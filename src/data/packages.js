@@ -115,6 +115,7 @@ export const PACKAGES = [
       { day:11, title:'Departure from Haridwar',
         desc:'After breakfast, check out from hotel. Transfer to Haridwar railway station or bus stand. Tour ends with divine memories and blessings of the Char Dham.' },
     ],
+    photo: 'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     featured: true,
     badge   : 'Most Popular',
     images  : ['kedarnath','badrinath','gangotri','yamunotri'],
@@ -187,6 +188,7 @@ export const PACKAGES = [
       { day:12, title:'Rishikesh – Haridwar – Departure',
         desc:'Morning: Triveni Ghat holy dip in Rishikesh. Har Ki Pauri Ganga aarti in Haridwar. Certificate and prasad distribution. Transfer to Haridwar railway station. Tour ends with divine blessings.' },
     ],
+    photo: 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     featured: true,
     badge   : 'Best Seller',
     images  : ['kedarnath','badrinath','gangotri','yamunotri'],
@@ -250,6 +252,7 @@ export const PACKAGES = [
       { day:6, title:'Badrinath → Dehradun — Journey Home',
         desc:'Morning final darshan at Badrinath. Helicopter or road transfer to Dehradun based on availability. Reach Dehradun by noon. Transfer to airport or railway station. Certificates and prasad distributed. The Char Dham yatra — completed in 6 blessed days with divine efficiency.' },
     ],
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/900px-Kedarnathji-mandir.JPG',
     featured: true,
     badge   : 'Premium',
     images  : ['helicopter','kedarnath','badrinath'],
@@ -329,6 +332,7 @@ export const PACKAGES = [
       { day:15, title:'Rishikesh – Haridwar — Tour Concludes',
         desc:'Morning puja at Har Ki Pauri Haridwar. Certificate of completion, prasad and blessings. Transfer to railway station. Journey ends with renewed faith and divine peace.' },
     ],
+    photo: 'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     featured: false,
     badge   : 'Senior Special',
     images  : ['kedarnath','badrinath','yamunotri','gangotri'],
@@ -380,6 +384,7 @@ export const PACKAGES = [
       { day:6, title:'Devprayag – Rishikesh – Haridwar (180 km)',
         desc:'Morning drive via beautiful Devprayag. Visit Rishikesh — Ram Jhula, Laxman Jhula, Triveni Ghat. Evening Ganga aarti at Haridwar\'s Har Ki Pauri. Prasad and certificate distribution. Trip ends.' },
     ],
+    photo: 'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     featured: true,
     badge   : 'Best Value',
     images  : ['kedarnath','badrinath'],
@@ -426,6 +431,7 @@ export const PACKAGES = [
       { day:5, title:'Uttarkashi – Rishikesh – Haridwar (175 km)',
         desc:'Morning drive back to Haridwar via Tehri and Devprayag. Stop at Devprayag for the Sangam photograph. Reach Rishikesh, visit Laxman Jhula. Haridwar evening Ganga aarti. Tour concludes.' },
     ],
+    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Gangotri_temple.jpg?width=900',
     featured: false,
     badge   : null,
     images  : ['yamunotri','gangotri'],
@@ -474,6 +480,7 @@ export const PACKAGES = [
       { day:6, title:'Devprayag – Rishikesh – Haridwar',
         desc:'Morning drive. Visit Rishikesh. Haridwar Ganga aarti. Tour concludes.' },
     ],
+    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Badrinath_Temple_(front_view).JPG?width=900',
     featured: false,
     badge   : null,
     images  : ['gangotri','badrinath'],
@@ -522,6 +529,7 @@ export const PACKAGES = [
       { day:4, title:'Guptkashi – Devprayag – Rishikesh – Haridwar',
         desc:'Morning drive via Rudraprayag, Devprayag and Rishikesh. Reach Haridwar by 4 PM. Evening Ganga aarti at Har Ki Pauri. Certificate and prasad distribution. Transfer to railway station.' },
     ],
+    photo: 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     featured: true,
     badge   : 'Bestseller',
     images  : ['kedarnath'],
@@ -568,6 +576,7 @@ export const PACKAGES = [
       { day:3, title:'Badrinath – Devprayag – Rishikesh – Haridwar',
         desc:'Early morning final darshan and photography at the temple. Drive back to Haridwar via Joshimath, Rudraprayag, Devprayag, Rishikesh. Brief stop at Rishikesh — Ram Jhula walk. Haridwar Ganga aarti at Har Ki Pauri. Tour concludes.' },
     ],
+    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Badrinath_Temple_(front_view).JPG?width=900',
     featured: false,
     badge   : null,
     images  : ['badrinath'],
@@ -610,6 +619,7 @@ export const PACKAGES = [
       { day:3, title:'Barkot – Rishikesh – Haridwar (245 km)',
         desc:'Morning drive back via Naugaon, Mussoorie and Rishikesh. Stop at Laxman Jhula for 30 mins. Reach Haridwar by 5 PM. Ganga aarti. Tour concludes.' },
     ],
+    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Yamunotri_temple.JPG?width=900',
     featured: false,
     badge   : null,
     images  : ['yamunotri'],
@@ -652,6 +662,7 @@ export const PACKAGES = [
       { day:3, title:'Uttarkashi – Devprayag – Rishikesh – Haridwar',
         desc:'Morning drive via Tehri and Devprayag. Stop at Devprayag Sangam. Reach Haridwar by 5 PM. Ganga aarti and departure.' },
     ],
+    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Gangotri_temple.jpg?width=900',
     featured: false,
     badge   : null,
     images  : ['gangotri'],
@@ -677,3 +688,100 @@ export function getFeaturedPackages() {
 export function getAllSlugs() {
   return PACKAGES.map(p => ({ slug: p.slug }));
 }
+
+// ==========================================================
+// TESTIMONIALS (for homepage + detail pages)
+// ==========================================================
+export const TESTIMONIALS = [
+  {
+    id:'t1', name:'Rakesh & Sunita Sharma', location:'New Delhi',
+    package:'Char Dham Yatra 10N/11D', rating:5,
+    date:'October 2024',
+    text:'Our entire extended family of 12 went for Char Dham with Shiv Ganga. From the moment our driver Bhanu ji picked us up at Haridwar until the day we returned, everything was perfect. The VIP darshan at Kedarnath saved us 4 hours of queuing. My 78-year-old mother completed the yatra comfortably because of the palki arrangements they handled for us.',
+    avatar:'RS',
+  },
+  {
+    id:'t2', name:'Dr. Priya Menon', location:'Bangalore',
+    package:'Kedarnath Yatra 3N/4D', rating:5,
+    date:'September 2024',
+    text:'As a solo woman traveler, I was nervous about the Kedarnath trek. The team assigned me to a group of other solo pilgrims and a female guide for parts of the journey. The hotel at Guptkashi was clean and the food was pure sattvic. Completed my darshan peacefully. Will definitely book again for Badrinath.',
+    avatar:'PM',
+  },
+  {
+    id:'t3', name:'Vivek Agarwal', location:'Mumbai',
+    package:'Char Dham by Helicopter', rating:5,
+    date:'May 2024',
+    text:'Being a busy professional I could not spare 12 days for the full yatra. The helicopter package was worth every rupee. 6 days, all 4 dhams, VIP darshan at every stop. The weather briefing at Dehradun was thorough. Even though one flight got delayed by 2 hours due to clouds, the team kept us informed and we made up time the next day.',
+    avatar:'VA',
+  },
+  {
+    id:'t4', name:'Ganesh Iyer Family', location:'Chennai',
+    package:'Do Dham (Kedarnath + Badrinath)', rating:5,
+    date:'June 2024',
+    text:'Three generations travelled together — my parents in 70s, us, and our two teenagers. The itinerary was paced beautifully with enough rest days. Oxygen cylinder was readily available when my father felt breathless at Kedarnath. The driver knew every chai stop and viewpoint on the route. Pure Tamil vegetarian food was arranged at 2 hotels on my special request.',
+    avatar:'GI',
+  },
+  {
+    id:'t5', name:'Arjun & Neha Kapoor', location:'Lucknow',
+    package:'Gangotri–Badrinath 5N/6D', rating:5,
+    date:'October 2024',
+    text:'This was our second yatra with Shiv Ganga. Last year Do Dham, this year Gangotri–Badrinath. Consistent quality, transparent pricing, zero hidden charges. The Harsil valley stop was magical — they arranged evening chai at a riverside cafe none of the bigger operators take you to.',
+    avatar:'AK',
+  },
+];
+
+// ==========================================================
+// GLOBAL FAQs (homepage)
+// ==========================================================
+export const GLOBAL_FAQS = [
+  {
+    q:'What is the best time to do Char Dham Yatra in 2025?',
+    a:'The ideal windows are early May to mid-June (spring, post-temple opening) and mid-September to late October (post-monsoon, clear weather). Monsoon months (July–August) are avoided due to landslides and frequent roadblocks. November to April, the temples are officially closed.',
+  },
+  {
+    q:'Do you charge any commission or hidden fees?',
+    a:'Zero commission, zero middleman charges. We are the actual operator — not an aggregator. You pay us directly, there is no third-party markup. Every quote you receive has a complete breakdown of vehicle, hotel, meals, guide, and permits. What you see is exactly what you pay.',
+  },
+  {
+    q:'How do I register for the mandatory Char Dham biometric registration?',
+    a:'We handle the full registration on your behalf — all we need is a copy of your government-issued ID (Aadhaar/passport/driving licence), a recent photo, and travel dates. Our team submits the biometric registration to the Uttarakhand Tourism portal 72 hours before your yatra starts.',
+  },
+  {
+    q:'Is the Kedarnath trek mandatory, or are there alternatives?',
+    a:'The 16 km Kedarnath trek from Gaurikund is not mandatory. You can choose: (1) Pony ride — approx ₹3,500–4,500 one way, (2) Palki (hand-carried palanquin) — approx ₹8,000–12,000 one way, (3) Helicopter from Phata/Sersi/Guptkashi — approx ₹7,500–9,500 round trip. We arrange all three options at actual operator rates.',
+  },
+  {
+    q:'What happens if bad weather cancels helicopter flights?',
+    a:'Helicopter yatra has a built-in buffer day. If a flight gets cancelled due to weather, we reschedule to the next available slot. If all your dates get affected, we either extend by road (at reduced additional cost) or refund the helicopter portion in full. Our policy is transparent and written into your booking contract.',
+  },
+  {
+    q:'Can senior citizens and children safely do the Char Dham Yatra?',
+    a:'Yes. Our Senior Citizen Special Package (14N/15D) is designed with extra rest days, ground-floor accommodation, pony/palki included, and a medical attendant with oxygen cylinder on board. For children, we recommend age 7+ for the full trek and age 4+ for road-only portions. We have successfully taken pilgrims aged 4 to 84.',
+  },
+  {
+    q:'Are meals and hotels included in the package price?',
+    a:'Yes — all meals (daily vegetarian breakfast and dinner, Jain options on request) and hotel accommodations are included at every stop. You only pay extra for lunch on long driving days (stops at hill dhabas cost ₹150–300 per person) and personal expenses.',
+  },
+  {
+    q:'How far in advance should I book?',
+    a:'For peak months (May–June and October), we recommend booking at least 60 days in advance. September is moderately busy — 30 days advance is sufficient. Helicopter slots for peak dates often fill 90+ days ahead. For any date, early bird bookings get a 5-10% discount.',
+  },
+];
+
+// ==========================================================
+// TRUST SIGNALS / ACHIEVEMENTS
+// ==========================================================
+export const TRUST = {
+  stats: [
+    { icon:'🏆', value:'15+',     label:'Years of Trust',    sub:'Serving pilgrims since 2010' },
+    { icon:'🙏', value:'50,000+', label:'Happy Pilgrims',   sub:'From all 28 states of India' },
+    { icon:'⭐', value:'4.9/5',   label:'Google Rating',     sub:'Based on 850+ reviews' },
+    { icon:'🛡️', value:'100%',   label:'Safe Journeys',     sub:'Zero incident record' },
+  ],
+  certifications: [
+    'Registered with Uttarakhand Tourism Board',
+    'Member of IATO (Indian Association of Tour Operators)',
+    'ISO 9001:2015 Certified Quality Management',
+    'Government-approved Char Dham Yatra operator',
+  ],
+};

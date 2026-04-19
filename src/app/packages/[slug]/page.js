@@ -103,7 +103,11 @@ export default function PackageDetailPage({ params }) {
       <Schemas pkg={pkg}/>
 
       {/* ── HERO ── */}
-      <div style={{ background:'linear-gradient(145deg,var(--deep) 0%,var(--deep-mid) 40%,var(--blue) 80%,var(--cyan) 100%)', paddingTop:24, paddingBottom:40 }}>
+      <div style={{ backgroundImage: pkg.photo
+          ? `linear-gradient(145deg,rgba(7,20,42,0.75) 0%,rgba(13,39,72,0.68) 40%,rgba(18,96,204,0.72) 80%,rgba(6,182,212,0.78) 100%), url('${pkg.photo}')`
+          : 'linear-gradient(145deg,var(--deep) 0%,var(--deep-mid) 40%,var(--blue) 80%,var(--cyan) 100%)',
+        backgroundSize:'cover', backgroundPosition:'center',
+        paddingTop:24, paddingBottom:40 }}>
         <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 16px' }}>
           <Breadcrumb pkg={pkg}/>
           {pkg.badge && (
@@ -130,7 +134,13 @@ export default function PackageDetailPage({ params }) {
       </div>
 
       {/* ── MAIN ── */}
-      <div style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px', display:'grid', gridTemplateColumns:'1fr min(320px,38%)', gap:28, alignItems:'start' }}>
+      <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 96px', display:'grid', gridTemplateColumns:'1fr min(320px,38%)', gap:28, alignItems:'start' }}>
+        <style dangerouslySetInnerHTML={{ __html: `
+          @media (max-width: 860px) {
+            .detail-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+            .detail-grid > div:last-child { position: static !important; order: -1; }
+          }
+        ` }}/>
 
         {/* Left */}
         <div>
@@ -263,6 +273,28 @@ export default function PackageDetailPage({ params }) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ── STICKY MOBILE BOOKING BAR ── */}
+      <div className="sticky-book-bar">
+        <div style={{ flex:1, display:'flex', flexDirection:'column', gap:0, justifyContent:'center' }}>
+          <div style={{ fontSize:11, color:'var(--muted)', lineHeight:1 }}>From</div>
+          <div style={{ display:'flex', alignItems:'baseline', gap:6 }}>
+            <span style={{ fontWeight:800, fontSize:19, color:'var(--blue)', lineHeight:1, letterSpacing:'-0.02em' }}>
+              ₹{pkg.price.discounted.toLocaleString('en-IN')}
+            </span>
+            <span style={{ fontSize:11, color:'var(--muted)' }}>/person</span>
+          </div>
+        </div>
+        <a href={`tel:${SITE.phone}`}
+          className="btn-outline"
+          style={{ padding:'10px 14px', fontSize:12, flexShrink:0 }}>
+          📞 Call
+        </a>
+        <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="noopener noreferrer"
+          style={{ background:'#25D366', color:'#fff', padding:'10px 18px', borderRadius:8, fontSize:12, fontWeight:700, textDecoration:'none', flexShrink:0 }}>
+          💬 Book Now
+        </a>
       </div>
     </>
   );

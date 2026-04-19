@@ -1,117 +1,195 @@
-import { SITE } from '@/data/packages';
+import { SITE, TRUST } from '@/data/packages';
 
 export const metadata = {
   title: 'About Us — Trusted Char Dham Yatra Specialists Since 2010',
-  description:
-    'Shiv Ganga Travels is a Haridwar-based pilgrimage specialist trusted by 50,000+ devotees. Learn our story and our commitment to safe, blessed yatras.',
+  description: 'Shiv Ganga Travels is a Haridwar-based pilgrimage specialist trusted by 50,000+ devotees. Learn our story, meet our team, and discover why we are the top choice for Char Dham.',
 };
 
 const TEAM = [
-  { name: 'Pandit Shiv Prasad Sharma', role: 'Founder & Head Pujari',    since: 'Since 2010' },
-  { name: 'Rajesh Nautiyal',           role: 'Head of Operations',        since: 'Since 2012' },
-  { name: 'Deepa Rawat',               role: 'Customer Relations Manager', since: 'Since 2016' },
+  { name: 'Pandit Shiv Prasad Sharma', role: 'Founder & Head Pujari',     since: 'Since 2010', bio: 'Third-generation Kedarnath pujari family. Personally leads every major yatra.' },
+  { name: 'Rajesh Nautiyal',           role: 'Head of Operations',         since: 'Since 2012', bio: 'Garhwali native. 15 years of route knowledge. Speaks Hindi, English & Garhwali.' },
+  { name: 'Deepa Rawat',               role: 'Customer Relations Manager', since: 'Since 2016', bio: 'Handles every enquiry personally. Ensures seamless communication.' },
+  { name: 'Mohan Bhatt',               role: 'Senior Mountain Guide',      since: 'Since 2014', bio: 'Over 200 Kedarnath treks. Trained in first-aid & high-altitude safety.' },
 ];
 
 export default function AboutPage() {
   return (
-    <div style={{ paddingTop: '88px', background: '#fef9f0', minHeight: '100vh' }}>
-      {/* Header */}
-      <div
-        className="py-16 text-center px-4"
-        style={{ background: 'linear-gradient(160deg, #142742 0%, #1e3a5f 100%)' }}
-      >
-        <p className="text-orange-300 text-sm font-semibold tracking-[0.25em] uppercase mb-3">
-          Our Story
-        </p>
-        <h1
-          className="text-white mb-3"
-          style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 600 }}
-        >
-          About {SITE.name}
-        </h1>
-        <p className="text-blue-200 max-w-xl mx-auto">{SITE.tagline}</p>
-      </div>
+    <>
+      {/* HERO */}
+      <section style={{
+        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--blue-dark) 100%)',
+        padding:'60px 16px 50px', textAlign:'center',
+      }}>
+        <div style={{ maxWidth:720, margin:'0 auto' }}>
+          <span style={{
+            background:'rgba(6,182,212,0.18)', color:'var(--cyan)',
+            fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
+            padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
+            border:'1px solid rgba(6,182,212,0.3)',
+          }}>Our Story</span>
+          <h1 className="font-display" style={{
+            color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3rem)',
+            lineHeight:1.15, marginBottom:14, letterSpacing:'-0.02em',
+          }}>
+            About <em style={{ fontStyle:'italic', color:'var(--cyan)', fontWeight:700 }}>{SITE.name}</em>
+          </h1>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:15, lineHeight:1.7 }}>
+            {SITE.tagline}
+          </p>
+        </div>
+      </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-16 space-y-16">
-
-        {/* Story */}
-        <section>
-          <p className="divider-om mb-6" />
-          <h2 className="text-3xl font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-display)', color: '#142742' }}>
-            Our Journey Since {SITE.established}
-          </h2>
-          <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
+      {/* STORY */}
+      <section style={{ background:'#fff', padding:'60px 16px' }}>
+        <div style={{ maxWidth:780, margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:36 }}>
+            <span className="section-tag">Our Journey</span>
+            <h2 className="section-title">Serving Pilgrims Since <em>{SITE.established}</em></h2>
+          </div>
+          <div style={{ color:'var(--mid)', fontSize:15, lineHeight:1.85, display:'flex', flexDirection:'column', gap:18 }}>
             <p>
-              <strong style={{ color: '#142742' }}>Shiv Ganga Travels</strong> was born in the holy city of Haridwar
-              in {SITE.established}, founded by Pandit Shiv Prasad Sharma — a lifelong devotee of Shiva and son of a
-              Kedarnath pujari family. What began as helping pilgrims from his village reach the dhams safely has
-              grown into one of Uttarakhand's most trusted yatra operators.
+              <strong style={{ color:'var(--text)' }}>Shiv Ganga Travels</strong> was born in the holy city of Haridwar in {SITE.established}, founded by <strong style={{ color:'var(--text)' }}>Pandit Shiv Prasad Sharma</strong> — a lifelong devotee of Lord Shiva and the son of a Kedarnath pujari family. What began as helping pilgrims from his village reach the dhams safely has grown into one of Uttarakhand&apos;s most trusted yatra operators.
             </p>
             <p>
-              Over 15 years, we have guided more than 50,000 pilgrims across all four dhams — from young families
-              doing their first yatra to elderly devotees fulfilling a lifelong dream. Every journey we undertake
-              carries the same sense of devotion with which we started.
+              Over <strong style={{ color:'var(--blue)' }}>15 years</strong>, we have guided more than <strong style={{ color:'var(--blue)' }}>50,000 pilgrims</strong> across all four dhams — from young families doing their first yatra to elderly devotees fulfilling a lifelong dream. Every journey we undertake carries the same sense of devotion with which we started.
             </p>
             <p>
-              We are not just a travel agency. We are fellow pilgrims. Our team — most of whom are Garhwali and
-              Kumaoni locals — understands the terrain, the weather, the temple customs, and most importantly,
-              the spiritual significance of every stop on the yatra route.
+              We are not just a travel agency. We are fellow pilgrims. Our team — most of whom are Garhwali and Kumaoni locals — understands the terrain, the weather, the temple customs, and most importantly, the spiritual significance of every stop on the yatra route.
+            </p>
+            <p style={{
+              padding:'18px 22px', background:'var(--blue-light)',
+              borderLeft:'4px solid var(--blue)', borderRadius:'0 10px 10px 0',
+              fontStyle:'italic', color:'var(--text)',
+            }}>
+              &ldquo;Every pilgrim who travels with us is family. Their safety, their darshan, their memories — these are our responsibility.&rdquo;
+              <br/>
+              <strong style={{ color:'var(--blue)', fontSize:13, fontStyle:'normal', marginTop:8, display:'block' }}>
+                — Pandit Shiv Prasad Sharma, Founder
+              </strong>
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Values */}
-        <section
-          className="rounded-2xl p-8"
-          style={{ background: '#142742' }}
-        >
-          <h2 className="text-2xl font-semibold text-white mb-6 text-center" style={{ fontFamily: 'var(--font-display)' }}>
-            Our Commitments to You
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+      {/* COMMITMENTS */}
+      <section style={{ background:'var(--bg)', padding:'60px 16px' }}>
+        <div style={{ maxWidth:1100, margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:36 }}>
+            <span className="section-tag">Our Commitments</span>
+            <h2 className="section-title">What We <em>Promise</em> You</h2>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(240px, 1fr))', gap:16 }}>
             {[
-              { icon: '🙏', title: 'Divine First', desc: 'We prioritise your darshan, not the clock. VIP arrangements at every dham.' },
-              { icon: '🛡️', title: 'Your Safety',  desc: 'Medical kits, oxygen cylinders, and trained staff on every trip.' },
-              { icon: '💚', title: 'Honest Prices', desc: 'No hidden costs. Everything is transparent before you book.' },
-              { icon: '🏔️', title: 'Local Expertise', desc: 'Our guides know the Himalayas like their backyard.' },
-            ].map((v) => (
-              <div key={v.title} className="flex gap-4 p-4 rounded-xl" style={{ background: 'rgba(255,255,255,0.07)' }}>
-                <span className="text-2xl">{v.icon}</span>
-                <div>
-                  <p className="font-semibold text-white text-sm mb-1">{v.title}</p>
-                  <p className="text-blue-200 text-xs leading-relaxed">{v.desc}</p>
-                </div>
+              { icon:'🙏', title:'Divine First',    desc:'Your darshan is our priority. VIP arrangements at every dham.' },
+              { icon:'🛡️', title:'Your Safety',    desc:'Medical kits, oxygen, trained staff, GPS-tracked vehicles.' },
+              { icon:'💚', title:'Honest Prices',   desc:'Zero hidden costs. Transparent breakdown before you book.' },
+              { icon:'🏔️', title:'Local Expertise', desc:'Garhwali guides who know every bend, every weather pattern.' },
+              { icon:'🕉️', title:'Spiritual Care',  desc:'Pre-yatra briefing, puja arrangements, traditional rites.' },
+              { icon:'📱', title:'Always Reachable', desc:'24/7 WhatsApp support during your journey. No abandonment.' },
+            ].map(v => (
+              <div key={v.title} style={{
+                background:'#fff', borderRadius:14, padding:'22px 20px',
+                border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+              }}>
+                <div style={{
+                  width:44, height:44, background:'var(--blue-light)', borderRadius:10,
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  fontSize:22, marginBottom:14,
+                }}>{v.icon}</div>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:5 }}>{v.title}</div>
+                <div style={{ fontSize:12.5, color:'var(--muted)', lineHeight:1.6 }}>{v.desc}</div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Team */}
-        <section>
-          <h2 className="text-3xl font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-display)', color: '#142742' }}>
-            The People Behind Your Yatra
-          </h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {TEAM.map((person) => (
-              <div
-                key={person.name}
-                className="text-center p-6 rounded-2xl"
-                style={{ background: '#fff', border: '1px solid #e2d8c8' }}
-              >
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"
-                  style={{ background: '#fff4ee' }}
-                >
-                  🙏
-                </div>
-                <p className="font-semibold text-sm mb-1" style={{ color: '#142742' }}>{person.name}</p>
-                <p className="text-xs text-gray-500 mb-1">{person.role}</p>
-                <p className="text-xs text-orange-500">{person.since}</p>
+      {/* CERTIFICATIONS */}
+      <section style={{ background:'#fff', padding:'50px 16px' }}>
+        <div style={{ maxWidth:900, margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:32 }}>
+            <span className="section-tag">Credentials</span>
+            <h2 className="section-title">Officially <em>Registered</em> & Trusted</h2>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:12 }}>
+            {TRUST.certifications.map(cert => (
+              <div key={cert} style={{
+                background:'var(--blue-light)', padding:'14px 18px',
+                borderRadius:10, display:'flex', alignItems:'center', gap:10,
+                border:'1px solid rgba(18,96,204,0.1)',
+              }}>
+                <span style={{
+                  width:28, height:28, background:'var(--blue)', color:'#fff',
+                  borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center',
+                  fontSize:14, fontWeight:700, flexShrink:0,
+                }}>✓</span>
+                <span style={{ fontSize:12.5, color:'var(--text)', fontWeight:500 }}>{cert}</span>
               </div>
             ))}
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section style={{ background:'var(--bg)', padding:'60px 16px' }}>
+        <div style={{ maxWidth:1100, margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:36 }}>
+            <span className="section-tag">The People</span>
+            <h2 className="section-title">Behind Your <em>Yatra</em></h2>
+            <p className="section-subtitle" style={{ margin:'0 auto' }}>Meet the people dedicated to making your pilgrimage seamless and sacred.</p>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:16 }}>
+            {TEAM.map(p => (
+              <div key={p.name} style={{
+                background:'#fff', padding:'26px 20px', borderRadius:16,
+                textAlign:'center', border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+              }}>
+                <div style={{
+                  width:68, height:68, margin:'0 auto 14px',
+                  borderRadius:'50%',
+                  background:'linear-gradient(135deg, var(--blue), var(--cyan))',
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  fontSize:28, color:'#fff',
+                  boxShadow:'0 4px 14px rgba(18,96,204,0.3)',
+                }}>🙏</div>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:3 }}>{p.name}</div>
+                <div style={{ fontSize:12, color:'var(--blue)', fontWeight:600, marginBottom:6 }}>{p.role}</div>
+                <div style={{ fontSize:11, color:'var(--cyan-dark)', marginBottom:10 }}>{p.since}</div>
+                <p style={{ fontSize:12, color:'var(--muted)', lineHeight:1.5 }}>{p.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{
+        background:'linear-gradient(135deg, var(--deep) 0%, var(--blue-dark) 100%)',
+        padding:'56px 16px', textAlign:'center',
+      }}>
+        <div style={{ maxWidth:640, margin:'0 auto' }}>
+          <h2 className="font-display" style={{
+            color:'#fff', fontWeight:600, fontSize:'clamp(1.5rem, 3.5vw, 2rem)',
+            marginBottom:12, letterSpacing:'-0.02em',
+          }}>
+            Ready to Travel With Us?
+          </h2>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:24, lineHeight:1.7 }}>
+            Join 50,000+ pilgrims who have trusted us with their sacred journey.
+          </p>
+          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
+            <a href={`tel:${SITE.phone}`} style={{
+              background:'#fff', color:'var(--blue)', padding:'13px 26px',
+              borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
+              display:'inline-flex', alignItems:'center', gap:8,
+            }}>📞 {SITE.phone}</a>
+            <a href="/packages" style={{
+              background:'var(--cyan)', color:'#fff', padding:'13px 26px',
+              borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
+            }}>View Packages</a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
