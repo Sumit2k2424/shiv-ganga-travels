@@ -31,7 +31,16 @@
   --border      : #E2E8F0;   /* subtle border */
   --border-dark : #CBD5E1;
 
-  /* ── Utility ── */
+  /* ── Backward-compatible aliases (old variable names → new) ── */
+  --deep        : #0F2B5B;   /* was deep ocean, now navy */
+  --deep-mid    : #1A3E75;   /* was deep-mid, now navy-mid */
+  --blue        : #0F2B5B;   /* was ocean blue, now navy */
+  --blue-light  : #E8F0FB;   /* alias */
+  --blue-dark   : #0A1F45;   /* alias */
+  --cyan        : #0B7B8B;   /* was cyan, now teal */
+  --cyan-dark   : #09666F;   /* was cyan-dark, now teal-dark */
+  --mid         : #475569;   /* was mid text, now text-mid */
+  --muted       : #94A3B8;   /* was muted, now text-muted */
   --green       : #15803D;
   --red         : #DC2626;
   --shadow-sm   : 0 1px 3px rgba(15,43,91,0.08), 0 1px 2px rgba(15,43,91,0.04);
