@@ -12,12 +12,12 @@ export default function ContactPage() {
     <>
       {/* HERO */}
       <section style={{
-        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--blue-dark) 100%)',
+        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--gold-dark) 100%)',
         padding:'60px 16px 50px', textAlign:'center',
       }}>
         <div style={{ maxWidth:720, margin:'0 auto' }}>
           <span style={{
-            background:'rgba(6,182,212,0.18)', color:'var(--cyan)',
+            background:'rgba(6,182,212,0.18)', color:'var(--teal)',
             fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
             padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
             border:'1px solid rgba(6,182,212,0.3)',
@@ -26,7 +26,7 @@ export default function ContactPage() {
             color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3rem)',
             lineHeight:1.15, marginBottom:14, letterSpacing:'-0.02em',
           }}>
-            Plan Your <em style={{ fontStyle:'italic', color:'var(--cyan)', fontWeight:700 }}>Sacred Journey</em>
+            Plan Your <em style={{ fontStyle:'italic', color:'var(--teal)', fontWeight:700 }}>Sacred Journey</em>
           </h1>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:15, lineHeight:1.7 }}>
             Our yatra experts are available 7 days a week, 7 AM – 9 PM IST.<br/>
@@ -42,10 +42,10 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:SITE.phone, href:`tel:${SITE.phone}`, sub:'Tap to call directly', color:'var(--blue)' },
+              { icon:'📞', label:'Phone', value:SITE.phone, href:`tel:${SITE.phone}`, sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--cyan-dark)' },
-              { icon:'📍', label:'Office', value:'Har Ki Pauri, Haridwar', sub:'Uttarakhand — 249401', color:'var(--blue-dark)' },
+              { icon:'📍', label:'Office', value:'Har Ki Pauri, Haridwar', sub:'Uttarakhand — 249401', color:'var(--gold-dark)' },
             ].map(c => {
               const inner = (
                 <div style={{
@@ -58,7 +58,7 @@ export default function ContactPage() {
                 }}>
                   <div style={{
                     width:46, height:46, borderRadius:12,
-                    background:'var(--blue-light)',
+                    background:'var(--navy-light)',
                     display:'flex', alignItems:'center', justifyContent:'center',
                     fontSize:22,
                   }}>{c.icon}</div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
               <div style={{ marginBottom:20 }}>
                 <span className="section-tag">Send enquiry</span>
                 <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:600, color:'var(--text)', letterSpacing:'-0.02em', lineHeight:1.2, marginTop:6 }}>
-                  Tell us about your <em style={{ color:'var(--blue)', fontStyle:'italic' }}>journey</em>
+                  Tell us about your <em style={{ color:'var(--navy)', fontStyle:'italic' }}>journey</em>
                 </h2>
               </div>
 
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
               {/* Working hours + social */}
               <div style={{
-                background:'linear-gradient(135deg, var(--deep) 0%, var(--blue-dark) 100%)',
+                background:'linear-gradient(135deg, var(--deep) 0%, var(--gold-dark) 100%)',
                 padding:'24px 22px', borderRadius:16, color:'#fff',
                 boxShadow:'var(--shadow-md)',
               }}>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                   </li>
                   <li style={{ display:'flex', justifyContent:'space-between', fontSize:13, paddingTop:6, marginTop:2, borderTop:'1px solid rgba(255,255,255,0.1)' }}>
                     <span style={{ color:'rgba(255,255,255,0.7)' }}>WhatsApp Support</span>
-                    <span style={{ fontWeight:600, color:'var(--cyan)' }}>24 / 7</span>
+                    <span style={{ fontWeight:600, color:'var(--teal)' }}>24 / 7</span>
                   </li>
                 </ul>
 
@@ -233,7 +233,7 @@ export default function ContactPage() {
               }}>
                 <div style={{ display:'flex', gap:12, alignItems:'flex-start' }}>
                   <div style={{
-                    width:40, height:40, background:'var(--blue-light)', borderRadius:10, flexShrink:0,
+                    width:40, height:40, background:'var(--navy-light)', borderRadius:10, flexShrink:0,
                     display:'flex', alignItems:'center', justifyContent:'center', fontSize:20,
                   }}>📍</div>
                   <div>

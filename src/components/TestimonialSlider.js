@@ -53,7 +53,7 @@ export default function TestimonialSlider({ items }) {
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         boxShadow: 'var(--shadow)',
         transition: 'all .2s',
-        color: 'var(--blue)',
+        color: 'var(--navy)',
       }}
     >
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -107,9 +107,9 @@ export default function TestimonialSlider({ items }) {
             {/* Package tag */}
             <div style={{
               marginTop: 12, padding: '6px 10px',
-              background: 'var(--blue-light)',
+              background: 'var(--navy-light)',
               borderRadius: 6, fontSize: 11,
-              color: 'var(--blue)', fontWeight: 600,
+              color: 'var(--navy)', fontWeight: 600,
               display: 'inline-block', alignSelf: 'flex-start',
             }}>
               ✓ {t.package}

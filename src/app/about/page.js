@@ -17,12 +17,12 @@ export default function AboutPage() {
     <>
       {/* HERO */}
       <section style={{
-        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--blue-dark) 100%)',
+        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--gold-dark) 100%)',
         padding:'60px 16px 50px', textAlign:'center',
       }}>
         <div style={{ maxWidth:720, margin:'0 auto' }}>
           <span style={{
-            background:'rgba(6,182,212,0.18)', color:'var(--cyan)',
+            background:'rgba(6,182,212,0.18)', color:'var(--teal)',
             fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
             padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
             border:'1px solid rgba(6,182,212,0.3)',
@@ -31,7 +31,7 @@ export default function AboutPage() {
             color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3rem)',
             lineHeight:1.15, marginBottom:14, letterSpacing:'-0.02em',
           }}>
-            About <em style={{ fontStyle:'italic', color:'var(--cyan)', fontWeight:700 }}>{SITE.name}</em>
+            About <em style={{ fontStyle:'italic', color:'var(--teal)', fontWeight:700 }}>{SITE.name}</em>
           </h1>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:15, lineHeight:1.7 }}>
             {SITE.tagline}
@@ -51,19 +51,19 @@ export default function AboutPage() {
               <strong style={{ color:'var(--text)' }}>Shiv Ganga Travels</strong> was born in the holy city of Haridwar in {SITE.established}, founded by <strong style={{ color:'var(--text)' }}>Pandit Shiv Prasad Sharma</strong> — a lifelong devotee of Lord Shiva and the son of a Kedarnath pujari family. What began as helping pilgrims from his village reach the dhams safely has grown into one of Uttarakhand&apos;s most trusted yatra operators.
             </p>
             <p>
-              Over <strong style={{ color:'var(--blue)' }}>15 years</strong>, we have guided more than <strong style={{ color:'var(--blue)' }}>50,000 pilgrims</strong> across all four dhams — from young families doing their first yatra to elderly devotees fulfilling a lifelong dream. Every journey we undertake carries the same sense of devotion with which we started.
+              Over <strong style={{ color:'var(--navy)' }}>15 years</strong>, we have guided more than <strong style={{ color:'var(--navy)' }}>50,000 pilgrims</strong> across all four dhams — from young families doing their first yatra to elderly devotees fulfilling a lifelong dream. Every journey we undertake carries the same sense of devotion with which we started.
             </p>
             <p>
               We are not just a travel agency. We are fellow pilgrims. Our team — most of whom are Garhwali and Kumaoni locals — understands the terrain, the weather, the temple customs, and most importantly, the spiritual significance of every stop on the yatra route.
             </p>
             <p style={{
-              padding:'18px 22px', background:'var(--blue-light)',
+              padding:'18px 22px', background:'var(--navy-light)',
               borderLeft:'4px solid var(--blue)', borderRadius:'0 10px 10px 0',
               fontStyle:'italic', color:'var(--text)',
             }}>
               &ldquo;Every pilgrim who travels with us is family. Their safety, their darshan, their memories — these are our responsibility.&rdquo;
               <br/>
-              <strong style={{ color:'var(--blue)', fontSize:13, fontStyle:'normal', marginTop:8, display:'block' }}>
+              <strong style={{ color:'var(--navy)', fontSize:13, fontStyle:'normal', marginTop:8, display:'block' }}>
                 — Pandit Shiv Prasad Sharma, Founder
               </strong>
             </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 border:'1px solid var(--border)', boxShadow:'var(--shadow)',
               }}>
                 <div style={{
-                  width:44, height:44, background:'var(--blue-light)', borderRadius:10,
+                  width:44, height:44, background:'var(--navy-light)', borderRadius:10,
                   display:'flex', alignItems:'center', justifyContent:'center',
                   fontSize:22, marginBottom:14,
                 }}>{v.icon}</div>
@@ -114,12 +114,12 @@ export default function AboutPage() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:12 }}>
             {TRUST.certifications.map(cert => (
               <div key={cert} style={{
-                background:'var(--blue-light)', padding:'14px 18px',
+                background:'var(--navy-light)', padding:'14px 18px',
                 borderRadius:10, display:'flex', alignItems:'center', gap:10,
                 border:'1px solid rgba(18,96,204,0.1)',
               }}>
                 <span style={{
-                  width:28, height:28, background:'var(--blue)', color:'#fff',
+                  width:28, height:28, background:'var(--navy)', color:'#fff',
                   borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center',
                   fontSize:14, fontWeight:700, flexShrink:0,
                 }}>✓</span>
@@ -147,13 +147,13 @@ export default function AboutPage() {
                 <div style={{
                   width:68, height:68, margin:'0 auto 14px',
                   borderRadius:'50%',
-                  background:'linear-gradient(135deg, var(--blue), var(--cyan))',
+                  background:'linear-gradient(135deg, var(--blue), var(--teal))',
                   display:'flex', alignItems:'center', justifyContent:'center',
                   fontSize:28, color:'#fff',
                   boxShadow:'0 4px 14px rgba(18,96,204,0.3)',
                 }}>🙏</div>
                 <div style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:3 }}>{p.name}</div>
-                <div style={{ fontSize:12, color:'var(--blue)', fontWeight:600, marginBottom:6 }}>{p.role}</div>
+                <div style={{ fontSize:12, color:'var(--navy)', fontWeight:600, marginBottom:6 }}>{p.role}</div>
                 <div style={{ fontSize:11, color:'var(--cyan-dark)', marginBottom:10 }}>{p.since}</div>
                 <p style={{ fontSize:12, color:'var(--muted)', lineHeight:1.5 }}>{p.bio}</p>
               </div>
@@ -164,7 +164,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section style={{
-        background:'linear-gradient(135deg, var(--deep) 0%, var(--blue-dark) 100%)',
+        background:'linear-gradient(135deg, var(--deep) 0%, var(--gold-dark) 100%)',
         padding:'56px 16px', textAlign:'center',
       }}>
         <div style={{ maxWidth:640, margin:'0 auto' }}>
@@ -179,12 +179,12 @@ export default function AboutPage() {
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`tel:${SITE.phone}`} style={{
-              background:'#fff', color:'var(--blue)', padding:'13px 26px',
+              background:'#fff', color:'var(--navy)', padding:'13px 26px',
               borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
               display:'inline-flex', alignItems:'center', gap:8,
             }}>📞 {SITE.phone}</a>
             <a href="/packages" style={{
-              background:'var(--cyan)', color:'#fff', padding:'13px 26px',
+              background:'var(--teal)', color:'#fff', padding:'13px 26px',
               borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
             }}>View Packages</a>
           </div>

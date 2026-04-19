@@ -69,11 +69,11 @@ function Breadcrumb({ pkg }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       <nav style={{ padding:'10px 0', fontSize:12, color:'var(--muted)' }}>
-        <Link href="/" style={{ color:'var(--blue)', textDecoration:'none' }}>Home</Link>
+        <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
         <span style={{ margin:'0 6px' }}>›</span>
-        <Link href="/packages" style={{ color:'var(--blue)', textDecoration:'none' }}>Packages</Link>
+        <Link href="/packages" style={{ color:'var(--navy)', textDecoration:'none' }}>Packages</Link>
         <span style={{ margin:'0 6px' }}>›</span>
-        <Link href={`/packages/${pkg.category}`} style={{ color:'var(--blue)', textDecoration:'none', textTransform:'capitalize' }}>
+        <Link href={`/packages/${pkg.category}`} style={{ color:'var(--navy)', textDecoration:'none', textTransform:'capitalize' }}>
           {pkg.category.replace(/-/g,' ')}
         </Link>
         <span style={{ margin:'0 6px' }}>›</span>
@@ -105,13 +105,13 @@ export default function PackageDetailPage({ params }) {
       {/* ── HERO ── */}
       <div style={{ backgroundImage: pkg.photo
           ? `linear-gradient(145deg,rgba(7,20,42,0.75) 0%,rgba(13,39,72,0.68) 40%,rgba(18,96,204,0.72) 80%,rgba(6,182,212,0.78) 100%), url('${pkg.photo}')`
-          : 'linear-gradient(145deg,var(--deep) 0%,var(--deep-mid) 40%,var(--blue) 80%,var(--cyan) 100%)',
+          : 'linear-gradient(145deg,var(--deep) 0%,var(--deep-mid) 40%,var(--blue) 80%,var(--teal) 100%)',
         backgroundSize:'cover', backgroundPosition:'center',
         paddingTop:24, paddingBottom:40 }}>
         <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 16px' }}>
           <Breadcrumb pkg={pkg}/>
           {pkg.badge && (
-            <span style={{ background:'var(--blue)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 12px', borderRadius:20, display:'inline-block', marginBottom:10 }}>
+            <span style={{ background:'var(--navy)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 12px', borderRadius:20, display:'inline-block', marginBottom:10 }}>
               {pkg.badge}
             </span>
           )}
@@ -150,8 +150,8 @@ export default function PackageDetailPage({ params }) {
             <h2 style={{ fontWeight:700, fontSize:17, color:'var(--text)', marginBottom:14 }}>✨ Package Highlights</h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:10 }}>
               {pkg.highlights.map((h,i) => (
-                <div key={i} style={{ display:'flex', gap:10, alignItems:'flex-start', background:'var(--blue-light)', padding:'10px 12px', borderRadius:8 }}>
-                  <span style={{ color:'var(--cyan)', fontWeight:700, marginTop:1, flexShrink:0 }}>✓</span>
+                <div key={i} style={{ display:'flex', gap:10, alignItems:'flex-start', background:'var(--navy-light)', padding:'10px 12px', borderRadius:8 }}>
+                  <span style={{ color:'var(--teal)', fontWeight:700, marginTop:1, flexShrink:0 }}>✓</span>
                   <span style={{ fontSize:13, color:'var(--mid)', lineHeight:1.5 }}>{h}</span>
                 </div>
               ))}
@@ -166,7 +166,7 @@ export default function PackageDetailPage({ params }) {
                 <div key={day.day} style={{ display:'flex', gap:14, marginBottom: i < pkg.itinerary.length-1 ? 0 : 0 }}>
                   {/* Timeline */}
                   <div style={{ display:'flex', flexDirection:'column', alignItems:'center', flexShrink:0 }}>
-                    <div style={{ width:34, height:34, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:700, fontSize:13, color:'#fff', flexShrink:0, background: i % 2 === 0 ? 'var(--blue)' : 'var(--cyan-dark)' }}>
+                    <div style={{ width:34, height:34, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:700, fontSize:13, color:'#fff', flexShrink:0, background: i % 2 === 0 ? 'var(--navy)' : 'var(--cyan-dark)' }}>
                       {day.day}
                     </div>
                     {i < pkg.itinerary.length-1 && <div style={{ width:2, flex:1, background:'var(--border)', margin:'4px 0' }}/>}
@@ -230,7 +230,7 @@ export default function PackageDetailPage({ params }) {
                     style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)', textDecoration:'none', transition:'box-shadow .2s' }}>
                     <div style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4, lineHeight:1.3 }}>{r.name}</div>
                     <div style={{ fontSize:11, color:'var(--muted)', marginBottom:6 }}>{r.duration.nights}N/{r.duration.days}D · {r.transport}</div>
-                    <div style={{ fontWeight:700, fontSize:16, color:'var(--blue)' }}>₹{r.price.discounted.toLocaleString('en-IN')}/-</div>
+                    <div style={{ fontWeight:700, fontSize:16, color:'var(--navy)' }}>₹{r.price.discounted.toLocaleString('en-IN')}/-</div>
                   </Link>
                 ))}
               </div>
@@ -242,7 +242,7 @@ export default function PackageDetailPage({ params }) {
         <div style={{ position:'sticky', top:80 }}>
           <div style={{ borderRadius:16, overflow:'hidden', border:'2px solid var(--border)', boxShadow:'var(--shadow-lg)' }}>
             {/* Price header */}
-            <div style={{ background:'linear-gradient(135deg,var(--deep),var(--blue))', padding:'20px 20px 16px', textAlign:'center' }}>
+            <div style={{ background:'linear-gradient(135deg,var(--deep),var(--navy))', padding:'20px 20px 16px', textAlign:'center' }}>
               <p style={{ color:'rgba(255,255,255,0.65)', fontSize:12, marginBottom:3 }}>Starting from</p>
               <p style={{ color:'rgba(255,255,255,0.5)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>
               <p style={{ color:'#fff', fontWeight:700, fontSize:36, lineHeight:1, margin:'4px 0' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}/-</p>
@@ -261,7 +261,7 @@ export default function PackageDetailPage({ params }) {
                 📞 Call to Book
               </a>
               <Link href="/contact"
-                style={{ textAlign:'center', fontSize:12, color:'var(--blue)', textDecoration:'none', display:'block', padding:'6px 0' }}>
+                style={{ textAlign:'center', fontSize:12, color:'var(--navy)', textDecoration:'none', display:'block', padding:'6px 0' }}>
                 ✉️ Send an Enquiry Form
               </Link>
             </div>
@@ -280,7 +280,7 @@ export default function PackageDetailPage({ params }) {
         <div style={{ flex:1, display:'flex', flexDirection:'column', gap:0, justifyContent:'center' }}>
           <div style={{ fontSize:11, color:'var(--muted)', lineHeight:1 }}>From</div>
           <div style={{ display:'flex', alignItems:'baseline', gap:6 }}>
-            <span style={{ fontWeight:800, fontSize:19, color:'var(--blue)', lineHeight:1, letterSpacing:'-0.02em' }}>
+            <span style={{ fontWeight:800, fontSize:19, color:'var(--navy)', lineHeight:1, letterSpacing:'-0.02em' }}>
               ₹{pkg.price.discounted.toLocaleString('en-IN')}
             </span>
             <span style={{ fontSize:11, color:'var(--muted)' }}>/person</span>

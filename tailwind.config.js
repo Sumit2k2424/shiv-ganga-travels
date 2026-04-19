@@ -8,23 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue:  { DEFAULT:'#1260CC', dark:'#0A4A9F', light:'#EBF5FF' },
-        cyan:  { DEFAULT:'#06B6D4', dark:'#0891B2' },
-        deep:  { DEFAULT:'#07142A', mid:'#0D2748' },
-        ocean: '#0D1F38',
-        muted: '#7B90B0',
-        border:'#D6E4F7',
-        bg:    '#F5F9FF',
+        navy:  { DEFAULT:'#0F2B5B', mid:'#1A3E75', light:'#E8F0FB' },
+        gold:  { DEFAULT:'#E8920A', dark:'#C67A08', light:'#FEF3E2' },
+        teal:  { DEFAULT:'#0B7B8B', dark:'#09666F', light:'#E3F5F7' },
+        bg:    '#F8F9FC',
+        card:  '#FFFFFF',
+        muted: '#94A3B8',
+        border:'#E2E8F0',
       },
-      fontFamily: { sans: ['Poppins','system-ui','sans-serif'] },
+      fontFamily: {
+        sans:    ['Plus Jakarta Sans','system-ui','sans-serif'],
+        display: ['Playfair Display','Georgia','serif'],
+      },
       boxShadow: {
-        card:  '0 2px 12px rgba(18,96,204,0.10)',
-        lg:    '0 8px 32px rgba(18,96,204,0.16)',
-        xl:    '0 16px 48px rgba(18,96,204,0.22)',
-      },
-      borderRadius: {
-        card: '10px',
-        lg:   '16px',
+        card: '0 4px 6px rgba(15,43,91,0.07)',
+        lg:   '0 20px 25px rgba(15,43,91,0.12)',
+        gold: '0 4px 14px rgba(232,146,10,0.35)',
       },
     },
   },

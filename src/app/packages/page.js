@@ -48,12 +48,12 @@ export default function PackagesPage() {
     <>
       {/* ── Page hero ── */}
       <section style={{
-        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--blue-dark) 100%)',
+        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--gold-dark) 100%)',
         padding:'60px 16px 44px', textAlign:'center',
       }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{
-            background:'rgba(6,182,212,0.18)', color:'var(--cyan)',
+            background:'rgba(6,182,212,0.18)', color:'var(--teal)',
             fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
             padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
             border:'1px solid rgba(6,182,212,0.3)',
@@ -64,7 +64,7 @@ export default function PackagesPage() {
             color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3.2rem)',
             lineHeight:1.15, marginBottom:14, letterSpacing:'-0.02em',
           }}>
-            All Yatra <em style={{ fontStyle:'italic', color:'var(--cyan)', fontWeight:700 }}>Packages</em>
+            All Yatra <em style={{ fontStyle:'italic', color:'var(--teal)', fontWeight:700 }}>Packages</em>
           </h1>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7, maxWidth:620, margin:'0 auto' }}>
             Choose from 11 curated packages — Char Dham, Do Dham, Single Dham. All from Haridwar or Dehradun. All inclusive. All trusted.
@@ -107,7 +107,7 @@ export default function PackagesPage() {
                   background:'var(--bg)', color:'var(--text)',
                   transition:'border-color .2s, background .2s',
                 }}
-                onFocus={e => { e.currentTarget.style.borderColor = 'var(--blue)'; e.currentTarget.style.background = '#fff'; }}
+                onFocus={e => { e.currentTarget.style.borderColor = 'var(--navy)'; e.currentTarget.style.background = '#fff'; }}
                 onBlur={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--bg)'; }}
               />
               {query && (
@@ -153,7 +153,7 @@ export default function PackagesPage() {
                     style={{
                       padding:'9px 18px', fontSize:13, fontWeight:600,
                       borderRadius:100, border:isActive ? '1.5px solid var(--blue)' : '1.5px solid var(--border)',
-                      background: isActive ? 'var(--blue)' : '#fff',
+                      background: isActive ? 'var(--navy)' : '#fff',
                       color: isActive ? '#fff' : 'var(--mid)',
                       cursor:'pointer', whiteSpace:'nowrap',
                       fontFamily:'var(--font)',
@@ -164,8 +164,8 @@ export default function PackagesPage() {
                     <span style={{
                       fontSize:11, fontWeight:600,
                       padding:'1px 7px', borderRadius:10,
-                      background: isActive ? 'rgba(255,255,255,0.25)' : 'var(--blue-light)',
-                      color: isActive ? '#fff' : 'var(--blue)',
+                      background: isActive ? 'rgba(255,255,255,0.25)' : 'var(--navy-light)',
+                      color: isActive ? '#fff' : 'var(--navy)',
                     }}>{count}</span>
                   </button>
                 );
