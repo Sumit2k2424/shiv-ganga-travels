@@ -269,7 +269,7 @@ export default function ChatBot() {
 
       {/* Chat window */}
       {open && (
-        <div style={{
+        <div className="chat-window" style={{
           position: 'fixed',
           bottom: 162, right: 24,
           zIndex: 997,

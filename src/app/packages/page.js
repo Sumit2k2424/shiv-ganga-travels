@@ -81,7 +81,7 @@ export default function PackagesPage() {
         <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 16px' }}>
 
           {/* Search + sort row */}
-          <div style={{
+          <div className="pkg-filter-row" style={{
             display:'flex', gap:12, padding:'14px 0 10px',
             flexWrap:'wrap', alignItems:'center',
           }}>

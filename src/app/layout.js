@@ -26,6 +26,12 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://images.unsplash.com"/>
         <link rel="dns-prefetch" href="https://images.pexels.com"/>
         <link rel="dns-prefetch" href="https://upload.wikimedia.org"/>
+        {/* Mobile SEO & PWA meta */}
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+        <meta name="apple-mobile-web-app-title" content="Shiv Ganga Travels"/>
+        <meta name="format-detection" content="telephone=yes"/>
         <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#0F2B5B"/><text x="20" y="28" font-size="20" font-weight="700" font-family="serif" fill="#E8920A" text-anchor="middle">ॐ</text></svg>`)}`}/>
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>

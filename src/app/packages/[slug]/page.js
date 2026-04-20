@@ -302,7 +302,7 @@ export default function PackageDetailPage({ params }) {
           </section>
 
           {/* Inclusions / Exclusions */}
-          <section style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:20 }}>
+          <section style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:16, marginBottom:20 }}>
             <div style={{ background:'#f0faf5', borderRadius:12, padding:18, border:'1px solid #bbf7d0' }}>
               <h3 style={{ fontWeight:700, fontSize:14, color:'#166534', marginBottom:12 }}>✅ Inclusions</h3>
               <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:6 }}>

@@ -206,7 +206,7 @@ export default function HomePage() {
             {/* Arrow */}
             <div style={{ width:0, height:0, borderTop:'38px solid transparent', borderBottom:'38px solid transparent', borderLeft:'20px solid var(--navy)', flexShrink:0 }} aria-hidden="true"/>
             {/* Chips */}
-            <div style={{ flex:1, display:'flex', alignItems:'center', overflowX:'auto', gap:0, padding:'0 4px' }}>
+            <div className="zero-comm-chips" style={{ flex:1, display:'flex', alignItems:'center', overflowX:'auto', gap:0, padding:'0 4px' }}>
               {[
                 {icon:'💸',text:'Pay us directly',sub:'No agency fees'},
                 {icon:'🤝',text:'We ARE the operator',sub:'15-year family business'},
@@ -223,7 +223,7 @@ export default function HomePage() {
               ))}
             </div>
             {/* Phone */}
-            <div style={{ flexShrink:0, padding:'0 22px', borderLeft:'1px solid var(--border)', display:'flex', alignItems:'center' }}>
+            <div className="zero-comm-phone" style={{ flexShrink:0, padding:'0 22px', borderLeft:'1px solid var(--border)', display:'flex', alignItems:'center' }}>
               <a href={`tel:${SITE.phone}`} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:2, textDecoration:'none' }}>
                 <span style={{ fontSize:18 }}>📞</span>
                 <span style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', whiteSpace:'nowrap' }}>{SITE.phone}</span>
@@ -301,7 +301,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0 48px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:32, alignItems:'center' }}>
+          <div className="why-split" style={{ display:'grid', gap:32, alignItems:'center' }}>
             {/* Left: copy */}
             <div>
               <span className="section-tag">What sets us apart</span>
@@ -329,7 +329,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Right: image block */}
-            <div style={{ position:'relative', borderRadius:'var(--r-xl)', overflow:'hidden', height:420 }}>
+            <div className="why-split-image" style={{ position:'relative', borderRadius:'var(--r-xl)', overflow:'hidden', height:420 }}>
               <div style={{
                 position:'absolute', inset:0,
                 backgroundImage:'url(https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=800)',
@@ -371,7 +371,7 @@ export default function HomePage() {
             <span className="section-tag">Simple & clear</span>
             <h2 className="section-title">Book in <em>4 Easy Steps</em></h2>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:20 }}>
+          <div className="steps-grid" style={{ display:'grid', gap:20 }}>
             {[
               {n:'01', icon:'💬', t:'Enquire',     d:'Call or WhatsApp us. Tell us your dates and group size.'},
               {n:'02', icon:'📋', t:'Customise',   d:'Review the itinerary. We adjust to your preferences.'},

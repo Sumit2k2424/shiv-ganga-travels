@@ -660,3 +660,313 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 .marquee-track:hover {
   animation-play-state: paused;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — comprehensive fixes for all breakpoints
+   Mobile-first approach: ≤ 640px small, ≤ 768px medium
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Base mobile resets ── */
+@media (max-width: 768px) {
+  :root { --section-y: 44px; }
+
+  body { font-size: 14px; }
+
+  .container { padding: 0 14px; }
+
+  .section-title { font-size: clamp(1.35rem, 5vw, 1.8rem); }
+  .section-subtitle { font-size: 13.5px; margin-bottom: 22px; }
+  .section-tag { font-size: 10px; }
+
+  /* Stack all 2-col grids */
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce section padding */
+  section[style*="padding:"] ,
+  section[style*="padding-top"] {
+    padding-top: 40px !important;
+    padding-bottom: 32px !important;
+  }
+}
+
+/* ── HERO ── */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 56px 14px 80px !important;
+    min-height: auto !important;
+  }
+  .hero-section h1 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem) !important;
+  }
+  .hero-trust-chips {
+    gap: 10px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* ── MARQUEE BANNER ── */
+@media (max-width: 640px) {
+  .marquee-track {
+    font-size: 11.5px !important;
+    animation-duration: 60s !important;
+  }
+}
+
+/* ── STATS BAR ── */
+@media (max-width: 640px) {
+  .stats-bar-inner {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .stats-bar-inner > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+}
+
+/* ── ZERO COMMISSION STRIP ── */
+.zero-comm-strip {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 76px;
+}
+@media (max-width: 860px) {
+  .zero-comm-strip {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+  .zero-comm-label {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px !important;
+  }
+  .zero-comm-arrow { display: none !important; }
+  .zero-comm-chips {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    overflow: visible !important;
+    padding: 8px 0 !important;
+  }
+  .zero-comm-chip {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 12px 14px !important;
+  }
+  .zero-comm-phone {
+    width: 100%;
+    border-left: none !important;
+    border-top: 1px solid var(--border) !important;
+    padding: 12px 20px !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+  }
+}
+
+/* ── DHAM TILES ── */
+@media (max-width: 500px) {
+  .dham-circle { width: 62px !important; height: 62px !important; font-size: 26px !important; }
+  .dham-tile { min-width: 72px !important; }
+  .dham-tile > div:last-child > div:first-child { font-size: 12px !important; }
+}
+
+/* ── PACKAGE CARDS (horizontal scroll) ── */
+@media (max-width: 640px) {
+  .hscroll { padding: 4px 14px 16px !important; gap: 12px !important; }
+  .pkg-card { min-width: 220px !important; flex: 0 0 220px !important; }
+}
+
+/* ── WHY CHOOSE US SPLIT ── */
+.why-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .why-split {
+    grid-template-columns: 1fr !important;
+  }
+  .why-split-image {
+    height: 260px !important;
+    order: -1;
+  }
+}
+
+/* ── JOURNEY STEPS ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+@media (max-width: 640px) {
+  .steps-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  .steps-grid .step-connector { display: none !important; }
+}
+@media (max-width: 360px) {
+  .steps-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── PROMO BANNER STRIP ── */
+@media (max-width: 640px) {
+  .promo-card { flex: 0 0 200px !important; height: 96px !important; padding: 0 16px !important; }
+  .promo-card > div:first-child { font-size: 13px !important; }
+}
+
+/* ── FOOTER ── */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 32px 24px;
+}
+@media (max-width: 860px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 20px !important; }
+}
+@media (max-width: 500px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .footer-bottom { flex-direction: column !important; text-align: center !important; }
+}
+
+/* ── PACKAGE DETAIL PAGE ── */
+@media (max-width: 860px) {
+  .detail-grid {
+    grid-template-columns: 1fr !important;
+    padding-bottom: 100px !important;
+  }
+  .detail-grid > div:last-child {
+    position: static !important;
+    order: -1;
+  }
+  .detail-grid > div:last-child > div[style*="position:sticky"] {
+    position: static !important;
+  }
+}
+@media (max-width: 640px) {
+  .detail-chips { flex-wrap: wrap !important; }
+  .detail-highlights { font-size: 12.5px !important; }
+}
+
+/* ── PACKAGES LISTING PAGE ── */
+@media (max-width: 640px) {
+  .pkg-filter-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .pkg-filter-row input,
+  .pkg-filter-row select {
+    width: 100% !important;
+  }
+}
+
+/* ── CONTACT PAGE ── */
+.contact-grid-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .contact-grid-inner { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 500px) {
+  .contact-form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── ABOUT PAGE ── */
+@media (max-width: 640px) {
+  .about-quote {
+    padding: 14px 16px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+/* ── LEAD POPUP ── */
+@media (max-width: 500px) {
+  .lead-popup-form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── CHAT BOT ── */
+@media (max-width: 480px) {
+  .chat-window {
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 70vh !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+}
+
+/* ── HERO SEARCH WIDGET ── */
+@media (max-width: 640px) {
+  .hero-search-form {
+    flex-direction: column !important;
+  }
+  .hero-search-form > div,
+  .hero-search-form > button {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+
+/* ── TESTIMONIAL CARDS ── */
+@media (max-width: 640px) {
+  .testimonial-card {
+    min-width: 280px !important;
+    flex: 0 0 280px !important;
+    padding: 22px 18px !important;
+  }
+}
+
+/* ── CATEGORY PACKAGE GRID ── */
+@media (max-width: 640px) {
+  .cat-pkg-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── STICKY BOOKING BAR (mobile) ── */
+@media (max-width: 768px) {
+  .sticky-book-bar {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+  .sticky-book-bar a,
+  .sticky-book-bar span {
+    font-size: 12px !important;
+    padding: 9px 12px !important;
+  }
+}
+
+/* ── GENERAL TYPOGRAPHY MOBILE ── */
+@media (max-width: 640px) {
+  .display-title { letter-spacing: -0.02em !important; }
+  p { line-height: 1.65 !important; }
+  h1, h2, h3 { word-break: break-word; }
+}
+
+/* ── PREVENT HORIZONTAL OVERFLOW ── */
+@media (max-width: 768px) {
+  main { overflow-x: hidden; }
+  .hero-wave svg { height: 36px !important; }
+}

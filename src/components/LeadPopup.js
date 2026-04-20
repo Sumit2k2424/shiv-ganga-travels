@@ -168,7 +168,7 @@ export default function LeadPopup() {
 
             {/* Form */}
             <form onSubmit={handleSubmit} style={{ padding: '22px 24px 24px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
+              <div className="lead-popup-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                 <div>
                   <label style={labelStyle}>Full Name <span style={{ color: 'var(--gold)' }}>*</span></label>
                   <input
@@ -199,7 +199,7 @@ export default function LeadPopup() {
                 </select>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+              <div className="lead-popup-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
                 <div>
                   <label style={labelStyle}>Travel Month</label>
                   <select name="month" value={form.month} onChange={handleChange} style={inputStyle}>

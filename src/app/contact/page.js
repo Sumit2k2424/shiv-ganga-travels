@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div style={{ maxWidth:1100, margin:'0 auto', display:'grid', gridTemplateColumns:'1fr', gap:24 }}>
 
           {/* Quick contact methods — 4 cards */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:14 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
               { icon:'📞', label:'Phone', value:SITE.phone, href:`tel:${SITE.phone}`, sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
@@ -87,8 +87,7 @@ export default function ContactPage() {
           </div>
 
           {/* Main content: form + side panel */}
-          <div style={{ display:'grid', gridTemplateColumns:'1.4fr 1fr', gap:20, alignItems:'start' }}
-               className="contact-grid">
+          <div className="contact-grid-inner" style={{ display:'grid', gap:20, alignItems:'start' }}>
             <style dangerouslySetInnerHTML={{ __html: `
               @media (max-width: 860px) {
                 .contact-grid { grid-template-columns: 1fr !important; }
@@ -290,7 +289,7 @@ function FormField({ label, required, children }) {
 
 function FormRow({ children }) {
   return (
-    <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+    <div className="contact-form-row" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
       {children}
     </div>
   );

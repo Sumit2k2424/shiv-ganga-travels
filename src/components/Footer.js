@@ -38,7 +38,7 @@ export default function Footer() {
 
       {/* Brand + links grid */}
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'40px 20px 32px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1.3fr repeat(3, 1fr)', gap:'32px 24px' }}>
+        <div className="footer-grid" style={{ display:'grid', gap:'32px 24px' }}>
 
           {/* Brand col */}
           <div>
@@ -90,7 +90,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop:'1px solid rgba(255,255,255,0.07)', maxWidth:'var(--container)', margin:'0 auto', padding:'16px 20px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
+      <div className="footer-bottom" style={{ borderTop:'1px solid rgba(255,255,255,0.07)', maxWidth:'var(--container)', margin:'0 auto', padding:'16px 20px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
         <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>
           © {new Date().getFullYear()} {SITE.name}. All rights reserved. Made with ❤️ in Haridwar.
         </span>

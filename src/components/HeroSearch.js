@@ -73,8 +73,8 @@ export default function HeroSearch() {
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSearch} style={{ padding:'20px 24px', display:'flex', gap:14, flexWrap:'wrap', alignItems:'flex-end' }}>
-        <div style={{ flex:'1 1 160px', minWidth:140 }}>
+      <form onSubmit={handleSearch} className="hero-search-form" style={{ padding:'20px 24px', display:'flex', gap:14, flexWrap:'wrap', alignItems:'flex-end' }}>
+        <div style={{ flex:'1 1 130px', minWidth:110 }}>
           <label style={labelStyle}>Travel Month</label>
           <select value={month} onChange={e=>setMonth(e.target.value)} style={selectStyle}
             onFocus={e=>{e.target.style.borderColor='var(--navy)';e.target.style.boxShadow='0 0 0 3px rgba(15,43,91,0.1)'}}
@@ -83,7 +83,7 @@ export default function HeroSearch() {
             {MONTHS.map(m=><option key={m}>{m}</option>)}
           </select>
         </div>
-        <div style={{ flex:'1 1 140px', minWidth:120 }}>
+        <div style={{ flex:'1 1 130px', minWidth:110 }}>
           <label style={labelStyle}>Pilgrims</label>
           <select value={pilgrims} onChange={e=>setPilgrims(e.target.value)} style={selectStyle}
             onFocus={e=>{e.target.style.borderColor='var(--navy)';e.target.style.boxShadow='0 0 0 3px rgba(15,43,91,0.1)'}}
@@ -93,7 +93,7 @@ export default function HeroSearch() {
             ))}
           </select>
         </div>
-        <div style={{ flex:'1 1 160px', minWidth:140 }}>
+        <div style={{ flex:'1 1 130px', minWidth:110 }}>
           <label style={labelStyle}>Package Type</label>
           <div style={{ ...selectStyle, background:'var(--navy-light)', color:'var(--navy)', fontWeight:600, cursor:'default', display:'flex', alignItems:'center' }}>
             {TABS.find(t=>t.id===tab)?.label}
