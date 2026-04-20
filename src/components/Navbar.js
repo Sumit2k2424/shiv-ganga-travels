@@ -83,7 +83,7 @@ export default function Navbar() {
       }}>
         <div style={{
           display: 'flex',
-          animation: 'marqueeScroll 28s linear infinite',
+          animation: 'marqueeScroll 55s linear infinite',
           whiteSpace: 'nowrap',
           willChange: 'transform',
         }}>
