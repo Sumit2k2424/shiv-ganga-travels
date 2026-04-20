@@ -32,8 +32,9 @@ const PKG_LINKS = [
   { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',            icon:'🏔️' },
   { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', icon:'🕌' },
   { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         icon:'🙏' },
-  { label:'Helicopter Tours', href:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun', sub:'All 4 dhams in 6 days — VIP experience', icon:'🚁' },
-  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 11 packages',        icon:'📋' },
+  { label:'Helicopter Tours', href:'/packages/helicopter',  sub:'All 4 dhams in 6 days — VIP experience',  icon:'🚁' },
+  { label:'Uttarakhand Tours',href:'/packages/uttarakhand', sub:'Hills, adventure, wildlife & more',        icon:'🌿' },
+  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        icon:'📋' },
 ];
 
 function MobileAccordion({ label, children }) {
@@ -171,11 +172,12 @@ export default function Navbar() {
 
             {/* Plain links */}
             {[
-              { label:'Char Dham',  href:'/packages/char-dham' },
-              { label:'Do Dham',    href:'/packages/do-dham' },
-              { label:'Helicopter', href:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
-              { label:'About',      href:'/about' },
-              { label:'Contact',    href:'/contact' },
+              { label:'Char Dham',    href:'/packages/char-dham' },
+              { label:'Do Dham',      href:'/packages/do-dham' },
+              { label:'Helicopter',   href:'/packages/helicopter' },
+              { label:'Uttarakhand',  href:'/packages/uttarakhand' },
+              { label:'About',        href:'/about' },
+              { label:'Contact',      href:'/contact' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>
             ))}
@@ -234,7 +236,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </MobileAccordion>
-            {[{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
+            {[{label:'About',href:'/about'},{label:'Contact',href:'/contact'},{label:'All Packages',href:'/packages'}].map(l => (
               <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
                 style={{ display:'block', padding:'15px 20px', fontSize:14, color:'var(--text)', borderBottom:'1px solid var(--border)', textDecoration:'none' }}>
                 {l.label}

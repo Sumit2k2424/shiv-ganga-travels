@@ -1,10 +1,26 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getPackageBySlug, getAllSlugs, SITE, PACKAGES } from '@/data/packages';
+import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
 
-export async function generateStaticParams() { return getAllSlugs(); }
+const CATEGORY_SLUGS = Object.keys(CATEGORIES);
+
+export async function generateStaticParams() {
+  // Include both individual package slugs AND category slugs
+  const pkgSlugs = getAllSlugs();
+  const catSlugs = CATEGORY_SLUGS.map(s => ({ slug: s }));
+  return [...pkgSlugs, ...catSlugs];
+}
 
 export async function generateMetadata({ params }) {
+  // Category page metadata
+  if (CATEGORY_SLUGS.includes(params.slug)) {
+    const cat = CATEGORIES[params.slug];
+    const count = PACKAGES.filter(p => p.category === params.slug).length;
+    return {
+      title: `${cat.name} Packages 2025 from Haridwar — ${SITE.name}`,
+      description: `Book ${cat.name} packages from Haridwar. ${count} curated packages with expert guides, VIP darshan, all-inclusive. Trusted since 2010.`,
+    };
+  }
   const pkg = getPackageBySlug(params.slug);
   if (!pkg) return {};
   return {
@@ -84,6 +100,110 @@ function Breadcrumb({ pkg }) {
 }
 
 export default function PackageDetailPage({ params }) {
+  // ── CATEGORY PAGE (e.g. /packages/char-dham) ──────────────────
+  if (CATEGORY_SLUGS.includes(params.slug)) {
+    const cat  = CATEGORIES[params.slug];
+    const pkgs = PACKAGES.filter(p => p.category === params.slug);
+    return (
+      <>
+        {/* Hero */}
+        <section style={{ background:'linear-gradient(145deg, var(--navy) 0%, var(--navy-mid) 60%, var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
+          <div style={{ maxWidth:720, margin:'0 auto' }}>
+            <span style={{ fontSize:44, display:'block', marginBottom:14 }}>{cat.icon}</span>
+            <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:12 }}>
+              {cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2025</em>
+            </h1>
+            <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>
+              {pkgs.length} curated packages · All from Haridwar · Expert guides · VIP darshan · Zero commission
+            </p>
+          </div>
+        </section>
+
+        {/* Breadcrumb */}
+        <div style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+          <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
+            <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
+            <span>›</span>
+            <Link href="/packages" style={{ color:'var(--navy)', textDecoration:'none' }}>All Packages</Link>
+            <span>›</span>
+            <span style={{ color:'var(--text)' }}>{cat.name}</span>
+          </div>
+        </div>
+
+        {/* Package grid */}
+        <section style={{ background:'var(--bg)', padding:'40px 20px 60px' }}>
+          <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+            <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:24 }}>
+              {pkgs.length} package{pkgs.length !== 1 ? 's' : ''} found
+            </p>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(290px, 1fr))', gap:20 }}>
+              {pkgs.map(p => {
+                const sav = p.price.original - p.price.discounted;
+                return (
+                  <Link key={p.slug} href={`/packages/${p.slug}`} className="pkg-card"
+                    style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column' }}>
+                    <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0 }}>
+                      <div className="card-img" style={{
+                        position:'absolute', inset:0,
+                        backgroundImage: p.photo
+                          ? `linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%),url('${p.photo}')`
+                          : 'linear-gradient(160deg,var(--navy),var(--teal))',
+                        backgroundSize:'cover', backgroundPosition:'center',
+                      }}/>
+                      {p.badge && <span className="badge badge-gold" style={{ position:'absolute', top:12, left:12, zIndex:2 }}>{p.badge}</span>}
+                      <span style={{ position:'absolute', top:12, right:12, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:11, fontWeight:600, padding:'3px 10px', borderRadius:6, zIndex:2 }}>
+                        {p.duration.nights}N/{p.duration.days}D
+                      </span>
+                      <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'12px 16px', zIndex:2 }}>
+                        <h2 style={{ color:'#fff', fontWeight:700, fontSize:15, lineHeight:1.3, textShadow:'0 1px 4px rgba(0,0,0,0.6)' }}>{p.name}</h2>
+                      </div>
+                    </div>
+                    <div style={{ padding:'14px 16px', flex:1, display:'flex', flexDirection:'column', gap:10 }}>
+                      <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
+                        <span className="chip">📍 {p.startCity}</span>
+                        <span className="chip">🚌 {p.transport}</span>
+                        <span className="chip">🎯 {p.difficulty}</span>
+                      </div>
+                      <ul style={{ listStyle:'none', flex:1 }}>
+                        {p.highlights.slice(0,3).map((h,i) => (
+                          <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', paddingLeft:16, position:'relative', lineHeight:1.5, marginBottom:4 }}>
+                            <span style={{ position:'absolute', left:0, color:'var(--teal)', fontWeight:700, fontSize:11 }}>✓</span>{h}
+                          </li>
+                        ))}
+                      </ul>
+                      <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', paddingTop:10, borderTop:'1px solid var(--border)' }}>
+                        <div>
+                          <div style={{ fontSize:11, color:'var(--text-muted)', textDecoration:'line-through' }}>₹{p.price.original.toLocaleString('en-IN')}</div>
+                          <div style={{ fontWeight:800, fontSize:22, color:'var(--navy)', lineHeight:1, letterSpacing:'-0.03em', fontFamily:'var(--font-display)' }}>
+                            ₹{p.price.discounted.toLocaleString('en-IN')}
+                          </div>
+                          {sav > 0 && <div style={{ fontSize:11, color:'var(--green)', fontWeight:600, marginTop:2 }}>Save ₹{sav.toLocaleString('en-IN')}</div>}
+                        </div>
+                        <span className="btn btn-primary" style={{ fontSize:12, padding:'8px 16px' }}>View Details →</span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* CTA */}
+            <div style={{ marginTop:48, padding:'28px 24px', background:'#fff', borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)', textAlign:'center' }}>
+              <p style={{ fontSize:16, fontWeight:600, color:'var(--text)', marginBottom:6 }}>Can&apos;t find the right dates or group size?</p>
+              <p style={{ fontSize:13.5, color:'var(--text-muted)', marginBottom:18 }}>We create custom itineraries — any dates, any group, any budget.</p>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I need a custom ${cat.name} package.`)}`}
+                 target="_blank" rel="noopener noreferrer"
+                 style={{ background:'#25D366', color:'#fff', padding:'12px 28px', borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:7 }}>
+                💬 Request Custom Package
+              </a>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  // ── INDIVIDUAL PACKAGE DETAIL ──────────────────────────────────
   const pkg = getPackageBySlug(params.slug);
   if (!pkg) notFound();
 

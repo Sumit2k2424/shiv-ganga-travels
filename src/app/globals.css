@@ -79,7 +79,6 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 img, svg { display: block; max-width: 100%; }
@@ -316,7 +315,8 @@ button { font-family: var(--font); }
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 4px 2px 20px;
+  overflow-y: visible;
+  padding: 4px 20px 20px 2px;   /* right padding so last card is fully visible */
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x proximity;
