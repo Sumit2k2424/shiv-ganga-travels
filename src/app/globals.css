@@ -415,7 +415,7 @@ button { font-family: var(--font); }
 ═══════════════════════════════════════════════════════════════ */
 .wa-float {
   position: fixed;
-  bottom: 24px;
+  bottom: 156px;
   right: 24px;
   z-index: 999;
   width: 56px;
@@ -577,8 +577,7 @@ button { font-family: var(--font); }
     box-shadow: 0 -4px 20px rgba(15,43,91,0.1);
     align-items: center;
   }
-  .wa-float { bottom: 76px; }
-}
+  .wa-float { bottom: 76px; }}
 
 /* ═══════════════════════════════════════════════════════════════
    UTILITIES & RESPONSIVE

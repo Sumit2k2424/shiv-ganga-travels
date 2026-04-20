@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LeadPopup from '@/components/LeadPopup';
+import ChatBot from '@/components/ChatBot';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <Footer/>
         <WhatsAppButton/>
         <LeadPopup/>
+        <ChatBot/>
       </body>
     </html>
   );
