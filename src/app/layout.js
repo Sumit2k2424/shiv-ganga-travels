@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import LeadPopup from '@/components/LeadPopup';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <main style={{ flex:1 }}>{children}</main>
         <Footer/>
         <WhatsAppButton/>
+        <LeadPopup/>
       </body>
     </html>
   );

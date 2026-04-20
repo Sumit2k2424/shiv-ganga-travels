@@ -5,6 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import CounterStat from '@/components/CounterStat';
 import FAQAccordion from '@/components/FAQAccordion';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
   title: `${SITE.name} — Char Dham Yatra Packages 2025 from Haridwar`,
@@ -12,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: `${SITE.name} — Char Dham Yatra 2025`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Trusted since 2010.',
-    images: ['https://images.unsplash.com/photo-1591189863345-9db058f9f8ec?auto=format&fit=crop&w=1200&q=70'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
   },
 };
 
@@ -110,7 +111,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <section style={{
         position:'relative', minHeight:'620px',
-        backgroundImage:'linear-gradient(160deg,rgba(15,43,91,0.88) 0%,rgba(15,43,91,0.65) 45%,rgba(11,123,139,0.75) 100%), url(https://images.unsplash.com/photo-1591189863345-9db058f9f8ec?auto=format&fit=crop&w=1600&q=60)',
+        backgroundImage:'linear-gradient(160deg,rgba(10,28,60,0.88) 0%,rgba(10,28,60,0.65) 45%,rgba(11,80,100,0.72) 100%), url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG)',
         backgroundSize:'cover', backgroundPosition:'center',
         display:'flex', alignItems:'center',
         padding:'72px 20px 100px', overflow:'hidden',
@@ -291,7 +292,7 @@ export default function HomePage() {
       <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'8px 0 40px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <RowHeader eyebrow="Most Popular" title={<><em>Char Dham</em> Yatra Packages</>} sub="All four dhams in one divine journey — from 5 days to 15 days." href="/packages/char-dham"/>
-          <div className="hscroll">{charDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</div>
+          <AutoScrollRow>{charDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
         </div>
       </ScrollReveal>
 
@@ -357,7 +358,7 @@ export default function HomePage() {
       <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <RowHeader eyebrow="Two Dhams · One Journey" title={<><em>Do Dham</em> Yatra Packages</>} sub="Perfect when time is limited but devotion is full." href="/packages/do-dham"/>
-          <div className="hscroll">{doDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</div>
+          <AutoScrollRow>{doDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
         </div>
       </ScrollReveal>
 
@@ -399,7 +400,7 @@ export default function HomePage() {
       <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <RowHeader eyebrow="Focused · Affordable" title={<><em>Single Dham</em> Packages</>} sub="One sacred shrine. Deeply meaningful. From ₹5,299." href="/packages/single-dham"/>
-          <div className="hscroll">{singleDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</div>
+          <AutoScrollRow>{singleDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
         </div>
       </ScrollReveal>
 
