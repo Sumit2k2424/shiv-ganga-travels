@@ -228,9 +228,10 @@ export default function ChatBot() {
       <button
         onClick={() => setOpen(o => !o)}
         aria-label={open ? 'Close chat' : 'Open chat assistant'}
+        className="chat-btn-float"
         style={{
           position: 'fixed',
-          bottom: 96, right: 24,
+          bottom: 24, right: 24,
           zIndex: 998,
           width: 54, height: 54,
           borderRadius: '50%',
@@ -240,6 +241,7 @@ export default function ChatBot() {
           boxShadow: '0 4px 18px rgba(15,43,91,0.35)',
           animation: open ? 'none' : 'botPulse 3s ease-in-out infinite',
           transition: 'transform .2s',
+          /* On mobile (≤768px) override via CSS: bottom: 74px */
         }}
         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
         onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -271,7 +273,7 @@ export default function ChatBot() {
       {open && (
         <div className="chat-window" style={{
           position: 'fixed',
-          bottom: 162, right: 24,
+          bottom: 90, right: 24,
           zIndex: 997,
           width: 'min(380px, calc(100vw - 32px))',
           height: 'min(560px, calc(100vh - 180px))',

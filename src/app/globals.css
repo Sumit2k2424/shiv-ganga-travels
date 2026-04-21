@@ -415,7 +415,7 @@ button { font-family: var(--font); }
 ═══════════════════════════════════════════════════════════════ */
 .wa-float {
   position: fixed;
-  bottom: 156px;
+  bottom: 96px;   /* sits above the chat button on desktop */
   right: 24px;
   z-index: 999;
   width: 56px;
@@ -577,7 +577,18 @@ button { font-family: var(--font); }
     box-shadow: 0 -4px 20px rgba(15,43,91,0.1);
     align-items: center;
   }
-  .wa-float { bottom: 76px; }}
+  /* Stacking order bottom → top:
+     sticky bar  = 0–64px
+     chat button = 74px  (set in ChatBot.js inline)
+     whatsapp    = 136px (here)
+  */
+  .wa-float {
+    bottom: 136px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════
    UTILITIES & RESPONSIVE
@@ -603,12 +614,6 @@ button { font-family: var(--font); }
 }
 @media (max-width: 767px) {
   .md\:flex, .md\:block, .md\:inline-block { display: none !important; }
-}
-
-/* ── Marquee / Announcement banner ── */
-@keyframes marqueeScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 
 /* ── Dropdown ── */
@@ -655,7 +660,7 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
   display: flex;
   white-space: nowrap;
   will-change: transform;
-  animation: marqueeScroll 90s linear infinite;
+  animation: marqueeScroll 60s linear infinite;  /* desktop: comfortable reading speed */
 }
 .marquee-track:hover {
   animation-play-state: paused;
@@ -969,4 +974,15 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 @media (max-width: 768px) {
   main { overflow-x: hidden; }
   .hero-wave svg { height: 36px !important; }
+}
+
+/* ── Chat button mobile position ── */
+@media (max-width: 768px) {
+  /* Chat button sits at 74px — just above the 64px sticky bar */
+  .chat-btn-float {
+    bottom: 74px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
 }
