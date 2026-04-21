@@ -12,7 +12,6 @@ export default function sitemap() {
     // High-value SEO landing pages
     { url: `${base}/char-dham-yatra-2025`,            lastModified: now, priority: 0.95, changeFrequency: 'weekly'   },
     { url: `${base}/kedarnath-yatra`,                 lastModified: now, priority: 0.90, changeFrequency: 'weekly'   },
-    { url: `${base}/badrinath-yatra`,                 lastModified: now, priority: 0.88, changeFrequency: 'weekly'   },
   ];
 
   // Category pages
