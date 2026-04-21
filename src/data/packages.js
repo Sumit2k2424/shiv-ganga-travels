@@ -12,7 +12,7 @@ export const SITE = {
   email      : 'info@shivgangatravels.com',
   address    : 'Near Har Ki Pauri, Haridwar, Uttarakhand — 249401',
   established: 2010,
-  baseUrl    : 'https://www.shivgangatravels.com',
+  baseUrl    : 'https://shiv-ganga-travels.vercel.app',
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────
