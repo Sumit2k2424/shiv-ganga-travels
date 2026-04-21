@@ -65,6 +65,10 @@ export const metadata = {
     languages: { 'en-IN': SITE.baseUrl },
   },
 
+  verification: {
+    google: 'google2e29cf8ed6b82236',
+  },
+
   category: 'travel',
   classification: 'Travel & Tourism',
 };
