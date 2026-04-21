@@ -26,8 +26,23 @@ export async function generateMetadata({ params }) {
   return {
     title: pkg.metaTitle,
     description: pkg.metaDesc,
-    openGraph: { title: pkg.metaTitle, description: pkg.metaDesc, type: 'website' },
+    keywords: pkg.tags || [],
     alternates: { canonical: `${SITE.baseUrl}/packages/${pkg.slug}` },
+    openGraph: {
+      title: pkg.metaTitle,
+      description: pkg.metaDesc,
+      type: 'website',
+      url: `${SITE.baseUrl}/packages/${pkg.slug}`,
+      siteName: SITE.name,
+      locale: 'en_IN',
+      images: pkg.photo ? [{ url: pkg.photo, width: 900, height: 560, alt: pkg.name }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pkg.metaTitle,
+      description: pkg.metaDesc,
+      images: pkg.photo ? [pkg.photo] : [],
+    },
   };
 }
 
@@ -35,10 +50,13 @@ export async function generateMetadata({ params }) {
 function Schemas({ pkg }) {
   const trip = {
     '@context':'https://schema.org','@type':'TouristTrip',
+    '@id': `${SITE.baseUrl}/packages/${pkg.slug}#trip`,
     name: pkg.name,
     description: pkg.metaDesc,
-    touristType: 'Pilgrim',
+    touristType: ['Pilgrim','ReligiousTourist'],
     url: `${SITE.baseUrl}/packages/${pkg.slug}`,
+    image: pkg.photo || '',
+    duration: `P${pkg.duration.days}D`,
     itinerary: {
       '@type':'ItemList',
       itemListElement: pkg.itinerary.map((d,i) => ({
@@ -48,11 +66,28 @@ function Schemas({ pkg }) {
     },
     offers: {
       '@type':'Offer',
-      price: pkg.price.discounted, priceCurrency:'INR',
+      price: pkg.price.discounted,
+      priceCurrency:'INR',
+      priceValidUntil: '2025-10-31',
       availability:'https://schema.org/InStock',
-      validFrom:'2025-05-01', validThrough:'2025-10-31',
+      validFrom:'2025-04-01',
+      validThrough:'2025-10-31',
+      seller: { '@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone: SITE.phone },
+      url: `${SITE.baseUrl}/packages/${pkg.slug}`,
     },
-    provider: { '@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl },
+    provider: {
+      '@type':'TravelAgency',
+      '@id': `${SITE.baseUrl}/#organization`,
+      name:SITE.name,
+      url:SITE.baseUrl,
+      telephone: SITE.phone,
+    },
+    startLocation: {
+      '@type': 'Place',
+      name: pkg.startCity,
+      address: { '@type': 'PostalAddress', addressLocality: pkg.startCity, addressRegion: 'Uttarakhand', addressCountry: 'IN' },
+    },
+    keywords: (pkg.tags || []).join(', '),
   };
 
   const faq = pkg.faqs?.length ? {
