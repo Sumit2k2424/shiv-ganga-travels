@@ -122,7 +122,7 @@ export default function ContactPage() {
                 </FormRow>
 
                 <FormField label="Email Address">
-                  <input type="email" name="email" placeholder="you@example.com" style={inputStyle}/>
+                  <input type="email" name="email" placeholder="sumitmishra2k@gmail.com" style={inputStyle}/>
                 </FormField>
 
                 <FormField label="Package Interested In">

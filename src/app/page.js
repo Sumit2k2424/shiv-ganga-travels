@@ -500,7 +500,7 @@ export default function HomePage() {
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.1)', paddingTop:32 }}>
             <p style={{ color:'rgba(255,255,255,0.6)', fontSize:13, marginBottom:14 }}>📬 Get yatra updates, early-bird offers & pilgrimage insights</p>
             <form action={`https://wa.me/${SITE.whatsapp}`} target="_blank" style={{ display:'flex', gap:8, maxWidth:400, margin:'0 auto', flexWrap:'wrap' }}>
-              <input type="email" placeholder="your@email.com" className="newsletter-input" required/>
+              <input type="email" placeholder="sumitmishra2k@gmail.com" className="newsletter-input" required/>
               <button type="submit" className="btn btn-primary" style={{ flexShrink:0 }}>Subscribe</button>
             </form>
           </div>
