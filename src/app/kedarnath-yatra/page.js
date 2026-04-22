@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra 2026 — Packages, Trek Guide, Pony & Helicopter | Shiv Ganga Travels',
-  description: 'Book Kedarnath Yatra 2026 from Haridwar. ₹6,499/person. 16km trek details, pony, palki & helicopter options, temple timings, what to carry. Expert Garhwali guides.',
-  keywords: ['Kedarnath Yatra 2026','Kedarnath package 2026','Kedarnath Yatra from Haridwar','Kedarnath trek','Kedarnath helicopter booking','Kedarnath pony booking','Kedarnath temple opening 2026','Kedarnath yatra package price'],
+  title: 'Kedarnath Yatra 2025 — Packages, Trek Guide, Pony & Helicopter | Shiv Ganga Travels',
+  description: 'Book Kedarnath Yatra 2025 from Haridwar. ₹6,499/person. 16km trek details, pony, palki & helicopter options, temple timings, what to carry. Expert Garhwali guides.',
+  keywords: ['Kedarnath Yatra 2025','Kedarnath package 2025','Kedarnath Yatra from Haridwar','Kedarnath trek','Kedarnath helicopter booking','Kedarnath pony booking','Kedarnath temple opening 2025','Kedarnath yatra package price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
-    title: 'Kedarnath Yatra 2026 — Complete Package & Guide',
+    title: 'Kedarnath Yatra 2025 — Complete Package & Guide',
     description: 'Book Kedarnath Yatra from Haridwar ₹6,499. 16km trek guide, pony, palki, helicopter options. Trusted since 2010.',
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
@@ -27,7 +27,7 @@ export default function KedarnathYatra() {
         <div style={{ maxWidth:800, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Sacred Jyotirlinga · 3,583m</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:16 }}>
-            Kedarnath Yatra 2026 — Complete Guide & Packages
+            Kedarnath Yatra 2025 — Complete Guide & Packages
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
             Lord Shiva's sacred abode in the Garhwal Himalayas<br/>Packages from <strong style={{ color:'#FFD166' }}>₹6,499</strong> · Trek · Pony · Helicopter options
@@ -94,11 +94,11 @@ export default function KedarnathYatra() {
 
         {/* CTA */}
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Yatra 2026</h3>
+          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Yatra 2025</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary in 2 hours. Zero commission. ₹6,499/person all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <Link href="/packages/kedarnath-yatra-package-3n-4d-haridwar" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>View Package</Link>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2025.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           </div>
         </div>

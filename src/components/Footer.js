@@ -4,9 +4,9 @@ import { SITE } from '@/data/packages';
 const COLS = [
   { heading:'Char Dham Packages', links:[
     {l:'Classic 10N/11D',   h:'/packages/char-dham-yatra-10n-11d-haridwar'},
-    {l:'Deluxe 11N/12D',    h:'/packages/char-dham-yatra-11n-12d-haridwar'},
+    {l:'Deluxe 11N/12D',    h:'/packages/char-dham-yatra-deluxe-11n-12d-haridwar'},
     {l:'Helicopter 5N/6D',  h:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun'},
-    {l:'Senior Special 12N',h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
+    {l:'Senior Special 14N',h:'/packages/char-dham-yatra-senior-citizen-14n-15d'},
   ]},
   { heading:'Do & Single Dham', links:[
     {l:'Kedarnath–Badrinath',h:'/packages/kedarnath-badrinath-do-dham-5n-6d'},
@@ -32,7 +32,7 @@ export default function Footer() {
       {/* Gold strip */}
       <div style={{ background:'var(--gold)', padding:'11px 20px', textAlign:'center' }}>
         <span style={{ color:'#fff', fontWeight:600, fontSize:13 }}>
-          ✦ Season 2026 Now Open — May–June & September–October · Book Early for Best Availability
+          ✦ Season 2025 Now Open — May–June & September–October · Book Early for Best Availability
         </span>
       </div>
 

@@ -8,10 +8,10 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
-  title: `${SITE.name} — Char Dham Yatra Packages 2026 from Haridwar`,
+  title: `${SITE.name} — Char Dham Yatra Packages 2025 from Haridwar`,
   description: 'Book Char Dham, Do Dham & Single Dham Yatra packages from Haridwar. Zero commission, VIP darshan, expert guides, all-inclusive. Trusted since 2010 by 50,000+ pilgrims.',
   openGraph: {
-    title: `${SITE.name} — Char Dham Yatra 2026`,
+    title: `${SITE.name} — Char Dham Yatra 2025`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Trusted since 2010.',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
   },
@@ -132,7 +132,7 @@ export default function HomePage() {
               marginBottom:22,
             }}>
               <span style={{ width:6, height:6, background:'#FFD166', borderRadius:'50%', animation:'blink 2s infinite' }}/>
-              Char Dham Yatra Specialist · Season 2026 Open
+              Char Dham Yatra Specialist · Season 2025 Open
             </div>
 
             {/* Hero headline */}
@@ -479,7 +479,7 @@ export default function HomePage() {
 
         <div style={{ maxWidth:760, margin:'0 auto', position:'relative', zIndex:1 }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:20, border:'1px solid rgba(232,146,10,0.3)' }}>
-            Season 2026 · Limited seats per batch
+            Season 2025 · Limited seats per batch
           </span>
           <h2 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:16 }}>
             Your Sacred Journey <em style={{ color:'#FFD166' }}>Awaits</em>
@@ -491,7 +491,7 @@ export default function HomePage() {
             <a href={`tel:${SITE.phone}`} style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'var(--shadow-lg)', transition:'transform var(--t)' }}>
               📞 {SITE.phone}
             </a>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2025.')}`} target="_blank" rel="noopener noreferrer"
                style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'0 4px 20px rgba(37,211,102,0.4)' }}>
               💬 WhatsApp Us Now
             </a>

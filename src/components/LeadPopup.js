@@ -5,8 +5,8 @@ import { SITE } from '@/data/packages';
 const STORAGE_KEY = 'sgt_popup_shown';
 
 const MONTHS = [
-  'May 2026','June 2026','July 2026','August 2026',
-  'September 2026','October 2026','Not decided yet',
+  'May 2025','June 2025','July 2025','August 2025',
+  'September 2025','October 2025','Not decided yet',
 ];
 
 const PACKAGES_LIST = [

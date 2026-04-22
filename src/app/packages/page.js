@@ -58,7 +58,7 @@ export default function PackagesPage() {
             padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
             border:'1px solid rgba(6,182,212,0.3)',
           }}>
-            Complete Catalogue · 2026 Season
+            Complete Catalogue · 2025 Season
           </span>
           <h1 className="font-display" style={{
             color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3.2rem)',

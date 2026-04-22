@@ -57,14 +57,11 @@ export default function Blog() {
             {POSTS.map(post => (
               <Link key={post.slug} href={`/blog/${post.slug}`}
                 style={{ textDecoration:'none', color:'inherit' }}>
-                <article style={{
+                <article className="pkg-card" style={{
                   background:'#fff', borderRadius:16, overflow:'hidden',
                   border:'1px solid var(--border)', boxShadow:'var(--shadow)',
-                  transition:'transform .3s, box-shadow .3s', height:'100%',
-                  display:'flex', flexDirection:'column',
-                }}
-                  onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-4px)';e.currentTarget.style.boxShadow='var(--shadow-lg)'}}
-                  onMouseLeave={e=>{e.currentTarget.style.transform='none';e.currentTarget.style.boxShadow='var(--shadow)'}}>
+                  height:'100%', display:'flex', flexDirection:'column',
+                }}>
                   <div style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', padding:'32px 24px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48 }}>
                     {post.icon}
                   </div>

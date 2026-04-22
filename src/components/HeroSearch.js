@@ -8,7 +8,7 @@ const TABS = [
   { id:'single-dham', label:'Single Dham' },
   { id:'helicopter',  label:'🚁 Helicopter' },
 ];
-const MONTHS = ['May 2026','June 2026','September 2026','October 2026'];
+const MONTHS = ['May 2025','June 2025','September 2025','October 2025'];
 
 export default function HeroSearch() {
   const [tab,     setTab]     = useState('char-dham');

@@ -2,7 +2,7 @@ import { SITE } from '@/data/packages';
 
 export default function WhatsAppButton() {
   const message = encodeURIComponent(
-    'Namaste! I would like to enquire about Char Dham Yatra packages for 2026.'
+    'Namaste! I would like to enquire about Char Dham Yatra packages for 2025.'
   );
   return (
     <a
