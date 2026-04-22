@@ -10,8 +10,9 @@ export default function sitemap() {
     { url: `${base}/about`,                           lastModified: now, priority: 0.65, changeFrequency: 'monthly'  },
     { url: `${base}/contact`,                         lastModified: now, priority: 0.75, changeFrequency: 'monthly'  },
     // High-value SEO landing pages
-    { url: `${base}/char-dham-yatra-2025`,            lastModified: now, priority: 0.95, changeFrequency: 'weekly'   },
+    { url: `${base}/char-dham-yatra-2026`,            lastModified: now, priority: 0.95, changeFrequency: 'weekly'   },
     { url: `${base}/char-dham-yatra`,                 lastModified: now, priority: 0.98, changeFrequency: 'weekly'   },
+    { url: `${base}/char-dham-yatra-2025`,            lastModified: now, priority: 0.50, changeFrequency: 'yearly'   },
     { url: `${base}/kedarnath-yatra`,                 lastModified: now, priority: 0.90, changeFrequency: 'weekly'   },
     // Blog
     { url: `${base}/blog`,                            lastModified: now, priority: 0.80, changeFrequency: 'weekly'   },

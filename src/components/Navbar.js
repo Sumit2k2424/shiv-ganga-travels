@@ -79,7 +79,7 @@ export default function Navbar() {
           <div style={{ display:'flex', gap:16, fontSize:11.5, color:'rgba(255,255,255,0.55)', flexWrap:'wrap' }}>
             <span style={{ color:'#FFD166', fontWeight:600 }}>✦ Uttarakhand Tourism Registered</span>
             <span>·</span>
-            <span>Season 2025: May–June & Sept–Oct</span>
+            <span>Season 2026: May–June & Sept–Oct</span>
           </div>
           <div style={{ display:'flex', gap:16, fontSize:11.5 }}>
             <a href={`tel:${SITE.phone}`} style={{ color:'#FFD166', textDecoration:'none', fontWeight:600 }}>{SITE.phone}</a>
@@ -198,7 +198,7 @@ export default function Navbar() {
               <span className="hidden lg:inline">{SITE.phone}</span>
             </a>
 
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Enquiry about Char Dham Yatra 2025.')}`}
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Enquiry about Char Dham Yatra 2026.')}`}
               target="_blank" rel="noopener noreferrer"
               className="hidden md:inline-flex btn"
               style={{ background:'var(--navy-light)', color:'var(--navy)', padding:'8px 16px', fontSize:12.5, gap:5, fontWeight:600, borderRadius:'var(--r-sm)', textDecoration:'none', display:'inline-flex', alignItems:'center' }}>

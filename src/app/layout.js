@@ -10,18 +10,18 @@ export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
 
   title: {
-    default: `${SITE.name} — Char Dham Yatra Packages 2025 from Haridwar`,
+    default: `${SITE.name} — Char Dham Yatra Packages 2026 from Haridwar`,
     template: `%s | ${SITE.name}`,
   },
   description: 'Book Char Dham, Do Dham & Single Dham Yatra packages from Haridwar. Zero commission, VIP darshan, expert Garhwali guides, all-inclusive. Registered operator trusted since 2010 by 50,000+ pilgrims.',
   keywords: [
-    'Char Dham Yatra 2025', 'Char Dham Yatra package from Haridwar',
-    'Chardham Yatra package', 'Kedarnath Yatra package 2025',
+    'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
+    'Chardham Yatra package', 'Kedarnath Yatra package 2026',
     'Badrinath Yatra package', 'Yamunotri Yatra package',
     'Gangotri Yatra package', 'Do Dham Yatra Haridwar',
     'Uttarakhand pilgrimage tour', 'Char Dham helicopter package',
     'Char Dham Yatra operator Haridwar', 'best Char Dham tour operator',
-    'Char Dham Yatra 2025 price', 'cheap Char Dham package',
+    'Char Dham Yatra 2026 price', 'cheap Char Dham package',
   ],
   authors: [{ name: SITE.name, url: SITE.baseUrl }],
   creator: SITE.name,
@@ -44,7 +44,7 @@ export const metadata = {
     locale: 'en_IN',
     url: SITE.baseUrl,
     siteName: SITE.name,
-    title: `${SITE.name} — Char Dham Yatra 2025 from Haridwar`,
+    title: `${SITE.name} — Char Dham Yatra 2026 from Haridwar`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. All-inclusive. 50,000+ pilgrims trusted us. Book now.',
     images: [{
       url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
@@ -55,7 +55,7 @@ export const metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} — Char Dham Yatra Packages 2025`,
+    title: `${SITE.name} — Char Dham Yatra Packages 2026`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. All-inclusive from ₹5,299. Zero commission.',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
   },

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     const cat = CATEGORIES[params.slug];
     const count = PACKAGES.filter(p => p.category === params.slug).length;
     return {
-      title: `${cat.name} Packages 2025 from Haridwar — ${SITE.name}`,
+      title: `${cat.name} Packages 2026 from Haridwar`,
       description: `Book ${cat.name} packages from Haridwar. ${count} curated packages with expert guides, VIP darshan, all-inclusive. Trusted since 2010.`,
     };
   }
@@ -68,10 +68,10 @@ function Schemas({ pkg }) {
       '@type':'Offer',
       price: pkg.price.discounted,
       priceCurrency:'INR',
-      priceValidUntil: '2025-10-31',
+      priceValidUntil: '2026-10-31',
       availability:'https://schema.org/InStock',
-      validFrom:'2025-04-01',
-      validThrough:'2025-10-31',
+      validFrom:'2026-04-01',
+      validThrough:'2026-10-31',
       seller: { '@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone: SITE.phone },
       url: `${SITE.baseUrl}/packages/${pkg.slug}`,
     },
@@ -146,7 +146,7 @@ export default function PackageDetailPage({ params }) {
           <div style={{ maxWidth:720, margin:'0 auto' }}>
             <span style={{ fontSize:44, display:'block', marginBottom:14 }}>{cat.icon}</span>
             <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:12 }}>
-              {cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2025</em>
+              {cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em>
             </h1>
             <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>
               {pkgs.length} curated packages · All from Haridwar · Expert guides · VIP darshan · Zero commission

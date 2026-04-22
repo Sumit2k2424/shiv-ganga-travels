@@ -18,7 +18,9 @@ function parseTarget(str) {
 
 export default function CounterStat({ icon, value, label, sub, border = false }) {
   const { prefix, number, suffix, decimals } = parseTarget(value);
-  const [current, setCurrent] = useState(0);
+  // SSR / initial render shows the real value so Googlebot and
+  // users without JS always see the correct number, not zero.
+  const [current, setCurrent] = useState(number);
   const ref = useRef(null);
   const started = useRef(false);
 
@@ -31,6 +33,7 @@ export default function CounterStat({ icon, value, label, sub, border = false })
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
+          setCurrent(0); // reset to 0 client-side so animation counts up
           const duration = 1800;
           const start = performance.now();
           const tick = (now) => {
