@@ -11,7 +11,12 @@ export default function sitemap() {
     { url: `${base}/contact`,                         lastModified: now, priority: 0.75, changeFrequency: 'monthly'  },
     // High-value SEO landing pages
     { url: `${base}/char-dham-yatra-2025`,            lastModified: now, priority: 0.95, changeFrequency: 'weekly'   },
+    { url: `${base}/char-dham-yatra`,                 lastModified: now, priority: 0.98, changeFrequency: 'weekly'   },
     { url: `${base}/kedarnath-yatra`,                 lastModified: now, priority: 0.90, changeFrequency: 'weekly'   },
+    // Blog
+    { url: `${base}/blog`,                            lastModified: now, priority: 0.80, changeFrequency: 'weekly'   },
+    { url: `${base}/blog/char-dham-guide`,            lastModified: now, priority: 0.88, changeFrequency: 'monthly'  },
+    { url: `${base}/blog/best-time-char-dham`,        lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
   ];
 
   // Category pages

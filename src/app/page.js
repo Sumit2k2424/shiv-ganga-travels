@@ -140,8 +140,8 @@ export default function HomePage() {
               color:'#fff', fontSize:'clamp(2.2rem, 5.5vw, 4rem)',
               fontWeight:600, marginBottom:18, lineHeight:1.08,
             }}>
-              Begin Your Sacred<br/>
-              <em style={{ fontStyle:'italic', color:'#FFD166', fontWeight:700 }}>Char Dham Journey</em>
+              Char Dham Yatra Package 2026<br/>
+              <em style={{ fontStyle:'italic', color:'#FFD166', fontWeight:700 }}>from Haridwar &amp; Delhi</em>
             </h1>
 
             <p style={{
@@ -415,6 +415,36 @@ export default function HomePage() {
             <p className="section-subtitle" style={{ margin:'0 auto' }}>Genuine reviews from 50,000+ souls who trusted us with their sacred journey.</p>
           </div>
           <TestimonialSlider items={TESTIMONIALS}/>
+        </div>
+      </ScrollReveal>
+
+
+      {/* ═══ INTERNAL LINKS — blog + landing pages ═══ */}
+      <ScrollReveal as="section" style={{ background:'var(--navy-light)', padding:'36px 0' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
+          <div style={{ textAlign:'center', marginBottom:20 }}>
+            <span className="section-tag">Helpful Resources</span>
+            <h2 className="section-title">Plan Your <em>Yatra Better</em></h2>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:14 }}>
+            {[
+              { icon:'📋', title:'Char Dham Packages 2026', desc:'View all packages with prices', href:'/char-dham-yatra' },
+              { icon:'📖', title:'Complete Yatra Guide', desc:'Route, cost, tips & itinerary', href:'/blog/char-dham-guide' },
+              { icon:'📅', title:'Best Time to Visit', desc:'Month-by-month weather guide', href:'/blog/best-time-char-dham' },
+              { icon:'🏔️', title:'Kedarnath Yatra', desc:'Trek, pony & helicopter guide', href:'/kedarnath-yatra' },
+              { icon:'🚁', title:'Helicopter Packages', desc:'All 4 dhams in 6 days', href:'/packages/helicopter' },
+              { icon:'👴', title:'Senior Citizen Special', desc:'Pony included, medical support', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
+            ].map(l => (
+              <Link key={l.href} href={l.href}
+                style={{ background:'#fff', padding:'16px', borderRadius:12, border:'1px solid var(--border)', textDecoration:'none', display:'flex', gap:12, alignItems:'flex-start', boxShadow:'var(--shadow)', transition:'transform .2s' }}>
+                <span style={{ fontSize:24, flexShrink:0 }}>{l.icon}</span>
+                <div>
+                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{l.title}</div>
+                  <div style={{ fontSize:12, color:'var(--text-muted)' }}>{l.desc}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </ScrollReveal>
 
