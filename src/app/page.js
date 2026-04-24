@@ -116,6 +116,75 @@ export default function HomePage() {
         display:'flex', alignItems:'center',
         padding:'72px 20px 100px', overflow:'hidden',
       }}>
+        {/* ── Animated stars ── */}
+        {[
+          {top:'8%', left:'5%',  size:3,  delay:'0s',   dur:'2.8s'},
+          {top:'14%',left:'18%', size:2,  delay:'0.4s',  dur:'3.2s'},
+          {top:'6%', left:'35%', size:4,  delay:'0.8s',  dur:'2.5s'},
+          {top:'20%',left:'55%', size:2,  delay:'1.2s',  dur:'3.5s'},
+          {top:'9%', left:'72%', size:3,  delay:'0.2s',  dur:'2.9s'},
+          {top:'16%',left:'88%', size:2,  delay:'1.6s',  dur:'3.1s'},
+          {top:'30%',left:'92%', size:4,  delay:'0.6s',  dur:'2.7s'},
+          {top:'40%',left:'3%',  size:2,  delay:'1s',    dur:'3.3s'},
+          {top:'55%',left:'8%',  size:3,  delay:'0.3s',  dur:'2.6s'},
+          {top:'65%',left:'25%', size:2,  delay:'1.4s',  dur:'3.0s'},
+          {top:'50%',left:'80%', size:3,  delay:'0.7s',  dur:'2.8s'},
+          {top:'70%',left:'90%', size:2,  delay:'1.1s',  dur:'3.4s'},
+          {top:'25%',left:'45%', size:2,  delay:'1.8s',  dur:'2.9s'},
+          {top:'42%',left:'62%', size:3,  delay:'0.5s',  dur:'3.2s'},
+          {top:'75%',left:'50%', size:2,  delay:'1.3s',  dur:'2.7s'},
+        ].map((s, i) => (
+          <div key={i} aria-hidden="true" style={{
+            position:'absolute', top:s.top, left:s.left,
+            width:s.size, height:s.size, borderRadius:'50%',
+            background:'#fff',
+            boxShadow:`0 0 ${s.size*2}px ${s.size}px rgba(255,255,255,0.9), 0 0 ${s.size*4}px ${s.size*2}px rgba(255,213,102,0.4)`,
+            animation:`starTwinkle ${s.dur} ease-in-out ${s.delay} infinite`,
+            pointerEvents:'none',
+          }}/>
+        ))}
+
+        {/* ── Floating offer badge — top right ── */}
+        <div aria-hidden="true" style={{
+          position:'absolute', top:28, right:24,
+          background:'linear-gradient(135deg,#E8920A,#f5a623)',
+          borderRadius:14, padding:'10px 16px',
+          boxShadow:'0 0 20px rgba(232,146,10,0.6), 0 0 40px rgba(232,146,10,0.3)',
+          animation:'floatBadge 3s ease-in-out infinite',
+          zIndex:2, maxWidth:180, textAlign:'center',
+          border:'1px solid rgba(255,255,255,0.25)',
+        }}>
+          <div style={{ fontSize:10, fontWeight:700, color:'rgba(255,255,255,0.85)', letterSpacing:'0.1em', textTransform:'uppercase' }}>🔥 Early Bird</div>
+          <div style={{ fontSize:16, fontWeight:800, color:'#fff', lineHeight:1.1, margin:'3px 0' }}>10% OFF</div>
+          <div style={{ fontSize:10, color:'rgba(255,255,255,0.8)' }}>Book 60 days ahead</div>
+        </div>
+
+        {/* ── Floating season badge — top left ── */}
+        <div aria-hidden="true" style={{
+          position:'absolute', top:28, left:24,
+          background:'rgba(255,255,255,0.1)',
+          backdropFilter:'blur(10px)',
+          borderRadius:14, padding:'10px 16px',
+          border:'1px solid rgba(255,255,255,0.2)',
+          boxShadow:'0 0 20px rgba(255,255,255,0.1)',
+          animation:'floatBadge 3.5s ease-in-out 0.5s infinite',
+          zIndex:2, textAlign:'center',
+        }}>
+          <div style={{ fontSize:10, fontWeight:700, color:'#4ade80', letterSpacing:'0.08em' }}>● SEASON OPEN</div>
+          <div style={{ fontSize:13, fontWeight:700, color:'#fff', marginTop:2 }}>Apr 19 – Nov 13</div>
+        </div>
+
+        {/* ── Glowing particle ring behind headline ── */}
+        <div aria-hidden="true" style={{
+          position:'absolute', top:'50%', left:'50%',
+          transform:'translate(-50%,-50%)',
+          width:600, height:600,
+          borderRadius:'50%',
+          background:'radial-gradient(ellipse, rgba(232,146,10,0.06) 0%, transparent 70%)',
+          pointerEvents:'none',
+          animation:'pulseRing 4s ease-in-out infinite',
+        }}/>
+
         {/* Subtle animated grain */}
         <div style={{ position:'absolute', inset:0, opacity:0.03, backgroundImage:'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")', pointerEvents:'none' }} aria-hidden="true"/>
 
@@ -130,9 +199,10 @@ export default function HomePage() {
               fontSize:11.5, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
               padding:'6px 18px', borderRadius:100,
               marginBottom:22,
+              boxShadow:'0 0 20px rgba(232,146,10,0.2)',
             }}>
-              <span style={{ width:6, height:6, background:'#FFD166', borderRadius:'50%', animation:'blink 2s infinite' }}/>
-              Char Dham Yatra Specialist · Season 2025 Open
+              <span style={{ width:6, height:6, background:'#4ade80', borderRadius:'50%', animation:'blink 2s infinite', boxShadow:'0 0 6px #4ade80' }}/>
+              2026 Season Open · Apr 19 – Nov 13
             </div>
 
             {/* Hero headline */}
@@ -162,6 +232,29 @@ export default function HomePage() {
                 <span key={t} style={{ whiteSpace:'nowrap' }}>{t}</span>
               ))}
             </div>
+
+            {/* ── Hot offers strip ── */}
+            <div style={{ display:'flex', justifyContent:'center', gap:10, flexWrap:'wrap', marginTop:20 }}>
+              {[
+                { emoji:'🔥', text:'10% Early Bird — Book 60 days ahead', glow:'rgba(232,146,10,0.5)' },
+                { emoji:'👴', text:'Senior Special — Pony included', glow:'rgba(11,123,139,0.5)' },
+                { emoji:'🚁', text:'Same-day Kedarnath + Badrinath by heli', glow:'rgba(99,153,34,0.5)' },
+              ].map(o => (
+                <div key={o.text} style={{
+                  display:'inline-flex', alignItems:'center', gap:7,
+                  background:'rgba(255,255,255,0.08)',
+                  backdropFilter:'blur(8px)',
+                  border:'1px solid rgba(255,255,255,0.18)',
+                  borderRadius:100, padding:'6px 14px',
+                  fontSize:12, color:'#fff', fontWeight:500,
+                  boxShadow:`0 0 14px ${o.glow}`,
+                  animation:'starTwinkle 3s ease-in-out infinite',
+                }}>
+                  <span>{o.emoji}</span>
+                  <span>{o.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -171,7 +264,12 @@ export default function HomePage() {
             <path d="M0,32 C480,56 960,8 1440,32 L1440,56 L0,56 Z" fill="var(--bg)"/>
           </svg>
         </div>
-        <style dangerouslySetInnerHTML={{ __html:'@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}' }}/>
+        <style dangerouslySetInnerHTML={{ __html:`
+          @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+          @keyframes starTwinkle { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(0.7)} }
+          @keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+          @keyframes pulseRing { 0%,100%{opacity:0.6;transform:translate(-50%,-50%) scale(1)} 50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)} }
+        `}}/>
       </section>
 
       {/* ═══════════════════════════════════════════════
