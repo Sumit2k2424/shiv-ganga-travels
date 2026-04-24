@@ -46,27 +46,27 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">The <strong>Panch Kedar</strong> is a circuit of five sacred Shiva temples in the Garhwal Himalayas of Uttarakhand, each believed to enshrine a different part of Lord Shiva's body that fell here after the Mahabharata. According to legend, the Pandavas sought Shiva's blessing after the Kurukshetra war, but Shiva evaded them by hiding as a bull. When cornered, he dived into the earth — different body parts emerging at five locations now known as the Panch Kedar.</p>
-        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px">
-          <div style="background:var(--navy-light);border-radius:10px;padding:14px 16px;border:1px solid rgba(15,43,91,0.1)">
-            <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px">1️⃣ Kedarnath (3,583m) — Shiva&apos;s Hump</div>
-            <div style="font-size:13px;color:var(--text-mid)">The most famous of the five. 16km trek from Gaurikund. 12th Jyotirlinga.</div>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Panch Kedar</strong> is a circuit of five sacred Shiva temples in the Garhwal Himalayas of Uttarakhand, each believed to enshrine a different part of Lord Shiva's body that fell here after the Mahabharata. According to legend, the Pandavas sought Shiva's blessing after the Kurukshetra war, but Shiva evaded them by hiding as a bull. When cornered, he dived into the earth — different body parts emerging at five locations now known as the Panch Kedar.</p>
+        <div style={{display:'flex',flexDirection:'column',gap:'8px',marginBottom:'24px'}}>
+          <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>1️⃣ Kedarnath (3,583m) — Shiva&apos;s Hump</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>The most famous of the five. 16km trek from Gaurikund. 12th Jyotirlinga.</div>
           </div>
-          <div style="background:var(--navy-light);border-radius:10px;padding:14px 16px;border:1px solid rgba(15,43,91,0.1)">
-            <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px">2️⃣ Tungnath (3,680m) — Shiva&apos;s Arms</div>
-            <div style="font-size:13px;color:var(--text-mid)">World's highest Shiva temple. 3.5km trek from Chopta. Stunning 360° Himalayan views.</div>
+          <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>2️⃣ Tungnath (3,680m) — Shiva&apos;s Arms</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>World's highest Shiva temple. 3.5km trek from Chopta. Stunning 360° Himalayan views.</div>
           </div>
-          <div style="background:var(--navy-light);border-radius:10px;padding:14px 16px;border:1px solid rgba(15,43,91,0.1)">
-            <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px">3️⃣ Rudranath (2,286m) — Shiva&apos;s Face</div>
-            <div style="font-size:13px;color:var(--text-mid)">Most remote of the five. 20km forest trek. Ancient temple with dramatic setting.</div>
+          <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>3️⃣ Rudranath (2,286m) — Shiva&apos;s Face</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>Most remote of the five. 20km forest trek. Ancient temple with dramatic setting.</div>
           </div>
-          <div style="background:var(--navy-light);border-radius:10px;padding:14px 16px;border:1px solid rgba(15,43,91,0.1)">
-            <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px">4️⃣ Madmaheshwar (3,497m) — Shiva&apos;s Navel</div>
-            <div style="font-size:13px;color:var(--text-mid)">22km trek through alpine meadows. Located between Kedarnath and Rudranath valleys.</div>
+          <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>4️⃣ Madmaheshwar (3,497m) — Shiva&apos;s Navel</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>22km trek through alpine meadows. Located between Kedarnath and Rudranath valleys.</div>
           </div>
-          <div style="background:var(--navy-light);border-radius:10px;padding:14px 16px;border:1px solid rgba(15,43,91,0.1)">
-            <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px">5️⃣ Kalpeshwar (2,134m) — Shiva&apos;s Hair</div>
-            <div style="font-size:13px;color:var(--text-mid)">The only Panch Kedar open all year. 2km trek. Located in Urgam valley near Joshimath.</div>
+          <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>5️⃣ Kalpeshwar (2,134m) — Shiva&apos;s Hair</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>The only Panch Kedar open all year. 2km trek. Located in Urgam valley near Joshimath.</div>
           </div>
         </div>
 

@@ -46,32 +46,32 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India's most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you're visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">Our Uttarakhand Package Categories</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:24px">
-          <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">🏔️ Mussoorie + Rishikesh</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">3N/4D · From ₹8,499 · Hill station + spiritual</div>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India's most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you're visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
+          <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Rishikesh</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹8,499 · Hill station + spiritual</div>
           </a>
-          <a href="/packages/nainital-kausani-ranikhet-4n-5d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">🌊 Nainital + Kausani</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">4N/5D · From ₹9,999 · Lakes + Kumaon views</div>
+          <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌊 Nainital + Kausani</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>4N/5D · From ₹9,999 · Lakes + Kumaon views</div>
           </a>
-          <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">🏄 Rishikesh Adventure</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">2N/3D · From ₹4,999 · Rafting + camping</div>
+          <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏄 Rishikesh Adventure</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>2N/3D · From ₹4,999 · Rafting + camping</div>
           </a>
-          <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">🌸 Valley of Flowers</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">5N/6D · From ₹13,499 · UNESCO Heritage</div>
+          <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌸 Valley of Flowers</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,499 · UNESCO Heritage</div>
           </a>
-          <a href="/packages/auli-joshimath-skiing-3n-4d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">⛷️ Auli Skiing</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">3N/4D · From ₹12,499 · India's best ski resort</div>
+          <a href="/packages/auli-joshimath-skiing-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>⛷️ Auli Skiing</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹12,499 · India's best ski resort</div>
           </a>
-          <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);text-decoration:none">
-            <div style="font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:4px">🐯 Jim Corbett</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">5N/6D · From ₹13,999 · Tiger reserve + Nainital</div>
+          <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🐯 Jim Corbett</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,999 · Tiger reserve + Nainital</div>
           </a>
         </div>
 

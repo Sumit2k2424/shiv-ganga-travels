@@ -46,18 +46,18 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Gangotri sits at 3,415 metres in the Uttarkashi district of Uttarakhand, on the banks of the Bhagirathi river. It is the mythological and geographical origin of the Ganga — the river that has shaped Indian civilisation for millennia. The temple here, dedicated to Goddess Ganga, is one of the Char Dham shrines and draws hundreds of thousands of pilgrims every year between May and November.</p>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Unlike Yamunotri and Kedarnath, Gangotri requires <strong>no trekking</strong>. A well-maintained motor road leads directly to the temple town. This makes it one of the most accessible of the four dhams, suitable for all ages and fitness levels.</p>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">What to See at Gangotri</h2>
-        <ul style="padding-left:20px;color:var(--text-mid);font-size:14.5px;line-height:2.3;margin-bottom:20px">
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Gangotri sits at 3,415 metres in the Uttarkashi district of Uttarakhand, on the banks of the Bhagirathi river. It is the mythological and geographical origin of the Ganga — the river that has shaped Indian civilisation for millennia. The temple here, dedicated to Goddess Ganga, is one of the Char Dham shrines and draws hundreds of thousands of pilgrims every year between May and November.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Unlike Yamunotri and Kedarnath, Gangotri requires <strong>no trekking</strong>. A well-maintained motor road leads directly to the temple town. This makes it one of the most accessible of the four dhams, suitable for all ages and fitness levels.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>What to See at Gangotri</h2>
+        <ul style={{paddingLeft:'20px',color:'var(--text-mid)',fontSize:'14.5px',lineHeight:2.3,marginBottom:'20px'}}>
           <li><strong>Gangotri Temple</strong> — 18th century temple enshrining Goddess Ganga. Pre-dawn aarti at 6 AM is particularly moving.</li>
           <li><strong>Bhagirathi Shila</strong> — The sacred rock where King Bhagirath is said to have meditated to bring Ganga to earth.</li>
           <li><strong>Suryakund & Brahma Kund</strong> — Two sacred pools near the temple. Pilgrims take a holy dip before entering the shrine.</li>
           <li><strong>Harsil Valley</strong> — 25 km before Gangotri. Apple orchards, cedar forests, and the most serene stretch of the Bhagirathi. Worth a stop.</li>
           <li><strong>Gaumukh Glacier</strong> — 20 km trek from Gangotri — the actual snout of the Gangotri glacier, the source of the Bhagirathi/Ganga. A permit is required. Available as add-on.</li>
         </ul>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">Route from Haridwar</h2>
-        <div style="background:var(--bg);border-radius:12px;padding:16px 20px;border:1px solid var(--border);font-size:14px;line-height:2.2;margin-bottom:20px">
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Route from Haridwar</h2>
+        <div style={{background:'var(--bg)',borderRadius:'12px',padding:'16px 20px',border:'1px solid var(--border)',fontSize:'14px',lineHeight:2.2,marginBottom:'20px'}}>
           <strong>Haridwar</strong> → Rishikesh → Tehri → <strong>Uttarkashi</strong> (overnight, 185 km) → Harsil Valley → <strong>Gangotri</strong> Temple Darshan → return to Uttarkashi overnight → Haridwar
         </div>
 

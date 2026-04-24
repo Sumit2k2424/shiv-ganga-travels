@@ -46,25 +46,25 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">What Makes This Package Different</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px">
-          <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border)">
-            <div style="font-weight:700;font-size:13px;color:var(--navy);margin-bottom:4px">🚁 Helicopter Between All Dhams</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">No road travel between shrines. Each dham by air — 7–20 minute flights.</div>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>What Makes This Package Different</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px',marginBottom:'20px'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🚁 Helicopter Between All Dhams</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>No road travel between shrines. Each dham by air — 7–20 minute flights.</div>
           </div>
-          <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border)">
-            <div style="font-weight:700;font-size:13px;color:var(--navy);margin-bottom:4px">🎫 VIP Darshan Guaranteed</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">Pre-arranged priority darshan at all 4 temples. No 3-hour queues.</div>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🎫 VIP Darshan Guaranteed</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Pre-arranged priority darshan at all 4 temples. No 3-hour queues.</div>
           </div>
-          <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border)">
-            <div style="font-weight:700;font-size:13px;color:var(--navy);margin-bottom:4px">🏨 Luxury Hotels</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">Best available hotels at each overnight stop. All meals included.</div>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🏨 Luxury Hotels</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Best available hotels at each overnight stop. All meals included.</div>
           </div>
-          <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border)">
-            <div style="font-weight:700;font-size:13px;color:var(--navy);margin-bottom:4px">💊 Medical Support</div>
-            <div style="font-size:12.5px;color:var(--text-mid)">Oxygen equipment, pulse oximeters, medical attendant throughout.</div>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>💊 Medical Support</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Oxygen equipment, pulse oximeters, medical attendant throughout.</div>
           </div>
         </div>
 

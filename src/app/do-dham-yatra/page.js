@@ -46,10 +46,10 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">The <strong>Do Dham Yatra</strong> covers two of the four Char Dhams — <strong>Kedarnath</strong> (Lord Shiva, 3,583m) and <strong>Badrinath</strong> (Lord Vishnu, 3,133m). This is the most popular combination for pilgrims who want a deeply meaningful yatra but have 5–7 days rather than 10–12 days for the complete Char Dham circuit.</p>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Many pilgrims choose to do Do Dham first — particularly Kedarnath and Badrinath as the Shiva-Vishnu pairing considered most auspicious — and then return for Yamunotri and Gangotri in a subsequent season. This is a perfectly valid approach, and we help hundreds of families plan it this way every year.</p>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">Why Kedarnath + Badrinath is the Most Popular Combination</h2>
-        <ul style="padding-left:20px;color:var(--text-mid);font-size:14.5px;line-height:2.3;margin-bottom:20px">
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Do Dham Yatra</strong> covers two of the four Char Dhams — <strong>Kedarnath</strong> (Lord Shiva, 3,583m) and <strong>Badrinath</strong> (Lord Vishnu, 3,133m). This is the most popular combination for pilgrims who want a deeply meaningful yatra but have 5–7 days rather than 10–12 days for the complete Char Dham circuit.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Many pilgrims choose to do Do Dham first — particularly Kedarnath and Badrinath as the Shiva-Vishnu pairing considered most auspicious — and then return for Yamunotri and Gangotri in a subsequent season. This is a perfectly valid approach, and we help hundreds of families plan it this way every year.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Why Kedarnath + Badrinath is the Most Popular Combination</h2>
+        <ul style={{paddingLeft:'20px',color:'var(--text-mid)',fontSize:'14.5px',lineHeight:2.3,marginBottom:'20px'}}>
           <li>The two shrines are geographically close — both in the Chamoli/Rudraprayag district of Garhwal</li>
           <li>Shiva and Vishnu together — the two most significant deities in the Sanatana tradition</li>
           <li>One trek (Kedarnath 16km) and one motor road (Badrinath) — a good balance</li>

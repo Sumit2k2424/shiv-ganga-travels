@@ -46,17 +46,17 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Delhi is the most common starting point for <strong>Char Dham Yatra</strong> pilgrims from across North India. The city has excellent connectivity to Haridwar — the official starting point of the yatra — by road, train, and even flight to Dehradun. This guide covers everything you need to plan a Char Dham Yatra from Delhi in 2026.</p>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">Delhi to Haridwar — Your Options</h2>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
-          <div style="background:#fff;border-radius:10px;padding:14px 16px;border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
-            <div><strong style="color:var(--navy);font-size:13px">🚂 Train (Recommended)</strong><br/><span style="font-size:12.5px;color:var(--text-mid)">Haridwar Express / Shatabdi. 4–6 hours. ₹250–800. Trains daily from NDLS/NZM.</span></div>
-            <div><strong style="color:var(--navy);font-size:13px">🚗 Private Car</strong><br/><span style="font-size:12.5px;color:var(--text-mid)">NH58 via Meerut–Muzaffarnagar. 5–6 hours driving. 250 km. We arrange from Delhi at extra cost.</span></div>
-            <div><strong style="color:var(--navy);font-size:13px">✈️ Flight to Dehradun</strong><br/><span style="font-size:12.5px;color:var(--text-mid)">40 min flight to Jolly Grant Airport. Then 1.5 hrs by road to Haridwar/Rishikesh.</span></div>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Delhi is the most common starting point for <strong>Char Dham Yatra</strong> pilgrims from across North India. The city has excellent connectivity to Haridwar — the official starting point of the yatra — by road, train, and even flight to Dehradun. This guide covers everything you need to plan a Char Dham Yatra from Delhi in 2026.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Delhi to Haridwar — Your Options</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'24px'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px 16px',border:'1px solid var(--border)',display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'12px'}}>
+            <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>🚂 Train (Recommended)</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Haridwar Express / Shatabdi. 4–6 hours. ₹250–800. Trains daily from NDLS/NZM.</span></div>
+            <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>🚗 Private Car</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>NH58 via Meerut–Muzaffarnagar. 5–6 hours driving. 250 km. We arrange from Delhi at extra cost.</span></div>
+            <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>✈️ Flight to Dehradun</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>40 min flight to Jolly Grant Airport. Then 1.5 hrs by road to Haridwar/Rishikesh.</span></div>
           </div>
         </div>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--navy);margin:28px 0 12px">Our Delhi Pickup Service</h2>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:16px">Our <strong>Char Dham Package from Delhi (10N/11D)</strong> includes pickup from any location in Delhi in our AC vehicle, transfer to Haridwar, and then the complete Char Dham circuit. This is a premium service — you don't worry about trains or connections. We handle everything from your front door.</p>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Delhi Pickup Service</h2>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Our <strong>Char Dham Package from Delhi (10N/11D)</strong> includes pickup from any location in Delhi in our AC vehicle, transfer to Haridwar, and then the complete Char Dham circuit. This is a premium service — you don't worry about trains or connections. We handle everything from your front door.</p>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
