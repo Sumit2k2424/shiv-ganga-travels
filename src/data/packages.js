@@ -108,7 +108,7 @@ export const PACKAGES = [
     faqs:[
       {q:'What is included in the Char Dham Yatra 9N/10D package?', a:'AC transport, twin-sharing accommodation, daily breakfast & dinner, guide, pujari, oxygen cylinder, biometric registration assistance and pickup/drop at Haridwar railway station.'},
       {q:'Is Kedarnath trek mandatory?', a:'No. You can opt for pony (₹3,500–4,500), palki (₹8,000–12,000) or helicopter (₹7,500–9,500) at extra cost.'},
-      {q:'When does Char Dham Yatra 2026 open?', a:'Yamunotri and Gangotri open on Akshaya Tritiya (around late April). Kedarnath opens in early May. Badrinath opens a few days after Kedarnath. Exact dates announced by the temple committee.'},
+      {q:'When does Char Dham Yatra 2026 open?', a:'2026 confirmed opening dates: Yamunotri & Gangotri open April 19 (Akshaya Tritiya). Kedarnath opens April 22 at 8:00 AM. Badrinath opens April 23. Closing: Yamunotri Nov 11, Gangotri Nov 10, Kedarnath Nov 11, Badrinath Nov 13.'},
     ],
   },
 

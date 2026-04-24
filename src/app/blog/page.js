@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 const POSTS = [
+  { slug:'char-dham-yatra-2026-new-rules', title:'Char Dham Yatra 2026 New Rules — Phone Ban, Age 55+, IRCTC Helicopter', excerpt:'All 2026 rule changes: mobile phone ban, medical certificate for 55+, IRCTC helicopter booking, non-Hindu entry, GPS tracking. Must-read before you travel.', tag:'2026 Update', readTime:'6 min', icon:'📢' },
   { slug:'char-dham-guide', title:'Char Dham Yatra Complete Guide 2026', excerpt:'Route, itinerary, cost, registration, packing list, and expert tips — everything in one place.', tag:'Complete Guide', readTime:'8 min', icon:'🏔️' },
   { slug:'best-time-char-dham', title:'Best Time for Char Dham Yatra 2026', excerpt:'Month-by-month weather guide, temple opening dates, and honest advice on peak vs off-season.', tag:'Travel Tips', readTime:'5 min', icon:'📅' },
   { slug:'kedarnath-trek-guide', title:'Kedarnath Trek Guide 2026 — 16km from Gaurikund', excerpt:'Difficulty, waypoints, what to carry, pony vs helicopter, and how to prepare. From 15 years of guiding.', tag:'Trek Guide', readTime:'9 min', icon:'🥾' },

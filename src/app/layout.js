@@ -183,7 +183,7 @@ export default function RootLayout({ children }) {
         <meta name="geo.position" content="29.9457;78.1642"/>
         <meta name="ICBM" content="29.9457, 78.1642"/>
         {/* SVG favicon */}
-        <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#0F2B5B"/><text x="20" y="28" font-size="20" font-weight="700" font-family="serif" fill="#E8920A" text-anchor="middle">ॐ</text></svg>`)}`}/>
+        <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" stroke="#0F2B5B" stroke-width="2" fill="none"/><circle cx="22" cy="22" r="14" fill="#0F2B5B"/><path d="M10 30 L17 18 L22 25 L27 16 L34 30 Z" fill="#E8920A"/></svg>`)}`}/>
         {/* Google Analytics G-FP0HXZ8068 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068"/>
         <script dangerouslySetInnerHTML={{ __html:`

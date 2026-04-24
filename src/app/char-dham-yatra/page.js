@@ -152,6 +152,40 @@ export default function CharDhamYatra() {
           The <strong>Char Dham Yatra</strong> is the holiest pilgrimage in Hinduism, covering four sacred shrines in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. At <strong>Shiv Ganga Travels</strong>, we have been organising Char Dham Yatra packages from Haridwar since 2010, serving over 50,000 pilgrims with zero commission, all-inclusive pricing, and verified drivers.
         </p>
 
+        {/* Departure dates + urgency + EMI */}
+        <div style={{ background:'var(--navy)', borderRadius:16, padding:'20px 22px', marginBottom:24 }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:12, marginBottom:16 }}>
+            <div style={{ fontWeight:700, fontSize:15, color:'#fff' }}>📅 Upcoming Departures</div>
+            <span style={{ background:'#25D366', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 12px', borderRadius:100 }}>Season Open — Apr 19, 2026</span>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(175px,1fr))', gap:10, marginBottom:14 }}>
+            {[
+              {date:'May 1–10, 2026',   seats:'4 seats left',  hot:true},
+              {date:'May 10–19, 2026',  seats:'6 seats left',  hot:true},
+              {date:'May 20–29, 2026',  seats:'8 seats left',  hot:false},
+              {date:'June 1–10, 2026',  seats:'12 seats left', hot:false},
+              {date:'Sept 10–19, 2026', seats:'Open batch',    hot:false},
+              {date:'Oct 1–10, 2026',   seats:'Open batch',    hot:false},
+            ].map(d => (
+              <div key={d.date} style={{ background:'rgba(255,255,255,0.07)', borderRadius:9, padding:'11px 12px', border:`1px solid ${d.hot ? 'rgba(232,146,10,0.5)' : 'rgba(255,255,255,0.12)'}` }}>
+                <div style={{ fontSize:13, fontWeight:700, color:'#fff', marginBottom:3 }}>{d.date}</div>
+                <div style={{ fontSize:11.5, color: d.hot ? '#FFD166' : 'rgba(255,255,255,0.55)', fontWeight:600 }}>{d.seats}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ padding:'12px 14px', background:'rgba(255,255,255,0.07)', borderRadius:9, border:'1px solid rgba(255,255,255,0.15)', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:10 }}>
+            <div>
+              <div style={{ fontSize:13, fontWeight:700, color:'#FFD166' }}>💳 Easy EMI — Pay in 3 Instalments</div>
+              <div style={{ fontSize:12, color:'rgba(255,255,255,0.65)', marginTop:2 }}>25% advance secures your seat · Balance in 2 easy payments · No interest</div>
+            </div>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 on EMI.')}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{ background:'var(--gold)', color:'#fff', padding:'9px 18px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', flexShrink:0, whiteSpace:'nowrap' }}>
+              Book with EMI →
+            </a>
+          </div>
+        </div>
+
         {/* Package grid */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px', marginBottom:32 }}>
           <h2 style={{ ...h2Style, marginTop:0, fontSize:'1.2rem' }}>Our Char Dham Yatra Packages 2026:</h2>

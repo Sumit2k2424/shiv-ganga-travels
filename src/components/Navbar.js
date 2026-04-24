@@ -3,19 +3,18 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
-function LogoMark({ size = 38 }) {
+function LogoMark({ size = 36 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="20" cy="20" r="19" stroke="url(#lg)" strokeWidth="1.5"/>
-      <path d="M8 28 L14 15 L20 23 L26 11 L32 28 Z" fill="url(#lg)" opacity="0.9"/>
-      <text x="20" y="36" textAnchor="middle" fontSize="8" fontWeight="700"
-        fontFamily="serif" fill="url(#lg)">ॐ</text>
-      <defs>
-        <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#0F2B5B"/>
-          <stop offset="100%" stopColor="#E8920A"/>
-        </linearGradient>
-      </defs>
+    <svg width={size} height={size} viewBox="0 0 44 44" fill="none" aria-hidden="true">
+      {/* Outer circle ring */}
+      <circle cx="22" cy="22" r="20" stroke="#0F2B5B" strokeWidth="2"/>
+      {/* Inner filled circle accent */}
+      <circle cx="22" cy="22" r="14" fill="#0F2B5B"/>
+      {/* Mountain peaks — two triangles */}
+      <path d="M10 30 L17 18 L22 25 L27 16 L34 30 Z" fill="#E8920A"/>
+      {/* Om symbol subtle */}
+      <text x="22" y="34.5" textAnchor="middle" fontSize="7" fontWeight="700"
+        fontFamily="serif" fill="rgba(255,255,255,0.55)" letterSpacing="0">ॐ</text>
     </svg>
   );
 }
@@ -99,15 +98,25 @@ export default function Navbar() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px', height:64, display:'flex', alignItems:'center', gap:0 }}>
 
           {/* Logo */}
-          <Link href="/" style={{ display:'flex', alignItems:'center', gap:11, textDecoration:'none', marginRight:36, flexShrink:0 }}>
-            <LogoMark size={38}/>
+          <Link href="/" style={{ display:'flex', alignItems:'center', gap:10, textDecoration:'none', marginRight:36, flexShrink:0 }}>
+            <LogoMark size={36}/>
             <div style={{ lineHeight:1 }}>
-              <div style={{ fontSize:16, fontWeight:700, color:'var(--navy)', letterSpacing:'-0.02em', lineHeight:1.2 }}>
-                Shiv Ganga
-                <span style={{ fontWeight:300, color:'var(--text-mid)' }}> Travels</span>
+              <div style={{ display:'flex', alignItems:'baseline', gap:5 }}>
+                <span style={{
+                  fontSize:17, fontWeight:800, color:'var(--navy)',
+                  letterSpacing:'-0.04em', lineHeight:1, fontFamily:'var(--font)',
+                  textTransform:'uppercase',
+                }}>SHIV GANGA</span>
+                <span style={{
+                  fontSize:17, fontWeight:300, color:'var(--navy)',
+                  letterSpacing:'-0.01em', lineHeight:1,
+                }}>TRAVELS</span>
               </div>
-              <div style={{ fontSize:10, color:'var(--text-muted)', letterSpacing:'0.12em', textTransform:'uppercase', marginTop:2 }}>
-                Haridwar · Est. {SITE.established}
+              <div style={{
+                fontSize:9.5, color:'var(--teal)', letterSpacing:'0.18em',
+                textTransform:'uppercase', marginTop:3, fontWeight:600,
+              }}>
+                HARIDWAR · EST. {SITE.established}
               </div>
             </div>
           </Link>

@@ -19,7 +19,7 @@ const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom
 
 export default function BestTimeCharDham() {
   const months = [
-    { month:'April', status:'Opening', color:'#fef9c3', border:'#fde047', note:'Temples open on Akshaya Tritiya. Only last weeks of April accessible. Still cold, snow at higher altitudes.' },
+    { month:'April', status:'Opening', color:'#fef9c3', border:'#fde047', note:'Temples opened April 19 (Yamunotri/Gangotri), April 22 (Kedarnath), April 23 (Badrinath). Late April is less crowded but still cold.' },
     { month:'May', status:'Peak ⭐', color:'#dcfce7', border:'#86efac', note:'Most popular month. Spring blooms, pleasant weather. Highly recommended. Book 90 days ahead — fills fast.' },
     { month:'June', status:'Good', color:'#dcfce7', border:'#86efac', note:'Good first half. Pre-monsoon showers start mid-June. Still manageable but carry rain gear.' },
     { month:'July', status:'Avoid ⚠️', color:'#fee2e2', border:'#fca5a5', note:'Peak monsoon. Heavy rains, frequent landslides, road closures. Not recommended.' },
@@ -52,7 +52,7 @@ export default function BestTimeCharDham() {
       </nav>
 
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style={p}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. The temples are open only from April/May to October/November each year. This guide breaks down each month so you can plan your ideal yatra.</p>
+        <p style={p}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. In 2026, temples opened on April 19 (Yamunotri & Gangotri), April 22 (Kedarnath), and April 23 (Badrinath). Closing dates: Gangotri Nov 10, Yamunotri & Kedarnath Nov 11, Badrinath Nov 13. This guide breaks down each month so you can plan your ideal yatra.</p>
 
         <h2 style={h2}>Month-by-Month Guide</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
@@ -71,10 +71,10 @@ export default function BestTimeCharDham() {
         <p style={p}>The exact opening dates change every year based on the Hindu calendar and are announced a few months before. Approximate dates for 2026:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:24 }}>
           {[
-            { temple:'Yamunotri', opens:'May 2026', closes:'Nov 2026' },
-            { temple:'Gangotri', opens:'May 2026', closes:'Nov 2026' },
-            { temple:'Kedarnath', opens:'May 2026', closes:'Nov 2026' },
-            { temple:'Badrinath', opens:'May 2026', closes:'Nov 2026' },
+            { temple:'Yamunotri', opens:'April 19, 2026', closes:'November 11, 2026' },
+            { temple:'Gangotri', opens:'April 19, 2026', closes:'November 10, 2026' },
+            { temple:'Kedarnath', opens:'April 22, 2026', closes:'November 11, 2026' },
+            { temple:'Badrinath', opens:'April 23, 2026', closes:'November 13, 2026' },
           ].map(t => (
             <div key={t.temple} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)', textAlign:'center' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t.temple}</div>

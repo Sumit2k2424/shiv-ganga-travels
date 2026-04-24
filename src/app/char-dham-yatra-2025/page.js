@@ -47,10 +47,10 @@ export default function CharDhamGuide2025() {
         <div style={{ maxWidth:800, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16, border:'1px solid rgba(232,146,10,0.3)' }}>Complete Guide 2025</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:16 }}>
-            Char Dham Yatra 2025 — Everything You Need to Know
+            Char Dham Yatra 2026 — Opening Dates, New Rules & Travel Guide
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
-            Yamunotri · Gangotri · Kedarnath · Badrinath<br/>Opening dates, packages, prices, registration & complete travel guide
+            2026 Season is Open · Yamunotri & Gangotri: Apr 19 · Kedarnath: Apr 22 · Badrinath: Apr 23
           </p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function CharDhamGuide2025() {
         <h2 style={h2}>Best Time for Char Dham Yatra 2025</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:20 }}>
           {[
-            { season:'May – Mid June', rating:'⭐⭐⭐⭐⭐', label:'Best', color:'#dcfce7', border:'#86efac', tip:'Spring season. Post-opening rush. Book 90 days ahead.' },
+            { season:'Apr 19 – Mid June', rating:'⭐⭐⭐⭐⭐', label:'Peak', color:'#dcfce7', border:'#86efac', tip:'Season open. Temples opened Apr 19-23. May peak — book 60 days ahead.' },
             { season:'Mid Sept – October', rating:'⭐⭐⭐⭐⭐', label:'Best', color:'#dcfce7', border:'#86efac', tip:'Post-monsoon. Clear skies, fewer crowds, great views.' },
             { season:'July – August', rating:'⭐⭐', label:'Avoid', color:'#fef3c7', border:'#fcd34d', tip:'Heavy monsoon. Landslide risk. Many roads blocked.' },
             { season:'Nov – April', rating:'❌', label:'Closed', color:'#fee2e2', border:'#fca5a5', tip:'Temples closed. Snow-covered roads. Not accessible.' },
