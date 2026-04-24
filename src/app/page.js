@@ -407,6 +407,75 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           TESTIMONIALS
       ═══════════════════════════════════════════════ */}
+
+      {/* ═══ CONTENT FUNNEL ═══ */}
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'52px 0' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
+          <div style={{ textAlign:'center', marginBottom:32 }}>
+            <span className="section-tag">Plan Your Perfect Yatra</span>
+            <h2 className="section-title">Not Sure Where to Start? <em>We&apos;ll Guide You</em></h2>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:20 }}>
+            <div style={{ background:'var(--navy-light)', borderRadius:16, padding:'24px', border:'1px solid rgba(15,43,91,0.1)' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+                <div style={{ width:36, height:36, background:'var(--navy)', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', fontWeight:800, fontSize:16 }}>1</div>
+                <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)' }}>Learn &amp; Plan</div>
+              </div>
+              <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.65, marginBottom:16 }}>New to Char Dham Yatra? Understand the route, best time, costs, and what to expect before booking.</p>
+              <div style={{ display:'flex', flexDirection:'column', gap:7 }}>
+                {[
+                  {label:'Complete Yatra Guide',href:'/char-dham-yatra-2025'},
+                  {label:'Best Time to Visit',href:'/blog/best-time-char-dham'},
+                  {label:'What Does It Cost?',href:'/blog/char-dham-yatra-cost'},
+                  {label:'What to Pack',href:'/blog/char-dham-yatra-packing-list'},
+                ].map(l=>(
+                  <Link key={l.href} href={l.href} style={{ fontSize:13, color:'var(--navy)', textDecoration:'none', padding:'7px 10px', background:'#fff', borderRadius:8, fontWeight:500, display:'flex', justifyContent:'space-between', border:'1px solid var(--border)' }}>
+                    <span>{l.label}</span><span style={{ color:'var(--gold)' }}>→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div style={{ background:'linear-gradient(135deg,var(--navy),var(--navy-mid))', borderRadius:16, padding:'24px' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+                <div style={{ width:36, height:36, background:'var(--gold)', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', fontWeight:800, fontSize:16 }}>2</div>
+                <div style={{ fontWeight:700, fontSize:15, color:'#fff' }}>Choose Your Yatra</div>
+              </div>
+              <p style={{ fontSize:13.5, color:'rgba(255,255,255,0.75)', lineHeight:1.65, marginBottom:16 }}>Browse by dham type, duration, or budget. Full day-wise itinerary on every package page.</p>
+              <div style={{ display:'flex', flexDirection:'column', gap:7 }}>
+                {[
+                  {label:'Char Dham (All 4)',href:'/packages/char-dham'},
+                  {label:'Do Dham (2 shrines)',href:'/do-dham-yatra'},
+                  {label:'Kedarnath Only',href:'/kedarnath-yatra'},
+                  {label:'Helicopter Package',href:'/char-dham-helicopter'},
+                ].map(l=>(
+                  <Link key={l.href} href={l.href} style={{ fontSize:13, color:'#fff', textDecoration:'none', padding:'7px 10px', background:'rgba(255,255,255,0.1)', borderRadius:8, fontWeight:500, display:'flex', justifyContent:'space-between', border:'1px solid rgba(255,255,255,0.15)' }}>
+                    <span>{l.label}</span><span style={{ color:'#FFD166' }}>→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div style={{ background:'linear-gradient(135deg,var(--teal),#0a6670)', borderRadius:16, padding:'24px' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+                <div style={{ width:36, height:36, background:'#fff', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', color:'var(--teal)', fontWeight:800, fontSize:16 }}>3</div>
+                <div style={{ fontWeight:700, fontSize:15, color:'#fff' }}>Book with Confidence</div>
+              </div>
+              <p style={{ fontSize:13.5, color:'rgba(255,255,255,0.8)', lineHeight:1.65, marginBottom:16 }}>Zero commission. Free itinerary in 2 hours. 50,000+ pilgrims trusted us since 2010.</p>
+              <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+                <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`}
+                  target="_blank" rel="noopener noreferrer"
+                  style={{ background:'#25D366', color:'#fff', padding:'11px 16px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center' }}>
+                  💬 Start on WhatsApp
+                </a>
+                <a href={`tel:${SITE.phone}`}
+                  style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'10px 16px', borderRadius:9, fontWeight:600, fontSize:13, textDecoration:'none', textAlign:'center', border:'1px solid rgba(255,255,255,0.25)' }}>
+                  📞 {SITE.phone}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
       <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ marginBottom:28, textAlign:'center' }}>
@@ -500,7 +569,7 @@ export default function HomePage() {
           <div style={{ borderTop:'1px solid rgba(255,255,255,0.1)', paddingTop:32 }}>
             <p style={{ color:'rgba(255,255,255,0.6)', fontSize:13, marginBottom:14 }}>📬 Get yatra updates, early-bird offers & pilgrimage insights</p>
             <form action={`https://wa.me/${SITE.whatsapp}`} target="_blank" style={{ display:'flex', gap:8, maxWidth:400, margin:'0 auto', flexWrap:'wrap' }}>
-              <input type="email" placeholder="sumitmishra2k@gmail.com" className="newsletter-input" required/>
+              <input type="email" placeholder="your@email.com" className="newsletter-input" required/>
               <button type="submit" className="btn btn-primary" style={{ flexShrink:0 }}>Subscribe</button>
             </form>
           </div>

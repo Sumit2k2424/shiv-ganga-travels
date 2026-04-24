@@ -184,6 +184,14 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="29.9457, 78.1642"/>
         {/* SVG favicon */}
         <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#0F2B5B"/><text x="20" y="28" font-size="20" font-weight="700" font-family="serif" fill="#E8920A" text-anchor="middle">ॐ</text></svg>`)}`}/>
+        {/* Google Analytics G-FP0HXZ8068 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068"/>
+        <script dangerouslySetInnerHTML={{ __html:`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FP0HXZ8068', { page_path: window.location.pathname });
+        `}}/>
         <SiteSchema/>
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>

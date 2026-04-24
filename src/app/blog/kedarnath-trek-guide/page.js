@@ -111,7 +111,7 @@ export default function KedarnathTrekGuide() {
         <p style={p}>Our difficulty rating: <strong>Moderate to Challenging</strong>. Here's a realistic breakdown:</p>
         <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8, marginBottom:20 }}>
           {[
-            { segment:'Gaurikund to Jungle Chatti (4km)', honest:'Steep and tiring from the very start. Your lungs will protest. Don\'t rush.' },
+            { segment:'Gaurikund to Jungle Chatti (4km)', honest:'Steep and tiring from the very start. Your lungs will protest. Don't rush.' },
             { segment:'Jungle Chatti to Linchauli (5km)', honest:'The longest continuous stretch. Cafes/tea stalls every 1–2km. Mental game here.' },
             { segment:'Linchauli to Base Camp (4km)', honest:'The path opens up. You can see the peaks. Second wind kicks in for most people.' },
             { segment:'Base Camp to Kedarnath (3km)', honest:'Final stretch. Emotional. You can see the temple. This part almost runs itself.' },

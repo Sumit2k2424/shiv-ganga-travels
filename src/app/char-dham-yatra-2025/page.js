@@ -3,8 +3,8 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra 2025 — Complete Guide, Packages & Prices from Haridwar',
-  description: 'Plan your Char Dham Yatra 2025. Complete guide to Yamunotri, Gangotri, Kedarnath & Badrinath. Packages from ₹19,500. Dates, routes, registration, packing list. Shiv Ganga Travels.',
+  title: 'Char Dham Yatra 2026 Opening Dates, Registration & Travel Guide | Shiv Ganga Travels',
+  description: 'Char Dham Yatra 2026 opening dates, registration process, temple timings, route map, and detailed travel guide. Plan your sacred Himalayan pilgrimage with Shiv Ganga Travels Haridwar.',
   keywords: ['Char Dham Yatra 2025','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-2025` },
   openGraph: {
