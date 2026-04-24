@@ -75,9 +75,9 @@ export default function Page() {
           </a>
         </div>
 
-        <div style={{{{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}}}>
-          <div style={{{{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}}}>📦 Browse All Packages:</div>
-          <Link href="/packages/uttarakhand" style={{{{display:'inline-flex',alignItems:'center',gap:6,background:'var(--navy)',color:'#fff',padding:'10px 20px',borderRadius:8,fontWeight:700,fontSize:13.5,textDecoration:'none'}}}}>View Uttarakhand Packages →</Link>
+        <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
+          <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}>📦 Browse All Packages:</div>
+          <Link href="/packages/uttarakhand" style={{display:'inline-flex',alignItems:'center',gap:6,background:'var(--navy)',color:'#fff',padding:'10px 20px',borderRadius:8,fontWeight:700,fontSize:13.5,textDecoration:'none'}}>View Uttarakhand Packages →</Link>
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
