@@ -118,21 +118,21 @@ export default function HomePage() {
       }}>
         {/* ── Animated stars ── */}
         {[
-          {top:'8%', left:'5%',  size:3,  delay:'0s',   dur:'2.8s'},
-          {top:'14%',left:'18%', size:2,  delay:'0.4s',  dur:'3.2s'},
-          {top:'6%', left:'35%', size:4,  delay:'0.8s',  dur:'2.5s'},
-          {top:'20%',left:'55%', size:2,  delay:'1.2s',  dur:'3.5s'},
-          {top:'9%', left:'72%', size:3,  delay:'0.2s',  dur:'2.9s'},
-          {top:'16%',left:'88%', size:2,  delay:'1.6s',  dur:'3.1s'},
-          {top:'30%',left:'92%', size:4,  delay:'0.6s',  dur:'2.7s'},
-          {top:'40%',left:'3%',  size:2,  delay:'1s',    dur:'3.3s'},
-          {top:'55%',left:'8%',  size:3,  delay:'0.3s',  dur:'2.6s'},
-          {top:'65%',left:'25%', size:2,  delay:'1.4s',  dur:'3.0s'},
-          {top:'50%',left:'80%', size:3,  delay:'0.7s',  dur:'2.8s'},
-          {top:'70%',left:'90%', size:2,  delay:'1.1s',  dur:'3.4s'},
-          {top:'25%',left:'45%', size:2,  delay:'1.8s',  dur:'2.9s'},
-          {top:'42%',left:'62%', size:3,  delay:'0.5s',  dur:'3.2s'},
-          {top:'75%',left:'50%', size:2,  delay:'1.3s',  dur:'2.7s'},
+          {top:'8%', left:'5%',  size:3,  delay:'0s',   dur:'5.5s'},
+          {top:'14%',left:'18%', size:2,  delay:'0.8s',  dur:'6.5s'},
+          {top:'6%', left:'35%', size:4,  delay:'1.5s',  dur:'5.0s'},
+          {top:'20%',left:'55%', size:2,  delay:'2.2s',  dur:'7.0s'},
+          {top:'9%', left:'72%', size:3,  delay:'0.4s',  dur:'5.8s'},
+          {top:'16%',left:'88%', size:2,  delay:'3.0s',  dur:'6.2s'},
+          {top:'30%',left:'92%', size:4,  delay:'1.1s',  dur:'5.4s'},
+          {top:'40%',left:'3%',  size:2,  delay:'1.9s',  dur:'6.6s'},
+          {top:'55%',left:'8%',  size:3,  delay:'0.6s',  dur:'5.2s'},
+          {top:'65%',left:'25%', size:2,  delay:'2.7s',  dur:'6.0s'},
+          {top:'50%',left:'80%', size:3,  delay:'1.3s',  dur:'5.6s'},
+          {top:'70%',left:'90%', size:2,  delay:'2.1s',  dur:'6.8s'},
+          {top:'25%',left:'45%', size:2,  delay:'3.4s',  dur:'5.8s'},
+          {top:'42%',left:'62%', size:3,  delay:'1.0s',  dur:'6.4s'},
+          {top:'75%',left:'50%', size:2,  delay:'2.5s',  dur:'5.4s'},
         ].map((s, i) => (
           <div key={i} aria-hidden="true" style={{
             position:'absolute', top:s.top, left:s.left,
@@ -150,7 +150,7 @@ export default function HomePage() {
           background:'linear-gradient(135deg,#E8920A,#f5a623)',
           borderRadius:14, padding:'10px 16px',
           boxShadow:'0 0 20px rgba(232,146,10,0.6), 0 0 40px rgba(232,146,10,0.3)',
-          animation:'floatBadge 3s ease-in-out infinite',
+          animation:'floatBadge 6s ease-in-out infinite',
           zIndex:2, maxWidth:180, textAlign:'center',
           border:'1px solid rgba(255,255,255,0.25)',
         }}>
@@ -167,7 +167,7 @@ export default function HomePage() {
           borderRadius:14, padding:'10px 16px',
           border:'1px solid rgba(255,255,255,0.2)',
           boxShadow:'0 0 20px rgba(255,255,255,0.1)',
-          animation:'floatBadge 3.5s ease-in-out 0.5s infinite',
+          animation:'floatBadge 7s ease-in-out 1s infinite',
           zIndex:2, textAlign:'center',
         }}>
           <div style={{ fontSize:10, fontWeight:700, color:'#4ade80', letterSpacing:'0.08em' }}>● SEASON OPEN</div>
@@ -182,7 +182,7 @@ export default function HomePage() {
           borderRadius:'50%',
           background:'radial-gradient(ellipse, rgba(232,146,10,0.06) 0%, transparent 70%)',
           pointerEvents:'none',
-          animation:'pulseRing 4s ease-in-out infinite',
+          animation:'pulseRing 8s ease-in-out infinite',
         }}/>
 
         {/* Subtle animated grain */}
@@ -201,7 +201,7 @@ export default function HomePage() {
               marginBottom:22,
               boxShadow:'0 0 20px rgba(232,146,10,0.2)',
             }}>
-              <span style={{ width:6, height:6, background:'#4ade80', borderRadius:'50%', animation:'blink 2s infinite', boxShadow:'0 0 6px #4ade80' }}/>
+              <span style={{ width:6, height:6, background:'#4ade80', borderRadius:'50%', animation:'blink 4s infinite', boxShadow:'0 0 6px #4ade80' }}/>
               2026 Season Open · Apr 19 – Nov 13
             </div>
 
@@ -248,7 +248,7 @@ export default function HomePage() {
                   borderRadius:100, padding:'6px 14px',
                   fontSize:12, color:'#fff', fontWeight:500,
                   boxShadow:`0 0 14px ${o.glow}`,
-                  animation:'starTwinkle 3s ease-in-out infinite',
+                  animation:'starTwinkle 6s ease-in-out infinite',
                 }}>
                   <span>{o.emoji}</span>
                   <span>{o.text}</span>
@@ -269,6 +269,13 @@ export default function HomePage() {
           @keyframes starTwinkle { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(0.7)} }
           @keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
           @keyframes pulseRing { 0%,100%{opacity:0.6;transform:translate(-50%,-50%) scale(1)} 50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)} }
+
+          /* Desktop — slow everything down to comfortable viewing speed */
+          @media (min-width: 768px) {
+            @keyframes starTwinkle { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(0.8)} }
+            @keyframes floatBadge  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+            @keyframes pulseRing   { 0%,100%{opacity:0.5;transform:translate(-50%,-50%) scale(1)} 50%{opacity:0.9;transform:translate(-50%,-50%) scale(1.06)} }
+          }
         `}}/>
       </section>
 
