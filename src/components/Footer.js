@@ -3,25 +3,42 @@ import { SITE } from '@/data/packages';
 
 const COLS = [
   { heading:'Char Dham Packages', links:[
-    {l:'Classic 10N/11D',   h:'/packages/char-dham-yatra-10n-11d-haridwar'},
-    {l:'Deluxe 11N/12D',    h:'/packages/char-dham-yatra-deluxe-11n-12d-haridwar'},
-    {l:'Helicopter 5N/6D',  h:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun'},
-    {l:'Senior Special 14N',h:'/packages/char-dham-yatra-senior-citizen-14n-15d'},
+    {l:'Char Dham Yatra 2026',       h:'/char-dham-yatra'},
+    {l:'Classic 9N/10D',             h:'/packages/char-dham-yatra-9n-10d-haridwar'},
+    {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
+    {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
+    {l:'Senior Special 12N/13D',     h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
+    {l:'From Delhi',                 h:'/char-dham-yatra-from-delhi'},
+    {l:'From Mumbai',                h:'/char-dham-yatra-from-mumbai'},
+    {l:'From Bangalore',             h:'/char-dham-yatra-from-bangalore'},
   ]},
-  { heading:'Do & Single Dham', links:[
-    {l:'Kedarnath–Badrinath',h:'/packages/kedarnath-badrinath-do-dham-5n-6d'},
-    {l:'Yamunotri–Gangotri', h:'/packages/yamunotri-gangotri-do-dham-4n-5d'},
-    {l:'Kedarnath Yatra',    h:'/packages/kedarnath-yatra-package-3n-4d-haridwar'},
-    {l:'Badrinath Yatra',    h:'/packages/badrinath-yatra-package-2n-3d-haridwar'},
-    {l:'Yamunotri Yatra',    h:'/packages/yamunotri-yatra-package-2n-3d-haridwar'},
-    {l:'Gangotri Yatra',     h:'/packages/gangotri-yatra-package-2n-3d-haridwar'},
+  { heading:'Single & Do Dham', links:[
+    {l:'Kedarnath Yatra',            h:'/kedarnath-yatra'},
+    {l:'Badrinath Yatra',            h:'/blog/badrinath-yatra-guide'},
+    {l:'Gangotri Yatra',             h:'/gangotri-yatra'},
+    {l:'Yamunotri Yatra',            h:'/yamunotri-yatra'},
+    {l:'Do Dham Yatra',              h:'/do-dham-yatra'},
+    {l:'Panch Kedar Yatra',          h:'/panch-kedar-yatra'},
+    {l:'Uttarakhand Tours',          h:'/uttarakhand-tour-packages'},
+    {l:'Valley of Flowers',          h:'/packages/valley-of-flowers-hemkund-sahib-5n-6d'},
   ]},
-  { heading:'Quick Links', links:[
-    {l:'All Packages',    h:'/packages'},
-    {l:'About Us',        h:'/about'},
-    {l:'Contact',         h:'/contact'},
-    {l:'Privacy Policy',  h:'/privacy'},
-    {l:'Terms',           h:'/terms'},
+  { heading:'Guides & Tools', links:[
+    {l:'2026 New Rules 🆕',          h:'/blog/char-dham-yatra-2026-new-rules'},
+    {l:'Cost Calculator 🧮',         h:'/char-dham-yatra-cost-calculator'},
+    {l:'Route Map 🗺️',               h:'/char-dham-yatra-route-map'},
+    {l:'Kedarnath Trek Guide',       h:'/blog/kedarnath-trek-guide'},
+    {l:'Helicopter Booking',         h:'/blog/kedarnath-helicopter-booking'},
+    {l:'Packing List',               h:'/blog/char-dham-yatra-packing-list'},
+    {l:'Cost Breakdown',             h:'/blog/char-dham-yatra-cost'},
+    {l:'All Blog Posts',             h:'/blog'},
+  ]},
+  { heading:'Company', links:[
+    {l:'About Us',                   h:'/about'},
+    {l:'Contact Us',                 h:'/contact'},
+    {l:'All Packages',               h:'/packages'},
+    {l:'Senior Citizen Package',     h:'/blog/senior-citizen-char-dham'},
+    {l:'Registration Guide',         h:'/blog/char-dham-yatra-registration'},
+    {l:'Best Time to Visit',         h:'/blog/best-time-char-dham'},
   ]},
 ];
 
@@ -32,13 +49,13 @@ export default function Footer() {
       {/* Gold strip */}
       <div style={{ background:'var(--gold)', padding:'11px 20px', textAlign:'center' }}>
         <span style={{ color:'#fff', fontWeight:600, fontSize:13 }}>
-          ✦ Season 2025 Now Open — May–June & September–October · Book Early for Best Availability
+          ✦ 2026 Season Open — Yamunotri & Gangotri Apr 19 · Kedarnath Apr 22 · Badrinath Apr 23
         </span>
       </div>
 
       {/* Brand + links grid */}
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'40px 20px 32px' }}>
-        <div className="footer-grid" style={{ display:'grid', gap:'32px 24px' }}>
+        <div className="footer-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:'32px 24px' }}>
 
           {/* Brand col */}
           <div>

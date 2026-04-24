@@ -9,7 +9,7 @@ export const SITE = {
   tagline    : 'Your Sacred Journey, Our Devotion',
   phone      : '+91-7017082807',
   whatsapp   : '917017082807',
-  email      : 'sumitmishra2k@gmail.com',
+  email      : 'support@shivgangatravels.com',
   address    : 'Near Har Ki Pauri, Haridwar, Uttarakhand — 249401',
   established: 2010,
   baseUrl    : 'https://www.shivgangatravels.com',

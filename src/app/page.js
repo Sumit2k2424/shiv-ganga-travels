@@ -488,31 +488,149 @@ export default function HomePage() {
       </ScrollReveal>
 
 
-      {/* ═══ INTERNAL LINKS — blog + landing pages ═══ */}
-      <ScrollReveal as="section" style={{ background:'var(--navy-light)', padding:'36px 0' }}>
+      {/* ═══ FULL SITE DIRECTORY ═══ */}
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
-          <div style={{ textAlign:'center', marginBottom:20 }}>
-            <span className="section-tag">Helpful Resources</span>
-            <h2 className="section-title">Plan Your <em>Yatra Better</em></h2>
+          <div style={{ textAlign:'center', marginBottom:36 }}>
+            <span className="section-tag">Everything in One Place</span>
+            <h2 className="section-title">Explore <em>All Resources</em></h2>
+            <p className="section-subtitle" style={{ margin:'0 auto' }}>Packages, guides, tools, and city pages — all linked from here.</p>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:14 }}>
-            {[
-              { icon:'📋', title:'Char Dham Packages 2026', desc:'View all packages with prices', href:'/char-dham-yatra' },
-              { icon:'📖', title:'Complete Yatra Guide', desc:'Route, cost, tips & itinerary', href:'/blog/char-dham-guide' },
-              { icon:'📅', title:'Best Time to Visit', desc:'Month-by-month weather guide', href:'/blog/best-time-char-dham' },
-              { icon:'🏔️', title:'Kedarnath Yatra', desc:'Trek, pony & helicopter guide', href:'/kedarnath-yatra' },
-              { icon:'🚁', title:'Helicopter Packages', desc:'All 4 dhams in 6 days', href:'/packages/helicopter' },
-              { icon:'👴', title:'Senior Citizen Special', desc:'Pony included, medical support', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
-            ].map(l => (
-              <Link key={l.href} href={l.href}
-                style={{ background:'#fff', padding:'16px', borderRadius:12, border:'1px solid var(--border)', textDecoration:'none', display:'flex', gap:12, alignItems:'flex-start', boxShadow:'var(--shadow)', transition:'transform .2s' }}>
-                <span style={{ fontSize:24, flexShrink:0 }}>{l.icon}</span>
-                <div>
-                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{l.title}</div>
-                  <div style={{ fontSize:12, color:'var(--text-muted)' }}>{l.desc}</div>
-                </div>
-              </Link>
-            ))}
+
+          {/* Row 1 — Yatra Packages */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'var(--navy)', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Yatra Packages</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
+              {[
+                { icon:'🏔️', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
+                { icon:'🕌', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
+                { icon:'🙏', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
+                { icon:'🌊', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
+                { icon:'🌿', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
+                { icon:'⛰️', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
+                { icon:'🚁', title:'Helicopter Package', desc:'All 4 dhams in 6 days', href:'/char-dham-helicopter' },
+                { icon:'🛕', title:'Panch Kedar Yatra', desc:'5 Shiva temples · 8N/9D', href:'/panch-kedar-yatra' },
+                { icon:'🌳', title:'Uttarakhand Tours', desc:'Hills, wildlife, adventure', href:'/uttarakhand-tour-packages' },
+                { icon:'👴', title:'Senior Citizen', desc:'Special care package', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="pkg-card"
+                  style={{ background:'#fff', padding:'14px', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start' }}>
+                  <span style={{ fontSize:22, flexShrink:0 }}>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{l.title}</div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 — Plan by City */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'var(--teal)', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Book from Your City</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
+              {[
+                { icon:'🏙️', title:'From Delhi', href:'/char-dham-yatra-from-delhi' },
+                { icon:'🌆', title:'From Mumbai', href:'/char-dham-yatra-from-mumbai' },
+                { icon:'🌇', title:'From Bangalore', href:'/char-dham-yatra-from-bangalore' },
+                { icon:'🌃', title:'From Hyderabad', href:'/char-dham-yatra-from-hyderabad' },
+                { icon:'🌉', title:'From Chennai', href:'/char-dham-yatra-from-chennai' },
+                { icon:'🌁', title:'From Pune', href:'/char-dham-yatra-from-pune' },
+              ].map(l => (
+                <Link key={l.href} href={l.href}
+                  style={{ background:'var(--teal)', color:'#fff', padding:'12px 14px', borderRadius:10, textDecoration:'none', display:'flex', gap:10, alignItems:'center' }}>
+                  <span style={{ fontSize:18 }}>{l.icon}</span>
+                  <span style={{ fontWeight:600, fontSize:13 }}>{l.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 3 — Planning Tools */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'var(--gold)', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Free Planning Tools</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10 }}>
+              {[
+                { icon:'🧮', title:'Yatra Cost Calculator', desc:'Instant personalised price estimate for your group', href:'/char-dham-yatra-cost-calculator', hot:true },
+                { icon:'🗺️', title:'Route Map 2026', desc:'All distances, altitudes & stops from Haridwar', href:'/char-dham-yatra-route-map', hot:true },
+                { icon:'📋', title:'Biometric Registration', desc:'How to register — step by step guide', href:'/blog/char-dham-yatra-registration', hot:false },
+              ].map(l => (
+                <Link key={l.href} href={l.href}
+                  style={{ background: l.hot ? 'var(--navy)' : '#fff', padding:'16px', borderRadius:12, border: l.hot ? 'none' : '1px solid var(--border)', textDecoration:'none', display:'flex', gap:12, alignItems:'flex-start' }}>
+                  <span style={{ fontSize:26, flexShrink:0 }}>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:13.5, color: l.hot ? '#fff' : 'var(--navy)', marginBottom:3 }}>
+                      {l.title}
+                      {l.hot && <span style={{ marginLeft:8, background:'var(--gold)', color:'#fff', fontSize:9.5, fontWeight:700, padding:'1px 7px', borderRadius:100 }}>FREE</span>}
+                    </div>
+                    <div style={{ fontSize:12, color: l.hot ? 'rgba(255,255,255,0.65)' : 'var(--text-muted)', lineHeight:1.5 }}>{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 4 — Travel Guides (blog) */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'#25D366', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Travel Guides & Blog</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10 }}>
+              {[
+                { icon:'📢', title:'2026 New Rules', desc:'Phone ban, age 55+ certificate, IRCTC helicopter', href:'/blog/char-dham-yatra-2026-new-rules', new:true },
+                { icon:'📅', title:'Best Time to Visit', desc:'Month-by-month weather guide', href:'/blog/best-time-char-dham' },
+                { icon:'🥾', title:'Kedarnath Trek Guide', desc:'16km route, difficulty, tips', href:'/blog/kedarnath-trek-guide' },
+                { icon:'🚁', title:'Helicopter Booking Guide', desc:'Prices, helipads, weather tips', href:'/blog/kedarnath-helicopter-booking' },
+                { icon:'🎒', title:'Packing List', desc:'Exactly what to carry', href:'/blog/char-dham-yatra-packing-list' },
+                { icon:'💰', title:'Cost Breakdown', desc:'Every rupee explained', href:'/blog/char-dham-yatra-cost' },
+                { icon:'👴', title:'Senior Citizen Guide', desc:'Age 60-85+ can do it', href:'/blog/senior-citizen-char-dham' },
+                { icon:'🗺️', title:'Haridwar to Kedarnath', desc:'Route, stops & travel time', href:'/blog/haridwar-to-kedarnath' },
+                { icon:'🌸', title:'Valley of Flowers', desc:'UNESCO trek guide', href:'/blog/valley-of-flowers-trek' },
+                { icon:'🏄', title:'Rishikesh Adventure', desc:'Rafting, bungee & camping', href:'/blog/rishikesh-adventure-guide' },
+                { icon:'📖', title:'All Blog Posts →', desc:'Complete yatra knowledge hub', href:'/blog' },
+              ].map(l => (
+                <Link key={l.href} href={l.href}
+                  style={{ background:'#fff', padding:'12px 14px', borderRadius:10, border:`1px solid ${l.new ? 'rgba(232,146,10,0.4)' : 'var(--border)'}`, textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start', background: l.new ? '#fff9f0' : '#fff' }}>
+                  <span style={{ fontSize:20, flexShrink:0 }}>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:2, display:'flex', alignItems:'center', gap:5 }}>
+                      {l.title}
+                      {l.new && <span style={{ background:'var(--gold)', color:'#fff', fontSize:9, fontWeight:700, padding:'1px 6px', borderRadius:100 }}>NEW</span>}
+                    </div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)', lineHeight:1.4 }}>{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick contact strip */}
+          <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16 }}>
+            <div>
+              <div style={{ fontWeight:700, fontSize:15, color:'#fff', marginBottom:3 }}>Need help choosing the right package?</div>
+              <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)' }}>Call or WhatsApp — free advice, no obligation</div>
+            </div>
+            <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help choosing the right Char Dham Yatra package.')}`}
+                target="_blank" rel="noopener noreferrer"
+                style={{ background:'#25D366', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+                💬 WhatsApp
+              </a>
+              <a href={`tel:${SITE.phone}`}
+                style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
+                📞 {SITE.phone}
+              </a>
+            </div>
           </div>
         </div>
       </ScrollReveal>

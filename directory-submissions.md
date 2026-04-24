@@ -11,7 +11,7 @@
 **Tagline:** Haridwar's Trusted Char Dham Yatra Specialist Since 2010
 **Phone:** +91-7017082807
 **WhatsApp:** +91-7017082807
-**Email:** info@shivgangatravels.com
+**Email:** support@shivgangatravels.com
 **Website:** https://www.shivgangatravels.com
 **Address:** Near Har Ki Pauri, Haridwar, Uttarakhand — 249401
 **Google Maps:** https://maps.google.com/?q=Shiv+Ganga+Travels+Haridwar
@@ -32,7 +32,7 @@ All packages include: AC private vehicle, hotel accommodation (twin sharing), da
 
 2026 Char Dham season is open: Yamunotri & Gangotri from April 19, Kedarnath from April 22, Badrinath from April 23. Closing November 2026.
 
-Contact: +91-7017082807 (call/WhatsApp) | info@shivgangatravels.com | shivgangatravels.com
+Contact: +91-7017082807 (call/WhatsApp) | support@shivgangatravels.com | shivgangatravels.com
 
 **Services:**
 - Char Dham Yatra Package
@@ -256,7 +256,7 @@ Shiv Ganga Travels offers Char Dham Yatra packages from ₹19,500 per person, al
 **Contact:**
 Shiv Ganga Travels
 Phone/WhatsApp: +91-7017082807
-Email: info@shivgangatravels.com
+Email: support@shivgangatravels.com
 Website: https://www.shivgangatravels.com
 
 ---
