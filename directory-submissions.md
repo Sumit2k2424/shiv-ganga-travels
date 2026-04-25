@@ -13,7 +13,7 @@
 **WhatsApp:** +91-7017082807
 **Email:** support@shivgangatravels.com
 **Website:** https://www.shivgangatravels.com
-**Address:** Near Har Ki Pauri, Haridwar, Uttarakhand — 249401
+**Address:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — 249410
 **Google Maps:** https://maps.google.com/?q=Shiv+Ganga+Travels+Haridwar
 **Coordinates:** 29.9457, 78.1642
 

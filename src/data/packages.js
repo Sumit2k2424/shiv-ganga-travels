@@ -10,7 +10,7 @@ export const SITE = {
   phone      : '+91-7017082807',
   whatsapp   : '917017082807',
   email      : 'support@shivgangatravels.com',
-  address    : 'Near Har Ki Pauri, Haridwar, Uttarakhand — 249401',
+  address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — 249410',
   established: 2010,
   baseUrl    : 'https://www.shivgangatravels.com',
 };

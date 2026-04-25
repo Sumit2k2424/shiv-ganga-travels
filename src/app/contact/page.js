@@ -2,7 +2,7 @@ import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
   title: 'Contact Us — Book Your Char Dham Yatra',
-  description: 'Contact Shiv Ganga Travels for Char Dham, Do Dham & Single Dham Yatra packages. Call, WhatsApp, or email us. Office near Har Ki Pauri, Haridwar.',
+  description: 'Contact Shiv Ganga Travels for Char Dham, Do Dham & Single Dham Yatra packages. Call, WhatsApp, or email us. Saptrishi Road, Near Shantikunj Gate, Bhupatwala, Haridwar.',
 };
 
 export default function ContactPage() {
@@ -45,7 +45,7 @@ export default function ContactPage() {
               { icon:'📞', label:'Phone', value:SITE.phone, href:`tel:${SITE.phone}`, sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--cyan-dark)' },
-              { icon:'📍', label:'Office', value:'Har Ki Pauri, Haridwar', sub:'Uttarakhand — 249401', color:'var(--gold-dark)' },
+              { icon:'📍', label:'Office', value:'Saptrishi Road, Bhupatwala, Haridwar', sub:'Bhupatwala, Uttarakhand — 249410', color:'var(--gold-dark)' },
             ].map(c => {
               const inner = (
                 <div style={{
@@ -238,9 +238,9 @@ export default function ContactPage() {
                   <div>
                     <h3 style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4 }}>Visit Our Office</h3>
                     <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.6 }}>
-                      Near Har Ki Pauri<br/>
+                      Saptrishi Road, Near Shantikunj Gate No. 1<br/>
                       Haridwar, Uttarakhand<br/>
-                      PIN — 249401
+                      Bhupatwala, Haridwar — 249410
                     </p>
                     <a href="https://maps.google.com/?q=Har+Ki+Pauri+Haridwar" target="_blank" rel="noopener noreferrer"
                        className="btn-ghost" style={{ marginTop:10, paddingLeft:0 }}>

@@ -105,10 +105,10 @@ function SiteSchema() {
     paymentAccepted: 'Cash, UPI, Bank Transfer',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Near Har Ki Pauri',
+      streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
       addressLocality: 'Haridwar',
       addressRegion: 'Uttarakhand',
-      postalCode: '249401',
+      postalCode: '249410',
       addressCountry: 'IN',
     },
     geo: {

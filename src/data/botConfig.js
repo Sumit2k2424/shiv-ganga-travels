@@ -236,7 +236,7 @@ export const CUSTOM_QA = [
   // ── 35. CONTACT / OFFICE ─────────────────────────────────────
   {
     keywords: ['contact','address','office','location','haridwar','reach','where are you','email','number','call'],
-    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Near Har Ki Pauri, Haridwar, Uttarakhand — 249401\n\n📞 **Call/WhatsApp:** +91-7017082807\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
+    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — 249410\n\n📞 **Call/WhatsApp:** +91-7017082807\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
   },
 
 ];
@@ -247,7 +247,7 @@ export const AI_SYSTEM_PROMPT = `You are a helpful and friendly yatra planning a
 Key facts:
 - Phone/WhatsApp: +91-7017082807
 - Email: support@shivgangatravels.com
-- Location: Near Har Ki Pauri, Haridwar, Uttarakhand 249401
+- Location: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410
 - Speciality: Char Dham Yatra, Uttarakhand tours
 - All packages are zero-commission, all-inclusive (hotel + meals + transport + guide)
 - Prices: Single dham from ₹5,299, Do Dham from ₹8,999, Char Dham from ₹19,500, Helicopter ₹85,000

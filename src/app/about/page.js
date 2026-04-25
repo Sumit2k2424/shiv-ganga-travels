@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'About Shiv Ganga Travels — Founded 2010 by Dhanesh Chandra Mishra, Haridwar',
-  description: 'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra in Roorkee, initially serving Army personnel. Today a full-fleet Char Dham Yatra operator with 20+ vehicles and offices in Haridwar.',
+  title: 'About Shiv Ganga Travels — Retd. Army Officer Dhanesh Chandra Mishra, Founded 2010',
+  description: 'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, in Roorkee. Started serving Army personnel, now one of Haridwar\'s most trusted Char Dham operators with 20+ vehicles.',
   keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
   alternates: { canonical: `${SITE.baseUrl}/about` },
   openGraph: {
     title: 'About Shiv Ganga Travels — Our Story, Ethics & Vision',
-    description: 'Founded in 2010 by Dhanesh Chandra Mishra. From serving Army personnel in Roorkee to one of Haridwar\'s most trusted Char Dham Yatra operators with 20+ vehicles.',
+    description: 'Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
     url: `${SITE.baseUrl}/about`,
     type: 'website',
   },
@@ -26,17 +26,17 @@ function Schema() {
     founder: {
       '@type': 'Person',
       name: 'Dhanesh Chandra Mishra',
-      jobTitle: 'Founder & Director',
+      jobTitle: 'Founder, Director & Retired Indian Army Officer',
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Near Har Ki Pauri',
+      streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
       addressLocality: 'Haridwar',
       addressRegion: 'Uttarakhand',
-      postalCode: '249401',
+      postalCode: '249410',
       addressCountry: 'IN',
     },
-    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra. Originally serving Army personnel in Roorkee, the company has grown to a full fleet of 20+ vehicles operating from Haridwar.',
+    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Originally serving Army personnel, the company has grown to 20+ vehicles and 50,000+ pilgrims served.',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
     aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '850', bestRating: '5' },
     sameAs: [`https://share.google/gApTvZu1nEBnhjm3W`],
@@ -76,7 +76,7 @@ export default function AboutPage() {
             About <em style={{ color: '#FFD166', fontStyle: 'italic' }}>Shiv Ganga Travels</em>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 15.5, lineHeight: 1.75, maxWidth: 600, margin: '0 auto' }}>
-            From a single vehicle serving Army jawans in Roorkee to one of Haridwar&apos;s most trusted Char Dham Yatra operators — this is our story.
+            From a retired Army officer&apos;s single vehicle in Roorkee to one of Haridwar&apos;s most trusted Char Dham Yatra operators — this is our story.
           </p>
         </div>
       </section>
@@ -116,19 +116,19 @@ export default function AboutPage() {
             }}>🙏</div>
             <div>
               <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)', marginBottom: 3 }}>Dhanesh Chandra Mishra</div>
-              <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director, Shiv Ganga Travels</div>
-              <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Roorkee, Uttarakhand · Founded 2010 · 15 years in pilgrimage travel</div>
+              <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director · Retired Indian Army Officer</div>
+              <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Retired Indian Army Officer · Roorkee, Uttarakhand · Founded 2010</div>
             </div>
           </div>
 
           <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>
 
           <p style={p}>
-            Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong> in Roorkee, Uttarakhand — a city that has long been home to a large military community. In those early days, Dhanesh was not thinking about building a travel company. He had a vehicle, a deep familiarity with the Uttarakhand mountains, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
+            Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army, in Roorkee, Uttarakhand. Dhanesh served his country in uniform before turning to another form of service — helping pilgrims reach the sacred Himalayan dhams with dignity, honesty, and care. After retirement, he had a vehicle, a deep familiarity with the Uttarakhand mountains earned through years of military posting in the region, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
           </p>
 
           <p style={p}>
-            Military culture runs on discipline, punctuality, and zero tolerance for shortcuts. Dhanesh had absorbed those values, and he brought them directly into how he operated. Pick-up times were kept to the minute. Vehicles were always serviced before a long mountain run. No pilgrim was ever overcharged. The jawans and officers noticed — and they started coming back, and bringing their families.
+            Military culture runs on discipline, punctuality, and zero tolerance for shortcuts. Dhanesh had not merely absorbed those values — he had lived them through years of service in the Indian Army. He brought them directly into how he operated. Pick-up times were kept to the minute. Vehicles were always serviced before a long mountain run. No pilgrim was ever overcharged. The jawans and officers noticed — and they started coming back, and bringing their families.
           </p>
 
           <blockquote style={pullQuote}>
