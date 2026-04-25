@@ -986,3 +986,10 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
     height: 48px !important;
   }
 }
+
+/* Cab hero grid — stack on mobile */
+@media (max-width: 768px) {
+  .cab-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

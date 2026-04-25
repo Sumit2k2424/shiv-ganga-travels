@@ -220,6 +220,88 @@ export default function HomePage() {
       </div>
 
       {/* ═══════════════════════════════════════════════
+          CAB SECTION HERO
+      ═══════════════════════════════════════════════ */}
+      <section style={{ background:'linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)', padding:'52px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }}>
+
+            {/* Left — text */}
+            <div>
+              <span style={{ background:'rgba(232,146,10,0.2)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18 }}>
+                🚙 Char Dham Cab Service
+              </span>
+              <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.6rem,3.5vw,2.4rem)', fontWeight:600, color:'#fff', lineHeight:1.15, marginBottom:14, letterSpacing:'-0.03em' }}>
+                AC Cab for Char Dham Yatra —<br/>
+                <em style={{ color:'#FFD166', fontStyle:'italic' }}>Innova · Tempo · Ertiga</em>
+              </h2>
+              <p style={{ fontSize:15, color:'rgba(255,255,255,0.72)', lineHeight:1.75, marginBottom:24 }}>
+                Haridwar–Kedarnath–Badrinath–Gangotri–Yamunotri and back. Experienced hill drivers, fixed rates, no hidden charges. Available standalone or as part of any package.
+              </p>
+
+              {/* Vehicle chips */}
+              <div style={{ display:'flex', flexWrap:'wrap', gap:8, marginBottom:24 }}>
+                {[
+                  { v:'Ertiga', s:'4 seats', p:'from ₹22,000' },
+                  { v:'Innova Crysta', s:'6 seats', p:'from ₹30,000', hot:true },
+                  { v:'Tempo 9S', s:'9 seats', p:'from ₹38,000' },
+                  { v:'Tempo 12S', s:'12 seats', p:'from ₹44,000' },
+                ].map(c => (
+                  <div key={c.v} style={{
+                    background: c.hot ? 'rgba(232,146,10,0.2)' : 'rgba(255,255,255,0.07)',
+                    border: `1px solid ${c.hot ? 'rgba(232,146,10,0.5)' : 'rgba(255,255,255,0.15)'}`,
+                    borderRadius:9, padding:'8px 14px',
+                  }}>
+                    <div style={{ fontSize:12.5, fontWeight:700, color: c.hot ? '#FFD166' : '#fff' }}>{c.v}</div>
+                    <div style={{ fontSize:11, color:'rgba(255,255,255,0.5)', marginTop:1 }}>{c.s} · {c.p}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+                <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates.')}`}
+                  target="_blank" rel="noopener noreferrer"
+                  style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>
+                  💬 Book Cab on WhatsApp
+                </a>
+                <Link href="/char-dham-yatra-cab-booking"
+                  style={{ background:'rgba(255,255,255,0.1)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:600, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
+                  View All Vehicles →
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — route cards */}
+            <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+              <div style={{ fontSize:11, fontWeight:700, color:'rgba(255,255,255,0.4)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom:4 }}>Popular Routes</div>
+              {[
+                { from:'Haridwar', to:'Kedarnath', dist:'225 km', time:'6–7 hrs', fare:'₹5,500+', href:'/haridwar-to-kedarnath-cab' },
+                { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'8–9 hrs', fare:'₹7,000+', href:'/haridwar-to-badrinath-cab' },
+                { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'7–8 hrs', fare:'₹6,500+', href:'/haridwar-to-gangotri-cab' },
+                { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs', fare:'₹3,500+', href:'/delhi-to-haridwar-cab' },
+              ].map(r => (
+                <Link key={r.href} href={r.href}
+                  style={{ display:'grid', gridTemplateColumns:'1fr auto', alignItems:'center', gap:12, padding:'13px 16px', background:'rgba(255,255,255,0.06)', borderRadius:11, border:'1px solid rgba(255,255,255,0.1)', textDecoration:'none', transition:'background .15s' }}>
+                  <div>
+                    <div style={{ fontSize:13.5, fontWeight:700, color:'#fff' }}>{r.from} → {r.to}</div>
+                    <div style={{ fontSize:12, color:'rgba(255,255,255,0.5)', marginTop:2 }}>{r.dist} · {r.time}</div>
+                  </div>
+                  <div style={{ textAlign:'right' }}>
+                    <div style={{ fontSize:14, fontWeight:800, color:'#FFD166' }}>{r.fare}</div>
+                    <div style={{ fontSize:10.5, color:'rgba(255,255,255,0.4)', marginTop:1 }}>Innova one-way</div>
+                  </div>
+                </Link>
+              ))}
+              <Link href="/char-dham-yatra-cab-booking"
+                style={{ textAlign:'center', fontSize:12.5, color:'rgba(255,255,255,0.5)', textDecoration:'none', padding:'10px', borderRadius:9, border:'1px dashed rgba(255,255,255,0.15)', marginTop:2 }}>
+                View all cab options + group rates →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
           ZERO COMMISSION STRIP
       ═══════════════════════════════════════════════ */}
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)' }}>

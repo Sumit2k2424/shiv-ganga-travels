@@ -1,192 +1,342 @@
-import { SITE, TRUST } from '@/data/packages';
+import Link from 'next/link';
+import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'About Us — Trusted Char Dham Yatra Specialists Since 2010',
-  description: 'Shiv Ganga Travels is a Haridwar-based pilgrimage specialist trusted by 50,000+ devotees. Learn our story, meet our team, and discover why we are the top choice for Char Dham.',
+  title: 'About Shiv Ganga Travels — Founded 2010 by Dhanesh Chandra Mishra, Haridwar',
+  description: 'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra in Roorkee, initially serving Army personnel. Today a full-fleet Char Dham Yatra operator with 20+ vehicles and offices in Haridwar.',
+  keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
+  alternates: { canonical: `${SITE.baseUrl}/about` },
+  openGraph: {
+    title: 'About Shiv Ganga Travels — Our Story, Ethics & Vision',
+    description: 'Founded in 2010 by Dhanesh Chandra Mishra. From serving Army personnel in Roorkee to one of Haridwar\'s most trusted Char Dham Yatra operators with 20+ vehicles.',
+    url: `${SITE.baseUrl}/about`,
+    type: 'website',
+  },
 };
 
-const TEAM = [
-  { name: 'Pandit Shiv Prasad Sharma', role: 'Founder & Head Pujari',     since: 'Since 2010', bio: 'Third-generation Kedarnath pujari family. Personally leads every major yatra.' },
-  { name: 'Rajesh Nautiyal',           role: 'Head of Operations',         since: 'Since 2012', bio: 'Garhwali native. 15 years of route knowledge. Speaks Hindi, English & Garhwali.' },
-  { name: 'Deepa Rawat',               role: 'Customer Relations Manager', since: 'Since 2016', bio: 'Handles every enquiry personally. Ensures seamless communication.' },
-  { name: 'Mohan Bhatt',               role: 'Senior Mountain Guide',      since: 'Since 2014', bio: 'Over 200 Kedarnath treks. Trained in first-aid & high-altitude safety.' },
-];
+function Schema() {
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': ['TravelAgency', 'LocalBusiness'],
+    name: SITE.name,
+    url: SITE.baseUrl,
+    telephone: SITE.phone,
+    email: SITE.email,
+    foundingDate: '2010',
+    founder: {
+      '@type': 'Person',
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Near Har Ki Pauri',
+      addressLocality: 'Haridwar',
+      addressRegion: 'Uttarakhand',
+      postalCode: '249401',
+      addressCountry: 'IN',
+    },
+    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra. Originally serving Army personnel in Roorkee, the company has grown to a full fleet of 20+ vehicles operating from Haridwar.',
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '850', bestRating: '5' },
+    sameAs: [`https://share.google/gApTvZu1nEBnhjm3W`],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}/>;
+}
+
+const h2 = {
+  fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem,2.8vw,1.9rem)',
+  fontWeight: 600, color: 'var(--navy)', letterSpacing: '-0.03em',
+  marginBottom: 14, marginTop: 0,
+};
+const p = { fontSize: 15.5, color: 'var(--text-mid)', lineHeight: 1.9, marginBottom: 18 };
+const pullQuote = {
+  borderLeft: '4px solid var(--gold)', paddingLeft: 22, margin: '28px 0',
+  fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--navy)',
+  fontStyle: 'italic', lineHeight: 1.65,
+};
 
 export default function AboutPage() {
   return (
     <>
-      {/* HERO */}
+      <Schema/>
+
+      {/* ── HERO ── */}
       <section style={{
-        background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--gold-dark) 100%)',
-        padding:'60px 16px 50px', textAlign:'center',
+        background: 'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)',
+        padding: '60px 20px 50px', textAlign: 'center',
       }}>
-        <div style={{ maxWidth:720, margin:'0 auto' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <span style={{
-            background:'rgba(6,182,212,0.18)', color:'var(--teal)',
-            fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase',
-            padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:18,
-            border:'1px solid rgba(6,182,212,0.3)',
-          }}>Our Story</span>
-          <h1 className="font-display" style={{
-            color:'#fff', fontWeight:600, fontSize:'clamp(2rem, 5vw, 3rem)',
-            lineHeight:1.15, marginBottom:14, letterSpacing:'-0.02em',
-          }}>
-            About <em style={{ fontStyle:'italic', color:'var(--teal)', fontWeight:700 }}>{SITE.name}</em>
+            background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11,
+            fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+            padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 18,
+          }}>Our Story · Est. 2010</span>
+          <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(2rem,5vw,3rem)', lineHeight: 1.12, marginBottom: 16 }}>
+            About <em style={{ color: '#FFD166', fontStyle: 'italic' }}>Shiv Ganga Travels</em>
           </h1>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:15, lineHeight:1.7 }}>
-            {SITE.tagline}
+          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 15.5, lineHeight: 1.75, maxWidth: 600, margin: '0 auto' }}>
+            From a single vehicle serving Army jawans in Roorkee to one of Haridwar&apos;s most trusted Char Dham Yatra operators — this is our story.
           </p>
         </div>
       </section>
 
-      {/* STORY */}
-      <section style={{ background:'#fff', padding:'60px 16px' }}>
-        <div style={{ maxWidth:780, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:36 }}>
-            <span className="section-tag">Our Journey</span>
-            <h2 className="section-title">Serving Pilgrims Since <em>{SITE.established}</em></h2>
-          </div>
-          <div style={{ color:'var(--mid)', fontSize:15, lineHeight:1.85, display:'flex', flexDirection:'column', gap:18 }}>
-            <p>
-              <strong style={{ color:'var(--text)' }}>Shiv Ganga Travels</strong> was born in the holy city of Haridwar in {SITE.established}, founded by <strong style={{ color:'var(--text)' }}>Pandit Shiv Prasad Sharma</strong> — a lifelong devotee of Lord Shiva and the son of a Kedarnath pujari family. What began as helping pilgrims from his village reach the dhams safely has grown into one of Uttarakhand&apos;s most trusted yatra operators.
-            </p>
-            <p>
-              Over <strong style={{ color:'var(--navy)' }}>15 years</strong>, we have guided more than <strong style={{ color:'var(--navy)' }}>50,000 pilgrims</strong> across all four dhams — from young families doing their first yatra to elderly devotees fulfilling a lifelong dream. Every journey we undertake carries the same sense of devotion with which we started.
-            </p>
-            <p>
-              We are not just a travel agency. We are fellow pilgrims. Our team — most of whom are Garhwali and Kumaoni locals — understands the terrain, the weather, the temple customs, and most importantly, the spiritual significance of every stop on the yatra route.
-            </p>
-            <p style={{
-              padding:'18px 22px', background:'var(--navy-light)',
-              borderLeft:'4px solid var(--blue)', borderRadius:'0 10px 10px 0',
-              fontStyle:'italic', color:'var(--text)',
+      {/* ── QUICK STATS ── */}
+      <div style={{ background: 'var(--navy)', padding: '0' }}>
+        <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))' }}>
+          {[
+            { num: '2010', label: 'Year Founded' },
+            { num: '15+', label: 'Years of Service' },
+            { num: '50,000+', label: 'Pilgrims Served' },
+            { num: '20+', label: 'Fleet Vehicles' },
+            { num: '2', label: 'Offices (Roorkee & Haridwar)' },
+          ].map((s, i, arr) => (
+            <div key={s.label} style={{
+              padding: '20px 16px', textAlign: 'center',
+              borderRight: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
             }}>
-              &ldquo;Every pilgrim who travels with us is family. Their safety, their darshan, their memories — these are our responsibility.&rdquo;
-              <br/>
-              <strong style={{ color:'var(--navy)', fontSize:13, fontStyle:'normal', marginTop:8, display:'block' }}>
-                — Pandit Shiv Prasad Sharma, Founder
-              </strong>
+              <div style={{ fontSize: 24, fontWeight: 800, color: '#FFD166', fontFamily: 'var(--font-display)' }}>{s.num}</div>
+              <div style={{ fontSize: 11.5, color: 'rgba(255,255,255,0.55)', marginTop: 3 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── MAIN STORY ── */}
+      <section style={{ background: '#fff', padding: '64px 20px' }}>
+        <div style={{ maxWidth: 820, margin: '0 auto' }}>
+
+          {/* Founder intro */}
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 28, marginBottom: 40, flexWrap: 'wrap' }}>
+            <div style={{
+              width: 90, height: 90, borderRadius: '50%', flexShrink: 0,
+              background: 'linear-gradient(135deg,var(--navy),var(--teal))',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 36, border: '3px solid var(--gold)',
+            }}>🙏</div>
+            <div>
+              <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)', marginBottom: 3 }}>Dhanesh Chandra Mishra</div>
+              <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director, Shiv Ganga Travels</div>
+              <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Roorkee, Uttarakhand · Founded 2010 · 15 years in pilgrimage travel</div>
+            </div>
+          </div>
+
+          <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>
+
+          <p style={p}>
+            Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong> in Roorkee, Uttarakhand — a city that has long been home to a large military community. In those early days, Dhanesh was not thinking about building a travel company. He had a vehicle, a deep familiarity with the Uttarakhand mountains, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
+          </p>
+
+          <p style={p}>
+            Military culture runs on discipline, punctuality, and zero tolerance for shortcuts. Dhanesh had absorbed those values, and he brought them directly into how he operated. Pick-up times were kept to the minute. Vehicles were always serviced before a long mountain run. No pilgrim was ever overcharged. The jawans and officers noticed — and they started coming back, and bringing their families.
+          </p>
+
+          <blockquote style={pullQuote}>
+            &ldquo;Army jawans taught me that discipline and fair pricing are not optional — they are the only way to operate. That lesson became the foundation of everything we do.&rdquo;
+            <div style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'normal', marginTop: 8, fontFamily: 'var(--font)' }}>— Dhanesh Chandra Mishra, Founder</div>
+          </blockquote>
+
+          <h2 style={h2}>The Belief That Changed Everything</h2>
+
+          <p style={p}>
+            As word spread and the business grew steadily through Roorkee&apos;s military community, Dhanesh began to see a pattern in the wider pilgrimage travel market that troubled him. Most tour operators charged one price to well-connected customers and a very different price to first-time pilgrims who didn&apos;t know any better. Aggregator platforms added commissions on commissions. The holy journey to the Char Dhams — something millions of ordinary Indian families saved up for years to undertake — had become an industry where the pilgrim was often the last person being looked after.
+          </p>
+
+          <p style={p}>
+            Dhanesh&apos;s conviction was straightforward: <strong>everyone deserves fair pricing and the same quality of service</strong> — whether you are a senior Army officer, a schoolteacher from Agra, or a retired farmer from rural Maharashtra taking his once-in-a-lifetime yatra. This belief was not a marketing slogan. It was the reason he expanded beyond the military community and opened the business to all pilgrims.
+          </p>
+
+          <h2 style={h2}>Growth — From Roorkee to Haridwar</h2>
+
+          <p style={p}>
+            The growth through the 2010s was steady and earned — not driven by advertising but by word of mouth from satisfied pilgrims. A family from Delhi who had a good experience told their neighbours. A WhatsApp group for a Kedarnath pilgrims&apos; batch shared Dhanesh&apos;s number. Repeat bookings became the norm rather than the exception. By the mid-2010s, the fleet had expanded from a single vehicle to several, and the team had grown to include experienced Garhwali guides, a dedicated operations team, and a customer relations desk.
+          </p>
+
+          <p style={p}>
+            The logical next step was Haridwar — the official gateway to the Char Dham circuit and the city where every yatra truly begins. Shiv Ganga Travels opened its Haridwar office, positioning itself at the heart of pilgrimage activity. Today we operate from both Roorkee and Haridwar, with a full fleet of over <strong>20 vehicles</strong> — Innova Crysta, Ertiga, Tempo Travellers of various capacities — all maintained to a standard that Dhanesh himself inspects regularly.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ── COVERAGE ── */}
+      <section style={{ background: 'var(--bg)', padding: '60px 20px' }}>
+        <div style={{ maxWidth: 'var(--container)', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 36 }}>
+            <span className="section-tag">Where We Operate</span>
+            <h2 className="section-title">Our <em>Coverage</em></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              Every dham, every route, every major city — we cover the complete Char Dham circuit and beyond.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* COMMITMENTS */}
-      <section style={{ background:'var(--bg)', padding:'60px 16px' }}>
-        <div style={{ maxWidth:1100, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:36 }}>
-            <span className="section-tag">Our Commitments</span>
-            <h2 className="section-title">What We <em>Promise</em> You</h2>
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(240px, 1fr))', gap:16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(240px,1fr))', gap: 16 }}>
             {[
-              { icon:'🙏', title:'Divine First',    desc:'Your darshan is our priority. VIP arrangements at every dham.' },
-              { icon:'🛡️', title:'Your Safety',    desc:'Medical kits, oxygen, trained staff, GPS-tracked vehicles.' },
-              { icon:'💚', title:'Honest Prices',   desc:'Zero hidden costs. Transparent breakdown before you book.' },
-              { icon:'🏔️', title:'Local Expertise', desc:'Garhwali guides who know every bend, every weather pattern.' },
-              { icon:'🕉️', title:'Spiritual Care',  desc:'Pre-yatra briefing, puja arrangements, traditional rites.' },
-              { icon:'📱', title:'Always Reachable', desc:'24/7 WhatsApp support during your journey. No abandonment.' },
+              {
+                icon: '🏔️', title: 'The Four Dhams',
+                items: ['Yamunotri — 3,291m', 'Gangotri — 3,415m', 'Kedarnath — 3,583m', 'Badrinath — 3,133m'],
+                color: 'var(--navy)', bg: 'var(--navy-light)',
+              },
+              {
+                icon: '🛕', title: 'Additional Shrines',
+                items: ['Panch Kedar circuit', 'Panch Badri circuit', 'Hemkund Sahib', 'Tungnath & Chandrashila'],
+                color: 'var(--teal)', bg: '#e6f7f9',
+              },
+              {
+                icon: '🌳', title: 'Uttarakhand Tours',
+                items: ['Mussoorie & Dehradun', 'Nainital & Kausani', 'Rishikesh adventure', 'Jim Corbett & Auli'],
+                color: '#15803d', bg: '#f0fdf4',
+              },
+              {
+                icon: '🚙', title: 'Cab Routes',
+                items: ['Delhi → Haridwar', 'Haridwar → Kedarnath', 'Haridwar → Badrinath', 'Haridwar → Gangotri'],
+                color: '#92400e', bg: '#fff8e8',
+              },
+              {
+                icon: '🌆', title: 'Pickup Cities',
+                items: ['Delhi & NCR', 'Mumbai & Pune', 'Bangalore & Hyderabad', 'Chennai & all major cities'],
+                color: '#6d28d9', bg: '#f5f3ff',
+              },
+              {
+                icon: '👴', title: 'Special Groups',
+                items: ['Senior citizens (60–85+)', 'Army & defence personnel', 'Corporate groups', 'School & college groups'],
+                color: '#9f1239', bg: '#fff1f2',
+              },
+            ].map(card => (
+              <div key={card.title} style={{ background: '#fff', borderRadius: 14, padding: '20px', border: '1px solid var(--border)' }}>
+                <div style={{
+                  width: 44, height: 44, borderRadius: 10, background: card.bg,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 22, marginBottom: 12,
+                }}>
+                  {card.icon}
+                </div>
+                <div style={{ fontWeight: 700, fontSize: 14, color: card.color, marginBottom: 10 }}>{card.title}</div>
+                {card.items.map(item => (
+                  <div key={item} style={{ fontSize: 13, color: 'var(--text-mid)', padding: '4px 0', display: 'flex', gap: 7, alignItems: 'center' }}>
+                    <span style={{ color: card.color, fontWeight: 700, fontSize: 11 }}>✓</span>{item}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ETHICS ── */}
+      <section style={{ background: '#fff', padding: '60px 20px' }}>
+        <div style={{ maxWidth: 820, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span className="section-tag">How We Operate</span>
+            <h2 className="section-title">Our <em>Ethics</em></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              The values we inherited from serving the Indian Army — and the principles we refuse to compromise on.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {[
+              {
+                num: '01', title: 'Zero Commission, Zero Middlemen',
+                body: 'Every rupee you pay goes directly to Shiv Ganga Travels. We are not aggregators. We do not use sub-agents or commission-based booking platforms. When you pay ₹19,500 for a package, that is the final amount — no hidden facilitation fee, no "agent service charge" added at the end. This was a non-negotiable principle from day one and it has never changed.',
+                icon: '🚫',
+              },
+              {
+                num: '02', title: 'Fair Pricing — The Same for Everyone',
+                body: 'A retired government employee from Bhopal and a corporate executive from Gurugram pay exactly the same price for the same package. We publish our prices publicly on this website. We do not negotiate special deals that disadvantage other customers. Dhanesh started this company because he saw how ordinary pilgrims were routinely overcharged — that practice has no place in how we operate.',
+                icon: '⚖️',
+              },
+              {
+                num: '03', title: 'Military-Grade Discipline',
+                body: 'Our drivers are the backbone of the yatra experience. We select only drivers with 5+ years of mountain driving experience and zero incident records on Char Dham routes. Vehicles are serviced before every major trip — not just annually, before every trip. Departure times are kept. If we say pickup at 5:30 AM, the vehicle is at your location at 5:30 AM.',
+                icon: '🎖️',
+              },
+              {
+                num: '04', title: 'Transparency About What We Can and Cannot Do',
+                body: 'Mountain travel involves uncertainty — weather, road conditions, landslides, government restrictions. We tell our pilgrims exactly what might go wrong and how we handle it. We do not promise guaranteed darshan on a specific date without qualifying the statement. Honest communication, even when it is inconvenient, is part of how we work.',
+                icon: '🔍',
+              },
+              {
+                num: '05', title: 'The Pilgrim Comes First — Always',
+                body: 'This sounds obvious but is rarely practised. When a road gets blocked and a pilgrim needs to be re-routed overnight, we absorb the hotel cost. When a senior pilgrim cannot complete the Kedarnath trek, we arrange a pony or helicopter at cost price with no markup. When a group wants to extend their stay at a dham, we rearrange the vehicle without a penalty fee. The yatra is sacred — we treat it that way.',
+                icon: '🙏',
+              },
+            ].map(e => (
+              <div key={e.num} style={{ display: 'flex', gap: 20, padding: '22px', background: 'var(--bg)', borderRadius: 14, border: '1px solid var(--border)', alignItems: 'flex-start' }}>
+                <div style={{ flexShrink: 0, textAlign: 'center' }}>
+                  <div style={{ fontSize: 28, marginBottom: 4 }}>{e.icon}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.06em' }}>{e.num}</div>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--navy)', marginBottom: 8 }}>{e.title}</div>
+                  <div style={{ fontSize: 14.5, color: 'var(--text-mid)', lineHeight: 1.8 }}>{e.body}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VISION ── */}
+      <section style={{ background: 'linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding: '60px 20px' }}>
+        <div style={{ maxWidth: 820, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span style={{ background: 'rgba(232,146,10,0.2)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>Where We Are Going</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem,3.5vw,2.4rem)', fontWeight: 600, color: '#fff', marginBottom: 14, letterSpacing: '-0.02em' }}>
+              Our <em style={{ color: '#FFD166', fontStyle: 'italic' }}>Vision</em>
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 16, marginBottom: 40 }}>
+            {[
+              {
+                icon: '🎯', title: 'The Definitive Uttarakhand Operator',
+                body: 'Our goal is to become the most trusted name in Uttarakhand pilgrimage and adventure travel — not the biggest, but the most trusted. Every family that books with us should feel they could not have found a better operator at any price.',
+              },
+              {
+                icon: '🌱', title: 'Responsible Mountain Tourism',
+                body: 'The Himalayas are under growing pressure from mass tourism. We are committed to practices that respect the ecology — no plastic in our vehicles, no littering policies enforced on every trip, and supporting local Garhwali economies rather than importing everything from the plains.',
+              },
+              {
+                icon: '📱', title: 'Technology That Serves Pilgrims',
+                body: 'Our investment in digital — this website, the AI chatbot, the cost calculator, real-time WhatsApp support — is driven by one goal: making the yatra easier to plan and book for every Indian family, regardless of how tech-savvy they are.',
+              },
+              {
+                icon: '👥', title: 'Growing the Team, Not Just the Fleet',
+                body: 'Our drivers, guides, and operations staff are the company. We invest in their training, fair compensation, and wellbeing. A Garhwali guide who is well-paid and respected brings a quality of care to every pilgrimage that no management system can replicate.',
+              },
             ].map(v => (
-              <div key={v.title} style={{
-                background:'#fff', borderRadius:14, padding:'22px 20px',
-                border:'1px solid var(--border)', boxShadow:'var(--shadow)',
-              }}>
-                <div style={{
-                  width:44, height:44, background:'var(--navy-light)', borderRadius:10,
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:22, marginBottom:14,
-                }}>{v.icon}</div>
-                <div style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:5 }}>{v.title}</div>
-                <div style={{ fontSize:12.5, color:'var(--muted)', lineHeight:1.6 }}>{v.desc}</div>
+              <div key={v.title} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)', borderRadius: 14, padding: '20px', border: '1px solid rgba(255,255,255,0.15)' }}>
+                <div style={{ fontSize: 28, marginBottom: 10 }}>{v.icon}</div>
+                <div style={{ fontWeight: 700, fontSize: 14, color: '#fff', marginBottom: 8 }}>{v.title}</div>
+                <div style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{v.body}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CERTIFICATIONS */}
-      <section style={{ background:'#fff', padding:'50px 16px' }}>
-        <div style={{ maxWidth:900, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:32 }}>
-            <span className="section-tag">Credentials</span>
-            <h2 className="section-title">Officially <em>Registered</em> & Trusted</h2>
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:12 }}>
-            {TRUST.certifications.map(cert => (
-              <div key={cert} style={{
-                background:'var(--navy-light)', padding:'14px 18px',
-                borderRadius:10, display:'flex', alignItems:'center', gap:10,
-                border:'1px solid rgba(18,96,204,0.1)',
-              }}>
-                <span style={{
-                  width:28, height:28, background:'var(--navy)', color:'#fff',
-                  borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:14, fontWeight:700, flexShrink:0,
-                }}>✓</span>
-                <span style={{ fontSize:12.5, color:'var(--text)', fontWeight:500 }}>{cert}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TEAM */}
-      <section style={{ background:'var(--bg)', padding:'60px 16px' }}>
-        <div style={{ maxWidth:1100, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:36 }}>
-            <span className="section-tag">The People</span>
-            <h2 className="section-title">Behind Your <em>Yatra</em></h2>
-            <p className="section-subtitle" style={{ margin:'0 auto' }}>Meet the people dedicated to making your pilgrimage seamless and sacred.</p>
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:16 }}>
-            {TEAM.map(p => (
-              <div key={p.name} style={{
-                background:'#fff', padding:'26px 20px', borderRadius:16,
-                textAlign:'center', border:'1px solid var(--border)', boxShadow:'var(--shadow)',
-              }}>
-                <div style={{
-                  width:68, height:68, margin:'0 auto 14px',
-                  borderRadius:'50%',
-                  background:'linear-gradient(135deg, var(--blue), var(--teal))',
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:28, color:'#fff',
-                  boxShadow:'0 4px 14px rgba(18,96,204,0.3)',
-                }}>🙏</div>
-                <div style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:3 }}>{p.name}</div>
-                <div style={{ fontSize:12, color:'var(--navy)', fontWeight:600, marginBottom:6 }}>{p.role}</div>
-                <div style={{ fontSize:11, color:'var(--cyan-dark)', marginBottom:10 }}>{p.since}</div>
-                <p style={{ fontSize:12, color:'var(--muted)', lineHeight:1.5 }}>{p.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{
-        background:'linear-gradient(135deg, var(--deep) 0%, var(--gold-dark) 100%)',
-        padding:'56px 16px', textAlign:'center',
-      }}>
-        <div style={{ maxWidth:640, margin:'0 auto' }}>
-          <h2 className="font-display" style={{
-            color:'#fff', fontWeight:600, fontSize:'clamp(1.5rem, 3.5vw, 2rem)',
-            marginBottom:12, letterSpacing:'-0.02em',
+          <blockquote style={{
+            borderLeft: '4px solid #FFD166', paddingLeft: 24, margin: '0 0 36px',
+            fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: '#fff',
+            fontStyle: 'italic', lineHeight: 1.7,
           }}>
-            Ready to Travel With Us?
-          </h2>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:24, lineHeight:1.7 }}>
-            Join 50,000+ pilgrims who have trusted us with their sacred journey.
-          </p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`tel:${SITE.phone}`} style={{
-              background:'#fff', color:'var(--navy)', padding:'13px 26px',
-              borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
-              display:'inline-flex', alignItems:'center', gap:8,
-            }}>📞 {SITE.phone}</a>
-            <a href="/packages" style={{
-              background:'var(--teal)', color:'#fff', padding:'13px 26px',
-              borderRadius:10, fontWeight:700, fontSize:13.5, textDecoration:'none',
-            }}>View Packages</a>
+            &ldquo;Every pilgrim who trusts us with their Char Dham Yatra is giving us something sacred — their time, their faith, and often the savings of years. We do not take that lightly. Our vision is simple: to be worthy of that trust, every single time.&rdquo;
+            <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', fontStyle: 'normal', marginTop: 10, fontFamily: 'var(--font)' }}>— Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels</div>
+          </blockquote>
+
+          <div style={{ textAlign: 'center' }}>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, marginBottom: 24 }}>
+              Ready to plan your Char Dham Yatra with us?
+            </p>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 with Shiv Ganga Travels.')}`}
+                target="_blank" rel="noopener noreferrer"
+                style={{ background: '#25D366', color: '#fff', padding: '13px 28px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+                💬 Book on WhatsApp
+              </a>
+              <Link href="/char-dham-yatra"
+                style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '13px 28px', borderRadius: 10, fontWeight: 600, fontSize: 14, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
+                View Packages →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

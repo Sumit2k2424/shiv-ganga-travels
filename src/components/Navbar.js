@@ -36,6 +36,14 @@ const PKG_LINKS = [
   { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        icon:'📋' },
 ];
 
+const CAB_LINKS = [
+  { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'All vehicles — Innova, Ertiga, Tempo',  icon:'🚙' },
+  { label:'Haridwar → Kedarnath',  href:'/haridwar-to-kedarnath-cab',   sub:'225 km · 6–7 hrs · from ₹5,500',       icon:'🗺️' },
+  { label:'Haridwar → Badrinath',  href:'/haridwar-to-badrinath-cab',   sub:'320 km · 8–9 hrs · from ₹7,000',       icon:'🗺️' },
+  { label:'Haridwar → Gangotri',   href:'/haridwar-to-gangotri-cab',    sub:'265 km · 7–8 hrs · from ₹6,500',       icon:'🗺️' },
+  { label:'Delhi → Haridwar',      href:'/delhi-to-haridwar-cab',       sub:'210 km · 4–5 hrs · from ₹3,500',       icon:'🚗' },
+];
+
 function MobileAccordion({ label, children }) {
   const [open, setOpen] = useState(false);
   return (
@@ -56,7 +64,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled,   setScrolled]   = useState(false);
   const [dropOpen,   setDropOpen]   = useState(false);
+  const [cabOpen,    setCabOpen]    = useState(false);
   const dropRef = useRef(null);
+  const cabRef  = useRef(null);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -70,6 +80,12 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', fn);
   }, []);
 
+  useEffect(() => {
+    const fn = e => { if (cabRef.current && !cabRef.current.contains(e.target)) setCabOpen(false); };
+    document.addEventListener('mousedown', fn);
+    return () => document.removeEventListener('mousedown', fn);
+  }, []);
+
   return (
     <>
       {/* ── Utility strip ─────────────────────────────────── */}
@@ -78,7 +94,7 @@ export default function Navbar() {
           <div style={{ display:'flex', gap:16, fontSize:11.5, color:'rgba(255,255,255,0.55)', flexWrap:'wrap' }}>
             <span style={{ color:'#FFD166', fontWeight:600 }}>✦ Uttarakhand Tourism Registered</span>
             <span>·</span>
-            <span>Season 2025: May–June & Sept–Oct</span>
+            <span>2026 Season Open — Apr 19 to Nov 13</span>
           </div>
           <div style={{ display:'flex', gap:16, fontSize:11.5 }}>
             <a href={`tel:${SITE.phone}`} style={{ color:'#FFD166', textDecoration:'none', fontWeight:600 }}>{SITE.phone}</a>
@@ -179,13 +195,66 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* Cabs dropdown */}
+            <div ref={cabRef} style={{ position:'relative' }}>
+              <button onClick={() => setCabOpen(o => !o)}
+                style={{
+                  display:'flex', alignItems:'center', gap:3,
+                  padding:'8px 12px', fontSize:13.5, fontWeight:500,
+                  color: cabOpen ? 'var(--navy)' : 'var(--text-mid)',
+                  background:'none', border:'none', cursor:'pointer',
+                  fontFamily:'var(--font)', borderRadius:'var(--r-sm)',
+                  transition:'color var(--t)',
+                }}
+                aria-expanded={cabOpen} aria-haspopup="true">
+                🚙 Cabs <ChevronDown open={cabOpen}/>
+              </button>
+
+              {cabOpen && (
+                <div style={{
+                  position:'absolute', top:'calc(100% + 10px)', left:'-8px',
+                  background:'#fff', border:'1px solid var(--border)',
+                  borderRadius:16, minWidth:290,
+                  boxShadow:'0 16px 48px rgba(15,43,91,0.15), 0 4px 12px rgba(15,43,91,0.08)',
+                  overflow:'hidden', zIndex:200,
+                  animation:'dropIn .18s ease',
+                }}>
+                  <div style={{ padding:'12px 18px 10px', borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
+                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.12em' }}>
+                      Cab & Taxi Service
+                    </span>
+                  </div>
+                  {CAB_LINKS.map((l, i) => (
+                    <Link key={l.href} href={l.href} onClick={() => setCabOpen(false)}
+                      style={{
+                        display:'flex', alignItems:'center', gap:12,
+                        padding:'12px 18px', textDecoration:'none',
+                        borderBottom: i < CAB_LINKS.length-1 ? '1px solid var(--border)' : 'none',
+                        transition:'background var(--t)',
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.background='var(--bg)'}
+                      onMouseLeave={e => e.currentTarget.style.background='transparent'}>
+                      <span style={{
+                        width:36, height:36, borderRadius:10, flexShrink:0,
+                        background:'#fff8e8',
+                        display:'flex', alignItems:'center', justifyContent:'center', fontSize:17,
+                      }}>{l.icon}</span>
+                      <div>
+                        <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{l.label}</div>
+                        <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{l.sub}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Plain links */}
             {[
               { label:'Char Dham',    href:'/packages/char-dham' },
-              { label:'Do Dham',      href:'/packages/do-dham' },
+              { label:'Kedarnath',    href:'/kedarnath-yatra' },
               { label:'Helicopter',   href:'/packages/helicopter' },
-              { label:'Uttarakhand',  href:'/packages/uttarakhand' },
-              { label:'About',        href:'/about' },
+              { label:'Blog',         href:'/blog' },
               { label:'Contact',      href:'/contact' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>
@@ -245,7 +314,19 @@ export default function Navbar() {
                 </Link>
               ))}
             </MobileAccordion>
-            {[{label:'About',href:'/about'},{label:'Contact',href:'/contact'},{label:'All Packages',href:'/packages'}].map(l => (
+            <MobileAccordion label="🚙 Cabs">
+              {CAB_LINKS.map(l => (
+                <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
+                  style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:13.5, color:'var(--text-mid)', textDecoration:'none', borderBottom:'1px solid var(--border)' }}>
+                  <span>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:600 }}>{l.label}</div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:1 }}>{l.sub}</div>
+                  </div>
+                </Link>
+              ))}
+            </MobileAccordion>
+            {[{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'},{label:'All Packages',href:'/packages'}].map(l => (
               <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
                 style={{ display:'block', padding:'15px 20px', fontSize:14, color:'var(--text)', borderBottom:'1px solid var(--border)', textDecoration:'none' }}>
                 {l.label}
