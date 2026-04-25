@@ -44,11 +44,11 @@ const FP = 'https://commons.wikimedia.org/wiki/Special:FilePath';
 const UNS = 'https://images.unsplash.com';
 
 export const CATEGORIES = {
-  'char-dham':    { slug:'char-dham',    name:'Char Dham Yatra',      shortName:'Char Dham',    icon:'🏔️', desc:'All 4 sacred dhams' },
-  'do-dham':      { slug:'do-dham',      name:'Do Dham Yatra',        shortName:'Do Dham',      icon:'🕌', desc:'Two dhams, one journey' },
-  'single-dham':  { slug:'single-dham',  name:'Single Dham Yatra',    shortName:'Single Dham',  icon:'🙏', desc:'One shrine, pure devotion' },
-  'helicopter':   { slug:'helicopter',   name:'Helicopter Tours',     shortName:'Helicopter',   icon:'🚁', desc:'VIP aerial yatra' },
-  'uttarakhand':  { slug:'uttarakhand',  name:'Uttarakhand Tours',    shortName:'Uttarakhand',  icon:'🌿', desc:'Hills, lakes & adventure' },
+  'char-dham':    { slug:'char-dham',    name:'Char Dham Yatra',      shortName:'Char Dham',    icon:'🏔️', desc:'All 4 sacred dhams' , cover:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/600px-Kedarnathji-mandir.JPG'},
+  'do-dham':      { slug:'do-dham',      name:'Do Dham Yatra',        shortName:'Do Dham',      icon:'🕌', desc:'Two dhams, one journey' , cover:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/600px-Badrinath_Temple_%28front_view%29.jpg'},
+  'single-dham':  { slug:'single-dham',  name:'Single Dham Yatra',    shortName:'Single Dham',  icon:'🙏', desc:'One shrine, pure devotion' , cover:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/600px-Kedarnathji-mandir.JPG'},
+  'helicopter':   { slug:'helicopter',   name:'Helicopter Tours',     shortName:'Helicopter',   icon:'🚁', desc:'VIP aerial yatra' , cover:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'},
+  'uttarakhand':  { slug:'uttarakhand',  name:'Uttarakhand Tours',    shortName:'Uttarakhand',  icon:'🌿', desc:'Hills, lakes & adventure' , cover:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'},
 };
 
 // ================================================================
@@ -75,6 +75,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
     price    : { original:24000, discounted:20999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       'All 4 Dhams — Yamunotri, Gangotri, Kedarnath & Badrinath',
       '6 km trek / pony ride to Yamunotri from Janki Chatti',
@@ -127,6 +128,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
     price    : { original:50000, discounted:45000, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       '3-star deluxe hotels at every stopover',
       'Extra rest day at Uttarkashi with Harsil Valley excursion',
@@ -177,6 +179,7 @@ export const PACKAGES = [
     endCity  : 'Dehradun',
     altitude : 'Max: Kedarnath 3,583m (helipad at 3,566m)',
     price    : { original:95000, discounted:85000, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Complete Char Dham in just 6 days by helicopter',
       'Departs from Sahastradhara Helipad, Dehradun',
@@ -221,6 +224,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
     price    : { original:32000, discounted:27999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/800px-Badrinath_Temple_%28front_view%29.jpg',
     highlights:[
       'Designed for pilgrims aged 60+ with extra rest days',
       'Pony/palki at Yamunotri (6 km both ways) — included',
@@ -272,6 +276,7 @@ export const PACKAGES = [
     endCity  : 'Delhi',
     altitude : 'Max: Kedarnath 3,583m',
     price    : { original:28000, discounted:24500, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       'Pickup from Delhi (Kashmiri Gate / Majnu Ka Tila)',
       'Volvo Bus Delhi to Haridwar + AC Tempo Traveller for yatra',
@@ -325,6 +330,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
     price    : { original:14000, discounted:11999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       'Kedarnath Jyotirlinga — sacred hump of Lord Shiva',
       'Gaurikund hot spring ritual dip before the trek',
@@ -369,6 +375,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Gangotri 3,415m / Yamunotri 3,291m',
     price    : { original:11500, discounted:9499, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gangotri_temple.jpg/800px-Gangotri_temple.jpg',
     highlights:[
       'Yamunotri — source of sacred Yamuna River at 3,291m',
       'Divya Shila puja + Surya Kund (94°C) hot spring',
@@ -412,6 +419,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m (helipad)',
     price    : { original:35000, discounted:29999, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Helicopter to Kedarnath from Phata/Sersi helipad',
       'No 16 km trek — ideal for elderly and busy pilgrims',
@@ -453,6 +461,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Gangotri 3,415m',
     price    : { original:18000, discounted:15499, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/800px-Badrinath_Temple_%28front_view%29.jpg',
     highlights:[
       '3 sacred dhams — Yamunotri, Gangotri & Badrinath',
       'No 16 km Kedarnath trek — suitable for all fitness levels',
@@ -503,6 +512,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Kedarnath: 3,583m | Gaurikund: 1,982m',
     price    : { original:8500, discounted:6999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       'Kedarnath Jyotirlinga — 12th and highest of 12 Shiva shrines',
       '16 km scenic trek from Gaurikund (pony/helicopter optional)',
@@ -549,6 +559,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Badrinath: 3,133m',
     price    : { original:8000, discounted:6499, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/800px-Badrinath_Temple_%28front_view%29.jpg',
     highlights:[
       'Badrinath — one of 108 Vishnu Divya Desams',
       'Tapt Kund natural thermal spring bath (45°C)',
@@ -590,6 +601,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Yamunotri: 3,291m',
     price    : { original:7500, discounted:5999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Yamunotri_Temple.jpg/800px-Yamunotri_Temple.jpg',
     highlights:[
       'Yamunotri Dham — source of sacred Yamuna River at 3,291m',
       'Divya Shila worship before entering the inner sanctum',
@@ -631,6 +643,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Gangotri: 3,415m',
     price    : { original:7000, discounted:5699, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gangotri_temple.jpg/800px-Gangotri_temple.jpg',
     highlights:[
       'Gangotri — origin of the Holy Ganga River at 3,415m',
       'Bhagirathi Asthapadhi Snana (holy dip in Ganga)',
@@ -676,6 +689,7 @@ export const PACKAGES = [
     endCity  : 'Dehradun',
     altitude : 'Max: Kedarnath 3,566m (helipad)',
     price    : { original:55000, discounted:45000, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Visit both Kedarnath & Badrinath in a single day',
       'Aerial views of Garhwal Himalayas from helicopter',
@@ -714,6 +728,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Hemkund Sahib 4,329m',
     price    : { original:22000, discounted:18499, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/15639131/pexels-photo-15639131.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Hemkund Sahib Gurudwara at 4,329m — sacred Sikh pilgrimage',
       'Valley of Flowers — UNESCO World Heritage Site',
@@ -763,6 +778,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Rishikesh 356m',
     price    : { original:9000, discounted:7499, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haridwar_Har_ki_Pauri.jpg/800px-Haridwar_Har_ki_Pauri.jpg',
     highlights:[
       'Har Ki Pauri Ganga Aarti — magical evening ritual',
       'White water rafting on the Ganges (Grade III–IV rapids)',
@@ -805,6 +821,7 @@ export const PACKAGES = [
     endCity  : 'Dehradun',
     altitude : 'Max: Dhanaulti 2,250m',
     price    : { original:12000, discounted:9999, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Mussoorie — Queen of the Hills at 2,000m',
       'Gun Hill ropeway with panoramic Himalayan views',
@@ -847,6 +864,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Kausani 1,890m',
     price    : { original:16000, discounted:13499, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Nainital — beautiful lake town with Naini Lake boating',
       'Snow View Point — panoramic Himalayan vista',
@@ -890,6 +908,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Chandrashila 4,130m',
     price    : { original:10000, discounted:8499, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Chopta — "Mini Switzerland of Uttarakhand" at 2,680m',
       'Tungnath — world\'s highest Shiva temple at 3,680m (Panch Kedar)',
@@ -931,6 +950,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Auli 2,519m–3,049m',
     price    : { original:15000, discounted:12499, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/848612/pexels-photo-848612.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Auli — India\'s premier ski destination with 14 km slopes',
       'Gondola / cable car ride — 4 km, 10-seater (India\'s longest)',
@@ -978,6 +998,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Tungnath 3,680m / Kedarnath 3,583m',
     price    : { original:25000, discounted:21999, currency:'₹', perPerson:true },
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/800px-Kedarnathji-mandir.JPG',
     highlights:[
       'All 5 Panch Kedar Shiva temples in one journey',
       'Kedarnath — most sacred of the 12 Jyotirlingas (3,583m)',
@@ -1046,7 +1067,7 @@ export const PACKAGES = [
     ],
     featured : false,
     badge    : 'Adventure Pick',
-    photo    : 'https://images.unsplash.com/photo-1591189863345-9db058f9f8ec?auto=format&fit=crop&w=900&q=60',
+    photo     : 'https://images.unsplash.com/photo-1591189863345-9db058f9f8ec?auto=format&fit=crop&w=600&h=400&q=70',
     images   : ['rishikesh'],
     tags     : ['rishikesh','rafting','camping','bungee','adventure','ganga','yoga'],
     metaTitle: 'Rishikesh Adventure Package 2026 — Rafting Camping Bungee 2N/3D | Shiv Ganga Travels',
@@ -1089,7 +1110,7 @@ export const PACKAGES = [
     ],
     featured : false,
     badge    : null,
-    photo    : 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
+    photo     : 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     images   : ['mussoorie'],
     tags     : ['mussoorie','rishikesh','kanatal','hill station','uttarakhand','family','kempty falls'],
     metaTitle: 'Mussoorie Rishikesh Kanatal Tour Package 2026 — 4N/5D | Shiv Ganga Travels',
@@ -1112,6 +1133,7 @@ export const PACKAGES = [
     endCity  : 'Kathgodam',
     altitude : 'Nainital: 2,084m | Corbett: 1,100m',
     price    : { original:17000, discounted:13999, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Jim Corbett National Park — India\'s oldest tiger reserve',
       '2 jungle safaris — Dhikala zone (best for tigers)',
@@ -1176,7 +1198,7 @@ export const PACKAGES = [
     ],
     featured : false,
     badge    : null,
-    photo    : 'https://commons.wikimedia.org/wiki/Special:FilePath/Gangotri_temple.jpg?width=900',
+    photo     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haridwar_Har_ki_Pauri.jpg/800px-Haridwar_Har_ki_Pauri.jpg',
     images   : ['haridwar'],
     tags     : ['haridwar','rishikesh','ganga darshan','spiritual','yoga','temple','aarti'],
     metaTitle: 'Haridwar Rishikesh Spiritual Tour Package 2026 — 4N/5D Ganga Darshan',
@@ -1199,6 +1221,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Badrinath 3,133m',
     price    : { original:28000, discounted:22999, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Haridwar — Har Ki Pauri Ganga aarti & 5 major temples',
       'Rishikesh — Yoga capital, rafting, Parmarth Niketan aarti',
@@ -1248,6 +1271,7 @@ export const PACKAGES = [
     endCity  : 'Haridwar',
     altitude : 'Max: Hemkund Sahib 4,329m',
     price    : { original:16000, discounted:13499, currency:'₹', perPerson:true },
+    photo     : 'https://images.pexels.com/photos/15639131/pexels-photo-15639131.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     highlights:[
       'Valley of Flowers — UNESCO World Heritage Site, 500+ species of Himalayan wildflowers',
       'Hemkund Sahib — Sikh Gurudwara at 4,329m, one of the highest places of worship',
@@ -1314,7 +1338,7 @@ export const PACKAGES = [
     ],
     featured : true,
     badge    : 'Best Combo',
-    photo    : 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
+    photo     : 'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     images   : ['kedarnath','badrinath'],
     tags     : ['kedarnath','chopta','badrinath','tungnath','adventure','spiritual','combo'],
     metaTitle: 'Kedarnath Chopta Badrinath Package 2026 — 6N/7D Spiritual Adventure Combo',

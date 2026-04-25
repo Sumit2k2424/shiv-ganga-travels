@@ -28,12 +28,12 @@ function ChevronDown({ open }) {
 }
 
 const PKG_LINKS = [
-  { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',            icon:'🏔️' },
-  { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', icon:'🕌' },
-  { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         icon:'🙏' },
-  { label:'Helicopter Tours', href:'/packages/helicopter',  sub:'All 4 dhams in 6 days — VIP experience',  icon:'🚁' },
-  { label:'Uttarakhand Tours',href:'/packages/uttarakhand', sub:'Hills, adventure, wildlife & more',        icon:'🌿' },
-  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        icon:'📋' },
+  { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',             img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/120px-Kedarnathji-mandir.JPG' },
+  { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/120px-Badrinath_Temple_%28front_view%29.jpg' },
+  { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/120px-Kedarnathji-mandir.JPG' },
+  { label:'Helicopter Tours', href:'/packages/helicopter',  sub:'All 4 dhams in 6 days — VIP experience',  img:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=120&h=80&fit=crop' },
+  { label:'Uttarakhand Tours',href:'/packages/uttarakhand', sub:'Hills, adventure, wildlife & more',        img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=120&h=80&fit=crop' },
+  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        img:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haridwar_Har_ki_Pauri.jpg/120px-Haridwar_Har_ki_Pauri.jpg' },
 ];
 
 const CAB_LINKS = [
@@ -174,17 +174,15 @@ export default function Navbar() {
                     <Link key={l.href} href={l.href} onClick={() => setDropOpen(false)}
                       style={{
                         display:'flex', alignItems:'center', gap:12,
-                        padding:'12px 18px', textDecoration:'none',
+                        padding:'10px 16px', textDecoration:'none',
                         borderBottom: i < PKG_LINKS.length-1 ? '1px solid var(--border)' : 'none',
                         transition:'background var(--t)',
                       }}
                       onMouseEnter={e => e.currentTarget.style.background='var(--bg)'}
                       onMouseLeave={e => e.currentTarget.style.background='transparent'}>
-                      <span style={{
-                        width:36, height:36, borderRadius:10, flexShrink:0,
-                        background:'var(--navy-light)',
-                        display:'flex', alignItems:'center', justifyContent:'center', fontSize:17,
-                      }}>{l.icon}</span>
+                      <img src={l.img} alt={l.label} width={44} height={44}
+                        style={{ width:44, height:44, borderRadius:8, objectFit:'cover', flexShrink:0 }}
+                        loading="lazy" decoding="async"/>
                       <div>
                         <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{l.label}</div>
                         <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{l.sub}</div>
@@ -255,6 +253,7 @@ export default function Navbar() {
               { label:'Kedarnath',    href:'/kedarnath-yatra' },
               { label:'Helicopter',   href:'/packages/helicopter' },
               { label:'Blog',         href:'/blog' },
+              { label:'About',        href:'/about' },
               { label:'Contact',      href:'/contact' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>

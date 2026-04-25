@@ -621,22 +621,24 @@ export default function HomePage() {
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
               {[
-                { icon:'🏔️', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
-                { icon:'🕌', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
-                { icon:'🙏', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
-                { icon:'🌊', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
-                { icon:'🌿', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
-                { icon:'⛰️', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
-                { icon:'🚁', title:'Helicopter Package', desc:'All 4 dhams in 6 days', href:'/char-dham-helicopter' },
-                { icon:'🛕', title:'Panch Kedar Yatra', desc:'5 Shiva temples · 8N/9D', href:'/panch-kedar-yatra' },
-                { icon:'🌳', title:'Uttarakhand Tours', desc:'Hills, wildlife, adventure', href:'/uttarakhand-tour-packages' },
-                { icon:'👴', title:'Senior Citizen', desc:'Special care package', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/400px-Badrinath_Temple_%28front_view%29.jpg', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/400px-Badrinath_Temple_%28front_view%29.jpg', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gangotri_temple.jpg/400px-Gangotri_temple.jpg', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Yamunotri_Temple.jpg/400px-Yamunotri_Temple.jpg', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
+                { img:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Helicopter Package', desc:'All 4 dhams in 6 days', href:'/char-dham-helicopter' },
+                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Panch Kedar Yatra', desc:'5 Shiva temples · 8N/9D', href:'/panch-kedar-yatra' },
+                { img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Uttarakhand Tours', desc:'Hills, wildlife, adventure', href:'/uttarakhand-tour-packages' },
+                { img:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Senior Citizen', desc:'Special care package', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="pkg-card"
-                  style={{ background:'#fff', padding:'14px', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start' }}>
-                  <span style={{ fontSize:22, flexShrink:0 }}>{l.icon}</span>
-                  <div>
-                    <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{l.title}</div>
+                  style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column', borderRadius:10, overflow:'hidden', border:'1px solid var(--border)' }}>
+                  <img src={l.img} alt={l.title} width={400} height={180}
+                    style={{ width:'100%', height:100, objectFit:'cover', display:'block' }}
+                    loading="lazy" decoding="async"/>
+                  <div style={{ padding:'10px 12px' }}>
+                    <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:2 }}>{l.title}</div>
                     <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{l.desc}</div>
                   </div>
                 </Link>

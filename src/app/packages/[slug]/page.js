@@ -107,7 +107,11 @@ export default function PackageDetailPage({ params }) {
       <>
         <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
           <div style={{ maxWidth:720, margin:'0 auto' }}>
-            <span style={{ fontSize:44, display:'block', marginBottom:14 }}>{cat.icon}</span>
+            {cat.cover && (
+              <div style={{ width:80, height:80, borderRadius:16, overflow:'hidden', margin:'0 auto 14px', border:'3px solid rgba(255,255,255,0.25)' }}>
+                <img src={cat.cover} alt={cat.name} width={80} height={80} style={{ width:'100%', height:'100%', objectFit:'cover' }} loading="eager"/>
+              </div>
+            )}
             <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:12 }}>{cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em></h1>
             <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>{pkgs.length} packages · From Haridwar · VIP darshan · Zero commission</p>
           </div>
