@@ -88,6 +88,7 @@ function SiteSchema() {
     '@id': `${SITE.baseUrl}/#organization`,
     name: SITE.name,
     alternateName: ['Shiv Ganga Travels Haridwar', 'Shiv Ganga Char Dham Tours'],
+    sameAs: ['https://share.google/gApTvZu1nEBnhjm3W','https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET'],
     url: SITE.baseUrl,
     logo: {
       '@type': 'ImageObject',

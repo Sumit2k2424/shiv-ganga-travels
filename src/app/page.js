@@ -586,7 +586,59 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Row 3 — Planning Tools */}
+          {/* Row 3 — Cabs */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'#f59e0b', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Cab & Taxi Service</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
+              {[
+                { icon:'🚙', title:'All Char Dham Cabs', desc:'Innova, Tempo, Ertiga — rates & booking', href:'/char-dham-yatra-cab-booking', hot:true },
+                { icon:'🚗', title:'Haridwar → Kedarnath', desc:'225km · 6–7hrs · from ₹5,500', href:'/haridwar-to-kedarnath-cab' },
+                { icon:'🚗', title:'Haridwar → Badrinath', desc:'320km · 8–9hrs · from ₹7,000', href:'/haridwar-to-badrinath-cab' },
+                { icon:'🚗', title:'Haridwar → Gangotri', desc:'265km · 7–8hrs · from ₹6,500', href:'/haridwar-to-gangotri-cab' },
+                { icon:'🚗', title:'Delhi → Haridwar', desc:'210km · 4–5hrs · from ₹3,500', href:'/delhi-to-haridwar-cab' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="pkg-card"
+                  style={{ background: l.hot ? 'var(--navy)' : '#fff', padding:'14px', borderRadius:10, border: l.hot ? 'none' : '1px solid var(--border)', textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start' }}>
+                  <span style={{ fontSize:20, flexShrink:0 }}>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:13, color: l.hot ? '#fff' : 'var(--navy)', marginBottom:2 }}>{l.title}</div>
+                    <div style={{ fontSize:11.5, color: l.hot ? 'rgba(255,255,255,0.65)' : 'var(--text-muted)' }}>{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 3b — Temple & Spiritual */}
+          <div style={{ marginBottom:32 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
+              <div style={{ width:3, height:20, background:'var(--teal)', borderRadius:2 }}/>
+              <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Temple Guides & Puja</h3>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
+              {[
+                { icon:'🕌', title:'Kedarnath Temple', desc:'Timings, history & puja guide', href:'/kedarnath-temple' },
+                { icon:'🕌', title:'Badrinath Temple', desc:'Darshan, Tapt Kund & puja', href:'/badrinath-temple' },
+                { icon:'🙏', title:'Online Puja Booking', desc:'Abhishek, Rudrabhishek — all temples', href:'/online-puja-booking', hot:true },
+                { icon:'🌤️', title:'Kedarnath Weather', desc:'Month-wise temperature guide', href:'/kedarnath-weather' },
+                { icon:'🚨', title:'Emergency Contacts', desc:'Helplines, SDRF, hospitals', href:'/char-dham-yatra-emergency-contacts' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="pkg-card"
+                  style={{ background: l.hot ? '#fff9f0' : '#fff', padding:'14px', borderRadius:10, border:`1px solid ${l.hot ? 'rgba(232,146,10,0.3)' : 'var(--border)'}`, textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start' }}>
+                  <span style={{ fontSize:20, flexShrink:0 }}>{l.icon}</span>
+                  <div>
+                    <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{l.title}</div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 4 — Planning Tools */}
           <div style={{ marginBottom:32 }}>
             <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
               <div style={{ width:3, height:20, background:'var(--gold)', borderRadius:2 }}/>
