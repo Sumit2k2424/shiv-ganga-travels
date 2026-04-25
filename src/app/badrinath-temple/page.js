@@ -43,9 +43,9 @@ export default function BadrinathTemple() {
       <p style={p}>Badrinath is one of the most revered pilgrimage sites in Hinduism — the final and perhaps most significant of the four Char Dhams. The temple, dedicated to Lord Vishnu in his Badrinarayan form, sits at 3,133 metres between the Nar and Narayan mountain ranges in Chamoli district. Unlike Kedarnath, Badrinath is accessible entirely by motor road — no trekking required — making it accessible to pilgrims of all ages and fitness levels.</p>
       <p style={p}>The black stone idol of Badrinarayan is 1 metre tall and is believed to be <em>swayambhu</em> (self-manifested). The idol was reportedly retrieved from the Alaknanda river by Adi Shankaracharya in the 8th century and installed in the current temple. The temple was built and rebuilt several times — the current structure is from the 17th century with subsequent renovations.</p>
       <h2 style={h2}>Darshan Timings 2026</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
         {[['4:30 AM','Maha Abhishek — most auspicious puja of the day'],['6:00 AM','Abhishek + Aarti'],['7:00 AM','General Darshan opens'],['12:00 PM','Madhyan Darshan'],['1:00 PM – 4:00 PM','Temple closed for rest'],['4:00 PM','Evening Darshan reopens'],['7:00 PM','Sandhya Aarti'],['9:00 PM','Shayan Aarti — temple closes'],].map(([time,desc],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'140px 1fr', borderTop: i>0?'1px solid var(--border)':'none', padding:'10px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(90px,32%,140px) 1fr', borderTop: i>0?'1px solid var(--border)':'none', padding:'10px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{time}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)' }}>{desc}</div>
           </div>

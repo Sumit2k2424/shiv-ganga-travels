@@ -125,7 +125,7 @@ export default function PackageDetailPage({ params }) {
         </div>
         <section style={{ background:'var(--bg)', padding:'40px 20px 60px' }}>
           <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(290px,1fr))', gap:20 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(290px,100%),1fr))', gap:20 }}>
               {pkgs.map(p => {
                 const sav = p.price.original - p.price.discounted;
                 return (
@@ -267,7 +267,7 @@ export default function PackageDetailPage({ params }) {
           {/* Inclusions / Exclusions */}
           <section>
             <h2 style={SH}>✅ What&apos;s Included / Excluded</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:14 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(260px,100%),1fr))', gap:12 }}>
               <div style={{ background:'#f0fdf4', borderRadius:12, padding:'16px' }}>
                 <div style={{ fontWeight:700, fontSize:13, color:'#15803d', marginBottom:10 }}>✅ Included</div>
                 {(pkg.inclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#15803d', flexShrink:0 }}>✓</span>{item}</div>)}
@@ -311,7 +311,7 @@ export default function PackageDetailPage({ params }) {
           {pkg.faqs?.length > 0 && (
             <section>
               <h2 style={SH}>❓ Frequently Asked Questions</h2>
-              <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden' }}>
+              <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto' }}>
                 {pkg.faqs.map((faq,i)=>(
                   <div key={i} style={{ padding:'16px 20px', borderBottom:i<pkg.faqs.length-1?'1px solid var(--border)':'none' }}>
                     <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:7 }}>Q. {faq.q}</div>

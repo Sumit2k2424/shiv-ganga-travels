@@ -158,7 +158,7 @@ export default function CharDhamYatra() {
             <div style={{ fontWeight:700, fontSize:15, color:'#fff' }}>📅 Upcoming Departures</div>
             <span style={{ background:'#25D366', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 12px', borderRadius:100 }}>Season Open — Apr 19, 2026</span>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:8, marginBottom:14 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(140px,45%),1fr))', gap:8, marginBottom:14 }}>
             {[
               {date:'May 1–10, 2026',   seats:'4 seats left',  hot:true},
               {date:'May 10–19, 2026',  seats:'6 seats left',  hot:true},

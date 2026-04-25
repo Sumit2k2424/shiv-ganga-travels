@@ -63,7 +63,7 @@ export default function Blog() {
 
       <section style={{ background:'var(--bg)', padding:'48px 20px 60px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:20 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(280px,100%),1fr))', gap:20 }}>
             {POSTS.map(post => {
               const tc = TAG_COLORS[post.tag] || { bg:'var(--navy-light)', color:'var(--navy)' };
               return (

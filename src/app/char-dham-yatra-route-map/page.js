@@ -191,7 +191,7 @@ export default function RouteMap() {
 
         {/* Distance table */}
         <h2 style={h2}>Distance Reference Table</h2>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:28 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>
               <tr style={{ background:'var(--navy-light)' }}>

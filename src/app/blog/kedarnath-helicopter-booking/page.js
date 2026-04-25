@@ -99,7 +99,7 @@ export default function KedarnathHelicopterBooking() {
         </ol>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
-        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:24 }}>
           {faqData.map((f, i) => (
             <div key={i} style={{ padding:'16px 20px', borderBottom:i<faqData.length-1?'1px solid var(--border)':'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>

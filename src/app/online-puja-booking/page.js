@@ -60,7 +60,7 @@ export default function PujaBooking() {
           <div style={{ fontFamily:'var(--font-display)', fontSize:'1.3rem', fontWeight:600, color:'var(--navy)', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' }}>
             🕌 {temple.temple} — {temple.deity}
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(250px,1fr))', gap:12 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(250px,100%),1fr))', gap:12 }}>
             {temple.pujas.map(puja => (
               <div key={puja.name} style={{ background:'#fff', borderRadius:12, border:`${puja.popular ? '2px solid var(--navy)' : '1px solid var(--border)'}`, padding:'16px', position:'relative' }}>
                 {puja.popular && <div style={{ position:'absolute', top:-1, right:-1, background:'var(--gold)', color:'#fff', fontSize:10, fontWeight:700, padding:'3px 10px', borderRadius:'0 12px 0 8px' }}>POPULAR</div>}

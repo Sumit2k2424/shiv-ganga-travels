@@ -338,7 +338,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ display:'flex', alignItems:'stretch', overflow:'hidden', minHeight:76 }}>
+          <div style={{ display:'flex', alignItems:'stretch', overflow:'clip', minHeight:76 }}>
             {/* Dark label */}
             <div style={{ background:'var(--navy)', padding:'16px 28px', display:'flex', alignItems:'center', gap:14, flexShrink:0 }}>
               <span style={{ fontSize:28 }}>🛡️</span>

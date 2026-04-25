@@ -767,8 +767,18 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 
 /* ─── 9. PACKAGE CARDS (carousel) ──────────────────────────── */
 @media (max-width: 640px) {
-  .hscroll { padding: 4px 14px 16px !important; gap: 12px !important; }
-  .pkg-card { min-width: 220px !important; flex: 0 0 220px !important; }
+  .hscroll {
+    padding: 4px 16px 16px !important;
+    gap: 14px !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  /* One full-width card per screen — swipe naturally */
+  .hscroll > * {
+    min-width: calc(100vw - 48px) !important;
+    flex: 0 0 calc(100vw - 48px) !important;
+    max-width: calc(100vw - 48px) !important;
+    scroll-snap-align: center !important;
+  }
 }
 
 /* ─── 10. PACKAGE DIRECTORY GRID ───────────────────────────── */
@@ -1032,4 +1042,224 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 @media (max-width: 400px) {
   /* Shorten commission strip to 2 lines max */
   .comm-strip-link { display: block; margin-top: 3px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE OVERFLOW ELIMINATION — no element cut on any screen
+   Strategy: attribute selectors override ALL inline-style grids
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Global box model: nothing overflows ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  img, video, iframe, table { max-width: 100%; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   1. INLINE GRID OVERRIDES (minmax too wide for phone screen)
+   These attribute selectors catch every inline style grid that
+   uses a minmax value too large to fit a 375px phone.
+────────────────────────────────────────────────────────────── */
+
+/* Any grid with minmax ≥ 340px → single column on mobile */
+@media (max-width: 600px) {
+  [style*="minmax(380px"],
+  [style*="minmax(360px"],
+  [style*="minmax(340px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Any grid with minmax 260–330px → single column on mobile */
+@media (max-width: 640px) {
+  [style*="minmax(330px"],
+  [style*="minmax(310px"],
+  [style*="minmax(300px"],
+  [style*="minmax(290px"],
+  [style*="minmax(280px"],
+  [style*="minmax(270px"],
+  [style*="minmax(260px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Any grid with minmax 220–250px → single column below 480px */
+@media (max-width: 480px) {
+  [style*="minmax(250px"],
+  [style*="minmax(240px"],
+  [style*="minmax(230px"],
+  [style*="minmax(220px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Any grid with minmax 180–210px → 2 columns below 480px */
+@media (max-width: 480px) {
+  [style*="minmax(210px"],
+  [style*="minmax(200px"],
+  [style*="minmax(190px"],
+  [style*="minmax(180px"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* Any grid with minmax 160–180px → 2 columns even on tiny screens */
+@media (max-width: 360px) {
+  [style*="minmax(175px"],
+  [style*="minmax(170px"],
+  [style*="minmax(165px"],
+  [style*="minmax(160px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   2. FIXED COLUMN GRIDS (e.g. "140px 1fr", "160px 1fr")
+   These are used in darshan-timing tables and route rows
+────────────────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  [style*="gridTemplateColumns:'160px"],
+  [style*="gridTemplateColumns:"160px"],
+  [style*="gridTemplateColumns:'140px"],
+  [style*="gridTemplateColumns:"140px"],
+  [style*="gridTemplateColumns:'120px"],
+  [style*="gridTemplateColumns:"120px"] {
+    grid-template-columns: 1fr !important;
+    gap: 2px !important;
+  }
+
+  /* Make split rows in timing tables look like label + value stacked */
+  [style*="gridTemplateColumns:'160px"] > *:first-child,
+  [style*="gridTemplateColumns:'140px"] > *:first-child {
+    padding-bottom: 0 !important;
+    font-size: 11px !important;
+    color: var(--text-muted) !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   3. TABLES — wrap all tables in a scrollable container
+   (we can't add wrappers to already-built pages easily,
+   so we style the table's containing overflow:hidden divs)
+────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Tables inside overflow:hidden border-radius divs */
+  div[style*="overflow:'hidden'"] > table,
+  div[style*='overflow:"hidden"'] > table,
+  div[style*="overflow: hidden"] > table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+
+  /* General table overflow safety */
+  table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  /* Make table cells wrap text so they don't force wide layout */
+  td, th {
+    white-space: normal !important;
+    word-break: break-word;
+    min-width: 80px;
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   4. SPECIFIC PROBLEM PAGES
+────────────────────────────────────────────────────────────── */
+
+/* Emergency contacts — minmax(380px) is 2× phone width */
+@media (max-width: 640px) {
+  .emergency-grid,
+  [style*="minmax(380px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Cab vehicles grid minmax(270px) */
+@media (max-width: 600px) {
+  [style*="minmax(270px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Puja booking minmax(250px) */
+@media (max-width: 500px) {
+  [style*="minmax(250px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Blog listing minmax(300px) */
+@media (max-width: 640px) {
+  [style*="minmax(300px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   5. PADDING & CONTAINER SAFETY
+────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Reduce large padding on small phones */
+  [style*="padding:'28px 24px'"],
+  [style*="padding:'24px'"],
+  [style*="padding:'20px 22px'"] {
+    padding: 16px 14px !important;
+  }
+
+  /* Reduce gap on flex rows that wrap */
+  [style*="gap:20"], [style*="gap: 20"] {
+    gap: 12px !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   6. FLEX ROWS — prevent horizontal overflow
+────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Any flex row with gap on small phones — allow wrapping */
+  [style*="display:'flex'"][style*="gap"],
+  [style*='display:"flex"'][style*="gap"] {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   7. IMAGES — always contained
+────────────────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   8. ZERO HORIZONTAL SCROLL on body
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  body    { overflow-x: hidden !important; }
+  #__next { overflow-x: hidden !important; max-width: 100vw; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   9. STICKY BOOKING BAR — don't let it clip content
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Add breathing room at the bottom so last content isn't hidden under bar */
+  main > section:last-child,
+  main > div:last-child {
+    padding-bottom: 80px !important;
+  }
 }

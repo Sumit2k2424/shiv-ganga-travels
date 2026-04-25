@@ -41,7 +41,7 @@ export default function KedarnathWeather() {
         <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}><strong>May–June</strong> and <strong>September–October</strong> are the two ideal windows. May–June has clear skies, mild temperatures, and blooming rhododendrons. September–October has crystal-clear post-monsoon visibility — best for Himalayan photography. Avoid July–August (monsoon, landslides).</p>
       </div>
       <h2 style={h2}>Month-by-Month Weather</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
         <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
           <thead>
             <tr style={{ background:'var(--navy-light)' }}>

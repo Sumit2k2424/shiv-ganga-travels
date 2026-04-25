@@ -75,7 +75,7 @@ export default function EmergencyContacts() {
         <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Before you travel</div>
         <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>Save the 108 ambulance number and your nearest district control room number in your phone before departing. Mountain networks can be patchy — note numbers on paper too. Our team at Shiv Ganga Travels is also available 24/7 during your yatra at <strong>{SITE.phone}</strong>.</p>
       </div>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(380px,1fr))', gap:16 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(380px,100%),1fr))', gap:16 }}>
         {contacts.map(cat => (
           <div key={cat.category} style={{ background:cat.color, border:`1px solid ${cat.border}`, borderRadius:12, padding:'16px 18px' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>{cat.category}</div>

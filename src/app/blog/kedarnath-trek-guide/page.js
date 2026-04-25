@@ -171,7 +171,7 @@ export default function KedarnathTrekGuide() {
         <p style={p}>Cut out alcohol completely for the two weeks before the trek — it dehydrates you and impairs altitude acclimatisation. Drink 2–3 litres of water daily.</p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
-        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden' }}>
+        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto' }}>
           {faqData.map((f, i) => (
             <div key={i} style={{ padding:'18px 20px', borderBottom: i < faqData.length-1 ? '1px solid var(--border)' : 'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>

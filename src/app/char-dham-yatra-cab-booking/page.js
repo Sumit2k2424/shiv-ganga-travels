@@ -88,7 +88,7 @@ export default function CabBooking() {
       </div>
 
       <h2 style={h2}>🚙 Vehicle Options & Rates</h2>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(270px,1fr))', gap:14, marginBottom:32 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(270px,100%),1fr))', gap:14, marginBottom:32 }}>
         {vehicles.map(v => (
           <div key={v.name} style={{ background:'#fff', borderRadius:14, border:`${v.popular ? '2px solid var(--navy)' : '1px solid var(--border)'}`, padding:'18px', position:'relative', overflow:'hidden' }}>
             {v.popular && <div style={{ position:'absolute', top:0, right:0, background:'var(--navy)', color:'#fff', fontSize:10, fontWeight:700, padding:'4px 12px', borderRadius:'0 14px 0 8px', letterSpacing:'0.06em' }}>MOST POPULAR</div>}
@@ -109,7 +109,7 @@ export default function CabBooking() {
       </div>
 
       <h2 style={h2}>📍 Key Routes & Distances</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:32 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
         <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
           <thead>
             <tr style={{ background:'var(--navy-light)' }}>
@@ -135,7 +135,7 @@ export default function CabBooking() {
       </div>
 
       <h2 style={h2}>❓ Frequently Asked Questions</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:32 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
         {[
           { q:'What is the cab fare for Char Dham Yatra from Haridwar?', a:'Full Char Dham Yatra cab fares start at ₹22,000 for an Ertiga (4-seater) and go up to ₹52,000 for a 12-seater Tempo Traveller for the complete 10–12 day circuit. Innova Crysta — the most popular choice — costs ₹30,000–38,000. All fares include fuel, toll, parking, and driver allowance.' },
           { q:'Which vehicle is best for Char Dham Yatra?', a:'Innova Crysta is best for families of 4–6. Tempo Traveller is ideal for groups of 7–12. Ertiga is economical for couples or small groups. All vehicles are hill-terrain certified with drivers who have 5+ years of mountain driving experience on Char Dham routes.' },
