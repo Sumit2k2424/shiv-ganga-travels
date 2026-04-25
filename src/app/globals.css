@@ -667,59 +667,66 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — comprehensive fixes for all breakpoints
-   Mobile-first approach: ≤ 640px small, ≤ 768px medium
+   MOBILE-FIRST RESPONSIVE SYSTEM
+   Breakpoints: 480px (xs) · 640px (sm) · 768px (md) · 860px (lg)
+   Strategy: Every inline-style grid gets a CSS class override
 ═══════════════════════════════════════════════════════════════ */
 
-/* ── Base mobile resets ── */
+/* ─── 1. ROOT & BODY ─────────────────────────────────────────── */
 @media (max-width: 768px) {
-  :root { --section-y: 44px; }
-
-  body { font-size: 14px; }
-
-  .container { padding: 0 14px; }
-
-  .section-title { font-size: clamp(1.35rem, 5vw, 1.8rem); }
-  .section-subtitle { font-size: 13.5px; margin-bottom: 22px; }
-  .section-tag { font-size: 10px; }
-
-  /* Stack all 2-col grids */
-  .mobile-stack {
-    grid-template-columns: 1fr !important;
+  :root {
+    --section-y: 40px;
+    --container-pad: 16px;
   }
+  body { font-size: 15px; }
+  .container { padding: 0 16px; }
+  main { overflow-x: hidden; }
 
-  /* Reduce section padding */
+  /* Scale down heavy section padding */
   section[style*="padding:"] ,
   section[style*="padding-top"] {
-    padding-top: 40px !important;
-    padding-bottom: 32px !important;
+    padding-top: 36px !important;
+    padding-bottom: 28px !important;
   }
 }
 
-/* ── HERO ── */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 56px 14px 80px !important;
-    min-height: auto !important;
-  }
-  .hero-section h1 {
-    font-size: clamp(1.7rem, 7vw, 2.4rem) !important;
-  }
-  .hero-trust-chips {
-    gap: 10px !important;
-    font-size: 11px !important;
-  }
-}
-
-/* ── MARQUEE BANNER ── */
+/* ─── 2. TYPOGRAPHY ─────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .marquee-track {
-    font-size: 11.5px !important;
-    animation-duration: 60s !important;
+  .display-title {
+    font-size: clamp(1.6rem, 7.5vw, 2.4rem) !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
   }
+  .section-title  { font-size: clamp(1.3rem, 6vw, 1.8rem) !important; }
+  .section-subtitle { font-size: 13.5px !important; margin-bottom: 20px !important; }
+  .section-tag    { font-size: 10px !important; padding: 4px 13px !important; }
+  h1, h2, h3      { word-break: break-word; }
+  p               { line-height: 1.7 !important; }
 }
 
-/* ── STATS BAR ── */
+/* ─── 3. NAVBAR UTILITY STRIP ───────────────────────────────── */
+@media (max-width: 640px) {
+  .utility-strip-left { display: none !important; }
+  .utility-strip      { justify-content: center !important; }
+}
+
+/* ─── 4. HERO SECTION ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-badge-right,
+  .hero-badge-left { display: none !important; }
+
+  .hero-offer-pills { gap: 6px !important; margin-top: 14px !important; }
+  .hero-offer-pills > div {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+  }
+  .hero-wave svg { height: 28px !important; }
+}
+@media (max-width: 480px) {
+  .hero-offer-pills { display: none !important; }
+}
+
+/* ─── 5. STATS BAR ──────────────────────────────────────────── */
 @media (max-width: 640px) {
   .stats-bar-inner {
     display: grid !important;
@@ -727,269 +734,302 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
   }
   .stats-bar-inner > div {
     border-right: none !important;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    padding: 14px 10px !important;
   }
 }
 
-/* ── ZERO COMMISSION STRIP ── */
-.zero-comm-strip {
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  min-height: 76px;
+/* ─── 6. CAB HERO ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cab-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
 }
+
+/* ─── 7. ZERO-COMMISSION STRIP ──────────────────────────────── */
 @media (max-width: 860px) {
-  .zero-comm-strip {
-    flex-wrap: wrap;
-    min-height: auto;
-  }
-  .zero-comm-label {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 20px !important;
-  }
-  .zero-comm-arrow { display: none !important; }
-  .zero-comm-chips {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    overflow: visible !important;
-    padding: 8px 0 !important;
-  }
-  .zero-comm-chip {
-    border-right: none !important;
-    border-bottom: 1px solid var(--border) !important;
-    padding: 12px 14px !important;
-  }
-  .zero-comm-phone {
-    width: 100%;
-    border-left: none !important;
-    border-top: 1px solid var(--border) !important;
-    padding: 12px 20px !important;
-    justify-content: center !important;
-    flex-direction: row !important;
-    gap: 10px !important;
+  .zero-comm-strip  { flex-wrap: wrap !important; min-height: auto !important; }
+  .zero-comm-label  { width: 100% !important; justify-content: center !important; padding: 14px 20px !important; }
+  .zero-comm-arrow  { display: none !important; }
+  .zero-comm-chips  { width: 100% !important; display: grid !important; grid-template-columns: 1fr 1fr !important; overflow: visible !important; padding: 8px 0 !important; }
+  .zero-comm-chip   { border-right: none !important; border-bottom: 1px solid var(--border) !important; padding: 12px 14px !important; }
+  .zero-comm-phone  { width: 100% !important; border-left: none !important; border-top: 1px solid var(--border) !important; padding: 12px 20px !important; justify-content: center !important; flex-direction: row !important; gap: 10px !important; }
+}
+
+/* ─── 8. CONTENT FUNNEL ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .funnel-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
   }
 }
 
-/* ── DHAM TILES ── */
-@media (max-width: 500px) {
-  .dham-circle { width: 62px !important; height: 62px !important; font-size: 26px !important; }
-  .dham-tile { min-width: 72px !important; }
-  .dham-tile > div:last-child > div:first-child { font-size: 12px !important; }
-}
-
-/* ── PACKAGE CARDS (horizontal scroll) ── */
+/* ─── 9. PACKAGE CARDS (carousel) ──────────────────────────── */
 @media (max-width: 640px) {
   .hscroll { padding: 4px 14px 16px !important; gap: 12px !important; }
   .pkg-card { min-width: 220px !important; flex: 0 0 220px !important; }
 }
 
-/* ── WHY CHOOSE US SPLIT ── */
-.why-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
-}
-@media (max-width: 860px) {
-  .why-split {
-    grid-template-columns: 1fr !important;
+/* ─── 10. PACKAGE DIRECTORY GRID ───────────────────────────── */
+@media (max-width: 480px) {
+  .pkg-dir-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
   }
-  .why-split-image {
-    height: 260px !important;
-    order: -1;
-  }
+  .pkg-dir-grid a img { height: 70px !important; }
+  .pkg-dir-grid a > div { padding: 7px 8px !important; }
+  .pkg-dir-grid a > div > div:first-child { font-size: 11px !important; }
+  .pkg-dir-grid a > div > div:last-child  { display: none !important; }
 }
 
-/* ── JOURNEY STEPS ── */
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
+/* ─── 11. SITE DIRECTORY — CITY ROW ─────────────────────────── */
+@media (max-width: 480px) {
+  /* city pills row: 2 columns */
+  .city-pills-grid { grid-template-columns: 1fr 1fr !important; }
 }
+
+/* ─── 12. WHY CHOOSE US ─────────────────────────────────────── */
+@media (max-width: 860px) {
+  .why-split { grid-template-columns: 1fr !important; }
+  .why-split-image { height: 240px !important; order: -1 !important; }
+}
+
+/* ─── 13. STEPS / HOW IT WORKS ──────────────────────────────── */
 @media (max-width: 640px) {
-  .steps-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 16px !important;
-  }
+  .steps-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
   .steps-grid .step-connector { display: none !important; }
 }
 @media (max-width: 360px) {
   .steps-grid { grid-template-columns: 1fr !important; }
 }
 
-/* ── PROMO BANNER STRIP ── */
+/* ─── 14. PACKAGE DETAIL PAGE ──────────────────────────────── */
+@media (max-width: 860px) {
+  .detail-grid {
+    grid-template-columns: 1fr !important;
+    padding: 20px 14px 100px !important;
+    gap: 20px !important;
+  }
+  .detail-grid > div:last-child { position: static !important; order: -1 !important; }
+  .detail-grid > div:last-child > div { position: static !important; }
+}
 @media (max-width: 640px) {
-  .promo-card { flex: 0 0 200px !important; height: 96px !important; padding: 0 16px !important; }
-  .promo-card > div:first-child { font-size: 13px !important; }
+  /* Inclusions/Exclusions side-by-side → stack */
+  .detail-grid .inc-exc-grid { grid-template-columns: 1fr !important; }
+  .detail-grid table { font-size: 12px !important; }
 }
 
-/* ── FOOTER ── */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr repeat(3, 1fr);
-  gap: 32px 24px;
-}
-@media (max-width: 860px) {
-  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 20px !important; }
-}
+/* ─── 15. DHAM TILES ────────────────────────────────────────── */
 @media (max-width: 500px) {
-  .footer-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .dham-circle { width: 60px !important; height: 60px !important; font-size: 24px !important; }
+  .dham-tile { min-width: 68px !important; }
+  .dham-tile > div:last-child > div:first-child { font-size: 11.5px !important; }
 }
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+
+/* ─── 16. FOOTER ────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 16px !important; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
 }
 @media (max-width: 640px) {
   .footer-bottom { flex-direction: column !important; text-align: center !important; }
 }
 
-/* ── PACKAGE DETAIL PAGE ── */
-@media (max-width: 860px) {
-  .detail-grid {
-    grid-template-columns: 1fr !important;
-    padding-bottom: 100px !important;
+/* ─── 17. STICKY BOOKING BAR ────────────────────────────────── */
+@media (max-width: 768px) {
+  .sticky-book-bar {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 10px 12px;
+    gap: 8px;
+    z-index: 80;
+    box-shadow: 0 -4px 20px rgba(15,43,91,0.12);
+    align-items: center;
   }
-  .detail-grid > div:last-child {
-    position: static !important;
-    order: -1;
-  }
-  .detail-grid > div:last-child > div[style*="position:sticky"] {
-    position: static !important;
-  }
-}
-@media (max-width: 640px) {
-  .detail-chips { flex-wrap: wrap !important; }
-  .detail-highlights { font-size: 12.5px !important; }
-}
-
-/* ── PACKAGES LISTING PAGE ── */
-@media (max-width: 640px) {
-  .pkg-filter-row {
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  .pkg-filter-row input,
-  .pkg-filter-row select {
-    width: 100% !important;
+  .sticky-book-bar > div:first-child { flex-shrink: 0; }
+  .sticky-book-bar a {
+    flex: 1;
+    font-size: 12.5px !important;
+    padding: 10px 8px !important;
+    text-align: center;
+    border-radius: 9px;
+    text-decoration: none;
   }
 }
 
-/* ── CONTACT PAGE ── */
-.contact-grid-inner {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 20px;
-  align-items: start;
-}
-@media (max-width: 860px) {
-  .contact-grid-inner { grid-template-columns: 1fr !important; }
-}
-@media (max-width: 500px) {
-  .contact-form-row {
-    grid-template-columns: 1fr !important;
+/* ─── 18. WHATSAPP + CHAT FLOAT ──────────────────────────────── */
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 130px !important;
+    right: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+  .chat-btn-float {
+    bottom: 72px !important;
+    right: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
   }
 }
 
-/* ── ABOUT PAGE ── */
-@media (max-width: 640px) {
-  .about-quote {
-    padding: 14px 16px !important;
-    font-size: 13.5px !important;
-  }
-}
-
-/* ── LEAD POPUP ── */
-@media (max-width: 500px) {
-  .lead-popup-form-row {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* ── CHAT BOT ── */
+/* ─── 19. CHAT WINDOW ───────────────────────────────────────── */
 @media (max-width: 480px) {
   .chat-window {
     right: 0 !important;
     left: 0 !important;
     bottom: 0 !important;
     width: 100% !important;
-    height: 70vh !important;
+    height: 72vh !important;
     border-radius: 20px 20px 0 0 !important;
   }
 }
 
-/* ── HERO SEARCH WIDGET ── */
+/* ─── 20. HERO SEARCH WIDGET ────────────────────────────────── */
 @media (max-width: 640px) {
   .hero-search-form {
     flex-direction: column !important;
+    gap: 10px !important;
   }
   .hero-search-form > div,
-  .hero-search-form > button {
-    width: 100% !important;
-    flex: none !important;
+  .hero-search-form > button { width: 100% !important; flex: none !important; }
+}
+
+/* ─── 21. LEAD POPUP ────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .lead-popup-form-row { grid-template-columns: 1fr !important; }
+  .lead-popup-inner {
+    padding: 20px 16px !important;
+    max-width: 95vw !important;
+    border-radius: 16px !important;
   }
 }
 
-/* ── TESTIMONIAL CARDS ── */
+/* ─── 22. TESTIMONIALS ──────────────────────────────────────── */
 @media (max-width: 640px) {
   .testimonial-card {
-    min-width: 280px !important;
-    flex: 0 0 280px !important;
-    padding: 22px 18px !important;
+    min-width: 270px !important;
+    flex: 0 0 270px !important;
+    padding: 18px 16px !important;
   }
 }
 
-/* ── CATEGORY PACKAGE GRID ── */
+/* ─── 23. HERO PROMO STRIP ──────────────────────────────────── */
 @media (max-width: 640px) {
-  .cat-pkg-grid {
-    grid-template-columns: 1fr !important;
-  }
+  .promo-card { flex: 0 0 195px !important; height: 92px !important; padding: 0 14px !important; }
+  .promo-card > div:first-child { font-size: 12.5px !important; }
 }
 
-/* ── STICKY BOOKING BAR (mobile) ── */
-@media (max-width: 768px) {
-  .sticky-book-bar {
-    padding: 10px 12px !important;
-    gap: 8px !important;
-  }
-  .sticky-book-bar a,
-  .sticky-book-bar span {
-    font-size: 12px !important;
-    padding: 9px 12px !important;
-  }
+/* ─── 24. CONTACT PAGE ──────────────────────────────────────── */
+@media (max-width: 860px) {
+  .contact-grid-inner { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 500px) {
+  .contact-form-row { grid-template-columns: 1fr !important; }
 }
 
-/* ── GENERAL TYPOGRAPHY MOBILE ── */
+/* ─── 25. PACKAGES FILTER BAR ───────────────────────────────── */
 @media (max-width: 640px) {
-  .display-title { letter-spacing: -0.02em !important; }
-  p { line-height: 1.65 !important; }
-  h1, h2, h3 { word-break: break-word; }
+  .pkg-filter-row { flex-direction: column !important; align-items: stretch !important; }
+  .pkg-filter-row input,
+  .pkg-filter-row select { width: 100% !important; }
 }
 
-/* ── PREVENT HORIZONTAL OVERFLOW ── */
-@media (max-width: 768px) {
-  main { overflow-x: hidden; }
-  .hero-wave svg { height: 36px !important; }
+/* ─── 26. ABOUT PAGE ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .about-founder-intro { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+  .about-quote { font-size: 13.5px !important; padding: 14px 16px !important; }
 }
 
-/* ── Chat button mobile position ── */
+/* ─── 27. CAB BOOKING TABLES ────────────────────────────────── */
+@media (max-width: 600px) {
+  .cab-table-wrap { overflow-x: auto !important; }
+  .cab-table-wrap table { min-width: 380px; }
+}
+
+/* ─── 28. WEATHER TABLE ─────────────────────────────────────── */
+@media (max-width: 600px) {
+  .weather-table-wrap { overflow-x: auto !important; }
+  .weather-table-wrap table { min-width: 540px; font-size: 11.5px !important; }
+  .weather-table-wrap th,
+  .weather-table-wrap td  { padding: 8px 8px !important; }
+}
+
+/* ─── 29. PUJA BOOKING CARDS ────────────────────────────────── */
+@media (max-width: 480px) {
+  .puja-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── 30. EMERGENCY CONTACTS ────────────────────────────────── */
+@media (max-width: 500px) {
+  .emergency-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── 31. GLOBAL INLINE GRID OVERRIDES ─────────────────────── */
+/* Any auto-fill grid with minmax ≥240px collapses to 1 col on mobile */
+@media (max-width: 500px) {
+  [style*="minmax(240px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(220px"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 640px) {
+  [style*="minmax(380px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(270px"] { grid-template-columns: 1fr !important; }
+}
+
+/* ─── 32. PREVENT OVERFLOW ──────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Chat button sits at 74px — just above the 64px sticky bar */
-  .chat-btn-float {
-    bottom: 74px !important;
-    right: 16px !important;
-    width: 48px !important;
-    height: 48px !important;
+  main      { overflow-x: hidden !important; }
+  .hero-wave svg { height: 28px !important; }
+  img { max-width: 100%; }
+}
+
+/* ─── 33. TOUCH TARGETS ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
   }
+  /* Exceptions for tiny decorative elements */
+  .chip, .badge, .section-tag, .nav-link { min-height: unset; min-width: unset; }
 }
 
-/* Cab hero grid — stack on mobile */
-@media (max-width: 768px) {
-  .cab-hero-grid {
-    grid-template-columns: 1fr !important;
+/* ─── 34. REDUCED MOTION ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
   }
+  .wa-float { animation: none !important; }
+}
+
+/* ─── 35. LANDSCAPE PHONE ───────────────────────────────────── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .chat-window { height: 85vh !important; }
+  .sticky-book-bar { padding: 6px 12px !important; }
+}
+
+/* ── Glowing hero buttons ──────────────────────────────── */
+@keyframes shimmerBtn {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Commission strip ──────────────────────────────────── */
+@keyframes commStrip {
+  0%,100% { background-position: 0% 0; }
+  50%     { background-position: 100% 0; }
+}
+@media (max-width: 640px) {
+  .comm-strip-text { font-size: 11px !important; }
+  /* truncate on very small screens */
+}
+@media (max-width: 400px) {
+  /* Shorten commission strip to 2 lines max */
+  .comm-strip-link { display: block; margin-top: 3px; }
 }

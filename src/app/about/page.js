@@ -83,7 +83,7 @@ export default function AboutPage() {
 
       {/* ── QUICK STATS ── */}
       <div style={{ background: 'var(--navy)', padding: '0' }}>
-        <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))' }}>
+        <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(120px,1fr))' }}>
           {[
             { num: '2010', label: 'Year Founded' },
             { num: '15+', label: 'Years of Service' },

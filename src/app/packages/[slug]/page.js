@@ -112,7 +112,7 @@ export default function PackageDetailPage({ params }) {
                 <img src={cat.cover} alt={cat.name} width={80} height={80} style={{ width:'100%', height:'100%', objectFit:'cover' }} loading="eager"/>
               </div>
             )}
-            <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:12 }}>{cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em></h1>
+            <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5vw,2.8rem)', marginBottom:12 }}>{cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em></h1>
             <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>{pkgs.length} packages · From Haridwar · VIP darshan · Zero commission</p>
           </div>
         </section>

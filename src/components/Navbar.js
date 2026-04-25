@@ -88,10 +88,36 @@ export default function Navbar() {
 
   return (
     <>
+      {/* ── Commission alert strip ─────────────────────── */}
+      <div style={{
+        background:'linear-gradient(90deg,#7f1d1d,#991b1b,#7f1d1d)',
+        backgroundSize:'200% 100%',
+        padding:'8px 16px', textAlign:'center',
+        position:'relative', overflow:'hidden',
+      }}>
+        {/* Subtle shimmer */}
+        <div aria-hidden="true" style={{
+          position:'absolute', inset:0,
+          background:'linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.06) 50%,transparent 65%)',
+          backgroundSize:'300% 100%',
+          animation:'commStrip 4s ease-in-out infinite',
+        }}/>
+        <Link href="/char-dham-yatra" style={{ textDecoration:'none' }}>
+          <span style={{ fontSize:12.5, fontWeight:600, color:'#fff', position:'relative' }}>
+            <span style={{ color:'#fca5a5', marginRight:6 }}>⚠️ Warning:</span>
+            Most travel agents charge 10–20% commission on top of the actual package cost — you pay it without knowing.
+            <span style={{ color:'#FFD166', fontWeight:700, marginLeft:8, textDecoration:'underline', textUnderlineOffset:3 }}>
+              Book direct. Save the difference. →
+            </span>
+          </span>
+        </Link>
+        <style dangerouslySetInnerHTML={{ __html:'@keyframes commStrip{0%{background-position:200% 0}100%{background-position:-200% 0}}' }}/>
+      </div>
+
       {/* ── Utility strip ─────────────────────────────────── */}
       <div style={{ background:'var(--navy)', padding:'0' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'7px 20px', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8 }}>
-          <div style={{ display:'flex', gap:16, fontSize:11.5, color:'rgba(255,255,255,0.55)', flexWrap:'wrap' }}>
+        <div className='utility-strip' style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'7px 16px', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8 }}>
+          <div className='utility-strip-left' style={{ display:'flex', gap:16, fontSize:11.5, color:'rgba(255,255,255,0.55)', flexWrap:'wrap' }}>
             <span style={{ color:'#FFD166', fontWeight:600 }}>✦ Uttarakhand Tourism Registered</span>
             <span>·</span>
             <span>2026 Season Open — Apr 19 to Nov 13</span>

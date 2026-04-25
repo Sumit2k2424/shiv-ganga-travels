@@ -114,20 +114,13 @@ export default function HomePage() {
         backgroundImage:'linear-gradient(160deg,rgba(10,28,60,0.88) 0%,rgba(10,28,60,0.65) 45%,rgba(11,80,100,0.72) 100%), url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG)',
         backgroundSize:'cover', backgroundPosition:'center',
         display:'flex', alignItems:'center',
-        padding:'72px 20px 100px', overflow:'hidden',
+        padding:'clamp(48px,8vw,72px) 16px clamp(60px,10vw,100px)', overflow:'hidden',
       }}>
         {/* Subtle grain */}
         <div style={{ position:'absolute', inset:0, opacity:0.03, backgroundImage:'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")', pointerEvents:'none' }} aria-hidden="true"/>
 
-        {/* Offer badge — top right */}
-        <div style={{ position:'absolute', top:24, right:24, background:'linear-gradient(135deg,#E8920A,#f5a623)', borderRadius:14, padding:'10px 16px', zIndex:2, maxWidth:170, textAlign:'center', border:'1px solid rgba(255,255,255,0.25)', boxShadow:'0 4px 20px rgba(232,146,10,0.4)' }}>
-          <div style={{ fontSize:10, fontWeight:700, color:'rgba(255,255,255,0.85)', letterSpacing:'0.1em', textTransform:'uppercase' }}>🔥 Early Bird</div>
-          <div style={{ fontSize:16, fontWeight:800, color:'#fff', lineHeight:1.1, margin:'3px 0' }}>10% OFF</div>
-          <div style={{ fontSize:10, color:'rgba(255,255,255,0.8)' }}>Book 60 days ahead</div>
-        </div>
-
-        {/* Season badge — top left */}
-        <div style={{ position:'absolute', top:24, left:24, background:'rgba(255,255,255,0.1)', backdropFilter:'blur(10px)', borderRadius:14, padding:'10px 16px', border:'1px solid rgba(255,255,255,0.2)', zIndex:2, textAlign:'center' }}>
+        {/* Season badge — top left only */}
+        <div className='hero-badge-left' style={{ position:'absolute', top:24, left:24, background:'rgba(255,255,255,0.1)', backdropFilter:'blur(10px)', borderRadius:14, padding:'10px 16px', border:'1px solid rgba(255,255,255,0.2)', zIndex:2, textAlign:'center' }}>
           <div style={{ fontSize:10, fontWeight:700, color:'#4ade80', letterSpacing:'0.08em' }}>● SEASON OPEN</div>
           <div style={{ fontSize:13, fontWeight:700, color:'#fff', marginTop:2 }}>Apr 19 – Nov 13</div>
         </div>
@@ -150,7 +143,7 @@ export default function HomePage() {
 
             {/* Hero headline */}
             <h1 className="display-title" style={{
-              color:'#fff', fontSize:'clamp(2.2rem, 5.5vw, 4rem)',
+              color:'#fff', fontSize:'clamp(1.8rem,6vw,4rem)',
               fontWeight:600, marginBottom:18, lineHeight:1.08,
             }}>
               Char Dham Yatra Package 2026<br/>
@@ -159,7 +152,7 @@ export default function HomePage() {
 
             <p style={{
               color:'rgba(255,255,255,0.78)', fontSize:16, lineHeight:1.75,
-              marginBottom:36, maxWidth:580, margin:'0 auto 36px',
+              marginBottom:28, maxWidth:580, margin:'0 auto 28px',
             }}>
               Yamunotri · Gangotri · Kedarnath · Badrinath<br/>
               <span style={{ color:'#FFD166', fontWeight:600 }}>Starting ₹5,299 per person</span>
@@ -169,30 +162,66 @@ export default function HomePage() {
             {/* Search widget */}
             <HeroSearch/>
 
+            {/* ── Glowing tool buttons ── */}
+            <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap', marginTop:24 }}>
+              <Link href="/char-dham-yatra-cost-calculator"
+                style={{
+                  display:'inline-flex', alignItems:'center', gap:9,
+                  background:'linear-gradient(135deg,#E8920A,#f5a82a)',
+                  color:'#fff', padding:'12px 22px', borderRadius:50,
+                  fontWeight:700, fontSize:13.5, textDecoration:'none',
+                  boxShadow:'0 0 18px rgba(232,146,10,0.7), 0 0 36px rgba(232,146,10,0.35)',
+                  border:'1px solid rgba(255,255,255,0.25)',
+                  position:'relative', overflow:'hidden',
+                }}>
+                {/* Shimmer sweep */}
+                <span aria-hidden="true" style={{
+                  position:'absolute', inset:0,
+                  background:'linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.18) 50%,transparent 60%)',
+                  backgroundSize:'200% 100%',
+                  animation:'shimmerBtn 2.5s ease-in-out infinite',
+                }}/>
+                <span style={{ fontSize:18, position:'relative' }}>🧮</span>
+                <span style={{ position:'relative' }}>Yatra Cost Calculator</span>
+              </Link>
+
+              <Link href="/char-dham-yatra-route-map"
+                style={{
+                  display:'inline-flex', alignItems:'center', gap:9,
+                  background:'rgba(255,255,255,0.08)',
+                  backdropFilter:'blur(12px)',
+                  color:'#fff', padding:'12px 22px', borderRadius:50,
+                  fontWeight:700, fontSize:13.5, textDecoration:'none',
+                  boxShadow:'0 0 18px rgba(11,123,139,0.55), 0 0 36px rgba(11,123,139,0.25)',
+                  border:'1px solid rgba(11,123,139,0.6)',
+                }}>
+                <span style={{ fontSize:18 }}>🗺️</span>
+                Route Map & Distances
+              </Link>
+            </div>
+
             {/* Trust row */}
-            <div style={{ display:'flex', justifyContent:'center', gap:22, flexWrap:'wrap', marginTop:24, fontSize:12, color:'rgba(255,255,255,0.65)' }}>
+            <div style={{ display:'flex', justifyContent:'center', gap:22, flexWrap:'wrap', marginTop:20, fontSize:12, color:'rgba(255,255,255,0.6)' }}>
               {['✓ No hidden charges','✓ VIP darshan included','✓ 24/7 yatra support','✓ Free cancellation 30 days'].map(t=>(
                 <span key={t} style={{ whiteSpace:'nowrap' }}>{t}</span>
               ))}
             </div>
 
-            {/* Offer pills — static, no animation */}
-            <div style={{ display:'flex', justifyContent:'center', gap:10, flexWrap:'wrap', marginTop:20 }}>
+            {/* Offer pills */}
+            <div className='hero-offer-pills' style={{ display:'flex', justifyContent:'center', gap:10, flexWrap:'wrap', marginTop:16 }}>
               {[
-                { emoji:'🔥', text:'10% Early Bird — Book 60 days ahead' },
                 { emoji:'👴', text:'Senior Special — Pony included' },
                 { emoji:'🚁', text:'Same-day Kedarnath + Badrinath by heli' },
+                { emoji:'💳', text:'EMI available — 25% advance books your seat' },
               ].map(o => (
                 <div key={o.text} style={{
                   display:'inline-flex', alignItems:'center', gap:7,
-                  background:'rgba(255,255,255,0.08)',
-                  backdropFilter:'blur(8px)',
+                  background:'rgba(255,255,255,0.08)', backdropFilter:'blur(8px)',
                   border:'1px solid rgba(255,255,255,0.18)',
                   borderRadius:100, padding:'6px 14px',
                   fontSize:12, color:'#fff', fontWeight:500,
                 }}>
-                  <span>{o.emoji}</span>
-                  <span>{o.text}</span>
+                  <span>{o.emoji}</span><span>{o.text}</span>
                 </div>
               ))}
             </div>
@@ -205,7 +234,10 @@ export default function HomePage() {
             <path d="M0,32 C480,56 960,8 1440,32 L1440,56 L0,56 Z" fill="var(--bg)"/>
           </svg>
         </div>
-        <style dangerouslySetInnerHTML={{ __html:'@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}' }}/>
+        <style dangerouslySetInnerHTML={{ __html:`
+          @keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+          @keyframes shimmerBtn{0%{background-position:200% 0}100%{background-position:-200% 0}}
+        `}}/>
       </section>
 
       {/* ═══════════════════════════════════════════════
@@ -224,7 +256,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <section style={{ background:'linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)', padding:'52px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }}>
+          <div className='cab-hero-grid' style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }}>
 
             {/* Left — text */}
             <div>
@@ -531,7 +563,7 @@ export default function HomePage() {
             <span className="section-tag">Plan Your Perfect Yatra</span>
             <h2 className="section-title">Not Sure Where to Start? <em>We&apos;ll Guide You</em></h2>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:20 }}>
+          <div className='funnel-grid' style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:20 }}>
             <div style={{ background:'var(--navy-light)', borderRadius:16, padding:'24px', border:'1px solid rgba(15,43,91,0.1)' }}>
               <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
                 <div style={{ width:36, height:36, background:'var(--navy)', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', fontWeight:800, fontSize:16 }}>1</div>
@@ -619,7 +651,7 @@ export default function HomePage() {
               <div style={{ width:3, height:20, background:'var(--navy)', borderRadius:2 }}/>
               <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Yatra Packages</h3>
             </div>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
+            <div className='pkg-dir-grid' style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
               {[
                 { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
                 { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/400px-Badrinath_Temple_%28front_view%29.jpg', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
@@ -838,7 +870,7 @@ export default function HomePage() {
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:20, border:'1px solid rgba(232,146,10,0.3)' }}>
             Season 2025 · Limited seats per batch
           </span>
-          <h2 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4vw,2.8rem)', marginBottom:16 }}>
+          <h2 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5vw,2.8rem)', marginBottom:16 }}>
             Your Sacred Journey <em style={{ color:'#FFD166' }}>Awaits</em>
           </h2>
           <p style={{ color:'rgba(255,255,255,0.72)', fontSize:15, lineHeight:1.75, marginBottom:32, maxWidth:540, margin:'0 auto 32px' }}>
