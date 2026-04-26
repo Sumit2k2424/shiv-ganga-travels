@@ -524,6 +524,26 @@ export default function HomePage() {
       </ScrollReveal>
 
       {/* ═══════════════════════════════════════════════
+          DO DHAM
+      ═══════════════════════════════════════════════ */}
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
+          <RowHeader eyebrow="Two Dhams · One Journey" title={<><em>Do Dham</em> Yatra Packages</>} sub="Perfect when time is limited but devotion is full." href="/packages/do-dham"/>
+          <AutoScrollRow>{doDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
+        </div>
+      </ScrollReveal>
+
+      {/* ═══════════════════════════════════════════════
+          SINGLE DHAM
+      ═══════════════════════════════════════════════ */}
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
+          <RowHeader eyebrow="Focused · Affordable" title={<><em>Single Dham</em> Packages</>} sub="One sacred shrine. Deeply meaningful. From ₹5,299." href="/packages/single-dham"/>
+          <AutoScrollRow>{singleDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
+        </div>
+      </ScrollReveal>
+
+      {/* ═══════════════════════════════════════════════
           WHY CHOOSE US — compact icon grid
       ═══════════════════════════════════════════════ */}
       <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0 48px' }}>
@@ -580,16 +600,6 @@ export default function HomePage() {
       </ScrollReveal>
 
       {/* ═══════════════════════════════════════════════
-          DO DHAM
-      ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
-          <RowHeader eyebrow="Two Dhams · One Journey" title={<><em>Do Dham</em> Yatra Packages</>} sub="Perfect when time is limited but devotion is full." href="/packages/do-dham"/>
-          <AutoScrollRow>{doDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
-        </div>
-      </ScrollReveal>
-
-      {/* ═══════════════════════════════════════════════
           JOURNEY STEPS
       ═══════════════════════════════════════════════ */}
       <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
@@ -618,16 +628,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </ScrollReveal>
-
-      {/* ═══════════════════════════════════════════════
-          SINGLE DHAM
-      ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'48px 0 40px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
-          <RowHeader eyebrow="Focused · Affordable" title={<><em>Single Dham</em> Packages</>} sub="One sacred shrine. Deeply meaningful. From ₹5,299." href="/packages/single-dham"/>
-          <AutoScrollRow>{singleDham.map(p=><PkgCard key={p.slug} pkg={p}/>)}</AutoScrollRow>
         </div>
       </ScrollReveal>
 
