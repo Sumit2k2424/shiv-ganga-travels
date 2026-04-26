@@ -8,13 +8,25 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
-  title: `${SITE.name} — Char Dham Yatra Packages 2025 from Haridwar`,
-  description: 'Book Char Dham, Do Dham & Single Dham Yatra packages from Haridwar. Zero commission, VIP darshan, expert guides, all-inclusive. Trusted since 2010 by 50,000+ pilgrims.',
+  title: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar | Est. 2010`,
+  description: 'Book Char Dham Yatra 2026 from Haridwar. Zero commission, all-inclusive packages from ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. Founded 2010 by Retd. Army Officer. 50,000+ pilgrims served.',
+  keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: `${SITE.name} — Char Dham Yatra 2025`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Trusted since 2010.',
+    title: 'Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar',
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010.',
+    url: 'https://www.shivgangatravels.com',
+    siteName: 'Shiv Ganga Travels',
+    images: [{ url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG', width: 1200, height: 630, alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels Haridwar' }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shiv Ganga Travels — Char Dham Yatra 2026',
+    description: 'Zero commission Char Dham Yatra from Haridwar. Est. 2010.',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
   },
+  alternates: { canonical: 'https://www.shivgangatravels.com' },
 };
 
 /* ─── Schemas ─── */
