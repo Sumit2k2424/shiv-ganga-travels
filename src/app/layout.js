@@ -93,9 +93,15 @@ function SiteSchema() {
     logo: {
       '@type': 'ImageObject',
       url: `${SITE.baseUrl}/logo.png`,
-      width: 300, height: 100,
+      width: 512,
+      height: 512,
     },
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+    image: {
+      '@type': 'ImageObject',
+      url: `${SITE.baseUrl}/logo.png`,
+      width: 512,
+      height: 512,
+    },
     description: 'Haridwar-based Char Dham Yatra specialist since 2010. Zero commission, all-inclusive packages, expert guides.',
     telephone: SITE.phone,
     email: SITE.email,

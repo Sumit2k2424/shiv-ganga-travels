@@ -338,9 +338,9 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ display:'flex', alignItems:'stretch', overflow:'clip', minHeight:76 }}>
+          <div className="zero-comm-strip" style={{ display:'flex', alignItems:'stretch', minHeight:76 }}>
             {/* Dark label */}
-            <div style={{ background:'var(--navy)', padding:'16px 28px', display:'flex', alignItems:'center', gap:14, flexShrink:0 }}>
+            <div className="zero-comm-label" style={{ background:'var(--navy)', padding:'16px 28px', display:'flex', alignItems:'center', gap:14, flexShrink:0 }}>
               <span style={{ fontSize:28 }}>🛡️</span>
               <div>
                 <div style={{ color:'var(--gold)', fontWeight:700, fontSize:15, letterSpacing:'-0.01em', fontFamily:'var(--font-display)', fontStyle:'italic' }}>
@@ -351,17 +351,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            {/* Arrow */}
-            <div style={{ width:0, height:0, borderTop:'38px solid transparent', borderBottom:'38px solid transparent', borderLeft:'20px solid var(--navy)', flexShrink:0 }} aria-hidden="true"/>
+            {/* Arrow — desktop only */}
+            <div className="zero-comm-arrow" style={{ width:0, height:0, borderTop:'38px solid transparent', borderBottom:'38px solid transparent', borderLeft:'20px solid var(--navy)', flexShrink:0 }} aria-hidden="true"/>
             {/* Chips */}
-            <div className="zero-comm-chips" style={{ flex:1, display:'flex', alignItems:'center', overflowX:'auto', gap:0, padding:'0 4px' }}>
+            <div className="zero-comm-chips" style={{ flex:1, display:'flex', alignItems:'center', gap:0 }}>
               {[
                 {icon:'💸',text:'Pay us directly',sub:'No agency fees'},
                 {icon:'🤝',text:'We ARE the operator',sub:'15-year family business'},
                 {icon:'📋',text:'Full price breakdown',sub:'Before you book'},
                 {icon:'💰',text:'Price match guarantee',sub:'Beat any genuine quote'},
               ].map((c,i)=>(
-                <div key={c.text} style={{ display:'flex', alignItems:'center', gap:10, padding:'0 22px', borderRight:i<3?'1px solid var(--border)':'none', flexShrink:0, height:'100%' }}>
+                <div className="zero-comm-chip" key={c.text} style={{ display:'flex', alignItems:'center', gap:10, padding:'0 22px', borderRight:i<3?'1px solid var(--border)':'none', flexShrink:0, height:'100%' }}>
                   <span style={{ fontSize:20 }}>{c.icon}</span>
                   <div>
                     <div style={{ fontWeight:600, fontSize:12.5, color:'var(--text)', whiteSpace:'nowrap' }}>{c.text}</div>
