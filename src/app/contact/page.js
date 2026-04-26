@@ -1,4 +1,5 @@
 import { SITE, PACKAGES } from '@/data/packages';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 
 export const metadata = {
   title: 'Contact Us — Book Your Char Dham Yatra',
@@ -226,30 +227,25 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              {/* Address */}
-              <div style={{
-                background:'#fff', padding:'22px 20px',
-                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
-              }}>
-                <div style={{ display:'flex', gap:12, alignItems:'flex-start' }}>
-                  <div style={{
-                    width:40, height:40, background:'var(--navy-light)', borderRadius:10, flexShrink:0,
-                    display:'flex', alignItems:'center', justifyContent:'center', fontSize:20,
-                  }}>📍</div>
+              {/* Map */}
+              <div style={{ borderRadius:16, overflow:'hidden', border:'1px solid var(--border)', boxShadow:'var(--shadow)' }}>
+                {/* Address header strip */}
+                <div style={{ background:'var(--navy)', padding:'14px 18px', display:'flex', alignItems:'center', gap:12 }}>
+                  <span style={{ fontSize:22 }}>📍</span>
                   <div>
-                    <h3 style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4 }}>Visit Our Office</h3>
-                    <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.6 }}>
-                      Saptrishi Road, Near Shantikunj Gate No. 1<br/>
-                      Haridwar, Uttarakhand<br/>
-                      Bhupatwala, Haridwar — 249410
-                    </p>
-                    <a href="https://maps.google.com/?q=Har+Ki+Pauri+Haridwar" target="_blank" rel="noopener noreferrer"
-                       className="btn-ghost" style={{ marginTop:10, paddingLeft:0 }}>
-                      View on Google Maps
-                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 7h8M7 3l4 4-4 4"/></svg>
-                    </a>
+                    <div style={{ fontWeight:700, fontSize:13.5, color:'#fff' }}>Shiv Ganga Travels — Haridwar Office</div>
+                    <div style={{ fontSize:12, color:'rgba(255,255,255,0.65)', marginTop:2 }}>
+                      Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar — 249410
+                    </div>
                   </div>
+                  <a href={`https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8`}
+                     target="_blank" rel="noopener noreferrer"
+                     style={{ marginLeft:'auto', background:'rgba(255,255,255,0.12)', color:'#fff', padding:'6px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', whiteSpace:'nowrap', border:'1px solid rgba(255,255,255,0.2)', flexShrink:0 }}>
+                    Get Directions →
+                  </a>
                 </div>
+                {/* Interactive map */}
+                <GoogleMapEmbed height={360} />
               </div>
             </div>
           </div>
