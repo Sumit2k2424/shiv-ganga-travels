@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
-import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 
 const COLS = [
   { heading:'Char Dham Packages', links:[
@@ -63,38 +62,6 @@ export default function Footer() {
         <span style={{ color:'#fff', fontWeight:600, fontSize:13 }}>
           ✦ 2026 Season Open — Yamunotri & Gangotri Apr 19 · Kedarnath Apr 22 · Badrinath Apr 23
         </span>
-      </div>
-
-      {/* Map + address strip */}
-      <div style={{ borderBottom:'1px solid rgba(255,255,255,0.08)' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'24px 20px', display:'flex', gap:20, alignItems:'stretch', flexWrap:'wrap' }}>
-          {/* Map */}
-          <div style={{ flex:'1 1 320px', minHeight:200, borderRadius:12, overflow:'hidden', border:'1px solid rgba(255,255,255,0.12)' }}>
-            <GoogleMapEmbed height={200} />
-          </div>
-          {/* Address + directions */}
-          <div style={{ flex:'0 0 260px', display:'flex', flexDirection:'column', justifyContent:'center', gap:10 }}>
-            <div style={{ fontWeight:700, fontSize:14, color:'#fff' }}>📍 Our Office</div>
-            <div style={{ fontSize:13, color:'rgba(255,255,255,0.65)', lineHeight:1.7 }}>
-              Saptrishi Road<br/>
-              Near Shantikunj Gate No. 1<br/>
-              Bhupatwala, Haridwar<br/>
-              Uttarakhand — 249410
-            </div>
-            <div style={{ display:'flex', flexDirection:'column', gap:7, marginTop:4 }}>
-              <a href={`https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8`}
-                target="_blank" rel="noopener noreferrer"
-                style={{ background:'var(--gold)', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', textAlign:'center' }}>
-                🗺️ Get Directions
-              </a>
-              <a href={`https://wa.me/917017082807?text=${encodeURIComponent('Namaste! I want to visit your office. Please share the directions.')}`}
-                target="_blank" rel="noopener noreferrer"
-                style={{ background:'rgba(255,255,255,0.1)', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:600, fontSize:12.5, textDecoration:'none', textAlign:'center', border:'1px solid rgba(255,255,255,0.15)' }}>
-                💬 WhatsApp for Directions
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Brand + links grid */}
