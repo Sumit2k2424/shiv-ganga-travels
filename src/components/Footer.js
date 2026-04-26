@@ -94,6 +94,10 @@ export default function Footer() {
                 style={{ background:'#25D366', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none' }}>
                 💬 WhatsApp
               </a>
+              <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
+                style={{ background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none' }}>
+                📸 Instagram
+              </a>
             </div>
           </div>
 
@@ -122,9 +126,13 @@ export default function Footer() {
         <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>
           © {new Date().getFullYear()} {SITE.name}. All rights reserved. Made with ❤️ in Haridwar.
         </span>
-        <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>
-          {SITE.address}
-        </span>
+        <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+          <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>{SITE.address}</span>
+          <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
+            style={{ display:'inline-flex', alignItems:'center', gap:5, background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'5px 12px', borderRadius:100, fontSize:11.5, fontWeight:700, textDecoration:'none', whiteSpace:'nowrap' }}>
+            📸 @shivgangatravels
+          </a>
+        </div>
       </div>
     </footer>
   );

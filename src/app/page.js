@@ -832,6 +832,10 @@ export default function HomePage() {
                 style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
                 📞 {SITE.phone}
               </a>
+              <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
+                style={{ background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+                📸 Instagram
+              </a>
             </div>
           </div>
         </div>
