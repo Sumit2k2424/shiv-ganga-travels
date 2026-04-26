@@ -282,12 +282,11 @@ export default function Navbar() {
             ].map(l => (
               <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>
             ))}
-          </nav>
 
-          {/* Spacer */}
-          <div style={{ flex: 1 }}/>
+            {/* Spacer */}
+            <div style={{ flex: 1 }}/>
 
-          {/* Desktop Book Now CTA */}
+            {/* Desktop Book Now CTA */}
           <a
             href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share packages and availability.')}`}
             target="_blank" rel="noopener noreferrer"
