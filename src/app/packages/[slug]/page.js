@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
+import FloatingBookCTA from '@/components/FloatingBookCTA';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
@@ -403,6 +404,7 @@ export default function PackageDetailPage({ params }) {
           </div>
         </div>
       </div>
+      <FloatingBookCTA packageName={pkg.name}/>
     </>
   );
 }

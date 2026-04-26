@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LeadPopup from '@/components/LeadPopup';
 import ChatBot from '@/components/ChatBot';
+import FloatingBookCTA from '@/components/FloatingBookCTA';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
@@ -206,6 +207,7 @@ export default function RootLayout({ children }) {
         <main style={{ flex:1 }}>{children}</main>
         <Footer/>
         <WhatsAppButton/>
+        <FloatingBookCTA/>
         <LeadPopup/>
         <ChatBot/>
       </body>

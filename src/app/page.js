@@ -252,6 +252,85 @@ export default function HomePage() {
       </div>
 
       {/* ═══════════════════════════════════════════════
+          INTENT SELECTOR — "What are you looking for?"
+          Psychology: removes decision paralysis, guides
+          pilgrim to right package instantly (Hick's Law)
+      ═══════════════════════════════════════════════ */}
+      <section style={{ background:'#fff', padding:'36px 20px 28px', borderBottom:'1px solid var(--border)' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:20 }}>
+            <p style={{ fontSize:13, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom:6 }}>Find Your Yatra in 3 Seconds</p>
+            <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,3vw,1.7rem)', fontWeight:600, color:'var(--navy)', margin:0, letterSpacing:'-0.02em' }}>
+              What are you looking for?
+            </h2>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(200px,100%),1fr))', gap:12 }}>
+            {[
+              {
+                emoji:'🏔️', title:'Char Dham Yatra',
+                desc:'All 4 sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath',
+                tag:'Most popular', tagColor:'#16A34A', tagBg:'#F0FDF4',
+                from:'₹19,500', href:'/char-dham-yatra',
+                accent:'var(--navy)',
+              },
+              {
+                emoji:'🕌', title:'Kedarnath Yatra',
+                desc:'3 nights 4 days — Lord Shiva\'s abode at 3,583m',
+                tag:'Fastest booking', tagColor:'var(--teal)', tagBg:'#E6F7F9',
+                from:'₹6,499', href:'/kedarnath-yatra',
+                accent:'var(--teal)',
+              },
+              {
+                emoji:'🚁', title:'Helicopter Package',
+                desc:'All 4 dhams in 6 days — for seniors & VIP darshan',
+                tag:'Premium', tagColor:'#B45309', tagBg:'#FEF3E2',
+                from:'₹85,000', href:'/char-dham-helicopter',
+                accent:'#B45309',
+              },
+              {
+                emoji:'🚙', title:'Just the Cab',
+                desc:'Vehicle only — Innova, Ertiga, Tempo from Haridwar',
+                tag:'Cab only', tagColor:'#6D28D9', tagBg:'#F5F3FF',
+                from:'₹5,500', href:'/char-dham-yatra-cab-booking',
+                accent:'#6D28D9',
+              },
+            ].map(card => (
+              <Link key={card.href} href={card.href}
+                style={{
+                  display:'flex', flexDirection:'column', gap:10,
+                  padding:'18px', borderRadius:14,
+                  border:`2px solid transparent`,
+                  background:'var(--bg)',
+                  textDecoration:'none', color:'inherit',
+                  transition:'all .18s',
+                  boxShadow:'0 1px 4px rgba(15,43,91,0.06)',
+                  position:'relative', overflow:'hidden',
+                }}
+                className="intent-card"
+              >
+                {/* Left accent bar */}
+                <div style={{ position:'absolute', left:0, top:0, bottom:0, width:3, background:card.accent, borderRadius:'14px 0 0 14px' }}/>
+                <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+                  <span style={{ fontSize:28 }}>{card.emoji}</span>
+                  <span style={{ fontSize:10.5, fontWeight:700, color:card.tagColor, background:card.tagBg, padding:'3px 10px', borderRadius:100 }}>{card.tag}</span>
+                </div>
+                <div>
+                  <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:4 }}>{card.title}</div>
+                  <div style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.5 }}>{card.desc}</div>
+                </div>
+                <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginTop:'auto' }}>
+                  <div style={{ fontSize:12, color:'var(--text-muted)' }}>
+                    From <span style={{ fontWeight:800, fontSize:16, color:'var(--navy)', fontFamily:'var(--font-display)' }}>{card.from}</span>
+                  </div>
+                  <span style={{ fontSize:12, fontWeight:600, color:card.accent }}>Explore →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
           CAB SECTION HERO
       ═══════════════════════════════════════════════ */}
       <section style={{ background:'linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)', padding:'52px 20px' }}>
