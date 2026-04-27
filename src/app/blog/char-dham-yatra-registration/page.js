@@ -7,7 +7,17 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-registration` },
 };
 function Schema() {
-  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Registration 2026 — Complete Guide', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-registration` };
+  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Registration 2026 — Complete Guide', author:{'@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about`}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-registration` };
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Is biometric registration mandatory for Char Dham Yatra 2026?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, biometric registration is mandatory for all four dhams in 2026. Register at registrationandtouristcare.uk.gov.in or at Haridwar/Rishikesh centres. Daily limits: Kedarnath 15,000-17,000, Badrinath 20,000, Gangotri/Yamunotri 7,000-8,000 per day.' }},
+      { '@type': 'Question', name: 'Can Shiv Ganga Travels help with Char Dham registration?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Shiv Ganga Travels assists all pilgrims with biometric registration as part of the package at no extra charge. Our team guides you through the online registration process before departure.' }},
+    ],
+  };
   return (<>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>

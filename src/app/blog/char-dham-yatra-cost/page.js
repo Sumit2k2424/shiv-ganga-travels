@@ -11,18 +11,8 @@ export const metadata = {
 
 function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Cost 2026 — Complete Budget Breakdown Per Person', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-20', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-cost` };
-  return (<>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    </>);
-}
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
-
-export default function CharDhamCost() {
-
-  const faq = {
+    const faq = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
@@ -40,7 +30,17 @@ export default function CharDhamCost() {
       }
     ],
   };
-  return (
+  return (<>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
+    </>);
+}
+
+const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
+const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+
+export default function CharDhamCost() {
+return (
     <>
       <Schema/>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
