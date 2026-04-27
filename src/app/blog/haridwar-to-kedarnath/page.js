@@ -8,7 +8,7 @@ export const metadata = {
 };
 function Schema() {
   const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Haridwar to Kedarnath Distance, Route & Travel Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-10', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/haridwar-to-kedarnath` };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };

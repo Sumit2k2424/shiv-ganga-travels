@@ -18,7 +18,7 @@ function Schema() {
         acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is possible. You need to arrange: biometric registration, vehicle hire, hotels at Barkot/Uttarkashi/Guptkashi/Joshimath, and Kedarnath trek logistics. During peak season (May–June), hotels fill 45–60 days in advance — independent travellers often find their preferred options unavailable. For first-time pilgrims or senior citizens, a package is strongly recommended.' }},
     ],
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
 }
 
 export default function PkgVsSelf() {

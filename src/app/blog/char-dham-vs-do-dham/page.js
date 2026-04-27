@@ -34,7 +34,7 @@ function Schema() {
         acceptedAnswer: { '@type': 'Answer', text: 'Technically possible but not recommended. A 7-day Char Dham itinerary would require 200+ km of mountain driving daily and allow minimal time at each dham. The Kedarnath trek alone takes 4–6 hours one way. A Do Dham package in 5–6 days is far more sustainable for most pilgrims.' }},
     ],
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
 }
 
 export default function ComparisonPage() {
