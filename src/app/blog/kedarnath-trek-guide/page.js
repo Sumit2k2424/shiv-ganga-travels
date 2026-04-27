@@ -30,7 +30,7 @@ function Schema() {
     description: 'Complete guide to the Kedarnath trek from Gaurikund — distance, difficulty, tips, pony and helicopter options.',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
-    datePublished: '2025-02-01', dateModified: '2026-01-01',
+    datePublished: '2025-02-01', dateModified: '2026-04-27',
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
   };

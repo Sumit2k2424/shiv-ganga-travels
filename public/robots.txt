@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.shivgangatravels.com/sitemap.xml
+
+# LLM / AI crawler guidance
+# See /llms.txt for AI-readable site summary

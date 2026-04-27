@@ -23,7 +23,7 @@ const faqData = [
 ];
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book', author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-10', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-10', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:faqData.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }

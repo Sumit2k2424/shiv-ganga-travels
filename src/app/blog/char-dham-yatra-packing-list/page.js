@@ -10,8 +10,9 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-15', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>;
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>;
 }
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
@@ -81,6 +82,21 @@ export default function PackingList() {
     },
   ];
 
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question',
+        name: 'What should I pack for Kedarnath in summer?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Summer packing for Kedarnath: thermal inners (2 sets — nights drop to 4°C even in June), fleece jacket, windproof outer layer, warm cap and gloves, waterproof trekking boots, wool socks (3–4 pairs), sunscreen SPF 50+, sunglasses, rain poncho, ORS sachets, trekking poles, headtorch, power bank, and enough cash (ATMs available only until Sonprayag). Personal medicines for 2 extra days beyond trip duration.' },
+      },
+      { '@type': 'Question',
+        name: 'Do I need oxygen at Kedarnath?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Supplemental oxygen is not mandatory but is advisable for first-time high-altitude visitors and pilgrims over 60. Oxygen cans are available at Gaurikund and Kedarnath for ₹300–500 each. Symptoms of altitude sickness (headache, nausea, breathlessness) typically appear 6–12 hours after reaching altitude. If symptoms are severe, descend immediately. Shiv Ganga Travels carries oxygen cylinders in all vehicles.' },
+      }
+    ],
+  };
   return (
     <>
       <Schema/>

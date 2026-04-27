@@ -7,8 +7,9 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-registration` },
 };
 function Schema() {
-  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Registration 2026 — Complete Guide', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-15', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-registration` };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>;
+  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Registration 2026 — Complete Guide', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-registration` };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>;
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };

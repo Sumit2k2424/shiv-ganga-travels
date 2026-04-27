@@ -29,6 +29,21 @@ export default function BestTimeCharDham() {
     { month:'Nov–Apr', status:'Closed ❌', color:'#f1f5f9', border:'#cbd5e1', note:'Temples closed for winter. Priests and idols moved to valley temples. Roads blocked by snow.' },
   ];
 
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question',
+        name: 'What is the best month for Char Dham Yatra?',
+        acceptedAnswer: { '@type': 'Answer', text: 'May and September–October are the best months. May offers good weather (8–18°C at dhams), clear skies, and blooming rhododendrons. September–October has post-monsoon crystal clarity, fewer crowds than May, and excellent photography conditions. Both windows avoid monsoon risk (July–August). The 2026 season opens April 19 (Yamunotri/Gangotri), April 22 (Kedarnath), April 23 (Badrinath).' },
+      },
+      { '@type': 'Question',
+        name: 'Is August safe for Char Dham Yatra?',
+        acceptedAnswer: { '@type': 'Answer', text: 'August is monsoon peak in Uttarakhand and carries significant landslide risk, especially on the Kedarnath route (Sonprayag–Gaurikund) and Gangotri highway. Road blockages are frequent. Shiv Ganga Travels advises against August travel for first-time pilgrims and senior citizens. If you must travel in August, build 2–3 buffer days into your itinerary and travel with an experienced operator who monitors road conditions daily.' },
+      }
+    ],
+  };
   return (
     <>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>

@@ -10,14 +10,34 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Cost 2026 — Complete Budget Breakdown Per Person', author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-20', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-cost` };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>;
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Cost 2026 — Complete Budget Breakdown Per Person', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-20', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-cost` };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>;
 }
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 
 export default function CharDhamCost() {
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question',
+        name: 'How much does Char Dham Yatra cost per person in 2026?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra costs between ₹19,500 and ₹85,000 per person in 2026. A standard 9-night 10-day road package from Haridwar starts at ₹19,500 all-inclusive (vehicle, hotels, meals, guide). Helicopter packages start at ₹85,000 per person. According to Dhanesh Chandra Mishra, founder of Shiv Ganga Travels: "The total cost including personal expenses like pony at Kedarnath, puja, and tips is typically ₹25,000–35,000 for a budget traveller on a ₹19,500 package."' },
+      },
+      { '@type': 'Question',
+        name: 'What is not included in Char Dham Yatra package cost?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Items typically excluded: pony/palki/helicopter at Kedarnath (₹3,000–9,000), personal puja expenses (₹500–5,000 per dham), temple entry fees, personal shopping, room heater charges, laundry, tips for driver and guide (customary ₹500–1,000 each), and any upgrade costs if you decide to change hotels en route.' },
+      },
+      { '@type': 'Question',
+        name: 'Is Char Dham Yatra cheaper in September vs May?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Prices are similar in September and May — peak season pricing applies to both. Hotel rates may be 10–15% lower in September vs peak May. The main advantage of September is fewer crowds and better views, not lower package costs. Budget packages remain at ₹19,500 in both months at Shiv Ganga Travels.' },
+      }
+    ],
+  };
   return (
     <>
       <Schema/>
