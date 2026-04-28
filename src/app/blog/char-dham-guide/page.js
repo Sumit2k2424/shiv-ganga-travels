@@ -64,7 +64,7 @@ export default function CharDhamGuide() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <p style={p}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 

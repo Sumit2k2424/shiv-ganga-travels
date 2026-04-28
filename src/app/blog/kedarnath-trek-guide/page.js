@@ -74,7 +74,7 @@ export default function KedarnathTrekGuide() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <p style={p}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims, a 58-year-old retired school teacher from Lucknow, was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli — about 8km in, with the Mandakini river roaring below and the first glimpse of snow peaks ahead — she turned to me and said, "Yeh toh swarg hai." (This is heaven.) She reached the temple, touched the Shivalinga, and wept.</p>
 
@@ -118,7 +118,7 @@ export default function KedarnathTrekGuide() {
           ].map(s => (
             <li key={s.segment} style={{ padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid var(--border)' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{s.segment}</div>
-              <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.5 }}>{s.honest}</div>
+              <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.5 }}>{s.honest}</div>
             </li>
           ))}
         </ul>
@@ -137,7 +137,7 @@ export default function KedarnathTrekGuide() {
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{m.mode}</div>
               <div style={{ fontSize:12.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:4 }}>Cost: {m.cost}</div>
               <div style={{ fontSize:12, color:'var(--text-mid)', marginBottom:4 }}>Time: {m.time}</div>
-              <div style={{ fontSize:11.5, color:'var(--text-muted)', lineHeight:1.5, marginBottom:6 }}>Best for: {m.who}</div>
+              <div style={{ fontSize:11.5, color:'var(--text-muted)', lineHeight:1.75, marginBottom:6 }}>Best for: {m.who}</div>
               <div style={{ fontSize:11.5, color:'var(--teal-dark)', fontStyle:'italic' }}>{m.note}</div>
             </div>
           ))}
@@ -175,7 +175,7 @@ export default function KedarnathTrekGuide() {
           {faqData.map((f, i) => (
             <div key={i} style={{ padding:'18px 20px', borderBottom: i < faqData.length-1 ? '1px solid var(--border)' : 'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>
-              <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7 }}>A: {f.a}</div>
+              <div style={{ fontSize:15, color:'#334155', lineHeight:1.7 }}>A: {f.a}</div>
             </div>
           ))}
         </div>

@@ -50,7 +50,7 @@ export default function PkgVsSelf() {
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> April 2026</span>
         </div>
       </div>
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           An honest answer from someone who runs packages: self-planned is absolutely possible, and for some pilgrims it is the better choice. But for most first-time pilgrims and senior citizens, a direct operator package wins on cost, convenience, and safety — especially if you book with a zero-commission direct operator rather than an aggregator.
         </p>
@@ -76,7 +76,7 @@ export default function PkgVsSelf() {
         </div>
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>⚠️ The most common self-planning mistake:</div>
-          <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.75, margin:0 }}>Pilgrims who plan independently often underestimate hotel availability in peak season. Hotels at Guptkashi (Kedarnath base) and Joshimath (Badrinath base) fill up 45–60 days ahead in May–June. Operators like Shiv Ganga Travels pre-block rooms from January each year. A self-planner arriving in Haridwar in late April for a May departure will find most good hotels already gone.</p>
+          <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>Pilgrims who plan independently often underestimate hotel availability in peak season. Hotels at Guptkashi (Kedarnath base) and Joshimath (Badrinath base) fill up 45–60 days ahead in May–June. Operators like Shiv Ganga Travels pre-block rooms from January each year. A self-planner arriving in Haridwar in late April for a May departure will find most good hotels already gone.</p>
         </div>
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Free Package Quote</h3>

@@ -122,7 +122,7 @@ export default function NewRules2026() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <div style={{ background:'#fee2e2', border:'1.5px solid #fca5a5', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Important Notice for 2026 Pilgrims</div>
@@ -145,7 +145,7 @@ export default function NewRules2026() {
                 </div>
                 <span style={{ background:'var(--navy)', color:'#fff', fontSize:10.5, fontWeight:700, padding:'3px 10px', borderRadius:100, flexShrink:0 }}>{rule.status}</span>
               </div>
-              <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.7, marginBottom:10 }}>{rule.detail}</p>
+              <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.7, marginBottom:10 }}>{rule.detail}</p>
               <div style={{ fontSize:13, color:'var(--text)', fontWeight:600 }}>
                 <span style={{ color:'var(--teal)' }}>→ </span>What this means for you: <span style={{ fontWeight:400, color:'var(--text-mid)' }}>{rule.impact}</span>
               </div>

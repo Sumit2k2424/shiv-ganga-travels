@@ -29,7 +29,7 @@ export default function HaridwarToKedarnath() {
         <span>Haridwar to Kedarnath Route</span>
       </div>
     </nav>
-    <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+    <article style={className='blog-container'}>
       <p style={p}>The road from Haridwar to Kedarnath is not just a journey — it's a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
       <p style={p}>Here is the complete route guide from <strong>Haridwar to Kedarnath</strong>, including distances, journey times, the best places to stop, and exactly what to expect at each stage.</p>
 
@@ -49,7 +49,7 @@ export default function HaridwarToKedarnath() {
         ].map(d => (
           <div key={d.day} style={{ background:'#fff', borderRadius:10, padding:'16px', border:'1px solid var(--border)' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:6 }}>{d.day}: {d.route}</div>
-            <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.65 }}>{d.desc}</div>
+            <div style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>{d.desc}</div>
           </div>
         ))}
       </div>

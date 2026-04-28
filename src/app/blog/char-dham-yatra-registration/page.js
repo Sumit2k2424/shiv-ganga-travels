@@ -161,7 +161,7 @@ export default function RegistrationBlog() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 20px' }}>
+      <article style={className='blog-container'}>
 
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>
@@ -212,7 +212,7 @@ export default function RegistrationBlog() {
                 <span style={{ fontSize:20, flexShrink:0 }}>{icon}</span>
                 <div>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{title}</div>
-                  <div style={{ fontSize:13.5, color:'var(--text-muted)' }}>{desc}</div>
+                  <div style={{ fontSize:15, color:'#4A5568' }}>{desc}</div>
                 </div>
               </div>
             ))}
@@ -255,7 +255,7 @@ export default function RegistrationBlog() {
                 </div>
                 <div style={{ padding:'14px 16px', flex:1 }}>
                   <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:5 }}>{s.title}</div>
-                  <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.65 }}>{s.desc}</div>
+                  <div style={{ fontSize:15, color:'#4A5568', lineHeight:1.85 }}>{s.desc}</div>
                 </div>
               </div>
             ))}
@@ -360,7 +360,7 @@ export default function RegistrationBlog() {
             'Helicopter bookings via IRCTC require a valid Indian phone number — international pilgrims should purchase a local SIM before attempting IRCTC registration',
             'Some hotels close to the dhams may request passport copy at check-in — carry photocopies',
           ].map(r => (
-            <div key={r} style={{ display:'flex', gap:8, fontSize:13.5, color:'var(--text-muted)', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#4A5568', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
               <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span> {r}
             </div>
           ))}
@@ -380,7 +380,7 @@ export default function RegistrationBlog() {
                 </div>
                 <div style={{ padding:'14px 16px', flex:1 }}>
                   <div style={{ fontWeight:700, fontSize:14, color:'#DC2626', marginBottom:5 }}>❌ {e.mistake}</div>
-                  <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.65 }}>✅ <strong>Fix:</strong> {e.fix}</div>
+                  <div style={{ fontSize:15, color:'#4A5568', lineHeight:1.85 }}>✅ <strong>Fix:</strong> {e.fix}</div>
                 </div>
               </div>
             ))}
@@ -396,7 +396,7 @@ export default function RegistrationBlog() {
             'If daily limits are hit at a checkpoint, our drivers know alternate timing strategies and holding points',
             'We monitor the official Char Dham daily count portal and alert groups in advance',
           ].map(r => (
-            <div key={r} style={{ display:'flex', gap:8, fontSize:13.5, color:'var(--text-mid)', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#334155', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
               <span style={{ color:' var(--navy)', fontWeight:700, flexShrink:0 }}>✓</span> {r}
             </div>
           ))}
@@ -417,7 +417,7 @@ export default function RegistrationBlog() {
                 <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', display:'flex', justifyContent:'space-between', alignItems:'center', fontWeight:600, fontSize:14, color:'var(--navy)' }}>
                   {q} <span style={{ flexShrink:0, fontSize:18, color:'var(--navy)' }}>＋</span>
                 </summary>
-                <div style={{ padding:'0 16px 14px', fontSize:14, color:'var(--text-muted)', lineHeight:1.75, borderTop:'1px solid var(--border)', paddingTop:12 }}>{a}</div>
+                <div style={{ padding:'0 16px 14px', fontSize:15.5, color:'#2D3748', lineHeight:1.75, borderTop:'1px solid var(--border)', paddingTop:12 }}>{a}</div>
               </details>
             ))}
           </div>

@@ -121,7 +121,7 @@ return (
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <p style={p}>Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 
@@ -139,7 +139,7 @@ return (
               {cat.items.map(item => (
                 <div key={item.item} style={{ background:cat.color, border:`1px solid ${cat.border}`, borderRadius:10, padding:'12px 16px', display:'grid', gridTemplateColumns:'1fr 1.2fr', gap:12 }}>
                   <div style={{ fontWeight:600, fontSize:13.5, color:'var(--text)' }}>{item.item}</div>
-                  <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.5 }}><strong style={{ color:'var(--navy)' }}>Why:</strong> {item.why}</div>
+                  <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.5 }}><strong style={{ color:'var(--navy)' }}>Why:</strong> {item.why}</div>
                 </div>
               ))}
             </div>

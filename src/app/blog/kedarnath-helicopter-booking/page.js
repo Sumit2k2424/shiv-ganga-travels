@@ -55,7 +55,7 @@ export default function KedarnathHelicopterBooking() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <p style={p}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn't care how you arrive."</p>
 
@@ -103,7 +103,7 @@ export default function KedarnathHelicopterBooking() {
           {faqData.map((f, i) => (
             <div key={i} style={{ padding:'16px 20px', borderBottom:i<faqData.length-1?'1px solid var(--border)':'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>
-              <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7 }}>A: {f.a}</div>
+              <div style={{ fontSize:15, color:'#334155', lineHeight:1.7 }}>A: {f.a}</div>
             </div>
           ))}
         </div>

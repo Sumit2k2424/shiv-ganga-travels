@@ -29,7 +29,7 @@ export default function BadrinathYatraGuide() {
         <span>Badrinath Yatra Guide 2026</span>
       </div>
     </nav>
-    <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+    <article style={className='blog-container'}>
       <p style={p}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={p}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 
@@ -81,7 +81,7 @@ export default function BadrinathYatraGuide() {
         ].map(s => (
           <div key={s.place} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:5 }}>📍 {s.place}</div>
-            <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.65 }}>{s.desc}</div>
+            <div style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>{s.desc}</div>
           </div>
         ))}
       </div>

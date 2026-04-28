@@ -57,7 +57,7 @@ return (
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
         <p style={p}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
         <p style={p}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
         <p style={p}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>

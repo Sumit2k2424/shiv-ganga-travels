@@ -61,7 +61,7 @@ return (
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
         <p style={p}>The most common question we get is: "How much will the entire Char Dham Yatra cost me?" And the honest answer is — it depends on what you choose. But unlike most travel websites that give vague ranges, we're going to break every rupee down for you so you can budget accurately before you call us.</p>
 
         <h2 style={h2}>Package Cost — What's Actually Included</h2>
@@ -112,7 +112,7 @@ return (
             <div key={s.scenario} style={{ background:'var(--bg)', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{s.scenario}</div>
               <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', marginBottom:6 }}>{s.total}</div>
-              <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5, marginBottom:6 }}>{s.includes}</div>
+              <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.75, marginBottom:6 }}>{s.includes}</div>
               <div style={{ fontSize:12, color:'var(--teal-dark)', fontStyle:'italic' }}>{s.note}</div>
             </div>
           ))}

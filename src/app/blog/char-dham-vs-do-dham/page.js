@@ -59,7 +59,7 @@ export default function ComparisonPage() {
         </div>
       </div>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article style={className='blog-container'}>
 
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.
@@ -90,17 +90,17 @@ export default function ComparisonPage() {
 
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12 }}>Choose Char Dham if...</h2>
         {['You have 10+ days available and no serious health conditions at altitude','You are completing the yatra for the first time and want the full spiritual circuit','You are aged 40–65 and in reasonable fitness','Family reunion or group pilgrimage where all members want the complete experience','You want to honour a vow (mannat) that requires all four dhams'].map(r => (
-          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:14, color:'var(--text-mid)' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
+          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12, marginTop:28 }}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
         {['You have only 5–7 days available','You are above 65 or have health conditions','You are a first-time yatri wanting to experience mountain pilgrimage before committing to the full circuit','You have previously done Yamunotri and Gangotri and want to complete Kedarnath + Badrinath','Budget is a key consideration — Do Dham costs approximately 40% less than Char Dham'].map(r => (
-          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:14, color:'var(--text-mid)' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
+          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>💬 From 15 years of experience:</div>
-          <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.75, margin:0 }}>
+          <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>
             "In my experience, pilgrims who rush Char Dham in 7–8 days feel unsatisfied — they missed the experience at each dham. I always recommend: if you have less than 10 days, do Do Dham well rather than Char Dham in a rush. The journey matters as much as the destination." — <strong>Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels</strong>
           </p>
         </div>
