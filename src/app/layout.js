@@ -81,7 +81,11 @@ export const metadata = {
 
   alternates: {
     canonical: SITE.baseUrl,
-    languages: { 'en-IN': SITE.baseUrl },
+    languages: { 'en-IN': SITE.baseUrl, 'hi-IN': SITE.baseUrl },
+  },
+  other: {
+    'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹19,500 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
+    'keywords:hi': 'चार धाम यात्रा हरिद्वार, केदारनाथ यात्रा, बद्रीनाथ यात्रा, चार धाम यात्रा पैकेज 2026',
   },
 
   verification: {

@@ -153,13 +153,13 @@ export default function HomePage() {
               2026 Season Open · Apr 19 – Nov 13
             </div>
 
-            {/* Hero headline */}
+            {/* Hero headline — keyword first */}
             <h1 className="display-title" style={{
               color:'#fff', fontSize:'clamp(1.8rem,6vw,4rem)',
               fontWeight:600, marginBottom:18, lineHeight:1.08,
             }}>
-              Char Dham Yatra Package 2026<br/>
-              <em style={{ fontStyle:'italic', color:'#FFD166', fontWeight:700 }}>from Haridwar &amp; Delhi</em>
+              Char Dham Yatra 2026 — Haridwar<br/>
+              <em style={{ fontStyle:'italic', color:'#FFD166', fontWeight:700 }}>Direct Operator · Zero Commission</em>
             </h1>
 
             <p style={{
@@ -167,8 +167,8 @@ export default function HomePage() {
               marginBottom:28, maxWidth:580, margin:'0 auto 28px',
             }}>
               Yamunotri · Gangotri · Kedarnath · Badrinath<br/>
-              <span style={{ color:'#FFD166', fontWeight:600 }}>Starting ₹5,299 per person</span>
-              &nbsp;·&nbsp;Zero commission &nbsp;·&nbsp; VIP darshan
+              <span style={{ color:'#FFD166', fontWeight:700 }}>From ₹19,500/person all-inclusive</span>
+              &nbsp;·&nbsp; Zero commission &nbsp;·&nbsp; Direct operator since 2010
             </p>
 
             {/* Search widget */}
@@ -213,8 +213,8 @@ export default function HomePage() {
             </div>
 
             {/* Trust row */}
-            <div style={{ display:'flex', justifyContent:'center', gap:22, flexWrap:'wrap', marginTop:20, fontSize:12, color:'rgba(255,255,255,0.6)' }}>
-              {['✓ No hidden charges','✓ VIP darshan included','✓ 24/7 yatra support','✓ Free cancellation 30 days'].map(t=>(
+            <div style={{ display:'flex', justifyContent:'center', gap:22, flexWrap:'wrap', marginTop:20, fontSize:12, color:'rgba(255,255,255,0.7)' }}>
+              {['✓ No hidden charges','✓ VIP darshan included','✓ 50,000+ pilgrims since 2010','✓ Free cancellation 30 days'].map(t=>(
                 <span key={t} style={{ whiteSpace:'nowrap' }}>{t}</span>
               ))}
             </div>
@@ -259,6 +259,35 @@ export default function HomePage() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', display:'flex', flexWrap:'wrap' }}>
           {TRUST.stats.map((s,i) => (
             <CounterStat key={s.label} {...s} border={i < TRUST.stats.length-1}/>
+          ))}
+        </div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════
+          TRUST BADGE STRIP
+      ═══════════════════════════════════════════════ */}
+      <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'14px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'center', gap:0, flexWrap:'wrap' }}>
+          {[
+            { icon:'🏅', label:'IATA Approved', sub:'Tour Operator' },
+            { icon:'🏛️', label:'Uttarakhand Tourism', sub:'Registered' },
+            { icon:'⚔️', label:'Founded by', sub:'Retd. Army Officer' },
+            { icon:'📅', label:'Est. 2010', sub:'15 Years' },
+            { icon:'🙏', label:'50,000+ Pilgrims', sub:'Served' },
+            { icon:'🚫', label:'Zero Commission', sub:'Direct Operator' },
+          ].map((b,i,a) => (
+            <div key={b.label} style={{
+              display:'flex', alignItems:'center', gap:10,
+              padding:'8px 20px',
+              borderRight: i < a.length-1 ? '1px solid var(--border)' : 'none',
+              flexShrink:0,
+            }}>
+              <span style={{ fontSize:20 }}>{b.icon}</span>
+              <div>
+                <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', lineHeight:1.2 }}>{b.label}</div>
+                <div style={{ fontSize:11, color:'var(--text-muted)' }}>{b.sub}</div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -521,6 +550,62 @@ export default function HomePage() {
                 <div style={{ color:'#FFD166', fontSize:11.5, marginTop:8, fontWeight:600 }}>View Package →</div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          PRICE COMPARISON — Direct vs OTA
+          Psychology: loss aversion — show what they'd
+          OVERPAY booking via MakeMyTrip/Thrillophilia
+      ═══════════════════════════════════════════════ */}
+      <section style={{ background:'var(--navy)', padding:'48px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:28 }}>
+            <span style={{ background:'rgba(232,146,10,0.2)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:12 }}>
+              Why Book Direct
+            </span>
+            <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,3vw,2rem)', fontWeight:700, color:'#fff', letterSpacing:'-0.02em', marginBottom:8 }}>
+              Save ₹10,000+ Per Person — Book Direct
+            </h2>
+            <p style={{ color:'rgba(255,255,255,0.65)', fontSize:14 }}>Same 9N/10D Char Dham Yatra. Identical itinerary. Very different price.</p>
+          </div>
+
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(220px,100%),1fr))', gap:12, marginBottom:24 }}>
+            {[
+              { source:'MakeMyTrip', price:'₹30,337', type:'Online Travel Agent', badge:'Commission included', badgeBg:'#DC2626', detail:'Aggregator markup + platform fee + agent commission' },
+              { source:'Thrillophilia', price:'₹24,000+', type:'Activity Aggregator', badge:'Upto 20% commission', badgeBg:'#DC2626', detail:'Their "15% off" is off their inflated base price' },
+              { source:'Local Agent', price:'₹22,000+', type:'Travel Agent', badge:'Hidden markup', badgeBg:'#B45309', detail:'Agent earns ₹2,000–4,000 per booking from your payment' },
+              { source:'Shiv Ganga Travels', price:'₹19,500', type:'Direct Operator', badge:'Zero commission', badgeBg:'#15803D', detail:'You pay the operator directly — no one takes a cut', highlight:true },
+            ].map(r => (
+              <div key={r.source} style={{
+                background: r.highlight ? 'rgba(232,146,10,0.15)' : 'rgba(255,255,255,0.06)',
+                borderRadius:14, padding:'18px 16px',
+                border: r.highlight ? '2px solid #E8920A' : '1px solid rgba(255,255,255,0.1)',
+                position:'relative',
+              }}>
+                {r.highlight && (
+                  <div style={{ position:'absolute', top:-10, left:'50%', transform:'translateX(-50%)', background:'#E8920A', color:'#fff', fontSize:10.5, fontWeight:800, padding:'3px 14px', borderRadius:100, whiteSpace:'nowrap' }}>
+                    ✓ Best Price
+                  </div>
+                )}
+                <div style={{ fontWeight:700, fontSize:15, color: r.highlight ? '#FFD166' : '#fff', marginBottom:6 }}>{r.source}</div>
+                <div style={{ fontWeight:800, fontSize:28, color: r.highlight ? '#FFD166' : '#fff', fontFamily:'var(--font-display)', letterSpacing:'-0.03em', lineHeight:1 }}>{r.price}</div>
+                <div style={{ fontSize:11.5, color:'rgba(255,255,255,0.5)', marginBottom:10 }}>per person · 9N/10D</div>
+                <span style={{ background:r.badgeBg, color:'#fff', fontSize:10.5, fontWeight:700, padding:'3px 10px', borderRadius:100, display:'inline-block', marginBottom:8 }}>{r.badge}</span>
+                <div style={{ fontSize:12, color:'rgba(255,255,255,0.55)', lineHeight:1.5 }}>{r.detail}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign:'center' }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 directly. Please share packages and pricing.')}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'0 4px 16px rgba(37,211,102,0.35)' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Book Direct — Save Up to ₹10,837
+            </a>
+            <p style={{ color:'rgba(255,255,255,0.45)', fontSize:11.5, marginTop:10 }}>No booking fee · No agent · Pay us directly</p>
           </div>
         </div>
       </section>

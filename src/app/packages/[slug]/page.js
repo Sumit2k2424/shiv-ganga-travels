@@ -212,6 +212,13 @@ export default function PackageDetailPage({ params }) {
       <div className="sticky-book-bar">
         <div><span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>from</span><span style={{ fontWeight:800, fontSize:18, color:'var(--navy)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</span></div>
         <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
+        </div>
+        {/* Trust micro-signals below sticky bar */}
+        <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'8px 16px 0', fontSize:11.5, color:'var(--text-muted)' }}>
+          <span>✓ 50,000+ pilgrims served</span>
+          <span>✓ Zero commission</span>
+          <Link href="/cancellation-policy" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>Flexible cancellation →</Link>
+        </div>
         <a href={`tel:${SITE.phone}`} style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
       </div>
 

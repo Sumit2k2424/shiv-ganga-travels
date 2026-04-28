@@ -1529,3 +1529,12 @@ article .section-rule {
   color: #2D3748 !important;
   line-height: 1.85 !important;
 }
+
+/* ── Trust badge strip — collapse on mobile ──────────── */
+@media (max-width: 640px) {
+  .trust-badge-strip > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    width: 50% !important;
+  }
+}
