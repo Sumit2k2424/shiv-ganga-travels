@@ -275,10 +275,10 @@ export default function Navbar() {
 
             {/* Plain links — minimal, high-intent only */}
             {[
-              { label:'Kedarnath',  href:'/kedarnath-yatra' },
-              { label:'Helicopter', href:'/packages/helicopter' },
-              { label:'Blog',       href:'/blog' },
-              { label:'About',      href:'/about' },
+              { label:'Kedarnath',   href:'/kedarnath-yatra' },
+              { label:'Blog',        href:'/blog' },
+              { label:'About',       href:'/about' },
+              { label:'Contact Us',  href:'/contact' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>
             ))}

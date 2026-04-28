@@ -3,7 +3,7 @@
    Inspired by: MakeMyTrip, Thrillophilia, Thomas Cook, Traveler Theme
    Palette: Deep Navy + Sacred Gold + Himalayan Teal
 ────────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,700&display=swap');
+/* Fonts loaded via next/font/google in layout.js — no render-blocking */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,8 +51,8 @@
   --shadow-gold : 0 4px 14px rgba(232,146,10,0.35);
 
   /* ── Typography ── */
-  --font        : 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font        : var(--font-jakarta), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
 
   /* ── Spacing ── */
   --section-y   : 72px;

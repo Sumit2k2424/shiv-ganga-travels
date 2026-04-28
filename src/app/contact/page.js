@@ -1,5 +1,4 @@
 import { SITE, PACKAGES } from '@/data/packages';
-import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 
 export const metadata = {
   title: 'Contact Us — Book Your Char Dham Yatra',
@@ -47,7 +46,7 @@ export default function ContactPage() {
               { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
-              { icon:'📍', label:'Office', value:'Saptrishi Road, Bhupatwala, Haridwar', sub:'Bhupatwala, Uttarakhand — 249410', color:'var(--gold-dark)' },
+              { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },
             ].map(c => {
               const inner = (
                 <div style={{
@@ -245,7 +244,16 @@ export default function ContactPage() {
                   </a>
                 </div>
                 {/* Interactive map */}
-                <GoogleMapEmbed height={360} />
+                <iframe
+                  title="Shiv Ganga Travels — Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.32!2d78.19274539999999!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
+                  width="100%"
+                  height="360"
+                  style={{ border:0, display:'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>

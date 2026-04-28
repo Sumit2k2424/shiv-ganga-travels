@@ -236,7 +236,7 @@ export const CUSTOM_QA = [
   // ── 35. CONTACT / OFFICE ─────────────────────────────────────
   {
     keywords: ['contact','address','office','location','haridwar','reach','where are you','email','number','call'],
-    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — 249410\n\n📞 **Call/WhatsApp:** +91-7017082807\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
+    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India\n\n📞 **Call/WhatsApp:** +91-7017082807\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
   },
 
 ];

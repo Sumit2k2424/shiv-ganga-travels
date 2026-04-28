@@ -374,9 +374,9 @@ export default function AboutPage() {
                     <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>Office Address</div>
                     <div style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.7 }}>
                       Saptrishi Road<br/>
-                      Near Shantikunj Gate No. 1<br/>
-                      Bhupatwala, Haridwar<br/>
-                      Uttarakhand — 249410
+                      Near Shantikunj Gate No. 1, Bhupatwala<br/>
+                      Haridwar, Uttarakhand 249410<br/>
+                      India
                     </div>
                   </div>
                 </div>
@@ -423,14 +423,14 @@ export default function AboutPage() {
               </a>
             </div>
 
-            {/* Google Maps embed */}
+            {/* Google Maps iframe — lightweight, no JS required */}
             <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid var(--border)', minHeight: 380, position: 'relative' }}>
               <iframe
                 title="Shiv Ganga Travels Office Location — Saptrishi Road, Bhupatwala, Haridwar"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.98!2d78.1927454!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.32!2d78.1927454!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
                 width="100%"
-                height="100%"
-                style={{ border: 0, display: 'block', minHeight: 380 }}
+                height="380"
+                style={{ border: 0, display: 'block' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

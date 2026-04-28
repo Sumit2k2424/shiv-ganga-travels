@@ -1,10 +1,30 @@
 import './globals.css';
+import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LeadPopup from '@/components/LeadPopup';
 import ChatBot from '@/components/ChatBot';
 import { SITE } from '@/data/packages';
+
+// ── next/font — zero render-blocking, self-hosted at build time ──
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300','400','500','600','700','800'],
+  style: ['normal','italic'],
+  variable: '--font-jakarta',
+  display: 'swap',
+  preload: true,
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500','600','700'],
+  style: ['normal','italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
@@ -275,13 +295,21 @@ function SiteSchema() {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN">
+    <html lang="en-IN" className={`${jakarta.variable} ${playfair.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-        <link rel="dns-prefetch" href="https://images.unsplash.com"/>
-        <link rel="dns-prefetch" href="https://images.pexels.com"/>
-        <link rel="dns-prefetch" href="https://upload.wikimedia.org"/>
+        {/* Fonts now self-hosted via next/font — no Google Fonts preconnect needed */}
+        {/* Preconnect to image CDNs used in hero and package cards */}
+        <link rel="preconnect" href="https://images.pexels.com"/>
+        <link rel="preconnect" href="https://upload.wikimedia.org"/>
+        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+        <link rel="dns-prefetch" href="https://maps.googleapis.com"/>
+        {/* Preload LCP hero image — eliminates largest contentful paint delay */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG"
+          fetchPriority="high"
+        />
         {/* Mobile / PWA */}
         <meta name="mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -296,14 +324,14 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="29.9457, 78.1642"/>
         {/* SVG favicon */}
         <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" stroke="#0F2B5B" stroke-width="2" fill="none"/><circle cx="22" cy="22" r="14" fill="#0F2B5B"/><path d="M10 30 L17 18 L22 25 L27 16 L34 30 Z" fill="#E8920A"/></svg>`)}`}/>
-        {/* Google Analytics G-FP0HXZ8068 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068"/>
-        <script dangerouslySetInnerHTML={{ __html:`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-FP0HXZ8068', { page_path: window.location.pathname });
-        `}}/>
+        {/* DNS prefetch for third-party domains used on this site */}
+        <link rel="dns-prefetch" href="//www.google-analytics.com"/>
+        <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+        <link rel="dns-prefetch" href="//images.pexels.com"/>
+        <link rel="dns-prefetch" href="//upload.wikimedia.org"/>
+        <link rel="preconnect" href="https://www.google-analytics.com"/>
+        {/* Preload LCP hero image */}
+        <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG" fetchPriority="high"/>
         <SiteSchema/>
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
@@ -313,6 +341,9 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <ChatBot/>
+        {/* GA4 — loaded last, never blocks render */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068"/>
+        <script dangerouslySetInnerHTML={{ __html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FP0HXZ8068');`}}/>
       </body>
     </html>
   );

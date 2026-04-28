@@ -443,7 +443,7 @@ export default function RegistrationBlog() {
             </a>
           </div>
           <p style={{ color:'rgba(255,255,255,0.5)', fontSize:11.5, marginTop:14, marginBottom:0 }}>
-            Shiv Ganga Travels · Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar 249410
+            Shiv Ganga Travels · Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India
           </p>
         </div>
 
