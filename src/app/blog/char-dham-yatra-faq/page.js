@@ -254,7 +254,7 @@ export default function FAQ() {
       </nav>
 
       {/* FAQ content */}
-      <div style={className='blog-container'}>
+      <div className="blog-container">
 
         {/* Table of contents */}
         <div style={{ background: 'var(--navy-light)', borderRadius: 14, padding: '20px 24px', marginBottom: 40 }}>

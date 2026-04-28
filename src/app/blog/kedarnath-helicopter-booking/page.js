@@ -55,7 +55,7 @@ export default function KedarnathHelicopterBooking() {
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         <p style={p}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn't care how you arrive."</p>
 

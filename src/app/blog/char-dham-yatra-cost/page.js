@@ -61,7 +61,7 @@ return (
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
         <p style={p}>The most common question we get is: "How much will the entire Char Dham Yatra cost me?" And the honest answer is — it depends on what you choose. But unlike most travel websites that give vague ranges, we're going to break every rupee down for you so you can budget accurately before you call us.</p>
 
         <h2 style={h2}>Package Cost — What's Actually Included</h2>

@@ -29,7 +29,7 @@ export default function RishikeshAdventureGuide() {
         <span>Rishikesh Adventure Guide 2026</span>
       </div>
     </nav>
-    <article style={className='blog-container'}>
+    <article className="blog-container">
       <p style={p}>Rishikesh is one of those rare places that genuinely delivers on its hype. The Ganga rushing through a gorge of forested hills. Ancient temples and modern ashrams side by side. Yoga studios next to bungee platforms. The same river that witnesses solemn Ganga aarti at sunset carries shrieking rafters through Grade IV rapids in the morning. It's a contradiction that somehow makes perfect sense.</p>
       <p style={p}>This guide covers everything for an <strong>Rishikesh adventure trip in 2026</strong> — what activities are actually worth your money, the honest costs (not the inflated tourist prices), the best time to go, and what not to miss beyond the adventure sports.</p>
 

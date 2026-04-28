@@ -74,7 +74,7 @@ export default function KedarnathTrekGuide() {
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         <p style={p}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims, a 58-year-old retired school teacher from Lucknow, was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli — about 8km in, with the Mandakini river roaring below and the first glimpse of snow peaks ahead — she turned to me and said, "Yeh toh swarg hai." (This is heaven.) She reached the temple, touched the Shivalinga, and wept.</p>
 

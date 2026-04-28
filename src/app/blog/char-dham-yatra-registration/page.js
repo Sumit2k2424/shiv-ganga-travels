@@ -161,7 +161,7 @@ export default function RegistrationBlog() {
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>

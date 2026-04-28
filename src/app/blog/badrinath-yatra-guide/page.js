@@ -29,7 +29,7 @@ export default function BadrinathYatraGuide() {
         <span>Badrinath Yatra Guide 2026</span>
       </div>
     </nav>
-    <article style={className='blog-container'}>
+    <article className="blog-container">
       <p style={p}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={p}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 

@@ -121,7 +121,7 @@ return (
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         <p style={p}>Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 

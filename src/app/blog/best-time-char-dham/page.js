@@ -66,7 +66,7 @@ export default function BestTimeCharDham() {
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
         <p style={p}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. In 2026, temples opened on April 19 (Yamunotri & Gangotri), April 22 (Kedarnath), and April 23 (Badrinath). Closing dates: Gangotri Nov 10, Yamunotri & Kedarnath Nov 11, Badrinath Nov 13. This guide breaks down each month so you can plan your ideal yatra.</p>
 
         <h2 style={h2}>Month-by-Month Guide</h2>

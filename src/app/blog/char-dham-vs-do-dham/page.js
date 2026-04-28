@@ -59,7 +59,7 @@ export default function ComparisonPage() {
         </div>
       </div>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.

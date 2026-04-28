@@ -122,7 +122,7 @@ export default function NewRules2026() {
         </div>
       </nav>
 
-      <article style={className='blog-container'}>
+      <article className="blog-container">
 
         <div style={{ background:'#fee2e2', border:'1.5px solid #fca5a5', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Important Notice for 2026 Pilgrims</div>

@@ -29,7 +29,7 @@ export default function HaridwarToKedarnath() {
         <span>Haridwar to Kedarnath Route</span>
       </div>
     </nav>
-    <article style={className='blog-container'}>
+    <article className="blog-container">
       <p style={p}>The road from Haridwar to Kedarnath is not just a journey — it's a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
       <p style={p}>Here is the complete route guide from <strong>Haridwar to Kedarnath</strong>, including distances, journey times, the best places to stop, and exactly what to expect at each stage.</p>
 
