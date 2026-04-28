@@ -340,6 +340,105 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ── FIND US / MAP SECTION ─────────────────────── */}
+      <section style={{ background: '#fff', padding: '64px 20px 56px' }}>
+        <div style={{ maxWidth: 'var(--container)', margin: '0 auto' }}>
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: 36 }}>
+            <span style={{ background: 'var(--navy-light)', color: 'var(--navy)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
+              Visit Us
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem,3vw,2rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 10 }}>
+              Come Meet Dhanesh Ji in Person
+            </h2>
+            <p style={{ fontSize: 15, color: 'var(--text-muted)', maxWidth: 560, margin: '0 auto' }}>
+              Our office is open 7 days a week. Walk in, sit down, and plan your Char Dham Yatra over a cup of chai — no appointment needed.
+            </p>
+          </div>
+
+          {/* Two-col: address card + map */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(260px,340px) 1fr', gap: 24, alignItems: 'stretch' }} className="about-map-grid">
+
+            {/* Address card */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+              {/* Address */}
+              <div style={{ background: 'var(--bg)', borderRadius: 16, border: '1px solid var(--border)', padding: '22px 20px' }}>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 16 }}>
+                  <div style={{ width: 40, height: 40, background: 'var(--navy)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD166" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>Office Address</div>
+                    <div style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                      Saptrishi Road<br/>
+                      Near Shantikunj Gate No. 1<br/>
+                      Bhupatwala, Haridwar<br/>
+                      Uttarakhand — 249410
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {[
+                    { icon: '📞', label: 'Call / WhatsApp', value: SITE.phone, href: `tel:${SITE.phone}` },
+                    { icon: '✉️', label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
+                    { icon: '⏰', label: 'Office Hours', value: 'Mon–Sun: 7 AM – 9 PM', href: null },
+                  ].map(item => (
+                    <div key={item.label} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 13, borderTop: '1px solid var(--border)', paddingTop: 8 }}>
+                      <span style={{ fontSize: 16 }}>{item.icon}</span>
+                      <div>
+                        <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{item.label}</div>
+                        {item.href ? (
+                          <a href={item.href} style={{ color: 'var(--navy)', fontWeight: 600, textDecoration: 'none', fontSize: 13 }}>{item.value}</a>
+                        ) : (
+                          <div style={{ color: 'var(--text)', fontWeight: 600, fontSize: 13 }}>{item.value}</div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Landmark note */}
+              <div style={{ background: 'var(--navy-light)', borderRadius: 12, padding: '14px 16px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                <span style={{ fontSize: 20, flexShrink: 0 }}>🗺️</span>
+                <div>
+                  <div style={{ fontWeight: 700, fontSize: 12.5, color: 'var(--navy)', marginBottom: 4 }}>How to find us</div>
+                  <div style={{ fontSize: 12.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                    We are right next to Shantikunj (Gayatri Pariwar) — one of Haridwar's most recognisable landmarks. Take Saptrishi Road from Har Ki Pauri direction. Look for Gate No. 1 of Shantikunj.
+                  </div>
+                </div>
+              </div>
+
+              {/* Directions CTA */}
+              <a href="https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8"
+                target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: 'var(--navy)', color: '#fff', padding: '13px 20px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                </svg>
+                Get Directions on Google Maps
+              </a>
+            </div>
+
+            {/* Google Maps embed */}
+            <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid var(--border)', minHeight: 380, position: 'relative' }}>
+              <iframe
+                title="Shiv Ganga Travels Office Location — Saptrishi Road, Bhupatwala, Haridwar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.98!2d78.1927454!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', minHeight: 380 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
