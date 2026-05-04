@@ -76,12 +76,12 @@ export default function KedarnathTrekGuide() {
 
       <article className="blog-container">
 
-        <p style={p}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims, a 58-year-old retired school teacher from Lucknow, was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli — about 8km in, with the Mandakini river roaring below and the first glimpse of snow peaks ahead — she turned to me and said, "Yeh toh swarg hai." (This is heaven.) She reached the temple, touched the Shivalinga, and wept.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims, a 58-year-old retired school teacher from Lucknow, was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli — about 8km in, with the Mandakini river roaring below and the first glimpse of snow peaks ahead — she turned to me and said, "Yeh toh swarg hai." (This is heaven.) She reached the temple, touched the Shivalinga, and wept.</p>
 
-        <p style={p}>That's what the <strong>Kedarnath trek</strong> does to people. It breaks you down physically and then builds you back up spiritually. This guide covers everything you need to know before you take your first step from Gaurikund — the distance, difficulty, what to carry, and how to prepare.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>That's what the <strong>Kedarnath trek</strong> does to people. It breaks you down physically and then builds you back up spiritually. This guide covers everything you need to know before you take your first step from Gaurikund — the distance, difficulty, what to carry, and how to prepare.</p>
 
         <h2 style={h2}>Kedarnath Trek Distance & Route</h2>
-        <p style={p}>The trek covers <strong>16 kilometres one way</strong>, starting at <strong>Gaurikund</strong> (1,982m above sea level) and ending at <strong>Kedarnath Temple</strong> (3,583m). The total elevation gain is approximately 1,600 metres across 16km, which works out to a steady but steep climb throughout.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The trek covers <strong>16 kilometres one way</strong>, starting at <strong>Gaurikund</strong> (1,982m above sea level) and ending at <strong>Kedarnath Temple</strong> (3,583m). The total elevation gain is approximately 1,600 metres across 16km, which works out to a steady but steep climb throughout.</p>
 
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:12 }}>📍 Trail Waypoints</div>
@@ -103,12 +103,12 @@ export default function KedarnathTrekGuide() {
           </div>
         </div>
 
-        <p style={p}>The trail is well-paved with concrete and stone steps for a large portion. It can get extremely crowded in peak season (May–June) — we're talking thousands of pilgrims on the same path. Our team recommends starting the trek by <strong>5:00–5:30 AM</strong> to avoid the worst of the crowds and to give yourself enough daylight for a comfortable ascent.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The trail is well-paved with concrete and stone steps for a large portion. It can get extremely crowded in peak season (May–June) — we're talking thousands of pilgrims on the same path. Our team recommends starting the trek by <strong>5:00–5:30 AM</strong> to avoid the worst of the crowds and to give yourself enough daylight for a comfortable ascent.</p>
 
         <h2 style={h2}>How Difficult is the Kedarnath Trek?</h2>
-        <p style={p}>Let's be honest with each other. The Kedarnath trek is <strong>not easy</strong>. Anyone who tells you it's a casual walk hasn't done it. The combination of high altitude, steep incline, and long distance makes it genuinely demanding. But here's the thing — it's not technical. There's no rock climbing, no river crossings, no scrambling. It's a walking trail, just a steep one.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Let's be honest with each other. The Kedarnath trek is <strong>not easy</strong>. Anyone who tells you it's a casual walk hasn't done it. The combination of high altitude, steep incline, and long distance makes it genuinely demanding. But here's the thing — it's not technical. There's no rock climbing, no river crossings, no scrambling. It's a walking trail, just a steep one.</p>
 
-        <p style={p}>Our difficulty rating: <strong>Moderate to Challenging</strong>. Here's a realistic breakdown:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our difficulty rating: <strong>Moderate to Challenging</strong>. Here's a realistic breakdown:</p>
         <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8, marginBottom:20 }}>
           {[
             { segment:'Gaurikund to Jungle Chatti (4km)', honest:'Steep and tiring from the very start. Your lungs will protest. Don\'t rush.' },
@@ -124,7 +124,7 @@ export default function KedarnathTrekGuide() {
         </ul>
 
         <h2 style={h2}>Pony, Palki, or Helicopter? Honest Comparison</h2>
-        <p style={p}>Every year we get asked this question. Here's what we tell our pilgrims — there's no shame in any option. The mountain doesn't judge. Shiva doesn't judge. The darshan is equally valid whether you walked, rode a pony, or flew in by helicopter.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year we get asked this question. Here's what we tell our pilgrims — there's no shame in any option. The mountain doesn't judge. Shiva doesn't judge. The darshan is equally valid whether you walked, rode a pony, or flew in by helicopter.</p>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:12, marginBottom:24 }}>
           {[
@@ -144,7 +144,7 @@ export default function KedarnathTrekGuide() {
         </div>
 
         <h2 style={h2}>What to Carry for the Kedarnath Trek</h2>
-        <p style={p}>This is where most first-timers go wrong — either carrying too much (your back will hate you) or too little (your body will hate you). Here's the Goldilocks list from 15 years of guiding pilgrims:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is where most first-timers go wrong — either carrying too much (your back will hate you) or too little (your body will hate you). Here's the Goldilocks list from 15 years of guiding pilgrims:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { cat:'✅ Must Carry', items:['Walking stick (rent at Gaurikund ₹100)', 'Rain poncho/jacket', 'Warm fleece or sweater', 'Trekking shoes (not sandals)', 'Water bottle (refill at stalls)', 'Dry snacks — nuts, energy bars, biscuits', 'Plastic bag to protect phone/documents'] },
@@ -161,14 +161,14 @@ export default function KedarnathTrekGuide() {
         </div>
 
         <h2 style={h2}>How to Prepare for the Trek</h2>
-        <p style={p}>Start training at least <strong>4–6 weeks before</strong> your yatra date. You don't need a gym membership or a personal trainer. Here's a simple plan that works:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Start training at least <strong>4–6 weeks before</strong> your yatra date. You don't need a gym membership or a personal trainer. Here's a simple plan that works:</p>
         <ul style={{ paddingLeft:20, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2 }}>
           <li><strong>Weeks 1–2:</strong> Walk 3–5 km daily at a brisk pace. Stairs instead of lift everywhere.</li>
           <li><strong>Weeks 3–4:</strong> Increase to 6–8 km. Find a hill nearby and walk up it repeatedly.</li>
           <li><strong>Week 5–6:</strong> Do a practice trek of 10–12 km with a light backpack. Your local hills or a nature trail works perfectly.</li>
           <li><strong>Daily:</strong> Pranayama (breathing exercises) for 15 minutes — this prepares your lungs for altitude.</li>
         </ul>
-        <p style={p}>Cut out alcohol completely for the two weeks before the trek — it dehydrates you and impairs altitude acclimatisation. Drink 2–3 litres of water daily.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Cut out alcohol completely for the two weeks before the trek — it dehydrates you and impairs altitude acclimatisation. Drink 2–3 litres of water daily.</p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto' }}>

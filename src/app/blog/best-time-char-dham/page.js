@@ -67,7 +67,7 @@ export default function BestTimeCharDham() {
       </nav>
 
       <article className="blog-container">
-        <p style={p}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. In 2026, temples opened on April 19 (Yamunotri & Gangotri), April 22 (Kedarnath), and April 23 (Badrinath). Closing dates: Gangotri Nov 10, Yamunotri & Kedarnath Nov 11, Badrinath Nov 13. This guide breaks down each month so you can plan your ideal yatra.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. In 2026, temples opened on April 19 (Yamunotri & Gangotri), April 22 (Kedarnath), and April 23 (Badrinath). Closing dates: Gangotri Nov 10, Yamunotri & Kedarnath Nov 11, Badrinath Nov 13. This guide breaks down each month so you can plan your ideal yatra.</p>
 
         <h2 style={h2}>Month-by-Month Guide</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
@@ -83,7 +83,7 @@ export default function BestTimeCharDham() {
         </div>
 
         <h2 style={h2}>Char Dham Temple Opening Dates 2026</h2>
-        <p style={p}>The exact opening dates change every year based on the Hindu calendar and are announced a few months before. Approximate dates for 2026:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The exact opening dates change every year based on the Hindu calendar and are announced a few months before. Approximate dates for 2026:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:24 }}>
           {[
             { temple:'Yamunotri', opens:'April 19, 2026', closes:'November 11, 2026' },

@@ -123,11 +123,11 @@ export default function AboutPage() {
 
           <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army, in Roorkee, Uttarakhand. Dhanesh served his country in uniform before turning to another form of service — helping pilgrims reach the sacred Himalayan dhams with dignity, honesty, and care. After retirement, he had a vehicle, a deep familiarity with the Uttarakhand mountains earned through years of military posting in the region, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
           </p>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             Military culture runs on discipline, punctuality, and zero tolerance for shortcuts. Dhanesh had not merely absorbed those values — he had lived them through years of service in the Indian Army. He brought them directly into how he operated. Pick-up times were kept to the minute. Vehicles were always serviced before a long mountain run. No pilgrim was ever overcharged. The jawans and officers noticed — and they started coming back, and bringing their families.
           </p>
 
@@ -138,21 +138,21 @@ export default function AboutPage() {
 
           <h2 style={h2}>The Belief That Changed Everything</h2>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             As word spread and the business grew steadily through Roorkee&apos;s military community, Dhanesh began to see a pattern in the wider pilgrimage travel market that troubled him. Most tour operators charged one price to well-connected customers and a very different price to first-time pilgrims who didn&apos;t know any better. Aggregator platforms added commissions on commissions. The holy journey to the Char Dhams — something millions of ordinary Indian families saved up for years to undertake — had become an industry where the pilgrim was often the last person being looked after.
           </p>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             Dhanesh&apos;s conviction was straightforward: <strong>everyone deserves fair pricing and the same quality of service</strong> — whether you are a senior Army officer, a schoolteacher from Agra, or a retired farmer from rural Maharashtra taking his once-in-a-lifetime yatra. This belief was not a marketing slogan. It was the reason he expanded beyond the military community and opened the business to all pilgrims.
           </p>
 
           <h2 style={h2}>Growth — From Roorkee to Haridwar</h2>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             The growth through the 2010s was steady and earned — not driven by advertising but by word of mouth from satisfied pilgrims. A family from Delhi who had a good experience told their neighbours. A WhatsApp group for a Kedarnath pilgrims&apos; batch shared Dhanesh&apos;s number. Repeat bookings became the norm rather than the exception. By the mid-2010s, the fleet had expanded from a single vehicle to several, and the team had grown to include experienced Garhwali guides, a dedicated operations team, and a customer relations desk.
           </p>
 
-          <p style={p}>
+          <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             The logical next step was Haridwar — the official gateway to the Char Dham circuit and the city where every yatra truly begins. Shiv Ganga Travels opened its Haridwar office, positioning itself at the heart of pilgrimage activity. Today we operate from both Roorkee and Haridwar, with a full fleet of over <strong>20 vehicles</strong> — Innova Crysta, Ertiga, Tempo Travellers of various capacities — all maintained to a standard that Dhanesh himself inspects regularly.
           </p>
 

@@ -78,7 +78,7 @@ export default function CabBooking() {
 
     <div style={{ maxWidth:960, margin:'0 auto', padding:'40px 20px 60px' }}>
 
-      <p style={p}>Shiv Ganga Travels provides dedicated cab service for Char Dham Yatra 2026 from Haridwar, Rishikesh, and Delhi. All our vehicles are AC, hill-terrain certified, and driven by experienced Garhwali drivers who know every curve of the Kedarnath, Badrinath, Gangotri, and Yamunotri routes. You can book a cab as a standalone service or as part of our all-inclusive Char Dham Yatra package.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Shiv Ganga Travels provides dedicated cab service for Char Dham Yatra 2026 from Haridwar, Rishikesh, and Delhi. All our vehicles are AC, hill-terrain certified, and driven by experienced Garhwali drivers who know every curve of the Kedarnath, Badrinath, Gangotri, and Yamunotri routes. You can book a cab as a standalone service or as part of our all-inclusive Char Dham Yatra package.</p>
 
       <div style={{ background:'#dcfce7', border:'1px solid #86efac', borderRadius:12, padding:'14px 18px', marginBottom:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'#15803d', marginBottom:4 }}>✅ What's included in every cab booking</div>

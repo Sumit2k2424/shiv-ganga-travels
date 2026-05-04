@@ -131,7 +131,7 @@ export default function NewRules2026() {
           </p>
         </div>
 
-        <p style={p}>Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of April 2026.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of April 2026.</p>
 
         <h2 style={h2}>All 7 Rule Changes for 2026</h2>
 
@@ -154,7 +154,7 @@ export default function NewRules2026() {
         </div>
 
         <h2 style={h2}>How We Handle These Rules for Our Pilgrims</h2>
-        <p style={p}>When you book a Char Dham Yatra with Shiv Ganga Travels, our team handles all compliance automatically:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>When you book a Char Dham Yatra with Shiv Ganga Travels, our team handles all compliance automatically:</p>
         <ul style={{ paddingLeft:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.3, marginBottom:24 }}>
           <li>We obtain your biometric registration and remind you about documents needed</li>
           <li>We assist with IRCTC helicopter booking if you opt for the helicopter route</li>

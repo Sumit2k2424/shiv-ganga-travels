@@ -66,10 +66,10 @@ export default function CharDhamGuide() {
 
       <article className="blog-container">
 
-        <p style={p}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 
         <h2 style={h2}>What is the Char Dham Yatra?</h2>
-        <p style={p}>The Char Dham Yatra consists of four sacred shrines in the Garhwal Himalayas of Uttarakhand state, India. The four dhams are:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The Char Dham Yatra consists of four sacred shrines in the Garhwal Himalayas of Uttarakhand state, India. The four dhams are:</p>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { name:'Yamunotri', alt:'3,291m', god:'Goddess Yamuna', desc:'Source of the Yamuna river. First stop on the circuit.' },
@@ -86,7 +86,7 @@ export default function CharDhamGuide() {
         </ul>
 
         <h2 style={h2}>Best Time for Char Dham Yatra 2026</h2>
-        <p style={p}>The temples open in <strong>May</strong> (Akshaya Tritiya) and close in <strong>November</strong> (Bhai Dooj). The ideal windows are:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The temples open in <strong>May</strong> (Akshaya Tritiya) and close in <strong>November</strong> (Bhai Dooj). The ideal windows are:</p>
         <ul style={{ paddingLeft:20, marginBottom:16, color:'var(--text-mid)', fontSize:14.5, lineHeight:2 }}>
           <li><strong style={{ color:'var(--navy)' }}>May – Mid June</strong> — Spring season, post-opening rush, pleasant weather. Book 90 days ahead.</li>
           <li><strong style={{ color:'var(--navy)' }}>Mid September – October</strong> — Post-monsoon, crystal-clear views, less crowded. Best season overall.</li>
@@ -95,13 +95,13 @@ export default function CharDhamGuide() {
         </ul>
 
         <h2 style={h2}>Char Dham Yatra Route from Haridwar</h2>
-        <p style={p}>The complete route follows a clockwise direction and covers approximately <strong>1,200 km</strong> by road plus trekking:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The complete route follows a clockwise direction and covers approximately <strong>1,200 km</strong> by road plus trekking:</p>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
           <strong>Haridwar</strong> → Rishikesh → Barkot → <strong>Yamunotri</strong> → Uttarkashi → <strong>Gangotri</strong> → Guptkashi → Gaurikund → <strong>Kedarnath</strong> (16km trek) → Rudraprayag → Joshimath → <strong>Badrinath</strong> → Mana Village → Devprayag → Rishikesh → <strong>Haridwar</strong>
         </div>
 
         <h2 style={h2}>Char Dham Yatra Cost Breakdown 2026</h2>
-        <p style={p}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹19,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹19,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { item:'Hotel Accommodation', type:'Included', note:'All nights, twin sharing' },
@@ -122,7 +122,7 @@ export default function CharDhamGuide() {
         </div>
 
         <h2 style={h2}>Char Dham Yatra Registration 2026</h2>
-        <p style={p}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
 
         <h2 style={h2}>Char Dham Yatra Packing List</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>

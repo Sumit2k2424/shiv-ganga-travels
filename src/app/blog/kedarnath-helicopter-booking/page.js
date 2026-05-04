@@ -57,12 +57,12 @@ export default function KedarnathHelicopterBooking() {
 
       <article className="blog-container">
 
-        <p style={p}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn't care how you arrive."</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn't care how you arrive."</p>
 
-        <p style={p}>Whether you're booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong>, written honestly from 15 years of arranging these flights for our pilgrims.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you're booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong>, written honestly from 15 years of arranging these flights for our pilgrims.</p>
 
         <h2 style={h2}>Kedarnath Helicopter Price 2026</h2>
-        <p style={p}>Helicopter prices are <strong>per person, round trip</strong>. One-way bookings are rarely available. Prices vary by helipad:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Helicopter prices are <strong>per person, round trip</strong>. One-way bookings are rarely available. Prices vary by helipad:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:20 }}>
           {[
             { pad:'Phata Helipad', dist:'35 km', price:'₹8,000–9,500', note:'Most popular. Most operators. Best availability.', rating:'⭐⭐⭐' },
@@ -82,14 +82,14 @@ export default function KedarnathHelicopterBooking() {
         </p>
 
         <h2 style={h2}>The Three Helipads — Which One Should You Choose?</h2>
-        <p style={p}>All three helipads reach Kedarnath in roughly 7–10 minutes. The choice depends on where you're staying and your budget. If you're on a standard Char Dham or Kedarnath package with us, we book from <strong>Phata or Sersi</strong> as they offer the best combination of price, availability, and reliability.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>All three helipads reach Kedarnath in roughly 7–10 minutes. The choice depends on where you're staying and your budget. If you're on a standard Char Dham or Kedarnath package with us, we book from <strong>Phata or Sersi</strong> as they offer the best combination of price, availability, and reliability.</p>
 
         <h2 style={h2}>Weather & When to Book Morning Slots</h2>
-        <p style={p}>This is the most important practical tip — and most operators won't tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>
-        <p style={p}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But the success rate for morning flights is over 95%. Afternoon flights, especially in May–June, get cancelled frequently. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is the most important practical tip — and most operators won't tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But the success rate for morning flights is over 95%. Afternoon flights, especially in May–June, get cancelled frequently. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
 
         <h2 style={h2}>How to Book Kedarnath Helicopter Through Us</h2>
-        <p style={p}>When you book a <strong>Kedarnath Yatra package</strong> with Shiv Ganga Travels, we handle the helicopter booking as part of the package or as an add-on. Here's our process:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>When you book a <strong>Kedarnath Yatra package</strong> with Shiv Ganga Travels, we handle the helicopter booking as part of the package or as an add-on. Here's our process:</p>
         <ol style={{ paddingLeft:22, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.2 }}>
           <li>You confirm your travel dates with us (at least 60 days ahead for peak season)</li>
           <li>We check availability across all three helipads and secure the best rate</li>

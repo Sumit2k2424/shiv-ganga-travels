@@ -62,10 +62,10 @@ return (
       </nav>
 
       <article className="blog-container">
-        <p style={p}>The most common question we get is: "How much will the entire Char Dham Yatra cost me?" And the honest answer is — it depends on what you choose. But unlike most travel websites that give vague ranges, we're going to break every rupee down for you so you can budget accurately before you call us.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The most common question we get is: "How much will the entire Char Dham Yatra cost me?" And the honest answer is — it depends on what you choose. But unlike most travel websites that give vague ranges, we're going to break every rupee down for you so you can budget accurately before you call us.</p>
 
         <h2 style={h2}>Package Cost — What's Actually Included</h2>
-        <p style={p}>A reputable all-inclusive Char Dham Yatra package from a registered operator covers:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A reputable all-inclusive Char Dham Yatra package from a registered operator covers:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:10, marginBottom:24 }}>
           {[
             { pkg:'Standard 9N/10D', price:'₹19,500', hotel:'Budget/standard hotels', vehicle:'Shared Tempo Traveller', meals:'Breakfast + dinner' },
@@ -82,7 +82,7 @@ return (
         </div>
 
         <h2 style={h2}>The "Extra" Costs — What Most Operators Don't Tell You Upfront</h2>
-        <p style={p}>Here's where we differ from most operators. We tell you about these costs before you book, not after. These are genuine extras that you will encounter:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Here's where we differ from most operators. We tell you about these costs before you book, not after. These are genuine extras that you will encounter:</p>
         <div style={{ display:'flex', flexDirection:'column', gap:8, marginBottom:24 }}>
           {[
             { cost:'Kedarnath Pony (if not trekking)', price:'₹3,500–4,500 one way', note:'Booked at Gaurikund on the day. Price varies by season.' },
@@ -119,9 +119,9 @@ return (
         </div>
 
         <h2 style={h2}>How to Get the Best Price</h2>
-        <p style={p}><strong>Book early.</strong> May–June slots fill 90 days in advance and prices are 10–15% higher than if you book in January–February. Booking in January for a May yatra typically gives you the best rooms, best vehicles, and 5–10% early bird discount.</p>
-        <p style={p}><strong>Travel in a group.</strong> Groups of 6+ get 5% off per person. Groups of 12+ get 8% off. This is real money on a ₹20,000+ package.</p>
-        <p style={p}><strong>Consider September–October.</strong> Same quality experience, same temples, 10–15% cheaper than peak May–June season, fewer crowds, better mountain views after the monsoon clears.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Book early.</strong> May–June slots fill 90 days in advance and prices are 10–15% higher than if you book in January–February. Booking in January for a May yatra typically gives you the best rooms, best vehicles, and 5–10% early bird discount.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Travel in a group.</strong> Groups of 6+ get 5% off per person. Groups of 12+ get 8% off. This is real money on a ₹20,000+ package.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Consider September–October.</strong> Same quality experience, same temples, 10–15% cheaper than peak May–June season, fewer crowds, better mountain views after the monsoon clears.</p>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Get an Exact Quote for Your Group</h3>

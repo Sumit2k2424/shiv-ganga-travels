@@ -58,13 +58,13 @@ return (
       </nav>
 
       <article className="blog-container">
-        <p style={p}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
-        <p style={p}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
-        <p style={p}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>
 
         <h2 style={h2}>Is There an Age Limit for Char Dham Yatra?</h2>
-        <p style={p}><strong>There is no official age limit for Char Dham Yatra.</strong> However, the Uttarakhand government does recommend that pilgrims above 60 years with pre-existing medical conditions (heart disease, severe BP, recent surgery) get a fitness certificate from their doctor before travelling. This is good advice, not a barrier.</p>
-        <p style={p}>The reality is: every year, thousands of pilgrims aged 70–80+ complete the Char Dham Yatra safely. With proper planning, the right pacing, and a good operator, it is very much achievable.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>There is no official age limit for Char Dham Yatra.</strong> However, the Uttarakhand government does recommend that pilgrims above 60 years with pre-existing medical conditions (heart disease, severe BP, recent surgery) get a fitness certificate from their doctor before travelling. This is good advice, not a barrier.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The reality is: every year, thousands of pilgrims aged 70–80+ complete the Char Dham Yatra safely. With proper planning, the right pacing, and a good operator, it is very much achievable.</p>
 
         <h2 style={h2}>Our Senior Citizen Special Package — ₹24,500 (12N/13D)</h2>
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'20px', marginBottom:24 }}>
@@ -89,9 +89,9 @@ return (
         </div>
 
         <h2 style={h2}>Medical Conditions — What Can & Cannot Travel</h2>
-        <p style={p}><strong>Can travel with precautions:</strong> Controlled blood pressure, Type 2 diabetes, mild asthma, arthritis, knee replacements, hip replacements (within 6+ months), controlled thyroid. Consult your doctor and carry medications.</p>
-        <p style={p}><strong>Should consider helicopter package:</strong> Heart stents or bypass surgery (within 12 months), severe COPD, recent stroke, uncontrolled diabetes, oxygen dependency at sea level. The helicopter package eliminates altitude stress by minimising time at high elevation.</p>
-        <p style={p}><strong>Should postpone:</strong> Active cancer treatment, very recent major surgery (under 3 months), severe unstable heart conditions. Your health comes first. The dhams will be there next year.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Can travel with precautions:</strong> Controlled blood pressure, Type 2 diabetes, mild asthma, arthritis, knee replacements, hip replacements (within 6+ months), controlled thyroid. Consult your doctor and carry medications.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Should consider helicopter package:</strong> Heart stents or bypass surgery (within 12 months), severe COPD, recent stroke, uncontrolled diabetes, oxygen dependency at sea level. The helicopter package eliminates altitude stress by minimising time at high elevation.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Should postpone:</strong> Active cancer treatment, very recent major surgery (under 3 months), severe unstable heart conditions. Your health comes first. The dhams will be there next year.</p>
 
         <h2 style={h2}>10 Practical Tips for Senior Pilgrims</h2>
         <ol style={{ paddingLeft:22, marginBottom:24, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.5 }}>

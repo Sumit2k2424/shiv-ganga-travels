@@ -67,9 +67,9 @@ export default function CharDhamGuide2025() {
       {/* Article */}
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
 
-        <p style={p}>The <strong>Char Dham Yatra</strong> is one of the most sacred pilgrimages in Hinduism, encompassing four divine shrines nestled in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. Completing this circuit, traditionally done in a clockwise direction starting from Yamunotri, is believed to wash away a lifetime of sins and grant liberation (<em>moksha</em>).</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The <strong>Char Dham Yatra</strong> is one of the most sacred pilgrimages in Hinduism, encompassing four divine shrines nestled in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. Completing this circuit, traditionally done in a clockwise direction starting from Yamunotri, is believed to wash away a lifetime of sins and grant liberation (<em>moksha</em>).</p>
 
-        <p style={p}>The 2025 Char Dham season is open from <strong>May to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹19,500 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 2025 Char Dham season is open from <strong>May to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹19,500 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
 
         {/* Quick package links */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px 22px', marginBottom:32, border:'1px solid rgba(15,43,91,0.1)' }}>
@@ -121,11 +121,11 @@ export default function CharDhamGuide2025() {
         </div>
 
         <h2 style={h2}>Char Dham Yatra 2025 — Registration & Permits</h2>
-        <p style={p}>Since 2017, the Government of Uttarakhand requires <strong>mandatory biometric registration</strong> for all Char Dham pilgrims. This helps manage crowd density at high-altitude temples and enables emergency response. Daily pilgrim limits are enforced, particularly at Kedarnath and Badrinath.</p>
-        <p style={p}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807 / +91-8859123961</a>.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, the Government of Uttarakhand requires <strong>mandatory biometric registration</strong> for all Char Dham pilgrims. This helps manage crowd density at high-altitude temples and enables emergency response. Daily pilgrim limits are enforced, particularly at Kedarnath and Badrinath.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807 / +91-8859123961</a>.</p>
 
         <h2 style={h2}>Char Dham Yatra Route Map</h2>
-        <p style={p}>The traditional route follows a clockwise direction:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The traditional route follows a clockwise direction:</p>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:13.5, lineHeight:2, marginBottom:20 }}>
           <strong>Haridwar</strong> → Barkot → <strong>Yamunotri</strong> → Uttarkashi → <strong>Gangotri</strong> → Guptkashi → Gaurikund → <strong>Kedarnath</strong> → Rudraprayag → Joshimath → <strong>Badrinath</strong> → Rishikesh → <strong>Haridwar</strong>
         </div>

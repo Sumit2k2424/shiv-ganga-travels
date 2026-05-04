@@ -35,7 +35,7 @@ export default function KedarnathWeather() {
       </div>
     </nav>
     <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-      <p style={p}>Kedarnath sits at 3,583 metres — one of the highest motorable pilgrimage destinations in India. The weather here is dramatically different from the plains below. Even in peak summer (May–June), temperatures at night can drop to 4–5°C. Understanding the weather cycle is essential for planning a safe and comfortable yatra.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Kedarnath sits at 3,583 metres — one of the highest motorable pilgrimage destinations in India. The weather here is dramatically different from the plains below. Even in peak summer (May–June), temperatures at night can drop to 4–5°C. Understanding the weather cycle is essential for planning a safe and comfortable yatra.</p>
       <div style={{ background:'#dcfce7', border:'1px solid #86efac', borderRadius:12, padding:'14px 18px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'#15803d', marginBottom:6 }}>✅ Best months to visit Kedarnath</div>
         <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}><strong>May–June</strong> and <strong>September–October</strong> are the two ideal windows. May–June has clear skies, mild temperatures, and blooming rhododendrons. September–October has crystal-clear post-monsoon visibility — best for Himalayan photography. Avoid July–August (monsoon, landslides).</p>
