@@ -42,7 +42,7 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:SITE.phone, href:`tel:${SITE.phone}`, sub:'Tap to call directly', color:'var(--navy)' },
+              { icon:'📞', label:'Phone', value:SITE.phone, href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },

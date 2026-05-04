@@ -382,7 +382,7 @@ export default function AboutPage() {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {[
-                    { icon: '📞', label: 'Call / WhatsApp', value: SITE.phone, href: `tel:${SITE.phone}` },
+                    { icon: '📞', label: 'Call / WhatsApp', value: SITE.phone, href: 'tel:+917017082807' },
                     { icon: '✉️', label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
                     { icon: '⏰', label: 'Office Hours', value: 'Mon–Sun: 7 AM – 9 PM', href: null },
                   ].map(item => (
