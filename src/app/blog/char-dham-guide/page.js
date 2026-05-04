@@ -64,7 +64,7 @@ export default function CharDhamGuide() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 
@@ -122,7 +122,7 @@ export default function CharDhamGuide() {
         </div>
 
         <h2 style={h2}>Char Dham Yatra Registration 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link></strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
 
         <h2 style={h2}>Char Dham Yatra Packing List</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>

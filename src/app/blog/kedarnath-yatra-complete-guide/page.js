@@ -18,7 +18,7 @@ function Schema() {
       { '@type': 'Question', name: 'How many days are needed for Kedarnath Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'A comfortable Kedarnath Yatra takes 3 nights 4 days from Haridwar: Day 1 Haridwar to Guptkashi, Day 2 trek to Kedarnath (16km) and overnight stay near temple, Day 3 morning darshan and return to Guptkashi, Day 4 return to Haridwar. For helicopter option, same schedule without the trek.' }},
       { '@type': 'Question', name: 'Is Kedarnath Yatra registration mandatory in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Registration at registrationandtouristcare.uk.gov.in is mandatory. Free, takes 15 minutes. Yatra card is checked at Sonprayag checkpoint — pilgrims without registration are turned back. Pilgrims 55+ must also submit a medical fitness certificate.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Registration at registrationandtouristcare.uk.gov.in is mandatory. Free, takes 15 minutes. Yatra card is checked at Sonprayag checkpoint — pilgrims without registration are turned back. Pilgrims 55+ must also submit a <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link>.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -51,7 +51,7 @@ export default function KedarnathCompleteGuide() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026 · Verified for current season</div>
 
         {/* Quick facts */}
@@ -144,6 +144,15 @@ export default function KedarnathCompleteGuide() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Complete Kedarnath Reference</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Darshan Timings','/blog/kedarnath-darshan-timing'],['Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Kedarnath Packages','/kedarnath-yatra'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],['How to Reach Haridwar','/how-to-reach-haridwar']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

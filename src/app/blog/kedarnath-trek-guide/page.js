@@ -74,7 +74,7 @@ export default function KedarnathTrekGuide() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims, a 58-year-old retired school teacher from Lucknow, was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli — about 8km in, with the Mandakini river roaring below and the first glimpse of snow peaks ahead — she turned to me and said, "Yeh toh swarg hai." (This is heaven.) She reached the temple, touched the Shivalinga, and wept.</p>
 
@@ -196,7 +196,7 @@ export default function KedarnathTrekGuide() {
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Kedarnath Yatra?</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, biometric registration, and VIP darshan. ₹6,499 all-inclusive.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>, and VIP darshan. ₹6,499 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>

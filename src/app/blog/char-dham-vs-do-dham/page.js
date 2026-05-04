@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham vs Do Dham Yatra 2026 — Which is Right for You?',
-  description: 'Detailed comparison: Char Dham Yatra (all 4 dhams) vs Do Dham Yatra (Kedarnath + Badrinath). Cost, days, difficulty, best for whom. Expert guide by Shiv Ganga Travels, Haridwar.',
+  description: 'Detailed comparison: Char Dham Yatra (all 4 dhams) vs Do Dham Yatra (Kedarnath + Badrinath). Cost, days, difficulty, best for whom. Expert guide by <Link href="/" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Shiv Ganga Travels</Link>, Haridwar.',
   keywords: ['char dham vs do dham','char dham yatra vs do dham yatra','difference between char dham and do dham','which is better char dham or do dham','do dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
@@ -59,7 +59,7 @@ export default function ComparisonPage() {
         </div>
       </div>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.
@@ -112,6 +112,15 @@ export default function ComparisonPage() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help deciding between Char Dham and Do Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Char Dham →</Link>
             <Link href="/do-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Do Dham →</Link>
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
           </div>
         </div>
       </article>

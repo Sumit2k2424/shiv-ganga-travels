@@ -61,7 +61,7 @@ return (
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The most common question we get is: "How much will the entire Char Dham Yatra cost me?" And the honest answer is — it depends on what you choose. But unlike most travel websites that give vague ranges, we're going to break every rupee down for you so you can budget accurately before you call us.</p>
 
         <h2 style={h2}>Package Cost — What's Actually Included</h2>
@@ -130,6 +130,15 @@ return (
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a cost breakdown for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Get Free Quote</a>
             <Link href="/char-dham-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View All Packages →</Link>
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','/char-dham-yatra'],['Cost Calculator','/char-dham-yatra-cost-calculator'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Group Package','/blog/char-dham-group-package'],['Cancellation Policy','/cancellation-policy'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
           </div>
         </div>
       </article>

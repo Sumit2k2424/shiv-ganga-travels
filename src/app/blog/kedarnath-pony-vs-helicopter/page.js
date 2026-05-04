@@ -58,7 +58,7 @@ export default function PonyVsHelicopter() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Quick comparison table */}
         <h2 style={H2}>At a Glance — Pony vs Helicopter vs Trek vs Palki</h2>

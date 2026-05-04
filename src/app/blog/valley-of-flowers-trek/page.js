@@ -29,7 +29,7 @@ export default function ValleyOfFlowersTrek() {
         <span>Valley of Flowers Trek Guide</span>
       </div>
     </nav>
-    <article className="blog-container">
+    <article className="blog-container" itemScope itemType="https://schema.org/Article">
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There are landscapes that photographs cannot do justice to. The Valley of Flowers is one of them. Imagine a valley so wide you can’t see its edges, blanketed in thousands of wildflowers in colours so vivid they seem painted — cobalt Himalayan blue poppies, crimson cobra lilies, soft lavender primulas, waxy white Brahma Kamals. And overhead, glacier peaks. And the only sound is the Pushpawati stream and the wind.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is a <strong>UNESCO World Heritage Site</strong> since 1982, and rightly so. It's one of the most genuinely extraordinary places in India. This complete guide covers when to go, how to get there, what you'll see, and how to combine it with the equally magnificent Hemkund Sahib pilgrimage.</p>
 

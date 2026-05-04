@@ -90,6 +90,17 @@ export default function Page() {
           </div>
         </div>
       </article>
+
+      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham vs Do Dham','/blog/char-dham-vs-do-dham'],['Kedarnath Packages','/kedarnath-yatra'],['Char Dham Packages','/char-dham-yatra'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Best Time','/blog/best-time-char-dham']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -51,7 +51,7 @@ export default function GroupPackage() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
@@ -122,7 +122,7 @@ export default function GroupPackage() {
           What Shiv Ganga Travels Handles for Group Yatras
         </h2>
         {[
-          ['Group biometric registration', 'We complete biometric registration for all group members at Haridwar centre before departure. Provide Aadhaar details 2 weeks before departure for smooth processing.'],
+          ['Group <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>', 'We complete biometric registration for all group members at Haridwar centre before departure. Provide Aadhaar details 2 weeks before departure for smooth processing.'],
           ['Hotel room allocation', 'For groups of 10+, we pre-block entire floors or wings at key hotels to keep the group together — Guptkashi, Joshimath, Uttarkashi.'],
           ['Vehicle coordination', 'Multiple vehicles travel in convoy. If one vehicle has a breakdown or delay, others wait at the next checkpoint. No pilgrim is ever separated from the group.'],
           ['Temple facilitation', 'We arrange group queue management at all four dhams. For large groups, we coordinate with temple staff for organised darshan rather than individual queue jostling.'],

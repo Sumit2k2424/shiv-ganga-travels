@@ -162,6 +162,17 @@ export default function Page() {
           </div>
         </div>
       </article>
+
+      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Helicopter Booking Guide','/blog/kedarnath-helicopter-booking'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

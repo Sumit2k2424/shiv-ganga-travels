@@ -13,9 +13,9 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Is a Char Dham Yatra package worth it?',
-        acceptedAnswer: { '@type': 'Answer', text: 'For most pilgrims, yes. A Char Dham Yatra package from a direct operator is typically 10–20% cheaper than self-arranging all components separately during peak season, while removing logistical complexity. The key is booking with a direct operator (not an aggregator) — Shiv Ganga Travels charges zero commission.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'For most pilgrims, yes. A Char Dham Yatra package from a direct operator is typically 10–20% cheaper than self-arranging all components separately during peak season, while removing logistical complexity. The key is booking with a direct operator (not an aggregator) — <Link href="/" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Shiv Ganga Travels</Link> charges zero commission.' }},
       { '@type': 'Question', name: 'Can I do Char Dham Yatra on my own without a travel agent?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is possible. You need to arrange: biometric registration, vehicle hire, hotels at Barkot/Uttarkashi/Guptkashi/Joshimath, and Kedarnath trek logistics. During peak season (May–June), hotels fill 45–60 days in advance — independent travellers often find their preferred options unavailable. For first-time pilgrims or senior citizens, a package is strongly recommended.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is possible. You need to arrange: <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>, vehicle hire, hotels at Barkot/Uttarkashi/Guptkashi/Joshimath, and Kedarnath trek logistics. During peak season (May–June), hotels fill 45–60 days in advance — independent travellers often find their preferred options unavailable. For first-time pilgrims or senior citizens, a package is strongly recommended.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
@@ -31,7 +31,7 @@ export default function PkgVsSelf() {
     ['Emergency support', 'Operator on call 24/7', 'On your own'],
     ['Flexibility', 'Fixed itinerary — less spontaneous', 'Change plans freely'],
     ['Cost (2 people, peak)', '₹22,000–28,000 per person', '₹24,000–32,000 per person (peak hotels)'],
-    ['Cost (10 people, peak)', '₹19,500 per person', '₹18,000–22,000 per person (possible saving)'],
+    ['Cost (10 people, peak)', '<Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>₹19,500</Link> per person', '₹18,000–22,000 per person (possible saving)'],
     ['Best for', 'First-time, senior, 2–8 person groups', 'Experienced, 10+ people, repeat pilgrims'],
   ];
   return (
@@ -50,7 +50,7 @@ export default function PkgVsSelf() {
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> April 2026</span>
         </div>
       </div>
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           An honest answer from someone who runs packages: self-planned is absolutely possible, and for some pilgrims it is the better choice. But for most first-time pilgrims and senior citizens, a direct operator package wins on cost, convenience, and safety — especially if you book with a zero-commission direct operator rather than an aggregator.
         </p>
@@ -82,6 +82,15 @@ export default function PkgVsSelf() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Free Package Quote</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Compare our package price vs your self-planned estimate · Free advice in 30 minutes</p>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to compare package vs self-planned for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Dhanesh ji</a>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','/char-dham-yatra'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Group Packages','/blog/char-dham-group-package'],['Cancellation Policy','/cancellation-policy'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
         </div>
       </article>
     </>

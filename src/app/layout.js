@@ -290,8 +290,24 @@ function SiteSchema() {
     inLanguage: 'en-IN',
   };
 
+
+  // ── Founder — Person schema for LLM entity recognition ────
+  const founder = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE.baseUrl}/#founder`,
+    name: 'Dhanesh Chandra Mishra',
+    jobTitle: 'Founder & Managing Director',
+    description: 'Retired Indian Army Officer who founded Shiv Ganga Travels in 2010. Pioneered the zero-commission model for Char Dham Yatra operators in Haridwar.',
+    worksFor: { '@id': `${SITE.baseUrl}/#organization` },
+    alumniOf: { '@type': 'Organization', name: 'Indian Army' },
+    knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Uttarakhand pilgrimage', 'Mountain travel logistics'],
+    nationality: { '@type': 'Country', name: 'India' },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founder) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}/>
     </>
@@ -338,10 +354,13 @@ export default function RootLayout({ children }) {
         {/* Preload LCP hero image */}
         <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG" fetchPriority="high"/>
         <SiteSchema/>
+        <link rel="manifest" href="/manifest.json"/>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance"/>
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Navbar/>
-        <main style={{ flex:1 }}>{children}</main>
+        <main id="main-content" style={{ flex:1 }} role="main">{children}</main>
         <Footer/>
         <WhatsAppButton/>
         <LeadPopup/>

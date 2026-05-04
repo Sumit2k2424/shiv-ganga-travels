@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Medical Certificate 2026 — Who Needs It, Format & How to Get It',
-  description: 'Complete guide to the mandatory medical fitness certificate for Char Dham Yatra 2026. Who needs it, what it should say, which doctor can issue it, and what happens without it.',
+  description: 'Complete guide to the mandatory <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link>. Who needs it, what it should say, which doctor can issue it, and what happens without it.',
   keywords: ['char dham yatra medical certificate','char dham yatra fitness certificate','medical certificate for char dham yatra 2026','char dham yatra doctor certificate','kedarnath medical certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };
@@ -49,7 +49,7 @@ export default function MedicalCertificate() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>

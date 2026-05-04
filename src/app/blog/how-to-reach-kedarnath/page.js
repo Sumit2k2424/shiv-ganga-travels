@@ -58,7 +58,7 @@ export default function HowToReachKedarnath() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>

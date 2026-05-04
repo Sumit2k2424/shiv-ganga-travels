@@ -149,6 +149,17 @@ export default function KedarnathYatra() {
           </div>
         </div>
       </article>
+
+      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath-road-trip'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

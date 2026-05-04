@@ -21,7 +21,7 @@ function Schema() {
       { '@type': 'Question', name: 'Is Char Dham Yatra safe for someone doing it alone?',
         acceptedAnswer: { '@type': 'Answer', text: 'Solo Char Dham Yatra is possible but not recommended for first timers. The mountain roads, Kedarnath trek, altitude effects, and daily pilgrim limits require experience to navigate confidently. Solo pilgrims should travel with an organised group or hire a private guide. Shiv Ganga Travels accepts solo pilgrims and places them in small groups of compatible travellers.' }},
       { '@type': 'Question', name: 'How much should I budget for my first Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹19,500–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>₹19,500</Link>–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -65,7 +65,7 @@ export default function FirstTimerGuide() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>📋 What this guide covers</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:6 }}>
@@ -110,7 +110,7 @@ export default function FirstTimerGuide() {
           { n:'1', t:'Book your package', d:'Book with a direct operator 60–90 days before peak season (May–June) or 30–45 days before September–October. Hotels at Guptkashi and Joshimath fill 60 days ahead. Do not wait.' },
           { n:'2', t:'Get a medical check-up', d:'Mandatory for 55+ (medical certificate from MBBS doctor). Recommended for anyone with BP, diabetes, or heart history. Your doctor should specifically clear you for high-altitude travel.' },
           { n:'3', t:'Start physical preparation', d:'If you are not regularly active, begin daily 30-minute walks. Increase to 45 minutes over 6 weeks. Practice climbing stairs with a day pack. The Kedarnath trek is 16km at steep gradient — preparation makes it manageable.' },
-          { n:'4', t:'Complete biometric registration', d:'Register at registrationandtouristcare.uk.gov.in. Free. Takes 15 minutes. Mandatory for all 4 dhams. Shiv Ganga Travels handles this for all our package pilgrims.' },
+          { n:'4', t:'Complete <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>', d:'Register at registrationandtouristcare.uk.gov.in. Free. Takes 15 minutes. Mandatory for all 4 dhams. Shiv Ganga Travels handles this for all our package pilgrims.' },
           { n:'5', t:'Arrange your travel to Haridwar', d:'Book train or flight. Best trains from Delhi: Shatabdi Express (06:45 NDLS → 10:55 HW) or Mussoorie Express (overnight). See our guide: ' },
         ].map(item=>(
           <div key={item.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>

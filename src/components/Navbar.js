@@ -37,11 +37,12 @@ const PKG_LINKS = [
 ];
 
 const CAB_LINKS = [
-  { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'All vehicles — Innova, Ertiga, Tempo',  icon:'🚙' },
-  { label:'Haridwar → Kedarnath',  href:'/haridwar-to-kedarnath-cab',   sub:'225 km · 6–7 hrs · from ₹5,500',       icon:'🗺️' },
-  { label:'Haridwar → Badrinath',  href:'/haridwar-to-badrinath-cab',   sub:'320 km · 8–9 hrs · from ₹7,000',       icon:'🗺️' },
-  { label:'Haridwar → Gangotri',   href:'/haridwar-to-gangotri-cab',    sub:'265 km · 7–8 hrs · from ₹6,500',       icon:'🗺️' },
-  { label:'Delhi → Haridwar',      href:'/delhi-to-haridwar-cab',       sub:'210 km · 4–5 hrs · from ₹3,500',       icon:'🚗' },
+  { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'Innova · Ertiga · Tempo · Full circuit',  icon:'🚙' },
+  { label:'Haridwar → Kedarnath',  href:'/haridwar-to-kedarnath-cab',   sub:'218 km · 6–7 hrs · from ₹5,500',        icon:'🗺️' },
+  { label:'Haridwar → Badrinath',  href:'/haridwar-to-badrinath-cab',   sub:'320 km · 8–9 hrs · from ₹7,000',        icon:'🗺️' },
+  { label:'Haridwar → Gangotri',   href:'/haridwar-to-gangotri-cab',    sub:'265 km · 7–8 hrs · from ₹6,500',        icon:'🗺️' },
+  { label:'Haridwar → Yamunotri',  href:'/char-dham-yatra-cab-booking', sub:'175 km · 5–6 hrs · from ₹4,500',        icon:'🗺️' },
+  { label:'Delhi → Haridwar',      href:'/delhi-to-haridwar-cab',       sub:'210 km · 4–5 hrs · from ₹3,500',        icon:'🚗' },
 ];
 
 function MobileAccordion({ label, children }) {
@@ -373,7 +374,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </MobileAccordion>
-            {[{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'},{label:'All Packages',href:'/packages'}].map(l => (
+            {[{label:'Char Dham Yatra',href:'/char-dham-yatra'},{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'From Noida',href:'/char-dham-yatra-from-noida'},{label:'From Lucknow',href:'/char-dham-yatra-from-lucknow'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
               <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
                 style={{ display:'block', padding:'15px 20px', fontSize:14, color:'var(--text)', borderBottom:'1px solid var(--border)', textDecoration:'none' }}>
                 {l.label}

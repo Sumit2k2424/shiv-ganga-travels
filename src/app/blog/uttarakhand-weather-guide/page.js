@@ -63,7 +63,7 @@ export default function WeatherGuide() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
         {/* Season summary */}
@@ -129,7 +129,7 @@ export default function WeatherGuide() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Plan Your Yatra for the Best Weather</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>We will suggest the ideal travel dates based on weather, crowds, and your group. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need advice on the best dates for Char Dham Yatra 2026 based on weather.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need advice on the best dates for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> based on weather.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/blog/best-time-char-dham" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Best Time Guide →</Link>
           </div>

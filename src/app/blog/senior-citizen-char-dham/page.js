@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide',
+  title: 'Senior Citizen <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> — Tips, Special Package & Safety Guide',
   description: 'Can senior citizens do Char Dham Yatra? Yes! Complete guide for elderly pilgrims — special packages with pony included, medical support, altitude safety, and realistic tips from 15 years experience.',
   keywords: ['senior citizen char dham yatra','char dham yatra for elderly','char dham yatra age limit','char dham yatra senior citizen package','old age char dham yatra','char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
@@ -18,7 +18,7 @@ function Schema() {
     mainEntity: [
       { '@type': 'Question',
         name: 'Is Char Dham Yatra safe for senior citizens above 70?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, with proper preparation and a specialised package. Shiv Ganga Travels has completed yatras with pilgrims aged 75–82. Key requirements: helicopter for Kedarnath (avoids 16km trek), medical certificate, ground-floor rooms, slower pace 12N/13D itinerary, medical attendant, and oxygen cylinder. Badrinath and Gangotri are accessible by motor road with no trekking. A medical fitness certificate from a doctor is mandatory for pilgrims 55+.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, with proper preparation and a specialised package. Shiv Ganga Travels has completed yatras with pilgrims aged 75–82. Key requirements: helicopter for Kedarnath (avoids 16km trek), medical certificate, ground-floor rooms, slower pace 12N/13D itinerary, medical attendant, and oxygen cylinder. Badrinath and Gangotri are accessible by motor road with no trekking. A <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> from a doctor is mandatory for pilgrims 55+.' },
       },
       { '@type': 'Question',
         name: 'What is the special provision for senior citizens at Kedarnath?',
@@ -57,7 +57,7 @@ return (
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>
@@ -114,6 +114,15 @@ return (
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Senior-Friendly Packages','/char-dham-yatra'],['Medical Certificate Guide','/blog/char-dham-yatra-medical-certificate'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Packing List','/blog/char-dham-yatra-packing-list'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Cancellation Policy','/cancellation-policy']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
           </div>
         </div>
       </article>

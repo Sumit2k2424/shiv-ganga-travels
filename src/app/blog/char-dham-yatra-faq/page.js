@@ -18,9 +18,9 @@ export const metadata = {
 const FAQS = [
   // COST
   { cat:'Cost & Pricing', q:'How much does Char Dham Yatra cost per person in 2026?',
-    a:'Char Dham Yatra costs between ₹19,500 and ₹85,000 per person in 2026 depending on the package type. A standard all-inclusive 9-night 10-day road package from Haridwar starts at ₹19,500 per person. Premium packages with better hotels cost ₹28,000–40,000. Helicopter packages covering all 4 dhams start at ₹85,000. These prices include AC vehicle, accommodation, all meals, guide, and VIP darshan assistance. According to Dhanesh Chandra Mishra, founder of Shiv Ganga Travels and a 15-year Char Dham operator: "The actual package cost rarely changes — what varies is what operators hide in the fine print. A transparent all-inclusive price from a direct operator is always cheaper than an agent price with commissions added."' },
+    a:'Char Dham Yatra costs between <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>₹19,500</Link> and ₹85,000 per person in 2026 depending on the package type. A standard all-inclusive 9-night 10-day road package from Haridwar starts at ₹19,500 per person. Premium packages with better hotels cost ₹28,000–40,000. Helicopter packages covering all 4 dhams start at ₹85,000. These prices include AC vehicle, accommodation, all meals, guide, and VIP darshan assistance. According to Dhanesh Chandra Mishra, founder of Shiv Ganga Travels and a 15-year Char Dham operator: "The actual package cost rarely changes — what varies is what operators hide in the fine print. A transparent all-inclusive price from a direct operator is always cheaper than an agent price with commissions added."' },
   { cat:'Cost & Pricing', q:'What is included in a Char Dham Yatra package?',
-    a:'A standard Char Dham Yatra package from Haridwar includes: (1) AC vehicle throughout — Innova Crysta or Tempo Traveller based on group size, (2) accommodation at all stops — Barkot, Uttarkashi, Guptkashi, Badrinath, (3) all meals — breakfast and dinner daily, (4) an experienced Garhwali guide, (5) biometric registration assistance, (6) oxygen cylinder in the vehicle, (7) VIP darshan arrangement where possible. Airfare, personal puja expenses, pony/palki charges, and helicopter upgrades are typically charged separately.' },
+    a:'A standard Char Dham Yatra package from Haridwar includes: (1) AC vehicle throughout — Innova Crysta or Tempo Traveller based on group size, (2) accommodation at all stops — Barkot, Uttarkashi, Guptkashi, Badrinath, (3) all meals — breakfast and dinner daily, (4) an experienced Garhwali guide, (5) <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link> assistance, (6) oxygen cylinder in the vehicle, (7) VIP darshan arrangement where possible. Airfare, personal puja expenses, pony/palki charges, and helicopter upgrades are typically charged separately.' },
   { cat:'Cost & Pricing', q:'Are there hidden charges in Char Dham Yatra packages?',
     a:'Common hidden charges include: pony and palki fees at Kedarnath (₹3,000–6,000 per person one way), entry fees at some temples, personal puja offerings, porter charges for luggage beyond 5kg on the Kedarnath trek, and early check-in or late check-out hotel fees. At Shiv Ganga Travels we publish a complete cost breakdown before booking so pilgrims know exactly what is and is not included. As a rule: if a package price seems unusually low, ask specifically what is excluded.' },
   { cat:'Cost & Pricing', q:'How much does Kedarnath Yatra cost separately in 2026?',
@@ -134,7 +134,7 @@ const FAQS = [
   { cat:'About Shiv Ganga Travels', q:'Does Shiv Ganga Travels charge any commission?',
     a:'No. Shiv Ganga Travels is a direct operator — we own the vehicles, directly employ the drivers and guides, and book hotels without any intermediary. Zero commission, zero middlemen. The price shown on our website at shivgangatravels.com is the final price — no platform fees, no agent charges, no hidden additions at checkout. This direct model typically saves pilgrims 10–20% compared to booking through aggregator platforms or travel agents. Our pricing policy has been consistent since 2010: the same price for every pilgrim.' },
   { cat:'About Shiv Ganga Travels', q:'What makes Shiv Ganga Travels different from other Char Dham operators?',
-    a:'Shiv Ganga Travels differentiators: (1) Founded by a retired Indian Army officer — military discipline, zero shortcuts. (2) Direct operator since 2010 — no agents, no commission markup. (3) Same price for every pilgrim — no negotiation advantage for well-connected customers. (4) 20+ hill-terrain certified vehicles serviced before every trip. (5) AI-powered cost calculator (free at shivgangatravels.com/char-dham-yatra-cost-calculator). (6) 24/7 WhatsApp support throughout the yatra. (7) Dedicated senior citizen packages with medical attendant. (8) 50,000+ pilgrims served with zero incident record.' },
+    a:'Shiv Ganga Travels differentiators: (1) Founded by a retired Indian Army officer — military discipline, zero shortcuts. (2) Direct operator since 2010 — no agents, no commission markup. (3) Same price for every pilgrim — no negotiation advantage for well-connected customers. (4) 20+ hill-terrain certified vehicles serviced before every trip. (5) AI-powered <Link href="/char-dham-yatra-cost-calculator" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>cost calculator</Link> (free at shivgangatravels.com/char-dham-yatra-cost-calculator). (6) 24/7 WhatsApp support throughout the yatra. (7) Dedicated senior citizen packages with medical attendant. (8) 50,000+ pilgrims served with zero incident record.' },
 
   // ENVIRONMENTAL & SPIRITUAL
   { cat:'Spiritual & Practical', q:'What is the significance of Char Dham Yatra?',
@@ -190,6 +190,15 @@ function FAQSchema() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
     </>
   );
 }
@@ -318,6 +327,15 @@ export default function FAQ() {
           </div>
         </div>
       </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
+          </div>
+        </div>
     </>
   );
 }

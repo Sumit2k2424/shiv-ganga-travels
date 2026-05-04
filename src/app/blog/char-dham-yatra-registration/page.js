@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Registration 2026 — Complete Step-by-Step Guide',
-  description: 'How to register for Char Dham Yatra 2026 online and offline. Mandatory biometric process, documents needed, daily limits, yatra card, and what happens if you skip registration. Explained by a 15-year Haridwar operator.',
+  description: 'How to register for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> online and offline. Mandatory biometric process, documents needed, daily limits, yatra card, and what happens if you skip registration. Explained by a 15-year Haridwar operator.',
   keywords: [
     'char dham yatra registration 2026','char dham yatra registration online',
     'how to register for char dham yatra','char dham yatra biometric registration',
@@ -53,7 +53,7 @@ function Schema() {
       { '@type': 'HowToStep', position: 2, name: 'Create your account', text: 'Click "New Registration". Enter your mobile number and verify with OTP. Create a password.' },
       { '@type': 'HowToStep', position: 3, name: 'Fill pilgrim details', text: 'Enter all traveller details — name as on Aadhaar, Aadhaar number, date of birth, address. Repeat for each member of your group.' },
       { '@type': 'HowToStep', position: 4, name: 'Select dhams and dates', text: 'Choose which dhams you are visiting and your expected dates. You can select all 4 (Char Dham) or fewer.' },
-      { '@type': 'HowToStep', position: 5, name: 'Upload medical certificate', text: 'If any pilgrim is 55 years or above, upload the medical fitness certificate from a registered doctor.' },
+      { '@type': 'HowToStep', position: 5, name: 'Upload medical certificate', text: 'If any pilgrim is 55 years or above, upload the <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> from a registered doctor.' },
       { '@type': 'HowToStep', position: 6, name: 'Download yatra permit', text: 'After submission, download and print your Char Dham Yatra permit. Carry physical and digital copies — it is checked at multiple checkpoints.' },
     ],
   };
@@ -70,7 +70,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the official website for Char Dham Yatra registration 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The official and only legitimate website for Char Dham Yatra registration 2026 is registrationandtouristcare.uk.gov.in — run by the Uttarakhand Tourism Department. Do not pay money on any other website claiming to offer Char Dham registration. The official registration is completely free.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'The official and only legitimate website for Char Dham Yatra registration 2026 is registrationandtouristcare.uk.gov.in — run by the Uttarakhand Tourism Department. Do not pay money on any other website claiming to offer <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham registration</Link>. The official registration is completely free.' },
       },
       {
         '@type': 'Question',
@@ -161,7 +161,7 @@ export default function RegistrationBlog() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>

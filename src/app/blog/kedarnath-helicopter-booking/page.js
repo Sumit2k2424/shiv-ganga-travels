@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book',
-  description: 'Complete guide to Kedarnath helicopter booking 2026. Prices ₹7,500–9,500, helipads at Phata, Sersi & Guptkashi, how to book, cancellation policy and weather tips.',
+  description: 'Complete guide to Kedarnath helicopter booking 2026. Prices ₹7,500–9,500, helipads at Phata, Sersi & Guptkashi, how to book, <Link href="/cancellation-policy" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>cancellation policy</Link> and weather tips.',
   keywords: ['kedarnath helicopter booking','kedarnath helicopter price 2026','kedarnath helicopter booking online','phata to kedarnath helicopter','kedarnath helicopter cost','kedarnath helicopter 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {
@@ -55,7 +55,7 @@ export default function KedarnathHelicopterBooking() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
@@ -110,11 +110,20 @@ export default function KedarnathHelicopterBooking() {
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Helicopter 2026</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle helipad booking, biometric registration & VIP darshan. Call us before slots fill up.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle helipad booking, <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link> & VIP darshan. Call us before slots fill up.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath helicopter for 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp for Booking</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Direct</a>
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Kedarnath Packages','/kedarnath-yatra'],['Char Dham Helicopter','/char-dham-helicopter'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
           </div>
         </div>
       </article>

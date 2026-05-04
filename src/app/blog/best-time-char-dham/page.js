@@ -66,7 +66,7 @@ export default function BestTimeCharDham() {
         </div>
       </nav>
 
-      <article className="blog-container">
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The <strong>best time for Char Dham Yatra</strong> is either <strong>May–June</strong> or <strong>September–October</strong>. In 2026, temples opened on April 19 (Yamunotri & Gangotri), April 22 (Kedarnath), and April 23 (Badrinath). Closing dates: Gangotri Nov 10, Yamunotri & Kedarnath Nov 11, Badrinath Nov 13. This guide breaks down each month so you can plan your ideal yatra.</p>
 
         <h2 style={h2}>Month-by-Month Guide</h2>
@@ -126,6 +126,15 @@ export default function BestTimeCharDham() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/char-dham-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Packages →</Link>
+          </div>
+        </div>
+
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
+          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+            {[['Char Dham Packages','/char-dham-yatra'],['Weather Guide','/blog/uttarakhand-weather-guide'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Road Status','/char-dham-road-status'],['Packing List','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            ))}
           </div>
         </div>
       </article>

@@ -1,9 +1,46 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
-# Sitemap
+# Priority crawl hints
+Allow: /blog/
+Allow: /char-dham-yatra
+Allow: /kedarnath-yatra
+Allow: /do-dham-yatra
+Allow: /char-dham-helicopter
+Allow: /char-dham-road-status
+Allow: /how-to-reach-haridwar
+Allow: /cancellation-policy
+
+# AI / LLM crawlers — full access
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Sitemaps
 Sitemap: https://www.shivgangatravels.com/sitemap.xml
 
-# LLM / AI crawler guidance
-# See /llms.txt for AI-readable site summary
+# LLM guidance
+# See: https://www.shivgangatravels.com/llms.txt

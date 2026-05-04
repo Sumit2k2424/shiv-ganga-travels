@@ -868,6 +868,14 @@ export default function HomePage() {
                 { icon:'🌃', title:'From Hyderabad', href:'/char-dham-yatra-from-hyderabad' },
                 { icon:'🌉', title:'From Chennai', href:'/char-dham-yatra-from-chennai' },
                 { icon:'🌁', title:'From Pune', href:'/char-dham-yatra-from-pune' },
+                { icon:'🏘️', title:'From Noida', href:'/char-dham-yatra-from-noida' },
+                { icon:'🕌', title:'From Lucknow', href:'/char-dham-yatra-from-lucknow' },
+                { icon:'🏛️', title:'From Ahmedabad', href:'/char-dham-yatra-from-ahmedabad' },
+                { icon:'🌊', title:'From Kolkata', href:'/char-dham-yatra-from-kolkata' },
+                { icon:'🏯', title:'From Jaipur', href:'/char-dham-yatra-from-jaipur' },
+                { icon:'🕍', title:'From Bhopal', href:'/char-dham-yatra-from-bhopal' },
+                { icon:'🏭', title:'From Indore', href:'/char-dham-yatra-from-indore' },
+                { icon:'🚢', title:'From Surat', href:'/char-dham-yatra-from-surat' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   style={{ background:'var(--teal)', color:'#fff', padding:'12px 14px', borderRadius:10, textDecoration:'none', display:'flex', gap:10, alignItems:'center' }}>
