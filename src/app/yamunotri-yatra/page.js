@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -46,6 +46,8 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Yamunotri, at 3,291 metres in the Uttarkashi district, is the source of the Yamuna river and the westernmost of the four Char Dhams. It is always the first shrine visited in the traditional Char Dham Yatra circuit, before Gangotri, Kedarnath, and Badrinath. The temple enshrines a black marble idol of Goddess Yamuna.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>The Yamunotri Trek</h2>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The trek starts at <strong>Janki Chatti</strong> (2,650m) and covers <strong>6 km one way</strong> to the temple (3,291m), with an elevation gain of about 640 metres. Most pilgrims take 2–3 hours to ascend and 1.5–2 hours to descend. Compared to the Kedarnath trek, this is considerably shorter and gentler.</p>
@@ -74,13 +76,50 @@ export default function Page() {
           </div>
         </div>
 
+
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          Recommended Hotels Near Yamunotri (Barkot / Janki Chatti)
+        </h2>
+        <p style={{fontSize:'14.5px',color:'var(--text-muted)',marginBottom:16}}>Motor road ends at Janki Chatti. Stay at Barkot (13km before) for better facilities or Janki Chatti for closest access.</p>
+        <div style={{overflowX:'auto',marginBottom:28}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:13.5}}>
+            <thead><tr style={{background:'var(--navy)'}}>
+              {['Hotel','Location','Rating','Price/Night','Notes'].map(h=>(
+                <th key={h} style={{padding:'10px 12px',textAlign:'left',color:'#fff',fontWeight:700,fontSize:12}}></th>
+              ))}
+            </tr></thead>
+            <tbody>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Barkot</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Barkot</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,200–1,800/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Government rest house. Barkot has best facilities on Yamunotri route. 13km from Janki Chatti.</td>
+              </tr>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'var(--bg)'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel Himalayan Inn</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Barkot</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,500–2,500/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Best private option in Barkot. Hot water, restaurant, mountain views. Popular with yatra groups.</td>
+              </tr>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel Janki Palace</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Janki Chatti</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,000–1,800/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Closest hotel to trek start point. Basic amenities. Ideal if starting trek at dawn.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Yamunotri Yatra 2026 — First Dham of the Char Dham Circuit.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

@@ -92,6 +92,52 @@ export default function KedarnathYatra() {
           <strong>Haridwar</strong> (0 km) → Rishikesh → Devprayag → Rudraprayag → Agastyamuni → <strong>Guptkashi</strong> (220 km, ~7 hrs) → Sonprayag → Gaurikund → <strong>Kedarnath Trek begins</strong> (228 km + 16 km trek)
         </div>
 
+
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>
+          Recommended Hotels Near Kedarnath Base (Guptkashi / Sonprayag)
+        </h2>
+        <p style={{ fontSize:'14.5px', color:'var(--text-muted)', marginBottom:16 }}>
+          Shiv Ganga Travels has pre-blocked rooms at these properties during peak season.
+        </p>
+        <div style={{ overflowX:'auto', marginBottom:28 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
+            <thead><tr style={{ background:'var(--navy)' }}>
+              {['Hotel','Location','Rating','Price/Night','Notes'].map(h=>(
+                <th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              <tr style={ borderBottom:'1px solid var(--border)', background:'#fff' }>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Hotel Ukhimath Residency</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Guptkashi</td>
+                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★★</td>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹2,200–3,500/night</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Best base for Kedarnath. 15 mins from Sonprayag. Clean rooms, hot water, veg meals.</td>
+              </tr>
+              <tr style={ borderBottom:'1px solid var(--border)', background:'var(--bg)' }>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>GMVN Guptkashi</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Guptkashi</td>
+                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★</td>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹1,200–2,000/night</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Government guest house. Budget option. Book via gmvnl.in or through your operator.</td>
+              </tr>
+              <tr style={ borderBottom:'1px solid var(--border)', background:'#fff' }>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Hotel Shivam</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Sonprayag</td>
+                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★</td>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹1,500–2,500/night</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Closest to Sonprayag checkpoint. Good if arriving late. Simple rooms, restaurant.</td>
+              </tr>
+              <tr style={ borderBottom:'1px solid var(--border)', background:'var(--bg)' }>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Mandakini Resort</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Near Kund</td>
+                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★★</td>
+                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹2,800–4,500/night</td>
+                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Premium option. River-facing rooms. Best for seniors needing extra comfort.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         {/* CTA */}
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Yatra 2025</h3>

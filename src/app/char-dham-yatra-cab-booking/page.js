@@ -16,7 +16,7 @@ function Schema() {
     url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
     telephone:SITE.phone, areaServed:'Uttarakhand',
     provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     { '@type':'Question', name:'What is the cab fare for Char Dham Yatra from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Cab fares for Char Dham Yatra from Haridwar start at ₹22,000 for a Ertiga (4-seater) and go up to ₹45,000 for a Tempo Traveller (12-seater) for the complete 10-12 day circuit. Innova Crysta is ₹30,000–35,000 for the full Char Dham route.' }},
@@ -64,7 +64,7 @@ export default function CabBooking() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates and availability.')}`} target="_blank" rel="noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book Cab on WhatsApp</a>
-          <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </section>
@@ -155,7 +155,7 @@ export default function CabBooking() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share vehicle options and rates.')}`} target="_blank" rel="noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp for Quote</a>
-          <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </div>

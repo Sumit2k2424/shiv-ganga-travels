@@ -123,7 +123,7 @@ export default function Navbar() {
             <span>2026 Season Open — Apr 19 to Nov 13</span>
           </div>
           <div style={{ display:'flex', gap:16, fontSize:11.5 }}>
-            <a href={`tel:${SITE.phone}`} style={{ color:'#FFD166', textDecoration:'none', fontWeight:600 }}>{SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ color:'#FFD166', textDecoration:'none', fontWeight:600 }}>+91-7017082807 / +91-8859123961</a>
             <a href={`mailto:${SITE.email}`} style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none', display:'none' }} className="hidden lg:inline">{SITE.email}</a>
           </div>
         </div>
@@ -310,7 +310,7 @@ export default function Navbar() {
 
           {/* Right CTAs */}
           <div style={{ display:'flex', alignItems:'center', gap:8, marginLeft:'auto', flexShrink:0 }}>
-            <a href={`tel:${SITE.phone}`}
+            <a href='tel:+917017082807'
               className="hidden md:flex"
               style={{
                 display:'flex', alignItems:'center', gap:6, fontSize:12.5, fontWeight:500,
@@ -320,7 +320,7 @@ export default function Navbar() {
               onMouseEnter={e => e.currentTarget.style.background='var(--navy-light)'}
               onMouseLeave={e => e.currentTarget.style.background='transparent'}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2" strokeLinecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14h0v2.92z"/></svg>
-              <span className="hidden lg:inline">{SITE.phone}</span>
+              <span className="hidden lg:inline">+91-7017082807 / +91-8859123961</span>
             </a>
 
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Namaste! I want to book Char Dham Yatra 2026.')}`}
@@ -380,7 +380,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div style={{ padding:'14px 16px', display:'flex', flexDirection:'column', gap:10 }}>
-              <a href={`tel:${SITE.phone}`}
+              <a href='tel:+917017082807'
                 style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:600, color:'var(--navy)', border:'1.5px solid var(--navy)', background:'var(--navy-light)', textDecoration:'none' }}>
                 📞 {SITE.phone}
               </a>

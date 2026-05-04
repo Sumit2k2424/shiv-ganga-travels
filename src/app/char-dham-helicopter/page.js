@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -46,6 +46,8 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>What Makes This Package Different</h2>
@@ -89,13 +91,74 @@ export default function Page() {
           </div>
         </div>
 
+
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          Helipads — Locations, Distance &amp; Details
+        </h2>
+        <div style={{overflowX:'auto',marginBottom:28}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:14}}>
+            <thead>
+              <tr style={{background:'var(--navy)'}}>
+                {['Dham','Helipad Name','Location','Distance from Temple','Notes'].map(h=>(
+                  <th key={h} style={{padding:'11px 14px',textAlign:'left',color:'#fff',fontWeight:700,fontSize:12.5}}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Yamunotri','Kharsali Helipad','Kharsali Village (1km from Janki Chatti)','6km trek to temple (pony/doli from helipad)','Altitude 2,675m. IRCTC booking not required for this helipad in 2026.'],
+                ['Gangotri','Harsil / Jhalla Helipad','Harsil, 23km from Gangotri','Road transfer 23km (45 min) to Gangotri temple','No IRCTC booking needed. Road to Gangotri fully open.'],
+                ['Kedarnath','Phata Helipad','Phata Village, 19km from Gaurikund','Fly to temple helipad — 7 min flight','Primary helipad 2026. IRCTC booking mandatory. 2,700m altitude.'],
+                ['Kedarnath','Sersi Helipad','Sersi, Guptkashi area','Fly to temple helipad — 12 min flight','Alternate to Phata. IRCTC booking mandatory. Altitude 1,800m.'],
+                ['Kedarnath','Guptkashi Helipad','Near Guptkashi town','Fly to temple helipad — 15 min flight','Third option. IRCTC mandatory. Road base for Kedarnath pilgrims.'],
+                ['Badrinath','No helipad needed','Motor road reaches temple directly','0 — road goes to temple','No helicopter needed. Motor road reaches Badrinath at 3,133m.'],
+              ].map(([dh,hp,loc,dist,notes],i)=>(
+                <tr key={hp} style={{borderBottom:'1px solid var(--border)',background:i%2===0?'#fff':'var(--bg)'}}>
+                  <td style={{padding:'10px 14px',fontWeight:700,color:'var(--navy)',fontSize:14}}>{dh}</td>
+                  <td style={{padding:'10px 14px',fontWeight:600,color:'var(--teal)',fontSize:13.5}}>{hp}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-mid)',fontSize:13}}>{loc}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-mid)',fontSize:13}}>{dist}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-muted)',fontSize:12.5}}>{notes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          How to Book Kedarnath Helicopter via IRCTC (Mandatory 2026)
+        </h2>
+        <div style={{display:'flex',flexDirection:'column',gap:10,marginBottom:24}}>
+          {[
+            ['1','Visit irctc.co.in','Go to Tourism section → Helicopter Services → Kedarnath'],
+            ['2','Create IRCTC account','Mobile OTP verification required. Use an active Indian mobile number.'],
+            ['3','Select helipad and date','Choose Phata, Sersi, or Guptkashi. Select departure date and time slot.'],
+            ['4','Enter passenger details','Name as per Aadhaar, age, ID proof details for each passenger.'],
+            ['5','Pay online','₹7,000–9,000 per person one-way. Card, UPI, or net banking.'],
+            ['6','Download ticket','Print or save digital ticket. Carry to helipad — QR code is scanned.'],
+          ].map(([n,t,d])=>(
+            <div key={n} style={{display:'flex',gap:0,borderRadius:10,overflow:'hidden',border:'1px solid var(--border)'}}>
+              <div style={{background:'var(--navy)',minWidth:44,display:'flex',alignItems:'center',justifyContent:'center',padding:'12px 8px'}}>
+                <span style={{color:'#FFD166',fontWeight:800,fontSize:16}}>{n}</span>
+              </div>
+              <div style={{padding:'12px 14px',flex:1}}>
+                <div style={{fontWeight:700,fontSize:13.5,color:'var(--navy)',marginBottom:3}}>{t}</div>
+                <div style={{fontSize:13,color:'var(--text-muted)'}}>{d}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style={{background:'#FEF3E2',border:'2px solid var(--gold)',borderRadius:12,padding:'14px 18px',marginBottom:28,fontSize:13.5,color:'#7B3F00'}}>
+          <strong>Important 2026 rule:</strong> Kedarnath helicopter bookings at helipads are being eliminated. All bookings must be via irctc.co.in. Walk-in bookings are no longer accepted. Shiv Ganga Travels assists all pilgrims with IRCTC helicopter booking — included in our packages at no extra charge.
+        </div>
+
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

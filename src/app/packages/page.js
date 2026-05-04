@@ -240,7 +240,7 @@ export default function PackagesPage() {
                    }}>
                   💬 Request Custom Quote
                 </a>
-                <a href={`tel:${SITE.phone}`} className="btn-outline" style={{ padding:'10px 22px' }}>
+                <a href='tel:+917017082807' className="btn-outline" style={{ padding:'10px 22px' }}>
                   📞 {SITE.phone}
                 </a>
               </div>

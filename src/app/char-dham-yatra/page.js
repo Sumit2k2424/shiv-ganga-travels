@@ -128,7 +128,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
               💬 Book on WhatsApp
             </a>
-            <a href={`tel:${SITE.phone}`}
+            <a href='tel:+917017082807'
               style={{ background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>
@@ -147,6 +147,8 @@ export default function CharDhamYatra() {
 
       {/* Main content */}
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
 
         <p style={pStyle}>
           The <strong>Char Dham Yatra</strong> is the holiest pilgrimage in Hinduism, covering four sacred shrines in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. At <strong>Shiv Ganga Travels</strong>, we have been organising Char Dham Yatra packages from Haridwar since 2010, serving over 50,000 pilgrims with zero commission, all-inclusive pricing, and verified drivers.
@@ -304,7 +306,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               💬 Book on WhatsApp
             </a>
-            <a href={`tel:${SITE.phone}`}
+            <a href='tel:+917017082807'
               style={{ background:'#fff', color:'var(--navy)', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>

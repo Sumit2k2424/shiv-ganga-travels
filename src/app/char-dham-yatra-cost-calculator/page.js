@@ -215,7 +215,7 @@ export default function CostCalculator() {
                 style={{ flex:1, background:'#25D366', color:'#fff', padding:'11px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center' }}>
                 💬 Get Exact Quote on WhatsApp
               </a>
-              <a href={`tel:${SITE.phone}`}
+              <a href='tel:+917017082807'
                 style={{ flex:1, background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center', border:'1px solid rgba(255,255,255,0.2)' }}>
                 📞 Call Us
               </a>

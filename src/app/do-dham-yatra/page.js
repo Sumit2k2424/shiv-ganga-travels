@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -46,6 +46,8 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Do Dham Yatra</strong> covers two of the four Char Dhams — <strong>Kedarnath</strong> (Lord Shiva, 3,583m) and <strong>Badrinath</strong> (Lord Vishnu, 3,133m). This is the most popular combination for pilgrims who want a deeply meaningful yatra but have 5–7 days rather than 10–12 days for the complete Char Dham circuit.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Many pilgrims choose to do Do Dham first — particularly Kedarnath and Badrinath as the Shiva-Vishnu pairing considered most auspicious — and then return for Yamunotri and Gangotri in a subsequent season. This is a perfectly valid approach, and we help hundreds of families plan it this way every year.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Why Kedarnath + Badrinath is the Most Popular Combination</h2>
@@ -84,7 +86,7 @@ export default function Page() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Do Dham Yatra 2026 — Kedarnath & Badrinath from Haridwar.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

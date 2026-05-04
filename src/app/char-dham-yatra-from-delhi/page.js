@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -46,6 +46,9 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+          {/* Last updated */}
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Delhi is the most common starting point for <strong>Char Dham Yatra</strong> pilgrims from across North India. The city has excellent connectivity to Haridwar — the official starting point of the yatra — by road, train, and even flight to Dehradun. This guide covers everything you need to plan a Char Dham Yatra from Delhi in 2026.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Delhi to Haridwar — Your Options</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'24px'}}>
@@ -57,6 +60,45 @@ export default function Page() {
         </div>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Delhi Pickup Service</h2>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Our <strong>Char Dham Package from Delhi (10N/11D)</strong> includes pickup from any location in Delhi in our AC vehicle, transfer to Haridwar, and then the complete Char Dham circuit. This is a premium service — you don't worry about trains or connections. We handle everything from your front door.</p>
+
+
+        {/* Vehicle pricing table */}
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          Vehicle Options &amp; Pricing — Char Dham Yatra 2026
+        </h2>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.8,marginBottom:16}}>Choose the vehicle that suits your group size. All prices are for the complete Char Dham circuit (all 4 dhams) including fuel, toll, parking, and driver allowance. No hidden charges.</p>
+        <div style={{overflowX:'auto',marginBottom:28}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:14}}>
+            <thead>
+              <tr style={{background:'var(--navy)'}}>
+                {['Vehicle','Seats','Circuit Price','Per Day','Best For'].map(h=>(
+                  <th key={h} style={{padding:'11px 14px',textAlign:'left',color:'#fff',fontWeight:700,fontSize:12.5,whiteSpace:'nowrap'}}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Ertiga / Maruti','4 passengers','₹22,000–25,000','₹2,000–2,300','Couples, small families'],
+                ['Innova Crysta','6 passengers','₹28,000–32,000','₹2,500–3,000','Families of 4–6'],
+                ['Innova Crysta (7S)','7 passengers','₹30,000–34,000','₹2,700–3,100','Groups of 6–7'],
+                ['Tempo Traveller 9S','9 passengers','₹38,000–44,000','₹3,500–4,000','Medium groups'],
+                ['Tempo Traveller 12S','12 passengers','₹44,000–52,000','₹4,000–4,700','Large groups'],
+                ['Innova Hycross (Premium)','6 passengers','₹36,000–42,000','₹3,300–3,800','Premium comfort'],
+              ].map(([v,s,p,d,b],i)=>(
+                <tr key={v} style={{borderBottom:'1px solid var(--border)',background:i%2===0?'#fff':'var(--bg)'}}>
+                  <td style={{padding:'10px 14px',fontWeight:700,color:'var(--navy)',fontSize:14}}>{v}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-mid)',fontSize:13.5}}>{s}</td>
+                  <td style={{padding:'10px 14px',fontWeight:800,color:'var(--navy)',fontSize:15,fontFamily:'var(--font-display)'}}>{p}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-muted)',fontSize:13.5}}>{d}</td>
+                  <td style={{padding:'10px 14px',color:'var(--text-muted)',fontSize:13}}>{b}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div style={{background:'var(--navy-light)',borderRadius:12,padding:'14px 18px',marginBottom:28,fontSize:13.5,color:'var(--navy)'}}>
+          <strong>All prices include:</strong> AC vehicle · Experienced hill driver · Fuel · All tolls &amp; parking · Driver night allowance · GPS tracking. Prices are for the full 10–11 day Char Dham circuit. For cab-only (no package) contact us for separate cab rates.
+        </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
@@ -85,7 +127,7 @@ export default function Page() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra from Delhi 2026 — Route, Distance & Packages.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

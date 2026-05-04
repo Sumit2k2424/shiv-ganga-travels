@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.9', reviewCount:'850', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -46,6 +46,8 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Gangotri sits at 3,415 metres in the Uttarkashi district of Uttarakhand, on the banks of the Bhagirathi river. It is the mythological and geographical origin of the Ganga — the river that has shaped Indian civilisation for millennia. The temple here, dedicated to Goddess Ganga, is one of the Char Dham shrines and draws hundreds of thousands of pilgrims every year between May and November.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Unlike Yamunotri and Kedarnath, Gangotri requires <strong>no trekking</strong>. A well-maintained motor road leads directly to the temple town. This makes it one of the most accessible of the four dhams, suitable for all ages and fitness levels.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>What to See at Gangotri</h2>
@@ -82,13 +84,57 @@ export default function Page() {
           </div>
         </div>
 
+
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          Recommended Hotels Near Gangotri (Uttarkashi / Harsil)
+        </h2>
+        <p style={{fontSize:'14.5px',color:'var(--text-muted)',marginBottom:16}}>Most pilgrims stay in Uttarkashi (100km before Gangotri) or Harsil (24km). Gangotri town has limited accommodation.</p>
+        <div style={{overflowX:'auto',marginBottom:28}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:13.5}}>
+            <thead><tr style={{background:'var(--navy)'}}>
+              {['Hotel','Location','Rating','Price/Night','Notes'].map(h=>(
+                <th key={h} style={{padding:'10px 12px',textAlign:'left',color:'#fff',fontWeight:700,fontSize:12}}></th>
+              ))}
+            </tr></thead>
+            <tbody>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Uttarkashi</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Uttarkashi</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,200–2,000/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Government guest house. Central location. Good base for Gangotri. Uttarkashi has best amenities on this route.</td>
+              </tr>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'var(--bg)'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel Himalayan Star</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Uttarkashi</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹2,000–3,500/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Best hotel in Uttarkashi. Hot water, restaurant, reliable WiFi. 100km from Gangotri.</td>
+              </tr>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Harsil</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Harsil</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,500–2,200/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Beautiful apple-orchard setting. 24km from Gangotri. Serene alternative to Uttarkashi. Cold nights.</td>
+              </tr>
+              <tr style={{borderBottom:'1px solid var(--border)',background:'var(--bg)'}}>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel New Tourist</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Gangotri town</td>
+                <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹800–1,500/night</td>
+                <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Basic accommodation in Gangotri town itself. Very limited options — book only via operator.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Gangotri Yatra 2026 — Sacred Origin of the Ganga.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

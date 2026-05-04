@@ -120,7 +120,7 @@ function SiteSchema() {
       'Shiv Ganga Char Dham Tours',
     ],
     url: SITE.baseUrl,
-    telephone: '+91-7017082807',
+    telephone: ['+91-7017082807', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
     // ── Address — must match GBP field-for-field ─────────────
@@ -213,6 +213,7 @@ function SiteSchema() {
       {
         '@type': 'ContactPoint',
         telephone: '+91-7017082807',
+        alternateName: '+91-8859123961',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['Hindi', 'English'],

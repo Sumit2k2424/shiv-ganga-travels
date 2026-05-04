@@ -7,8 +7,10 @@
 export const SITE = {
   name       : 'Shiv Ganga Travels',
   tagline    : 'Your Sacred Journey, Our Devotion',
-  phone      : '+91-7017082807',
+  phone      : '+91-7017082807 / +91-8859123961',
+  phone2     : '+91-8859123961',
   whatsapp   : '917017082807',
+  whatsapp2  : '918859123961',
   email      : 'support@shivgangatravels.com',
   address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India',
   established: 2010,

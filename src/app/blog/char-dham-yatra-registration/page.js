@@ -437,7 +437,7 @@ export default function RegistrationBlog() {
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Help Now
             </a>
-            <a href={`tel:${SITE.phone}`}
+            <a href='tel:+917017082807'
               style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>
