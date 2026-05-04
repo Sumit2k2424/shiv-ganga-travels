@@ -95,7 +95,7 @@ export default function Page() {
       <h2 style={{...h2}}>Driver Tips for This Route</h2>
       <div style={{ display:'flex', flexDirection:'column', gap:8, marginBottom:28 }}>
         <div style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}><span style={{ flexShrink:0 }}>💡</span>Best to overnight at Joshimath and reach Badrinath early morning for darshan</div>
-<div style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}><span style={{ flexShrink:0 }}>💡</span>Mana village (3km past Badrinath) is India's last village — worth a visit</div>
+<div style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}><span style={{ flexShrink:0 }}>💡</span>Mana village (3km past Badrinath) is India’s last village — worth a visit</div>
 <div style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}><span style={{ flexShrink:0 }}>💡</span>Tapt Kund hot spring near the temple — take a dip before darshan</div>
 <div style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}><span style={{ flexShrink:0 }}>💡</span>Check road status at Chamoli if visiting June–September (landslide risk)</div>
       </div>

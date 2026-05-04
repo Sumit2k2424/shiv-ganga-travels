@@ -30,7 +30,7 @@ export default function KedarnathYatra() {
             Kedarnath Yatra 2025 — Complete Guide & Packages
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
-            Lord Shiva's sacred abode in the Garhwal Himalayas<br/>Packages from <strong style={{ color:'#FFD166' }}>₹6,499</strong> · Trek · Pony · Helicopter options
+            Lord Shiva’s sacred abode in the Garhwal Himalayas<br/>Packages from <strong style={{ color:'#FFD166' }}>₹6,499</strong> · Trek · Pony · Helicopter options
           </p>
         </div>
       </section>

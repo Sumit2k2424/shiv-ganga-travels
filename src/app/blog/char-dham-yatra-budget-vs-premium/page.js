@@ -61,7 +61,7 @@ export default function BudgetVsPremium() {
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
-          Every pilgrim asks the same question: <em>"Is it worth paying ₹35,000 when there's a ₹19,500 package available?"</em> After 15 years and 50,000+ pilgrims, the honest answer from Shiv Ganga Travels is: <strong>it depends entirely on your age, group size, and priorities.</strong> Here is the complete breakdown of what actually changes.
+          Every pilgrim asks the same question: <em>"Is it worth paying ₹35,000 when there’s a ₹19,500 package available?"</em> After 15 years and 50,000+ pilgrims, the honest answer from Shiv Ganga Travels is: <strong>it depends entirely on your age, group size, and priorities.</strong> Here is the complete breakdown of what actually changes.
         </p>
 
         {/* Three-tier price summary */}

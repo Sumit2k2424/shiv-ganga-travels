@@ -95,13 +95,13 @@ return (
 
         <h2 style={h2}>10 Practical Tips for Senior Pilgrims</h2>
         <ol style={{ paddingLeft:22, marginBottom:24, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.5 }}>
-          <li><strong>Visit your doctor 4 weeks before departure.</strong> Get a full checkup. Adjust any medications if needed. Carry the doctor's contact number.</li>
+          <li><strong>Visit your doctor 4 weeks before departure.</strong> Get a full checkup. Adjust any medications if needed. Carry the doctor’s contact number.</li>
           <li><strong>Start daily walks 6 weeks before.</strong> Even 20–30 minutes daily builds the stamina for driving and short walks between vehicles and temples.</li>
           <li><strong>Book the pony or helicopter in advance.</strong> Don't decide on the day — pre-booking ensures availability and avoids price gouging.</li>
           <li><strong>Carry at least 3 months' supply of medicines.</strong> Don't rely on finding your specific medication in mountain towns.</li>
           <li><strong>Drink water constantly.</strong> At altitude, dehydration happens faster and quietly. 2.5–3 litres daily minimum.</li>
           <li><strong>Avoid altitude sickness with Diamox.</strong> Ask your doctor about taking 125mg Diamox from 1 day before Kedarnath/Badrinath.</li>
-          <li><strong>Never skip meals.</strong> At altitude, eating keeps your energy and oxygen levels stable. Even if you're not hungry, eat something.</li>
+          <li><strong>Never skip meals.</strong> At altitude, eating keeps your energy and oxygen levels stable. Even if you’re not hungry, eat something.</li>
           <li><strong>Inform your guide immediately if you feel unwell.</strong> Headache, confusion, vomiting at altitude are warning signs. Our team knows exactly what to do.</li>
           <li><strong>Descend if severe symptoms appear.</strong> Altitude sickness resolved at lower altitude — every time. Never "push through" significant symptoms.</li>
           <li><strong>Rest the first evening at Kedarnath.</strong> Do not rush straight to the temple the moment you arrive. Rest 2–3 hours, drink water, then visit.</li>

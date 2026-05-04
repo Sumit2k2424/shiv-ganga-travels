@@ -148,7 +148,7 @@ return (
 
         <h2 style={h2}>One Final Tip — Pack a Day Before, Not the Night Before</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Pack at least 24 hours before your departure. Lay everything out on your bed. Then remove 20% of it — you always pack more than you need. Sleep on it. In the morning you'll know what you actually need.</p>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>And if you forget something minor — toothbrush, a pair of socks, a torch — don't panic. Haridwar and Rishikesh have everything you'd need. Even Guptkashi and Joshimath have decent shops. The Himalayas are not a wilderness expedition. You will not starve or freeze. Just travel light, travel safe, and travel with an open heart.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>And if you forget something minor — toothbrush, a pair of socks, a torch — don’t panic. Haridwar and Rishikesh have everything you'd need. Even Guptkashi and Joshimath have decent shops. The Himalayas are not a wilderness expedition. You will not starve or freeze. Just travel light, travel safe, and travel with an open heart.</p>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:32, marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides:</div>

@@ -163,7 +163,7 @@ export default function SevenDaysBlog() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>Our Recommendation</div>
           <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, margin:0 }}>
-            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva's most powerful Jyotirlinga and Lord Vishnu's primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our <Link href="/do-dham-yatra" style={{ color:'var(--teal)', fontWeight:700 }}>Do Dham Yatra packages from ₹10,999</Link>.
+            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva’s most powerful Jyotirlinga and Lord Vishnu’s primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our <Link href="/do-dham-yatra" style={{ color:'var(--teal)', fontWeight:700 }}>Do Dham Yatra packages from ₹10,999</Link>.
           </p>
         </div>
 

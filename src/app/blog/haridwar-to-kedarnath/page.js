@@ -30,7 +30,7 @@ export default function HaridwarToKedarnath() {
       </div>
     </nav>
     <article className="blog-container">
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The road from Haridwar to Kedarnath is not just a journey — it's a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The road from Haridwar to Kedarnath is not just a journey — it’s a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Here is the complete route guide from <strong>Haridwar to Kedarnath</strong>, including distances, journey times, the best places to stop, and exactly what to expect at each stage.</p>
 
       <h2 style={h2}>Total Distance: Haridwar to Kedarnath</h2>

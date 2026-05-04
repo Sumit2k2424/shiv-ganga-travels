@@ -332,7 +332,7 @@ export default function ChatBot() {
           }}>
             {msgs.map(msg => <Bubble key={msg.id} msg={msg}/>)}
 
-            {/* Quick questions — shown when there's only the greeting */}
+            {/* Quick questions — shown when there’s only the greeting */}
             {msgs.length === 1 && (
               <div style={{ marginTop: 8 }}>
                 <p style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 8, textAlign: 'center' }}>

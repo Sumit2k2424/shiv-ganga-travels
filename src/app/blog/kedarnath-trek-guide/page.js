@@ -106,7 +106,7 @@ export default function KedarnathTrekGuide() {
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The trail is well-paved with concrete and stone steps for a large portion. It can get extremely crowded in peak season (May–June) — we're talking thousands of pilgrims on the same path. Our team recommends starting the trek by <strong>5:00–5:30 AM</strong> to avoid the worst of the crowds and to give yourself enough daylight for a comfortable ascent.</p>
 
         <h2 style={h2}>How Difficult is the Kedarnath Trek?</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Let's be honest with each other. The Kedarnath trek is <strong>not easy</strong>. Anyone who tells you it's a casual walk hasn't done it. The combination of high altitude, steep incline, and long distance makes it genuinely demanding. But here's the thing — it's not technical. There's no rock climbing, no river crossings, no scrambling. It's a walking trail, just a steep one.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Let's be honest with each other. The Kedarnath trek is <strong>not easy</strong>. Anyone who tells you it’s a casual walk hasn't done it. The combination of high altitude, steep incline, and long distance makes it genuinely demanding. But here’s the thing — it’s not technical. There’s no rock climbing, no river crossings, no scrambling. It's a walking trail, just a steep one.</p>
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our difficulty rating: <strong>Moderate to Challenging</strong>. Here's a realistic breakdown:</p>
         <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8, marginBottom:20 }}>
@@ -124,7 +124,7 @@ export default function KedarnathTrekGuide() {
         </ul>
 
         <h2 style={h2}>Pony, Palki, or Helicopter? Honest Comparison</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year we get asked this question. Here's what we tell our pilgrims — there's no shame in any option. The mountain doesn't judge. Shiva doesn't judge. The darshan is equally valid whether you walked, rode a pony, or flew in by helicopter.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year we get asked this question. Here's what we tell our pilgrims — there’s no shame in any option. The mountain doesn’t judge. Shiva doesn’t judge. The darshan is equally valid whether you walked, rode a pony, or flew in by helicopter.</p>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:12, marginBottom:24 }}>
           {[
@@ -161,7 +161,7 @@ export default function KedarnathTrekGuide() {
         </div>
 
         <h2 style={h2}>How to Prepare for the Trek</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Start training at least <strong>4–6 weeks before</strong> your yatra date. You don't need a gym membership or a personal trainer. Here's a simple plan that works:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Start training at least <strong>4–6 weeks before</strong> your yatra date. You don’t need a gym membership or a personal trainer. Here's a simple plan that works:</p>
         <ul style={{ paddingLeft:20, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2 }}>
           <li><strong>Weeks 1–2:</strong> Walk 3–5 km daily at a brisk pace. Stairs instead of lift everywhere.</li>
           <li><strong>Weeks 3–4:</strong> Increase to 6–8 km. Find a hill nearby and walk up it repeatedly.</li>

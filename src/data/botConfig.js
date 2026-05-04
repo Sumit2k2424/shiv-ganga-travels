@@ -128,7 +128,7 @@ export const CUSTOM_QA = [
   // ── 17. BIOMETRIC REGISTRATION ──────────────────────────────
   {
     keywords: ['biometric','registration','register','permit','yatra card','mandatory register','form'],
-    answer: `**Char Dham Biometric Registration — Mandatory Since 2017:**\n\nThe Government of Uttarakhand requires all pilgrims to register online before the yatra.\n\n✅ **We handle everything for you!**\nJust provide:\n• Copy of Aadhaar/Passport/Driving Licence\n• Recent passport-size photo\n• Your travel dates\n\n⏰ We submit your registration to the **Uttarakhand Tourism portal** 72 hours before your departure and share your Yatra Card via WhatsApp.\n\n**Why it's important:**\n• Required at every dham checkpoint\n• Helps emergency services locate you\n• Daily pilgrim limits enforced (book early!)\n• Without it, entry to dhams can be denied\n\nDon't worry — we've done this 50,000+ times! 🙏`,
+    answer: `**Char Dham Biometric Registration — Mandatory Since 2017:**\n\nThe Government of Uttarakhand requires all pilgrims to register online before the yatra.\n\n✅ **We handle everything for you!**\nJust provide:\n• Copy of Aadhaar/Passport/Driving Licence\n• Recent passport-size photo\n• Your travel dates\n\n⏰ We submit your registration to the **Uttarakhand Tourism portal** 72 hours before your departure and share your Yatra Card via WhatsApp.\n\n**Why it’s important:**\n• Required at every dham checkpoint\n• Helps emergency services locate you\n• Daily pilgrim limits enforced (book early!)\n• Without it, entry to dhams can be denied\n\nDon't worry — we've done this 50,000+ times! 🙏`,
   },
 
   // ── 18. WHAT TO PACK ─────────────────────────────────────────
@@ -140,7 +140,7 @@ export const CUSTOM_QA = [
   // ── 19. ALTITUDE SICKNESS ────────────────────────────────────
   {
     keywords: ['altitude','sickness','AMS','breathless','oxygen','mountain sickness','dizzy','headache','height'],
-    answer: `**Altitude Sickness on Char Dham Yatra:**\n\n⚠️ **Kedarnath (3,583m) & Badrinath (3,133m)** can cause altitude sickness in some people.\n\n**Symptoms to watch:** Headache, dizziness, nausea, breathlessness, fatigue\n\n**Our Safety Measures:**\n✅ Oxygen cylinder on every vehicle\n✅ Pulse oximeters to monitor blood oxygen\n✅ Gradual acclimatisation built into itinerary\n✅ Driver trained in first aid\n✅ Rest day at Joshimath before Badrinath\n\n**Prevention Tips:**\n• Acclimatise gradually — don't rush\n• Drink 3–4 litres of water daily\n• Avoid alcohol completely\n• Take Diamox (125mg) if advised by doctor\n• Rest first day at high altitude before temple visit\n\n🏥 **Nearest hospitals:** Guptkashi (Kedarnath) & Joshimath (Badrinath)`,
+    answer: `**Altitude Sickness on Char Dham Yatra:**\n\n⚠️ **Kedarnath (3,583m) & Badrinath (3,133m)** can cause altitude sickness in some people.\n\n**Symptoms to watch:** Headache, dizziness, nausea, breathlessness, fatigue\n\n**Our Safety Measures:**\n✅ Oxygen cylinder on every vehicle\n✅ Pulse oximeters to monitor blood oxygen\n✅ Gradual acclimatisation built into itinerary\n✅ Driver trained in first aid\n✅ Rest day at Joshimath before Badrinath\n\n**Prevention Tips:**\n• Acclimatise gradually — don’t rush\n• Drink 3–4 litres of water daily\n• Avoid alcohol completely\n• Take Diamox (125mg) if advised by doctor\n• Rest first day at high altitude before temple visit\n\n🏥 **Nearest hospitals:** Guptkashi (Kedarnath) & Joshimath (Badrinath)`,
   },
 
   // ── 20. GROUP DISCOUNTS ──────────────────────────────────────
@@ -176,7 +176,7 @@ export const CUSTOM_QA = [
   // ── 25. TRANSPORTATION DETAILS ───────────────────────────────
   {
     keywords: ['vehicle','transport','car','bus','innova','tempo','traveller','ac','driver','road'],
-    answer: `**Our Fleet & Transportation:**\n\n🚗 **Innova Crysta** — up to 6 passengers\nBest for small families, premium comfort\n\n🚐 **Tempo Traveller** — 9, 12, or 16 seater\nAC, push-back seats, TV, best for groups\n\n🚌 **Mini Bus / Bus** — 25–45 seater\nFor large groups and corporate pilgrimages\n\n**Our drivers:**\n✅ 10+ years hill-driving experience\n✅ Uttarakhand routes expertise\n✅ Background-verified & licensed\n✅ Hindi + basic English speaking\n✅ First-aid trained\n\n**Vehicle features:**\n• AC (switched off in steep hills — AC doesn't work well on inclines)\n• First-aid kit + oxygen cylinder\n• GPS tracking\n• Blankets for cold nights\n\n📌 **Note:** Road conditions in mountains can be challenging after monsoon. Our drivers know the safest routes!`,
+    answer: `**Our Fleet & Transportation:**\n\n🚗 **Innova Crysta** — up to 6 passengers\nBest for small families, premium comfort\n\n🚐 **Tempo Traveller** — 9, 12, or 16 seater\nAC, push-back seats, TV, best for groups\n\n🚌 **Mini Bus / Bus** — 25–45 seater\nFor large groups and corporate pilgrimages\n\n**Our drivers:**\n✅ 10+ years hill-driving experience\n✅ Uttarakhand routes expertise\n✅ Background-verified & licensed\n✅ Hindi + basic English speaking\n✅ First-aid trained\n\n**Vehicle features:**\n• AC (switched off in steep hills — AC doesn’t work well on inclines)\n• First-aid kit + oxygen cylinder\n• GPS tracking\n• Blankets for cold nights\n\n📌 **Note:** Road conditions in mountains can be challenging after monsoon. Our drivers know the safest routes!`,
   },
 
   // ── 26. ATM / CASH / MOBILE NETWORK ─────────────────────────
@@ -200,7 +200,7 @@ export const CUSTOM_QA = [
   // ── 29. PANCH KEDAR / SPECIAL TOURS ─────────────────────────
   {
     keywords: ['panch kedar','5 kedar','tungnath','rudranath','madmaheshwar','kalpeshwar','five kedar'],
-    answer: `**Panch Kedar Yatra — All 5 Shiva Temples:**\n\n💰 Package: **₹21,999/person** (8N/9D)\n\n**The 5 Panch Kedar temples:**\n1️⃣ **Kedarnath** (3,583m) — Shiva's hump\n2️⃣ **Tungnath** (3,680m) — Shiva's arms · World's highest Shiva temple!\n3️⃣ **Rudranath** (2,286m) — Shiva's face\n4️⃣ **Madmaheshwar** (3,497m) — Shiva's navel\n5️⃣ **Kalpeshwar** (2,134m) — Shiva's hair · Open all year!\n\n🥾 **Trekking required** at all 5 temples (2–22 km)\n⚠️ **Moderate–challenging** fitness level needed\n📅 **Season:** May–June & September–October only\n\nThis is our most adventurous pilgrimage! Recommended for fit pilgrims who love trekking. Legendary 8-day journey. 🙏`,
+    answer: `**Panch Kedar Yatra — All 5 Shiva Temples:**\n\n💰 Package: **₹21,999/person** (8N/9D)\n\n**The 5 Panch Kedar temples:**\n1️⃣ **Kedarnath** (3,583m) — Shiva’s hump\n2️⃣ **Tungnath** (3,680m) — Shiva’s arms · World's highest Shiva temple!\n3️⃣ **Rudranath** (2,286m) — Shiva’s face\n4️⃣ **Madmaheshwar** (3,497m) — Shiva’s navel\n5️⃣ **Kalpeshwar** (2,134m) — Shiva’s hair · Open all year!\n\n🥾 **Trekking required** at all 5 temples (2–22 km)\n⚠️ **Moderate–challenging** fitness level needed\n📅 **Season:** May–June & September–October only\n\nThis is our most adventurous pilgrimage! Recommended for fit pilgrims who love trekking. Legendary 8-day journey. 🙏`,
   },
 
   // ── 30. DIFFERENCE BETWEEN CHAR DHAM & DO DHAM ──────────────
@@ -224,13 +224,13 @@ export const CUSTOM_QA = [
   // ── 33. RISHIKESH ADVENTURE ──────────────────────────────────
   {
     keywords: ['rafting','bungee','camping','adventure rishikesh','white water','river','jump','cliff'],
-    answer: `**Rishikesh Adventure Package — ₹4,999 (2N/3D)**\n\n🌊 **River Rafting:**\n• 16 km Ganga rafting (Shivpuri to Rishikesh)\n• Grade II–IV rapids: Marine Drive, Three Blind Mice, Sweet Sixteen\n• All safety equipment provided\n• No experience needed!\n\n🪂 **Bungee Jumping** (optional add-on — ₹3,500)\n• 83m — India's highest fixed-platform bungee!\n• At Jumpin Heights, Rishikesh\n\n🏕️ **Beach Camping:**\n• Camp on Ganga riverbank under stars\n• Bonfire, music, riverside dinner\n\n🧘 **Spiritual Side:**\n• Parmarth Niketan Ganga Aarti (evening)\n• Laxman Jhula & Ram Jhula\n• Beatles Ashram\n• Triveni Ghat morning dip\n\n📅 **Best time:** October – May (avoid monsoon for rafting)\n\nPerfect for groups, couples & families! 🏄`,
+    answer: `**Rishikesh Adventure Package — ₹4,999 (2N/3D)**\n\n🌊 **River Rafting:**\n• 16 km Ganga rafting (Shivpuri to Rishikesh)\n• Grade II–IV rapids: Marine Drive, Three Blind Mice, Sweet Sixteen\n• All safety equipment provided\n• No experience needed!\n\n🪂 **Bungee Jumping** (optional add-on — ₹3,500)\n• 83m — India’s highest fixed-platform bungee!\n• At Jumpin Heights, Rishikesh\n\n🏕️ **Beach Camping:**\n• Camp on Ganga riverbank under stars\n• Bonfire, music, riverside dinner\n\n🧘 **Spiritual Side:**\n• Parmarth Niketan Ganga Aarti (evening)\n• Laxman Jhula & Ram Jhula\n• Beatles Ashram\n• Triveni Ghat morning dip\n\n📅 **Best time:** October – May (avoid monsoon for rafting)\n\nPerfect for groups, couples & families! 🏄`,
   },
 
   // ── 34. WEATHER / WHAT TO EXPECT ────────────────────────────
   {
     keywords: ['weather','temperature','rain','cold','hot','snow','climate','degree'],
-    answer: `**Weather Guide for Char Dham Yatra:**\n\n**In May–June:**\n🌤️ Days: Pleasant 10°C–22°C at dhams\n❄️ Nights: Cold 2°C–8°C\n☀️ Clear skies, occasional showers in June\n\n**In September–October:**\n🌤️ Days: Cool 8°C–18°C\n❄️ Nights: Very cold 0°C–5°C\n🏔️ Crystal-clear mountain views after monsoon\n\n**At High Altitude (Kedarnath, Chandrashila):**\n❄️ Snow patches visible even in summer\n💨 Strong winds — carry windcheater always\n\n**Essential clothing:**\n✅ Thermal innerwear\n✅ Heavy fleece/sweater\n✅ Windproof outer jacket\n✅ Woollen cap and gloves\n✅ Rain poncho\n\n💡 **Rule of thumb:** Even if you're going in May, pack clothes for 0°C. Mountain weather changes in 30 minutes!`,
+    answer: `**Weather Guide for Char Dham Yatra:**\n\n**In May–June:**\n🌤️ Days: Pleasant 10°C–22°C at dhams\n❄️ Nights: Cold 2°C–8°C\n☀️ Clear skies, occasional showers in June\n\n**In September–October:**\n🌤️ Days: Cool 8°C–18°C\n❄️ Nights: Very cold 0°C–5°C\n🏔️ Crystal-clear mountain views after monsoon\n\n**At High Altitude (Kedarnath, Chandrashila):**\n❄️ Snow patches visible even in summer\n💨 Strong winds — carry windcheater always\n\n**Essential clothing:**\n✅ Thermal innerwear\n✅ Heavy fleece/sweater\n✅ Windproof outer jacket\n✅ Woollen cap and gloves\n✅ Rain poncho\n\n💡 **Rule of thumb:** Even if you’re going in May, pack clothes for 0°C. Mountain weather changes in 30 minutes!`,
   },
 
   // ── 35. CONTACT / OFFICE ─────────────────────────────────────

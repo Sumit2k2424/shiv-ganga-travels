@@ -59,7 +59,7 @@ export default function Page() {
           </div>
         </div>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Delhi Pickup Service</h2>
-        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Our <strong>Char Dham Package from Delhi (10N/11D)</strong> includes pickup from any location in Delhi in our AC vehicle, transfer to Haridwar, and then the complete Char Dham circuit. This is a premium service — you don't worry about trains or connections. We handle everything from your front door.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Our <strong>Char Dham Package from Delhi (10N/11D)</strong> includes pickup from any location in Delhi in our AC vehicle, transfer to Haridwar, and then the complete Char Dham circuit. This is a premium service — you don’t worry about trains or connections. We handle everything from your front door.</p>
 
 
         {/* Vehicle pricing table */}
