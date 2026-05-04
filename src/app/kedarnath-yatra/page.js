@@ -46,7 +46,7 @@ export default function KedarnathYatra() {
       </nav>
 
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style={p}><strong>Kedarnath</strong>, situated at an altitude of 3,583 metres in the Rudraprayag district of Uttarakhand, is one of the holiest Hindu shrines — the 12th of the 12 Jyotirlingas of Lord Shiva. The ancient stone temple, dating back to the 8th century and attributed to Adi Shankaracharya, draws lakhs of pilgrims every year between May and October.</p>
+        <p style={{p}}><strong>Kedarnath</strong>, situated at an altitude of 3,583 metres in the Rudraprayag district of Uttarakhand, is one of the holiest Hindu shrines — the 12th of the 12 Jyotirlingas of Lord Shiva. The ancient stone temple, dating back to the 8th century and attributed to Adi Shankaracharya, draws lakhs of pilgrims every year between May and October.</p>
 
         {/* Packages */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>
@@ -65,8 +65,8 @@ export default function KedarnathYatra() {
           </div>
         </div>
 
-        <h2 style={h2}>Kedarnath Trek — Complete Details</h2>
-        <p style={p}>The Kedarnath trek begins at <strong>Gaurikund</strong> (1,982m) and covers <strong>16 km one way</strong>, climbing approximately 1,600 metres in altitude. The trail passes through Jungle Chatti, Bheembali, Lincholi, and Base Camp before arriving at the Kedarnath shrine. Most pilgrims take 5–6 hours for the ascent and 3–4 hours for the descent.</p>
+        <h2 style={{h2}}>Kedarnath Trek — Complete Details</h2>
+        <p style={{p}}>The Kedarnath trek begins at <strong>Gaurikund</strong> (1,982m) and covers <strong>16 km one way</strong>, climbing approximately 1,600 metres in altitude. The trail passes through Jungle Chatti, Bheembali, Lincholi, and Base Camp before arriving at the Kedarnath shrine. Most pilgrims take 5–6 hours for the ascent and 3–4 hours for the descent.</p>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:12, marginBottom:20 }}>
           {[
@@ -84,10 +84,10 @@ export default function KedarnathYatra() {
           ))}
         </div>
 
-        <h2 style={h2}>Temple Timings & Puja</h2>
-        <p style={p}>The Kedarnath temple opens at <strong>4:30 AM</strong> for the auspicious Brahma Muhurta puja — the most sacred time to seek blessings. The <strong>Mahabhishek puja</strong> (special ritual with milk, honey, and holy water) can be booked in advance and is a deeply moving spiritual experience. We arrange this for our pilgrims.</p>
+        <h2 style={{h2}}>Temple Timings & Puja</h2>
+        <p style={{p}}>The Kedarnath temple opens at <strong>4:30 AM</strong> for the auspicious Brahma Muhurta puja — the most sacred time to seek blessings. The <strong>Mahabhishek puja</strong> (special ritual with milk, honey, and holy water) can be booked in advance and is a deeply moving spiritual experience. We arrange this for our pilgrims.</p>
 
-        <h2 style={h2}>How to Reach Kedarnath from Haridwar</h2>
+        <h2 style={{h2}}>How to Reach Kedarnath from Haridwar</h2>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 18px', border:'1px solid var(--border)', fontSize:13.5, lineHeight:2, marginBottom:16 }}>
           <strong>Haridwar</strong> (0 km) → Rishikesh → Devprayag → Rudraprayag → Agastyamuni → <strong>Guptkashi</strong> (220 km, ~7 hrs) → Sonprayag → Gaurikund → <strong>Kedarnath Trek begins</strong> (228 km + 16 km trek)
         </div>
@@ -107,33 +107,33 @@ export default function KedarnathYatra() {
               ))}
             </tr></thead>
             <tbody>
-              <tr style={ borderBottom:'1px solid var(--border)', background:'#fff' }>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Hotel Ukhimath Residency</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Guptkashi</td>
-                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★★</td>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹2,200–3,500/night</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Best base for Kedarnath. 15 mins from Sonprayag. Clean rooms, hot water, veg meals.</td>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>Hotel Ukhimath Residency</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }}>Guptkashi</td>
+                <td style={{ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }}>★★★</td>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>₹2,200–3,500/night</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Best base for Kedarnath. 15 mins from Sonprayag. Clean rooms, hot water, veg meals.</td>
               </tr>
-              <tr style={ borderBottom:'1px solid var(--border)', background:'var(--bg)' }>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>GMVN Guptkashi</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Guptkashi</td>
-                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★</td>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹1,200–2,000/night</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Government guest house. Budget option. Book via gmvnl.in or through your operator.</td>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>GMVN Guptkashi</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }}>Guptkashi</td>
+                <td style={{ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }}>★★</td>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>₹1,200–2,000/night</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Government guest house. Budget option. Book via gmvnl.in or through your operator.</td>
               </tr>
-              <tr style={ borderBottom:'1px solid var(--border)', background:'#fff' }>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Hotel Shivam</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Sonprayag</td>
-                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★</td>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹1,500–2,500/night</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Closest to Sonprayag checkpoint. Good if arriving late. Simple rooms, restaurant.</td>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>Hotel Shivam</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }}>Sonprayag</td>
+                <td style={{ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }}>★★</td>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>₹1,500–2,500/night</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Closest to Sonprayag checkpoint. Good if arriving late. Simple rooms, restaurant.</td>
               </tr>
-              <tr style={ borderBottom:'1px solid var(--border)', background:'var(--bg)' }>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>Mandakini Resort</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }>Near Kund</td>
-                <td style={ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }>★★★</td>
-                <td style={ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }>₹2,800–4,500/night</td>
-                <td style={ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }>Premium option. River-facing rooms. Best for seniors needing extra comfort.</td>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>Mandakini Resort</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:13 }}>Near Kund</td>
+                <td style={{ padding:'10px 12px', color:'#E8920A', fontWeight:700, fontSize:13 }}>★★★</td>
+                <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>₹2,800–4,500/night</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Premium option. River-facing rooms. Best for seniors needing extra comfort.</td>
               </tr>
             </tbody>
           </table>
