@@ -66,7 +66,7 @@ export const metadata = {
     title: `Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010. 50,000+ pilgrims served.',
     images: [{
-      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+      url: '/opengraph-image',
       width: 1200, height: 630,
       alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels, Haridwar',
     }],
@@ -76,7 +76,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra 2026`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. All-inclusive from ₹5,299. Zero commission. Haridwar.',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
 
   alternates: {
@@ -181,7 +181,7 @@ function SiteSchema() {
       },
       {
         '@type': 'ImageObject',
-        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+        url: '/opengraph-image',
         caption: 'Kedarnath Temple — served by Shiv Ganga Travels',
       },
     ],
@@ -328,7 +328,7 @@ export default function RootLayout({ children }) {
         <link
           rel="preload"
           as="image"
-          href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG"
+          href="/opengraph-image"
           fetchPriority="high"
         />
         {/* Mobile / PWA */}
@@ -352,7 +352,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//upload.wikimedia.org"/>
         <link rel="preconnect" href="https://www.google-analytics.com"/>
         {/* Preload LCP hero image */}
-        <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1600px-Kedarnathji-mandir.JPG" fetchPriority="high"/>
+        <link rel="preload" as="image" href="/opengraph-image" fetchPriority="high"/>
         <SiteSchema/>
         <link rel="manifest" href="/manifest.json"/>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance"/>

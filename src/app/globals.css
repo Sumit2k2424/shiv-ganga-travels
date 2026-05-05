@@ -804,6 +804,11 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
   .why-split-image { height: 240px !important; order: -1 !important; }
 }
 
+/* ─── 12b. FOUNDER STORY ────────────────────────────────────── */
+@media (max-width: 860px) {
+  .founder-grid { grid-template-columns: 1fr !important; }
+}
+
 /* ─── 13. STEPS / HOW IT WORKS ──────────────────────────────── */
 @media (max-width: 640px) {
   .steps-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }

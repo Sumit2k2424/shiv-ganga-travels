@@ -38,7 +38,7 @@ export const CUSTOM_QA = [
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
   {
     keywords: ['price','cost','rate','charge','fee','kitna','how much','budget','affordable','cheap','expensive','tariff'],
-    answer: `**Package Prices 2025 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,499 · 2N/3D\n• Gangotri — ₹5,299 · 2N/3D\n• Kedarnath — ₹6,499 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹8,999 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹19,500 · 9N/10D\n• Deluxe — ₹27,500 · 11N/12D\n• Senior Special — ₹24,500 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7017082807`,
+    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,499 · 2N/3D\n• Gangotri — ₹5,299 · 2N/3D\n• Kedarnath — ₹6,499 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹8,999 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹19,500 · 9N/10D\n• Deluxe — ₹27,500 · 11N/12D\n• Senior Special — ₹24,500 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7017082807`,
   },
 
   // ── 3. CHAR DHAM OVERVIEW ────────────────────────────────────

@@ -697,6 +697,79 @@ export default function HomePage() {
       </ScrollReveal>
 
       {/* ═══════════════════════════════════════════════
+          FOUNDER STORY
+      ═══════════════════════════════════════════════ */}
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }} className="founder-grid">
+            {/* Left: story */}
+            <div>
+              <span className="section-tag">The people behind your yatra</span>
+              <h2 className="section-title" style={{ marginBottom:16 }}>
+                Founded by a <em>Retired Army Officer</em> — Not a Startup
+              </h2>
+              <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
+                In 2010, Dhanesh Chandra Mishra — a retired officer of the Indian Army — started Shiv Ganga Travels with a single vehicle and one conviction: that pilgrims deserved to be treated with the same care and discipline that the Army demands of every mission.
+              </p>
+              <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
+                He'd seen what happened when families entrusted their sacred journey to operators who prioritised profit over safety. Overloaded vehicles. Substandard hotels. Missing guides. Stranded pilgrims at 3,500 metres. He decided to do it differently.
+              </p>
+              <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:24 }}>
+                Fifteen years later, Shiv Ganga Travels has carried over 50,000 pilgrims across every season — with a zero incident record. Every vehicle is maintained to Army safety standards. Every driver is trained for high-altitude emergencies. Every rupee is accounted for before you pay.
+              </p>
+              <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
+                {[
+                  { icon:'⚔️', t:'Military discipline', d:'Punctuality, safety protocols, and accountability on every trip' },
+                  { icon:'🛡️', t:'Zero incident record', d:'15 seasons, 50,000+ pilgrims — not one safety failure' },
+                  { icon:'📋', t:'Full cost transparency', d:'Every package includes a line-by-line cost breakdown before you book' },
+                ].map(f => (
+                  <div key={f.t} style={{ display:'flex', gap:12, alignItems:'flex-start', padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid var(--border)' }}>
+                    <div style={{ width:34, height:34, borderRadius:8, background:'var(--navy-light)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:16, flexShrink:0 }}>{f.icon}</div>
+                    <div>
+                      <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)' }}>{f.t}</div>
+                      <div style={{ fontSize:12.5, color:'var(--text-muted)', marginTop:2, lineHeight:1.5 }}>{f.d}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link href="/about" style={{ display:'inline-flex', alignItems:'center', gap:8, background:'var(--navy)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+                Our full story →
+              </Link>
+            </div>
+            {/* Right: founder card */}
+            <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
+              <div style={{ background:'var(--navy)', borderRadius:20, padding:'28px 24px', color:'#fff', position:'relative', overflow:'hidden' }}>
+                <div style={{ position:'absolute', top:-30, right:-30, width:120, height:120, borderRadius:'50%', background:'rgba(232,146,10,0.15)' }}/>
+                <div style={{ position:'absolute', bottom:-20, left:-20, width:90, height:90, borderRadius:'50%', background:'rgba(11,123,139,0.2)' }}/>
+                <div style={{ position:'relative', zIndex:1 }}>
+                  <div style={{ width:56, height:56, borderRadius:'50%', background:'var(--gold)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:22, fontWeight:800, color:' var(--navy)', marginBottom:14 }}>DM</div>
+                  <div style={{ fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'#fff', marginBottom:4 }}>Dhanesh Chandra Mishra</div>
+                  <div style={{ fontSize:12.5, color:'rgba(255,255,255,0.65)', marginBottom:20 }}>Founder & Director · Retired Indian Army Officer</div>
+                  <blockquote style={{ borderLeft:'3px solid var(--gold)', paddingLeft:16, margin:0, fontStyle:'italic', fontSize:14.5, color:'rgba(255,255,255,0.85)', lineHeight:1.7 }}>
+                    "Every pilgrim who boards one of our vehicles carries faith, family, and often a lifelong dream. I treat that responsibility the same way I treated my duty in the Army — with total commitment and zero compromise."
+                  </blockquote>
+                </div>
+              </div>
+              {/* Trust badges row */}
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                {[
+                  { v:'Est. 2010', l:'15 years running' },
+                  { v:'50,000+', l:'Pilgrims served' },
+                  { v:'20+ Vehicles', l:'Fleet owned outright' },
+                  { v:'0 Incidents', l:'Across 15 seasons' },
+                ].map(s => (
+                  <div key={s.l} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'12px 14px', textAlign:'center' }}>
+                    <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)', fontFamily:'var(--font-display)' }}>{s.v}</div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* ═══════════════════════════════════════════════
           JOURNEY STEPS
       ═══════════════════════════════════════════════ */}
       <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
@@ -748,7 +821,7 @@ export default function HomePage() {
               <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.65, marginBottom:16 }}>New to Char Dham Yatra? Understand the route, best time, costs, and what to expect before booking.</p>
               <div style={{ display:'flex', flexDirection:'column', gap:7 }}>
                 {[
-                  {label:'Complete Yatra Guide',href:'/char-dham-yatra-2025'},
+                  {label:'Complete Yatra Guide',href:'/char-dham-yatra'},
                   {label:'Best Time to Visit',href:'/blog/best-time-char-dham'},
                   {label:'What Does It Cost?',href:'/blog/char-dham-yatra-cost'},
                   {label:'What to Pack',href:'/blog/char-dham-yatra-packing-list'},
@@ -1056,7 +1129,7 @@ export default function HomePage() {
 
         <div style={{ maxWidth:760, margin:'0 auto', position:'relative', zIndex:1 }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:20, border:'1px solid rgba(232,146,10,0.3)' }}>
-            Season 2025 · Limited seats per batch
+            Season 2026 · Limited seats per batch
           </span>
           <h2 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5vw,2.8rem)', marginBottom:16 }}>
             Your Sacred Journey <em style={{ color:'#FFD166' }}>Awaits</em>
@@ -1068,7 +1141,7 @@ export default function HomePage() {
             <a href='tel:+917017082807' style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'var(--shadow-lg)', transition:'transform var(--t)' }}>
               📞 {SITE.phone}
             </a>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2025.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
                style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'0 4px 20px rgba(37,211,102,0.4)' }}>
               💬 WhatsApp Us Now
             </a>

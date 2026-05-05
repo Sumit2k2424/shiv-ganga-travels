@@ -141,7 +141,7 @@ export default function ContactPage() {
                   <FormField label="Travel Month">
                     <select name="month" style={inputStyle} defaultValue="">
                       <option value="" disabled>— Select month —</option>
-                      {['May 2025','June 2025','July 2025','August 2025','September 2025','October 2025','Not sure yet'].map(m => (
+                      {['May 2026','June 2026','July 2026','August 2026','September 2026','October 2026','Not sure yet'].map(m => (
                         <option key={m}>{m}</option>
                       ))}
                     </select>

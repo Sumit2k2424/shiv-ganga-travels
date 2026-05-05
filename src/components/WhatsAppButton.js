@@ -1,21 +1,9 @@
 'use client';
-import { useState, useEffect } from 'react';
 import { SITE } from '@/data/packages';
 
 export default function WhatsAppButton() {
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const fn = () => setHidden(window.scrollY > 350);
-    window.addEventListener('scroll', fn, { passive: true });
-    fn();
-    return () => window.removeEventListener('scroll', fn);
-  }, []);
-
-  if (hidden) return null;
-
   const message = encodeURIComponent(
-    'Namaste! I would like to enquire about Char Dham Yatra packages for 2025.'
+    'Namaste! I would like to enquire about Char Dham Yatra packages for 2026.'
   );
   return (
     <a

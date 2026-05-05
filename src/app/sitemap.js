@@ -13,6 +13,24 @@ export default function sitemap() {
     { url: `${base}/char-dham-yatra-2025`,            lastModified: now, priority: 0.95, changeFrequency: 'weekly'   },
     { url: `${base}/char-dham-yatra`,                 lastModified: now, priority: 0.98, changeFrequency: 'weekly'   },
     { url: `${base}/kedarnath-yatra`,                 lastModified: now, priority: 0.90, changeFrequency: 'weekly'   },
+    // Weather pages — all 4 dhams
+    { url: `${base}/kedarnath-weather`,               lastModified: now, priority: 0.88, changeFrequency: 'monthly'  },
+    { url: `${base}/yamunotri-weather`,               lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/gangotri-weather`,                lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/badrinath-weather`,               lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    // How to reach pages — all 4 dhams
+    { url: `${base}/how-to-reach-kedarnath`,          lastModified: now, priority: 0.87, changeFrequency: 'monthly'  },
+    { url: `${base}/how-to-reach-yamunotri`,          lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/how-to-reach-gangotri`,           lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/how-to-reach-badrinath`,          lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    // City departure pages
+    { url: `${base}/char-dham-yatra-from-noida`,      lastModified: now, priority: 0.82, changeFrequency: 'monthly'  },
+    // Hotel guide pages
+    { url: `${base}/kedarnath-hotels`,                lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/badrinath-hotels`,                lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    // Niche pilgrimage pages
+    { url: `${base}/panch-badri-yatra`,               lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    { url: `${base}/chopta-tungnath`,                 lastModified: now, priority: 0.82, changeFrequency: 'monthly'  },
     // Blog
     { url: `${base}/blog`,                            lastModified: now, priority: 0.80, changeFrequency: 'weekly'   },
     { url: `${base}/blog/char-dham-guide`,            lastModified: now, priority: 0.88, changeFrequency: 'monthly'  },
