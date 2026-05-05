@@ -73,7 +73,7 @@ export default function EmergencyContacts() {
     <div style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
       <div style={{ background:'#fee2e2', border:'1px solid #fca5a5', borderRadius:12, padding:'14px 18px', marginBottom:28 }}>
         <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Before you travel</div>
-        <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>Save the 108 ambulance number and your nearest district control room number in your phone before departing. Mountain networks can be patchy — note numbers on paper too. Our team at Shiv Ganga Travels is also available 24/7 during your yatra at <strong>+91-7017082807 / +91-8859123961</strong>.</p>
+        <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>Save the 108 ambulance number and your nearest district control room number in your phone before departing. Mountain networks can be patchy — note numbers on paper too. Our team at Shiv Ganga Travels is also available 24/7 during your yatra at <strong>+91-7017082807</strong>.</p>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(380px,100%),1fr))', gap:16 }}>
         {contacts.map(cat => (

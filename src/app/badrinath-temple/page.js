@@ -53,6 +53,35 @@ export default function BadrinathTemple() {
       </div>
       <h2 style={h2}>Tapt Kund — The Hot Spring</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Just below the temple is <strong>Tapt Kund</strong> — a natural sulphur hot spring that maintains a temperature of around 55°C year-round, even when the surrounding air is near freezing. Pilgrims traditionally bathe in the Tapt Kund before entering the temple for darshan. The hot spring water is considered medicinal and spiritually purifying. There are separate bathing areas for men and women.</p>
+      <h2 style={h2}>The Legend of Badrinath</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The name Badrinath comes from Badri — a wild berry tree (Indian jujube) that once grew abundantly in this valley. The legend goes that Lord Vishnu was meditating in severe penance at this spot, exposed to the harsh Himalayan cold. Goddess Lakshmi, unable to bear watching her husband suffer, transformed herself into a Badri tree and shaded him for thousands of years. When Vishnu finally emerged from meditation, he declared that since Lakshmi had sheltered him here, this place would forever be known as Badrikashram — the hermitage of the Badri tree.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The black stone idol worshipped here is considered <em>swayambhu</em> — self-manifested, not made by human hands. According to tradition, Adi Shankaracharya found it in the Alaknanda river, where it had been submerged to protect it during a period of Buddhist dominance in the region, and enshrined it in the current temple in the 8th century. The idol shows Vishnu in Padmasana (seated lotus posture), which is rare — most Vishnu temples show him reclining or standing.</p>
+
+      <h2 style={h2}>Places to Visit Near Badrinath</h2>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
+        {[
+          { name:'Mana Village', dist:'3km from temple', desc:'The last inhabited village before the Tibetan border. Walking through its stone lanes — past ancient cave homes, locals weaving shawls — feels like stepping several centuries back. Ask the locals about the cave where Vyas Muni is said to have dictated the Mahabharata to Ganesha.' },
+          { name:'Brahma Kapal', dist:'1km from temple', desc:'A flat rock platform on the bank of the Alaknanda where Hindus perform pind-dan (last rites) for their deceased ancestors. It is said that rites performed here directly reach the ancestors. The site has an ancient, solemn quality. Many pilgrims plan their visit specifically for this ritual.' },
+          { name:'Vyas Gufa & Ganesh Gufa', dist:'Mana Village, 3km', desc:'The cave where the sage Vyas Muni is said to have composed the Mahabharata. Ganesh Gufa nearby is where Lord Ganesha reportedly transcribed it as Vyas dictated. Small, dark, and extraordinary to stand inside when you know the story.' },
+          { name:'Bhim Pul', dist:'Mana Village, 3km', desc:'A single massive boulder serves as a natural bridge across a roaring mountain stream. According to legend, Bhima (of the Pandavas) placed this rock to help Draupadi cross. The Saraswati river — which is said to disappear underground just ahead — rushes beneath it with tremendous force.' },
+          { name:'Neelkanth Peak Viewpoint', dist:'Near Badrinath', desc:'At 6,596m, Neelkanth is the most prominent peak visible from Badrinath and is considered sacred to Lord Vishnu. Its sheer, snow-streaked face towers above the valley. The best views are from the path toward Mana at dawn, when the peak catches the first light.' },
+          { name:'Tapt Kund', dist:'Below the temple steps', desc:'The natural sulphur hot spring where pilgrims bathe before darshan. Even in sub-zero temperatures, the water here stays around 55°C. Bathing in the mist while snow-dusted peaks tower overhead is a genuinely unforgettable sensory experience.' },
+        ].map(pl => (
+          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
+            <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
+            <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
+          </div>
+        ))}
+      </div>
+
+      <h2 style={h2}>What Makes Badrinath Different from the Other Dhams</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Badrinath is the only one of the four dhams where you can drive all the way to the temple gate. No trekking, no pony ride — just a walk of a few hundred metres from the parking area. This makes it uniquely accessible for elderly pilgrims, families with small children, and anyone with mobility limitations. Yet despite this accessibility, it doesn't feel like a lesser pilgrimage. The scale of the mountains around it — deep valley, sheer cliff walls, the roar of the Alaknanda — is the most dramatic of all four dhams.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The town of Badrinath itself is also different from the others. It has a village quality, with the Alaknanda running right through it and a row of ashrams and dhabas along the river bank. In peak season (May–June), the town is full and energetic. But those who come in mid-September find it quieter, the mountains dusted with early snow, and the darshan lines short. Our team considers the September window the ideal time to visit Badrinath if your schedule allows it.</p>
+
+      <h2 style={h2}>Local Wildlife & Sightings</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The valley around Badrinath is inside the Nanda Devi Biosphere Reserve and is home to some remarkable wildlife. <strong>Himalayan ibex</strong> — large, bearded wild goats with curved horns — are commonly spotted on the rocky slopes above Mana village. <strong>Snow pigeons</strong> nest in large flocks on the cliff faces above the Alaknanda. In spring, the hillsides around the temple are covered in Brahma Kamal, the sacred alpine lotus — a protected species and considered highly auspicious. The walk to Mana village in early morning, before the crowds arrive, often yields sightings of monal pheasants in the scrub alongside the path.</p>
+
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>

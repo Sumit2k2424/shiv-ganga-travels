@@ -99,7 +99,7 @@ export default function BestTimeCharDham() {
           ))}
         </div>
         <p style={{ ...p, fontSize:13.5, background:'var(--navy-light)', padding:'12px 16px', borderRadius:10 }}>
-          📌 <strong>We send WhatsApp alerts</strong> to all our past customers when exact 2026 opening dates are announced. Save our number: <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807 / +91-8859123961</a>
+          📌 <strong>We send WhatsApp alerts</strong> to all our past customers when exact 2026 opening dates are announced. Save our number: <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807</a>
         </p>
 
         {/* Internal links & CTA */}

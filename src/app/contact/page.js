@@ -42,8 +42,9 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:SITE.phone, href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
-              { icon:'💬', label:'WhatsApp', value:SITE.phone, href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
+              { icon:'📞', label:'Phone', value:'+91-7017082807', href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
+              { icon:'📞', label:'Phone 2', value:'+91-8859123961', href:'tel:+918859123961', sub:'Alternate number', color:'var(--navy)' },
+              { icon:'💬', label:'WhatsApp', value:'+91-7017082807', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
               { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },

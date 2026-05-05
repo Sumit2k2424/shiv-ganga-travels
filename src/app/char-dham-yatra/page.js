@@ -237,27 +237,121 @@ export default function CharDhamYatra() {
           <strong>Day 11:</strong> Joshimath → Rishikesh → Haridwar<br/>
         </div>
 
-        <h2 style={h2Style}>Char Dham Yatra Package Cost 2026</h2>
+        <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
-          Our Char Dham Yatra package prices <strong>start from ₹19,500 per person</strong> for the standard 9N/10D package. Prices vary based on package type, hotel category, and group size:
+          Our packages start from <strong>Rs.19,500 per person</strong> (approx <strong>Rs.39,000 per couple</strong>) for 9N/10D all-inclusive from Haridwar. Choose your comfort level below.
         </p>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:24 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
-            { type:'Standard Package',  nights:'9N/10D', price:'₹19,500', note:'Shared vehicle, standard hotels' },
-            { type:'Deluxe Package',    nights:'11N/12D',price:'₹27,500', note:'3-star hotels, more rest days' },
-            { type:'Senior Special',    nights:'12N/13D',price:'₹24,500', note:'Pony/palki + medical attendant' },
-            { type:'Helicopter Package',nights:'5N/6D',  price:'₹85,000', note:'All 4 dhams by air — VIP' },
+            { tier:'Budget', range:'Rs.19,500-Rs.22,000', couple:'Rs.39,000-Rs.44,000', duration:'9N/10D', vehicle:'Sedan / Swift Dzire', hotel:'Standard lodges', best:'Solo, young pilgrims' },
+            { tier:'Deluxe', range:'Rs.27,500-Rs.32,000', couple:'Rs.55,000-Rs.64,000', duration:'11N/12D', vehicle:'Innova Crysta', hotel:'2-3 star hotels', best:'Families, seniors' },
+            { tier:'Senior Special', range:'Rs.24,500-Rs.28,000', couple:'Rs.49,000-Rs.56,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
+            { tier:'Helicopter', range:'Rs.85,000-Rs.95,000', couple:'Rs.1,70,000-Rs.1,90,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
           ].map(p => (
-            <div key={p.type} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
-              <div style={{ fontWeight:700, fontSize:13.5, color:'var(--text)', marginBottom:4 }}>{p.type}</div>
-              <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', lineHeight:1 }}>{p.price}</div>
-              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>{p.nights} · {p.note}</div>
+            <div key={p.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+              <div style={{ fontWeight:800, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{p.tier}</div>
+              <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', lineHeight:1, marginBottom:2 }}>{p.range}</div>
+              <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:6 }}>per person - {p.duration}</div>
+              <div style={{ fontSize:13, fontWeight:700, color:'var(--teal)', marginBottom:8 }}>Per couple: {p.couple}</div>
+              <div style={{ fontSize:12, color:'var(--text-mid)', marginBottom:2 }}>Vehicle: {p.vehicle}</div>
+              <div style={{ fontSize:12, color:'var(--text-mid)', marginBottom:2 }}>Hotel: {p.hotel}</div>
+              <div style={{ fontSize:12, color:'var(--text-mid)' }}>Best for: {p.best}</div>
             </div>
           ))}
         </div>
-        <p style={{ ...pStyle, fontSize:13.5 }}>
-          All packages are <strong>all-inclusive</strong> — hotel accommodation, daily meals (breakfast + dinner), private AC vehicle, experienced Garhwali guide, biometric registration, toll & parking charges. <strong>Zero commission. No hidden fees.</strong>
-        </p>
+
+        <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>Private Taxi Fare — Char Dham Circuit from Haridwar</h3>
+        <div style={{ overflowX:'auto', marginBottom:8 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
+            <thead><tr style={{ background:'var(--navy)' }}>
+              {['Vehicle','Capacity','Total Fare','Per Person (4 pax)','Best For'].map(h=>(
+                <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['Swift Dzire / Sedan','2-3 persons','Rs.35,000-45,000','~Rs.15,000','Budget couple'],
+                ['Ertiga / Maruti','4-5 persons','Rs.45,000-60,000','~Rs.12,000','Small family'],
+                ['Innova Crysta','4-7 persons','Rs.55,000-75,000','~Rs.11,000','Most popular'],
+                ['Tempo Traveller 12-seater','8-12 persons','Rs.90,000-1.2L','~Rs.9,000','Groups'],
+                ['Tempo Traveller 17-seater','13-17 persons','Rs.1.1L-1.5L','~Rs.7,500','Large group'],
+              ].map(([v,cap,fare,pp,best],i)=>(
+                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
+                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
+                  <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
+                  <td style={{ padding:'8px 12px', color:'var(--teal)', fontWeight:600, fontSize:13 }}>{pp}</td>
+                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{best}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Fares include fuel, toll, parking and driver allowance. All packages are all-inclusive — hotel, meals, guide, registration. Zero commission. No hidden fees.</p>
+
+        <h2 style={h2Style}>Best Time for Char Dham Yatra 2026 — Month-by-Month</h2>
+        <div style={{ overflowX:'auto', marginBottom:24 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
+            <thead><tr style={{ background:'var(--navy)' }}>
+              {['Month','Temp (day/night)','Crowd','Roads','Verdict'].map(h=>(
+                <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['May','12-22C / 4-8C','Very high','Good','Ideal — book 60 days ahead'],
+                ['June','14-24C / 6-10C','Very high','Good early, risk late','Ideal early June'],
+                ['July-Aug','14-22C / 8-12C','Low','Landslide risk','Avoid — monsoon season'],
+                ['September','10-18C / 3-6C','Low-moderate','Clear post-monsoon','Best for peaceful darshan'],
+                ['October 1-15','6-15C / -2-4C','Low','Open until closing','Good — early Oct only'],
+              ].map(([m,temp,crowd,roads,v],i)=>(
+                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                  <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{m}</td>
+                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{temp}</td>
+                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{crowd}</td>
+                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{roads}</td>
+                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={h2Style}>The Story Behind the Four Dhams — Why This Pilgrimage Matters</h2>
+        <p style={{ fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Adi Shankaracharya, the 8th-century philosopher-monk, established the Char Dham in the 8th century CE for a specific reason: to unite India. He placed one sacred shrine at each corner of the subcontinent — Puri in the east, Dwarka in the west, Rameswaram in the south, and Badrinath in the north. The Himalayan Char Dham — Yamunotri, Gangotri, Kedarnath, and Badrinath — is the "Chhota Char Dham" (the smaller, northern circuit), but it is the one most people are referring to when they say Char Dham Yatra today.</p>
+        <p style={{ fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The circuit is always done in a specific order: west to east — Yamunotri first, then Gangotri, then Kedarnath, then Badrinath. This is not arbitrary. Yamunotri and Gangotri are the sources of two of India's most sacred rivers. Kedarnath honours the form in which Lord Shiva is worshipped in the Himalayas. And Badrinath, where Lord Vishnu meditated, is where the circuit is completed — the final grace, the final absolution. Most pilgrims who complete all four describe the Badrinath darshan as carrying an emotional weight unlike anything else. It is the ending of something that began weeks earlier in a very different state of mind.</p>
+
+        <h2 style={h2Style}>What Each Dham Feels Like — Honestly</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:14, marginBottom:28 }}>
+          {[
+            { dham:'Yamunotri', feel:'Intimate & effortful', desc:'The 6km trek filters out the casual visitor. By the time you reach the temple, you have earned it. The Surya Kund ritual — cooking rice in boiling water to offer the goddess — is unlike anything at the other three dhams. Quiet, ancient, deeply personal.' },
+            { dham:'Gangotri', feel:'Dramatic & humbling', desc:'The Bhagirathi gorge — sheer rock walls, roaring river, and an 18th-century temple at the river\'s edge — is visually stunning. No trekking needed. The story of Bhagirath and his thousand years of penance hangs in the air. The pre-dawn aarti here, with the river loud in the darkness, is extraordinary.' },
+            { dham:'Kedarnath', feel:'Raw & physically demanding', desc:'The 16km trek across elevation is the hardest physical challenge on the circuit. The boulder behind the temple from the 2013 flood is a tangible thing you can touch. Many pilgrims weep at the first sight of the temple after hours of walking. This dham asks the most of you — and gives the most back.' },
+            { dham:'Badrinath', feel:'Grand & accessible', desc:'The only dham you can reach by car. But the scale of the valley — Neelkanth peak soaring above, the Alaknanda rushing past the temple steps — makes it the most visually dramatic of all four. Mana village, 3km beyond, is India\'s last inhabited village. Walking through it at dawn before the crowds arrive is something many of our regulars plan their entire trip around.' },
+          ].map(d => (
+            <div key={d.dham} style={{ background:'#fff', borderRadius:12, padding:'18px', border:'1px solid var(--border)' }}>
+              <div style={{ fontWeight:800, fontSize:15, color:'var(--navy)', marginBottom:3 }}>{d.dham}</div>
+              <div style={{ fontSize:11, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:8 }}>{d.feel}</div>
+              <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{d.desc}</div>
+            </div>
+          ))}
+        </div>
+
+        <h2 style={h2Style}>Local Experiences Along the Route You Should Not Miss</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
+          {[
+            { name:'Ganga Aarti at Har Ki Pauri, Haridwar', when:'Every evening at sunset', desc:'Your yatra begins in Haridwar, and the evening Ganga Aarti at Har Ki Pauri is the unofficial opening ceremony. Thousands of diyas (earthen lamps) float on the Ganga as priests swing large oil lamps in synchronized arcs. If this is your first yatra, arrive a day early to attend it. It sets the tone for everything that follows.' },
+            { name:'Devprayag Confluence', when:'En route to Kedarnath', desc:'Where the Alaknanda and Bhagirathi meet to become the Ganga. The two rivers have distinctly different colours — one green, one grey-blue — and you can watch them resist mixing for several metres before finally merging. An ancient Raghunath Temple sits at the point of confluence. Most groups stop here for 20 minutes on their way to Guptkashi.' },
+            { name:'Mana Village, Badrinath', when:'Morning, before crowds', desc:'Three kilometres beyond Badrinath, Mana is India\'s last village before the Tibetan border. It has stone houses, a 900-year-old cave where the Mahabharata was dictated, a natural rock bridge over a roaring river, and a handful of women who sell locally woven shawls from their doorways. Walk here before 8 AM. By 10 AM, there are tour groups.' },
+            { name:'Tea at a Dhaba on the Trek', when:'Any rest point, Kedarnath trek', desc:'On the Kedarnath trek, there are small tea stalls perched on ledges above the valley. Dal, rice, and chai served at 12,000 feet, with a view of the Mandakini valley below. These dhabas — run year after year by the same families — are one of the most human parts of the entire yatra. Sit down, eat slowly, talk to whoever is there.' },
+          ].map(pl => (
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+              <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
+              <div style={{ fontSize:11, color:'var(--gold-dark)', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.06em', marginBottom:8 }}>{pl.when}</div>
+              <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
+            </div>
+          ))}
+        </div>
 
         <h2 style={h2Style}>Why Choose Shiv Ganga Travels?</h2>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>

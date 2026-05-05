@@ -7,7 +7,7 @@
 export const SITE = {
   name       : 'Shiv Ganga Travels',
   tagline    : 'Your Sacred Journey, Our Devotion',
-  phone      : '+91-7017082807 / +91-8859123961',
+  phone      : '+91-7017082807',
   phone2     : '+91-8859123961',
   whatsapp   : '917017082807',
   whatsapp2  : '918859123961',

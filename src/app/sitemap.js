@@ -17,6 +17,17 @@ export default function sitemap() {
     { url: `${base}/blog`,                            lastModified: now, priority: 0.80, changeFrequency: 'weekly'   },
     { url: `${base}/blog/char-dham-guide`,            lastModified: now, priority: 0.88, changeFrequency: 'monthly'  },
     { url: `${base}/blog/best-time-char-dham`,        lastModified: now, priority: 0.85, changeFrequency: 'monthly'  },
+    // New city pages
+    { url: `${base}/char-dham-yatra-from-varanasi`,   lastModified: now, priority: 0.80, changeFrequency: 'monthly'  },
+    { url: `${base}/char-dham-yatra-from-chandigarh`, lastModified: now, priority: 0.80, changeFrequency: 'monthly'  },
+    { url: `${base}/char-dham-yatra-from-nagpur`,     lastModified: now, priority: 0.78, changeFrequency: 'monthly'  },
+    { url: `${base}/char-dham-yatra-from-patna`,      lastModified: now, priority: 0.78, changeFrequency: 'monthly'  },
+    // New blog posts targeting long-tail keywords
+    { url: `${base}/blog/mana-village-badrinath`,     lastModified: now, priority: 0.78, changeFrequency: 'monthly'  },
+    { url: `${base}/blog/triyuginarayan-temple`,      lastModified: now, priority: 0.80, changeFrequency: 'monthly'  },
+    { url: `${base}/blog/char-dham-yatra-in-october`, lastModified: now, priority: 0.82, changeFrequency: 'monthly'  },
+    { url: `${base}/blog/char-dham-yatra-with-kids`,  lastModified: now, priority: 0.82, changeFrequency: 'monthly'  },
+    { url: `${base}/blog/char-dham-yatra-for-heart-patients`, lastModified: now, priority: 0.82, changeFrequency: 'monthly'  },
   ];
 
   // Category pages

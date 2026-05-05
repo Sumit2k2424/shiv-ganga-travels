@@ -237,6 +237,61 @@ export default function PackageDetailPage({ params }) {
             ))}
           </div>
 
+          {/* Budget Tiers — TravelVaidya style */}
+          <section>
+            <h2 style={SH}>💰 Package Pricing — Budget, Deluxe & Premium</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', marginBottom:16, lineHeight:1.7 }}>
+              All packages cover the same temples and itinerary. The difference is the hotel standard and vehicle type. Choose based on your comfort preference and group size.
+            </p>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
+              {[
+                { tier:'Budget', range:'₹19,500–₹25,000', perCouple:'₹39,000–₹50,000', vehicle:'Swift Dzire / Sedan', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
+                { tier:'Deluxe', range:'₹27,500–₹35,000', perCouple:'₹55,000–₹70,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
+                { tier:'Premium', range:'₹42,000–₹55,000', perCouple:'₹84,000–₹1,10,000', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
+              ].map(t => (
+                <div key={t.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:`2px solid ${t.color}`, position:'relative', overflow:'hidden' }}>
+                  <div style={{ fontWeight:800, fontSize:15, color:t.color, marginBottom:4 }}>{t.tier}</div>
+                  <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', marginBottom:2 }}>{t.range}</div>
+                  <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>per person</div>
+                  <div style={{ fontSize:12.5, fontWeight:600, color:t.color, marginBottom:8 }}>Per couple: {t.perCouple}</div>
+                  {[['Vehicle', t.vehicle],['Hotel', t.hotel],['Ideal for', t.ideal]].map(([k,v])=>(
+                    <div key={k} style={{ fontSize:12, color:'var(--text-mid)', marginBottom:3 }}><strong>{k}:</strong> {v}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            {/* Vehicle-wise taxi fare table */}
+            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🚗 Vehicle-wise Private Taxi Fare (Full Char Dham Route)</h3>
+            <div style={{ overflowX:'auto', marginBottom:8 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Vehicle','Capacity','Total Fare','Per Person (4 pax)','Best For'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {[
+                    ['Swift Dzire / Sedan','2–3 persons','₹35,000–45,000','~₹15,000','Budget couple/solo'],
+                    ['Ertiga / Maruti','4–5 persons','₹45,000–60,000','~₹12,000','Small family'],
+                    ['Innova Crysta','4–7 persons','₹55,000–75,000','~₹11,000','Most popular choice'],
+                    ['Tempo Traveller 12-seater','8–12 persons','₹90,000–1.2L','~₹9,000','Groups & extended family'],
+                    ['Tempo Traveller 17-seater','13–17 persons','₹1.1L–1.5L','~₹7,500','Large group'],
+                  ].map(([v,cap,fare,pp,best],i)=>(
+                    <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                      <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
+                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
+                      <td style={{ padding:'8px 12px', color:'var(--teal)', fontWeight:600, fontSize:13 }}>{pp}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{best}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for 2026 season.</p>
+          </section>
+
           {/* Highlights */}
           <section>
             <h2 style={SH}>✨ Package Highlights</h2>
@@ -252,7 +307,16 @@ export default function PackageDetailPage({ params }) {
 
           {/* Day-wise Itinerary */}
           <section>
-            <h2 style={SH}>🗓️ Day-wise Itinerary</h2>
+            <h2 style={SH}>🗓️ Brief Itinerary at a Glance</h2>
+            <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:20 }}>
+              {pkg.itinerary.map((day, i) => (
+                <div key={day.day} style={{ display:'grid', gridTemplateColumns:'70px 1fr', gap:8, padding:'6px 0', borderBottom: i < pkg.itinerary.length-1 ? '1px solid rgba(15,43,91,0.1)' : 'none' }}>
+                  <div style={{ fontSize:12, fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>Day {day.day}:</div>
+                  <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{day.title}</div>
+                </div>
+              ))}
+            </div>
+            <h2 style={SH}>🗓️ Day-wise Itinerary (Detailed)</h2>
             <div style={{ position:'relative' }}>
               {pkg.itinerary.map((day,idx)=>(
                 <div key={day.day} style={{ display:'grid', gridTemplateColumns:'44px 1fr', gap:0, marginBottom: idx < pkg.itinerary.length-1 ? 20 : 0 }}>
@@ -360,6 +424,82 @@ export default function PackageDetailPage({ params }) {
             </section>
           )}
 
+          {/* Packing List */}
+          <section>
+            <h2 style={SH}>🎒 Packing List for This Yatra</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:8, marginBottom:8 }}>
+              {[
+                ['Clothing','Heavy jacket / down vest','Thermal inner layers (2 sets)','Woollen cap, gloves, socks','Waterproof poncho / raincoat','Comfortable trekking shoes'],
+                ['Health','Personal medicines (with extra)','Altitude sickness tablets','ORS sachets & glucose tablets','Pulse oximeter (small, cheap)','Sunscreen SPF 50+'],
+                ['Documents','Aadhaar card / valid ID','Char Dham registration QR','Medical fitness certificate (50+)','Travel insurance document','Emergency contact card (printed)'],
+                ['Practical','Power bank (20,000 mAh)','Cash (₹5,000–10,000 minimum)','Reusable water bottle (1L)','Light torch / headlamp','Walking stick (collapsible)'],
+              ].map(([cat, ...items]) => (
+                <div key={cat} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
+                  <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.05em' }}>{cat}</div>
+                  {items.map(item => (
+                    <div key={item} style={{ display:'flex', gap:6, fontSize:12, color:'var(--text-mid)', marginBottom:4, lineHeight:1.4 }}>
+                      <span style={{ color:'var(--teal)', flexShrink:0, fontWeight:700 }}>✓</span>{item}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:12, color:'var(--text-muted)' }}>💡 We share a detailed packing checklist PDF with every confirmed booking. WhatsApp us to receive it in advance.</p>
+          </section>
+
+          {/* Travel Tips — 15 numbered tips for featured snippets */}
+          <section>
+            <h2 style={SH}>💡 15 Essential Travel Tips for This Yatra</h2>
+            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+              {[
+                'Complete Char Dham biometric registration before leaving home — you cannot proceed past Rishikesh/Haridwar checkpoints without it.',
+                'Start driving by 6 AM every day. Night driving is prohibited on Himalayan roads after 9 PM for safety reasons.',
+                'Pack warm clothes even in May–June. Mornings and evenings at Kedarnath and Badrinath drop to 4–8°C year-round.',
+                'Carry at least ₹7,000–10,000 in cash. ATMs are sparse, unreliable, and frequently out of cash in peak season.',
+                'Book hotels in advance at Barkot, Uttarkashi, Guptkashi, and Joshimath — all four fill up by noon in May-June.',
+                'Pre-book Kedarnath helicopter from the IRCTC portal (heliyatra.irctc.co.in) 60+ days in advance for peak season.',
+                'Eat light vegetarian food throughout — heavy meals worsen altitude sickness. Dhabas along the route serve dal-rice and rotis.',
+                'Stay hydrated — drink 3–4 litres of water daily at high altitude. Avoid alcohol entirely; it worsens acclimatisation.',
+                'Jio and Airtel work better than Vi/BSNL on the Char Dham route. Airtel is more reliable near Kedarnath.',
+                'Poncho / raincoat is essential even in May. Afternoon showers are common at all four dhams.',
+                'For Kedarnath trek, start no later than 6 AM. The path gets crowded and unsafe to return after 2 PM.',
+                'Senior citizens and those with BP / heart / diabetes must carry a medical fitness certificate — it is checked at Sonprayag and Pandukeshwar.',
+                'Respect the "no photography inside temple sanctum" rule strictly. Cameras and phones are banned inside Kedarnath temple from 2026.',
+                'Hire only government-registered pony wallahs and porters at Gaurikund (Kedarnath) and Janki Chatti (Yamunotri) — avoid touts.',
+                'Keep your Char Dham registration QR code (printed AND digital) accessible at all times — it is checked at 8–10 points on the route.',
+              ].map((tip, i) => (
+                <div key={i} style={{ display:'flex', gap:12, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                  <span style={{ background:'var(--navy)', color:'#fff', fontWeight:700, fontSize:11, width:22, height:22, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, marginTop:1 }}>{i+1}</span>
+                  {tip}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Emergency contacts */}
+          <section>
+            <h2 style={SH}>🚨 Emergency Contacts & Yatra Helplines</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:16 }}>
+              {[
+                { label:'Uttarakhand Disaster Helpline', num:'1070', note:'24/7 emergency' },
+                { label:'Police Helpline', num:'100', note:'All districts' },
+                { label:'Ambulance / Medical', num:'108', note:'Free, 24/7' },
+                { label:'Kedarnath Control Room', num:'+91-1364-222-734', note:'During yatra season' },
+                { label:'GMVN Enquiry', num:'+91-135-2746817', note:'Accommodation' },
+                { label:'Shiv Ganga Travels', num:'+91-7017082807', note:'24/7 on-ground support' },
+              ].map(c => (
+                <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)', textDecoration:'none', display:'block' }}>
+                  <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{c.label}</div>
+                  <div style={{ fontWeight:800, fontSize:16, color:'var(--teal)', marginBottom:2 }}>{c.num}</div>
+                  <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{c.note}</div>
+                </a>
+              ))}
+            </div>
+            <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>
+              Save the Uttarakhand Disaster Helpline (1070) and ambulance number (108) in your phone before departing. Mountain networks can be patchy — also note numbers on paper. Our team at Shiv Ganga Travels is on WhatsApp 24/7 during your yatra.
+            </p>
+          </section>
+
           {/* Bottom CTA */}
           <section style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
             <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book?</h2>
@@ -379,6 +519,7 @@ export default function PackageDetailPage({ params }) {
               {savings>0 && <p style={{ color:'rgba(255,255,255,0.4)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>}
               <p style={{ color:'#fff', fontWeight:800, fontSize:36, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</p>
               <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
+              <p style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginTop:4 }}>≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
               {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
             </div>
             <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>

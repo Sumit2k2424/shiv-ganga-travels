@@ -59,6 +59,26 @@ export default function Page() {
           <li>Also available as a same-day helicopter package (₹28,000/person)</li>
         </ul>
 
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>The Shiva-Vishnu Connection — Why This Pairing is Theologically Significant</h2>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Kedarnath and Badrinath sit in neighbouring valleys, less than 50km apart as the crow flies, yet separated by a 5,000-metre ridge that takes two full days to drive around. The two shrines represent the two pillars of Vaishnava and Shaiva tradition in Hinduism — and together, they are sometimes described as the two lungs of Garhwal's spiritual geography.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>There is a beautiful legend that connects them directly. Adi Shankaracharya, who is credited with establishing Kedarnath as one of the Char Dhams, is also said to have attained samadhi (final liberation) at Kedarnath at age 32. His samadhi shrine sits directly behind the Kedarnath temple. He had also re-established the Badrinath temple decades earlier after it had fallen into neglect. Walking between these two shrines — as pilgrims have done for over a thousand years — is walking through his life's work in the mountains.</p>
+
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>Notable Places Along the Do Dham Route</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
+          {[
+            { name:'Rudraprayag Confluence', dist:'140km from Haridwar', desc:'The Mandakini river — which you will follow all the way to Kedarnath — meets the Alaknanda here. Rudraprayag is a quiet town with a famous suspension bridge and a Rudra (Shiva) temple at the confluence. Named after Shiva\'s fierce Rudra form. The evening there has a completely different energy from the bustling roadside towns.' },
+            { name:'Chopta & Tungnath', dist:'Near Guptkashi', desc:'A detour of about 35km from the main route takes you to Chopta — the "Mini Switzerland of Uttarakhand" — and from there a 3.5km trek to Tungnath, the highest Shiva temple in the world at 3,680m. Most Do Dham groups miss this. Our custom itineraries can add it if you have an extra day.' },
+            { name:'Joshimath', dist:'270km from Haridwar, near Badrinath', desc:'The last town before Badrinath, and the winter seat of the Badrinath deity. In winter, the idol is brought to Joshimath\'s Narasimha Temple with great ceremony. The town is also the base for the Valley of Flowers and Hemkund Sahib treks. A charming hill town that most pilgrims only see from the bus window.' },
+            { name:'Mana Village', dist:'3km beyond Badrinath', desc:'Do not leave Badrinath without walking to Mana. The village has the Vyas Gufa (cave where the Mahabharata was written), Bhim Pul (a single boulder spanning a roaring river), and some of the warmest local hospitality anywhere on the Char Dham circuit. A plate of rajma-rice from the last dhaba before Tibet costs ₹80.' },
+          ].map(pl => (
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
+              <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
+              <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
+            </div>
+          ))}
+        </div>
+
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
           <Link href={`/packages/kedarnath-badrinath-do-dham-5n-6d`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid var(--border)',textDecoration:'none',gap:12}}>

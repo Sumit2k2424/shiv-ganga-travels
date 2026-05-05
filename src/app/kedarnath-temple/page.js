@@ -68,6 +68,37 @@ export default function KedarnathTemple() {
           </div>
         ))}
       </div>
+      <h2 style={h2}>The Story Behind the Temple</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The story of Kedarnath goes back to the Mahabharata. After the Kurukshetra war, the Pandavas were tormented by guilt — they had killed their own kin, including their guru Dronacharya and granduncle Bhishma. They sought Lord Shiva's forgiveness and came to the Himalayas to find him. But Shiva, who was reluctant to absolve them easily, disguised himself as a bull and disappeared into the earth at Kedarnath.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>When Bhima tried to catch the bull, it began to sink into the ground. Bhima grabbed its hump — and that's the hump still worshipped in the form of the Kedarnath Shivalinga today. The rest of Shiva's body parts are said to have emerged at four other sites — Tungnath (arms), Rudranath (face), Madhyamaheshwar (navel), and Kalpeshwar (hair) — together forming the Panch Kedar pilgrimage.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Then there is the miracle of 2013. During the catastrophic Uttarakhand floods that killed thousands and wiped out entire villages, a massive boulder rolled down from the mountain directly behind the temple. Instead of crushing it, the boulder split the water flow and sat there like a shield. The temple itself had water flowing around it but the sanctum remained almost untouched. Many of our pilgrims who visit today specifically go behind the temple to see that boulder — and the emotion on their faces is something our team has described as unlike anything else on the yatra.</p>
+
+      <h2 style={h2}>Places to Visit Near Kedarnath</h2>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
+        {[
+          { name:'Bhairavnath Temple', dist:'500m from main temple', desc:'The guardian deity of Kedarnath. It is believed you must seek Bhairav\'s permission before leaving — even today pilgrims stop here on the way out. A small, ancient shrine with a powerful atmosphere.' },
+          { name:'Gandhi Sarovar (Chorabari Lake)', dist:'3km trek from temple', desc:'Also called Chorabari Lake, this glacial lake sits at 3,900m. The trail passes through alpine meadows with views of Kedarnath peak. The lake was dramatically impacted in 2013 but has largely recovered. A quiet, meditative place early morning.' },
+          { name:'Vasuki Tal', dist:'8km trek from temple', desc:'A high-altitude lake at 4,135m surrounded by glaciers. On a clear day you can see Chaukhamba peak reflected in the water. This is for physically fit trekkers and should not be attempted without a guide. The reward is extraordinary.' },
+          { name:'Shankaracharya Samadhi', dist:'Behind main temple', desc:'Adi Shankaracharya, who is credited with establishing Kedarnath as one of the four sacred dhams, is believed to have attained samadhi (liberation) here at the age of 32. His tomb sits just behind the temple. A moment of real historical gravity.' },
+          { name:'Gaurikund', dist:'14km below (trek base)', desc:'The base of the Kedarnath trek at 1,982m. Named after Goddess Gauri (Parvati), there is a hot spring here where she is said to have bathed. The Gaurikund temple and the kund itself are worth visiting before starting the trek up.' },
+          { name:'Triyuginarayan Temple', dist:'12km from Sonprayag', desc:'The mythological site where Lord Shiva and Parvati were married. The eternal flame in the temple courtyard is said to have been burning since their wedding. A remarkable detour, rarely crowded, with a deeply human story attached to it.' },
+        ].map(pl => (
+          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
+            <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
+            <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
+          </div>
+        ))}
+      </div>
+
+      <h2 style={h2}>What You'll Actually Experience on the Trek</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 16km trek from Gaurikund to Kedarnath takes most pilgrims 6–8 hours. The first few kilometres pass through tea stalls and horse handlers — it can feel chaotic and commercial. But by the time you cross the 5km mark and the forest gives way to open alpine terrain, something shifts. The Mandakini river roars below, the Kedarnath peak comes into view, and you start to understand why people have been making this journey for over a thousand years.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The last 2km before the temple, the path straightens and widens. Pilgrims who have been walking in silence for hours sometimes begin to chant spontaneously. By the time the temple comes into view — grey stone, simple, ancient, tucked between peaks — it genuinely stops people in their tracks. We have had pilgrims in their 70s tell us this moment alone made the entire journey worth every rupee and every aching step.</p>
+
+      <h2 style={h2}>Wildlife & Natural Sightings</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The Kedarnath Wildlife Sanctuary that surrounds the valley is one of the most biodiverse high-altitude ecosystems in India. On the trek, keep your eyes on the rocky slopes — <strong>Bharal (Himalayan blue sheep)</strong> are frequently spotted above the treeline, and their sure-footedness on near-vertical rock is genuinely humbling. The <strong>Himalayan monal</strong>, Uttarakhand's state bird, with its iridescent blue-green plumage, is spotted regularly near the base of the valley.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Snow leopards live in the higher reaches of the sanctuary. You are unlikely to spot one on the main trail, but pugmarks have been reported near Gandhi Sarovar and Vasuki Tal. In spring, the slopes below Kedarnath are blanketed with Brahma Kamal — a rare lotus-like alpine flower that blooms at high altitude and holds deep religious significance. Pilgrims who spot it in bloom consider it an especially auspicious sign.</p>
+
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>

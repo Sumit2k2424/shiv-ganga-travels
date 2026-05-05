@@ -93,9 +93,25 @@ export default function KedarnathYatra() {
         </div>
 
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>
-          Recommended Hotels Near Kedarnath Base (Guptkashi / Sonprayag)
-        </h2>
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>Places to Visit Along the Kedarnath Route</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
+          {[
+            { name:'Devprayag', dist:'75km from Haridwar', desc:'The most sacred of the five Prayags — the confluence of the Alaknanda and Bhagirathi rivers that together form the Ganga. Standing at the confluence and watching two rivers of completely different colours merge is a moment worth stopping for. The ancient Raghunath Temple here is over 1,200 years old.' },
+            { name:'Guptkashi', dist:'220km from Haridwar', desc:'Your overnight base before the trek. Guptkashi has its own Vishwanath Temple — said to be the site where Shiva hid from the Pandavas before being found at Kedarnath. The town sits above a deep valley and the evening views of the Himalayan ridges from its ridge road are remarkable.' },
+            { name:'Ukhimath (winter Kedarnath)', dist:'Near Guptkashi', desc:'When Kedarnath temple closes in November, the deity is brought down to Ukhimath for the winter months. This small village temple is where Lord Kedarnath "lives" from November to April. If you are visiting in winter — or if you just want a quieter, more personal darshan — Ukhimath is worth visiting.' },
+            { name:'Triyuginarayan Temple', dist:'12km from Sonprayag', desc:'The temple where Lord Shiva and Goddess Parvati were married, with Vishnu himself officiating as brother of the bride. The sacred fire in the courtyard is said to have been burning since the wedding — through three yugas (cosmic ages), which is how the village got its name. Rarely on standard itineraries, almost never crowded.' },
+            { name:'Gaurikund', dist:'Trek start, 228km from Haridwar', desc:'Named after Goddess Gauri (Parvati), who bathed in the hot spring here while waiting for Shiva. The kund is still there — a small hot spring pool surrounded by stone walls. Trek starts here. The short walk from the parking area to Gaurikund passes through a bustling small market of walking sticks, poncho sellers, and warm chai shops.' },
+            { name:'Shankar Math (top of trek)', dist:'Kedarnath, trek end', desc:'A small monastery near the temple, run by the Jyotirmath peetham. Monks here have maintained continuous worship at Kedarnath for centuries. The math is open to pilgrims and has a simple guest house. Spending the night at Kedarnath and attending the 4 AM Mahabhishek is an experience that most day-visitors never get.' },
+          ].map(pl => (
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
+              <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
+              <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
+            </div>
+          ))}
+        </div>
+
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>Recommended Hotels Near Kedarnath Base (Guptkashi / Sonprayag)</h2>
         <p style={{ fontSize:'14.5px', color:'var(--text-muted)', marginBottom:16 }}>
           Shiv Ganga Travels has pre-blocked rooms at these properties during peak season.
         </p>

@@ -494,7 +494,7 @@ export default function HomePage() {
             <div className="zero-comm-phone" style={{ flexShrink:0, padding:'0 22px', borderLeft:'1px solid var(--border)', display:'flex', alignItems:'center' }}>
               <a href='tel:+917017082807' style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:2, textDecoration:'none' }}>
                 <span style={{ fontSize:18 }}>📞</span>
-                <span style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', whiteSpace:'nowrap' }}>+91-7017082807 / +91-8859123961</span>
+                <span style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', whiteSpace:'nowrap' }}>+91-7017082807</span>
                 <span style={{ fontSize:10, color:'var(--text-muted)' }}>Call direct</span>
               </a>
             </div>
