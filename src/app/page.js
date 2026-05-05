@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { PACKAGES, SITE, TESTIMONIALS, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
+import { PACKAGES, SITE, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
 import HeroSearch from '@/components/HeroSearch';
 import ScrollReveal from '@/components/ScrollReveal';
 import CounterStat from '@/components/CounterStat';
 import FAQAccordion from '@/components/FAQAccordion';
-import TestimonialSlider from '@/components/TestimonialSlider';
+import GoogleReviews from '@/components/GoogleReviews';
 import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
@@ -878,9 +878,11 @@ export default function HomePage() {
           <div style={{ marginBottom:28, textAlign:'center' }}>
             <span className="section-tag">Real stories</span>
             <h2 className="section-title">What Our <em>Pilgrims</em> Say</h2>
-            <p className="section-subtitle" style={{ margin:'0 auto' }}>Genuine reviews from 50,000+ souls who trusted us with their sacred journey.</p>
+            <p className="section-subtitle" style={{ margin:'0 auto' }}>
+              Real Google reviews from pilgrims who trusted us with their sacred journey.
+            </p>
           </div>
-          <TestimonialSlider items={TESTIMONIALS}/>
+          <GoogleReviews/>
         </div>
       </ScrollReveal>
 
