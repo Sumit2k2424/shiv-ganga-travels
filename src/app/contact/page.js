@@ -238,7 +238,7 @@ export default function ContactPage() {
                       Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar — 249410
                     </div>
                   </div>
-                  <a href={`https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8`}
+                  <a href={`https://www.google.com/maps?cid=16074078434377735602`}
                      target="_blank" rel="noopener noreferrer"
                      style={{ marginLeft:'auto', background:'rgba(255,255,255,0.12)', color:'#fff', padding:'6px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', whiteSpace:'nowrap', border:'1px solid rgba(255,255,255,0.2)', flexShrink:0 }}>
                     Get Directions →
@@ -247,7 +247,7 @@ export default function ContactPage() {
                 {/* Interactive map */}
                 <iframe
                   title="Shiv Ganga Travels — Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.32!2d78.19274539999999!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.32!2d78.19274539999999!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390947a06d69b471%3A0xdf12992c04da1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"
                   width="100%"
                   height="360"
                   style={{ border:0, display:'block' }}

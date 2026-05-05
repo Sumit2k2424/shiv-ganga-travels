@@ -95,7 +95,8 @@ const STATIC = [
     text:'Auli skiing with Shiv Ganga was a perfect winter holiday. The skiing instructor was patient with beginners. Gondola views were breathtaking — Nanda Devi at sunrise is something I will never forget.' },
 ];
 
-const MAPS_REVIEW_URL = 'https://www.google.com/maps/place/Shiv+Ganga+Travels/@29.9896838,78.1927454,17z#reviews';
+const MAPS_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602#reviews';
+const WRITE_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 
 export default function GoogleReviews() {
   const [data, setData]       = useState({ reviews: STATIC, rating: 4.9, total: 850, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
@@ -182,7 +183,7 @@ export default function GoogleReviews() {
               </svg>
             </button>
           ))}
-          <a href={MAPS_REVIEW_URL} target="_blank" rel="noopener noreferrer"
+          <a href={data.mapsUrl || MAPS_REVIEW_URL} target="_blank" rel="noopener noreferrer"
             style={{ fontSize:13, fontWeight:600, color:'#0f2b5b', textDecoration:'none',
               padding:'7px 14px', borderRadius:8, border:'1px solid #e8ecf2',
               background:'#fff', display:'flex', alignItems:'center', gap:6 }}>
@@ -205,7 +206,7 @@ export default function GoogleReviews() {
 
       {/* Write a review CTA */}
       <div style={{ marginTop:16, textAlign:'center' }}>
-        <a href="https://g.page/r/CdgdGpx82RjZEAE/review" target="_blank" rel="noopener noreferrer"
+        <a href={data.reviewUrl || WRITE_REVIEW_URL} target="_blank" rel="noopener noreferrer"
           style={{ fontSize:13, color:'#8898a6', textDecoration:'none', display:'inline-flex',
             alignItems:'center', gap:5 }}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
