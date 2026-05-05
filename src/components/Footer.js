@@ -44,6 +44,7 @@ const COLS = [
   ]},
   { heading:'Company', links:[
     {l:'About Us',                   h:'/about'},
+    {l:'Site Map',                   h:'/sitemap-page'},
     {l:'Contact Us',                 h:'/contact'},
     {l:'All Packages',               h:'/packages'},
     {l:'Senior Citizen Package',     h:'/blog/senior-citizen-char-dham'},
