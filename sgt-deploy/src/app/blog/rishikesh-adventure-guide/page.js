@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Rishikesh Adventure Guide 2026 — Rafting, Bungee, Camping & What It Really Costs',
-  description: 'Complete Rishikesh adventure guide 2026. River rafting prices, bungee jumping details, beach camping, best time to visit, and honest cost breakdown. Plan your perfect Rishikesh trip.',
+  title: 'Rishikesh Adventure Guide 2026 — Rafting & Bungee',
+  description: 'Complete Rishikesh adventure guide 2026. River rafting prices, bungee jumping details, beach camping, best time to visit, and honest cost breakdown',
   keywords: ['rishikesh adventure guide','rishikesh river rafting 2026','rishikesh bungee jumping price','rishikesh camping','rishikesh adventure package','rishikesh rafting cost 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },
 };
@@ -18,7 +18,7 @@ export default function RishikeshAdventureGuide() {
     <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#0B7B8B 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Adventure Guide · 2026</span>
-        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Rishikesh Adventure Guide 2026 — Rafting, Bungee, Camping & Honest Prices</h1>
+        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Rishikesh Adventure Guide 2026 — Rafting, Bungee & Camping</h1>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Adventure capital of India · White water rafting · 83m bungee · Beach camping · Yoga & spirituality</p>
       </div>
     </section>
@@ -72,7 +72,7 @@ export default function RishikeshAdventureGuide() {
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Rishikesh Adventure Package</h3>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹4,999 per person · 2N/3D · Rafting + Camping + Ganga Aarti from Haridwar</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Rishikesh Adventure package 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Rishikesh Adventure package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
           <Link href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)' }}>View Package →</Link>
         </div>
       </div>

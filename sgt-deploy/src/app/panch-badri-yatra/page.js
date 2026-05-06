@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Panch Badri Yatra 2026 — Complete Guide, Route, Package & Best Time',
-  description: 'Panch Badri Yatra 2026 complete guide. Visit all 5 Badri shrines — Badrinath, Yogadhyan Badri, Bhavishya Badri, Vriddha Badri, Adi Badri. Route, best time, and packages from Haridwar.',
+  title: 'Panch Badri Yatra 2026 — All 5 Badri Shrines Guide',
+  description: 'Panch Badri Yatra 2026. Visit all 5 Badri shrines: Badrinath, Yogadhyan Badri, Bhavishya Badri, Vriddha Badri, Adi Badri. Packages from Haridwar.',
   keywords: ['panch badri yatra','panch badri yatra 2026','panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },
   openGraph: {
@@ -143,7 +143,7 @@ export default function PanchBadriYatra() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:20 }}>Tell us your dates and preferred pace. We design the complete circuit with all transport, hotels and darshan arrangements.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Panch Badri Yatra 2026. Please share packages and itinerary details.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Get a Free Quote</a>
             <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>

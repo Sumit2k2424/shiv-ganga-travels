@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Medical Certificate 2026 — Who Needs It, Format & How to Get It',
-  description: 'Complete guide to the mandatory <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link>. Who needs it, what it should say, which doctor can issue it, and what happens without it.',
+  title: 'Char Dham Medical Certificate 2026 — Who Needs It?',
+  description: 'Char Dham Yatra medical certificate 2026. Who needs it, format, how to get it from a doctor and submit during registration.',
   keywords: ['char dham yatra medical certificate','char dham yatra fitness certificate','medical certificate for char dham yatra 2026','char dham yatra doctor certificate','kedarnath medical certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };
@@ -61,7 +61,7 @@ export default function MedicalCertificate() {
         </div>
 
         <h2 style={H2}>Who Needs the Medical Certificate?</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginBottom:20 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12, marginBottom:20 }}>
           <div style={{ background:'#FFF1F2', borderRadius:12, padding:'14px 16px', border:'1px solid #FECDD3' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#9F1239', marginBottom:8 }}>❌ Must have certificate</div>
             {['All pilgrims aged 55 years and above (mandatory)','Any age with heart disease, diabetes, hypertension (strongly recommended)','Pilgrims on blood thinners or cardiac medication','Anyone with a history of high-altitude sickness','Pilgrims with COPD, asthma, or respiratory conditions'].map(s=>(
@@ -130,7 +130,7 @@ export default function MedicalCertificate() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels sends a pre-departure checklist 30 days before your yatra — including the exact certificate format for your doctor.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with the medical certificate for Char Dham Yatra 2026.')}`}
-              target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
+              target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/blog/char-dham-yatra-registration" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Registration Guide →</Link>
           </div>
         </div>

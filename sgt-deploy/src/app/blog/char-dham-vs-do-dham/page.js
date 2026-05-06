@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham vs Do Dham Yatra 2026 — Which is Right for You?',
-  description: 'Detailed comparison: Char Dham Yatra (all 4 dhams) vs Do Dham Yatra (Kedarnath + Badrinath). Cost, days, difficulty, best for whom. Expert guide by <Link href="/" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Shiv Ganga Travels</Link>, Haridwar.',
+  description: 'Char Dham Yatra vs Do Dham — which is right for you? Time, budget, fitness and devotion compared. Help choosing your 2026 pilgrimage.',
   keywords: ['char dham vs do dham','char dham yatra vs do dham yatra','difference between char dham and do dham','which is better char dham or do dham','do dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
@@ -109,7 +109,7 @@ export default function ComparisonPage() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Not sure which to choose? Ask Dhanesh ji directly.</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free advice · No obligation · Direct WhatsApp response in 30 minutes</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help deciding between Char Dham and Do Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help deciding between Char Dham and Do Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Char Dham →</Link>
             <Link href="/do-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Do Dham →</Link>
           </div>

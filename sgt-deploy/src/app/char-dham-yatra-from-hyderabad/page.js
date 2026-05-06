@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Hyderabad 2026 — Complete Travel Guide & Packages',
-  description: 'Char Dham Yatra from Hyderabad 2026. Flight to Dehradun via Delhi (2.5 hrs). All-inclusive packages from ₹25,999. VIP darshan. Zero commission. Trusted operator.',
+  title: 'Char Dham Yatra from Hyderabad 2026 — Packages',
+  description: 'Char Dham Yatra from Hyderabad 2026. Flight to Dehradun, all-inclusive packages from ₹19,500. Direct Haridwar operator, zero commission.',
   keywords: ['char dham yatra from hyderabad, char dham yatra package from hyderabad, hyderabad to char dham yatra 2026, char dham tour from hyderabad'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad` },
-  openGraph: { title: 'Char Dham Yatra Package from Hyderabad 2026 — Complete Travel Guide & Packages', description: 'Char Dham Yatra from Hyderabad 2026. Flight to Dehradun via Delhi (2.5 hrs). All-inclusive packages from ₹25,999. VIP darshan. Zero commission. Trusted operator.', url: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad`, type:'website' },
+  openGraph: { title: 'Char Dham Yatra Package from Hyderabad 2026 — Complete Travel Guide & Packages', description: 'Char Dham Yatra from Hyderabad 2026. Flight to Dehradun via Delhi (2.5 hrs). All-inclusive packages from ₹25,999. VIP darshan. Zero commission. Trusted', url: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad`, type:'website' },
 };
 
 function Schema() {
@@ -32,7 +32,7 @@ export default function Page() {
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Package from Hyderabad 2026</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>All-inclusive from <strong style={{color:'#FFD166'}}>From ₹25,999</strong> · Pickup from Hyderabad · VIP darshan · Zero commission</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Hyderabad.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Hyderabad.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>
@@ -122,7 +122,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Hyderabad Char Dham Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary within 2 hours. Pickup from Rajiv Gandhi Airport Hyderabad or Haridwar railway station. Zero commission. ₹25,999 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Hyderabad.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Hyderabad.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>

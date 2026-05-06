@@ -30,10 +30,10 @@ export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
 
   title: {
-    default: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar`,
-    template: `%s | Shiv Ganga Travels`,
+    default: `Shiv Ganga Travels — Char Dham Yatra 2026 Haridwar`,
+    template: `%s | Shiv Ganga`,
   },
-  description: 'Book Char Dham Yatra 2026 from Haridwar. Zero commission, VIP darshan, all-inclusive. Kedarnath, Badrinath, Gangotri, Yamunotri. Direct operator since 2010. 50,000+ pilgrims served.',
+  description: 'Char Dham Yatra 2026 from Haridwar. Zero commission, direct operator. From ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims. Founded by Retd. Army Officer.',
   keywords: [
     'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
     'Kedarnath Yatra package 2026', 'Badrinath Yatra package',
@@ -49,13 +49,9 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    'max-video-preview': -1,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
   },
 
   openGraph: {
@@ -63,8 +59,8 @@ export const metadata = {
     locale: 'en_IN',
     url: SITE.baseUrl,
     siteName: 'Shiv Ganga Travels',
-    title: `Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010. 50,000+ pilgrims served.',
+    title: `Char Dham Yatra 2026 — Shiv Ganga Travels, Haridwar`,
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹19,500. Zero commission. Direct operator. 50,000+ pilgrims.',
     images: [{
       url: '/opengraph-image',
       width: 1200, height: 630,
@@ -81,7 +77,11 @@ export const metadata = {
 
   alternates: {
     canonical: SITE.baseUrl,
-    languages: { 'en-IN': SITE.baseUrl, 'hi-IN': SITE.baseUrl },
+    languages: {
+      'x-default': SITE.baseUrl,
+      'en-IN':     SITE.baseUrl,
+      'hi-IN':     `${SITE.baseUrl}/hi`,
+    },
   },
   other: {
     'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹19,500 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
@@ -99,7 +99,8 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 5,
+  minimumScale: 1,
+  viewportFit: 'cover',
   themeColor: '#0F2B5B',
 };
 
@@ -321,7 +322,6 @@ export default function RootLayout({ children }) {
         {/* Fonts now self-hosted via next/font — no Google Fonts preconnect needed */}
         {/* Preconnect to image CDNs used in hero and package cards */}
         <link rel="preconnect" href="https://images.pexels.com"/>
-        <link rel="preconnect" href="https://upload.wikimedia.org"/>
         <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
         <link rel="dns-prefetch" href="https://maps.googleapis.com"/>
         {/* Preload LCP hero image — eliminates largest contentful paint delay */}
@@ -349,7 +349,6 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//www.google-analytics.com"/>
         <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
         <link rel="dns-prefetch" href="//images.pexels.com"/>
-        <link rel="dns-prefetch" href="//upload.wikimedia.org"/>
         <link rel="preconnect" href="https://www.google-analytics.com"/>
         {/* Preload LCP hero image */}
         <link rel="preload" as="image" href="/opengraph-image" fetchPriority="high"/>

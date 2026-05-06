@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Road Status 2026 — Live Route Conditions Haridwar to Kedarnath, Badrinath',
-  description: 'Current road conditions on Char Dham Yatra routes 2026. Kedarnath route (NH7), Badrinath highway, Gangotri highway, Yamunotri road. Updated weekly by Shiv Ganga Travels, Haridwar.',
+  title: 'Char Dham Road Status 2026 — Live Route Conditions',
+  description: 'Live Char Dham road status 2026. Route conditions from Haridwar to Kedarnath, Badrinath, Gangotri and Yamunotri. Daily updates.',
   keywords: ['char dham road status','kedarnath road condition','char dham highway status 2026','sonprayag road open','joshimath road status','gangotri highway status','char dham yatra road blockage'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },
   openGraph: {
@@ -149,7 +149,7 @@ export default function RoadStatus() {
               {/* Body */}
               <div style={{ background:STATUS_BG[r.status], padding:'16px 20px' }}>
                 <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, marginBottom:14 }}>{r.detail}</p>
-                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+                <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
                   <div>
                     <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.06em' }}>Route Checkpoints</div>
                     {r.checkpoints.map((cp,i) => (
@@ -226,7 +226,7 @@ export default function RoadStatus() {
             Travelling soon? Our team monitors all routes daily and will advise you on exact conditions.
           </p>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! What is the current road condition for Char Dham Yatra 2026?')}`}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', display:'inline-block' }}>
             💬 Ask About Today&apos;s Road Conditions
           </a>

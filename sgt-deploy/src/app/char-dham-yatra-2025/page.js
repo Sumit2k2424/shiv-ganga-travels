@@ -3,8 +3,8 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra 2026 Opening Dates, Registration & Travel Guide | Shiv Ganga Travels',
-  description: 'Char Dham Yatra 2026 opening dates, registration process, temple timings, route map, and detailed travel guide. Plan your sacred Himalayan pilgrimage with Shiv Ganga Travels Haridwar.',
+  title: 'Char Dham Yatra 2026 — Registration & Travel Guide',
+  description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹19,500.',
   keywords: ['Char Dham Yatra 2025','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-2025` },
   openGraph: {
@@ -28,7 +28,7 @@ function Schema() {
     datePublished: '2025-01-15',
     dateModified: new Date().toISOString().split('T')[0],
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/char-dham-yatra-2025` },
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+    image: '/opengraph-image',
     keywords: 'Char Dham Yatra 2025, Char Dham packages, Kedarnath Yatra, Badrinath Yatra',
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>;
@@ -139,7 +139,7 @@ export default function CharDhamGuide2025() {
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Speak with our yatra experts. Free custom itinerary within 2 hours.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2025.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2025.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/packages/char-dham" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>View Packages →</Link>
           </div>

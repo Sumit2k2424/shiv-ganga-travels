@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Badrinath Yatra Guide 2026 — Darshan Timings, Route, Package & Travel Tips',
-  description: 'Complete Badrinath Yatra guide 2026. Temple timings, route from Haridwar, Mana village, Tapt Kund, package from ₹5,999. Everything you need for a perfect Badrinath pilgrimage.',
+  title: 'Badrinath Yatra 2026 — Temple, Timings & Travel Guide',
+  description: 'Complete Badrinath Yatra guide 2026. Temple timings, route from Haridwar, Mana village, Tapt Kund, package from ₹5,999. Everything you need for a',
   keywords: ['badrinath yatra 2026','badrinath yatra guide','badrinath temple darshan timings','badrinath yatra package','haridwar to badrinath','badrinath yatra tips 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
 };
@@ -18,7 +18,7 @@ export default function BadrinathYatraGuide() {
     <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
-        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Badrinath Yatra Guide 2026 — Temple, Timings, Mana Village & Everything In Between</h1>
+        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Badrinath Yatra Guide 2026 — Temple, Timings & Travel Tips</h1>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹5,999</p>
       </div>
     </section>
@@ -52,7 +52,7 @@ export default function BadrinathYatraGuide() {
 
       <h2 style={h2}>Badrinath Temple Darshan Timings 2026</h2>
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:20, fontSize:14 }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
           {[
             { session:'Morning Opening', time:'4:30 AM' },
             { session:'Mahabhishek Puja', time:'4:30 – 6:30 AM' },
@@ -90,7 +90,7 @@ export default function BadrinathYatraGuide() {
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Badrinath Yatra Package</h3>
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹5,999 per person · 2N/3D from Haridwar · All-inclusive · VIP darshan arranged</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
           <Link href="/packages/badrinath-yatra-package-2n-3d-haridwar" style={{ background:'var(--gold)', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>View Package →</Link>
         </div>
       </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Cab Booking 2026 — Tempo Traveller, Innova, SUV from Haridwar',
-  description: 'Book cab for Char Dham Yatra 2026 from Haridwar. Innova Crysta, Tempo Traveller, Ertiga for Kedarnath, Badrinath, Gangotri, Yamunotri. AC vehicles, experienced drivers, fixed rates.',
+  title: 'Char Dham Cab Booking 2026 — Innova & Tempo Traveller',
+  description: 'Book Char Dham Yatra cab from Haridwar 2026. Innova, Tempo Traveller, SUV. Door-to-door pickup. Direct operator, best rates.',
   keywords: ['char dham yatra cab booking','char dham yatra taxi','haridwar to char dham cab','char dham yatra innova','char dham yatra tempo traveller','char dham cab price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
   openGraph: { title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar', description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking`, type: 'website' },
@@ -62,7 +62,7 @@ export default function CabBooking() {
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Cab Booking 2026</h1>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Innova Crysta · Tempo Traveller · Ertiga · from Haridwar · Hill-experienced drivers · Fixed rates · AC vehicles</p>
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates and availability.')}`} target="_blank" rel="noopener noreferrer"
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book Cab on WhatsApp</a>
           <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
@@ -87,7 +87,7 @@ export default function CabBooking() {
         </div>
       </div>
 
-      <h2 style={h2}>🚙 Vehicle Options & Rates</h2>
+      <h2 style={h2}>Vehicle Options & Rates</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(270px,100%),1fr))', gap:14, marginBottom:32 }}>
         {vehicles.map(v => (
           <div key={v.name} style={{ background:'#fff', borderRadius:14, border:`${v.popular ? '2px solid var(--navy)' : '1px solid var(--border)'}`, padding:'18px', position:'relative', overflow:'hidden' }}>
@@ -100,7 +100,7 @@ export default function CabBooking() {
             <ul style={{ listStyle:'none', marginBottom:14 }}>
               {v.features.map(f => <li key={f} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'3px 0', display:'flex', gap:6 }}><span style={{ color:'var(--teal)' }}>✓</span>{f}</li>)}
             </ul>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I want to book a ${v.name} for Char Dham Yatra 2026.`)}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I want to book a ${v.name} for Char Dham Yatra 2026.`)}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: v.popular ? 'var(--navy)' : 'var(--navy-light)', color: v.popular ? '#fff' : 'var(--navy)', padding:'9px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', display:'block', textAlign:'center' }}>
               Book {v.name} →
             </a>
@@ -108,7 +108,7 @@ export default function CabBooking() {
         ))}
       </div>
 
-      <h2 style={h2}>📍 Key Routes & Distances</h2>
+      <h2 style={h2}>Key Routes & Distances</h2>
       <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
         <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
           <thead>
@@ -134,7 +134,7 @@ export default function CabBooking() {
         </table>
       </div>
 
-      <h2 style={h2}>❓ Frequently Asked Questions</h2>
+      <h2 style={h2}>Frequently Asked Questions</h2>
       <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
         {[
           { q:'What is the cab fare for Char Dham Yatra from Haridwar?', a:'Full Char Dham Yatra cab fares start at ₹22,000 for an Ertiga (4-seater) and go up to ₹52,000 for a 12-seater Tempo Traveller for the complete 10–12 day circuit. Innova Crysta — the most popular choice — costs ₹30,000–38,000. All fares include fuel, toll, parking, and driver allowance.' },
@@ -153,7 +153,7 @@ export default function CabBooking() {
         <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Char Dham Cab Today</h2>
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free quote in 30 minutes · Fixed rates · No hidden charges · 2026 season open</p>
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share vehicle options and rates.')}`} target="_blank" rel="noopener noreferrer"
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share vehicle options and rates.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp for Quote</a>
           <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'About Shiv Ganga Travels — Retd. Army Officer Dhanesh Chandra Mishra, Founded 2010',
-  description: 'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, in Roorkee. Started serving Army personnel, now one of Haridwar\'s most trusted Char Dham operators with 20+ vehicles.',
+  title: 'About Shiv Ganga Travels — Founded by Army Officer',
+  description: 'Shiv Ganga Travels, Haridwar. Founded 2010 by Retd. Army Officer. Zero commission, direct Char Dham operator. 50,000+ pilgrims served across 15 seasons.',
   keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
   alternates: { canonical: `${SITE.baseUrl}/about` },
   openGraph: {
@@ -36,7 +36,7 @@ function Schema() {
       postalCode: '249410',
       addressCountry: 'IN',
     },
-    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Originally serving Army personnel, the company has grown to 20+ vehicles and 50,000+ pilgrims served.',
+    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
     aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '850', bestRating: '5' },
     sameAs: [`https://www.google.com/maps?cid=16074078434377735602`, `https://maps.app.goo.gl/Cup8TpduvDW6TaKf6`],
@@ -328,7 +328,7 @@ export default function AboutPage() {
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 with Shiv Ganga Travels.')}`}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" rel="nofollow noopener noreferrer"
                 style={{ background: '#25D366', color: '#fff', padding: '13px 28px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
                 💬 Book on WhatsApp
               </a>

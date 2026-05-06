@@ -127,7 +127,7 @@ export default function CancellationPolicy() {
           <p style={{ color:'rgba(255,255,255,0.65)', fontSize:13.5, marginBottom:18 }}>We respond to every cancellation request within 24 hours.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a question about my booking / cancellation.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp
             </a>

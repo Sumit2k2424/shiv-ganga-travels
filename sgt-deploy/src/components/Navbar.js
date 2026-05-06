@@ -28,12 +28,12 @@ function ChevronDown({ open }) {
 }
 
 const PKG_LINKS = [
-  { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',             img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/120px-Kedarnathji-mandir.JPG' },
-  { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/120px-Badrinath_Temple_%28front_view%29.jpg' },
-  { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/120px-Kedarnathji-mandir.JPG' },
+  { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',             imgAlt:'Kedarnath Temple — Char Dham Yatra', img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', imgAlt:'Badrinath Temple — Do Dham Yatra', img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         imgAlt:'Kedarnath Temple Single Dham Yatra', img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800' },
   { label:'Helicopter Tours', href:'/packages/helicopter',  sub:'All 4 dhams in 6 days — VIP experience',  img:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=120&h=80&fit=crop' },
   { label:'Uttarakhand Tours',href:'/packages/uttarakhand', sub:'Hills, adventure, wildlife & more',        img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=120&h=80&fit=crop' },
-  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        img:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Haridwar_Har_ki_Pauri.jpg/120px-Haridwar_Har_ki_Pauri.jpg' },
+  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        imgAlt:'Haridwar Ganga Ghats — All Packages', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=800' },
 ];
 
 const CAB_LINKS = [
@@ -290,7 +290,7 @@ export default function Navbar() {
             {/* Desktop Book Now CTA */}
           <a
             href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share packages and availability.')}`}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank" rel="nofollow noopener noreferrer"
             className="hidden md:flex"
             style={{
               display: 'flex', alignItems: 'center', gap: 7,
@@ -325,7 +325,7 @@ export default function Navbar() {
             </a>
 
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Namaste! I want to book Char Dham Yatra 2026.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               className="hidden md:inline-flex btn"
               style={{ background:'var(--navy-light)', color:'var(--navy)', padding:'8px 16px', fontSize:12.5, gap:5, fontWeight:600, borderRadius:'var(--r-sm)', textDecoration:'none', display:'inline-flex', alignItems:'center' }}>
               💬 Enquire

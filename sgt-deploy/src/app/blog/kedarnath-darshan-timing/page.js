@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Darshan Timings 2026 — Opening & Closing Hours, Puja Schedule, Best Time',
-  description: 'Kedarnath temple darshan timings 2026. Morning session 6 AM–3 PM, evening 5–9 PM. Mahabhishek at 4 AM, Shringaar Aarti 7:30 PM. VIP darshan booking, puja prices, and best time to visit.',
+  title: 'Kedarnath Darshan Timings 2026 — Hours & Puja Guide',
+  description: 'Kedarnath temple darshan timings 2026. Morning session 6 AM–3 PM, evening 5–9 PM. Mahabhishek at 4 AM, Shringaar Aarti 7:30 PM. VIP darshan booking',
   keywords: ['kedarnath darshan timings 2026','kedarnath temple opening time','kedarnath darshan time','kedarnath mandir timing','kedarnath aarti time','kedarnath puja timing','kedarnath temple closing time','kedarnath VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
   openGraph: { title: 'Kedarnath Darshan Timings 2026 — Complete Schedule', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
@@ -178,7 +178,7 @@ export default function KedarnathTimings() {
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>📅 2026 Season Dates</div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
             {[['Opening Date','April 22, 2026 at 8:00 AM'],['Closing Date','November 11, 2026 (Bhai Dooj)'],['Best Season','May 10 – June 20 & Sep 15 – Oct 25'],['Daily Pilgrim Limit','15,000–17,000 per day']].map(([k,v])=>(
               <div key={k} style={{ display:'flex', gap:8 }}>
                 <span style={{ color:'var(--text-muted)', fontSize:13, minWidth:130, flexShrink:0 }}>{k}:</span>
@@ -191,7 +191,7 @@ export default function KedarnathTimings() {
         {/* FAQ */}
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Frequently Asked Questions</h2>
         {[
-          ['Can I book Kedarnath Mahabhishek online?', 'Yes. Mahabhishek can be booked through the Shri Kedarnath temple website or through your tour operator. Shiv Ganga Travels books Mahabhishek puja for all our Kedarnath packages as standard. The puja is at 4:00 AM, so your vehicle must reach Gaurikund by 2 AM at the latest — which means leaving Guptkashi at 1 AM.'],
+          ['Can I book Kedarnath Mahabhishek online?', 'Yes. Mahabhishek you can book through the Shri Kedarnath temple website or through your tour operator. Shiv Ganga Travels books Mahabhishek puja for all our Kedarnath packages as standard. The puja is at 4:00 AM, so your vehicle must reach Gaurikund by 2 AM at the latest — which means leaving Guptkashi at 1 AM.'],
           ['Is there a separate darshan line for senior citizens?', 'Yes. A dedicated Divyangjan (disabled) and Senior Citizens queue is maintained at Kedarnath temple. Our guides facilitate access to this queue for pilgrims aged 70+ or those with mobility limitations. Ask your guide to approach the queue management staff at the temple entrance.'],
           ['Can I see the temple open during the Kedarnath trek?', 'No. The Kedarnath trek from Gaurikund (16km) takes 5–7 hours ascending. If you leave Gaurikund at 5 AM, you reach Kedarnath by 11 AM–12 PM — right at the end of the morning session. Timing your trek start is critical. Many pilgrims who leave at 7–8 AM arrive during the 3 PM afternoon closure and miss morning darshan entirely.'],
           ['What is the phone ban rule at Kedarnath temple?', 'Mobile phones are banned inside the inner sanctum (garbhagriha) of Kedarnath temple in 2026. Phone deposit counters are set up at the temple entrance. Photography outside the temple complex remains permitted. This rule is enforced by temple security and Uttarakhand Police.'],
@@ -208,7 +208,7 @@ export default function KedarnathTimings() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Yatra 2026 — Including Mahabhishek Booking</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels books Mahabhishek puja, manages temple queue, and arranges VIP darshan. Haridwar-based direct operator. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026 with Mahabhishek puja. Please share details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026 with Mahabhishek puja. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Kedarnath Packages →</Link>
           </div>

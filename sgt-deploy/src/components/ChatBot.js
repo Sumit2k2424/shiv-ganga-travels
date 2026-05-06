@@ -307,7 +307,7 @@ export default function ChatBot() {
               </div>
             </div>
             {/* WhatsApp shortcut */}
-            <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="nofollow noopener noreferrer"
               title="Chat on WhatsApp"
               style={{
                 width: 34, height: 34, borderRadius: '50%',

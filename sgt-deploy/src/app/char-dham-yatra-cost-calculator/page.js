@@ -96,7 +96,7 @@ export default function CostCalculator() {
         </p>
       </div>
 
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:16 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:16, marginBottom:16 }}>
 
         {/* Pilgrims */}
         <div>
@@ -211,7 +211,7 @@ export default function CostCalculator() {
             </p>
             <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I used your cost calculator. ${form.pilgrims} pilgrims, ${form.packageType} package from ${form.startCity}. Estimated ₹${result.total.toLocaleString('en-IN')}. Please confirm exact price.`)}`}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" rel="nofollow noopener noreferrer"
                 style={{ flex:1, background:'#25D366', color:'#fff', padding:'11px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center' }}>
                 💬 Get Exact Quote on WhatsApp
               </a>

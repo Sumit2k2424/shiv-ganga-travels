@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Pune 2026 — Train, Flight & Complete Guide',
-  description: 'Char Dham Yatra from Pune 2026. Train to Haridwar (24 hrs) or flight to Dehradun. Packages from ₹24,499. VIP darshan. Zero commission. Trusted since 2010.',
+  title: 'Char Dham Yatra from Pune 2026 — Packages',
+  description: 'Char Dham Yatra from Pune 2026. Flight to Dehradun or Haridwar, all-inclusive packages from ₹19,500. Direct operator, zero commission.',
   keywords: ['char dham yatra from pune, char dham yatra package from pune, pune to char dham yatra 2026, char dham tour from pune'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
   openGraph: { title: 'Char Dham Yatra Package from Pune 2026 — Train, Flight & Complete Guide', description: 'Char Dham Yatra from Pune 2026. Train to Haridwar (24 hrs) or flight to Dehradun. Packages from ₹24,499. VIP darshan. Zero commission. Trusted since 2010.', url: `${SITE.baseUrl}/char-dham-yatra-from-pune`, type:'website' },
@@ -32,7 +32,7 @@ export default function Page() {
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Package from Pune 2026</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>All-inclusive from <strong style={{color:'#FFD166'}}>From ₹24,499</strong> · Pickup from Pune · VIP darshan · Zero commission</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>
@@ -122,7 +122,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Pune Char Dham Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary within 2 hours. Pickup from Pune railway station or Mumbai airport. Zero commission. ₹24,499 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Pony vs Helicopter 2026 — Which is Better? Cost, Pros & Cons',
-  description: 'Complete comparison: Kedarnath by pony vs helicopter in 2026. Cost, time, availability, IRCTC booking, pony booking, and which option suits which pilgrim. Expert analysis.',
+  title: 'Kedarnath Pony vs Helicopter 2026 — Which Is Better?',
+  description: 'Complete comparison: Kedarnath by pony vs helicopter in 2026. Cost, time, availability, IRCTC booking, pony booking, and which option suits which',
   keywords: ['kedarnath pony vs helicopter','kedarnath helicopter or pony','kedarnath pony cost 2026','kedarnath helicopter cost 2026','kedarnath trek alternatives','best way to reach kedarnath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
@@ -163,7 +163,7 @@ export default function PonyVsHelicopter() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Both pony pre-booking and IRCTC helicopter coordination included in all our packages — no extra charge.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Kedarnath helicopter or pony booking 2026.')}`}
-              target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
+              target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
           </div>
         </div>

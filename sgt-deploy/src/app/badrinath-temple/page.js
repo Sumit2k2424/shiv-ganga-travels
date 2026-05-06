@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
   title: 'Badrinath Temple 2026 — Darshan Timings, History, Abhishek Puja & Guide',
-  description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord Vishnu shrine, Tapt Kund.',
+  description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord',
   keywords: ['badrinath temple','badrinath temple timings 2026','badrinath darshan timings','badrinath temple opening date 2026','badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };
@@ -94,7 +94,7 @@ export default function BadrinathTemple() {
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Badrinath Yatra Package</h3>
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Maha Abhishek booking included · VIP darshan · From ₹5,999</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra with Maha Abhishek puja assistance.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra with Maha Abhishek puja assistance.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>

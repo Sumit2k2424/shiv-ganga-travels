@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra 2026 — Packages, Trek Guide, Pony & Helicopter | Shiv Ganga Travels',
-  description: 'Book Kedarnath Yatra 2026 from Haridwar. ₹6,499/person. 16km trek details, pony, palki & helicopter options, temple timings, what to carry. Expert Garhwali guides.',
+  title: 'Kedarnath Yatra 2026 — Packages, Trek & Helicopter',
+  description: 'Book Kedarnath Yatra 2026 from Haridwar. 3N/4D packages from ₹12,999. Helicopter, pony, VIP darshan. Senior citizen packages available.',
   keywords: ['Kedarnath Yatra 2026','Kedarnath package 2025','Kedarnath Yatra from Haridwar','Kedarnath trek','Kedarnath helicopter booking','Kedarnath pony booking','Kedarnath temple opening 2025','Kedarnath yatra package price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
@@ -11,7 +11,7 @@ export const metadata = {
     description: 'Book Kedarnath Yatra from Haridwar ₹6,499. 16km trek guide, pony, palki, helicopter options. Trusted since 2010.',
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
 };
 
@@ -46,7 +46,18 @@ export default function KedarnathYatra() {
       </nav>
 
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <p style={{p}}><strong>Kedarnath</strong>, situated at an altitude of 3,583 metres in the Rudraprayag district of Uttarakhand, is one of the holiest Hindu shrines — the 12th of the 12 Jyotirlingas of Lord Shiva. The ancient stone temple, dating back to the 8th century and attributed to Adi Shankaracharya, draws lakhs of pilgrims every year between May and October.</p>
+        {/* Quick facts — skimmable entry point */}
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid var(--border)', marginBottom:20, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:8 }}>
+          {[['Altitude','3,583m (Rudraprayag)'],['Jyotirlinga','12th of 12 Shiva temples'],['Trek','16km from Gaurikund'],['Season','April 22 – Nov 2026'],['From Haridwar','230km by road'],['Package from','₹6,499/person']].map(([k,v])=>(
+            <div key={k}><div style={{ fontSize:11, color:'var(--text-muted)' }}>{k}</div><div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{v}</div></div>
+          ))}
+        </div>
+        <p style={{p}}>
+          <strong>Kedarnath</strong> stands at 3,583 metres in the Rudraprayag district of Uttarakhand — the 12th Jyotirlinga, the highest Shiva temple in the Himalayan range. Adi Shankaracharya built the current stone temple in the 8th century. The structure has survived 12 centuries of Himalayan winters. It survived the 2013 cloudbursts that destroyed everything around it. The boulder that deflected the flood now stands behind the temple as a permanent reminder.
+        </p>
+        <p style={{p}}>
+          Every year from late April to early November, hundreds of thousands of pilgrims make the 16km trek from Gaurikund to seek the darshan of Lord Kedarnath. The temple opens before dawn for the Mahabhishek puja at 4:30 AM. You can book this ritual in advance — we arrange it for all our Kedarnath Yatra pilgrims.
+        </p>
 
         {/* Packages */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>
@@ -85,7 +96,7 @@ export default function KedarnathYatra() {
         </div>
 
         <h2 style={{h2}}>Temple Timings & Puja</h2>
-        <p style={{p}}>The Kedarnath temple opens at <strong>4:30 AM</strong> for the auspicious Brahma Muhurta puja — the most sacred time to seek blessings. The <strong>Mahabhishek puja</strong> (special ritual with milk, honey, and holy water) can be booked in advance and is a deeply moving spiritual experience. We arrange this for our pilgrims.</p>
+        <p style={{p}}>The Kedarnath temple opens at <strong>4:30 AM</strong> for the auspicious Brahma Muhurta puja — the most sacred time to seek blessings. The <strong>Mahabhishek puja</strong> (special ritual with milk, honey, and holy water) you can book in advance and is a deeply moving spiritual experience. We arrange this for our pilgrims.</p>
 
         <h2 style={{h2}}>How to Reach Kedarnath from Haridwar</h2>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 18px', border:'1px solid var(--border)', fontSize:13.5, lineHeight:2, marginBottom:16 }}>
@@ -158,9 +169,9 @@ export default function KedarnathYatra() {
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Yatra 2026</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary in 2 hours. Zero commission. ₹6,499/person all-inclusive.</p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+          <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <Link href="/packages/kedarnath-yatra-package-3n-4d-haridwar" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>View Package</Link>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           </div>
         </div>
@@ -170,7 +181,7 @@ export default function KedarnathYatra() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath-road-trip'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
+            {[['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath-road-trip'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

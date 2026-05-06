@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Opening Dates 2026 — Yamunotri, Gangotri, Kedarnath, Badrinath',
-  description: 'Official Char Dham Yatra opening dates 2026: Yamunotri & Gangotri April 19, Kedarnath April 22 at 8 AM, Badrinath April 23 at 6:15 AM. Closing dates, best season, and booking guide.',
+  title: 'Char Dham Yatra Opening Dates 2026 — All 4 Dhams',
+  description: 'Official Char Dham Yatra opening dates 2026: Yamunotri & Gangotri April 19, Kedarnath April 22 at 8 AM, Badrinath April 23 at 6:15 AM. Closing dates',
   keywords: ['char dham yatra opening dates 2026','kedarnath opening date 2026','badrinath opening date 2026','gangotri opening date 2026','yamunotri opening date 2026','char dham 2026 dates','char dham season 2026 start date','kedarnath temple open date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026` },
   openGraph: { title: 'Char Dham Opening Dates 2026 — All 4 Dhams Official Dates', description: 'Official opening and closing dates for all 4 Char Dham shrines in 2026 with booking guide.', url: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`, type: 'article' },
@@ -171,7 +171,7 @@ export default function OpeningDates() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Char Dham Yatra 2026 — Season Still Open</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Packages available May–October 2026. Direct operator from Haridwar. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share available dates and packages.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share available dates and packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
           </div>

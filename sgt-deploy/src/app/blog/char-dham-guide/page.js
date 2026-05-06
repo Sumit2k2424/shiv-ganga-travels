@@ -3,8 +3,8 @@ import { SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Complete Guide 2026 — Route, Cost, Tips | Shiv Ganga Travels',
-  description: 'Complete Char Dham Yatra guide 2026. Detailed route, day-by-day itinerary, cost breakdown, what to pack, registration, and expert travel tips from Haridwar.',
+  title: 'Char Dham Yatra Complete Guide 2026 — Route & Tips',
+  description: 'Complete Char Dham Yatra guide 2026. Detailed route, day-by-day itinerary, cost breakdown, what to pack, registration, and expert travel tips from',
   keywords: ['char dham yatra guide','char dham yatra complete information','char dham yatra tips','char dham yatra route map','char dham yatra packing list','char dham yatra 2026 guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-guide` },
   openGraph: {
@@ -26,7 +26,7 @@ function Schema() {
     datePublished: '2025-01-15',
     dateModified: '2026-01-01',
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-guide`,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+    image: '/opengraph-image',
     keywords: 'Char Dham Yatra 2026, char dham guide, char dham route, char dham cost',
     articleSection: 'Travel Guide',
     wordCount: '1200',
@@ -168,7 +168,7 @@ export default function CharDhamGuide() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Char Dham Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Expert guidance. Zero commission. Free custom itinerary in 2 hours.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/char-dham-yatra"
               style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Packages →</Link>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Senior Citizen <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> — Tips, Special Package & Safety Guide',
-  description: 'Can senior citizens do Char Dham Yatra? Yes! Complete guide for elderly pilgrims — special packages with pony included, medical support, altitude safety, and realistic tips from 15 years experience.',
+  title: 'Senior Citizen Char Dham Yatra 2026 — Safety Guide',
+  description: 'Char Dham Yatra for senior citizens 2026. Pony, palki, VIP darshan, oxygen, acclimatisation tips and our special senior package.',
   keywords: ['senior citizen char dham yatra','char dham yatra for elderly','char dham yatra age limit','char dham yatra senior citizen package','old age char dham yatra','char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
   openGraph: { title:'Senior Citizen Char Dham Yatra 2026 — Complete Guide', description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article' },
@@ -111,7 +111,7 @@ return (
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book the Senior Citizen Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>₹24,500 per person · 12N/13D · Pony included · Medical attendant · No worries.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>

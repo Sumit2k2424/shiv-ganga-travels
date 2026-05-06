@@ -126,7 +126,7 @@ export default function FirstTimerGuide() {
         ))}
 
         <h2 style={H2}>Packing List — What to Carry (and What to Leave Behind)</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:20 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:16, marginBottom:20 }}>
           <div style={{ background:'#F0FDF4', borderRadius:12, padding:'16px', border:'1px solid #86EFAC' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#15803D', marginBottom:10 }}>✅ Must Carry</div>
             {['Thermal inners (2 sets) — even in June','Fleece jacket + windproof outer layer','Waterproof trekking shoes','Rain poncho','Warm cap and gloves','Aadhaar card (original)','Yatra registration card — printed','Medical certificate (if 55+)','Personal medicines + 2 extra days supply','ORS sachets — 10 minimum','Sunscreen SPF 50+ and lip balm','Cash ₹10,000+ in small notes','Powerbank (fully charged)','Trekking poles for Kedarnath','Headtorch with spare batteries'].map(i=>(
@@ -163,7 +163,7 @@ export default function FirstTimerGuide() {
         <h2 style={H2}>Altitude Sickness — Prevention and Recognition</h2>
         <div style={{ background:'#FEF3E2', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:16 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#7B3F00', marginBottom:8 }}>⚠️ Know These Symptoms</div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, fontSize:13.5, color:'#7B3F00' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:8, fontSize:13.5, color:'#7B3F00' }}>
             {['Headache (first sign — take seriously)','Nausea or vomiting','Dizziness when standing','Breathlessness at rest','Loss of appetite','Fatigue beyond what walking explains','Confusion or difficulty walking (severe — descend immediately)','Blue lips or fingertips (emergency — call 108)'].map(s=>(
               <div key={s} style={{ display:'flex', gap:6 }}><span>•</span>{s}</div>
             ))}
@@ -235,7 +235,7 @@ export default function FirstTimerGuide() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Direct operator since 2010</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am planning my first Char Dham Yatra 2026. Please share packages and advice.')}`}
-              target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+              target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Free Advice
             </a>
             <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>

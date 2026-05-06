@@ -80,7 +80,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Include Mana in Your Char Dham Itinerary</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>All our Badrinath and Char Dham packages include time at Mana Village. Just ask us when booking.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Mana Village in my Char Dham itinerary. Please share details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Mana Village in my Char Dham itinerary. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/badrinath-temple" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Badrinath Guide →</Link>
           </div>

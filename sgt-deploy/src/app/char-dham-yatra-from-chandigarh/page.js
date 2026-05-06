@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Chandigarh 2026 — Route, Distance & Package',
-  description: 'Char Dham Yatra from Chandigarh 2026. Only 180km to Haridwar — shortest drive of any major city. All-inclusive packages from ₹22,999/person. Direct Haridwar operator, zero commission.',
+  title: 'Char Dham Yatra from Chandigarh 2026 — Packages',
+  description: 'Char Dham Yatra from Chandigarh 2026. 4-hour drive to Haridwar, all-inclusive packages from ₹19,500. Direct operator, zero commission.',
   keywords: ['char dham yatra from chandigarh','chandigarh to haridwar char dham','char dham package chandigarh 2026','chandigarh haridwar distance char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },
   openGraph: { title:'Char Dham Yatra from Chandigarh 2026', description:'Chandigarh to Haridwar is just 180km — the closest major city to the Char Dham circuit. All-inclusive from ₹22,999.', url:`${SITE.baseUrl}/char-dham-yatra-from-chandigarh`, type:'website' },
@@ -115,7 +115,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book from Chandigarh — Free Quote in 2 Hours</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Direct operator from Haridwar. Zero commission. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Chandigarh and want to book Char Dham Yatra 2026. Please share package details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Chandigarh and want to book Char Dham Yatra 2026. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <a href="tel:+917017082807" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>

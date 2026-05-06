@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Uttarakhand Weather Month by Month 2026 — Char Dham Yatra Complete Climate Guide',
-  description: 'Month-by-month weather guide for Char Dham Yatra routes in Uttarakhand 2026. Temperatures at Kedarnath, Badrinath, Gangotri, Yamunotri by month. Rainfall, snowfall, best season data.',
+  title: 'Uttarakhand Weather 2026 — Month-by-Month Guide',
+  description: 'Month-by-month weather guide for Char Dham Yatra routes in Uttarakhand 2026. Temperatures at Kedarnath, Badrinath, Gangotri, Yamunotri by month',
   keywords: ['uttarakhand weather month by month','kedarnath weather 2026','char dham yatra weather','badrinath temperature month wise','best weather char dham yatra','uttarakhand climate guide','kedarnath temperature june','char dham yatra september weather'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
   openGraph: { title: 'Uttarakhand Weather Month by Month — Char Dham Yatra Climate Guide 2026', url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },
@@ -129,7 +129,7 @@ export default function WeatherGuide() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Plan Your Yatra for the Best Weather</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>We will suggest the ideal travel dates based on weather, crowds, and your group. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need advice on the best dates for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> based on weather.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need advice on the best dates for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/blog/best-time-char-dham" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Best Time Guide →</Link>
           </div>

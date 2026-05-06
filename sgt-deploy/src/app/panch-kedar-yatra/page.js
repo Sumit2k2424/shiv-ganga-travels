@@ -20,7 +20,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
       {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
-      {'@type':'ListItem',position:2,name:'Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines in the Garhwal Himalayas',item:`${SITE.baseUrl}/panch-kedar-yatra`},
+      {'@type':'ListItem',position:2,name:'Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines',item:`${SITE.baseUrl}/panch-kedar-yatra`},
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
@@ -33,7 +33,7 @@ export default function Page() {
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines in the Garhwal Himalayas</h1>
+          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Kedarnath · Tungnath · Rudranath · Madmaheshwar · Kalpeshwar · 8N/9D · ₹21,999</p>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function Page() {
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <span>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines in the Garhwal Himalayas</span>
+          <span>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines</span>
         </div>
       </nav>
 
@@ -97,7 +97,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines in the Garhwal Himalayas.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Badrinath 2026 — Best Stays at Badrinath, Joshimath & Chamoli',
-  description: 'Complete hotel guide for Badrinath Yatra 2026. Where to stay — Badrinath town, Joshimath, Chamoli and Pipalkoti. Budget to premium, honest recommendations.',
+  title: 'Hotels Near Badrinath 2026 — Joshimath & Badrinath',
+  description: 'Best hotels near Badrinath 2026. Badrinath town, Joshimath, Chamoli and Rudraprayag stays — honest guide with prices and recommendations.',
   keywords: ['hotels near badrinath','badrinath hotels 2026','joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },
   openGraph: {
@@ -112,7 +112,7 @@ export default function BadrinathHotels() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:16 }}>Pre-confirmed hotels in Joshimath and Badrinath. Your room is waiting when you arrive.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026. Please share packages with hotel details.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/packages/badrinath-yatra-package-2n-3d-haridwar" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Package →</Link>
           </div>

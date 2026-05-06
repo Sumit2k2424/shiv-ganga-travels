@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Yamunotri Weather 2026 — Month-wise Temperature, Best Time & What to Wear',
-  description: 'Yamunotri weather guide 2026. Month-by-month temperatures, rainfall and best time to visit. Yamunotri is at 3,291m — what to expect each month and what to pack.',
+  title: 'Yamunotri Weather 2026 — Month-wise Temperature Guide',
+  description: 'Yamunotri weather guide 2026. Month-by-month temperatures at 3,291m. Best time: May-June and Sept-Oct. What to pack for each season.',
   keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit','yamunotri weather 2026','yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },
   openGraph: {
@@ -128,7 +128,7 @@ export default function YamunotriWeather() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:16 }}>Get a free package quote for your dates — we'll tell you exactly what weather to expect.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Yamunotri Yatra 2026. Please share packages.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Yamunotri Packages →</Link>
           </div>

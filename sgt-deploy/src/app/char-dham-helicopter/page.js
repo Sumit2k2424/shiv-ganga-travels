@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days | Shiv Ganga Travels',
-  description: 'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.',
+  title: 'Char Dham Helicopter Package 2026 — All 4 Dhams, 6 Days',
+  description: 'Char Dham helicopter tour 2026. All 4 dhams in 6 days from Dehradun. VIP darshan, luxury stays. Packages from ₹85,000 per person.',
   keywords: ['char dham helicopter package, char dham helicopter tour 2026, char dham yatra by helicopter, helicopter char dham price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
-  openGraph: { title:'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days | Shiv Ganga Travels', description:'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
+  openGraph: { title: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days', description:'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
 };
 
 function Schema() {
@@ -156,7 +156,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>

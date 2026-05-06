@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra in October 2026 — Is It Worth It? Honest Guide',
-  description: 'Is October a good time for Char Dham Yatra? Less crowd, cheaper hotels, snowfall risk, closing dates. Honest guide for October Char Dham 2026 from a Haridwar operator.',
+  title: 'Char Dham Yatra in October 2026 — Is It Worth It?',
+  description: 'Is October a good time for Char Dham Yatra? Less crowd, cheaper hotels, snowfall risk, closing dates. Honest guide for October Char Dham 2026 from a',
   keywords: ['char dham yatra in october','kedarnath yatra october','char dham yatra october weather','char dham october closing dates','char dham off season october','best time char dham october september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
 };
@@ -106,7 +106,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Planning October Char Dham? Talk to Us First</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>We have run October yatras every year since 2010. We know which dates are safe and which are risky. Free 10-minute consultation.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am planning Char Dham Yatra in October 2026. Can you advise on dates and risks?')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am planning Char Dham Yatra in October 2026. Can you advise on dates and risks?')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp for Advice</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
           </div>

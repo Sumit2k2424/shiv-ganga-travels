@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Heart Patients & Diabetics — Can You Go? 2026',
-  description: 'Can heart patients and diabetics do Char Dham Yatra? Altitude effects on heart conditions and diabetes, medical certificate requirements, helicopter option, what doctors say. Honest 2026 guide.',
+  title: 'Char Dham Yatra for Heart Patients 2026 — Safety Guide',
+  description: 'Char Dham Yatra for heart patients 2026. Altitude risk, medical precautions, which dhams are safer and helicopter alternatives.',
   keywords: ['char dham yatra for heart patients','char dham yatra diabetics','char dham yatra blood pressure','char dham yatra medical conditions','kedarnath yatra heart patient','char dham altitude sickness prevention','char dham medical certificate 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
 };
@@ -101,7 +101,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Travelling with a Medical Condition? Talk to Our Team</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>We will review your condition, suggest the right itinerary, and tell you honestly if we think the yatra is not advisable right now.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a medical condition and want to discuss whether Char Dham Yatra is safe for me.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a medical condition and want to discuss whether Char Dham Yatra is safe for me.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Discuss with Us</a>
             <Link href="/blog/senior-citizen-char-dham" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Senior Package →</Link>
           </div>

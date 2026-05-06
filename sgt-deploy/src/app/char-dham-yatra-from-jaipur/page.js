@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Jaipur 2026 — Distance, Route & Booking',
-  description: 'Char Dham Yatra from Jaipur 2026. Distance to Haridwar: 490km. Route via NH48 via Delhi. All-inclusive packages from ₹22,999/person. Direct operator, zero commission.',
+  title: 'Char Dham Yatra from Jaipur 2026 — Packages',
+  description: 'Char Dham Yatra from Jaipur 2026. 6-hour drive to Haridwar, all-inclusive packages from ₹19,500. Direct operator, zero commission.',
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-jaipur` },
 };
 
@@ -118,11 +118,40 @@ export default function Page() {
           </table>
         </div>
 
+        
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>
+          What Char Dham Yatra Includes — From Jaipur
+        </h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:24 }}>
+          {[
+            ['AC private vehicle', 'Dedicated Innova/Tempo for your group — no shared buses'],
+            ['All hotels', '9 nights in pre-confirmed hotels. Ground-floor rooms for seniors.'],
+            ['VIP darshan', 'Skip queues at all 4 dhams. Priest-arranged at Kedarnath and Badrinath.'],
+            ['Local guide', 'Garhwali guide who knows every route, rest stop, and ritual.'],
+            ['Pony at Kedarnath', 'Included for pilgrims 60+ or on request. Confirmed in advance.'],
+            ['Oxygen cylinder', 'On every vehicle. Drivers trained for altitude emergencies.'],
+          ].map(([title, desc]) => (
+            <div key={title} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:10, padding:'12px 14px' }}>
+              <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:4 }}>{title}</div>
+              <div style={{ fontSize:12.5, color:'#475569', lineHeight:1.6 }}>{desc}</div>
+            </div>
+          ))}
+        </div>
+
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 }}>
+          Why Book Direct — Not Through an Aggregator
+        </h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
+          Sites like MakeMyTrip and Thrillophilia charge ₹25,000–30,000+ for the same package we run at ₹19,500. The difference is a 30–40% agent commission layered onto the operator's base price. We are the operator. You book us directly, you pay the operator price. That is not a marketing claim — we publish a side-by-side price comparison on our homepage.
+        </p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
+          We also own our vehicles. We don't sub-contract to local taxi operators as aggregators typically do. Our drivers work with us year after year. They know the Kedarnath route, the Gangotri highway, the mountain weather windows, and when to stop and when to push on.
+        </p>
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:28 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Char Dham Yatra from Jaipur — Free Quote in 2 Hours</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Direct operator. Zero commission. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Jaipur and want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Jaipur and want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
             <a href="tel:+917017082807" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 Call</a>

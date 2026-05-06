@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Delhi 2026 — Distance, Route & Booking',
+  title: 'Char Dham Yatra from Delhi 2026 — Packages',
   description: 'Char Dham Yatra from Delhi 2026. Complete guide — distance 335km to Haridwar, route via NH58, train options, and all-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from delhi, char dham yatra package from delhi, delhi to char dham package, char dham tour from delhi 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-delhi` },
@@ -52,7 +52,7 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Delhi is the most common starting point for <strong>Char Dham Yatra</strong> pilgrims from across North India. The city has excellent connectivity to Haridwar — the official starting point of the yatra — by road, train, and even flight to Dehradun. This guide covers everything you need to plan a Char Dham Yatra from Delhi in 2026.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Delhi to Haridwar — Your Options</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'24px'}}>
-          <div style={{background:'#fff',borderRadius:'10px',padding:'14px 16px',border:'1px solid var(--border)',display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'12px'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px 16px',border:'1px solid var(--border)',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,220px),1fr))',gap:'12px'}}>
             <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>🚂 Train (Recommended)</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Haridwar Express / Shatabdi. 4–6 hours. ₹250–800. Trains daily from NDLS/NZM.</span></div>
             <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>🚗 Private Car</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>NH58 via Meerut–Muzaffarnagar. 5–6 hours driving. 250 km. We arrange from Delhi at extra cost.</span></div>
             <div><strong style={{color:'var(--navy)',fontSize:'13px'}}>✈️ Flight to Dehradun</strong><br/><span style={{fontSize:'12.5px',color:'var(--text-mid)'}}>40 min flight to Jolly Grant Airport. Then 1.5 hrs by road to Haridwar/Rishikesh.</span></div>
@@ -125,7 +125,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra from Delhi 2026 — Route, Distance & Packages.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra from Delhi 2026 — Route, Distance & Packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
