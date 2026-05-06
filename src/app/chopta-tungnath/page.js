@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Chopta Tungnath 2026 — Trek, Best Time & Guide',
-  description: 'Chopta and Tungnath Chandrashila trek 2026. India's highest Shiva temple at 3,680m. Best time, how to reach and packages from Haridwar.',
+  description: 'Chopta Tungnath Chandrashila trek 2026. Highest Shiva temple at 3,680m. Best time, how to reach and packages from Haridwar.',
   keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek','chopta best time to visit 2026','chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
   openGraph: {
