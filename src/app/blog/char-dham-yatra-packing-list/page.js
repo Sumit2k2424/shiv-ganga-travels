@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Packing List 2026 — What to Carry & What to Leave Behind',
-  description: 'Complete Char Dham Yatra packing list 2026. Clothes, medicines, documents, shoes — exactly what to carry for 10–12 days in the Himalayas. Avoid these common mistakes.',
+  title: 'Char Dham Yatra Packing List 2026 — What to Carry',
+  description: 'Complete Char Dham Yatra packing list 2026. Clothes, medicines, documents, shoes — exactly what to carry for 10–12 days in the Himalayas. Avoid these',
   keywords: ['char dham yatra packing list','what to carry for char dham yatra','char dham yatra essentials','char dham yatra preparation','what to pack for char dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
   openGraph: { title:'Char Dham Yatra Packing List 2026', description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article' },
@@ -105,7 +105,7 @@ return (
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Preparation Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra Packing List 2026 — What to Carry & What to Leave Behind
+            Char Dham Yatra Packing List 2026 — What to Carry
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Clothes · Shoes · Medicines · Documents · Gadgets — from 15 years of guiding pilgrims</p>
         </div>
@@ -168,7 +168,7 @@ return (
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Char Dham Yatra 2026</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We send a complete personalised packing list 7 days before your departure. ₹19,500 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/char-dham-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Packages →</Link>
           </div>

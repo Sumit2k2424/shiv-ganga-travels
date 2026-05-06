@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Kedarnath 2026 — Complete Guide from Delhi, Mumbai, Bangalore & All Cities',
-  description: 'Complete guide to reach Kedarnath 2026 from Delhi, Mumbai, Bangalore, Hyderabad, Chennai. Train to Haridwar, flight to Dehradun, road to Gaurikund, trek or helicopter to Kedarnath.',
+  title: 'How to Reach Kedarnath 2026 — All Routes Explained',
+  description: 'Complete guide to reach Kedarnath 2026 from Delhi, Mumbai, Bangalore, Hyderabad, Chennai. Train to Haridwar, flight to Dehradun, road to Gaurikund',
   keywords: ['how to reach kedarnath','kedarnath how to reach','how to go to kedarnath','kedarnath nearest railway station','kedarnath nearest airport','kedarnath route from delhi','how to reach kedarnath from delhi 2026','kedarnath journey guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },
   openGraph: { title: 'How to Reach Kedarnath 2026 — Complete Journey Guide', url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
@@ -155,7 +155,7 @@ export default function HowToReachKedarnath() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Your Kedarnath Journey — Haridwar Direct</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels arranges the complete journey — from your arrival in Haridwar to your Kedarnath darshan. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help planning how to reach Kedarnath 2026. Please guide me.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help planning how to reach Kedarnath 2026. Please guide me.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Kedarnath Packages →</Link>
           </div>

@@ -1,12 +1,13 @@
 import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
-  title: 'Contact Us — Book Your Char Dham Yatra',
-  description: 'Contact Shiv Ganga Travels for Char Dham, Do Dham & Single Dham Yatra packages. Call, WhatsApp, or email us. Saptrishi Road, Near Shantikunj Gate, Bhupatwala, Haridwar.',
+  title: 'Contact — Shiv Ganga Travels Haridwar',
+  alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
+  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra packages. Call, WhatsApp or email us. Saptrishi Road, Haridwar, Uttarakhand.',
 };
 
 export default function ContactPage() {
-  const whatsappMsg = encodeURIComponent('Namaste! I would like to enquire about Char Dham Yatra packages for 2025.');
+  const whatsappMsg = encodeURIComponent('Namaste! I would like to enquire about Char Dham Yatra packages for 2026.');
 
   return (
     <>

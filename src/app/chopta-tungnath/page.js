@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Chopta Tungnath 2026 — Complete Travel Guide, Trek, Best Time & Packages',
-  description: 'Chopta and Tungnath Chandrasheela trek guide 2026. Mini Switzerland of India, highest Shiva temple, best time to visit, how to reach, and packages from Haridwar.',
+  title: 'Chopta Tungnath 2026 — Trek, Best Time & Guide',
+  description: 'Chopta and Tungnath Chandrashila trek 2026. India's highest Shiva temple at 3,680m. Best time, how to reach and packages from Haridwar.',
   keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek','chopta best time to visit 2026','chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
   openGraph: {
@@ -106,7 +106,7 @@ export default function ChoptaTungnath() {
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Chopta Tungnath trip 2026. Please share packages from Haridwar.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Get a Quote</a>
             <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>

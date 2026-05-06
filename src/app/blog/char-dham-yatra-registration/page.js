@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Registration 2026 — Complete Step-by-Step Guide',
-  description: 'How to register for <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> online and offline. Mandatory biometric process, documents needed, daily limits, yatra card, and what happens if you skip registration. Explained by a 15-year Haridwar operator.',
+  title: 'Char Dham Yatra Registration 2026 — Step-by-Step',
+  description: 'Step-by-step Char Dham Yatra registration guide 2026. IRCTC and state portal process, documents needed, tips to avoid errors.',
   keywords: [
     'char dham yatra registration 2026','char dham yatra registration online',
     'how to register for char dham yatra','char dham yatra biometric registration',
@@ -24,7 +24,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: 'How to Register for Char Dham Yatra 2026',
-    description: 'Step-by-step process to complete mandatory Char Dham Yatra biometric registration online at registrationandtouristcare.uk.gov.in or at designated centres in Haridwar and Rishikesh.',
+    description: 'Step-by-step process to complete mandatory Char Dham Yatra biometric registration online at registrationandtouristcare.uk.gov.in or at designated',
     author: {
       '@type': 'Person',
       name: 'Dhanesh Chandra Mishra',
@@ -129,10 +129,10 @@ export default function RegistrationBlog() {
           </span>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', fontWeight:700, letterSpacing:'-0.03em', lineHeight:1.2, marginBottom:16 }}>
             Char Dham Yatra Registration 2026<br/>
-            <em style={{ color:'#FFD166', fontStyle:'italic' }}>Everything You Must Know Before You Go</em>
+            <em style={{ color:'#FFD166', fontStyle:'italic' }}>Step-by-Step Guide</em>
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15.5, lineHeight:1.75, maxWidth:700, margin:'0 auto 20px' }}>
-            Registration is not optional. Without it, the police will turn you back at the checkpoint — even if you have already driven 6 hours from Haridwar. Here is the complete guide from a 15-year Char Dham operator.
+            Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Your 6-hour drive from Haridwar counts for nothing without a valid registration. Here is the complete step-by-step process from operators who've helped 50,000+ pilgrims register successfully.
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap' }}>
             {['⏱️ 20 min to complete','💰 Completely free','📱 Online or offline','🪪 Aadhaar mandatory'].map(t => (
@@ -433,7 +433,7 @@ export default function RegistrationBlog() {
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Char Dham Yatra registration 2026. Please guide me.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Help Now
             </a>

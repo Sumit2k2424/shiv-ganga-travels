@@ -3,8 +3,8 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar | Shiv Ganga Travels',
-  description: 'Book Char Dham Yatra package 2026 from Haridwar & Delhi. Kedarnath, Badrinath, Gangotri, Yamunotri. Starting ₹19,500. Verified operator, safe travel, VIP darshan.',
+  title: 'Char Dham Yatra Package 2026 from Haridwar',
+  description: 'Book Char Dham Yatra package 2026 from Haridwar & Delhi. Kedarnath, Badrinath, Gangotri, Yamunotri. Starting ₹19,500. Verified operator, safe travel',
   keywords: [
     'char dham yatra package','char dham yatra 2026','char dham package from haridwar',
     'char dham yatra package price','char dham yatra booking','chardham yatra package 2026',
@@ -12,11 +12,11 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar | Shiv Ganga Travels',
+    title: 'Char Dham Yatra Package 2026 from Haridwar',
     description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
 };
 
@@ -84,7 +84,7 @@ function Schema() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
+            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
@@ -130,12 +130,12 @@ export default function CharDhamYatra() {
           </h1>
 
           <p style={{ color:'rgba(255,255,255,0.82)', fontSize:15.5, lineHeight:1.75, marginBottom:28, maxWidth:620, margin:'0 auto 28px' }}>
-            Book affordable Char Dham Yatra packages covering <strong style={{ color:'#FFD166' }}>Kedarnath, Badrinath, Gangotri,</strong> and <strong style={{ color:'#FFD166' }}>Yamunotri</strong> with experienced Garhwali guides, VIP darshan, and complete travel support.
+            Travel all four sacred Char Dham shrines — <strong style={{ color:'#FFD166' }}>Yamunotri, Gangotri, Kedarnath, Badrinath</strong> — with Garhwali-expert guides, VIP darshan at every temple, and zero commission pricing direct from Haridwar.
           </p>
 
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra Package 2026.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
               💬 Book on WhatsApp
             </a>
@@ -161,8 +161,31 @@ export default function CharDhamYatra() {
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
 
+        {/* Semantic intro — active voice, skimmable */}
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
+          <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10, textTransform:'uppercase', letterSpacing:'0.06em' }}>Before you book — what you need to know</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:8 }}>
+            {[
+              ['Duration', '9–12 nights from Haridwar'],
+              ['Route', 'Yamunotri → Gangotri → Kedarnath → Badrinath'],
+              ['Season 2026', 'April 19 – November 2026'],
+              ['Registration', 'Mandatory biometric / online'],
+              ['Starts from', '₹19,500/person all-inclusive'],
+              ['Trek required', 'Kedarnath (16km) + Yamunotri (6km)'],
+            ].map(([k,v]) => (
+              <div key={k} style={{ fontSize:13, display:'flex', flexDirection:'column', gap:1 }}>
+                <span style={{ color:'var(--text-muted)', fontSize:11 }}>{k}</span>
+                <span style={{ fontWeight:700, color:'var(--navy)', fontSize:13 }}>{v}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <p style={pStyle}>
-          The <strong>Char Dham Yatra</strong> is the holiest pilgrimage in Hinduism, covering four sacred shrines in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. At <strong>Shiv Ganga Travels</strong>, we have been organising Char Dham Yatra packages from Haridwar since 2010, serving over 50,000 pilgrims with zero commission, all-inclusive pricing, and verified drivers.
+          The <strong>Char Dham Yatra</strong> covers four sacred Himalayan shrines in Garhwal, Uttarakhand — <strong>Yamunotri</strong> (source of the Yamuna), <strong>Gangotri</strong> (source of the Ganges), <strong>Kedarnath</strong> (Shiva's Jyotirlinga at 3,583m) and <strong>Badrinath</strong> (Vishnu's abode on the banks of the Alaknanda). Completing all four in a single circuit is called the Chhota Char Dham Yatra — the northern Hindu pilgrimage circuit established by Adi Shankaracharya in the 8th century.
+        </p>
+        <p style={pStyle}>
+          We run this circuit from Haridwar every year since 2010. Over 50,000 pilgrims have travelled with us across 15 seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹19,500, that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
         </p>
 
         {/* Departure dates + urgency + EMI */}
@@ -192,7 +215,7 @@ export default function CharDhamYatra() {
               <div style={{ fontSize:12, color:'rgba(255,255,255,0.65)', marginTop:2 }}>25% advance secures your seat · Balance in 2 easy payments · No interest</div>
             </div>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 on EMI.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'var(--gold)', color:'#fff', padding:'9px 18px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', flexShrink:0, whiteSpace:'nowrap' }}>
               Book with EMI →
             </a>
@@ -221,7 +244,7 @@ export default function CharDhamYatra() {
 
         <h2 style={h2Style}>Char Dham Yatra Itinerary 2026</h2>
         <p style={pStyle}>
-          The complete Char Dham Yatra covers <strong>10–12 days</strong> from Haridwar, travelling in a traditional clockwise direction. Here is the standard route:
+          The full Char Dham circuit runs <strong>10–12 days</strong> from Haridwar. You travel clockwise — the traditional, spiritually correct direction. Here is the standard itinerary:
         </p>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
           <strong>Day 1:</strong> Haridwar — Ganga Aarti at Har Ki Pauri<br/>
@@ -239,7 +262,7 @@ export default function CharDhamYatra() {
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
-          Our packages start from <strong>Rs.19,500 per person</strong> (approx <strong>Rs.39,000 per couple</strong>) for 9N/10D all-inclusive from Haridwar. Choose your comfort level below.
+          Our packages start at <strong>₹19,500 per person</strong> (₹39,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. Choose your comfort tier:
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
@@ -407,7 +430,7 @@ export default function CharDhamYatra() {
           </p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               💬 Book on WhatsApp
             </a>
@@ -427,7 +450,7 @@ export default function CharDhamYatra() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
+            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

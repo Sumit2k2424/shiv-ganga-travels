@@ -158,7 +158,7 @@ export default function PackageCard({ pkg }) {
 
           <div style={{ display:"flex", flexDirection:"column", gap:6, flexShrink:0 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{
                 background:"#25D366", color:"#fff",
                 padding:"9px 14px", borderRadius:8,

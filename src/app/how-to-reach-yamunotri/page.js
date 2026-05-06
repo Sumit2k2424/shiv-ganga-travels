@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Yamunotri 2026 — Road, Helicopter, Trek & Route from Haridwar',
-  description: 'Complete guide on how to reach Yamunotri Dham 2026. Road route from Haridwar, nearest railway station, Dehradun to Janki Chatti, helicopter option, and 6km trek details.',
+  title: 'How to Reach Yamunotri 2026 — Trek & Route Guide',
+  description: 'How to reach Yamunotri Dham 2026. Road route, helicopter, 6km trek from Janki Chatti. Distance from Haridwar and nearest railway station.',
   keywords: ['how to reach yamunotri','yamunotri route','haridwar to yamunotri','janki chatti to yamunotri','yamunotri trek','how to reach yamunotri from delhi','nearest railway station to yamunotri'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-yamunotri` },
   openGraph: {
@@ -132,7 +132,7 @@ export default function HowToReachYamunotri() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:16 }}>We handle all transportation, pony arrangements, and hotel bookings — you focus on the pilgrimage.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to visit Yamunotri as part of Char Dham Yatra 2026. Please share packages.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Yamunotri Packages →</Link>
           </div>

@@ -78,7 +78,7 @@ export default function FloatingBookCTA({ packageName = '' }) {
       <a
         href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(waMsg)}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         style={{
           display: 'flex',
           alignItems: 'center',

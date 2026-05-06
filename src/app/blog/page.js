@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Travel Blog — Guides, Tips & Pilgrimage Insights | Shiv Ganga Travels',
+  title: 'Char Dham Yatra Blog — Guides & Pilgrimage Tips',
   description: 'Expert Char Dham Yatra guides, trek tips, packing lists, cost breakdowns, and pilgrimage insights from Shiv Ganga Travels — Haridwar\'s trusted yatra specialist since 2010.',
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };
@@ -103,6 +103,27 @@ export default function Blog() {
           </div>
         </div>
       </section>
-    </>
+    
+      {/* Near-orphan guides — more inlinks needed */}
+      <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px 40px' }}>
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.1rem', color:'var(--navy)', marginBottom:14 }}>
+          Special Interest Guides
+        </h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10 }}>
+          {[
+            { href:'/blog/char-dham-yatra-with-kids',         label:'Char Dham with Kids — Family Guide' },
+            { href:'/blog/char-dham-yatra-for-heart-patients',label:'Char Dham for Heart Patients' },
+            { href:'/blog/char-dham-yatra-first-timer-guide', label:'First-Timer Complete Guide' },
+            { href:'/blog/char-dham-yatra-in-october',        label:'Char Dham in October — Worth It?' },
+            { href:'/blog/mana-village-badrinath',            label:'Mana Village — Last Indian Village' },
+            { href:'/blog/triyuginarayan-temple',             label:'Triyuginarayan Temple Guide' },
+          ].map(l => (
+            <Link key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
+              {l.label} →
+            </Link>
+          ))}
+        </div>
+      </div>
+</>
   );
 }

@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Haridwar to Kedarnath Distance, Route & Road Trip Guide 2026',
-  description: 'Complete Haridwar to Kedarnath route guide. 218km by road via NH7, 6–7 hours to Gaurikund. Checkpoints, halts, road conditions, police checkpost timings, and what to expect. Updated 2026.',
+  description: 'Haridwar to Kedarnath road trip guide 2026. 250km route, drive time, stops at Devprayag, Rudraprayag, Guptkashi. Best road tips.',
   keywords: ['haridwar to kedarnath distance','haridwar to kedarnath route','haridwar to kedarnath road trip','haridwar to gaurikund distance','haridwar to kedarnath how to reach','haridwar to kedarnath by road','kedarnath road trip from haridwar 2026','haridwar to sonprayag distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
   openGraph: { title: 'Haridwar to Kedarnath Distance & Route 2026 — Complete Road Trip Guide', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
@@ -143,7 +143,7 @@ export default function HaridwarToKedarnath() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Yatra from Haridwar</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels handles all Sonprayag permits, vehicle registration, and Kedarnath logistics. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Kedarnath Yatra 2026 from Haridwar. Please share package details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Kedarnath Yatra 2026 from Haridwar. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Kedarnath Packages →</Link>
           </div>

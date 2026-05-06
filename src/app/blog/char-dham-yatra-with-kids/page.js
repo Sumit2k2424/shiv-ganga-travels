@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra with Kids — Complete Family Guide 2026',
-  description: 'Can you take children on Char Dham Yatra? Age guidelines, safety tips, which dhams are kid-friendly, packing list for children, altitude precautions. Honest guide from Haridwar operators.',
+  description: 'Char Dham Yatra with kids 2026. Age tips, altitude safety, easier routes, packing guide and which dhams are child-friendly.',
   keywords: ['char dham yatra with kids','char dham yatra with children','kedarnath yatra with family','char dham yatra family package','char dham with small children','kids char dham yatra altitude'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
 };
@@ -76,7 +76,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Planning Char Dham with Your Family?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Tell us the ages of your children and we will design the right itinerary — with pony arrangements, helicopter if needed, and appropriate pacing.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra with my children. Please help me plan a family-friendly itinerary.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra with my children. Please help me plan a family-friendly itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
           </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Trek Guide 2026 — Distance, Difficulty, Tips & What to Expect',
-  description: 'Planning the Kedarnath trek? Complete guide covering the 16km route from Gaurikund, difficulty level, best time, what to carry, pony & helicopter options. Real tips from 15 years of experience.',
+  title: 'Kedarnath Trek 2026 — Route, Difficulty & Tips',
+  description: 'Kedarnath trek guide 2026. 16km route from Gaurikund, difficulty, altitude, best time and tips for all fitness levels.',
   keywords: ['kedarnath trek','kedarnath trek distance','kedarnath trek difficulty','gaurikund to kedarnath trek','kedarnath trek guide 2026','kedarnath yatra trek'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
   openGraph: {
@@ -11,7 +11,7 @@ export const metadata = {
     description: 'Complete Kedarnath trek guide — 16km route, difficulty, what to carry, pony vs helicopter.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     type: 'article',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
 };
 
@@ -32,7 +32,7 @@ function Schema() {
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     datePublished: '2025-02-01', dateModified: '2026-04-27',
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG',
+    image: '/opengraph-image',
   };
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -198,7 +198,7 @@ export default function KedarnathTrekGuide() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Kedarnath Yatra?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>, and VIP darshan. ₹6,499 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <Link href="/kedarnath-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Package →</Link>
           </div>

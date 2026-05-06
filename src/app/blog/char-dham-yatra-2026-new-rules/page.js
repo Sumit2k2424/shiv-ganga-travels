@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: '<Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham Yatra 2026</Link> New Rules — Phone Ban, Age Limit, IRCTC Helicopter & All Updates',
-  description: 'Complete guide to new Char Dham Yatra 2026 rules: phone ban inside temples, mandatory medical certificate for 55+, IRCTC helicopter booking, real-time tracking, 177 ambulances on route.',
+  title: 'Char Dham Yatra 2026 New Rules — Complete Guide',
+  description: 'Complete guide to new Char Dham Yatra 2026 rules: phone ban inside temples, mandatory medical certificate for 55+, IRCTC helicopter booking, real-time',
   keywords: ['char dham yatra 2026 new rules','char dham yatra 2026 mobile phone ban','char dham yatra 2026 age limit','char dham yatra 2026 regulations','kedarnath new rules 2026','char dham yatra irctc helicopter 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules` },
   openGraph: {
-    title: 'Char Dham Yatra 2026 New Rules — Everything You Must Know Before You Travel',
+    title: 'Char Dham Yatra 2026 New Rules — What Changed',
     description: 'Phone ban, medical certificates, IRCTC helicopter booking, non-Hindu entry — all 2026 new rules explained.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules`,
     type: 'article',
@@ -106,7 +106,7 @@ export default function NewRules2026() {
             🔴 Live — Updated April 2026
           </span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra 2026 New Rules — Everything You Must Know Before You Travel
+            Char Dham Yatra 2026 New Rules — What Changed
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
             Phone ban · Medical certificate for 55+ · IRCTC helicopter · Non-Hindu entry · Real-time tracking
@@ -182,7 +182,7 @@ export default function NewRules2026() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book for 2026 Season — We Handle All Compliance</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Medical certificate reminders · IRCTC helicopter booking · Biometric registration — all included.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 and need help with the new rules.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 and need help with the new rules.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>

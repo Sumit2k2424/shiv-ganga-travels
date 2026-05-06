@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Bangalore 2026 — Flights, Train & Packages',
-  description: 'Char Dham Yatra from Bangalore 2026. Flight to Dehradun (2 hrs). All-inclusive packages from ₹26,499. Bangalore pickup to airport. VIP darshan. Zero commission.',
+  title: 'Char Dham Yatra from Bangalore 2026 — Packages',
+  description: 'Char Dham Yatra from Bangalore 2026. Flight to Dehradun, all-inclusive packages from ₹19,500. Direct Haridwar operator, zero commission.',
   keywords: ['char dham yatra from bangalore, char dham yatra package from bangalore, bangalore to char dham yatra 2026, char dham tour from bangalore'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bangalore` },
-  openGraph: { title: 'Char Dham Yatra Package from Bangalore 2026 — Flights, Train & Packages', description: 'Char Dham Yatra from Bangalore 2026. Flight to Dehradun (2 hrs). All-inclusive packages from ₹26,499. Bangalore pickup to airport. VIP darshan. Zero commission.', url: `${SITE.baseUrl}/char-dham-yatra-from-bangalore`, type:'website' },
+  openGraph: { title: 'Char Dham Yatra Package from Bangalore 2026 — Flights, Train & Packages', description: 'Char Dham Yatra from Bangalore 2026. Flight to Dehradun (2 hrs). All-inclusive packages from ₹26,499. Bangalore pickup to airport. VIP darshan. Zero', url: `${SITE.baseUrl}/char-dham-yatra-from-bangalore`, type:'website' },
 };
 
 function Schema() {
@@ -32,7 +32,7 @@ export default function Page() {
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Package from Bangalore 2026</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>All-inclusive from <strong style={{color:'#FFD166'}}>From ₹26,499</strong> · Pickup from Bangalore · VIP darshan · Zero commission</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>
@@ -122,7 +122,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Bangalore Char Dham Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary within 2 hours. Pickup from Kempegowda Airport Bangalore or Dehradun/Haridwar. Zero commission. ₹26,499 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>

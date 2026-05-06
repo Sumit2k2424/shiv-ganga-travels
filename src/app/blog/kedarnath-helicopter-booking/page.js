@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book',
-  description: 'Complete guide to Kedarnath helicopter booking 2026. Prices ₹7,500–9,500, helipads at Phata, Sersi & Guptkashi, how to book, <Link href="/cancellation-policy" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>cancellation policy</Link> and weather tips.',
+  title: 'Kedarnath Helicopter Booking 2026 — Price & Guide',
+  description: 'Kedarnath helicopter booking 2026. Prices ₹7,500–9,500. Helipads at Phata, Guptkashi, Sirsi. Book via IRCTC heliyatra portal.',
   keywords: ['kedarnath helicopter booking','kedarnath helicopter price 2026','kedarnath helicopter booking online','phata to kedarnath helicopter','kedarnath helicopter cost','kedarnath helicopter 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {
@@ -39,7 +39,7 @@ export default function KedarnathHelicopterBooking() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Helicopter Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Kedarnath Helicopter Booking 2026 — Price, Helipads & Everything You Must Know
+            Kedarnath Helicopter Booking 2026 — Complete Guide
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>₹7,500–9,500 round trip · Phata · Sersi · Guptkashi · Weather tips · How to book</p>
         </div>
@@ -112,7 +112,7 @@ export default function KedarnathHelicopterBooking() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Kedarnath Helicopter 2026</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle helipad booking, <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link> & VIP darshan. Call us before slots fill up.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath helicopter for 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath helicopter for 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp for Booking</a>
             <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Direct</a>
           </div>

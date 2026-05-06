@@ -4,6 +4,7 @@ import { SITE } from '@/data/packages';
 const COLS = [
   { heading:'Char Dham Packages', links:[
     {l:'Char Dham Yatra 2026',       h:'/char-dham-yatra'},
+    {l:'Char Dham Guide 2026',       h:'/char-dham-yatra-2025'},
     {l:'Classic 9N/10D',             h:'/packages/char-dham-yatra-9n-10d-haridwar'},
     {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
     {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
@@ -57,6 +58,7 @@ const COLS = [
     {l:'Yamunotri Weather',            h:'/yamunotri-weather'},
     {l:'Gangotri Weather',             h:'/gangotri-weather'},
     {l:'Badrinath Weather',            h:'/badrinath-weather'},
+    {l:'How to Reach Kedarnath',        h:'/blog/how-to-reach-kedarnath'},
     {l:'How to Reach Yamunotri',       h:'/how-to-reach-yamunotri'},
     {l:'How to Reach Gangotri',        h:'/how-to-reach-gangotri'},
     {l:'How to Reach Badrinath',       h:'/how-to-reach-badrinath'},
@@ -103,7 +105,7 @@ export default function Footer() {
                 style={{ background:'rgba(255,255,255,0.1)', color:'var(--gold)', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', border:'1px solid rgba(255,255,255,0.12)' }}>
                 📞 Call
               </a>
-              <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer"
+              <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="nofollow noopener noreferrer"
                 style={{ background:'#25D366', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none' }}>
                 💬 WhatsApp
               </a>

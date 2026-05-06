@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered by Experts',
-  description: 'Complete Char Dham Yatra FAQ 2026. 50 expert answers covering cost, registration, best time, senior citizens, helicopter, packing, new rules, safety. Founded 2010, 50,000+ pilgrims.',
+  description: 'Complete Char Dham Yatra FAQ 2026. 50 expert answers covering cost, registration, best time, senior citizens, helicopter, packing, new rules, safety',
   keywords: ['char dham yatra faq','char dham yatra questions answers','char dham yatra 2026 questions','kedarnath yatra faq','char dham yatra guide 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },
   openGraph: {
@@ -316,7 +316,7 @@ export default function FAQ() {
           </h3>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a question about Char Dham Yatra 2026.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
               💬 Ask on WhatsApp
             </a>

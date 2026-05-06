@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Budget vs Premium Package 2026 — Which is Worth It?',
-  description: 'Detailed comparison: Budget Char Dham Yatra (₹19,500) vs Premium (₹38,000+). What actually changes — hotels, vehicles, meals, darshan. Honest analysis from a 15-year operator.',
+  title: 'Char Dham Budget vs Premium Package 2026 — Compared',
+  description: 'Detailed comparison: Budget Char Dham Yatra (₹19,500) vs Premium (₹38,000+). What actually changes — hotels, vehicles, meals, darshan. Honest analysis',
   keywords: ['char dham yatra budget vs premium','char dham yatra package comparison','best char dham yatra package 2026','char dham yatra deluxe package','char dham yatra premium package price','char dham yatra budget package','is premium char dham package worth it'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium` },
   openGraph: { title: 'Char Dham Budget vs Premium Package 2026 — What Actually Changes', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article' },
@@ -121,7 +121,7 @@ export default function BudgetVsPremium() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Personalised Package Recommendation</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Tell us your group size, ages, and budget — we will suggest the right tier. No upselling, honest advice always. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help choosing between budget and premium Char Dham Yatra package 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help choosing between budget and premium Char Dham Yatra package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View All Packages →</Link>
           </div>

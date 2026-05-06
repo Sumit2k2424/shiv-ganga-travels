@@ -10,14 +10,14 @@ import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
   title: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar | Est. 2010`,
-  description: 'Book Char Dham Yatra 2026 from Haridwar. Zero commission, all-inclusive packages from ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. Founded 2010 by Retd. Army Officer. 50,000+ pilgrims served.',
+  description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
     title: 'Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar',
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
-    images: [{ url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG', width: 1200, height: 630, alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels Haridwar' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels Haridwar' }],
     locale: 'en_IN',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Shiv Ganga Travels — Char Dham Yatra 2026',
     description: 'Zero commission Char Dham Yatra from Haridwar. Est. 2010.',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
   alternates: { canonical: 'https://www.shivgangatravels.com' },
 };
@@ -281,7 +281,7 @@ export default function HomePage() {
 
               <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
                 <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates.')}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank" rel="nofollow noopener noreferrer"
                   style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>
                   💬 Book Cab on WhatsApp
                 </a>
@@ -469,7 +469,7 @@ export default function HomePage() {
 
           <div style={{ textAlign:'center' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 directly. Please share packages and pricing.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'0 4px 16px rgba(37,211,102,0.35)' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Book Direct — Save Up to ₹10,837
@@ -728,7 +728,7 @@ export default function HomePage() {
               <p style={{ fontSize:13.5, color:'rgba(255,255,255,0.8)', lineHeight:1.65, marginBottom:16 }}>Zero commission. Free itinerary in 2 hours. 50,000+ pilgrims trusted us since 2010.</p>
               <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
                 <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank" rel="nofollow noopener noreferrer"
                   style={{ background:'#25D366', color:'#fff', padding:'11px 16px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center' }}>
                   💬 Start on WhatsApp
                 </a>
@@ -773,14 +773,14 @@ export default function HomePage() {
             </div>
             <div className='pkg-dir-grid' style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
               {[
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/400px-Badrinath_Temple_%28front_view%29.jpg', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Badrinath_Temple_%28front_view%29.jpg/400px-Badrinath_Temple_%28front_view%29.jpg', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gangotri_temple.jpg/400px-Gangotri_temple.jpg', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Yamunotri_Temple.jpg/400px-Yamunotri_Temple.jpg', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
+                { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
+                { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
+                { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
+                { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
+                { img:'https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
+                { img:'https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
                 { img:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Helicopter Package', desc:'All 4 dhams in 6 days', href:'/char-dham-helicopter' },
-                { img:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/400px-Kedarnathji-mandir.JPG', title:'Panch Kedar Yatra', desc:'5 Shiva temples · 8N/9D', href:'/panch-kedar-yatra' },
+                { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Panch Kedar Yatra', desc:'5 Shiva temples · 8N/9D', href:'/panch-kedar-yatra' },
                 { img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Uttarakhand Tours', desc:'Hills, wildlife, adventure', href:'/uttarakhand-tour-packages' },
                 { img:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Senior Citizen', desc:'Special care package', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
               ].map(l => (
@@ -813,6 +813,9 @@ export default function HomePage() {
                 { icon:'🌉', title:'From Chennai', href:'/char-dham-yatra-from-chennai' },
                 { icon:'🌁', title:'From Pune', href:'/char-dham-yatra-from-pune' },
                 { icon:'🏘️', title:'From Noida', href:'/char-dham-yatra-from-noida' },
+                { icon:'🏙️', title:'From Chandigarh', href:'/char-dham-yatra-from-chandigarh' },
+                { icon:'🌆', title:'From Nagpur', href:'/char-dham-yatra-from-nagpur' },
+                { icon:'🏛️', title:'From Patna', href:'/char-dham-yatra-from-patna' },
                 { icon:'🕌', title:'From Lucknow', href:'/char-dham-yatra-from-lucknow' },
                 { icon:'🏛️', title:'From Ahmedabad', href:'/char-dham-yatra-from-ahmedabad' },
                 { icon:'🌊', title:'From Kolkata', href:'/char-dham-yatra-from-kolkata' },
@@ -952,7 +955,7 @@ export default function HomePage() {
             </div>
             <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help choosing the right Char Dham Yatra package.')}`}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" rel="nofollow noopener noreferrer"
                 style={{ background:'#25D366', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
                 💬 WhatsApp
               </a>
@@ -982,7 +985,7 @@ export default function HomePage() {
           <FAQAccordion faqs={GLOBAL_FAQS}/>
           <div style={{ textAlign:'center', marginTop:24 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a question about Char Dham Yatra.')}`}
-               target="_blank" rel="noopener noreferrer"
+               target="_blank" rel="nofollow noopener noreferrer"
                className="btn btn-outline" style={{ display:'inline-flex', gap:7 }}>
               💬 Still have questions? Ask on WhatsApp
             </a>
@@ -1012,7 +1015,7 @@ export default function HomePage() {
             <a href='tel:+917017082807' style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'var(--shadow-lg)', transition:'transform var(--t)' }}>
               📞 {SITE.phone}
             </a>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
                style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'0 4px 20px rgba(37,211,102,0.4)' }}>
               💬 WhatsApp Us Now
             </a>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package from Noida 2026 — Distance, Route & Direct Booking',
-  description: 'Char Dham Yatra from Noida 2026. 285km to Haridwar via NH334. All-inclusive packages from ₹19,500/person. Direct operator from Haridwar. Zero commission.',
+  title: 'Char Dham Yatra from Noida 2026 — Route & Packages',
+  description: 'Char Dham Yatra from Noida 2026. 270km to Haridwar via NH334. All-inclusive packages from ₹19,500. Door-to-door Noida pickup available.',
   keywords: ['char dham yatra from noida','char dham yatra package from noida 2026','noida to char dham yatra','noida to haridwar char dham','char dham tour from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {
@@ -174,7 +174,7 @@ export default function Page() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Tell us your dates and group size. We'll send a detailed, no-obligation itinerary with exact pricing.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Noida and want to book Char Dham Yatra 2026. Please share packages and Noida pickup details.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Enquire Now</a>
             <a href={`tel:${SITE.phone}`}
               style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>

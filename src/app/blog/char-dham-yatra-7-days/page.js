@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible? Complete 7-Day Itinerary',
-  description: 'Can you do Char Dham Yatra in 7 days? Honest answer with a detailed 7-day itinerary, what you skip, what you rush, and when a 7-day plan actually makes sense. Expert guide by Shiv Ganga Travels, Haridwar.',
+  title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible?',
+  description: 'Can you do Char Dham Yatra in 7 days? Route, feasibility and honest advice for pilgrims with limited time in 2026.',
   keywords: ['char dham yatra 7 days','char dham yatra in 7 days possible','7 day char dham yatra itinerary','char dham yatra 7 nights 8 days','chardham yatra 7 days itinerary 2026','char dham yatra minimum days'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible?', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
@@ -186,7 +186,7 @@ export default function SevenDaysBlog() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book the Right Duration for Your Yatra</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>We will suggest the ideal itinerary based on your group, age, and available days. No pressure — honest advice always.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have limited days for Char Dham Yatra 2026. Please suggest the best itinerary.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have limited days for Char Dham Yatra 2026. Please suggest the best itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Char Dham Packages →</Link>
             <Link href="/do-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Do Dham (5N/6D) →</Link>

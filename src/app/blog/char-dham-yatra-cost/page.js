@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Cost 2026 — Complete Budget Breakdown Per Person',
-  description: 'Exact Char Dham Yatra cost breakdown for 2026. Package prices, hidden costs, pony/helicopter charges, hotel upgrades. Budget from ₹19,500 to ₹85,000 per person explained.',
+  title: 'Char Dham Yatra Cost 2026 — Complete Breakdown',
+  description: 'Exact Char Dham Yatra cost breakdown for 2026. Package prices, hidden costs, pony/helicopter charges, hotel upgrades. Budget from ₹19,500 to ₹85,000',
   keywords: ['char dham yatra cost','char dham yatra price 2026','char dham yatra budget','char dham yatra package cost','char dham yatra expenses','how much does char dham yatra cost'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title:'Char Dham Yatra Cost 2026 — Complete Budget Breakdown', description:'Everything that goes into the cost of a Char Dham Yatra — package prices, extras, hidden costs.', url:`${SITE.baseUrl}/blog/char-dham-yatra-cost`, type:'article' },
@@ -127,7 +127,7 @@ return (
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Get an Exact Quote for Your Group</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Tell us your dates, group size, and preferences. We'll send a complete cost breakdown within 2 hours. No obligation.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a cost breakdown for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a cost breakdown for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Get Free Quote</a>
             <Link href="/char-dham-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View All Packages →</Link>
           </div>

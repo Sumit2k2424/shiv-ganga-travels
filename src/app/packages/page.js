@@ -232,7 +232,7 @@ export default function PackagesPage() {
               </div>
               <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
                 <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a custom Char Dham package.')}`}
-                   target="_blank" rel="noopener noreferrer"
+                   target="_blank" rel="nofollow noopener noreferrer"
                    style={{
                      background:'#25D366', color:'#fff', padding:'10px 22px',
                      borderRadius:10, fontSize:13, fontWeight:600, textDecoration:'none',

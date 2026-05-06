@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra from Patna 2026 — Train, Flight & Package',
-  description: 'Char Dham Yatra from Patna 2026. Train or fly to Haridwar. All-inclusive packages from ₹22,999/person. Direct Haridwar operator. Zero commission. Bihar pilgrim groups welcome.',
+  description: 'Char Dham Yatra from Patna 2026. Train to Haridwar (14 hrs), all-inclusive packages from ₹19,500. Direct operator, zero commission.',
   keywords: ['char dham yatra from patna','patna to haridwar char dham','char dham package patna 2026','bihar char dham yatra package','patna haridwar train char dham'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-patna` },
 };
@@ -86,7 +86,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book from Patna — Free Quote in 2 Hours</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Direct Haridwar operator. Bihar groups welcome. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Patna/Bihar and want to book Char Dham Yatra 2026. Please share package details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Patna/Bihar and want to book Char Dham Yatra 2026. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <a href="tel:+917017082807" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>

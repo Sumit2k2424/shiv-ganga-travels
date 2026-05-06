@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Badrinath Weather 2026 — Month-wise Temperature, Best Time & What to Pack',
-  description: 'Badrinath weather guide 2026. Month-by-month temperatures at 3,133m. Best time to visit Badrinath Dham: May–June and September–October. Snowfall and road conditions.',
+  title: 'Badrinath Weather 2026 — Month-wise Temperature Guide',
+  description: 'Badrinath weather guide 2026. Month-by-month temperatures at 3,133m. Best time: May-June and Sept-Oct. Altitude tips and packing guide.',
   keywords: ['badrinath weather','badrinath temperature','badrinath weather may','badrinath best time to visit 2026','badrinath snowfall','badrinath weather in october'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-weather` },
   openGraph: {
@@ -109,7 +109,7 @@ export default function BadrinathWeather() {
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:16 }}>Book a standalone Badrinath package or include it as part of your full Char Dham tour.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026. Please share packages.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/packages/badrinath-yatra-package-2n-3d-haridwar" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Badrinath Package →</Link>
           </div>

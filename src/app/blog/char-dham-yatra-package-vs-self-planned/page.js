@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package vs Self-Planned — Which is Better in 2026?',
-  description: 'Honest comparison: booking a Char Dham Yatra package vs planning independently. Cost, convenience, flexibility, safety. Expert analysis by a 15-year Char Dham operator.',
+  title: 'Char Dham Package vs Self-Planned — 2026 Guide',
+  description: 'Honest comparison: booking a Char Dham Yatra package vs planning independently. Cost, convenience, flexibility, safety. Expert analysis by a 15-year',
   keywords: ['char dham yatra package vs self planned','char dham yatra self booking','is char dham yatra package worth it','char dham yatra independent travel','char dham yatra own arrangement'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned` },
 };
@@ -81,7 +81,7 @@ export default function PkgVsSelf() {
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Free Package Quote</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Compare our package price vs your self-planned estimate · Free advice in 30 minutes</p>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to compare package vs self-planned for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Dhanesh ji</a>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to compare package vs self-planned for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Dhanesh ji</a>
         </div>
 
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>

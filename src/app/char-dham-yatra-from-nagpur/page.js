@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra from Nagpur 2026 — Flight, Route & Package',
-  description: 'Char Dham Yatra from Nagpur 2026. Fly Nagpur to Dehradun (2 hrs). All-inclusive packages from ₹22,999/person. Direct Haridwar operator. Zero commission.',
+  description: 'Char Dham Yatra from Nagpur 2026. Train to Haridwar, all-inclusive packages from ₹19,500. Direct Haridwar operator, zero commission.',
   keywords: ['char dham yatra from nagpur','nagpur to haridwar char dham','char dham package nagpur 2026','nagpur char dham yatra flight'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-nagpur` },
 };
@@ -86,7 +86,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book from Nagpur — Free Quote in 2 Hours</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Direct Haridwar operator. Zero commission. {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Nagpur and want to book Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Nagpur and want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <a href="tel:+917017082807" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>

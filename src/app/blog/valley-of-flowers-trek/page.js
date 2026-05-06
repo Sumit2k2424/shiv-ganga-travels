@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Valley of Flowers Trek Guide 2026 — Best Time, Route, Flowers & How to Reach',
-  description: 'Valley of Flowers trek guide 2026. UNESCO World Heritage Site in Uttarakhand. Best time (July–September), route from Govindghat, 500+ wildflower species, Hemkund Sahib combo.',
+  title: 'Valley of Flowers Trek 2026 — Best Time & Route',
+  description: 'Valley of Flowers trek guide 2026. UNESCO World Heritage Site in Uttarakhand. Best time (July–September), route from Govindghat, 500+ wildflower',
   keywords: ['valley of flowers trek','valley of flowers uttarakhand','valley of flowers best time','valley of flowers trek guide 2026','govindghat to valley of flowers','valley of flowers flowers list'],
   alternates: { canonical: `${SITE.baseUrl}/blog/valley-of-flowers-trek` },
 };
@@ -18,7 +18,7 @@ export default function ValleyOfFlowersTrek() {
     <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#0B7B8B 60%,#15803D 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>UNESCO Heritage Trek · 2026</span>
-        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Valley of Flowers Trek 2026 — A Himalayan Flower Paradise You Must See Once</h1>
+        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Valley of Flowers Trek 2026 — Best Time & Complete Guide</h1>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>UNESCO World Heritage · 500+ wildflower species · Best July–September · 5N/6D from Haridwar</p>
       </div>
     </section>
@@ -75,7 +75,7 @@ export default function ValleyOfFlowersTrek() {
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Valley of Flowers Package</h3>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹13,499 per person · 5N/6D · Includes Hemkund Sahib + Badrinath darshan</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Valley of Flowers + Hemkund Sahib package 2026.')}`} target="_blank" rel="noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Valley of Flowers + Hemkund Sahib package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
           <Link href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{ background:'rgba(255,255,255,0.2)', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.4)' }}>View Package →</Link>
         </div>
       </div>

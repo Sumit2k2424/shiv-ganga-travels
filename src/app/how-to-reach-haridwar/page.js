@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Haridwar 2026 — Train, Flight, Bus, Road from Delhi, Mumbai, Bangalore',
-  description: 'Complete guide to reaching Haridwar for Char Dham Yatra 2026. Best trains from Delhi, Mumbai, Bangalore, Chennai, Hyderabad. Nearest airports, bus routes, road distances and costs.',
+  title: 'How to Reach Haridwar — Train, Flight, Bus & Road',
+  description: 'How to reach Haridwar 2026. Train from Delhi (3.5 hrs), flight to Dehradun, bus and road routes from Mumbai, Bangalore and all major cities.',
   keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach','jolly grant airport haridwar','dehradun airport haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-haridwar` },
   openGraph: {
@@ -225,7 +225,7 @@ export default function HowToReachHaridwar() {
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help reaching Haridwar for Char Dham Yatra 2026. Please guide me.')}`}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Travel Advice
             </a>

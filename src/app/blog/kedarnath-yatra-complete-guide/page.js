@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra 2026 — Complete Guide: Route, Cost, Registration, Trek, Stay',
-  description: 'Complete Kedarnath Yatra 2026 guide. Distance, route from Haridwar, trek details, registration, puja prices, darshan timings, helicopter booking, hotels, and packages from ₹6,499.',
+  title: 'Kedarnath Yatra 2026 — Complete Planning Guide',
+  description: 'Complete Kedarnath Yatra 2026 guide. Distance, route from Haridwar, trek details, registration, puja prices, darshan timings, helicopter booking',
   keywords: ['kedarnath yatra 2026 complete guide','kedarnath yatra guide','how to do kedarnath yatra','kedarnath yatra cost 2026','kedarnath yatra package from haridwar','kedarnath yatra registration 2026','kedarnath yatra planning guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
   openGraph: { title: 'Kedarnath Yatra 2026 — Complete A-Z Guide', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
@@ -134,7 +134,7 @@ export default function KedarnathCompleteGuide() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Yatra 2026 — Direct from Haridwar</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>15 years · 50,000+ pilgrims · Direct operator · Zero commission · {SITE.phone}</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026. Please share package details.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
           </div>

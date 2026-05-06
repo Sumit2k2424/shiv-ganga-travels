@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Triyuginarayan Temple — Where Shiva and Parvati Were Married | 2026 Guide',
-  description: 'Complete guide to Triyuginarayan Temple near Kedarnath. The mythological wedding site of Lord Shiva and Goddess Parvati. Eternal fire, Vishnu as priest, how to visit, distance from Sonprayag.',
+  title: 'Triyuginarayan Temple 2026 — Guide, Route & Timings',
+  description: 'Triyuginarayan Temple guide 2026 — where Lord Shiva married Goddess Parvati. Location, route from Haridwar, darshan timings.',
   keywords: ['triyuginarayan temple','triyuginarayan temple kedarnath','triyuginarayan shiva parvati wedding','triyuginarayan temple guide','triyuginarayan yatra','sonprayag to triyuginarayan'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },
 };
@@ -83,7 +83,7 @@ export default function Page() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Add Triyuginarayan to Your Kedarnath Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>We include this on request — no extra charge. Mention it when you book.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Triyuginarayan Temple in my Kedarnath/Char Dham itinerary.')}`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Triyuginarayan Temple in my Kedarnath/Char Dham itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
             <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Kedarnath Package →</Link>
           </div>

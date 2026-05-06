@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Route Map 2026 — Complete Road Map, Distances & Stops',
-  description: 'Complete Char Dham Yatra route map 2026. Haridwar to all 4 dhams with distances, travel times, key stops, and altitude. Printable road map for Yamunotri, Gangotri, Kedarnath, Badrinath.',
+  description: 'Char Dham Yatra route map 2026. Interactive distances from Haridwar — Yamunotri, Gangotri, Kedarnath, Badrinath. Day-wise road distances and driving times.',
   keywords: ['char dham yatra route map','char dham route map 2026','char dham yatra road map','haridwar to char dham route','char dham yatra distance chart','char dham yatra map'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-route-map` },
   openGraph: {
@@ -11,7 +11,7 @@ export const metadata = {
     description: 'Complete road map for Char Dham Yatra 2026 — all distances, altitudes, and key stops from Haridwar.',
     url: `${SITE.baseUrl}/char-dham-yatra-route-map`,
     type: 'website',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kedarnathji-mandir.JPG/1200px-Kedarnathji-mandir.JPG'],
+    images: ['/opengraph-image'],
   },
 };
 

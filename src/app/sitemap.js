@@ -98,7 +98,6 @@ export default function sitemap() {
 
   const howToReach = [
     { url: `${b}/how-to-reach-haridwar`,               p: 0.85, cf: 'monthly' },
-    { url: `${b}/how-to-reach-kedarnath`,              p: 0.87, cf: 'monthly' },
     { url: `${b}/how-to-reach-yamunotri`,              p: 0.85, cf: 'monthly' },
     { url: `${b}/how-to-reach-gangotri`,               p: 0.85, cf: 'monthly' },
     { url: `${b}/how-to-reach-badrinath`,              p: 0.85, cf: 'monthly' },
