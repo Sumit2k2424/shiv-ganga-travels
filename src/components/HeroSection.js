@@ -138,13 +138,6 @@ function Scene() {
           <stop offset="45%"  stopColor="rgba(4,10,20,0.58)"/>
           <stop offset="100%" stopColor="rgba(4,10,20,0.78)"/>
         </linearGradient>
-        {/* Left-lighter overlay — lets Shiva show through on left */}
-        <linearGradient id="overlay-lr" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"   stopColor="rgba(4,10,20,0.05)"/>
-          <stop offset="22%"  stopColor="rgba(4,10,20,0.18)"/>
-          <stop offset="42%"  stopColor="rgba(4,10,20,0.55)"/>
-          <stop offset="100%" stopColor="rgba(4,10,20,0.52)"/>
-        </linearGradient>
         <radialGradient id="centre-light" cx="50%" cy="40%" r="45%">
           <stop offset="0%"  stopColor="transparent"/>
           <stop offset="100%" stopColor="rgba(2,6,14,0.35)"/>
@@ -258,29 +251,29 @@ function Scene() {
                M880,510 L897,534 L863,534 Z M1030,490 L1048,516 L1012,516 Z"
         fill="rgba(195,215,240,0.4)"/>
 
-      {/* ── KAILASH — LEFT sacred peak ── */}
+      {/* ── KAILASH — central sacred peak ── */}
       <path d="
-        M0,900
-        L30,800 L70,830 L110,772 L150,802 L185,742 L205,762
-        L225,698 L242,716 L254,648 L260,608
-        L266,648 L278,716 L296,698 L318,742 L356,802 L396,772
-        L440,830 L490,800 L560,900 Z"
+        M460,900
+        L500,780 L530,800 L570,740 L610,770 L640,700 L660,720
+        L680,660 L700,680 L715,620 L720,608
+        L725,620 L740,680 L760,660 L780,700 L810,770 L840,740
+        L880,800 L910,780 L950,900 Z"
         fill="url(#kailash-g)"/>
 
       {/* Kailash snow cap */}
-      <path d="M242,716 L254,662 L260,608 L266,662 L278,716
-               L268,708 L260,696 L252,708 Z"
-        fill="rgba(225,240,255,0.72)"/>
-      <path d="M228,732 L242,716 L252,708 L260,696 L268,708 L278,716 L292,732
-               L276,724 L260,714 L244,724 Z"
-        fill="rgba(200,225,248,0.52)"/>
+      <path d="M700,680 L715,640 L720,608 L725,640 L740,680
+               L730,672 L720,658 L710,672 Z"
+        fill="rgba(225,240,255,0.7)"/>
+      <path d="M685,700 L700,680 L710,672 L720,658 L730,672 L740,680 L755,700
+               L738,692 L720,680 L702,692 Z"
+        fill="rgba(200,225,248,0.5)"/>
       {/* Extra snow detail */}
-      <path d="M218,746 L228,732 L244,724 L260,714 L276,724 L292,732 L302,746
-               L286,738 L260,728 L234,738 Z"
-        fill="rgba(180,210,240,0.36)"/>
+      <path d="M678,715 L690,704 L702,692 L720,680 L738,692 L750,704 L762,715
+               L744,708 L720,698 L696,708 Z"
+        fill="rgba(180,210,240,0.35)"/>
 
       {/* ── SHIVA on Kailash ── */}
-      <g transform="translate(260,590)">
+      <g transform="translate(720,600)">
 
         {/* Outer divine aura — large, soft */}
         <ellipse cx="0" cy="-85" rx="130" ry="140"
@@ -425,23 +418,22 @@ function Scene() {
 
       {/* ── NEAR MOUNTAIN RANGE — foreground, dark ── */}
       <path d="
-        M0,900
-        L0,840 L100,775 L180,840 L260,608 L340,840 L420,775
-        L520,720 L640,758 L760,716 L880,748 L1000,714
-        L1100,742 L1200,710 L1300,738 L1400,718 L1440,725 L1440,900 Z"
+        M0,900 L0,720
+        L80,680 L160,720 L260,665 L360,700 L460,660
+        L520,820 L720,608 L920,820
+        L980,660 L1080,700 L1180,665 L1280,720 L1360,680 L1440,720 L1440,900 Z"
         fill="url(#mtn-near)"/>
 
       {/* Near snow details */}
-      <path d="M760,716 L775,736 L745,736 Z M1000,714 L1016,736 L984,736 Z
-               M1200,710 L1217,732 L1183,732 Z"
-        fill="rgba(170,200,235,0.42)"/>
+      <path d="M260,665 L275,685 L245,685 Z M460,660 L476,680 L444,680 Z
+               M980,660 L996,680 L964,680 Z M1180,665 L1196,685 L1164,685 Z"
+        fill="rgba(170,200,235,0.45)"/>
 
       {/* Ground mist */}
       <rect x="0" y="800" width="1440" height="100" fill="url(#mist)" opacity="0.6"/>
 
       {/* ── OVERLAY for text legibility ── */}
       <rect width="1440" height="900" fill="url(#overlay)"/>
-      <rect width="1440" height="900" fill="url(#overlay-lr)"/>
       <rect width="1440" height="900" fill="url(#centre-light)"/>
     </svg>
   );
@@ -499,9 +491,8 @@ export default function HeroSection() {
         </div>
       </a>
 
-      {/* Content — flex-end pushes text to right on desktop, centred on mobile */}
-      <div className="hero-content" style={{ maxWidth:1240, width:'100%', position:'relative', zIndex:10, display:'flex', justifyContent:'flex-end' }}>
-      <div className="hero-text-block" style={{ width:'min(640px,57%)', textAlign:'center' }}>
+      {/* Content */}
+      <div style={{ maxWidth:820, width:'100%', position:'relative', zIndex:10, textAlign:'center' }}>
 
         <div style={{
           display:'inline-flex', alignItems:'center', gap:8,
@@ -646,8 +637,7 @@ export default function HeroSection() {
             <path d="M5 8l5 5 5-5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
-      </div>{/* end hero-text-block */}
-      </div>{/* end hero-content */}
+      </div>
 
       {/* Wave */}
       <div className="hero-wave" aria-hidden="true" style={{ zIndex:10 }}>
@@ -660,14 +650,9 @@ export default function HeroSection() {
         @keyframes sgPulse  { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.55;transform:scale(0.82)} }
         @keyframes sgBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
         @keyframes sgShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-        @media(max-width:860px){
-          .hero-content{justify-content:center!important}
-          .hero-text-block{width:92%!important;max-width:600px!important}
-        }
         @media(max-width:640px){
           .hero-offer-pills>div{font-size:11px!important}
           .hero-badge-right{display:none!important}
-          .hero-text-block{width:100%!important}
         }
       `}}/>
     </section>
