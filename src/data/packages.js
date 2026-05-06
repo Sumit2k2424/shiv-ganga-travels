@@ -46,16 +46,11 @@ const FP = 'https://commons.wikimedia.org/wiki/Special:FilePath';
 const UNS = 'https://images.unsplash.com';
 
 export const CATEGORIES = {
-  'char-dham': { slug:'char-dham',    name:'Char Dham Yatra',      shortName:'Char Dham',    icon:'🏔️', desc:'All 4 sacred dhams' , cover:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800'
-    coverAlt: 'Kedarnath Temple — Char Dham Yatra 2026',},
-  'do-dham': { slug:'do-dham',      name:'Do Dham Yatra',        shortName:'Do Dham',      icon:'🕌', desc:'Two dhams, one journey' , cover:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800'
-    coverAlt: 'Badrinath Temple — Do Dham Yatra 2026',},
-  'single-dham': { slug:'single-dham',  name:'Single Dham Yatra',    shortName:'Single Dham',  icon:'🙏', desc:'One shrine, pure devotion' , cover:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800'
-    coverAlt: 'Kedarnath Temple — Single Dham Yatra',},
-  'helicopter': { slug:'helicopter',   name:'Helicopter Tours',     shortName:'Helicopter',   icon:'🚁', desc:'VIP aerial yatra' , cover:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'
-    coverAlt: 'Helicopter over Himalayan peaks — Char Dham by Helicopter',},
-  'uttarakhand': { slug:'uttarakhand',  name:'Uttarakhand Tours',    shortName:'Uttarakhand',  icon:'🌿', desc:'Hills, lakes & adventure' , cover:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'
-    coverAlt: 'Haridwar Ganga Ghats — Uttarakhand Tour Packages',},
+  'char-dham': { slug:'char-dham',    name:'Char Dham Yatra',      shortName:'Char Dham',    icon:'🏔️', desc:'All 4 sacred dhams' , cover:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', coverAlt:'Kedarnath Temple — Char Dham Yatra 2026'},
+  'do-dham': { slug:'do-dham',      name:'Do Dham Yatra',        shortName:'Do Dham',      icon:'🕌', desc:'Two dhams, one journey' , cover:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', coverAlt:'Badrinath Temple — Do Dham Yatra 2026'},
+  'single-dham': { slug:'single-dham',  name:'Single Dham Yatra',    shortName:'Single Dham',  icon:'🙏', desc:'One shrine, pure devotion' , cover:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', coverAlt:'Kedarnath Temple — Single Dham Yatra'},
+  'helicopter': { slug:'helicopter',   name:'Helicopter Tours',     shortName:'Helicopter',   icon:'🚁', desc:'VIP aerial yatra' , cover:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', coverAlt:'Helicopter over Himalayan peaks — Char Dham by Helicopter'},
+  'uttarakhand': { slug:'uttarakhand',  name:'Uttarakhand Tours',    shortName:'Uttarakhand',  icon:'🌿', desc:'Hills, lakes & adventure' , cover:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', coverAlt:'Haridwar Ganga Ghats — Uttarakhand Tour Packages'},
 };
 
 // ================================================================

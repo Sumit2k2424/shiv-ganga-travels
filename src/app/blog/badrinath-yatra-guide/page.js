@@ -52,7 +52,7 @@ export default function BadrinathYatraGuide() {
 
       <h2 style={h2}>Badrinath Temple Darshan Timings 2026</h2>
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:20, fontSize:14 }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
           {[
             { session:'Morning Opening', time:'4:30 AM' },
             { session:'Mahabhishek Puja', time:'4:30 – 6:30 AM' },

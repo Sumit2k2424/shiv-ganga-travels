@@ -245,7 +245,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <section style={{ background:'linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)', padding:'52px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div className='cab-hero-grid' style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }}>
+          <div className='cab-hero-grid' style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:40, alignItems:'center' }}>
 
             {/* Left — text */}
             <div>
@@ -522,7 +522,7 @@ export default function HomePage() {
               <p className="section-subtitle">
                 15 years. Uttarakhand Tourism registered. Zero incident record. Every rupee accounted for.
               </p>
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
                 {[
                   {icon:'🎫', t:'VIP Darshan',     d:'Skip-the-line at all 4 dhams'},
                   {icon:'🏔️', t:'Expert Guides',   d:'Garhwali locals, 10+ yrs'},
@@ -551,7 +551,7 @@ export default function HomePage() {
               <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top, rgba(15,43,91,0.85) 0%, transparent 55%)' }}/>
               {/* Stats overlay */}
               <div style={{ position:'absolute', bottom:20, left:20, right:20 }}>
-                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
                   {[{v:'50,000+',l:'Happy Pilgrims'},{v:'15+',l:'Years of Trust'},{v:'4.9/5',l:'Google Rating'},{v:'100%',l:'Safe Record'}].map(s=>(
                     <div key={s.l} style={{ background:'rgba(255,255,255,0.12)', backdropFilter:'blur(8px)', borderRadius:10, padding:'10px 14px', border:'1px solid rgba(255,255,255,0.2)' }}>
                       <div style={{ color:'#FFD166', fontWeight:800, fontSize:18, fontFamily:'var(--font-display)', lineHeight:1 }}>{s.v}</div>
@@ -570,7 +570,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
       <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:40, alignItems:'center' }} className="founder-grid">
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:40, alignItems:'center' }} className="founder-grid">
             {/* Left: story */}
             <div>
               <span className="section-tag">The people behind your yatra</span>
@@ -620,7 +620,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Trust badges row */}
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
                 {[
                   { v:'Est. 2010', l:'15 years running' },
                   { v:'50,000+', l:'Pilgrims served' },

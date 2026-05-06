@@ -91,7 +91,7 @@ export default function BudgetVsPremium() {
                 <span>{row.factor}</span>
                 <span style={{ fontSize:11.5, color:'var(--text-muted)', fontWeight:400 }}>💡 {row.note}</span>
               </div>
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:0 }}>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap:0 }}>
                 {[['Budget',row.budget,'#fff'],['Standard',row.standard,'#FFFBF3'],['Premium',row.premium,'#F0FDF4']].map(([tier,val,bg])=>(
                   <div key={tier} style={{ padding:'10px 14px', background:bg, borderRight:'1px solid var(--border)' }}>
                     <div style={{ fontSize:10.5, fontWeight:700, color:'var(--text-muted)', marginBottom:4, textTransform:'uppercase', letterSpacing:'0.05em' }}>{tier}</div>

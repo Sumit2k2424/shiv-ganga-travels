@@ -1840,3 +1840,655 @@ html {
   0%   { background-position: 100% 50%; }
   100% { background-position: 0%   50%; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE-FIRST RESPONSIVE — COMPREHENSIVE PATCH
+   Covers inline-styled JSX elements not reachable by class names
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── A. BASE — prevent ALL horizontal overflow ─────────────── */
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+* { box-sizing: border-box; }
+img, video, iframe, embed { max-width: 100%; height: auto; }
+
+/* ─── B. INLINE GRID: collapse any fixed multi-column grid ─── */
+/* minmax(300px) → 1 col on screens < 480px */
+@media (max-width: 479px) {
+  [style*="minmax(300px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(260px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(250px"] { grid-template-columns: 1fr !important; }
+}
+/* Anything wider than 220px needs auto-collapse at 480–640 */
+@media (max-width: 639px) {
+  [style*="minmax(280px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(200px"] { grid-template-columns: 1fr 1fr !important; }
+  [style*="minmax(180px"] { grid-template-columns: 1fr 1fr !important; }
+  [style*="minmax(160px"] { grid-template-columns: 1fr 1fr !important; }
+  [style*="minmax(150px"] { grid-template-columns: 1fr 1fr !important; }
+  [style*="minmax(140px"] { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ─── C. INLINE TABLES — force horizontal scroll on mobile ─── */
+@media (max-width: 640px) {
+  /* Any table not already inside .cab-table-wrap or .weather-table-wrap */
+  article table,
+  section table {
+    min-width: 420px;
+    font-size: 12px !important;
+  }
+  article table th,
+  article table td,
+  section table th,
+  section table td {
+    padding: 7px 8px !important;
+  }
+  /* Wrap overflow for parent div */
+  .table-scroll,
+  [style*="overflowX:'auto'"],
+  [style*='overflowX:"auto"'] {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ─── D. INLINE FLEX ROWS — prevent overflow on narrow screens  */
+@media (max-width: 480px) {
+  /* Any flex row with gap that doesn't wrap — force wrap */
+  [style*="display:'flex'"][style*="gap:"] {
+    flex-wrap: wrap;
+  }
+  /* Allow flex children to shrink properly */
+  [style*="flexShrink:0"] {
+    flex-shrink: 1 !important;
+  }
+}
+
+/* ─── E. HERO SECTION — mobile layout ──────────────────────── */
+@media (max-width: 860px) {
+  .hero-content { justify-content: center !important; padding: 0 4px !important; }
+  .hero-text-block {
+    width: 94% !important;
+    max-width: 600px !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero-text-block { width: 100% !important; }
+  /* Hero scene SVG — scale to narrow viewport */
+  .hero-content > .hero-text-block h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+  }
+}
+
+/* ─── F. HERO CTA BUTTONS — stack on mobile ────────────────── */
+@media (max-width: 500px) {
+  .hero-text-block > div > a,
+  .hero-text-block > div > button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ─── G. BLOG / STATIC PAGE ARTICLES ───────────────────────── */
+@media (max-width: 640px) {
+  article { padding: 24px 16px 48px !important; }
+  article h2 { font-size: clamp(1.1rem, 4.5vw, 1.4rem) !important; margin-top: 28px !important; }
+  article p { font-size: 14.5px !important; line-height: 1.8 !important; }
+  /* Inline quick-facts grids inside articles */
+  article > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 375px) {
+  article { padding: 20px 14px 48px !important; }
+  article h2 { font-size: 1.1rem !important; }
+}
+
+/* ─── H. PACKAGE DETAIL PAGE — sidebar sticky → fixed bottom ─ */
+@media (max-width: 860px) {
+  /* Sidebar booking widget scrolls with page on mobile */
+  [style*="position:'sticky'"] {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+/* ─── I. PACKAGE CARD — price row on narrow cards ──────────── */
+@media (max-width: 380px) {
+  .pkg-card .card-price-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .pkg-card .card-price-row > div:last-child {
+    flex-direction: row !important;
+    gap: 8px !important;
+  }
+  .pkg-card .card-price-row a,
+  .pkg-card .card-price-row a + a {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+}
+
+/* ─── J. CITY PAGES — departure table ──────────────────────── */
+@media (max-width: 640px) {
+  .city-depart-table { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  .city-depart-table table { min-width: 380px; font-size: 12px !important; }
+}
+
+/* ─── K. HOW-TO-REACH ROUTE TABLES ─────────────────────────── */
+@media (max-width: 640px) {
+  [style*="grid-template-columns:'1fr 1fr 80px 80px auto'"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+}
+
+/* ─── L. WEATHER TABLE — 6 col overflow ────────────────────── */
+@media (max-width: 600px) {
+  .weather-table-wrap,
+  [class*="weather"] table {
+    overflow-x: auto !important;
+    display: block !important;
+  }
+}
+
+/* ─── M. STATS BAR — allow wrapping on small screens ──────── */
+@media (max-width: 500px) {
+  .stats-bar-item { flex-direction: column !important; text-align: center !important; }
+  .stats-bar-divider { display: none !important; }
+}
+
+/* ─── N. FLOATING WA BUTTON — safe zone above sticky bar ───── */
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 74px !important; /* above sticky booking bar */
+  }
+}
+
+/* ─── O. LEAD POPUP — full-screen on mobile ────────────────── */
+@media (max-width: 480px) {
+  .lead-popup-overlay { align-items: flex-end !important; }
+  .lead-popup-inner {
+    border-radius: 20px 20px 0 0 !important;
+    width: 100% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* ─── P. NAVBAR — search bar mobile ────────────────────────── */
+@media (max-width: 640px) {
+  .nav-search { display: none !important; }
+  .nav-logo-text { font-size: 13px !important; }
+}
+
+/* ─── Q. SECTION HEADINGS — fluid type ─────────────────────── */
+@media (max-width: 640px) {
+  .section-title {
+    font-size: clamp(1.4rem, 5vw, 2rem) !important;
+  }
+  .section-subtitle { font-size: 14px !important; }
+}
+
+/* ─── R. FORM ELEMENTS — full-width on mobile ──────────────── */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important; /* prevent iOS zoom on focus */
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ─── S. INLINE PRICE COMPARISON TABLE ─────────────────────── */
+@media (max-width: 600px) {
+  .price-compare-table { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  .price-compare-table table { min-width: 400px; }
+}
+
+/* ─── T. SAFE AREA — iPhone notch/home bar ─────────────────── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .sticky-book-bar {
+    padding-bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+  }
+  .wa-float {
+    bottom: calc(74px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* ─── U. ACCESSIBILITY — focus visible ─────────────────────── */
+@media (max-width: 768px) {
+  :focus-visible {
+    outline: 3px solid var(--teal) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* ─── V. LANDSCAPE PHONE — compact layout ──────────────────── */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero-text-block h1 { font-size: 1.4rem !important; }
+  .hero-text-block { padding: 20px 16px !important; }
+  .sticky-book-bar { padding: 6px 12px !important; }
+  .wa-float { bottom: 56px !important; }
+}
+
+/* ─── W. GLOBAL INLINE GRID — EXTENDED ─────────────────────── */
+/* Catch any inline grid not using auto-fill that would overflow */
+@media (max-width: 400px) {
+  [style*="grid-template-columns:'1fr 1fr'"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*='grid-template-columns:"1fr 1fr"'] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── X. HERO SCENE — prevent SVG overflow on tiny screens ─── */
+@media (max-width: 380px) {
+  .hero-scene-svg {
+    width: 100vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  /* Offer pills — single column */
+  .hero-offer-pills { gap: 6px !important; }
+  .hero-offer-pills > div { width: 100% !important; justify-content: center !important; }
+}
+
+/* ─── Y. GOOGLE REVIEWS — card sizing ──────────────────────── */
+@media (max-width: 640px) {
+  .google-reviews-scroll > div {
+    flex: 0 0 calc(100vw - 40px) !important;
+    min-width: calc(100vw - 40px) !important;
+  }
+}
+
+/* ─── Z. MIN FONT SIZE — never below 11px on any device ──── */
+@media (max-width: 640px) {
+  [style*="fontSize:10"] { font-size: 11px !important; }
+  [style*="fontSize:9"]  { font-size: 11px !important; }
+  [style*="fontSize:8"]  { font-size: 11px !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — COMPREHENSIVE FIX
+   Priority: core layout → typography → tables → components
+   Breakpoints: 768px (tablet), 640px (phone), 380px (small)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── CORE LAYOUT ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Prevent any element from exceeding viewport */
+  * { box-sizing: border-box; }
+  body { overflow-x: hidden; }
+  img, video, svg, canvas { max-width: 100%; height: auto; }
+
+  /* Articles and content wrappers */
+  article, .content-wrap {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Headings */
+  h1 { font-size: clamp(1.5rem, 6.5vw, 2.2rem) !important; }
+  h2 { font-size: clamp(1.15rem, 5vw, 1.5rem) !important; }
+  h3 { font-size: clamp(1rem, 4.5vw, 1.2rem) !important; }
+
+  /* Body text — comfortable thumb-tap reading distance */
+  p, li, td, th { font-size: 15px !important; line-height: 1.75 !important; }
+
+  /* Reduce letter spacing on small screens */
+  [style*="letterSpacing"] { letter-spacing: 0 !important; }
+}
+
+/* ─── GRID SYSTEM — prevent overflow ────────────────────── */
+@media (max-width: 640px) {
+  /* Any inline grid collapses to single column on phone */
+  [style*="gridTemplateColumns:'1fr 1fr'"],
+  [style*='gridTemplateColumns:"1fr 1fr"'] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="gridTemplateColumns:'1fr 1fr 1fr'"],
+  [style*='gridTemplateColumns:"1fr 1fr 1fr"'] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Column count grids */
+  [style*="gridTemplateColumns:'repeat(2"],
+  [style*="gridTemplateColumns:'repeat(3"],
+  [style*="gridTemplateColumns:'repeat(4"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Prevent fixed-px grids from overflowing */
+  [style*="gridTemplateColumns:'160px"],
+  [style*="gridTemplateColumns:'180px"],
+  [style*="gridTemplateColumns:'200px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── FLEX ROWS ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Force wrap on inline flex rows that could overflow */
+  [style*="display:'flex'"],
+  [style*='display:"flex"'] {
+    flex-wrap: wrap;
+  }
+  /* Override for items that should stay in a row */
+  .flex-nowrap-mobile { flex-wrap: nowrap !important; }
+}
+
+/* ─── TABLES ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* All tables scroll horizontally — never overflow */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    max-width: 100%;
+    width: 100%;
+  }
+  thead, tbody, tfoot { display: table; width: 100%; }
+
+  /* Reduce table cell padding */
+  td, th {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  td, th { padding: 7px 8px !important; font-size: 12.5px !important; }
+}
+
+/* ─── CARDS & PACKAGE CARDS ──────────────────────────────── */
+@media (max-width: 640px) {
+  /* Package cards: full width on mobile */
+  .pkg-card, .package-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* Price display */
+  .pkg-price { font-size: 22px !important; }
+
+  /* Card grids */
+  .card-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── HERO SECTION ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-content { justify-content: center !important; }
+  .hero-text-block {
+    width: 90% !important;
+    max-width: 580px !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text-block { width: 100% !important; }
+
+  /* CTA buttons — full width on small screens */
+  .hero-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ─── NAVIGATION ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Desktop nav links — hidden */
+  .nav-desktop { display: none !important; }
+  /* Mobile hamburger — visible */
+  .nav-mobile-btn { display: flex !important; }
+
+  /* Navbar height */
+  .site-header { height: 60px !important; }
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+}
+
+/* ─── FORMS & INPUTS ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  input, select, textarea, button {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+    min-height: 44px !important; /* Minimum tap target */
+  }
+  .search-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* ─── PRICING TABLES ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important;
+  }
+  .pricing-card { padding: 16px !important; }
+}
+
+/* ─── STAT BARS & INFO STRIPS ────────────────────────────── */
+@media (max-width: 640px) {
+  .stat-bar, .trust-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .stat-bar .stat-item { padding: 12px 10px !important; }
+}
+
+/* ─── BLOG CONTENT ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Month/info cards in blog pages */
+  .month-card, .info-card {
+    padding: 12px 14px !important;
+  }
+  /* Section spacing */
+  .blog-article h2 { margin-top: 28px !important; }
+  .blog-article p { margin-bottom: 12px !important; }
+}
+
+/* ─── PACKAGE DETAIL PAGES ───────────────────────────────── */
+@media (max-width: 768px) {
+  .pkg-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .pkg-highlight-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
+
+/* ─── FLOATING ELEMENTS ──────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Sticky booking bar padding */
+  .sticky-book-bar {
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+  .sticky-book-bar .price-label {
+    font-size: 11px !important;
+  }
+  .sticky-book-bar .price-value {
+    font-size: 17px !important;
+  }
+  /* Floating WhatsApp — clear sticky bar */
+  .wa-float { bottom: 144px !important; }
+}
+
+/* ─── SPECIFIC COMPONENT FIXES ───────────────────────────── */
+
+/* Hero search widget */
+@media (max-width: 640px) {
+  .hero-search-tabs {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+  .hero-search-tabs button {
+    flex: 1 1 auto !important;
+    min-width: 80px !important;
+    font-size: 12.5px !important;
+    padding: 8px 10px !important;
+  }
+  .hero-search-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .hero-search-submit {
+    width: 100% !important;
+    padding: 13px !important;
+  }
+}
+
+/* Comparison tables (budget vs premium) */
+@media (max-width: 640px) {
+  .comparison-table th:nth-child(3),
+  .comparison-table td:nth-child(3) {
+    display: none !important;
+  }
+}
+
+/* Cost calculator */
+@media (max-width: 640px) {
+  .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .calc-result {
+    position: static !important;
+    margin-top: 16px !important;
+  }
+}
+
+/* Founder grid — responsive */
+@media (max-width: 860px) {
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Why-split section */
+@media (max-width: 860px) {
+  .why-split {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Lead popup */
+@media (max-width: 640px) {
+  .lead-popup-inner {
+    width: min(380px, calc(100vw - 24px)) !important;
+    padding: 20px 16px !important;
+  }
+  .lead-popup-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Package cards in carousel */
+@media (max-width: 640px) {
+  .pkg-carousel-card {
+    flex: 0 0 calc(100vw - 40px) !important;
+    min-width: calc(100vw - 40px) !important;
+  }
+}
+
+/* CTA buttons — stack on mobile */
+@media (max-width: 480px) {
+  .cta-row {
+    flex-direction: column !important;
+  }
+  .cta-row a, .cta-row button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* How-to-reach route rows */
+@media (max-width: 640px) {
+  .route-row {
+    grid-template-columns: 1fr 1fr !important;
+    font-size: 12px !important;
+  }
+  .route-row .route-note { display: none !important; }
+}
+
+/* Weather tables */
+@media (max-width: 640px) {
+  .weather-table th:nth-child(3),
+  .weather-table td:nth-child(3),
+  .weather-table th:last-child,
+  .weather-table td:last-child {
+    display: none !important;
+  }
+}
+
+/* ─── TOUCH & INTERACTION ────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Minimum 44x44px tap targets */
+  a, button, [role="button"] {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Remove hover effects on touch */
+  @media (hover: none) {
+    *:hover { opacity: 1 !important; transform: none !important; }
+  }
+}
+
+/* ─── SCROLL ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Horizontal scroll containers */
+  .scroll-x {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .scroll-x::-webkit-scrollbar { display: none; }
+}
+
+/* ─── UTILITY ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hide-mobile { display: none !important; }
+  .show-mobile { display: block !important; }
+  .show-mobile-flex { display: flex !important; }
+
+  /* Reduce excessive margin/padding set inline */
+  [style*="marginTop:40"], [style*="marginTop:48"],
+  [style*="marginTop:56"], [style*="marginTop:60"] {
+    margin-top: 24px !important;
+  }
+  [style*="padding:56px"], [style*="padding:60px"] {
+    padding: 32px 16px !important;
+  }
+}
+

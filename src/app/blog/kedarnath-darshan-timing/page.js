@@ -178,7 +178,7 @@ export default function KedarnathTimings() {
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>📅 2026 Season Dates</div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
             {[['Opening Date','April 22, 2026 at 8:00 AM'],['Closing Date','November 11, 2026 (Bhai Dooj)'],['Best Season','May 10 – June 20 & Sep 15 – Oct 25'],['Daily Pilgrim Limit','15,000–17,000 per day']].map(([k,v])=>(
               <div key={k} style={{ display:'flex', gap:8 }}>
                 <span style={{ color:'var(--text-muted)', fontSize:13, minWidth:130, flexShrink:0 }}>{k}:</span>

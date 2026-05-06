@@ -296,7 +296,7 @@ function FormField({ label, required, children }) {
 
 function FormRow({ children }) {
   return (
-    <div className="contact-form-row" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+    <div className="contact-form-row" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
       {children}
     </div>
   );

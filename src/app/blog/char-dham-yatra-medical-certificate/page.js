@@ -61,7 +61,7 @@ export default function MedicalCertificate() {
         </div>
 
         <h2 style={H2}>Who Needs the Medical Certificate?</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginBottom:20 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12, marginBottom:20 }}>
           <div style={{ background:'#FFF1F2', borderRadius:12, padding:'14px 16px', border:'1px solid #FECDD3' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#9F1239', marginBottom:8 }}>❌ Must have certificate</div>
             {['All pilgrims aged 55 years and above (mandatory)','Any age with heart disease, diabetes, hypertension (strongly recommended)','Pilgrims on blood thinners or cardiac medication','Anyone with a history of high-altitude sickness','Pilgrims with COPD, asthma, or respiratory conditions'].map(s=>(

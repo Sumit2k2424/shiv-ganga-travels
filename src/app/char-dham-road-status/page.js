@@ -149,7 +149,7 @@ export default function RoadStatus() {
               {/* Body */}
               <div style={{ background:STATUS_BG[r.status], padding:'16px 20px' }}>
                 <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, marginBottom:14 }}>{r.detail}</p>
-                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+                <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
                   <div>
                     <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.06em' }}>Route Checkpoints</div>
                     {r.checkpoints.map((cp,i) => (

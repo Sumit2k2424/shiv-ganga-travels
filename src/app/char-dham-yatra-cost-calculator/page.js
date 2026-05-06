@@ -96,7 +96,7 @@ export default function CostCalculator() {
         </p>
       </div>
 
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:16 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:16, marginBottom:16 }}>
 
         {/* Pilgrims */}
         <div>

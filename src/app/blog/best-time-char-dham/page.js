@@ -141,8 +141,8 @@ export default function BestTimeCharDham() {
         </p>
 
         <h2 style={h2}>Char Dham Yatra 2026 — Official Opening Dates</h2>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
+        <div style={{ overflowX:'auto', borderRadius:12, border:'1px solid var(--border)', marginBottom:24 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14, minWidth:460 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
               {['Dham','Opening Date 2026','Altitude','Nearest Base'].map(h => (
                 <th key={h} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontSize:12, fontWeight:700 }}>{h}</th>

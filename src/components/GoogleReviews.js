@@ -197,7 +197,7 @@ export default function GoogleReviews() {
 
       {/* Cards scroll */}
       <div ref={scrollRef}
-        style={{ display:'flex', gap:14, overflowX:'auto', scrollSnapType:'x mandatory',
+        className="google-reviews-scroll" style={{ display:'flex', gap:14, overflowX:'auto', scrollSnapType:'x mandatory',
           paddingBottom:8, scrollbarWidth:'none', msOverflowStyle:'none' }}>
         {(loading ? STATIC : reviews).map((r, i) => (
           <ReviewCard key={i} review={r}/>

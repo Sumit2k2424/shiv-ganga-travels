@@ -133,7 +133,7 @@ export default function CharDhamYatra() {
             Travel all four sacred Char Dham shrines — <strong style={{ color:'#FFD166' }}>Yamunotri, Gangotri, Kedarnath, Badrinath</strong> — with Garhwali-expert guides, VIP darshan at every temple, and zero commission pricing direct from Haridwar.
           </p>
 
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+          <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra Package 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
@@ -428,7 +428,7 @@ export default function CharDhamYatra() {
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>
             Free custom itinerary within 2 hours. Zero commission. ₹19,500 onwards all-inclusive.
           </p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+          <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>

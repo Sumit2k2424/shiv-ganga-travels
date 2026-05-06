@@ -26,7 +26,7 @@ export default function HeroSearch() {
     width:'100%', padding:'11px 14px',
     border:'1.5px solid var(--border)',
     borderRadius:'var(--r-sm)',
-    fontSize:13.5, color:'var(--text)',
+    fontSize:16, color:'var(--text)',
     background:'#fff', outline:'none',
     fontFamily:'var(--font)',
     transition:'border-color .15s, box-shadow .15s',
@@ -56,7 +56,7 @@ export default function HeroSearch() {
           return (
             <button key={t.id} onClick={()=>setTab(t.id)}
               style={{
-                padding:'13px 24px', fontSize:13, fontWeight:600,
+                padding:'13px 24px', fontSize:14, fontWeight:600,
                 border:'none',
                 borderBottom: active ? '2px solid var(--gold)' : '2px solid transparent',
                 background:'none',

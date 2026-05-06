@@ -137,7 +137,7 @@ export default function PackageCard({ pkg }) {
         </div>
 
         {/* Price + CTA */}
-        <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", gap:8 }}>
+        <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", gap:8, flexWrap:"wrap" }}>
           <div>
             <div style={{ fontSize:11, color:"var(--text-muted)", textDecoration:"line-through" }}>
               ₹{pkg.price.original.toLocaleString("en-IN")}

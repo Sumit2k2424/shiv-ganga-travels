@@ -65,7 +65,7 @@ function Snow() {
 function Scene() {
   return (
     <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
-      style={{ position:'absolute', inset:0, width:'100%', height:'100%', zIndex:2 }}
+      className="hero-scene-svg" style={{ position:'absolute', inset:0, width:'100%', height:'100%', zIndex:2 }}
       aria-hidden="true">
       <defs>
 
@@ -456,7 +456,7 @@ export default function HeroSection() {
       background:'#010508',
       display:'flex', flexDirection:'column',
       alignItems:'center', justifyContent:'center',
-      padding:'clamp(80px,10vw,100px) 16px clamp(80px,12vw,120px)',
+      padding:'clamp(70px,8vw,100px) 16px clamp(70px,10vw,120px)',
       overflow:'hidden',
     }}>
       <Scene/>

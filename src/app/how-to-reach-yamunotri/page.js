@@ -112,7 +112,7 @@ export default function HowToReachYamunotri() {
         </p>
 
         <h2 style={h2}>Nearest Airport and Railway Station</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginBottom:24 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12, marginBottom:24 }}>
           {[
             { icon:'✈️', type:'Nearest Airport', name:'Jolly Grant Airport, Dehradun', dist:'~175km from Janki Chatti', note:'IndiGo, Air India, SpiceJet fly daily from Delhi (40 mins). Taxi to Barkot from airport: ~5 hrs.' },
             { icon:'🚂', type:'Nearest Railway Station', name:'Haridwar or Dehradun', dist:'250km / 175km', note:'Haridwar has more train options from across India. Dehradun has direct trains from Delhi (Shatabdi, Jan Shatabdi).' },
