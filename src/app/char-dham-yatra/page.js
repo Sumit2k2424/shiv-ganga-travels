@@ -37,9 +37,9 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '850',
-      bestRating: '5',
+      ratingValue: 4.9,
+      reviewCount: 850,
+      bestRating: 5,
     },
   };
 
@@ -59,8 +59,8 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '850',
+      ratingValue: 4.9,
+      reviewCount: 850,
     },
   };
 

@@ -142,7 +142,7 @@ function SiteSchema() {
     },
 
     // ── Maps link — use Place ID for exact match ─────────────
-    hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8',
+    hasMap: 'https://www.google.com/maps?cid=16074078434377735602',
 
     // ── Opening hours — must match GBP exactly ───────────────
     openingHoursSpecification: [
@@ -160,10 +160,10 @@ function SiteSchema() {
     // Update these whenever your GBP review count changes
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.3',
-      reviewCount: '21',
-      bestRating: '5',
-      worstRating: '1',
+      ratingValue: 4.3,
+      reviewCount: 21,
+      bestRating: 5,
+      worstRating: 1,
     },
 
     // ── Logo & image ──────────────────────────────────────────
@@ -266,8 +266,8 @@ function SiteSchema() {
 
     // ── Cross-platform links — all must match GBP "sameAs" ───
     sameAs: [
-      'https://share.google/gApTvZu1nEBnhjm3W',
-      'https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8',
+      'https://www.google.com/maps?cid=16074078434377735602',
+      'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
       'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       `https://wa.me/${SITE.whatsapp}`,

@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone,
     address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'},
-    aggregateRating:{'@type':'AggregateRating',ratingValue:'4.9',reviewCount:'850',bestRating:'5'},
+    aggregateRating:{'@type':'AggregateRating',ratingValue:4.9,reviewCount:850,bestRating:5},
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }

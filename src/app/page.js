@@ -32,7 +32,7 @@ export const metadata = {
 
 /* ─── Schemas ─── */
 function Schema() {
-  const agency = { '@context':'https://schema.org','@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone, email:SITE.email, address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'}, foundingDate:String(SITE.established), aggregateRating:{'@type':'AggregateRating',ratingValue:'4.9',reviewCount:'850',bestRating:'5'}, priceRange:'₹₹' };
+  const agency = { '@context':'https://schema.org','@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone, email:SITE.email, address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'}, foundingDate:String(SITE.established), aggregateRating:{'@type':'AggregateRating',ratingValue:4.9,reviewCount:850,bestRating:5}, priceRange:'₹₹' };
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
