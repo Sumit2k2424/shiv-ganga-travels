@@ -4,19 +4,21 @@ import { SITE } from '@/data/packages';
 const COLS = [
   { heading:'Char Dham Packages', links:[
     {l:'Char Dham Yatra 2026',       h:'/char-dham-yatra'},
-    {l:'Char Dham Guide 2026',       h:'/char-dham-yatra-2025'},
+    {l:'Char Dham Guide 2026',       h:'/char-dham-yatra'},
     {l:'Classic 9N/10D',             h:'/packages/char-dham-yatra-9n-10d-haridwar'},
     {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
     {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
     {l:'Senior Special 12N/13D',     h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
     {l:'From Delhi',                 h:'/char-dham-yatra-from-delhi'},
+    {l:'From Rishikesh',             h:'/char-dham-yatra-from-rishikesh'},
+    {l:'From Dehradun',              h:'/char-dham-yatra-from-dehradun'},
     {l:'From Noida',                 h:'/char-dham-yatra-from-noida'},
     {l:'From Mumbai',                h:'/char-dham-yatra-from-mumbai'},
     {l:'From Bangalore',             h:'/char-dham-yatra-from-bangalore'},
   ]},
   { heading:'Single & Do Dham', links:[
     {l:'Kedarnath Yatra',            h:'/kedarnath-yatra'},
-    {l:'Badrinath Yatra',            h:'/blog/badrinath-yatra-guide'},
+    {l:'Badrinath Yatra',            h:'/badrinath-yatra'},
     {l:'Gangotri Yatra',             h:'/gangotri-yatra'},
     {l:'Yamunotri Yatra',            h:'/yamunotri-yatra'},
     {l:'Do Dham Yatra',              h:'/do-dham-yatra'},

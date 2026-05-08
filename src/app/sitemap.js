@@ -38,6 +38,8 @@ const BLOG_SLUGS = [
 
 const CITY_SLUGS = [
   { slug: 'char-dham-yatra-from-delhi',       p: 0.88 },
+  { slug: 'char-dham-yatra-from-rishikesh',   p: 0.90 },
+  { slug: 'char-dham-yatra-from-dehradun',    p: 0.88 },
   { slug: 'char-dham-yatra-from-mumbai',      p: 0.85 },
   { slug: 'char-dham-yatra-from-bangalore',   p: 0.85 },
   { slug: 'char-dham-yatra-from-hyderabad',   p: 0.83 },
@@ -65,8 +67,8 @@ export default function sitemap() {
     { url: b,                                          p: 1.00, cf: 'weekly'  },
     { url: `${b}/char-dham-yatra`,                     p: 0.98, cf: 'weekly'  },
     { url: `${b}/kedarnath-yatra`,                     p: 0.92, cf: 'weekly'  },
+    { url: `${b}/badrinath-yatra`,                     p: 0.92, cf: 'weekly'  },
     { url: `${b}/packages`,                            p: 0.92, cf: 'weekly'  },
-    { url: `${b}/char-dham-yatra-2025`,                p: 0.90, cf: 'weekly'  },
     { url: `${b}/char-dham-helicopter`,                p: 0.90, cf: 'weekly'  },
     { url: `${b}/do-dham-yatra`,                       p: 0.88, cf: 'weekly'  },
     { url: `${b}/gangotri-yatra`,                      p: 0.86, cf: 'monthly' },

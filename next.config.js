@@ -22,11 +22,15 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Redirect stale 2025 guide URL → main char dham page (2026 content)
+      { source: '/char-dham-yatra-2025', destination: '/char-dham-yatra', permanent: true },
       // Fix internal 404s found by Screaming Frog
       { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
       { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },
       { source: '/how-to-reach-kedarnath',                           destination: '/blog/how-to-reach-kedarnath',                    permanent: true },
       { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
+      // Redirect blog Badrinath guide to new proper landing page
+      { source: '/blog/badrinath-yatra-guide',                       destination: '/badrinath-yatra',                                permanent: true },
     ];
   },
 

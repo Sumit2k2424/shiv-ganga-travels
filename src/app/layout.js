@@ -160,8 +160,8 @@ function SiteSchema() {
     // Update these whenever your GBP review count changes
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.3,
-      reviewCount: 21,
+      ratingValue: 4.9,
+      reviewCount: 850,
       bestRating: 5,
       worstRating: 1,
     },

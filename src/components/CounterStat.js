@@ -2,7 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * Animated number counter — counts up from 0 to target when scrolled into view.
+ * Animated number counter — counts up from ~80% of target when scrolled into view.
+ * IMPORTANT: Initial state = REAL value so Googlebot/SSR always sees the correct number.
  * Supports suffix (+, /5, %, etc.) and prefix.
  * Parses the target value from a string like "50,000+" or "4.9/5".
  */
@@ -18,27 +19,33 @@ function parseTarget(str) {
 
 export default function CounterStat({ icon, value, label, sub, border = false }) {
   const { prefix, number, suffix, decimals } = parseTarget(value);
-  const [current, setCurrent] = useState(0);
+
+  // ── Start at REAL value — Googlebot and SSR always see the correct number ──
+  // Animation counts from 80% → 100% for visual effect without hiding truth from crawlers.
+  const [current, setCurrent] = useState(number);
   const ref = useRef(null);
   const started = useRef(false);
 
   useEffect(() => {
     if (!ref.current) return;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) { setCurrent(number); return; }
+    if (prefersReduced) return; // already showing real value
 
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
-          const duration = 1800;
+          // Animate from 80% of value up to 100%
+          const startVal = number * 0.80;
+          setCurrent(startVal);
+          const duration = 1600;
           const start = performance.now();
           const tick = (now) => {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
             // Ease-out cubic
             const eased = 1 - Math.pow(1 - progress, 3);
-            setCurrent(number * eased);
+            setCurrent(startVal + (number - startVal) * eased);
             if (progress < 1) requestAnimationFrame(tick);
             else setCurrent(number);
           };

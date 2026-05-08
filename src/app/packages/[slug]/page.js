@@ -82,7 +82,7 @@ function Schemas({ pkg }) {
     provider:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
     startLocation:{ '@type':'Place', name:pkg.startCity, address:{'@type':'PostalAddress',addressLocality:pkg.startCity,addressRegion:'Uttarakhand',addressCountry:'IN'} },
     keywords:(pkg.tags||[]).join(', '),
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.3, reviewCount:30, bestRating:5 },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.9, reviewCount:850, bestRating:5 },
   };
   const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
   const breadcrumb = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
