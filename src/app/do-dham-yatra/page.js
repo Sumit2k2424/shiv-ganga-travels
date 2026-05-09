@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar',
-  description: 'Book Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. Starting ₹10,999 per person. 5N/6D. Perfect for pilgrims with limited time.',
-  keywords: ['do dham yatra, do dham yatra 2026, kedarnath badrinath package, do dham yatra from haridwar, do dham yatra package price'],
+  title: '2 Dham Yatra 2026 — Kedarnath & Badrinath Package | Do Dham from Haridwar',
+  description: 'Book 2 Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. Kedarnath Badrinath package from ₹10,999/person. 5N/6D. Direct operator, zero commission.',
+  keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','do dham yatra 2026','kedarnath badrinath package','kedarnath and badrinath package','kedarnath and badrinath tour package','badrinath kedarnath tour package','2 dham yatra package from haridwar','do dham yatra from haridwar','kedarnath badrinath tour','kedarnath and badrinath tour'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
-  openGraph: { title:'Do Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar', description:'Book Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. Starting ₹10,999 per person. 5N/6D. Perfect for pilgrims with limited time.', url:`${SITE.baseUrl}/do-dham-yatra`, type:'website' },
+  openGraph: { title:'2 Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar | Do Dham', description:'Book 2 Dham Yatra (Do Dham) 2026 — Kedarnath + Badrinath from Haridwar. Kedarnath Badrinath package ₹10,999/person. 5N/6D. Zero commission.', url:`${SITE.baseUrl}/do-dham-yatra`, type:'website' },
 };
 
 function Schema() {
@@ -33,7 +33,7 @@ export default function Page() {
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Do Dham Yatra 2026 — Kedarnath & Badrinath from Haridwar</h1>
+          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Do Dham / 2 Dham Yatra 2026 — Kedarnath & Badrinath from Haridwar</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Two of the holiest shrines · 5N/6D · From ₹10,999 per person · Perfect if time is limited</p>
         </div>
       </section>

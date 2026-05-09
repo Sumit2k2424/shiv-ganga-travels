@@ -3,16 +3,18 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar',
-  description: 'Book Char Dham Yatra package 2026 from Haridwar & Delhi. Kedarnath, Badrinath, Gangotri, Yamunotri. Starting ₹19,500. Verified operator, safe travel',
+  title: 'Char Dham Yatra Package 2026 — Chardham & 4 Dham from Haridwar',
+  description: 'Chardham yatra package 2026 from Haridwar. 4 dham yatra — Kedarnath, Badrinath, Gangotri, Yamunotri. From ₹19,500. Direct operator, zero commission. 50,000+ pilgrims.',
   keywords: [
-    'char dham yatra package','char dham yatra 2026','char dham package from haridwar',
-    'char dham yatra package price','char dham yatra booking','chardham yatra package 2026',
-    'char dham yatra from delhi','char dham tour package',
+    'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
+    'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',
+    'char dham yatra package price','char dham yatra booking','chardham tour package',
+    'char dham yatra from delhi','char dham tour package','uttarakhand tourism','uttarakhand tour packages',
+    'char dham yatra package from haridwar','uttarakhand char dham yatra package',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar',
+    title: 'Char Dham Yatra Package 2026 — Chardham & 4 Dham from Haridwar',
     description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',

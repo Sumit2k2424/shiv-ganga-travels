@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Helicopter Package 2026 — All 4 Dhams, 6 Days',
-  description: 'Char Dham helicopter tour 2026. All 4 dhams in 6 days from Dehradun. VIP darshan, luxury stays. Packages from ₹85,000 per person.',
-  keywords: ['char dham helicopter package, char dham helicopter tour 2026, char dham yatra by helicopter, helicopter char dham price 2026'],
+  title: '4 Dham Yatra by Helicopter 2026 — All 4 Dhams in 6 Days | Char Dham Helicopter',
+  description: '4 Dham Yatra by helicopter 2026. Char Dham helicopter package — all 4 dhams in 5N/6D from Dehradun Sahastradhara. VIP darshan. From ₹85,000/person.',
+  keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','char dham yatra package by helicopter','4 dham yatra helicopter package','char dham helicopter tour 2026','kedarnath helicopter package','char dham helicopter price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
-  openGraph: { title: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days', description:'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
+  openGraph: { title: '4 Dham Yatra by Helicopter 2026 — Char Dham Helicopter Package', description:'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
 };
 
 function Schema() {
