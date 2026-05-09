@@ -274,7 +274,7 @@ export default function CharDhamYatra() {
                 <tr key={day} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, whiteSpace:'nowrap' }}>{day}</td>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'#334155', fontSize:13 }}>{route}</td>
-                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:12.5', whiteSpace:'nowrap' }}>{dist}</td>
+                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:12.5, whiteSpace:'nowrap' }}>{dist}</td>
                   <td style={{ padding:'9px 12px', color:'#1D9E75', fontWeight:600, fontSize:12.5, whiteSpace:'nowrap' }}>{alt}</td>
                   <td style={{ padding:'9px 12px', color:'#64748b', fontSize:12, lineHeight:1.6 }}>{stops}</td>
                   <td style={{ padding:'9px 12px', color:'var(--navy)', fontWeight:600, fontSize:12.5 }}>{hotel}</td>
