@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown (Every Rupee)',
-  description: 'Exact Char Dham Yatra cost 2026. Package ₹19,500. Kedarnath pony ₹3,500. Helicopter ₹7,500. Registration ₹150. Train, food, personal expenses — every rupee broken down.',
+  description: 'Exact Char Dham Yatra cost 2026. Package ₹19,500. Kedarnath pony ₹3,500. Helicopter ₹7,500. Registration FREE (₹0). Train, food, personal expenses — every rupee broken down.',
   keywords: ['char dham yatra cost 2026','char dham yatra package price','kedarnath pony cost','char dham yatra total cost','char dham yatra budget','char dham yatra price per person'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', description: 'Exact cost breakdown for Char Dham Yatra 2026. Package prices, pony, helicopter, registration, train fare, personal expenses — every rupee explained.', url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article' },
@@ -13,10 +13,10 @@ function Schema() {
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What is the total cost of Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person for a budget pilgrim, and ₹30,000–₹40,000 for a comfortable experience. This includes: package cost ₹19,500–₹27,500, Kedarnath pony ₹3,500–₹4,500 (if not trekking), registration ₹150, personal expenses ₹1,500–₹2,000, and train/bus to Haridwar ₹500–₹2,500 depending on your city.' } },
+      { '@type': 'Question', name: 'What is the total cost of Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person for a budget pilgrim, and ₹30,000–₹40,000 for a comfortable experience. This includes: package cost ₹19,500–₹27,500, Kedarnath pony ₹3,500–₹4,500 (if not trekking), registration FREE (₹0), personal expenses ₹1,500–₹2,000, and train/bus to Haridwar ₹500–₹2,500 depending on your city.' } },
       { '@type': 'Question', name: 'What is the cost of Char Dham Yatra package from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra packages from Haridwar start at ₹19,500 per person (9N/10D, standard) with Shiv Ganga Travels. This is an all-inclusive direct-operator price with zero commission — it covers AC vehicle, hotels, breakfast and dinner, guide, VIP darshan at all 4 dhams, and all toll/parking charges. Deluxe packages (Innova, 3-star hotels) start at ₹27,500.' } },
       { '@type': 'Question', name: 'What is the cost of Kedarnath pony in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath pony (horse ride) costs ₹3,500–₹4,500 for one way (Gaurikund to Kedarnath, 16km). For round trip the cost is ₹7,000–₹9,000. These are government-regulated rates displayed at the Gaurikund booking counter. Booking is done on the day at Gaurikund — no advance booking available. In peak May–June, ponies get booked out by 7–8 AM.' } },
-      { '@type': 'Question', name: 'Is the Char Dham registration fee included in the package price?', acceptedAnswer: { '@type': 'Answer', text: 'The Char Dham registration fee is ₹150 per person. It is NOT typically included in standard package prices — it is charged separately by the Uttarakhand government at registrationandtouristcare.uk.gov.in. However, Shiv Ganga Travels handles the registration process for all our pilgrims at no extra cost — you provide the Aadhaar details, we do the rest.' } },
+      { '@type': 'Question', name: 'Is the Char Dham registration fee included in the package price?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra registration is completely FREE in 2026 — ₹0. The Uttarakhand government removed the previous ₹150 fee for this season. You register at registrationandtouristcare.uk.gov.in at no cost. Shiv Ganga Travels handles the entire registration process for all our package pilgrims — you just provide your Aadhaar details.' } },
     ],
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2024-01-15', dateModified: '2026-05-01', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
@@ -55,13 +55,13 @@ export default function CharDhamCost() {
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 10 }}>Quick Answer — Total Char Dham Yatra Cost 2026</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(160px,1fr))', gap: 10 }}>
-            {[['Package (9N/10D)','₹19,500–₹27,500'],['Kedarnath pony (1 way)','₹3,500–₹4,500'],['Kedarnath helicopter (RT)','₹7,500–₹9,500'],['Registration fee','₹150/person'],['Train Delhi–Haridwar','₹200–₹700'],['Personal expenses (10 days)','₹1,500–₹3,000'],['Total (budget pilgrim)','₹22,000–₹28,000'],['Total (comfortable)','₹30,000–₹40,000']].map(([k,v]) => (
+            {[['Package (9N/10D)','₹19,500–₹27,500'],['Kedarnath pony (1 way)','₹3,500–₹4,500'],['Kedarnath helicopter (RT)','₹7,500–₹9,500'],['Registration fee','FREE (₹0)'],['Train Delhi–Haridwar','₹200–₹700'],['Personal expenses (10 days)','₹1,500–₹3,000'],['Total (budget pilgrim)','₹22,000–₹28,000'],['Total (comfortable)','₹30,000–₹40,000']].map(([k,v]) => (
               <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13.5, color: '#FFD166' }}>{v}</div></div>
             ))}
           </div>
         </div>
 
-        <p style={p}><strong>The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person</strong> for a budget-conscious pilgrim, and ₹30,000–₹40,000 for a comfortable experience with a private vehicle and better hotels. The biggest variable is the Kedarnath section: pilgrims who trek on foot spend ₹0 extra; those who take pony add ₹3,500–₹4,500; those who take helicopter add ₹7,500–₹9,500. Everything else — registration (₹150), VIP darshan, meals, temples — is included in a good all-inclusive package. Here is every cost, broken down.</p>
+        <p style={p}><strong>The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person</strong> for a budget-conscious pilgrim, and ₹30,000–₹40,000 for a comfortable experience with a private vehicle and better hotels. The biggest variable is the Kedarnath section: pilgrims who trek on foot spend ₹0 extra; those who take pony add ₹3,500–₹4,500; those who take helicopter add ₹7,500–₹9,500. Everything else — registration (free in 2026), VIP darshan, meals, temples — is included in a good all-inclusive package. Here is every cost, broken down.</p>
 
         <h2 style={h2}>1. Package Cost — What's Included and What's Not</h2>
         <p style={p}>A <strong>reputable all-inclusive Char Dham Yatra package</strong> from a registered direct operator covers the following — this is what Shiv Ganga Travels includes in our packages. If a price lower than ₹17,000 is quoted, something from this list is missing.</p>
@@ -88,7 +88,7 @@ export default function CharDhamCost() {
           </table>
         </div>
 
-        <p style={p}>All packages include: AC vehicle (shared or private as listed), hotels with breakfast and dinner, experienced guide, VIP darshan at all 4 dhams (skips general queue), all tolls and parking fees, driver allowance, and GST. The registration fee (₹150/person) is handled separately.</p>
+        <p style={p}>All packages include: AC vehicle (shared or private as listed), hotels with breakfast and dinner, experienced guide, VIP darshan at all 4 dhams (skips general queue), all tolls and parking fees, driver allowance, and GST. Registration is handled by us — completely free (₹0 government fee in 2026).</p>
 
         <h2 style={h2}>2. Kedarnath Extras — The Biggest Variable Cost</h2>
         <p style={p}>The Kedarnath section is where costs vary most between pilgrims. The 16km trek from Gaurikund is free, but most pilgrims above 50 or those with joint/cardiac issues opt for pony or helicopter. Here are the exact costs in 2026:</p>
@@ -113,10 +113,10 @@ export default function CharDhamCost() {
           ))}
         </div>
 
-        <h2 style={h2}>3. Registration Fee — ₹150 Per Person (Mandatory)</h2>
-        <p style={p}><strong>All Char Dham pilgrims must register</strong> at registrationandtouristcare.uk.gov.in before reaching Sonprayag for Kedarnath. The registration fee is <strong>₹150 per person</strong> and is non-refundable. This is a government charge — operators cannot include it in their package price (it must be paid directly to the portal). Police checkpoints at Sonprayag (Kedarnath route), Dharali (Gangotri route), and Govindghat (Badrinath) verify the printed QR code certificate. Pilgrims without it are turned back regardless of how far they have driven.</p>
-        <p style={{ ...p, fontSize: 13.5, background: 'rgba(232,146,10,0.08)', padding: '12px 16px', borderRadius: 8, borderLeft: '3px solid #E8920A' }}>
-          <strong>Important for group booking:</strong> Register each pilgrim separately. For a family of 4, the total registration cost is ₹600 (4 × ₹150). Shiv Ganga Travels handles the registration process for all package pilgrims at no extra cost.
+        <h2 style={h2}>3. Registration — FREE in 2026 (₹0, Government Removed the Fee)</h2>
+        <p style={p}><strong>All Char Dham pilgrims must register</strong> at registrationandtouristcare.uk.gov.in before reaching checkpoints. <strong>Registration is completely free in 2026 — ₹0.</strong> The Uttarakhand government removed the previous ₹150 fee this season. Register online, via WhatsApp (type "Yatra" to +91-8394833833), or via the Tourist Care Uttarakhand mobile app. Police checkpoints at Sonprayag (Kedarnath), Uttarkashi (Gangotri), Barkot (Yamunotri), and Joshimath (Badrinath) verify the printed QR certificate. Pilgrims without it are turned back regardless of how far they have driven.</p>
+        <p style={{ ...p, fontSize: 13.5, background: 'rgba(29,158,117,0.08)', padding: '12px 16px', borderRadius: 8, borderLeft: '3px solid #1D9E75' }}>
+          <strong>Included in every Shiv Ganga Travels package:</strong> We handle registration for all pilgrims at no cost. You provide Aadhaar details — we do the rest, including printing and carrying permits in the vehicle.
         </p>
 
         <h2 style={h2}>4. Getting to Haridwar — Train & Flight Costs</h2>
@@ -151,7 +151,7 @@ export default function CharDhamCost() {
             ['Kedarnath pony (if not trekking)','₹3,500–4,500 one way','Booked at Gaurikund counter on the day. Not bookable in advance.'],
             ['Yamunotri pony (6km trek)','₹1,800–2,500 one way','Available at Janki Chatti. Most pilgrims above 55 use this.'],
             ['Temple VIP darshan (Gangotri/Badrinath)','₹150–300 per person','VIP queue tokens. Your operator handles this; confirm it is included.'],
-            ['Registration fee','₹150 per person','Mandatory government charge. Must be paid at registrationandtouristcare.uk.gov.in.'],
+            ['Registration (2026)','FREE — ₹0','Government removed the fee for 2026. Register at registrationandtouristcare.uk.gov.in or WhatsApp +91-8394833833.'],
             ['Tapt Kund entry (Badrinath)','₹50','Small BKTC entry fee for the hot spring bath before Badrinath darshan.'],
             ['Personal expenses (10 days)','₹1,500–3,000','Chai, snacks, souvenirs, tips for driver/guide (discretionary), puja donations.'],
             ['Medical certificate (age 55+)','₹100–500','Doctor consultation fee. Required by government from 2026.'],
@@ -172,28 +172,28 @@ export default function CharDhamCost() {
               title: '🎒 Budget pilgrim',
               total: '₹22,000–₹25,000',
               color: '#1D9E75',
-              breakdown: ['Package 9N/10D: ₹19,500', 'Trek on foot (no pony)', 'Registration: ₹150', 'Train from Delhi (SL): ₹350', 'Personal expenses: ₹1,500', 'No optional upgrades'],
+              breakdown: ['Package 9N/10D: ₹19,500', 'Trek on foot (no pony)', 'Registration: FREE (₹0)', 'Train from Delhi (SL): ₹350', 'Personal expenses: ₹1,500', 'No optional upgrades'],
               note: 'For fit pilgrims who can do the 16km trek. Shared vehicle, budget hotels. Fully comfortable and dignified.',
             },
             {
               title: '👨‍👩‍👧 Average family (with pony)',
               total: '₹28,000–₹33,000',
               color: '#BA7517',
-              breakdown: ['Package 9N/10D: ₹19,500', 'Kedarnath pony (1 way): ₹4,000', 'Yamunotri pony (1 way): ₹2,000', 'Registration: ₹150', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
+              breakdown: ['Package 9N/10D: ₹19,500', 'Kedarnath pony (1 way): ₹4,000', 'Yamunotri pony (1 way): ₹2,000', 'Registration: FREE (₹0)', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
               note: 'Most families with mixed ages. Pony at Kedarnath and Yamunotri. Good hotels.',
             },
             {
               title: '👴 Senior / comfort traveller',
               total: '₹35,000–₹45,000',
               color: '#533AB7',
-              breakdown: ['Deluxe package 11N/12D: ₹27,500', 'Kedarnath helicopter: ₹8,500', 'Yamunotri pony RT: ₹4,500', 'Registration: ₹150', 'Flight Bangalore-Dehradun: ₹6,000', 'Personal expenses: ₹3,000'],
+              breakdown: ['Deluxe package 11N/12D: ₹27,500', 'Kedarnath helicopter: ₹8,500', 'Yamunotri pony RT: ₹4,500', 'Registration: FREE (₹0)', 'Flight Bangalore-Dehradun: ₹6,000', 'Personal expenses: ₹3,000'],
               note: 'Maximum comfort. Private vehicle, 3-star hotels, helicopter at Kedarnath. For seniors and those with health concerns.',
             },
             {
               title: '🚁 Premium helicopter',
               total: '₹88,000–₹95,000',
               color: '#0F2B5B',
-              breakdown: ['Helicopter package 5N/6D: ₹85,000', 'Flight to Dehradun: ₹4,000', 'Registration: ₹150', 'Personal expenses: ₹3,000', 'All 4 dhams in 6 days', 'VIP darshan included'],
+              breakdown: ['Helicopter package 5N/6D: ₹85,000', 'Flight to Dehradun: ₹4,000', 'Registration: FREE (₹0)', 'Personal expenses: ₹3,000', 'All 4 dhams in 6 days', 'VIP darshan included'],
               note: 'Complete helicopter package. All 4 dhams by air from Sahastradhara Helipad, Dehradun. 6 days total.',
             },
           ].map(({ title, total, color, breakdown, note }) => (
