@@ -126,6 +126,10 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+
+          {/* Link columns */}
+          {COLS.map(col => (
+            <div key={col.heading}>
               <h3 style={{
                 color:'#fff', fontWeight:700, fontSize:11.5, marginBottom:14,
                 textTransform:'uppercase', letterSpacing:'0.1em',
