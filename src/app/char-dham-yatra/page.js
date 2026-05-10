@@ -459,7 +459,7 @@ export default function CharDhamYatra() {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
           {[
             { name:'Tungnath Temple', type:'Sacred', detail:'The highest Shiva temple in the world at 3,680m. Near Chopta, between Kedarnath and Badrinath on the circuit. A 3.5km trek from Chopta. Adds 1 day and approximately ₹2,000 extra. One of the Panch Kedar.' },
-            { name:'Auli Skiing/Sightseeing', type:'Scenic', detail:'India's premier skiing destination at 2,519m, just 16km from Joshimath. Best in Feb–March for skiing; year-round for Himalayan views and the Auli Gondola (Asia's highest cable car). Add to Badrinath day.' },
+            { name:'Auli Skiing/Sightseeing', type:'Scenic', detail:'India\'s premier skiing destination at 2,519m, just 16km from Joshimath. Best in Feb–March for skiing; year-round for Himalayan views and the Auli Gondola (Asia\'s highest cable car). Add to Badrinath day.' },
             { name:'Hemkund Sahib', type:'Sacred (Sikh)', detail:'Sacred Sikh gurudwara at 4,632m — the highest gurudwara in the world. Near Govindghat (Badrinath route). Adds 1 day: 14km trek round trip from Ghangaria. Many Hindu pilgrims visit alongside the Char Dham.' },
             { name:'Valley of Flowers', type:'UNESCO', detail:'UNESCO World Heritage Site near Joshimath. Open July–September only (monsoon flowers). 3km trek from Ghangaria. Combine with Hemkund Sahib for a 2-day Joshimath side trip.' },
           ].map(item => (
