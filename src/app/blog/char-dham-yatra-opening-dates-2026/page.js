@@ -177,44 +177,7 @@ export default function OpeningDates() {
           </div>
         </div>
 
-        
-        {/* Closing dates section — competitors rank for this separately */}
-        <h2 style={h2Style}>Char Dham Closing Dates 2026 — When All 4 Dhams Close</h2>
-        <p style={pStyle}>
-          The 2026 Char Dham season closes in November as temperatures drop and snowfall makes the high-altitude routes inaccessible. Closing dates follow the Hindu lunar calendar — Gangotri and Yamunotri close on Diwali/Bhai Dooj, Kedarnath two days after Diwali, and Badrinath approximately 2 weeks later.
-        </p>
-        <div style={{ overflowX:'auto', marginBottom:20 }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
-            <thead><tr style={{ background:'var(--navy)' }}>
-              {['Dham','Closing date 2026','Occasion','Winter abode (deity moved here)'].map(h=>(
-                <th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
-              ))}
-            </tr></thead>
-            <tbody>
-              {[
-                ['🌿 Gangotri','November 10, 2026','Diwali','Mukhba village, Uttarkashi'],
-                ['🌊 Yamunotri','November 11, 2026','Bhai Dooj','Kharsali village, Uttarkashi'],
-                ['🏔️ Kedarnath','November 11, 2026','Bhai Dooj (Bhai Duj)','Ukhimath — Omkareshwar Temple'],
-                ['🕌 Badrinath','November 13, 2026','~2 weeks post-Diwali','Pandukheshwar / Joshimath'],
-              ].map(([dham,date,occasion,abode],i)=>(
-                <tr key={dham} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
-                  <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:15 }}>{dham}</td>
-                  <td style={{ padding:'9px 12px', fontWeight:700, color:'#D85A30' }}>{date}</td>
-                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{occasion}</td>
-                  <td style={{ padding:'9px 12px', color:'#64748b', fontSize:13 }}>{abode}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p style={pStyle}>
-          <strong>What happens at closing:</strong> Each dham has a Kapat Band (door-closing) ceremony. At Kedarnath, Lord Shiva's Panchmukhi Doli (five-faced palanquin) travels from Kedarnath to Ukhimath over 4 days. Before the doors seal, the priest lights the <em>Akhand Jyot</em> — an eternal flame that burns inside the locked temple for all 6 winter months. When the doors reopen in April, the flame is still burning. Thousands of pilgrims attend the closing ceremony specifically for this moment.
-        </p>
-        <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'12px 16px', marginBottom:28, fontSize:13.5, color:'#7B3F00' }}>
-          <strong>💡 October visits — last chance with best conditions:</strong> October is arguably the best month to visit Char Dham. Crowds are 70% lighter than peak season, prices are lower, and post-monsoon skies are crystal clear. The dhams are all still open through October. <Link href="/blog/char-dham-yatra-in-october" style={{ color:'var(--teal)', fontWeight:600 }}>See our October Char Dham guide →</Link>
-        </div>
-
-<div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Road Status 2026','/char-dham-road-status'],['Char Dham Cost','/blog/char-dham-yatra-cost'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Darshan Timings 2026 — Garbha Griha, Touch Shivling, VIP & Puja Hours',
+  title: 'Kedarnath Darshan Timings 2026 — Hours & Puja Guide',
   description: 'Kedarnath temple darshan timings 2026. Morning session 6 AM–3 PM, evening 5–9 PM. Mahabhishek at 4 AM, Shringaar Aarti 7:30 PM. VIP darshan booking',
   keywords: ['kedarnath darshan timings 2026','kedarnath temple opening time','kedarnath darshan time','kedarnath mandir timing','kedarnath aarti time','kedarnath puja timing','kedarnath temple closing time','kedarnath VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },

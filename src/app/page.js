@@ -1,45 +1,12 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { PACKAGES, SITE, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
+import HeroSearch from '@/components/HeroSearch';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
+import CounterStat from '@/components/CounterStat';
 import FAQAccordion from '@/components/FAQAccordion';
-
-// ── Lazy-load below-the-fold interactive components ──────────────────────────
-// These are NOT needed for LCP (first visible content). Loading them lazily
-// removes them from the critical JS bundle, directly improving:
-//   • LCP  — hero renders without waiting for these
-//   • TBT  — main thread not blocked by AutoScrollRow × 3 + GoogleReviews
-//   • TTI  — page becomes interactive faster on mobile 3G/4G
-
-// HeroSearch — small but interactive; defer 1 tick so hero text paints first
-const HeroSearch = dynamic(() => import('@/components/HeroSearch'), {
-  ssr: false,
-  loading: () => (
-    <div style={{ height:160, background:'rgba(255,255,255,0.06)', borderRadius:16 }}/>
-  ),
-});
-
-// CounterStat — pure visual, no interaction needed before scroll
-const CounterStat = dynamic(() => import('@/components/CounterStat'), {
-  ssr: true, // keep SSR so Googlebot sees real values
-});
-
-// GoogleReviews — fetches API on mount; load only when near viewport
-const GoogleReviews = dynamic(() => import('@/components/GoogleReviews'), {
-  ssr: false,
-  loading: () => (
-    <div style={{ height:300, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,0.4)', fontSize:14 }}>
-      Loading reviews…
-    </div>
-  ),
-});
-
-// AutoScrollRow — runs JS timers; 3 instances on page. Load after hydration
-const AutoScrollRow = dynamic(() => import('@/components/AutoScrollRow'), {
-  ssr: false,
-  loading: () => <div style={{ height:240, overflowX:'hidden' }}/>,
-});
+import GoogleReviews from '@/components/GoogleReviews';
+import AutoScrollRow from '@/components/AutoScrollRow';
 
 export const metadata = {
   title: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar | Est. 2010`,
@@ -65,7 +32,7 @@ export const metadata = {
 
 /* ─── Schemas ─── */
 function Schema() {
-  const agency = { '@context':'https://schema.org','@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone, email:SITE.email, address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'}, foundingDate:String(SITE.established), aggregateRating:{'@type':'AggregateRating',ratingValue:4.9,reviewCount:850,bestRating:5}, priceRange:'₹₹' };
+  const agency = { '@context':'https://schema.org','@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone, email:SITE.email, address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'}, foundingDate:String(SITE.established), aggregateRating:{'@type':'AggregateRating',ratingValue:'4.9',reviewCount:'850',bestRating:'5'}, priceRange:'₹₹' };
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
@@ -545,7 +512,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           WHY CHOOSE US — compact icon grid
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0 48px' }}>
+      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0 48px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div className="why-split" style={{ display:'grid', gap:32, alignItems:'center' }}>
             {/* Left: copy */}
@@ -601,7 +568,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           FOUNDER STORY
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:40, alignItems:'center' }} className="founder-grid">
             {/* Left: story */}
@@ -674,7 +641,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           JOURNEY STEPS
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0' }}>
+      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:44 }}>
             <span className="section-tag">Simple & clear</span>
@@ -708,7 +675,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
 
       {/* ═══ CONTENT FUNNEL ═══ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'52px 0' }}>
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'52px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:32 }}>
             <span className="section-tag">Plan Your Perfect Yatra</span>
@@ -775,7 +742,7 @@ export default function HomePage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0' }}>
+      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ marginBottom:28, textAlign:'center' }}>
             <span className="section-tag">Real stories</span>
@@ -790,7 +757,7 @@ export default function HomePage() {
 
 
       {/* ═══ FULL SITE DIRECTORY ═══ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:36 }}>
             <span className="section-tag">Everything in One Place</span>
@@ -997,23 +964,8 @@ export default function HomePage() {
                 📞 {SITE.phone}
               </a>
               <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
-                style={{ background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:7 }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=100083198213052" target="_blank" rel="noopener noreferrer"
-                style={{ background:'#1877F2', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:7 }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-                </svg>
-                Facebook
-              </a>
-              <a href="https://www.youtube.com/@Shivgangatravelsharidwar" target="_blank" rel="noopener noreferrer"
-                style={{ background:'#FF0000', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:7 }}>
-                <svg width="18" height="13" viewBox="0 0 24 17" fill="currentColor" aria-hidden="true">
-                  <path d="M23.495 2.656A3.016 3.016 0 0 0 21.37.516C19.505 0 12 0 12 0S4.495 0 2.63.516A3.016 3.016 0 0 0 .505 2.656C0 4.532 0 8.45 0 8.45s0 3.918.505 5.794a3.016 3.016 0 0 0 2.125 2.14C4.495 16.9 12 16.9 12 16.9s7.505 0 9.37-.516a3.016 3.016 0 0 0 2.125-2.14C24 12.368 24 8.45 24 8.45s0-3.918-.505-5.794zM9.545 12.027V4.873l6.272 3.577-6.272 3.577z"/>
-                </svg>
-                YouTube
+                style={{ background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+                📸 Instagram
               </a>
             </div>
           </div>
@@ -1023,7 +975,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           FAQ
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:800, margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:32 }}>
             <span className="section-tag">Have questions?</span>

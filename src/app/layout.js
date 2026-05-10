@@ -1,23 +1,11 @@
 import './globals.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
-import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import LeadPopup from '@/components/LeadPopup';
+import ChatBot from '@/components/ChatBot';
 import { SITE } from '@/data/packages';
-
-// ── Lazy-load heavy interactive widgets ──────────────────────────────────────
-// LeadPopup (14KB) and ChatBot (17KB) are never needed for LCP or FCP.
-// Loading them after hydration saves ~31KB from the initial JS bundle,
-// directly improving TTI and TBT on mobile (the two lowest-scoring metrics).
-const LeadPopup = dynamic(() => import('@/components/LeadPopup'), {
-  ssr: false,
-  loading: () => null,
-});
-const ChatBot = dynamic(() => import('@/components/ChatBot'), {
-  ssr: false,
-  loading: () => null,
-});
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({
@@ -32,9 +20,10 @@ const jakarta = Plus_Jakarta_Sans({
 const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['500','600','700'],
+  style: ['normal','italic'],
   variable: '--font-playfair',
-  display: 'optional',
-  preload: false,
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata = {
@@ -153,7 +142,7 @@ function SiteSchema() {
     },
 
     // ── Maps link — use Place ID for exact match ─────────────
-    hasMap: 'https://www.google.com/maps?cid=16074078434377735602',
+    hasMap: 'https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8',
 
     // ── Opening hours — must match GBP exactly ───────────────
     openingHoursSpecification: [
@@ -171,24 +160,23 @@ function SiteSchema() {
     // Update these whenever your GBP review count changes
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.9,
-      reviewCount: 850,
-      bestRating: 5,
-      worstRating: 1,
+      ratingValue: '4.3',
+      reviewCount: '21',
+      bestRating: '5',
+      worstRating: '1',
     },
 
     // ── Logo & image ──────────────────────────────────────────
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.shivgangatravels.com/logo.png',
+      url: `${SITE.baseUrl}/logo.png`,
       width: 512,
       height: 512,
-      '@id': 'https://www.shivgangatravels.com/logo.png',
     },
     image: [
       {
         '@type': 'ImageObject',
-        url: 'https://www.shivgangatravels.com/logo.png',
+        url: `${SITE.baseUrl}/logo.png`,
         width: 512,
         height: 512,
       },
@@ -278,8 +266,8 @@ function SiteSchema() {
 
     // ── Cross-platform links — all must match GBP "sameAs" ───
     sameAs: [
-      'https://www.google.com/maps?cid=16074078434377735602',
-      'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
+      'https://share.google/gApTvZu1nEBnhjm3W',
+      'https://www.google.com/maps/place/?q=place_id:ChIJcbRpbaBHCTkRsh3aBCyZEt8',
       'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       `https://wa.me/${SITE.whatsapp}`,
@@ -331,14 +319,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={`${jakarta.variable} ${playfair.variable}`}>
       <head>
-        {/* Preconnect to APIs used below-the-fold (Google reviews, maps) */}
-        <link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="anonymous"/>
-        <link rel="preconnect" href="https://maps.googleapis.com" crossOrigin="anonymous"/>
-        {/* DNS prefetch for analytics — non-blocking */}
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
-        {/* Preconnect Pexels for hero images */}
+        {/* Fonts now self-hosted via next/font — no Google Fonts preconnect needed */}
+        {/* Preconnect to image CDNs used in hero and package cards */}
         <link rel="preconnect" href="https://images.pexels.com"/>
+        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+        <link rel="dns-prefetch" href="https://maps.googleapis.com"/>
+        {/* Preload LCP hero image — eliminates largest contentful paint delay */}
+        <link
+          rel="preload"
+          as="image"
+          href="/opengraph-image"
+          fetchPriority="high"
+        />
         {/* Mobile / PWA */}
         <meta name="mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -351,14 +343,15 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="29.9896838, 78.1927454"/>
         <meta name="geo.country" content="IN"/>
         <meta name="ICBM" content="29.9457, 78.1642"/>
-        {/* SVG favicon — modern browsers */}
+        {/* SVG favicon */}
         <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" stroke="#0F2B5B" stroke-width="2" fill="none"/><circle cx="22" cy="22" r="14" fill="#0F2B5B"/><path d="M10 30 L17 18 L22 25 L27 16 L34 30 Z" fill="#E8920A"/></svg>`)}`}/>
-        {/* PNG favicon — Google uses this for the site logo in search results */}
-        <link rel="icon" type="image/png" sizes="512x512" href="/logo.png"/>
-        <link rel="icon" type="image/png" sizes="192x192" href="/logo-square.png"/>
-        {/* Apple touch icon — required for iOS home screen & social sharing */}
-        <link rel="apple-touch-icon" sizes="512x512" href="/logo.png"/>
-        <link rel="apple-touch-icon" sizes="192x192" href="/logo-square.png"/>
+        {/* DNS prefetch for third-party domains used on this site */}
+        <link rel="dns-prefetch" href="//www.google-analytics.com"/>
+        <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+        <link rel="dns-prefetch" href="//images.pexels.com"/>
+        <link rel="preconnect" href="https://www.google-analytics.com"/>
+        {/* Preload LCP hero image */}
+        <link rel="preload" as="image" href="/opengraph-image" fetchPriority="high"/>
         <SiteSchema/>
         <link rel="manifest" href="/manifest.json"/>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance"/>
@@ -371,23 +364,9 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <ChatBot/>
-        {/* GA4 — deferred 2s after load so it never competes with LCP/FID */}
-        <script dangerouslySetInnerHTML={{ __html:`
-          window.dataLayer=window.dataLayer||[];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag=gtag;
-          gtag('js',new Date());
-          gtag('config','G-FP0HXZ8068',{send_page_view:false});
-          window.addEventListener('load',function(){
-            setTimeout(function(){
-              var s=document.createElement('script');
-              s.async=true;
-              s.src='https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068';
-              document.head.appendChild(s);
-              gtag('event','page_view');
-            },2000);
-          });
-        `}}/>
+        {/* GA4 — loaded last, never blocks render */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FP0HXZ8068"/>
+        <script dangerouslySetInnerHTML={{ __html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FP0HXZ8068');`}}/>
       </body>
     </html>
   );

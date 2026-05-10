@@ -2,70 +2,45 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Pune 2026 — Train, Flight & Package from ₹24,999',
-  description: 'Char Dham Yatra from Pune 2026. 1,600 km — fly via Mumbai or Delhi. Trains, flights, pickups explained. All-inclusive packages from ₹24,999. Direct Haridwar operator since 2010.',
-  keywords: ['char dham yatra from pune','char dham yatra package from pune','pune to haridwar char dham','char dham tour from pune 2026','chardham yatra pune','pune char dham yatra package'],
+  title: 'Char Dham Yatra from Pune 2026 — Packages',
+  description: 'Char Dham Yatra from Pune 2026. Flight to Dehradun or Haridwar, all-inclusive packages from ₹19,500. Direct operator, zero commission.',
+  keywords: ['char dham yatra from pune, char dham yatra package from pune, pune to char dham yatra 2026, char dham tour from pune'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
-  openGraph: {
-    title: 'Char Dham Yatra from Pune 2026 — Trains, Flights & Packages from ₹24,999',
-    description: '1,600 km — fly via Mumbai or Delhi. Char Dham packages from ₹24,999/person. Zero commission, direct Haridwar operator.',
-    url: `${SITE.baseUrl}/char-dham-yatra-from-pune`, type:'website',
-  },
+  openGraph: { title: 'Char Dham Yatra Package from Pune 2026 — Train, Flight & Complete Guide', description: 'Char Dham Yatra from Pune 2026. Train to Haridwar (24 hrs) or flight to Dehradun. Packages from ₹24,499. VIP darshan. Zero commission. Trusted since 2010.', url: `${SITE.baseUrl}/char-dham-yatra-from-pune`, type:'website' },
 };
 
 function Schema() {
-  const faq = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity:[
-      { '@type':'Question', name:'How to reach Haridwar from Pune for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Pune (PNQ) to Dehradun — no direct flight. Best: fly Pune to Mumbai (45 min) or Delhi (1h 40m) and connect. Alternatively fly Pune to Delhi (IndiGo daily, ₹3,000–5,000) and take Shatabdi to Haridwar. Many Pune pilgrims use Mumbai airport as the connecting hub.' } },
-      { '@type':'Question', name:'What is the Char Dham Yatra package cost from Pune?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Pune starts at ₹24,999/person for a 9N/10D all-inclusive package — AC vehicle, hotels, meals, VIP darshan at all 4 dhams, guide, registration. Zero commission.' } },
-      { '@type':'Question', name:'How many days for Char Dham Yatra from Pune?', acceptedAnswer:{ '@type':'Answer', text:'Plan 11–13 days from Pune: 1 day travel to Haridwar + 9–10 days Char Dham circuit + 1–2 days return.' } },
-    ],
+  const ld = {
+    '@context':'https://schema.org','@type':'TravelAgency',
+    name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone,
+    address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'},
+    aggregateRating:{'@type':'AggregateRating',ratingValue:'4.9',reviewCount:'850',bestRating:'5'},
   };
-  const bc = {
-    '@context':'https://schema.org','@type':'BreadcrumbList',
-    itemListElement:[
-      { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
-      { '@type':'ListItem', position:2, name:'Char Dham Yatra', item:`${SITE.baseUrl}/char-dham-yatra` },
-      { '@type':'ListItem', position:3, name:'From Pune', item:`${SITE.baseUrl}/char-dham-yatra-from-pune` },
-    ],
-  };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
+const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
+const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 
 export default function Page() {
   return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px', textAlign:'center' }}>
-        <div style={{ maxWidth:860, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>
-            Pune · Char Dham 2026 · Direct Operator
-          </span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra from Pune 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.85)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto 20px' }}>
-            1,600 km — fly via Mumbai or Delhi · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹24,999' }/person</strong> · Zero commission
-          </p>
-          <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['✈️ Fly via Dehradun','✅ Zero commission','🙏 VIP darshan included','⭐ 4.9/5 · 850+ reviews'].map(t=>(
-              <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
-            ))}
-          </div>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
+        <div style={{ maxWidth:820, margin:'0 auto' }}>
+          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>From Pune · 2026</span>
+          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Package from Pune 2026</h1>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>All-inclusive from <strong style={{color:'#FFD166'}}>From ₹24,499</strong> · Pickup from Pune · VIP darshan · Zero commission</p>
+          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 24px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>From Pune</span>
@@ -73,106 +48,83 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 2026 · Season open: Apr 19 – Nov 2026</div>
+          {/* Last updated */}
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
 
-        <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
-          {[['Distance','1600 km'],['Best route','Fly to Dehradun/Delhi'],['Total trip','11–13 days'],['Package from','₹24,999/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(
-            <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div></div>
-          ))}
+        <p style={{...p}}>Planning a <strong>Char Dham Yatra from Pune</strong> in 2026? You are in the right place. Shiv Ganga Travels, based in Haridwar since 2010, has helped thousands of pilgrims from Pune and across India complete the sacred four-dham circuit — Yamunotri, Gangotri, Kedarnath, and Badrinath — safely and comfortably. This page covers everything specific to Pune pilgrims: how to get to Haridwar, what our packages include, and exactly what to expect.</p>
+
+        <h2 style={{...h2}}>How to Reach Haridwar from Pune</h2>
+        <p style={{...p}}>Most Pune pilgrims travel to Haridwar first, which is the official starting point of the Char Dham Yatra. From Haridwar, our vehicle picks you up and the journey begins. Here are your best travel options:</p>
+        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:24 }}>
+                    <div style={{display:'flex', gap:14, padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid var(--border)', alignItems:'flex-start'}}>
+            <span style={{fontSize:20, flexShrink:0}}>🚂</span>
+            <div><div style={{fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3}}>🚂 Train Pune → Haridwar</div><div style={{fontSize:13, color:'var(--text-mid)', lineHeight:1.5}}>Pune to Haridwar via Jhansi/Mathura · 22–26 hrs · ₹700–2,200 AC · Most popular option</div></div>
+          </div>
+          <div style={{display:'flex', gap:14, padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid var(--border)', alignItems:'flex-start'}}>
+            <span style={{fontSize:20, flexShrink:0}}>✈️</span>
+            <div><div style={{fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3}}>✈️ Pune → Dehradun</div><div style={{fontSize:13, color:'var(--text-mid)', lineHeight:1.5}}>Via Mumbai/Delhi · Total 3–4 hrs · ₹4,000–8,000</div></div>
+          </div>
+          <div style={{display:'flex', gap:14, padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid var(--border)', alignItems:'flex-start'}}>
+            <span style={{fontSize:20, flexShrink:0}}>🚌</span>
+            <div><div style={{fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3}}>🚌 Pune → Mumbai → Train</div><div style={{fontSize:13, color:'var(--text-mid)', lineHeight:1.5}}>Catch Mumbai→Haridwar train · Total 2 hrs bus + 22 hrs train</div></div>
+          </div>
         </div>
+        <p style={{...p}}>Pune is a major starting city for Char Dham Yatra pilgrims from Maharashtra. The Pune–Haridwar Express runs directly and is the most comfortable and cost-effective way to reach the yatra base.</p>
 
-        <p style={p}><strong>Char Dham Yatra from Pune 2026:</strong> The distance from Pune to Haridwar is approximately 1600km. Pune (PNQ) to Dehradun — no direct flight. Best: fly Pune to Mumbai (45 min) or Delhi (1h 40m) and connect. Alternatively fly Pune to Delhi (IndiGo daily, ₹3,000–5,000) and take Shatabdi to Haridwar. Many Pune pilgrims use Mumbai airport as the connecting hub. Our all-inclusive 9N/10D package from Pune is ₹24,999/person — covers the full circuit with AC vehicle, hotels, meals, VIP darshan, and guide. Everything on this page is specific to Pune pilgrims.</p>
-
-        <h2 style={h2}>How to Reach Haridwar from Pune</h2>
-        <p style={p}>All our packages start from Haridwar. Getting there from Pune is your first step. Actual train names, timings and costs below:</p>
-
-        
-        <div style={{ overflowX:'auto', marginBottom:20 }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
-            <thead><tr style={{ background:'var(--navy)' }}>
-              {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h=>(
-                <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>
-              ))}
-            </tr></thead>
-            <tbody>
-              {[
-                ['Pune–Dehradun Express (15098)','Pune Junction','05:35 PM','Haridwar','10:00 AM (+2)','~40h','Direct but very long'],
-              ].map(([train,from_,dep,arr,dur,cost,tip],i)=>(
-                <tr key={train} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
-                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{train}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{from_}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dep}</td>
-                  <td style={{ padding:'8px 12px', color:'#1D9E75', fontWeight:600, fontSize:12 }}>{arr}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dur}</td>
-                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12 }}>{cost}</td>
-                  <td style={{ padding:'8px 12px', color:'#64748b', fontSize:12 }}>{tip}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:10, padding:'12px 16px', marginBottom:20 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'#0C447C', marginBottom:4 }}>✈️ Flight from Pune</div>
-          <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Pune (PNQ) to Dehradun — no direct flight. Best: fly Pune to Mumbai (45 min) or Delhi (1h 40m) and connect. Alternatively fly Pune to Delhi (IndiGo daily, ₹3,000–5,000) and take Shatabdi to Haridwar. Many Pune pilgrims use Mumbai airport as the connecting hub.</div>
-        </div>
-
-        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🚗 By Road from Pune</div>
-          <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Pune–Delhi flight + Shatabdi is the cleanest option. The Pune–Dehradun Express exists but 40 hours of train travel before a 10-day yatra is punishing. Budget ₹4,000–6,000 for air travel.</div>
-        </div>
-
-        <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Pune pilgrims (15 years of experience)</div>
-          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7 }}>Pune has a significant Marathi pilgrim community alongside North Indian IT professionals. Many Pune groups book September–October to avoid monsoon and school year conflicts. The city has multiple WhatsApp groups dedicated to Char Dham yatra planning.</div>
-        </div>
-
-        <h2 style={h2}>What's Included — Pune Char Dham Package</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:24 }}>
-          {['✅ AC vehicle (Innova / Tempo Traveller)','✅ Station or airport pickup in Pune or Haridwar','✅ Hotel accommodation all 9 nights (twin sharing)','✅ Breakfast + dinner every day','✅ VIP darshan — no queue at all 4 dhams','✅ Experienced Garhwali guide throughout','✅ Biometric registration handled — completely free','✅ All tolls, parking, driver allowance included','✅ Oxygen cylinder + first aid kit on vehicle','✅ 24hr WhatsApp support during the entire yatra'].map(item=>(
-            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>
-          ))}
-        </div>
-        <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
-          <strong>Package from Pune:</strong> ₹24,999/person · 9N/10D · All-inclusive · 5% GST included · Zero commission — you pay us directly
-        </div>
-
-        <h2 style={h2}>Our Pickup Points in Pune</h2>
-        <p style={p}>We pick up from these Pune locations. If you are at a different address, WhatsApp us — we accommodate almost all requests.</p>
-        <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:28 }}>
-          <span key='Pune Railway Station' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Pune Railway Station</span>
-          <span key='Pune International Airport' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Pune International Airport</span>
-          <span key='Shivajinagar' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Shivajinagar</span>
-          <span key='Hinjewadi' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Hinjewadi</span>
-        </div>
-
-        <h2 style={h2}>2026 Season — All 4 Dhams Are Open</h2>
-        <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))', gap:12 }}>
-          {[['🌊 Yamunotri','Open Apr 19','Closes Nov 2026'],['🌿 Gangotri','Open Apr 19','Closes Nov 2026'],['🏔️ Kedarnath','Open Apr 22','Closes Nov 2026'],['🕌 Badrinath','Open Apr 23','Closes Nov 2026']].map(([d,o,c])=>(
-            <div key={d} style={{ textAlign:'center' }}>
-              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{d}</div>
-              <div style={{ fontSize:12.5, color:'#15803D', fontWeight:600 }}>{o}</div>
-              <div style={{ fontSize:12, color:'#64748b' }}>{c}</div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
-          <div style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginBottom:6 }}>🙏 Pune → Haridwar → Char Dham</div>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Book Your Char Dham Yatra from Pune</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free itinerary in 2 hrs · ₹24,999/person · Zero commission · Registration handled free</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Book Now</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+        <h2 style={{...h2}}>Our Char Dham Package from Pune — ₹24,499 Per Person</h2>
+        <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px 22px', marginBottom:24 }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>📦 Char Dham Package from Pune includes:</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:10 }}>
+            {[
+              {icon:'🚌', item:'AC private vehicle from Pune airport or Haridwar station'},
+              {icon:'🏨', item:'Hotel accommodation — all nights on twin sharing'},
+              {icon:'🍱', item:'Daily breakfast + dinner throughout the tour'},
+              {icon:'🎫', item:'VIP darshan at all 4 dhams — skip the queue'},
+              {icon:'👤', item:'Experienced local Garhwali guide'},
+              {icon:'📋', item:'Complete biometric registration handled for you'},
+              {icon:'💊', item:'Oxygen cylinder + first aid kit on vehicle'},
+              {icon:'🚫', item:'Zero commission — you pay us directly'},
+            ].map(f=>(
+              <div key={f.item} style={{ display:'flex', gap:10, padding:'10px 12px', background:'#fff', borderRadius:8, border:'1px solid var(--border)', alignItems:'center', fontSize:13, color:'var(--text-mid)' }}>
+                <span style={{flexShrink:0,fontSize:18}}>{}</span>{f.icon}{f.item}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
-          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+        <h2 style={{...h2}}>2026 Char Dham Opening Dates — Season is Open</h2>
+        <div style={{ background:'#dcfce7', border:'1px solid #86efac', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'#15803d', marginBottom:10 }}>✅ 2026 Season Confirmed Open</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))', gap:8, fontSize:13.5, color:'var(--text-mid)' }}>
+            <div>🌊 <strong>Yamunotri</strong><br/>Open: Apr 19 | Closes: Nov 11</div>
+            <div>🌿 <strong>Gangotri</strong><br/>Open: Apr 19 | Closes: Nov 10</div>
+            <div>🏔️ <strong>Kedarnath</strong><br/>Open: Apr 22 | Closes: Nov 11</div>
+            <div>🕌 <strong>Badrinath</strong><br/>Open: Apr 23 | Closes: Nov 13</div>
+          </div>
+        </div>
+
+        <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides:</div>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+            {[
+              {label:'Complete Yatra Guide', href:'/char-dham-yatra'},
+              {label:'Kedarnath Trek Guide', href:'/blog/kedarnath-trek-guide'},
+              {label:'Packing List', href:'/blog/char-dham-yatra-packing-list'},
+              {label:'2026 New Rules', href:'/blog/char-dham-yatra-2026-new-rules'},
+              {label:'Cost Breakdown', href:'/blog/char-dham-yatra-cost'},
+            ].map(l=>(
+              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label} →</Link>
             ))}
+          </div>
+        </div>
+
+        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
+          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Pune Char Dham Package</h3>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary within 2 hours. Pickup from Pune railway station or Mumbai airport. Zero commission. ₹24,499 all-inclusive.</p>
+          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Pune.')}`} target="_blank" rel="nofollow noopener noreferrer"
+              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
           </div>
         </div>
       </article>

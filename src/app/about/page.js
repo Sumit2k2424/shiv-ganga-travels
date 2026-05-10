@@ -38,7 +38,7 @@ function Schema() {
     },
     description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.9, reviewCount: 850, bestRating: 5 },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '850', bestRating: '5' },
     sameAs: [`https://www.google.com/maps?cid=16074078434377735602`, `https://maps.app.goo.gl/Cup8TpduvDW6TaKf6`],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}/>;
