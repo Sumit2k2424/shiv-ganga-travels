@@ -33,13 +33,8 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['500','600','700'],
   variable: '--font-playfair',
-  display: 'optional',  // don't block render waiting for decorative display font
-  preload: false,       // preload: false — this font is only used in headings below fold
-});
-  style: ['normal','italic'],
-  variable: '--font-playfair',
-  display: 'swap',
-  preload: true,
+  display: 'optional',
+  preload: false,
 });
 
 export const metadata = {
