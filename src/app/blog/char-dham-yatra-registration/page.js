@@ -37,7 +37,7 @@ function Schema() {
       '@type': 'Organization',
       name: SITE.name,
       url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+      logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' },
     },
     datePublished: '2026-01-01',
     dateModified: '2026-05-09',

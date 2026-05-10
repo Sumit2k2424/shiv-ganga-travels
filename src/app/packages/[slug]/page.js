@@ -94,7 +94,7 @@ function Schemas({ pkg }) {
     name:pkg.name,
     description:pkg.metaDesc,
     url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    image:pkg.photo||`${SITE.baseUrl}/logo.png`,
+    image:pkg.photo||'https://www.shivgangatravels.com/logo.png',
     brand:{ '@type':'Brand', name:SITE.name },
     offers:{
       '@type':'Offer',
