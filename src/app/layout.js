@@ -180,14 +180,15 @@ function SiteSchema() {
     // ── Logo & image ──────────────────────────────────────────
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE.baseUrl}/logo.png`,
+      url: 'https://www.shivgangatravels.com/logo.png',
       width: 512,
       height: 512,
+      '@id': 'https://www.shivgangatravels.com/logo.png',
     },
     image: [
       {
         '@type': 'ImageObject',
-        url: `${SITE.baseUrl}/logo.png`,
+        url: 'https://www.shivgangatravels.com/logo.png',
         width: 512,
         height: 512,
       },
@@ -350,8 +351,14 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="29.9896838, 78.1927454"/>
         <meta name="geo.country" content="IN"/>
         <meta name="ICBM" content="29.9457, 78.1642"/>
-        {/* SVG favicon */}
+        {/* SVG favicon — modern browsers */}
         <link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" stroke="#0F2B5B" stroke-width="2" fill="none"/><circle cx="22" cy="22" r="14" fill="#0F2B5B"/><path d="M10 30 L17 18 L22 25 L27 16 L34 30 Z" fill="#E8920A"/></svg>`)}`}/>
+        {/* PNG favicon — Google uses this for the site logo in search results */}
+        <link rel="icon" type="image/png" sizes="512x512" href="/logo.png"/>
+        <link rel="icon" type="image/png" sizes="192x192" href="/logo-square.png"/>
+        {/* Apple touch icon — required for iOS home screen & social sharing */}
+        <link rel="apple-touch-icon" sizes="512x512" href="/logo.png"/>
+        <link rel="apple-touch-icon" sizes="192x192" href="/logo-square.png"/>
         <SiteSchema/>
         <link rel="manifest" href="/manifest.json"/>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance"/>
