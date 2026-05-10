@@ -33,6 +33,33 @@ const p = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:
 export default function NewRules2026() {
   const rules = [
     {
+      icon:'🚗',
+      rule:'Green Card — Trip Permit for non-UK vehicles',
+      status:'NEW 2026',
+      color:'#fef9c3',
+      border:'#fde047',
+      detail:'All vehicles registered OUTSIDE Uttarakhand (Delhi DL, Haryana HR, UP, Rajasthan RJ, Maharashtra MH, and all other non-UK plates) must obtain a Green Card (Trip Permit) before entering Char Dham routes. Apply at greencard.uk.gov.in — fee ₹50, takes 5 minutes. Checked at route checkposts. Uttarakhand-registered (UK plate) vehicles are exempt.',
+      impact:'Apply before you leave home. If you are self-driving from Delhi, Jaipur, or Lucknow — do this online the night before departure. If you book a Haridwar-based operator (UK plates), this is not required at all.',
+    },
+    {
+      icon:'🩺',
+      rule:'SpO2 oxygen screening at Sonprayag checkpoint',
+      status:'NEW 2026',
+      color:'#fce7f3',
+      border:'#f9a8d4',
+      detail:'All pilgrims heading to Kedarnath are health-screened at the Sonprayag checkpoint. Oxygen saturation (SpO2) below 85% means you may be restricted from proceeding to Kedarnath. The government has deployed 31 health check centres and 20 Medical Relief Posts (MRPs) along all Char Dham routes. Helicopter passengers are exempt from this trek-route screening.',
+      impact:'Carry a pulse oximeter — available at any pharmacy for ₹300–800. Check your SpO2 at Haridwar (sea level) before departure and again at Sonprayag. If you are 55+, do the medical check your doctor recommends.',
+    },
+    {
+      icon:'🌙',
+      rule:'Vehicle movement banned 10 PM – 4 AM on all routes',
+      status:'NEW 2026',
+      color:'#e0e7ff',
+      border:'#a5b4fc',
+      detail:'All private and commercial vehicles are banned from Char Dham roads between 10:00 PM and 4:00 AM. Police checkposts enforce this at key points. Plan your daily driving to reach your overnight stop (Sonprayag, Guptkashi, Uttarkashi, Barkot) before 10 PM. Violations result in vehicle detention overnight.',
+      impact:'This actually benefits pilgrims — roads are safer and less congested during the permit hours. Plan drives to end by 8–9 PM to have buffer time.',
+    },
+    {
       icon:'📱',
       rule:'Mobile phone ban inside temples',
       status:'NEW 2026',
