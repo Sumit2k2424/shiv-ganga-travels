@@ -102,42 +102,30 @@ export default function Footer() {
             <p style={{ fontSize:12.5, lineHeight:1.7, color:'rgba(255,255,255,0.55)', marginBottom:18, maxWidth:240 }}>
               Haridwar's trusted Char Dham Yatra specialist since {SITE.established}. 50,000+ blessed pilgrims. Zero commission.
             </p>
-            <div style={{ display:'flex', gap:8 }}>
-              <a href='tel:+917017082807'
-                style={{ background:'rgba(255,255,255,0.1)', color:'var(--gold)', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', border:'1px solid rgba(255,255,255,0.12)' }}>
+            <div style={{ display:'flex', gap:8, flexWrap:'wrap', alignItems:'center' }}>
+              <a href='tel:+917017082807' aria-label="Call us"
+                style={{ background:'rgba(255,255,255,0.1)', color:'var(--gold)', padding:'8px 12px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', border:'1px solid rgba(255,255,255,0.12)', whiteSpace:'nowrap' }}>
                 📞 Call
               </a>
-              <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="nofollow noopener noreferrer"
-                style={{ background:'#25D366', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none' }}>
+              <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp"
+                style={{ background:'#25D366', color:'#fff', padding:'8px 12px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', whiteSpace:'nowrap' }}>
                 💬 WhatsApp
               </a>
-              <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
-                style={{ background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:6 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-              </a>
-              {/* Facebook — official brand blue #1877F2 */}
-              <a href="https://www.facebook.com/profile.php?id=100083198213052" target="_blank" rel="noopener noreferrer"
-                style={{ background:'#1877F2', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:6 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-                </svg>
-                Facebook
-              </a>
-              {/* YouTube — official brand red #FF0000 */}
-              <a href="https://www.youtube.com/@Shivgangatravelsharidwar" target="_blank" rel="noopener noreferrer"
-                style={{ background:'#FF0000', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:6 }}>
-                <svg width="16" height="12" viewBox="0 0 24 17" fill="currentColor" aria-hidden="true">
-                  <path d="M23.495 2.656A3.016 3.016 0 0 0 21.37.516C19.505 0 12 0 12 0S4.495 0 2.63.516A3.016 3.016 0 0 0 .505 2.656C0 4.532 0 8.45 0 8.45s0 3.918.505 5.794a3.016 3.016 0 0 0 2.125 2.14C4.495 16.9 12 16.9 12 16.9s7.505 0 9.37-.516a3.016 3.016 0 0 0 2.125-2.14C24 12.368 24 8.45 24 8.45s0-3.918-.505-5.794zM9.545 12.027V4.873l6.272 3.577-6.272 3.577z"/>
-                </svg>
-                YouTube
-              </a>
+              <div style={{ display:'flex', gap:6 }}>
+                <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
+                  style={{ width:34, height:34, borderRadius:'50%', background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100083198213052" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"
+                  style={{ width:34, height:34, borderRadius:'50%', background:'#1877F2', color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@Shivgangatravelsharidwar" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"
+                  style={{ width:34, height:34, borderRadius:'50%', background:'#FF0000', color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+                  <svg width="17" height="12" viewBox="0 0 24 17" fill="currentColor" aria-hidden="true"><path d="M23.495 2.656A3.016 3.016 0 0 0 21.37.516C19.505 0 12 0 12 0S4.495 0 2.63.516A3.016 3.016 0 0 0 .505 2.656C0 4.532 0 8.45 0 8.45s0 3.918.505 5.794a3.016 3.016 0 0 0 2.125 2.14C4.495 16.9 12 16.9 12 16.9s7.505 0 9.37-.516a3.016 3.016 0 0 0 2.125-2.14C24 12.368 24 8.45 24 8.45s0-3.918-.505-5.794zM9.545 12.027V4.873l6.272 3.577-6.272 3.577z"/></svg>
+                </a>
+              </div>
             </div>
-          </div>
-
-          {/* Link columns */}
-          {COLS.map(col => (
-            <div key={col.heading}>
               <h3 style={{
                 color:'#fff', fontWeight:700, fontSize:11.5, marginBottom:14,
                 textTransform:'uppercase', letterSpacing:'0.1em',
