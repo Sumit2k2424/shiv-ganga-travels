@@ -16,8 +16,41 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
+  // Reduce JS bundle size — tree-shake large packages
   experimental: {
-    optimizePackageImports: ['react', 'react-dom'],
+    optimizePackageImports: [
+      'react',
+      'react-dom',
+      'next/link',
+      'next/image',
+    ],
+  },
+
+  // Webpack: split vendor chunks for better caching on mobile
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...(config.optimization.splitChunks?.cacheGroups || {}),
+          // Separate React into its own cached chunk
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+            name: 'react',
+            chunks: 'all',
+            priority: 20,
+          },
+          // Separate Next.js internals
+          nextjs: {
+            test: /[\\/]node_modules[\\/]next[\\/]/,
+            name: 'nextjs',
+            chunks: 'all',
+            priority: 10,
+          },
+        },
+      };
+    }
+    return config;
   },
 
   async redirects() {

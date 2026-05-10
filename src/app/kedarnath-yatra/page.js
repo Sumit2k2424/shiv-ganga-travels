@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra 2026 — Package, Trek, Helicopter & Tour Guide from Haridwar',
-  description: 'Kedarnath yatra package 2026 from Haridwar from ₹6,499. Kedarnath trip guide — 16km trek, pony ₹3,500, helicopter ₹7,500. Haridwar to Kedarnath package. Direct operator.',
-  keywords: ['Kedarnath Yatra 2026','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide','Kedarnath helicopter booking 2026','kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package'],
+  title: 'Kedarnath Yatra Package 2026 — Ek Dham Yatra from ₹6,499 | Trek & Helicopter Guide',
+  description: 'Kedarnath Yatra 2026 — Ek Dham package from ₹6,499/person. 16km trek guide, pony ₹3,500, helicopter ₹7,500. Group discounts. Vasuki Tal, Gandhi Sarovar, Triyuginarayan. Direct Haridwar operator.',
+  keywords: ['Kedarnath Yatra 2026','ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide','Kedarnath helicopter booking 2026','kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
     title: 'Kedarnath Yatra 2026 — Complete Trek, Packages & Helicopter Guide',

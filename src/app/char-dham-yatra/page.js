@@ -3,8 +3,8 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar — From ₹19,500 | Book Direct',
-  description: 'Char dham yatra package from Haridwar 2026. 9N/10D from ₹19,500. Fixed departures May–Nov. Kedarnath, Badrinath, Gangotri, Yamunotri. 16km trek guide, hotel names, en-route stops. Direct operator since 2010.',
+  title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charges | Book Direct',
+  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹19,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct. Kedarnath 16km trek, Badrinath, Gangotri, Yamunotri. Direct operator since 2010.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
     'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',
@@ -14,7 +14,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar — From ₹19,500 | Book Direct',
+    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charges | Book Direct',
     description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
@@ -425,6 +425,53 @@ export default function CharDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Fares include fuel, toll, parking and driver allowance. All packages are all-inclusive — hotel, meals, guide, registration. Zero commission. No hidden fees.</p>
+
+        {/* No hidden charges breakdown — competitor Yatrio ranks heavily on this */}
+        <h2 style={h2Style}>No Hidden Charges — What ₹19,500 Includes (and Doesn't)</h2>
+        <p style={pStyle}>
+          The phrase "no hidden charges" is used by every operator. Here is what it actually means with Shiv Ganga Travels — a line-by-line breakdown of what is included in the ₹19,500 base price and what is genuinely a personal choice extra.
+        </p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:24 }}>
+          <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:10 }}>✅ Included in ₹19,500</div>
+            {['AC vehicle (Tempo Traveller / Innova based on group size)','All 9 nights hotel (twin sharing, breakfast + dinner)','Experienced Garhwali guide throughout','VIP darshan at all 4 dhams — no queue','All tolls, parking, fuel, driver allowance','Biometric registration assistance (free)','Oxygen cylinder + first aid kit','24hr WhatsApp support','GST @ 5% (included, not extra)'].map(item => (
+              <div key={item} style={{ fontSize:13, color:'#334155', padding:'4px 0', borderBottom:'1px solid rgba(21,128,61,0.12)', display:'flex', gap:6 }}>
+                <span style={{ color:'#15803D', fontWeight:700, flexShrink:0 }}>✓</span>{item}
+              </div>
+            ))}
+          </div>
+          <div style={{ background:'#FFF8F0', border:'1px solid #FDBA74', borderRadius:12, padding:'16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:10 }}>📌 Genuine optional extras (your choice)</div>
+            {['Kedarnath pony — ₹3,500–4,500 one way (booked at Gaurikund)','Yamunotri pony — ₹1,800–2,500 one way','Kedarnath helicopter — ₹7,500–9,500 round trip (book via IRCTC)','Kedarnath overnight stay — ₹800–1,500 (GMVN tents)','Pind Daan at Brahma Kapal Badrinath — priest charges vary','Travel insurance (recommended, not included)','Personal expenses: tips, snacks, souvenirs'].map(item => (
+              <div key={item} style={{ fontSize:13, color:'#78350F', padding:'4px 0', borderBottom:'1px solid rgba(146,64,14,0.1)', display:'flex', gap:6 }}>
+                <span style={{ color:'#E8920A', fontWeight:700, flexShrink:0 }}>+</span>{item}
+              </div>
+            ))}
+          </div>
+        </div>
+        <p style={{ fontSize:13, color:'var(--text-muted)', fontStyle:'italic', marginBottom:28 }}>
+          No service charge. No registration fee. No booking platform fee. The price we quote is the price you pay. We have operated this way since 2010.
+        </p>
+
+        {/* Add-on options — Tungnath/Auli keywords */}
+        <h2 style={h2Style}>Popular Add-Ons to Your Char Dham Yatra</h2>
+        <p style={pStyle}>Many pilgrims extend their yatra with one of these nearby sacred or scenic destinations. All add-ons are optional, vehicle-based (no extra guide needed), and can be added to any package at a marginal extra cost.</p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
+          {[
+            { name:'Tungnath Temple', type:'Sacred', detail:'The highest Shiva temple in the world at 3,680m. Near Chopta, between Kedarnath and Badrinath on the circuit. A 3.5km trek from Chopta. Adds 1 day and approximately ₹2,000 extra. One of the Panch Kedar.' },
+            { name:'Auli Skiing/Sightseeing', type:'Scenic', detail:'India's premier skiing destination at 2,519m, just 16km from Joshimath. Best in Feb–March for skiing; year-round for Himalayan views and the Auli Gondola (Asia's highest cable car). Add to Badrinath day.' },
+            { name:'Hemkund Sahib', type:'Sacred (Sikh)', detail:'Sacred Sikh gurudwara at 4,632m — the highest gurudwara in the world. Near Govindghat (Badrinath route). Adds 1 day: 14km trek round trip from Ghangaria. Many Hindu pilgrims visit alongside the Char Dham.' },
+            { name:'Valley of Flowers', type:'UNESCO', detail:'UNESCO World Heritage Site near Joshimath. Open July–September only (monsoon flowers). 3km trek from Ghangaria. Combine with Hemkund Sahib for a 2-day Joshimath side trip.' },
+          ].map(item => (
+            <div key={item.name} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:6 }}>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{item.name}</div>
+                <span style={{ fontSize:11, background:'rgba(11,123,139,0.1)', color:'var(--teal)', padding:'2px 8px', borderRadius:20, fontWeight:600 }}>{item.type}</span>
+              </div>
+              <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.detail}</div>
+            </div>
+          ))}
+        </div>
 
         <h2 style={h2Style}>Best Time for Char Dham Yatra 2026 — Month-by-Month</h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>

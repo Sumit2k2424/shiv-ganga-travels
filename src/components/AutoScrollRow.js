@@ -2,8 +2,14 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 
 /**
- * AutoScrollRow — horizontal scroll container that auto-advances
- * every `interval` ms. Pauses on hover/touch. Arrow buttons included.
+ * AutoScrollRow — horizontal scroll container.
+ *
+ * MOBILE PERFORMANCE: On mobile (pointer: coarse) we use CSS scroll-snap
+ * only — no JavaScript timers, no requestAnimationFrame. The JS auto-advance
+ * timer only activates on desktop where the CPU cost is negligible.
+ *
+ * This fixes the TBT (Total Blocking Time) regression caused by 3 simultaneous
+ * setInterval calls on the mobile main thread.
  */
 export default function AutoScrollRow({ children, interval = 5000, cardWidth = 276 }) {
   const ref     = useRef(null);
@@ -11,6 +17,13 @@ export default function AutoScrollRow({ children, interval = 5000, cardWidth = 2
   const paused  = useRef(false);
   const [canLeft,  setCanLeft]  = useState(false);
   const [canRight, setCanRight] = useState(true);
+  const [isMobile, setIsMobile] = useState(true); // default mobile — no timer until confirmed desktop
+
+  useEffect(() => {
+    // Detect pointer type once — coarse = touch/mobile, fine = mouse/desktop
+    const mql = window.matchMedia('(pointer: coarse)');
+    setIsMobile(mql.matches);
+  }, []);
 
   const updateArrows = useCallback(() => {
     const el = ref.current;
@@ -19,141 +32,101 @@ export default function AutoScrollRow({ children, interval = 5000, cardWidth = 2
     setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
   }, []);
 
-  const scrollBy = useCallback((dir) => {
-    const el = ref.current;
-    if (!el) return;
-    el.scrollBy({ left: dir * (cardWidth + 16), behavior: 'smooth' });
-  }, [cardWidth]);
-
-  const resetToStart = useCallback(() => {
-    const el = ref.current;
-    if (!el) return;
-    // If at the end, loop back to start
-    if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 4) {
-      el.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      el.scrollBy({ left: cardWidth + 16, behavior: 'smooth' });
-    }
-  }, [cardWidth]);
-
-  // Auto-scroll ticker
-  useEffect(() => {
-    const start = () => {
-      timer.current = setInterval(() => {
-        if (!paused.current) resetToStart();
-      }, interval);
-    };
-    start();
-    return () => clearInterval(timer.current);
-  }, [interval, resetToStart]);
-
-  // Arrow/scroll listeners
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     updateArrows();
     el.addEventListener('scroll', updateArrows, { passive: true });
-    return () => el.removeEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows, { passive: true });
+    return () => {
+      el.removeEventListener('scroll', updateArrows);
+      window.removeEventListener('resize', updateArrows);
+    };
   }, [updateArrows]);
 
-  const pause  = () => { paused.current = true; };
-  const resume = () => { paused.current = false; };
+  // Auto-advance timer — DESKTOP ONLY (pointer: fine)
+  useEffect(() => {
+    if (isMobile) return; // no timer on mobile — saves main thread
+    const el = ref.current;
+    if (!el) return;
 
-  const arrowBtn = (dir, disabled) => (
-    <button
-      onClick={() => { scrollBy(dir); }}
-      disabled={disabled}
-      aria-label={dir > 0 ? 'Next' : 'Previous'}
-      style={{
-        width: 34, height: 34, borderRadius: '50%',
-        background: disabled ? 'var(--bg)' : '#fff',
-        border: '1.5px solid var(--border)',
-        cursor: disabled ? 'not-allowed' : 'pointer',
-        opacity: disabled ? 0.4 : 1,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        boxShadow: disabled ? 'none' : 'var(--shadow)',
-        transition: 'all .2s',
-        color: 'var(--navy)',
-        flexShrink: 0,
-      }}
-    >
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-        stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        {dir > 0
-          ? <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4"/>
-          : <path d="M10.5 6.5h-8M6.5 2.5l-4 4 4 4"/>
-        }
-      </svg>
-    </button>
-  );
+    const advance = () => {
+      if (paused.current) return;
+      const atEnd = el.scrollLeft >= el.scrollWidth - el.clientWidth - 10;
+      el.scrollBy({ left: atEnd ? -el.scrollWidth : cardWidth, behavior: 'smooth' });
+    };
+
+    timer.current = setInterval(advance, interval);
+    return () => clearInterval(timer.current);
+  }, [isMobile, interval, cardWidth]);
+
+  const scroll = (dir) => {
+    const el = ref.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+  };
 
   return (
     <div style={{ position: 'relative' }}>
-      {/* Arrow controls */}
-      <div style={{
-        position: 'absolute', top: '50%', left: 0, right: 0,
-        transform: 'translateY(-50%)',
-        display: 'flex', justifyContent: 'space-between',
-        pointerEvents: 'none', zIndex: 10,
-        padding: '0 4px',
-      }}>
-        <div style={{ pointerEvents: 'all' }}>{arrowBtn(-1, !canLeft)}</div>
-        <div style={{ pointerEvents: 'all' }}>{arrowBtn( 1, !canRight)}</div>
-      </div>
+      {/* Left arrow — only shown on desktop */}
+      {canLeft && (
+        <button
+          onClick={() => scroll(-1)}
+          aria-label="Scroll left"
+          style={{
+            display: isMobile ? 'none' : 'flex',
+            position: 'absolute', left: -18, top: '50%',
+            transform: 'translateY(-50%)', zIndex: 2,
+            width: 36, height: 36, borderRadius: '50%',
+            background: '#fff', border: '1px solid #e2e8f0',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+            alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
+          }}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8l4-4" stroke="#0F2B5B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      )}
 
       {/* Scroll container */}
       <div
         ref={ref}
-        className="hscroll"
-        onMouseEnter={pause}
-        onMouseLeave={resume}
-        onTouchStart={pause}
-        onTouchEnd={resume}
-        style={{ padding: '4px 40px 20px' }} /* side padding for arrow buttons */
-      >
+        onMouseEnter={() => { paused.current = true; }}
+        onMouseLeave={() => { paused.current = false; }}
+        onTouchStart={() => { paused.current = true; }}
+        onTouchEnd={() => { setTimeout(() => { paused.current = false; }, 1500); }}
+        style={{
+          display: 'flex',
+          gap: 12,
+          overflowX: 'auto',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          paddingBottom: 4,
+        }}>
         {children}
       </div>
 
-      {/* Dot progress indicator */}
-      <DotIndicator scrollRef={ref} cardWidth={cardWidth}/>
-    </div>
-  );
-}
-
-/* ── Dot progress dots ── */
-function DotIndicator({ scrollRef, cardWidth }) {
-  const [active, setActive] = useState(0);
-  const [total,  setTotal]  = useState(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const count = Math.round(el.scrollWidth / (cardWidth + 16));
-    setTotal(count);
-    const onScroll = () => {
-      const idx = Math.round(el.scrollLeft / (cardWidth + 16));
-      setActive(Math.min(idx, count - 1));
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, [scrollRef, cardWidth]);
-
-  if (total <= 1) return null;
-
-  return (
-    <div style={{
-      display: 'flex', justifyContent: 'center',
-      gap: 6, marginTop: 4,
-    }}>
-      {[...Array(Math.min(total, 8))].map((_, i) => (
-        <div key={i} style={{
-          width: i === active ? 18 : 6,
-          height: 6,
-          borderRadius: 3,
-          background: i === active ? 'var(--gold)' : 'var(--border)',
-          transition: 'all .3s ease',
-        }}/>
-      ))}
+      {/* Right arrow — only shown on desktop */}
+      {canRight && (
+        <button
+          onClick={() => scroll(1)}
+          aria-label="Scroll right"
+          style={{
+            display: isMobile ? 'none' : 'flex',
+            position: 'absolute', right: -18, top: '50%',
+            transform: 'translateY(-50%)', zIndex: 2,
+            width: 36, height: 36, borderRadius: '50%',
+            background: '#fff', border: '1px solid #e2e8f0',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+            alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
+          }}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 4l4 4-4 4" stroke="#0F2B5B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

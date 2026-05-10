@@ -1,12 +1,45 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { PACKAGES, SITE, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
-import HeroSearch from '@/components/HeroSearch';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
-import CounterStat from '@/components/CounterStat';
 import FAQAccordion from '@/components/FAQAccordion';
-import GoogleReviews from '@/components/GoogleReviews';
-import AutoScrollRow from '@/components/AutoScrollRow';
+
+// ── Lazy-load below-the-fold interactive components ──────────────────────────
+// These are NOT needed for LCP (first visible content). Loading them lazily
+// removes them from the critical JS bundle, directly improving:
+//   • LCP  — hero renders without waiting for these
+//   • TBT  — main thread not blocked by AutoScrollRow × 3 + GoogleReviews
+//   • TTI  — page becomes interactive faster on mobile 3G/4G
+
+// HeroSearch — small but interactive; defer 1 tick so hero text paints first
+const HeroSearch = dynamic(() => import('@/components/HeroSearch'), {
+  ssr: false,
+  loading: () => (
+    <div style={{ height:160, background:'rgba(255,255,255,0.06)', borderRadius:16 }}/>
+  ),
+});
+
+// CounterStat — pure visual, no interaction needed before scroll
+const CounterStat = dynamic(() => import('@/components/CounterStat'), {
+  ssr: true, // keep SSR so Googlebot sees real values
+});
+
+// GoogleReviews — fetches API on mount; load only when near viewport
+const GoogleReviews = dynamic(() => import('@/components/GoogleReviews'), {
+  ssr: false,
+  loading: () => (
+    <div style={{ height:300, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,0.4)', fontSize:14 }}>
+      Loading reviews…
+    </div>
+  ),
+});
+
+// AutoScrollRow — runs JS timers; 3 instances on page. Load after hydration
+const AutoScrollRow = dynamic(() => import('@/components/AutoScrollRow'), {
+  ssr: false,
+  loading: () => <div style={{ height:240, overflowX:'hidden' }}/>,
+});
 
 export const metadata = {
   title: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar | Est. 2010`,
@@ -512,7 +545,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           WHY CHOOSE US — compact icon grid
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0 48px' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0 48px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div className="why-split" style={{ display:'grid', gap:32, alignItems:'center' }}>
             {/* Left: copy */}
@@ -568,7 +601,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           FOUNDER STORY
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:40, alignItems:'center' }} className="founder-grid">
             {/* Left: story */}
@@ -641,7 +674,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           JOURNEY STEPS
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:44 }}>
             <span className="section-tag">Simple & clear</span>
@@ -675,7 +708,7 @@ export default function HomePage() {
       ═══════════════════════════════════════════════ */}
 
       {/* ═══ CONTENT FUNNEL ═══ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'52px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'52px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:32 }}>
             <span className="section-tag">Plan Your Perfect Yatra</span>
@@ -742,7 +775,7 @@ export default function HomePage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal as="section" style={{ background:'#fff', padding:'56px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'#fff', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ marginBottom:28, textAlign:'center' }}>
             <span className="section-tag">Real stories</span>
@@ -757,7 +790,7 @@ export default function HomePage() {
 
 
       {/* ═══ FULL SITE DIRECTORY ═══ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:36 }}>
             <span className="section-tag">Everything in One Place</span>
@@ -975,7 +1008,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           FAQ
       ═══════════════════════════════════════════════ */}
-      <ScrollReveal as="section" style={{ background:'var(--bg)', padding:'56px 0' }}>
+      <ScrollReveal as="section" className="section-lazy" style={{ background:'var(--bg)', padding:'56px 0' }}>
         <div style={{ maxWidth:800, margin:'0 auto', padding:'0 20px' }}>
           <div style={{ textAlign:'center', marginBottom:32 }}>
             <span className="section-tag">Have questions?</span>
