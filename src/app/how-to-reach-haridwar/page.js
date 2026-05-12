@@ -38,7 +38,7 @@ function Schema() {
     '@type': 'Article',
     headline: 'How to Reach Haridwar for Char Dham Yatra 2026 — Complete Guide',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
-    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
     datePublished: '2026-01-01',
     dateModified: '2026-05-04',
     mainEntityOfPage: `${SITE.baseUrl}/how-to-reach-haridwar`,

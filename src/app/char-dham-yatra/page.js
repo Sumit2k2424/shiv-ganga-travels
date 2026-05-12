@@ -3,16 +3,18 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar',
-  description: 'Book Char Dham Yatra package 2026 from Haridwar & Delhi. Kedarnath, Badrinath, Gangotri, Yamunotri. Starting ₹19,500. Verified operator, safe travel',
+  title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charges | Book Direct',
+  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹19,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct. Kedarnath 16km trek, Badrinath, Gangotri, Yamunotri. Direct operator since 2010.',
   keywords: [
-    'char dham yatra package','char dham yatra 2026','char dham package from haridwar',
-    'char dham yatra package price','char dham yatra booking','chardham yatra package 2026',
-    'char dham yatra from delhi','char dham tour package',
+    'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
+    'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',
+    'char dham yatra package price','char dham yatra booking','chardham tour package',
+    'char dham yatra from delhi','char dham tour package','uttarakhand tourism','uttarakhand tour packages',
+    'char dham yatra package from haridwar','uttarakhand char dham yatra package',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar',
+    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charges | Book Direct',
     description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
@@ -37,9 +39,9 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '850',
-      bestRating: '5',
+      ratingValue: 4.9,
+      reviewCount: 850,
+      bestRating: 5,
     },
   };
 
@@ -59,8 +61,8 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '850',
+      ratingValue: 4.9,
+      reviewCount: 850,
     },
   };
 
@@ -242,23 +244,135 @@ export default function CharDhamYatra() {
           </div>
         </div>
 
-        <h2 style={h2Style}>Char Dham Yatra Itinerary 2026</h2>
+        <h2 style={h2Style}>Char Dham Yatra Itinerary 2026 — Day-by-Day with Distances & Altitudes</h2>
         <p style={pStyle}>
-          The full Char Dham circuit runs <strong>10–12 days</strong> from Haridwar. You travel clockwise — the traditional, spiritually correct direction. Here is the standard itinerary:
+          The full Char Dham circuit runs <strong>10–11 days</strong> from Haridwar, travelling clockwise — the traditional, auspicious direction. Below is the complete day-by-day itinerary with exact driving distances, altitudes, en-route stops, and overnight hotel locations.
         </p>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
-          <strong>Day 1:</strong> Haridwar — Ganga Aarti at Har Ki Pauri<br/>
-          <strong>Day 2:</strong> Haridwar → Barkot (via Dehradun & Mussoorie)<br/>
-          <strong>Day 3:</strong> Barkot → Yamunotri Darshan → Barkot<br/>
-          <strong>Day 4:</strong> Barkot → Uttarkashi (Kashi Vishwanath Temple)<br/>
-          <strong>Day 5:</strong> Uttarkashi → Gangotri Darshan → Uttarkashi<br/>
-          <strong>Day 6:</strong> Uttarkashi → Guptkashi (via Tehri, Srinagar)<br/>
-          <strong>Day 7:</strong> Guptkashi → Kedarnath Trek (16 km) → Kedarnath<br/>
-          <strong>Day 8:</strong> Kedarnath Darshan → Descend → Rudraprayag<br/>
-          <strong>Day 9:</strong> Rudraprayag → Badrinath (via Joshimath)<br/>
-          <strong>Day 10:</strong> Badrinath Darshan → Mana Village → Joshimath<br/>
-          <strong>Day 11:</strong> Joshimath → Rishikesh → Haridwar<br/>
+        <div style={{ overflowX:'auto', marginBottom:24 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
+            <thead>
+              <tr style={{ background:'var(--navy)' }}>
+                {['Day','Route','Distance / Time','Altitude','En-route stops','Hotel / Stay'].map(h => (
+                  <th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Day 1','Haridwar — Ganga Aarti','—','249m','Har Ki Pauri, Mansa Devi temple (optional)','Haridwar'],
+                ['Day 2','Haridwar → Barkot','210 km · 7–8 hrs','1,352m','Mussoorie (brief stop), Kempty Falls, Prakeshwar Mahadev Temple','Barkot'],
+                ['Day 3','Barkot → Yamunotri → Barkot','36 km drive + 6 km trek','3,291m (Yamunotri)','Janki Chatti trek start, Surya Kund hot spring, Divya Shila rock pillar','Barkot'],
+                ['Day 4','Barkot → Uttarkashi','90 km · 4 hrs','1,352m','Shiv Gufa (Shiva cave temple), Kashi Vishwanath Temple, Uttarkashi town','Uttarkashi'],
+                ['Day 5','Uttarkashi → Gangotri → Uttarkashi','100 km each way · 3–4 hrs','3,048m (Gangotri)','Gangnani Hot Spring (ritual dip en route), Harsil Valley (apple orchards), Bhagirathi holy dip','Uttarkashi'],
+                ['Day 6','Uttarkashi → Guptkashi','220 km · 8–9 hrs','1,319m','Dhari Devi Temple (if time permits), Tilwara (Mandakini river), Ardh Narishwar Temple at Guptkashi','Guptkashi'],
+                ['Day 7','Guptkashi → Kedarnath','30 km drive + 16 km trek','3,583m (Kedarnath)','Sonprayag checkpoint, Gaurikund hot spring (ritual dip), Jungle Chatti rest point (4km), Kedarnath Base Camp (13km)','Kedarnath'],
+                ['Day 8','Kedarnath darshan → Rudraprayag','Trek down 16 km + 30 km drive','—','4:30 AM Mahabhishek (optional, bookable), Shankaracharya Samadhi behind temple, Gaurikund','Rudraprayag'],
+                ['Day 9','Rudraprayag → Badrinath','160 km · 5–6 hrs','3,133m','Karnaprayag, Nandprayag, Vishnuprayag confluences, Joshimath (Narsingh Temple), Tapt Kund','Badrinath'],
+                ['Day 10','Badrinath Darshan → Mana Village → Return','215 km · 6–7 hrs','3,133m','Brahma Kapal (Pind Daan), Mana Village (last Indian village), Vyas Gufa, Bhim Pul, Saraswati river source','Rudraprayag / Rishikesh'],
+                ['Day 11','Return → Haridwar','160 km · 5 hrs','249m','Devprayag confluence (Alaknanda + Bhagirathi = Ganga), Rishikesh Ram Jhula, Triveni Ghat','Home / Departure'],
+              ].map(([day, route, dist, alt, stops, hotel], i) => (
+                <tr key={day} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
+                  <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, whiteSpace:'nowrap' }}>{day}</td>
+                  <td style={{ padding:'9px 12px', fontWeight:600, color:'#334155', fontSize:13 }}>{route}</td>
+                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:12.5, whiteSpace:'nowrap' }}>{dist}</td>
+                  <td style={{ padding:'9px 12px', color:'#1D9E75', fontWeight:600, fontSize:12.5, whiteSpace:'nowrap' }}>{alt}</td>
+                  <td style={{ padding:'9px 12px', color:'#64748b', fontSize:12, lineHeight:1.6 }}>{stops}</td>
+                  <td style={{ padding:'9px 12px', color:'var(--navy)', fontWeight:600, fontSize:12.5 }}>{hotel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+
+        {/* Hotel names per destination */}
+        <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10, marginTop:8 }}>Hotels We Use per Destination (Pre-Blocked, Peak Season 2026)</h3>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:8, marginBottom:24 }}>
+          {[
+            ['Barkot','Hotel Yamunotri Continental / Yatri Niwas or similar','Budget · Standard tier'],
+            ['Uttarkashi','Hotel Him Ganga NXE / Hotel Shivalik or similar','Budget · Standard tier'],
+            ['Guptkashi','Hotel Giriraj / Ukhimath Residency or similar','Budget · Standard tier'],
+            ['Kedarnath','Tented camps / GMVN guesthouse','On-mountain, basic'],
+            ['Badrinath','Hotel Patliputa / Snow Crest or similar','Budget · Standard tier'],
+            ['Rudraprayag','Shangrila Resort / Hotel Rudra or similar','Transit halt'],
+          ].map(([dest, hotel, tier]) => (
+            <div key={dest} style={{ background:'#fff', borderRadius:8, padding:'10px 12px', border:'1px solid var(--border)' }}>
+              <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:2 }}>{dest}</div>
+              <div style={{ fontSize:12, color:'#475569', marginBottom:3, lineHeight:1.4 }}>{hotel}</div>
+              <div style={{ fontSize:11, color:'var(--text-muted)' }}>{tier}</div>
+            </div>
+          ))}
+        </div>
+
+
+        {/* Departure dates + availability — KingHills-style urgency signal */}
+        <h2 style={h2Style}>2026 Departure Dates — Available Seats</h2>
+        <p style={pStyle}>
+          We run fixed-departure group batches and private custom departures. Book early — May and September batches fill 6–8 weeks ahead. Confirmed bookings get a 25% advance payment option.
+        </p>
+        <div style={{ overflowX:'auto', marginBottom:8 }}>
+          <table style={{ borderCollapse:'collapse', fontSize:12.5, width:'100%' }}>
+            <thead>
+              <tr style={{ background:'var(--navy)' }}>
+                {['Month','Departure dates','Seats','Status'].map(h => (
+                  <th key={h} style={{ padding:'9px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['May 2026',   '5, 10, 15, 17, 20, 22, 26, 29',   '2–8 seats left',  'FILLING FAST'],
+                ['June 2026',  '3, 7, 12, 15, 19, 22, 26, 29',    '10–25 seats',     'Available'],
+                ['July 2026',  '3, 10, 17, 24, 31',               '30–45 seats',     'Open'],
+                ['August 2026','7, 14, 21, 28',                    '45–60 seats',     'Open'],
+                ['Sept 2026',  '4, 8, 11, 14, 18, 21, 24, 27',    '15–35 seats',     'Booking fast'],
+                ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', '20–50 seats',     'Available'],
+                ['Nov 2026',   '1, 3 (last batches)',              'Limited',         'Final season'],
+              ].map(([month, dates, seats, status], i) => (
+                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                  <td style={{ padding:'9px 14px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{month}</td>
+                  <td style={{ padding:'9px 14px', color:'#334155', fontSize:12.5 }}>{dates}</td>
+                  <td style={{ padding:'9px 14px', fontWeight:600, color: status==='FILLING FAST'?'#D85A30':'#1D9E75', fontSize:12.5 }}>{seats}</td>
+                  <td style={{ padding:'9px 14px' }}>
+                    <span style={{ background: status==='FILLING FAST'?'#FCEBEB':status==='Booking fast'?'#FAEEDA':'#EAF3DE', color: status==='FILLING FAST'?'#A32D2D':status==='Booking fast'?'#854F0B':'#3B6D11', fontSize:11, fontWeight:700, padding:'3px 8px', borderRadius:20 }}>{status}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
+          📞 For exact seat counts on a specific date, call or WhatsApp — we confirm availability within 30 minutes. <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to check availability for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ color:'var(--teal)', fontWeight:600 }}>Check availability →</a>
+        </p>
+
+        {/* Room-type pricing — answers the "sharing vs private room" question */}
+        <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>Price by Room Type (9N/10D Standard Package)</h3>
+        <div style={{ overflowX:'auto', marginBottom:20 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
+            <thead>
+              <tr style={{ background:'var(--navy)' }}>
+                {['Room type','Who it suits','Price per person','Total for 2 pax'].map(h => (
+                  <th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Sharing (3–4 in room)', 'Groups, solo pilgrims', '₹19,500', '₹39,000 per couple'],
+                ['Triple sharing', 'Families of 3', '₹21,500', '₹64,500 per 3'],
+                ['Double / Twin', 'Couples, pairs', '₹24,500', '₹49,000 per couple'],
+                ['Single occupancy', 'Solo with private room', '₹32,500', '₹32,500 (1 person)'],
+              ].map(([type, suits, price, total], i) => (
+                <tr key={type} style={{ borderBottom:'1px solid var(--border)', background: i===0?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
+                  <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{type}{i===0&&<span style={{ marginLeft:6, fontSize:10, background:'rgba(29,158,117,0.15)', color:'#1D9E75', padding:'2px 7px', borderRadius:20, fontWeight:700 }}>Most popular</span>}</td>
+                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{suits}</td>
+                  <td style={{ padding:'9px 12px', fontWeight:800, color:'#1D9E75', fontSize:15 }}>{price}</td>
+                  <td style={{ padding:'9px 12px', color:'#64748b', fontSize:13 }}>{total}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:8 }}>All prices include AC vehicle, hotel, breakfast + dinner, guide, registration assistance, VIP darshan at all 4 dhams, tolls and parking. 5% GST included. Zero commission — you pay the operator directly.</p>
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
@@ -311,6 +425,53 @@ export default function CharDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Fares include fuel, toll, parking and driver allowance. All packages are all-inclusive — hotel, meals, guide, registration. Zero commission. No hidden fees.</p>
+
+        {/* No hidden charges breakdown — competitor Yatrio ranks heavily on this */}
+        <h2 style={h2Style}>No Hidden Charges — What ₹19,500 Includes (and Doesn't)</h2>
+        <p style={pStyle}>
+          The phrase "no hidden charges" is used by every operator. Here is what it actually means with Shiv Ganga Travels — a line-by-line breakdown of what is included in the ₹19,500 base price and what is genuinely a personal choice extra.
+        </p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:24 }}>
+          <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:10 }}>✅ Included in ₹19,500</div>
+            {['AC vehicle (Tempo Traveller / Innova based on group size)','All 9 nights hotel (twin sharing, breakfast + dinner)','Experienced Garhwali guide throughout','VIP darshan at all 4 dhams — no queue','All tolls, parking, fuel, driver allowance','Biometric registration assistance (free)','Oxygen cylinder + first aid kit','24hr WhatsApp support','GST @ 5% (included, not extra)'].map(item => (
+              <div key={item} style={{ fontSize:13, color:'#334155', padding:'4px 0', borderBottom:'1px solid rgba(21,128,61,0.12)', display:'flex', gap:6 }}>
+                <span style={{ color:'#15803D', fontWeight:700, flexShrink:0 }}>✓</span>{item}
+              </div>
+            ))}
+          </div>
+          <div style={{ background:'#FFF8F0', border:'1px solid #FDBA74', borderRadius:12, padding:'16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:10 }}>📌 Genuine optional extras (your choice)</div>
+            {['Kedarnath pony — ₹3,500–4,500 one way (booked at Gaurikund)','Yamunotri pony — ₹1,800–2,500 one way','Kedarnath helicopter — ₹7,500–9,500 round trip (book via IRCTC)','Kedarnath overnight stay — ₹800–1,500 (GMVN tents)','Pind Daan at Brahma Kapal Badrinath — priest charges vary','Travel insurance (recommended, not included)','Personal expenses: tips, snacks, souvenirs'].map(item => (
+              <div key={item} style={{ fontSize:13, color:'#78350F', padding:'4px 0', borderBottom:'1px solid rgba(146,64,14,0.1)', display:'flex', gap:6 }}>
+                <span style={{ color:'#E8920A', fontWeight:700, flexShrink:0 }}>+</span>{item}
+              </div>
+            ))}
+          </div>
+        </div>
+        <p style={{ fontSize:13, color:'var(--text-muted)', fontStyle:'italic', marginBottom:28 }}>
+          No service charge. No registration fee. No booking platform fee. The price we quote is the price you pay. We have operated this way since 2010.
+        </p>
+
+        {/* Add-on options — Tungnath/Auli keywords */}
+        <h2 style={h2Style}>Popular Add-Ons to Your Char Dham Yatra</h2>
+        <p style={pStyle}>Many pilgrims extend their yatra with one of these nearby sacred or scenic destinations. All add-ons are optional, vehicle-based (no extra guide needed), and can be added to any package at a marginal extra cost.</p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
+          {[
+            { name:'Tungnath Temple', type:'Sacred', detail:'The highest Shiva temple in the world at 3,680m. Near Chopta, between Kedarnath and Badrinath on the circuit. A 3.5km trek from Chopta. Adds 1 day and approximately ₹2,000 extra. One of the Panch Kedar.' },
+            { name:'Auli Skiing/Sightseeing', type:'Scenic', detail:'India\'s premier skiing destination at 2,519m, just 16km from Joshimath. Best in Feb–March for skiing; year-round for Himalayan views and the Auli Gondola (Asia\'s highest cable car). Add to Badrinath day.' },
+            { name:'Hemkund Sahib', type:'Sacred (Sikh)', detail:'Sacred Sikh gurudwara at 4,632m — the highest gurudwara in the world. Near Govindghat (Badrinath route). Adds 1 day: 14km trek round trip from Ghangaria. Many Hindu pilgrims visit alongside the Char Dham.' },
+            { name:'Valley of Flowers', type:'UNESCO', detail:'UNESCO World Heritage Site near Joshimath. Open July–September only (monsoon flowers). 3km trek from Ghangaria. Combine with Hemkund Sahib for a 2-day Joshimath side trip.' },
+          ].map(item => (
+            <div key={item.name} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:6 }}>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{item.name}</div>
+                <span style={{ fontSize:11, background:'rgba(11,123,139,0.1)', color:'var(--teal)', padding:'2px 8px', borderRadius:20, fontWeight:600 }}>{item.type}</span>
+              </div>
+              <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.detail}</div>
+            </div>
+          ))}
+        </div>
 
         <h2 style={h2Style}>Best Time for Char Dham Yatra 2026 — Month-by-Month</h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>

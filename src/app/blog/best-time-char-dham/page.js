@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Guide',
+  title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & Price Guide',
   description: 'Best time for Char Dham Yatra 2026: May and Sept–Oct. Month-by-month weather, opening dates, crowds and honest advice from a 15-year Haridwar operator.',
   keywords: ['best time for char dham yatra','char dham yatra best time','char dham yatra season','char dham yatra months','char dham yatra weather','char dham opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/best-time-char-dham` },
   openGraph: {
-    title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Guide',
+    title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & Price Guide',
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
     url: `${SITE.baseUrl}/blog/best-time-char-dham`, type: 'article',
   },

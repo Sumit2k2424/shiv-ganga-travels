@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Senior Citizen Char Dham Yatra 2026 — Safety Guide',
+  title: 'Char Dham Yatra for Senior Citizens 2026 — 60+ | Pony, Palki, Helicopter & Medical Tips',
   description: 'Char Dham Yatra for senior citizens 2026. Pony, palki, VIP darshan, oxygen, acclimatisation tips and our special senior package.',
   keywords: ['senior citizen char dham yatra','char dham yatra for elderly','char dham yatra age limit','char dham yatra senior citizen package','old age char dham yatra','char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },

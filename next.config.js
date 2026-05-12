@@ -16,17 +16,54 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
+  // Reduce JS bundle size — tree-shake large packages
   experimental: {
-    optimizePackageImports: ['react', 'react-dom'],
+    optimizePackageImports: [
+      'react',
+      'react-dom',
+      'next/link',
+      'next/image',
+    ],
+  },
+
+  // Webpack: split vendor chunks for better caching on mobile
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...(config.optimization.splitChunks?.cacheGroups || {}),
+          // Separate React into its own cached chunk
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+            name: 'react',
+            chunks: 'all',
+            priority: 20,
+          },
+          // Separate Next.js internals
+          nextjs: {
+            test: /[\\/]node_modules[\\/]next[\\/]/,
+            name: 'nextjs',
+            chunks: 'all',
+            priority: 10,
+          },
+        },
+      };
+    }
+    return config;
   },
 
   async redirects() {
     return [
+      // Redirect stale 2025 guide URL → main char dham page (2026 content)
+      { source: '/char-dham-yatra-2025', destination: '/char-dham-yatra', permanent: true },
       // Fix internal 404s found by Screaming Frog
       { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
       { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },
       { source: '/how-to-reach-kedarnath',                           destination: '/blog/how-to-reach-kedarnath',                    permanent: true },
       { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
+      // Redirect blog Badrinath guide to new proper landing page
+      { source: '/blog/badrinath-yatra-guide',                       destination: '/badrinath-yatra',                                permanent: true },
     ];
   },
 

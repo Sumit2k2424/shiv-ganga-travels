@@ -22,7 +22,7 @@ function Schema() {
     headline: 'Char Dham Yatra Complete Guide 2026',
     description: 'Complete guide to planning Char Dham Yatra 2026 from Haridwar.',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
-    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
     datePublished: '2025-01-15',
     dateModified: '2026-01-01',
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-guide`,

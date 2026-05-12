@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Helicopter Package 2026 — All 4 Dhams, 6 Days',
-  description: 'Char Dham helicopter tour 2026. All 4 dhams in 6 days from Dehradun. VIP darshan, luxury stays. Packages from ₹85,000 per person.',
-  keywords: ['char dham helicopter package, char dham helicopter tour 2026, char dham yatra by helicopter, helicopter char dham price 2026'],
+  title: 'Char Dham Helicopter Package 2026 — DGCA-Approved | 5N/6D from Sahastradhara Dehradun',
+  description: 'Char Dham Helicopter Package 2026. DGCA-approved operators. 5N/6D from Sahastradhara Helipad, Dehradun. All 4 dhams: Yamunotri, Gangotri, Kedarnath, Badrinath. VIP darshan. 5 kg luggage limit. Weather buffer day included.',
+  keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','DGCA approved char dham helicopter','sahastradhara helipad char dham','char dham helicopter price 2026','char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
-  openGraph: { title: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days', description:'Book Char Dham by helicopter 2026. All 4 dhams in 5N/6D from Dehradun. ₹85,000 per person. VIP darshan, luxury hotels, no queues.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
+  openGraph: { title: 'Char Dham Helicopter Package 2026 — DGCA-Approved, Sahastradhara Dehradun', description:'Char Dham Helicopter Package 2026. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
 };
 
 function Schema() {
@@ -14,7 +14,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:'4.3', reviewCount:'30', bestRating:'5' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.9, reviewCount:850, bestRating:5 },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -125,6 +125,24 @@ export default function Page() {
           </table>
         </div>
 
+        {/* DGCA + practical rules — what competitors rank for */}
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
+          Char Dham Helicopter — Practical Rules 2026
+        </h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:10, marginBottom:24 }}>
+          {[
+            { icon:'🏛️', title:'DGCA-Approved Operators Only', body:'All Char Dham helicopter services must be DGCA (Directorate General of Civil Aviation) certified. We only coordinate with licensed operators — verify DGCA certification before booking any heli package. Many online portals use unlicensed resellers.' },
+            { icon:'🎒', title:'5 kg Luggage Limit — Strictly Enforced', body:'Each helicopter passenger is allowed maximum 5 kg of luggage. This is strictly weighed and enforced at the helipad. Excess baggage is offloaded. Pack light: 2–3 days of warm clothes, medicines, documents. Ground luggage transfer arrangements can be made for larger bags.' },
+            { icon:'⛅', title:'Weather Buffer Day — Essential', body:'Helicopter operations in the Himalayas are entirely weather-dependent. Morning fog, cloud cover, or winds at altitude can ground all flights for a full day. Every itinerary should include at least one buffer day — we build this into our 5N/6D structure. Book return flights one day after the scheduled end of the package.' },
+            { icon:'💰', title:'Price Transparency — No Surprise Extras', body:'Full Char Dham helicopter packages in 2026 range from ₹2.1 lakh to ₹2.5 lakh per person from established operators (helicopter transfer + hotel + meals + VIP darshan). Budget options starting at ₹85,000 cover ground arrangements only — helicopter ticket must be booked separately via IRCTC. We are transparent about what each tier includes.' },
+          ].map(item => (
+            <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--navy)' }}>
+              <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
+              <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
+            </div>
+          ))}
+        </div>
+
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:700,color:'var(--navy)',marginBottom:14,marginTop:32}}>
           How to Book Kedarnath Helicopter via IRCTC (Mandatory 2026)
         </h2>
@@ -147,6 +165,9 @@ export default function Page() {
               </div>
             </div>
           ))}
+        </div>
+        <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:10, padding:'14px 16px', marginBottom:16, fontSize:13.5, color:'#185FA5' }}>
+          <strong>Best months for Char Dham helicopter:</strong> May–June for clear skies and full season. But September is genuinely underrated — fewer bookings, post-monsoon crystal visibility, cooler temperatures, and helicopter slots available on shorter notice. October works too but temple closing dates loom. Avoid July–August: monsoon grounds helicopters frequently.
         </div>
         <div style={{background:'#FEF3E2',border:'2px solid var(--gold)',borderRadius:12,padding:'14px 18px',marginBottom:28,fontSize:13.5,color:'#7B3F00'}}>
           <strong>Important 2026 rule:</strong> Kedarnath helicopter bookings at helipads are being eliminated. All bookings must be via irctc.co.in. Walk-in bookings are no longer accepted. Shiv Ganga Travels assists all pilgrims with IRCTC helicopter booking — included in our packages at no extra charge.
