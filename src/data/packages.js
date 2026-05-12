@@ -932,7 +932,7 @@ export const PACKAGES = [
     photo    : `${P}/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop`,
     images   : ['chopta','tungnath'],
     tags     : ['chopta','tungnath','chandrashila','trek','mini switzerland','panch kedar','adventure'],
-    metaTitle: 'Chopta Tungnath Chandrashila Trek 2026 — 2N/3D | World\'s Highest Shiva Temple | ₹8,499',
+    metaTitle: 'Chopta Tungnath Chandrashila Trek 2026 — 2N/3D | Worlds Highest Shiva Temple | ₹8,499',
     metaDesc : 'Chopta Tungnath Chandrashila trek 2N/3D from Haridwar. ₹8,499/person. World\'s highest Shiva temple, 4130m summit, 360° Himalayan views. 2026.',
     faqs:[],
   },
