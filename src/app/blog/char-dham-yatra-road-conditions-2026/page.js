@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Road Conditions 2026 — Current Status, Landslide Zones & All-Weather Road',
+  title: 'Char Dham Yatra Road Conditions 2026 — Current Status, Landslide Zones and All-Weather Road',
   description: 'Char Dham Yatra road conditions 2026: current status of all 4 routes, landslide-prone zones, All-Weather Road project update, Joshimath situation, and driving tips for mountain roads.',
   keywords: ['char dham yatra road condition 2026','char dham road status 2026','char dham yatra route condition','kedarnath route road condition','badrinath road condition 2026','char dham all weather road','char dham road closure 2026','joshimath road condition'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026` },
   openGraph: {
-    title: 'Char Dham Yatra Road Conditions 2026 — Live Status & All-Weather Road Update',
+    title: 'Char Dham Yatra Road Conditions 2026 — Live Status and All-Weather Road Update',
     description: 'Current road conditions for all 4 Char Dham routes 2026. Landslide zones, All-Weather Road project status, Joshimath update, and mountain driving tips.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026`, type: 'article',
   },

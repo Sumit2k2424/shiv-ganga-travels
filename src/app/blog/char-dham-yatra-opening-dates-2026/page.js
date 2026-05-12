@@ -179,8 +179,8 @@ export default function OpeningDates() {
 
         
         {/* Closing dates section — competitors rank for this separately */}
-        <h2 style={h2Style}>Char Dham Closing Dates 2026 — When All 4 Dhams Close</h2>
-        <p style={pStyle}>
+        <h2 style={h2}>Char Dham Closing Dates 2026 — When All 4 Dhams Close</h2>
+        <p style={p}>
           The 2026 Char Dham season closes in November as temperatures drop and snowfall makes the high-altitude routes inaccessible. Closing dates follow the Hindu lunar calendar — Gangotri and Yamunotri close on Diwali/Bhai Dooj, Kedarnath two days after Diwali, and Badrinath approximately 2 weeks later.
         </p>
         <div style={{ overflowX:'auto', marginBottom:20 }}>
@@ -207,7 +207,7 @@ export default function OpeningDates() {
             </tbody>
           </table>
         </div>
-        <p style={pStyle}>
+        <p style={p}>
           <strong>What happens at closing:</strong> Each dham has a Kapat Band (door-closing) ceremony. At Kedarnath, Lord Shiva's Panchmukhi Doli (five-faced palanquin) travels from Kedarnath to Ukhimath over 4 days. Before the doors seal, the priest lights the <em>Akhand Jyot</em> — an eternal flame that burns inside the locked temple for all 6 winter months. When the doors reopen in April, the flame is still burning. Thousands of pilgrims attend the closing ceremony specifically for this moment.
         </p>
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'12px 16px', marginBottom:28, fontSize:13.5, color:'#7B3F00' }}>
