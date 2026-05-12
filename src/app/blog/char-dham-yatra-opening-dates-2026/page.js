@@ -26,6 +26,11 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
 }
 
+
+// Style constants used in closing dates section
+const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
+const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
+
 const DHAMS = [
   { name:'Yamunotri', deity:'Goddess Yamuna', altitude:'3,291m', opens:'April 19, 2026', openTime:'7:30 AM (Akshaya Tritiya)', closes:'November 7, 2026 (Bhai Dooj – 1)', announcement:'Announced on Basant Panchami by temple priests at Kharsali village', icon:'🏔️',
     about:'Yamunotri is the westernmost and first shrine in the Char Dham circuit. Motor road ends at Janki Chatti — a 6km trek leads to the temple. The Surya Kund hot spring (90°C) at the temple is used to cook rice as prasad.',
