@@ -127,6 +127,7 @@ export default function Footer() {
               </div>
             </div>
 
+          </div>
           {/* Link columns */}
           {COLS.map(col => (
             <div key={col.heading}>
