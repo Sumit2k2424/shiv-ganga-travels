@@ -31,6 +31,12 @@ const POSTS = [
   { slug:'char-dham-yatra-medical-certificate', title:'Char Dham Medical Certificate 2026 — Who Needs It & How', excerpt:'Mandatory for 55+. Format, doctor requirements, upload process, what happens without it at checkpoints.', tag:'Registration', readTime:'5 min', icon:'🏥' },
   { slug:'how-to-reach-kedarnath', title:'How to Reach Kedarnath 2026 — From All Major Cities', excerpt:'Train to Haridwar, fly to Dehradun, drive to Gaurikund, then trek or helicopter. City-by-city guide.', tag:'Route Guide', readTime:'6 min', icon:'✈️' },
   { slug:'rishikesh-adventure-guide', title:'Rishikesh Adventure Guide 2026 — Rafting, Bungee & Camping', excerpt:'Honest price guide for rafting, bungee at 83m, beach camping, and the spiritual side you shouldn\'t miss.', tag:'Adventure', readTime:'7 min', icon:'🏄' },
+  { slug:'char-dham-yatra-kitna-kharcha', title:'चार धाम यात्रा 2026 में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा', excerpt:'गाड़ी, होटल, खाना, पंजीकरण, घोड़ा — हर मद का अलग-अलग हिसाब। 4 लोगों की फैमिली का असली उदाहरण। ₹19,500 से शुरू।', tag:'हिंदी गाइड', readTime:'7 min', icon:'💰' },
+  { slug:'bujurg-char-dham-yatra', title:'बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है? — यह 12 बातें पहले जान लें', excerpt:'60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम। घोड़ा, पालकी, हेलिकॉप्टर — Senior Special Package ₹24,500 से।', tag:'हिंदी गाइड', readTime:'7 min', icon:'👴' },
+  { slug:'kedarnath-pehli-baar', title:'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', excerpt:'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, नेटवर्क — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', tag:'हिंदी गाइड', readTime:'9 min', icon:'🏔️' },
+  { slug:'char-dham-registration-hindi', title:'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? 9 Steps', excerpt:'मुफ्त रजिस्ट्रेशन — website और WhatsApp दोनों से। बिना रजिस्ट्रेशन के सोनप्रयाग पर पुलिस वापस भेज देती है।', tag:'हिंदी गाइड', readTime:'5 min', icon:'📋' },
+  { slug:'char-dham-packing-list-hindi', title:'चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं? — यह लिस्ट Print कर लो', excerpt:'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले एक बार check करें।', tag:'हिंदी गाइड', readTime:'6 min', icon:'🎒' },
+  { slug:'char-dham-kab-jayen', title:'चार धाम यात्रा 2026 में कब जाएं? — हर महीने का सच बताया', excerpt:'मई, जून, सितंबर, अक्टूबर — कौन सा महीना सबसे सही? मौसम, भीड़, खर्चा — बिना लाग-लपेट के जवाब।', tag:'हिंदी गाइड', readTime:'6 min', icon:'📅' },
 ];
 
 const TAG_COLORS = {
@@ -46,6 +52,7 @@ const TAG_COLORS = {
   'Yatra Guide': { bg:'#fff1f2', color:'#9f1239' },
   'Nature Trek': { bg:'#f0fdf4', color:'#14532d' },
   'Adventure': { bg:'#ecfeff', color:'#164e63' },
+  'हिंदी गाइड': { bg:'#FFF3CC', color:'#7C4A00' },
 };
 
 export default function Blog() {

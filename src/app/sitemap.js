@@ -59,6 +59,12 @@ const CITY_SLUGS = [
   { slug: 'char-dham-yatra-from-surat',       p: 0.80 },
   { slug: 'char-dham-yatra-from-nagpur',      p: 0.78 },
   { slug: 'char-dham-yatra-from-patna',       p: 0.78 },
+  { slug: 'char-dham-yatra-kitna-kharcha',    p: 0.85 },
+  { slug: 'bujurg-char-dham-yatra',           p: 0.85 },
+  { slug: 'kedarnath-pehli-baar',             p: 0.87 },
+  { slug: 'char-dham-registration-hindi',     p: 0.88 },
+  { slug: 'char-dham-packing-list-hindi',     p: 0.83 },
+  { slug: 'char-dham-kab-jayen',              p: 0.85 },
 ];
 
 export default function sitemap() {
