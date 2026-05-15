@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package',
+  title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples',
   description: 'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹21,999. 8N/9D.',
   keywords: ['panch kedar yatra, panch kedar yatra 2026, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek'],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
@@ -100,7 +100,7 @@ export default function Page() {
         </div>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>
+          <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h2>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Reply in 2 hours</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines.')}`} target="_blank" rel="nofollow noopener noreferrer"

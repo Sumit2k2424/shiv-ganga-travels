@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar Tour Package 2026 — Haridwar Tour from ₹2,999 | Shiv Ganga',
+  title: 'Haridwar Tour Package 2026',
   description: 'Haridwar tour packages 2026 from ₹2,999. Har Ki Pauri, Ganga Aarti, Mansa Devi, Chandi Devi. Haridwar + Rishikesh combo. Direct operator, zero commission.',
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Rishikesh Adventure Guide 2026 — Rafting & Bungee',
+  title: 'Rishikesh Adventure Guide 2026',
   description: 'Complete Rishikesh adventure guide 2026. River rafting prices, bungee jumping details, beach camping, best time to visit, and honest cost breakdown',
   keywords: ['rishikesh adventure guide','rishikesh river rafting 2026','rishikesh bungee jumping price','rishikesh camping','rishikesh adventure package','rishikesh rafting cost 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },

@@ -46,7 +46,7 @@ export const metadata = {
   description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: 'Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar',
+    title: 'Char Dham Yatra 2026 Packages Haridwar',
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
@@ -89,7 +89,7 @@ function PkgCard({ pkg }) {
         {pkg.badge && <span className="badge badge-gold" style={{ position:'absolute', top:10, left:10, zIndex:2 }}>{pkg.badge}</span>}
         <span style={{ position:'absolute', top:10, right:10, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:10.5, fontWeight:600, padding:'3px 9px', borderRadius:6, zIndex:2 }}>{pkg.duration.nights}N</span>
         <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'10px 14px', zIndex:2 }}>
-          <h3 style={{ color:'#fff', fontWeight:700, fontSize:13.5, lineHeight:1.3, textShadow:'0 1px 4px rgba(0,0,0,0.6)' }}>{pkg.name}</h3>
+          <h2 style={{ color:'#fff', fontWeight:700, fontSize:13.5, lineHeight:1.3, textShadow:'0 1px 4px rgba(0,0,0,0.6)' }}>{pkg.name}</h2>
         </div>
       </div>
       {/* Body */}

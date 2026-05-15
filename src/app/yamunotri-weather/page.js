@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Yamunotri Weather 2026 — Month-wise Temperature Guide',
+  title: 'Yamunotri Weather 2026 — Month-wise Temperature',
   description: 'Yamunotri weather guide 2026. Month-by-month temperatures at 3,291m. Best time: May-June and Sept-Oct. What to pack for each season.',
   keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit','yamunotri weather 2026','yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },

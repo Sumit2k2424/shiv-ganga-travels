@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Distance, Route & Road Trip Guide 2026',
+  title: 'Haridwar to Kedarnath Distance, Route & Road',
   description: 'Haridwar to Kedarnath road trip guide 2026. 250km route, drive time, stops at Devprayag, Rudraprayag, Guptkashi. Best road tips.',
   keywords: ['haridwar to kedarnath distance','haridwar to kedarnath route','haridwar to kedarnath road trip','haridwar to gaurikund distance','haridwar to kedarnath how to reach','haridwar to kedarnath by road','kedarnath road trip from haridwar 2026','haridwar to sonprayag distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },

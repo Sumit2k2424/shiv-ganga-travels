@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: '2 Dham Yatra 2026 — Kedarnath & Badrinath Package from ₹10,999 | Do Dham',
-  description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. 5N/6D from ₹10,999/person. Who should choose 2 dham vs Char Dham, what each costs, and full itinerary.',
+  title: '2 Dham Yatra 2026 — Kedarnath & Badrinath',
+  description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. 5N/6D from ₹10,999/person. Who should choose 2 dham vs Char Dham, what each costs.',
   keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package','do dham yatra 2026','kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
   openGraph: {

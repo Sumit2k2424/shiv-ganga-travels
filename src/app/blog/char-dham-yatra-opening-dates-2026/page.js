@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Opening Dates 2026 — All 4 Dhams',
+  title: 'Char Dham Yatra Opening Dates 2026 — All 4',
   description: 'Official Char Dham Yatra opening dates 2026: Yamunotri & Gangotri April 19, Kedarnath April 22 at 8 AM, Badrinath April 23 at 6:15 AM. Closing dates',
   keywords: ['char dham yatra opening dates 2026','kedarnath opening date 2026','badrinath opening date 2026','gangotri opening date 2026','yamunotri opening date 2026','char dham 2026 dates','char dham season 2026 start date','kedarnath temple open date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026` },

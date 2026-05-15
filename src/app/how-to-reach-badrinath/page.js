@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Badrinath 2026 — Road & Route Guide',
+  title: 'How to Reach Badrinath 2026 — Road & Route',
   description: 'How to reach Badrinath Dham 2026. Road route from Haridwar via Joshimath (320km, 9-10 hrs). Helicopter from Dehradun. No trekking needed.',
   keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath','badrinath by road 2026','nearest airport badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-badrinath` },
@@ -116,7 +116,7 @@ export default function HowToReachBadrinath() {
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['How to Reach Kedarnath','/how-to-reach-kedarnath'],['Badrinath Weather','/badrinath-weather'],['Badrinath Temple Guide','/badrinath-temple'],['Haridwar to Badrinath Cab','/haridwar-to-badrinath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
+            {[['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Badrinath Weather','/badrinath-weather'],['Badrinath Temple Guide','/badrinath-temple'],['Haridwar to Badrinath Cab','/haridwar-to-badrinath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

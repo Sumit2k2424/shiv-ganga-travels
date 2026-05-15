@@ -3,7 +3,7 @@ import { SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Complete Guide 2026 — Route & Tips',
+  title: 'Char Dham Yatra Complete Guide 2026',
   description: 'Complete Char Dham Yatra guide 2026. Detailed route, day-by-day itinerary, cost breakdown, what to pack, registration, and expert travel tips from',
   keywords: ['char dham yatra guide','char dham yatra complete information','char dham yatra tips','char dham yatra route map','char dham yatra packing list','char dham yatra 2026 guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-guide` },

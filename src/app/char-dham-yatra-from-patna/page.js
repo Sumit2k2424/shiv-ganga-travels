@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Patna 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Patna 2026. 1,100 km — train (16–18 hrs) or fly. Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Patna 2026 — Train, Flight',
+  description: 'Char Dham Yatra from Patna 2026. 1,100 km — train (16–18 hrs) or fly. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from patna','char dham yatra package from patna','patna to haridwar char dham','char dham tour from patna 2026','chardham yatra patna','patna char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-patna` },
   openGraph: {

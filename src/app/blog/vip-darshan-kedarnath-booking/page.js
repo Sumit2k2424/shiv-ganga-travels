@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'VIP Darshan Kedarnath 2026 — ₹1,100 Parchi, Booking Guide & Scam Warning',
-  description: 'Kedarnath VIP darshan parchi ₹1,100 in 2026. How to book, when VIP is suspended in peak season, what it includes, Garbha Griha access, and fraud warnings about fake VIP tickets.',
+  title: 'VIP Darshan Kedarnath 2026 — ₹1,100 Parchi,',
+  description: 'Kedarnath VIP darshan parchi ₹1,100 in 2026. How to book, when VIP is suspended in peak season, what it includes, Garbha Griha access.',
   keywords: [
     'VIP darshan kedarnath 2026','kedarnath VIP darshan price','kedarnath special darshan',
     'kedarnath VIP parchi booking','kedarnath darshan parchi price 2026','kedarnath special entry',

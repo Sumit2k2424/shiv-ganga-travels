@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Route Map 2026 — Complete Road Guide from Haridwar with Distances',
-  description: 'Char Dham Yatra route map 2026 from Haridwar. Complete road guide: Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Badrinath. Day-wise km, travel time, key stops.',
+  title: 'Char Dham Yatra Route Map 2026 — Complete Road',
+  description: 'Char Dham Yatra route map 2026 from Haridwar. Complete road guide: Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath →.',
   keywords: ['char dham yatra route map','char dham yatra route from haridwar','char dham route map 2026','char dham yatra road map','char dham yatra distance','char dham route by road','char dham yatra distance from haridwar','char dham road trip route'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-route-map` },
   openGraph: {

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Yamunotri 2026 — Trek & Route Guide',
+  title: 'How to Reach Yamunotri 2026 — Trek & Route',
   description: 'How to reach Yamunotri Dham 2026. Road route, helicopter, 6km trek from Janki Chatti. Distance from Haridwar and nearest railway station.',
   keywords: ['how to reach yamunotri','yamunotri route','haridwar to yamunotri','janki chatti to yamunotri','yamunotri trek','how to reach yamunotri from delhi','nearest railway station to yamunotri'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-yamunotri` },

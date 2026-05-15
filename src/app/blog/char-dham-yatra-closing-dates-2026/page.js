@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Closing Dates 2026 — When Kedarnath, Badrinath, Gangotri & Yamunotri Close',
-  description: 'Char Dham closing dates 2026: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Closing ceremony traditions, winter abodes, and last-chance booking guide.',
+  title: 'Char Dham Closing Dates 2026 — When Kedarnath,',
+  description: 'Char Dham closing dates 2026: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13.',
   keywords: [
     'char dham closing dates 2026','chardham closing dates 2026','kedarnath closing date 2026',
     'badrinath closing date 2026','gangotri closing date 2026','yamunotri closing date 2026',

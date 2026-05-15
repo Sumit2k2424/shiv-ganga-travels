@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Kedarnath Weather 2026 — Month-wise Temperature, Best Time & What to Wear',
+  title: 'Kedarnath Weather 2026 — Month-wise',
   description: 'Kedarnath weather guide 2026. Month-by-month temperatures, rainfall, snowfall. Best time to visit: May–June and Sept–Oct. What to wear at 3,583m altitude.',
   keywords: ['kedarnath weather','kedarnath temperature','kedarnath weather in may','kedarnath weather in june','kedarnath best time to visit 2026','kedarnath snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-weather` },

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Group Package 2026 — Book for 10+ Pilgrims',
+  title: 'Char Dham Group Package 2026 — Book for 10+',
   description: 'Char Dham group package 2026. Book for 10+ pilgrims and save 10–15%. Custom itinerary, dedicated vehicle, group meals included.',
   keywords: ['char dham yatra group package','char dham yatra group booking','char dham group package price 2026','char dham yatra for large groups','char dham group tour from haridwar','char dham group discount 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },

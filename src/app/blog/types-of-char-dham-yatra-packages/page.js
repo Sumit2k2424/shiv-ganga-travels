@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Types of Char Dham Yatra Packages 2026 — Budget, Deluxe, Premium & Helicopter',
-  description: 'All types of Char Dham Yatra packages 2026: Budget (₹19,500), Deluxe (₹35,000), Premium (₹55,000), Helicopter (₹2.4L). What each includes, who it suits, and how to choose. Honest operator guide.',
+  title: 'Types of Char Dham Yatra Packages 2026',
+  description: 'All types of Char Dham Yatra packages 2026: Budget (₹19,500), Deluxe (₹35,000), Premium (₹55,000), Helicopter (₹2.4L).',
   keywords: ['types of char dham yatra packages','char dham yatra package types','budget char dham package','deluxe char dham package','char dham yatra package comparison','which char dham package to choose','char dham budget vs luxury'],
   alternates: { canonical: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages` },
   openGraph: {

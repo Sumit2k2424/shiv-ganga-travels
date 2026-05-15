@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide',
+  title: 'Gangotri Yatra 2026 — Package, Route, Temple',
   description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,299 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek',
   keywords: ['gangotri yatra, gangotri yatra 2026, gangotri yatra package, haridwar to gangotri, gangotri temple guide'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },

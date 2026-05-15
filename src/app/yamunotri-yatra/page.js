@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide',
+  title: 'Yamunotri Yatra 2026 — Trek, Package, Surya',
   description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
   keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },

@@ -193,7 +193,7 @@ export default function PackagesPage() {
               background:'#fff', borderRadius:16, border:'1px solid var(--border)',
             }}>
               <div style={{ fontSize:48, marginBottom:16, opacity:0.4 }}>🔍</div>
-              <h3 style={{ fontSize:17, fontWeight:700, color:'var(--text)', marginBottom:8 }}>No packages found</h3>
+              <h2 style={{ fontSize:17, fontWeight:700, color:'var(--text)', marginBottom:8 }}>No packages found</h2>
               <p style={{ fontSize:13.5, color:'var(--muted)', marginBottom:20 }}>
                 Try different keywords or browse all packages.
               </p>

@@ -3,9 +3,10 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra 2026 — Registration & Travel Guide',
+  title: 'Char Dham Yatra 2026 — Registration & Travel',
   description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹19,500.',
   keywords: ['Char Dham Yatra 2025','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
+  robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-2025` },
   openGraph: {
     title: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridwar',

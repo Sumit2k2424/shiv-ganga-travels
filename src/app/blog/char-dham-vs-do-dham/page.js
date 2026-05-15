@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham vs Do Dham Yatra 2026 — Which is Right for You?',
+  title: 'Char Dham vs Do Dham Yatra 2026 — Which is',
   description: 'Char Dham Yatra vs Do Dham — which is right for you? Time, budget, fitness and devotion compared. Help choosing your 2026 pilgrimage.',
   keywords: ['char dham vs do dham','char dham yatra vs do dham yatra','difference between char dham and do dham','which is better char dham or do dham','do dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra with Kids — Complete Family Guide 2026',
+  title: 'Char Dham Yatra with Kids — Complete Family',
   description: 'Char Dham Yatra with kids 2026. Age tips, altitude safety, easier routes, packing guide and which dhams are child-friendly.',
   keywords: ['char dham yatra with kids','char dham yatra with children','kedarnath yatra with family','char dham yatra family package','char dham with small children','kids char dham yatra altitude'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },

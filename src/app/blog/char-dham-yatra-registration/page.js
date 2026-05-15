@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Registration 2026 — Free Online Guide | 18,000/Day Limit | Step-by-Step',
+  title: 'Char Dham Yatra Registration 2026 — Free Online',
   description: 'Char Dham Yatra registration 2026 is FREE. Online, WhatsApp, app and offline methods. Documents, daily limits, 55+ rules — complete step-by-step guide.',
   keywords: [
     'char dham yatra registration 2026','char dham yatra registration online',

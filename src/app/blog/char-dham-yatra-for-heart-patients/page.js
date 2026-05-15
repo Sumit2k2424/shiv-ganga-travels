@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Heart Patients 2026 — Safety Guide',
+  title: 'Char Dham Yatra for Heart Patients 2026',
   description: 'Char Dham Yatra for heart patients 2026. Altitude risk, medical precautions, which dhams are safer and helicopter alternatives.',
   keywords: ['char dham yatra for heart patients','char dham yatra diabetics','char dham yatra blood pressure','char dham yatra medical conditions','kedarnath yatra heart patient','char dham altitude sickness prevention','char dham medical certificate 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },

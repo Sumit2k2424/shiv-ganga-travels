@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Trek Guide 2026 — 16km Gaurikund to Kedarnath | Route, Stages & Difficulty',
+  title: 'Kedarnath Trek Guide 2026',
   description: 'Kedarnath trek guide 2026. 16km route from Gaurikund, difficulty, altitude, best time and tips for all fitness levels.',
   keywords: ['kedarnath trek','kedarnath trek distance','kedarnath trek difficulty','gaurikund to kedarnath trek','kedarnath trek guide 2026','kedarnath yatra trek'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },

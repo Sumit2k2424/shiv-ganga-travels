@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 
 export const metadata = {
-  title: 'Sitemap — Shiv Ganga Travels | All Pages & Packages',
+  title: 'Sitemap — All Char Dham Pages',
   description: 'Complete sitemap of Shiv Ganga Travels — all Char Dham Yatra packages, travel guides, weather pages, city packages, blog posts and tools.',
   alternates: { canonical: `${SITE.baseUrl}/sitemap-page` },
   robots: { index: true, follow: true },
@@ -48,7 +48,7 @@ const sections = [
     title: 'How to Reach',
     links: [
       { label: 'How to Reach Haridwar', href: '/how-to-reach-haridwar' },
-      { label: 'How to Reach Kedarnath', href: '/how-to-reach-kedarnath' },
+      { label: 'How to Reach Kedarnath', href: '/blog/how-to-reach-kedarnath' },
       { label: 'How to Reach Yamunotri', href: '/how-to-reach-yamunotri' },
       { label: 'How to Reach Gangotri', href: '/how-to-reach-gangotri' },
       { label: 'How to Reach Badrinath', href: '/how-to-reach-badrinath' },

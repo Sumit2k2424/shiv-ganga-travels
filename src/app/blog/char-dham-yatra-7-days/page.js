@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible?',
+  title: 'Char Dham Yatra in 7 Days 2026 — Is It',
   description: 'Can you do Char Dham Yatra in 7 days? Route, feasibility and honest advice for pilgrims with limited time in 2026.',
   keywords: ['char dham yatra 7 days','char dham yatra in 7 days possible','7 day char dham yatra itinerary','char dham yatra 7 nights 8 days','chardham yatra 7 days itinerary 2026','char dham yatra minimum days'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },

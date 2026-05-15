@@ -3,8 +3,8 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charges | Book Direct',
-  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹19,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct. Kedarnath 16km trek, Badrinath, Gangotri, Yamunotri. Direct operator since 2010.',
+  title: 'Char Dham Yatra Package 2026 from Haridwar',
+  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹19,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
     'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',

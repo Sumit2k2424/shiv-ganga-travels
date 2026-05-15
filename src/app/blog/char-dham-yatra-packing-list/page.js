@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Packing List 2026 — What to Pack for Kedarnath Trek & 4 Dhams',
+  title: 'Char Dham Yatra Packing List 2026',
   description: 'Complete Char Dham Yatra packing list 2026. Clothes, medicines, documents, shoes — exactly what to carry for 10–12 days in the Himalayas. Avoid these',
   keywords: ['char dham yatra packing list','what to carry for char dham yatra','char dham yatra essentials','char dham yatra preparation','what to pack for char dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },

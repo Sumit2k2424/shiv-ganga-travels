@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Badrinath 2026 — Joshimath & Badrinath',
+  title: 'Hotels Near Badrinath 2026',
   description: 'Best hotels near Badrinath 2026. Badrinath town, Joshimath, Chamoli and Rudraprayag stays — honest guide with prices and recommendations.',
   keywords: ['hotels near badrinath','badrinath hotels 2026','joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },
@@ -94,7 +94,7 @@ export default function BadrinathHotels() {
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:8, marginBottom:10 }}>
               <div>
                 <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:11, fontWeight:700, padding:'2px 10px', borderRadius:20, marginBottom:6, display:'inline-block' }}>{s.type}</span>
-                <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', margin:0 }}>{s.loc}</h3>
+                <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', margin:0 }}>{s.loc}</h2>
               </div>
               <div style={{ textAlign:'right' }}>
                 <div style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{s.budget}</div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Trek Timings 2026 — Start Time, Cut-off & Night Trek Rules',
-  description: 'Kedarnath trek timings 2026: Start before 1:30 PM from Gaurikund, descend by 5 PM. 16km trek stages, cut-off times at each checkpoint, night trek rules, and 2026 DM order details.',
+  title: 'Kedarnath Trek Timings 2026 — Start Time,',
+  description: 'Kedarnath trek timings 2026: Start before 1:30 PM from Gaurikund, descend by 5 PM. 16km trek stages, cut-off times at each checkpoint, night trek rules.',
   keywords: ['kedarnath trek timings 2026','kedarnath trek timing','kedarnath trek start time','gaurikund to kedarnath trek timing','kedarnath trek last time','kedarnath trek cut off time','kedarnath trek rules 2026','when to start kedarnath trek'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026` },
   openGraph: {

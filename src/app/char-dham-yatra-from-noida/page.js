@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Noida 2026 — Route & Packages',
+  title: 'Char Dham Yatra from Noida 2026',
   description: 'Char Dham Yatra from Noida 2026. 270km to Haridwar via NH334. All-inclusive packages from ₹19,500. Door-to-door Noida pickup available.',
   keywords: ['char dham yatra from noida','char dham yatra package from noida 2026','noida to char dham yatra','noida to haridwar char dham','char dham tour from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },

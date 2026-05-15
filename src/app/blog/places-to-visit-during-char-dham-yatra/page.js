@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Top Places to Visit During Char Dham Yatra 2026 — Beyond the 4 Dhams',
-  description: 'Top places to visit during Char Dham Yatra 2026 beyond the 4 dhams: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta, Lakhamandal, Dhari Devi. Operator-insider guide.',
+  title: 'Top Places to Visit During Char Dham Yatra 2026',
+  description: 'Top places to visit during Char Dham Yatra 2026 beyond the 4 dhams: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta, Lakhamandal.',
   keywords: ['places to visit during char dham yatra','places to see during char dham yatra','tourist places in char dham yatra route','attractions near char dham yatra','char dham yatra sightseeing','places near kedarnath','places near badrinath','harsil valley char dham'],
   alternates: { canonical: `${SITE.baseUrl}/blog/places-to-visit-during-char-dham-yatra` },
   openGraph: {
@@ -151,7 +151,7 @@ export default function PlacesToVisit() {
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 10 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ background: 'var(--navy)', color: '#FFD166', fontWeight: 700, fontSize: 12, padding: '3px 9px', borderRadius: 20 }}>#{i + 1}</span>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--navy)', margin: 0 }}>{place.name}</h3>
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--navy)', margin: 0 }}>{place.name}</h2>
                 </div>
                 <span style={{ fontSize: 11, background: 'rgba(11,123,139,0.1)', color: 'var(--teal)', padding: '2px 9px', borderRadius: 20, fontWeight: 700 }}>{place.type}</span>
               </div>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999',
-  description: 'Badrinath Yatra package from Haridwar 2026. 2N/3D all-inclusive from ₹5,999. Direct operator, zero commission. VIP darshan, AC cab, hotel. 50,000+ pilgrims served.',
+  title: 'Badrinath Yatra Package 2026',
+  description: 'Badrinath Yatra package from Haridwar 2026. 2N/3D all-inclusive from ₹5,999. Direct operator, zero commission. VIP darshan, AC cab, hotel.',
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar','badrinath yatra 2026',
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',

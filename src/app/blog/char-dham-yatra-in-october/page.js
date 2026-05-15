@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra in October 2026 — Is It Worth It?',
+  title: 'Char Dham Yatra in October 2026 — Is It Worth',
   description: 'Is October a good time for Char Dham Yatra? Less crowd, cheaper hotels, snowfall risk, closing dates. Honest guide for October Char Dham 2026 from a',
   keywords: ['char dham yatra in october','kedarnath yatra october','char dham yatra october weather','char dham october closing dates','char dham off season october','best time char dham october september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },

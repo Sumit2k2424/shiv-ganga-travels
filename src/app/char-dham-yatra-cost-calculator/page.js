@@ -2,6 +2,20 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { SITE } from '@/data/packages';
+
+export const metadata = {
+  title: 'Char Dham Yatra Cost Calculator 2026',
+  description: 'Calculate exact cost of Char Dham Yatra 2026. Add pilgrims, pony, helicopter, hotel upgrade. Packages from ₹19,500 per person from Haridwar.',
+  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cost-calculator` },
+  openGraph: {
+    title: 'Char Dham Yatra Cost Calculator 2026',
+    description: 'Estimate your Char Dham Yatra cost instantly. Packages from ₹19,500.',
+    url: `${SITE.baseUrl}/char-dham-yatra-cost-calculator`,
+    type: 'website',
+  },
+};
+
 
 export default function CostCalculator() {
   const [form, setForm] = useState({
@@ -91,6 +105,7 @@ export default function CostCalculator() {
         <h1 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.6rem,4vw,2.4rem)', fontWeight:600, color:'var(--navy)', marginBottom:10, letterSpacing:'-0.03em' }}>
           Char Dham Yatra Cost Calculator 2026
         </h1>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 600, margin: '1.5rem 0 1rem', color: '#1a1a1a' }}>Calculate Your Yatra Cost</h2>
         <p style={{ fontSize:14.5, color:'var(--text-muted)', lineHeight:1.7 }}>
           Get an instant personalised cost estimate for your Char Dham Yatra. Adjust options below.
         </p>

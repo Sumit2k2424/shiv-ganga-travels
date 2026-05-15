@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Varanasi 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Varanasi 2026. 800 km by road (12–13 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Varanasi 2026 — Train,',
+  description: 'Char Dham Yatra from Varanasi 2026. 800 km by road (12–13 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from varanasi','char dham yatra package from varanasi','varanasi to haridwar char dham','char dham tour from varanasi 2026','chardham yatra varanasi','varanasi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-varanasi` },
   openGraph: {

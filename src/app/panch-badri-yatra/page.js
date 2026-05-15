@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Panch Badri Yatra 2026 — All 5 Badri Shrines Guide',
+  title: 'Panch Badri Yatra 2026 — All 5 Badri Shrines',
   description: 'Panch Badri Yatra 2026. Visit all 5 Badri shrines: Badrinath, Yogadhyan Badri, Bhavishya Badri, Vriddha Badri, Adi Badri. Packages from Haridwar.',
   keywords: ['panch badri yatra','panch badri yatra 2026','panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },

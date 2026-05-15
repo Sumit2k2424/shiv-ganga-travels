@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra History & Significance — Adi Shankaracharya, Mythology & Meaning',
-  description: 'Char Dham Yatra history and significance: why Adi Shankaracharya established it in the 8th century, mythology of all 4 dhams, spiritual meaning, and why Hindus consider it the most important pilgrimage.',
+  title: 'Char Dham Yatra History & Significance',
+  description: 'Char Dham Yatra history and significance: why Adi Shankaracharya established it in the 8th century, mythology of all 4 dhams, spiritual meaning.',
   keywords: ['char dham yatra history','char dham yatra significance','why char dham yatra is important','char dham yatra mythology','char dham yatra spiritual significance','adi shankaracharya char dham','char dham yatra meaning','importance of char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
   openGraph: {

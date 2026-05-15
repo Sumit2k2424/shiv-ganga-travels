@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Kedarnath 2026 — Guptkashi & Sonprayag',
+  title: 'Hotels Near Kedarnath 2026',
   description: 'Best hotels near Kedarnath 2026. Guptkashi, Sonprayag, Kedarnath Top and Phata stays — honest guide with prices, comfort ratings and tips.',
   keywords: ['hotels near kedarnath','kedarnath hotels 2026','guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-hotels` },
@@ -100,7 +100,7 @@ export default function KedarnathHotels() {
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:8, marginBottom:10 }}>
               <div>
                 <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:11, fontWeight:700, padding:'2px 10px', borderRadius:20, marginBottom:6, display:'inline-block' }}>{s.type}</span>
-                <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', margin:0 }}>{s.loc}</h3>
+                <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', margin:0 }}>{s.loc}</h2>
               </div>
               <div style={{ textAlign:'right' }}>
                 <div style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{s.budget}</div>
@@ -133,7 +133,7 @@ export default function KedarnathHotels() {
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Badrinath Hotels','/badrinath-hotels'],['Kedarnath Weather','/kedarnath-weather'],['How to Reach Kedarnath','/how-to-reach-kedarnath'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h]) => (
+            {[['Badrinath Hotels','/badrinath-hotels'],['Kedarnath Weather','/kedarnath-weather'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

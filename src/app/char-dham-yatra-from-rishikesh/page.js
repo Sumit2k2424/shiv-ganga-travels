@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Rishikesh 2026 — Packages from ₹19,500',
-  description: 'Char Dham Yatra from Rishikesh 2026. 24km from Haridwar. All-inclusive packages from ₹19,500/person. Direct operator, zero commission. Rishikesh pickup available.',
+  title: 'Char Dham Yatra from Rishikesh 2026 — Packages',
+  description: 'Char Dham Yatra from Rishikesh 2026. 24km from Haridwar. All-inclusive packages from ₹19,500/person. Direct operator, zero commission.',
   keywords: [
     'char dham yatra from rishikesh', 'char dham yatra package rishikesh 2026',
     'rishikesh to char dham yatra', 'char dham tour from rishikesh',

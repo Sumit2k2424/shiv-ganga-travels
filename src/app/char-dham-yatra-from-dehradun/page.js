@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Dehradun 2026 — Packages & Helicopter',
-  description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport gateway. Road & helicopter packages from ₹19,500. 54km to Haridwar. Direct operator, zero commission.',
+  title: 'Char Dham Yatra from Dehradun 2026',
+  description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport gateway. Road & helicopter packages from ₹19,500. 54km to Haridwar.',
   keywords: [
     'char dham yatra from dehradun', 'char dham yatra package dehradun 2026',
     'dehradun to char dham yatra', 'char dham helicopter dehradun',

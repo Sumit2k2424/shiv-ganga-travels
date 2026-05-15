@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'बुजुर्गों के लिए चार धाम यात्रा 2026 — कैसे करें, क्या सावधानी बरतें',
-  description: '60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर — सब जानकारी हिंदी में। शिव गंगा ट्रेवल्स का Special Senior Package ₹24,500 से।',
+  title: 'बुजुर्गों के लिए चार धाम यात्रा 2026 — कैसे',
+  description: '60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर — सब जानकारी हिंदी में। शिव गंगा ट्रेवल्स का Special Senior Package ₹24,500.',
   keywords: ['बुजुर्गों के लिए चार धाम यात्रा','वरिष्ठ नागरिक चार धाम','char dham yatra for senior citizens hindi','बड़े उम्र में चार धाम'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },
   openGraph: { title: 'बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है? — 12 जरूरी बातें', description: '60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर — सब जानकारी।', url: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra`, type: 'article' },

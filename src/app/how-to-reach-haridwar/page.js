@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Haridwar — Train, Flight, Bus & Road',
+  title: 'How to Reach Haridwar',
   description: 'How to reach Haridwar 2026. Train from Delhi (3.5 hrs), flight to Dehradun, bus and road routes from Mumbai, Bangalore and all major cities.',
   keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach','jolly grant airport haridwar','dehradun airport haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-haridwar` },

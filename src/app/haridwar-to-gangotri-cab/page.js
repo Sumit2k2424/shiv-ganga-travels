@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi',
+  title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance,',
   description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.',
   keywords: ['haridwar to gangotri cab,haridwar to gangotri taxi,haridwar gangotri distance,cab from haridwar to gangotri 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-gangotri-cab` },

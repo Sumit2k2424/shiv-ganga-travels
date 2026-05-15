@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Pony Charges 2026 — Palki & Pitthu Rates from Gaurikund',
-  description: 'Kedarnath pony charges 2026: pony ₹5,500–7,000, palki ₹7,500–10,000, pitthu kandi ₹1,500–2,500. Official government rates from Gaurikund. Booking counter locations, fraud warnings, and tips.',
+  title: 'Kedarnath Pony Charges 2026 — Palki & Pitthu',
+  description: 'Kedarnath pony charges 2026: pony ₹5,500–7,000, palki ₹7,500–10,000, pitthu kandi ₹1,500–2,500. Official government rates from Gaurikund.',
   keywords: [
     'kedarnath pony charges 2026','kedarnath pony rate 2026','kedarnath palki charges',
     'kedarnath palki rates 2026','gaurikund pony booking','kedarnath pitthu charges',

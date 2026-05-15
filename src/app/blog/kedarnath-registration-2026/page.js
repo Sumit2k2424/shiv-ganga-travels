@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra Registration 2026 — Online, WhatsApp & Offline Guide',
-  description: 'Kedarnath Yatra registration 2026: step-by-step online (registrationandtouristcare.uk.gov.in), WhatsApp (8394833833), and offline counter guide. Daily limit 18,000. March 6 portal opening. Free e-pass.',
+  title: 'Kedarnath Yatra Registration 2026 — Online,',
+  description: 'Kedarnath Yatra registration 2026: step-by-step online (registrationandtouristcare.uk.gov.in), WhatsApp (8394833833), and offline counter guide.',
   keywords: [
     'kedarnath yatra registration 2026','kedarnath registration 2026','kedarnath yatra registration online',
     'how to register for kedarnath yatra 2026','kedarnath registration online 2026',

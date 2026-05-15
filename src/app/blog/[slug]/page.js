@@ -51,7 +51,7 @@ export default function BlogPage({ params }) {
 
       {/* CTA */}
       <div style={{marginTop:30,padding:20,background:'#f5f5f5',borderRadius:10}}>
-        <h3>Plan Your Trip Now</h3>
+        <h2 style={{fontSize:"1.25rem",fontWeight:600,margin:"2rem 0 0.5rem"}}>Plan Your Trip Now</h2>
         <p>Get best price, no middleman, direct booking support.</p>
         <a href="https://wa.me/917017082807" target="_blank" rel="nofollow noopener noreferrer">
           <button style={{padding:'10px 20px',background:'green',color:'#fff',border:'none',borderRadius:5}}>
@@ -62,7 +62,7 @@ export default function BlogPage({ params }) {
 
       {/* Related Blogs */}
       <div style={{marginTop:40}}>
-        <h3>Related Blogs</h3>
+        <h2 style={{fontSize:'1.25rem',fontWeight:600,margin:'2rem 0 1rem'}}>Related Blogs</h2>
         {related.map(r => (
           <div key={r.slug}>
             <Link href={`/blog/${r.slug}`}>{r.title}</Link>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Green Card for Char Dham Yatra 2026 — Vehicle Permit for Non-Uttarakhand Cars',
-  description: 'Green Card (Trip Card) required for all vehicles registered outside Uttarakhand on Char Dham routes 2026. How to apply at greencard.uk.gov.in, cost ₹50, required documents. DL, HR, UP, MH plates all need it.',
+  title: 'Green Card for Char Dham Yatra 2026 — Vehicle',
+  description: 'Green Card (Trip Card) required for all vehicles registered outside Uttarakhand on Char Dham routes 2026.',
   keywords: [
     'green card char dham yatra 2026','green card uttarakhand vehicle permit','char dham trip permit',
     'uttarakhand vehicle green card','char dham yatra vehicle permit 2026','trip card uttarakhand',

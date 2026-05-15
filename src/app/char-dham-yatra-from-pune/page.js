@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Pune 2026 — Train, Flight & Package from ₹24,999',
-  description: 'Char Dham Yatra from Pune 2026. 1,600 km — fly via Mumbai or Delhi. Trains, flights, pickups explained. All-inclusive packages from ₹24,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Pune 2026 — Train, Flight',
+  description: 'Char Dham Yatra from Pune 2026. 1,600 km — fly via Mumbai or Delhi. Trains, flights, pickups explained. All-inclusive packages from ₹24,999.',
   keywords: ['char dham yatra from pune','char dham yatra package from pune','pune to haridwar char dham','char dham tour from pune 2026','chardham yatra pune','pune char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
   openGraph: {

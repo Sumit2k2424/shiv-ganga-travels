@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Online Puja Booking — Kedarnath, Badrinath Abhishek & Rudrabhishek 2026',
+  title: 'Online Puja Booking — Kedarnath, Badrinath',
   description: 'Book online puja at Kedarnath, Badrinath, Gangotri and Yamunotri 2026. Abhishek, Rudraabhishek and special darshan. Managed directly from Haridwar.',
   keywords: ['online puja booking kedarnath','badrinath abhishek booking','kedarnath mahabhishek','rudrabhishek kedarnath','char dham puja booking 2026','badrinath online puja'],
   alternates: { canonical: `${SITE.baseUrl}/online-puja-booking` },
@@ -35,6 +35,7 @@ export default function PujaBooking() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🙏 Advance Booking · 2026</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Online Puja Booking — Char Dham 2026</h1>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 600, margin: '1.5rem 0 1rem', color: '#1a1a1a' }}>Kedarnath & Badrinath Puja Services</h2>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Mahabhishek · Rudrabhishek · Sahastra Naam · Shringaar Aarti · All temples · Temple-registered pandits</p>
         <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a puja at Char Dham temples. Please share availability and prices.')}`} target="_blank" rel="nofollow noopener noreferrer"
           style={{ display:'inline-block', background:'#25D366', color:'#fff', padding:'13px 32px', borderRadius:10, fontWeight:700, fontSize:15, textDecoration:'none', marginTop:20 }}>💬 Book Puja on WhatsApp</a>

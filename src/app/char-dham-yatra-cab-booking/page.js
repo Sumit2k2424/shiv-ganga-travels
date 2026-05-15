@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Cab Booking 2026 — Innova & Tempo Traveller',
+  title: 'Char Dham Cab Booking 2026 — Innova & Tempo',
   description: 'Book Char Dham Yatra cab from Haridwar 2026. Innova, Tempo Traveller, SUV. Door-to-door pickup. Direct operator, best rates.',
   keywords: ['char dham yatra cab booking','char dham yatra taxi','haridwar to char dham cab','char dham yatra innova','char dham yatra tempo traveller','char dham cab price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },

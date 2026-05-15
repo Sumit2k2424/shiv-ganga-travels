@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller',
+  title: 'Haridwar to Kedarnath Cab 2026 — Fare,',
   description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.',
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Helicopter Booking 2026 — Price & Guide',
+  title: 'Kedarnath Helicopter Booking 2026',
   description: 'Kedarnath helicopter booking 2026. Prices ₹7,500–9,500. Helipads at Phata, Guptkashi, Sirsi. Book via IRCTC heliyatra portal.',
   keywords: ['kedarnath helicopter booking','kedarnath helicopter price 2026','kedarnath helicopter booking online','phata to kedarnath helicopter','kedarnath helicopter cost','kedarnath helicopter 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },

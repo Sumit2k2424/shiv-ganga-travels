@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Delhi 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Delhi 2026. 250–335 km depending on pickup point. Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Delhi 2026 — Train, Flight',
+  description: 'Char Dham Yatra from Delhi 2026. 250–335 km depending on pickup point. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from delhi','char dham yatra package from delhi','delhi to haridwar char dham','char dham tour from delhi 2026','chardham yatra delhi','delhi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-delhi` },
   openGraph: {

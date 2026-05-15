@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Chandigarh 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Chandigarh 2026. 215 km by road (4–4.5 hrs) via NH7. Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Chandigarh 2026 — Train,',
+  description: 'Char Dham Yatra from Chandigarh 2026. 215 km by road (4–4.5 hrs) via NH7. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from chandigarh','char dham yatra package from chandigarh','chandigarh to haridwar char dham','char dham tour from chandigarh 2026','chardham yatra chandigarh','chandigarh char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },
   openGraph: {

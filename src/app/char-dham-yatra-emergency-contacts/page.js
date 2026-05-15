@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Char Dham Emergency Contacts — SDRF & Hospital Numbers',
+  title: 'Char Dham Emergency Contacts — SDRF & Hospital',
   description: 'Char Dham emergency contacts 2026. SDRF helpline, hospital numbers, police contacts for Kedarnath, Badrinath, Gangotri, Yamunotri. Save before you travel.',
   keywords: ['char dham yatra emergency contacts','kedarnath helpline number','char dham yatra helpline 2026','badrinath temple committee number','char dham yatra police number'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-emergency-contacts` },
@@ -60,6 +60,7 @@ export default function EmergencyContacts() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(255,255,255,0.15)', color:'#fff', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>🚨 Save Before You Travel</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:12 }}>Char Dham Yatra Emergency Contacts 2026</h1>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 600, margin: '1.5rem 0 1rem', color: '#1a1a1a' }}>SDRF Helpline & Hospital Numbers</h2>
         <p style={{ color:'rgba(255,255,255,0.85)', fontSize:15 }}>Save these numbers in your phone before you leave home</p>
       </div>
     </section>

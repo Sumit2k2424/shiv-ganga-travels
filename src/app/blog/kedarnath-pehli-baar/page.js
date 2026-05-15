@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी में',
+  title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के',
   description: 'केदारनाथ पहली बार जा रहे हैं? रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — सब कुछ हिंदी में। 18 गलतियाँ जो नए यात्री अक्सर करते हैं।',
   keywords: ['केदारनाथ यात्रा 2026 पहली बार','kedarnath jane ki jankari hindi','केदारनाथ कैसे जाएं','kedarnath trek hindi guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` },

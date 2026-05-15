@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Pony vs Helicopter 2026 — Which Is Better?',
+  title: 'Kedarnath Pony vs Helicopter 2026 — Which Is',
   description: 'Complete comparison: Kedarnath by pony vs helicopter in 2026. Cost, time, availability, IRCTC booking, pony booking, and which option suits which',
   keywords: ['kedarnath pony vs helicopter','kedarnath helicopter or pony','kedarnath pony cost 2026','kedarnath helicopter cost 2026','kedarnath trek alternatives','best way to reach kedarnath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },

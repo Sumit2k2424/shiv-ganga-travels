@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Road Status 2026 — Live Route Conditions',
+  title: 'Char Dham Road Status 2026 — Live Route',
   description: 'Live Char Dham road status 2026. Route conditions from Haridwar to Kedarnath, Badrinath, Gangotri and Yamunotri. Daily updates.',
   keywords: ['char dham road status','kedarnath road condition','char dham highway status 2026','sonprayag road open','joshimath road status','gangotri highway status','char dham yatra road blockage'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },

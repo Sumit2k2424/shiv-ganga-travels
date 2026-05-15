@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Nagpur 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Nagpur 2026. 1,450 km — fly via Dehradun (2 hrs). Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Nagpur 2026 — Train,',
+  description: 'Char Dham Yatra from Nagpur 2026. 1,450 km — fly via Dehradun (2 hrs). Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from nagpur','char dham yatra package from nagpur','nagpur to haridwar char dham','char dham tour from nagpur 2026','chardham yatra nagpur','nagpur char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-nagpur` },
   openGraph: {

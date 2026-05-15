@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered by Experts',
+  title: 'Char Dham Yatra FAQ 2026 — 50 Questions',
   description: 'Complete Char Dham Yatra FAQ 2026. 50 expert answers covering cost, registration, best time, senior citizens, helicopter, packing, new rules, safety',
   keywords: ['char dham yatra faq','char dham yatra questions answers','char dham yatra 2026 questions','kedarnath yatra faq','char dham yatra guide 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },

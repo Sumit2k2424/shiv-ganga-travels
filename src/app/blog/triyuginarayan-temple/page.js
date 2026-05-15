@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Triyuginarayan Temple 2026 — Guide, Route & Timings',
+  title: 'Triyuginarayan Temple 2026',
   description: 'Triyuginarayan Temple guide 2026 — where Lord Shiva married Goddess Parvati. Location, route from Haridwar, darshan timings.',
   keywords: ['triyuginarayan temple','triyuginarayan temple kedarnath','triyuginarayan shiva parvati wedding','triyuginarayan temple guide','triyuginarayan yatra','sonprayag to triyuginarayan'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },

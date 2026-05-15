@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown (Every Rupee)',
-  description: 'Exact Char Dham Yatra cost 2026. Package ₹19,500. Kedarnath pony ₹3,500. Helicopter ₹7,500. Registration FREE (₹0). Train, food, personal expenses — every rupee broken down.',
+  title: 'Char Dham Yatra Cost 2026 — Complete Price',
+  description: 'Exact Char Dham Yatra cost 2026. Package ₹19,500. Kedarnath pony ₹3,500. Helicopter ₹7,500. Registration FREE (₹0).',
   keywords: ['char dham yatra cost 2026','char dham yatra package price','kedarnath pony cost','char dham yatra total cost','char dham yatra budget','char dham yatra price per person'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title: 'Char Dham Yatra Cost 2026 — Budget ₹19,500 to Luxury ₹2.5L | Complete Breakdown', description: 'Char Dham Yatra cost 2026 per person: budget ₹19,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter ₹1.5L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.', url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article' },

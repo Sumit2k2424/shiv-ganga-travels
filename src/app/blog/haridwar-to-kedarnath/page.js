@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Haridwar to Kedarnath Distance, Route & Travel Guide 2026',
+  title: 'Haridwar to Kedarnath Distance, Route & Travel',
   description: 'Haridwar to Kedarnath distance is 228km by road + 16km trek. Complete route guide, journey time, best stops, accommodation, and travel tips for 2026.',
   keywords: ['haridwar to kedarnath distance','haridwar to kedarnath route','haridwar to kedarnath by road','haridwar to kedarnath travel guide','haridwar kedarnath trip 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Lucknow 2026 — Train, Flight & Package from ₹22,999',
-  description: 'Char Dham Yatra from Lucknow 2026. 485 km by road (8–9 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999. Direct Haridwar operator since 2010.',
+  title: 'Char Dham Yatra from Lucknow 2026 — Train,',
+  description: 'Char Dham Yatra from Lucknow 2026. 485 km by road (8–9 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from lucknow','char dham yatra package from lucknow','lucknow to haridwar char dham','char dham tour from lucknow 2026','chardham yatra lucknow','lucknow char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-lucknow` },
   openGraph: {

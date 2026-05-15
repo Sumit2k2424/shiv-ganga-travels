@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra 2026 New Rules — Green Card, SpO2 Check, 10PM Ban & All Changes',
+  title: 'Char Dham Yatra 2026 New Rules — Green Card,',
   description: 'Complete guide to new Char Dham Yatra 2026 rules: phone ban inside temples, mandatory medical certificate for 55+, IRCTC helicopter booking, real-time',
   keywords: ['char dham yatra 2026 new rules','char dham yatra 2026 mobile phone ban','char dham yatra 2026 age limit','char dham yatra 2026 regulations','kedarnath new rules 2026','char dham yatra irctc helicopter 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules` },
