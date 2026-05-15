@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Month-by-month Yamunotri weather guide. Best time to visit, what to pack, temperature ranges.',
     url: `${SITE.baseUrl}/yamunotri-weather`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yamunotri Weather 2026 — Month-wise Temperature Guide',
+    description: 'Month-by-month Yamunotri weather guide. Best time to visit, what to pack, temperature ranges.',
+    images: [{ url: '/opengraph-image', alt: 'Yamunotri Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const weather = [

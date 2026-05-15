@@ -11,6 +11,13 @@ export const metadata = {
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
     url: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Helicopter Booking 2026 — Price & Guide | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Helicopter Booking 2026 — Complete Guide',
+    description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Helicopter Booking 2026 — Complete Guide | Shiv Ganga Travels' }],
   },
 };
 

@@ -11,7 +11,13 @@ export const metadata = {
     description: 'Complete road map for Char Dham Yatra 2026 — all distances, altitudes, and key stops from Haridwar.',
     url: `${SITE.baseUrl}/char-dham-yatra-route-map`,
     type: 'website',
-    images: ['/opengraph-image'],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Route Map 2026 from Haridwar — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Route Map 2026 — Distances, Times & Key Stops',
+    description: 'Complete road map for Char Dham Yatra 2026 — all distances, altitudes, and key stops from Haridwar.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Route Map 2026 — Distances, Times & Key Stop | Shiv Ganga Travels' }],
   },
 };
 

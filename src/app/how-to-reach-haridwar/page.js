@@ -12,6 +12,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/how-to-reach-haridwar`,
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Reach Haridwar for Char Dham Yatra 2026',
+    description: 'Train, flight, bus, and road options from all major cities to Haridwar — starting point of Char Dham Yatra.',
+    images: [{ url: '/opengraph-image', alt: 'How to Reach Haridwar for Char Dham Yatra 2026 | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

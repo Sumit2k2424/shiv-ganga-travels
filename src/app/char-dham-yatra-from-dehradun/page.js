@@ -16,6 +16,13 @@ export const metadata = {
     description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹19,500. Helicopter packages from ₹85,000. Direct operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-dehradun`,
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Dehradun 2026',
+    description: 'Char Dham Yatra from Dehradun. Closest city to Haridwar. Direct operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
   },
 };
 

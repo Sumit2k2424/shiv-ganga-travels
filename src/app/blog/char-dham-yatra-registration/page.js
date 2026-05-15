@@ -18,6 +18,13 @@ export const metadata = {
     description: 'Everything you need to know about mandatory Char Dham Yatra registration 2026 — online process, documents, biometric centres, daily limits.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-registration`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Registration 2026 — Free Online Guide | 18,000/Day Lim | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Registration 2026 — Step-by-Step Guide',
+    description: 'Everything you need to know about mandatory Char Dham Yatra registration 2026 — online process, documents, biometric centres, daily limits.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Registration 2026 — Step-by-Step Guide | Shiv Ganga Travels' }],
   },
 };
 

@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra History & Significance — Why It Is the Most Important Hindu Pilgrimage',
     description: 'Complete history of Char Dham Yatra: Adi Shankaracharya\'s 8th-century vision, mythology of all 4 dhams, spiritual significance, and why completing this yatra is considered a path to moksha.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-significance`, type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra History & Significance — Adi Shankaracharya, Mythology | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra History & Significance — Why It Is the Most Important ',
+    description: 'Complete history of Char Dham Yatra: Adi Shankaracharya\',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra History & Significance — Why It Is the Most  | Shiv Ganga Travels' }],
   },
 };
 

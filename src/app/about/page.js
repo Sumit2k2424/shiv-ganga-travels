@@ -12,6 +12,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/about`,
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Shiv Ganga Travels — Our Story, Ethics & Vision',
+    description: 'Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
+    images: [{ url: '/opengraph-image', alt: 'About Shiv Ganga Travels — Our Story, Ethics & Vision | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

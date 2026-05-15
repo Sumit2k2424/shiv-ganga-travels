@@ -16,6 +16,13 @@ export const metadata = {
     description: 'Kedarnath VIP darshan parchi ₹1,100. What it includes, when it\'s suspended in peak season, how to book Rudrabhishek, and why NOT to pay ₹2,000+ to touts.',
     url: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'VIP Darshan Kedarnath 2026 — ₹1,100 Parchi, Booking Guide & Scam Warni | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath VIP Darshan 2026 — ₹1,100 Parchi, What It Includes & Fraud W',
+    description: 'Kedarnath VIP darshan parchi ₹1,100. What it includes, when it\',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath VIP Darshan 2026 — ₹1,100 Parchi, What It Includes | Shiv Ganga Travels' }],
   },
 };
 

@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['delhi to haridwar cab,delhi to haridwar taxi fare,delhi to haridwar distance,cab from delhi to haridwar char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/delhi-to-haridwar-cab` },
   openGraph: { title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup', description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Innova from ₹4,500. Pickup from IGI Airport, NDLS, or home.', url: `${SITE.baseUrl}/delhi-to-haridwar-cab`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup',
+    description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Innova from ₹4,500. Pickup from IGI Airport, NDLS, or home.',
+    images: [{ url: '/opengraph-image', alt: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham  | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

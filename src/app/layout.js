@@ -82,8 +82,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra 2026`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. All-inclusive from ₹5,299. Zero commission. Haridwar.',
-    images: ['/opengraph-image'],
+    description: 'Char Dham Yatra 2026 from Haridwar from ₹19,500. Direct operator since 2010. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
   },
 
   alternates: {

@@ -16,6 +16,13 @@ export const metadata = {
     description: 'Pony ₹5,500–7,000 one way · Palki ₹7,500–10,000 · Pitthu ₹1,500–2,500. Kedarnath 2026 official rates. How to book, fraud warnings, best time to book.',
     url: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Pony Charges 2026 — Palki & Pitthu Rates from Gaurikund | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Pony Charges 2026 — Official Rates: Pony, Palki, Pitthu from',
+    description: 'Pony ₹5,500–7,000 one way · Palki ₹7,500–10,000 · Pitthu ₹1,500–2,500. Kedarnath 2026 official rates. How to book, fraud warnings, best time to book.',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Pony Charges 2026 — Official Rates: Pony, Palki, P | Shiv Ganga Travels' }],
   },
 };
 

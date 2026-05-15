@@ -11,6 +11,13 @@ export const metadata = {
     description: 'Char Dham Yatra from Noida 2026. 285km to Haridwar. Packages from ₹19,500/person. Direct operator, zero commission.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-noida`,
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Noida — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Noida 2026',
+    description: 'Char Dham Yatra from Noida. 250km to Haridwar. Direct operator. Zero commission.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Noida — Shiv Ganga Travels' }],
   },
 };
 

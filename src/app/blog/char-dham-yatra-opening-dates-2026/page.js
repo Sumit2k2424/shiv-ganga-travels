@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['char dham yatra opening dates 2026','kedarnath opening date 2026','badrinath opening date 2026','gangotri opening date 2026','yamunotri opening date 2026','char dham 2026 dates','char dham season 2026 start date','kedarnath temple open date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026` },
   openGraph: { title: 'Char Dham Opening Dates 2026 — All 4 Dhams Official Dates', description: 'Official opening and closing dates for all 4 Char Dham shrines in 2026 with booking guide.', url: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Opening Dates 2026 — All 4 Dhams | Shiv Ganga Travels' }],
 };
 
 function Schema() {

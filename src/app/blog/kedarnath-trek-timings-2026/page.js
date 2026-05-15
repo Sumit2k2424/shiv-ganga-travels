@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Kedarnath Trek Timings 2026 — Cut-off Times, Rules & Night Trek Policy',
     description: 'Official Kedarnath trek timings 2026: last entry 1:30 PM from Gaurikund, descent deadline 5 PM. 16km route cut-off times at each checkpoint. DM Rudraprayag order explained.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026`, type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Trek Timings 2026 — Start Time, Cut-off & Night Trek Rules | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Trek Timings 2026 — Cut-off Times, Rules & Night Trek Policy',
+    description: 'Official Kedarnath trek timings 2026: last entry 1:30 PM from Gaurikund, descent deadline 5 PM. 16km route cut-off times at each checkpoint. DM Rudraprayag',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Trek Timings 2026 — Cut-off Times, Rules & Night T | Shiv Ganga Travels' }],
   },
 };
 

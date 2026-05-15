@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra from Indore 2026 — Trains, Flights & Packages from ₹23,999',
     description: '1,050 km — fly via Delhi or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-indore`, type:'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Indore — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Indore 2026 — Trains, Flights & Packages from ₹23',
+    description: '1,050 km — fly via Delhi or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Indore — Shiv Ganga Travels' }],
   },
 };
 

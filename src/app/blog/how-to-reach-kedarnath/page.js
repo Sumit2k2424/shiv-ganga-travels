@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['how to reach kedarnath','kedarnath how to reach','how to go to kedarnath','kedarnath nearest railway station','kedarnath nearest airport','kedarnath route from delhi','how to reach kedarnath from delhi 2026','kedarnath journey guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },
   openGraph: { title: 'How to Reach Kedarnath 2026 — Complete Journey Guide', url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'How to Reach Kedarnath 2026 — All Routes Explained | Shiv Ganga Travels' }],
 };
 
 function Schema() {

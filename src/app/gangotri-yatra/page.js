@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['gangotri yatra, gangotri yatra 2026, gangotri yatra package, haridwar to gangotri, gangotri temple guide'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
   openGraph: { title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide', description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,299 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek', url:`${SITE.baseUrl}/gangotri-yatra`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide',
+    description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,299 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek',
+    images: [{ url: '/opengraph-image', alt: 'Gangotri Yatra 2026 — Package, Route, Temple Guide | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

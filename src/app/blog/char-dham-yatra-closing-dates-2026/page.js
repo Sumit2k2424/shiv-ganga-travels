@@ -16,6 +16,13 @@ export const metadata = {
     description: 'Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony guide.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Closing Dates 2026 — When Kedarnath, Badrinath, Gangotri & Y | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Closing Dates 2026 — When All 4 Dhams Close for Winter',
+    description: 'Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Closing Dates 2026 — When All 4 Dhams Close for Wi | Shiv Ganga Travels' }],
   },
 };
 

@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.',
     url: `${SITE.baseUrl}/gangotri-weather`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gangotri Weather 2026 — Month-wise Temperature Guide',
+    description: 'Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.',
+    images: [{ url: '/opengraph-image', alt: 'Gangotri Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const weather = [

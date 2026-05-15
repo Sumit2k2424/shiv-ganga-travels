@@ -11,6 +11,13 @@ export const metadata = {
     description: '50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-faq`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered by Experts | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered',
+    description: '50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered | Shiv Ganga Travels' }],
   },
 };
 

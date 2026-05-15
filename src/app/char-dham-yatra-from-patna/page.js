@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra from Patna 2026 — Trains, Flights & Packages from ₹22,999',
     description: '1,100 km — train (16–18 hrs) or fly. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-patna`, type:'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Patna — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Patna 2026 — Trains, Flights & Packages from ₹22,',
+    description: '1,100 km — train (16–18 hrs) or fly. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Patna — Shiv Ganga Travels' }],
   },
 };
 

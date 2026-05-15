@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['char dham yatra group package','char dham yatra group booking','char dham group package price 2026','char dham yatra for large groups','char dham group tour from haridwar','char dham group discount 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
   openGraph: { title: 'Char Dham Yatra Group Package 2026 — Pricing & Planning', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Group Package 2026 — Book for 10+ Pilgrims | Shiv Ganga Travels' }],
 };
 
 function Schema() {

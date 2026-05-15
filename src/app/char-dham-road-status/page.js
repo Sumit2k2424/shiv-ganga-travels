@@ -12,6 +12,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/char-dham-road-status`,
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Road Status 2026 — Live Route Conditions',
+    description: 'Weekly updated road conditions for all Char Dham Yatra routes from Haridwar.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Road Status 2026 — Live Route Conditions | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

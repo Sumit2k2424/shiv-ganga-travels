@@ -16,6 +16,13 @@ export const metadata = {
     description: 'Mandatory registration for Kedarnath 2026. Step-by-step online guide, WhatsApp option, daily 18,000 pilgrim cap. Free e-pass with QR code. Portal opened March 6.',
     url: `${SITE.baseUrl}/blog/kedarnath-registration-2026`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra Registration 2026 — Online, WhatsApp & Offline Guide | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Yatra Registration 2026 — Complete Guide (Online + WhatsApp ',
+    description: 'Mandatory registration for Kedarnath 2026. Step-by-step online guide, WhatsApp option, daily 18,000 pilgrim cap. Free e-pass with QR code. Portal opened Ma',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Yatra Registration 2026 — Complete Guide (Online + | Shiv Ganga Travels' }],
   },
 };
 

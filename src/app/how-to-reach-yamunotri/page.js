@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-yamunotri`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Reach Yamunotri 2026 — Road, Trek & Route Guide',
+    description: 'Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.',
+    images: [{ url: '/opengraph-image', alt: 'How to Reach Yamunotri 2026 — Road, Trek & Route Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };

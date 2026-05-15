@@ -11,6 +11,13 @@ export const metadata = {
     description: 'Phone ban, medical certificates, IRCTC helicopter booking, non-Hindu entry — all 2026 new rules explained.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 New Rules — Green Card, SpO2 Check, 10PM Ban & Al | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra 2026 New Rules — What Changed',
+    description: 'Phone ban, medical certificates, IRCTC helicopter booking, non-Hindu entry — all 2026 new rules explained.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 New Rules — What Changed | Shiv Ganga Travels' }],
   },
 };
 

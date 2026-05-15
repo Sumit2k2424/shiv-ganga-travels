@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & Price Guide',
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
     url: `${SITE.baseUrl}/blog/best-time-char-dham`, type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & P | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & P',
+    description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
+    images: [{ url: '/opengraph-image', alt: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, | Shiv Ganga Travels' }],
   },
 };
 

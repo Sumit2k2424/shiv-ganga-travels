@@ -16,6 +16,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999',
+    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹5,999. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
+    images: [{ url: '/opengraph-image', alt: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999 | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

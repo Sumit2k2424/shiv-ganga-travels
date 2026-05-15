@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['चार धाम यात्रा में क्या ले जाएं','char dham yatra packing list hindi','चार धाम यात्रा सामान','char dham yatra kya le jayen'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },
   openGraph: { title: 'चार धाम यात्रा पैकिंग लिस्ट 2026 — Print करके बैग में रख लो', description: 'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले check करें।', url: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'चार धाम यात्रा पैकिंग लिस्ट 2026 — क्या ले जाएं, क्या छोड़ें — पूरी हि | Shiv Ganga Travels' }],
 };
 
 function Schema() {

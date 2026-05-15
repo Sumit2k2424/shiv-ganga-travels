@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['char dham yatra budget vs premium','char dham yatra package comparison','best char dham yatra package 2026','char dham yatra deluxe package','char dham yatra premium package price','char dham yatra budget package','is premium char dham package worth it'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium` },
   openGraph: { title: 'Char Dham Budget vs Premium Package 2026 — What Actually Changes', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Budget vs Premium Package 2026 — Compared | Shiv Ganga Travels' }],
 };
 
 function Schema() {

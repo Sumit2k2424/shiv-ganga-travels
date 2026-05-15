@@ -15,6 +15,13 @@ export const metadata = {
     description: 'Char Dham Yatra from Rishikesh 2026. Just 24km from Haridwar. Packages from ₹19,500. Direct operator, zero commission. Rishikesh door pickup available.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-rishikesh`,
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Rishikesh — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Rishikesh 2026',
+    description: 'Char Dham Yatra from Rishikesh. Gateway to Char Dham. Direct operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Rishikesh — Shiv Ganga Travels' }],
   },
 };
 

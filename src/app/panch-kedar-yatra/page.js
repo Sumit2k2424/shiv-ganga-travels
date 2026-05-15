@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['panch kedar yatra, panch kedar yatra 2026, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek'],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
   openGraph: { title:'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package', description:'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹21,999. 8N/9D.', url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package',
+    description: 'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹21,999. 8N/9D.',
+    images: [{ url: '/opengraph-image', alt: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Pa | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

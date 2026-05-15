@@ -13,6 +13,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/char-dham-yatra-2025`,
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridwar',
+    description: 'Everything about Char Dham Yatra 2025 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridw | Shiv Ganga Travels' }],
+  },
 };
 
 const charDhamPkgs = PACKAGES.filter(p => p.category === 'char-dham');

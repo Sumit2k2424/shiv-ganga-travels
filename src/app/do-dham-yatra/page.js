@@ -10,6 +10,13 @@ export const metadata = {
     title: '2 Dham Yatra 2026 — Kedarnath & Badrinath from ₹10,999 | Do Dham',
     description: 'Do Dham Yatra (Kedarnath + Badrinath) 2026 from Haridwar. 5N/6D from ₹10,999. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.',
     url: `${SITE.baseUrl}/do-dham-yatra`, type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath from ₹10,999',
+    description: 'Kedarnath + Badrinath from Haridwar. 5N/6D from ₹10,999. VIP darshan, AC vehicle. Zero commission.',
+    images: [{ url: '/opengraph-image', alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package' }],
   },
 };
 

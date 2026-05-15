@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['char dham yatra cab booking','char dham yatra taxi','haridwar to char dham cab','char dham yatra innova','char dham yatra tempo traveller','char dham cab price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
   openGraph: { title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar', description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking`, type: 'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar',
+    description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwa | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

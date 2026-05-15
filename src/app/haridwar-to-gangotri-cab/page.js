@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['haridwar to gangotri cab,haridwar to gangotri taxi,haridwar gangotri distance,cab from haridwar to gangotri 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-gangotri-cab` },
   openGraph: { title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi', description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.', url: `${SITE.baseUrl}/haridwar-to-gangotri-cab`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi',
+    description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.',
+    images: [{ url: '/opengraph-image', alt: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Ut | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

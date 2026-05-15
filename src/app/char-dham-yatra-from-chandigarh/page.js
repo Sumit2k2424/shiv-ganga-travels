@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra from Chandigarh 2026 — Trains, Flights & Packages from ₹22,999',
     description: '215 km by road (4–4.5 hrs) via NH7. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh`, type:'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Chandigarh — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Chandigarh 2026 — Trains, Flights & Packages from',
+    description: '215 km by road (4–4.5 hrs) via NH7. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Chandigarh — Shiv Ganga Travels' }],
   },
 };
 

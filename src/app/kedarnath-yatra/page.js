@@ -11,6 +11,13 @@ export const metadata = {
     description: 'Complete Kedarnath Yatra guide 2026. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹6,499. Direct operator since 2010.',
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra Package 2026 from Haridwar — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Yatra 2026 — Package from ₹6,499 | Direct Operator',
+    description: 'Kedarnath Yatra 2026 from Haridwar from ₹6,499. 16km trek guide, pony, helicopter options. Zero commission.',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Yatra Package 2026 from Haridwar' }],
   },
 };
 

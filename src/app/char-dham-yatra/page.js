@@ -18,7 +18,13 @@ export const metadata = {
     description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
-    images: ['/opengraph-image'],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Package 2026 from Haridwar — Shiv Ganga Travels, Zero Commission Direct Operator' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hidden Charge',
+    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹19,500.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Package 2026 from Haridwar — ₹19,500, No Hid | Shiv Ganga Travels' }],
   },
 };
 

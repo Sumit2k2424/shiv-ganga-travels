@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['kedarnath yatra 2026 complete guide','kedarnath yatra guide','how to do kedarnath yatra','kedarnath yatra cost 2026','kedarnath yatra package from haridwar','kedarnath yatra registration 2026','kedarnath yatra planning guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
   openGraph: { title: 'Kedarnath Yatra 2026 — Complete A-Z Guide', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra 2026 — Complete Planning Guide | Shiv Ganga Travels' }],
 };
 
 function Schema() {

@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['केदारनाथ यात्रा 2026 पहली बार','kedarnath jane ki jankari hindi','केदारनाथ कैसे जाएं','kedarnath trek hindi guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` },
   openGraph: { title: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', description: 'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', url: `${SITE.baseUrl}/blog/kedarnath-pehli-baar`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी म | Shiv Ganga Travels' }],
 };
 
 function Schema() {

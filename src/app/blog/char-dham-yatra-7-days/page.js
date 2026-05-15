@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['char dham yatra 7 days','char dham yatra in 7 days possible','7 day char dham yatra itinerary','char dham yatra 7 nights 8 days','chardham yatra 7 days itinerary 2026','char dham yatra minimum days'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible?', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra in 7 Days 2026 — Is It Possible? | Shiv Ganga Travels' }],
 };
 
 function Schema() {

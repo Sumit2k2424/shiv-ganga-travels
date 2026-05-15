@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['haridwar to kedarnath distance','haridwar to kedarnath route','haridwar to kedarnath road trip','haridwar to gaurikund distance','haridwar to kedarnath how to reach','haridwar to kedarnath by road','kedarnath road trip from haridwar 2026','haridwar to sonprayag distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
   openGraph: { title: 'Haridwar to Kedarnath Distance & Route 2026 — Complete Road Trip Guide', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Haridwar to Kedarnath Distance, Route & Road Trip Guide 2026 | Shiv Ganga Travels' }],
 };
 
 function Schema() {

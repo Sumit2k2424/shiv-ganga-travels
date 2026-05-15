@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
   openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide',
+    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
+    images: [{ url: '/opengraph-image', alt: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

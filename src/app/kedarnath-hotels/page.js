@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
     url: `${SITE.baseUrl}/kedarnath-hotels`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hotels Near Kedarnath 2026 — Guide to Best Stays',
+    description: 'Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
+    images: [{ url: '/opengraph-image', alt: 'Hotels Near Kedarnath 2026 — Guide to Best Stays | Shiv Ganga Travels' }],
+  },
 };
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };

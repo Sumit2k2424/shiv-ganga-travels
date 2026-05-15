@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },
   openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Travel',
+    description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.',
+    images: [{ url: '/opengraph-image', alt: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Te | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

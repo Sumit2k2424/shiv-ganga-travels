@@ -11,7 +11,13 @@ export const metadata = {
     description: 'Complete Kedarnath trek guide — 16km route, difficulty, what to carry, pony vs helicopter.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     type: 'article',
-    images: ['/opengraph-image'],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Trek Guide 2026 — 16km Route from Gaurikund | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Trek Guide 2026 — Everything You Need to Know',
+    description: 'Complete Kedarnath trek guide — 16km route, difficulty, what to carry, pony vs helicopter.',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Trek Guide 2026 — Everything You Need to Know | Shiv Ganga Travels' }],
   },
 };
 

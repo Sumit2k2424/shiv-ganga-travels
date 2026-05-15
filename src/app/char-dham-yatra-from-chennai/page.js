@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra from Chennai 2026 — Trains, Flights & Packages from ₹25,999',
     description: '2,200 km — fly only. Char Dham packages from ₹25,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-chennai`, type:'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Chennai — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra from Chennai 2026 — Trains, Flights & Packages from ₹2',
+    description: '2,200 km — fly only. Char Dham packages from ₹25,999/person. Zero commission, direct Haridwar operator.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Chennai — Shiv Ganga Travels' }],
   },
 };
 

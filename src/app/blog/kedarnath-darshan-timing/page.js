@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['kedarnath darshan timings 2026','kedarnath temple opening time','kedarnath darshan time','kedarnath mandir timing','kedarnath aarti time','kedarnath puja timing','kedarnath temple closing time','kedarnath VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
   openGraph: { title: 'Kedarnath Darshan Timings 2026 — Complete Schedule', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Darshan Timings 2026 — Garbha Griha, Touch Shivling, VIP & P | Shiv Ganga Travels' }],
 };
 
 function Schema() {

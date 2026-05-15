@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple, Chandrashila summit, best time, how to reach, and packages from Haridwar.',
     url: `${SITE.baseUrl}/chopta-tungnath`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chopta Tungnath 2026 — Complete Travel Guide',
+    description: 'Complete guide to Chopta and Tungnath — India\',
+    images: [{ url: '/opengraph-image', alt: 'Chopta Tungnath 2026 — Complete Travel Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };

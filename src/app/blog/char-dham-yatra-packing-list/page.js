@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['char dham yatra packing list','what to carry for char dham yatra','char dham yatra essentials','char dham yatra preparation','what to pack for char dham yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
   openGraph: { title:'Char Dham Yatra Packing List 2026', description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Packing List 2026 — What to Pack for Kedarnath Trek &  | Shiv Ganga Travels' }],
 };
 
 function Schema() {

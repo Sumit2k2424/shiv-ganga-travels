@@ -58,7 +58,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Shiv Ganga Travels — Char Dham Yatra 2026',
     description: 'Zero commission Char Dham Yatra from Haridwar. Est. 2010.',
-    images: ['/opengraph-image'],
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
   },
   alternates: { canonical: 'https://www.shivgangatravels.com' },
 };

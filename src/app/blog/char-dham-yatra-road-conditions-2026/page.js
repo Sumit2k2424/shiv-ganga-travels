@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra Road Conditions 2026 — Live Status and All-Weather Road Update',
     description: 'Current road conditions for all 4 Char Dham routes 2026. Landslide zones, All-Weather Road project status, Joshimath update, and mountain driving tips.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026`, type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Road Conditions 2026 — Current Status, Landslide Zones | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Road Conditions 2026 — Live Status and All-Weather Roa',
+    description: 'Current road conditions for all 4 Char Dham routes 2026. Landslide zones, All-Weather Road project status, Joshimath update, and mountain driving tips.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Road Conditions 2026 — Live Status and All-W | Shiv Ganga Travels' }],
   },
 };
 

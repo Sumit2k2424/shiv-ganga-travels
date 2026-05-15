@@ -6,7 +6,8 @@ export const metadata = {
   description: 'Char Dham Helicopter Package 2026. DGCA-approved operators. 5N/6D from Sahastradhara Helipad, Dehradun. All 4 dhams: Yamunotri, Gangotri, Kedarnath, Badrinath. VIP darshan. 5 kg luggage limit. Weather buffer day included.',
   keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','DGCA approved char dham helicopter','sahastradhara helipad char dham','char dham helicopter price 2026','char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
-  openGraph: { title: 'Char Dham Helicopter Package 2026 — DGCA-Approved, Sahastradhara Dehradun', description:'Char Dham Helicopter Package 2026. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website' },
+  openGraph: { title: 'Char Dham Helicopter Package 2026 — DGCA-Approved, Sahastradhara Dehradun', description:'Char Dham Helicopter Package 2026. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website', images:[{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days | Shiv Ganga Travels' }] },
+  twitter: { card: 'summary_large_image', title: 'Char Dham by Helicopter 2026 — 5N/6D from ₹85,000', description: 'All 4 Char Dhams in 6 days by helicopter. VIP darshan. From Dehradun. Zero commission.', images: [{ url: '/opengraph-image', alt: 'Char Dham Helicopter Package 2026' }] },
 };
 
 function Schema() {

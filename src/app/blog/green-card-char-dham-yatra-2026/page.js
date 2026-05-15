@@ -16,6 +16,13 @@ export const metadata = {
     description: 'All vehicles registered outside Uttarakhand need a Green Card to drive on Char Dham routes in 2026. Apply at greencard.uk.gov.in. ₹50 fee. Step-by-step guide.',
     url: `${SITE.baseUrl}/blog/green-card-char-dham-yatra-2026`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Green Card for Char Dham Yatra 2026 — Vehicle Permit for Non-Uttarakha | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Green Card / Trip Permit for Char Dham Yatra 2026 — Complete Guide',
+    description: 'All vehicles registered outside Uttarakhand need a Green Card to drive on Char Dham routes in 2026. Apply at greencard.uk.gov.in. ₹50 fee. Step-by-step gui',
+    images: [{ url: '/opengraph-image', alt: 'Green Card / Trip Permit for Char Dham Yatra 2026 — Complete | Shiv Ganga Travels' }],
   },
 };
 

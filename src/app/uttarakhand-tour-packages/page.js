@@ -7,6 +7,12 @@ export const metadata = {
   keywords: ['uttarakhand tour packages, uttarakhand tour packages 2026, uttarakhand tourism packages, best uttarakhand packages from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
   openGraph: { title:'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrimage', description:'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.', url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrima',
+    description: 'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.',
+    images: [{ url: '/opengraph-image', alt: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure  | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

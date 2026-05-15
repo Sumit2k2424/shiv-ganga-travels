@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['uttarakhand weather month by month','kedarnath weather 2026','char dham yatra weather','badrinath temperature month wise','best weather char dham yatra','uttarakhand climate guide','kedarnath temperature june','char dham yatra september weather'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
   openGraph: { title: 'Uttarakhand Weather Month by Month — Char Dham Yatra Climate Guide 2026', url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Uttarakhand Weather 2026 — Month-by-Month Guide | Shiv Ganga Travels' }],
 };
 
 function Schema() {

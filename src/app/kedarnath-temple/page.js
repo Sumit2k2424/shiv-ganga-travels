@@ -6,6 +6,12 @@ export const metadata = {
   keywords: ['kedarnath temple','kedarnath temple timings 2026','kedarnath temple history','kedarnath darshan 2026','kedarnath temple opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
   openGraph: { title: 'Kedarnath Temple 2026 — Darshan Timings, History & Complete Guide', description: 'Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & 2026 opening dates.', url: `${SITE.baseUrl}/kedarnath-temple`, type: 'website' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kedarnath Temple 2026 — Darshan Timings, History & Complete Guide',
+    description: 'Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & 2026 opening dates.',
+    images: [{ url: '/opengraph-image', alt: 'Kedarnath Temple 2026 — Darshan Timings, History & Complete  | Shiv Ganga Travels' }],
+  },
 };
 function Schema() {
   const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], aggregateRating:{'@type':'AggregateRating',ratingValue:4.9,reviewCount:5000,bestRating:5}, touristType:'Pilgrim' };

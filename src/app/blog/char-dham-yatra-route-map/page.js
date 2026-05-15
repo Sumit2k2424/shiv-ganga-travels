@@ -10,6 +10,13 @@ export const metadata = {
     title: 'Char Dham Yatra Route Map 2026 — Road Guide with Distances & Travel Times',
     description: 'Complete Char Dham Yatra route from Haridwar. 1,500km total. Day-wise distances, driving times, key stops, altitude at each dham. Operator-verified 2026 guide.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-route-map`, type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Route Map 2026 — Complete Road Guide from Haridwar wit | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Route Map 2026 — Road Guide with Distances & Travel Ti',
+    description: 'Complete Char Dham Yatra route from Haridwar. 1,500km total. Day-wise distances, driving times, key stops, altitude at each dham. Operator-verified 2026 gu',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Route Map 2026 — Road Guide with Distances & | Shiv Ganga Travels' }],
   },
 };
 

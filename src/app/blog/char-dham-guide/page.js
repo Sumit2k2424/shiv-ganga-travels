@@ -12,6 +12,13 @@ export const metadata = {
     description: 'Everything you need to know before planning your Char Dham Yatra — route, cost, registration, tips.',
     url: `${SITE.baseUrl}/blog/char-dham-guide`,
     type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Complete Guide 2026 — Route & Tips | Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Complete Guide 2026',
+    description: 'Everything you need to know before planning your Char Dham Yatra — route, cost, registration, tips.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Complete Guide 2026 | Shiv Ganga Travels' }],
   },
 };
 

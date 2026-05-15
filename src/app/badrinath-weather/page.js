@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.',
     url: `${SITE.baseUrl}/badrinath-weather`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Badrinath Weather 2026 — Month-wise Temperature Guide',
+    description: 'Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.',
+    images: [{ url: '/opengraph-image', alt: 'Badrinath Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const weather = [

@@ -19,6 +19,12 @@ export const metadata = {
     url: `${SITE.baseUrl}/rishikesh-tour-packages`,
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rishikesh Tour Packages 2026 — Trips from ₹3,999 | Haridwar + Rishikes',
+    description: 'Rishikesh tour packages from ₹3,999. Ganga Aarti, rafting, ashrams, Haridwar combo. Direct operator from Haridwar. Zero commission. 50,000+ pilgrims served',
+    images: [{ url: '/opengraph-image', alt: 'Rishikesh Tour Packages 2026 — Trips from ₹3,999 | Haridwar  | Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

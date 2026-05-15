@@ -11,6 +11,12 @@ export const metadata = {
     description: 'Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-badrinath`, type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Reach Badrinath 2026 — Road Route & Complete Guide',
+    description: 'Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.',
+    images: [{ url: '/opengraph-image', alt: 'How to Reach Badrinath 2026 — Road Route & Complete Guide | Shiv Ganga Travels' }],
+  },
 };
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
