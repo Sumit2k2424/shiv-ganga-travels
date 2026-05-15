@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra for First Timers 2026's Guide',
+  title: 'Char Dham Yatra for First Timers 2026',
   description: 'Planning your first Char Dham Yatra in 2026? Complete guide covering everything — registration, packing, fitness, route, costs, do\'s and don\'ts. Written by a 15-year Haridwar operator.',
   keywords: ['char dham yatra first time','char dham yatra beginners guide','first time char dham yatra tips','char dham yatra complete guide','char dham yatra what to expect'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-first-timer-guide` },
