@@ -15,7 +15,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Char Dham Yatra History & Significance — Why It Is the Most Important ',
-    description: 'Complete history of Char Dham Yatra: Adi Shankaracharya\',
+    description: 'Complete history of Char Dham Yatra: Adi Shankaracharya',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra History & Significance — Why It Is the Most  | Shiv Ganga Travels' }],
   },
 };

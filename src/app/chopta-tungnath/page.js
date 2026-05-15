@@ -14,7 +14,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chopta Tungnath 2026 — Complete Travel Guide',
-    description: 'Complete guide to Chopta and Tungnath — India\',
+    description: 'Complete guide to Chopta and Tungnath — India',
     images: [{ url: '/opengraph-image', alt: 'Chopta Tungnath 2026 — Complete Travel Guide | Shiv Ganga Travels' }],
   },
 };

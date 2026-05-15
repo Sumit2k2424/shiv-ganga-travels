@@ -21,7 +21,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kedarnath VIP Darshan 2026 — ₹1,100 Parchi, What It Includes & Fraud W',
-    description: 'Kedarnath VIP darshan parchi ₹1,100. What it includes, when it\',
+    description: 'Kedarnath VIP darshan parchi ₹1,100. What it includes, when it',
     images: [{ url: '/opengraph-image', alt: 'Kedarnath VIP Darshan 2026 — ₹1,100 Parchi, What It Includes | Shiv Ganga Travels' }],
   },
 };

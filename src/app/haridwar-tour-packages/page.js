@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Haridwar Tour Package 2026 — Ganga Aarti, Har Ki Pauri | From ₹2,999',
-    description: 'Haridwar tour packages from ₹2,999. Har Ki Pauri Ganga Aarti, Mansa Devi, Chandi Devi, Rishikesh combo. Shiv Ganga Travels — Haridwar\',
+    description: 'Haridwar tour packages from ₹2,999. Har Ki Pauri Ganga Aarti, Mansa Devi, Chandi Devi, Rishikesh combo. Shiv Ganga Travels — Haridwar',
     images: [{ url: '/opengraph-image', alt: 'Haridwar Tour Package 2026 — Ganga Aarti, Har Ki Pauri | Fro | Shiv Ganga Travels' }],
   },
 };
