@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Blog 2026 – Expert Trek Guides, Cost Tips & Pilgrimage Planning',
-  description: 'In-depth Char Dham Yatra guides, trek tips, packing lists, cost breakdowns, and pilgrimage insights from Shiv Ganga Travels — Haridwar\'s trusted yatra specialist since 2010.'s trusted yatra specialist since 2010.',
+  description: 'In-depth Char Dham Yatra guides, trek tips, packing lists, cost breakdowns, and pilgrimage insights from Shiv Ganga Travels — Haridwar\'s trusted yatra specialist since 2010.',
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };
 
