@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Group Package 2026 — Book for 10+',
-  description: 'Char Dham group package 2026. Book for 10+ pilgrims and save 10–15%. Custom itinerary, dedicated vehicle, group meals included.',
-  keywords: ['char dham yatra group package','char dham yatra group booking','char dham group package price 2026','char dham yatra for large groups','char dham group tour from haridwar','char dham group discount 2026'],
+  title: 'Char Dham Yatra Group Package 2026 – Price, Discount & Custom Itinerary for 10+ Pilgrims',
+  description: 'Book Char Dham Yatra for groups of 10 or more and save 10–15%. Custom itinerary, dedicated vehicle, group meals included. Packages from ₹17,500 per person. WhatsApp to get a quote.',
+  keywords: ['char dham yatra group package 2026', 'char dham yatra group booking', 'char dham group package price 2026', 'char dham yatra large group', 'char dham group tour haridwar', 'char dham group discount 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
-  openGraph: { title: 'Char Dham Yatra Group Package 2026 — Pricing & Planning', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
+  openGraph: { title: 'Char Dham Yatra Group Package 2026 – Price, Discount & Custom Itinerary for 10+ Pilgrims', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Group Package 2026 — Book for 10+ Pilgrims | Shiv Ganga Travels' }],
 };
 

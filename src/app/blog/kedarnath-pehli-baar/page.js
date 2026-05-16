@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के',
-  description: 'केदारनाथ पहली बार जा रहे हैं? रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — सब कुछ हिंदी में। 18 गलतियाँ जो नए यात्री अक्सर करते हैं।',
-  keywords: ['केदारनाथ यात्रा 2026 पहली बार','kedarnath jane ki jankari hindi','केदारनाथ कैसे जाएं','kedarnath trek hindi guide'],
+  title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी',
+  description: 'पहली बार केदारनाथ जा रहे हैं? रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — सब कुछ हिंदी में। 18 गलतियाँ जो नए यात्री अक्सर करते हैं — इन्हें पहले जरूर पढ़ें।',
+  keywords: ['केदारनाथ यात्रा 2026 पहली बार', 'kedarnath pehli baar kaise jayen', 'केदारनाथ कैसे जाएं हिंदी', 'kedarnath trek hindi guide', 'केदारनाथ यात्रा गाइड 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` },
   openGraph: { title: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', description: 'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', url: `${SITE.baseUrl}/blog/kedarnath-pehli-baar`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी म | Shiv Ganga Travels' }],

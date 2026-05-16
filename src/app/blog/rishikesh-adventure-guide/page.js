@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Rishikesh Adventure Guide 2026',
-  description: 'Complete Rishikesh adventure guide 2026. River rafting prices, bungee jumping details, beach camping, best time to visit, and honest cost breakdown',
-  keywords: ['rishikesh adventure guide','rishikesh river rafting 2026','rishikesh bungee jumping price','rishikesh camping','rishikesh adventure package','rishikesh rafting cost 2026'],
+  title: 'Rishikesh Adventure Guide 2026 – Rafting Prices, Bungee Jumping & Beach Camping',
+  description: 'Complete Rishikesh adventure guide 2026: river rafting ₹600–1,200, bungee jumping ₹3,550, beach camping ₹1,200/night. Best time to visit, booking tips, and safety guide for all activities.',
+  keywords: ['rishikesh adventure guide 2026', 'rishikesh river rafting price 2026', 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },
 };
 function Schema() {

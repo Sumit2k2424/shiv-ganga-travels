@@ -2,17 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'VIP Darshan Kedarnath 2026 — ₹1,100 Parchi,',
-  description: 'Kedarnath VIP darshan parchi ₹1,100 in 2026. How to book, when VIP is suspended in peak season, what it includes, Garbha Griha access.',
-  keywords: [
-    'VIP darshan kedarnath 2026','kedarnath VIP darshan price','kedarnath special darshan',
-    'kedarnath VIP parchi booking','kedarnath darshan parchi price 2026','kedarnath special entry',
-    'kedarnath abhishek booking','kedarnath rudrabhishek booking','kedarnath VIP ticket',
-    'kedarnath darshan queue skip','garbha griha kedarnath access',
-  ],
+  title: 'VIP Darshan Kedarnath 2026 – ₹1,100 Parchi, How to Book & Garbha Griha Access',
+  description: 'Kedarnath VIP darshan 2026: parchi costs ₹1,100 per person, includes Garbha Griha access and priority queue. How to book, when VIP is suspended in peak season, and what to expect inside.',
+  keywords: ['VIP darshan kedarnath 2026', 'kedarnath VIP darshan price', 'kedarnath special darshan booking', 'kedarnath garbha griha access', 'kedarnath darshan parchi 2026', 'kedarnath priority darshan'],
   alternates: { canonical: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking` },
   openGraph: {
-    title: 'Kedarnath VIP Darshan 2026 — ₹1,100 Parchi, What It Includes & Fraud Warning',
+    title: 'VIP Darshan Kedarnath 2026 – ₹1,100 Parchi, How to Book & Garbha Griha Access',
     description: 'Kedarnath VIP darshan parchi ₹1,100. What it includes, when it\'s suspended in peak season, how to book Rudrabhishek, and why NOT to pay ₹2,000+ to touts.',
     url: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking`,
     type: 'article',

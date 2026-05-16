@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Senior Citizens 2026',
-  description: 'Char Dham Yatra for senior citizens 2026. Pony, palki, VIP darshan, oxygen, acclimatisation tips and our special senior package.',
-  keywords: ['senior citizen char dham yatra','char dham yatra for elderly','char dham yatra age limit','char dham yatra senior citizen package','old age char dham yatra','char dham yatra 60 years'],
+  title: 'Char Dham Yatra for Senior Citizens 2026 – Pony, Palki, VIP Darshan & Medical Tips',
+  description: 'Complete guide for senior citizens doing Char Dham Yatra 2026: medical certificate for 55+, pony and palki costs, VIP darshan booking, oxygen stops, acclimatisation, and our senior package.',
+  keywords: ['senior citizen char dham yatra 2026', 'char dham yatra for elderly', 'char dham yatra age limit 2026', 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
-  openGraph: { title:'Senior Citizen Char Dham Yatra 2026 — Complete Guide', description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article' },
+  openGraph: { title:'Char Dham Yatra for Senior Citizens 2026 – Pony, Palki, VIP Darshan & Medical Tips', description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra for Senior Citizens 2026 — 60+ | Pony, Palki, Helicopt | Shiv Ganga Travels' }],
 };
 

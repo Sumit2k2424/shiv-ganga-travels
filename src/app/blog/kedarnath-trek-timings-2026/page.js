@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Trek Timings 2026 — Start Time,',
-  description: 'Kedarnath trek timings 2026: Start before 1:30 PM from Gaurikund, descend by 5 PM. 16km trek stages, cut-off times at each checkpoint, night trek rules.',
-  keywords: ['kedarnath trek timings 2026','kedarnath trek timing','kedarnath trek start time','gaurikund to kedarnath trek timing','kedarnath trek last time','kedarnath trek cut off time','kedarnath trek rules 2026','when to start kedarnath trek'],
+  title: 'Kedarnath Trek Timings 2026 – Start Time, Cut-Off Points & Night Trek Rules',
+  description: 'Official Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Cut-off times at each checkpoint, last entry rules at Kedarnath, and why starting at 5 AM is best.',
+  keywords: ['kedarnath trek timings 2026', 'kedarnath trek timing', 'kedarnath trek start time 2026', 'gaurikund to kedarnath trek timing', 'kedarnath trek last time', 'kedarnath trek cut off time', 'when to start kedarnath trek'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026` },
   openGraph: {
-    title: 'Kedarnath Trek Timings 2026 — Cut-off Times, Rules & Night Trek Policy',
+    title: 'Kedarnath Trek Timings 2026 – Start Time, Cut-Off Points & Night Trek Rules',
     description: 'Official Kedarnath trek timings 2026: last entry 1:30 PM from Gaurikund, descent deadline 5 PM. 16km route cut-off times at each checkpoint. DM Rudraprayag order explained.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Trek Timings 2026 — Start Time, Cut-off & Night Trek Rules | Shiv Ganga Travels' }],

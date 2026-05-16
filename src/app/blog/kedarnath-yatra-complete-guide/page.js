@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra 2026 — Complete Planning Guide',
-  description: 'Complete Kedarnath Yatra 2026 guide. Distance, route from Haridwar, trek details, registration, puja prices, darshan timings, helicopter booking',
-  keywords: ['kedarnath yatra 2026 complete guide','kedarnath yatra guide','how to do kedarnath yatra','kedarnath yatra cost 2026','kedarnath yatra package from haridwar','kedarnath yatra registration 2026','kedarnath yatra planning guide'],
+  title: 'Kedarnath Yatra 2026 Complete Guide – Route, Cost, Registration, Trek & Darshan',
+  description: 'Complete Kedarnath Yatra 2026 planning guide: 16km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking, best time to visit, and packages from ₹6,499 ex-Haridwar.',
+  keywords: ['kedarnath yatra 2026 complete guide', 'kedarnath yatra guide', 'how to do kedarnath yatra', 'kedarnath yatra cost 2026', 'kedarnath yatra package haridwar', 'kedarnath yatra planning guide 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
-  openGraph: { title: 'Kedarnath Yatra 2026 — Complete A-Z Guide', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
+  openGraph: { title: 'Kedarnath Yatra 2026 Complete Guide – Route, Cost, Registration, Trek & Darshan', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra 2026 — Complete Planning Guide | Shiv Ganga Travels' }],
 };
 

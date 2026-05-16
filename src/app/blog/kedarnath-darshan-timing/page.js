@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Darshan Timings 2026 — Garbha Griha,',
-  description: 'Kedarnath temple darshan timings 2026. Morning session 6 AM–3 PM, evening 5–9 PM. Mahabhishek at 4 AM, Shringaar Aarti 7:30 PM. VIP darshan booking',
-  keywords: ['kedarnath darshan timings 2026','kedarnath temple opening time','kedarnath darshan time','kedarnath mandir timing','kedarnath aarti time','kedarnath puja timing','kedarnath temple closing time','kedarnath VIP darshan booking'],
+  title: 'Kedarnath Darshan Timings 2026 – Morning & Evening Sessions, Aarti Time & VIP Darshan',
+  description: 'Kedarnath temple darshan timings 2026: morning session 6 AM–3 PM, evening 5–9 PM. Mahabhishek at 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan parchi ₹1,100 in advance.',
+  keywords: ['kedarnath darshan timings 2026', 'kedarnath temple opening time', 'kedarnath darshan time', 'kedarnath mandir timing 2026', 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
-  openGraph: { title: 'Kedarnath Darshan Timings 2026 — Complete Schedule', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
+  openGraph: { title: 'Kedarnath Darshan Timings 2026 – Morning & Evening Sessions, Aarti Time & VIP Darshan', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Darshan Timings 2026 — Garbha Griha, Touch Shivling, VIP & P | Shiv Ganga Travels' }],
 };
 

@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham vs Do Dham Yatra 2026 — Which is',
-  description: 'Char Dham Yatra vs Do Dham — which is right for you? Time, budget, fitness and devotion compared. Help choosing your 2026 pilgrimage.',
-  keywords: ['char dham vs do dham','char dham yatra vs do dham yatra','difference between char dham and do dham','which is better char dham or do dham','do dham yatra 2026'],
+  title: 'Char Dham vs Do Dham Yatra 2026 – Which Is Right for You? Honest Comparison',
+  description: 'Char Dham Yatra vs Do Dham — compare time (10 vs 6 days), cost (₹19,500 vs ₹12,500), difficulty, and spiritual significance. Expert guide to help you choose the right pilgrimage in 2026.',
+  keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
 

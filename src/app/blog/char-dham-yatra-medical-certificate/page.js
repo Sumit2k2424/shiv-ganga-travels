@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Medical Certificate 2026 — Mandatory',
-  description: 'Char Dham medical certificate 2026: required for pilgrims 55+ (updated from 60+). SpO2 below 85% at Sonprayag = turned back. 31 health centres on route.',
-  keywords: ['char dham yatra medical certificate','char dham yatra fitness certificate','medical certificate for char dham yatra 2026','char dham yatra doctor certificate','kedarnath medical certificate'],
+  title: 'Char Dham Yatra Medical Certificate 2026 – Who Needs It, How to Get It & What Tests',
+  description: 'Char Dham Yatra 2026 medical certificate is mandatory for pilgrims aged 55+. SpO2 below 85% at checkpoints means being turned back. Find out which tests, which doctors, and how to prepare.',
+  keywords: ['char dham yatra medical certificate 2026', 'char dham yatra fitness certificate', 'medical certificate kedarnath 2026', 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };
 

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Badrinath Yatra 2026 — Temple, Timings & Travel',
-  description: 'Complete Badrinath Yatra guide 2026. Temple timings, route from Haridwar, Mana village, Tapt Kund, package from ₹5,999. Everything you need for a',
-  keywords: ['badrinath yatra 2026','badrinath yatra guide','badrinath temple darshan timings','badrinath yatra package','haridwar to badrinath','badrinath yatra tips 2026'],
+  title: 'Badrinath Yatra Guide 2026 – Temple Timings, Route from Haridwar & Travel Tips',
+  description: 'Complete Badrinath Yatra 2026 guide: darshan timings 4:30 AM–9 PM, Tapt Kund, Mana Village, best time to visit, and how to reach from Haridwar. Packages from ₹5,999.',
+  keywords: ['badrinath yatra guide 2026', 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', 'badrinath yatra package 2026', 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
 };
 function Schema() {

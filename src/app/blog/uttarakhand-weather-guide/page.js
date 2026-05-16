@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Uttarakhand Weather 2026 — Month-by-Month Guide',
-  description: 'Month-by-month weather guide for Char Dham Yatra routes in Uttarakhand 2026. Temperatures at Kedarnath, Badrinath, Gangotri, Yamunotri by month',
-  keywords: ['uttarakhand weather month by month','kedarnath weather 2026','char dham yatra weather','badrinath temperature month wise','best weather char dham yatra','uttarakhand climate guide','kedarnath temperature june','char dham yatra september weather'],
+  title: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines',
+  description: 'Month-by-month Uttarakhand weather guide for Char Dham Yatra 2026: temperatures at Kedarnath, Badrinath, Gangotri, and Yamunotri from May to October. When to pack woolens vs raincoats.',
+  keywords: ['uttarakhand weather month by month 2026', 'kedarnath weather 2026', 'char dham yatra weather guide', 'badrinath temperature month wise', 'uttarakhand climate chart', 'kedarnath temperature june', 'char dham yatra weather september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
-  openGraph: { title: 'Uttarakhand Weather Month by Month — Char Dham Yatra Climate Guide 2026', url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },
+  openGraph: { title: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines', url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Uttarakhand Weather 2026 — Month-by-Month Guide | Shiv Ganga Travels' }],
 };
 

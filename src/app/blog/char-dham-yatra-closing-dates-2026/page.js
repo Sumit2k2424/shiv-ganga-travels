@@ -2,17 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Closing Dates 2026 — When Kedarnath,',
-  description: 'Char Dham closing dates 2026: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13.',
-  keywords: [
-    'char dham closing dates 2026','chardham closing dates 2026','kedarnath closing date 2026',
-    'badrinath closing date 2026','gangotri closing date 2026','yamunotri closing date 2026',
-    'char dham kapat band 2026','kedarnath kapat band 2026','char dham winter closure',
-    'char dham last date 2026','when does kedarnath close 2026','when does badrinath close 2026',
-  ],
+  title: 'Char Dham Yatra Closing Dates 2026 – When Kedarnath, Badrinath & All 4 Temples Close',
+  description: 'Official Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window to avoid missing any dham.',
+  keywords: ['char dham closing dates 2026', 'kedarnath closing date 2026', 'badrinath closing date 2026', 'gangotri closing date 2026', 'yamunotri closing date 2026', 'char dham yatra last date 2026', 'when does char dham close'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026` },
   openGraph: {
-    title: 'Char Dham Closing Dates 2026 — When All 4 Dhams Close for Winter',
+    title: 'Char Dham Yatra Closing Dates 2026 – When Kedarnath, Badrinath & All 4 Temples Close',
     description: 'Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony guide.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026`,
     type: 'article',

@@ -2,17 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Pony Charges 2026 — Palki & Pitthu',
-  description: 'Kedarnath pony charges 2026: pony ₹5,500–7,000, palki ₹7,500–10,000, pitthu kandi ₹1,500–2,500. Official government rates from Gaurikund.',
-  keywords: [
-    'kedarnath pony charges 2026','kedarnath pony rate 2026','kedarnath palki charges',
-    'kedarnath palki rates 2026','gaurikund pony booking','kedarnath pitthu charges',
-    'kedarnath kandi rates','kedarnath doli charges','kedarnath mule charges',
-    'kedarnath pony price','how to book pony kedarnath','kedarnath trek pony',
-  ],
+  title: 'Kedarnath Pony Charges 2026 – Official Rates for Pony, Palki & Pitthu Kandi',
+  description: 'Official Kedarnath pony charges 2026 from Gaurikund: pony ₹5,500–7,000, palki ₹7,500–10,000, pitthu kandi ₹1,500–2,500. How to book, how to avoid overcharging, and tips for elderly pilgrims.',
+  keywords: ['kedarnath pony charges 2026', 'kedarnath pony rate 2026', 'kedarnath palki charges 2026', 'kedarnath pitthu kandi rate', 'gaurikund pony booking', 'kedarnath horse charges 2026', 'kedarnath palki booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026` },
   openGraph: {
-    title: 'Kedarnath Pony Charges 2026 — Official Rates: Pony, Palki, Pitthu from Gaurikund',
+    title: 'Kedarnath Pony Charges 2026 – Official Rates for Pony, Palki & Pitthu Kandi',
     description: 'Pony ₹5,500–7,000 one way · Palki ₹7,500–10,000 · Pitthu ₹1,500–2,500. Kedarnath 2026 official rates. How to book, fraud warnings, best time to book.',
     url: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026`,
     type: 'article',

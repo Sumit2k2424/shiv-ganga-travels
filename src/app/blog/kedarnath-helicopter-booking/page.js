@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Helicopter Booking 2026',
-  description: 'Kedarnath helicopter booking 2026. Prices ₹7,500–9,500. Helipads at Phata, Guptkashi, Sirsi. Book via IRCTC heliyatra portal.',
-  keywords: ['kedarnath helicopter booking','kedarnath helicopter price 2026','kedarnath helicopter booking online','phata to kedarnath helicopter','kedarnath helicopter cost','kedarnath helicopter 2026'],
+  title: 'Kedarnath Helicopter Booking 2026 – Price, Helipads, IRCTC Portal & Booking Tips',
+  description: 'Kedarnath helicopter booking 2026: prices ₹7,500–9,500 per person, helipads at Phata, Guptkashi, and Sirsi. How to book via IRCTC heliyatra portal, cancellation policy, and weather tips.',
+  keywords: ['kedarnath helicopter booking 2026', 'kedarnath helicopter price 2026', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'kedarnath helicopter cost 2026', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {
-    title: 'Kedarnath Helicopter Booking 2026 — Complete Guide',
+    title: 'Kedarnath Helicopter Booking 2026 – Price, Helipads, IRCTC Portal & Booking Tips',
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
     url: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking`,
     type: 'article',

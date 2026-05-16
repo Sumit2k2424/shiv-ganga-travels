@@ -2,17 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Green Card for Char Dham Yatra 2026 — Vehicle',
-  description: 'Green Card (Trip Card) required for all vehicles registered outside Uttarakhand on Char Dham routes 2026.',
-  keywords: [
-    'green card char dham yatra 2026','green card uttarakhand vehicle permit','char dham trip permit',
-    'uttarakhand vehicle green card','char dham yatra vehicle permit 2026','trip card uttarakhand',
-    'char dham yatra car permit','non uttarakhand vehicle char dham','green card uk.gov.in char dham',
-    'char dham yatra 2026 new rules vehicle',
-  ],
+  title: 'Green Card for Char Dham Yatra 2026 – Vehicle Permit Rules, How to Apply & Cost',
+  description: 'Green Card (Trip Card) is mandatory for all non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes require it, and consequences of not having one.',
+  keywords: ['green card char dham yatra 2026', 'green card uttarakhand vehicle permit 2026', 'char dham trip card 2026', 'char dham vehicle permit', 'uttarakhand green card apply online', 'char dham yatra car permit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/green-card-char-dham-yatra-2026` },
   openGraph: {
-    title: 'Green Card / Trip Permit for Char Dham Yatra 2026 — Complete Guide',
+    title: 'Green Card for Char Dham Yatra 2026 – Vehicle Permit Rules, How to Apply & Cost',
     description: 'All vehicles registered outside Uttarakhand need a Green Card to drive on Char Dham routes in 2026. Apply at greencard.uk.gov.in. ₹50 fee. Step-by-step guide.',
     url: `${SITE.baseUrl}/blog/green-card-char-dham-yatra-2026`,
     type: 'article',

@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Pony vs Helicopter 2026 — Which Is',
-  description: 'Complete comparison: Kedarnath by pony vs helicopter in 2026. Cost, time, availability, IRCTC booking, pony booking, and which option suits which',
-  keywords: ['kedarnath pony vs helicopter','kedarnath helicopter or pony','kedarnath pony cost 2026','kedarnath helicopter cost 2026','kedarnath trek alternatives','best way to reach kedarnath'],
+  title: 'Kedarnath Pony vs Helicopter 2026 – Cost, Time, Availability & Which Is Better?',
+  description: 'Kedarnath pony vs helicopter 2026: detailed comparison of cost (pony ₹5,500 vs helicopter ₹8,500), journey time, comfort, and booking process. Which option suits your age and fitness level?',
+  keywords: ['kedarnath pony vs helicopter 2026', 'kedarnath helicopter or pony', 'kedarnath pony cost 2026', 'kedarnath helicopter cost 2026', 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
 

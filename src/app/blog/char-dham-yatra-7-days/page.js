@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra in 7 Days 2026 — Is It',
-  description: 'Can you do Char Dham Yatra in 7 days? Route, feasibility and honest advice for pilgrims with limited time in 2026.',
-  keywords: ['char dham yatra 7 days','char dham yatra in 7 days possible','7 day char dham yatra itinerary','char dham yatra 7 nights 8 days','chardham yatra 7 days itinerary 2026','char dham yatra minimum days'],
+  title: 'Char Dham Yatra in 7 Days 2026 – Is It Possible? Complete Itinerary & Honest Tips',
+  description: 'Can you complete Char Dham Yatra in 7 days? Yes — with the right itinerary. Day-by-day plan, what to skip, driving distances, and honest advice for pilgrims with limited time in 2026.',
+  keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', 'char dham yatra short duration 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
-  openGraph: { title: 'Char Dham Yatra in 7 Days 2026 — Is It Possible?', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
+  openGraph: { title: 'Char Dham Yatra in 7 Days 2026 – Is It Possible? Complete Itinerary & Honest Tips', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra in 7 Days 2026 — Is It Possible? | Shiv Ganga Travels' }],
 };
 

@@ -2,19 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Registration 2026 — Free Online',
-  description: 'Char Dham Yatra registration 2026 is FREE. Online, WhatsApp, app and offline methods. Documents, daily limits, 55+ rules — complete step-by-step guide.',
-  keywords: [
-    'char dham yatra registration 2026','char dham yatra registration online',
-    'how to register for char dham yatra','char dham yatra biometric registration',
-    'char dham yatra permit 2026','chardham yatra registration process',
-    'registrationandtouristcare.uk.gov.in','char dham yatra registration documents',
-    'char dham yatra registration whatsapp','char dham registration free 2026',
-    'tourist care uttarakhand app','char dham yatra registration toll free',
-  ],
+  title: 'Char Dham Yatra Registration 2026 – Free Step-by-Step Online, WhatsApp & Offline Guide',
+  description: 'Char Dham Yatra 2026 registration is FREE. Step-by-step guide: online (registrationandtouristcare.uk.gov.in), WhatsApp, app, and offline counter. Documents required and daily pilgrim limits.',
+  keywords: ['char dham yatra registration 2026', 'char dham yatra registration online', 'char dham yatra biometric registration', 'char dham yatra registration process', 'registrationandtouristcare.uk.gov.in', 'char dham registration free 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-registration` },
   openGraph: {
-    title: 'Char Dham Yatra Registration 2026 — Step-by-Step Guide',
+    title: 'Char Dham Yatra Registration 2026 – Free Step-by-Step Online, WhatsApp & Offline Guide',
     description: 'Everything you need to know about mandatory Char Dham Yatra registration 2026 — online process, documents, biometric centres, daily limits.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-registration`,
     type: 'article',

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Valley of Flowers Trek 2026 — Best Time & Route',
-  description: 'Valley of Flowers trek guide 2026. UNESCO World Heritage Site in Uttarakhand. Best time (July–September), route from Govindghat, 500+ wildflower',
-  keywords: ['valley of flowers trek','valley of flowers uttarakhand','valley of flowers best time','valley of flowers trek guide 2026','govindghat to valley of flowers','valley of flowers flowers list'],
+  title: 'Valley of Flowers Trek 2026 – Best Time, Route from Govindghat & Complete Guide',
+  description: 'Complete Valley of Flowers trek guide 2026: UNESCO World Heritage Site, best time July–September, 17km route from Govindghat, difficulty, entry fee ₹150, and 500+ wildflower species to see.',
+  keywords: ['valley of flowers trek 2026', 'valley of flowers best time', 'valley of flowers trek guide', 'govindghat to valley of flowers', 'valley of flowers uttarakhand', 'valley of flowers entry fee 2026', 'valley of flowers flowers list'],
   alternates: { canonical: `${SITE.baseUrl}/blog/valley-of-flowers-trek` },
 };
 function Schema() {

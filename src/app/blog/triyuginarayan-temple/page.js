@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Triyuginarayan Temple 2026',
-  description: 'Triyuginarayan Temple guide 2026 — where Lord Shiva married Goddess Parvati. Location, route from Haridwar, darshan timings.',
-  keywords: ['triyuginarayan temple','triyuginarayan temple kedarnath','triyuginarayan shiva parvati wedding','triyuginarayan temple guide','triyuginarayan yatra','sonprayag to triyuginarayan'],
+  title: 'Triyuginarayan Temple 2026 – Where Shiva Married Parvati, Route & Darshan Guide',
+  description: 'Complete guide to Triyuginarayan Temple 2026 — where Lord Shiva and Goddess Parvati were married. Located 12km from Sonprayag, darshan timings, how to reach, and best time to visit.',
+  keywords: ['triyuginarayan temple 2026', 'triyuginarayan temple kedarnath', 'triyuginarayan shiva parvati wedding', 'triyuginarayan temple guide', 'triyuginarayan yatra', 'sonprayag to triyuginarayan', 'triyuginarayan temple distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },
 };
 

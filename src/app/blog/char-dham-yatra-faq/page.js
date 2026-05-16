@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra FAQ 2026 — 50 Questions',
-  description: 'Complete Char Dham Yatra FAQ 2026. 50 expert answers covering cost, registration, best time, senior citizens, helicopter, packing, new rules, safety',
-  keywords: ['char dham yatra faq','char dham yatra questions answers','char dham yatra 2026 questions','kedarnath yatra faq','char dham yatra guide 2026'],
+  title: 'Char Dham Yatra FAQ 2026 – 50 Most-Asked Questions Answered by an Expert',
+  description: '50 expert answers to the most common Char Dham Yatra questions: cost, registration, best time, medical requirements, senior citizens, helicopter, packing, and all new 2026 rules.',
+  keywords: ['char dham yatra faq 2026', 'char dham yatra questions answers', 'char dham yatra 2026 questions', 'kedarnath yatra faq', 'char dham yatra common questions'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },
   openGraph: {
-    title: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered',
+    title: 'Char Dham Yatra FAQ 2026 – 50 Most-Asked Questions Answered by an Expert',
     description: '50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-faq`,
     type: 'article',

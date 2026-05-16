@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra with Kids — Complete Family',
-  description: 'Char Dham Yatra with kids 2026. Age tips, altitude safety, easier routes, packing guide and which dhams are child-friendly.',
-  keywords: ['char dham yatra with kids','char dham yatra with children','kedarnath yatra with family','char dham yatra family package','char dham with small children','kids char dham yatra altitude'],
+  title: 'Char Dham Yatra with Kids 2026 – Age Tips, Altitude Safety & Family Planning Guide',
+  description: 'Planning Char Dham Yatra with children in 2026? Altitude safety tips for kids, which dhams are child-friendly, what to pack, and how to keep young pilgrims comfortable throughout.',
+  keywords: ['char dham yatra with kids 2026', 'char dham yatra with children', 'kedarnath yatra with family', 'char dham yatra family package', 'char dham with small children', 'kids char dham yatra altitude safety'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
 };
 

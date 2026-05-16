@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Haridwar to Kedarnath Distance, Route & Travel',
-  description: 'Haridwar to Kedarnath distance is 228km by road + 16km trek. Complete route guide, journey time, best stops, accommodation, and travel tips for 2026.',
-  keywords: ['haridwar to kedarnath distance','haridwar to kedarnath route','haridwar to kedarnath by road','haridwar to kedarnath travel guide','haridwar kedarnath trip 2026'],
+  title: 'Haridwar to Kedarnath Distance, Route & Travel Guide 2026 – All Options Explained',
+  description: 'Haridwar to Kedarnath is 228km by road + 16km trek. Complete 2026 guide: journey time, best stops, cab vs bus options, accommodation at Sonprayag and Guptkashi. Packages from ₹6,499.',
+  keywords: ['haridwar to kedarnath distance 2026', 'haridwar to kedarnath route', 'haridwar to kedarnath by road', 'haridwar to kedarnath travel guide', 'haridwar kedarnath trip 2026', 'haridwar to kedarnath cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
 };
 function Schema() {

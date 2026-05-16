@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Budget vs Premium Package 2026',
-  description: 'Detailed comparison: Budget Char Dham Yatra (₹19,500) vs Premium (₹38,000+). What actually changes — hotels, vehicles, meals, darshan. Honest analysis',
-  keywords: ['char dham yatra budget vs premium','char dham yatra package comparison','best char dham yatra package 2026','char dham yatra deluxe package','char dham yatra premium package price','char dham yatra budget package','is premium char dham package worth it'],
+  title: 'Char Dham Budget vs Premium Package 2026 – What Actually Changes? Honest Comparison',
+  description: 'Budget Char Dham package (₹19,500) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals, and darshan quality. Detailed honest comparison by a 15-year Haridwar operator.',
+  keywords: ['char dham yatra budget vs premium', 'char dham yatra package comparison 2026', 'is premium char dham package worth it', 'char dham yatra deluxe vs budget', 'char dham luxury package vs budget'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium` },
-  openGraph: { title: 'Char Dham Budget vs Premium Package 2026 — What Actually Changes', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article' },
+  openGraph: { title: 'Char Dham Budget vs Premium Package 2026 – What Actually Changes? Honest Comparison', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Budget vs Premium Package 2026 — Compared | Shiv Ganga Travels' }],
 };
 

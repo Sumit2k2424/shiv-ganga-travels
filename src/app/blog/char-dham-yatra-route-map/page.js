@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Route Map 2026 — Complete Road',
-  description: 'Char Dham Yatra route map 2026 from Haridwar. Complete road guide: Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath →.',
-  keywords: ['char dham yatra route map','char dham yatra route from haridwar','char dham route map 2026','char dham yatra road map','char dham yatra distance','char dham route by road','char dham yatra distance from haridwar','char dham road trip route'],
+  title: 'Char Dham Yatra Route Map 2026 – Complete Road Guide from Haridwar with Distances',
+  description: 'Char Dham Yatra 2026 route map from Haridwar: Haridwar → Yamunotri → Gangotri → Kedarnath → Badrinath. Total distances, drive times, stopovers, and alternate route options explained.',
+  keywords: ['char dham yatra route map 2026', 'char dham yatra route from haridwar', 'char dham route map haridwar', 'char dham yatra distance', 'char dham yatra road map', 'haridwar to char dham distance', 'char dham yatra total km'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-route-map` },
   openGraph: {
-    title: 'Char Dham Yatra Route Map 2026 — Road Guide with Distances & Travel Times',
+    title: 'Char Dham Yatra Route Map 2026 – Complete Road Guide from Haridwar with Distances',
     description: 'Complete Char Dham Yatra route from Haridwar. 1,500km total. Day-wise distances, driving times, key stops, altitude at each dham. Operator-verified 2026 guide.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-route-map`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Route Map 2026 — Complete Road Guide from Haridwar wit | Shiv Ganga Travels' }],
