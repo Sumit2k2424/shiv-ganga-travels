@@ -329,10 +329,10 @@ export default function HomePage() {
             <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
               <div style={{ fontSize:11, fontWeight:700, color:'rgba(255,255,255,0.4)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom:4 }}>Popular Routes</div>
               {[
-                { from:'Haridwar', to:'Kedarnath', dist:'225 km', time:'6–7 hrs', fare:'₹5,500+', href:'/haridwar-to-kedarnath-cab' },
-                { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'8–9 hrs', fare:'₹7,000+', href:'/haridwar-to-badrinath-cab' },
-                { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'7–8 hrs', fare:'₹6,500+', href:'/haridwar-to-gangotri-cab' },
-                { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs', fare:'₹3,500+', href:'/delhi-to-haridwar-cab' },
+                { from:'Haridwar', to:'Kedarnath', dist:'225 km', time:'6–7 hrs', fare:'₹3,500+', href:'/haridwar-to-kedarnath-cab' },
+                { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'8–9 hrs', fare:'₹4,500+', href:'/haridwar-to-badrinath-cab' },
+                { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'7–8 hrs', fare:'₹4,000+', href:'/haridwar-to-gangotri-cab' },
+                { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs', fare:'₹2,800+', href:'/delhi-to-haridwar-cab' },
               ].map(r => (
                 <Link key={r.href} href={r.href}
                   style={{ display:'grid', gridTemplateColumns:'1fr auto', alignItems:'center', gap:12, padding:'13px 16px', background:'rgba(255,255,255,0.06)', borderRadius:11, border:'1px solid rgba(255,255,255,0.1)', textDecoration:'none', transition:'background .15s' }}>
@@ -875,10 +875,10 @@ export default function HomePage() {
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
               {[
                 { icon:'🚙', title:'All Char Dham Cabs', desc:'Innova, Tempo, Ertiga — rates & booking', href:'/char-dham-yatra-cab-booking', hot:true },
-                { icon:'🚗', title:'Haridwar → Kedarnath', desc:'225km · 6–7hrs · from ₹5,500', href:'/haridwar-to-kedarnath-cab' },
-                { icon:'🚗', title:'Haridwar → Badrinath', desc:'320km · 8–9hrs · from ₹7,000', href:'/haridwar-to-badrinath-cab' },
-                { icon:'🚗', title:'Haridwar → Gangotri', desc:'265km · 7–8hrs · from ₹6,500', href:'/haridwar-to-gangotri-cab' },
-                { icon:'🚗', title:'Delhi → Haridwar', desc:'210km · 4–5hrs · from ₹3,500', href:'/delhi-to-haridwar-cab' },
+                { icon:'🚗', title:'Haridwar → Kedarnath', desc:'225km · 6–7hrs · from ₹3,500', href:'/haridwar-to-kedarnath-cab' },
+                { icon:'🚗', title:'Haridwar → Badrinath', desc:'320km · 8–9hrs · from ₹4,500', href:'/haridwar-to-badrinath-cab' },
+                { icon:'🚗', title:'Haridwar → Gangotri', desc:'265km · 7–8hrs · from ₹4,000', href:'/haridwar-to-gangotri-cab' },
+                { icon:'🚗', title:'Delhi → Haridwar', desc:'210km · 4–5hrs · from ₹2,800', href:'/delhi-to-haridwar-cab' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="pkg-card"
                   style={{ background: l.hot ? 'var(--navy)' : '#fff', padding:'14px', borderRadius:10, border: l.hot ? 'none' : '1px solid var(--border)', textDecoration:'none', display:'flex', gap:10, alignItems:'flex-start' }}>

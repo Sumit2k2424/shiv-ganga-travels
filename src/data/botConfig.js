@@ -176,7 +176,10 @@ export const CUSTOM_QA = [
   // ── 25. TRANSPORTATION DETAILS ───────────────────────────────
   {
     keywords: ['vehicle','transport','car','bus','innova','tempo','traveller','ac','driver','road'],
-    answer: `**Our Fleet & Transportation:**\n\n🚗 **Innova Crysta** — up to 6 passengers\nBest for small families, premium comfort\n\n🚐 **Tempo Traveller** — 9, 12, or 16 seater\nAC, push-back seats, TV, best for groups\n\n🚌 **Mini Bus / Bus** — 25–45 seater\nFor large groups and corporate pilgrimages\n\n**Our drivers:**\n✅ 10+ years hill-driving experience\n✅ Uttarakhand routes expertise\n✅ Background-verified & licensed\n✅ Hindi + basic English speaking\n✅ First-aid trained\n\n**Vehicle features:**\n• AC (switched off in steep hills — AC doesn’t work well on inclines)\n• First-aid kit + oxygen cylinder\n• GPS tracking\n• Blankets for cold nights\n\n📌 **Note:** Road conditions in mountains can be challenging after monsoon. Our drivers know the safest routes!`,
+    answer: `**Our Fleet & Transportation:**\n\n🚗 **Swift Dzire** — up to 4 passengers
+Starting from ₹2,800 · Best for couples & small families
+
+🚙 **Innova Crysta** — up to 6 passengers\nBest for families of 4–6, premium comfort\n\n🚐 **Tempo Traveller** — 9, 12, or 16 seater\nAC, push-back seats, TV, best for groups\n\n🚌 **Mini Bus / Bus** — 25–45 seater\nFor large groups and corporate pilgrimages\n\n**Our drivers:**\n✅ 10+ years hill-driving experience\n✅ Uttarakhand routes expertise\n✅ Background-verified & licensed\n✅ Hindi + basic English speaking\n✅ First-aid trained\n\n**Vehicle features:**\n• AC (switched off in steep hills — AC doesn’t work well on inclines)\n• First-aid kit + oxygen cylinder\n• GPS tracking\n• Blankets for cold nights\n\n📌 **Note:** Road conditions in mountains can be challenging after monsoon. Our drivers know the safest routes!`,
   },
 
   // ── 26. ATM / CASH / MOBILE NETWORK ─────────────────────────

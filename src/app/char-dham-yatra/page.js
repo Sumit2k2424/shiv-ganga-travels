@@ -386,7 +386,7 @@ export default function CharDhamYatra() {
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
-            { tier:'Budget', range:'Rs.19,500-Rs.22,000', couple:'Rs.39,000-Rs.44,000', duration:'9N/10D', vehicle:'Sedan / Swift Dzire', hotel:'Standard lodges', best:'Solo, young pilgrims' },
+            { tier:'Budget', range:'Rs.19,500-Rs.22,000', couple:'Rs.39,000-Rs.44,000', duration:'9N/10D', vehicle:'Swift Dzire', hotel:'Standard lodges', best:'Solo, young pilgrims' },
             { tier:'Deluxe', range:'Rs.27,500-Rs.32,000', couple:'Rs.55,000-Rs.64,000', duration:'11N/12D', vehicle:'Innova Crysta', hotel:'2-3 star hotels', best:'Families, seniors' },
             { tier:'Senior Special', range:'Rs.24,500-Rs.28,000', couple:'Rs.49,000-Rs.56,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
             { tier:'Helicopter', range:'Rs.85,000-Rs.95,000', couple:'Rs.1,70,000-Rs.1,90,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
@@ -413,7 +413,7 @@ export default function CharDhamYatra() {
             </tr></thead>
             <tbody>
               {[
-                ['Swift Dzire / Sedan','2-3 persons','Rs.35,000-45,000','~Rs.15,000','Budget couple'],
+                ['Swift Dzire','2-3 persons','Rs.18,000-24,000','~Rs.10,000','Budget couple'],
                 ['Ertiga / Maruti','4-5 persons','Rs.45,000-60,000','~Rs.12,000','Small family'],
                 ['Innova Crysta','4-7 persons','Rs.55,000-75,000','~Rs.11,000','Most popular'],
                 ['Tempo Traveller 12-seater','8-12 persons','Rs.90,000-1.2L','~Rs.9,000','Groups'],

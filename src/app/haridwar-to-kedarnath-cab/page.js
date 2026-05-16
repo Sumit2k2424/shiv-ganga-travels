@@ -3,14 +3,14 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Haridwar to Kedarnath Cab 2026 — Fare,',
-  description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.',
+  description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },
-  openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
+  openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Travel',
-    description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Innova Crysta from ₹6,500. Experienced hill drivers. Pickup from railway station.',
+    description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
     images: [{ url: '/opengraph-image', alt: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Te | Shiv Ganga Travels' }],
   },
 };
@@ -91,9 +91,9 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Ertiga</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹5,500–6,500</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,000–8,500</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹9,500–11,000</td></tr>
+            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Swift Dzire</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹3,500–4,500</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹5,000–6,500</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,000–9,000</td></tr>
           </tbody>
         </table>
       </div>

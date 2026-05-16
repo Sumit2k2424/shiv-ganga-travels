@@ -3,14 +3,14 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance,',
-  description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.',
+  description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Swift Dzire from ₹4,000.',
   keywords: ['haridwar to gangotri cab,haridwar to gangotri taxi,haridwar gangotri distance,cab from haridwar to gangotri 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-gangotri-cab` },
-  openGraph: { title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi', description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.', url: `${SITE.baseUrl}/haridwar-to-gangotri-cab`, type:'website' },
+  openGraph: { title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi', description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Swift Dzire from ₹4,000.', url: `${SITE.baseUrl}/haridwar-to-gangotri-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Uttarkashi',
-    description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Innova Crysta from ₹7,500.',
+    description: 'Book cab from Haridwar to Gangotri 2026. 265km via Uttarkashi, 7–8 hours. No trek — motor road to temple. Swift Dzire from ₹4,000.',
     images: [{ url: '/opengraph-image', alt: 'Haridwar to Gangotri Cab 2026 — Fare, Distance, Route via Ut | Shiv Ganga Travels' }],
   },
 };
@@ -91,9 +91,9 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Ertiga</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹6,500–7,500</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,500–9,000</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹10,500–12,000</td></tr>
+            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Swift Dzire</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹4,000–5,000</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹5,500–7,000</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,500–9,500</td></tr>
           </tbody>
         </table>
       </div>

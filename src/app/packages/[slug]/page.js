@@ -287,7 +287,7 @@ export default function PackageDetailPage({ params }) {
             </p>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
               {[
-                { tier:'Budget', range:'₹19,500–₹25,000', perCouple:'₹39,000–₹50,000', vehicle:'Swift Dzire / Sedan', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
+                { tier:'Budget', range:'₹19,500–₹25,000', perCouple:'₹39,000–₹50,000', vehicle:'Swift Dzire', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
                 { tier:'Deluxe', range:'₹27,500–₹35,000', perCouple:'₹55,000–₹70,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
                 { tier:'Premium', range:'₹42,000–₹55,000', perCouple:'₹84,000–₹1,10,000', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
               ].map(t => (
@@ -314,7 +314,7 @@ export default function PackageDetailPage({ params }) {
                 </tr></thead>
                 <tbody>
                   {[
-                    ['Swift Dzire / Sedan','2–3 persons','₹35,000–45,000','~₹15,000','Budget couple/solo'],
+                    ['Swift Dzire','2–3 persons','₹18,000–24,000','~₹10,000','Budget couple/solo'],
                     ['Ertiga / Maruti','4–5 persons','₹45,000–60,000','~₹12,000','Small family'],
                     ['Innova Crysta','4–7 persons','₹55,000–75,000','~₹11,000','Most popular choice'],
                     ['Tempo Traveller 12-seater','8–12 persons','₹90,000–1.2L','~₹9,000','Groups & extended family'],

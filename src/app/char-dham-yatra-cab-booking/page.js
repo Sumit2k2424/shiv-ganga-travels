@@ -25,8 +25,8 @@ function Schema() {
     aggregateRating:{ '@type':'AggregateRating', ratingValue:4.9, reviewCount:850, bestRating:5 },
   };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
-    { '@type':'Question', name:'What is the cab fare for Char Dham Yatra from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Cab fares for Char Dham Yatra from Haridwar start at ₹22,000 for a Ertiga (4-seater) and go up to ₹45,000 for a Tempo Traveller (12-seater) for the complete 10-12 day circuit. Innova Crysta is ₹30,000–35,000 for the full Char Dham route.' }},
-    { '@type':'Question', name:'Which vehicle is best for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Innova Crysta is the most popular for families of 4-6. Tempo Traveller (12-seater) is best for groups. Ertiga is economical for small groups. All vehicles must be hill-certified and our drivers have 5+ years mountain driving experience.' }},
+    { '@type':'Question', name:'What is the cab fare for Char Dham Yatra from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Cab fares for Char Dham Yatra from Haridwar start at ₹18,000 for a Swift Dzire (4-seater) and go up to ₹45,000 for a Tempo Traveller (12-seater) for the complete 10-12 day circuit. Innova Crysta is ₹26,000–32,000 for the full Char Dham route.' }},
+    { '@type':'Question', name:'Which vehicle is best for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Innova Crysta is the most popular for families of 4-6. Tempo Traveller (12-seater) is best for groups. Swift Dzire is economical for small groups. All vehicles must be hill-certified and our drivers have 5+ years mountain driving experience.' }},
     { '@type':'Question', name:'Is cab included in Char Dham Yatra packages?', acceptedAnswer:{ '@type':'Answer', text:'Yes — all our Char Dham Yatra packages include a dedicated AC vehicle. You can also book just the cab service separately if you have your own accommodation arranged.' }},
   ]};
   const bc = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
@@ -41,11 +41,11 @@ function Schema() {
 }
 
 const vehicles = [
-  { name:'Ertiga / Maruti Suzuki', seats:4, type:'Hatchback SUV', price:'₹22,000–28,000', best:'Couples & small families', ac:true, luggage:'2 bags', img:'🚗', features:['AC','4 comfortable seats','Best for budget travel','Hill-terrain certified'] },
-  { name:'Innova Crysta', seats:6, type:'Premium SUV', price:'₹30,000–38,000', best:'Families of 4–6', ac:true, luggage:'4 bags', img:'🚙', features:['AC','6 plush seats','Most popular choice','Excellent mountain grip','High ground clearance'], popular:true },
-  { name:'Innova HyCross', seats:6, type:'Premium Hybrid', price:'₹35,000–42,000', best:'Premium travelers', ac:true, luggage:'4 bags', img:'🚙', features:['AC','Hybrid engine','Better fuel efficiency','Smooth hill performance','Premium interiors'] },
-  { name:'Tempo Traveller (9-seater)', seats:9, type:'Mini Van', price:'₹38,000–44,000', best:'Groups of 7–9', ac:true, luggage:'6 bags', img:'🚐', features:['AC','9 push-back seats','Ideal for groups','Luggage carrier roof'] },
-  { name:'Tempo Traveller (12-seater)', seats:12, type:'Group Van', price:'₹44,000–52,000', best:'Groups of 10–12', ac:true, luggage:'8 bags', img:'🚐', features:['AC','12 seats','Best per-seat economy','Roof carrier','Group pilgrimages'] },
+  { name:'Swift Dzire', seats:4, type:'Sedan', price:'₹18,000–24,000', best:'Couples & small families', ac:true, luggage:'2 bags', img:'🚗', features:['AC','4 comfortable seats','Best for budget travel','Hill-terrain certified'] },
+  { name:'Innova Crysta', seats:6, type:'Premium SUV', price:'₹26,000–32,000', best:'Families of 4–6', ac:true, luggage:'4 bags', img:'🚙', features:['AC','6 plush seats','Most popular choice','Excellent mountain grip','High ground clearance'], popular:true },
+  { name:'Innova HyCross', seats:6, type:'Premium Hybrid', price:'₹30,000–38,000', best:'Premium travelers', ac:true, luggage:'4 bags', img:'🚙', features:['AC','Hybrid engine','Better fuel efficiency','Smooth hill performance','Premium interiors'] },
+  { name:'Tempo Traveller (9-seater)', seats:9, type:'Mini Van', price:'₹32,000–40,000', best:'Groups of 7–9', ac:true, luggage:'6 bags', img:'🚐', features:['AC','9 push-back seats','Ideal for groups','Luggage carrier roof'] },
+  { name:'Tempo Traveller (12-seater)', seats:12, type:'Group Van', price:'₹38,000–46,000', best:'Groups of 10–12', ac:true, luggage:'8 bags', img:'🚐', features:['AC','12 seats','Best per-seat economy','Roof carrier','Group pilgrimages'] },
 ];
 
 const routes = [
@@ -66,7 +66,7 @@ export default function CabBooking() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🚙 Cab Booking · 2026</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Cab Booking 2026</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Innova Crysta · Tempo Traveller · Ertiga · from Haridwar · Hill-experienced drivers · Fixed rates · AC vehicles</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Innova Crysta · Tempo Traveller · Swift Dzire · from Haridwar · Hill-experienced drivers · Fixed rates · AC vehicles</p>
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book Cab on WhatsApp</a>
@@ -143,8 +143,8 @@ export default function CabBooking() {
       <h2 style={h2}>Frequently Asked Questions</h2>
       <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
         {[
-          { q:'What is the cab fare for Char Dham Yatra from Haridwar?', a:'Full Char Dham Yatra cab fares start at ₹22,000 for an Ertiga (4-seater) and go up to ₹52,000 for a 12-seater Tempo Traveller for the complete 10–12 day circuit. Innova Crysta — the most popular choice — costs ₹30,000–38,000. All fares include fuel, toll, parking, and driver allowance.' },
-          { q:'Which vehicle is best for Char Dham Yatra?', a:'Innova Crysta is best for families of 4–6. Tempo Traveller is ideal for groups of 7–12. Ertiga is economical for couples or small groups. All vehicles are hill-terrain certified with drivers who have 5+ years of mountain driving experience on Char Dham routes.' },
+          { q:'What is the cab fare for Char Dham Yatra from Haridwar?', a:'Full Char Dham Yatra cab fares start at ₹18,000 for a Swift Dzire (4-seater) and go up to ₹46,000 for a 12-seater Tempo Traveller for the complete 10–12 day circuit. Innova Crysta — the most popular choice — costs ₹26,000–32,000. All fares include fuel, toll, parking, and driver allowance.' },
+          { q:'Which vehicle is best for Char Dham Yatra?', a:'Innova Crysta is best for families of 4–6. Tempo Traveller is ideal for groups of 7–12. Swift Dzire is economical for couples or small groups. All vehicles are hill-terrain certified with drivers who have 5+ years of mountain driving experience on Char Dham routes.' },
           { q:'Can I book just the cab without a full package?', a:'Yes. We offer standalone cab-only service for the Char Dham circuit if you have your own accommodation arranged. Contact us on WhatsApp with your dates, group size, and pickup point to get an exact quote.' },
           { q:'What happens if the road is blocked due to landslide?', a:'Mountain roads in Uttarakhand are subject to weather disruptions. Our drivers are experienced in alternate routes and we stay connected with local traffic authorities. We do not charge extra for unavoidable detours or delays.' },
         ].map((faq, i, arr) => (

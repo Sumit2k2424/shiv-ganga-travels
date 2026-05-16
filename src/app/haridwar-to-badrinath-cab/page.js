@@ -3,14 +3,14 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Haridwar to Badrinath Cab 2026 — Fare,',
-  description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Innova Crysta from ₹8,500. No trek required — motor road to temple.',
+  description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.',
   keywords: ['haridwar to badrinath cab,haridwar to badrinath taxi,haridwar to badrinath distance,cab from haridwar to badrinath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-badrinath-cab` },
-  openGraph: { title: 'Haridwar to Badrinath Cab 2026 — Fare, Distance, Route via Joshimath', description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Innova Crysta from ₹8,500. No trek required — motor road to temple.', url: `${SITE.baseUrl}/haridwar-to-badrinath-cab`, type:'website' },
+  openGraph: { title: 'Haridwar to Badrinath Cab 2026 — Fare, Distance, Route via Joshimath', description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.', url: `${SITE.baseUrl}/haridwar-to-badrinath-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Haridwar to Badrinath Cab 2026 — Fare, Distance, Route via Joshimath',
-    description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Innova Crysta from ₹8,500. No trek required — motor road to temple.',
+    description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.',
     images: [{ url: '/opengraph-image', alt: 'Haridwar to Badrinath Cab 2026 — Fare, Distance, Route via J | Shiv Ganga Travels' }],
   },
 };
@@ -91,9 +91,9 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Ertiga</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,000–8,000</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹8,500–10,000</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹12,000–14,000</td></tr>
+            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Swift Dzire</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹4,500–5,500</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹6,000–7,500</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹8,000–10,000</td></tr>
           </tbody>
         </table>
       </div>

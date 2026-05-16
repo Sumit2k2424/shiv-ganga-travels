@@ -3,14 +3,14 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Delhi to Haridwar Cab 2026 — Taxi Fare,',
-  description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Innova from ₹4,500. Pickup from IGI Airport, NDLS, or home.',
+  description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.',
   keywords: ['delhi to haridwar cab,delhi to haridwar taxi fare,delhi to haridwar distance,cab from delhi to haridwar char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/delhi-to-haridwar-cab` },
-  openGraph: { title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup', description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Innova from ₹4,500. Pickup from IGI Airport, NDLS, or home.', url: `${SITE.baseUrl}/delhi-to-haridwar-cab`, type:'website' },
+  openGraph: { title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup', description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.', url: `${SITE.baseUrl}/delhi-to-haridwar-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup',
-    description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Innova from ₹4,500. Pickup from IGI Airport, NDLS, or home.',
+    description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.',
     images: [{ url: '/opengraph-image', alt: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham  | Shiv Ganga Travels' }],
   },
 };
@@ -91,9 +91,9 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Ertiga</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹3,500–4,500</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹4,500–5,500</td></tr>
-<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹6,500–8,000</td></tr>
+            <tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Swift Dzire</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>4 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹2,800–3,500</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Innova Crysta</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>6 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹5,000–6,000</td></tr>
+<tr style={{ borderTop:'1px solid var(--border)' }}><td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>Tempo Traveller 9S</td><td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-muted)' }}>9 seats</td><td style={{ padding:'11px 16px', textAlign:'right', fontWeight:700, color:'var(--navy)', fontSize:15 }}>₹7,000–8,500</td></tr>
           </tbody>
         </table>
       </div>
