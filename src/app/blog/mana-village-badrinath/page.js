@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Mana Village Near Badrinath 2026 – India\'s Last Village, Vyas Gufa & What to See's Last Village Before Tibet | Guide 2026',
-  description: 'Complete guide to Mana Village — India\'s last inhabited village before the Tibet border. Vyas Gufa, Bhim Pul, Saraswati River, local shawl weavers. How to visit, entry fee, and season guide.'s last inhabited village before Tibet border. Vyas Gufa, Bhim Pul, Saraswati river, local shawl weavers. How to visit, what to see, opening season.',
+  title: 'Mana Village Near Badrinath 2026 – India\'s Last Village, Vyas Gufa & What to See',
+  description: 'Complete guide to Mana Village — India\'s last inhabited village before the Tibet border. Vyas Gufa, Bhim Pul, Saraswati River, local shawl weavers. How to visit, entry fee, and season guide.',
   keywords: ['mana village near badrinath', 'mana village last village india', 'mana village guide 2026', 'mana village vyas gufa', 'bhim pul mana village', 'india last village tibet border', 'mana village distance badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/mana-village-badrinath` },
 };
