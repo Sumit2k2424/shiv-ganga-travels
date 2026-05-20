@@ -64,6 +64,7 @@ const nextConfig = {
       { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
       // Redirect blog Badrinath guide to new proper landing page
       { source: '/blog/badrinath-yatra-guide',                       destination: '/badrinath-yatra',                                permanent: true },
+      { source: '/blog/char-dham-yatra-route-map',                  destination: '/char-dham-yatra-route-map',                    permanent: true },
     ];
   },
 
@@ -103,7 +104,7 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
-        source: '/(logo\\.png|logo-square\\.png|sitemap\\.xml|robots\\.txt|llms\\.txt)',
+        source: '/(logo\\.png|logo-square\\.png|llms\\.txt)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=3600' }],
       },
     ];
