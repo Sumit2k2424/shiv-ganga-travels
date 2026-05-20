@@ -8,7 +8,9 @@
   "theme_color": "#0F2B5B",
   "orientation": "portrait",
   "icons": [
-    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+    { "src": "/favicon.ico",       "sizes": "any",     "type": "image/x-icon",  "purpose": "any" },
+    { "src": "/logo-square.png",   "sizes": "256x256", "type": "image/png",     "purpose": "any maskable" },
+    { "src": "/logo.png",          "sizes": "512x512", "type": "image/png",     "purpose": "any maskable" }
   ],
   "categories": ["travel", "lifestyle"],
   "lang": "en-IN"
