@@ -5,20 +5,20 @@ import FAQAccordion from '@/components/FAQAccordion';
 export const metadata = {
   title: 'Char Dham Yatra 2026 — Registration & Travel',
   description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹19,500.',
-  keywords: ['Char Dham Yatra 2025','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
-  robots: { index: true, follow: true },
-  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-2025` },
+  keywords: ['Char Dham Yatra 2026','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
+  robots: { index: false, follow: true },
+  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridwar',
-    description: 'Everything about Char Dham Yatra 2025 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
+    title: 'Char Dham Yatra 2026 — Complete Guide & Packages from Haridwar',
+    description: 'Everything about Char Dham Yatra 2026 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
     url: `${SITE.baseUrl}/char-dham-yatra-2025`,
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridwar',
-    description: 'Everything about Char Dham Yatra 2025 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2025 — Complete Guide & Packages from Haridw | Shiv Ganga Travels' }],
+    title: 'Char Dham Yatra 2026 — Complete Guide & Packages from Haridwar',
+    description: 'Everything about Char Dham Yatra 2026 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 — Complete Guide & Packages from Haridw | Shiv Ganga Travels' }],
   },
 };
 
@@ -28,7 +28,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra 2025 — Complete Guide, Packages & Prices from Haridwar',
+    headline: 'Char Dham Yatra 2026 — Complete Guide, Packages & Prices from Haridwar',
     description: 'Complete guide to planning Char Dham Yatra 2025 including opening dates, registration, routes, packages and what to carry.',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
@@ -36,7 +36,7 @@ function Schema() {
     dateModified: new Date().toISOString().split('T')[0],
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/char-dham-yatra-2025` },
     image: '/opengraph-image',
-    keywords: 'Char Dham Yatra 2025, Char Dham packages, Kedarnath Yatra, Badrinath Yatra',
+    keywords: 'Char Dham Yatra 2026, Char Dham packages, Kedarnath Yatra, Badrinath Yatra',
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>;
 }
@@ -65,7 +65,7 @@ export default function CharDhamGuide2025() {
       {/* Breadcrumb */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
+          Home
           <span>›</span>
           <span>Char Dham Yatra 2025</span>
         </div>
@@ -129,7 +129,8 @@ export default function CharDhamGuide2025() {
 
         <h2 style={h2}>Char Dham Yatra 2025 — Registration & Permits</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, the Government of Uttarakhand requires <strong>mandatory biometric registration</strong> for all Char Dham pilgrims. This helps manage crowd density at high-altitude temples and enables emergency response. Daily pilgrim limits are enforced, particularly at Kedarnath and Badrinath.</p>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807</a>.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>+91-7017082807</a>.</p>
 
         <h2 style={h2}>Char Dham Yatra Route Map</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The traditional route follows a clockwise direction:</p>
@@ -145,10 +146,12 @@ export default function CharDhamGuide2025() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Plan Your Char Dham Yatra 2025?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Speak with our yatra experts. Free custom itinerary within 2 hours.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>📞 {SITE.phone}</a>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2025.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            <Link href="/packages/char-dham" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>View Packages →</Link>
+              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>💬 WhatsApp Us</a>
+            View Packages →
           </div>
         </div>
       </article>

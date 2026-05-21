@@ -457,9 +457,9 @@ export default function Navbar() {
               💬 Enquire
             </a>
 
-            <Link href="/contact" className="btn btn-primary" style={{ padding:'9px 20px', fontSize:13 }}>
+            
               Book Now
-            </Link>
+            
 
             <button onClick={() => setMobileOpen(o => !o)} className="md:hidden"
               style={{
@@ -511,10 +511,10 @@ export default function Navbar() {
                 style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:600, color:'var(--navy)', border:'1.5px solid var(--navy)', background:'var(--navy-light)', textDecoration:'none' }}>
                 📞 {SITE.phone}
               </a>
-              <Link href="/contact" onClick={() => setMobileOpen(false)}
+               setMobileOpen(false)}
                 style={{ display:'block', textAlign:'center', padding:'13px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:700, color:'#fff', background:'var(--gold)', textDecoration:'none' }}>
                 Book Now
-              </Link>
+              
             </div>
           </div>
         )}

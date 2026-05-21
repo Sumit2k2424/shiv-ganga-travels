@@ -19,7 +19,7 @@ function Schema() {
       { '@type': 'Question', name: 'How many days are needed for Kedarnath Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'A comfortable Kedarnath Yatra takes 3 nights 4 days from Haridwar: Day 1 Haridwar to Guptkashi, Day 2 trek to Kedarnath (16km) and overnight stay near temple, Day 3 morning darshan and return to Guptkashi, Day 4 return to Haridwar. For helicopter option, same schedule without the trek.' }},
       { '@type': 'Question', name: 'Is Kedarnath Yatra registration mandatory in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Registration at registrationandtouristcare.uk.gov.in is mandatory. Free, takes 15 minutes. Yatra card is checked at Sonprayag checkpoint — pilgrims without registration are turned back. Pilgrims 55+ must also submit a <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link>.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Registration at registrationandtouristcare.uk.gov.in is mandatory. Free, takes 15 minutes. Yatra card is checked at Sonprayag checkpoint — pilgrims without registration are turned back. Pilgrims 55+ must also submit a medical fitness certificate.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -46,8 +46,8 @@ export default function KedarnathCompleteGuide() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Kedarnath Yatra Complete Guide 2026</span>
         </div>
       </nav>
@@ -137,7 +137,7 @@ export default function KedarnathCompleteGuide() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
+            View Packages →
           </div>
         </div>
 

@@ -112,13 +112,31 @@ export default function RouteMap() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
+          Home<span>›</span>
+          Char Dham Yatra<span>›</span>
           <span>Route Map 2026</span>
         </div>
       </nav>
 
       <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+
+        {/* Booking nudge — route map visitors are actively planning */}
+        <div style={{ background:'var(--navy)', borderRadius:12, padding:'14px 20px', marginBottom:28, display:'flex', flexWrap:'wrap', gap:12, alignItems:'center', justifyContent:'space-between' }}>
+          <div style={{ color:'rgba(255,255,255,0.85)', fontSize:13.5 }}>
+            <strong style={{ color:'#FFD166' }}>Planning this route?</strong> Book with the operator who drives it every day — Shiv Ganga Travels, Haridwar.
+          </div>
+          <div style={{ display:'flex', gap:8, flexShrink:0 }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I was looking at the Char Dham route map. I want to know about packages.')}`}
+              target="_blank" rel="nofollow noopener noreferrer"
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'route_map_cta',value:1}); } catch(e){} }}
+              style={{ background:'#25D366', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none' }}>
+              💬 Get Quote
+            </a>
+            <a href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>
+              View Packages →
+            </a>
+          </div>
+        </div>
 
         {/* Summary stats */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))', gap:12, marginBottom:36 }}>

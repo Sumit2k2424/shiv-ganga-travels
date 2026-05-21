@@ -21,7 +21,7 @@ function Schema() {
       { '@type': 'Question', name: 'Is Char Dham Yatra safe for someone doing it alone?',
         acceptedAnswer: { '@type': 'Answer', text: 'Solo Char Dham Yatra is possible but not recommended for first timers. The mountain roads, Kedarnath trek, altitude effects, and daily pilgrim limits require experience to navigate confidently. Solo pilgrims should travel with an organised group or hire a private guide. Shiv Ganga Travels accepts solo pilgrims and places them in small groups of compatible travellers.' }},
       { '@type': 'Question', name: 'How much should I budget for my first Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs <Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>₹19,500</Link>–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹19,500–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -59,8 +59,8 @@ export default function FirstTimerGuide() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Char Dham Yatra First Timer Guide</span>
         </div>
       </nav>
@@ -110,7 +110,7 @@ export default function FirstTimerGuide() {
           { n:'1', t:'Book your package', d:'Book with a direct operator 60–90 days before peak season (May–June) or 30–45 days before September–October. Hotels at Guptkashi and Joshimath fill 60 days ahead. Do not wait.' },
           { n:'2', t:'Get a medical check-up', d:'Mandatory for 55+ (medical certificate from MBBS doctor). Recommended for anyone with BP, diabetes, or heart history. Your doctor should specifically clear you for high-altitude travel.' },
           { n:'3', t:'Start physical preparation', d:'If you are not regularly active, begin daily 30-minute walks. Increase to 45 minutes over 6 weeks. Practice climbing stairs with a day pack. The Kedarnath trek is 16km at steep gradient — preparation makes it manageable.' },
-          { n:'4', t:'Complete <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>', d:'Register at registrationandtouristcare.uk.gov.in. Free. Takes 15 minutes. Mandatory for all 4 dhams. Shiv Ganga Travels handles this for all our package pilgrims.' },
+          { n:'4', t:'Complete biometric registration', d:'Register at registrationandtouristcare.uk.gov.in. Free. Takes 15 minutes. Mandatory for all 4 dhams. Shiv Ganga Travels handles this for all our package pilgrims.' },
           { n:'5', t:'Arrange your travel to Haridwar', d:'Book train or flight. Best trains from Delhi: Shatabdi Express (06:45 NDLS → 10:55 HW) or Mussoorie Express (overnight). See our guide: ' },
         ].map(item=>(
           <div key={item.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
@@ -119,7 +119,7 @@ export default function FirstTimerGuide() {
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{item.t}</div>
               <div style={{ fontSize:14, color:'var(--text-muted)', lineHeight:1.7 }}>
                 {item.d}
-                {item.n==='5' && <Link href="/how-to-reach-haridwar" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>How to Reach Haridwar →</Link>}
+                {item.n==='5' && How to Reach Haridwar →}
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function FirstTimerGuide() {
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize:13.5, color:'var(--text-muted)' }}>Note: These are Shiv Ganga Travels direct operator prices. Booking through MakeMyTrip or Thrillophilia adds ₹3,000–8,000 per person in platform fees and agent commissions. See our <Link href="/blog/char-dham-yatra-cost" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>complete cost breakdown →</Link></p>
+        <p style={{ fontSize:13.5, color:'var(--text-muted)' }}>Note: These are Shiv Ganga Travels direct operator prices. Booking through MakeMyTrip or Thrillophilia adds ₹3,000–8,000 per person in platform fees and agent commissions. See our complete cost breakdown →</p>
 
         <h2 style={H2}>10 Mistakes First Time Pilgrims Make — And How to Avoid Them</h2>
         {[
@@ -228,7 +228,7 @@ export default function FirstTimerGuide() {
             <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>{i+1}.</span> {q}
           </div>
         ))}
-        <p style={{ marginTop:16 }}>Shiv Ganga Travels has been answering all five questions since 2010. We own our fleet of 20+ AC vehicles, employ our drivers directly, pre-block hotels by name from January, and are registered with Uttarakhand Tourism. See our <Link href="/cancellation-policy" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>cancellation policy →</Link></p>
+        <p style={{ marginTop:16 }}>Shiv Ganga Travels has been answering all five questions since 2010. We own our fleet of 20+ AC vehicles, employ our drivers directly, pre-block hotels by name from January, and are registered with Uttarakhand Tourism. See our cancellation policy →</p>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Ready for Your First Char Dham Yatra?</h3>

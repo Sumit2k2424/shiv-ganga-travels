@@ -24,8 +24,8 @@ export default function BadrinathTemple() {
     </section>
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/blog/badrinath-yatra-guide" style={{ color:'var(--navy)', textDecoration:'none' }}>Badrinath Yatra</Link><span>›</span>
+        Home<span>›</span>
+        Badrinath Yatra<span>›</span>
         <span>Badrinath Temple</span>
       </div>
     </nav>

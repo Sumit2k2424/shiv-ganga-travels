@@ -64,7 +64,7 @@ export default function Page() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
+          Home<span>›</span>
           <span>Uttarakhand Tour Packages 2026 — Beyond the Dhams</span>
         </div>
       </nav>
@@ -103,7 +103,7 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}>📦 Browse All Packages:</div>
-          <Link href="/packages/uttarakhand" style={{display:'inline-flex',alignItems:'center',gap:6,background:'var(--navy)',color:'#fff',padding:'10px 20px',borderRadius:8,fontWeight:700,fontSize:13.5,textDecoration:'none'}}>View Uttarakhand Packages →</Link>
+          View Uttarakhand Packages →
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>

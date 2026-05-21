@@ -70,8 +70,8 @@ export default function KedarnathPonyRates() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Kedarnath Pony Palki Rates 2026</span>
         </div>
       </nav>

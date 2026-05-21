@@ -58,8 +58,8 @@ export default function SevenDaysBlog() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Char Dham Yatra in 7 Days</span>
         </div>
       </nav>
@@ -71,7 +71,7 @@ export default function SevenDaysBlog() {
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:15, color:'#7B3F00', marginBottom:8 }}>⚠️ The Honest Verdict Before You Read Further</div>
           <p style={{ fontSize:14.5, color:'#7B3F00', lineHeight:1.75, margin:0 }}>
-            A 7-day Char Dham Yatra is <strong>physically possible for fit adults under 60</strong> but involves 200–250km of mountain driving daily, very limited darshan time, and virtually no rest. It is not recommended by Shiv Ganga Travels as a primary option. If you have only 7 days, we suggest <Link href="/do-dham-yatra" style={{ color:'#7B3F00', fontWeight:700 }}>Do Dham Yatra (Kedarnath + Badrinath)</Link> in 5N/6D instead — you get two of the most powerful dhams with adequate time at each.
+            A 7-day Char Dham Yatra is <strong>physically possible for fit adults under 60</strong> but involves 200–250km of mountain driving daily, very limited darshan time, and virtually no rest. It is not recommended by Shiv Ganga Travels as a primary option. If you have only 7 days, we suggest Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D instead — you get two of the most powerful dhams with adequate time at each.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function SevenDaysBlog() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>Our Recommendation</div>
           <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, margin:0 }}>
-            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva’s most powerful Jyotirlinga and Lord Vishnu’s primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our <Link href="/do-dham-yatra" style={{ color:'var(--teal)', fontWeight:700 }}>Do Dham Yatra packages from ₹10,999</Link>.
+            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva’s most powerful Jyotirlinga and Lord Vishnu’s primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our Do Dham Yatra packages from ₹10,999.
           </p>
         </div>
 
@@ -189,8 +189,8 @@ export default function SevenDaysBlog() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have limited days for Char Dham Yatra 2026. Please suggest the best itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Char Dham Packages →</Link>
-            <Link href="/do-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>Do Dham (5N/6D) →</Link>
+            Char Dham Packages →
+            Do Dham (5N/6D) →
           </div>
         </div>
 

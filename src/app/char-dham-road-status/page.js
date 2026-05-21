@@ -7,7 +7,7 @@ export const metadata = {
   keywords: ['char dham road status 2026','char dham road status today','kedarnath road open 2026','badrinath highway status','gangotri road condition','yamunotri route status','char dham yatra route update','sonprayag road condition','joshimath road open'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },
   openGraph: {
-    title: 'Char Dham Yatra Road Status 2026 — Live Route Conditions | Shiv Ganga Travels',
+    title: 'Char Dham Yatra Road Status 2026 — Live Route Conditions',
     description: 'Live road conditions for all 4 Char Dham routes. Updated May 21, 2026. Kedarnath, Badrinath, Gangotri, Yamunotri — full status with checkpoints, helplines and travel advisories.',
     url: `${SITE.baseUrl}/char-dham-road-status`,
     type: 'website',
@@ -175,9 +175,9 @@ export default function RoadStatus() {
       {/* Breadcrumb */}
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link>
+          Home
           <span>›</span>
-          <Link href="/char-dham-yatra" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Char Dham Yatra</Link>
+          Char Dham Yatra
           <span>›</span>
           <span>Road Status 2026</span>
         </div>
@@ -191,7 +191,8 @@ export default function RoadStatus() {
             <strong>Peak Season Advisory (May–June 2026):</strong> All four routes are open but traffic is extremely heavy, especially on weekends. Sonprayag (Kedarnath) sees 2–3 hour queues after 9 AM during peak days.
             Road conditions can change within hours during afternoon showers — always verify with your operator before travel.{' '}
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Can you share today\'s road update for Char Dham Yatra?')}`}
-              style={{ color: '#7B3F00', fontWeight: 700 }} target="_blank" rel="nofollow noopener noreferrer">
+              style={{ color: '#7B3F00', fontWeight: 700 }} target="_blank" rel="nofollow noopener noreferrer"
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
               WhatsApp us for today's update →
             </a>
           </span>
@@ -282,8 +283,10 @@ export default function RoadStatus() {
                     ))}
                     <div style={{ background: '#fff', borderRadius: 10, padding: '11px 14px', border: '1px solid var(--border)' }}>
                       <div style={{ fontSize: 11.5, color: 'var(--text-muted)', fontWeight: 600, marginBottom: 3 }}>UNIVERSAL EMERGENCY</div>
-                      <a href="tel:+919411112985" style={{ display: 'block', fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', textDecoration: 'none' }}>SDRF: +91-9411112985</a>
-                      <a href="tel:108" style={{ display: 'block', fontWeight: 700, fontSize: 13, color: 'var(--navy)', textDecoration: 'none' }}>Ambulance: 108</a>
+                      <a href="tel:+919411112985" style={{ display: 'block', fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', textDecoration: 'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>SDRF: +91-9411112985</a>
+                      <a href="tel:108" style={{ display: 'block', fontWeight: 700, fontSize: 13, color: 'var(--navy)', textDecoration: 'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>Ambulance: 108</a>
                     </div>
                   </div>
                 </div>
@@ -371,7 +374,8 @@ export default function RoadStatus() {
             </p>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Can you share today\'s road condition update for Char Dham Yatra 2026?')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '12px 26px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none', display: 'inline-block' }}>
+              style={{ background: '#25D366', color: '#fff', padding: '12px 26px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none', display: 'inline-block' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
               💬 Get Today&apos;s Road Update on WhatsApp
             </a>
           </div>

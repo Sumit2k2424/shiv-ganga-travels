@@ -19,7 +19,7 @@ function Schema() {
     mainEntity: [
       { '@type': 'Question',
         name: 'Is Char Dham Yatra safe for senior citizens above 70?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, with proper preparation and a specialised package. Shiv Ganga Travels has completed yatras with pilgrims aged 75–82. Key requirements: helicopter for Kedarnath (avoids 16km trek), medical certificate, ground-floor rooms, slower pace 12N/13D itinerary, medical attendant, and oxygen cylinder. Badrinath and Gangotri are accessible by motor road with no trekking. A <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> from a doctor is mandatory for pilgrims 55+.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, with proper preparation and a specialised package. Shiv Ganga Travels has completed yatras with pilgrims aged 75–82. Key requirements: helicopter for Kedarnath (avoids 16km trek), medical certificate, ground-floor rooms, slower pace 12N/13D itinerary, medical attendant, and oxygen cylinder. Badrinath and Gangotri are accessible by motor road with no trekking. A medical fitness certificate from a doctor is mandatory for pilgrims 55+.' },
       },
       { '@type': 'Question',
         name: 'What is the special provision for senior citizens at Kedarnath?',
@@ -52,8 +52,8 @@ return (
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Senior Citizen Char Dham Yatra</span>
         </div>
       </nav>

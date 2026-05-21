@@ -79,6 +79,7 @@ export default function FloatingBookCTA({ packageName = '' }) {
         href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(waMsg)}`}
         target="_blank"
         rel="nofollow noopener noreferrer"
+        onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_floating_cta',value:1}); } catch(e){} }}
         style={{
           display: 'flex',
           alignItems: 'center',

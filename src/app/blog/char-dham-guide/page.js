@@ -63,9 +63,9 @@ export default function CharDhamGuide() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
+          Home
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link>
+          Blog
           <span>›</span>
           <span>Char Dham Yatra Guide</span>
         </div>
@@ -129,7 +129,7 @@ export default function CharDhamGuide() {
         </div>
 
         <h2 style={h2}>Char Dham Yatra Registration 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link></strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
 
         <h2 style={h2}>Char Dham Yatra Packing List</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>
@@ -177,8 +177,7 @@ export default function CharDhamGuide() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            <Link href="/char-dham-yatra"
-              style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Packages →</Link>
+            View Packages →
           </div>
         </div>
       </article>

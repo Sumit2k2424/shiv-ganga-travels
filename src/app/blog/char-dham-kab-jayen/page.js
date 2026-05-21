@@ -58,8 +58,8 @@ export default function CharDhamKabJayen() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>चार धाम यात्रा कब जाएं</span>
         </div>
       </nav>
@@ -139,7 +139,7 @@ export default function CharDhamKabJayen() {
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>सितंबर और अक्टूबर के batch जल्दी भरते हैं। WhatsApp पर अपनी तारीख और ग्रुप का साइज बताएं।</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! September/October 2026 Char Dham Yatra ke liye dates aur package jaanna hai.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 Dates Check करें</a>
-            <Link href="/packages" style={{ background: '#E8920A', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>🏔️ Packages देखें →</Link>
+            🏔️ Packages देखें →
           </div>
         </div>
 

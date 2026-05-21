@@ -338,10 +338,9 @@ export default function AboutPage() {
                 style={{ background: '#25D366', color: '#fff', padding: '13px 28px', borderRadius: 10, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
                 💬 Book on WhatsApp
               </a>
-              <Link href="/char-dham-yatra"
-                style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '13px 28px', borderRadius: 10, fontWeight: 600, fontSize: 14, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
+              
                 View Packages →
-              </Link>
+              
             </div>
           </div>
         </div>

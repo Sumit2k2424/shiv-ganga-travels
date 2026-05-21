@@ -13,9 +13,9 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Is a Char Dham Yatra package worth it?',
-        acceptedAnswer: { '@type': 'Answer', text: 'For most pilgrims, yes. A Char Dham Yatra package from a direct operator is typically 10–20% cheaper than self-arranging all components separately during peak season, while removing logistical complexity. The key is booking with a direct operator (not an aggregator) — <Link href="/" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Shiv Ganga Travels</Link> charges zero commission.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'For most pilgrims, yes. A Char Dham Yatra package from a direct operator is typically 10–20% cheaper than self-arranging all components separately during peak season, while removing logistical complexity. The key is booking with a direct operator (not an aggregator) — Shiv Ganga Travels charges zero commission.' }},
       { '@type': 'Question', name: 'Can I do Char Dham Yatra on my own without a travel agent?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is possible. You need to arrange: <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link>, vehicle hire, hotels at Barkot/Uttarkashi/Guptkashi/Joshimath, and Kedarnath trek logistics. During peak season (May–June), hotels fill 45–60 days in advance — independent travellers often find their preferred options unavailable. For first-time pilgrims or senior citizens, a package is strongly recommended.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, it is possible. You need to arrange: biometric registration, vehicle hire, hotels at Barkot/Uttarkashi/Guptkashi/Joshimath, and Kedarnath trek logistics. During peak season (May–June), hotels fill 45–60 days in advance — independent travellers often find their preferred options unavailable. For first-time pilgrims or senior citizens, a package is strongly recommended.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
@@ -31,7 +31,7 @@ export default function PkgVsSelf() {
     ['Emergency support', 'Operator on call 24/7', 'On your own'],
     ['Flexibility', 'Fixed itinerary — less spontaneous', 'Change plans freely'],
     ['Cost (2 people, peak)', '₹22,000–28,000 per person', '₹24,000–32,000 per person (peak hotels)'],
-    ['Cost (10 people, peak)', '<Link href="/char-dham-yatra" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>₹19,500</Link> per person', '₹18,000–22,000 per person (possible saving)'],
+    ['Cost (10 people, peak)', '₹19,500 per person', '₹18,000–22,000 per person (possible saving)'],
     ['Best for', 'First-time, senior, 2–8 person groups', 'Experienced, 10+ people, repeat pilgrims'],
   ];
   return (

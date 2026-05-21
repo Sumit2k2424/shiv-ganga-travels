@@ -52,8 +52,8 @@ export default function PonyVsHelicopter() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/kedarnath-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span>
+          Home<span>›</span>
+          Kedarnath Yatra<span>›</span>
           <span>Pony vs Helicopter</span>
         </div>
       </nav>
@@ -164,7 +164,7 @@ export default function PonyVsHelicopter() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Kedarnath helicopter or pony booking 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
+            View Kedarnath Packages →
           </div>
         </div>
 

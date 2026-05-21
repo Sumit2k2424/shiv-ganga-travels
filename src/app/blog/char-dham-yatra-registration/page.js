@@ -55,7 +55,7 @@ function Schema() {
       { '@type': 'HowToStep', position: 2, name: 'Create your account', text: 'Click "New Registration". Enter your mobile number and verify with OTP. Create a password.' },
       { '@type': 'HowToStep', position: 3, name: 'Fill pilgrim details', text: 'Enter all traveller details — name as on Aadhaar, Aadhaar number, date of birth, address. Repeat for each member of your group.' },
       { '@type': 'HowToStep', position: 4, name: 'Select dhams and dates', text: 'Choose which dhams you are visiting and your expected dates. You can select all 4 (Char Dham) or fewer.' },
-      { '@type': 'HowToStep', position: 5, name: 'Upload medical certificate', text: 'If any pilgrim is 55 years or above, upload the <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> from a registered doctor.' },
+      { '@type': 'HowToStep', position: 5, name: 'Upload medical certificate', text: 'If any pilgrim is 55 years or above, upload the medical fitness certificate from a registered doctor.' },
       { '@type': 'HowToStep', position: 6, name: 'Download yatra permit', text: 'After submission, download and print your Char Dham Yatra permit. Carry physical and digital copies — it is checked at multiple checkpoints.' },
     ],
   };
@@ -72,7 +72,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the official website for Char Dham Yatra registration 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The official and only legitimate website for Char Dham Yatra registration 2026 is registrationandtouristcare.uk.gov.in — run by the Uttarakhand Tourism Department. Do not pay money on any other website claiming to offer <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>Char Dham registration</Link>. The official registration is completely free.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'The official and only legitimate website for Char Dham Yatra registration 2026 is registrationandtouristcare.uk.gov.in — run by the Uttarakhand Tourism Department. Do not pay money on any other website claiming to offer Char Dham registration. The official registration is completely free.' },
       },
       {
         '@type': 'Question',
@@ -155,15 +155,35 @@ export default function RegistrationBlog() {
       {/* Breadcrumb */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
+          Home
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link>
+          Blog
           <span>›</span>
           <span>Char Dham Yatra Registration 2026</span>
         </div>
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* === CONVERSION HOOK — above fold, reduces bounce === */}
+        <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:24, display:'flex', flexWrap:'wrap', gap:16, alignItems:'center', justifyContent:'space-between' }}>
+          <div>
+            <div style={{ fontWeight:700, fontSize:14, color:'#FFD166', marginBottom:4 }}>✅ Don&apos;t want to do this yourself?</div>
+            <div style={{ fontSize:13.5, color:'rgba(255,255,255,0.8)', lineHeight:1.6 }}>Shiv Ganga Travels completes registration for all our pilgrims — free with every package booking.</div>
+          </div>
+          <div style={{ display:'flex', gap:8, flexWrap:'wrap', flexShrink:0 }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Please help me with Char Dham Yatra registration 2026.')}`}
+              target="_blank" rel="nofollow noopener noreferrer"
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'registration_page_cta',value:1}); } catch(e){} }}
+              style={{ background:'#25D366', color:'#fff', padding:'10px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' }}>
+              💬 Register via WhatsApp
+            </a>
+            <a href={`tel:${SITE.phone}`}
+              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'10px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)', whiteSpace:'nowrap' }}>
+              📞 Call Us
+            </a>
+          </div>
+        </div>
 
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>
@@ -361,7 +381,8 @@ export default function RegistrationBlog() {
             </div>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 and need help with registration and daily limit planning.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}>
+              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
               💬 Ask Us
             </a>
           </div>
@@ -378,9 +399,9 @@ export default function RegistrationBlog() {
               </div>
             ))}
             <div style={{ marginTop:10 }}>
-              <Link href="/blog/kedarnath-helicopter-booking" style={{ fontSize:13, color:'#0C447C', fontWeight:700, textDecoration:'underline', textUnderlineOffset:2 }}>
+              
                 Full helicopter booking guide →
-              </Link>
+              
             </div>
           </div>
 
@@ -496,11 +517,13 @@ export default function RegistrationBlog() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Char Dham Yatra registration 2026. Please guide me.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
               💬 WhatsApp — Get Help Now
             </a>
             <a href='tel:+917017082807'
-              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
+              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>
               📞 {SITE.phone}
             </a>
           </div>

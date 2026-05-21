@@ -318,10 +318,9 @@ export default function HomePage() {
                   style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>
                   💬 Book Cab on WhatsApp
                 </a>
-                <Link href="/char-dham-yatra-cab-booking"
-                  style={{ background:'rgba(255,255,255,0.1)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:600, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
+                
                   View All Vehicles →
-                </Link>
+                
               </div>
             </div>
 
@@ -346,10 +345,9 @@ export default function HomePage() {
                   </div>
                 </Link>
               ))}
-              <Link href="/char-dham-yatra-cab-booking"
-                style={{ textAlign:'center', fontSize:12.5, color:'rgba(255,255,255,0.5)', textDecoration:'none', padding:'10px', borderRadius:9, border:'1px dashed rgba(255,255,255,0.15)', marginTop:2 }}>
+              
                 View all cab options + group rates →
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -634,9 +632,9 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <Link href="/about" style={{ display:'inline-flex', alignItems:'center', gap:8, background:'var(--navy)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
+              
                 Our full story →
-              </Link>
+              
             </div>
             {/* Right: founder card */}
             <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
@@ -836,6 +834,17 @@ export default function HomePage() {
             <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:14 }}>
               <div style={{ width:3, height:20, background:'var(--teal)', borderRadius:2 }}/>
               <h3 style={{ fontSize:14, fontWeight:700, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', margin:0 }}>Book from Your City</h3>
+            </div>
+            {/* Delhi/NCR highlight — top traffic source */}
+            <div style={{ background:'linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%)', borderRadius:12, padding:'14px 18px', marginBottom:12, display:'flex', flexWrap:'wrap', gap:12, alignItems:'center', justifyContent:'space-between' }}>
+              <div>
+                <div style={{ fontWeight:700, fontSize:14, color:'#FFD166', marginBottom:3 }}>🏙️ Delhi, Noida &amp; NCR — Easy Pickup</div>
+                <div style={{ fontSize:13, color:'rgba(255,255,255,0.8)' }}>Direct pickup from Delhi, Noida, Gurugram &amp; Ghaziabad · 4–5 hrs to Haridwar</div>
+              </div>
+              <Link href="/char-dham-yatra-from-delhi"
+                style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'9px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)', whiteSpace:'nowrap', flexShrink:0 }}>
+                Delhi Package →
+              </Link>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
               {[

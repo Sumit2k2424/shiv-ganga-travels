@@ -71,8 +71,8 @@ export default function OpeningDates() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Char Dham Opening Dates 2026</span>
         </div>
       </nav>
@@ -181,7 +181,7 @@ export default function OpeningDates() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share available dates and packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
+            View Packages →
           </div>
         </div>
 
@@ -219,7 +219,7 @@ export default function OpeningDates() {
           <strong>What happens at closing:</strong> Each dham has a Kapat Band (door-closing) ceremony. At Kedarnath, Lord Shiva's Panchmukhi Doli (five-faced palanquin) travels from Kedarnath to Ukhimath over 4 days. Before the doors seal, the priest lights the <em>Akhand Jyot</em> — an eternal flame that burns inside the locked temple for all 6 winter months. When the doors reopen in April, the flame is still burning. Thousands of pilgrims attend the closing ceremony specifically for this moment.
         </p>
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'12px 16px', marginBottom:28, fontSize:13.5, color:'#7B3F00' }}>
-          <strong>💡 October visits — last chance with best conditions:</strong> October is arguably the best month to visit Char Dham. Crowds are 70% lighter than peak season, prices are lower, and post-monsoon skies are crystal clear. The dhams are all still open through October. <Link href="/blog/char-dham-yatra-in-october" style={{ color:'var(--teal)', fontWeight:600 }}>See our October Char Dham guide →</Link>
+          <strong>💡 October visits — last chance with best conditions:</strong> October is arguably the best month to visit Char Dham. Crowds are 70% lighter than peak season, prices are lower, and post-monsoon skies are crystal clear. The dhams are all still open through October. See our October Char Dham guide →
         </div>
 
 <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>

@@ -24,7 +24,7 @@ export const metadata = {
 function Schema() {
   const faqData = [
     { q: 'Is mobile phone allowed inside Kedarnath temple in 2026?', a: 'No. In 2026, mobile phones are banned inside the premises of Kedarnath and Badrinath temples. You must deposit your phone at the counter before entering the sanctum. Photography inside the inner shrine has been prohibited to preserve the spiritual atmosphere.' },
-    { q: 'Is there an age limit for Char Dham Yatra 2026?', a: 'There is no absolute age ban, but the Uttarakhand government now requires a mandatory <Link href="/blog/char-dham-yatra-medical-certificate" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>medical fitness certificate</Link> for all pilgrims aged 55 years and above, and for those with pre-existing health conditions. The certificate must be from a registered doctor and obtained before travel.' },
+    { q: 'Is there an age limit for Char Dham Yatra 2026?', a: 'There is no absolute age ban, but the Uttarakhand government now requires a mandatory medical fitness certificate for all pilgrims aged 55 years and above, and for those with pre-existing health conditions. The certificate must be from a registered doctor and obtained before travel.' },
     { q: 'Can non-Hindus visit Kedarnath and Badrinath in 2026?', a: 'In 2026, entry restrictions for non-Hindus have been introduced at certain temples in the Char Dham circuit. Non-Hindus are advised to check the specific rules at each temple before visiting. Some temples now require proof of Hindu faith for entry to the inner sanctum.' },
     { q: 'How to book Kedarnath helicopter in 2026?', a: 'As per new 2026 rules, Kedarnath helicopter bookings must be made exclusively through the IRCTC portal (irctc.co.in). Private operator bookings at helipads on the day of travel are being phased out. Shiv Ganga Travels can assist you with IRCTC helicopter booking as part of our package.' },
     { q: 'What is the real-time tracking system for Char Dham Yatra 2026?', a: 'The Uttarakhand government has introduced a real-time GPS tracking system for all registered yatra vehicles. 177 ambulances are deployed along the Char Dham route, plus a helicopter ambulance operated by AIIMS Rishikesh for emergencies.' },
@@ -81,7 +81,7 @@ export default function NewRules2026() {
       status:'NEW 2026',
       color:'#fef3c7',
       border:'#fcd34d',
-      detail:'All pilgrims aged 55 years and above must carry a medical fitness certificate from a registered doctor. Anyone with pre-existing conditions (heart disease, BP, diabetes, COPD) must also carry a certificate regardless of age. Certificates will be checked at <Link href="/blog/char-dham-yatra-registration" style={{color:"var(--teal)",fontWeight:600,textDecoration:"underline",textDecorationColor:"rgba(11,123,139,0.3)",textUnderlineOffset:2}}>biometric registration</Link> checkpoints.',
+      detail:'All pilgrims aged 55 years and above must carry a medical fitness certificate from a registered doctor. Anyone with pre-existing conditions (heart disease, BP, diabetes, COPD) must also carry a certificate regardless of age. Certificates will be checked at biometric registration checkpoints.',
       impact:'Plan ahead — get this certificate from your doctor at least 1 week before departure. Our team reminds all pilgrims about this during booking.',
     },
     {
@@ -150,8 +150,8 @@ export default function NewRules2026() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          Home<span>›</span>
+          Blog<span>›</span>
           <span>Char Dham Yatra 2026 New Rules</span>
         </div>
       </nav>

@@ -30,8 +30,8 @@ export default function KedarnathWeather() {
     </section>
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/kedarnath-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span><span>Weather Guide</span>
+        Home<span>›</span>
+        Kedarnath Yatra<span>›</span><span>Weather Guide</span>
       </div>
     </nav>
     <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
@@ -78,7 +78,7 @@ export default function KedarnathWeather() {
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Best dates: May 1–June 15 and Sept 10–Oct 31 · Packages from ₹6,499</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Kedarnath Yatra 2026. Please suggest best dates.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>View Packages →</Link>
+          View Packages →
         </div>
       </div>
     </div>

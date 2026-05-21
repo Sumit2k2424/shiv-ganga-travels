@@ -89,9 +89,9 @@ export default function KedarnathTrekGuide() {
       {/* BREADCRUMB */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
+          Home
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--navy)', textDecoration:'none' }}>Blog</Link>
+          Blog
           <span>›</span>
           <span>Kedarnath Trek Guide 2026</span>
         </div>
@@ -310,11 +310,11 @@ export default function KedarnathTrekGuide() {
         {/* CTA */}
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Kedarnath Yatra?</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, <Link href="/blog/kedarnath-registration-2026" style={{ color:'var(--teal)', fontWeight:600, textDecoration:'underline', textDecorationColor:'rgba(11,123,139,0.3)', textUnderlineOffset:2 }}>biometric registration</Link>, and VIP darshan. ₹6,499 all-inclusive.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, biometric registration, and VIP darshan. ₹6,499 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            <Link href="/kedarnath-yatra" style={{ background:'var(--gold)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>View Package →</Link>
+            View Package →
           </div>
         </div>
 

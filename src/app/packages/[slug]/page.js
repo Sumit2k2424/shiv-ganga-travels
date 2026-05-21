@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   if (CATEGORY_SLUGS.includes(params.slug)) {
     const cat = CATEGORIES[params.slug];
     return {
-      title: `${cat.name} Packages 2026 from Haridwar — ${SITE.name}`,
+      title: `${cat.name} Packages 2026 from Haridwar`,
       description: `Book ${cat.name} from Haridwar. Expert guides, VIP darshan, all-inclusive. Trusted since 2010.`,
       alternates: { canonical: `${SITE.baseUrl}/packages/${params.slug}` },
     };
@@ -155,8 +155,8 @@ export default function PackageDetailPage({ params }) {
         </section>
         <div style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
           <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-            <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-            <Link href="/packages" style={{ color:'var(--navy)', textDecoration:'none' }}>Packages</Link><span>›</span>
+            Home<span>›</span>
+            Packages<span>›</span>
             <span>{cat.name}</span>
           </div>
         </div>
@@ -229,8 +229,8 @@ export default function PackageDetailPage({ params }) {
       <section style={{ minHeight:340, background:pkg.photo?`linear-gradient(180deg,rgba(10,25,60,0.55) 0%,rgba(10,25,60,0.88) 100%),url('${pkg.photo}') center/cover`:'linear-gradient(145deg,var(--navy),var(--teal))', display:'flex', alignItems:'flex-end', padding:'0 20px 28px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', width:'100%' }}>
           <nav style={{ fontSize:11.5, color:'rgba(255,255,255,0.6)', marginBottom:12, display:'flex', gap:5, flexWrap:'wrap' }}>
-            <Link href="/" style={{ color:'rgba(255,255,255,0.7)', textDecoration:'none' }}>Home</Link><span>›</span>
-            <Link href="/packages" style={{ color:'rgba(255,255,255,0.7)', textDecoration:'none' }}>Packages</Link><span>›</span>
+            Home<span>›</span>
+            Packages<span>›</span>
             <Link href={`/packages/${pkg.category}`} style={{ color:'rgba(255,255,255,0.7)', textDecoration:'none', textTransform:'capitalize' }}>{CATEGORIES[pkg.category]?.name||pkg.category}</Link><span>›</span>
             <span style={{ color:'#FFD166' }}>{pkg.name}</span>
           </nav>
@@ -247,15 +247,17 @@ export default function PackageDetailPage({ params }) {
       {/* Sticky bar */}
       <div className="sticky-book-bar">
         <div><span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>from</span><span style={{ fontWeight:800, fontSize:18, color:'var(--navy)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</span></div>
-        <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
-        <a href='tel:+917017082807' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
+        <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>💬 Book via WhatsApp</a>
+        <a href='tel:+917017082807' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>📞 Call Now</a>
       </div>
       {/* Trust micro-signals below sticky bar */}
       <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid var(--border)' }}>
         <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
         <span>✓ Est. 2010 · Retd. Army Officer founder</span>
-        <Link href="/cancellation-policy" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>Flexible cancellation →</Link>
+        Flexible cancellation →
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
@@ -704,8 +706,10 @@ export default function PackageDetailPage({ params }) {
             <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book?</h2>
             <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary · Zero commission · Reply in 2 hrs</p>
             <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-              <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>💬 Book on WhatsApp</a>
+              <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>📞 {SITE.phone}</a>
             </div>
           </section>
         </div>
@@ -722,9 +726,11 @@ export default function PackageDetailPage({ params }) {
               {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
             </div>
             <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
-              <a href='tel:+917017082807' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book</a>
-              <Link href="/contact" style={{ textAlign:'center', fontSize:12, color:'var(--navy)', textDecoration:'none', display:'block', padding:'6px 0' }}>✉️ Send Enquiry Form</Link>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>💬 Book via WhatsApp</a>
+              <a href='tel:+917017082807' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}
+              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>📞 Call to Book</a>
+              ✉️ Send Enquiry Form
             </div>
             <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
               {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',label:'Start',val:pkg.startCity},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(
