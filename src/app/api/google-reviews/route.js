@@ -10,7 +10,7 @@ const MAPS_URL      = 'https://www.google.com/maps?cid=16074078434377735602';
 const REVIEW_URL    = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 const CACHE_SECS    = 86400;
 
-export const revalidate = CACHE_SECS;
+export const revalidate = 86400; // 24 hours — must be a static literal in Next.js 15
 
 // Step 1: Find Place ID via text search
 async function findPlaceId(apiKey) {

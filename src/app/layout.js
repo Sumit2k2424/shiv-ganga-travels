@@ -1,23 +1,11 @@
 import './globals.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
-import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+// LeadPopup + ChatBot loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
+import { LeadPopup, ChatBot } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
-
-// ── Lazy-load heavy interactive widgets ──────────────────────────────────────
-// LeadPopup (14KB) and ChatBot (17KB) are never needed for LCP or FCP.
-// Loading them after hydration saves ~31KB from the initial JS bundle,
-// directly improving TTI and TBT on mobile (the two lowest-scoring metrics).
-const LeadPopup = dynamic(() => import('@/components/LeadPopup'), {
-  ssr: false,
-  loading: () => null,
-});
-const ChatBot = dynamic(() => import('@/components/ChatBot'), {
-  ssr: false,
-  loading: () => null,
-});
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({

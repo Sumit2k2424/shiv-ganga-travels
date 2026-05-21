@@ -50,14 +50,18 @@ export default function PackageCard({ pkg }) {
 
       {/* Image */}
       <Link href={`/packages/${pkg.slug}`} style={{ display:"block", textDecoration:"none" }}>
-        <div style={{ height:200, position:"relative", overflow:"hidden", flexShrink:0 }}>
-          <div className="card-img" style={{
-            position:"absolute", inset:0,
-            backgroundImage: pkg.photo
-              ? `linear-gradient(180deg,rgba(15,43,91,0.06) 0%,rgba(15,43,91,0.7) 100%),url('${pkg.photo}')`
-              : fallBg,
-            backgroundSize:"cover", backgroundPosition:"center",
-          }}/>
+        <div style={{ height:200, position:"relative", overflow:"hidden", flexShrink:0, background: fallBg }}>
+          {pkg.photo && (
+            <img
+              src={pkg.photo}
+              alt={pkg.name}
+              width={400} height={200}
+              loading="lazy" decoding="async"
+              style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", display:"block" }}
+            />
+          )}
+          {/* Overlay gradient */}
+          <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg,rgba(15,43,91,0.06) 0%,rgba(15,43,91,0.72) 100%)", pointerEvents:"none" }}/>
 
           {/* Top badges */}
           <div style={{ position:"absolute", top:10, left:10, right:10, display:"flex", justifyContent:"space-between", zIndex:2 }}>

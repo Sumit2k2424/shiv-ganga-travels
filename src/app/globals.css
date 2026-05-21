@@ -2212,10 +2212,15 @@ img, video, iframe, embed { max-width: 100%; height: auto; }
 
 /* ─── CARDS & PACKAGE CARDS ──────────────────────────────── */
 @media (max-width: 640px) {
-  /* Package cards: full width on mobile */
-  .pkg-card, .package-card {
+  /* Full width ONLY when in a grid layout, NOT inside a horizontal scroll carousel */
+  .card-grid .pkg-card,
+  .card-grid .package-card {
     width: 100% !important;
     max-width: 100% !important;
+  }
+  /* Carousel cards: keep fixed width so they scroll horizontally */
+  .pkg-card, .package-card {
+    scroll-snap-align: start;
   }
   /* Price display */
   .pkg-price { font-size: 22px !important; }

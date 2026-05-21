@@ -1,44 +1,15 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { PACKAGES, SITE, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
 import FAQAccordion from '@/components/FAQAccordion';
+// ssr:false dynamic imports moved to Client Component wrapper (Next.js 15 requirement)
+import { HeroSearch, GoogleReviews, AutoScrollRow } from '@/components/PageClientWidgets';
+import dynamic from 'next/dynamic';
 
-// ── Lazy-load below-the-fold interactive components ──────────────────────────
-// These are NOT needed for LCP (first visible content). Loading them lazily
-// removes them from the critical JS bundle, directly improving:
-//   • LCP  — hero renders without waiting for these
-//   • TBT  — main thread not blocked by AutoScrollRow × 3 + GoogleReviews
-//   • TTI  — page becomes interactive faster on mobile 3G/4G
-
-// HeroSearch — small but interactive; defer 1 tick so hero text paints first
-const HeroSearch = dynamic(() => import('@/components/HeroSearch'), {
-  ssr: false,
-  loading: () => (
-    <div style={{ height:160, background:'rgba(255,255,255,0.06)', borderRadius:16 }}/>
-  ),
-});
-
-// CounterStat — pure visual, no interaction needed before scroll
+// CounterStat keeps ssr:true so Googlebot sees real values — allowed in Server Components
 const CounterStat = dynamic(() => import('@/components/CounterStat'), {
-  ssr: true, // keep SSR so Googlebot sees real values
-});
-
-// GoogleReviews — fetches API on mount; load only when near viewport
-const GoogleReviews = dynamic(() => import('@/components/GoogleReviews'), {
-  ssr: false,
-  loading: () => (
-    <div style={{ height:300, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,0.4)', fontSize:14 }}>
-      Loading reviews…
-    </div>
-  ),
-});
-
-// AutoScrollRow — runs JS timers; 3 instances on page. Load after hydration
-const AutoScrollRow = dynamic(() => import('@/components/AutoScrollRow'), {
-  ssr: false,
-  loading: () => <div style={{ height:240, overflowX:'hidden' }}/>,
+  ssr: true,
 });
 
 export const metadata = {
@@ -78,14 +49,18 @@ function PkgCard({ pkg }) {
     <Link href={`/packages/${pkg.slug}`} className="pkg-card"
       style={{ display:'flex', flexDirection:'column', minWidth:240, maxWidth:280, flex:'0 0 260px', textDecoration:'none', color:'inherit' }}>
       {/* Image */}
-      <div style={{ height:168, position:'relative', overflow:'hidden', flexShrink:0 }}>
-        <div className="card-img" style={{
-          position:'absolute', inset:0,
-          backgroundImage: pkg.photo
-            ? `linear-gradient(180deg,rgba(15,43,91,0.08) 0%,rgba(15,43,91,0.72) 100%), url('${pkg.photo}')`
-            : (fallBg[pkg.category] || fallBg['char-dham']),
-          backgroundSize:'cover', backgroundPosition:'center',
-        }}/>
+      <div style={{ height:168, position:'relative', overflow:'hidden', flexShrink:0, background: fallBg[pkg.category] || fallBg['char-dham'] }}>
+        {pkg.photo && (
+          <img
+            src={pkg.photo}
+            alt={pkg.name}
+            width={280} height={168}
+            loading="lazy" decoding="async"
+            style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}
+          />
+        )}
+        {/* Overlay gradient */}
+        <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(15,43,91,0.08) 0%,rgba(15,43,91,0.75) 100%)', pointerEvents:'none' }}/>
         {pkg.badge && <span className="badge badge-gold" style={{ position:'absolute', top:10, left:10, zIndex:2 }}>{pkg.badge}</span>}
         <span style={{ position:'absolute', top:10, right:10, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:10.5, fontWeight:600, padding:'3px 9px', borderRadius:6, zIndex:2 }}>{pkg.duration.nights}N</span>
         <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'10px 14px', zIndex:2 }}>

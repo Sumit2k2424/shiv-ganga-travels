@@ -162,13 +162,17 @@ export default function PackageDetailPage({ params }) {
         </div>
         <section style={{ background:'var(--bg)', padding:'40px 20px 60px' }}>
           <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(290px,100%),1fr))', gap:20 }}>
+            <div className="card-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(290px,100%),1fr))', gap:20 }}>
               {pkgs.map(p => {
                 const sav = p.price.original - p.price.discounted;
                 return (
                   <Link key={p.slug} href={`/packages/${p.slug}`} className="pkg-card" style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column' }}>
-                    <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0 }}>
-                      <div style={{ position:'absolute', inset:0, backgroundImage:p.photo?`linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%),url('${p.photo}')`: 'linear-gradient(160deg,var(--navy),var(--teal))', backgroundSize:'cover', backgroundPosition:'center' }}/>
+                    <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0, background:'linear-gradient(160deg,var(--navy),var(--teal))' }}>
+                      {p.photo && (
+                        <img src={p.photo} alt={p.name} width={290} height={200} loading="lazy" decoding="async"
+                          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}/>
+                      )}
+                      <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%)', pointerEvents:'none' }}/>
                       {p.badge && <span className="badge badge-gold" style={{ position:'absolute', top:12, left:12, zIndex:2 }}>{p.badge}</span>}
                       <span style={{ position:'absolute', top:12, right:12, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:11, fontWeight:600, padding:'3px 10px', borderRadius:6, zIndex:2 }}>{p.duration.nights}N/{p.duration.days}D</span>
                       <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'12px 16px', zIndex:2 }}>
