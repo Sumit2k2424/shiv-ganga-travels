@@ -54,11 +54,7 @@ export default function BlogPage({ params }) {
       <p>{blog.content}</p>
 
       {/* CTA */}
-      <div style={{marginTop:30,padding:20,background:'#f5f5f5',borderRadius:10}}>
-        <h2 style={{fontSize:"1.25rem",fontWeight:600,margin:"2rem 0 0.5rem"}}>Plan Your Trip Now</h2>
-        <p>Get best price, no middleman, direct booking support.</p>
-        <BlogCTA variant="footer" intent="info" />
-      </div>
+      <BlogCTA variant="footer" intent="info" />
 
       {/* Related Blogs */}
       <div style={{ marginTop: 32 }}>
