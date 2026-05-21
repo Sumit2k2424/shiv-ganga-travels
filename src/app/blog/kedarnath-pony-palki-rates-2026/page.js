@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Pony Charges 2026 – Official Rates for Pony, Palki & Pitthu Kandi',
@@ -179,6 +180,9 @@ export default function KedarnathPonyRates() {
           ))}
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
+
         <h2 style={h2}>⚠️ Fraud Warning — Protect Yourself</h2>
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '16px 18px', marginBottom: 28 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: '#A32D2D', marginBottom: 10 }}>Common scams at Kedarnath — know them before you arrive</div>
@@ -246,7 +250,10 @@ export default function KedarnathPonyRates() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

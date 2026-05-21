@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra for First Timers 2026 – Complete Planning Guide from Start to Finish',
@@ -197,6 +198,9 @@ export default function FirstTimerGuide() {
             </tbody>
           </table>
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         <p style={{ fontSize:13.5, color:'var(--text-muted)' }}>Note: These are Shiv Ganga Travels direct operator prices. Booking through MakeMyTrip or Thrillophilia adds ₹3,000–8,000 per person in platform fees and agent commissions. See our complete cost breakdown →</p>
 
         <h2 style={H2}>10 Mistakes First Time Pilgrims Make — And How to Avoid Them</h2>
@@ -252,7 +256,10 @@ export default function FirstTimerGuide() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

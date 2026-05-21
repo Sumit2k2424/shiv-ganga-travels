@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Packing List 2026 – Clothes, Medicines & Documents (Printable Checklist)',
@@ -163,6 +164,9 @@ return (
               <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label}</Link>
             ))}
           </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="packing" />
         </div>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
@@ -174,7 +178,10 @@ return (
             View Packages →
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="packing" />
+</article>
     </>
   );
 }

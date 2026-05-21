@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Helicopter Booking 2026 – Price, Helipads, IRCTC Portal & Booking Tips',
@@ -105,6 +106,9 @@ export default function KedarnathHelicopterBooking() {
           <li>If weather cancels the flight, we immediately rebook or arrange ground transport and refund the helicopter portion</li>
         </ol>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
         <h2 style={h2}>Frequently Asked Questions</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:24 }}>
           {faqData.map((f, i) => (
@@ -133,7 +137,10 @@ export default function KedarnathHelicopterBooking() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

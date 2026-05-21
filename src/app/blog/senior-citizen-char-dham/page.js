@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra for Senior Citizens 2026 – Pony, Palki, VIP Darshan & Medical Tips',
@@ -108,6 +109,9 @@ return (
           <li><strong>Rest the first evening at Kedarnath.</strong> Do not rush straight to the temple the moment you arrive. Rest 2–3 hours, drink water, then visit.</li>
         </ol>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book the Senior Citizen Package</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>₹24,500 per person · 12N/13D · Pony included · Medical attendant · No worries.</p>
@@ -126,7 +130,10 @@ return (
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

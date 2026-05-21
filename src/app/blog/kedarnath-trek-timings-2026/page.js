@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Trek Timings 2026 – Start Time, Cut-Off Points & Night Trek Rules',
@@ -151,6 +152,9 @@ export default function TrekTimings() {
                 <strong style={{ fontSize: 14, color: 'var(--navy)' }}>{item.time}</strong>
                 <span style={{ fontSize: 11, background: 'var(--bg)', color: item.color, fontWeight: 700, padding: '2px 8px', borderRadius: 20 }}>{item.badge}</span>
               </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.7 }}>{item.detail}</div>
             </div>
           ))}
@@ -191,7 +195,10 @@ export default function TrekTimings() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

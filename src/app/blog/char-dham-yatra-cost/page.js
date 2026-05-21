@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Cost 2026 – Complete Price Breakdown Per Person (Budget to Luxury)',
@@ -204,6 +205,9 @@ export default function CharDhamCost() {
               {breakdown.map(line => (<div key={line} style={{ fontSize: 12.5, color: '#475569', padding: '3px 0', borderBottom: '1px solid var(--bg)', display: 'flex', gap: 6 }}><span style={{ color, flexShrink: 0 }}>•</span>{line}</div>))}
               <div style={{ fontSize: 12.5, color: '#64748b', marginTop: 8, fontStyle: 'italic' }}>{note}</div>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="cost" />
           ))}
         </div>
 
@@ -268,7 +272,10 @@ export default function CharDhamCost() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="cost" />
+</article>
     </>
   );
 }

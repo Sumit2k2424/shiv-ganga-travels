@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra FAQ 2026 – 50 Most-Asked Questions Answered by an Expert',
@@ -327,6 +328,9 @@ export default function FAQ() {
                   <div style={{ padding: '0 18px 18px', fontSize: 14.5, color: 'var(--text-mid)', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>
                     <p style={{ marginTop: 14, marginBottom: 0 }}>{faq.a}</p>
                   </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
                 </details>
               ))}
             </div>

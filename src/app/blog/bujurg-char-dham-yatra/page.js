@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'बुजुर्गों के लिए चार धाम यात्रा 2026 — घोड़ा, पालकी और हेलिकॉप्टर गाइड',
@@ -116,6 +117,9 @@ export default function BujurgCharDham() {
               <div key={f} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13 }}><span style={{ color: '#1D9E75', flexShrink: 0 }}>✅</span><span style={{ color: '#334155' }}>{f}</span></div>
             ))}
           </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         </div>
 
         <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
@@ -149,7 +153,10 @@ export default function BujurgCharDham() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

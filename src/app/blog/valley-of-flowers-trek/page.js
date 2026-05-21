@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 export const metadata = {
   title: 'Valley of Flowers Trek 2026 – Best Time, Route from Govindghat & Complete Guide',
   description: 'Complete Valley of Flowers trek guide 2026: UNESCO World Heritage Site, best time July–September, 17km route from Govindghat, difficulty, entry fee ₹150, and 500+ wildflower species to see.',
@@ -67,6 +68,9 @@ export default function ValleyOfFlowersTrek() {
         <li><strong>Anemone, Geranium, Marsh Marigold</strong> — In abundance throughout August.</li>
       </ul>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
       <h2 style={h2}>Hemkund Sahib — Combine for the Perfect 5-Day Trip</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Hemkund Sahib (4,329m) is a Sikh pilgrimage site of extraordinary beauty — a glacial lake surrounded by snow peaks with a pristine gurudwara on its shores. It is said that Guru Gobind Singh meditated here in a previous life. The <strong>Langar</strong> (free kitchen) serves dal, roti and kheer to everyone regardless of faith — one of the most moving expressions of community in any religious place in India.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹13,499 per person.</p>
@@ -79,6 +83,9 @@ export default function ValleyOfFlowersTrek() {
           View Package →
         </div>
       </div>
-    </article>
+    
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
   </>);
 }

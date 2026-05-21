@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Pony vs Helicopter 2026 – Cost, Time, Availability & Which Is Better?',
@@ -130,6 +131,9 @@ export default function PonyVsHelicopter() {
           ))}
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
+
         <h2 style={H2}>Who Should Choose What — Our Recommendation</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(220px,100%),1fr))', gap:14, marginBottom:28 }}>
           {[
@@ -176,7 +180,10 @@ export default function PonyVsHelicopter() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

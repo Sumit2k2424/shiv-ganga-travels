@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham vs Do Dham Yatra 2026 – Which Is Right for You? Honest Comparison',
@@ -98,6 +99,9 @@ export default function ComparisonPage() {
           <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>💬 From 15 years of experience:</div>
           <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>
@@ -123,7 +127,10 @@ export default function ComparisonPage() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

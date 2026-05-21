@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'How to Reach Kedarnath 2026 – By Road, Train, Flight & Helicopter from Major Cities',
@@ -153,6 +154,9 @@ export default function HowToReachKedarnath() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
+
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Your Kedarnath Journey — Haridwar Direct</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels arranges the complete journey — from your arrival in Haridwar to your Kedarnath darshan. {SITE.phone}</p>
@@ -171,7 +175,10 @@ export default function HowToReachKedarnath() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

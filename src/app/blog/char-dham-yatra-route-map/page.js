@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Route Map 2026 – Complete Road Guide from Haridwar with Distances',
@@ -176,6 +177,9 @@ export default function RouteMap() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="route" />
+
         <h2 style={h2}>Insider Route Tips — 15 Seasons on This Road</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
@@ -211,7 +215,10 @@ export default function RouteMap() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="route" />
+</article>
     </>
   );
 }

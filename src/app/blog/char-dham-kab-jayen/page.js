@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'चार धाम यात्रा कब जाएं 2026 — मई, सितंबर या अक्टूबर? पूरी जानकारी',
@@ -117,6 +118,9 @@ export default function CharDhamKabJayen() {
               <div style={{ fontWeight: 800, fontSize: 14, color: '#1D9E75', marginBottom: 4 }}>→ {rec}</div>
               <div style={{ fontSize: 12, color: '#64748b' }}>{why}</div>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
           ))}
         </div>
 
@@ -151,7 +155,10 @@ export default function CharDhamKabJayen() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

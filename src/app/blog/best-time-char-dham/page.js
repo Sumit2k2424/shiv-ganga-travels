@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
@@ -176,6 +177,9 @@ export default function BestTimeCharDham() {
           Note: All four dhams open on Akshaya Tritiya or within 4 days. The exact time of the opening puja (muhurta) is set by the Badrinath–Kedarnath Temple Committee (BKTC) each year. Closing dates for 2026 will be announced in September.
         </p>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <h2 style={h2}>How Weather Affects Each Part of the Journey</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:12, marginBottom:24 }}>
           {[
@@ -239,7 +243,10 @@ export default function BestTimeCharDham() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

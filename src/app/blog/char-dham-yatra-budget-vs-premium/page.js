@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Budget vs Premium Package 2026 – What Actually Changes? Honest Comparison',
@@ -111,6 +112,9 @@ export default function BudgetVsPremium() {
           The spiritual experience is the same regardless of package tier — Lord Shiva at Kedarnath does not distinguish between pilgrims who paid ₹20,000 and those who paid ₹50,000. But the access experience is very different. Premium packages include <strong>Mahabhishek booking at Kedarnath</strong> — the 4 AM private puja where you are inches from the Shivalinga in near silence, while the entire temple is still dark. This experience is impossible to have in a general queue. For many pilgrims, this 45-minute puja at 4 AM is worth the entire upgrade cost on its own.
         </p>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="cost" />
+
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>Our Recommendation Based on 50,000+ Pilgrims</div>
           <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, margin:0 }}>
@@ -136,7 +140,10 @@ export default function BudgetVsPremium() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="cost" />
+</article>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Types of Char Dham Yatra Packages 2026 – Budget, Deluxe, Luxury & Helicopter Compared',
@@ -176,6 +177,9 @@ export default function PackageTypes() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <h2 style={h2}>Which Package Should You Choose?</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
@@ -210,7 +214,10 @@ export default function PackageTypes() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

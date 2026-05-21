@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Closing Dates 2026 – When Kedarnath, Badrinath & All 4 Temples Close',
@@ -166,6 +167,9 @@ export default function ClosingDates() {
           For Hindu pilgrims, this is not merely symbolic — it is understood as evidence of the continuous divine presence at Kedarnath regardless of human access. Many pilgrims who attend the closing ceremony specifically come for this moment: the lighting of the Akhand Jyot and the sound of the doors sealing. It is, by many accounts, more moving than the opening ceremony.
         </p>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <h2 style={h2}>Planning a Last-Season Visit? Book October</h2>
         <p style={p}>
           October is genuinely the best month for Char Dham Yatra — a fact that experienced pilgrims know but first-timers rarely consider. The monsoon has ended, the roads are freshly cleaned, the Himalayan skies are crystal clear, and pilgrim numbers drop by 70% from peak season. Hotels that are ₹3,000/night in May are ₹1,200–1,500 in October. Pony and palki availability is better. Darshan queues are shorter.
@@ -199,7 +203,10 @@ export default function ClosingDates() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

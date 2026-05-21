@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra History & Spiritual Significance – Why Adi Shankaracharya Founded It',
@@ -121,6 +122,9 @@ export default function Significance() {
                 <span style={{ fontSize: 11, background: 'var(--bg)', color: 'var(--teal)', padding: '2px 9px', borderRadius: 20, fontWeight: 700 }}>{dham.deity}</span>
                 <span style={{ fontSize: 11, color: '#7C3AED', fontWeight: 600 }}>↑ {dham.alt}</span>
               </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, marginBottom: 10 }}>{dham.myth}</p>
               <div style={{ background: 'rgba(11,123,139,0.06)', borderRadius: 8, padding: '9px 12px', fontSize: 13, color: '#0D5C70' }}>
                 <strong>Shankaracharya connection:</strong> {dham.shankaracharya}
@@ -160,7 +164,10 @@ export default function Significance() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

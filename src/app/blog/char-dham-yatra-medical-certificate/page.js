@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Medical Certificate 2026 – Who Needs It, How to Get It & What Tests',
@@ -113,6 +114,9 @@ export default function MedicalCertificate() {
                 <div style={{ fontWeight:700, fontSize:14, color:item.ok?'#15803D':'#9F1239' }}>{item.type}</div>
                 <div style={{ fontSize:13.5, color:item.ok?'#15803D':'#9F1239', marginTop:3 }}>{item.note}</div>
               </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
             </div>
           ))}
         </div>
@@ -143,7 +147,10 @@ export default function MedicalCertificate() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

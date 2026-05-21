@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines',
@@ -121,6 +122,9 @@ export default function WeatherGuide() {
                 <div key={p} style={{ display:'flex', gap:8, fontSize:13.5, color:'#334155', padding:'6px 0', borderBottom:'1px solid var(--border)' }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>{p}
                 </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
               ))}
             </div>
           </div>
@@ -144,7 +148,10 @@ export default function WeatherGuide() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

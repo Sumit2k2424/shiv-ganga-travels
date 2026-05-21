@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? (Step-by-Step)',
@@ -124,6 +125,9 @@ export default function CharDhamRegistrationHindi() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="registration" />
+
         <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
@@ -161,7 +165,10 @@ export default function CharDhamRegistrationHindi() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="registration" />
+</article>
     </>
   );
 }

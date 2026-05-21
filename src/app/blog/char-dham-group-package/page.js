@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Group Package 2026 – Price, Discount & Custom Itinerary for 10+ Pilgrims',
@@ -116,6 +117,9 @@ export default function GroupPackage() {
               </div>
               <div style={{ fontSize:13.5, color:'#475569' }}>{item.why}</div>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
           </div>
         ))}
 
@@ -157,7 +161,10 @@ export default function GroupPackage() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Complete Guide 2026 – Route, Cost, Registration & Travel Tips',
@@ -145,6 +146,9 @@ export default function CharDhamGuide() {
                 {c.items.map(i => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{i}</li>)}
               </ul>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
           ))}
         </div>
 
@@ -180,7 +184,10 @@ export default function CharDhamGuide() {
             View Packages →
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

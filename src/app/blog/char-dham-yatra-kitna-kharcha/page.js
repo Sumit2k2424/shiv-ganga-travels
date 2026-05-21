@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'चार धाम यात्रा 2026 में कितना खर्चा आता है? — प्रति व्यक्ति पूरा हिसाब',
@@ -135,6 +136,9 @@ export default function CharDhamKharcha() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="cost" />
+
         <h2 style={h2}>सीधे ऑपरेटर vs एजेंट — कितना फर्क पड़ता है?</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
@@ -187,7 +191,10 @@ export default function CharDhamKharcha() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="cost" />
+</article>
     </>
   );
 }

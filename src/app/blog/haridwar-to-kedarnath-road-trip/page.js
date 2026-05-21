@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Haridwar to Kedarnath Road Trip 2026 – Distance, Route, Drive Time & Best Stops',
@@ -134,6 +135,9 @@ export default function HaridwarToKedarnath() {
                 <div key={k} style={{ fontSize:13, color:'#475569', marginBottom:4, display:'flex', gap:6 }}>
                   <span style={{ flexShrink:0 }}>{k}:</span><span style={{ fontWeight:600, color:'#334155' }}>{v}</span>
                 </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="route" />
               ))}
               <p style={{ fontSize:12.5, color:'var(--text-muted)', marginTop:8, lineHeight:1.5 }}>{opt.notes}</p>
             </div>
@@ -158,7 +162,10 @@ export default function HaridwarToKedarnath() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="route" />
+</article>
     </>
   );
 }

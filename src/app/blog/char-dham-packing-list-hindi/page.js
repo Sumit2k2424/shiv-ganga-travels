@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'चार धाम यात्रा पैकिंग लिस्ट 2026 — क्या ले जाएं, क्या छोड़ें (Print करें)',
@@ -119,6 +120,9 @@ export default function CharDhamPackingListHindi() {
           ['ORS Powder (Extra)','5-6 Packets'],['गुड़ या खजूर','जल्दी Energy'],
         ]}/>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="packing" />
         <h2 style={h2}>❌ यह सब घर पर छोड़ दो</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 8, marginBottom: 28 }}>
           {[
@@ -159,7 +163,10 @@ export default function CharDhamPackingListHindi() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="packing" />
+</article>
     </>
   );
 }

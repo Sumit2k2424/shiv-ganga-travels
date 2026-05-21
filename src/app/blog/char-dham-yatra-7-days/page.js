@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra in 7 Days 2026 – Is It Possible? Complete Itinerary & Honest Tips',
@@ -158,6 +159,9 @@ export default function SevenDaysBlog() {
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{title}</div>
               <div style={{ fontSize:14.5, color:'#475569', lineHeight:1.75 }}>{desc}</div>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
           </div>
         ))}
 
@@ -202,7 +206,10 @@ export default function SevenDaysBlog() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

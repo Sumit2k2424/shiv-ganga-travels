@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Triyuginarayan Temple 2026 – Where Shiva Married Parvati, Route & Darshan Guide',
@@ -71,6 +72,9 @@ export default function Page() {
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{k}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
           ))}
         </div>
 
@@ -97,7 +101,10 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

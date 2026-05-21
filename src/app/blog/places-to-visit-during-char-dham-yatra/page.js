@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Top 10 Places to Visit During Char Dham Yatra 2026 – Beyond the 4 Dhams',
@@ -201,6 +202,9 @@ export default function PlacesToVisit() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Want These Stops Built Into Your Itinerary?</h3>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>All our packages include Devprayag, Gangnani, Harsil, and Mana Village as standard. Triyuginarayan and Chopta added on request.</p>
@@ -219,7 +223,10 @@ export default function PlacesToVisit() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

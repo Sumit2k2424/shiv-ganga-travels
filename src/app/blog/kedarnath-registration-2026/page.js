@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Yatra Registration 2026 – Online Process, Documents & WhatsApp Registration',
@@ -142,6 +143,9 @@ export default function KedarnathRegistration() {
             </div>
           ))}
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="registration" />
         <p style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 24 }}>Offline counters open from April 15, 2026. Carry original Aadhaar + passport photo. Biometric scan done on-site.</p>
 
         <h2 style={h2}>Why the 18,000/Day Limit Matters</h2>
@@ -187,7 +191,10 @@ export default function KedarnathRegistration() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="registration" />
+</article>
     </>
   );
 }

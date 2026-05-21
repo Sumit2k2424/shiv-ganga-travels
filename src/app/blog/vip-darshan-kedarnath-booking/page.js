@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'VIP Darshan Kedarnath 2026 – ₹1,100 Parchi, How to Book & Garbha Griha Access',
@@ -167,6 +168,9 @@ export default function VIPDarshan() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
+
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>We Arrange VIP Darshan for Our Pilgrims</h3>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>All Shiv Ganga Travels Kedarnath overnight packages include VIP darshan coordination and Abhishek arrangement. You pay the official ₹1,100 at the counter — we make sure you are there at the right time.</p>
@@ -192,7 +196,10 @@ export default function VIPDarshan() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

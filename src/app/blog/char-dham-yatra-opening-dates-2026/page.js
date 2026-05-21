@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Opening Dates 2026 – Yamunotri, Gangotri, Kedarnath & Badrinath Dates',
@@ -173,6 +174,9 @@ export default function OpeningDates() {
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', minWidth:150, flexShrink:0 }}>{m}</div>
             <div style={{ fontSize:14.5, color:'#475569', lineHeight:1.75 }}>{d}</div>
           </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         ))}
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
@@ -230,7 +234,10 @@ export default function OpeningDates() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

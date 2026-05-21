@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी',
@@ -133,6 +134,9 @@ export default function KedarnathPehliBaar() {
           </table>
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
+
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>हमारे साथ केदारनाथ जाएं — ₹6,499 से</h3>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 8 }}>✅ VIP दर्शन शामिल · ✅ अनुभवी पहाड़ी ड्राइवर · ✅ 24/7 WhatsApp support</p>
@@ -151,7 +155,10 @@ export default function KedarnathPehliBaar() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

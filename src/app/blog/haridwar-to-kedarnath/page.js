@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 export const metadata = {
   title: 'Haridwar to Kedarnath Distance, Route & Travel Guide 2026 – All Options Explained',
   description: 'Haridwar to Kedarnath is 228km by road + 16km trek. Complete 2026 guide: journey time, best stops, cab vs bus options, accommodation at Sonprayag and Guptkashi. Packages from ₹6,499.',
@@ -67,6 +68,9 @@ export default function HaridwarToKedarnath() {
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{s.place}</div>
             <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5 }}>{s.why}</div>
           </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
         ))}
       </div>
 
@@ -78,6 +82,9 @@ export default function HaridwarToKedarnath() {
           View Package →
         </div>
       </div>
-    </article>
+    
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
   </>);
 }

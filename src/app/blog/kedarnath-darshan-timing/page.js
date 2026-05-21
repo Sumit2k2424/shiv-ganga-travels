@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Kedarnath Darshan Timings 2026 – Morning & Evening Sessions, Aarti Time & VIP Darshan',
@@ -173,6 +174,9 @@ export default function KedarnathTimings() {
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
           The Shringaar Aarti is the most visually striking ritual at Kedarnath. The Shivalinga is adorned with flowers — particularly dhatura blossoms sacred to Lord Shiva — along with fresh bhasma (sacred ash), sandalwood paste, and precious stones. The aarti is performed by temple priests with large multi-wick diyas while conch shells, bells, and devotional instruments create an atmosphere unlike anything in modern India.
         </p>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:20 }}>
           Arriving at the temple by 7:00 PM secures a good viewing position. The aarti lasts approximately 20–25 minutes. The smoke from the diyas and incense in the enclosed stone temple creates a sacred haze. Many pilgrims describe the Shringaar Aarti as the most moving 25 minutes of their entire yatra.
         </p>
@@ -223,7 +227,10 @@ export default function KedarnathTimings() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="kedarnath" />
+</article>
     </>
   );
 }

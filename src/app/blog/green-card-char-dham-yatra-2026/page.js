@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Green Card for Char Dham Yatra 2026 – Vehicle Permit Rules, How to Apply & Cost',
@@ -154,6 +155,9 @@ export default function GreenCard() {
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 3 }}>{item.rule}</div>
                 <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.65 }}>{item.detail}</div>
               </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
             </div>
           ))}
         </div>
@@ -183,7 +187,10 @@ export default function GreenCard() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

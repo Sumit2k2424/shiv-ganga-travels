@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 export const metadata = {
   title: 'Badrinath Yatra Guide 2026 – Temple Timings, Route from Haridwar & Travel Tips',
   description: 'Complete Badrinath Yatra 2026 guide: darshan timings 4:30 AM–9 PM, Tapt Kund, Mana Village, best time to visit, and how to reach from Haridwar. Packages from ₹5,999.',
@@ -70,6 +71,9 @@ export default function BadrinathYatraGuide() {
       </div>
       <p style={{ ...p, fontSize:13.5 }}>💡 <strong>Pro tip:</strong> The <strong>Mahabhishek Puja at 4:30 AM</strong> is the most spiritually powerful. Book in advance through us — it requires advance registration and involves witnessing the lord being bathed and adorned for the day.</p>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
       <h2 style={h2}>Beyond the Temple — What Else to See</h2>
       <div style={{ display:'flex', flexDirection:'column', gap:8, marginBottom:24 }}>
         {[
@@ -94,6 +98,9 @@ export default function BadrinathYatraGuide() {
           View Package →
         </div>
       </div>
-    </article>
+    
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
   </>);
 }

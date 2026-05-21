@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra for Heart Patients 2026 – Altitude Risk, Safer Routes & Helicopter Options',
@@ -89,6 +90,9 @@ export default function Page() {
                 <div key={item} style={{ display:'flex', gap:8, fontSize:12.5, color:'var(--text-mid)', marginBottom:5, lineHeight:1.5 }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>•</span>{item}
                 </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
               ))}
             </div>
           ))}
@@ -115,7 +119,10 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

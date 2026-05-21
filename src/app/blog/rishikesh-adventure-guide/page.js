@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 export const metadata = {
   title: 'Rishikesh Adventure Guide 2026 – Rafting Prices, Bungee Jumping & Beach Camping',
   description: 'Complete Rishikesh adventure guide 2026: river rafting ₹600–1,200, bungee jumping ₹3,550, beach camping ₹1,200/night. Best time to visit, booking tips, and safety guide for all activities.',
@@ -76,6 +77,9 @@ export default function RishikeshAdventureGuide() {
           View Package →
         </div>
       </div>
-    </article>
+    
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
   </>);
 }

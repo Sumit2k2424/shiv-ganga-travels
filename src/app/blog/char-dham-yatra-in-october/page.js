@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra in October 2026 – Weather, Crowds, Closing Dates & Is It Worth It?',
@@ -86,6 +87,9 @@ export default function Page() {
         <p style={p}><strong>Temperature:</strong> October nights at Kedarnath can drop to -5°C or below. Badrinath nights hover around 0–5°C. Yamunotri and Gangotri are similar. You need proper warm clothing — a thin fleece jacket is not enough. We share a packing list when you book.</p>
         <p style={p}><strong>Some facilities close early:</strong> A few dhabas and shops on the Kedarnath trek route begin to close in early October as operators head home. Tea stalls at the midpoint may be shut. Carry your own snacks and water for the trek.</p>
 
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
         <h2 style={h2}>Our Recommendation for October Travel</h2>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
           {[
@@ -120,7 +124,10 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

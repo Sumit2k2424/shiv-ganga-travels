@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra with Kids 2026 – Age Tips, Altitude Safety & Family Planning Guide',
@@ -68,6 +69,9 @@ export default function Page() {
           ))}
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <h2 style={h2}>Making the Yatra Meaningful for Children</h2>
         <p style={p}>The Char Dham Yatra is not just a physical journey — it is a story. Children who understand the stories respond to it completely differently from those who are just being taken along. Before the trip, tell them the stories: why the Pandavas went to Kedarnath, why King Bhagirath performed penance at Gangotri, who Adi Shankaracharya was. The trek to Kedarnath becomes an adventure when a child knows they are following in the footsteps of the Pandavas.</p>
         <p style={p}>The Surya Kund at Yamunotri — where you cook rice in a 94°C natural hot spring — is genuinely magical for children. The Bhim Pul boulder bridge at Mana Village. The marmots that pop out of their burrows along the Kedarnath valley. The Himalayan monals (the jewel-coloured pheasants) that cross the path. A child who comes home from the Char Dham Yatra has experienced things that most adults never will.</p>
@@ -90,7 +94,10 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
+</article>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
 
 export const metadata = {
   title: 'Char Dham Yatra Registration 2026 – Free Step-by-Step Online, WhatsApp & Offline Guide',
@@ -393,6 +394,9 @@ export default function RegistrationBlog() {
             <p style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7, margin:'0 0 10px' }}>
               From 2026, the IRCTC helicopter portal (<strong>heliyatra.irctc.co.in</strong>) requires your Yatra Registration Number to log in. You cannot book a Kedarnath helicopter slot without first completing Char Dham Yatra registration. The sequence is:
             </p>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="registration" />
             {['1. Complete Char Dham Yatra registration at registrationandtouristcare.uk.gov.in (free, takes 15 min)','2. Note your Yatra Registration Number from the confirmation','3. Go to heliyatra.irctc.co.in and log in using your Registration Number + Aadhaar','4. Book your helicopter slot (May slots sell out by February — book early)'].map((step, i) => (
               <div key={i} style={{ display:'flex', gap:8, fontSize:13.5, color:'#185FA5', padding:'5px 0', borderBottom:'1px solid rgba(21,95,165,0.12)' }}>
                 <span style={{ fontWeight:700, flexShrink:0 }}>→</span> {step}
@@ -550,7 +554,10 @@ export default function RegistrationBlog() {
             ))}
           </div>
         </div>
-      </article>
+      
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="registration" />
+</article>
     </>
   );
 }
