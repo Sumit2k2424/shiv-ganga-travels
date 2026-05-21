@@ -511,10 +511,12 @@ export default function Navbar() {
                 style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:600, color:'var(--navy)', border:'1.5px solid var(--navy)', background:'var(--navy-light)', textDecoration:'none' }}>
                 📞 {SITE.phone}
               </a>
-               setMobileOpen(false)}
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share package details.')}`}
+                target="_blank" rel="nofollow noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
                 style={{ display:'block', textAlign:'center', padding:'13px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:700, color:'#fff', background:'var(--gold)', textDecoration:'none' }}>
                 Book Now
-              
+              </a>
             </div>
           </div>
         )}
