@@ -128,7 +128,6 @@ export default function RouteMap() {
           <div style={{ display:'flex', gap:8, flexShrink:0 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I was looking at the Char Dham route map. I want to know about packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'route_map_cta',value:1}); } catch(e){} }}
               style={{ background:'#25D366', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none' }}>
               💬 Get Quote
             </a>

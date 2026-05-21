@@ -144,13 +144,11 @@ export default function CharDhamYatra() {
           <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra Package 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
               💬 Book on WhatsApp
             </a>
             <a href='tel:+917017082807'
-              style={{ background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>
           </div>
@@ -226,8 +224,7 @@ export default function CharDhamYatra() {
             </div>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 on EMI.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'var(--gold)', color:'#fff', padding:'9px 18px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', flexShrink:0, whiteSpace:'nowrap' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background:'var(--gold)', color:'#fff', padding:'9px 18px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', flexShrink:0, whiteSpace:'nowrap' }}>
               Book with EMI →
             </a>
           </div>
@@ -350,8 +347,7 @@ export default function CharDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          📞 For exact seat counts on a specific date, call or WhatsApp — we confirm availability within 30 minutes. <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to check availability for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ color:'var(--teal)', fontWeight:600 }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>Check availability →</a>
+          📞 For exact seat counts on a specific date, call or WhatsApp — we confirm availability within 30 minutes. <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to check availability for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ color:'var(--teal)', fontWeight:600 }}>Check availability →</a>
         </p>
 
         {/* Room-type pricing — answers the "sharing vs private room" question */}
@@ -602,13 +598,11 @@ export default function CharDhamYatra() {
           <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               💬 Book on WhatsApp
             </a>
             <a href='tel:+917017082807'
-              style={{ background:'#fff', color:'var(--navy)', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#fff', color:'var(--navy)', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>
             

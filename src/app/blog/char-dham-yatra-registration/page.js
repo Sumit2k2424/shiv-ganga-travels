@@ -175,7 +175,6 @@ export default function RegistrationBlog() {
           <div style={{ display:'flex', gap:8, flexWrap:'wrap', flexShrink:0 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Please help me with Char Dham Yatra registration 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'registration_page_cta',value:1}); } catch(e){} }}
               style={{ background:'#25D366', color:'#fff', padding:'10px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' }}>
               💬 Register via WhatsApp
             </a>
@@ -382,8 +381,7 @@ export default function RegistrationBlog() {
             </div>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 and need help with registration and daily limit planning.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}>
               💬 Ask Us
             </a>
           </div>
@@ -521,13 +519,11 @@ export default function RegistrationBlog() {
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Char Dham Yatra registration 2026. Please guide me.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Help Now
             </a>
             <a href='tel:+917017082807'
-              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>
+              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>
           </div>

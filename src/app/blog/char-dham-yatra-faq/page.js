@@ -282,7 +282,6 @@ export default function FAQ() {
           <div style={{ display:'flex', gap:8, flexWrap:'wrap', flexShrink:0 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I read your Char Dham FAQ page. I want to know about packages and dates for 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'faq_page_cta',value:1}); } catch(e){} }}
               style={{ background:'#25D366', color:'#fff', padding:'9px 16px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' }}>
               💬 WhatsApp Quote
             </a>
@@ -348,13 +347,11 @@ export default function FAQ() {
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a question about Char Dham Yatra 2026.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','generate_lead',{event_category:'engagement',event_label:'whatsapp_hero_cta',value:1}); } catch(e){} }}>
+              style={{ background: '#25D366', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
               💬 Ask on WhatsApp
             </a>
             <a href='tel:+917017082807'
-              style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}
-              onClick={() => { try { if(window.gtag) window.gtag('event','phone_call_click',{event_category:'engagement',event_label:'phone_cta',value:1}); } catch(e){} }}>
+              style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>
           </div>
