@@ -119,7 +119,7 @@ export default function FirstTimerGuide() {
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{item.t}</div>
               <div style={{ fontSize:14, color:'var(--text-muted)', lineHeight:1.7 }}>
                 {item.d}
-                {item.n==='5' && How to Reach Haridwar →}
+                {item.n==='5' && <a href="/how-to-reach-haridwar" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>How to Reach Haridwar →</a>}
               </div>
             </div>
           </div>
