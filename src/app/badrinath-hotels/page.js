@@ -78,7 +78,7 @@ export default function BadrinathHotels() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 21, 2026</div>
 
         <p style={p}>
           Badrinath town has limited hotel capacity — it's a high-altitude mountain settlement, not a tourist resort. For most pilgrims, the smart strategy is to stay one night in Joshimath (45km below, 1,875m altitude) for acclimatisation, then travel up to Badrinath for darshan, and optionally spend the night in Badrinath itself before descending. Our packages are designed around this logic.

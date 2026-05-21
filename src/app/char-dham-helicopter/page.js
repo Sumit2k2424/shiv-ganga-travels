@@ -47,7 +47,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>

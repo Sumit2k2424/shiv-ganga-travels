@@ -31,7 +31,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <p style={p}>Most Badrinath pilgrims spend their entire time at the temple, do their darshan, and leave without ever knowing that 3km up the same road is one of the most extraordinary places in India. Mana Village — officially the last inhabited village before the China (Tibet) border — sits at 3,200m at the confluence of the Saraswati and Alaknanda rivers, surrounded by peaks above 6,000m, and it has been continuously inhabited for over a thousand years.</p>
         <p style={p}>The village is small — maybe 70–80 stone houses — and for eight months of the year it is completely buried under snow. The Bhotia community who live here migrate to the lower valleys every winter and return in April when the Badrinath temple reopens. When we say India's last village, we mean it literally: beyond Mana, the road continues to the Mana Pass and into Tibet. There is a signboard at the village entrance that says exactly this.</p>

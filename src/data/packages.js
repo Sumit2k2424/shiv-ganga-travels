@@ -1,7 +1,7 @@
 // ================================================================
 // SHIV GANGA TRAVELS — COMPLETE UTTARAKHAND PACKAGE DATA 2026
 // Source: gangotritravels.com itineraries + market research
-// Updated: April 2026
+// Updated: May 2026
 // ================================================================
 
 export const SITE = {

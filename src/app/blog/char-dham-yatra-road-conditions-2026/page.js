@@ -73,7 +73,7 @@ export default function RoadConditions() {
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Updated May 2026 · Season Open
+            Updated May 21, 2026 · Peak Season Active
           </span>
           <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
             Char Dham Yatra Road Conditions 2026
@@ -93,7 +93,7 @@ export default function RoadConditions() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 2026 · Season opened April 19–23</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Peak Season — All Routes Open</div>
 
         <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#15803D' }}>
           <strong>2026 Season Status:</strong> All four Char Dham routes are open as of April 2026. Yamunotri and Gangotri opened April 19, Kedarnath April 22, Badrinath April 23. No major road closures reported at time of writing. Monsoon season (July–August) is when conditions deteriorate — plan accordingly.

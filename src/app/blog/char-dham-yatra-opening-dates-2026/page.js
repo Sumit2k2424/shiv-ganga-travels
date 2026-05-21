@@ -57,6 +57,8 @@ export default function OpeningDates() {
       <Schema/>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
         <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
+          <span style={{ background:'rgba(21,128,61,0.25)', color:'#86EFAC', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:10 }}>🟢 Season Open — All 4 Dhams Active</span>
+          <br/>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Official Dates · 2026 Season</span>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
             Char Dham Yatra Opening Dates 2026
@@ -76,7 +78,7 @@ export default function OpeningDates() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026 · Officially verified</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Officially verified</div>
 
         {/* Quick dates card */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px', marginBottom:28 }}>

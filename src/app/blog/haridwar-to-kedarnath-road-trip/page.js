@@ -67,7 +67,7 @@ export default function HaridwarToKedarnath() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
           {[['Total Distance','218km to Gaurikund'],['Driving Time','6–7 hours'],['Main Route','NH7 via Rishikesh'],['Key Town','Guptkashi (base)'],['Final Checkpoint','Sonprayag'],['Trek from Gaurikund','16km one way']].map(([k,v])=>(

@@ -84,7 +84,7 @@ export default function KedarnathHotels() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 21, 2026</div>
 
         <div style={{ background:'#fffbeb', border:'1px solid #fcd34d', borderRadius:12, padding:'14px 18px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#92400e', marginBottom:6 }}>⚠️ Book early for peak season (May–June, October)</div>

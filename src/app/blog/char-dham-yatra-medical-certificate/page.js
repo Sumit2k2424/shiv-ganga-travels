@@ -50,7 +50,7 @@ export default function MedicalCertificate() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>
           <span style={{ fontSize:26, flexShrink:0 }}>⚠️</span>

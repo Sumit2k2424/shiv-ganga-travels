@@ -31,7 +31,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10, marginBottom:28 }}>
           {[{icon:'📍',label:'Location',val:'Triyuginarayan village, Rudraprayag'},{icon:'🏔️',label:'Altitude',val:'1,980m'},{icon:'🚗',label:'Distance',val:'12km from Sonprayag'},{icon:'🔥',label:'Feature',val:'Eternal sacred fire'},{icon:'🙏',label:'Deity',val:'Lord Vishnu (as Narayana)'},{icon:'📅',label:'Best Time',val:'May–June, Sept–Oct'}].map(s=>(

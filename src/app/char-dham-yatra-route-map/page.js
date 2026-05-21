@@ -128,7 +128,7 @@ export default function RouteMap() {
             { label:'Max Altitude', val:'3,583m', icon:'🏔️' },
             { label:'Treks Required', val:'2 of 4 dhams', icon:'🥾' },
             { label:'Base City', val:'Haridwar', icon:'📍' },
-            { label:'Season', val:'Apr 19 – Nov 13', icon:'🌤️' },
+            { label:'Season', val:'Apr 19 – Nov 13 · Season Open', icon:'🌤️' },
           ].map(s => (
             <div key={s.label} style={{ background:'var(--navy-light)', borderRadius:10, padding:'14px', textAlign:'center' }}>
               <div style={{ fontSize:20, marginBottom:4 }}>{s.icon}</div>

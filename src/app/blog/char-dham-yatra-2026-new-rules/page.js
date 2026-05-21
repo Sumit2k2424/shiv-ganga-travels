@@ -137,7 +137,7 @@ export default function NewRules2026() {
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.25)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>
-            🔴 Live — Updated April 2026
+            🔴 Live — Updated May 21, 2026
           </span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
             Char Dham Yatra 2026 New Rules — What Changed
@@ -165,7 +165,7 @@ export default function NewRules2026() {
           </p>
         </div>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of April 2026.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of May 2026.</p>
 
         <h2 style={h2}>All 7 Rule Changes for 2026</h2>
 

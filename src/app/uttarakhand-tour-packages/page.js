@@ -70,7 +70,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>

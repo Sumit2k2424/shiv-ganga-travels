@@ -105,7 +105,7 @@ export default function PackageTypes() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> May 2026 · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
+          🗓️ <strong>Last updated:</strong> May 21, 2026 · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>
 
         <p style={p}>

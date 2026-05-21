@@ -47,7 +47,7 @@ export default function PkgVsSelf() {
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra · Founder, Shiv Ganga Travels · Retd. Army Officer</span>
-          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> April 2026</span>
+          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> May 21, 2026</span>
         </div>
       </div>
       <article className="blog-container" itemScope itemType="https://schema.org/Article">

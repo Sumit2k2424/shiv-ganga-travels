@@ -259,7 +259,7 @@ export default function PackageDetailPage({ params }) {
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
-        <span>🗓️ <strong>Last updated:</strong> May 2026 · Season open Apr 19 – Nov 2026</span>
+        <span>🗓️ <strong>Last updated:</strong> May 21, 2026 · Season open Apr 19 – Nov 2026</span>
         <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · 15 seasons)</span>
       </div>
 

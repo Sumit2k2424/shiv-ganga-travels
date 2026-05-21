@@ -161,7 +161,7 @@ export default function BadrinathYatraPage() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 2026 · Season open: Apr 23 – Nov 2026</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Season open: Apr 23 – Nov 2026</div>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

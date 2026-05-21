@@ -58,7 +58,7 @@ export default function HowToReachBadrinath() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 21, 2026</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
           {[['Altitude','3,133m'],['From Haridwar','~320km by road'],['Drive Time','9–10 hrs'],['Trek Required','None (motorable)'],['Nearest Town','Joshimath (45km)'],['Temple Opens','Apr 23, 2026']].map(([k,v]) => (

@@ -52,7 +52,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 4, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Panch Kedar</strong> is a circuit of five sacred Shiva temples in the Garhwal Himalayas of Uttarakhand, each believed to enshrine a different part of Lord Shiva’s body that fell here after the Mahabharata. According to legend, the Pandavas sought Shiva’s blessing after the Kurukshetra war, but Shiva evaded them by hiding as a bull. When cornered, he dived into the earth — different body parts emerging at five locations now known as the Panch Kedar.</p>
         <div style={{display:'flex',flexDirection:'column',gap:'8px',marginBottom:'24px'}}>

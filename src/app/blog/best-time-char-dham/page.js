@@ -83,7 +83,7 @@ export default function BestTimeCharDham() {
       </nav>
 
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: May 2026 · Author: Shiv Ganga Travels team, Haridwar</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: May 21, 2026 · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', marginBottom:28 }}>
