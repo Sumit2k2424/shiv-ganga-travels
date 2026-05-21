@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+
+// Disable Next.js anonymous telemetry
+process.env.NEXT_TELEMETRY_DISABLED = '1';
+
 const nextConfig = {
   staticPageGenerationTimeout: 180,
 
