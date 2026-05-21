@@ -1,4 +1,4 @@
-﻿import BlogCTA from '@/components/BlogCTA';
+import BlogCTA from '@/components/BlogCTA';
 import blogs from '@/data/blogs.json'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'

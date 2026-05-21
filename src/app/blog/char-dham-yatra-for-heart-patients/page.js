@@ -89,11 +89,11 @@ export default function Page() {
               {section.items.map(item=>(
                 <div key={item} style={{ display:'flex', gap:8, fontSize:12.5, color:'var(--text-mid)', marginBottom:5, lineHeight:1.5 }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>•</span>{item}
-                </div>
+                </div>              ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-              ))}
+
             </div>
           ))}
         </div>

@@ -67,11 +67,11 @@ export default function HaridwarToKedarnath() {
           <div key={s.place} style={{ background:'var(--bg)', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{s.place}</div>
             <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5 }}>{s.why}</div>
-          </div>
+          </div>        ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
-        ))}
+
       </div>
 
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>

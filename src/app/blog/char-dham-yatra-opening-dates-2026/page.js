@@ -173,11 +173,11 @@ export default function OpeningDates() {
           <div key={m} style={{ display:'flex', gap:14, padding:'12px 0', borderBottom:'1px solid var(--border)' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', minWidth:150, flexShrink:0 }}>{m}</div>
             <div style={{ fontSize:14.5, color:'#475569', lineHeight:1.75 }}>{d}</div>
-          </div>
+          </div>        ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-        ))}
+
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Char Dham Yatra 2026 — Season Still Open</h3>

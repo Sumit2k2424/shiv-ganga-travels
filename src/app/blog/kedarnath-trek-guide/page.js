@@ -227,11 +227,11 @@ export default function KedarnathTrekGuide() {
               <div style={{ fontSize:12, marginBottom:8 }}>{s.stars}</div>
               <div style={{ fontSize:12.5, color:'#16a34a', lineHeight:1.65, marginBottom:6 }}>✅ {s.pros}</div>
               <div style={{ fontSize:12.5, color:'#dc2626', lineHeight:1.65 }}>⚠️ {s.cons}</div>
-            </div>
+            </div>          ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
-          ))}
+
         </div>
         <p style={p}><strong>Our honest advice:</strong> If you are travelling with family or elderly parents, stay at <strong>Guptkashi or Sonprayag</strong> and do the trek as a day trip. Start at 4–5AM, reach Kedarnath by noon, complete darshan, and descend by evening. Comfort at the base is dramatically better, and the trek itself is unchanged.</p>
 

@@ -121,11 +121,11 @@ export default function WeatherGuide() {
               {item.pack.map(p => (
                 <div key={p} style={{ display:'flex', gap:8, fontSize:13.5, color:'#334155', padding:'6px 0', borderBottom:'1px solid var(--border)' }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>{p}
-                </div>
+                </div>              ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-              ))}
+
             </div>
           </div>
         ))}

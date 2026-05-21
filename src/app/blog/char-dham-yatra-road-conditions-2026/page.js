@@ -147,11 +147,11 @@ export default function RoadConditions() {
             <div key={item.rule} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{item.rule}</div>
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.65 }}>{item.detail}</div>
-            </div>
+            </div>          ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="route" />
-          ))}
+
         </div>
 
         <h2 style={h2}>How to Check Live Road Status</h2>

@@ -145,11 +145,11 @@ export default function CharDhamGuide() {
               <ul style={{ paddingLeft:14, margin:0 }}>
                 {c.items.map(i => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{i}</li>)}
               </ul>
-            </div>
+            </div>          ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-          ))}
+
         </div>
 
         <h2 style={h2}>Frequently Asked Questions</h2>

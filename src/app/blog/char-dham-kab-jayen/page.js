@@ -117,11 +117,11 @@ export default function CharDhamKabJayen() {
               <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 4 }}>{who}</div>
               <div style={{ fontWeight: 800, fontSize: 14, color: '#1D9E75', marginBottom: 4 }}>→ {rec}</div>
               <div style={{ fontSize: 12, color: '#64748b' }}>{why}</div>
-            </div>
+            </div>          ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-          ))}
+
         </div>
 
         <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>

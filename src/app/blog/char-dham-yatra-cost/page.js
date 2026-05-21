@@ -204,11 +204,11 @@ export default function CharDhamCost() {
               <div style={{ fontWeight: 900, fontSize: 20, color, marginBottom: 12 }}>{total}</div>
               {breakdown.map(line => (<div key={line} style={{ fontSize: 12.5, color: '#475569', padding: '3px 0', borderBottom: '1px solid var(--bg)', display: 'flex', gap: 6 }}><span style={{ color, flexShrink: 0 }}>•</span>{line}</div>))}
               <div style={{ fontSize: 12.5, color: '#64748b', marginTop: 8, fontStyle: 'italic' }}>{note}</div>
-            </div>
+            </div>          ))}
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="cost" />
-          ))}
+
         </div>
 
         <h2 style={h2}>7. What Drives the Price Up — and How to Keep Costs Down</h2>
