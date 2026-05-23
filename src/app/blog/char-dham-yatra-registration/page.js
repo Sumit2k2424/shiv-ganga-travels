@@ -35,7 +35,7 @@ function Schema() {
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-      }/about`,
+      },
     },
     publisher: {
       '@type': 'Organization',
