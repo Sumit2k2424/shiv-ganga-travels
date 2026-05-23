@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Opening Dates 2026 – Yamunotri, Gangotri, Kedarnath & Badrinath Dates',
@@ -52,9 +53,39 @@ const DHAMS = [
     bestTime:'May–June, September–October', crowd:'Second-highest after Kedarnath — daily limit 20,000 pilgrims' },
 ];
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Char Dham Yatra Opening Dates 2026 – Yamunotri, Gangotri, Kedarnath & Badrinath Dates',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2026-02-15',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function OpeningDates() {
   return (
     <>
+      <Schema />
+      <    <>
       <Schema/>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
         <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
@@ -79,6 +110,9 @@ export default function OpeningDates() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Officially verified</div>
 
         {/* Quick dates card */}
@@ -235,6 +269,9 @@ export default function OpeningDates() {
           </div>
         </div>
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

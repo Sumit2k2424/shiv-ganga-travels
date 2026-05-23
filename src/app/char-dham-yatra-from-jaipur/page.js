@@ -59,7 +59,7 @@ export default function Page() {
             560 km by road (8–9 hrs) or train · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹22,999' }/person</strong> · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['🚂 Overnight train','✅ Zero commission','🙏 VIP darshan included','⭐ 4.9/5 · 850+ reviews'].map(t=>(
+            {['🚂 Overnight train','✅ Zero commission','🙏 VIP darshan included','⭐ 4.6/5 · 38 reviews'].map(t=>(
               <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

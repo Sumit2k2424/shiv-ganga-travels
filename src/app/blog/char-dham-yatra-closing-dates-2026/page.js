@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Closing Dates 2026 – When Kedarnath, Badrinath & All 4 Temples Close',
@@ -45,6 +46,34 @@ function Schema() {
 
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.15rem,2.5vw,1.4rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };
 const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
+
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Char Dham Yatra Closing Dates 2026 – When Kedarnath, Badrinath & All 4 Temples Close',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
 
 export default function ClosingDates() {
   const dhams = [
@@ -112,6 +141,9 @@ export default function ClosingDates() {
       </nav>
 
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 21, 2026 — dates confirmed for 2026 season
         </div>

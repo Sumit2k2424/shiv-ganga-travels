@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines',
@@ -41,9 +42,39 @@ const WEATHER = [
   { month:'Late Oct–November', kedarnath:'−5 to 5°C · Possible snowfall', badrinath:'0 to 10°C · Closing season', gangotri:'−2 to 8°C · Cold', yamunotri:'−2 to 8°C · Very cold', pilgrim:'Very low', suitability:'Cold with early snowfall risk. Closing ceremonies on Bhai Dooj. Season ends Nov 11–13.', verdict:'⭐⭐⭐' },
 ];
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2024-06-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function WeatherGuide() {
   return (
     <>
+      <Schema />
+      <    <>
       <Schema/>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
         <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
@@ -66,6 +97,9 @@ export default function WeatherGuide() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
         {/* Season summary */}

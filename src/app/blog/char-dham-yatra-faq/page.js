@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra FAQ 2026 – 50 Most-Asked Questions Answered by an Expert',
@@ -174,10 +175,12 @@ function FAQSchema() {
     headline: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered by Experts',
     description: 'Complete FAQ for Char Dham Yatra 2026 covering cost, registration, safety, packing, rules, and accommodation.',
     author: {
-      '@type': 'Person',
-      name: 'Dhanesh Chandra Mishra',
-      jobTitle: 'Founder, Shiv Ganga Travels — Retired Indian Army Officer',
-      url: `${SITE.baseUrl}/about`,
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }/about`,
     },
     publisher: {
       '@type': 'Organization',

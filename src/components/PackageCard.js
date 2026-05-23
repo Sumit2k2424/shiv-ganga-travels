@@ -105,7 +105,7 @@ export default function PackageCard({ pkg }) {
             <div style={{ display:"flex", alignItems:"center", gap:7 }}>
               <Stars/>
               <span style={{ fontSize:11, color:"rgba(255,255,255,0.75)" }}>
-                4.9 · Last booked {proof}
+                4.6 · Last booked {proof}
               </span>
             </div>
           </div>

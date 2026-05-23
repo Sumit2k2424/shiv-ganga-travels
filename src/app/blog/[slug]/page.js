@@ -1,4 +1,5 @@
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 import blogs from '@/data/blogs.json'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -25,6 +26,34 @@ export function generateMetadata({ params }) {
     openGraph: { title, description, url: `${SITE.baseUrl}/blog/${blog.slug}`, type: 'article' },
   }
 }
+
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Blog',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/[slug]`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
 
 export default function BlogPage({ params }) {
   const blog = blogs.find(b => b.slug === params.slug)

@@ -45,8 +45,8 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.9,
-      reviewCount: 850,
+      ratingValue: 4.6,
+      reviewCount: 38,
       bestRating: 5,
     },
   };
@@ -67,8 +67,8 @@ function Schema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.9,
-      reviewCount: 850,
+      ratingValue: 4.6,
+      reviewCount: 38,
     },
   };
 
@@ -551,7 +551,7 @@ export default function CharDhamYatra() {
             { icon:'💰', point:'No middleman pricing — pay us directly' },
             { icon:'🎫', point:'VIP darshan at all 4 dhams — skip queues' },
             { icon:'🚌', point:'Own AC fleet — no rental vehicles' },
-            { icon:'⭐', point:'4.9/5 Google rating — 850+ verified reviews' },
+            { icon:'⭐', point:'4.6/5 Google rating — 38 verified reviews' },
             { icon:'🛡️', point:'Uttarakhand Tourism Board registered operator' },
             { icon:'💊', point:'Oxygen cylinder + first aid on every vehicle' },
           ].map(w => (

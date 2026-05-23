@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Complete Guide 2026 — History, Significance, Route & FAQs',
@@ -284,6 +285,9 @@ export default function CharDhamCompleteGuide() {
       </div>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <meta itemProp="datePublished" content="2026-05-21" />
         <meta itemProp="dateModified" content="2026-05-21" />
         <meta itemProp="author" content="Shiv Ganga Travels" />

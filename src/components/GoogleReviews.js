@@ -99,7 +99,7 @@ const MAPS_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602#re
 const WRITE_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 
 export default function GoogleReviews() {
-  const [data, setData]       = useState({ reviews: STATIC, rating: 4.9, total: 850, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
+  const [data, setData]       = useState({ reviews: STATIC, rating: 4.6, total: 38, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef(null);
   const [canL, setCanL] = useState(false);
@@ -156,12 +156,12 @@ export default function GoogleReviews() {
           <div>
             <div style={{ display:'flex', alignItems:'baseline', gap:6 }}>
               <span style={{ fontSize:22, fontWeight:700, color:'#0f2b5b', lineHeight:1 }}>
-                {data.rating || '4.9'}
+                {data.rating || '4.6'}
               </span>
-              <Stars n={Math.round(data.rating || 4.9)}/>
+              <Stars n={Math.round(data.rating || 4.6)}/>
             </div>
             <div style={{ fontSize:12, color:'#8898a6', marginTop:2 }}>
-              {data.total ? `${data.total.toLocaleString('en-IN')}+` : '850+'} reviews on Google
+              {data.total ? `${data.total.toLocaleString('en-IN')}+` : '38+'} reviews on Google
               {data.source === 'live' && (
                 <span style={{ marginLeft:6, background:'#dcfce7', color:'#15803d',
                   fontSize:10, fontWeight:700, padding:'1px 6px', borderRadius:20 }}>LIVE</span>

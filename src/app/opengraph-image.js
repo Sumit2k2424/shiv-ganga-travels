@@ -55,7 +55,7 @@ export default async function Image() {
               { num:'₹19,500', label:'Starting price' },
               { num:'50,000+', label:'Happy pilgrims' },
               { num:'15 Years', label:'Of trust' },
-              { num:'4.9/5 ★', label:'Google rating' },
+              { num:'4.6/5 ★', label:'Google rating' },
             ].map(s => (
               <div key={s.num} style={{ display:'flex', flexDirection:'column', gap:'4px' }}>
                 <span style={{ fontSize:'22px', fontWeight:'700', color:'#E8920A' }}>{s.num}</span>

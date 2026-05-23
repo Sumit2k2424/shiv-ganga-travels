@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? (Step-by-Step)',
@@ -28,6 +29,34 @@ function Schema() {
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 36 };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? (Step-by-Step)',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-registration-hindi`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function CharDhamRegistrationHindi() {
   const steps = [
     ['Website खोलें','Chrome में जाएं: registrationandtouristcare.uk.gov.in — यह उत्तराखंड सरकार की official website है।'],
@@ -43,6 +72,8 @@ export default function CharDhamRegistrationHindi() {
 
   return (
     <>
+      <Schema />
+      <    <>
       <Schema/>
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
@@ -61,6 +92,9 @@ export default function CharDhamRegistrationHindi() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

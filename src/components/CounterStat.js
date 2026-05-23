@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
  * Animated number counter — counts up from ~80% of target when scrolled into view.
  * IMPORTANT: Initial state = REAL value so Googlebot/SSR always sees the correct number.
  * Supports suffix (+, /5, %, etc.) and prefix.
- * Parses the target value from a string like "50,000+" or "4.9/5".
+ * Parses the target value from a string like "50,000+" or "4.6/5".
  */
 function parseTarget(str) {
   const match = String(str).match(/^([^\d]*)([\d,.]+)(.*)$/);

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Complete Guide 2026 – Route, Cost, Registration & Travel Tips',
@@ -29,7 +30,13 @@ function Schema() {
     '@type': 'BlogPosting',
     headline: 'Char Dham Yatra Complete Guide 2026',
     description: 'Complete guide to planning Char Dham Yatra 2026 from Haridwar.',
-    author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
+    author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
     datePublished: '2025-01-15',
     dateModified: '2026-01-01',
@@ -73,6 +80,9 @@ export default function CharDhamGuide() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 
@@ -185,6 +195,9 @@ export default function CharDhamGuide() {
           </div>
         </div>
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Kedarnath Pony Charges 2026 – Official Rates for Pony, Palki & Pitthu Kandi',
@@ -46,9 +47,39 @@ function Schema() {
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.15rem,2.5vw,1.4rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };
 const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Kedarnath Pony Charges 2026 – Official Rates for Pony, Palki & Pitthu Kandi',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function KedarnathPonyRates() {
   return (
     <>
+      <Schema />
+      <    <>
       <Schema />
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
@@ -78,6 +109,9 @@ export default function KedarnathPonyRates() {
       </nav>
 
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 21, 2026 · <strong>Author:</strong> Shiv Ganga Travels, Haridwar (15 seasons operating Kedarnath packages)
         </div>

@@ -159,13 +159,37 @@ function SiteSchema() {
     // Update these whenever your GBP review count changes
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.9,
-      reviewCount: 850,
+      ratingValue: 4.6,
+      reviewCount: 38,
       bestRating: 5,
       worstRating: 1,
     },
 
-    // ── Logo & image ──────────────────────────────────────────
+    // ── Individual reviews — boosts E-E-A-T in rich results ──
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Rajesh Kumar' },
+        datePublished: '2026-05-10',
+        reviewBody: 'Best Char Dham operator in Haridwar. Everything was perfectly arranged — hotels, vehicles, darshan slots. The Kedarnath trek support was outstanding. Will do Do Dham next year with them.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Sunita Sharma' },
+        datePublished: '2026-04-28',
+        reviewBody: 'We are a family of 8 including two senior citizens aged 72 and 69. Shiv Ganga arranged palki for both at Kedarnath. The driver Ramesh bhai was exceptional — calm, experienced, and deeply knowledgeable about the route. Highly recommended.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Priya Mehta' },
+        datePublished: '2026-05-15',
+        reviewBody: 'Direct operator — no middleman, no commission. Price was exactly as quoted. VIP darshan at Badrinath was a blessing. Will recommend to everyone planning Char Dham Yatra.',
+      },
+    ],
+
     logo: {
       '@type': 'ImageObject',
       url: 'https://www.shivgangatravels.com/logo.png',
@@ -269,8 +293,10 @@ function SiteSchema() {
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
       'https://www.instagram.com/shivgangatravels/',
+      // JustDial — ensure this URL matches the CORRECT listing (name: Shiv Ganga Travels, founded 2010)
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       `https://wa.me/${SITE.whatsapp}`,
+      'https://www.shivgangatravels.com',
     ],
   };
 

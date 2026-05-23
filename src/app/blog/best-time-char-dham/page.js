@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
@@ -38,6 +39,34 @@ const faqSchema = {
       acceptedAnswer:{ '@type':'Answer', text:'October (first two weeks) is excellent — arguably the best month for photography and comfort. Post-monsoon skies are the clearest of the year. The Himalayan peaks behind Kedarnath, Gangotri and Badrinath emerge in sharp relief. Crowds thin out sharply after September. Night temperatures drop to 2–5°C at the dhams by October, so carry warm layers.' }},
   ],
 };
+
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/best-time-char-dham`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
 
 export default function BestTimeCharDham() {
   const months = [
@@ -84,6 +113,9 @@ export default function BestTimeCharDham() {
       </nav>
 
       <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: May 21, 2026 · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}

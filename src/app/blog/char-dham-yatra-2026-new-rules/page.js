@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra 2026 New Rules – Phone Ban, Green Card, Medical Certificate & More',
@@ -37,6 +38,34 @@ function Schema() {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Char Dham Yatra 2026 New Rules – Phone Ban, Green Card, Medical Certificate & More',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2026-02-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
 
 export default function NewRules2026() {
   const rules = [
@@ -159,6 +188,9 @@ export default function NewRules2026() {
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
+
         <div style={{ background:'#fee2e2', border:'1.5px solid #fca5a5', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Important Notice for 2026 Pilgrims</div>
           <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>
@@ -226,6 +258,9 @@ export default function NewRules2026() {
           </div>
         </div>
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

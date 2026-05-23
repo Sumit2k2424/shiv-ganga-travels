@@ -1405,13 +1405,15 @@ export const TRUST = {
   stats: [
     { icon:'🏆', value:'15+',     label:'Years of Trust',    sub:'Serving pilgrims since 2010' },
     { icon:'🙏', value:'50,000+', label:'Happy Pilgrims',    sub:'From all 28 states of India' },
-    { icon:'⭐', value:'4.9/5',   label:'Google Rating',     sub:'Based on 850+ verified reviews' },
+    { icon:'⭐', value:'4.6/5',   label:'Google Rating',     sub:'Based on 38 verified reviews' },
     { icon:'🛡️', value:'100%',   label:'Safe Journeys',     sub:'Zero incident record in 15 years' },
   ],
   certifications: [
-    'Registered with Uttarakhand Tourism Development Board',
-    'Member of IATO (Indian Association of Tour Operators)',
-    'ISO 9001:2015 Certified Quality Management System',
+    { text:'Registered with Uttarakhand Tourism Development Board', url:'https://uttarakhandtourism.gov.in', linkText:'Verify →' },
+    { text:'Yatra Permit Authority: Uttarakhand Tourism', url:'https://registrationandtouristcare.uk.gov.in', linkText:'Registration Portal →' },
+    { text:'Member of IATO (Indian Association of Tour Operators)', url:'https://www.iato.in', linkText:'IATO →' },
+    { text:'ISO 9001:2015 Certified Quality Management System', url:null, linkText:null },
+  ],
     'Government-approved Char Dham Yatra Operator 2026',
   ],
 };

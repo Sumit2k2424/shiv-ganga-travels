@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Registration 2026 – Free Step-by-Step Online, WhatsApp & Offline Guide',
@@ -29,10 +30,12 @@ function Schema() {
     name: 'How to Register for Char Dham Yatra 2026',
     description: 'Step-by-step process to complete mandatory Char Dham Yatra biometric registration online at registrationandtouristcare.uk.gov.in or at designated',
     author: {
-      '@type': 'Person',
-      name: 'Dhanesh Chandra Mishra',
-      jobTitle: 'Founder, Shiv Ganga Travels — Retired Indian Army Officer',
-      url: `${SITE.baseUrl}/about`,
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }/about`,
     },
     publisher: {
       '@type': 'Organization',
@@ -119,9 +122,39 @@ function Schema() {
 const H2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.55rem)', fontWeight:700, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const H3 = { fontFamily:'var(--font-display)', fontSize:'clamp(1rem,2vw,1.2rem)', fontWeight:700, color:'var(--teal)', marginBottom:8, marginTop:24 };
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Char Dham Yatra Registration 2026 – Free Step-by-Step Online, WhatsApp & Offline Guide',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-registration`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function RegistrationBlog() {
   return (
     <>
+      <Schema />
+      <    <>
       <Schema/>
 
       {/* Hero */}
@@ -166,6 +199,9 @@ export default function RegistrationBlog() {
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
+
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:24, display:'flex', flexWrap:'wrap', gap:16, alignItems:'center', justifyContent:'space-between' }}>
           <div>
@@ -191,7 +227,7 @@ export default function RegistrationBlog() {
           <div>
             <div style={{ fontWeight:700, fontSize:14, color:'#7B3F00', marginBottom:6 }}>Mandatory from Day 1 of the Season</div>
             <p style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7, margin:0 }}>
-              Char Dham Yatra registration is <strong>not optional</strong> in 2026. Police checkpoints at Sonprayag (Kedarnath), Joshimath (Badrinath), Barkot (Yamunotri), and Uttarkashi (Gangotri) will turn back any pilgrim without a valid yatra permit. There is <strong>no on-the-spot registration</strong> at these checkpoints.
+              Char Dham Yatra registration is <strong>not optional</strong> in 2026. Source: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer" style={{color:"var(--teal)",fontWeight:600}}>Uttarakhand Tourism Registration Portal</a>. Police checkpoints at Sonprayag (Kedarnath), Joshimath (Badrinath), Barkot (Yamunotri), and Uttarkashi (Gangotri) will turn back any pilgrim without a valid yatra permit. There is <strong>no on-the-spot registration</strong> at these checkpoints.
             </p>
           </div>
         </div>
@@ -551,6 +587,9 @@ export default function RegistrationBlog() {
           </div>
         </div>
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="registration" />
 </article>

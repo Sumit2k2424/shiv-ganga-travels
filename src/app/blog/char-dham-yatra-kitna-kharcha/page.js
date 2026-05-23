@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'चार धाम यात्रा 2026 में कितना खर्चा आता है? — प्रति व्यक्ति पूरा हिसाब',
@@ -20,7 +21,13 @@ function Schema() {
       { '@type': 'Question', name: 'क्या सितंबर में चार धाम यात्रा सस्ती होती है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ — सितंबर-अक्टूबर में होटल 30-40% सस्ते, भीड़ कम, घोड़ा आसानी से मिलता है। हम सितंबर-अक्टूबर में जाने की खास सलाह देते हैं।' } },
     ],
   };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा 2026 में कितना खर्चा आता है?', inLanguage: 'hi', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा 2026 में कितना खर्चा आता है?', inLanguage: 'hi', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम यात्रा खर्चा 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -50,6 +57,9 @@ export default function CharDhamKharcha() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         {/* Quick answer box */}

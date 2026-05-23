@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
@@ -37,7 +38,13 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
     headline: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
     description: 'Complete guide to the Kedarnath trek from Gaurikund — distance, difficulty, stay options, best time to visit, pony and helicopter options.',
-    author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
+    author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     datePublished: '2025-02-01', dateModified: '2026-04-27',
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
@@ -99,6 +106,9 @@ export default function KedarnathTrekGuide() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
 
         {/* INTRO */}
         <p style={p}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims — a 58-year-old retired school teacher from Lucknow — was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli, with the Mandakini river roaring below and the first glimpse of snow peaks ahead, she turned to me and said, <em>"Yeh toh swarg hai."</em> She reached the temple, touched the Shivalinga, and wept.</p>
@@ -323,6 +333,9 @@ export default function KedarnathTrekGuide() {
         </div>
 
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="kedarnath" />
 </article>

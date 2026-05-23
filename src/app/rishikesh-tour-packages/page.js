@@ -79,7 +79,7 @@ export default function RishikeshTourPackages() {
             Rishikesh trip packages from <strong style={{ color: '#FFD166' }}>₹3,999/person</strong> · Haridwar + Rishikesh combo · Rafting · Ganga Aarti · Ashrams · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🙏 Triveni Ghat Aarti','🚣 White water rafting','🧘 Yoga & ashrams','⛰️ 24km from Haridwar','⭐ 4.9/5 · 850+ reviews'].map(t => (
+            {['🙏 Triveni Ghat Aarti','🚣 White water rafting','🧘 Yoga & ashrams','⛰️ 24km from Haridwar','⭐ 4.6/5 · 38 reviews'].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Cost 2026 – Complete Price Breakdown Per Person (Budget to Luxury)',
@@ -21,7 +22,13 @@ function Schema() {
       { '@type': 'Question', name: 'Is the Char Dham registration fee included in the package price?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra registration is completely FREE in 2026 — ₹0. The Uttarakhand government removed the previous ₹150 fee for this season. You register at registrationandtouristcare.uk.gov.in at no cost. Shiv Ganga Travels handles the entire registration process for all our package pilgrims — you just provide your Aadhaar details.' } },
     ],
   };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2024-01-15', dateModified: '2026-05-01', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }, datePublished: '2024-01-15', dateModified: '2026-05-01', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra Cost 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-cost` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -51,6 +58,9 @@ export default function CharDhamCost() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         {/* Intent-first answer */}
@@ -273,6 +283,9 @@ export default function CharDhamCost() {
           </div>
         </div>
       
+        {/* Author bio card — E-E-A-T */}
+        <BlogAuthor variant="bottom" author="sumit" />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="cost" />
 </article>

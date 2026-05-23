@@ -107,8 +107,8 @@ function Schemas({ pkg }) {
     },
     aggregateRating:{
       '@type':'AggregateRating',
-      ratingValue:4.9,
-      reviewCount:850,
+      ratingValue:4.6,
+      reviewCount:38,
       bestRating:5,
       worstRating:1,
     },
@@ -644,8 +644,8 @@ export default function PackageDetailPage({ params }) {
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator, not a broker. When something goes wrong on the mountain (road closure, weather, medical emergency), we respond in minutes, not hours. Delhi-based aggregators call a subcontractor. We call our own driver.</div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.9/5 · 850+ Verified Google Reviews</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 850+ reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted. Our average rating of 4.9/5 over 15 years has never dropped below 4.8. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.6/5 · 38 Verified Google Reviews</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 38 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted. Our average rating of 4.6/5 over 15 years has currently at 4.6/5. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Uttarakhand Tourism Registered</div>
@@ -679,7 +679,7 @@ export default function PackageDetailPage({ params }) {
               {[
                 { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
                 { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
-                { icon:'⭐', title:'4.9/5 · 850+ Verified Google Reviews', body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. Our 4.9/5 rating over 15 years has never dropped below 4.8.' },
+                { icon:'⭐', title:'4.6/5 · 38 Verified Google Reviews', body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. Our 4.6/5 rating over 15 years has currently at 4.6/5.' },
                 { icon:'📋', title:'Uttarakhand Tourism Registered', body:'Registered with Uttarakhand Tourism Development Board. Member of IATO. All vehicles hold valid tourism permits and hill-route licences. Registration verifiable at the Haridwar Tourism office.' },
               ].map(item => (
                 <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>

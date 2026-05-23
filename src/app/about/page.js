@@ -21,19 +21,72 @@ export const metadata = {
 };
 
 function Schema() {
-  const ld = {
+  const dhanesh = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE.baseUrl}/about#dhanesh-mishra`,
+    name: 'Dhanesh Chandra Mishra',
+    jobTitle: 'Founder & Director',
+    description: 'Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. Has led Char Dham Yatra operations for 15 seasons, serving 50,000+ pilgrims.',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Shiv Ganga Travels',
+      url: SITE.baseUrl,
+      '@id': `${SITE.baseUrl}/#organization`,
+    },
+    alumniOf: 'Indian Army',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Haridwar',
+      addressRegion: 'Uttarakhand',
+      addressCountry: 'IN',
+    },
+    knowsAbout: ['Char Dham Yatra', 'Kedarnath', 'Badrinath', 'Himalayan Travel', 'Pilgrim Safety'],
+    sameAs: [
+      SITE.baseUrl,
+      `https://www.google.com/maps?cid=16074078434377735602`,
+    ],
+  };
+
+  const sumit = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE.baseUrl}/about#sumit-mishra`,
+    name: 'Sumit Mishra',
+    jobTitle: 'Operations Manager & Content Lead',
+    description: 'Manages operations at Shiv Ganga Travels. Has accompanied pilgrim groups on the Char Dham circuit since 2015, coordinating 500+ groups annually.',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Shiv Ganga Travels',
+      url: SITE.baseUrl,
+      '@id': `${SITE.baseUrl}/#organization`,
+    },
+    sameAs: [
+      'https://www.linkedin.com/in/sumit-mishra-863734171/',
+      'https://www.facebook.com/sumi2112',
+    ],
+    knowsAbout: ['Char Dham Yatra', 'Kedarnath Trek', 'Badrinath', 'Yatra Registration', 'Mountain Travel'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Haridwar',
+      addressRegion: 'Uttarakhand',
+      addressCountry: 'IN',
+    },
+  };
+
+  const org = {
     '@context': 'https://schema.org',
     '@type': ['TravelAgency', 'LocalBusiness'],
+    '@id': `${SITE.baseUrl}/#organization`,
     name: SITE.name,
     url: SITE.baseUrl,
+    foundingDate: '2010',
+    founder: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#dhanesh-mishra`, name: 'Dhanesh Chandra Mishra' },
+    employee: [
+      { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra' },
+    ],
     telephone: SITE.phone,
     email: SITE.email,
-    foundingDate: '2010',
-    founder: {
-      '@type': 'Person',
-      name: 'Dhanesh Chandra Mishra',
-      jobTitle: 'Founder, Director & Retired Indian Army Officer',
-    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
@@ -42,13 +95,19 @@ function Schema() {
       postalCode: '249410',
       addressCountry: 'IN',
     },
-    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from',
-    numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.9, reviewCount: 850, bestRating: 5 },
-    sameAs: [`https://www.google.com/maps?cid=16074078434377735602`, `https://maps.app.goo.gl/Cup8TpduvDW6TaKf6`],
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
+    award: 'Uttarakhand Tourism Registered Tour Operator',
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}/>;
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dhanesh) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sumit) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+    </>
+  );
 }
+
 
 const h2 = {
   fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem,2.8vw,1.9rem)',
@@ -162,6 +221,61 @@ export default function AboutPage() {
             The logical next step was Haridwar — the official gateway to the Char Dham circuit and the city where every yatra truly begins. Shiv Ganga Travels opened its Haridwar office, positioning itself at the heart of pilgrimage activity. Today we operate from both Roorkee and Haridwar, with a full fleet of over <strong>20 vehicles</strong> — Innova Crysta, Ertiga, Tempo Travellers of various capacities — all maintained to a standard that Dhanesh himself inspects regularly.
           </p>
 
+        </div>
+      </section>
+
+      {/* Team section — E-E-A-T: named humans behind the content */}
+      <section style={{ background:'var(--navy-light)', borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)', padding:'40px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.7rem)', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>The People Behind the Yatra</h2>
+          <p style={{ fontSize:14.5, color:'var(--text-muted)', marginBottom:28 }}>Every itinerary, every guide, every piece of content on this site comes from people who have spent years on these routes.</p>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,320px),1fr))', gap:20 }}>
+            {/* Dhanesh */}
+            <div style={{ background:'#fff', borderRadius:14, border:'1px solid var(--border)', padding:'20px 22px' }}
+              itemScope itemType="https://schema.org/Person" itemID="/about#dhanesh-mishra">
+              <div style={{ display:'flex', gap:14, alignItems:'flex-start', marginBottom:14 }}>
+                <div style={{ width:52, height:52, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:18, color:'#FFD166', flexShrink:0 }}>DM</div>
+                <div>
+                  <div style={{ fontWeight:800, fontSize:15.5, color:'var(--navy)' }} itemProp="name">Dhanesh Chandra Mishra</div>
+                  <div style={{ fontSize:13, color:'var(--text-muted)' }} itemProp="jobTitle">Founder & Director</div>
+                </div>
+              </div>
+              <p style={{ fontSize:13.5, color:'#475569', lineHeight:1.75, margin:'0 0 12px' }} itemProp="description">
+                Retired Indian Army Officer. Founded Shiv Ganga Travels in 2010 after years of military posting across Uttarakhand. Has personally driven the Kedarnath and Badrinath routes hundreds of times.
+              </p>
+              <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                {['Retired Army Officer','Founded 2010','15 Seasons','50,000+ Pilgrims'].map(c => (
+                  <span key={c} style={{ fontSize:11.5, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Sumit */}
+            <div style={{ background:'#fff', borderRadius:14, border:'1px solid var(--border)', padding:'20px 22px' }}
+              itemScope itemType="https://schema.org/Person" itemID="/about#sumit-mishra">
+              <div style={{ display:'flex', gap:14, alignItems:'flex-start', marginBottom:14 }}>
+                <div style={{ width:52, height:52, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:18, color:'#fff', flexShrink:0 }}>SM</div>
+                <div>
+                  <div style={{ fontWeight:800, fontSize:15.5, color:'var(--navy)' }} itemProp="name">Sumit Mishra</div>
+                  <div style={{ fontSize:13, color:'var(--text-muted)' }} itemProp="jobTitle">Operations Manager & Content Lead</div>
+                  <div style={{ display:'flex', gap:6, marginTop:5 }}>
+                    <a href="https://www.linkedin.com/in/sumit-mishra-863734171/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
+                      style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>
+                    <a href="https://www.facebook.com/sumi2112" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
+                      style={{ fontSize:11.5, color:'#1877F2', fontWeight:600, textDecoration:'none' }}>Facebook ↗</a>
+                  </div>
+                </div>
+              </div>
+              <p style={{ fontSize:13.5, color:'#475569', lineHeight:1.75, margin:'0 0 12px' }} itemProp="description">
+                Manages day-to-day operations and handles all yatra content. Has accompanied pilgrim groups on the full Char Dham circuit since 2015. Coordinates 500+ pilgrim groups annually and writes from direct field experience.
+              </p>
+              <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                {['Operations since 2015','500+ Groups/Year','Content Author','Haridwar Based'].map(c => (
+                  <span key={c} style={{ fontSize:11.5, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

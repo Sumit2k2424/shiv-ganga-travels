@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'बुजुर्गों के लिए चार धाम यात्रा 2026 — घोड़ा, पालकी और हेलिकॉप्टर गाइड',
@@ -20,7 +21,13 @@ function Schema() {
       { '@type': 'Question', name: 'बुजुर्गों के लिए कौन सा महीना सबसे अच्छा है?', acceptedAnswer: { '@type': 'Answer', text: 'सितंबर का पहला हफ्ता सबसे अच्छा है — कम भीड़, सुहावना मौसम, घोड़ा-पालकी आसानी से मिलते हैं।' } },
     ],
   };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'बुजुर्गों के लिए चार धाम यात्रा 2026', inLanguage: 'hi', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'बुजुर्गों के लिए चार धाम यात्रा 2026', inLanguage: 'hi', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'बुजुर्गों के लिए चार धाम यात्रा', item: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -50,6 +57,9 @@ export default function BujurgCharDham() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         <p style={{ ...p, fontStyle: 'italic', background: 'rgba(15,43,91,0.05)', padding: '16px 20px', borderRadius: 10, borderLeft: '3px solid var(--navy)' }}>रमेश जी, उम्र 72 साल, बरेली से आए थे। बेटे ने कहा था "उम्र हो गई है, पहाड़ पर मत जाओ।" लेकिन वे नहीं माने। मई 2024 में हमारे साथ चार धाम गए — केदारनाथ में घोड़े पर बैठकर पहुँचे, आँखों में आँसू थे। लौटकर उन्होंने फोन किया — <strong>"बेटा, जिंदगी की सबसे बड़ी खुशी मिली।"</strong></p>

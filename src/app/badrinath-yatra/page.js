@@ -54,7 +54,7 @@ function Schema() {
       name: SITE.name,
       url: SITE.baseUrl,
       telephone: SITE.phone,
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.9, reviewCount: 850, bestRating: 5 },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     },
   };
 
@@ -133,7 +133,7 @@ export default function BadrinathYatraPage() {
             Haridwar to Badrinath — <strong style={{ color: '#FFD166' }}>2N/3D from ₹5,999/person</strong> · No trekking · All-inclusive · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
-            {['🕌 Fully motorable', '✅ VIP darshan', '🚗 AC cab included', '🍱 Sattvic meals', '⭐ 4.9/5 · 850+ reviews'].map(t => (
+            {['🕌 Fully motorable', '✅ VIP darshan', '🚗 AC cab included', '🍱 Sattvic meals', '⭐ 4.6/5 · 38 reviews'].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

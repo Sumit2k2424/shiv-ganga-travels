@@ -94,7 +94,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
         {/* Trust proof row */}
         <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginBottom: 22 }}>
           {[
-            ['⭐', '4.9/5 Rating', '1,200+ reviews'],
+            ['⭐', '4.6/5 Rating', '38 reviews'],
             ['✅', 'No Hidden Costs', 'All-inclusive price'],
             ['📞', '24×7 Support', 'On-route helpline'],
             ['🏆', 'Est. 2010', '15 years on these routes'],

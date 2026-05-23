@@ -22,7 +22,7 @@ function Schema() {
     url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
     telephone:SITE.phone, areaServed:'Uttarakhand',
     provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.9, reviewCount:850, bestRating:5 },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     { '@type':'Question', name:'What is the cab fare for Char Dham Yatra from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Cab fares for Char Dham Yatra from Haridwar start at ₹18,000 for a Swift Dzire (4-seater) and go up to ₹45,000 for a Tempo Traveller (12-seater) for the complete 10-12 day circuit. Innova Crysta is ₹26,000–32,000 for the full Char Dham route.' }},

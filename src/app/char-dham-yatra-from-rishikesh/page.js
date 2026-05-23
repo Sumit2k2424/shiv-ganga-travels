@@ -96,7 +96,7 @@ export default function Page() {
             Yamunotri · Gangotri · Kedarnath · Badrinath — from <strong style={{ color: '#FFD166' }}>₹19,500/person</strong> · Rishikesh pickup · Direct operator · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
-            {['📍 24km from Haridwar', '✅ Zero commission', '🚗 Doorstep pickup', '🙏 9N/10D circuit', '⭐ 4.9/5 · 850+ reviews'].map(t => (
+            {['📍 24km from Haridwar', '✅ Zero commission', '🚗 Doorstep pickup', '🙏 9N/10D circuit', '⭐ 4.6/5 · 38 reviews'].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

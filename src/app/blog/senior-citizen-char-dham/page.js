@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra for Senior Citizens 2026 – Pony, Palki, VIP Darshan & Medical Tips',
@@ -12,7 +13,13 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-03-01', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/senior-citizen-char-dham` };
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-03-01', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/senior-citizen-char-dham` };
 
     const faq = {
     '@context': 'https://schema.org',
@@ -60,6 +67,9 @@ return (
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>

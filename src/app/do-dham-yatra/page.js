@@ -61,7 +61,7 @@ export default function DoDhamYatra() {
             2 Dham Yatra from Haridwar · <strong style={{ color:'#FFD166' }}>₹10,999/person</strong> · 5N/6D · Kedarnath 16km trek · Badrinath darshan · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['🏔️ Kedarnath 3,583m','🕌 Badrinath 3,133m','🎖️ 15 yrs · 50k pilgrims','⭐ 4.9/5 · 850+ reviews'].map(t=>(
+            {['🏔️ Kedarnath 3,583m','🕌 Badrinath 3,133m','🎖️ 15 yrs · 50k pilgrims','⭐ 4.6/5 · 38 reviews'].map(t=>(
               <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

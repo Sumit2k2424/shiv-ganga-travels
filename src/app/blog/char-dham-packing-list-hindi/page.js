@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'चार धाम यात्रा पैकिंग लिस्ट 2026 — क्या ले जाएं, क्या छोड़ें (Print करें)',
@@ -12,7 +13,13 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा पैकिंग लिस्ट 2026', inLanguage: 'hi', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा पैकिंग लिस्ट 2026', inLanguage: 'hi', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम पैकिंग लिस्ट', item: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -57,6 +64,9 @@ export default function CharDhamPackingListHindi() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'rgba(216,90,48,0.07)', borderRadius: 12, padding: '16px 20px', border: '1px solid #F5C4B3', marginBottom: 24 }}>

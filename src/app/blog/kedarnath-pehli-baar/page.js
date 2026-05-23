@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी',
@@ -20,7 +21,13 @@ function Schema() {
       { '@type': 'Question', name: 'केदारनाथ जाने के लिए रजिस्ट्रेशन जरूरी है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ — बिना रजिस्ट्रेशन के सोनप्रयाग पर पुलिस रोक देती है। registrationandtouristcare.uk.gov.in पर मुफ्त में करें। शिव गंगा ट्रेवल्स के पैकेज में यह हम करते हैं।' } },
     ],
   };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'केदारनाथ यात्रा 2026 पहली बार — पूरी जानकारी', inLanguage: 'hi', author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/kedarnath-pehli-baar` } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'केदारनाथ यात्रा 2026 पहली बार — पूरी जानकारी', inLanguage: 'hi', author: {
+        '@type': 'Person',
+        name: 'Sumit Mishra',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        url: `${SITE.baseUrl}/about`,
+        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/kedarnath-pehli-baar` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'केदारनाथ पहली बार', item: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -70,6 +77,9 @@ export default function KedarnathPehliBaar() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

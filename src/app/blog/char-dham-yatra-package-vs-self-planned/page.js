@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham Yatra Package vs Self-Planned 2026 – Cost, Convenience & Which Is Better?',
@@ -22,6 +23,34 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
 }
 
+function Schema() {
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Char Dham Yatra Package vs Self-Planned 2026 – Cost, Convenience & Which Is Better?',
+    description: '',
+    image: `${SITE.baseUrl}/opengraph-image`,
+    datePublished: '2025-01-01',
+    dateModified: '2026-05-21',
+    author: {
+      '@type': 'Person',
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.baseUrl,
+      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+}
+
+
 export default function PkgVsSelf() {
   const rows = [
     ['Hotel booking', 'Pre-blocked rooms guaranteed', 'May be unavailable in peak season'],
@@ -37,6 +66,8 @@ export default function PkgVsSelf() {
   ];
   return (
     <>
+      <Schema />
+      <    <>
       <Schema/>
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -52,6 +83,9 @@ export default function PkgVsSelf() {
         </div>
       </div>
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           An honest answer from someone who runs packages: self-planned is absolutely possible, and for some pilgrims it is the better choice. But for most first-time pilgrims and senior citizens, a direct operator package wins on cost, convenience, and safety — especially if you book with a zero-commission direct operator rather than an aggregator.
         </p>

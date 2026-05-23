@@ -36,9 +36,41 @@ export const metadata = {
 
 /* ─── Schemas ─── */
 function Schema() {
-  const agency = { '@context':'https://schema.org','@type':'TravelAgency', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone, email:SITE.email, address:{'@type':'PostalAddress',streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',addressLocality:'Haridwar',addressRegion:'Uttarakhand',postalCode:'249410',addressCountry:'IN'}, foundingDate:String(SITE.established), aggregateRating:{'@type':'AggregateRating',ratingValue:4.9,reviewCount:850,bestRating:5}, priceRange:'₹₹' };
+  const agency = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelAgency',
+    name: SITE.name,
+    url: SITE.baseUrl,
+    telephone: SITE.phone,
+    email: SITE.email,
+    '@id': `${SITE.baseUrl}/#organization`,
+    address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
+    foundingDate: String(SITE.established),
+    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
+    priceRange: '₹₹',
+  };
+
+  const charDhamProduct = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Char Dham Yatra Package 2026 from Haridwar',
+    description: 'All-inclusive Char Dham Yatra package covering Yamunotri, Gangotri, Kedarnath and Badrinath. 9N/10D from Haridwar. Direct operator, no commission.',
+    url: `${SITE.baseUrl}/char-dham-yatra`,
+    brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
+    offers: {
+      '@type': 'Offer',
+      price: '19500',
+      priceCurrency: 'INR',
+      priceValidUntil: '2026-11-30',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE.baseUrl}/char-dham-yatra`,
+      seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+    },
+    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
+  };
+
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
 
 /* ─── Inline compact card ─── */
@@ -558,7 +590,7 @@ export default function HomePage() {
               {/* Stats overlay */}
               <div style={{ position:'absolute', bottom:20, left:20, right:20 }}>
                 <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
-                  {[{v:'50,000+',l:'Happy Pilgrims'},{v:'15+',l:'Years of Trust'},{v:'4.9/5',l:'Google Rating'},{v:'100%',l:'Safe Record'}].map(s=>(
+                  {[{v:'50,000+',l:'Happy Pilgrims'},{v:'15+',l:'Years of Trust'},{v:'4.6/5',l:'Google Rating'},{v:'100%',l:'Safe Record'}].map(s=>(
                     <div key={s.l} style={{ background:'rgba(255,255,255,0.12)', backdropFilter:'blur(8px)', borderRadius:10, padding:'10px 14px', border:'1px solid rgba(255,255,255,0.2)' }}>
                       <div style={{ color:'#FFD166', fontWeight:800, fontSize:18, fontFamily:'var(--font-display)', lineHeight:1 }}>{s.v}</div>
                       <div style={{ color:'rgba(255,255,255,0.75)', fontSize:11, marginTop:3 }}>{s.l}</div>

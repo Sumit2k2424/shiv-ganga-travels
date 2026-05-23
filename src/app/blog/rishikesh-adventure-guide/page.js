@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
   title: 'Rishikesh Adventure Guide 2026 – Rafting Prices, Bungee Jumping & Beach Camping',
   description: 'Complete Rishikesh adventure guide 2026: river rafting ₹600–1,200, bungee jumping ₹3,550, beach camping ₹1,200/night. Best time to visit, booking tips, and safety guide for all activities.',
@@ -31,6 +32,9 @@ export default function RishikeshAdventureGuide() {
       </div>
     </nav>
     <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Rishikesh is one of those rare places that genuinely delivers on its hype. The Ganga rushing through a gorge of forested hills. Ancient temples and modern ashrams side by side. Yoga studios next to bungee platforms. The same river that witnesses solemn Ganga aarti at sunset carries shrieking rafters through Grade IV rapids in the morning. It's a contradiction that somehow makes perfect sense.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything for an <strong>Rishikesh adventure trip in 2026</strong> — what activities are actually worth your money, the honest costs (not the inflated tourist prices), the best time to go, and what not to miss beyond the adventure sports.</p>
 

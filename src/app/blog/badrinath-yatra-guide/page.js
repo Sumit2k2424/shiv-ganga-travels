@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
   title: 'Badrinath Yatra Guide 2026 – Temple Timings, Route from Haridwar & Travel Tips',
   description: 'Complete Badrinath Yatra 2026 guide: darshan timings 4:30 AM–9 PM, Tapt Kund, Mana Village, best time to visit, and how to reach from Haridwar. Packages from ₹5,999.',
@@ -31,6 +32,9 @@ export default function BadrinathYatraGuide() {
       </div>
     </nav>
     <article className="blog-container" itemScope itemType="https://schema.org/Article">
+
+        {/* Author byline — E-E-A-T signal */}
+        <BlogAuthor variant="top" author="sumit" />
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 
