@@ -154,8 +154,6 @@ export default function RegistrationBlog() {
   return (
     <>
       <Schema />
-      <    <>
-      <Schema/>
 
       {/* Hero */}
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'56px 20px 44px' }}>

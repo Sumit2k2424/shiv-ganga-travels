@@ -1413,7 +1413,6 @@ export const TRUST = {
     { text:'Yatra Permit Authority: Uttarakhand Tourism', url:'https://registrationandtouristcare.uk.gov.in', linkText:'Registration Portal →' },
     { text:'Member of IATO (Indian Association of Tour Operators)', url:'https://www.iato.in', linkText:'IATO →' },
     { text:'ISO 9001:2015 Certified Quality Management System', url:null, linkText:null },
-  ],
-    'Government-approved Char Dham Yatra Operator 2026',
+    { text:'Government-approved Char Dham Yatra Operator 2026', url:null, linkText:null },
   ],
 };
