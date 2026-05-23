@@ -39,33 +39,6 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Char Dham Yatra 2026 New Rules – Phone Ban, Green Card, Medical Certificate & More',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-02-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function NewRules2026() {
   const rules = [

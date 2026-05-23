@@ -39,33 +39,6 @@ const DAY_ITINERARY = [
   { day:'Day 7', route:'Return home', dist:'—', details:'Travel home from Haridwar via train, flight from Dehradun, or road. Allow full day — do not book a noon flight on Day 7 if you are driving back from mountains on Day 6 night.', warning:'Many pilgrims miss flights because they underestimate Day 6 return driving time. Book Day 7 evening flights only.' },
 ];
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Char Dham Yatra in 7 Days 2026 – Is It Possible? Complete Itinerary & Honest Tips',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function SevenDaysBlog() {
   return (

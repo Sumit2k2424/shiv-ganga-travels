@@ -23,33 +23,6 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
 }
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Char Dham Yatra Package vs Self-Planned 2026 – Cost, Convenience & Which Is Better?',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function PkgVsSelf() {
   const rows = [

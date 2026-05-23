@@ -35,33 +35,6 @@ const CITY_ROUTES = [
   { city:'Hyderabad', dist:'1,620km to Haridwar', bestRoute:'Fly Hyderabad → Dehradun (2 hrs)', step1:'Hyderabad → Dehradun flight (IndiGo, 2 hrs)', step2:'Dehradun → Haridwar → Guptkashi → Gaurikund (8 hrs total)', step3:'Gaurikund → Kedarnath trek or helicopter', step4:'Total: 1.5–2 days', total:'1.5–2 days total' },
 ];
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'How to Reach Kedarnath 2026 – By Road, Train, Flight & Helicopter from Major Cities',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function HowToReachKedarnath() {
   return (

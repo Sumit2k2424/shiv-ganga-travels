@@ -41,33 +41,6 @@ const ROUTE = [
 
 const TYPE_COLOR = { start:'#15803D', stop:'var(--navy)', highlight:'#D97706', stay:'#0B7B8B', checkpoint:'#DC2626', end:'var(--teal)' };
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Haridwar to Kedarnath Road Trip 2026 – Distance, Route, Drive Time & Best Stops',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function HaridwarToKedarnath() {
   return (

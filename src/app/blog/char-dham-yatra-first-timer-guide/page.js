@@ -32,33 +32,6 @@ function Schema() {
 const H2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.55rem)', fontWeight:700, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const H3 = { fontFamily:'var(--font-display)', fontSize:'clamp(1rem,2vw,1.2rem)', fontWeight:700, color:'var(--teal)', marginBottom:8, marginTop:24 };
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Char Dham Yatra for First Timers 2026 – Complete Planning Guide from Start to Finish',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2024-04-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-first-timer-guide`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function FirstTimerGuide() {
   return (

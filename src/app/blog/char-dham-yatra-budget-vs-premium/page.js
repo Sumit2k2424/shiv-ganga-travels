@@ -36,33 +36,6 @@ const COMPARE = [
   { factor:'Best for', budget:'Groups of 6–10 pilgrims. Fit adults. Budget-conscious families.', standard:'Families of 4–6. Mixed age groups. Pilgrims wanting comfort without luxury.', premium:'Couples. Senior citizens. NRIs. Pilgrims with health conditions.', note:'Match the package to your group, not to price alone' },
 ];
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Char Dham Budget vs Premium Package 2026 – What Actually Changes? Honest Comparison',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function BudgetVsPremium() {
   return (

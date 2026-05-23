@@ -42,33 +42,6 @@ const WEATHER = [
   { month:'Late Oct–November', kedarnath:'−5 to 5°C · Possible snowfall', badrinath:'0 to 10°C · Closing season', gangotri:'−2 to 8°C · Cold', yamunotri:'−2 to 8°C · Very cold', pilgrim:'Very low', suitability:'Cold with early snowfall risk. Closing ceremonies on Bhai Dooj. Season ends Nov 11–13.', verdict:'⭐⭐⭐' },
 ];
 
-function Schema() {
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Uttarakhand Weather Guide 2026 – Month-by-Month Temperature at All Char Dham Shrines',
-    description: '',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2024-06-01',
-    dateModified: '2026-05-21',
-    author: {
-      '@type': 'Person',
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
-      url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`,
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
-}
-
 
 export default function WeatherGuide() {
   return (
