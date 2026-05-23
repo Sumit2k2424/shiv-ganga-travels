@@ -17,7 +17,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Mana Village Near Badrinath 2026 – India\',
+    headline: 'Mana Village Near Badrinath 2026 – India\'s Last Village, Vyas Gufa & What to See',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2025-01-01',
