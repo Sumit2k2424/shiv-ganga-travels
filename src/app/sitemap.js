@@ -2,6 +2,7 @@ import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 
 const BLOG_SLUGS = [
   { slug: 'char-dham-guide',                    p: 0.90 },
+  { slug: 'char-dham-yatra-complete-guide',     p: 0.95 },
   { slug: 'best-time-char-dham',                p: 0.88 },
   { slug: 'char-dham-yatra-cost',               p: 0.88 },
   { slug: 'char-dham-yatra-packing-list',       p: 0.85 },
