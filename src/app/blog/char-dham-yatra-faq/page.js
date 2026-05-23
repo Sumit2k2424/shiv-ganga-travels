@@ -181,7 +181,6 @@ function FAQSchema() {
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
       },
-    },
     publisher: {
       '@type': 'Organization',
       name: SITE.name,
