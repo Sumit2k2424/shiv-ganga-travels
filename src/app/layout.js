@@ -106,13 +106,12 @@ export const viewport = {
 // ── LocalBusiness schema — fully GBP-aligned ─────────────────
 function SiteSchema() {
 
-  // ── Primary organisation / local business ──────────────────
+  // ── Primary organisation / local business — Haridwar ───────
   const org = {
     '@context': 'https://schema.org',
-    '@type': ['TravelAgency', 'LocalBusiness'],
+    '@type': ['TravelAgency', 'LocalBusiness', 'TouristInformationCenter'],
     '@id': `${SITE.baseUrl}/#organization`,
 
-    // ── Identity — must match GBP character-for-character ───
     name: 'Shiv Ganga Travels',
     alternateName: [
       'Shiv Ganga Tour and Travels',
@@ -123,7 +122,6 @@ function SiteSchema() {
     telephone: ['+91-7017082807', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
-    // ── Address — must match GBP field-for-field ─────────────
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
@@ -133,17 +131,15 @@ function SiteSchema() {
       addressCountry: 'IN',
     },
 
-    // ── Exact GPS coordinates from your GBP Place ID ─────────
+    // ── 5-decimal precision GPS — required for local pack ────
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 29.9896838,
-      longitude: 78.1927454,
+      latitude: 29.98968,
+      longitude: 78.19274,
     },
 
-    // ── Maps link — use Place ID for exact match ─────────────
     hasMap: 'https://www.google.com/maps?cid=16074078434377735602',
 
-    // ── Opening hours — must match GBP exactly ───────────────
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -152,11 +148,8 @@ function SiteSchema() {
         closes: '21:00',
       },
     ],
-    // Human-readable version Google also reads
     openingHours: ['Mo-Su 07:00-21:00'],
 
-    // ── Ratings — match actual GBP numbers exactly ───────────
-    // Update these whenever your GBP review count changes
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: 4.6,
@@ -165,7 +158,6 @@ function SiteSchema() {
       worstRating: 1,
     },
 
-    // ── Individual reviews — boosts E-E-A-T in rich results ──
     review: [
       {
         '@type': 'Review',
@@ -198,23 +190,12 @@ function SiteSchema() {
       '@id': 'https://www.shivgangatravels.com/logo.png',
     },
     image: [
-      {
-        '@type': 'ImageObject',
-        url: 'https://www.shivgangatravels.com/logo.png',
-        width: 512,
-        height: 512,
-      },
-      {
-        '@type': 'ImageObject',
-        url: '/opengraph-image',
-        caption: 'Kedarnath Temple — served by Shiv Ganga Travels',
-      },
+      { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png', width: 512, height: 512 },
+      { '@type': 'ImageObject', url: '/opengraph-image', caption: 'Kedarnath Temple — served by Shiv Ganga Travels' },
     ],
 
-    // ── Description ───────────────────────────────────────────
     description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours. 50,000+ pilgrims served.',
 
-    // ── Founder — Army officer story in structured data ───────
     founder: {
       '@type': 'Person',
       name: 'Dhanesh Chandra Mishra',
@@ -223,81 +204,111 @@ function SiteSchema() {
     },
 
     foundingDate: '2010',
-    foundingLocation: {
-      '@type': 'Place',
-      name: 'Roorkee, Uttarakhand, India',
-    },
+    foundingLocation: { '@type': 'Place', name: 'Roorkee, Uttarakhand, India' },
 
-    // ── Business details ──────────────────────────────────────
     priceRange: '₹₹',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer, Credit Card, Debit Card',
 
-    // ── Contact points ────────────────────────────────────────
     contactPoint: [
       {
         '@type': 'ContactPoint',
         telephone: '+91-7017082807',
-        alternateName: '+91-8859123961',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['Hindi', 'English'],
-        contactOption: 'TollFree',
       },
       {
         '@type': 'ContactPoint',
         url: 'https://wa.me/917017082807',
         contactType: 'sales',
-        contactOption: 'HearingImpairedSupported',
         availableLanguage: ['Hindi', 'English'],
       },
     ],
 
-    // ── Service area — matches GBP service areas ─────────────
+    // ── Hybrid SAB — areaServed with named cities ─────────────
     areaServed: [
-      { '@type': 'City',  name: 'Haridwar',    containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
-      { '@type': 'City',  name: 'Rishikesh',   containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
-      { '@type': 'City',  name: 'Roorkee',     containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
-      { '@type': 'City',  name: 'Dehradun',    containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
-      { '@type': 'City',  name: 'Delhi' },
-      { '@type': 'City',  name: 'Mumbai' },
-      { '@type': 'City',  name: 'Bangalore' },
-      { '@type': 'City',  name: 'Hyderabad' },
-      { '@type': 'City',  name: 'Chennai' },
-      { '@type': 'State', name: 'Uttarakhand' },
+      { '@type': 'City', name: 'Haridwar',   containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Rishikesh',  containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Roorkee',    containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Dehradun',   containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Delhi' },
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Gurgaon' },
+      { '@type': 'City', name: 'Ghaziabad' },
+      { '@type': 'City', name: 'Mumbai' },
+      { '@type': 'City', name: 'Bangalore' },
+      { '@type': 'City', name: 'Hyderabad' },
+      { '@type': 'City', name: 'Chennai' },
+      { '@type': 'City', name: 'Kolkata' },
+      { '@type': 'City', name: 'Pune' },
+      { '@type': 'City', name: 'Ahmedabad' },
+      { '@type': 'City', name: 'Jaipur' },
+      { '@type': 'City', name: 'Lucknow' },
+      { '@type': 'City', name: 'Varanasi' },
+      { '@type': 'AdministrativeArea', name: 'Uttarakhand' },
+      { '@type': 'Country', name: 'India' },
     ],
 
-    // ── Services offered ──────────────────────────────────────
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Char Dham Yatra Packages 2026',
       itemListElement: [
-        { '@type': 'Offer', name: 'Char Dham Yatra Package',       price: '19500', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra` },
-        { '@type': 'Offer', name: 'Kedarnath Yatra Package',       price: '6499',  priceCurrency: 'INR', url: `${SITE.baseUrl}/kedarnath-yatra` },
-        { '@type': 'Offer', name: 'Char Dham Helicopter Package',  price: '85000', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-helicopter` },
+        { '@type': 'Offer', name: 'Char Dham Yatra Package',      price: '19500', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra` },
+        { '@type': 'Offer', name: 'Kedarnath Yatra Package',      price: '6499',  priceCurrency: 'INR', url: `${SITE.baseUrl}/kedarnath-yatra` },
+        { '@type': 'Offer', name: 'Char Dham Helicopter Package', price: '85000', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-helicopter` },
         { '@type': 'Offer', name: 'Do Dham Yatra Package',        price: '10999', priceCurrency: 'INR', url: `${SITE.baseUrl}/do-dham-yatra` },
         { '@type': 'Offer', name: 'Char Dham Cab Booking',        price: '5500',  priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
       ],
     },
 
-    // ── Awards / accreditations ───────────────────────────────
     award: 'Uttarakhand Tourism Registered Tour Operator',
-    knowsAbout: [
-      'Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra',
-      'Gangotri Yatra', 'Yamunotri Yatra', 'Uttarakhand Tourism',
-      'Hindu Pilgrimage', 'Himalayan Travel', 'Char Dham Helicopter',
-    ],
+    knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Gangotri Yatra', 'Yamunotri Yatra', 'Uttarakhand Tourism', 'Hindu Pilgrimage', 'Himalayan Travel', 'Char Dham Helicopter'],
 
-    // ── Cross-platform links — all must match GBP "sameAs" ───
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
       'https://www.instagram.com/shivgangatravels/',
-      // JustDial — ensure this URL matches the CORRECT listing (name: Shiv Ganga Travels, founded 2010)
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       `https://wa.me/${SITE.whatsapp}`,
       'https://www.shivgangatravels.com',
     ],
+  };
+
+  // ── Roorkee branch office — separate LocalBusiness with branchOf ──
+  const roorkee = {
+    '@context': 'https://schema.org',
+    '@type': ['TravelAgency', 'LocalBusiness'],
+    '@id': `${SITE.baseUrl}/#organization-roorkee`,
+    name: 'Shiv Ganga Travels — Roorkee',
+    url: SITE.baseUrl,
+    telephone: '+91-7017082807',
+    email: 'support@shivgangatravels.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Roorkee',
+      addressRegion: 'Uttarakhand',
+      postalCode: '247667',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 29.86820,
+      longitude: 77.89490,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+    ],
+    // Links this branch back to the parent Haridwar location
+    branchOf: { '@id': `${SITE.baseUrl}/#organization` },
+    parentOrganization: { '@id': `${SITE.baseUrl}/#organization` },
+    priceRange: '₹₹',
+    description: 'Roorkee branch of Shiv Ganga Travels — Char Dham Yatra specialist. Founded here in 2010. Serving pilgrims from Roorkee, Muzaffarnagar, Saharanpur and surrounding areas.',
   };
 
   // ── WebSite schema with SearchAction ──────────────────────
@@ -317,7 +328,6 @@ function SiteSchema() {
     inLanguage: 'en-IN',
   };
 
-
   // ── Founder — Person schema for LLM entity recognition ────
   const founder = {
     '@context': 'https://schema.org',
@@ -336,6 +346,7 @@ function SiteSchema() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founder) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(roorkee) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}/>
     </>
   );

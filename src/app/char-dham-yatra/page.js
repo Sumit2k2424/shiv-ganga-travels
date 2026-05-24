@@ -29,9 +29,11 @@ export const metadata = {
 };
 
 function Schema() {
+  // ── TravelAgency + AggregateRating ─────────────────────────
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'TravelAgency',
+    '@type': ['TravelAgency', 'LocalBusiness'],
+    '@id': `${SITE.baseUrl}/#organization`,
     name: SITE.name,
     url: SITE.baseUrl,
     telephone: SITE.phone,
@@ -43,33 +45,80 @@ function Schema() {
       postalCode: '249410',
       addressCountry: 'IN',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 4.6,
-      reviewCount: 38,
-      bestRating: 5,
-    },
+    geo: { '@type': 'GeoCoordinates', latitude: 29.98968, longitude: 78.19274 },
+    openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '07:00', closes: '21:00' }],
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5, worstRating: 1 },
+    priceRange: '₹₹',
+    foundingDate: '2010',
+    award: 'Uttarakhand Tourism Registered Tour Operator',
   };
 
-  const product = {
+  // ── TouristTrip — one per major dham ──────────────────────
+  const charDhamTrip = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Char Dham Yatra Package 2026',
-    description: 'All-inclusive Char Dham Yatra package from Haridwar covering Yamunotri, Gangotri, Kedarnath and Badrinath.',
-    brand: { '@type': 'Brand', name: SITE.name },
+    '@type': 'TouristTrip',
+    name: 'Char Dham Yatra 2026 — Yamunotri, Gangotri, Kedarnath, Badrinath',
+    description: 'Complete Char Dham Yatra pilgrimage from Haridwar — all four sacred shrines in one circuit. 9 nights/10 days, all-inclusive.',
+    url: `${SITE.baseUrl}/char-dham-yatra`,
+    touristType: ['Pilgrim', 'Religious Tourist', 'Family'],
+    itinerary: [
+      { '@type': 'TouristAttraction', name: 'Yamunotri Temple', address: { '@type': 'PostalAddress', addressLocality: 'Janki Chatti', addressRegion: 'Uttarakhand' } },
+      { '@type': 'TouristAttraction', name: 'Gangotri Temple', address: { '@type': 'PostalAddress', addressLocality: 'Gangotri', addressRegion: 'Uttarakhand' } },
+      { '@type': 'TouristAttraction', name: 'Kedarnath Temple', address: { '@type': 'PostalAddress', addressLocality: 'Kedarnath', addressRegion: 'Uttarakhand' } },
+      { '@type': 'TouristAttraction', name: 'Badrinath Temple', address: { '@type': 'PostalAddress', addressLocality: 'Badrinath', addressRegion: 'Uttarakhand' } },
+    ],
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '19500',
       highPrice: '85000',
       priceCurrency: 'INR',
-      offerCount: '5',
+      offerCount: 5,
+      availability: 'https://schema.org/InStock',
+      validFrom: '2026-04-19',
+      validThrough: '2026-11-13',
+      seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+    },
+    provider: { '@type': 'TravelAgency', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+    availableLanguage: ['Hindi', 'English'],
+    maximumAttendeeCapacity: 17,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  };
+
+  // ── Senior TouristTrip ─────────────────────────────────────
+  const seniorTrip = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: 'Senior Citizen Char Dham Yatra 2026 — 12N/13D Slow-Paced Package',
+    description: 'Specially designed Char Dham Yatra for pilgrims aged 60+. Extra rest days, ground-floor rooms, pony and palki included, oxygen support.',
+    url: `${SITE.baseUrl}/char-dham-yatra`,
+    touristType: ['Senior Citizen', 'Senior Pilgrim'],
+    offers: {
+      '@type': 'Offer',
+      price: '27999',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: SITE.name },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 4.6,
-      reviewCount: 38,
+    provider: { '@type': 'TravelAgency', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+  };
+
+  // ── Product + AggregateRating (rich result) ────────────────
+  const product = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Char Dham Yatra Package 2026 from Haridwar',
+    description: 'All-inclusive Char Dham Yatra package from Haridwar. Yamunotri, Gangotri, Kedarnath, Badrinath. AC vehicle, hotels, guide, VIP darshan. Direct operator — zero commission.',
+    brand: { '@type': 'Brand', name: SITE.name },
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '19500',
+      highPrice: '95000',
+      priceCurrency: 'INR',
+      offerCount: '5',
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
   };
 
   const faqSchema = {
@@ -85,8 +134,13 @@ function Schema() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(charDhamTrip) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(seniorTrip) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
+    </>
+  );
+}
 
       <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
@@ -168,8 +222,117 @@ export default function CharDhamYatra() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
 
+        {/* ── FIX 4: Credential badges above the fold ────────────── */}
+        <div style={{ display:'flex', flexWrap:'wrap', gap:8, marginBottom:20 }}>
+          <a href="https://uttarakhandtourism.gov.in" target="_blank" rel="noopener noreferrer"
+            style={{ display:'inline-flex', alignItems:'center', gap:6, background:'#F0FDF4', border:'1.5px solid #86EFAC', borderRadius:8, padding:'6px 13px', fontSize:12.5, fontWeight:700, color:'#15803D', textDecoration:'none' }}>
+            🏛️ Uttarakhand Tourism Registered Operator ↗
+          </a>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:8, padding:'6px 13px', fontSize:12.5, fontWeight:700, color:'var(--navy)' }}>
+            ⭐ 4.6★ · 38 Google Reviews
+          </div>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:8, padding:'6px 13px', fontSize:12.5, fontWeight:600, color:'var(--navy)' }}>
+            🏆 Est. 2010 · 15 Seasons · 50,000+ Pilgrims
+          </div>
+        </div>
 
-        {/* Semantic intro — active voice, skimmable */}
+        {/* ── FIX 5: "Why direct is cheaper" explainer near price ── */}
+        <div style={{ background:'linear-gradient(135deg,rgba(15,43,91,0.06) 0%,rgba(11,123,139,0.06) 100%)', border:'1px solid rgba(15,43,91,0.12)', borderRadius:12, padding:'13px 18px', marginBottom:20, display:'flex', gap:12, alignItems:'flex-start' }}>
+          <span style={{ fontSize:22, flexShrink:0 }}>💰</span>
+          <div>
+            <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Why our ₹19,500 price is lower than platforms</div>
+            <p style={{ fontSize:13.5, color:'#334155', margin:0, lineHeight:1.7 }}>
+              This price comes directly to us. No platform fee, no agent commission, no markup. MakeMyTrip and similar aggregators add 10–20% to operator prices before showing you the total. What you see here is what you pay.{' '}
+              <a href="/direct-operator-vs-travel-aggregator-char-dham" style={{ color:'var(--teal)', fontWeight:600, textDecoration:'none' }}>How this works →</a>
+            </p>
+          </div>
+        </div>
+
+        {/* ── FIX 2: Senior citizen package card above fold ─────── */}
+        <div style={{ background:'linear-gradient(135deg,#7C2D12 0%,#9A3412 100%)', borderRadius:14, padding:'16px 20px', marginBottom:20, position:'relative', overflow:'hidden' }}>
+          <div style={{ position:'absolute', top:0, right:0, background:'rgba(255,255,255,0.1)', width:80, height:80, borderRadius:'0 14px 0 80px' }}/>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:14, alignItems:'center', justifyContent:'space-between', position:'relative' }}>
+            <div>
+              <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:6 }}>
+                <span style={{ background:'#FFD166', color:'#7C2D12', fontSize:11, fontWeight:800, padding:'3px 10px', borderRadius:100, letterSpacing:'0.06em' }}>🙏 SENIOR FRIENDLY</span>
+                <span style={{ background:'rgba(255,255,255,0.2)', color:'#fff', fontSize:11, fontWeight:600, padding:'3px 10px', borderRadius:100 }}>Ages 60+</span>
+              </div>
+              <div style={{ fontWeight:800, fontSize:16, color:'#fff', marginBottom:3 }}>Senior Citizen Char Dham Package</div>
+              <div style={{ fontSize:13.5, color:'rgba(255,255,255,0.85)', lineHeight:1.6 }}>
+                12N/13D · Slower pace · Extra rest days · Pony &amp; palki included · Ground-floor rooms · Oxygen support
+              </div>
+            </div>
+            <div style={{ textAlign:'center', flexShrink:0 }}>
+              <div style={{ fontWeight:800, fontSize:22, color:'#FFD166', lineHeight:1 }}>₹27,999</div>
+              <div style={{ fontSize:11.5, color:'rgba(255,255,255,0.7)', marginBottom:8 }}>per person · all-inclusive</div>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am looking for the Senior Citizen Char Dham Yatra 2026 package. Please share details.')}`}
+                target="_blank" rel="nofollow noopener noreferrer"
+                style={{ background:'#25D366', color:'#fff', padding:'8px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', display:'inline-block' }}>
+                💬 Enquire Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ── FIX 3: Compact inclusions toggle ABOVE departure calendar ── */}
+        <details style={{ background:'#fff', border:'1.5px solid #86EFAC', borderRadius:12, overflow:'hidden', marginBottom:20 }} open>
+          <summary style={{ padding:'13px 16px', cursor:'pointer', listStyle:'none', background:'#F0FDF4', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+            <span style={{ fontWeight:700, fontSize:14, color:'#15803D' }}>✅ What ₹19,500 includes — tap to see full list</span>
+            <span style={{ fontSize:18, color:'#15803D' }}>▾</span>
+          </summary>
+          <div style={{ padding:'12px 16px', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:8 }}>
+            {[
+              '🚗 AC vehicle (Innova / Tempo Traveller)',
+              '🏨 Hotels — all 9 nights (twin sharing)',
+              '🍽️ Breakfast + dinner every day',
+              '🧭 Experienced Garhwali guide throughout',
+              '🙏 VIP darshan — no queue at all 4 dhams',
+              '📋 Biometric registration — completely free',
+              '🐴 Pony at Kedarnath & Yamunotri — included',
+              '🛣️ All tolls, parking, driver allowance',
+              '🩺 Oxygen cylinder + first aid in vehicle',
+              '📱 24×7 WhatsApp support on-route',
+            ].map(item => (
+              <div key={item} style={{ fontSize:13.5, color:'#15803D', padding:'4px 0', borderBottom:'1px solid #F0FDF4', display:'flex', alignItems:'flex-start', gap:4 }}>{item}</div>
+            ))}
+          </div>
+          <div style={{ padding:'10px 16px', background:'#FFFBF3', borderTop:'1px solid #FDE68A', fontSize:12.5, color:'#92400E' }}>
+            ⚠️ Not included (personal choice): helicopter upgrade, single-room supplement, personal expenses, travel insurance
+          </div>
+        </details>
+
+        {/* ── FIX 7: Video — darshan footage / route reel ───────── */}
+        <div style={{ marginBottom:24 }}>
+          <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em', marginBottom:10 }}>🎥 See the Yatra — Real Footage from Our Groups</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,340px),1fr))', gap:14 }}>
+            <div style={{ position:'relative', paddingBottom:'56.25%', borderRadius:12, overflow:'hidden', background:'var(--navy)' }}>
+              <iframe
+                src="https://www.youtube.com/embed/?listType=user_uploads&list=shivgangatravels"
+                title="Char Dham Yatra 2026 — Shiv Ganga Travels"
+                style={{ position:'absolute', top:0, left:0, width:'100%', height:'100%', border:0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px', border:'1px solid var(--border)', display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+              <div>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>What you will see in the reel</div>
+                {['🚗 Our vehicles on the Kedarnath highway','🏔️ The 16km Kedarnath trek','🕌 Badrinath darshan — valley view','🌊 Gangotri — source of the Ganga','👴 Senior pilgrims we served in 2025'].map(item => (
+                  <div key={item} style={{ fontSize:13, color:'#334155', padding:'4px 0', borderBottom:'1px solid var(--border)' }}>{item}</div>
+                ))}
+              </div>
+              <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer"
+                style={{ marginTop:12, display:'inline-flex', alignItems:'center', gap:6, background:'linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)', color:'#fff', padding:'8px 14px', borderRadius:8, fontWeight:700, fontSize:13, textDecoration:'none', width:'fit-content' }}>
+                📸 Follow @shivgangatravels on Instagram
+              </a>
+            </div>
+          </div>
+          <p style={{ fontSize:12.5, color:'var(--text-muted)', marginTop:8 }}>
+            Replace YouTube src with your actual video ID. Footage from real pilgrim groups — not stock video.
+          </p>
+        </div>
+
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10, textTransform:'uppercase', letterSpacing:'0.06em' }}>Before you book — what you need to know</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:8 }}>
@@ -326,20 +489,23 @@ export default function CharDhamYatra() {
             </thead>
             <tbody>
               {[
-                ['May 2026',   '5, 10, 15, 17, 20, 22, 26, 29',   '2–8 seats left',  'FILLING FAST'],
-                ['June 2026',  '3, 7, 12, 15, 19, 22, 26, 29',    '10–25 seats',     'Available'],
-                ['July 2026',  '3, 10, 17, 24, 31',               '30–45 seats',     'Open'],
-                ['August 2026','7, 14, 21, 28',                    '45–60 seats',     'Open'],
-                ['Sept 2026',  '4, 8, 11, 14, 18, 21, 24, 27',    '15–35 seats',     'Booking fast'],
-                ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', '20–50 seats',     'Available'],
-                ['Nov 2026',   '1, 3 (last batches)',              'Limited',         'Final season'],
-              ].map(([month, dates, seats, status], i) => (
-                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                ['May 2026',   '5, 10, 15, 17, 20, 22, 26, 29',   '2–8 seats left',  'FILLING FAST', false],
+                ['June 2026',  '3, 7, 12, 15, 19, 22, 26, 29',    '10–25 seats',     'Available',    false],
+                ['July 2026',  '3, 10, 17, 24, 31',               '30–45 seats',     'Open',         false],
+                ['August 2026','7, 14, 21, 28',                    '45–60 seats',     'Open',         false],
+                ['Sept 2026',  '4, 8, 11, 14, 18, 21, 24, 27',    '15–35 seats',     'Booking fast', false],
+                ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', '20–50 seats',     'Available',    false],
+                ['Nov 2026',   '1, 3 (last batches)',              'Limited',         'Final season', false],
+              ].map(([month, dates, seats, status, soldOut], i) => (
+                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)', opacity: soldOut ? 0.6 : 1 }}>
                   <td style={{ padding:'9px 14px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{month}</td>
-                  <td style={{ padding:'9px 14px', color:'#334155', fontSize:12.5 }}>{dates}</td>
-                  <td style={{ padding:'9px 14px', fontWeight:600, color: status==='FILLING FAST'?'#D85A30':'#1D9E75', fontSize:12.5 }}>{seats}</td>
+                  <td style={{ padding:'9px 14px', color: soldOut ? '#94a3b8' : '#334155', fontSize:12.5, textDecoration: soldOut ? 'line-through' : 'none' }}>{dates}</td>
+                  <td style={{ padding:'9px 14px', fontWeight:600, color: soldOut ? '#94a3b8' : status==='FILLING FAST'?'#D85A30':'#1D9E75', fontSize:12.5 }}>{soldOut ? '—' : seats}</td>
                   <td style={{ padding:'9px 14px' }}>
-                    <span style={{ background: status==='FILLING FAST'?'#FCEBEB':status==='Booking fast'?'#FAEEDA':'#EAF3DE', color: status==='FILLING FAST'?'#A32D2D':status==='Booking fast'?'#854F0B':'#3B6D11', fontSize:11, fontWeight:700, padding:'3px 8px', borderRadius:20 }}>{status}</span>
+                    {soldOut
+                      ? <span style={{ background:'#F1F5F9', color:'#64748b', fontSize:11, fontWeight:700, padding:'3px 8px', borderRadius:20 }}>SOLD OUT</span>
+                      : <span style={{ background: status==='FILLING FAST'?'#FCEBEB':status==='Booking fast'?'#FAEEDA':'#EAF3DE', color: status==='FILLING FAST'?'#A32D2D':status==='Booking fast'?'#854F0B':'#3B6D11', fontSize:11, fontWeight:700, padding:'3px 8px', borderRadius:20 }}>{status}</span>
+                    }
                   </td>
                 </tr>
               ))}

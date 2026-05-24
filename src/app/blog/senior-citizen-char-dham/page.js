@@ -16,7 +16,7 @@ function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide', author: {
         '@type': 'Person',
         name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        jobTitle: 'Co-Founder & Co-Founder & Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-03-01', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/senior-citizen-char-dham` };

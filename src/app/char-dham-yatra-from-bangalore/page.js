@@ -1,187 +1,162 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Bangalore 2026 — Train,',
-  description: 'Char Dham Yatra from Bangalore 2026. 2,100 km — fly only. Trains, flights, pickups explained. All-inclusive packages from ₹25,999.',
-  keywords: ['char dham yatra from bangalore','char dham yatra package from bangalore','bangalore to haridwar char dham','char dham tour from bangalore 2026','chardham yatra bangalore','bangalore char dham yatra package'],
+  title: 'Char Dham Yatra from Bangalore 2026 — Packages, Routes & Direct Booking',
+  description: 'Char Dham Yatra from Bangalore 2026. 2,100 km · 2h 30m direct flight to Dehradun. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Bangalore pickup, VIP darshan, registration handled free.',
+  keywords: ['char dham yatra from bangalore','char dham yatra bangalore 2026','char dham package from bangalore','kedarnath from bangalore','haridwar from bangalore'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bangalore` },
   openGraph: {
-    title: 'Char Dham Yatra from Bangalore 2026 — Trains, Flights & Packages from ₹25,999',
-    description: '2,100 km — fly only. Char Dham packages from ₹25,999/person. Zero commission, direct Haridwar operator.',
-    url: `${SITE.baseUrl}/char-dham-yatra-from-bangalore`, type:'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Bangalore — Shiv Ganga Travels' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Char Dham Yatra from Bangalore 2026 — Trains, Flights & Packages from ',
-    description: '2,100 km — fly only. Char Dham packages from ₹25,999/person. Zero commission, direct Haridwar operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Bangalore — Shiv Ganga Travels' }],
+    title: 'Char Dham Yatra from Bangalore 2026 — Direct Operator, Zero Commission',
+    description: 'Char Dham Yatra from Bangalore 2026. 2,100 km · 2h 30m direct flight to Dehradun. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Bangalore pickup, VIP darshan,',
+    url: `${SITE.baseUrl}/char-dham-yatra-from-bangalore`,
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Bangalore 2026 — Shiv Ganga Travels' }],
   },
 };
 
 function Schema() {
+  const org = {
+    '@context': 'https://schema.org', '@type': 'TravelAgency',
+    name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
+    '@id': `${SITE.baseUrl}/#organization`,
+    address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
+    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
+    areaServed: [{ '@type':'City', name:'Bangalore' }, { '@type':'State', name:'Uttarakhand' }],
+  };
   const faq = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity:[
-      { '@type':'Question', name:'How to reach Haridwar from Bangalore for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Bangalore to Dehradun — no direct flight; connect via Delhi or Mumbai. Total 3–4 hours. Alternatively fly to Delhi (2h 30m, ₹3,000–6,000) and take the Jan Shatabdi to Haridwar (5.5 hrs). Total: one day travel.' } },
-      { '@type':'Question', name:'What is the Char Dham Yatra package cost from Bangalore?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Bangalore starts at ₹25,999/person for a 9N/10D all-inclusive package — AC vehicle, hotels, meals, VIP darshan at all 4 dhams, guide, registration. Zero commission.' } },
-      { '@type':'Question', name:'How many days for Char Dham Yatra from Bangalore?', acceptedAnswer:{ '@type':'Answer', text:'Plan 11–13 days from Bangalore: 1 day travel to Haridwar + 9–10 days Char Dham circuit + 1–2 days return.' } },
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: [
+      { '@type':'Question', name:'How to reach Haridwar from Bangalore for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Bangalore (BLR) to Dehradun (DED) — IndiGo direct, 2h 30m, from ₹3,200. Fly to Dehradun, cab 35km to Haridwar (45 min). Strongly recommended over the 40+ hour train.' } },
+      { '@type':'Question', name:'What is the cost of Char Dham Yatra from Bangalore?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Bangalore with Shiv Ganga Travels starts at ₹26,999/person for a 9N/10D all-inclusive package from Haridwar. This covers AC vehicle, hotels, breakfast and dinner, VIP darshan at all 4 dhams, and 24x7 support. Bangalore pickup is available.' } },
     ],
   };
-  const bc = {
-    '@context':'https://schema.org','@type':'BreadcrumbList',
-    itemListElement:[
-      { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
-      { '@type':'ListItem', position:2, name:'Char Dham Yatra', item:`${SITE.baseUrl}/char-dham-yatra` },
-      { '@type':'ListItem', position:3, name:'From Bangalore', item:`${SITE.baseUrl}/char-dham-yatra-from-bangalore` },
-    ],
-  };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
+const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:36, letterSpacing:'-0.02em' };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
-export default function Page() {
+export default function CharDhamFromBangalore() {
   return (
     <>
-      <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px', textAlign:'center' }}>
-        <div style={{ maxWidth:860, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>
-            Bangalore · Char Dham 2026 · Direct Operator
-          </span>
+      <Schema />
+
+      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
+        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
+          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Char Dham Yatra 2026 · From Bangalore</span>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
             Char Dham Yatra from Bangalore 2026
           </h1>
-          <p style={{ color:'rgba(255,255,255,0.85)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto 20px' }}>
-            2,100 km — fly only · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹25,999' }/person</strong> · Zero commission
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
+            2,100 km · 2h 30m direct flight to Dehradun · All-inclusive from <strong style={{ color:'#FFD166' }}>₹26,999/person</strong> · Zero commission
           </p>
-          <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['✈️ Fly via Dehradun','✅ Zero commission','🙏 VIP darshan included','⭐ 4.6/5 · 38 reviews'].map(t=>(
-              <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
-            ))}
-          </div>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 24px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore. Please share packages and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
+              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Quote</a>
+            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)' }}>📞 Call Now</a>
           </div>
         </div>
       </section>
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Char Dham Yatra<span>›</span>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
+          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>From Bangalore</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Season open: Apr 19 – Nov 2026</div>
+      <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
+        <BlogAuthor variant="top" author="sumit" />
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
-          {[['Distance','2100 km'],['Best route','Fly to Dehradun/Delhi'],['Total trip','11–13 days'],['Package from','₹25,999/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(
-            <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div></div>
-          ))}
+          <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`2,100 km`}</div></div>
+          <div key="Flight time"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Flight time`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`2h 30m direct`}</div></div>
+          <div key="Total trip"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Total trip`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`11–13 days`}</div></div>
+          <div key="Package from"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Package from`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`₹26,999/person`}</div></div>
+          <div key="Best route"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Best route`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`Fly to Dehradun`}</div></div>
+          <div key="Registration"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Registration`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`FREE · We handle`}</div></div>
         </div>
 
-        <p style={p}><strong>Char Dham Yatra from Bangalore 2026:</strong> The distance from Bangalore to Haridwar is approximately 2100km. Bangalore to Dehradun — no direct flight; connect via Delhi or Mumbai. Total 3–4 hours. Alternatively fly to Delhi (2h 30m, ₹3,000–6,000) and take the Jan Shatabdi to Haridwar (5.5 hrs). Total: one day travel. Our all-inclusive 9N/10D package from Bangalore is ₹25,999/person — covers the full circuit with AC vehicle, hotels, meals, VIP darshan, and guide. Everything on this page is specific to Bangalore pilgrims.</p>
+        <p style={{ ...p, fontStyle:'italic', borderLeft:'3px solid var(--teal)', paddingLeft:16, background:'var(--navy-light)', padding:'14px 16px', borderRadius:'0 10px 10px 0', marginBottom:24 }}>
+          <strong>Bangalore to Haridwar — Char Dham 2026:</strong> Bangalore is 2,100km from Haridwar. The train takes 40+ hours — don't do it. Fly to Dehradun (2h 30m direct) and arrive rested. Bengaluru–Dehradun fares drop to ₹3,200 in October.
+        </p>
 
-        <h2 style={h2}>How to Reach Haridwar from Bangalore</h2>
-        <p style={p}>All our packages start from Haridwar. Getting there from Bangalore is your first step. Actual train names, timings and costs below:</p>
+        <h2 style={{...h2}}>How to Reach Haridwar from Bangalore</h2>
+        <p style={{...p}}>All our Char Dham packages start and end at Haridwar — the spiritual gateway of the circuit. Getting there is your first step.</p>
 
-        
-        <div style={{ overflowX:'auto', marginBottom:20 }}>
+        <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', marginBottom:10, marginTop:20 }}>🚂 Train from Bangalore</h3>
+        <div style={{ overflowX:'auto', marginBottom:16 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
-              {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h=>(
-                <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>
-              ))}
+              {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              {[
-                ['Bangalore–Delhi Rajdhani (22691)','KSR Bengaluru','08:00 PM','Delhi → Haridwar','40h + 6h total','₹2,500–6,000',''],
-              ].map(([train,from_,dep,arr,dur,cost,tip],i)=>(
-                <tr key={train} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
-                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{train}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{from_}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dep}</td>
-                  <td style={{ padding:'8px 12px', color:'#1D9E75', fontWeight:600, fontSize:12 }}>{arr}</td>
-                  <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dur}</td>
-                  <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12 }}>{cost}</td>
-                  <td style={{ padding:'8px 12px', color:'#64748b', fontSize:12 }}>{tip}</td>
-                </tr>
-              ))}
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Sampark Kranti (12649)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`08:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`40h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, 50h+ total`}</td></tr>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Via Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Various`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`38h+`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Fly instead`}</td></tr>
             </tbody>
           </table>
         </div>
-        <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:10, padding:'12px 16px', marginBottom:20 }}>
+
+        <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:10, padding:'12px 16px', marginBottom:14 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#0C447C', marginBottom:4 }}>✈️ Flight from Bangalore</div>
-          <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Bangalore to Dehradun — no direct flight; connect via Delhi or Mumbai. Total 3–4 hours. Alternatively fly to Delhi (2h 30m, ₹3,000–6,000) and take the Jan Shatabdi to Haridwar (5.5 hrs). Total: one day travel.</div>
+          <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Bangalore (BLR) to Dehradun (DED) — IndiGo direct, 2h 30m. Book 60+ days ahead for ₹3,200–5,500. Jolly Grant Airport is 35km from Haridwar, cab takes 45 minutes.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🚗 By Road from Bangalore</div>
-          <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Best route: fly Bangalore → Delhi (IndiGo/Air India, morning flight), arrive Delhi by noon, take Jan Shatabdi at 6:45 PM from New Delhi station, arrive Haridwar 12:10 AM. Start yatra next morning. One day travel, nothing wasted.</div>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Bangalore</div>
+          <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Bangalore to Haridwar is 2,100km — three days minimum. Not recommended before a demanding 10-day yatra circuit.</div>
         </div>
 
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Bangalore pilgrims (15 years of experience)</div>
-          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7 }}>Bangalore has a huge community of North Indian origin families who do Char Dham every 5–7 years. Many book a combined yatra + Kedarnath helicopter for working professionals — 6 days total with helicopter.</div>
+          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Bangalore pilgrims — 15 seasons of experience</div>
+          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Bengaluru sends a strong contingent — IT professionals who plan the yatra for May long weekends, with bookings spiking in late February. Kannada and Tamil-speaking groups from South Bengaluru consolidate into groups of 12–20 for shared Innova or Tempo Traveller bookings. Families from Koramangala and Whitefield form the bulk of our October batch. Bengaluru pilgrims are some of the best planners we see — if you WhatsApp us early, we can reserve slots before they fill.</div>
         </div>
 
-        <h2 style={h2}>What's Included — Bangalore Char Dham Package</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:24 }}>
-          {['✅ AC vehicle (Innova / Tempo Traveller)','✅ Station or airport pickup in Bangalore or Haridwar','✅ Hotel accommodation all 9 nights (twin sharing)','✅ Breakfast + dinner every day','✅ VIP darshan — no queue at all 4 dhams','✅ Experienced Garhwali guide throughout','✅ Biometric registration handled — completely free','✅ All tolls, parking, driver allowance included','✅ Oxygen cylinder + first aid kit on vehicle','✅ 24hr WhatsApp support during the entire yatra'].map(item=>(
-            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>
-          ))}
+        <BlogCTA variant="inline" intent="booking" />
+
+        <h2 style={{...h2}}>Package Inclusions — Char Dham from Bangalore</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:16 }}>
+          {[
+            '✅ AC vehicle (Innova / Tempo Traveller)',
+            '✅ Airport / station pickup in Bangalore or Haridwar',
+            '✅ Hotels — all 9 nights (twin sharing)',
+            '✅ Breakfast + dinner every day',
+            '✅ VIP darshan — no queue at all 4 dhams',
+            '✅ Experienced Garhwali guide throughout',
+            '✅ Biometric registration — completely free',
+            '✅ All tolls, parking, driver allowance',
+            '✅ Oxygen cylinder + first aid in vehicle',
+            '✅ 24×7 WhatsApp support throughout',
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
-          <strong>Package from Bangalore:</strong> ₹25,999/person · 9N/10D · All-inclusive · 5% GST included · Zero commission — you pay us directly
+          <strong>Package from Bangalore:</strong> ₹26,999/person · 9N/10D · All-inclusive · Zero commission
         </div>
 
-        <h2 style={h2}>Our Pickup Points in Bangalore</h2>
-        <p style={p}>We pick up from these Bangalore locations. If you are at a different address, WhatsApp us — we accommodate almost all requests.</p>
-        <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:28 }}>
-          <span key='KSR Bengaluru Station' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 KSR Bengaluru Station</span>
-          <span key='Kempegowda International Airport T1/T2' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Kempegowda International Airport T1/T2</span>
-          <span key='Whitefield' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Whitefield</span>
-          <span key='Electronic City' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Electronic City</span>
+        <h2 style={{...h2}}>Pickup Points in Bangalore</h2>
+        <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
+<span key="Kempegowda International Airport (BLR)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kempegowda International Airport (BLR)`}</span>
+          <span key="Majestic (KSR) Railway Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Majestic (KSR) Railway Station`}</span>
+          <span key="Koramangala" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Koramangala`}</span>
+          <span key="Whitefield" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Whitefield`}</span>
+          <span key="Electronic City" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Electronic City`}</span>
+          <span key="Yeshwanthpur Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Yeshwanthpur Station`}</span>
         </div>
+        <p style={{ ...p, fontSize:14 }}>South Indian pilgrims doing their first Himalayan Char Dham are sometimes unprepared for Kedarnath cold — 5–10°C even in May. We brief every Bengaluru group specifically: thermal layers and a windproof jacket are not optional. Our vehicles carry oxygen cylinders, which gives first-time high-altitude travellers peace of mind.</p>
 
-        <h2 style={h2}>2026 Season — All 4 Dhams Are Open</h2>
+        <h2 style={{...h2}}>2026 Season Status</h2>
         <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))', gap:12 }}>
-          {[['🌊 Yamunotri','Open Apr 19','Closes Nov 2026'],['🌿 Gangotri','Open Apr 19','Closes Nov 2026'],['🏔️ Kedarnath','Open Apr 22','Closes Nov 2026'],['🕌 Badrinath','Open Apr 23','Closes Nov 2026']].map(([d,o,c])=>(
-            <div key={d} style={{ textAlign:'center' }}>
-              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{d}</div>
-              <div style={{ fontSize:12.5, color:'#15803D', fontWeight:600 }}>{o}</div>
-              <div style={{ fontSize:12, color:'#64748b' }}>{c}</div>
-            </div>
+          {[['🌊 Yamunotri','Open Apr 19','Closes ~Nov 7'],['🌿 Gangotri','Open Apr 19','Closes ~Nov 7'],['🏔️ Kedarnath','Open Apr 22','Closes ~Nov 11'],['🕌 Badrinath','Open Apr 23','Closes ~Nov 13']].map(([dh,o,c]) => (
+            <div key={dh} style={{ textAlign:'center' }}><div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{dh}</div><div style={{ fontSize:12.5, color:'#15803D', fontWeight:600 }}>{o}</div><div style={{ fontSize:12, color:'#64748b' }}>{c}</div></div>
           ))}
         </div>
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
-          <div style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginBottom:6 }}>🙏 Bangalore → Haridwar → Char Dham</div>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Book Your Char Dham Yatra from Bangalore</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free itinerary in 2 hrs · ₹25,999/person · Zero commission · Registration handled free</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Bangalore.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Book Now</a>
-            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
-          </div>
-        </div>
-
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
-          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
-            ))}
-          </div>
-        </div>
+        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogCTA variant="footer" intent="booking" />
       </article>
     </>
   );

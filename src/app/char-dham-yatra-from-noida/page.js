@@ -1,201 +1,162 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogCTA from '@/components/BlogCTA';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Noida 2026',
-  description: 'Char Dham Yatra from Noida 2026. 270km to Haridwar via NH334. All-inclusive packages from ₹19,500. Door-to-door Noida pickup available.',
-  keywords: ['char dham yatra from noida','char dham yatra package from noida 2026','noida to char dham yatra','noida to haridwar char dham','char dham tour from noida'],
+  title: 'Char Dham Yatra from Noida 2026 — Packages, Routes & Direct Booking',
+  description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹22,999/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registration handled free.',
+  keywords: ['char dham yatra from noida','char dham yatra noida 2026','char dham package from noida','kedarnath from noida','haridwar from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {
-    title: 'Char Dham Yatra Package from Noida 2026 — Route, Distance & Booking',
-    description: 'Char Dham Yatra from Noida 2026. 285km to Haridwar. Packages from ₹19,500/person. Direct operator, zero commission.',
+    title: 'Char Dham Yatra from Noida 2026 — Direct Operator, Zero Commission',
+    description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹22,999/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registr',
     url: `${SITE.baseUrl}/char-dham-yatra-from-noida`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Noida — Shiv Ganga Travels' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Char Dham Yatra from Noida 2026',
-    description: 'Char Dham Yatra from Noida. 250km to Haridwar. Direct operator. Zero commission.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Noida — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Noida 2026 — Shiv Ganga Travels' }],
   },
 };
 
 function Schema() {
+  const org = {
+    '@context': 'https://schema.org', '@type': 'TravelAgency',
+    name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
+    '@id': `${SITE.baseUrl}/#organization`,
+    address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
+    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
+    areaServed: [{ '@type':'City', name:'Noida' }, { '@type':'State', name:'Uttarakhand' }],
+  };
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'How far is Noida from Haridwar for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Noida is approximately 240–285km from Haridwar depending on your sector. Via NH334 (Meerut–Muzaffarnagar route), the drive takes 4.5–5.5 hours by car, avoiding Delhi traffic.' } },
-      { '@type': 'Question', name: 'What is the cost of Char Dham Yatra from Noida?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Noida starts at ₹19,500 per person for 9N/10D from Haridwar (packages by Shiv Ganga Travels). Add Noida–Haridwar transfer cost separately, which we can arrange at ₹3,000–4,500 by cab.' } },
-      { '@type': 'Question', name: 'What is the best route from Noida to Haridwar for Char Dham?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Best route: Noida → NH58/NH334 → Meerut → Muzaffarnagar → Roorkee → Haridwar. Total distance ~270km, 4.5–5 hours. Avoid NH24 via Delhi as it adds 60–90 mins in traffic.' } },
-      { '@type': 'Question', name: 'Which train connects Noida to Haridwar for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'From Ghaziabad (nearest railhead, 15 mins from Noida): multiple daily trains to Haridwar including Jan Shatabdi Express (3.5 hrs). From New Delhi station: Haridwar Express, Mussoorie Express. Best option for time-saving is Ghaziabad–Haridwar Jan Shatabdi.' } },
+      { '@type':'Question', name:'How to reach Haridwar from Noida for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Noida to Haridwar — 230km via Delhi–Meerut Expressway. Drive in 4 hours (early morning) or take Jan Shatabdi from Anand Vihar (5h 25m). Driving is usually faster and more convenient.' } },
+      { '@type':'Question', name:'What is the cost of Char Dham Yatra from Noida?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Noida with Shiv Ganga Travels starts at ₹22,999/person for a 9N/10D all-inclusive package from Haridwar. This covers AC vehicle, hotels, breakfast and dinner, VIP darshan at all 4 dhams, and 24x7 support. Noida pickup is available.' } },
     ],
   };
-  const bc = {
-    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl },
-      { '@type': 'ListItem', position: 2, name: 'Char Dham Yatra', item: `${SITE.baseUrl}/char-dham-yatra` },
-      { '@type': 'ListItem', position: 3, name: 'From Noida', item: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
-    ],
-  };
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/>
-    </>
-  );
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
+const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:36, letterSpacing:'-0.02em' };
+const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
-export default function Page() {
+export default function CharDhamFromNoida() {
   return (
     <>
-      <Schema/>
+      <Schema />
+
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
         <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>
-            Noida NCR · Char Dham 2026
-          </span>
+          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Char Dham Yatra 2026 · From Noida</span>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra Package from Noida 2026
+            Char Dham Yatra from Noida 2026
           </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto 20px' }}>
-            Yamunotri · Gangotri · Kedarnath · Badrinath — from <strong style={{ color:'#FFD166' }}>₹19,500/person</strong> · Direct operator · Zero commission
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
+            230 km · 4–4.5h via Delhi–Meerut Expressway · All-inclusive from <strong style={{ color:'#FFD166' }}>₹22,999/person</strong> · Zero commission
           </p>
-          {['📍 ~270km to Haridwar','✅ Zero commission','🙏 9N/10D circuit','⭐ 50,000+ pilgrims'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
+          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Noida/NCR. Please share packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
+              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Quote</a>
+            <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)' }}>📞 Call Now</a>
+          </div>
         </div>
       </section>
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Char Dham Yatra<span>›</span>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
+          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>From Noida</span>
         </div>
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
+        <BlogAuthor variant="top" author="sumit" />
 
-        {/* Quick stats */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
-          {[['Distance to Haridwar','~270km'],['Best Route','NH334 via Meerut'],['Drive Time','4.5–5 hrs'],['Yatra Duration','9N/10D'],['Package From','₹19,500/person'],['Season','Apr 19 – Nov 2026']].map(([k,v]) => (
-            <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div></div>
-          ))}
+          <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`230 km`}</div></div>
+          <div key="Road time (5 AM)"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Road time (5 AM)`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`~4 hrs DM Expressway`}</div></div>
+          <div key="From Anand Vihar"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`From Anand Vihar`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`6–8h by train`}</div></div>
+          <div key="Package from"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Package from`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`₹22,999/person`}</div></div>
+          <div key="Total trip"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Total trip`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`10–12 days`}</div></div>
+          <div key="Registration"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Registration`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`FREE · We handle`}</div></div>
         </div>
 
-        <p style={p}>
-          Noida is one of the best-connected NCR locations for Char Dham Yatra pilgrims. At roughly 270km from Haridwar, the journey takes about 4.5–5 hours by road — and you completely skip the congestion of Delhi city by taking the NH334 route through Meerut and Muzaffarnagar. Most Noida pilgrims prefer an early morning departure (5–6 AM) to arrive in Haridwar by 10–11 AM, leaving the full day for the Ganga Aarti and first-day formalities.
+        <p style={{ ...p, fontStyle:'italic', borderLeft:'3px solid var(--teal)', paddingLeft:16, background:'var(--navy-light)', padding:'14px 16px', borderRadius:'0 10px 10px 0', marginBottom:24 }}>
+          <strong>Noida to Haridwar — Char Dham 2026:</strong> Noida is the closest NCR city to Haridwar — 230km on the Delhi–Meerut Expressway. Leave Sector 18 before 5:30 AM and you are in Haridwar by 10 AM for the morning Aarti.
         </p>
 
-        <h2 style={h2}>How to Reach Haridwar from Noida</h2>
-        <p style={p}>There are three good ways to get from Noida to Haridwar. Which one works best depends on your group size and budget.</p>
+        <h2 style={{...h2}}>How to Reach Haridwar from Noida</h2>
+        <p style={{...p}}>All our Char Dham packages start and end at Haridwar — the spiritual gateway of the circuit. Getting there is your first step.</p>
 
-        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:24 }}>
-          {[
-            { icon:'🚗', mode:'Private Car / Cab (Recommended)', time:'4.5–5 hrs', cost:'₹3,500–4,500 per car', desc:'Take the NH334 route via Meerut–Muzaffarnagar–Roorkee–Haridwar. Avoids Delhi traffic completely. We can arrange door-to-door pickup from any Noida sector.' },
-            { icon:'🚂', mode:'Train from Ghaziabad (GZB)', time:'3–3.5 hrs', cost:'₹80–400 per person', desc:'Jan Shatabdi Express (GZB to HW) is the fastest and cheapest. Ghaziabad station is just 15 mins from Noida. Book on IRCTC 60 days ahead for confirmed seats in peak season.' },
-            { icon:'✈️', mode:'Flight to Dehradun', time:'40 min + 1.5 hrs road', cost:'₹2,500–4,000', desc:'IndiGo and Air India fly Delhi to Dehradun (use Delhi airport — Noida to IGI is ~50 mins). Then 1.5 hrs by cab from Jolly Grant Airport to Haridwar.' },
-          ].map(r => (
-            <div key={r.mode} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
-              <div style={{ display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:6 }}>
-                <strong style={{ fontSize:13.5, color:'var(--navy)' }}>{r.icon} {r.mode}</strong>
-                <div style={{ display:'flex', gap:8 }}>
-                  <span style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:12, padding:'2px 10px', borderRadius:20, fontWeight:600 }}>{r.time}</span>
-                  <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:12, padding:'2px 10px', borderRadius:20, fontWeight:600 }}>{r.cost}</span>
-                </div>
-              </div>
-              <p style={{ fontSize:13.5, color:'#475569', lineHeight:1.7, margin:0 }}>{r.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <h2 style={h2}>Train Schedule — Ghaziabad to Haridwar</h2>
-        <div style={{ overflowX:'auto', marginBottom:28 }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
+        <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', marginBottom:10, marginTop:20 }}>🚂 Train from Noida</h3>
+        <div style={{ overflowX:'auto', marginBottom:16 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
-              {['Train','Dep GZB','Arr HW','Days','Fare (SL / 3A)'].map(h => (
-                <th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
-              ))}
+              {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              {[
-                ['Jan Shatabdi 12055','06:20','09:55','Daily','₹260 / ₹680'],
-                ['Mussoorie Express 14041','22:20','05:40+1','Daily','₹170 / ₹430'],
-                ['Dehradun Express 19019','23:10','07:00+1','Daily','₹165 / ₹440'],
-                ['Nanda Devi Express 12205','23:30','06:35+1','Tue,Thu,Sat','₹180 / ₹450'],
-              ].map(([tr,dep,arr,days,fare], i) => (
-                <tr key={tr} style={{ borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
-                  <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{tr}</td>
-                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{dep}</td>
-                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{arr}</td>
-                  <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{days}</td>
-                  <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
-                </tr>
-              ))}
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Jan Shatabdi (12055)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:45 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`12:10 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`5h 25m`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Best daytime from NCR`}</td></tr>
+              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Mussoorie Express (14041)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`20:30`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:00 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`9.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Overnight, arrives fresh`}</td></tr>
             </tbody>
           </table>
         </div>
 
-        <h2 style={h2}>Our Noida Pickup Service</h2>
-        <p style={p}>
-          We operate a dedicated Noida pickup service for Char Dham pilgrims. Our AC Innova or Tempo Traveller collects your group from your Noida sector address early morning and drives you directly to Haridwar, where your yatra vehicle is waiting. No train booking stress, no lugging bags through stations. From Noida Sector 18, the pickup typically happens at 5:30 AM for a 10 AM Haridwar arrival. Cost: ₹3,500–4,500 per car (not per person) one-way from central Noida.
-        </p>
+        <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:10, padding:'12px 16px', marginBottom:14 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'#0C447C', marginBottom:4 }}>✈️ Flight from Noida</div>
+          <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>No flight needed — Noida to Haridwar is 230km. The Delhi–Meerut Expressway is one of the best highways in India. Driving is faster than any flight option.</div>
+        </div>
 
-        <h2 style={h2}>Char Dham Packages from Noida 2026</h2>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))', gap:12, marginBottom:28 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Noida</div>
+          <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Noida to Haridwar: Delhi–Meerut Expressway to Meerut, NH334 via Muzaffarnagar, Roorkee, Haridwar. Leave Sector 18 before 5:30 AM. Avoid leaving after 7 AM — Ghaziabad traffic adds 45 minutes.</div>
+        </div>
+
+        <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
+          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Noida pilgrims — 15 seasons of experience</div>
+          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Noida and Greater Noida together form one of our top-3 departure cities. The IT corridor — Sector 62, Sector 132, Expressway — generates large corporate group bookings. We receive WhatsApp group bookings from entire offices who plan the yatra together as a team. For groups of 15+, we have a special Noida-origin pricing that consolidates vehicle cost. We also pick up from Ghaziabad (Raj Nagar) and Indirapuram for NCR pilgrims who prefer not to travel to Haridwar independently.</div>
+        </div>
+
+        <BlogCTA variant="inline" intent="booking" />
+
+        <h2 style={{...h2}}>Package Inclusions — Char Dham from Noida</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:16 }}>
           {[
-            { name:'Char Dham Classic', duration:'9N/10D', price:'₹19,500', badge:'Most Popular', href:'/packages/char-dham-yatra-9n-10d-haridwar' },
-            { name:'Char Dham Deluxe', duration:'11N/12D', price:'₹45,000', badge:'Best Value', href:'/packages/char-dham-yatra-11n-12d-haridwar' },
-            { name:'Senior Citizen Special', duration:'12N/13D', price:'₹27,999', badge:'With Pony', href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
-            { name:'Char Dham by Helicopter', duration:'5N/6D', price:'₹85,000', badge:'Premium', href:'/char-dham-helicopter' },
-          ].map(pkg => (
-            <Link key={pkg.href} href={pkg.href} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', textDecoration:'none', display:'flex', flexDirection:'column', gap:6 }}>
-              <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:20, width:'fit-content' }}>{pkg.badge}</span>
-              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{pkg.name}</div>
-              <div style={{ fontSize:12.5, color:'var(--text-muted)' }}>{pkg.duration}</div>
-              <div style={{ fontWeight:800, fontSize:16, color:'var(--gold)' }}>{pkg.price}<span style={{ fontSize:11, color:'var(--text-muted)', fontWeight:400 }}> /person</span></div>
-            </Link>
+            '✅ AC vehicle (Innova / Tempo Traveller)',
+            '✅ Airport / station pickup in Noida or Haridwar',
+            '✅ Hotels — all 9 nights (twin sharing)',
+            '✅ Breakfast + dinner every day',
+            '✅ VIP darshan — no queue at all 4 dhams',
+            '✅ Experienced Garhwali guide throughout',
+            '✅ Biometric registration — completely free',
+            '✅ All tolls, parking, driver allowance',
+            '✅ Oxygen cylinder + first aid in vehicle',
+            '✅ 24×7 WhatsApp support throughout',
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+        </div>
+        <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
+          <strong>Package from Noida:</strong> ₹22,999/person · 9N/10D · All-inclusive · Zero commission
+        </div>
+
+        <h2 style={{...h2}}>Pickup Points in Noida</h2>
+        <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
+<span key="Noida Sector 18 Metro Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 18 Metro Station`}</span>
+          <span key="Noida Sector 62" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 62`}</span>
+          <span key="Greater Noida (Pari Chowk)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Greater Noida (Pari Chowk)`}</span>
+          <span key="Knowledge Park II/III" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Knowledge Park II/III`}</span>
+          <span key="Ghaziabad (Raj Nagar)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Ghaziabad (Raj Nagar)`}</span>
+          <span key="Anand Vihar ISBT (Delhi)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Anand Vihar ISBT (Delhi)`}</span>
+        </div>
+        <p style={{ ...p, fontSize:14 }}>We run a Noida-NCR batch WhatsApp group every March–April for pilgrims who want to form a group with others from the area and share vehicle costs. Message us to be added. Groups of 6 from Noida can share an Innova Crysta and reduce per-person vehicle cost by ₹1,800–2,200 compared to individual bookings.</p>
+
+        <h2 style={{...h2}}>2026 Season Status</h2>
+        <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))', gap:12 }}>
+          {[['🌊 Yamunotri','Open Apr 19','Closes ~Nov 7'],['🌿 Gangotri','Open Apr 19','Closes ~Nov 7'],['🏔️ Kedarnath','Open Apr 22','Closes ~Nov 11'],['🕌 Badrinath','Open Apr 23','Closes ~Nov 13']].map(([dh,o,c]) => (
+            <div key={dh} style={{ textAlign:'center' }}><div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{dh}</div><div style={{ fontSize:12.5, color:'#15803D', fontWeight:600 }}>{o}</div><div style={{ fontSize:12, color:'#64748b' }}>{c}</div></div>
           ))}
         </div>
 
-        <h2 style={h2}>Why Book with Shiv Ganga Travels?</h2>
-        <p style={p}>
-          We're a Haridwar-based direct operator — not an online aggregator. That means when you pay ₹19,500, every rupee goes toward your accommodation, vehicle, meals, and guide. No platform fee. No agent commission. No markup. We've been running Char Dham Yatras since 2010, founded by a Retired Army Officer. Over 50,000 pilgrims have trusted us with their sacred journey.
-        </p>
-        <p style={p}>
-          For Noida pilgrims specifically, we're popular because we offer Noida doorstep pickup, flexible dates (not fixed departure batches), and a Noida-specific WhatsApp contact line where you can discuss packages in Hindi or English. Most of our Noida groups book 45–60 days in advance for May and October — which are peak months for NCR pilgrims.
-        </p>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Get Your Noida Package Quote — Free, 2 Hours</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Tell us your dates and group size. We'll send a detailed, no-obligation itinerary with exact pricing.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am from Noida and want to book Char Dham Yatra 2026. Please share packages and Noida pickup details.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Enquire Now</a>
-            <a href={`tel:${SITE.phone}`}
-              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
-          </div>
-        </div>
-
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
-          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['How to Reach Haridwar','/how-to-reach-haridwar'],['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Delhi Package','/char-dham-yatra-from-delhi'],['Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
-            ))}
-          </div>
-        </div>
+        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogCTA variant="footer" intent="booking" />
       </article>
     </>
   );

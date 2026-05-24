@@ -53,7 +53,7 @@ function Schema() {
     '@type': 'Person',
     '@id': `${SITE.baseUrl}/about#sumit-mishra`,
     name: 'Sumit Mishra',
-    jobTitle: 'Operations Manager & Content Lead',
+    jobTitle: 'Co-Founder & Co-Founder & Operations Manager',
     description: 'Manages operations at Shiv Ganga Travels. Has accompanied pilgrim groups on the Char Dham circuit since 2015, coordinating 500+ groups annually.',
     worksFor: {
       '@type': 'Organization',
@@ -257,7 +257,7 @@ export default function AboutPage() {
                 <div style={{ width:52, height:52, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:18, color:'#fff', flexShrink:0 }}>SM</div>
                 <div>
                   <div style={{ fontWeight:800, fontSize:15.5, color:'var(--navy)' }} itemProp="name">Sumit Mishra</div>
-                  <div style={{ fontSize:13, color:'var(--text-muted)' }} itemProp="jobTitle">Operations Manager & Content Lead</div>
+                  <div style={{ fontSize:13, color:'var(--text-muted)' }} itemProp="jobTitle">Co-Founder & Co-Founder & Operations Manager</div>
                   <div style={{ display:'flex', gap:6, marginTop:5 }}>
                     <a href="https://www.linkedin.com/in/sumit-mishra-863734171/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
                       style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>

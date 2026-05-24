@@ -10,7 +10,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
   const authors = {
     sumit: {
       name: 'Sumit Mishra',
-      role: 'Operations Manager & Content Lead, Shiv Ganga Travels',
+      role: 'Co-Founder & Operations Manager, Shiv Ganga Travels',
       bio: `Sumit Mishra manages day-to-day operations at Shiv Ganga Travels and has personally accompanied pilgrim groups on the Char Dham circuit since 2015. He handles route planning, hotel pre-blocking during peak season, and yatra coordination for 500+ pilgrims annually. Everything published on this site is written from first-hand experience on these routes.`,
       credentials: [
         '10+ years on Char Dham routes',
