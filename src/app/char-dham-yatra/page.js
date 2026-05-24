@@ -142,20 +142,6 @@ function Schema() {
   );
 }
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
-          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
 const charDhamPkgs = PACKAGES.filter(p => p.category === 'char-dham');
 
 const h2Style = {
