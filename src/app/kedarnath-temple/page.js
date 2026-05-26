@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Kedarnath Temple 2026 — History, Timings,',
+  title: 'Kedarnath Temple 2026 — Timings, Aarti & Darshan Guide',
   description: 'Complete Kedarnath Temple guide 2026. Temple history, darshan timings (4 AM–9 PM), dress code, puja types, altitude 3,583m, trek route from Gaurikund',
   keywords: ['kedarnath temple','kedarnath temple timings 2026','kedarnath temple history','kedarnath darshan 2026','kedarnath temple opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
@@ -118,7 +118,7 @@ export default function KedarnathTemple() {
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Puja booking assistance included · VIP darshan · Helicopter option · From ₹6,499</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra with puja booking assistance.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </article>

@@ -129,7 +129,7 @@ export default function CharDhamGuide2025() {
 
         <h2 style={h2}>Char Dham Yatra 2025 — Registration & Permits</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, the Government of Uttarakhand requires <strong>mandatory biometric registration</strong> for all Char Dham pilgrims. This helps manage crowd density at high-altitude temples and enables emergency response. Daily pilgrim limits are enforced, particularly at Kedarnath and Badrinath.</p>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917017082807' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7017082807</a>.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917817996730' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7817996730</a>.</p>
 
         <h2 style={h2}>Char Dham Yatra Route Map</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The traditional route follows a clockwise direction:</p>
@@ -145,7 +145,7 @@ export default function CharDhamGuide2025() {
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Plan Your Char Dham Yatra 2025?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Speak with our yatra experts. Free custom itinerary within 2 hours.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2025.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
             View Packages →

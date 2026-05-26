@@ -8,6 +8,18 @@ export const metadata = {
   description: 'Booking a Char Dham Yatra package vs going independent in 2026 — honest cost comparison, what you gain and lose, and which option suits which type of pilgrim. Expert guide from a Haridwar operator.',
   keywords: ['char dham yatra package vs self planned', 'char dham yatra self booking', 'is char dham yatra package worth it', 'char dham yatra independent travel', 'char dham package or self arranged 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned` },
+  openGraph: {
+    title: 'Char Dham Yatra Package vs Self-Planned 2026 – Honest Cost Comparison',
+    description: 'Is a Char Dham Yatra package worth it? Honest comparison of package vs self-planned — costs, convenience, and which suits you best. From a direct Haridwar operator.',
+    url: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned`,
+    type: 'article',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Package vs Self-Planned 2026 — Shiv Ganga Travels' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Char Dham Yatra Package vs Self-Planned 2026',
+    description: 'Honest cost comparison from a direct Haridwar operator — what you gain, what you lose, and who should choose which.',
+  },
 };
 
 function Schema() {

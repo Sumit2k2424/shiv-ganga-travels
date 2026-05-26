@@ -49,7 +49,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, Uttarakhand Tourism registered, with all-inclusive packages from ₹19,500 per person. Contact: +91-7017082807.' } },
+      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, Uttarakhand Tourism registered, with all-inclusive packages from ₹19,500 per person. Contact: +91-7817996730.' } },
       { '@type': 'Question', name: 'What should I check before booking a Char Dham Yatra operator?', acceptedAnswer: { '@type': 'Answer', text: 'Check: (1) Uttarakhand Tourism registration number. (2) Physical office in Haridwar or Rishikesh. (3) Google reviews — minimum 4.5★, at least 20+ genuine reviews. (4) All-inclusive pricing — pony, VIP darshan, government fees included. (5) Whether they are a direct operator or an aggregator. (6) Senior citizen package availability. (7) 24×7 on-route support.' } },
     ],
   };
@@ -88,7 +88,7 @@ const OPERATORS = [
     model: 'Direct operator — zero commission',
     regStatus: '✅ Uttarakhand Tourism registered',
     seniorPkg: '✅ 12N/13D dedicated package',
-    contact: `+91-7017082807 · wa.me/${SITE.whatsapp}`,
+    contact: `+91-7817996730 · wa.me/${SITE.whatsapp}`,
     url: SITE.baseUrl,
     pros: ['Lowest all-inclusive price — zero commission', 'Army-founded — military-grade accountability', 'Direct WhatsApp to the person managing your yatra', 'Pre-booked hotels in peak season', 'Dedicated senior citizen package'],
     cons: ['Smaller review count than large platforms', 'Limited departure city inventory vs aggregators'],

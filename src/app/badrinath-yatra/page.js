@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Badrinath Yatra Package 2026',
+  title: 'Badrinath Yatra Package 2026 — From ₹6,999 All Inclusive',
   description: 'Badrinath Yatra package from Haridwar 2026. 2N/3D all-inclusive from ₹5,999. Direct operator, zero commission. VIP darshan, AC cab, hotel.',
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar','badrinath yatra 2026',
@@ -162,6 +162,19 @@ export default function BadrinathYatraPage() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Season open: Apr 23 – Nov 2026</div>
+
+        {/* Quick Answer — for AI Overviews / featured snippets */}
+        <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:24 }}>
+          <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>🛕 Quick Answer</div>
+          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>Badrinath Yatra</strong> is the pilgrimage to the seat of Lord Vishnu at 3,133 metres in the Chamoli district of Uttarakhand. <strong>The temple opens April 23, 2026 and closes November 13, 2026.</strong> Unlike Kedarnath, Badrinath has full motor road access — no trek required. From Haridwar it is 301 km (10–12 hours by road). A 3-day Badrinath-only package from Haridwar costs <strong>from ₹6,999 per person</strong>, including hotels, transport, and meals.</p>
+        </div>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context':'https://schema.org','@type':'WebPage',
+          name:'Badrinath Yatra Package 2026',
+          url:`${SITE.baseUrl}/badrinath-yatra`,
+          speakable:{ '@type':'SpeakableSpecification', cssSelector:['.quick-answer','h1'] },
+        }) }}/>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Char Dham Emergency Contacts — SDRF & Hospital',
+  title: 'Char Dham Emergency Contacts 2026 — SDRF, Hospitals, Helpline',
   description: 'Char Dham emergency contacts 2026. SDRF helpline, hospital numbers, police contacts for Kedarnath, Badrinath, Gangotri, Yamunotri. Save before you travel.',
   keywords: ['char dham yatra emergency contacts','kedarnath helpline number','char dham yatra helpline 2026','badrinath temple committee number','char dham yatra police number'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-emergency-contacts` },
@@ -74,7 +74,7 @@ export default function EmergencyContacts() {
     <div style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
       <div style={{ background:'#fee2e2', border:'1px solid #fca5a5', borderRadius:12, padding:'14px 18px', marginBottom:28 }}>
         <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Before you travel</div>
-        <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>Save the 108 ambulance number and your nearest district control room number in your phone before departing. Mountain networks can be patchy — note numbers on paper too. Our team at Shiv Ganga Travels is also available 24/7 during your yatra at <strong>+91-7017082807</strong>.</p>
+        <p style={{ margin:0, fontSize:14, color:'#7f1d1d', lineHeight:1.7 }}>Save the 108 ambulance number and your nearest district control room number in your phone before departing. Mountain networks can be patchy — note numbers on paper too. Our team at Shiv Ganga Travels is also available 24/7 during your yatra at <strong>+91-7817996730</strong>.</p>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(380px,100%),1fr))', gap:16 }}>
         {contacts.map(cat => (
@@ -92,7 +92,7 @@ export default function EmergencyContacts() {
       <div style={{ marginTop:28, background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center' }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Travelling with Shiv Ganga Travels?</h3>
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:16 }}>Our team is your 24/7 support throughout the yatra. One call and we handle everything.</p>
-        <a href='tel:+917017082807' style={{ background:'#25D366', color:'#fff', padding:'11px 28px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+        <a href='tel:+917817996730' style={{ background:'#25D366', color:'#fff', padding:'11px 28px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
       </div>
     </div>
   </>);

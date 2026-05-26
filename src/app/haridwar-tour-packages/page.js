@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar Tour Package 2026',
+  title: 'Haridwar Tour Packages 2026 — Ghats, Temples & Sightseeing',
   description: 'Haridwar tour packages 2026 from ₹2,999. Har Ki Pauri, Ganga Aarti, Mansa Devi, Chandi Devi. Haridwar + Rishikesh combo. Direct operator, zero commission.',
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',
@@ -52,7 +52,7 @@ function Schema() {
       },
       {
         '@type': 'Question', name: 'What is the best travel agency in Haridwar for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels is one of Haridwar\'s most trusted Char Dham Yatra operators, founded in 2010 by a retired Indian Army officer. With 50,000+ pilgrims served, a 4.6/5 Google rating from 38 reviews, and Uttarakhand Tourism registration, we are a direct operator with zero commission. Located at Saptrishi Road, Bhupatwala, Haridwar. Contact: +91-7017082807.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels is one of Haridwar\'s most trusted Char Dham Yatra operators, founded in 2010 by a retired Indian Army officer. With 50,000+ pilgrims served, a 4.6/5 Google rating from 38 reviews, and Uttarakhand Tourism registration, we are a direct operator with zero commission. Located at Saptrishi Road, Bhupatwala, Haridwar. Contact: +91-7817996730.' },
       },
       {
         '@type': 'Question', name: 'How many days are needed for a Haridwar trip?',

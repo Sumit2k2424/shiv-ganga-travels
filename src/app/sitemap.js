@@ -144,6 +144,7 @@ export default function sitemap() {
   const tools = [
     { url: `${b}/char-dham-yatra-cost-calculator`,     p: 0.88, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-route-map`,           p: 0.87, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-statistics`,          p: 0.90, cf: 'monthly' },
   ];
 
   const cabs = [

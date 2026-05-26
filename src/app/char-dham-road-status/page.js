@@ -40,7 +40,7 @@ function Schema() {
       },
       {
         '@type': 'Question', name: 'What should I do if the road is blocked during Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Wait at the nearest safe point — dhabas and rest areas are every 2–3km on all routes. Call SDRF (+91-9411112985) for road updates and assistance. If you are travelling with Shiv Ganga Travels, our 24/7 WhatsApp support (+91-7017082807) monitors all routes in real time and will redirect your vehicle or arrange holding accommodation immediately.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Wait at the nearest safe point — dhabas and rest areas are every 2–3km on all routes. Call SDRF (+91-9411112985) for road updates and assistance. If you are travelling with Shiv Ganga Travels, our 24/7 WhatsApp support (+91-7817996730) monitors all routes in real time and will redirect your vehicle or arrange holding accommodation immediately.' },
       },
     ],
   };
@@ -312,8 +312,8 @@ export default function RoadStatus() {
           <p style={{ fontSize: 14, color: '#475569', lineHeight: 1.7, marginBottom: 16 }}>
             These stretches are clear during May–June and post-monsoon (September–October). Check before travel if visiting in July–August.
           </p>
-          <div style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--border)', overflow: 'hidden' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
+          <div style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--border)', overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5, minWidth: 480 }}>
               <thead>
                 <tr style={{ background: 'var(--navy-light)' }}>
                   <th style={{ padding: '10px 16px', textAlign: 'left', fontWeight: 700, fontSize: 12, color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Location</th>

@@ -3,12 +3,12 @@ import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
   title: 'Contact Shiv Ganga Travels — Haridwar Char Dham Yatra Booking',
-  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra 2026. Call +91-7017082807, WhatsApp, or visit our office at Saptrishi Road, Bhupatwala, Haridwar. Reply within 2 hours, 7 AM–9 PM, 7 days.',
+  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra 2026. Call +91-7817996730, WhatsApp, or visit our office at Saptrishi Road, Bhupatwala, Haridwar. Reply within 2 hours, 7 AM–9 PM, 7 days.',
   keywords: ['contact shiv ganga travels','char dham yatra booking haridwar','shiv ganga travels haridwar phone','char dham yatra operator contact','haridwar tour operator contact'],
   alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
   openGraph: {
     title: 'Contact Shiv Ganga Travels — Char Dham Yatra 2026 Booking, Haridwar',
-    description: 'Call or WhatsApp +91-7017082807. Saptrishi Road, Bhupatwala, Haridwar. 7 days, 7 AM–9 PM. Reply within 2 hours.',
+    description: 'Call or WhatsApp +91-7817996730. Saptrishi Road, Bhupatwala, Haridwar. 7 days, 7 AM–9 PM. Reply within 2 hours.',
     url: 'https://www.shivgangatravels.com/contact',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Contact Shiv Ganga Travels Haridwar' }],
@@ -44,7 +44,7 @@ function Schema() {
     '@id': `${SITE.baseUrl}/#organization`,
     name: SITE.name,
     url: SITE.baseUrl,
-    telephone: ['+91-7017082807', '+91-8859123961'],
+    telephone: ['+91-7817996730', '+91-8859123961'],
     email: SITE.email,
     address: {
       '@type': 'PostalAddress',
@@ -63,7 +63,7 @@ function Schema() {
     }],
     aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     contactPoint: [
-      { '@type': 'ContactPoint', telephone: '+91-7017082807', contactType: 'customer service', areaServed: 'IN', availableLanguage: ['Hindi','English'], hoursAvailable: { '@type': 'OpeningHoursSpecification', opens: '07:00', closes: '21:00', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] } },
+      { '@type': 'ContactPoint', telephone: '+91-7817996730', contactType: 'customer service', areaServed: 'IN', availableLanguage: ['Hindi','English'], hoursAvailable: { '@type': 'OpeningHoursSpecification', opens: '07:00', closes: '21:00', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] } },
       { '@type': 'ContactPoint', url: `https://wa.me/${SITE.whatsapp}`, contactType: 'sales', availableLanguage: ['Hindi','English'] },
     ],
     // ── Key contacts — machine-readable person entities ──────
@@ -73,7 +73,7 @@ function Schema() {
         '@id': `${SITE.baseUrl}/about#dhanesh-mishra`,
         name: 'Dhanesh Chandra Mishra',
         jobTitle: 'Founder & Director',
-        telephone: '+91-7017082807',
+        telephone: '+91-7817996730',
         worksFor: { '@id': `${SITE.baseUrl}/#organization` },
       },
       {
@@ -81,7 +81,7 @@ function Schema() {
         '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Co-Founder & Co-Founder & Operations Manager',
-        telephone: '+91-7017082807',
+        telephone: '+91-7817996730',
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
         worksFor: { '@id': `${SITE.baseUrl}/#organization` },
       },
@@ -96,7 +96,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the phone number of Shiv Ganga Travels Haridwar?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels can be reached at +91-7017082807 (primary) or +91-8859123961 (alternate). Available 7 days a week, 7 AM to 9 PM IST. WhatsApp is the fastest way to get a response — usually within 30 minutes.' }
+        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels can be reached at +91-7817996730 (primary) or +91-8859123961 (alternate). Available 7 days a week, 7 AM to 9 PM IST. WhatsApp is the fastest way to get a response — usually within 30 minutes.' }
       },
       {
         '@type': 'Question',
@@ -164,9 +164,9 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:'+91-7017082807', href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
+              { icon:'📞', label:'Phone', value:'+91-7817996730', href:'tel:+917817996730', sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'📞', label:'Phone 2', value:'+91-8859123961', href:'tel:+918859123961', sub:'Alternate number', color:'var(--navy)' },
-              { icon:'💬', label:'WhatsApp', value:'+91-7017082807', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
+              { icon:'💬', label:'WhatsApp', value:'+91-7817996730', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
               { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },
@@ -404,7 +404,7 @@ export default function ContactPage() {
                       <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:2 }} itemProp="name">Dhanesh Chandra Mishra</div>
                       <div style={{ fontSize:12.5, color:'var(--gold)', fontWeight:700, marginBottom:4 }} itemProp="jobTitle">Founder &amp; Director</div>
                       <p style={{ fontSize:13, color:'#475569', margin:0, lineHeight:1.65 }} itemProp="description">
-                        Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee in 2010. Personally oversees quality, vehicle maintenance and guide training for every season.
+                        Retired Indian Army Officer. Founded Shiv Ganga Travels in Haridwar in 2010. Personally oversees quality, vehicle maintenance and guide training for every season.
                       </p>
                     </div>
                   </div>

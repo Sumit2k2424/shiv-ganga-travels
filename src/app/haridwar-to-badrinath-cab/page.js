@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Badrinath Cab 2026 — Fare,',
+  title: 'Haridwar to Badrinath Cab 2026 — Fare, Distance & Route via Joshimath',
   description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.',
-  keywords: ['haridwar to badrinath cab,haridwar to badrinath taxi,haridwar to badrinath distance,cab from haridwar to badrinath 2026'],
+  keywords: ['haridwar to badrinath cab', 'haridwar to badrinath taxi', 'haridwar to badrinath distance', 'cab from haridwar to badrinath 2026', 'haridwar badrinath cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-badrinath-cab` },
   openGraph: { title: 'Haridwar to Badrinath Cab 2026 — Fare, Distance, Route via Joshimath', description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.', url: `${SITE.baseUrl}/haridwar-to-badrinath-cab`, type:'website' },
   twitter: {
@@ -49,7 +49,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Haridwar to Badrinath for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </section>
@@ -127,7 +127,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Haridwar to Badrinath for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </div>

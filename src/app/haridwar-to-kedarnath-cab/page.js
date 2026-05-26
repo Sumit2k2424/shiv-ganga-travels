@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Cab 2026 — Fare,',
+  title: 'Haridwar to Kedarnath Cab 2026 — Fare from ₹3,500, Route Guide',
   description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },
   openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Travel',
+    title: 'Haridwar to Kedarnath Cab 2026 — Fare from ₹3,500',
     description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
     images: [{ url: '/opengraph-image', alt: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Te | Shiv Ganga Travels' }],
   },
@@ -49,7 +49,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Haridwar to Kedarnath (Gaurikund) for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </section>
@@ -127,7 +127,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Haridwar to Kedarnath (Gaurikund) for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </div>

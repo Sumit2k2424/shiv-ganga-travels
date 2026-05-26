@@ -67,7 +67,7 @@ export default async function Image() {
 
         {/* Bottom bar */}
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 60px 32px' }}>
-          <span style={{ fontSize:'15px', color:'rgba(255,255,255,0.6)' }}>📞 +91-7017082807 · shivgangatravels.com</span>
+          <span style={{ fontSize:'15px', color:'rgba(255,255,255,0.6)' }}>📞 +91-7817996730 · shivgangatravels.com</span>
           <span style={{ fontSize:'14px', color:'rgba(255,255,255,0.5)' }}>Founded by Retired Army Officer</span>
         </div>
       </div>

@@ -73,6 +73,43 @@ export default function RishikeshAdventureGuide() {
         <li><strong>Morning Triveni Ghat dip:</strong> 5 AM, the Ganga glowing in the dawn light. Priests performing morning aarti. Possibly the most peaceful 30 minutes in India.</li>
       </ul>
 
+      <h2 style={h2}>Where to Stay — Honest Area-by-Area Guide</h2>
+      <p style={p}><strong>Tapovan:</strong> The yoga and traveller hub. Best hotels and cafes are here. Rooms ₹1,200–4,500. About 3km from the main ashram belt but worth it for the quality of accommodation. Where most of our clients prefer to stay.</p>
+      <p style={p}><strong>Laxman Jhula area:</strong> Older Rishikesh atmosphere. Authentic ashram setting on the river. Properties are simpler, often guesthouse-style. Rooms ₹600–2,500. Genuinely the soul of Rishikesh, but newer buildings are now far from the river.</p>
+      <p style={p}><strong>Ram Jhula / Swarg Ashram:</strong> Pedestrian-only zone, completely free of vehicles. Lined with ashrams and small dharamshalas. Rooms ₹400–1,500. Spiritual atmosphere is strongest here, but expect minimal amenities and shared bathrooms in many places.</p>
+      <p style={p}><strong>Main Rishikesh town:</strong> The municipal area near the railway station. Mid-range business hotels ₹1,800–3,500. Not where you come for the Rishikesh experience, but useful if you arrive late by train.</p>
+
+      <h2 style={h2}>Food — Where Locals & Long-Stayers Actually Eat</h2>
+      <p style={p}>Rishikesh is a vegetarian-only town by religious convention — no meat, no eggs, no alcohol within the municipal boundary. This sounds restrictive but the vegetarian food scene here is one of the best in India. The Little Buddha Cafe and Ramana's Garden (in Tapovan) serve genuinely good international vegetarian. The German Bakery near Laxman Jhula has been operating since 1985. For Indian food, the Chotiwala Restaurant near Ram Jhula has been serving the same thalis since 1958 — the kind of place that doesn't need to change. For chai, just sit anywhere along the ghats early morning.</p>
+
+      <h2 style={h2}>Combining Rishikesh with the Char Dham</h2>
+      <p style={p}>The natural pattern most of our pilgrims follow: 1–2 nights in Haridwar (Ganga aarti and main ghats), 1–2 nights in Rishikesh (river activities, ashram visit, optional rafting), then the Char Dham circuit. Rishikesh works particularly well as a soft-start to the mountain journey — you are already at 356m altitude, your body begins acclimatising, and you experience the holy Ganga before it becomes glacier-fed at Devprayag. Several of our 11-day Char Dham packages include 1 night Rishikesh built into the start.</p>
+
+      <h2 style={h2}>Frequently Asked Questions</h2>
+      <div style={{ marginBottom:24 }}>
+        {[
+          { q:'Is Rishikesh safe for solo female travellers?', a:'Yes — Rishikesh is one of the safer Indian destinations for solo women, especially in the Tapovan and Swarg Ashram areas where most travellers stay. The yoga community is international and welcoming. Standard precautions apply at night.' },
+          { q:'What is the best month to visit Rishikesh for rafting?', a:'March–April and September–November. Summer (June) gets hot. Monsoon (July–August) suspends rafting. Winter (December–February) is too cold for water activities but excellent for ashram stays and yoga.' },
+          { q:'Can I visit Rishikesh in one day from Haridwar?', a:'Yes — Rishikesh is only 25km from Haridwar (45 min by car). A day trip covering Laxman Jhula, Beatles Ashram, and Parmarth Niketan aarti is feasible. We arrange day-trip cars from Haridwar.' },
+          { q:'Is alcohol available in Rishikesh?', a:'No. Rishikesh is officially a dry city as a holy town. The nearest legal alcohol is in Haridwar or Dehradun. Most travellers respect this — the atmosphere is part of why Rishikesh feels different from other Indian destinations.' },
+        ].map(faq => (
+          <details key={faq.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'12px 16px', marginBottom:8 }}>
+            <summary style={{ fontWeight:700, fontSize:14, color:'var(--navy)', cursor:'pointer' }}>{faq.q}</summary>
+            <p style={{ margin:'10px 0 0', fontSize:14, color:'var(--text-mid)', lineHeight:1.75 }}>{faq.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context':'https://schema.org','@type':'FAQPage',
+        mainEntity:[
+          {'@type':'Question',name:'Is Rishikesh safe for solo female travellers?',acceptedAnswer:{'@type':'Answer',text:'Yes — Rishikesh is one of the safer Indian destinations for solo women, especially in the Tapovan and Swarg Ashram areas. Standard precautions apply at night.'}},
+          {'@type':'Question',name:'What is the best month to visit Rishikesh for rafting?',acceptedAnswer:{'@type':'Answer',text:'March–April and September–November. Summer is hot, monsoon suspends rafting, winter is too cold for water activities.'}},
+          {'@type':'Question',name:'Can I visit Rishikesh in one day from Haridwar?',acceptedAnswer:{'@type':'Answer',text:'Yes — Rishikesh is only 25km from Haridwar (45 min by car). A day trip is feasible.'}},
+          {'@type':'Question',name:'Is alcohol available in Rishikesh?',acceptedAnswer:{'@type':'Answer',text:'No. Rishikesh is officially a dry city as a holy town. The nearest legal alcohol is in Haridwar or Dehradun.'}},
+        ],
+      }) }} />
+
       <div style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Rishikesh Adventure Package</h3>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹4,999 per person · 2N/3D · Rafting + Camping + Ganga Aarti from Haridwar</p>

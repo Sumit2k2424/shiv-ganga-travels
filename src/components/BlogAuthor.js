@@ -24,7 +24,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
     dhanesh: {
       name: 'Dhanesh Chandra Mishra',
       role: 'Founder & Director, Shiv Ganga Travels',
-      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
+      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
       credentials: [
         'Retired Indian Army Officer',
         'Founded Shiv Ganga Travels 2010',

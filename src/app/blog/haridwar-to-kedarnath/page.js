@@ -78,6 +78,44 @@ export default function HaridwarToKedarnath() {
 
       </div>
 
+      <h2 style={h2}>What the 8-Hour Drive Actually Looks Like</h2>
+      <p style={p}>Most pilgrims underestimate the drive. The first 100km from Haridwar — through Rishikesh, Devprayag, and up to Srinagar Garhwal — is smooth four-lane highway in 2026 after the Char Dham Pariyojana widening. After Srinagar, the road narrows and the real mountain driving begins. Rudraprayag onwards has switchbacks every few minutes; sensitive stomachs should take a Vomicid or Avomine 30 minutes before this stretch.</p>
+      <p style={p}>The single most important advice we give every pilgrim: <strong>start from Haridwar no later than 4:30 AM</strong>. This gets you to Sonprayag before 1 PM, gives you time for the shared jeep to Gaurikund, and leaves daylight for the first kilometre of the trek if you are doing a same-day climb. Pilgrims who start at 7 AM consistently arrive at Sonprayag after 3 PM, miss the day's trekking window, and lose a full day from the itinerary.</p>
+
+      <h2 style={h2}>Where to Break the Journey — Best Overnight Stops</h2>
+      <p style={p}><strong>Devprayag (75 km from Haridwar):</strong> The confluence of Bhagirathi and Alaknanda — the official birthplace of the Ganga. A short stop here for tea and photos is worth it. Not a place to stay overnight.</p>
+      <p style={p}><strong>Rudraprayag (162 km):</strong> The largest town on the route. Decent hotels (₹1,500–3,000), good food at the Bharat Bhojanalay near the bus stand. A reasonable place to break the journey if you started late from Haridwar.</p>
+      <p style={p}><strong>Guptkashi (212 km):</strong> Our strongly recommended overnight stop. Sitting at 1,319m, it provides crucial acclimatisation before the climb to Kedarnath at 3,583m. Hotels are clean and reasonably priced (₹800–4,000). Most of our Kedarnath packages include this overnight by design.</p>
+      <p style={p}><strong>Sonprayag (243 km):</strong> The road ends here for private vehicles. Shared jeeps run the final 5km to Gaurikund (₹50/seat). Limited basic accommodation if you need it.</p>
+
+      <h2 style={h2}>Helicopter — When It Is Genuinely Worth the Cost</h2>
+      <p style={p}>The helicopter from Phata to Kedarnath (or Sersi/Guptkashi to Kedarnath) takes 7–10 minutes and costs ₹2,800–3,500 one way per person. For a fit pilgrim under 55, the trek is part of the spiritual experience and the helicopter feels like skipping the journey. For anyone over 60, anyone with a knee or heart condition, or anyone on a strict 1-day Kedarnath schedule, the helicopter is not a luxury — it is the right choice.</p>
+      <p style={p}>One thing operators do not always disclose: helicopter slots are weather-dependent and can be cancelled with as little as 30 minutes notice. We always recommend a hybrid plan — helicopter one way, trek the other way, with a buffer day at Guptkashi in case of cancellation. Our team handles all helicopter booking through IRCTC-approved operators.</p>
+
+      <h2 style={h2}>Frequently Asked Questions</h2>
+      <div style={{ marginBottom:24 }}>
+        {[
+          { q:'What is the exact distance from Haridwar to Kedarnath?', a:'225 km by road from Haridwar to Sonprayag (where private vehicles must stop). From Sonprayag, a shared jeep covers the final 5km to Gaurikund. From Gaurikund, the 16km trek begins. Total: 246 km from Haridwar to Kedarnath temple.' },
+          { q:'How long does the Haridwar to Kedarnath trip take?', a:'Drive time Haridwar to Sonprayag: 7–9 hours including breaks. With an overnight at Guptkashi (recommended), the trip is 2 days minimum (Day 1: Haridwar to Guptkashi, Day 2: Guptkashi to Kedarnath). Same-day Haridwar to Kedarnath is technically possible but exhausting and not advised.' },
+          { q:'Is there a direct bus from Haridwar to Kedarnath?', a:'Yes — GMOU and Uttarakhand State Transport buses run from Haridwar/Rishikesh ISBT to Sonprayag during the yatra season (May–October). The trip takes 10–12 hours by bus. Not recommended for senior pilgrims due to the rough ride.' },
+          { q:'Can I take my own car to Kedarnath?', a:'Yes, up to Sonprayag (243 km from Haridwar). From Sonprayag onwards, only authorised shared jeeps are allowed for the final 5km to Gaurikund. Parking at Sonprayag costs ₹100–200 per day.' },
+        ].map(faq => (
+          <details key={faq.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'12px 16px', marginBottom:8 }}>
+            <summary style={{ fontWeight:700, fontSize:14, color:'var(--navy)', cursor:'pointer' }}>{faq.q}</summary>
+            <p style={{ margin:'10px 0 0', fontSize:14, color:'var(--text-mid)', lineHeight:1.75 }}>{faq.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context':'https://schema.org','@type':'FAQPage',
+        mainEntity:[
+          {'@type':'Question',name:'What is the exact distance from Haridwar to Kedarnath?',acceptedAnswer:{'@type':'Answer',text:'225 km by road from Haridwar to Sonprayag, then 5km shared jeep to Gaurikund, then 16km trek to Kedarnath temple.'}},
+          {'@type':'Question',name:'How long does the Haridwar to Kedarnath trip take?',acceptedAnswer:{'@type':'Answer',text:'7–9 hours drive plus overnight at Guptkashi for acclimatisation, then trek day to Kedarnath. Minimum 2 days.'}},
+          {'@type':'Question',name:'Is there a direct bus from Haridwar to Kedarnath?',acceptedAnswer:{'@type':'Answer',text:'Yes — GMOU buses run to Sonprayag during yatra season. Not recommended for senior pilgrims.'}},
+        ],
+      }) }} />
+
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Package from Haridwar</h3>
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹6,499 all-inclusive · Pickup from Haridwar · Expert guide</p>

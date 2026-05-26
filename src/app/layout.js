@@ -76,11 +76,6 @@ export const metadata = {
 
   alternates: {
     canonical: SITE.baseUrl,
-    languages: {
-      'x-default': SITE.baseUrl,
-      'en-IN':     SITE.baseUrl,
-      'hi-IN':     `${SITE.baseUrl}/hi`,
-    },
   },
   other: {
     'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹19,500 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
@@ -119,7 +114,7 @@ function SiteSchema() {
       'Shiv Ganga Char Dham Tours',
     ],
     url: SITE.baseUrl,
-    telephone: ['+91-7017082807', '+91-8859123961'],
+    telephone: ['+91-7817996730', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
     address: {
@@ -200,11 +195,11 @@ function SiteSchema() {
       '@type': 'Person',
       name: 'Dhanesh Chandra Mishra',
       jobTitle: 'Founder & Director',
-      description: 'Retired Indian Army Officer, founded Shiv Ganga Travels in 2010 in Roorkee, Uttarakhand.',
+      description: 'Retired Indian Army Officer, founded Shiv Ganga Travels in 2010. Headquartered in Haridwar, Uttarakhand.',
     },
 
     foundingDate: '2010',
-    foundingLocation: { '@type': 'Place', name: 'Roorkee, Uttarakhand, India' },
+    foundingLocation: { '@type': 'Place', name: 'Haridwar, Uttarakhand, India' },
 
     priceRange: '₹₹',
     currenciesAccepted: 'INR',
@@ -213,14 +208,14 @@ function SiteSchema() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-7017082807',
+        telephone: '+91-7817996730',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['Hindi', 'English'],
       },
       {
         '@type': 'ContactPoint',
-        url: 'https://wa.me/917017082807',
+        url: 'https://wa.me/917817996730',
         contactType: 'sales',
         availableLanguage: ['Hindi', 'English'],
       },
@@ -230,7 +225,6 @@ function SiteSchema() {
     areaServed: [
       { '@type': 'City', name: 'Haridwar',   containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
       { '@type': 'City', name: 'Rishikesh',  containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
-      { '@type': 'City', name: 'Roorkee',    containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
       { '@type': 'City', name: 'Dehradun',   containedInPlace: { '@type': 'AdministrativeArea', name: 'Uttarakhand' } },
       { '@type': 'City', name: 'Delhi' },
       { '@type': 'City', name: 'Noida' },
@@ -266,50 +260,16 @@ function SiteSchema() {
     knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Gangotri Yatra', 'Yamunotri Yatra', 'Uttarakhand Tourism', 'Hindu Pilgrimage', 'Himalayan Travel', 'Char Dham Helicopter'],
 
     sameAs: [
+      'https://www.shivgangatravels.com',
+      'https://www.instagram.com/shivgangatravels/',
+      'https://www.facebook.com/profile.php?id=100083198213052',
+      'https://www.youtube.com/@Shivgangatravelsharidwar',
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
-      'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
-      `https://wa.me/${SITE.whatsapp}`,
-      'https://www.shivgangatravels.com',
     ],
   };
 
-  // ── Roorkee branch office — separate LocalBusiness with branchOf ──
-  const roorkee = {
-    '@context': 'https://schema.org',
-    '@type': ['TravelAgency', 'LocalBusiness'],
-    '@id': `${SITE.baseUrl}/#organization-roorkee`,
-    name: 'Shiv Ganga Travels — Roorkee',
-    url: SITE.baseUrl,
-    telephone: '+91-7017082807',
-    email: 'support@shivgangatravels.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Roorkee',
-      addressRegion: 'Uttarakhand',
-      postalCode: '247667',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 29.86820,
-      longitude: 77.89490,
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-    ],
-    // Links this branch back to the parent Haridwar location
-    branchOf: { '@id': `${SITE.baseUrl}/#organization` },
-    parentOrganization: { '@id': `${SITE.baseUrl}/#organization` },
-    priceRange: '₹₹',
-    description: 'Roorkee branch of Shiv Ganga Travels — Char Dham Yatra specialist. Founded here in 2010. Serving pilgrims from Roorkee, Muzaffarnagar, Saharanpur and surrounding areas.',
-  };
 
   // ── WebSite schema with SearchAction ──────────────────────
   const website = {
@@ -346,7 +306,6 @@ function SiteSchema() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founder) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(roorkee) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}/>
     </>
   );
@@ -375,7 +334,6 @@ export default function RootLayout({ children }) {
         <meta name="geo.position" content="29.9896838;78.1927454"/>
         <meta name="ICBM" content="29.9896838, 78.1927454"/>
         <meta name="geo.country" content="IN"/>
-        <meta name="ICBM" content="29.9457, 78.1642"/>
         {/* favicon.ico — Google uses this for search result icons (data: URIs are ignored) */}
         <link rel="icon" href="/favicon.ico" sizes="any"/>
         {/* PNG favicons — for modern browsers and Google Search */}

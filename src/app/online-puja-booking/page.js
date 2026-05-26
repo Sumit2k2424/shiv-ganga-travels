@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Online Puja Booking — Kedarnath, Badrinath',
+  title: 'Online Puja Booking 2026 — Kedarnath, Badrinath & All Dhams',
   description: 'Book online puja at Kedarnath, Badrinath, Gangotri and Yamunotri 2026. Abhishek, Rudraabhishek and special darshan. Managed directly from Haridwar.',
   keywords: ['online puja booking kedarnath','badrinath abhishek booking','kedarnath mahabhishek','rudrabhishek kedarnath','char dham puja booking 2026','badrinath online puja'],
   alternates: { canonical: `${SITE.baseUrl}/online-puja-booking` },

@@ -83,6 +83,10 @@ const nextConfig = {
       { source: '/char-dham-yatra-from-patna',       destination: '/char-dham-yatra-from-delhi', permanent: true },
       { source: '/char-dham-yatra-from-rishikesh',   destination: '/char-dham-yatra-from-delhi', permanent: true },
       { source: '/char-dham-yatra-from-dehradun',    destination: '/char-dham-yatra-from-delhi', permanent: true },
+      // Fix root-level 404s found in Search Console (pages exist under /blog/)
+      { source: '/char-dham-yatra-kitna-kharcha',    destination: '/blog/char-dham-yatra-kitna-kharcha', permanent: true },
+      { source: '/kedarnath-pehli-baar',             destination: '/blog/kedarnath-pehli-baar',          permanent: true },
+      { source: '/char-dham-kab-jayen',              destination: '/blog/char-dham-kab-jayen',           permanent: true },
     ];
   },
 
@@ -95,7 +99,12 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+          // HSTS: forces HTTPS for 2 years, includeSubDomains + preload-eligible
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          // Cross-Origin-Opener-Policy: process isolation, better Lighthouse score
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          // Modern Permissions-Policy — explicitly disable features we never use
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=(), interest-cohort=()' },
           {
             key: 'Content-Security-Policy',
             value: [
@@ -109,6 +118,7 @@ const nextConfig = {
               "worker-src blob: 'self'",
               "base-uri 'self'",
               "form-action 'self'",
+              "upgrade-insecure-requests",
             ].join('; '),
           },
         ],

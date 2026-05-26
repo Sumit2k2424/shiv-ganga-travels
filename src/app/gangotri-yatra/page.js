@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Gangotri Yatra 2026 — Package, Route, Temple',
+  title: 'Gangotri Yatra 2026 — Package, Route & Temple Darshan',
   description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,299 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek',
   keywords: ['gangotri yatra, gangotri yatra 2026, gangotri yatra package, haridwar to gangotri, gangotri temple guide'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
@@ -166,7 +166,7 @@ export default function Page() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Gangotri Yatra 2026 — Sacred Origin of the Ganga.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

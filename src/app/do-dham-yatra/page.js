@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: '2 Dham Yatra 2026 — Kedarnath & Badrinath',
+  title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath from ₹10,999',
   description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar. 5N/6D from ₹10,999/person. Who should choose 2 dham vs Char Dham, what each costs.',
   keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package','do dham yatra 2026','kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
@@ -84,6 +84,19 @@ export default function DoDhamYatra() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
+
+        {/* Quick Answer — for AI Overviews / featured snippets */}
+        <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:24 }}>
+          <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>🛕 Quick Answer</div>
+          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>Do Dham Yatra</strong> (Two-Dham Yatra) covers two of the four Char Dham shrines — <strong>Kedarnath and Badrinath</strong>. It is the most popular shortened pilgrimage option, completed in 5–6 days from Haridwar. Kedarnath requires a 16km trek (or helicopter) at 3,583m; Badrinath has motor road access at 3,133m. A complete Do Dham package from Haridwar costs <strong>from ₹10,999 per person</strong>, including hotels, transport, and meals.</p>
+        </div>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context':'https://schema.org','@type':'WebPage',
+          name:'Do Dham Yatra 2026 — Kedarnath & Badrinath',
+          url:`${SITE.baseUrl}/do-dham-yatra`,
+          speakable:{ '@type':'SpeakableSpecification', cssSelector:['.quick-answer','h1'] },
+        }) }}/>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Duration','5N/6D'],['Kedarnath','3,583m'],['Badrinath','3,133m'],['Trek','16km Kedarnath'],['Package from','₹10,999/person'],['Season','Apr 22 – Nov 2026']].map(([k,v])=>(

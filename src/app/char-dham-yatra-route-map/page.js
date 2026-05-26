@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Route Map 2026 — Complete Road',
+  title: 'Char Dham Yatra Route Map 2026 — Full Road Guide & Distances',
   description: 'Char Dham Yatra route map 2026. Interactive distances from Haridwar — Yamunotri, Gangotri, Kedarnath, Badrinath. Day-wise road distances and driving times.',
   keywords: ['char dham yatra route map','char dham route map 2026','char dham yatra road map','haridwar to char dham route','char dham yatra distance chart','char dham yatra map'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-route-map` },

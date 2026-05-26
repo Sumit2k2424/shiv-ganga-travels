@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Delhi 2026 — Train, Flight',
+  title: 'Char Dham Yatra from Delhi 2026 — Train, Flight & Packages',
   description: 'Char Dham Yatra from Delhi 2026. 250–335 km depending on pickup point. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
   keywords: ['char dham yatra from delhi','char dham yatra package from delhi','delhi to haridwar char dham','char dham tour from delhi 2026','chardham yatra delhi','delhi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-delhi` },
@@ -14,7 +14,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Delhi 2026 — Trains, Flights & Packages from ₹22,',
+    title: 'Char Dham Yatra from Delhi 2026 — From ₹22,999',
     description: '250–335 km depending on pickup point. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Delhi — Shiv Ganga Travels' }],
   },

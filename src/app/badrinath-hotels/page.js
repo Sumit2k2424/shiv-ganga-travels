@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Badrinath 2026',
+  title: 'Badrinath Hotels 2026 — Best Stays Near the Temple',
   description: 'Best hotels near Badrinath 2026. Badrinath town, Joshimath, Chamoli and Rudraprayag stays — honest guide with prices and recommendations.',
   keywords: ['hotels near badrinath','badrinath hotels 2026','joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },

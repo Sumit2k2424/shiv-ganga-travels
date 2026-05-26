@@ -3,7 +3,7 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar',
+  title: 'Char Dham Yatra Package 2026 — Haridwar from ₹19,500',
   description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹19,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
@@ -187,7 +187,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
               💬 Book on WhatsApp
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>
@@ -207,6 +207,20 @@ export default function CharDhamYatra() {
       {/* Main content */}
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
+
+        {/* ── Quick Answer block — built for AI Overviews, Bing Copilot, featured snippets ── */}
+        <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:24 }}>
+          <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>📍 Quick Answer</div>
+          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}>The <strong>Char Dham Yatra</strong> is a 10–12 day Himalayan pilgrimage covering four sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in Uttarakhand, India. The 2026 season runs April 19 to November 13. From Haridwar, a complete Char Dham package with hotels, transport, and meals costs <strong>₹19,500 to ₹45,000 per person</strong> depending on hotel tier. The full route covers approximately 1,607 km.</p>
+        </div>
+
+        {/* Speakable schema for voice/AI answers */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context':'https://schema.org','@type':'WebPage',
+          name:'Char Dham Yatra Package 2026 from Haridwar',
+          url:`${SITE.baseUrl}/char-dham-yatra`,
+          speakable:{ '@type':'SpeakableSpecification', cssSelector:['.quick-answer','h1'] },
+        }) }}/>
 
         {/* ── FIX 4: Credential badges above the fold ────────────── */}
         <div style={{ display:'flex', flexWrap:'wrap', gap:8, marginBottom:20 }}>
@@ -753,7 +767,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               💬 Book on WhatsApp
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background:'#fff', color:'var(--navy)', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Haridwar',
+  title: 'How to Reach Haridwar 2026 — Train, Flight, Bus & Cab Guide',
   description: 'How to reach Haridwar 2026. Train from Delhi (3.5 hrs), flight to Dehradun, bus and road routes from Mumbai, Bangalore and all major cities.',
   keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach','jolly grant airport haridwar','dehradun airport haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-haridwar` },
@@ -235,7 +235,7 @@ export default function HowToReachHaridwar() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Travel Advice
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>
