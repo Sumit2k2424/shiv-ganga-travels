@@ -94,7 +94,7 @@ function Schemas({ pkg }) {
     name:pkg.name,
     description:pkg.metaDesc,
     url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    image:pkg.photo||'https://www.shivgangatravels.com/logo.png',
+    image:pkg.photo||`${SITE.baseUrl}/logo.png`,
     brand:{ '@type':'Brand', name:SITE.name },
     offers:{
       '@type':'Offer',
@@ -104,13 +104,30 @@ function Schemas({ pkg }) {
       availability:'https://schema.org/InStock',
       seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
       url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    },
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue:4.6,
-      reviewCount:38,
-      bestRating:5,
-      worstRating:1,
+      hasMerchantReturnPolicy:{
+        '@type':'MerchantReturnPolicy',
+        applicableCountry:'IN',
+        returnPolicyCategory:'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays:7,
+        returnMethod:'https://schema.org/ReturnByMail',
+        returnFees:'https://schema.org/FreeReturn',
+        description:'Cancellation accepted up to 7 days before departure for a full refund minus processing fees. See full cancellation policy at shivgangatravels.com/cancellation-policy',
+        url:`${SITE.baseUrl}/cancellation-policy`,
+      },
+      shippingDetails:{
+        '@type':'OfferShippingDetails',
+        doesNotShip:true,
+        shippingDestination:{
+          '@type':'DefinedRegion',
+          addressCountry:'IN',
+        },
+        deliveryTime:{
+          '@type':'ShippingDeliveryTime',
+          handlingTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:1, unitCode:'DAY' },
+          transitTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:0, unitCode:'DAY' },
+        },
+        shippingRate:{ '@type':'MonetaryAmount', value:0, currency:'INR' },
+      },
     },
     review:[
       { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Rakesh Sharma'}, reviewBody:'Excellent Char Dham yatra experience. Zero commission as promised. Hotel stays were clean, driver was knowledgeable. Highly recommend Shiv Ganga Travels.' },

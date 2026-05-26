@@ -47,7 +47,6 @@ function Schema() {
     },
     geo: { '@type': 'GeoCoordinates', latitude: 29.98968, longitude: 78.19274 },
     openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '07:00', closes: '21:00' }],
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5, worstRating: 1 },
     priceRange: '₹₹',
     foundingDate: '2010',
     award: 'Uttarakhand Tourism Registered Tour Operator',
@@ -108,6 +107,7 @@ function Schema() {
     '@type': 'Product',
     name: 'Char Dham Yatra Package 2026 from Haridwar',
     description: 'All-inclusive Char Dham Yatra package from Haridwar. Yamunotri, Gangotri, Kedarnath, Badrinath. AC vehicle, hotels, guide, VIP darshan. Direct operator — zero commission.',
+    image: `${SITE.baseUrl}/opengraph-image`,
     brand: { '@type': 'Brand', name: SITE.name },
     offers: {
       '@type': 'AggregateOffer',
@@ -117,8 +117,26 @@ function Schema() {
       offerCount: '5',
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+      hasMerchantReturnPolicy:{
+        '@type':'MerchantReturnPolicy',
+        applicableCountry:'IN',
+        returnPolicyCategory:'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays:7,
+        returnFees:'https://schema.org/FreeReturn',
+        url:`${SITE.baseUrl}/cancellation-policy`,
+      },
+      shippingDetails:{
+        '@type':'OfferShippingDetails',
+        doesNotShip:true,
+        shippingDestination:{ '@type':'DefinedRegion', addressCountry:'IN' },
+        deliveryTime:{
+          '@type':'ShippingDeliveryTime',
+          handlingTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:1, unitCode:'DAY' },
+          transitTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:0, unitCode:'DAY' },
+        },
+        shippingRate:{ '@type':'MonetaryAmount', value:0, currency:'INR' },
+      },
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
   };
 
   const faqSchema = {

@@ -95,7 +95,6 @@ function Schema() {
       postalCode: '249410',
       addressCountry: 'IN',
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     award: 'Uttarakhand Tourism Registered Tour Operator',
     sameAs: [
       'https://www.shivgangatravels.com',

@@ -61,7 +61,6 @@ function Schema() {
       dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
       opens: '07:00', closes: '21:00',
     }],
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     contactPoint: [
       { '@type': 'ContactPoint', telephone: '+91-7817996730', contactType: 'customer service', areaServed: 'IN', availableLanguage: ['Hindi','English'], hoursAvailable: { '@type': 'OpeningHoursSpecification', opens: '07:00', closes: '21:00', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] } },
       { '@type': 'ContactPoint', url: `https://wa.me/${SITE.whatsapp}`, contactType: 'sales', availableLanguage: ['Hindi','English'] },
@@ -250,7 +249,7 @@ export default function ContactPage() {
                 </FormField>
 
                 <FormField label="Package Interested In">
-                  <select name="package" style={inputStyle} defaultValue="">
+                  <select name="package" aria-label="Select package type" style={inputStyle} defaultValue="">
                     <option value="" disabled>— Select a package —</option>
                     {PACKAGES.map(p => (
                       <option key={p.slug} value={p.name}>{p.name} ({p.duration.nights}N/{p.duration.days}D)</option>
@@ -261,7 +260,7 @@ export default function ContactPage() {
 
                 <FormRow>
                   <FormField label="Travel Month">
-                    <select name="month" style={inputStyle} defaultValue="">
+                    <select name="month" aria-label="Select travel month" style={inputStyle} defaultValue="">
                       <option value="" disabled>— Select month —</option>
                       {['May 2026','June 2026','July 2026','August 2026','September 2026','October 2026','Not sure yet'].map(m => (
                         <option key={m}>{m}</option>

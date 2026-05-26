@@ -132,7 +132,7 @@ export default function CostCalculator() {
             { val:'senior', label:'Senior Special', sub:'12N/13D · ₹24,500/pp' },
             { val:'helicopter', label:'Helicopter', sub:'5N/6D · ₹85,000/pp' },
           ].map(p => (
-            <button key={p.val} onClick={() => set('packageType', p.val)}
+            <button key={p.val} onClick={() => set('packageType', p.val)} aria-pressed={form.packageType === p.val} aria-label={p.label}
               style={{ ...toggleStyle(form.packageType === p.val), flexDirection:'column', alignItems:'flex-start', padding:'12px 14px' }}>
               <div style={{ fontWeight:700, fontSize:13.5 }}>{p.label}</div>
               <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{p.sub}</div>
@@ -153,7 +153,7 @@ export default function CostCalculator() {
               { key:'hotelUpgrade', label:'🏨 Hotel Upgrade', sub:'+₹3,000/person' },
               { key:'insurance', label:'🛡️ Travel Insurance', sub:'+₹500/person' },
             ].map(a => (
-              <button key={a.key} onClick={() => set(a.key, !form[a.key])}
+              <button key={a.key} onClick={() => set(a.key, !form[a.key])} aria-pressed={!!form[a.key]} aria-label={a.label}
                 style={{ ...toggleStyle(form[a.key]), justifyContent:'space-between' }}>
                 <div>
                   <div style={{ fontWeight:600 }}>{a.label}</div>

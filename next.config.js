@@ -22,6 +22,8 @@ const nextConfig = {
 
   // Reduce JS bundle size — tree-shake large packages
   experimental: {
+    optimizeCss: true,           // Critters: inline critical CSS, defer the rest
+    optimizeServerReact: true,   // Tree-shake unused React server components
     optimizePackageImports: [
       'react',
       'react-dom',

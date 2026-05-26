@@ -57,6 +57,7 @@ export default function PackageCard({ pkg }) {
               alt={pkg.name}
               width={400} height={200}
               loading="lazy" decoding="async"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
               style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", display:"block" }}
             />
           )}

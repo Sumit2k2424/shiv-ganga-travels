@@ -46,7 +46,6 @@ function Schema() {
     '@id': `${SITE.baseUrl}/#organization`,
     address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
     foundingDate: String(SITE.established),
-    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
     priceRange: '₹₹',
   };
 
@@ -56,6 +55,7 @@ function Schema() {
     name: 'Char Dham Yatra Package 2026 from Haridwar',
     description: 'All-inclusive Char Dham Yatra package covering Yamunotri, Gangotri, Kedarnath and Badrinath. 9N/10D from Haridwar. Direct operator, no commission.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
+    image: `${SITE.baseUrl}/opengraph-image`,
     brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
     offers: {
       '@type': 'Offer',
@@ -65,8 +65,27 @@ function Schema() {
       availability: 'https://schema.org/InStock',
       url: `${SITE.baseUrl}/char-dham-yatra`,
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
+      hasMerchantReturnPolicy:{
+        '@type':'MerchantReturnPolicy',
+        applicableCountry:'IN',
+        returnPolicyCategory:'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays:7,
+        returnMethod:'https://schema.org/ReturnByMail',
+        returnFees:'https://schema.org/FreeReturn',
+        url:`${SITE.baseUrl}/cancellation-policy`,
+      },
+      shippingDetails:{
+        '@type':'OfferShippingDetails',
+        doesNotShip:true,
+        shippingDestination:{ '@type':'DefinedRegion', addressCountry:'IN' },
+        deliveryTime:{
+          '@type':'ShippingDeliveryTime',
+          handlingTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:1, unitCode:'DAY' },
+          transitTime:{ '@type':'QuantitativeValue', minValue:0, maxValue:0, unitCode:'DAY' },
+        },
+        shippingRate:{ '@type':'MonetaryAmount', value:0, currency:'INR' },
+      },
     },
-    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
 
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };

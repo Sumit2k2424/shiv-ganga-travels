@@ -23,7 +23,6 @@ function Schema() {
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     '@id': `${SITE.baseUrl}/#organization`,
     address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
     areaServed: [{ '@type':'City', name:'Chennai' }, { '@type':'State', name:'Uttarakhand' }],
   };
   const faq = {

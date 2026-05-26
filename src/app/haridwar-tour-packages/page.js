@@ -40,7 +40,6 @@ function Schema() {
       streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
       addressLocality: 'Haridwar', addressRegion: 'Uttarakhand', postalCode: '249410', addressCountry: 'IN',
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     priceRange: '₹₹',
   };
   const faq = {

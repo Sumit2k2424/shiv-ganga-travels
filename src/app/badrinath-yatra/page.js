@@ -54,7 +54,6 @@ function Schema() {
       name: SITE.name,
       url: SITE.baseUrl,
       telephone: SITE.phone,
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.6, reviewCount: 38, bestRating: 5 },
     },
   };
 

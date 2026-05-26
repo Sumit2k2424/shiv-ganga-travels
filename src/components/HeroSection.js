@@ -8,11 +8,17 @@ import { SITE } from '@/data/packages';
 function Snow() {
   const ref = useRef(null);
   useEffect(() => {
+    // Skip animation entirely if user prefers reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let raf, w, h;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    // Cap DPR at 1 on mobile to halve pixel work
+    const isMobile = window.innerWidth <= 768;
+    const dpr = isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 2);
 
     function resize() {
       w = canvas.offsetWidth; h = canvas.offsetHeight;
@@ -20,9 +26,10 @@ function Snow() {
       ctx.scale(dpr, dpr);
     }
     resize();
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
 
-    const FLAKES = 160;
+    // 60 flakes on mobile, 160 on desktop — halves CPU/TBT on mobile
+    const FLAKES = isMobile ? 60 : 160;
     const flakes = Array.from({ length: FLAKES }, () => ({
       x:  Math.random() * 1440,
       y:  Math.random() * 900,

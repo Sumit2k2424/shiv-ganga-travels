@@ -71,6 +71,8 @@ function ReviewCard({ review }) {
         {shown}
         {long && (
           <button onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-label={expanded ? 'Show less review text' : 'Show more review text'}
             style={{ background:'none', border:'none', color:'#0f2b5b', fontWeight:700,
               fontSize:13, cursor:'pointer', padding:'0 0 0 4px' }}>
             {expanded ? ' less' : ' more'}
@@ -174,6 +176,7 @@ export default function GoogleReviews() {
           {/* Nav arrows */}
           {[{ dir:-1, can:canL }, { dir:1, can:canR }].map(({ dir, can }) => (
             <button key={dir} onClick={() => scroll(dir)} disabled={!can}
+              aria-label={dir === -1 ? 'Previous reviews' : 'Next reviews'}
               style={{ width:36, height:36, borderRadius:'50%', border:'1px solid #e8ecf2',
                 background: can ? '#fff' : '#f8f9fa', cursor: can ? 'pointer' : 'default',
                 display:'flex', alignItems:'center', justifyContent:'center', opacity: can ? 1 : .4 }}>

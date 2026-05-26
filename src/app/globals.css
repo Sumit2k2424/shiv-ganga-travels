@@ -179,7 +179,7 @@ input, textarea, select { font-size: 16px; }
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: all var(--t);
+  transition: color var(--t), background var(--t), border-color var(--t), opacity var(--t), transform var(--t);
   white-space: nowrap;
   padding: 10px 22px;
   position: relative;
@@ -372,7 +372,7 @@ input, textarea, select { font-size: 16px; }
   align-items: center;
   justify-content: center;
   font-size: 32px;
-  transition: all var(--t-out);
+  transition: transform var(--t-out), box-shadow var(--t-out), opacity var(--t-out);
   box-shadow: var(--shadow);
 }
 .dham-tile:hover .dham-circle {
@@ -422,7 +422,7 @@ input, textarea, select { font-size: 16px; }
   padding: 7px 15px;
   border-radius: var(--r-sm);
   border: 1.5px solid var(--border-dark);
-  transition: all var(--t);
+  transition: border-color var(--t), background var(--t), color var(--t), opacity var(--t), transform var(--t);
   white-space: nowrap;
 }
 .view-all:hover {
@@ -439,6 +439,7 @@ input, textarea, select { font-size: 16px; }
 ═══════════════════════════════════════════════════════════════ */
 .wa-float {
   position: fixed;
+  will-change: transform, box-shadow;
   bottom: 96px;   /* sits above the chat button on desktop */
   right: 24px;
   z-index: 999;
@@ -505,7 +506,7 @@ input, textarea, select { font-size: 16px; }
   color: var(--navy);
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; font-weight: 700;
-  transition: all var(--t-out);
+  transition: color var(--t-out), background var(--t-out), opacity var(--t-out), transform var(--t-out);
 }
 .faq-question[aria-expanded="true"] .faq-icon {
   background: var(--gold); color: #fff; transform: rotate(45deg);
@@ -527,7 +528,7 @@ input, textarea, select { font-size: 16px; }
   flex: 0 0 345px;
   display: flex;
   flex-direction: column;
-  transition: all var(--t-out);
+  transition: transform var(--t-out), opacity var(--t-out), box-shadow var(--t-out);
   position: relative;
 }
 .testimonial-card:hover {
@@ -611,6 +612,7 @@ input, textarea, select { font-size: 16px; }
     right: 16px !important;
     width: 48px !important;
     height: 48px !important;
+    animation: none !important; /* save compositor thread on mobile */
   }
 }
 
@@ -1869,11 +1871,6 @@ html {
   animation: shimmer 1.4s ease infinite;
   border-radius: var(--r-sm);
 }
-@keyframes shimmer {
-  0%   { background-position: 100% 50%; }
-  100% { background-position: 0%   50%; }
-}
-
 /* ═══════════════════════════════════════════════════════════════
    MOBILE-FIRST RESPONSIVE — COMPREHENSIVE PATCH
    Covers inline-styled JSX elements not reachable by class names
