@@ -228,6 +228,63 @@ export default function ContactPage() {
                 </ul>
               </div>
 
+              {/* The People Behind the Yatra — moved from About; named humans (E-E-A-T) */}
+              <div style={{
+                background:'#fff', padding:'22px 20px',
+                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+              }}>
+                <h3 style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:4 }}>The People Behind the Yatra</h3>
+                <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.5, margin:'0 0 16px' }}>
+                  Every itinerary, every guide, every piece of content on this site comes from people who have spent years on these routes.
+                </p>
+
+                {/* Dhanesh */}
+                <div itemScope itemType="https://schema.org/Person" itemID="/contact#dhanesh-mishra"
+                  style={{ borderTop:'1px solid var(--border)', paddingTop:16 }}>
+                  <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
+                    <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#FFD166', flexShrink:0 }}>DM</div>
+                    <div style={{ minWidth:0 }}>
+                      <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)' }} itemProp="name">Dhanesh Chandra Mishra</div>
+                      <div style={{ fontSize:12.5, color:'var(--text-muted)' }} itemProp="jobTitle">Founder &amp; Director</div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.65, margin:'10px 0 10px' }} itemProp="description">
+                    Retired Indian Army Officer. Founded Shiv Ganga Travels in 2010 after years of military posting across Uttarakhand. Has personally driven the Kedarnath and Badrinath routes hundreds of times.
+                  </p>
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                    {['Retired Army Officer','Founded 2010','15 Seasons','50,000+ Pilgrims'].map(c => (
+                      <span key={c} style={{ fontSize:11, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sumit */}
+                <div itemScope itemType="https://schema.org/Person" itemID="/contact#sumit-mishra"
+                  style={{ borderTop:'1px solid var(--border)', paddingTop:16, marginTop:16 }}>
+                  <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
+                    <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#fff', flexShrink:0 }}>SM</div>
+                    <div style={{ minWidth:0 }}>
+                      <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)' }} itemProp="name">Sumit Mishra</div>
+                      <div style={{ fontSize:12.5, color:'var(--text-muted)' }} itemProp="jobTitle">Operations Manager &amp; Content Lead</div>
+                      <div style={{ display:'flex', gap:8, marginTop:5 }}>
+                        <a href="https://www.linkedin.com/in/sumit-mishra-863734171/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
+                          style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>
+                        <a href="https://www.facebook.com/sumi2112" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
+                          style={{ fontSize:11.5, color:'#1877F2', fontWeight:600, textDecoration:'none' }}>Facebook ↗</a>
+                      </div>
+                    </div>
+                  </div>
+                  <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.65, margin:'10px 0 10px' }} itemProp="description">
+                    Manages day-to-day operations and handles all yatra content. Has accompanied pilgrim groups on the full Char Dham circuit since 2015. Coordinates 500+ pilgrim groups annually and writes from direct field experience.
+                  </p>
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
+                    {['Operations since 2015','500+ Groups/Year','Content Author','Haridwar Based'].map(c => (
+                      <span key={c} style={{ fontSize:11, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Grievance & Content — named point of contact (trust / E-E-A-T) */}
               <div style={{
                 background:'#fff', padding:'22px 20px',
