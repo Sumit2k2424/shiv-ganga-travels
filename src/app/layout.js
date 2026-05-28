@@ -119,7 +119,7 @@ function SiteSchema() {
       'Shiv Ganga Char Dham Tours',
     ],
     url: SITE.baseUrl,
-    telephone: ['+91-7017082807', '+91-8859123961'],
+    telephone: ['+91-7817996730', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
     address: {
@@ -213,16 +213,33 @@ function SiteSchema() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-7017082807',
+        telephone: '+91-7817996730',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['Hindi', 'English'],
       },
       {
         '@type': 'ContactPoint',
-        url: 'https://wa.me/917017082807',
+        url: 'https://wa.me/917817996730',
         contactType: 'sales',
         availableLanguage: ['Hindi', 'English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-7817996730',
+        contactType: 'customer support',
+        name: 'Pragati Bhardwaj — Grievance Head',
+        availableLanguage: ['Hindi', 'English'],
+        areaServed: 'IN',
+      },
+    ],
+
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Pragati Bhardwaj',
+        jobTitle: 'Grievance Head & Lead Content',
+        worksFor: { '@id': `${SITE.baseUrl}/#organization` },
       },
     ],
 
@@ -282,7 +299,7 @@ function SiteSchema() {
     '@id': `${SITE.baseUrl}/#organization-roorkee`,
     name: 'Shiv Ganga Travels — Roorkee',
     url: SITE.baseUrl,
-    telephone: '+91-7017082807',
+    telephone: '+91-7817996730',
     email: 'support@shivgangatravels.com',
     address: {
       '@type': 'PostalAddress',

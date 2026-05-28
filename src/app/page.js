@@ -399,9 +399,9 @@ export default function HomePage() {
             </div>
             {/* Phone */}
             <div className="zero-comm-phone" style={{ flexShrink:0, padding:'0 22px', borderLeft:'1px solid var(--border)', display:'flex', alignItems:'center' }}>
-              <a href='tel:+917017082807' style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:2, textDecoration:'none' }}>
+              <a href='tel:+917817996730' style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:2, textDecoration:'none' }}>
                 <span style={{ fontSize:18 }}>📞</span>
-                <span style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', whiteSpace:'nowrap' }}>+91-7017082807</span>
+                <span style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', whiteSpace:'nowrap' }}>+91-7817996730</span>
                 <span style={{ fontSize:10, color:'var(--text-muted)' }}>Call direct</span>
               </a>
             </div>
@@ -770,7 +770,7 @@ export default function HomePage() {
                   style={{ background:'#25D366', color:'#fff', padding:'11px 16px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', textAlign:'center' }}>
                   💬 Start on WhatsApp
                 </a>
-                <a href='tel:+917017082807'
+                <a href='tel:+917817996730'
                   style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'10px 16px', borderRadius:9, fontWeight:600, fontSize:13, textDecoration:'none', textAlign:'center', border:'1px solid rgba(255,255,255,0.25)' }}>
                   📞 {SITE.phone}
                 </a>
@@ -1008,7 +1008,7 @@ export default function HomePage() {
                 style={{ background:'#25D366', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
                 💬 WhatsApp
               </a>
-              <a href='tel:+917017082807'
+              <a href='tel:+917817996730'
                 style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'10px 20px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
                 📞 {SITE.phone}
               </a>
@@ -1076,7 +1076,7 @@ export default function HomePage() {
             Speak with our yatra experts today. Limited seats per batch — book early for the best dates and pricing.
           </p>
           <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap', marginBottom:44 }}>
-            <a href='tel:+917017082807' style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'var(--shadow-lg)', transition:'transform var(--t)' }}>
+            <a href='tel:+917817996730' style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:'var(--r-sm)', fontWeight:700, fontSize:14, textDecoration:'none', boxShadow:'var(--shadow-lg)', transition:'transform var(--t)' }}>
               📞 {SITE.phone}
             </a>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"

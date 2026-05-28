@@ -66,7 +66,7 @@ export default function PanchBadriYatra() {
           { '@type':'Question', name:'How many days are needed for Panch Badri Yatra?',
             acceptedAnswer:{ '@type':'Answer', text:'Minimum 5–6 days from Haridwar for a comfortable Panch Badri Yatra. This covers Adi Badri (Day 1–2), Joshimath as base (Day 3–4) for Vriddha Badri and Yogadhyan Badri, Badrinath (Day 4–5), and Bhavishya Badri (Day 5, if fit). A relaxed 7N/8D itinerary is recommended.' }},
           { '@type':'Question', name:'What is the cost of Panch Badri Yatra from Haridwar?',
-            acceptedAnswer:{ '@type':'Answer', text:'Panch Badri Yatra from Haridwar starts from approximately ₹18,000–₹25,000 per person for a 6N/7D package including transport, accommodation, and meals. Contact Shiv Ganga Travels at +91-7017082807 for a customised quote.' }},
+            acceptedAnswer:{ '@type':'Answer', text:'Panch Badri Yatra from Haridwar starts from approximately ₹18,000–₹25,000 per person for a 6N/7D package including transport, accommodation, and meals. Contact Shiv Ganga Travels at +91-7817996730 for a customised quote.' }},
         ],
       })}}/>
 

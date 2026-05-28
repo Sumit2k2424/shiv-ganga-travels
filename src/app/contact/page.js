@@ -43,9 +43,9 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:'+91-7017082807', href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
+              { icon:'📞', label:'Phone', value:'+91-7817996730', href:'tel:+917817996730', sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'📞', label:'Phone 2', value:'+91-8859123961', href:'tel:+918859123961', sub:'Alternate number', color:'var(--navy)' },
-              { icon:'💬', label:'WhatsApp', value:'+91-7017082807', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
+              { icon:'💬', label:'WhatsApp', value:'+91-7817996730', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
               { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },
@@ -226,6 +226,39 @@ export default function ContactPage() {
                     <li key={t} style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.5 }}>{t}</li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Grievance & Content — named point of contact (trust / E-E-A-T) */}
+              <div style={{
+                background:'#fff', padding:'22px 20px',
+                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+              }}>
+                <div style={{ fontSize:11, color:'var(--text-muted)', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:12 }}>
+                  Grievance &amp; Editorial
+                </div>
+                <div style={{ display:'flex', alignItems:'center', gap:13 }}>
+                  <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:15, color:'#FFD166' }}>
+                    PB
+                  </div>
+                  <div style={{ minWidth:0 }}>
+                    <div style={{ fontWeight:700, fontSize:14.5, color:'var(--text)' }}>Pragati Bhardwaj</div>
+                    <div style={{ fontSize:12.5, color:'var(--teal)', fontWeight:600, marginTop:1 }}>Grievance Head &amp; Lead Content</div>
+                  </div>
+                </div>
+                <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.6, margin:'13px 0 0' }}>
+                  For any complaint, service concern, or feedback about your yatra, Pragati is your direct point of contact and ensures every grievance is acknowledged within 24 hours. She also leads the content and guides published across this site.
+                </p>
+                <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginTop:14 }}>
+                  <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I would like to raise a grievance / feedback regarding my booking.')}`}
+                     target="_blank" rel="noopener noreferrer"
+                     style={{ background:'#25D366', color:'#fff', padding:'8px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+                    💬 Raise a grievance
+                  </a>
+                  <a href="tel:+917817996730"
+                     style={{ background:'var(--navy-light)', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+                    📞 +91-7817996730
+                  </a>
+                </div>
               </div>
 
               {/* Map */}

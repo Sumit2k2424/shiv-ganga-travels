@@ -139,7 +139,7 @@ const FAQS = [
   { cat:'About Shiv Ganga Travels', q:'Who is the founder of Shiv Ganga Travels?',
     a:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, in Roorkee, Uttarakhand. Dhanesh initially served Army personnel stationed in Roorkee, bringing military-grade discipline and zero-compromise values to pilgrimage travel. He expanded the company on the principle that everyone deserves fair pricing — a school teacher from Agra and a corporate executive from Mumbai should pay the same price for the same service. Today, Shiv Ganga Travels operates from Haridwar and Roorkee with 20+ AC vehicles and has served 50,000+ pilgrims.' },
   { cat:'About Shiv Ganga Travels', q:'Where is the Shiv Ganga Travels office in Haridwar?',
-    a:'Shiv Ganga Travels office in Haridwar is located at: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — PIN 249410. The office is open Monday to Sunday, 7:00 AM to 9:00 PM. Phone: +91-7017082807. Email: support@shivgangatravels.com. Website: www.shivgangatravels.com. The office is near the famous Shantikunj (Gayatri Pariwar) complex — a landmark recognisable to most pilgrims visiting Haridwar.' },
+    a:'Shiv Ganga Travels office in Haridwar is located at: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — PIN 249410. The office is open Monday to Sunday, 7:00 AM to 9:00 PM. Phone: +91-7817996730. Email: support@shivgangatravels.com. Website: www.shivgangatravels.com. The office is near the famous Shantikunj (Gayatri Pariwar) complex — a landmark recognisable to most pilgrims visiting Haridwar.' },
   { cat:'About Shiv Ganga Travels', q:'Does Shiv Ganga Travels charge any commission?',
     a:'No. Shiv Ganga Travels is a direct operator — we own the vehicles, directly employ the drivers and guides, and book hotels without any intermediary. Zero commission, zero middlemen. The price shown on our website at shivgangatravels.com is the final price — no platform fees, no agent charges, no hidden additions at checkout. This direct model typically saves pilgrims 10–20% compared to booking through aggregator platforms or travel agents. Our pricing policy has been consistent since 2010: the same price for every pilgrim.' },
   { cat:'About Shiv Ganga Travels', q:'What makes Shiv Ganga Travels different from other Char Dham operators?',
@@ -352,7 +352,7 @@ export default function FAQ() {
               style={{ background: '#25D366', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
               💬 Ask on WhatsApp
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>

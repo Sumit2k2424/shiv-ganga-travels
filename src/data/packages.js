@@ -7,9 +7,9 @@
 export const SITE = {
   name       : 'Shiv Ganga Travels',
   tagline    : 'Your Sacred Journey, Our Devotion',
-  phone      : '+91-7017082807',
+  phone      : '+91-7817996730',
   phone2     : '+91-8859123961',
-  whatsapp   : '917017082807',
+  whatsapp   : '917817996730',
   whatsapp2  : '918859123961',
   email      : 'support@shivgangatravels.com',
   address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India',
@@ -1394,7 +1394,7 @@ export const GLOBAL_FAQS = [
   { q:'Do I need to be physically fit for Char Dham Yatra?',
     a:'You need to be able to walk 6km uphill (Yamunotri) and 16km (Kedarnath). Badrinath and Gangotri are fully motorable — no trekking required. For Kedarnath, pony (₹1,200–1,500 one way) and helicopter (₹8,000–10,000 one way) are available as alternatives. Most pilgrims aged 18–70 with no serious cardiac or respiratory conditions complete the Kedarnath trek without assistance. Carry a medical fitness certificate if you are 60+ or have any pre-existing condition.' },
   { q:'How do I book Char Dham Yatra from Shiv Ganga Travels?',
-    a:'WhatsApp us at +91-7017082807 with your preferred dates, group size, and city. We send a detailed custom itinerary with exact pricing within 2 hours. A 25% advance payment secures your booking and holds your hotel and darshan slots. We accept UPI, bank transfer and major cards. No booking fee, no processing charge.' },
+    a:'WhatsApp us at +91-7817996730 with your preferred dates, group size, and city. We send a detailed custom itinerary with exact pricing within 2 hours. A 25% advance payment secures your booking and holds your hotel and darshan slots. We accept UPI, bank transfer and major cards. No booking fee, no processing charge.' },
   { q:'Can I do Char Dham Yatra by helicopter?',
     a:'Yes. Our Char Dham by helicopter package covers all 4 dhams in 5N/6D from Dehradun (Sahastradhara Helipad). Helicopters land at dedicated helipads near each temple: Kharsali (Yamunotri, 1km walk), Harsil (Gangotri, 25km road), Phata or Sersi (Kedarnath, VIP darshan), Badrinath (adjacent to temple). Package price: ₹85,000 per person all-inclusive. Book via the IRCTC heliyatra portal for helicopter slots — we handle all ground arrangements.' },
 ];

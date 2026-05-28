@@ -147,7 +147,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:8 }}>
               💬 Book on WhatsApp
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background:'#fff', color:'var(--navy)', padding:'14px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>
@@ -601,7 +601,7 @@ export default function CharDhamYatra() {
               style={{ background:'#25D366', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               💬 Book on WhatsApp
             </a>
-            <a href='tel:+917017082807'
+            <a href='tel:+917817996730'
               style={{ background:'#fff', color:'var(--navy)', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>
               📞 {SITE.phone}
             </a>

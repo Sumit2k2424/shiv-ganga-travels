@@ -103,7 +103,7 @@ export default function Footer() {
               Haridwar's trusted Char Dham Yatra specialist since {SITE.established}. 50,000+ blessed pilgrims. Zero commission.
             </p>
             <div style={{ display:'flex', gap:8, flexWrap:'wrap', alignItems:'center' }}>
-              <a href='tel:+917017082807' aria-label="Call us"
+              <a href='tel:+917817996730' aria-label="Call us"
                 style={{ background:'rgba(255,255,255,0.1)', color:'var(--gold)', padding:'8px 12px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', border:'1px solid rgba(255,255,255,0.12)', whiteSpace:'nowrap' }}>
                 📞 Call
               </a>

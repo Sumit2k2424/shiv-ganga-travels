@@ -252,7 +252,7 @@ export default function PackageDetailPage({ params }) {
       <div className="sticky-book-bar">
         <div><span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>from</span><span style={{ fontWeight:800, fontSize:18, color:'var(--navy)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</span></div>
         <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
-        <a href='tel:+917017082807' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
+        <a href='tel:+917817996730' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
       </div>
       {/* Trust micro-signals below sticky bar */}
       <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid var(--border)' }}>
@@ -532,7 +532,7 @@ export default function PackageDetailPage({ params }) {
                 { label:'Ambulance / Medical', num:'108', note:'Free, 24/7' },
                 { label:'Kedarnath Control Room', num:'+91-1364-222-734', note:'During yatra season' },
                 { label:'GMVN Enquiry', num:'+91-135-2746817', note:'Accommodation' },
-                { label:'Shiv Ganga Travels', num:'+91-7017082807', note:'24/7 on-ground support' },
+                { label:'Shiv Ganga Travels', num:'+91-7817996730', note:'24/7 on-ground support' },
               ].map(c => (
                 <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)', textDecoration:'none', display:'block' }}>
                   <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{c.label}</div>
@@ -709,7 +709,7 @@ export default function PackageDetailPage({ params }) {
             <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary · Zero commission · Reply in 2 hrs</p>
             <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-              <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+              <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
             </div>
           </section>
         </div>
@@ -727,7 +727,7 @@ export default function PackageDetailPage({ params }) {
             </div>
             <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
-              <a href='tel:+917017082807' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book</a>
+              <a href='tel:+917817996730' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book</a>
               ✉️ Send Enquiry Form
             </div>
             <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
