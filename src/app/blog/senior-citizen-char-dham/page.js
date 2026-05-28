@@ -16,7 +16,7 @@ function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide', author: {
         '@type': 'Person',
         name: 'Sumit Mishra',
-        jobTitle: 'Co-Founder & Co-Founder & Operations Manager, Shiv Ganga Travels',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-03-01', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/senior-citizen-char-dham` };
@@ -128,7 +128,7 @@ return (
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
 

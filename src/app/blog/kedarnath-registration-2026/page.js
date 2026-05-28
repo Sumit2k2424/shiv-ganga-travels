@@ -41,34 +41,7 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Kedarnath Registration 2026', item: `${SITE.baseUrl}/blog/kedarnath-registration-2026` },
     ],
   };
-  const howto = {
-    '@context': 'https://schema.org', '@type': 'HowTo',
-    name: 'How to Register for Kedarnath Yatra Online in 2026',
-    description: 'Step-by-step guide to complete free Kedarnath Yatra registration on the official Uttarakhand government portal in 2026.',
-    image: `${SITE.baseUrl}/opengraph-image`,
-    totalTime: 'PT10M',
-    estimatedCost: { '@type':'MonetaryAmount', currency:'INR', value:'0' },
-    supply: [
-      { '@type':'HowToSupply', name:'Aadhaar Card (mandatory)' },
-      { '@type':'HowToSupply', name:'Mobile number linked to Aadhaar' },
-      { '@type':'HowToSupply', name:'Medical fitness certificate (required for age 55+)' },
-      { '@type':'HowToSupply', name:'Recent passport-size photograph (digital)' },
-    ],
-    tool: [{ '@type':'HowToTool', name:'Smartphone or computer with internet' }],
-    step: [
-      { '@type':'HowToStep', position:1, name:'Open the official portal', text:'Visit registrationandtouristcare.uk.gov.in — the only official Char Dham registration portal of the Uttarakhand Tourism Department.', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step1` },
-      { '@type':'HowToStep', position:2, name:'Create account with OTP', text:'Click "New Registration". Enter your mobile number, verify with OTP, and create a password.', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step2` },
-      { '@type':'HowToStep', position:3, name:'Select Char Dham 2026 → Kedarnath', text:'After login, click "Create/Manage Tour Info" → "Char Dham Yatra 2026" → check "Kedarnath".', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step3` },
-      { '@type':'HowToStep', position:4, name:'Add pilgrim details', text:'Enter each pilgrim\'s name exactly as on Aadhaar, age, gender, and Aadhaar number. Pilgrims aged 55+ must also upload a medical fitness certificate (PDF, under 2MB).', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step4` },
-      { '@type':'HowToStep', position:5, name:'Pick darshan date', text:'Choose your Kedarnath darshan date from available slots. The daily cap is approximately 18,000 pilgrims. Peak May–June slots fill within days of portal opening.', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step5` },
-      { '@type':'HowToStep', position:6, name:'Download QR-coded e-pass', text:'After submission, download the QR-coded Yatra Registration Letter (e-pass). Print it or save it on your phone. You will need to show this at the Sonprayag checkpoint.', url:`${SITE.baseUrl}/blog/kedarnath-registration-2026#step6` },
-    ],
-  };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-  </>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
 }
 
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.15rem,2.5vw,1.4rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Badrinath Weather 2026 — Monthly Temp & Best Visit Time',
+  title: 'Badrinath Weather 2026 — Month-wise Temperature',
   description: 'Badrinath weather guide 2026. Month-by-month temperatures at 3,133m. Best time: May-June and Sept-Oct. Altitude tips and packing guide.',
   keywords: ['badrinath weather','badrinath temperature','badrinath weather may','badrinath best time to visit 2026','badrinath snowfall','badrinath weather in october'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-weather` },

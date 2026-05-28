@@ -84,30 +84,6 @@ body {
 img, svg { display: block; max-width: 100%; }
 button { font-family: var(--font); }
 
-/* ── Mobile UX & accessibility (Google Lighthouse points) ── */
-/* All buttons / links — no double-tap delay, custom tap highlight */
-a, button, [role="button"] {
-  -webkit-tap-highlight-color: rgba(232, 146, 10, 0.18);
-  touch-action: manipulation;
-}
-/* Prevent iOS zoom on form inputs (font must be >= 16px) */
-input, textarea, select { font-size: 16px; }
-/* Keyboard-visible focus ring for accessibility (Lighthouse a11y) */
-:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-/* Respect reduced-motion preference */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* ── Selection ── */
 ::selection { background: var(--gold); color: #fff; }
 
@@ -179,7 +155,7 @@ input, textarea, select { font-size: 16px; }
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: color var(--t), background var(--t), border-color var(--t), opacity var(--t), transform var(--t);
+  transition: all var(--t);
   white-space: nowrap;
   padding: 10px 22px;
   position: relative;
@@ -372,7 +348,7 @@ input, textarea, select { font-size: 16px; }
   align-items: center;
   justify-content: center;
   font-size: 32px;
-  transition: transform var(--t-out), box-shadow var(--t-out), opacity var(--t-out);
+  transition: all var(--t-out);
   box-shadow: var(--shadow);
 }
 .dham-tile:hover .dham-circle {
@@ -422,7 +398,7 @@ input, textarea, select { font-size: 16px; }
   padding: 7px 15px;
   border-radius: var(--r-sm);
   border: 1.5px solid var(--border-dark);
-  transition: border-color var(--t), background var(--t), color var(--t), opacity var(--t), transform var(--t);
+  transition: all var(--t);
   white-space: nowrap;
 }
 .view-all:hover {
@@ -439,7 +415,6 @@ input, textarea, select { font-size: 16px; }
 ═══════════════════════════════════════════════════════════════ */
 .wa-float {
   position: fixed;
-  will-change: transform, box-shadow;
   bottom: 96px;   /* sits above the chat button on desktop */
   right: 24px;
   z-index: 999;
@@ -506,7 +481,7 @@ input, textarea, select { font-size: 16px; }
   color: var(--navy);
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; font-weight: 700;
-  transition: color var(--t-out), background var(--t-out), opacity var(--t-out), transform var(--t-out);
+  transition: all var(--t-out);
 }
 .faq-question[aria-expanded="true"] .faq-icon {
   background: var(--gold); color: #fff; transform: rotate(45deg);
@@ -528,7 +503,7 @@ input, textarea, select { font-size: 16px; }
   flex: 0 0 345px;
   display: flex;
   flex-direction: column;
-  transition: transform var(--t-out), opacity var(--t-out), box-shadow var(--t-out);
+  transition: all var(--t-out);
   position: relative;
 }
 .testimonial-card:hover {
@@ -612,7 +587,6 @@ input, textarea, select { font-size: 16px; }
     right: 16px !important;
     width: 48px !important;
     height: 48px !important;
-    animation: none !important; /* save compositor thread on mobile */
   }
 }
 
@@ -713,15 +687,6 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
     padding-top: 36px !important;
     padding-bottom: 28px !important;
   }
-
-  /* Prevent overflow from inline content (long URLs, codes, etc.) */
-  p, li, td, th, a, span, div { word-wrap: break-word; overflow-wrap: break-word; }
-  /* Tables that aren't already wrapped — make them horizontally scrollable */
-  table { max-width: 100%; }
-  /* Pre-formatted text — wrap instead of horizontal scroll */
-  pre { white-space: pre-wrap; word-break: break-word; }
-  /* Images and SVG — never exceed viewport */
-  img, svg, video, iframe { max-width: 100%; height: auto; }
 }
 
 /* ─── 2. TYPOGRAPHY ─────────────────────────────────────────── */
@@ -1871,6 +1836,11 @@ html {
   animation: shimmer 1.4s ease infinite;
   border-radius: var(--r-sm);
 }
+@keyframes shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    MOBILE-FIRST RESPONSIVE — COMPREHENSIVE PATCH
    Covers inline-styled JSX elements not reachable by class names
@@ -2600,3 +2570,50 @@ img:not([width]):not([height]) {
   }
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   PREMIUM GUIDE-PAGE INTERACTION LAYER (GPU-only: transform/opacity)
+   Lifts the long-form guide pages to MakeMyTrip/Agoda polish without
+   adding JS work or layout cost. All motion is disabled automatically
+   by the global prefers-reduced-motion rule above.
+═══════════════════════════════════════════════════════════════ */
+
+/* Hero content entrance — runs once on load, no scroll listener */
+.guide-hero-inner { animation: guideHeroIn 0.7s var(--t-out) both; }
+@keyframes guideHeroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.guide-hero-pill { animation: guideHeroIn 0.7s var(--t-out) both; animation-delay: 0.12s; }
+
+/* Breadcrumb: wrap instead of overflowing on small screens */
+.guide-breadcrumb { flex-wrap: wrap; row-gap: 2px; }
+
+/* Quick-facts grid: tighter, cleaner columns on phones + subtle hover */
+.guide-facts .guide-fact {
+  transition: transform var(--t-out), background var(--t);
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+}
+.guide-facts .guide-fact:hover { transform: translateY(-3px); background: rgba(255,255,255,0.06); }
+@media (max-width: 480px) {
+  .guide-facts { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* Related-guide chips: lift + accent on hover, comfortable tap target */
+.guide-chip {
+  transition: transform var(--t-out), box-shadow var(--t-out), border-color var(--t), color var(--t);
+  display: inline-flex;
+  align-items: center;
+}
+.guide-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15,43,91,0.12);
+  border-color: var(--teal) !important;
+  color: var(--teal) !important;
+}
+
+/* Generic reusable lift for any card-like element */
+.lift-hover { transition: transform var(--t-out), box-shadow var(--t-out); will-change: transform; }
+.lift-hover:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(15,43,91,0.14); }
+
+/* In-prose links inside guide articles get a smooth underline grow */
+.blog-container a:not(.guide-chip):not(.btn-primary) { transition: color var(--t); }

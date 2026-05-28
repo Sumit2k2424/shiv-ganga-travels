@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Gangotri 2026 — Routes, Distance & Travel Tips',
+  title: 'How to Reach Gangotri 2026',
   description: 'How to reach Gangotri Dham 2026. Road route from Haridwar via Uttarkashi (265km, 7-8 hrs). Helicopter option and nearest airport guide.',
   keywords: ['how to reach gangotri','gangotri route from haridwar','haridwar to gangotri distance','uttarkashi to gangotri','gangotri by road','nearest airport gangotri 2026'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-gangotri` },

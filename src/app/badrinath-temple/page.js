@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Badrinath Temple 2026 — Timings, Aarti & Darshan Guide',
+  title: 'Badrinath Temple 2026 — Darshan Timings,',
   description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord',
   keywords: ['badrinath temple','badrinath temple timings 2026','badrinath darshan timings','badrinath temple opening date 2026','badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', aggregateRating:{'@type':'AggregateRating',ratingValue:4.6,reviewCount:4500,bestRating:5} };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
@@ -95,7 +95,7 @@ export default function BadrinathTemple() {
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Maha Abhishek booking included · VIP darshan · From ₹5,999</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra with Maha Abhishek puja assistance.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </article>

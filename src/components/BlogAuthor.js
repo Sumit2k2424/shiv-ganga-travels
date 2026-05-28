@@ -10,7 +10,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
   const authors = {
     sumit: {
       name: 'Sumit Mishra',
-      role: 'Co-Founder & Operations Manager, Shiv Ganga Travels',
+      role: 'Operations Manager & Content Lead, Shiv Ganga Travels',
       bio: `Sumit Mishra manages day-to-day operations at Shiv Ganga Travels and has personally accompanied pilgrim groups on the Char Dham circuit since 2015. He handles route planning, hotel pre-blocking during peak season, and yatra coordination for 500+ pilgrims annually. Everything published on this site is written from first-hand experience on these routes.`,
       credentials: [
         '10+ years on Char Dham routes',
@@ -24,7 +24,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
     dhanesh: {
       name: 'Dhanesh Chandra Mishra',
       role: 'Founder & Director, Shiv Ganga Travels',
-      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
+      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
       credentials: [
         'Retired Indian Army Officer',
         'Founded Shiv Ganga Travels 2010',

@@ -79,44 +79,6 @@ export default function ValleyOfFlowersTrek() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Hemkund Sahib (4,329m) is a Sikh pilgrimage site of extraordinary beauty — a glacial lake surrounded by snow peaks with a pristine gurudwara on its shores. It is said that Guru Gobind Singh meditated here in a previous life. The <strong>Langar</strong> (free kitchen) serves dal, roti and kheer to everyone regardless of faith — one of the most moving expressions of community in any religious place in India.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹13,499 per person.</p>
 
-      <h2 style={h2}>What the Valley Actually Looks Like — Month by Month</h2>
-      <p style={p}><strong>Late June:</strong> The valley opens for visitors on June 1, but the flowers do not bloom in significant numbers until late June. Snow patches still dot the upper reaches. The waterfalls run at full volume from snowmelt. Good for a quieter visit, but the famous flower carpet is not yet visible.</p>
-      <p style={p}><strong>July:</strong> The first wave of bloom — anemones, geraniums, dwarf rhododendrons, and the early primulas. The valley turns from green to colour-flecked over the first ten days. Daily monsoon rain is now constant; the trek is wet but manageable. By the last week of July, around 200 species are in bloom simultaneously.</p>
-      <p style={p}><strong>Mid-August (peak):</strong> This is the famous moment — the valley becomes a carpet of more than 300 flowering species at once. Brahma Kamal, blue poppies, Himalayan balsam, asters, geraniums in every direction. This is what you see in photographs. Crowds peak in this window. Book your Ghangaria room 60 days ahead.</p>
-      <p style={p}><strong>September:</strong> The bloom thins, but the surviving species (asters, gentians, late primulas) are striking against the now-emerging snow on the upper peaks. The post-monsoon clarity returns. Crowds drop sharply after September 15. Some of our most memorable visits have been in late September.</p>
-
-      <h2 style={h2}>Combining with Hemkund Sahib — The Standard Pattern</h2>
-      <p style={p}>Almost everyone who treks to the Valley of Flowers also visits Hemkund Sahib — the Sikh gurudwara at 4,329m beside a glacial lake. Both treks start from the same base camp at Ghangaria, but they go in different directions. The typical pattern: arrive Ghangaria Day 1, trek Hemkund Sahib Day 2 (steeper, 6km one way), trek Valley of Flowers Day 3 (gentler, 4km one way), return Govindghat Day 4.</p>
-      <p style={p}>Hemkund is harder than the Valley — much steeper, higher altitude, and the lake at the top is often surrounded by snow even in August. Many of our guests find Hemkund the more transformative half of the trip precisely because of how demanding it is.</p>
-
-      <h2 style={h2}>Permits, Photography Rules, and Ground Reality</h2>
-      <p style={p}>The valley is a UNESCO World Heritage Site and is administered by the Forest Department. Entry permits are required — these are issued at the Forest Office at Ghangaria each morning. Cost is around ₹150 for Indians and ₹600 for foreign nationals (rates change annually). You must enter by 1 PM and exit by 5 PM. Camping inside the valley is strictly forbidden. Plucking flowers or removing any organic matter is a punishable offence.</p>
-      <p style={p}>Photography is allowed but drones are not. The light is best between 10 AM and 12 PM — earlier and you have monsoon mist, later and the cloud cover thickens. Bring a polariser filter if you have one.</p>
-
-      <h2 style={h2}>Frequently Asked Questions</h2>
-      <div style={{ marginBottom:24 }}>
-        {[
-          { q:'How difficult is the Valley of Flowers trek?', a:'Moderate. The Govindghat to Ghangaria stretch (14km) is the harder part — steady uphill at altitude. The Ghangaria to Valley stretch (4km) is gentle. An averagely fit person who walks regularly can complete it. Ponies are available throughout for those who cannot trek.' },
-          { q:'Is Valley of Flowers worth visiting if I have already seen Western Ghats blooms?', a:'Yes — the species and density are completely different. The Valley sits at 3,500–3,700m in a high alpine glacial valley. The combination of altitude, geography, and 300+ endemic species creates something that does not exist elsewhere in India.' },
-          { q:'Can senior citizens do the Valley of Flowers trek?', a:'Yes, with planning. Take 2 nights at Ghangaria instead of 1, use ponies for both the Govindghat–Ghangaria stretch and inside the valley if needed. We have sent guests in their 70s who completed it comfortably with the right pacing.' },
-          { q:'What is the best time to visit Valley of Flowers?', a:'August 1 to September 5 is peak bloom. July has lighter blooms but fewer crowds. June is too early. October is after closure (the valley closes October 4).' },
-        ].map(faq => (
-          <details key={faq.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'12px 16px', marginBottom:8 }}>
-            <summary style={{ fontWeight:700, fontSize:14, color:'var(--navy)', cursor:'pointer' }}>{faq.q}</summary>
-            <p style={{ margin:'10px 0 0', fontSize:14, color:'var(--text-mid)', lineHeight:1.75 }}>{faq.a}</p>
-          </details>
-        ))}
-      </div>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'FAQPage',
-        mainEntity:[
-          {'@type':'Question',name:'How difficult is the Valley of Flowers trek?',acceptedAnswer:{'@type':'Answer',text:'Moderate. The Govindghat to Ghangaria stretch (14km) is the harder part. The Ghangaria to Valley stretch (4km) is gentle. Ponies are available.'}},
-          {'@type':'Question',name:'What is the best time to visit Valley of Flowers?',acceptedAnswer:{'@type':'Answer',text:'August 1 to September 5 is peak bloom. July has lighter blooms but fewer crowds.'}},
-          {'@type':'Question',name:'Can senior citizens do the Valley of Flowers trek?',acceptedAnswer:{'@type':'Answer',text:'Yes with planning. Take 2 nights at Ghangaria, use ponies for the harder stretches.'}},
-        ],
-      }) }} />
-
       <div style={{ background:'linear-gradient(135deg,#0B7B8B,#15803D)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Valley of Flowers Package</h3>
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹13,499 per person · 5N/6D · Includes Hemkund Sahib + Badrinath darshan</p>

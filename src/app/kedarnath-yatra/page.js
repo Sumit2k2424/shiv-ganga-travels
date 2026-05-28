@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Yatra Package 2026 — From ₹8,999 Direct Operator',
+  title: 'Kedarnath Yatra Package 2026 — Ek Dham Yatra',
   description: 'Kedarnath Yatra 2026 — Ek Dham package from ₹6,499/person. 16km trek guide, pony ₹3,500, helicopter ₹7,500. Group discounts.',
   keywords: ['Kedarnath Yatra 2026','ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide','Kedarnath helicopter booking 2026','kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
@@ -70,19 +70,6 @@ export default function KedarnathYatra() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · Season Open — Trek Active</div>
-
-        {/* Quick Answer — for AI Overviews / featured snippets */}
-        <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:24 }}>
-          <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>🛕 Quick Answer</div>
-          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>Kedarnath Yatra</strong> is a pilgrimage to the 12th Jyotirlinga of Lord Shiva at 3,583 metres in the Garhwal Himalayas. The temple opens April 22, 2026 and closes November 11, 2026. Pilgrims trek <strong>16 km from Gaurikund</strong> (5–7 hours) or take a 7-minute helicopter from Phata (₹2,800–3,500 one way). A complete 3N/4D package from Haridwar costs <strong>from ₹6,499 per person</strong>. Online registration is mandatory.</p>
-        </div>
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context':'https://schema.org','@type':'WebPage',
-          name:'Kedarnath Yatra 2026 Complete Guide',
-          url:`${SITE.baseUrl}/kedarnath-yatra`,
-          speakable:{ '@type':'SpeakableSpecification', cssSelector:['.quick-answer','h1'] },
-        }) }}/>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '16px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹6,499/person'],['Pony one-way','₹3,500–4,500']].map(([k,v]) => (

@@ -1,136 +1,16 @@
-import Link from 'next/link';
 import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
-  title: 'Contact Shiv Ganga Travels — Haridwar Char Dham Yatra Booking',
-  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra 2026. Call +91-7817996730, WhatsApp, or visit our office at Saptrishi Road, Bhupatwala, Haridwar. Reply within 2 hours, 7 AM–9 PM, 7 days.',
-  keywords: ['contact shiv ganga travels','char dham yatra booking haridwar','shiv ganga travels haridwar phone','char dham yatra operator contact','haridwar tour operator contact'],
+  title: 'Contact — Shiv Ganga Travels Haridwar',
   alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
-  openGraph: {
-    title: 'Contact Shiv Ganga Travels — Char Dham Yatra 2026 Booking, Haridwar',
-    description: 'Call or WhatsApp +91-7817996730. Saptrishi Road, Bhupatwala, Haridwar. 7 days, 7 AM–9 PM. Reply within 2 hours.',
-    url: 'https://www.shivgangatravels.com/contact',
-    type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Contact Shiv Ganga Travels Haridwar' }],
-  },
+  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra packages. Call, WhatsApp or email us. Saptrishi Road, Haridwar, Uttarakhand.',
 };
-
-function Schema() {
-  // ── ContactPage schema ─────────────────────────────────────
-  const contactPage = {
-    '@context': 'https://schema.org',
-    '@type': 'ContactPage',
-    name: 'Contact Shiv Ganga Travels — Char Dham Yatra Booking',
-    url: 'https://www.shivgangatravels.com/contact',
-    description: 'Book Char Dham Yatra packages directly with Shiv Ganga Travels, Haridwar. Call, WhatsApp, or visit our office at Saptrishi Road, Bhupatwala.',
-    mainEntity: {
-      '@type': 'TravelAgency',
-      '@id': `${SITE.baseUrl}/#organization`,
-      name: SITE.name,
-    },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl },
-        { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE.baseUrl}/contact` },
-      ],
-    },
-  };
-
-  // ── LocalBusiness — contact-page-specific ─────────────────
-  const localBiz = {
-    '@context': 'https://schema.org',
-    '@type': ['TravelAgency', 'LocalBusiness'],
-    '@id': `${SITE.baseUrl}/#organization`,
-    name: SITE.name,
-    url: SITE.baseUrl,
-    telephone: ['+91-7817996730', '+91-8859123961'],
-    email: SITE.email,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
-      addressLocality: 'Haridwar',
-      addressRegion: 'Uttarakhand',
-      postalCode: '249410',
-      addressCountry: 'IN',
-    },
-    geo: { '@type': 'GeoCoordinates', latitude: 29.98968, longitude: 78.19274 },
-    hasMap: 'https://www.google.com/maps?cid=16074078434377735602',
-    openingHoursSpecification: [{
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      opens: '07:00', closes: '21:00',
-    }],
-    contactPoint: [
-      { '@type': 'ContactPoint', telephone: '+91-7817996730', contactType: 'customer service', areaServed: 'IN', availableLanguage: ['Hindi','English'], hoursAvailable: { '@type': 'OpeningHoursSpecification', opens: '07:00', closes: '21:00', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] } },
-      { '@type': 'ContactPoint', url: `https://wa.me/${SITE.whatsapp}`, contactType: 'sales', availableLanguage: ['Hindi','English'] },
-    ],
-    // ── Key contacts — machine-readable person entities ──────
-    employee: [
-      {
-        '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#dhanesh-mishra`,
-        name: 'Dhanesh Chandra Mishra',
-        jobTitle: 'Founder & Director',
-        telephone: '+91-7817996730',
-        worksFor: { '@id': `${SITE.baseUrl}/#organization` },
-      },
-      {
-        '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Co-Founder & Co-Founder & Operations Manager',
-        telephone: '+91-7817996730',
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
-        worksFor: { '@id': `${SITE.baseUrl}/#organization` },
-      },
-    ],
-  };
-
-  // ── FAQ schema — contact-specific questions ───────────────
-  const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the phone number of Shiv Ganga Travels Haridwar?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels can be reached at +91-7817996730 (primary) or +91-8859123961 (alternate). Available 7 days a week, 7 AM to 9 PM IST. WhatsApp is the fastest way to get a response — usually within 30 minutes.' }
-      },
-      {
-        '@type': 'Question',
-        name: 'Where is the Shiv Ganga Travels office in Haridwar?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels is located at Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410. It is about 2km from Har Ki Pauri on the Rishikesh side. GPS: 29.98968, 78.19274.' }
-      },
-      {
-        '@type': 'Question',
-        name: 'How quickly does Shiv Ganga Travels respond to enquiries?',
-        acceptedAnswer: { '@type': 'Answer', text: 'WhatsApp enquiries get a response within 30 minutes during working hours (7 AM–9 PM). Email enquiries are responded to within 2 hours. You will receive a personalised itinerary and price quote within the same call or WhatsApp session in most cases.' }
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I book Char Dham Yatra directly without a middleman?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — Shiv Ganga Travels is a direct operator, not an aggregator or agent. There is no middleman and zero commission. You pay the operator directly, get a proper receipt, and deal with the same team from enquiry to return. This is why our prices are lower than online travel platforms for the same quality of service.' }
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBiz) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    </>
-  );
-}
 
 export default function ContactPage() {
   const whatsappMsg = encodeURIComponent('Namaste! I would like to enquire about Char Dham Yatra packages for 2026.');
 
   return (
     <>
-      <Schema />
-
       {/* HERO */}
       <section style={{
         background:'linear-gradient(145deg, var(--deep) 0%, var(--deep-mid) 60%, var(--gold-dark) 100%)',
@@ -163,9 +43,9 @@ export default function ContactPage() {
           {/* Quick contact methods — 4 cards */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))', gap:14 }}>
             {[
-              { icon:'📞', label:'Phone', value:'+91-7817996730', href:'tel:+917817996730', sub:'Tap to call directly', color:'var(--navy)' },
+              { icon:'📞', label:'Phone', value:'+91-7017082807', href:'tel:+917017082807', sub:'Tap to call directly', color:'var(--navy)' },
               { icon:'📞', label:'Phone 2', value:'+91-8859123961', href:'tel:+918859123961', sub:'Alternate number', color:'var(--navy)' },
-              { icon:'💬', label:'WhatsApp', value:'+91-7817996730', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
+              { icon:'💬', label:'WhatsApp', value:'+91-7017082807', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
               { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },
@@ -249,7 +129,7 @@ export default function ContactPage() {
                 </FormField>
 
                 <FormField label="Package Interested In">
-                  <select name="package" aria-label="Select package type" style={inputStyle} defaultValue="">
+                  <select name="package" style={inputStyle} defaultValue="">
                     <option value="" disabled>— Select a package —</option>
                     {PACKAGES.map(p => (
                       <option key={p.slug} value={p.name}>{p.name} ({p.duration.nights}N/{p.duration.days}D)</option>
@@ -260,7 +140,7 @@ export default function ContactPage() {
 
                 <FormRow>
                   <FormField label="Travel Month">
-                    <select name="month" aria-label="Select travel month" style={inputStyle} defaultValue="">
+                    <select name="month" style={inputStyle} defaultValue="">
                       <option value="" disabled>— Select month —</option>
                       {['May 2026','June 2026','July 2026','August 2026','September 2026','October 2026','Not sure yet'].map(m => (
                         <option key={m}>{m}</option>
@@ -365,50 +245,6 @@ export default function ContactPage() {
                     Get Directions →
                   </a>
                 </div>
-                {/* ── Meet the team — E-E-A-T signal ───────────────────── */}
-                <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:14, padding:'18px 20px', marginBottom:18 }}>
-                  <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:14 }}>Who You&apos;ll Be Talking To</div>
-
-                  {/* Sumit Mishra */}
-                  <div style={{ display:'flex', gap:12, alignItems:'flex-start', marginBottom:14, paddingBottom:14, borderBottom:'1px solid var(--border)' }}
-                    itemScope itemType="https://schema.org/Person">
-                    <div style={{ width:44, height:44, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#fff', flexShrink:0 }}>SM</div>
-                    <div style={{ flex:1, minWidth:0 }}>
-                      <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', marginBottom:2 }}>
-                        <span style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }} itemProp="name">Sumit Mishra</span>
-                        <a href="https://www.linkedin.com/in/sumit-mishra-863734171/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
-                          style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>
-                        <a href="https://www.facebook.com/sumi2112" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
-                          style={{ fontSize:11.5, color:'#1877F2', fontWeight:600, textDecoration:'none' }}>Facebook ↗</a>
-                      </div>
-                      <div style={{ fontSize:12.5, color:'var(--teal)', fontWeight:700, marginBottom:4 }} itemProp="jobTitle">Co-Founder &amp; Co-Founder & Operations Manager</div>
-                      <p style={{ fontSize:13, color:'#475569', margin:0, lineHeight:1.65 }} itemProp="description">
-                        Handles all bookings, route planning and customer coordination. Has managed Char Dham Yatra operations since 2015 — 500+ groups annually. Your first point of contact on WhatsApp and phone.
-                      </p>
-                      <div style={{ marginTop:6, display:'flex', gap:6, flexWrap:'wrap' }}>
-                        <a href={`tel:${SITE.phone}`} style={{ fontSize:12.5, color:'var(--navy)', fontWeight:700, textDecoration:'none' }}>📞 {SITE.phone}</a>
-                        <span style={{ color:'var(--border)' }}>·</span>
-                        <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste Sumit ji! I want to enquire about Char Dham Yatra 2026.')}`}
-                          target="_blank" rel="nofollow noopener noreferrer"
-                          style={{ fontSize:12.5, color:'#25D366', fontWeight:700, textDecoration:'none' }}>💬 WhatsApp</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Dhanesh Mishra */}
-                  <div style={{ display:'flex', gap:12, alignItems:'flex-start' }}
-                    itemScope itemType="https://schema.org/Person">
-                    <div style={{ width:44, height:44, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#FFD166', flexShrink:0 }}>DM</div>
-                    <div style={{ flex:1, minWidth:0 }}>
-                      <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:2 }} itemProp="name">Dhanesh Chandra Mishra</div>
-                      <div style={{ fontSize:12.5, color:'var(--gold)', fontWeight:700, marginBottom:4 }} itemProp="jobTitle">Founder &amp; Director</div>
-                      <p style={{ fontSize:13, color:'#475569', margin:0, lineHeight:1.65 }} itemProp="description">
-                        Retired Indian Army Officer. Founded Shiv Ganga Travels in Haridwar in 2010. Personally oversees quality, vehicle maintenance and guide training for every season.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Interactive map */}
                 <iframe
                   title="Shiv Ganga Travels — Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar"

@@ -38,13 +38,13 @@ export const CUSTOM_QA = [
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
   {
     keywords: ['price','cost','rate','charge','fee','kitna','how much','budget','affordable','cheap','expensive','tariff'],
-    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,499 · 2N/3D\n• Gangotri — ₹5,299 · 2N/3D\n• Kedarnath — ₹6,499 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹8,999 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹19,500 · 9N/10D\n• Deluxe — ₹27,500 · 11N/12D\n• Senior Special — ₹24,500 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
+    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,499 · 2N/3D\n• Gangotri — ₹5,299 · 2N/3D\n• Kedarnath — ₹6,499 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹8,999 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹19,500 · 9N/10D\n• Deluxe — ₹27,500 · 11N/12D\n• Senior Special — ₹24,500 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7017082807`,
   },
 
   // ── 3. CHAR DHAM OVERVIEW ────────────────────────────────────
   {
     keywords: ['char dham','chardham','4 dham','four dham','all four','all 4'],
-    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹19,500/person\n• Deluxe 11N/12D — ₹27,500/person\n• Senior Special 12N/13D — ₹24,500/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
+    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹19,500/person\n• Deluxe 11N/12D — ₹27,500/person\n• Senior Special 12N/13D — ₹24,500/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7017082807`,
   },
 
   // ── 4. BEST TIME TO VISIT ────────────────────────────────────
@@ -80,7 +80,7 @@ export const CUSTOM_QA = [
   // ── 9. HELICOPTER PACKAGES ───────────────────────────────────
   {
     keywords: ['helicopter','heli','copter','aerial','fly','flight','air'],
-    answer: `🚁 **Helicopter Yatra Packages:**\n\n**Char Dham Helicopter** — ₹85,000/person (5N/6D)\n• Departs: Dehradun (Sahastradhara helipad)\n• All 4 dhams by air — Yamunotri, Gangotri, Kedarnath, Badrinath\n• VIP darshan at all shrines\n• Luxury hotels, all meals included\n• Best for: busy professionals, senior pilgrims\n\n**Do Dham Helicopter Same Day** — ₹28,000/person\n• Kedarnath + Badrinath in one day!\n• Departs from Phata/Sersi helipad\n• Back by evening\n\n**Kedarnath Only Helicopter** — ₹7,500–9,500 round trip\n• Available from Phata, Sersi, Guptkashi helipads\n• 7–10 minute flight each way\n\n⚠️ **Book 90+ days in advance** — helicopter slots sell out fast in peak season! 📞 +91-7817996730`,
+    answer: `🚁 **Helicopter Yatra Packages:**\n\n**Char Dham Helicopter** — ₹85,000/person (5N/6D)\n• Departs: Dehradun (Sahastradhara helipad)\n• All 4 dhams by air — Yamunotri, Gangotri, Kedarnath, Badrinath\n• VIP darshan at all shrines\n• Luxury hotels, all meals included\n• Best for: busy professionals, senior pilgrims\n\n**Do Dham Helicopter Same Day** — ₹28,000/person\n• Kedarnath + Badrinath in one day!\n• Departs from Phata/Sersi helipad\n• Back by evening\n\n**Kedarnath Only Helicopter** — ₹7,500–9,500 round trip\n• Available from Phata, Sersi, Guptkashi helipads\n• 7–10 minute flight each way\n\n⚠️ **Book 90+ days in advance** — helicopter slots sell out fast in peak season! 📞 +91-7017082807`,
   },
 
   // ── 10. WHAT IS INCLUDED ─────────────────────────────────────
@@ -98,19 +98,19 @@ export const CUSTOM_QA = [
   // ── 12. SENIOR CITIZENS ──────────────────────────────────────
   {
     keywords: ['senior','elderly','old age','aged','parents','mata pita','grandfather','grandmother','70','75','80','health issue'],
-    answer: `👴👵 **Senior Citizen Char Dham Package — ₹24,500 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony/palki included at Yamunotri & Kedarnath\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7817996730`,
+    answer: `👴👵 **Senior Citizen Char Dham Package — ₹24,500 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony/palki included at Yamunotri & Kedarnath\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7017082807`,
   },
 
   // ── 13. HOW TO BOOK ──────────────────────────────────────────
   {
     keywords: ['book','booking','reserve','how to book','kaise book','process','steps','confirm'],
-    answer: `**Booking Process — 4 Simple Steps:**\n\n1️⃣ **WhatsApp or call us**\nShare your travel dates, group size, and package preference\n📞 +91-7817996730\n\n2️⃣ **Receive custom itinerary**\nWe send a detailed itinerary within 2 hours — no obligation\n\n3️⃣ **Confirm with 25% advance**\nPay advance to lock your dates & vehicles\nPayment: Bank transfer, UPI, or cash\n\n4️⃣ **Receive your complete kit**\n• Biometric registration confirmation\n• Hotel vouchers\n• Driver & guide contact numbers\n• Packing list & emergency contacts\n\n📌 **Book at least 60 days in advance** for peak season (May–June, October). Helicopter slots fill even faster!`,
+    answer: `**Booking Process — 4 Simple Steps:**\n\n1️⃣ **WhatsApp or call us**\nShare your travel dates, group size, and package preference\n📞 +91-7017082807\n\n2️⃣ **Receive custom itinerary**\nWe send a detailed itinerary within 2 hours — no obligation\n\n3️⃣ **Confirm with 25% advance**\nPay advance to lock your dates & vehicles\nPayment: Bank transfer, UPI, or cash\n\n4️⃣ **Receive your complete kit**\n• Biometric registration confirmation\n• Hotel vouchers\n• Driver & guide contact numbers\n• Packing list & emergency contacts\n\n📌 **Book at least 60 days in advance** for peak season (May–June, October). Helicopter slots fill even faster!`,
   },
 
   // ── 14. CANCELLATION / REFUND ───────────────────────────────
   {
     keywords: ['cancel','cancellation','refund','money back','return','withdraw','postpone'],
-    answer: `**Cancellation & Refund Policy:**\n\n✅ **30+ days before:** Full refund (free cancellation)\n⚠️ **15–30 days before:** 25% cancellation fee\n⚠️ **7–15 days before:** 50% cancellation fee\n❌ **Within 7 days:** No refund\n\n**Special Cases:**\n🌦️ **Weather cancellation (helicopter):** Full refund or free reschedule — no questions asked\n🏥 **Medical emergency:** Refund on case-by-case basis with doctor certificate\n🏛️ **Temple closed due to calamity:** Full refund\n\n💡 **We recommend** travel insurance (available from ₹500/person) for complete peace of mind.\n\nQuestions? WhatsApp us — we're flexible and fair! 📞 +91-7817996730`,
+    answer: `**Cancellation & Refund Policy:**\n\n✅ **30+ days before:** Full refund (free cancellation)\n⚠️ **15–30 days before:** 25% cancellation fee\n⚠️ **7–15 days before:** 50% cancellation fee\n❌ **Within 7 days:** No refund\n\n**Special Cases:**\n🌦️ **Weather cancellation (helicopter):** Full refund or free reschedule — no questions asked\n🏥 **Medical emergency:** Refund on case-by-case basis with doctor certificate\n🏛️ **Temple closed due to calamity:** Full refund\n\n💡 **We recommend** travel insurance (available from ₹500/person) for complete peace of mind.\n\nQuestions? WhatsApp us — we're flexible and fair! 📞 +91-7017082807`,
   },
 
   // ── 15. ACCOMMODATION / HOTELS ──────────────────────────────
@@ -146,7 +146,7 @@ export const CUSTOM_QA = [
   // ── 20. GROUP DISCOUNTS ──────────────────────────────────────
   {
     keywords: ['group','family','friends','corporate','team','together','discount group','how many'],
-    answer: `**Group & Family Packages:**\n\n**Vehicle allocation by group size:**\n• 1–4 persons — Private Innova Crysta\n• 5–12 persons — AC Tempo Traveller (12 seater)\n• 13–25 persons — Mini bus + vehicles\n• 26+ persons — Full fleet with coordinator\n\n**Group Discounts:**\n• 6–10 persons — **5% off** per person\n• 11–20 persons — **8% off** per person\n• 21+ persons — **12% off** per person + complimentary welcome kit\n\n**Family packages:**\nChildren under 5: Free\nChildren 5–12: 50% of adult price\n\n**Corporate retreats:** Fully customised with dedicated coordinator, printed itineraries, and group photos at each dham.\n\nCall us for a personalised group quote! 📞 +91-7817996730`,
+    answer: `**Group & Family Packages:**\n\n**Vehicle allocation by group size:**\n• 1–4 persons — Private Innova Crysta\n• 5–12 persons — AC Tempo Traveller (12 seater)\n• 13–25 persons — Mini bus + vehicles\n• 26+ persons — Full fleet with coordinator\n\n**Group Discounts:**\n• 6–10 persons — **5% off** per person\n• 11–20 persons — **8% off** per person\n• 21+ persons — **12% off** per person + complimentary welcome kit\n\n**Family packages:**\nChildren under 5: Free\nChildren 5–12: 50% of adult price\n\n**Corporate retreats:** Fully customised with dedicated coordinator, printed itineraries, and group photos at each dham.\n\nCall us for a personalised group quote! 📞 +91-7017082807`,
   },
 
   // ── 21. PAYMENT METHODS ──────────────────────────────────────
@@ -194,7 +194,7 @@ export const CUSTOM_QA = [
   // ── 28. ADVANCE BOOKING / HOW EARLY ─────────────────────────
   {
     keywords: ['advance','early','how early','when to book','last minute','urgent','same week'],
-    answer: `**When to Book Your Yatra:**\n\n📅 **Recommended booking windows:**\n\n🔴 **May–June (Peak):** Book **90+ days ahead**\n• Most popular season, slots fill fast\n• Helicopter packages especially — book 3 months prior!\n\n🟡 **September–October:** Book **45–60 days ahead**\n• Clear weather, great season, still busy\n\n🟢 **Off-peak:** Can book **2–3 weeks ahead**\n• Less crowded, some discounts available\n\n**Early Bird Benefits:**\n✅ 5–10% discount for 90+ days advance booking\n✅ Better hotel options\n✅ Preferred vehicle allocation\n✅ Helicopter slots secured\n\n⚡ **Last-minute bookings (under 7 days):**\nWe try our best! Call us directly — we sometimes have cancellations available.\n\n📞 +91-7817996730 — available 7 AM–9 PM daily`,
+    answer: `**When to Book Your Yatra:**\n\n📅 **Recommended booking windows:**\n\n🔴 **May–June (Peak):** Book **90+ days ahead**\n• Most popular season, slots fill fast\n• Helicopter packages especially — book 3 months prior!\n\n🟡 **September–October:** Book **45–60 days ahead**\n• Clear weather, great season, still busy\n\n🟢 **Off-peak:** Can book **2–3 weeks ahead**\n• Less crowded, some discounts available\n\n**Early Bird Benefits:**\n✅ 5–10% discount for 90+ days advance booking\n✅ Better hotel options\n✅ Preferred vehicle allocation\n✅ Helicopter slots secured\n\n⚡ **Last-minute bookings (under 7 days):**\nWe try our best! Call us directly — we sometimes have cancellations available.\n\n📞 +91-7017082807 — available 7 AM–9 PM daily`,
   },
 
   // ── 29. PANCH KEDAR / SPECIAL TOURS ─────────────────────────
@@ -236,7 +236,7 @@ export const CUSTOM_QA = [
   // ── 35. CONTACT / OFFICE ─────────────────────────────────────
   {
     keywords: ['contact','address','office','location','haridwar','reach','where are you','email','number','call'],
-    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India\n\n📞 **Call/WhatsApp:** +91-7817996730\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
+    answer: `**Contact Shiv Ganga Travels:**\n\n📍 **Office:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India\n\n📞 **Call/WhatsApp:** +91-7017082807\n✉️ **Email:** support@shivgangatravels.com\n\n⏰ **Working Hours:**\n• Monday–Saturday: 7:00 AM – 9:00 PM IST\n• Sunday: 8:00 AM – 8:00 PM IST\n• WhatsApp: Available 24/7\n\n🌐 **Website:** www.shivgangatravels.com\n\n💡 **Response time:**\n• WhatsApp: Within 2 hours\n• Email: Within 4 hours\n• Phone: Pick up within 3 rings (working hours)\n\nWe are the **actual operator** — no agents, no middlemen. When you call, you speak directly with our yatra planning team. 🙏`,
   },
 
 ];
@@ -245,7 +245,7 @@ export const CUSTOM_QA = [
 export const AI_SYSTEM_PROMPT = `You are a helpful and friendly yatra planning assistant for Shiv Ganga Travels, a trusted pilgrimage tour operator based in Haridwar, Uttarakhand, India. You have been serving pilgrims for 15+ years with 50,000+ happy customers.
 
 Key facts:
-- Phone/WhatsApp: +91-7817996730
+- Phone/WhatsApp: +91-7017082807
 - Email: support@shivgangatravels.com
 - Location: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410
 - Speciality: Char Dham Yatra, Uttarakhand tours
@@ -257,7 +257,7 @@ Rules:
 - Keep answers concise (under 120 words) and warm
 - Speak in first person as the company ("We offer...", "Our packages...")
 - Use Indian pilgrimage context (VIP darshan, biometric registration, pony/palki, etc.)
-- For bookings, always direct to WhatsApp: +91-7817996730
+- For bookings, always direct to WhatsApp: +91-7017082807
 - Use ₹ for prices, not USD
 - Use occasional 🙏 emoji but sparingly
 - Never invent prices — say "please WhatsApp us for an exact quote"

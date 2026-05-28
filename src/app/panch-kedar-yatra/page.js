@@ -20,6 +20,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -104,7 +105,7 @@ export default function Page() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

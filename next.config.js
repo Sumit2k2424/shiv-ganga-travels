@@ -69,6 +69,17 @@ const nextConfig = {
       // Redirect blog Badrinath guide to new proper landing page
       { source: '/blog/badrinath-yatra-guide',                       destination: '/badrinath-yatra',                                permanent: true },
       { source: '/blog/char-dham-yatra-route-map',                  destination: '/char-dham-yatra-route-map',                    permanent: true },
+      // ── Thin/duplicate blog pages consolidated into canonical pages (May 2026 update cleanup) ──
+      { source: '/blog/char-dham-yatra-guide',     destination: '/blog/char-dham-guide',     permanent: true },
+      { source: '/blog/char-dham-budget-guide',    destination: '/blog/char-dham-yatra-cost', permanent: true },
+      { source: '/blog/kedarnath-yatra-package',   destination: '/kedarnath-yatra',          permanent: true },
+      { source: '/blog/kedarnath-yatra-guide',     destination: '/blog/kedarnath-yatra-complete-guide', permanent: true },
+      { source: '/blog/badrinath-temple-guide',    destination: '/badrinath-temple',         permanent: true },
+      { source: '/blog/yamunotri-yatra-guide',     destination: '/yamunotri-yatra',          permanent: true },
+      { source: '/blog/gangotri-yatra-guide',      destination: '/gangotri-yatra',           permanent: true },
+      { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
+      { source: '/blog/kedarnath-weather-guide',   destination: '/kedarnath-weather',        permanent: true },
+      { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
       // ── Duplicate city pages (92% identical content) → main Char Dham page ──
       // Keeps: Delhi, Noida, Mumbai, Bangalore, Chennai, Kolkata, Pune, Hyderabad, Chandigarh
       // Redirects: all other city pages that add no unique value
@@ -83,10 +94,6 @@ const nextConfig = {
       { source: '/char-dham-yatra-from-patna',       destination: '/char-dham-yatra-from-delhi', permanent: true },
       { source: '/char-dham-yatra-from-rishikesh',   destination: '/char-dham-yatra-from-delhi', permanent: true },
       { source: '/char-dham-yatra-from-dehradun',    destination: '/char-dham-yatra-from-delhi', permanent: true },
-      // Fix root-level 404s found in Search Console (pages exist under /blog/)
-      { source: '/char-dham-yatra-kitna-kharcha',    destination: '/blog/char-dham-yatra-kitna-kharcha', permanent: true },
-      { source: '/kedarnath-pehli-baar',             destination: '/blog/kedarnath-pehli-baar',          permanent: true },
-      { source: '/char-dham-kab-jayen',              destination: '/blog/char-dham-kab-jayen',           permanent: true },
     ];
   },
 
@@ -99,12 +106,7 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
-          // HSTS: forces HTTPS for 2 years, includeSubDomains + preload-eligible
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          // Cross-Origin-Opener-Policy: process isolation, better Lighthouse score
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
-          // Modern Permissions-Policy — explicitly disable features we never use
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=(), interest-cohort=()' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
           {
             key: 'Content-Security-Policy',
             value: [
@@ -118,7 +120,6 @@ const nextConfig = {
               "worker-src blob: 'self'",
               "base-uri 'self'",
               "form-action 'self'",
-              "upgrade-insecure-requests",
             ].join('; '),
           },
         ],

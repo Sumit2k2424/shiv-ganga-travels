@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
  * Uses Intersection Observer (zero layout cost).
  * Auto-skips on reduced-motion preference.
  */
-export default function ScrollReveal({ children, delay = 0, as = 'div', ...rest }) {
+export default function ScrollReveal({ children, delay = 0, as = 'div', className = '', ...rest }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -30,7 +30,7 @@ export default function ScrollReveal({ children, delay = 0, as = 'div', ...rest 
 
   const Tag = as;
   return (
-    <Tag ref={ref} className={`fade-in ${visible ? 'visible' : ''}`} {...rest}>
+    <Tag ref={ref} className={`fade-in ${visible ? 'visible' : ''} ${className}`.trim()} {...rest}>
       {children}
     </Tag>
   );

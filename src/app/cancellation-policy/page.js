@@ -96,7 +96,7 @@ export default function CancellationPolicy() {
         {/* How to cancel */}
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:12 }}>How to Cancel</h2>
         {[
-          'Send a cancellation request via WhatsApp to +91-7817996730 or email to support@shivgangatravels.com',
+          'Send a cancellation request via WhatsApp to +91-7017082807 or email to support@shivgangatravels.com',
           'Include your booking reference number and departure date in the message',
           'Our team will confirm receipt within 24 hours and provide the refund amount',
           'Refund is processed to your original payment method within 7 working days of confirmation',

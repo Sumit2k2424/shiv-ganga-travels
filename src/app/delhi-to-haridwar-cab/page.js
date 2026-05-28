@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Delhi to Haridwar Cab 2026 — Fare from ₹2,800, 5 hr Drive',
+  title: 'Delhi to Haridwar Cab 2026 — Taxi Fare,',
   description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.',
   keywords: ['delhi to haridwar cab,delhi to haridwar taxi fare,delhi to haridwar distance,cab from delhi to haridwar char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/delhi-to-haridwar-cab` },
@@ -49,7 +49,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Delhi / NCR to Haridwar for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </section>
@@ -127,7 +127,7 @@ export default function Page() {
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab from Delhi / NCR to Haridwar for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
             style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </div>

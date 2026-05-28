@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Helicopter Package 2026 — 5 Days, IRCTC Approved',
+  title: 'Char Dham Helicopter Package 2026',
   description: 'Char Dham Helicopter Package 2026. DGCA-approved operators. 5N/6D from Sahastradhara Helipad, Dehradun.',
   keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','DGCA approved char dham helicopter','sahastradhara helipad char dham','char dham helicopter price 2026','char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
@@ -15,6 +15,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
+    aggregateRating:{ '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -47,19 +48,6 @@ export default function Page() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
           <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
-
-        {/* Quick Answer — for AI Overviews / featured snippets */}
-        <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:24 }}>
-          <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>🚁 Quick Answer</div>
-          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}>The <strong>Char Dham Helicopter Package</strong> completes all four dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in <strong>5 days</strong> using helicopter flights between shrines. It starts from Dehradun's Sahastradhara helipad and costs <strong>from ₹85,000 per person</strong>, including IRCTC-approved flights, luxury hotels, VIP darshan at every temple, and ground transfers. Popular with senior pilgrims and time-constrained executives.</p>
-        </div>
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context':'https://schema.org','@type':'WebPage',
-          name:'Char Dham Helicopter Package 2026',
-          url:`${SITE.baseUrl}/char-dham-helicopter`,
-          speakable:{ '@type':'SpeakableSpecification', cssSelector:['.quick-answer','h1'] },
-        }) }}/>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>
@@ -192,7 +180,7 @@ export default function Page() {
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            <a href='tel:+917017082807' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
       </article>

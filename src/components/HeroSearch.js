@@ -54,7 +54,7 @@ export default function HeroSearch() {
         {TABS.map(t => {
           const active = tab === t.id;
           return (
-            <button key={t.id} onClick={()=>setTab(t.id)} aria-label={`${t.label} package type`} aria-pressed={tab === t.id}
+            <button key={t.id} onClick={()=>setTab(t.id)}
               style={{
                 padding:'13px 24px', fontSize:14, fontWeight:600,
                 border:'none',
@@ -75,8 +75,8 @@ export default function HeroSearch() {
       {/* Form */}
       <form onSubmit={handleSearch} className="hero-search-form" style={{ padding:'20px 24px', display:'flex', gap:14, flexWrap:'wrap', alignItems:'flex-end' }}>
         <div style={{ flex:'1 1 130px', minWidth:110 }}>
-          <label htmlFor="hs-month" style={labelStyle}>Travel Month</label>
-          <select id="hs-month" value={month} onChange={e=>setMonth(e.target.value)} style={selectStyle}
+          <label style={labelStyle}>Travel Month</label>
+          <select value={month} onChange={e=>setMonth(e.target.value)} style={selectStyle}
             onFocus={e=>{e.target.style.borderColor='var(--navy)';e.target.style.boxShadow='0 0 0 3px rgba(15,43,91,0.1)'}}
             onBlur={e=>{e.target.style.borderColor='var(--border)';e.target.style.boxShadow='none'}}>
             <option value="">Select month</option>
@@ -84,8 +84,8 @@ export default function HeroSearch() {
           </select>
         </div>
         <div style={{ flex:'1 1 130px', minWidth:110 }}>
-          <label htmlFor="hs-pilgrims" style={labelStyle}>Pilgrims</label>
-          <select id="hs-pilgrims" value={pilgrims} onChange={e=>setPilgrims(e.target.value)} style={selectStyle}
+          <label style={labelStyle}>Pilgrims</label>
+          <select value={pilgrims} onChange={e=>setPilgrims(e.target.value)} style={selectStyle}
             onFocus={e=>{e.target.style.borderColor='var(--navy)';e.target.style.boxShadow='0 0 0 3px rgba(15,43,91,0.1)'}}
             onBlur={e=>{e.target.style.borderColor='var(--border)';e.target.style.boxShadow='none'}}>
             {['1','2','3','4','5','6','7','8','9','10+'].map(n=>(

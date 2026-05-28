@@ -37,6 +37,11 @@ const POSTS = [
   { slug:'char-dham-registration-hindi', title:'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? 9 Steps', excerpt:'मुफ्त रजिस्ट्रेशन — website और WhatsApp दोनों से। बिना रजिस्ट्रेशन के सोनप्रयाग पर पुलिस वापस भेज देती है।', tag:'हिंदी गाइड', readTime:'5 min', icon:'📋' },
   { slug:'char-dham-packing-list-hindi', title:'चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं? — यह लिस्ट Print कर लो', excerpt:'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले एक बार check करें।', tag:'हिंदी गाइड', readTime:'6 min', icon:'🎒' },
   { slug:'char-dham-kab-jayen', title:'चार धाम यात्रा 2026 में कब जाएं? — हर महीने का सच बताया', excerpt:'मई, जून, सितंबर, अक्टूबर — कौन सा महीना सबसे सही? मौसम, भीड़, खर्चा — बिना लाग-लपेट के जवाब।', tag:'हिंदी गाइड', readTime:'6 min', icon:'📅' },
+  { slug:'char-dham-weather-guide', title:'Char Dham Yatra Weather 2026 — Month by Month', excerpt:'Real temperatures, rain and snow risk for all 4 dhams, and the windows we actually tell pilgrims to book.', tag:'Travel Tips', readTime:'6 min', icon:'🌡️' },
+  { slug:'char-dham-yatra-history', title:'Char Dham Yatra History & Significance', excerpt:'Where the circuit came from, what each shrine means, and why pilgrims walk it clockwise west to east.', tag:'Yatra Guide', readTime:'5 min', icon:'🛕' },
+  { slug:'char-dham-yatra-hotels', title:'Char Dham Yatra Hotels — Where Pilgrims Actually Stay', excerpt:'The honest version of accommodation: which base towns you sleep in and what budget vs premium really buys.', tag:'Travel Tips', readTime:'6 min', icon:'🏨' },
+  { slug:'char-dham-yatra-solo-women', title:'Char Dham Yatra for Solo Women Travellers', excerpt:'Is it safe, group vs private, women-friendly stays, and what we arrange for women travelling alone.', tag:'Travel Tips', readTime:'6 min', icon:'👩' },
+  { slug:'kedarnath-places-to-see', title:'Places to See in & Around Kedarnath', excerpt:'Beyond the temple — Bhairavnath, Vasuki Tal, Gandhi Sarovar and Triyuginarayan, and whether each is worth it.', tag:'Route Guide', readTime:'6 min', icon:'🏔️' },
 ];
 
 const TAG_COLORS = {

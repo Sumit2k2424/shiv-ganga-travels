@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Kedarnath Temple 2026 — Timings, Aarti & Darshan Guide',
+  title: 'Kedarnath Temple 2026 — History, Timings,',
   description: 'Complete Kedarnath Temple guide 2026. Temple history, darshan timings (4 AM–9 PM), dress code, puja types, altitude 3,583m, trek route from Gaurikund',
   keywords: ['kedarnath temple','kedarnath temple timings 2026','kedarnath temple history','kedarnath darshan 2026','kedarnath temple opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
@@ -14,7 +14,7 @@ export const metadata = {
   },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], aggregateRating:{'@type':'AggregateRating',ratingValue:4.6,reviewCount:5000,bestRating:5}, touristType:'Pilgrim' };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     {'@type':'Question',name:'What time does Kedarnath Temple open?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens at 4:00 AM for the Mahabhishek puja and closes at 9:00 PM. General darshan is from 6 AM to 3 PM and 5 PM to 9 PM. The temple is closed between 3 PM and 5 PM for a break.'}},
     {'@type':'Question',name:'When does Kedarnath Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens on April 22, 2026 at 8:00 AM for the 2026 season. The temple closes for winter on November 11, 2026.'}},
@@ -118,7 +118,7 @@ export default function KedarnathTemple() {
         <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Puja booking assistance included · VIP darshan · Helicopter option · From ₹6,499</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra with puja booking assistance.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
+          <a href='tel:+917017082807' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
     </article>

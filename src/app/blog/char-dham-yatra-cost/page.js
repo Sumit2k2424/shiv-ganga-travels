@@ -25,7 +25,7 @@ function Schema() {
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: {
         '@type': 'Person',
         name: 'Sumit Mishra',
-        jobTitle: 'Co-Founder & Co-Founder & Operations Manager, Shiv Ganga Travels',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
       }, datePublished: '2024-01-15', dateModified: '2026-05-01', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
@@ -232,7 +232,7 @@ export default function CharDhamCost() {
             ['Travel in September–October', 'Same temples, same darshan. 10–15% cheaper than May–June. Post-monsoon clarity means the mountains are actually more visible. Fewer crowds at every dham.'],
             ['Group of 6 or more', 'Groups of 6+ get 5% off per person. Groups of 12+ get 8% off. For a family of 6 booking a 9N/10D package, this saves ₹5,850 total.'],
             ['Trek Kedarnath instead of pony', 'If you are 18–55 and reasonably fit, the trek is free. The pony saves physical effort but costs ₹3,500–₹4,500 per person one way. A group of 4 saves ₹14,000–₹18,000 by trekking.'],
-            ['Book direct with the operator', 'Aggregator platforms (MakeMyTrip, Thrillophilia) add 15–20% commission to the operator\'s price. The same package from the operator directly costs ₹5,000–₹10,000 less per person. See full comparison: Direct vs Aggregator guide.'],
+            ['Book direct with the operator', 'Aggregator platforms (MakeMyTrip, Thrillophilia) add 15–20% commission to the operator\'s price. The same package from the operator directly costs ₹5,000–₹10,000 less per person.'],
           ].map(([tip, detail]) => (
             <div key={tip} style={{ background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)', borderLeft: '3px solid #1D9E75' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{tip}</div>
@@ -277,7 +277,7 @@ export default function CharDhamCost() {
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['SGT vs MakeMyTrip','/shiv-ganga-travels-vs-makemytrip-char-dham'],['Direct vs Aggregator','/direct-operator-vs-travel-aggregator-char-dham']].map(([l,h]) => (
+            {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

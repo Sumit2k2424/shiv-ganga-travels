@@ -32,7 +32,7 @@ function Schema() {
     author: {
         '@type': 'Person',
         name: 'Sumit Mishra',
-        jobTitle: 'Co-Founder & Co-Founder & Operations Manager, Shiv Ganga Travels',
+        jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
       },
@@ -528,7 +528,7 @@ export default function RegistrationBlog() {
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
               💬 WhatsApp — Get Help Now
             </a>
-            <a href='tel:+917817996730'
+            <a href='tel:+917017082807'
               style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
               📞 {SITE.phone}
             </a>

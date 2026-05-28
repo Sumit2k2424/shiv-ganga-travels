@@ -193,7 +193,7 @@ export default function LeadPopup() {
 
               <div style={{ marginBottom: 12 }}>
                 <label style={labelStyle}>Interested Package</label>
-                <select id="lp-package" name="package" aria-label="Select package" value={form.package} onChange={handleChange} style={inputStyle}>
+                <select name="package" value={form.package} onChange={handleChange} style={inputStyle}>
                   <option value="">— Select a package —</option>
                   {PACKAGES_LIST.map(p => <option key={p}>{p}</option>)}
                 </select>
@@ -202,14 +202,14 @@ export default function LeadPopup() {
               <div className="lead-popup-form-row" style={{ display: 'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 12, marginBottom: 20 }}>
                 <div>
                   <label style={labelStyle}>Travel Month</label>
-                  <select id="lp-month" name="month" aria-label="Select travel month" value={form.month} onChange={handleChange} style={inputStyle}>
+                  <select name="month" value={form.month} onChange={handleChange} style={inputStyle}>
                     <option value="">— Select month —</option>
                     {MONTHS.map(m => <option key={m}>{m}</option>)}
                   </select>
                 </div>
                 <div>
                   <label style={labelStyle}>No. of Pilgrims</label>
-                  <select id="lp-pilgrims" name="pilgrims" aria-label="Number of pilgrims" value={form.pilgrims} onChange={handleChange} style={inputStyle}>
+                  <select name="pilgrims" value={form.pilgrims} onChange={handleChange} style={inputStyle}>
                     {['1','2','3','4','5','6','7','8','9','10+'].map(n => (
                       <option key={n} value={n}>{n} pilgrim{n !== '1' ? 's' : ''}</option>
                     ))}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Gangotri Weather 2026 — Monthly Temp & Best Visit Months',
+  title: 'Gangotri Weather 2026 — Month-wise Temperature',
   description: 'Gangotri weather guide 2026. Month-by-month temperatures at 3,415m. Best time: May-June and Sept-Oct. Road conditions and packing guide.',
   keywords: ['gangotri weather','gangotri temperature','gangotri weather may','gangotri best time to visit','gangotri weather 2026','gangotri snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-weather` },

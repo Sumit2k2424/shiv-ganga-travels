@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Kedarnath Hotels 2026 — Best Stays from ₹500 to Premium',
+  title: 'Hotels Near Kedarnath 2026',
   description: 'Best hotels near Kedarnath 2026. Guptkashi, Sonprayag, Kedarnath Top and Phata stays — honest guide with prices, comfort ratings and tips.',
   keywords: ['hotels near kedarnath','kedarnath hotels 2026','guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-hotels` },
