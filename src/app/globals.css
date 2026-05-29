@@ -619,6 +619,12 @@ button { font-family: var(--font); }
 /* ── Dropdown ── */
 @keyframes dropIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
 
+/* ── Nav logo spacing: separated from desktop nav, flush on mobile ── */
+.nav-logo { margin-right: 0; }
+@media (min-width: 768px) {
+  .nav-logo { margin-right: 36px; }
+}
+
 /* ── Counter number formatting ── */
 .counter-value { font-feature-settings: 'tnum' 1; font-variant-numeric: tabular-nums; }
 

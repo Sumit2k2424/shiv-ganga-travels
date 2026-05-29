@@ -267,7 +267,7 @@ export default function Navbar() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px', height:64, display:'flex', alignItems:'center', gap:0 }}>
 
           {/* Logo */}
-          <Link href="/" style={{ display:'flex', alignItems:'flex-start', gap:10, textDecoration:'none', marginRight:36, flexShrink:0, paddingTop:4 }}>
+          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'flex-start', gap:10, textDecoration:'none', flexShrink:0, paddingTop:4 }}>
             <LogoMark size={36}/>
             <div style={{ lineHeight:1, paddingTop:2 }}>
               <div style={{ display:'flex', alignItems:'baseline', gap:5 }}>
@@ -457,21 +457,18 @@ export default function Navbar() {
               💬 Enquire
             </a>
 
-            
-              Book Now
-            
-
             <button onClick={() => setMobileOpen(o => !o)} className="md:hidden"
               style={{
                 display:'flex', alignItems:'center', justifyContent:'center',
-                width:38, height:38, borderRadius:'var(--r-sm)',
-                border:'1px solid var(--border)', background:'none', cursor:'pointer',
-                color:'var(--text)', marginLeft:4, transition:'background var(--t)',
+                width:42, height:42, borderRadius:10,
+                border:'1px solid var(--border)', background:'var(--navy-light)', cursor:'pointer',
+                color:'var(--navy)', marginLeft:4, flexShrink:0, transition:'background var(--t)',
               }}
-              aria-label="Menu">
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}>
               {mobileOpen
-                ? <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
-                : <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h10"/></svg>
+                ? <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
+                : <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h10"/></svg>
               }
             </button>
           </div>

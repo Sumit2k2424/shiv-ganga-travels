@@ -32,6 +32,15 @@ export default function LeadPopup() {
     return () => clearTimeout(t);
   }, []);
 
+  /* Lock background scroll while the modal is open */
+  useEffect(() => {
+    if (visible) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => { document.body.style.overflow = prev; };
+    }
+  }, [visible]);
+
   function close() {
     setClosing(true);
     setTimeout(() => { setVisible(false); setClosing(false); }, 350);
@@ -84,9 +93,12 @@ export default function LeadPopup() {
           transform: 'translate(-50%, -50%)',
           zIndex: 1001,
           width: 'min(480px, 94vw)',
+          maxHeight: '90dvh',
           background: '#fff',
           borderRadius: 20,
-          overflow: 'hidden',
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          WebkitOverflowScrolling: 'touch',
           boxShadow: '0 32px 80px rgba(10,20,40,0.35)',
           animation: closing ? 'slideDown .35s var(--t-out) forwards' : 'slideUp .4s var(--t-out)',
         }}
