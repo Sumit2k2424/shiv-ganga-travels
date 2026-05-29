@@ -10,7 +10,7 @@ import { SITE } from '@/data/packages';
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['300','400','500','600','700','800'],
+  weight: ['400','500','600','700','800'],
   style: ['normal','italic'],
   variable: '--font-jakarta',
   display: 'swap',
@@ -373,14 +373,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={`${jakarta.variable} ${playfair.variable}`}>
       <head>
-        {/* Preconnect to APIs used below-the-fold (Google reviews, maps) */}
-        <link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="anonymous"/>
-        <link rel="preconnect" href="https://maps.googleapis.com" crossOrigin="anonymous"/>
+        {/* Below-the-fold origins (reviews, maps, images) — dns-prefetch only, no socket cost on first paint */}
+        <link rel="dns-prefetch" href="https://lh3.googleusercontent.com"/>
+        <link rel="dns-prefetch" href="https://maps.googleapis.com"/>
+        <link rel="dns-prefetch" href="https://images.pexels.com"/>
         {/* DNS prefetch for analytics — non-blocking */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
-        {/* Preconnect Pexels for hero images */}
-        <link rel="preconnect" href="https://images.pexels.com"/>
         {/* Mobile / PWA */}
         <meta name="mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>

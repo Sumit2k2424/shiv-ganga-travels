@@ -13,6 +13,7 @@ function Snow() {
     const ctx = canvas.getContext('2d');
     let raf, w, h;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function resize() {
       w = canvas.offsetWidth; h = canvas.offsetHeight;
@@ -22,7 +23,7 @@ function Snow() {
     resize();
     window.addEventListener('resize', resize);
 
-    const FLAKES = 160;
+    const FLAKES = reduce ? 0 : (window.innerWidth < 768 ? 45 : 90);
     const flakes = Array.from({ length: FLAKES }, () => ({
       x:  Math.random() * 1440,
       y:  Math.random() * 900,
@@ -52,6 +53,7 @@ function Snow() {
       raf = requestAnimationFrame(draw);
     }
     raf = requestAnimationFrame(draw);
+    if (FLAKES === 0) cancelAnimationFrame(raf);
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize); };
   }, []);
 
@@ -509,7 +511,7 @@ export default function HeroSection() {
           Uttarakhand Tourism Registered · Est. 2010 · Direct Operator
         </div>
 
-        <h1 className="display-title" style={{
+        <h1 className="display-title speakable-answer" style={{
           color:'#fff', fontSize:'clamp(2rem,6vw,4.2rem)',
           fontWeight:600, lineHeight:1.07, marginBottom:18,
           textShadow:'0 4px 40px rgba(0,0,0,0.6)',
@@ -537,7 +539,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <p style={{
+        <p className="speakable-answer" style={{
           color:'rgba(255,255,255,0.72)', fontSize:15.5, lineHeight:1.75,
           marginBottom:30, maxWidth:540, margin:'0 auto 30px',
         }}>

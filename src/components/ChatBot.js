@@ -218,17 +218,24 @@ export default function ChatBot() {
           from { transform:scale(0); }
           to   { transform:scale(1); }
         }
-        @keyframes botPulse {
-          0%,100% { box-shadow:0 4px 18px rgba(15,43,91,0.35), 0 0 0 0 rgba(15,43,91,0.35); }
-          50%     { box-shadow:0 4px 18px rgba(15,43,91,0.35), 0 0 0 12px rgba(15,43,91,0); }
+        @keyframes botRing {
+          from { transform:scale(1);   opacity:.55; }
+          to   { transform:scale(1.6); opacity:0; }
         }
+        .chat-btn-float::after {
+          content:''; position:absolute; inset:0; border-radius:50%;
+          border:2px solid rgba(15,43,91,.45);
+          animation:botRing 3s ease-in-out infinite;
+          will-change:transform,opacity; pointer-events:none;
+        }
+        .chat-open::after { display:none; }
       `}}/>
 
       {/* Floating button */}
       <button
         onClick={() => setOpen(o => !o)}
         aria-label={open ? 'Close chat' : 'Open chat assistant'}
-        className="chat-btn-float"
+        className={open ? 'chat-btn-float chat-open' : 'chat-btn-float'}
         style={{
           position: 'fixed',
           bottom: 24, right: 24,
@@ -239,7 +246,6 @@ export default function ChatBot() {
           border: 'none', cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           boxShadow: '0 4px 18px rgba(15,43,91,0.35)',
-          animation: open ? 'none' : 'botPulse 3s ease-in-out infinite',
           transition: 'transform .2s',
           /* On mobile (≤768px) override via CSS: bottom: 74px */
         }}

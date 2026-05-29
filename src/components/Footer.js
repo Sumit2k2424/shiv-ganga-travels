@@ -56,6 +56,8 @@ const COLS = [
     {l:'Badrinath Hotels',            h:'/badrinath-hotels'},
     {l:'Kedarnath Temple Guide',       h:'/kedarnath-temple'},
     {l:'Badrinath Temple Guide',       h:'/badrinath-temple'},
+    {l:'Gangotri Temple Guide',        h:'/gangotri-temple'},
+    {l:'Yamunotri Temple Guide',       h:'/yamunotri-temple'},
     {l:'Kedarnath Weather',            h:'/kedarnath-weather'},
     {l:'Yamunotri Weather',            h:'/yamunotri-weather'},
     {l:'Gangotri Weather',             h:'/gangotri-weather'},

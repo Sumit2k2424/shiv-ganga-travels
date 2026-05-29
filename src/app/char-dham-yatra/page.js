@@ -87,6 +87,7 @@ function Schema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
       <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
@@ -132,7 +133,7 @@ export default function CharDhamYatra() {
           </span>
 
           {/* H1 — exact target keyword */}
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5.5vw,3rem)', marginBottom:16 }}>
+          <h1 className="display-title speakable-answer" style={{ color:'#fff', fontSize:'clamp(1.6rem,5.5vw,3rem)', marginBottom:16 }}>
             Char Dham Yatra Package 2026<br/>
             <em style={{ color:'#FFD166', fontStyle:'italic' }}>from Haridwar &amp; Delhi</em>
           </h1>

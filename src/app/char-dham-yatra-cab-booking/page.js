@@ -22,6 +22,14 @@ function Schema() {
     url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
     telephone:SITE.phone, areaServed:'Uttarakhand',
     provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
+  };
+  // Product carries the rating — TaxiService is not a Google-supported review-snippet type.
+  const product = {
+    '@context':'https://schema.org','@type':'Product',
+    name:'Char Dham Yatra Cab & Taxi Booking from Haridwar',
+    description:'Hill-certified AC cabs and tempo travellers for the Char Dham Yatra circuit from Haridwar — Swift Dzire, Innova Crysta and 12-seater Tempo Traveller with experienced mountain drivers.',
+    brand:{ '@type':'Brand', name:SITE.name },
+    offers:{ '@type':'Offer', price:'18000', priceCurrency:'INR', priceValidUntil:'2026-10-31', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`, seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl } },
     aggregateRating:{ '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
@@ -35,6 +43,7 @@ function Schema() {
   ]};
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);

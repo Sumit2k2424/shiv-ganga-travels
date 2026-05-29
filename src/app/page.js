@@ -70,7 +70,19 @@ function Schema() {
   };
 
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
+  // Voice-search: tells Google Assistant / TTS which concise blocks to read aloud
+  const webpage = {
+    '@context':'https://schema.org','@type':'WebPage',
+    '@id':`${SITE.baseUrl}/#webpage`,
+    url:SITE.baseUrl,
+    name:'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels',
+    inLanguage:'en-IN',
+    isPartOf:{ '@id':`${SITE.baseUrl}/#website` },
+    about:{ '@id':`${SITE.baseUrl}/#organization` },
+    primaryImageOfPage:{ '@type':'ImageObject', url:`${SITE.baseUrl}/opengraph-image` },
+    speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] },
+  };
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
 
 /* ─── Inline compact card ─── */

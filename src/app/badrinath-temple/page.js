@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', aggregateRating:{'@type':'AggregateRating',ratingValue:4.6,reviewCount:4500,bestRating:5} };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim' };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };

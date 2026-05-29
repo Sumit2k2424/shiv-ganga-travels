@@ -87,6 +87,8 @@ export default function sitemap() {
   const guides = [
     { url: `${b}/kedarnath-temple`,                    p: 0.88, cf: 'monthly' },
     { url: `${b}/badrinath-temple`,                    p: 0.86, cf: 'monthly' },
+    { url: `${b}/gangotri-temple`,                     p: 0.86, cf: 'monthly' },
+    { url: `${b}/yamunotri-temple`,                    p: 0.86, cf: 'monthly' },
     { url: `${b}/online-puja-booking`,                 p: 0.82, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-emergency-contacts`,  p: 0.78, cf: 'monthly' },
     { url: `${b}/char-dham-road-status`,               p: 0.80, cf: 'weekly'  },
