@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FAQAccordion from '@/components/FAQAccordion';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import BlogAuthor from '@/components/BlogAuthor';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra from Haridwar 2026 | Shiv Ganga Travels',
@@ -33,6 +34,15 @@ const FAQS = [
   { q:'Should I choose the road or helicopter Char Dham package?', a:'Choose road if you have 10–12 days, want the traditional immersive journey, and prefer a budget from ₹20,999. Choose helicopter if you are short on time or travelling with elderly pilgrims — it completes all four dhams in 5–6 days with VIP darshan, starting at ₹85,000 from Dehradun. Road departs directly from Haridwar; the helicopter yatra starts at Sahastradhara Helipad in Dehradun, 35 km away.' },
 ];
 
+const PAA = [
+  { q:'How many days are required for Char Dham Yatra from Haridwar?', a:'By road, 9 to 11 days is the standard from Haridwar — the most popular itinerary is 9 nights / 10 days. A fit adult can do it in 8 days at a hard pace, but that means 10+ hours in the vehicle some days. Senior citizens should allow 12–13 days with an acclimatisation day before Kedarnath. By helicopter the whole circuit takes just 5–6 days from Dehradun.' },
+  { q:'What is the Char Dham Yatra distance from Haridwar?', a:'The full road circuit from Haridwar and back is roughly 1,100–1,400 km depending on the exact route. The longest single legs are Haridwar→Barkot (210 km), Uttarkashi→Guptkashi (220 km), and Badrinath→Haridwar (320 km). Yamunotri adds a 6 km trek and Kedarnath a 16 km trek on top of the drive.' },
+  { q:'How much does Char Dham Yatra from Haridwar cost?', a:'Budget road packages from Haridwar start around ₹16,500–20,999 per person for 9–10 days, with deluxe (3-star hotels, Innova Crysta) running ₹26,500–45,000. The Char Dham by helicopter package is about ₹85,000 per person. Our 9N/10D all-inclusive from Haridwar starts at ₹20,999 with no agent commission.' },
+  { q:'Why do most Char Dham tours start from Haridwar?', a:'Haridwar is one of Hinduism\'s seven holiest cities and the natural gateway to the dhams. It is densely connected by train and bus from Delhi, Mumbai, Ahmedabad and Kolkata, and Jolly Grant Airport (Dehradun) is about an hour away. Starting here — rather than connecting through Delhi the same morning — gives a calmer first day and better acclimatisation before the climbs.' },
+  { q:'What is the correct order of the Char Dham Yatra?', a:'The traditional clockwise order is Yamunotri → Gangotri → Kedarnath → Badrinath. From Haridwar the route runs Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Rudraprayag → Badrinath, then back to Haridwar via Devprayag.' },
+  { q:'Is Char Dham Yatra registration mandatory in 2026?', a:'Yes. Biometric registration is compulsory and checked at police barriers such as Sonprayag. Register online at the Uttarakhand portal (registrationandtouristcare.uk.gov.in) or at counters in Haridwar and Rishikesh before you travel. Unregistered pilgrims are turned back at checkpoints. We complete registration free for everyone in our packages.' },
+];
+
 function Schema() {
   const faq = {
     '@context':'https://schema.org','@type':'FAQPage',
@@ -54,6 +64,11 @@ function Schema() {
       { '@type':'ListItem', position:5, name:'Badrinath darshan → Haridwar' },
     ] },
   };
+  const paa = {
+    '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1,
+      acceptedAnswer:{ '@type':'Answer', text:x.a } })),
+  };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -65,6 +80,7 @@ function Schema() {
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);
 }
@@ -261,6 +277,11 @@ export default function Page() {
         {/* FAQ */}
         <h2 style={h2}>Frequently Asked Questions</h2>
         <FAQAccordion faqs={FAQS}/>
+
+        {/* PEOPLE ALSO ASK — real Google PAA for this query */}
+        <div style={{ marginTop:36 }}>
+          <PeopleAlsoAsk items={PAA}/>
+        </div>
 
         {/* AUTHOR BIO — bottom */}
         <div style={{ marginTop:32 }}><BlogAuthor variant="bottom" author="sumit"/></div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Panch Badri Yatra 2026 — All 5 Badri Shrines',
@@ -54,6 +55,20 @@ const temples = [
     opens: 'Year-round', tip: 'The only one of the five open in winter. Often combined with the Char Dham return journey via Karnprayag.'
   },
 ];
+
+const PAA = [
+  { q:'What is the Panch Badri Yatra?', a:'Panch Badri is a circuit of five Vishnu temples in the Garhwal region: Badrinath (Vishal Badri), Yogadhyan Badri, Bhavishya Badri, Vridha Badri and Adi Badri. Together they form an important Vaishnavite pilgrimage around the Badrinath area.' },
+  { q:'How many days does Panch Badri take?', a:'Plan about 6–9 days from Haridwar, as the five temples are spread across the Chamoli district with some requiring short treks (notably Bhavishya Badri). It\'s less strenuous than Panch Kedar but still involves hill travel.' },
+  { q:'When is the best time for Panch Badri Yatra?', a:'May–June and September–October, matching the Badrinath season. Badrinath itself opens April 23, 2026. Avoid the monsoon for the trek sections and the high-altitude roads.' },
+  { q:'Is Badrinath part of Panch Badri?', a:'Yes — Badrinath (also called Vishal Badri) is the principal and most famous of the five. The other four (Yogadhyan, Bhavishya, Vridha and Adi Badri) are lesser-known shrines visited around it.' },
+  { q:'Is registration needed for Panch Badri?', a:'Badrinath requires the standard free Char Dham e-pass registration. The smaller Badri temples don\'t have the same checkpoint system, but it\'s wise to register for the main route. We handle Badrinath registration in our packages.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function PanchBadriYatra() {
   return (
@@ -162,6 +177,10 @@ export default function PanchBadriYatra() {
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>

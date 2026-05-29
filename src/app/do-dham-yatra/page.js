@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: '2 Dham Yatra 2026 — Kedarnath & Badrinath',
@@ -43,6 +44,21 @@ function Schema() {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
+
+const PAA = [
+  { q:'What is the Do Dham Yatra?', a:'Do Dham means visiting two of the four dhams instead of all four. The two popular combinations are Kedarnath + Badrinath, or Yamunotri + Gangotri. It\'s chosen by pilgrims who can\'t spare 10–12 days for the full Char Dham circuit.' },
+  { q:'How many days does Do Dham Yatra take?', a:'Typically 5 to 7 days by road from Haridwar, depending on the pairing. Kedarnath + Badrinath needs the Kedarnath trek day, so it runs slightly longer than Yamunotri + Gangotri. By helicopter, Kedarnath–Badrinath can be done in 1–2 days.' },
+  { q:'Which Do Dham combination should I choose?', a:'Kedarnath + Badrinath is the most popular — the two most revered shrines, both in the eastern half of the circuit. Yamunotri + Gangotri suits those wanting the gentler western pair with an easier trek. Your choice usually depends on which deities you most wish to visit and your fitness for the Kedarnath climb.' },
+  { q:'What is the cost of Do Dham Yatra?', a:'Do Dham road packages are more budget-friendly than the full circuit, generally starting lower per person since they cover fewer days. Helicopter Do Dham (Kedarnath–Badrinath) runs higher. We tailor pricing to the pairing, vehicle and hotel grade — message us for an exact quote.' },
+  { q:'Is Do Dham registration mandatory?', a:'Yes. Each dham you visit still requires the free biometric registration, checked at the same police barriers. We complete it for everyone in our packages.' },
+  { q:'When is the best time for Do Dham Yatra?', a:'Same as Char Dham — May–June and September–October. The dhams open between April 19 and 23, 2026, and close around mid-November. Avoid the July–August monsoon.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function DoDhamYatra() {
   return (
@@ -231,6 +247,10 @@ export default function DoDhamYatra() {
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>

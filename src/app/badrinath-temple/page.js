@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 export const metadata = {
   title: 'Badrinath Temple 2026 — Darshan Timings,',
   description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord',
@@ -12,6 +13,20 @@ function Schema() {
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
 const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+const PAA = [
+  { q:'Where is Badrinath Temple located?', a:'In Chamoli district of Uttarakhand, on the bank of the Alaknanda river between the Nar and Narayan peaks, at about 3,133 m altitude. It\'s fully motorable — no trek required.' },
+  { q:'Why is Badrinath Temple famous?', a:'Dedicated to Lord Vishnu, it\'s the most important of the four Char Dham shrines and one of the 108 Divya Desams. Tradition credits Adi Shankaracharya with establishing the temple in the 8th century.' },
+  { q:'What are the Badrinath darshan timings?', a:'Roughly 4:30 AM to 1:00 PM and 4:00 PM to 9:00 PM during the season, with the morning Maha Abhishek aarti at 4:30 AM and Shayan aarti around 8:30–9:00 PM. Verify on the day, as festival timings vary.' },
+  { q:'When does Badrinath Temple open in 2026?', a:'April 23, 2026, at 6:15 AM (Brahma Muhurta). It stays open until roughly mid-November before closing for winter.' },
+  { q:'What is Tapt Kund at Badrinath?', a:'A natural hot-water spring just below the temple, around 45–55°C. Pilgrims traditionally bathe here before darshan — it\'s believed to be purifying, and warms the body in the cold mountain air.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
+
 export default function BadrinathTemple() {
   return (<>
     <Schema/>
@@ -98,6 +113,10 @@ export default function BadrinathTemple() {
           <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
-    </article>
+            <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
+        </div>
+      </article>
   </>);
 }

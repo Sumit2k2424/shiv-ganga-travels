@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Helicopter Package 2026',
@@ -25,6 +26,21 @@ function Schema() {
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+}
+
+const PAA = [
+  { q:'How much does Char Dham Yatra by helicopter cost?', a:'Full Char Dham helicopter packages generally run ₹2,09,000–2,50,000 per person for 5N/6D, all-inclusive of helicopter transfers, hotels, meals, ground transfers and VIP darshan. Shorter Do Dham (Kedarnath–Badrinath) heli options start lower, around ₹1,20,000–1,35,000. Prices shift with season, operator and weather.' },
+  { q:'How many days is the Char Dham helicopter tour?', a:'Usually 5 nights / 6 days, covering all four dhams from Dehradun — one night in Dehradun and a night near each dham. Compared with 10–12 days by road, it\'s the fastest way to complete the circuit.' },
+  { q:'Where does the Char Dham helicopter start from?', a:'From Sahastradhara Helipad in Dehradun. The route flies to Kharsali (Yamunotri), Harsil (Gangotri), Phata/Sersi (Kedarnath) and Badrinath helipad, with assisted transfers to each temple.' },
+  { q:'Is the helicopter yatra good for senior citizens?', a:'Yes — it\'s the most senior-friendly option. It removes the long drives and most of the trekking (a short walk or pony at Yamunotri/Kedarnath remains), and includes VIP darshan to avoid long queues. It suits elderly pilgrims, NRIs and anyone short on time.' },
+  { q:'How do I book the Char Dham helicopter yatra?', a:'Slots are limited and weather-dependent. Book early through an authorised operator; biometric registration, valid ID and actual passenger weight are mandatory for heli bookings. Keep buffer days in your plan in case fog or wind delays a flight.' },
+  { q:'Does the helicopter package include VIP darshan?', a:'Yes. Almost all Char Dham helicopter packages include priority or VIP darshan assistance at each temple, plus ground handling at the helipads, premium hotels and meals.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
 }
 
 export default function Page() {
@@ -182,6 +198,10 @@ export default function Page() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
 

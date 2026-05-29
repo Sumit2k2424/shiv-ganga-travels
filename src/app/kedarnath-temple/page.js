@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 export const metadata = {
   title: 'Kedarnath Temple 2026 — History, Timings,',
   description: 'Complete Kedarnath Temple guide 2026. Temple history, darshan timings (4 AM–9 PM), dress code, puja types, altitude 3,583m, trek route from Gaurikund',
@@ -24,6 +25,20 @@ function Schema() {
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+const PAA = [
+  { q:'Where is Kedarnath Temple located?', a:'In Rudraprayag district of Uttarakhand, near the source of the Mandakini river, at about 3,583 m altitude in the Garhwal Himalayas. It\'s reached by a 16 km trek from Gaurikund or by helicopter.' },
+  { q:'Why is Kedarnath Temple famous?', a:'It\'s one of the twelve Jyotirlingas of Shiva and one of the four Char Dham shrines. Believed to be where Shiva appeared as a bull and left his hump, the stone temple has stood for centuries and survived the 2013 floods, deepening its significance.' },
+  { q:'What are the Kedarnath darshan timings?', a:'General darshan typically runs from 6:00 AM, with the early Maha Abhishek aarti around 4:00 AM for VIP ticket holders. The temple closes briefly in the afternoon and reopens for evening aarti. Timings vary slightly on festival days.' },
+  { q:'When does Kedarnath Temple open in 2026?', a:'April 22, 2026, with the date announced on Maha Shivratri. It closes around mid-November (Bhai Dooj), after which the deity is worshipped at Ukhimath for winter.' },
+  { q:'How do I reach Kedarnath Temple?', a:'Drive to Sonprayag/Gaurikund (the road-head), then trek 16 km, or take a pony, palki or helicopter shuttle from Phata/Sersi. From Haridwar it\'s roughly a 2-day journey including the climb.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
+
 export default function KedarnathTemple() {
   return (<>
     <Schema/>
@@ -121,6 +136,10 @@ export default function KedarnathTemple() {
           <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
         </div>
       </div>
-    </article>
+            <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
+        </div>
+      </article>
   </>);
 }

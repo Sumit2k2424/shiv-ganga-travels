@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra from Mumbai 2026 — Packages, Routes & Direct Booking',
@@ -38,6 +39,20 @@ function Schema() {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:36, letterSpacing:'-0.02em' };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
+
+const PAA = [
+  { q:'How do I reach Char Dham from Mumbai?', a:'Fly Mumbai to Dehradun (about 2.5 hours, often via Delhi) or to Delhi and continue by train/road to Haridwar. Trains from Mumbai to Haridwar run too but take 24+ hours. From Haridwar or Dehradun, the road yatra begins.' },
+  { q:'How many days for Char Dham Yatra from Mumbai?', a:'Allow 12–14 days including flights: travel to Haridwar, the 9–10 day circuit, and return. The helicopter option from Dehradun cuts the on-ground portion to 5–6 days, so 8–9 days total from Mumbai.' },
+  { q:'What is the cost of Char Dham Yatra from Mumbai?', a:'The land portion from Haridwar starts around ₹20,999–40,900 per person depending on hotels and vehicle, plus your Mumbai–Dehradun/Delhi airfare. Helicopter packages run about ₹2.2–2.4 lakh per person.' },
+  { q:'What is the best time for Char Dham Yatra from Mumbai?', a:'May–June or September–October. Book flights and packages early for these windows, as they\'re peak season. The 2026 dhams open between April 19 and 23. Avoid the July–August monsoon.' },
+  { q:'Is Char Dham Yatra suitable for families from Mumbai?', a:'Yes — it\'s a popular family pilgrimage. For elderly members or young children, the helicopter package or a senior-friendly road itinerary with extra rest days and pony/palki support at Yamunotri and Kedarnath works best.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function CharDhamFromMumbai() {
   return (
@@ -157,6 +172,10 @@ export default function CharDhamFromMumbai() {
 
         <BlogAuthor variant="bottom" author="sumit" />
         <BlogCTA variant="footer" intent="booking" />
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
+        </div>
       </article>
     </>
   );

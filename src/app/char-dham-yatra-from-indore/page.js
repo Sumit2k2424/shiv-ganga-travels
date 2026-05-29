@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra from Indore 2026 — Train,',
@@ -42,6 +43,21 @@ function Schema() {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
+
+const PAA = [
+  { q:'How far is Char Dham Yatra from Indore?', a:'Indore to Haridwar — the gateway to the dhams — is roughly 1,050 km. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },
+  { q:'How do I reach Haridwar from Indore?', a:'From Indore it\'s about 1,050 km to Haridwar. Best options: fly via Delhi or take a train. Jolly Grant Airport, Dehradun is the nearest airport (35 km from Haridwar); Haridwar Junction is the nearest railhead. From there the circuit begins.' },
+  { q:'How many days are needed for Char Dham Yatra from Indore?', a:'Plan 10–12 days for the full road circuit including travel from Indore. By helicopter (flying from Dehradun) the on-ground portion drops to 5–6 days. Senior citizens should allow a couple of extra days for acclimatisation.' },
+  { q:'What is the cost of Char Dham Yatra from Indore?', a:'Our all-inclusive road packages start from ₹23,999 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
+  { q:'What is the best time for Char Dham Yatra from Indore?', a:'May–June and September–October, matching the temple season — the 2026 dhams open between April 19 and 23. Book early for these peak windows and avoid the July–August monsoon, when landslides can delay the mountain stretches.' },
+  { q:'Is Char Dham Yatra registration mandatory?', a:'Yes. Free biometric registration is compulsory for all four dhams and checked at police barriers like Sonprayag. Register online at registrationandtouristcare.uk.gov.in before travelling — we complete it free for everyone in our packages.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function Page() {
   return (
@@ -180,6 +196,10 @@ export default function Page() {
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>

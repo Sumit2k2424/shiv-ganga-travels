@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Badrinath Yatra Package 2026',
@@ -110,6 +111,21 @@ function Schema() {
 
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.8vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 14, marginTop: 32 };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.85, marginBottom: 16 };
+
+const PAA = [
+  { q:'When does Badrinath open in 2026?', a:'Badrinath Dham opens on April 23, 2026, at 6:15 AM (Brahma Muhurta), and stays open until roughly mid-November. Daily darshan typically runs 4:30 AM–1:00 PM and 4:00 PM–9:00 PM.' },
+  { q:'How do I reach Badrinath?', a:'Badrinath is fully motorable — no trek. From Haridwar it\'s about 320 km (10–12 hours) via Rishikesh, Devprayag and Joshimath. Nearest airport is Jolly Grant, Dehradun (~310 km); nearest railhead is Rishikesh/Haridwar. Joshimath, 42 km away, is the last major stop before the temple.' },
+  { q:'What is the best time to visit Badrinath?', a:'May–June and September–October. September–October offers the calmest experience with shorter queues, while May–June is pleasant but very crowded with higher hotel rates. Mornings can drop to 5°C even in summer, so carry layers.' },
+  { q:'What is Tapt Kund at Badrinath?', a:'Tapt Kund is a natural hot-water spring on the bank of the Alaknanda, just below the temple entrance. Pilgrims traditionally take a dip here — the water sits around 45–55°C — before entering for darshan. It\'s believed to have purifying and healing properties.' },
+  { q:'Is registration required for Badrinath?', a:'Yes. A free e-pass via the Uttarakhand Tourist Care portal is mandatory; the registration checkpoint is at Pandukeshwar, about 24 km before Badrinath. Carry the QR pass on your phone and as a printout.' },
+  { q:'What is there to see near Badrinath?', a:'Mana Village — the last Indian village before the Tibet border, about 3 km away — plus Vasudhara Falls, Bheem Pul, the Saraswati river origin, and Brahma Kapal for ancestral rituals. The Auli ropeway near Joshimath is a popular add-on.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function BadrinathYatraPage() {
   const badrinathPkgs = PACKAGES.filter(p =>
@@ -344,6 +360,10 @@ export default function BadrinathYatraPage() {
               </Link>
             ))}
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>

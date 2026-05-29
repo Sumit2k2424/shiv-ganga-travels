@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Yamunotri Yatra 2026 — Trek, Package, Surya',
@@ -30,6 +31,21 @@ function Schema() {
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+}
+
+const PAA = [
+  { q:'When does Yamunotri open in 2026?', a:'Yamunotri opens on April 19, 2026, on Akshaya Tritiya — it\'s the first dham in the circuit. It closes around November 11, 2026 (Bhai Dooj/Yama Dwitiya) for the winter.' },
+  { q:'How long is the Yamunotri trek?', a:'About 6 km one way from Janki Chatti to the temple, taking 2–3 hours uphill. It\'s the gentler of the two Char Dham treks (Kedarnath being the hard one). Pony, palki and doli are available for those who can\'t walk it.' },
+  { q:'How do I reach Yamunotri?', a:'Drive to Janki Chatti (the road-head) via Haridwar → Barkot, roughly 210 km from Haridwar to Barkot then 45 km onward, and trek the final 6 km. Nearest airport is Jolly Grant, Dehradun; nearest railhead is Dehradun or Haridwar.' },
+  { q:'What is the best time to visit Yamunotri?', a:'May–June and September–October. These windows give pleasant daytime weather and a safe, dry trek. Avoid July–August, when monsoon rain makes the trail slippery and landslide-prone.' },
+  { q:'Is the Yamunotri trek suitable for senior citizens?', a:'Yes, with help. The 6 km path is easier than Kedarnath, and pony or palki carriers are readily available at Janki Chatti for those who can\'t manage the climb on foot. Start early, pace slowly, and allow rest stops.' },
+  { q:'Is registration mandatory for Yamunotri?', a:'Yes. Free Char Dham biometric registration is compulsory and checked en route. Register online at the Uttarakhand portal or at counters in Haridwar, Rishikesh or Barkot before starting the trek.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
 }
 
 export default function Page() {
@@ -156,6 +172,10 @@ export default function Page() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
 

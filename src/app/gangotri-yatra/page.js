@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Gangotri Yatra 2026 — Package, Route, Temple',
@@ -30,6 +31,21 @@ function Schema() {
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+}
+
+const PAA = [
+  { q:'When does Gangotri open in 2026?', a:'Gangotri Temple opens on April 19, 2026, on Akshaya Tritiya, alongside Yamunotri. It closes around November 10–11, 2026 (Diwali/Bhai Dooj), when the deity is moved to Mukhba village for winter worship.' },
+  { q:'Is there a trek to reach Gangotri?', a:'No. Gangotri is fully motorable right up to the temple — no trek is required, which makes it the most accessible of the four dhams. A trek only comes in if you continue 19 km upstream to Gaumukh, the actual glacial source of the Bhagirathi.' },
+  { q:'How do I reach Gangotri?', a:'By road via Haridwar → Rishikesh → Uttarkashi → Harsil → Gangotri, about 288 km from Haridwar. Nearest airport is Jolly Grant, Dehradun (~250 km); nearest railhead is Haridwar. Most pilgrims break the drive overnight at Uttarkashi or Harsil.' },
+  { q:'What is the best time to visit Gangotri?', a:'May–June and September–October, when the weather is stable and roads are clear. Summer days are mild (15–29°C) with cold nights; avoid the July–August monsoon, when landslides and slippery roads make the journey risky.' },
+  { q:'What are the Gangotri darshan timings?', a:'Roughly 6:15 AM to 2:00 PM and 3:00 PM to 9:30 PM during the season, with Mangala Aarti in the morning and Sandhya Aarti in the evening. Timings can shift on the opening day and major festival days.' },
+  { q:'Is registration mandatory for Gangotri?', a:'Yes. Char Dham registration is compulsory for all four shrines, including Gangotri. It\'s free — register online at registrationandtouristcare.uk.gov.in, on the Tourist Care Uttarakhand app, or at biometric counters before you travel.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
 }
 
 export default function Page() {
@@ -168,6 +184,10 @@ export default function Page() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
 

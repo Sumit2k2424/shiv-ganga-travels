@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples',
@@ -30,6 +31,20 @@ function Schema() {
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+}
+
+const PAA = [
+  { q:'What is the Panch Kedar Yatra?', a:'Panch Kedar is a circuit of five Shiva temples in the Garhwal Himalayas: Kedarnath, Tungnath, Rudranath, Madhyamaheshwar and Kalpeshwar. Legend ties them to the Pandavas seeking Shiva, who appeared in five body-parts across these sites.' },
+  { q:'How many days does Panch Kedar take?', a:'It\'s a longer, trek-heavy pilgrimage — usually 12–16 days depending on pace and weather, since several temples (Rudranath, Madhyamaheshwar) need multi-day treks. It\'s far more demanding than Char Dham and suits experienced trekkers.' },
+  { q:'When are the Panch Kedar temples open?', a:'Four of the five open roughly May to October/November, closing for winter snow. Kalpeshwar is the exception — it stays accessible year-round. Exact opening dates follow the Hindu calendar each season.' },
+  { q:'Is Panch Kedar harder than Char Dham?', a:'Yes, considerably. Panch Kedar involves long, remote Himalayan treks to Rudranath and Madhyamaheshwar with basic facilities, whereas Char Dham has motorable access to most shrines and only two treks. Good fitness and trekking experience are essential.' },
+  { q:'Which is the most difficult Panch Kedar temple?', a:'Rudranath is generally considered the toughest, requiring a long, steep trek through alpine meadows and forest. Madhyamaheshwar is also a multi-day trek. Kedarnath, Tungnath and Kalpeshwar are comparatively more accessible.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
 }
 
 export default function Page() {
@@ -107,6 +122,10 @@ export default function Page() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>

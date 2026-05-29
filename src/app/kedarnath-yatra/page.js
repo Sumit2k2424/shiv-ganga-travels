@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
+import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Kedarnath Yatra Package 2026 — Ek Dham Yatra',
@@ -43,6 +44,21 @@ function Schema() {
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 12, marginTop: 36 };
 const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 20 };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
+
+const PAA = [
+  { q:'How difficult is the Kedarnath trek?', a:'Moderate. It\'s a 16 km uphill walk from Gaurikund to the temple, gaining about 1,550 m to 3,583 m. Most reasonably fit adults complete it in 6–8 hours one way. The challenge is the altitude and the sustained climb, not technical terrain — the path is paved and well-used. Walk 3–5 km daily for 2–3 weeks beforehand, and anyone with heart or BP issues should carry a doctor\'s clearance.' },
+  { q:'How many days are needed for Kedarnath Yatra?', a:'From Haridwar, plan 3–4 days by road: travel to Guptkashi/Sonprayag, trek up and stay near Kedarnath, descend, return. With a helicopter from Phata or Sersi, it can be done in 2–3 days, or even a same-day darshan.' },
+  { q:'When does Kedarnath open in 2026?', a:'Kedarnath opens on April 22, 2026, with the date announced on Maha Shivratri per the Hindu calendar. It stays open until around mid-November (Bhai Dooj), then closes for winter.' },
+  { q:'What is the best time to visit Kedarnath?', a:'May to mid-June and September to October. Days are 10–20°C in summer and 5–15°C post-monsoon, with clear skies. Avoid July–August — monsoon brings landslides and slippery trails — and the temple is shut November to April.' },
+  { q:'Can I reach Kedarnath by helicopter?', a:'Yes. Helicopter shuttles run from Phata, Sersi and Guptkashi to the Kedarnath helipad, roughly ₹8,000–10,000 one way depending on season. It\'s popular with senior citizens and anyone wanting to skip the 16 km trek. Book slots early through the official IRCTC heliyatra portal.' },
+  { q:'Is registration mandatory for Kedarnath?', a:'Yes. Biometric registration is compulsory and checked at Sonprayag. Register free online at the Uttarakhand portal or at counters in Haridwar and Rishikesh before you travel — unregistered pilgrims are turned back at the checkpoint.' },
+];
+
+function PAASchema() {
+  const paa = { '@context':'https://schema.org','@type':'QAPage',
+    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+}
 
 export default function KedarnathYatra() {
   return (
@@ -272,6 +288,10 @@ export default function KedarnathYatra() {
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
+        </div>
+              <div style={{ marginTop:36 }}>
+          <PAASchema/>
+          <PeopleAlsoAsk items={PAA}/>
         </div>
       </article>
     </>
