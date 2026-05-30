@@ -77,7 +77,7 @@ export default function TrekTimings() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> May 21, 2026 · ✍️ Verified by Shiv Ganga Travels, Haridwar
+          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Verified by Shiv Ganga Travels, Haridwar
         </div>
 
         {/* Critical timing box */}

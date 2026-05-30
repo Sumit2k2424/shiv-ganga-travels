@@ -65,7 +65,7 @@ function Schema() {
     ] },
   };
   const paa = {
-    '@context':'https://schema.org','@type':'QAPage',
+    '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1,
       acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   };

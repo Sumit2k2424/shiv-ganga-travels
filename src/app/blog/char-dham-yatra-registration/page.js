@@ -189,7 +189,7 @@ export default function RegistrationBlog() {
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'56px 20px 44px' }}>
         <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>
-            Step-by-Step Guide · Updated May 21, 2026
+            Step-by-Step Guide · Updated {SITE.lastUpdated}
           </span>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', fontWeight:700, letterSpacing:'-0.03em', lineHeight:1.2, marginBottom:16 }}>
             Char Dham Yatra Registration 2026<br/>

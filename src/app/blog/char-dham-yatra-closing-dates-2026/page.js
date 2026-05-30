@@ -118,7 +118,7 @@ export default function ClosingDates() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> May 21, 2026 — dates confirmed for 2026 season
+          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} — dates confirmed for 2026 season
         </div>
 
         {/* Quick reference table */}

@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },
   openGraph: {
     title: 'Char Dham Yatra Road Status 2026 — Live Route Conditions',
-    description: 'Live road conditions for all 4 Char Dham routes. Updated May 21, 2026. Kedarnath, Badrinath, Gangotri, Yamunotri — full status with checkpoints, helplines and travel advisories.',
+    description: `Live road conditions for all 4 Char Dham routes. Updated ${SITE.lastUpdated}. Kedarnath, Badrinath, Gangotri, Yamunotri — full status with checkpoints, helplines and travel advisories.`,
     url: `${SITE.baseUrl}/char-dham-road-status`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Road Status 2026 — Live Route Conditions | Shiv Ganga Travels' }],
@@ -28,7 +28,7 @@ function Schema() {
     mainEntity: [
       {
         '@type': 'Question', name: 'Is Kedarnath road open in May 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. The Kedarnath route (NH7 via Rudraprayag–Guptkashi–Sonprayag) is fully open as of May 21, 2026. Sonprayag to Gaurikund (5km) operates on timed one-way police slots — start from Haridwar by 4 AM to reach Sonprayag before peak queue time. The Kedarnath trek (16km from Gaurikund) is open and in good condition. SDRF helpline: +91-9411112985.' },
+        acceptedAnswer: { '@type': 'Answer', text: `Yes. The Kedarnath route (NH7 via Rudraprayag–Guptkashi–Sonprayag) is fully open as of ${SITE.lastUpdated}. Sonprayag to Gaurikund (5km) operates on timed one-way police slots — start from Haridwar by 4 AM to reach Sonprayag before peak queue time. The Kedarnath trek (16km from Gaurikund) is open and in good condition. SDRF helpline: +91-9411112985.` },
       },
       {
         '@type': 'Question', name: 'What is the Badrinath highway condition in 2026?',
@@ -49,8 +49,8 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'SpecialAnnouncement',
     name: 'Char Dham Yatra 2026 — Peak Season Road Advisory',
-    text: 'All four Char Dham routes are open as of May 21, 2026. Peak pilgrim traffic expected on all routes through June. Leave Haridwar before 5 AM for Kedarnath route to avoid Sonprayag queues. Joshimath 30 km/h limit in effect.',
-    datePosted: '2026-05-21',
+    text: `All four Char Dham routes are open as of ${SITE.lastUpdated}. Peak pilgrim traffic expected on all routes through June. Leave Haridwar before 5 AM for Kedarnath route to avoid Sonprayag queues. Joshimath 30 km/h limit in effect.`,
+    datePosted: SITE.lastUpdatedISO,
     expires: '2026-06-30',
     category: 'https://www.wikidata.org/wiki/Q81068910',
     announcementLocation: { '@type': 'AdministrativeArea', name: 'Uttarakhand, India' },
@@ -75,7 +75,7 @@ const ROUTES = [
     statusLabel: '🟢 Open',
     trafficLevel: 'high',
     trafficLabel: '🔴 High Traffic',
-    updated: 'May 21, 2026',
+    updated: SITE.lastUpdated,
     roadDetail: 'NH7 is fully operational from Haridwar to Sonprayag. The Jhari bypass near Kund has a minor repair patch causing a 10–15 minute delay during peak hours — best avoided between 10 AM and 2 PM. Sonprayag to Gaurikund (5km) runs on timed one-way police slots with shared government jeeps (₹50/person). This is the busiest bottleneck in the entire yatra circuit right now.',
     trekStatus: '✅ Kedarnath Trek (16km from Gaurikund) — Open and in good condition. Mules and palkis operational.',
     peakTip: 'Leave Haridwar by 3–4 AM. Reach Sonprayag before 7 AM to avoid queue. SpO2 screening at Sonprayag checkpoint — bring your oximeter.',
@@ -92,7 +92,7 @@ const ROUTES = [
     statusLabel: '🟡 Open — Caution',
     trafficLevel: 'high',
     trafficLabel: '🔴 High Traffic',
-    updated: 'May 21, 2026',
+    updated: SITE.lastUpdated,
     roadDetail: 'NH58 is open and in good condition. Joshimath town has a mandatory 30 km/h speed limit due to ongoing ground subsidence monitoring — the road itself is safe and all vehicles including heavy ones pass through daily. Pipalkoti to Chamoli section has some loose gravel patches after recent rain — drive carefully. Mana Village (3km beyond Badrinath temple, at 3,219m) is accessible by road.',
     trekStatus: '✅ Badrinath Temple — Motor road to main entrance. No trek required. Mana Village walk (3km, flat) accessible.',
     peakTip: 'Leave Haridwar by 5 AM. Arrive Joshimath before 2 PM for a comfortable drive through town before evening traffic peaks. Book Badrinath hotels 1 week in advance in May.',
@@ -109,7 +109,7 @@ const ROUTES = [
     statusLabel: '🟡 Open — Monitor Weather',
     trafficLevel: 'medium',
     trafficLabel: '🟡 Moderate Traffic',
-    updated: 'May 21, 2026',
+    updated: SITE.lastUpdated,
     roadDetail: 'NH108 is open. The all-weather Rishikesh–Uttarkashi highway has significantly reduced journey time. The Harsil to Gangotri section (last 25km) remains the most exposed stretch — prone to rockfall in heavy rain. No incidents reported this week. Vehicle movement ban between 10 PM and 4 AM applies on the final stretch. Uttarkashi bypass is operational.',
     trekStatus: '✅ Gangotri Temple — Motor road all the way. Gomukh Glacier trek (19km beyond) requires separate permit from Forest Dept.',
     peakTip: 'Start from Haridwar by 6 AM and reach Gangotri before 2 PM to ensure you complete darshan before the evening weather window. Avoid the Harsil–Gangotri section after rain.',
@@ -126,7 +126,7 @@ const ROUTES = [
     statusLabel: '🟢 Open',
     trafficLevel: 'medium',
     trafficLabel: '🟡 Moderate Traffic',
-    updated: 'May 21, 2026',
+    updated: SITE.lastUpdated,
     roadDetail: 'Road to Janki Chatti is fully open and in good condition. The NH7 to Barkot is a wide highway — fast drive. After Barkot, the road narrows through the Yamuna valley. NHAI widening work continues near the Dharasu section — 10-minute delays possible. Phoolchatti alternate route (3km shorter trek) is accessible on dry days.',
     trekStatus: '✅ Yamunotri Trek (6km from Janki Chatti) — Open and comfortable. Mules operational. Surya Kund hot spring flowing.',
     peakTip: 'Lightest traffic of the four dhams. Leave Haridwar by 5–6 AM for a comfortable half-day drive. Good option to combine with Gangotri on a two-dham stretch.',
@@ -165,9 +165,9 @@ export default function RoadStatus() {
             <span style={{ background: '#FFF1F2', color: '#DC2626', padding: '5px 16px', borderRadius: 100, fontWeight: 700, fontSize: 13 }}>🔴 Blocked / Closed</span>
           </div>
           <div style={{ display: 'inline-flex', gap: 8, alignItems: 'center', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 10, padding: '8px 18px', fontSize: 13, color: 'rgba(255,255,255,0.85)' }}>
-            🕐 Last updated: <strong style={{ color: '#FFD166', marginLeft: 4 }}>May 21, 2026</strong>
+            🕐 Last updated: <strong style={{ color: '#FFD166', marginLeft: 4 }}>{SITE.lastUpdated}</strong>
             <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>|</span>
-            Next update: May 28, 2026
+            Next update: {new Date(new Date(SITE.lastUpdatedISO).getTime() + 7 * 864e5).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
           </div>
         </div>
       </section>

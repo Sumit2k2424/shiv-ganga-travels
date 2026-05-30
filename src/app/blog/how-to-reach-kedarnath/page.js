@@ -67,7 +67,7 @@ export default function HowToReachKedarnath() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
           {[['Nearest Railway Station','Haridwar / Rishikesh'],['Nearest Airport','Jolly Grant (Dehradun, 250km)'],['Road Base','Gaurikund (218km from HW)'],['Trek Distance','16km one way'],['Helicopter','Phata/Sersi helipads'],['Total Journey (from Delhi)','1.5–2 days']].map(([k,v])=>(

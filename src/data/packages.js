@@ -15,6 +15,10 @@ export const SITE = {
   address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India',
   established: 2010,
   baseUrl    : 'https://www.shivgangatravels.com',
+  // Single source of truth for the "Last updated" freshness stamp shown
+  // across all pages. Bump these two values to refresh the whole site.
+  lastUpdated   : 'May 30, 2026', // human-readable, shown on-page
+  lastUpdatedISO: '2026-05-30',   // schema.org dateModified format
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────

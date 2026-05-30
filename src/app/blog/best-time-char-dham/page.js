@@ -116,7 +116,7 @@ export default function BestTimeCharDham() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: May 21, 2026 · Author: Shiv Ganga Travels team, Haridwar</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated} · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', marginBottom:28 }}>

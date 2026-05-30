@@ -34,7 +34,7 @@ export default function GuideArticle({
   subtitle,
   pills = [],
   facts = [],
-  updated = 'May 21, 2026',
+  updated = SITE.lastUpdated,
   author = 'sumit',
   ctaIntent = 'info',
   ctaHeading = 'Plan Your Char Dham Yatra 2026 — Direct from Haridwar',
@@ -50,7 +50,7 @@ export default function GuideArticle({
     description: subtitle,
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-04-01',
-    dateModified: '2026-05-21',
+    dateModified: SITE.lastUpdatedISO,
     author: {
       '@type': 'Person',
       name: author === 'dhanesh' ? 'Dhanesh Chandra Mishra' : 'Sumit Mishra',

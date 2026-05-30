@@ -111,7 +111,7 @@ export default function PackageTypes() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> May 21, 2026 · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
+          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>
 
         <p style={p}>

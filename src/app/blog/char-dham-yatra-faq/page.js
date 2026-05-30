@@ -196,10 +196,20 @@ function FAQSchema() {
       name: '50 expert answers from a 15-year Char Dham Yatra operator',
     },
   };
+  const webpage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.baseUrl}/blog/char-dham-yatra-faq#webpage`,
+    url: `${SITE.baseUrl}/blog/char-dham-yatra-faq`,
+    name: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered',
+    inLanguage: 'en-IN',
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] },
+  };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpage) }}/>
 
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
@@ -231,14 +241,14 @@ export default function FAQ() {
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding: '56px 20px 44px', textAlign: 'center' }}>
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>
-            Expert FAQ · Updated May 21, 2026
+            Expert FAQ · Updated {SITE.lastUpdated}
           </span>
-          <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 14 }}>
+          <h1 className="display-title speakable-answer" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 14 }}>
             Char Dham Yatra FAQ 2026<br/>
             <em style={{ color: '#FFD166', fontStyle: 'italic' }}>50 Questions, Expert Answers</em>
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>
-            Answered by Dhanesh Chandra Mishra, founder of Shiv Ganga Travels — retired Indian Army officer and 15-year Char Dham Yatra operator. Based on 50,000+ pilgrims served since 2010.
+          <p className="speakable-answer" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>
+            Answered by Sumit Mishra, Operations Manager at Shiv Ganga Travels — running Char Dham Yatra operations since 2015, 500+ groups every season. Based on 50,000+ pilgrims served since 2010.
           </p>
           {/* Category jump links */}
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -255,8 +265,8 @@ export default function FAQ() {
       {/* Freshness + author strip */}
       <div style={{ background: '#fff', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', fontSize: 12.5, color: 'var(--text-muted)' }}>
-          <span>✍️ <strong style={{ color: 'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels</span>
-          <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> May 21, 2026 — verified for current season</span>
+          <span>✍️ <strong style={{ color: 'var(--navy)' }}>Author:</strong> Sumit Mishra, Operations Manager, Shiv Ganga Travels</span>
+          <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated} — verified for current season</span>
           <span>📊 <strong style={{ color: 'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims, 15 years of operation</span>
         </div>
       </div>

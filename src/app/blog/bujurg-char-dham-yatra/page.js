@@ -60,7 +60,7 @@ export default function BujurgCharDham() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026 · By Shiv Ganga Travels</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         <p style={{ ...p, fontStyle: 'italic', background: 'rgba(15,43,91,0.05)', padding: '16px 20px', borderRadius: 10, borderLeft: '3px solid var(--navy)' }}>रमेश जी, उम्र 72 साल, बरेली से आए थे। बेटे ने कहा था "उम्र हो गई है, पहाड़ पर मत जाओ।" लेकिन वे नहीं माने। मई 2024 में हमारे साथ चार धाम गए — केदारनाथ में घोड़े पर बैठकर पहुँचे, आँखों में आँसू थे। लौटकर उन्होंने फोन किया — <strong>"बेटा, जिंदगी की सबसे बड़ी खुशी मिली।"</strong></p>
 

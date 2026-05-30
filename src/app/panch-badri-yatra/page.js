@@ -65,7 +65,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'QAPage',
+  const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
   return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
 }
@@ -106,7 +106,7 @@ export default function PanchBadriYatra() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 21, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
 
         <p style={p}>
           The Panch Badri — five sacred shrines of Lord Vishnu scattered across the Garhwal Himalayas — is one of the most spiritually comprehensive pilgrimages in Hinduism, yet far less known than the Char Dham or Panch Kedar. Each of the five shrines represents a different form or aspect of Lord Vishnu. Completing all five in sequence is considered to bring moksha and is especially meaningful for Vaishnava devotees.

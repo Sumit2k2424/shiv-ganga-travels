@@ -71,7 +71,7 @@ export default function SevenDaysBlog() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 21, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Verdict box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>

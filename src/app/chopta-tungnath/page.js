@@ -58,7 +58,7 @@ export default function ChoptaTungnath() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: May 21, 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Chopta Altitude','2,680m'],['Tungnath','3,680m (temple)'],['Chandrashila','4,000m (summit)'],['Trek Distance','5km one way'],['From Haridwar','235km · 7–8 hrs'],['Best Season','May–June, Oct–Nov']].map(([k,v]) => (
