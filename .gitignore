@@ -29,3 +29,6 @@ Thumbs.db
 .vercel
 
 .vs/
+
+# Stray duplicate build copy (do not commit)
+shiv-ganga-travels-build/
