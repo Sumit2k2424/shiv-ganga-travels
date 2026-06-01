@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
+import { CAB_ROUTES } from '@/data/cabRoutes';
 
 // ── Blog priority hints. Any blog not listed falls back to DEFAULT_BLOG_P. ──
 const BLOG_PRIORITY = {
@@ -120,11 +121,13 @@ export default function sitemap() {
   ];
 
   const cabs = [
+    { url: `${b}/cabs`,                                p: 0.88, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-cab-booking`,         p: 0.85, cf: 'monthly' },
     { url: `${b}/haridwar-to-kedarnath-cab`,           p: 0.84, cf: 'monthly' },
     { url: `${b}/haridwar-to-badrinath-cab`,           p: 0.83, cf: 'monthly' },
     { url: `${b}/haridwar-to-gangotri-cab`,            p: 0.82, cf: 'monthly' },
     { url: `${b}/delhi-to-haridwar-cab`,               p: 0.82, cf: 'monthly' },
+    ...CAB_ROUTES.map(r => ({ url: `${b}/cabs/${r.slug}`, p: 0.82, cf: 'monthly' })),
   ];
 
   const blog = [

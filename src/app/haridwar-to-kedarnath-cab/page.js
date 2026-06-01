@@ -2,15 +2,15 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Cab 2026 — Fare,',
-  description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
+  title: 'Haridwar to Kedarnath Cab 2026 — Fare & Taxi Distance',
+  description: 'Book cab from Haridwar to Kedarnath 2026. 228km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },
-  openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
+  openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 228km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Travel',
-    description: 'Book cab from Haridwar to Kedarnath 2026. 225km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
+    description: 'Book cab from Haridwar to Kedarnath 2026. 228km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
     images: [{ url: '/opengraph-image', alt: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Te | Shiv Ganga Travels' }],
   },
 };
@@ -42,7 +42,7 @@ export default function Page() {
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>🚙 Cab Booking · 2026</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,4vw,2.6rem)', marginBottom:12 }}>Haridwar to Kedarnath (Gaurikund) Cab 2026</h1>
         <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap', marginBottom:24 }}>
-          {[{icon:'📏',val:'225 km'},{icon:'⏱',val:'6–7 hrs'},{icon:'📍',val:'Via Devprayag → Sonprayag'}].map(c=>(
+          {[{icon:'📏',val:'228 km'},{icon:'⏱',val:'6–7 hrs'},{icon:'📍',val:'Via Devprayag → Sonprayag'}].map(c=>(
             <span key={c.val} style={{ background:'rgba(255,255,255,0.12)', backdropFilter:'blur(6px)', color:'#fff', fontSize:12.5, padding:'6px 14px', borderRadius:100, display:'flex', gap:6, alignItems:'center' }}>{c.icon} {c.val}</span>
           ))}
         </div>
@@ -65,7 +65,7 @@ export default function Page() {
     <div style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
 
       <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))', gap:12 }}>
-        {[{icon:'📏',label:'Distance',val:'225 km'},{icon:'⏱',label:'Drive time',val:'6–7 hrs'},{icon:'🏔️',label:'Route',val:'Via Devprayag → Sonprayag'},{icon:'ℹ️',label:'Note',val:'Last motorable point is Gaurikund (1,982…'}].map(s=>(
+        {[{icon:'📏',label:'Distance',val:'228 km'},{icon:'⏱',label:'Drive time',val:'6–7 hrs'},{icon:'🏔️',label:'Route',val:'Via Devprayag → Sonprayag'},{icon:'ℹ️',label:'Note',val:'Last motorable point is Gaurikund (1,982…'}].map(s=>(
           <div key={s.label} style={{ textAlign:'center' }}>
             <div style={{ fontSize:18, marginBottom:3 }}>{s.icon}</div>
             <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{s.label}</div>
@@ -111,6 +111,7 @@ export default function Page() {
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[
             {label:'Full Char Dham Cab',href:'/char-dham-yatra-cab-booking'},
+            {label:'Haridwar → Kedarnath Route Guide',href:'/blog/haridwar-to-kedarnath'},
             {label:'Haridwar → Kedarnath',href:'/haridwar-to-kedarnath-cab'},
             {label:'Haridwar → Badrinath',href:'/haridwar-to-badrinath-cab'},
             {label:'Haridwar → Gangotri',href:'/haridwar-to-gangotri-cab'},

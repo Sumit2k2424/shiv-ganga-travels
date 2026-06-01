@@ -29,6 +29,7 @@ const COLS = [
     {l:'Valley of Flowers',          h:'/packages/valley-of-flowers-hemkund-sahib-5n-6d'},
   ]},
   { heading:'Cabs & Transport', links:[
+    {l:'All Uttarakhand Cabs',         h:'/cabs'},
     {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
     {l:'Haridwar → Kedarnath Cab',    h:'/haridwar-to-kedarnath-cab'},
     {l:'Haridwar → Badrinath Cab',    h:'/haridwar-to-badrinath-cab'},
