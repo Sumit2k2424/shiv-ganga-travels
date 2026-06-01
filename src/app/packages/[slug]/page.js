@@ -222,6 +222,20 @@ export default function PackageDetailPage({ params }) {
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
+  const isYatra  = pkg.category !== 'uttarakhand';
+  const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
+  const dham2026 = [
+    { dham:'Yamunotri', opens:'19 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
+    { dham:'Gangotri',  opens:'19 April 2026', closes:'10 Nov 2026', reg:'Mandatory' },
+    { dham:'Kedarnath', opens:'22 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
+    { dham:'Badrinath', opens:'23 April 2026', closes:'13 Nov 2026', reg:'Mandatory' },
+  ];
+  const delhiModes = [
+    { mode:'Volvo / AC Bus (overnight)', time:'~6 hrs', cost:'Included in package', note:'Sleep through the journey, arrive Haridwar by 6 AM. Best value for groups.' },
+    { mode:'Private Car (Innova/Ertiga)', time:'5–6 hrs', cost:'₹6,500–₹9,000 one way', note:'Door pickup anywhere in Delhi NCR; same vehicle stays for the full yatra.' },
+    { mode:'Train (Shatabdi/Jan Shatabdi)', time:'4.5–6 hrs', cost:'₹350–₹1,200/person', note:'Fastest budget option. We receive you at Haridwar station and switch to the 9N/10D plan.' },
+    { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'From ₹85,000 (5N/6D heli)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
+  ];
 
   const SH = { fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' };
 
@@ -631,6 +645,74 @@ export default function PackageDetailPage({ params }) {
             </div>
           </section>
 
+          {/* Delhi → Haridwar travel options — fills the by-car/train/bus/helicopter intent */}
+          {fromDelhi && (
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+            <h2 style={SH}>🚗 Char Dham Yatra from Delhi — Travel Options Compared</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+              Delhi to Haridwar is about 220–240 km, roughly 5–6 hours on the Delhi–Dehradun Expressway. How you cover that first leg decides your cost and comfort. Here is how the four ways stack up, and what we recommend for each kind of traveller.
+            </p>
+            <div style={{ overflowX:'auto', marginBottom:8 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:560 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Mode','Time','Cost','Notes'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {delhiModes.map((m,i)=>(
+                    <tr key={m.mode} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
+                      <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{m.mode}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)', whiteSpace:'nowrap' }}>{m.time}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{m.cost}</td>
+                      <td style={{ padding:'9px 12px', color:'#475569', lineHeight:1.6 }}>{m.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
+              Our group package uses the overnight Volvo so you do not lose a daytime leg. Want door pickup from Noida, Greater Noida, Gurugram or Faridabad instead? We send a private car across Delhi NCR, usually at no extra charge within the region — just ask when you book.
+            </p>
+          </section>
+          )}
+
+          {/* Char Dham 2026 Registration — high-intent, GEO-citable, fills competitor gap */}
+          {isYatra && (
+          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'2px solid var(--gold)' }}>
+            <h2 style={SH}>📋 Char Dham Yatra 2026 Registration — and How We Handle It For You</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+              Registration is compulsory in 2026. No pilgrim is allowed darshan at any of the four dhams without a valid Tourist Care Uttarakhand registration, and at Kedarnath and Yamunotri the QR slip is checked before you start the trek. The good news: if you book this package, <strong>we do the whole registration for you</strong>. You send us your photo and a government ID, and we hand you the printed QR slips at Haridwar before departure. You never touch the portal.
+            </p>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
+              If you would rather register yourself, it is free and takes about ten minutes on the official government site — <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>registrationandtouristcare.uk.gov.in</a>. Register one ID per traveller, pick your darshan dates, and save the slip to your phone. Avoid the dozens of look-alike sites that charge a fee; the government portal never asks for payment.
+            </p>
+            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🗓️ Char Dham 2026 Opening & Closing Dates (Confirmed)</h3>
+            <div style={{ overflowX:'auto', marginBottom:12 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:480 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Dham','Opens (Kapat)','Closes','Registration'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {dham2026.map((d,i)=>(
+                    <tr key={d.dham} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
+                      <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{d.dham}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.opens}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.closes}</td>
+                      <td style={{ padding:'9px 12px', color:'#B45309', fontWeight:600 }}>{d.reg}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
+              Yamunotri and Gangotri open together on Akshaya Tritiya; Kedarnath and Badrinath follow a day or two later. Dates are set by the temple committees each year and are confirmed for 2026. Keep a digital and a printed copy of your registration slip — network drops on the higher stretches and a paper backup saves trouble at the check posts.
+            </p>
+          </section>
+          )}
+
           {/* E-E-A-T: Operator credentials — Experience, Expertise, Authority, Trust */}
           <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:4 }}>
             <h2 style={SH}>🏔️ Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
@@ -645,7 +727,7 @@ export default function PackageDetailPage({ params }) {
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.6/5 · 38 Verified Google Reviews</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 38 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted. Our average rating of 4.6/5 over 15 years has currently at 4.6/5. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 38 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has held at 4.6/5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Uttarakhand Tourism Registered</div>
