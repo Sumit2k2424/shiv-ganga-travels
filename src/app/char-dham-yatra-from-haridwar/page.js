@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -305,6 +306,7 @@ export default function Page() {
             ))}
           </div>
         </div>
+              <CityLinkMesh current="haridwar" />
       </article>
     </>
   );

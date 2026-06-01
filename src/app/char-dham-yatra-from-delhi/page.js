@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
@@ -192,6 +193,9 @@ export default function Page() {
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Book Now</a>
             <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>
+          <div style={{ marginTop:14 }}>
+            <Link href="/packages/char-dham-yatra-from-delhi-10n-11d" style={{ color:'#FFD166', fontSize:13, fontWeight:600, textDecoration:'underline' }}>View the full 10N/11D Delhi package, itinerary & pricing →</Link>
+          </div>
         </div>
 
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
@@ -206,6 +210,7 @@ export default function Page() {
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>
         </div>
+              <CityLinkMesh current="delhi" />
       </article>
     </>
   );

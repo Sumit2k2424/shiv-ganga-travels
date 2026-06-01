@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
@@ -200,6 +201,7 @@ export default function Page() {
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>
         </div>
+              <CityLinkMesh current="nagpur" />
       </article>
     </>
   );

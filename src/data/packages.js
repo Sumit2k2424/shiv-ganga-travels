@@ -286,7 +286,7 @@ export const PACKAGES = [
     startCity: 'Delhi',
     endCity  : 'Delhi',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:28000, discounted:24500, currency:'₹', perPerson:true },
+    price    : { original:28000, discounted:22999, currency:'₹', perPerson:true },
     photo     : 'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800',
     highlights:[
       'Pickup from Delhi (Kashmiri Gate / Majnu Ka Tila)',
@@ -317,10 +317,10 @@ export const PACKAGES = [
     photo    : `${FP}/Gangotri_temple.jpg?width=900`,
     images   : ['gangotri','kedarnath','badrinath','yamunotri'],
     tags     : ['char dham','delhi','volvo bus','group tour','affordable','delhi pickup','haridwar via delhi','290km','noida gurugram'],
-    metaTitle: 'Char Dham Yatra from Delhi 2026 | 10N/11D Pickup ₹24,500',
-    metaDesc : 'Char Dham Yatra from Delhi 2026, 10N/11D from ₹24,500/person. Delhi/Noida/Gurugram pickup, Volvo to Haridwar, all 4 dhams, VIP darshan, registration help.',
+    metaTitle: 'Char Dham Yatra from Delhi 2026 | 10N/11D Pickup ₹22,999',
+    metaDesc : 'Char Dham Yatra from Delhi 2026, 10N/11D from ₹22,999/person. Delhi/Noida/Gurugram pickup, Volvo to Haridwar, all 4 dhams, VIP darshan, registration help.',
     faqs:[
-      {q:'How much is the Char Dham Yatra package from Delhi in 2026?', a:'Our 10N/11D group package from Delhi starts at ₹24,500 per person — that includes the overnight Volvo from Delhi to Haridwar, AC Tempo Traveller for the whole yatra, hotels, daily breakfast and dinner, guide and registration. A private car version (Innova Crysta, your own family only) runs roughly ₹32,000–₹45,000 per person depending on hotel tier. Direct rates, no agent commission.'},
+      {q:'How much is the Char Dham Yatra package from Delhi in 2026?', a:'Our 10N/11D group package from Delhi starts at ₹22,999 per person — that includes the overnight Volvo from Delhi to Haridwar, AC Tempo Traveller for the whole yatra, hotels, daily breakfast and dinner, guide and registration. A private car version (Innova Crysta, your own family only) runs roughly ₹32,000–₹45,000 per person depending on hotel tier. Direct rates, no agent commission.'},
       {q:'How far is Delhi to Haridwar and how long does it take?', a:'Roughly 220–240 km depending on your pickup point, about 5–6 hours by road via the Delhi–Dehradun Expressway. We run it overnight on a Volvo so you sleep through the journey and arrive fresh at 6 AM, saving a full daytime leg.'},
       {q:'Can I do the Char Dham Yatra from Delhi by car instead of bus?', a:'Yes. Tell us and we send a private AC car (Innova Crysta or Ertiga) to your Delhi/Noida/Gurugram address, drive you to Haridwar, and the same vehicle stays with you for the full yatra. It costs more than the Volvo group option but gives you door pickup, your own pace and no co-passengers.'},
       {q:'Is there a Char Dham Yatra from Delhi by train or helicopter?', a:'By train: take any Delhi–Haridwar service (Shatabdi, Jan Shatabdi, Mussoorie Express) and we receive you at Haridwar station — we adjust the package to a 9N/10D ex-Haridwar plan. By helicopter: there is no chopper from Delhi itself; the Char Dham helicopter circuit departs from Dehradun (Sahastradhara helipad), so we drive or fly you to Dehradun and start the 5N/6D heli yatra there.'},

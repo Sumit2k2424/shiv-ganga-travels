@@ -126,11 +126,23 @@ function Schemas({ pkg }) {
     {'@type':'ListItem',position:3,name:CATEGORIES[pkg.category]?.name||pkg.category,item:`${SITE.baseUrl}/packages/${pkg.category}`},
     {'@type':'ListItem',position:4,name:pkg.name,item:`${SITE.baseUrl}/packages/${pkg.slug}`},
   ]};
+  const author = {
+    '@context':'https://schema.org','@type':'Person',
+    '@id':`${SITE.baseUrl}/#dhanesh-chandra-mishra`,
+    name:'Dhanesh Chandra Mishra',
+    jobTitle:'Founder & Char Dham Yatra Specialist',
+    description:'Retired Indian Army officer who founded Shiv Ganga Travels in 2010. 15+ seasons organising Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
+    worksFor:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl },
+    knowsAbout:['Char Dham Yatra','Kedarnath Yatra','Badrinath','Gangotri','Yamunotri','Uttarakhand pilgrimage travel','Char Dham registration'],
+    address:{ '@type':'PostalAddress', addressLocality:'Haridwar', addressRegion:'Uttarakhand', addressCountry:'IN' },
+    sameAs:['https://www.instagram.com/shivgangatravels/','https://www.google.com/maps?cid=16074078434377735602'],
+  };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(breadcrumb) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(author) }}/>
   </>);
 }
 
@@ -236,6 +248,8 @@ export default function PackageDetailPage({ params }) {
     { mode:'Train (Shatabdi/Jan Shatabdi)', time:'4.5–6 hrs', cost:'₹350–₹1,200/person', note:'Fastest budget option. We receive you at Haridwar station and switch to the 9N/10D plan.' },
     { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'From ₹85,000 (5N/6D heli)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
+  const priceTxt = `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
+  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
 
   const SH = { fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' };
 
@@ -279,6 +293,21 @@ export default function PackageDetailPage({ params }) {
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
         <span>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open Apr 19 – Nov 2026</span>
         <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · 15 seasons)</span>
+      </div>
+
+      {/* Quick Answer — self-contained, claim-first block for AI Overviews / ChatGPT citation */}
+      <div style={{ maxWidth:1100, margin:'14px auto 0', padding:'0 16px' }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px' }}>
+          <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
+          <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>{quickAnswer}</p>
+          <ul style={{ listStyle:'none', display:'flex', flexWrap:'wrap', gap:'6px 18px', margin:'10px 0 0', padding:0, fontSize:12.5, color:'var(--text-mid)' }}>
+            <li><strong>Price:</strong> from {priceTxt}/person</li>
+            <li><strong>Duration:</strong> {pkg.duration.nights}N/{pkg.duration.days}D</li>
+            <li><strong>Start:</strong> {pkg.startCity}</li>
+            <li><strong>Season:</strong> {pkg.season || 'Apr–Nov 2026'}</li>
+            <li><strong>Operator:</strong> Shiv Ganga Travels (est. 2010)</li>
+          </ul>
+        </div>
       </div>
 
       <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'1fr min(340px,38%)', gap:28, alignItems:'start' }}>

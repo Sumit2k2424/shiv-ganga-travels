@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
@@ -177,6 +178,7 @@ export default function CharDhamFromBangalore() {
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>
         </div>
+              <CityLinkMesh current="bangalore" />
       </article>
     </>
   );

@@ -18,19 +18,31 @@ Allow: /cancellation-policy
 User-agent: GPTBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: CCBot
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 User-agent: cohere-ai

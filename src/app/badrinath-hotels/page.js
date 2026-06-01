@@ -127,7 +127,7 @@ export default function BadrinathHotels() {
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Kedarnath Hotels','/kedarnath-hotels'],['Badrinath Weather','/badrinath-weather'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Badrinath Temple','/badrinath-temple'],['Haridwar to Badrinath Cab','/haridwar-to-badrinath-cab']].map(([l,h]) => (
+            {[['All Char Dham Hotels','/char-dham-hotels'],['Kedarnath Hotels','/kedarnath-hotels'],['Badrinath Weather','/badrinath-weather'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Badrinath Temple','/badrinath-temple'],['Haridwar to Badrinath Cab','/haridwar-to-badrinath-cab']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

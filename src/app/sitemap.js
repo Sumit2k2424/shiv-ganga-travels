@@ -109,6 +109,7 @@ export default function sitemap() {
   ];
 
   const hotels = [
+    { url: `${b}/char-dham-hotels`,                    p: 0.9,  cf: 'monthly' },
     { url: `${b}/kedarnath-hotels`,                    p: 0.85, cf: 'monthly' },
     { url: `${b}/badrinath-hotels`,                    p: 0.85, cf: 'monthly' },
   ];

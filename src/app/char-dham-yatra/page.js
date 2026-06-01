@@ -615,6 +615,18 @@ export default function CharDhamYatra() {
 
       <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Char Dham Yatra from Your City</div>
+          <p style={{ fontSize:13, color:'#64748b', marginBottom:14, lineHeight:1.6 }}>City-specific routes, distances, train/flight options and pickup details for pilgrims travelling from across India.</p>
+          <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
+            {[['Delhi','delhi'],['Noida','noida'],['Jaipur','jaipur'],['Lucknow','lucknow'],['Chandigarh','chandigarh'],['Dehradun','dehradun'],['Haridwar','haridwar'],['Rishikesh','rishikesh'],['Varanasi','varanasi'],['Patna','patna'],['Kolkata','kolkata'],['Indore','indore'],['Bhopal','bhopal'],['Nagpur','nagpur'],['Ahmedabad','ahmedabad'],['Surat','surat'],['Pune','pune'],['Mumbai','mumbai'],['Hyderabad','hyderabad'],['Bangalore','bangalore'],['Chennai','chennai']].map(([l,c])=>(
+              <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
