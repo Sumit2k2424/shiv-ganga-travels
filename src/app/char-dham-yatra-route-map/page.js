@@ -99,7 +99,12 @@ export default function RouteMap() {
   return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
+
+      {/* Full-screen interactive animated route map (loads first) */}
+      <RouteMapInteractive />
+
+      {/* H1 + intro now sit just below the immersive map */}
+      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'40px 20px 36px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Free Resource · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
@@ -155,13 +160,6 @@ export default function RouteMap() {
             </div>
           ))}
         </div>
-
-        {/* Interactive, animated, clickable route map */}
-        <h2 style={h2}>Explore the Route — Tap Any Stop</h2>
-        <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom:18 }}>
-          Tap any point on the map (or the chips below it) to see what you can do there, the key things to know, and a local tip from people who drive this route every season.
-        </p>
-        <RouteMapInteractive />
 
         {/* Route timeline */}
         <h2 style={h2}>Complete Route — Stop by Stop</h2>
