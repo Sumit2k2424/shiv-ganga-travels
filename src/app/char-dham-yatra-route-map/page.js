@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import RouteMapInteractive from './RouteMapInteractive';
 
 export const metadata = {
   title: 'Char Dham Yatra Route Map 2026 — Complete Road',
@@ -154,6 +155,13 @@ export default function RouteMap() {
             </div>
           ))}
         </div>
+
+        {/* Interactive, animated, clickable route map */}
+        <h2 style={h2}>Explore the Route — Tap Any Stop</h2>
+        <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom:18 }}>
+          Tap any point on the map (or the chips below it) to see what you can do there, the key things to know, and a local tip from people who drive this route every season.
+        </p>
+        <RouteMapInteractive />
 
         {/* Route timeline */}
         <h2 style={h2}>Complete Route — Stop by Stop</h2>

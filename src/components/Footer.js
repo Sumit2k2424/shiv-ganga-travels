@@ -48,6 +48,7 @@ const COLS = [
   ]},
   { heading:'Company', links:[
     {l:'About Us',                   h:'/about'},
+    {l:'Leave a Review',             h:'/review'},
     {l:'Site Map',                   h:'/sitemap-page'},
     {l:'Contact Us',                 h:'/contact'},
     {l:'All Packages',               h:'/packages'},

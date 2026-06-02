@@ -2643,3 +2643,29 @@ img:not([width]):not([height]) {
 .hero-scene-svg { contain: layout paint style; }
 .hero-scene-svg g[style*="moonGlow"],
 .hero-content [style*="sgShimmer"] { will-change: opacity; }
+
+/* ── Mobile hero: keep the scene, stop the decorative animation churn ──
+   On phones the looping SVG/canvas animations are the main LCP/TBT cost.
+   We freeze them (static first frame) so the hero still looks rich but the
+   main thread is free for content paint. Desktop keeps full animation. */
+@media (max-width: 640px) {
+  .hero-scene-svg * { animation: none !important; }
+  .hero-scene-svg [style*="moonGlow"],
+  .hero-scene-svg [style*="auroraShift"] { opacity: 0.9 !important; }
+}
+
+/* ── Mobile hero: cheaper paint for content layer ──
+   backdrop-filter:blur is costly on mobile GPUs and drags Speed Index.
+   Swap the live blur for a flat translucent fill on phones; stop the
+   decorative content shimmer/pulse so the LCP heading paints sooner. */
+@media (max-width: 640px) {
+  .hero-content [style*="backdrop"],
+  .hero-badge-left, .hero-badge-right {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(8, 20, 40, 0.55) !important;
+  }
+  .hero-content [style*="sgShimmer"],
+  .hero-content [style*="sgPulse"],
+  .hero-badge-left [style*="sgPulse"] { animation: none !important; }
+}

@@ -14,6 +14,7 @@ function Snow() {
     let raf, w, h;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
 
     function resize() {
       w = canvas.offsetWidth; h = canvas.offsetHeight;
@@ -23,7 +24,12 @@ function Snow() {
     resize();
     window.addEventListener('resize', resize);
 
-    const FLAKES = reduce ? 0 : (window.innerWidth < 768 ? 45 : 90);
+    // On mobile (or reduced-motion) skip the rAF snow loop entirely — it is the
+    // single biggest main-thread cost on phones, and Lighthouse measures mobile.
+    const FLAKES = (reduce || isMobile) ? 0 : 90;
+    if (FLAKES === 0) {
+      return () => { window.removeEventListener('resize', resize); };
+    }
     const flakes = Array.from({ length: FLAKES }, () => ({
       x:  Math.random() * 1440,
       y:  Math.random() * 900,
@@ -53,7 +59,6 @@ function Snow() {
       raf = requestAnimationFrame(draw);
     }
     raf = requestAnimationFrame(draw);
-    if (FLAKES === 0) cancelAnimationFrame(raf);
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize); };
   }, []);
 
