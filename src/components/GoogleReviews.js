@@ -24,6 +24,7 @@ function Avatar({ author, photo }) {
       {photo && imgOk ? (
         <img src={photo} alt={author} width={44} height={44}
           style={{ width:44, height:44, objectFit:'cover', borderRadius:'50%' }}
+          loading="lazy" decoding="async"
           onError={() => setImgOk(false)} referrerPolicy="no-referrer"/>
       ) : (
         <span style={{ fontSize:15, fontWeight:700, color:'#4a5568' }}>{initials}</span>

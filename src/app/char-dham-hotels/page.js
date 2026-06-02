@@ -54,7 +54,7 @@ export default function CharDhamHotelsPage() {
   return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(180deg,rgba(10,25,60,0.7),rgba(10,25,60,0.92)),url(https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=1200) center/cover', padding:'48px 20px 40px' }}>
+      <section style={{ background:'linear-gradient(180deg,rgba(10,25,60,0.7),rgba(10,25,60,0.92)),url(https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800) center/cover', padding:'48px 20px 40px' }}>
         <div style={{ maxWidth:900, margin:'0 auto' }}>
           <nav style={{ fontSize:11.5, color:'rgba(255,255,255,0.6)', marginBottom:12 }}>Home › Char Dham Yatra › Hotels</nav>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.6rem,4vw,2.4rem)', fontWeight:700, lineHeight:1.15, marginBottom:12 }}>Char Dham Yatra Hotels 2026 — Where to Stay at Every Stop</h1>

@@ -23,8 +23,7 @@ export default function RouteMapInteractive() {
       <style>{`
         .rm-fullscreen {
           position: relative;
-          width: 100vw;
-          margin-left: calc(50% - 50vw);
+          width: 100%;
           min-height: 100vh;
           min-height: 100svh;
           display: flex;
@@ -71,9 +70,17 @@ export default function RouteMapInteractive() {
           .rm-panel, .rm-scrollhint { animation:none; }
         }
         @media (max-width: 820px) {
-          .rm-stage { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-          .rm-map-pane { padding: 16px 16px 8px; }
-          .rm-detail-pane { padding: 0 12px 16px; align-items: stretch; }
+          /* On phones do not cram into one screen — show the map, let the
+             detail panel flow at its natural height below it. */
+          .rm-fullscreen { min-height: auto; }
+          .rm-stage { grid-template-columns: 1fr; grid-template-rows: auto auto; }
+          .rm-map-pane { padding: 14px 14px 6px; }
+          .rm-detail-pane { padding: 6px 12px 14px; align-items: stretch; }
+          .rm-map-pane svg { max-height: 52vh !important; }
+          .rm-panel { max-height: none !important; }
+        }
+        @media (max-width: 380px) {
+          .rm-map-pane svg { max-height: 44vh !important; }
         }
       `}</style>
 
