@@ -18,13 +18,13 @@
     "tailwindcss": "^3.3.0"
   },
   "browserslist": [
-    "chrome >= 64",
-    "edge >= 79",
-    "firefox >= 67",
-    "safari >= 12",
-    "opera >= 51",
-    "ios_saf >= 12",
-    "and_chr >= 64",
+    "chrome >= 87",
+    "edge >= 88",
+    "firefox >= 78",
+    "safari >= 14",
+    "opera >= 73",
+    "ios_saf >= 14",
+    "and_chr >= 87",
     "not dead"
   ]
 }

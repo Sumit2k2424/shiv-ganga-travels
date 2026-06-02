@@ -2638,3 +2638,8 @@ img:not([width]):not([height]) {
 
 /* In-prose links inside guide articles get a smooth underline grow */
 .blog-container a:not(.guide-chip):not(.btn-primary) { transition: color var(--t); }
+
+/* ── Perf: isolate hero animations from document layout/paint (cuts forced reflow & TBT) ── */
+.hero-scene-svg { contain: layout paint style; }
+.hero-scene-svg g[style*="moonGlow"],
+.hero-content [style*="sgShimmer"] { will-change: opacity; }

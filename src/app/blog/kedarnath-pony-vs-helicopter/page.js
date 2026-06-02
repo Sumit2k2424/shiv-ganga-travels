@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Kedarnath Pony vs Helicopter 2026 – Cost, Time, Availability & Which Is Better?',
-  description: 'Kedarnath pony vs helicopter 2026: detailed comparison of cost (pony ₹5,500 vs helicopter ₹8,500), journey time, comfort, and booking process. Which option suits your age and fitness level?',
+  description: 'Kedarnath pony vs helicopter 2026: detailed comparison of cost (pony ₹3,000–5,000 vs helicopter from ₹3,043 one-way), journey time, comfort, and booking process. Which option suits your age and fitness level?',
   keywords: ['kedarnath pony vs helicopter 2026', 'kedarnath helicopter or pony', 'kedarnath pony cost 2026', 'kedarnath helicopter cost 2026', 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
@@ -17,9 +17,9 @@ function Schema() {
       { '@type': 'Question', name: 'How much does a pony cost at Kedarnath in 2026?',
         acceptedAnswer: { '@type': 'Answer', text: 'Pony (horse) at Kedarnath costs ₹3,000–5,000 one way from Gaurikund to Kedarnath in 2026. Return (Kedarnath to Gaurikund) is separately priced at ₹2,500–4,000. The Uttarakhand government sets fixed rates at the start of each season. Palki (palanquin carried by 4 porters) costs ₹8,000–12,000 one way. Book through your operator in advance — pony queues at Gaurikund during peak season are 2–3 hours long.' }},
       { '@type': 'Question', name: 'How much does Kedarnath helicopter cost in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath helicopter costs ₹7,000–9,000 per person one way in 2026 from Phata or Sersi helipads. Return is ₹7,000–9,000 again (total ₹14,000–18,000 return). Must be booked through the official IRCTC portal (irctc.co.in) — walk-in bookings at helipads are not permitted in 2026. Shiv Ganga Travels assists all pilgrims with IRCTC helicopter booking at no extra charge.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Official 2026 one-way fares are ₹3,043 (Sersi), ₹4,840 (Phata) and ₹6,077 (Guptkashi) per person; round-trip is ₹6,390, ₹10,164 and ₹12,762 respectively, plus a ₹300 IRCTC fee and 18% GST. Must be booked through the official IRCTC portal (irctc.co.in) — walk-in bookings at helipads are not permitted in 2026. Shiv Ganga Travels assists all pilgrims with IRCTC helicopter booking at no extra charge.' }},
       { '@type': 'Question', name: 'Is pony or helicopter better for Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Pony is better for: pilgrims who want the full mountain experience, those who are moderately fit, budget-conscious pilgrims (₹3,000–5,000 vs ₹7,000–9,000 helicopter), and those not pressed for time. Helicopter is better for: senior pilgrims (65+), those with knee/heart conditions, anyone doing Kedarnath as a same-day visit, and those who want to save 4–5 hours of trek time.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Pony is better for: pilgrims who want the full mountain experience, those who are moderately fit, budget-conscious pilgrims (pony ₹3,000–5,000 vs helicopter from ₹3,043 one-way), and those not pressed for time. Helicopter is better for: senior pilgrims (65+), those with knee/heart conditions, anyone doing Kedarnath as a same-day visit, and those who want to save 4–5 hours of trek time.' }},
       { '@type': 'Question', name: 'Can I book Kedarnath pony in advance?',
         acceptedAnswer: { '@type': 'Answer', text: 'Yes — and you should. Pony booking for Kedarnath can be done through your tour operator or at the Gaurikund pony stand in person. During peak season (May–June), the pony stand has long queues. Shiv Ganga Travels pre-books pony slots for our pilgrims as part of our package — ask us when booking your yatra.' }},
     ],
@@ -77,7 +77,7 @@ export default function PonyVsHelicopter() {
             </tr></thead>
             <tbody>
               {[
-                ['One-way cost','Free','₹3,000–5,000','₹7,000–9,000','₹8,000–12,000'],
+                ['One-way cost','Free','₹3,000–5,000','₹3,043–₹6,077','₹8,000–12,000'],
                 ['One-way time','5–7 hrs','3–4 hrs','8 minutes','4–5 hrs'],
                 ['Distance','16km on foot','16km on pony','Phata to temple','16km carried'],
                 ['Physical effort','High','Low','None','None'],
@@ -144,7 +144,7 @@ export default function PonyVsHelicopter() {
           {[
             { title:'Trek (Walk)', emoji:'🥾', for:'Fit pilgrims under 50 who want the full spiritual experience of the mountain', why:'The trek itself is part of the pilgrimage. The physical challenge creates a deeper sense of arrival at the temple.', cost:'Free', book:'No advance booking needed', col:'var(--teal)' },
             { title:'Pony', emoji:'🐴', for:'Pilgrims of all ages who want an alternative to walking — including seniors with moderate fitness', why:'Comfortable, affordable, and still gives you the mountain experience. Most popular choice at Kedarnath.', cost:'₹3,000–5,000 one way', book:'Advance booking through operator recommended', col:'#D97706' },
-            { title:'Helicopter', emoji:'🚁', for:'Senior pilgrims (65+), those with health conditions, and time-pressed pilgrims doing same-day Kedarnath', why:'8-minute flight vs 5-hour trek. Saves the day for those who physically cannot do the trek or pony.', cost:'₹7,000–9,000 one way via IRCTC', book:'Book on irctc.co.in — slots fill fast', col:'#7C3AED' },
+            { title:'Helicopter', emoji:'🚁', for:'Senior pilgrims (65+), those with health conditions, and time-pressed pilgrims doing same-day Kedarnath', why:'8-minute flight vs 5-hour trek. Saves the day for those who physically cannot do the trek or pony.', cost:'From ₹3,043 one way (Sersi) via IRCTC', book:'Book on irctc.co.in — slots fill fast', col:'#7C3AED' },
             { title:'Palki / Doli', emoji:'🪑', for:'Pilgrims who cannot walk or ride — very senior, disabled, or health conditions preventing both', why:'4 porters carry you in a chair. Slower than pony. More expensive. Most accessible option for those with severe mobility limitations.', cost:'₹8,000–12,000 one way', book:'Pre-book through operator', col:'var(--navy)' },
           ].map(opt=>(
             <div key={opt.title} style={{ border:`2px solid ${opt.col}`, borderRadius:14, padding:'16px', background:'#fff' }}>

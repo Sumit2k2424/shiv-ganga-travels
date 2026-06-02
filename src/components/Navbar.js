@@ -17,7 +17,7 @@ function LogoMark({ size = 36 }) {
         }
         @keyframes omPulse {
           0%,100% { opacity:.7; }
-          50%      { opacity:1; filter:drop-shadow(0 0 3px rgba(232,146,10,.9)); }
+          50%      { opacity:1; }
         }
         @keyframes riverFlow {
           0%   { stroke-dashoffset: 120; opacity:.35; }

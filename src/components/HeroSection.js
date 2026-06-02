@@ -178,8 +178,8 @@ function Scene() {
             50%     { opacity:calc(var(--s-a,0.5)*0.3); }
           }
           @keyframes moonGlow {
-            0%,100% { filter:drop-shadow(0 0 6px rgba(200,220,255,0.4)); }
-            50%     { filter:drop-shadow(0 0 14px rgba(200,220,255,0.7)); }
+            0%,100% { opacity:0.85; }
+            50%     { opacity:1; }
           }
         `}</style>
       </defs>

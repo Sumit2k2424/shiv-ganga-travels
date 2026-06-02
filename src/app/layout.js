@@ -11,18 +11,19 @@ import { SITE } from '@/data/packages';
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400','500','600','700','800'],
-  style: ['normal','italic'],
   variable: '--font-jakarta',
   display: 'swap',
   preload: true,
+  adjustFontFallback: true,
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['500','600','700'],
+  weight: ['600','700'],
   variable: '--font-playfair',
   display: 'optional',
   preload: false,
+  adjustFontFallback: true,
 });
 
 export const metadata = {
