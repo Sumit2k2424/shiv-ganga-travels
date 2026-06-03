@@ -125,6 +125,7 @@ export default function KedarnathTrekGuide() {
               ['#how-to-reach','How to Reach Gaurikund'],
               ['#stay','Where to Stay at Kedarnath'],
               ['#transport','Pony, Palki or Helicopter?'],
+              ['#alt-routes','Alternative Routes & the Ropeway'],
               ['#packing','What to Carry'],
               ['#preparation','6-Week Training Plan'],
               ['#faq','Frequently Asked Questions'],
@@ -263,6 +264,30 @@ export default function KedarnathTrekGuide() {
               <div style={{ fontSize:11.5, color:'var(--teal-dark)', fontStyle:'italic' }}>{m.note}</div>
             </div>
           ))}
+        </div>
+
+        {/* ALTERNATIVE ROUTES + ROPEWAY */}
+        <h2 id="alt-routes" style={h2}>Alternative Trek Routes & the Proposed Ropeway</h2>
+        <p style={p}>Almost everyone walks the standard Gaurikund route, but it isn't the only way up — and a faster option is coming. After the 2013 floods rebuilt the trail, two quieter alternatives opened, and a ropeway is now sanctioned that will change Kedarnath access entirely.</p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:18 }}>
+          {[
+            { name:'Gaurikund route (standard)', dist:'~16 km', note:'The main, fully-facilitated trail via Jungle Chatti, Bhimbali and Linchauli. Stone-paved, tea stalls, GMVN tents, water and medical camps throughout. This is the one to take unless you have a specific reason not to.' },
+            { name:'Chaumasi → Kham → Rambara route', dist:'~18–19 km', note:'A longer but gentler, far less crowded alignment via Chaumasi village, with easier gradients. Good for those who want solitude and a softer climb, and it has been used as a backup when the main trail is hit by weather.' },
+            { name:'Triyuginarayan route', dist:'~15 km', note:'Starts from Triyuginarayan (the temple where Shiva and Parvati are believed to have married). Scenic and quiet, but with fewer facilities — go with a guide and enough supplies.' },
+          ].map(r => (
+            <div key={r.name} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{r.name}</div>
+              <div style={{ fontSize:12.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:6 }}>{r.dist}</div>
+              <div style={{ fontSize:12, color:'var(--text-mid)', lineHeight:1.7 }}>{r.note}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 18px', marginBottom:18 }}>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>🚡 The Sonprayag–Kedarnath ropeway</div>
+          <p style={{ ...p, marginBottom:0 }}>A roughly 13 km ropeway from Sonprayag to Kedarnath has been approved, and it is expected to cut the journey to around 40 minutes once operational. It's aimed squarely at elderly and less-mobile pilgrims who can't manage the trek or a long pony ride. It is still under development, so for the 2026 season the trek, pony, palki and helicopter remain your options — but it's worth watching if you're planning a future yatra with senior family members.</p>
+        </div>
+        <div style={{ background:'#fff', border:'1px solid var(--gold)', borderRadius:12, padding:'14px 16px', marginBottom:24 }}>
+          <p style={{ ...p, marginBottom:0, fontSize:14 }}>⚠️ <strong>Whichever route you pick, register first.</strong> No one is allowed past Sonprayag without a valid Char Dham Yatra registration in 2026. Sort it before you arrive — see our <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>free Char Dham Yatra registration guide</Link> and check the <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</Link> before you drive to Gaurikund.</p>
         </div>
 
         {/* PACKING */}
