@@ -36,24 +36,11 @@ export const metadata = {
 
 /* ─── Schemas ─── */
 function Schema() {
-  const agency = {
-    '@context': 'https://schema.org',
-    '@type': 'TravelAgency',
-    name: SITE.name,
-    url: SITE.baseUrl,
-    telephone: SITE.phone,
-    email: SITE.email,
-    '@id': `${SITE.baseUrl}/#organization`,
-    address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    foundingDate: String(SITE.established),
-    aggregateRating: { '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
-    priceRange: '₹₹',
-  };
-
   const charDhamProduct = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Char Dham Yatra Package 2026 from Haridwar',
+    image: [`${SITE.baseUrl}/opengraph-image`],
     description: 'All-inclusive Char Dham Yatra package covering Yamunotri, Gangotri, Kedarnath and Badrinath. 9N/10D from Haridwar. Direct operator, no commission.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
@@ -82,7 +69,7 @@ function Schema() {
     primaryImageOfPage:{ '@type':'ImageObject', url:`${SITE.baseUrl}/opengraph-image` },
     speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] },
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(agency) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
 
 /* ─── Inline compact card ─── */

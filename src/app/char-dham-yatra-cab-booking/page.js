@@ -16,19 +16,19 @@ export const metadata = {
 };
 
 function Schema() {
+  // Single multi-typed node: Service keeps semantic accuracy, Product is the
+  // Google-supported review-snippet parent. Avoids the "invalid object type for
+  // field <parent_node>" error that Service/TaxiService alone triggers.
   const ld = {
-    '@context':'https://schema.org','@type':'TaxiService',
-    name:`${SITE.name} — Char Dham Cab Service`,
-    url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
-    telephone:SITE.phone, areaServed:'Uttarakhand',
-    provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
-  };
-  // Product carries the rating — TaxiService is not a Google-supported review-snippet type.
-  const product = {
-    '@context':'https://schema.org','@type':'Product',
+    '@context':'https://schema.org','@type':['Product','Service'],
     name:'Char Dham Yatra Cab & Taxi Booking from Haridwar',
     description:'Hill-certified AC cabs and tempo travellers for the Char Dham Yatra circuit from Haridwar — Swift Dzire, Innova Crysta and 12-seater Tempo Traveller with experienced mountain drivers.',
+    image:[`${SITE.baseUrl}/opengraph-image`],
+    url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
+    serviceType:'Char Dham Yatra cab & taxi hire',
+    areaServed:'Uttarakhand',
     brand:{ '@type':'Brand', name:SITE.name },
+    provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
     offers:{ '@type':'Offer', price:'18000', priceCurrency:'INR', priceValidUntil:'2026-10-31', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`, seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl } },
     aggregateRating:{ '@type':'AggregateRating', ratingValue:4.6, reviewCount:38, bestRating:5 },
   };
@@ -43,7 +43,6 @@ function Schema() {
   ]};
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);

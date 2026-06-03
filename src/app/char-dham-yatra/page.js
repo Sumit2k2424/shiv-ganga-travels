@@ -55,6 +55,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Char Dham Yatra Package 2026',
+    image: [`${SITE.baseUrl}/opengraph-image`],
     description: 'All-inclusive Char Dham Yatra package from Haridwar covering Yamunotri, Gangotri, Kedarnath and Badrinath.',
     brand: { '@type': 'Brand', name: SITE.name },
     offers: {
