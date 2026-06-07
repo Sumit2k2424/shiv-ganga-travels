@@ -22,17 +22,44 @@ export const metadata = {
   },
 };
 
+const FAQS = [
+  { q:'What is the correct sequence of the Char Dham Yatra?',
+    a:'The traditional order is Yamunotri first, then Gangotri, then Kedarnath, and Badrinath last. It runs west to east, which is how the temples are arranged across the Garhwal Himalayas and the way Adi Shankaracharya laid out the circuit. Going in this order also means you finish at Badrinath, the most easily road-accessible of the four.' },
+  { q:'How many days does the full Char Dham Yatra route take by road?',
+    a:'A comfortable road yatra from Haridwar takes 10 to 12 days. You can compress it to 9 days if you are fit and do not mind long driving hours, or cut it to 5–6 days by adding a Kedarnath helicopter leg. Doing all four in under 8 days by road is rushed and hard on senior pilgrims.' },
+  { q:'What is the total distance of the Char Dham Yatra circuit?',
+    a:'From Haridwar and back, the full circuit is roughly 860 km of driving plus about 22 km of trekking (6 km to Yamunotri and 16 km to Kedarnath). Badrinath and Gangotri need no trek — the road goes to both.' },
+  { q:'Which Char Dham temples need a trek and which are reachable by road?',
+    a:'Only two need walking: Yamunotri (about 6 km from Janki Chatti) and Kedarnath (about 16 km from Gaurikund, or a helicopter from Phata/Sersi/Guptkashi). Gangotri and Badrinath are fully road-connected — your vehicle drops you near the temple.' },
+  { q:'Where do most people break the journey overnight?',
+    a:'The usual night halts are Barkot (for Yamunotri), Uttarkashi (for Gangotri), Guptkashi or Sonprayag (for Kedarnath) and Joshimath/Pipalkoti or Badrinath (for Badrinath). We book these along the route so you are never hunting for a room after dark.' },
+  { q:'Do I need registration to follow the Char Dham route in 2026?',
+    a:'Yes. Char Dham registration through the Tourist Care Uttarakhand portal is compulsory in 2026 and is checked at points along the route, especially before the Yamunotri and Kedarnath treks. If you travel with us we complete the registration for every pilgrim and hand you the slips at Haridwar.' },
+];
+
 function Schema() {
   const ld = {
     '@context':'https://schema.org', '@type':'TouristAttraction',
+    '@id': `${SITE.baseUrl}/char-dham-yatra-route-map#attraction`,
     name:'Char Dham Yatra Route — Complete Map',
     description:'Route map for the Char Dham Yatra pilgrimage circuit covering Yamunotri, Gangotri, Kedarnath, and Badrinath from Haridwar.',
     url: `${SITE.baseUrl}/char-dham-yatra-route-map`,
+    isPartOf: { '@type':'WebSite', name:SITE.name, url:SITE.baseUrl },
     address:{ '@type':'PostalAddress', addressRegion:'Uttarakhand', addressCountry:'IN' },
     touristType:'Pilgrim',
     isAccessibleForFree:true,
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
+  const bc = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
+    {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
+    {'@type':'ListItem',position:2,name:'Char Dham Yatra',item:`${SITE.baseUrl}/char-dham-yatra`},
+    {'@type':'ListItem',position:3,name:'Route Map',item:`${SITE.baseUrl}/char-dham-yatra-route-map`},
+  ]};
+  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
+  </>);
 }
 
 const stops = [
@@ -252,6 +279,108 @@ export default function RouteMap() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Per-dham detail */}
+        <h2 style={h2}>Each Dham on the Route — at a glance</h2>
+        <div style={{ display:'grid', gap:12, marginBottom:28 }}>
+          {[
+            { n:'1 · Yamunotri', alt:'3,291 m', deity:'Goddess Yamuna', motor:'Janki Chatti', trek:'≈ 6 km on foot / pony / palki', road:'Narrow and steep past Barkot; the last stretch is a climb, not a drive.' },
+            { n:'2 · Gangotri', alt:'3,100 m', deity:'Goddess Ganga', motor:'Gangotri (temple gate)', trek:'None — road to the temple', road:'Good highway to Uttarkashi, then a slow mountain road via Harsil. No walking.' },
+            { n:'3 · Kedarnath', alt:'3,583 m', deity:'Lord Shiva (Jyotirlinga)', motor:'Gaurikund', trek:'≈ 16 km on foot / pony / palki, or helicopter', road:'Drive ends at Sonprayag; a link cab takes you to Gaurikund where the trek starts.' },
+            { n:'4 · Badrinath', alt:'3,133 m', deity:'Lord Vishnu', motor:'Badrinath (temple gate)', trek:'None — road to the temple', road:'Tarred road right to the town. The easiest darshan of the four.' },
+          ].map(d=>(
+            <div key={d.n} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'14px 16px' }}>
+              <div style={{ fontWeight:700, color:'var(--navy)', fontSize:15, marginBottom:8 }}>{d.n}</div>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,150px),1fr))', gap:8, fontSize:13 }}>
+                <div><span style={{ color:'var(--text-muted)' }}>Altitude:</span> <strong style={{ color:'var(--text)' }}>{d.alt}</strong></div>
+                <div><span style={{ color:'var(--text-muted)' }}>Deity:</span> <strong style={{ color:'var(--text)' }}>{d.deity}</strong></div>
+                <div><span style={{ color:'var(--text-muted)' }}>Last motorable:</span> <strong style={{ color:'var(--text)' }}>{d.motor}</strong></div>
+                <div><span style={{ color:'var(--text-muted)' }}>Trek:</span> <strong style={{ color:'var(--text)' }}>{d.trek}</strong></div>
+              </div>
+              <div style={{ fontSize:13, color:'var(--text-mid)', marginTop:8, lineHeight:1.6 }}><span style={{ color:'var(--text-muted)' }}>Road:</span> {d.road}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Distances from start city */}
+        <h2 style={h2}>Distance to the route from your city</h2>
+        <p style={{ fontSize:15, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+          Almost everyone joins the Char Dham circuit at Haridwar or Rishikesh, because that is where the mountain road begins. Here is how far the gateway is from the common starting points:
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:420 }}>
+            <thead><tr style={{ background:'var(--navy-light)' }}>
+              {['From','To Haridwar (gateway)','Drive time'].map(th=>(
+                <th key={th} style={{ padding:'10px 16px', textAlign:'left', fontWeight:700, fontSize:12, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em' }}>{th}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[['Delhi','≈ 240 km','5–6 hrs'],['Dehradun / Jolly Grant Airport','≈ 55 km','1.5 hrs'],['Rishikesh','≈ 25 km','45 min'],['Chandigarh','≈ 200 km','5 hrs'],['Lucknow','≈ 540 km','10–11 hrs']].map(([f,d,t],i)=>(
+                <tr key={f} style={{ borderTop:'1px solid var(--border)', background:i%2?'var(--bg)':'#fff' }}>
+                  <td style={{ padding:'10px 16px', color:'var(--text)', fontWeight:600 }}>{f}</td>
+                  <td style={{ padding:'10px 16px', color:'var(--navy)', fontWeight:600 }}>{d}</td>
+                  <td style={{ padding:'10px 16px', color:'var(--text-muted)' }}>{t}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Suggested itinerary */}
+        <h2 style={h2}>How the route splits into days (10-day plan)</h2>
+        <p style={{ fontSize:15, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+          This is the plan we run most often from Haridwar. It keeps driving days under control and gives senior pilgrims a sane pace.
+        </p>
+        <div style={{ display:'grid', gap:8, marginBottom:28 }}>
+          {[
+            ['Day 1','Haridwar → Barkot'],
+            ['Day 2','Barkot → Yamunotri trek → Barkot'],
+            ['Day 3','Barkot → Uttarkashi'],
+            ['Day 4','Uttarkashi → Gangotri → Uttarkashi'],
+            ['Day 5','Uttarkashi → Guptkashi'],
+            ['Day 6','Guptkashi → Gaurikund → Kedarnath (trek/heli)'],
+            ['Day 7','Kedarnath → Guptkashi'],
+            ['Day 8','Guptkashi → Joshimath/Pipalkoti'],
+            ['Day 9','Drive to Badrinath → darshan → Mana village'],
+            ['Day 10','Badrinath → Haridwar'],
+          ].map(([d,plan])=>(
+            <div key={d} style={{ display:'flex', gap:12, background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'10px 14px' }}>
+              <span style={{ minWidth:54, fontWeight:700, color:'var(--gold-dark)', fontSize:13 }}>{d}</span>
+              <span style={{ fontSize:13.5, color:'var(--text-mid)' }}>{plan}</span>
+            </div>
+          ))}
+        </div>
+        <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:28 }}>
+          Want it shorter? A <Link href="/char-dham-helicopter" style={{ color:'var(--navy)', fontWeight:600 }}>Char Dham by helicopter</Link> trip does all four in 5–6 days. Want only two? See the <Link href="/do-dham-yatra" style={{ color:'var(--navy)', fontWeight:600 }}>Do Dham route</Link>. You can also price any version on our <Link href="/char-dham-yatra-cost-calculator" style={{ color:'var(--navy)', fontWeight:600 }}>cost calculator</Link>.
+        </p>
+
+        {/* Registration & road status */}
+        <h2 style={h2}>Before you set off — 2026 registration &amp; road status</h2>
+        <p style={{ fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:14 }}>
+          Two things decide whether your route actually goes to plan. First, <strong>registration is compulsory in 2026</strong> and is checked on the road — you can read the rules on the <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener nofollow" style={{ color:'var(--navy)', fontWeight:600 }}>official Tourist Care Uttarakhand portal</a>. Book with us and we handle it for every pilgrim. Second, hill roads change with the weather; before you lock dates, check our live <Link href="/char-dham-road-status" style={{ color:'var(--navy)', fontWeight:600 }}>Char Dham road status</Link> page and the temple <Link href="/blog/char-dham-yatra-opening-dates-2026" style={{ color:'var(--navy)', fontWeight:600 }}>opening dates for 2026</Link>. The yatra opens with Yamunotri and Gangotri on 19 April 2026; Kedarnath and Badrinath follow within days.
+        </p>
+
+        {/* FAQ */}
+        <h2 style={h2}>Char Dham route map — FAQ</h2>
+        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
+          {FAQS.map(f=>(
+            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'14px 16px' }}>
+              <summary style={{ fontWeight:700, color:'var(--navy)', fontSize:14.5, cursor:'pointer' }}>{f.q}</summary>
+              <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginTop:10 }}>{f.a}</p>
+            </details>
+          ))}
+        </div>
+
+        {/* Author / E-E-A-T */}
+        <div style={{ display:'flex', gap:14, alignItems:'flex-start', background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
+          <div style={{ width:46, height:46, borderRadius:'50%', background:'linear-gradient(135deg,var(--navy),var(--teal))', display:'flex', alignItems:'center', justifyContent:'center', fontSize:22, flexShrink:0 }}>🪖</div>
+          <div>
+            <div style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>Mapped by Dhanesh Chandra Mishra</div>
+            <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.65, marginTop:3 }}>
+              Founder of Shiv Ganga Travels, Haridwar — a retired Army officer who has driven the full Char Dham circuit for 15 seasons. Distances here are from our own trip sheets, cross-checked each season. <span style={{ color:'var(--text-muted)' }}>Last updated: {SITE.lastUpdated}.</span>
+            </div>
+          </div>
         </div>
 
         {/* Embed/share note */}
