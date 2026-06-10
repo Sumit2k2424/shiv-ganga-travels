@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Yamunotri Temple 2026 — Timings, Trek, History & Guide',
@@ -17,7 +18,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Yamunotri Temple', description:'The source shrine of the river Yamuna, dedicated to Goddess Yamuna, at 3,291m in Uttarkashi district, Uttarakhand. The first of the four Char Dham shrines.', url:`${SITE.baseUrl}/yamunotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Yamunotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'31.0136',longitude:'78.4624'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:00',closes:'20:00'}], touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Yamunotri Temple', description:'The source shrine of the river Yamuna, dedicated to Goddess Yamuna, at 3,291m in Uttarkashi district, Uttarakhand. The first of the four Char Dham shrines.', url:`${SITE.baseUrl}/yamunotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Yamunotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'31.0136',longitude:'78.4624'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:00',closes:'20:00'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Yamunotri'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     {'@type':'Question',name:'What are the darshan timings at Yamunotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens around 6:00 AM and closes by about 8:00 PM, with a midday break in the afternoon. Because the 6km trek from Janki Chatti takes 3–4 hours up, most pilgrims aim to start early and reach the temple before noon.'}},
     {'@type':'Question',name:'When does Yamunotri Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens on April 19, 2026 (Akshaya Tritiya). It closes for winter on November 11, 2026 (Bhai Dooj), after which the idol of Goddess Yamuna is carried to Kharsali (Syana Chattra) village for winter worship.'}},
@@ -71,6 +72,11 @@ export default function YamunotriTemple() {
       </div>
 
       <h2 style={h2}>About Yamunotri Temple</h2>
+      <AnswerBox>
+        Yamunotri Temple is the source shrine of the river Yamuna, dedicated to Goddess Yamuna, at
+        3,291m in Uttarkashi district, Uttarakhand. The first of the four Char Dham shrines, it opens
+        on Akshaya Tritiya (late April/early May 2026) and is reached by a 6km trek from Janki Chatti.
+      </AnswerBox>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Yamunotri is the source shrine of the <strong>Yamuna</strong>, the second-holiest river in Hinduism after the Ganga, and traditionally the first stop on the Char Dham circuit. The temple sits at 3,291 metres in a narrow valley below the Banderpoonch massif, with the Yamuna tumbling past in icy white. The deity is Goddess Yamuna, depicted in black stone. The shrine was built in the 19th century by Maharani Gularia of Jaipur, and has been rebuilt more than once after avalanches and weather damage — a reminder of how exposed this corner of the Himalaya is.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>What sets Yamunotri apart is the trek and the hot springs. Unlike Gangotri, you cannot drive to the temple — the last 6km from Janki Chatti must be covered on foot, by pony, or by palki. For many pilgrims this is the first real test of the yatra, which is exactly why it comes first: it sets the tone. By the time you reach the temple, steam rising from the hot springs against the cold mountain air, you have earned the darshan.</p>
 

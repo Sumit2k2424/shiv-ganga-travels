@@ -12,15 +12,16 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  if (CATEGORY_SLUGS.includes(params.slug)) {
-    const cat = CATEGORIES[params.slug];
+  const { slug } = await params;
+  if (CATEGORY_SLUGS.includes(slug)) {
+    const cat = CATEGORIES[slug];
     return {
       title: `${cat.name} Packages 2026 from Haridwar`,
       description: `Book ${cat.name} from Haridwar. Expert guides, VIP darshan, all-inclusive. Trusted since 2010.`,
-      alternates: { canonical: `${SITE.baseUrl}/packages/${params.slug}` },
+      alternates: { canonical: `${SITE.baseUrl}/packages/${slug}` },
     };
   }
-  const pkg = getPackageBySlug(params.slug);
+  const pkg = getPackageBySlug(slug);
   if (!pkg) return {};
   return {
     title: pkg.metaTitle,
@@ -47,14 +48,14 @@ const CATEGORY_GUIDES = {
   'do-dham': [
     { label:'Kedarnath Yatra Guide', href:'/kedarnath-yatra' },
     { label:'Kedarnath Trek Guide', href:'/blog/kedarnath-trek-guide' },
-    { label:'Badrinath Yatra Guide', href:'/blog/badrinath-yatra-guide' },
+    { label:'Badrinath Yatra Guide', href:'/badrinath-yatra' },
     { label:'Best Time to Visit', href:'/blog/best-time-char-dham' },
   ],
   'single-dham': [
     { label:'Kedarnath Yatra Guide', href:'/kedarnath-yatra' },
     { label:'Kedarnath Trek Guide', href:'/blog/kedarnath-trek-guide' },
     { label:'Kedarnath Helicopter Booking', href:'/blog/kedarnath-helicopter-booking' },
-    { label:'Badrinath Yatra Guide', href:'/blog/badrinath-yatra-guide' },
+    { label:'Badrinath Yatra Guide', href:'/badrinath-yatra' },
     { label:'Haridwar to Kedarnath Route', href:'/blog/haridwar-to-kedarnath' },
   ],
   'helicopter': [
@@ -146,12 +147,13 @@ function Schemas({ pkg }) {
   </>);
 }
 
-export default function PackageDetailPage({ params }) {
+export default async function PackageDetailPage({ params }) {
+  const { slug } = await params;
 
-  if (CATEGORY_SLUGS.includes(params.slug)) {
-    const cat  = CATEGORIES[params.slug];
-    const pkgs = PACKAGES.filter(p => p.category === params.slug);
-    const guides = CATEGORY_GUIDES[params.slug] || [];
+  if (CATEGORY_SLUGS.includes(slug)) {
+    const cat  = CATEGORIES[slug];
+    const pkgs = PACKAGES.filter(p => p.category === slug);
+    const guides = CATEGORY_GUIDES[slug] || [];
     return (
       <>
         <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
@@ -227,7 +229,7 @@ export default function PackageDetailPage({ params }) {
     );
   }
 
-  const pkg = getPackageBySlug(params.slug);
+  const pkg = getPackageBySlug(slug);
   if (!pkg) notFound();
 
   const savings  = pkg.price.original - pkg.price.discounted;
@@ -287,7 +289,7 @@ export default function PackageDetailPage({ params }) {
         <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
         <span>✓ Est. 2010 · Retd. Army Officer founder</span>
-        <Link href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>Flexible cancellation →</Link>
+        Flexible cancellation →
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
@@ -837,14 +839,9 @@ export default function PackageDetailPage({ params }) {
               {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
             </div>
             <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" onClick={()=>{try{if(window.gtag)window.gtag('event','generate_lead',{event_label:'pkg_card_whatsapp'});}catch(e){}}} style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Get Free Quote on WhatsApp</a>
-              <a href='tel:+917817996730' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book — {SITE.phone}</a>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I have a question about the "${pkg.name}" package before booking.`)}`} target="_blank" rel="nofollow noopener noreferrer" style={{ color:'var(--navy)', textAlign:'center', fontWeight:600, fontSize:12.5, textDecoration:'none' }}>Have a question first? Message us →</a>
-              <div style={{ marginTop:2, paddingTop:10, borderTop:'1px dashed var(--border)', display:'flex', flexDirection:'column', gap:5 }}>
-                <div style={{ fontSize:11.5, color:'var(--text-mid)', display:'flex', alignItems:'center', gap:6 }}><span>⚡</span> Dhanesh ji (founder) replies personally — usually within 10 min, 7 AM–10 PM</div>
-                <div style={{ fontSize:11.5, color:'var(--text-mid)', display:'flex', alignItems:'center', gap:6 }}><span>🔒</span> ₹0 to enquire · no advance to talk · no pushy sales</div>
-                <div style={{ fontSize:11.5, color:'var(--text-mid)', display:'flex', alignItems:'center', gap:6 }}><span>⭐</span> 4.6/5 on Google · 38+ reviews · operating since 2010</div>
-              </div>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
+              <a href='tel:+917817996730' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book</a>
+              ✉️ Send Enquiry Form
             </div>
             <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
               {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',label:'Start',val:pkg.startCity},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(

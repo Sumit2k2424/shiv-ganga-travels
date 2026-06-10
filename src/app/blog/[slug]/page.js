@@ -5,8 +5,9 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SITE } from '@/data/packages'
 
-export function generateMetadata({ params }) {
-  const blog = blogs.find(b => b.slug === params.slug)
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const blog = blogs.find(b => b.slug === slug)
   if (!blog) return { title: 'Blog | Shiv Ganga Travels' }
 
   const rawTitle = blog.title || ''
@@ -55,11 +56,12 @@ function Schema() {
 }
 
 
-export default function BlogPage({ params }) {
-  const blog = blogs.find(b => b.slug === params.slug)
+export default async function BlogPage({ params }) {
+  const { slug } = await params;
+  const blog = blogs.find(b => b.slug === slug)
   if (!blog) notFound();
 
-  const related = blogs.filter(b => b.slug !== params.slug).slice(0, 3)
+  const related = blogs.filter(b => b.slug !== slug).slice(0, 3)
 
   return (
     <div style={{ maxWidth: 800, margin: 'auto', padding: 20, lineHeight: 1.7 }}>

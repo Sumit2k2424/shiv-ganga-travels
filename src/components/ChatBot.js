@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { SITE } from '@/data/packages';
 import {
   BOT_NAME, BOT_TAGLINE, BOT_AVATAR,
-  QUICK_QUESTIONS, CUSTOM_QA, AI_SYSTEM_PROMPT,
+  QUICK_QUESTIONS, CUSTOM_QA,
 } from '@/data/botConfig';
 
 /* ── Finds a custom answer or returns null ─────────────────────── */
@@ -165,16 +165,15 @@ export default function ChatBot() {
       return;
     }
 
-    // 2. Fall back to Claude AI
+    // 2. Fall back to Claude AI — via our own server route so the API key
+    //    stays server-side (calling api.anthropic.com from the browser fails
+    //    in production). See /src/app/api/chat/route.js.
     const typingId = addMsg('bot', '', true);
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 300,
-          system: AI_SYSTEM_PROMPT,
           messages: [
             // Include last few messages as context
             ...msgs.slice(-6).filter(m => !m.typing).map(m => ({
@@ -186,7 +185,7 @@ export default function ChatBot() {
         }),
       });
       const data = await response.json();
-      const answer = data.content?.[0]?.text || 'I\'m sorry, I couldn\'t process that. Please WhatsApp us at ' + SITE.phone;
+      const answer = data.text || 'I\'m sorry, I couldn\'t process that. Please WhatsApp us at ' + SITE.phone;
       replaceMsg(typingId, answer);
     } catch {
       replaceMsg(typingId, `Sorry, I had a hiccup! Please WhatsApp us directly at ${SITE.phone} — our team replies within 2 hours. 🙏`);

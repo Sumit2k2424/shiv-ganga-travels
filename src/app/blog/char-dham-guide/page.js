@@ -172,7 +172,7 @@ export default function CharDhamGuide() {
             {[
               { label:'Char Dham Packages 2026 →',        href:'/char-dham-yatra' },
               { label:'Kedarnath Yatra Guide →',          href:'/kedarnath-yatra' },
-              { label:'Char Dham Yatra 2026 Dates →',     href:'/char-dham-yatra-2025' },
+              { label:'Char Dham Yatra 2026 Dates →',     href:'/char-dham-yatra' },
               { label:'Helicopter Char Dham →',           href:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
               { label:'Senior Citizen Package →',         href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
               { label:'Best Time Blog →',                 href:'/blog/best-time-char-dham' },

@@ -115,7 +115,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://lh3.googleusercontent.com https://maps.googleapis.com https://maps.gstatic.com https://streetviewpixels-pa.googleapis.com https://www.google-analytics.com",
-              "connect-src 'self' https://maps.googleapis.com https://places.googleapis.com https://www.google-analytics.com https://api.anthropic.com",
+              "connect-src 'self' https://maps.googleapis.com https://places.googleapis.com https://www.google-analytics.com",
               "frame-src https://www.google.com https://maps.google.com",
               "worker-src blob: 'self'",
               "base-uri 'self'",

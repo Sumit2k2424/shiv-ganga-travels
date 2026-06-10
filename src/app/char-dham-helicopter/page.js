@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Char Dham Helicopter Package 2026',
@@ -68,6 +69,12 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Char Dham Helicopter Package</strong> is for pilgrims who want to complete all four sacred dhams — Yamunotri, Gangotri, Kedarnath, and Badrinath — in maximum comfort, minimum time, and with VIP darshan at every shrine. You fly by helicopter between each dham. No long mountain drives. No queues. Luxury hotels at every stop.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>This package is popular with senior pilgrims, corporate executives, and families where members have medical conditions that make mountain travel difficult. It's also a genuinely incredible experience — seeing the Himalayas from the air, watching Kedarnath temple appear below you in the snow, is something that sticks with you for life.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>What Makes This Package Different</h2>
+        <AnswerBox>
+          The Char Dham helicopter tour covers all four dhams in 5N/6D from Sahastradhara Helipad,
+          Dehradun, with DGCA-approved operators, VIP darshan and luxury hotels — no treks or queues.
+          Packages start from ₹85,000 per person; full all-inclusive Char Dham heli itineraries
+          typically run ₹2,09,000–2,50,000 depending on season, operator and weather.
+        </AnswerBox>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px',marginBottom:'20px'}}>
           <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🚁 Helicopter Between All Dhams</div>

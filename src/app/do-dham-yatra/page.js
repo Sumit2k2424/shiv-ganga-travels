@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: '2 Dham Yatra 2026 — Kedarnath & Badrinath',
@@ -114,6 +115,12 @@ export default function DoDhamYatra() {
 
         {/* Do Dham vs Char Dham — the decision most searchers are making */}
         <h2 style={h2}>Do Dham or Char Dham? — Honest Comparison</h2>
+        <AnswerBox>
+          Do Dham Yatra covers the two Kedarnath–Badrinath shrines in a 5N/6D all-inclusive package
+          from ₹10,999 per person — ideal when time is limited. Char Dham adds Yamunotri and Gangotri
+          (9N/10D, from ₹19,500). Choose Do Dham if you have under a week; choose Char Dham to complete
+          the full circuit. Both run late April to November 2026.
+        </AnswerBox>
         <p style={p}>Most people searching for "2 dham yatra" or "do dham yatra" are deciding between two options. Here is the honest answer from 15 years of sending pilgrims to the mountains:</p>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:12, marginBottom:28 }}>

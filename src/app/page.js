@@ -813,7 +813,7 @@ export default function HomePage() {
                 { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹19,500', href:'/char-dham-yatra' },
                 { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
                 { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
-                { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/blog/badrinath-yatra-guide' },
+                { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/badrinath-yatra' },
                 { img:'https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
                 { img:'https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },
                 { img:'https://images.pexels.com/photos/1544931/pexels-photo-1544931.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Helicopter Package', desc:'All 4 dhams in 6 days', href:'/char-dham-helicopter' },
@@ -862,15 +862,7 @@ export default function HomePage() {
                 { icon:'🌁', title:'From Pune', href:'/char-dham-yatra-from-pune' },
                 { icon:'🏘️', title:'From Noida', href:'/char-dham-yatra-from-noida' },
                 { icon:'🏙️', title:'From Chandigarh', href:'/char-dham-yatra-from-chandigarh' },
-                { icon:'🌆', title:'From Nagpur', href:'/char-dham-yatra-from-nagpur' },
-                { icon:'🏛️', title:'From Patna', href:'/char-dham-yatra-from-patna' },
-                { icon:'🕌', title:'From Lucknow', href:'/char-dham-yatra-from-lucknow' },
-                { icon:'🏛️', title:'From Ahmedabad', href:'/char-dham-yatra-from-ahmedabad' },
                 { icon:'🌊', title:'From Kolkata', href:'/char-dham-yatra-from-kolkata' },
-                { icon:'🏯', title:'From Jaipur', href:'/char-dham-yatra-from-jaipur' },
-                { icon:'🕍', title:'From Bhopal', href:'/char-dham-yatra-from-bhopal' },
-                { icon:'🏭', title:'From Indore', href:'/char-dham-yatra-from-indore' },
-                { icon:'🚢', title:'From Surat', href:'/char-dham-yatra-from-surat' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   style={{ background:'var(--teal)', color:'#fff', padding:'12px 14px', borderRadius:10, textDecoration:'none', display:'flex', gap:10, alignItems:'center' }}>

@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
-  title: 'Kedarnath Temple 2026 — History, Timings,',
+  title: 'Kedarnath Temple 2026 — History, Timings & Trek Guide',
   description: 'Complete Kedarnath Temple guide 2026. Temple history, darshan timings (4 AM–9 PM), dress code, puja types, altitude 3,583m, trek route from Gaurikund',
   keywords: ['kedarnath temple','kedarnath temple timings 2026','kedarnath temple history','kedarnath darshan 2026','kedarnath temple opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
@@ -15,7 +16,7 @@ export const metadata = {
   },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Kedarnath_Temple','https://www.wikidata.org/wiki/Q866014'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     {'@type':'Question',name:'What time does Kedarnath Temple open?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens at 4:00 AM for the Mahabhishek puja and closes at 9:00 PM. General darshan is from 6 AM to 3 PM and 5 PM to 9 PM. The temple is closed between 3 PM and 5 PM for a break.'}},
     {'@type':'Question',name:'When does Kedarnath Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens on April 22, 2026 at 8:00 AM for the 2026 season. The temple closes for winter on November 11, 2026.'}},
@@ -67,6 +68,11 @@ export default function KedarnathTemple() {
         ))}
       </div>
       <h2 style={h2}>About Kedarnath Temple</h2>
+      <AnswerBox>
+        Kedarnath Temple is one of the twelve Jyotirlingas of Lord Shiva, located at 3,583m in
+        the Garhwal Himalayas of Uttarakhand. It opens 22 April 2026, with darshan 4 AM–9 PM, and
+        is reached by a 16km trek from Gaurikund (or helicopter from Phata/Sersi/Guptkashi).
+      </AnswerBox>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Kedarnath is one of the twelve <strong>Jyotirlingas</strong> of Lord Shiva — the most sacred manifestations of the divine in Shaivite tradition. Located at 3,583 metres above sea level in the Rudraprayag district of Uttarakhand, the temple sits at the head of the Mandakini river valley, surrounded by snow-capped peaks. The existing stone temple is believed to have been built by Adi Shankaracharya in the 8th century CE, though the site's spiritual significance dates to the Mahabharata period — the Pandavas are said to have worshipped Lord Shiva here after the Kurukshetra war.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The temple survived the catastrophic 2013 floods with remarkably little structural damage — a massive boulder from the mountain behind acted as a natural shield, deflecting the floodwaters around the shrine. Many devotees see this as a divine miracle. The temple has since been restored with a stronger infrastructure including a wider trek path, proper drainage, and emergency facilities.</p>
       <h2 style={h2}>Darshan Timings 2026</h2>

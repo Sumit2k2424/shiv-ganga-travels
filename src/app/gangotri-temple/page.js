@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Gangotri Temple 2026 — Timings, History, Aarti & Guide',
@@ -17,7 +18,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Gangotri Temple', description:'The origin shrine of the river Ganga, dedicated to Goddess Ganga, at 3,415m in Uttarkashi district, Uttarakhand. One of the four Char Dham shrines.', url:`${SITE.baseUrl}/gangotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Gangotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.9947',longitude:'78.9398'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:15',closes:'21:30'}], touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Gangotri Temple', description:'The origin shrine of the river Ganga, dedicated to Goddess Ganga, at 3,415m in Uttarkashi district, Uttarakhand. One of the four Char Dham shrines.', url:`${SITE.baseUrl}/gangotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Gangotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.9947',longitude:'78.9398'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:15',closes:'21:30'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Gangotri_Temple'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
     {'@type':'Question',name:'What are the darshan timings at Gangotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Gangotri Temple opens around 6:15 AM and stays open until about 9:30 PM, with a midday break roughly between 2 PM and 3 PM. The morning and evening Ganga aarti on the riverbank are the most moving times to be there. Timings shift slightly on festival days.'}},
     {'@type':'Question',name:'When does Gangotri Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Gangotri Temple opens on April 19, 2026 (Akshaya Tritiya). It closes for winter on November 10, 2026 (Diwali/Annakut), after which the idol of Goddess Ganga is carried to Mukhba village for winter worship.'}},
@@ -71,6 +72,11 @@ export default function GangotriTemple() {
       </div>
 
       <h2 style={h2}>About Gangotri Temple</h2>
+      <AnswerBox>
+        Gangotri Temple is the origin shrine of the river Ganga, dedicated to Goddess Ganga, at
+        3,415m in Uttarkashi district, Uttarakhand. Built in the 18th century in white granite, it
+        opens on Akshaya Tritiya (late April/early May 2026) and is reachable by motor road.
+      </AnswerBox>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Gangotri is where Hindus believe the Ganga first touched the earth. The temple, a clean white granite shrine on the banks of the rushing <strong>Bhagirathi river</strong> at 3,415 metres, is dedicated to Goddess Ganga. The river is called the Bhagirathi here — it only takes the name Ganga further downstream at Devprayag, where it meets the Alaknanda. The present temple was built by the Gorkha commander Amar Singh Thapa in the early 18th century and has been repaired several times since, most notably by the royal family of Jaipur.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Of the four Char Dham shrines, Gangotri is the one most pilgrims find easiest on the body. The road runs all the way to the temple, so there is no trek — a real relief for older travellers after the climbs at Yamunotri and, later, Kedarnath. That said, the altitude is no joke. We always recommend arriving with a layer of warm clothing on hand and giving yourself an hour to settle before walking down to the river.</p>
 

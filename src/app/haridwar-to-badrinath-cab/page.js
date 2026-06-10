@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Badrinath Cab 2026 — Fare,',
+  title: 'Haridwar to Badrinath Cab 2026 — Fare & Distance',
   description: 'Book cab from Haridwar to Badrinath 2026. 320km via Joshimath, 8–9 hours. Swift Dzire from ₹4,500. No trek required — motor road to temple.',
   keywords: ['haridwar to badrinath cab,haridwar to badrinath taxi,haridwar to badrinath distance,cab from haridwar to badrinath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-badrinath-cab` },

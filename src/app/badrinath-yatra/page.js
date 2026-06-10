@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Badrinath Yatra Package 2026',
@@ -201,6 +202,12 @@ export default function BadrinathYatraPage() {
         </p>
 
         <h2 style={h2}>Badrinath Yatra Itinerary — 2N/3D from Haridwar</h2>
+        <AnswerBox>
+          Badrinath Yatra from Haridwar is a 2N/3D all-inclusive package from ₹5,999 per person with
+          Shiv Ganga Travels — AC cab, hotels, meals and darshan assistance. Badrinath is reachable by
+          motor road (no trek), at 3,133m in Chamoli district. The 2026 opening date is announced on
+          Maha Shivratri; the season runs late April to November.
+        </AnswerBox>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[

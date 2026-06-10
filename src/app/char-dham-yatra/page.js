@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Char Dham Yatra Package 2026 from Haridwar',
@@ -235,6 +236,12 @@ export default function CharDhamYatra() {
         {/* Package grid */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px', marginBottom:32 }}>
           <h2 style={{ ...h2Style, marginTop:0, fontSize:'1.2rem' }}>Our Char Dham Yatra Packages 2026:</h2>
+          <AnswerBox>
+            Char Dham Yatra from Haridwar covers all four shrines — Yamunotri, Gangotri, Kedarnath
+            and Badrinath — in a 9N/10D all-inclusive package from ₹19,500 per person with Shiv Ganga
+            Travels. Price includes AC transport, hotels, meals, and darshan assistance. The 2026
+            season runs late April to November. Shorter Do Dham and helicopter options are available.
+          </AnswerBox>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12 }}>
             {charDhamPkgs.map(p => (
               <Link key={p.slug} href={`/packages/${p.slug}`}
@@ -576,7 +583,7 @@ export default function CharDhamYatra() {
             {[
               { label:'View Char Dham Packages →',     href:'/packages/char-dham' },
               { label:'Kedarnath Yatra →',             href:'/kedarnath-yatra' },
-              { label:'Char Dham Yatra Guide 2026 →',  href:'/char-dham-yatra-2025' },
+              { label:'Char Dham Yatra Guide 2026 →',  href:'/char-dham-yatra' },
               { label:'Do Dham Packages →',            href:'/packages/do-dham' },
               { label:'Helicopter Char Dham →',        href:'/packages/helicopter' },
               { label:'All Packages →',               href:'/packages' },

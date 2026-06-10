@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Kedarnath Yatra Package 2026 — Ek Dham Yatra',
@@ -99,6 +100,12 @@ export default function KedarnathYatra() {
         {kedarnathPkgs.length > 0 && (
           <>
             <h2 style={h2}>Kedarnath Yatra Packages 2026</h2>
+            <AnswerBox>
+              Kedarnath Yatra from Haridwar costs ₹6,499 per person for a 3N/4D all-inclusive
+              package — AC cab, Guptkashi hotel, breakfast and dinner, and VIP darshan. The temple
+              opens 22 April 2026; reaching it is a 16km trek from Gaurikund, or a helicopter from
+              Phata/Sersi/Guptkashi (₹7,500–9,500 round trip). Pony/palki are available for seniors.
+            </AnswerBox>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 10, marginBottom: 28 }}>
               {kedarnathPkgs.map(pkg => (
                 <Link key={pkg.slug} href={`/packages/${pkg.slug}`} style={{ background: '#fff', padding: '14px 16px', borderRadius: 10, border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

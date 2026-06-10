@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return getCabRouteSlugs();
 }
 
-export function generateMetadata({ params }) {
-  const r = getCabRoute(params.route);
+export async function generateMetadata({ params }) {
+  const { route } = await params;
+  const r = getCabRoute(route);
   if (!r) return {};
   const title = `${r.from} to ${r.to} Cab 2026 — Fare & Distance`;
   const desc = `${r.from} to ${r.to} taxi 2026: ${r.distance}, ${r.time}. Fares from ${r.fares[0][2].split('–')[0]}. Experienced hill drivers, fixed price, pickup from ${r.from}.`;
@@ -47,8 +48,9 @@ function Schema({ r }) {
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.8vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };
 const p = { fontSize: 15, color: '#334155', lineHeight: 1.85, marginBottom: 16 };
 
-export default function CabRoutePage({ params }) {
-  const r = getCabRoute(params.route);
+export default async function CabRoutePage({ params }) {
+  const { route } = await params;
+  const r = getCabRoute(route);
   if (!r) notFound();
   const msg = encodeURIComponent(`Namaste! I want a cab from ${r.from} to ${r.to}.`);
   const siblings = getCabRoutesByBase(r.base).filter(x => x.slug !== r.slug).slice(0, 4);

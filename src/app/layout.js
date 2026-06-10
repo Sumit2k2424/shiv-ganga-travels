@@ -75,14 +75,11 @@ export const metadata = {
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
   },
 
-  alternates: {
-    canonical: SITE.baseUrl,
-    languages: {
-      'x-default': SITE.baseUrl,
-      'en-IN':     SITE.baseUrl,
-      'hi-IN':     `${SITE.baseUrl}/hi`,
-    },
-  },
+  // NOTE: no `alternates` here on purpose. A canonical set in the root layout
+  // cascades to every page that doesn't define its own, telling Google those
+  // pages canonicalise to the homepage. Each page sets its own canonical.
+  // hi-IN hreflang removed — /hi does not exist yet; broken hreflang gets the
+  // whole set ignored. Re-add `languages` only when a real /hi section ships.
   other: {
     'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹19,500 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
     'keywords:hi': 'चार धाम यात्रा हरिद्वार, केदारनाथ यात्रा, बद्रीनाथ यात्रा, चार धाम यात्रा पैकेज 2026',
@@ -281,7 +278,16 @@ function SiteSchema() {
     },
 
     award: 'Uttarakhand Tourism Registered Tour Operator',
-    knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Gangotri Yatra', 'Yamunotri Yatra', 'Uttarakhand Tourism', 'Hindu Pilgrimage', 'Himalayan Travel', 'Char Dham Helicopter'],
+    knowsAbout: [
+      { '@type': 'Thing', name: 'Char Dham Yatra', sameAs: 'https://en.wikipedia.org/wiki/Chota_Char_Dham' },
+      { '@type': 'Thing', name: 'Kedarnath Yatra', sameAs: 'https://en.wikipedia.org/wiki/Kedarnath_Temple' },
+      { '@type': 'Thing', name: 'Badrinath Yatra', sameAs: 'https://en.wikipedia.org/wiki/Badrinath_Temple' },
+      { '@type': 'Thing', name: 'Gangotri Yatra', sameAs: 'https://en.wikipedia.org/wiki/Gangotri_Temple' },
+      { '@type': 'Thing', name: 'Yamunotri Yatra', sameAs: 'https://en.wikipedia.org/wiki/Yamunotri' },
+      { '@type': 'Thing', name: 'Uttarakhand Tourism', sameAs: 'https://en.wikipedia.org/wiki/Tourism_in_Uttarakhand' },
+      { '@type': 'Thing', name: 'Hindu Pilgrimage', sameAs: 'https://en.wikipedia.org/wiki/Hindu_pilgrimage_sites' },
+      'Himalayan Travel', 'Char Dham Helicopter',
+    ],
 
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',

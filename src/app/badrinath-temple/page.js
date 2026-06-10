@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
-  title: 'Badrinath Temple 2026 — Darshan Timings,',
+  title: 'Badrinath Temple 2026 — Darshan Timings & Guide',
   description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord',
   keywords: ['badrinath temple','badrinath temple timings 2026','badrinath darshan timings','badrinath temple opening date 2026','badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', '@id':`${SITE.baseUrl}/badrinath-temple#attraction`, name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, isPartOf:{ '@id':`${SITE.baseUrl}/#organization` }, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim' };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', '@id':`${SITE.baseUrl}/badrinath-temple#attraction`, name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, isPartOf:{ '@id':`${SITE.baseUrl}/#organization` }, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Badrinath_Temple','https://www.wikidata.org/wiki/Q799695'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
@@ -55,6 +56,11 @@ export default function BadrinathTemple() {
         ))}
       </div>
       <h2 style={h2}>About Badrinath Temple</h2>
+      <AnswerBox>
+        Badrinath Temple is a sacred shrine of Lord Vishnu (as Badri Narayan) at 3,133m in Chamoli
+        district, Uttarakhand, on the banks of the Alaknanda. The northernmost Char Dham, it opens
+        late April 2026 (date announced on Maha Shivratri) and is reachable by motor road — no trek.
+      </AnswerBox>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Badrinath is one of the most revered pilgrimage sites in Hinduism — the final and perhaps most significant of the four Char Dhams. The temple, dedicated to Lord Vishnu in his Badrinarayan form, sits at 3,133 metres between the Nar and Narayan mountain ranges in Chamoli district. Unlike Kedarnath, Badrinath is accessible entirely by motor road — no trekking required — making it accessible to pilgrims of all ages and fitness levels.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The black stone idol of Badrinarayan is 1 metre tall and is believed to be <em>swayambhu</em> (self-manifested). The idol was reportedly retrieved from the Alaknanda river by Adi Shankaracharya in the 8th century and installed in the current temple. The temple was built and rebuilt several times — the current structure is from the 17th century with subsequent renovations.</p>
       <h2 style={h2}>Darshan Timings 2026</h2>
@@ -100,7 +106,7 @@ export default function BadrinathTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Badrinath Yatra Guide',h:'/blog/badrinath-yatra-guide'},{l:'Do Dham Package',h:'/do-dham-yatra'},{l:'Online Puja Booking',h:'/online-puja-booking'},{l:'Haridwar to Badrinath Cab',h:'/haridwar-to-badrinath-cab'},{l:'Char Dham Package',h:'/char-dham-yatra'}].map(l=>(
+          {[{l:'Badrinath Yatra Guide',h:'/badrinath-yatra'},{l:'Do Dham Package',h:'/do-dham-yatra'},{l:'Online Puja Booking',h:'/online-puja-booking'},{l:'Haridwar to Badrinath Cab',h:'/haridwar-to-badrinath-cab'},{l:'Char Dham Package',h:'/char-dham-yatra'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
           ))}
         </div>

@@ -264,7 +264,7 @@ export default function RishikeshTourPackages() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
-              ['Char Dham from Rishikesh', '/char-dham-yatra-from-rishikesh'],
+              ['Char Dham from Rishikesh', '/char-dham-yatra-from-delhi'],
               ['Haridwar Tour Packages', '/haridwar-tour-packages'],
               ['Char Dham Yatra 2026', '/char-dham-yatra'],
               ['Kedarnath Yatra', '/kedarnath-yatra'],

@@ -10,8 +10,6 @@ const COLS = [
     {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
     {l:'Senior Special 12N/13D',     h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
     {l:'From Delhi',                 h:'/char-dham-yatra-from-delhi'},
-    {l:'From Rishikesh',             h:'/char-dham-yatra-from-rishikesh'},
-    {l:'From Dehradun',              h:'/char-dham-yatra-from-dehradun'},
     {l:'From Noida',                 h:'/char-dham-yatra-from-noida'},
     {l:'From Mumbai',                h:'/char-dham-yatra-from-mumbai'},
     {l:'From Bangalore',             h:'/char-dham-yatra-from-bangalore'},

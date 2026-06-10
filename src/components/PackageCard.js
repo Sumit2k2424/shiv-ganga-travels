@@ -171,7 +171,7 @@ export default function PackageCard({ pkg }) {
                 display:"flex", alignItems:"center", justifyContent:"center", gap:5,
                 boxShadow:"0 2px 8px rgba(37,211,102,0.3)",
               }}>
-              💬 Get Free Quote
+              💬 Book Now
             </a>
             <Link href={`/packages/${pkg.slug}`}
               style={{
@@ -183,9 +183,6 @@ export default function PackageCard({ pkg }) {
               View Details →
             </Link>
           </div>
-        </div>
-        <div style={{ fontSize:10.5, color:"var(--text-muted)", textAlign:"center", marginTop:2 }}>
-          ⚡ Free quote on WhatsApp · founder replies in minutes · no advance to enquire
         </div>
       </div>
     </article>

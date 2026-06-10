@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Delhi to Haridwar Cab 2026 — Taxi Fare,',
+  title: 'Delhi to Haridwar Cab 2026 — Taxi Fare & Distance',
   description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.',
   keywords: ['delhi to haridwar cab,delhi to haridwar taxi fare,delhi to haridwar distance,cab from delhi to haridwar char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/delhi-to-haridwar-cab` },
