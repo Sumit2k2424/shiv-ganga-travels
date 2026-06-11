@@ -6,6 +6,10 @@ process.env.NEXT_TELEMETRY_DISABLED = '1';
 const nextConfig = {
   staticPageGenerationTimeout: 180,
 
+  // Pin the workspace root to this project so Next.js doesn't pick up a
+  // stray parent-directory lockfile (e.g. C:\Users\sumit\package-lock.json).
+  outputFileTracingRoot: __dirname,
+
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [390, 640, 750, 828, 1080, 1200, 1920],
