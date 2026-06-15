@@ -51,9 +51,22 @@ function discoverDirSlugs(relDir, exclude = []) {
 }
 
 // Auto-discover every "Char Dham Yatra from <city>" landing page so new city
-// pages are indexed the moment they ship — no manual sitemap edits needed.
+// pages are indexed the moment they ship — but never list slugs that are
+// 301-redirected in next.config.js (duplicate-content cleanup). A sitemap must
+// only contain canonical 200 URLs. Keep this set in sync with next.config.js.
+const REDIRECTED_CITIES = new Set([
+  'char-dham-yatra-from-lucknow', 'char-dham-yatra-from-varanasi',
+  'char-dham-yatra-from-jaipur', 'char-dham-yatra-from-ahmedabad',
+  'char-dham-yatra-from-indore', 'char-dham-yatra-from-bhopal',
+  'char-dham-yatra-from-nagpur', 'char-dham-yatra-from-surat',
+  'char-dham-yatra-from-patna', 'char-dham-yatra-from-rishikesh',
+  'char-dham-yatra-from-dehradun',
+]);
+
 function discoverCitySlugs() {
-  return discoverDirSlugs('src/app').filter(s => s.startsWith('char-dham-yatra-from-'));
+  return discoverDirSlugs('src/app')
+    .filter(s => s.startsWith('char-dham-yatra-from-'))
+    .filter(s => !REDIRECTED_CITIES.has(s));
 }
 
 const CITY_PRIORITY = {
@@ -61,9 +74,7 @@ const CITY_PRIORITY = {
   'char-dham-yatra-from-mumbai': 0.85, 'char-dham-yatra-from-bangalore': 0.85,
   'char-dham-yatra-from-hyderabad': 0.83, 'char-dham-yatra-from-chennai': 0.83,
   'char-dham-yatra-from-kolkata': 0.83, 'char-dham-yatra-from-chandigarh': 0.82,
-  'char-dham-yatra-from-pune': 0.82, 'char-dham-yatra-from-jaipur': 0.82,
-  'char-dham-yatra-from-lucknow': 0.82, 'char-dham-yatra-from-ahmedabad': 0.82,
-  'char-dham-yatra-from-dehradun': 0.82, 'char-dham-yatra-from-varanasi': 0.82,
+  'char-dham-yatra-from-pune': 0.82, 'char-dham-yatra-from-haridwar': 0.82,
 };
 const DEFAULT_CITY_P = 0.80;
 

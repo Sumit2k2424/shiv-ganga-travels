@@ -6,6 +6,12 @@ process.env.NEXT_TELEMETRY_DISABLED = '1';
 const nextConfig = {
   staticPageGenerationTimeout: 180,
 
+  // Next.js 16 enables Turbopack by default. An empty turbopack config tells
+  // Next which builder to use and silences the "webpack config + no turbopack
+  // config" build error. The webpack() block below is still honored whenever
+  // the build runs under webpack (e.g. `next build --webpack`).
+  turbopack: {},
+
   // Pin the workspace root to this project so Next.js doesn't pick up a
   // stray parent-directory lockfile (e.g. C:\Users\sumit\package-lock.json).
   outputFileTracingRoot: __dirname,
