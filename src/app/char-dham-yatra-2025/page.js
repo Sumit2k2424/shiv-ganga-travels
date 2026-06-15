@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 export const metadata = {
   title: 'Char Dham Yatra 2026 — Registration & Travel',
   description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹19,500.',
-  keywords: ['Char Dham Yatra 2026','Char Dham Yatra packages 2025','Char Dham opening date 2025','Char Dham Yatra from Haridwar 2025','Char Dham Yatra registration 2025','Char Dham Yatra price 2025','how to do Char Dham Yatra','Char Dham Yatra route'],
+  keywords: ['Char Dham Yatra 2026','Char Dham Yatra packages 2026','Char Dham opening date 2026','Char Dham Yatra from Haridwar 2026','Char Dham Yatra registration 2026','Char Dham Yatra price 2026','how to do Char Dham Yatra','Char Dham Yatra route'],
   robots: { index: false, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
@@ -29,7 +29,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Char Dham Yatra 2026 — Complete Guide, Packages & Prices from Haridwar',
-    description: 'Complete guide to planning Char Dham Yatra 2025 including opening dates, registration, routes, packages and what to carry.',
+    description: 'Complete guide to planning Char Dham Yatra 2026 including opening dates, registration, routes, packages and what to carry.',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     datePublished: '2025-01-15',
@@ -52,7 +52,7 @@ export default function CharDhamGuide2025() {
       {/* Hero */}
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:800, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16, border:'1px solid rgba(232,146,10,0.3)' }}>Complete Guide 2025</span>
+          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16, border:'1px solid rgba(232,146,10,0.3)' }}>Complete Guide 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:16 }}>
             Char Dham Yatra 2026 — Opening Dates, New Rules & Travel Guide
           </h1>
@@ -67,7 +67,7 @@ export default function CharDhamGuide2025() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home
           <span>›</span>
-          <span>Char Dham Yatra 2025</span>
+          <span>Char Dham Yatra 2026</span>
         </div>
       </nav>
 
@@ -76,11 +76,11 @@ export default function CharDhamGuide2025() {
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The <strong>Char Dham Yatra</strong> is one of the most sacred pilgrimages in Hinduism, encompassing four divine shrines nestled in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. Completing this circuit, traditionally done in a clockwise direction starting from Yamunotri, is believed to wash away a lifetime of sins and grant liberation (<em>moksha</em>).</p>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 2025 Char Dham season is open from <strong>May to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹19,500 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 2026 Char Dham season is open from <strong>late April to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹19,500 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
 
         {/* Quick package links */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px 22px', marginBottom:32, border:'1px solid rgba(15,43,91,0.1)' }}>
-          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>📦 Our Char Dham Packages 2025:</div>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>📦 Our Char Dham Packages 2026:</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10 }}>
             {charDhamPkgs.map(p => (
               <Link key={p.slug} href={`/packages/${p.slug}`}
@@ -111,7 +111,7 @@ export default function CharDhamGuide2025() {
           </div>
         ))}
 
-        <h2 style={h2}>Best Time for Char Dham Yatra 2025</h2>
+        <h2 style={h2}>Best Time for Char Dham Yatra 2026</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:20 }}>
           {[
             { season:'Apr 19 – Mid June', rating:'⭐⭐⭐⭐⭐', label:'Peak', color:'#dcfce7', border:'#86efac', tip:'Season open. Temples opened Apr 19-23. May peak — book 60 days ahead.' },
@@ -127,7 +127,7 @@ export default function CharDhamGuide2025() {
           ))}
         </div>
 
-        <h2 style={h2}>Char Dham Yatra 2025 — Registration & Permits</h2>
+        <h2 style={h2}>Char Dham Yatra 2026 — Registration & Permits</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, the Government of Uttarakhand requires <strong>mandatory biometric registration</strong> for all Char Dham pilgrims. This helps manage crowd density at high-altitude temples and enables emergency response. Daily pilgrim limits are enforced, particularly at Kedarnath and Badrinath.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Shiv Ganga Travels handles your registration completely</strong> — just provide a copy of your government ID (Aadhaar/passport), a photo, and your travel dates. We submit the registration and share your Yatra Card 72 hours before departure. Call us at <a href='tel:+917817996730' style={{ color:'var(--navy)', fontWeight:600 }}>+91-7817996730</a>.</p>
 
@@ -142,11 +142,11 @@ export default function CharDhamGuide2025() {
 
         {/* CTA */}
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Plan Your Char Dham Yatra 2025?</h3>
+          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Plan Your Char Dham Yatra 2026?</h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Speak with our yatra experts. Free custom itinerary within 2 hours.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2025.')}`} target="_blank" rel="nofollow noopener noreferrer"
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
             View Packages →
           </div>

@@ -50,7 +50,7 @@ export const CUSTOM_QA = [
   // ── 4. BEST TIME TO VISIT ────────────────────────────────────
   {
     keywords: ['best time','when to visit','season','month','kab','which month','right time','ideal time','temple open','open','close'],
-    answer: `**Best Time for Char Dham Yatra 2025:**\n\n✅ **May – Mid June** *(Peak season)*\nPost-opening, spring blooms, clear mountain skies. Most popular, book early!\n\n✅ **Mid September – October** *(Best season)*\nPost-monsoon, crystal clear Himalayan views, cooler weather, less crowded.\n\n⚠️ **July – August** — Monsoon. Heavy rains, landslide risk. Not recommended.\n\n❌ **November – April** — Temples closed for winter. Priests relocate to valley.\n\n📅 **Temple Opening 2025:**\n• Yamunotri & Gangotri — Akshaya Tritiya (April/May)\n• Kedarnath — 2–3 days after Yamunotri\n• Badrinath — 1–2 weeks after Kedarnath\n\n📅 **Closing:** Bhai Dooj (October/November)`,
+    answer: `**Best Time for Char Dham Yatra 2026:**\n\n✅ **Late April – Mid June** *(Peak season)*\nPost-opening, spring blooms, clear mountain skies. Most popular, book early!\n\n✅ **Mid September – October** *(Best season)*\nPost-monsoon, crystal clear Himalayan views, cooler weather, less crowded.\n\n⚠️ **July – August** — Monsoon. Heavy rains, landslide risk. Not recommended.\n\n❌ **November – April** — Temples closed for winter. Priests relocate to valley.\n\n📅 **Temple Opening 2026:**\n• Yamunotri & Gangotri — 19 April (Akshaya Tritiya)\n• Kedarnath — 22 April\n• Badrinath — 23 April\n\n📅 **Closing:** Bhai Dooj (around October/November)`,
   },
 
   // ── 5. KEDARNATH ─────────────────────────────────────────────

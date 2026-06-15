@@ -30,10 +30,15 @@ const DEFAULT_BLOG_P = 0.80;
 // This keeps the sitemap in sync with /src/app/blog and never lists 404s
 // (empty folders) or redirect-only slugs (which have no page file).
 function discoverBlogSlugs() {
-  const dir = path.join(process.cwd(), 'src/app/blog');
+  return discoverDirSlugs('src/app/blog', ['[slug]']);
+}
+
+// Generic: list immediate sub-route folders that contain a real page file.
+function discoverDirSlugs(relDir, exclude = []) {
+  const dir = path.join(process.cwd(), relDir);
   try {
     return fs.readdirSync(dir, { withFileTypes: true })
-      .filter(d => d.isDirectory() && d.name !== '[slug]')
+      .filter(d => d.isDirectory() && !exclude.includes(d.name))
       .filter(d => {
         try { return fs.readdirSync(path.join(dir, d.name)).some(f => f.startsWith('page.')); }
         catch { return false; }
@@ -45,19 +50,22 @@ function discoverBlogSlugs() {
   }
 }
 
-const CITY_SLUGS = [
-  { slug: 'char-dham-yatra-from-delhi',       p: 0.88 },
-  { slug: 'rishikesh-tour-packages',          p: 0.92 },
-  { slug: 'haridwar-tour-packages',           p: 0.92 },
-  { slug: 'char-dham-yatra-from-mumbai',      p: 0.85 },
-  { slug: 'char-dham-yatra-from-bangalore',   p: 0.85 },
-  { slug: 'char-dham-yatra-from-hyderabad',   p: 0.83 },
-  { slug: 'char-dham-yatra-from-chennai',     p: 0.83 },
-  { slug: 'char-dham-yatra-from-kolkata',     p: 0.83 },
-  { slug: 'char-dham-yatra-from-pune',        p: 0.82 },
-  { slug: 'char-dham-yatra-from-noida',       p: 0.85 },
-  { slug: 'char-dham-yatra-from-chandigarh',  p: 0.82 },
-];
+// Auto-discover every "Char Dham Yatra from <city>" landing page so new city
+// pages are indexed the moment they ship — no manual sitemap edits needed.
+function discoverCitySlugs() {
+  return discoverDirSlugs('src/app').filter(s => s.startsWith('char-dham-yatra-from-'));
+}
+
+const CITY_PRIORITY = {
+  'char-dham-yatra-from-delhi': 0.88, 'char-dham-yatra-from-noida': 0.85,
+  'char-dham-yatra-from-mumbai': 0.85, 'char-dham-yatra-from-bangalore': 0.85,
+  'char-dham-yatra-from-hyderabad': 0.83, 'char-dham-yatra-from-chennai': 0.83,
+  'char-dham-yatra-from-kolkata': 0.83, 'char-dham-yatra-from-chandigarh': 0.82,
+  'char-dham-yatra-from-pune': 0.82, 'char-dham-yatra-from-jaipur': 0.82,
+  'char-dham-yatra-from-lucknow': 0.82, 'char-dham-yatra-from-ahmedabad': 0.82,
+  'char-dham-yatra-from-dehradun': 0.82, 'char-dham-yatra-from-varanasi': 0.82,
+};
+const DEFAULT_CITY_P = 0.80;
 
 export default function sitemap() {
   const now = new Date().toISOString();
@@ -139,7 +147,11 @@ export default function sitemap() {
     })),
   ];
 
-  const cities = CITY_SLUGS.map(({ slug, p }) => ({ url: `${b}/${slug}`, p, cf: 'monthly' }));
+  const cities = discoverCitySlugs().map(slug => ({
+    url: `${b}/${slug}`,
+    p: CITY_PRIORITY[slug] || DEFAULT_CITY_P,
+    cf: 'monthly',
+  }));
 
   const categoryPages = Object.keys(CATEGORIES).map(slug => ({
     url: `${b}/packages/${slug}`, p: 0.90, cf: 'weekly',
@@ -149,10 +161,17 @@ export default function sitemap() {
     url: `${b}/packages/${pkg.slug}`, p: pkg.featured ? 0.88 : 0.80, cf: 'weekly',
   }));
 
+  const authority = [
+    { url: `${b}/best-char-dham-yatra-operators-haridwar`,          p: 0.86, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-statistics`,                       p: 0.78, cf: 'monthly' },
+    { url: `${b}/shiv-ganga-travels-vs-makemytrip-char-dham`,       p: 0.80, cf: 'monthly' },
+    { url: `${b}/direct-operator-vs-travel-aggregator-char-dham`,   p: 0.78, cf: 'monthly' },
+  ];
+
   const all = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...cities,
-    ...categoryPages, ...packagePages,
+    ...authority, ...categoryPages, ...packagePages,
   ];
 
   return all.map(({ url, p, cf }) => ({
