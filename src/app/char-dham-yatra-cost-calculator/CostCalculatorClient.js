@@ -9,7 +9,7 @@ import { SITE } from '@/data/packages';
    Output is an honest range, not false precision. */
 
 const TIERS = {
-  budget:    { label:'Budget',    sub:'Guesthouses · shared Tempo', nights:'9N/10D',  lo:19500, hi:28000 },
+  budget:    { label:'Budget',    sub:'Guesthouses · shared Tempo', nights:'9N/10D',  lo:21000, hi:28000 },
   deluxe:    { label:'Deluxe',    sub:'2–3★ hotels · Innova',       nights:'11N/12D', lo:28000, hi:40000 },
   luxury:    { label:'Luxury',    sub:'Premium hotels · private',   nights:'11N/12D', lo:45000, hi:65000 },
   helicopter:{ label:'Helicopter',sub:'5N/6D · VIP darshan',        nights:'5N/6D',   lo:165000, hi:250000 },
@@ -54,7 +54,7 @@ const SEASON = {
 };
 
 const FAQS = [
-  { q:'How much does the Char Dham Yatra cost per person in 2026?', a:'Per person, a road-based Char Dham Yatra from Haridwar costs roughly ₹19,500–₹28,000 on a budget tier, ₹28,000–₹40,000 deluxe, and ₹45,000–₹65,000 luxury. A full helicopter package runs ₹1.65–2.5 lakh. The exact figure depends on group size, season, start city and add-ons like pony or VIP darshan — which is what this calculator estimates.' },
+  { q:'How much does the Char Dham Yatra cost per person in 2026?', a:'Per person, a road-based Char Dham Yatra from Haridwar costs roughly ₹21,000–₹28,000 on a budget tier, ₹28,000–₹40,000 deluxe, and ₹45,000–₹65,000 luxury. A full helicopter package runs ₹1.65–2.5 lakh. The exact figure depends on group size, season, start city and add-ons like pony or VIP darshan — which is what this calculator estimates.' },
   { q:'Why is the cost shown as a range, not one fixed price?', a:'Because an honest Char Dham quote is a range until your dates and group are confirmed. Hotel rates swing with season, fuel and vehicle cost drop per head as the group grows, and add-ons are optional. A single number on other sites is usually the lowest possible figure shown without the conditions. We show the realistic low–high band, then confirm an exact fixed price on WhatsApp.' },
   { q:'Do larger groups pay less per person?', a:'Yes. Transport and guide costs are shared, so per-head price falls as the group grows. Groups of 4+ save around 4%, 6+ save about 8%, and 12+ save roughly 15% versus a couple. A solo pilgrim pays a small surcharge since nothing is shared — joining a group departure is cheaper.' },
   { q:'Does the season change the price?', a:'It does. May–June is peak and costs about 12% more as hotels and vehicles are in highest demand. September–October is the value window, typically around 5% cheaper, with thinner crowds and clear post-monsoon views. April and November sit in between.' },

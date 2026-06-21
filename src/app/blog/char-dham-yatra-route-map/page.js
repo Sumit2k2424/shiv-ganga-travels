@@ -146,7 +146,7 @@ export default function RouteMap() {
             <div key={item.route} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)' }}>{item.route}</div>
-                <span style={{ fontSize: 11, background: item.condition === 'Good' ? '#EAF3DE' : item.condition === 'Fair-Restricted' ? '#FCEBEB' : '#FFF8F0', color: item.condition === 'Good' ? '#27500A' : item.condition === 'Fair-Restricted' ? '#791F1F' : '#7B3F00', padding: '2px 8px', borderRadius: 20, fontWeight: 700 }}>{item.condition}</span>
+                <span style={{ fontSize: 11, background: item.condition === 'Good' ? '#EAF3DE' : item.condition === 'Fair-Restricted' ? '#FCEBEB' : '#FFF8F0', color: item.condition === 'Good' ? '#30000A' : item.condition === 'Fair-Restricted' ? '#791F1F' : '#7B3F00', padding: '2px 8px', borderRadius: 20, fontWeight: 700 }}>{item.condition}</span>
               </div>
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.7 }}>{item.detail}</div>
             </div>

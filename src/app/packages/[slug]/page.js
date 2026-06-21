@@ -232,8 +232,11 @@ export default async function PackageDetailPage({ params }) {
   const pkg = getPackageBySlug(slug);
   if (!pkg) notFound();
 
-  const savings  = pkg.price.original - pkg.price.discounted;
-  const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
+  const savings  = pkg.price.isRange ? 0 : pkg.price.original - pkg.price.discounted;
+  const isRange  = !!pkg.price.isRange;
+  const priceTxt = isRange
+    ? `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')} – ${pkg.price.currency}${pkg.price.original.toLocaleString('en-IN')}`
+    : `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
   const isYatra  = pkg.category !== 'uttarakhand';
@@ -250,7 +253,7 @@ export default async function PackageDetailPage({ params }) {
     { mode:'Train (Shatabdi/Jan Shatabdi)', time:'4.5–6 hrs', cost:'₹350–₹1,200/person', note:'Fastest budget option. We receive you at Haridwar station and switch to the 9N/10D plan.' },
     { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'From ₹85,000 (5N/6D heli)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
-  const priceTxt = `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
+  const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
   const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
 
   const SH = { fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' };
@@ -280,7 +283,12 @@ export default async function PackageDetailPage({ params }) {
 
       {/* Sticky bar */}
       <div className="sticky-book-bar">
-        <div><span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>from</span><span style={{ fontWeight:800, fontSize:18, color:'var(--navy)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</span></div>
+        <div>
+          <span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>{isRange ? 'range' : 'from'}</span>
+          <span style={{ fontWeight:800, fontSize:isRange?14:18, color:'var(--navy)' }}>
+            {isRange ? `₹${pkg.price.discounted.toLocaleString('en-IN')}–₹${pkg.price.original.toLocaleString('en-IN')}` : `₹${pkg.price.discounted.toLocaleString('en-IN')}`}
+          </span>
+        </div>
         <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
         <a href='tel:+917817996730' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
       </div>
@@ -336,8 +344,8 @@ export default async function PackageDetailPage({ params }) {
             </p>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
               {[
-                { tier:'Budget', range:'₹19,500–₹25,000', perCouple:'₹39,000–₹50,000', vehicle:'Swift Dzire', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
-                { tier:'Deluxe', range:'₹27,500–₹35,000', perCouple:'₹55,000–₹70,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
+                { tier:'Budget', range:'₹21,000', perCouple:'₹42,000', vehicle:'Swift Dzire / Shared', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
+                { tier:'Deluxe', range:'₹30,000', perCouple:'₹60,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
                 { tier:'Premium', range:'₹42,000–₹55,000', perCouple:'₹84,000–₹1,10,000', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
               ].map(t => (
                 <div key={t.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:`2px solid ${t.color}`, position:'relative', overflow:'hidden' }}>
@@ -352,22 +360,22 @@ export default async function PackageDetailPage({ params }) {
               ))}
             </div>
 
-            {/* Vehicle-wise taxi fare table */}
             <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🚗 Vehicle-wise Private Taxi Fare (Full Char Dham Route)</h3>
             <div style={{ overflowX:'auto', marginBottom:8 }}>
               <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
                 <thead><tr style={{ background:'var(--navy)' }}>
-                  {['Vehicle','Capacity','Total Fare','Per Person (4 pax)','Best For'].map(h=>(
+                  {['Vehicle','Capacity','Total Fare','Per Person (4–6 pax)','Best For'].map(h=>(
                     <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
                   ))}
                 </tr></thead>
                 <tbody>
                   {[
-                    ['Swift Dzire','2–3 persons','₹18,000–24,000','~₹10,000','Budget couple/solo'],
-                    ['Ertiga / Maruti','4–5 persons','₹45,000–60,000','~₹12,000','Small family'],
-                    ['Innova Crysta','4–7 persons','₹55,000–75,000','~₹11,000','Most popular choice'],
-                    ['Tempo Traveller 12-seater','8–12 persons','₹90,000–1.2L','~₹9,000','Groups & extended family'],
-                    ['Tempo Traveller 17-seater','13–17 persons','₹1.1L–1.5L','~₹7,500','Large group'],
+                    ['Swift Dzire','2–3 persons','₹28,000–₹30,000','~₹14,000–₹15,000','Budget couple/solo'],
+                    ['Ertiga','4–5 persons','₹36,000–₹38,000','~₹9,000–₹9,500','Small family'],
+                    ['Innova Crysta','4–7 persons','₹50,000–₹55,000','~₹8,000–₹9,000','Most popular choice'],
+                    ['Tempo Traveller 12-seater','8–12 persons','₹65,000–₹70,000','~₹6,000–₹7,000','Groups & extended family'],
+                    ['Tempo Traveller 17-seater','13–17 persons','₹75,000–₹80,000','~₹5,000–₹5,500','Large group'],
+                    ['Tempo Traveller 20-seater','15–20 persons','₹85,000–₹90,000','~₹4,500–₹5,000','Very large group'],
                   ].map(([v,cap,fare,pp,best],i)=>(
                     <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
                       <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
@@ -380,7 +388,10 @@ export default async function PackageDetailPage({ params }) {
                 </tbody>
               </table>
             </div>
-            <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for 2026 season.</p>
+            <div style={{ background:'#FFF8E7', border:'1px solid #E8920A', borderRadius:9, padding:'10px 14px', marginBottom:6, fontSize:13, color:'#7B3F00', lineHeight:1.7 }}>
+              <strong>❄️ AC Policy:</strong> Air conditioning is available as standard in plain areas (Haridwar, Rishikesh, Dehradun). In hilly/mountain areas (above Rishikesh), AC can be availed on request at an additional charge of <strong>₹2,000</strong> for the full hill section.
+            </div>
+            <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for the 2026 season. Contact us for exact quote basis your departure date and group size.</p>
           </section>
 
           {/* Highlights */}
@@ -831,12 +842,22 @@ export default async function PackageDetailPage({ params }) {
         <div style={{ position:'sticky', top:80 }}>
           <div style={{ borderRadius:16, overflow:'hidden', border:'2px solid var(--border)', boxShadow:'var(--shadow-lg)' }}>
             <div style={{ background:'linear-gradient(135deg,var(--navy),var(--navy-mid))', padding:'20px 20px 16px', textAlign:'center' }}>
-              <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12, marginBottom:3 }}>Starting from</p>
-              {savings>0 && <p style={{ color:'rgba(255,255,255,0.4)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>}
-              <p style={{ color:'#fff', fontWeight:800, fontSize:36, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</p>
-              <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
-              <p style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginTop:4 }}>≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
-              {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
+              <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12, marginBottom:3 }}>{isRange ? 'Price range per person' : 'Starting from'}</p>
+              {!isRange && savings>0 && <p style={{ color:'rgba(255,255,255,0.4)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>}
+              {isRange ? (
+                <>
+                  <p style={{ color:'#fff', fontWeight:800, fontSize:28, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')} – ₹{pkg.price.original.toLocaleString('en-IN')}</p>
+                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
+                  <p style={{ color:'#FFD166', fontSize:12.5, fontWeight:600, marginTop:4 }}>Budget · Standard · Deluxe tiers available</p>
+                </>
+              ) : (
+                <>
+                  <p style={{ color:'#fff', fontWeight:800, fontSize:36, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</p>
+                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
+                  <p style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginTop:4 }}>≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
+                  {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
+                </>
+              )}
             </div>
             <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>

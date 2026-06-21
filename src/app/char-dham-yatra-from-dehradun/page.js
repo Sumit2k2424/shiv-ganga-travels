@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra from Dehradun 2026',
-  description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport gateway. Road & helicopter packages from ₹19,500. 54km to Haridwar.',
+  description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport gateway. Road & helicopter packages from ₹21,000. 54km to Haridwar.',
   keywords: [
     'char dham yatra from dehradun', 'char dham yatra package dehradun 2026',
     'dehradun to char dham yatra', 'char dham helicopter dehradun',
@@ -15,7 +15,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-dehradun` },
   openGraph: {
     title: 'Char Dham Yatra from Dehradun 2026 — Road & Helicopter Packages',
-    description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹19,500. Helicopter packages from ₹85,000. Direct operator.',
+    description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹21,000. Helicopter packages from ₹85,000. Direct operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-dehradun`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
@@ -46,7 +46,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the cost of Char Dham Yatra from Dehradun?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Dehradun starts at ₹19,500 per person (road package, 9N/10D from Haridwar with Dehradun pickup). Helicopter package starts at ₹85,000 per person (5N/6D, all 4 dhams from Sahastradhara Helipad). All packages are zero commission — you pay the operator directly.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Dehradun starts at ₹21,000 per person (road package, 9N/10D from Haridwar with Dehradun pickup). Helicopter package starts at ₹85,000 per person (5N/6D, all 4 dhams from Sahastradhara Helipad). All packages are zero commission — you pay the operator directly.' },
       },
       {
         '@type': 'Question',
@@ -81,7 +81,7 @@ const PAA = [
   { q:'How far is Char Dham Yatra from Dehradun?', a:'Dehradun to Haridwar — the gateway to the dhams — is roughly 54 km to Haridwar. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },
   { q:'How do I reach Haridwar from Dehradun?', a:'Dehradun is right at the gateway — only 54 km to Haridwar. From here the road yatra begins almost immediately, via Barkot for Yamunotri.' },
   { q:'How many days are needed for Char Dham Yatra from Dehradun?', a:'Plan 9–11 days for the full road circuit including travel from Dehradun. By helicopter (flying from Dehradun) the on-ground portion drops to 5–6 days. Senior citizens should allow a couple of extra days for acclimatisation.' },
-  { q:'What is the cost of Char Dham Yatra from Dehradun?', a:'Our all-inclusive road packages start from ₹19,500 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
+  { q:'What is the cost of Char Dham Yatra from Dehradun?', a:'Our all-inclusive road packages start from ₹21,000 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
   { q:'What is the best time for Char Dham Yatra from Dehradun?', a:'May–June and September–October, matching the temple season — the 2026 dhams open between April 19 and 23. Book early for these peak windows and avoid the July–August monsoon, when landslides can delay the mountain stretches.' },
   { q:'Is Char Dham Yatra registration mandatory?', a:'Yes. Free biometric registration is compulsory for all four dhams and checked at police barriers like Sonprayag. Register online at registrationandtouristcare.uk.gov.in before travelling — we complete it free for everyone in our packages.' },
 ];
@@ -106,7 +106,7 @@ export default function Page() {
             Char Dham Yatra from Dehradun 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Road packages from <strong style={{ color: '#FFD166' }}>₹19,500</strong> · Helicopter from <strong style={{ color: '#FFD166' }}>₹85,000</strong> · Airport pickup · Zero commission
+            Road packages from <strong style={{ color: '#FFD166' }}>₹21,000</strong> · Helicopter from <strong style={{ color: '#FFD166' }}>₹85,000</strong> · Airport pickup · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
             {['✈️ Jolly Grant Airport pickup', '🚁 Helicopter departs Dehradun', '📍 54km from Haridwar', '⭐ 4.6/5 · 38 reviews'].map(t => (
@@ -143,7 +143,7 @@ export default function Page() {
             ['Dehradun → Haridwar', '54 km · 1.5 hrs'],
             ['Airport → Haridwar', '24 km · 40 min'],
             ['Yatra Duration', '9N/10D (road)'],
-            ['Road Package From', '₹19,500/person'],
+            ['Road Package From', '₹21,000/person'],
             ['Helicopter From', '₹85,000/person'],
             ['Season 2026', 'Apr 19 – Nov'],
           ].map(([k, v]) => (
@@ -164,7 +164,7 @@ export default function Page() {
           {[
             {
               type: '🚗 By Road',
-              price: 'From ₹19,500/person',
+              price: 'From ₹21,000/person',
               duration: '9N/10D',
               desc: 'Our AC vehicle picks you up from Dehradun city or Jolly Grant Airport and drives you to Haridwar (1.5 hrs), where the Char Dham circuit begins. Full circuit — Yamunotri, Gangotri, Kedarnath, Badrinath. Best for pilgrims who want the complete immersive experience.',
               badge: 'Most Popular',
@@ -218,7 +218,7 @@ export default function Page() {
         <h2 style={h2}>Packages from Dehradun 2026</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
-            { name: 'Char Dham Classic (Road)', duration: '9N/10D', price: '₹19,500', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
+            { name: 'Char Dham Classic (Road)', duration: '9N/10D', price: '₹21,000', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
             { name: 'Char Dham by Helicopter', duration: '5N/6D', price: '₹85,000', badge: 'From Dehradun', href: '/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
             { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹27,999', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
             { name: 'Kedarnath Yatra', duration: '3N/4D', price: '₹6,999', badge: 'Single Dham', href: '/kedarnath-yatra' },

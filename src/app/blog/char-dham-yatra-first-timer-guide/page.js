@@ -23,7 +23,7 @@ function Schema() {
       { '@type': 'Question', name: 'Is Char Dham Yatra safe for someone doing it alone?',
         acceptedAnswer: { '@type': 'Answer', text: 'Solo Char Dham Yatra is possible but not recommended for first timers. The mountain roads, Kedarnath trek, altitude effects, and daily pilgrim limits require experience to navigate confidently. Solo pilgrims should travel with an organised group or hire a private guide. Shiv Ganga Travels accepts solo pilgrims and places them in small groups of compatible travellers.' }},
       { '@type': 'Question', name: 'How much should I budget for my first Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹19,500–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹21,000–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -185,7 +185,7 @@ export default function FirstTimerGuide() {
             </tr></thead>
             <tbody>
               {[
-                ['10N/11D Package (Shiv Ganga Travels)','₹19,500','₹24,000','Vehicle, hotel, meals, guide, VIP darshan'],
+                ['10N/11D Package (Shiv Ganga Travels)','₹21,000','₹24,000','Vehicle, hotel, meals, guide, VIP darshan'],
                 ['Pony at Kedarnath (one way)','₹3,000','₹5,000','One way from Gaurikund — optional'],
                 ['Personal pujas at dhams','₹1,000','₹5,000','Prasad, offerings — personal choice'],
                 ['Snacks and personal drinks','₹1,000','₹2,000','Tea stops, packaged food, ORS'],

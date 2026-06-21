@@ -33,7 +33,7 @@ export const metadata = {
     default: `Shiv Ganga Travels — Char Dham Yatra 2026 Haridwar`,
     template: `%s | Shiv Ganga`,
   },
-  description: 'Char Dham Yatra 2026 from Haridwar. Zero commission, direct operator. From ₹19,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims. Founded by Retd. Army Officer.',
+  description: 'Char Dham Yatra 2026 from Haridwar. Zero commission, direct operator. From ₹21,000. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims. Founded by Retd. Army Officer.',
   keywords: [
     'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
     'Kedarnath Yatra package 2026', 'Badrinath Yatra package',
@@ -60,7 +60,7 @@ export const metadata = {
     url: SITE.baseUrl,
     siteName: 'Shiv Ganga Travels',
     title: `Char Dham Yatra 2026 — Shiv Ganga Travels, Haridwar`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹19,500. Zero commission. Direct operator. 50,000+ pilgrims.',
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹21,000. Zero commission. Direct operator. 50,000+ pilgrims.',
     images: [{
       url: '/opengraph-image',
       width: 1200, height: 630,
@@ -71,7 +71,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra 2026`,
-    description: 'Char Dham Yatra 2026 from Haridwar from ₹19,500. Direct operator since 2010. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
+    description: 'Char Dham Yatra 2026 from Haridwar from ₹21,000. Direct operator since 2010. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
   },
 
@@ -81,7 +81,7 @@ export const metadata = {
   // hi-IN hreflang removed — /hi does not exist yet; broken hreflang gets the
   // whole set ignored. Re-add `languages` only when a real /hi section ships.
   other: {
-    'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹19,500 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
+    'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹21,000 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
     'keywords:hi': 'चार धाम यात्रा हरिद्वार, केदारनाथ यात्रा, बद्रीनाथ यात्रा, चार धाम यात्रा पैकेज 2026',
   },
 
@@ -269,7 +269,7 @@ function SiteSchema() {
       '@type': 'OfferCatalog',
       name: 'Char Dham Yatra Packages 2026',
       itemListElement: [
-        { '@type': 'Offer', name: 'Char Dham Yatra Package',      price: '19500', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra` },
+        { '@type': 'Offer', name: 'Char Dham Yatra Package',      price: '21000', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra` },
         { '@type': 'Offer', name: 'Kedarnath Yatra Package',      price: '6499',  priceCurrency: 'INR', url: `${SITE.baseUrl}/kedarnath-yatra` },
         { '@type': 'Offer', name: 'Char Dham Helicopter Package', price: '85000', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-helicopter` },
         { '@type': 'Offer', name: 'Do Dham Yatra Package',        price: '10999', priceCurrency: 'INR', url: `${SITE.baseUrl}/do-dham-yatra` },

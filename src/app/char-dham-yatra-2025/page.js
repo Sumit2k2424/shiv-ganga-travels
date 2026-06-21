@@ -4,7 +4,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata = {
   title: 'Char Dham Yatra 2026 — Registration & Travel',
-  description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹19,500.',
+  description: 'Char Dham Yatra 2026 complete guide. Opening dates, registration, route and packages from Haridwar. Direct operator from ₹21,000.',
   keywords: ['Char Dham Yatra 2026','Char Dham Yatra packages 2026','Char Dham opening date 2026','Char Dham Yatra from Haridwar 2026','Char Dham Yatra registration 2026','Char Dham Yatra price 2026','how to do Char Dham Yatra','Char Dham Yatra route'],
   robots: { index: false, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
@@ -76,7 +76,7 @@ export default function CharDhamGuide2025() {
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The <strong>Char Dham Yatra</strong> is one of the most sacred pilgrimages in Hinduism, encompassing four divine shrines nestled in the Garhwal Himalayas of Uttarakhand — <strong>Yamunotri, Gangotri, Kedarnath,</strong> and <strong>Badrinath</strong>. Completing this circuit, traditionally done in a clockwise direction starting from Yamunotri, is believed to wash away a lifetime of sins and grant liberation (<em>moksha</em>).</p>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 2026 Char Dham season is open from <strong>late April to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹19,500 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 2026 Char Dham season is open from <strong>late April to October</strong>. With Shiv Ganga Travels, you can complete the entire Char Dham Yatra from <strong>₹21,000 per person</strong>, all-inclusive with hotel, meals, private AC vehicle, and expert guide.</p>
 
         {/* Quick package links */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'20px 22px', marginBottom:32, border:'1px solid rgba(15,43,91,0.1)' }}>

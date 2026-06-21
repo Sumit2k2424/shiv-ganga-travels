@@ -52,7 +52,7 @@ export default async function Image() {
           {/* Stats row */}
           <div style={{ display:'flex', gap:'32px' }}>
             {[
-              { num:'₹19,500', label:'Starting price' },
+              { num:'₹21,000', label:'Starting price' },
               { num:'50,000+', label:'Happy pilgrims' },
               { num:'15 Years', label:'Of trust' },
               { num:'4.6/5 ★', label:'Google rating' },

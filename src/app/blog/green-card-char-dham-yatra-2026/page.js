@@ -141,7 +141,7 @@ export default function GreenCard() {
           The Green Card system gives Uttarakhand traffic management real-time visibility into how many vehicles are entering the mountains. During heavy congestion or road closures, the system enables dynamic routing — directing vehicles away from blocked roads before they enter the bottleneck. For pilgrims, this means faster response times during emergencies and fewer "stuck on a mountain road for 24 hours" situations.
         </p>
 
-        <div style={{ background: '#EAF3DE', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#27500A' }}>
+        <div style={{ background: '#EAF3DE', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#30000A' }}>
           <strong>💡 Book a Haridwar-based operator and skip the Green Card entirely:</strong> Our vehicles are registered in Uttarakhand (UK plates) and do not require the Green Card permit. When you book a Char Dham package with Shiv Ganga Travels, your transport is handled in our vehicles — no permit hassle, no checkpost delays, no online applications needed.
         </div>
 

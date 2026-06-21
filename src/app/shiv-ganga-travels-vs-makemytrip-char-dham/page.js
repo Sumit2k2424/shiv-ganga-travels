@@ -4,12 +4,12 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026 — Price, Inclusions & Who Wins',
-  description: 'Shiv Ganga Travels starts from ₹19,500 direct. MakeMyTrip starts from ₹32,479 with commission. Full comparison of price, inclusions, accountability and post-booking support for Char Dham Yatra 2026.',
+  description: 'Shiv Ganga Travels starts from ₹21,000 direct. MakeMyTrip starts from ₹32,479 with commission. Full comparison of price, inclusions, accountability and post-booking support for Char Dham Yatra 2026.',
   keywords: ['shiv ganga travels vs makemytrip char dham','char dham yatra direct booking vs makemytrip','char dham yatra no commission','makemytrip char dham price','char dham yatra hidden charges','book char dham without agent'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham` },
   openGraph: {
     title: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026 — Price & Honest Comparison',
-    description: 'Direct operator at ₹19,500 vs aggregator at ₹32,479. The ₹12,979 gap is the commission layer. Full breakdown.',
+    description: 'Direct operator at ₹21,000 vs aggregator at ₹32,479. The ₹12,979 gap is the commission layer. Full breakdown.',
     url: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026' }],
@@ -35,7 +35,7 @@ function Schema() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Is MakeMyTrip good for Char Dham Yatra?', acceptedAnswer: { '@type': 'Answer', text: 'MakeMyTrip is a marketplace — it connects you with local operators but adds a commission margin of 10–20% to the operator price. Their Char Dham packages start from ₹32,479 as of May 2026. The underlying service (vehicle, hotels, guide) is provided by a third-party operator. If something goes wrong on-route, you deal with MakeMyTrip customer service, not the operator directly. For transparency and direct accountability on a Himalayan route, booking with a local Haridwar operator is generally better.' } },
-      { '@type': 'Question', name: 'How to book Char Dham Yatra without an agent or aggregator?', acceptedAnswer: { '@type': 'Answer', text: 'Book directly with a Haridwar-based operator like Shiv Ganga Travels. Call or WhatsApp +91-7817996730. You get the same vehicles and service without the 10–20% commission markup. Prices start from ₹19,500 per person (9N/10D, all-inclusive). You also get a direct phone number for the operator managing your yatra — not a call centre.' } },
+      { '@type': 'Question', name: 'How to book Char Dham Yatra without an agent or aggregator?', acceptedAnswer: { '@type': 'Answer', text: 'Book directly with a Haridwar-based operator like Shiv Ganga Travels. Call or WhatsApp +91-7817996730. You get the same vehicles and service without the 10–20% commission markup. Prices start from ₹21,000 per person (9N/10D, all-inclusive). You also get a direct phone number for the operator managing your yatra — not a call centre.' } },
       { '@type': 'Question', name: 'What are the hidden charges in Char Dham Yatra packages?', acceptedAnswer: { '@type': 'Answer', text: 'Common hidden charges in aggregator packages include: pony/palki charges at Yamunotri and Kedarnath (₹2,000–8,000), porter charges (₹500–1,500/day), government permit fees, VIP darshan fees (₹500–2,000), and service charges. Shiv Ganga Travels includes all of these in the quoted package price — what you see is what you pay.' } },
     ],
   };
@@ -45,7 +45,7 @@ function Schema() {
     '@type': 'ItemList',
     name: 'Shiv Ganga Travels vs MakeMyTrip — Char Dham Yatra 2026 Comparison',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Shiv Ganga Travels', description: 'Direct operator, Haridwar-based since 2010. From ₹19,500, zero commission.' },
+      { '@type': 'ListItem', position: 1, name: 'Shiv Ganga Travels', description: 'Direct operator, Haridwar-based since 2010. From ₹21,000, zero commission.' },
       { '@type': 'ListItem', position: 2, name: 'MakeMyTrip', description: 'Travel aggregator. Char Dham from ₹32,479. Commission-based marketplace model.' },
     ],
   };
@@ -64,7 +64,7 @@ const h3 = { fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight:
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 const ROWS = [
-  ['Starting price (9N/10D)', '₹19,500', '₹32,479', 'sgt'],
+  ['Starting price (9N/10D)', '₹21,000', '₹32,479', 'sgt'],
   ['Booking model', 'Direct operator', 'Marketplace aggregator', 'sgt'],
   ['Commission layer', 'Zero — you pay the operator', '10–20% added to operator price', 'sgt'],
   ['Based in', 'Haridwar (on-route)', 'Gurugram (off-route)', 'sgt'],
@@ -98,7 +98,7 @@ export default function VsMakeMyTrip() {
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <div style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 12, padding: '12px 20px', textAlign: 'center', minWidth: 150 }}>
-              <div style={{ fontWeight: 800, fontSize: 22, color: '#4ADE80' }}>₹19,500</div>
+              <div style={{ fontWeight: 800, fontSize: 22, color: '#4ADE80' }}>₹21,000</div>
               <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', marginTop: 2 }}>Shiv Ganga Travels · Direct</div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', color: 'rgba(255,255,255,0.4)', fontSize: 24 }}>vs</div>
@@ -166,10 +166,10 @@ export default function VsMakeMyTrip() {
 
         {/* Section 1: Price */}
         <h2 style={h2}>1. Price — Where the ₹12,979 Gap Actually Comes From</h2>
-        <p style={p}>MakeMyTrip&apos;s lowest Char Dham package starts at ₹32,479 per person as of May 2026. Shiv Ganga Travels starts at ₹19,500. That is a ₹12,979 difference on a package where the underlying service — vehicle, hotels, guide, meals — is essentially the same.</p>
+        <p style={p}>MakeMyTrip&apos;s lowest Char Dham package starts at ₹32,479 per person as of May 2026. Shiv Ganga Travels starts at ₹21,000. That is a ₹12,979 difference on a package where the underlying service — vehicle, hotels, guide, meals — is essentially the same.</p>
         <p style={p}>The gap is the commission structure. MakeMyTrip operates as a marketplace: local operators list their packages, and MakeMyTrip adds a margin before showing you the final price. That margin is typically 10–20% depending on the season and the operator. You pay it without knowing. There is no itemised breakdown of what goes to the operator and what goes to the platform.</p>
         <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: 12, padding: '16px 20px', marginBottom: 20 }}>
-          <div style={{ fontWeight: 700, fontSize: 13.5, color: '#15803D', marginBottom: 8 }}>What ₹19,500 covers at Shiv Ganga Travels</div>
+          <div style={{ fontWeight: 700, fontSize: 13.5, color: '#15803D', marginBottom: 8 }}>What ₹21,000 covers at Shiv Ganga Travels</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 8 }}>
             {['✅ AC vehicle (Innova / Tempo Traveller)','✅ Hotels — all 9 nights (twin sharing)','✅ Breakfast + dinner every day','✅ Experienced Garhwali guide throughout','✅ VIP darshan at all 4 dhams','✅ Biometric registration handled — free','✅ Pony/palki charges included','✅ All government tolls and parking','✅ Oxygen cylinder + first aid kit','✅ 24×7 WhatsApp support on-route'].map(item => (
               <div key={item} style={{ fontSize: 13, color: '#15803D', fontWeight: 500 }}>{item}</div>
@@ -234,7 +234,7 @@ export default function VsMakeMyTrip() {
         <h2 style={h2}>Frequently Asked Questions</h2>
         {[
           ['Is MakeMyTrip good for Char Dham Yatra?', 'MakeMyTrip is a marketplace — it connects you with local operators but adds a 10–20% commission margin. Their Char Dham packages start from ₹32,479 as of May 2026. For transparency, direct accountability on a Himalayan route, and lower cost, booking with a local Haridwar operator is generally better.'],
-          ['How to book Char Dham Yatra without an agent?', 'Book directly with a Haridwar-based operator like Shiv Ganga Travels. Call or WhatsApp +91-7817996730. You get the same vehicles and service without the commission markup. Packages from ₹19,500/person all-inclusive.'],
+          ['How to book Char Dham Yatra without an agent?', 'Book directly with a Haridwar-based operator like Shiv Ganga Travels. Call or WhatsApp +91-7817996730. You get the same vehicles and service without the commission markup. Packages from ₹21,000/person all-inclusive.'],
           ['What are hidden charges in Char Dham Yatra?', 'Common hidden charges in aggregator packages include pony/palki at Yamunotri and Kedarnath (₹2,000–8,000), porter charges, government permit fees, VIP darshan fees, and platform service charges. Shiv Ganga Travels includes all of these in the quoted package price.'],
           ['Can I negotiate price with Shiv Ganga Travels?', 'For groups of 6+ or for repeat bookings, we offer group discounts. WhatsApp us your group size and travel dates and we will send you the best rate available for that batch. We do not have dynamic pricing — the price is the same whether you call at 9 AM or 9 PM.'],
         ].map(([q, a], i) => (
@@ -252,7 +252,7 @@ export default function VsMakeMyTrip() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators Haridwar 2026 →</Link>
             <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Direct vs Aggregator Guide →</Link>
-            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>View Packages from ₹19,500 →</Link>
+            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>View Packages from ₹21,000 →</Link>
           </div>
         </div>
 
@@ -260,7 +260,7 @@ export default function VsMakeMyTrip() {
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 36 }}>
           <div style={{ color: '#FFD166', fontWeight: 700, fontSize: 13, marginBottom: 6 }}>Book direct. No commission. No middleman.</div>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Start with a free itinerary — ready in 2 hours</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>₹19,500/person · All-inclusive · Zero commission · You deal with the operator directly</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>₹21,000/person · All-inclusive · Zero commission · You deal with the operator directly</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I was comparing options for Char Dham Yatra 2026 and want to book directly with Shiv Ganga Travels.')}`}
               target="_blank" rel="nofollow noopener noreferrer"

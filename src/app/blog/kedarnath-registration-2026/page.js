@@ -162,7 +162,7 @@ export default function KedarnathRegistration() {
         </p>
 
         <h2 style={h2}>Helicopter Yatra — Special Registration Notes</h2>
-        <div style={{ background: '#EAF3DE', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#27500A' }}>
+        <div style={{ background: '#EAF3DE', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#30000A' }}>
           <strong>Critical — helicopter booking requires registration first:</strong> In 2026, you CANNOT book a Kedarnath helicopter ticket on IRCTC without a Yatra Registration Number. Complete the registration first at registrationandtouristcare.uk.gov.in, get your registration number, then go to heliyatra.irctc.co.in to book the helicopter ticket. Anyone claiming to sell helicopter tickets without this registration is operating a scam.
         </div>
 

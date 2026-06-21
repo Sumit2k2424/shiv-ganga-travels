@@ -33,7 +33,7 @@ function Schema() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the difference between a direct operator and a travel aggregator for Char Dham Yatra?', acceptedAnswer: { '@type': 'Answer', text: 'A direct operator owns and operates the vehicles, employs the guides, and manages the hotels directly. When you call them, you reach the person responsible for your yatra. A travel aggregator (MakeMyTrip, Thrillophilia, Yatra.com) is a marketplace — they list packages from multiple operators, add their commission margin, and act as an intermediary. Your money passes through the platform before reaching the actual operator.' } },
-      { '@type': 'Question', name: 'Is booking Char Dham Yatra directly cheaper than using an aggregator?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, typically by 15–30%. Aggregators add a commission of 10–20% to the operator price before showing it to you. For a ₹19,500 operator price, that translates to ₹22,000–24,000 on an aggregator. For a deluxe ₹30,000 package, you might pay ₹35,000–36,000. Book directly with Shiv Ganga Travels at +91-7817996730 to get the operator price without any markup.' } },
+      { '@type': 'Question', name: 'Is booking Char Dham Yatra directly cheaper than using an aggregator?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, typically by 15–30%. Aggregators add a commission of 10–20% to the operator price before showing it to you. For a ₹21,000 operator price, that translates to ₹22,000–24,000 on an aggregator. For a deluxe ₹30,000 package, you might pay ₹35,000–36,000. Book directly with Shiv Ganga Travels at +91-7817996730 to get the operator price without any markup.' } },
       { '@type': 'Question', name: 'How do I verify if a Char Dham Yatra operator is legitimate?', acceptedAnswer: { '@type': 'Answer', text: 'Check: (1) Uttarakhand Tourism Development Board registration — ask the operator for their registration number and verify at uttarakhandtourism.gov.in. (2) GST registration — legitimate operators invoice with GST. (3) Google Business Profile with genuine reviews — check photo consistency and review patterns. (4) Physical office in Haridwar or Rishikesh — not a Delhi or Mumbai address for a "Haridwar specialist". Shiv Ganga Travels is Uttarakhand Tourism registered and has its office at Saptrishi Road, Haridwar.' } },
     ],
   };
@@ -58,8 +58,8 @@ const FLOW = [
 ];
 
 const DIRECT_FLOW = [
-  { step: '1', who: 'You', action: 'Pay ₹19,500 directly to Shiv Ganga Travels' },
-  { step: '2', who: 'Operator', action: 'Receives full ₹19,500 · Allocates to vehicle, hotels, guide, margins' },
+  { step: '1', who: 'You', action: 'Pay ₹21,000 directly to Shiv Ganga Travels' },
+  { step: '2', who: 'Operator', action: 'Receives full ₹21,000 · Allocates to vehicle, hotels, guide, margins' },
   { step: '3', who: 'Problem arises?', action: 'You call / WhatsApp the operator directly — they respond immediately' },
 ];
 
@@ -207,7 +207,7 @@ export default function DirectVsAggregator() {
         <h2 style={h2}>Frequently Asked Questions</h2>
         {[
           ['What is a direct operator for Char Dham Yatra?', 'A direct operator owns and operates the tour. They have their own vehicles, guides, and hotel relationships. When you book with them, you pay the operator price with no intermediary markup. Shiv Ganga Travels is a direct operator based in Haridwar — not an aggregator, not a Delhi agent.'],
-          ['Is booking Char Dham directly cheaper than using MakeMyTrip?', 'Yes, typically by 15–30%. Aggregators add 10–20% commission. For a ₹19,500 operator price, you pay ₹22,000–24,000 on an aggregator. Direct with Shiv Ganga Travels you pay ₹19,500 and get the same — often better — service.'],
+          ['Is booking Char Dham directly cheaper than using MakeMyTrip?', 'Yes, typically by 15–30%. Aggregators add 10–20% commission. For a ₹21,000 operator price, you pay ₹22,000–24,000 on an aggregator. Direct with Shiv Ganga Travels you pay ₹21,000 and get the same — often better — service.'],
           ['How do I know Shiv Ganga Travels is a legitimate direct operator?', 'We are registered with the Uttarakhand Tourism Development Board. Our office is at Saptrishi Road, Bhupatwala, Haridwar — you can visit. We have 38 verified Google reviews. We issue GST-compliant invoices. Our WhatsApp number (+91-7817996730) is answered by the same people running your yatra.'],
           ['Can I cancel if I book directly with Shiv Ganga Travels?', 'Yes. Our cancellation policy is stated on the website and applies directly. 25% is non-refundable (covers pre-booking costs). 60–90 days notice: 75% refund. 30–60 days: 50%. Less than 30 days: no refund. These terms are clearly communicated at booking — no hidden clauses.'],
         ].map(([q, a], i) => (
@@ -224,13 +224,13 @@ export default function DirectVsAggregator() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
             <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators 2026 →</Link>
-            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book Direct — ₹19,500 →</Link>
+            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book Direct — ₹21,000 →</Link>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 36 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Skip the aggregator. Talk to the operator.</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Direct booking · ₹19,500/person · Zero commission · Haridwar office</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Direct booking · ₹21,000/person · Zero commission · Haridwar office</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 directly — no middleman. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"

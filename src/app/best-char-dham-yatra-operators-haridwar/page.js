@@ -36,7 +36,7 @@ function Schema() {
     numberOfItems: 6,
     itemListOrder: 'https://schema.org/ItemListOrderDescending',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Shiv Ganga Travels', url: 'https://www.shivgangatravels.com', description: 'Direct operator, Haridwar-based since 2010. Army-founded, zero commission. From ₹19,500.' },
+      { '@type': 'ListItem', position: 1, name: 'Shiv Ganga Travels', url: 'https://www.shivgangatravels.com', description: 'Direct operator, Haridwar-based since 2010. Army-founded, zero commission. From ₹21,000.' },
       { '@type': 'ListItem', position: 2, name: 'Travel Vaidya', url: 'https://travelvaidya.com', description: 'Dehradun-based operator. Strong NRI and South India clientele.' },
       { '@type': 'ListItem', position: 3, name: 'MakeMyTrip Char Dham', url: 'https://www.makemytrip.com', description: 'Travel aggregator. Char Dham from ₹32,479. Wide inventory, higher prices.' },
       { '@type': 'ListItem', position: 4, name: 'Thrillophilia', url: 'https://www.thrillophilia.com', description: 'Online aggregator. Listed price from ₹15,500 — verify all-inclusive status before booking.' },
@@ -49,7 +49,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, Uttarakhand Tourism registered, with all-inclusive packages from ₹19,500 per person. Contact: +91-7817996730.' } },
+      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, Uttarakhand Tourism registered, with all-inclusive packages from ₹21,000 per person. Contact: +91-7817996730.' } },
       { '@type': 'Question', name: 'What should I check before booking a Char Dham Yatra operator?', acceptedAnswer: { '@type': 'Answer', text: 'Check: (1) Uttarakhand Tourism registration number. (2) Physical office in Haridwar or Rishikesh. (3) Google reviews — minimum 4.5★, at least 20+ genuine reviews. (4) All-inclusive pricing — pony, VIP darshan, government fees included. (5) Whether they are a direct operator or an aggregator. (6) Senior citizen package availability. (7) 24×7 on-route support.' } },
     ],
   };
@@ -84,7 +84,7 @@ const OPERATORS = [
     base: 'Haridwar, Uttarakhand',
     since: '2010',
     rating: '4.6★ (38 reviews)',
-    startPrice: '₹19,500',
+    startPrice: '₹21,000',
     model: 'Direct operator — zero commission',
     regStatus: '✅ Uttarakhand Tourism registered',
     seniorPkg: '✅ 12N/13D dedicated package',
@@ -313,7 +313,7 @@ export default function BestOperators() {
           ['Who is the best Char Dham Yatra operator from Haridwar?', 'Based on our criteria — Google rating, pricing transparency, years on circuit, Uttarakhand Tourism registration, and senior pilgrim capability — Shiv Ganga Travels ranks first. Note that we wrote this page and have an obvious conflict of interest. The criteria and scoring are published openly — judge for yourself.'],
           ['What should I check before booking any Char Dham operator?', 'Ask for: (1) Uttarakhand Tourism registration number — verify at uttarakhandtourism.gov.in. (2) Physical Haridwar/Rishikesh office address. (3) Whether they are a direct operator or aggregator. (4) All-inclusive pricing breakdown — pony, VIP darshan, government fees. (5) Senior citizen package availability. (6) GST invoice on payment.'],
           ['Is Thrillophilia good for Char Dham Yatra?', 'Thrillophilia is an aggregator, not a direct operator. Their listed price of ₹15,500 is attractive but needs careful scrutiny — check what is excluded. Pony charges (₹2,000–6,000), VIP darshan, and porter fees are often excluded from aggregator headline prices. Compare all-inclusive prices, not headline prices.'],
-          ['What is the cheapest all-inclusive Char Dham package from Haridwar?', 'Shiv Ganga Travels offers the lowest verified all-inclusive price at ₹19,500 per person (9N/10D) — this includes vehicle, hotels, meals, guide, VIP darshan, pony at Kedarnath, government fees and 24×7 support. No hidden charges.'],
+          ['What is the cheapest all-inclusive Char Dham package from Haridwar?', 'Shiv Ganga Travels offers the lowest verified all-inclusive price at ₹21,000 per person (9N/10D) — this includes vehicle, hotels, meals, guide, VIP darshan, pony at Kedarnath, government fees and 24×7 support. No hidden charges.'],
         ].map(([q, a], i) => (
           <details key={i} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
             <summary style={{ padding: '14px 16px', cursor: 'pointer', listStyle: 'none', fontWeight: 600, fontSize: 14.5, color: 'var(--navy)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -328,7 +328,7 @@ export default function BestOperators() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
             <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Direct vs Aggregator Guide →</Link>
-            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book #1 Ranked — ₹19,500 →</Link>
+            <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book #1 Ranked — ₹21,000 →</Link>
           </div>
         </div>
 

@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra from Rishikesh 2026 — Packages',
-  description: 'Char Dham Yatra from Rishikesh 2026. 24km from Haridwar. All-inclusive packages from ₹19,500/person. Direct operator, zero commission.',
+  description: 'Char Dham Yatra from Rishikesh 2026. 24km from Haridwar. All-inclusive packages from ₹21,000/person. Direct operator, zero commission.',
   keywords: [
     'char dham yatra from rishikesh', 'char dham yatra package rishikesh 2026',
     'rishikesh to char dham yatra', 'char dham tour from rishikesh',
@@ -14,7 +14,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-rishikesh` },
   openGraph: {
     title: 'Char Dham Yatra from Rishikesh 2026 — Route, Distance & Packages',
-    description: 'Char Dham Yatra from Rishikesh 2026. Just 24km from Haridwar. Packages from ₹19,500. Direct operator, zero commission. Rishikesh door pickup available.',
+    description: 'Char Dham Yatra from Rishikesh 2026. Just 24km from Haridwar. Packages from ₹21,000. Direct operator, zero commission. Rishikesh door pickup available.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-rishikesh`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Rishikesh — Shiv Ganga Travels' }],
@@ -40,7 +40,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the cost of Char Dham Yatra from Rishikesh?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Rishikesh starts at ₹19,500 per person for a 9N/10D all-inclusive package with Shiv Ganga Travels. This includes AC vehicle, hotels, meals, VIP darshan, and guide from Haridwar onwards. Rishikesh-to-Haridwar pickup can be added at minimal cost.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Rishikesh starts at ₹21,000 per person for a 9N/10D all-inclusive package with Shiv Ganga Travels. This includes AC vehicle, hotels, meals, VIP darshan, and guide from Haridwar onwards. Rishikesh-to-Haridwar pickup can be added at minimal cost.' },
       },
       {
         '@type': 'Question',
@@ -85,7 +85,7 @@ const PAA = [
   { q:'How far is Char Dham Yatra from Rishikesh?', a:'Rishikesh to Haridwar — the gateway to the dhams — is roughly 24 km from Haridwar. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },
   { q:'How do I reach Haridwar from Rishikesh?', a:'Rishikesh is right at the gateway — only 24 km from Haridwar. From here the road yatra begins almost immediately, via Barkot for Yamunotri.' },
   { q:'How many days are needed for Char Dham Yatra from Rishikesh?', a:'Plan 9–11 days for the full road circuit including travel from Rishikesh. By helicopter (flying from Dehradun) the on-ground portion drops to 5–6 days. Senior citizens should allow a couple of extra days for acclimatisation.' },
-  { q:'What is the cost of Char Dham Yatra from Rishikesh?', a:'Our all-inclusive road packages start from ₹19,500 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
+  { q:'What is the cost of Char Dham Yatra from Rishikesh?', a:'Our all-inclusive road packages start from ₹21,000 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
   { q:'What is the best time for Char Dham Yatra from Rishikesh?', a:'May–June and September–October, matching the temple season — the 2026 dhams open between April 19 and 23. Book early for these peak windows and avoid the July–August monsoon, when landslides can delay the mountain stretches.' },
   { q:'Is Char Dham Yatra registration mandatory?', a:'Yes. Free biometric registration is compulsory for all four dhams and checked at police barriers like Sonprayag. Register online at registrationandtouristcare.uk.gov.in before travelling — we complete it free for everyone in our packages.' },
 ];
@@ -110,7 +110,7 @@ export default function Page() {
             Char Dham Yatra Package from Rishikesh 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Yamunotri · Gangotri · Kedarnath · Badrinath — from <strong style={{ color: '#FFD166' }}>₹19,500/person</strong> · Rishikesh pickup · Direct operator · Zero commission
+            Yamunotri · Gangotri · Kedarnath · Badrinath — from <strong style={{ color: '#FFD166' }}>₹21,000/person</strong> · Rishikesh pickup · Direct operator · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
             {['📍 24km from Haridwar', '✅ Zero commission', '🚗 Doorstep pickup', '🙏 9N/10D circuit', '⭐ 4.6/5 · 38 reviews'].map(t => (
@@ -148,7 +148,7 @@ export default function Page() {
             ['Rishikesh → Haridwar', '24 km · 30 min'],
             ['Best Route', 'NH58 via Haridwar'],
             ['Yatra Duration', '9N/10D'],
-            ['Package From', '₹19,500/person'],
+            ['Package From', '₹21,000/person'],
             ['Pickup Available', 'Ram Jhula, ISBT'],
             ['Season 2026', 'Apr 19 – Nov'],
           ].map(([k, v]) => (
@@ -224,7 +224,7 @@ export default function Page() {
         <h2 style={h2}>Char Dham Packages from Rishikesh 2026</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
-            { name: 'Char Dham Classic', duration: '9N/10D', price: '₹19,500', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
+            { name: 'Char Dham Classic', duration: '9N/10D', price: '₹21,000', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
             { name: 'Char Dham Deluxe', duration: '11N/12D', price: '₹45,000', badge: 'Best Value', href: '/packages/char-dham-yatra-11n-12d-haridwar' },
             { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹27,999', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
             { name: 'Char Dham Helicopter', duration: '5N/6D', price: '₹85,000', badge: 'Premium', href: '/char-dham-helicopter' },

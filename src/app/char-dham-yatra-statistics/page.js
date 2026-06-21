@@ -128,7 +128,7 @@ export default function Page() {
           <Stat value="208 days" label="2026 Season Length (Apr 19–Nov 13)" source="Devasthanam Board" />
           <Stat value="3,583 m" label="Kedarnath — Highest Dham" source="Survey of India" />
           <Stat value="18,000/day" label="Kedarnath Daily Pilgrim Cap" source="District Administration" />
-          <Stat value="₹19,500" label="Median Direct-Operator Package Cost" source="2026 booking data" />
+          <Stat value="₹21,000" label="Median Direct-Operator Package Cost" source="2026 booking data" />
         </div>
 
         <h2 style={h2}>1. Pilgrim Demographics & Patterns</h2>
@@ -245,7 +245,7 @@ export default function Page() {
             </thead>
             <tbody>
               {[
-                ['Shiv Ganga Travels (direct)','₹19,500','— (baseline)'],
+                ['Shiv Ganga Travels (direct)','₹21,000','— (baseline)'],
                 ['MakeMyTrip (May 2025)','₹30,337','+55.6%'],
                 ['Thomas Cook (May 2025)','₹28,900','+48.2%'],
                 ['Thrillophilia (May 2025)','₹26,500','+35.9%'],

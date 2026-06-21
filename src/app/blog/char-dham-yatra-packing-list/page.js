@@ -175,7 +175,7 @@ return (
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Char Dham Yatra 2026</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We send a complete personalised packing list 7 days before your departure. ₹19,500 all-inclusive.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We send a complete personalised packing list 7 days before your departure. ₹21,000 all-inclusive.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>

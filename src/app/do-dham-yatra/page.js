@@ -118,7 +118,7 @@ export default function DoDhamYatra() {
         <AnswerBox>
           Do Dham Yatra covers the two Kedarnath–Badrinath shrines in a 5N/6D all-inclusive package
           from ₹10,999 per person — ideal when time is limited. Char Dham adds Yamunotri and Gangotri
-          (9N/10D, from ₹19,500). Choose Do Dham if you have under a week; choose Char Dham to complete
+          (9N/10D, from ₹21,000). Choose Do Dham if you have under a week; choose Char Dham to complete
           the full circuit. Both run late April to November 2026.
         </AnswerBox>
         <p style={p}>Most people searching for "2 dham yatra" or "do dham yatra" are deciding between two options. Here is the honest answer from 15 years of sending pilgrims to the mountains:</p>
@@ -135,7 +135,7 @@ export default function DoDhamYatra() {
                 'You are primarily a Shiva or Vishnu devotee (Kedarnath + Badrinath)',
                 'Your group has seniors who cannot do 2 treks in one trip',
                 'You want the raw Himalayan experience without the extra 4 days',
-                'Budget is tight and ₹10,999 fits better than ₹19,500',
+                'Budget is tight and ₹10,999 fits better than ₹21,000',
               ],
             },
             {

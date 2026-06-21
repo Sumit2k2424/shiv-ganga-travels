@@ -153,7 +153,7 @@ export default function Significance() {
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Plan Your Char Dham Yatra 2026</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>From ₹19,500/person. All-inclusive from Haridwar. 15 seasons, 50,000+ pilgrims. Direct operator.</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>From ₹21,000/person. All-inclusive from Haridwar. 15 seasons, 50,000+ pilgrims. Direct operator.</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book on WhatsApp</a>
