@@ -755,7 +755,32 @@ export default async function PackageDetailPage({ params }) {
           </section>
           )}
 
-          {/* E-E-A-T: Operator credentials — Experience, Expertise, Authority, Trust */}
+          {/* Optional Add-ons — matches competitor upsell, drives internal links + conversions */}
+          {isYatra && (
+          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+            <h2 style={SH}>🧭 Optional Add-ons &amp; Extensions</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
+              Most pilgrims keep to the four dhams, but if you have a spare day and the legs for it, a few detours are well worth folding in. We add these on request — just tell us when you enquire and we will adjust the route and the quote. Each one needs roughly one extra day and is charged at actuals, no markup.
+            </p>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12 }}>
+              {[
+                { t:'Tungnath & Chopta', d:'World\u2019s highest Shiva temple (3,680m) and the meadows of Chopta. A short, rewarding trek near Kedarnath.', href:'/chopta-tungnath', add:'+1 day' },
+                { t:'Mana Village', d:'India\u2019s last village before Tibet — Vyas Gufa, Bhim Pul and the Saraswati\u2019s source, 3 km past Badrinath.', href:'/blog/mana-village-badrinath', add:'half day' },
+                { t:'Triyuginarayan Temple', d:'Where Shiva and Parvati married, with its eternal flame. An easy detour from Sonprayag.', href:'/blog/triyuginarayan-temple', add:'half day' },
+                { t:'Valley of Flowers', d:'UNESCO alpine valley in bloom (Jul\u2013Aug), paired with Hemkund Sahib near Govindghat.', href:'/blog/valley-of-flowers-trek', add:'+2 days' },
+              ].map(a => (
+                <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid var(--border)', display:'block' }}>
+                  <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
+                    <span style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{a.t}</span>
+                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--gold-dark)', background:'#FFF8E7', padding:'2px 8px', borderRadius:100, whiteSpace:'nowrap' }}>{a.add}</span>
+                  </div>
+                  <p style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.6, margin:0 }}>{a.d}</p>
+                  <span style={{ fontSize:12, color:'var(--teal)', fontWeight:600, marginTop:8, display:'inline-block' }}>Read more →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+          )}
           <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:4 }}>
             <h2 style={SH}>🏔️ Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
