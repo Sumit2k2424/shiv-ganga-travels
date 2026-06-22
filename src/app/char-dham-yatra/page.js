@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
+import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
@@ -391,7 +392,7 @@ export default function CharDhamYatra() {
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
-          Our packages start at <strong>₹21,000 per person</strong> (₹39,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. Choose your comfort tier:
+          Our packages start at <strong>₹21,000 per person</strong> (₹42,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. Choose your comfort tier:
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
@@ -441,6 +442,8 @@ export default function CharDhamYatra() {
         </div>
         <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Fares include fuel, toll, parking and driver allowance. All packages are all-inclusive — hotel, meals, guide, registration. Zero commission. No hidden fees.</p>
 
+        <WhyOurPrice />
+
         {/* No hidden charges breakdown — competitor Yatrio ranks heavily on this */}
         <h2 style={h2Style}>No Hidden Charges — What ₹21,000 Includes (and Doesn't)</h2>
         <p style={pStyle}>
@@ -449,7 +452,7 @@ export default function CharDhamYatra() {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:24 }}>
           <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:10 }}>✅ Included in ₹21,000</div>
-            {['AC vehicle (Tempo Traveller / Innova based on group size)','All 9 nights hotel (twin sharing, breakfast + dinner)','Experienced Garhwali guide throughout','VIP darshan at all 4 dhams — no queue','All tolls, parking, fuel, driver allowance','Biometric registration assistance (free)','Oxygen cylinder + first aid kit','24hr WhatsApp support','GST @ 5% (included, not extra)'].map(item => (
+            {['Private vehicle — Tempo Traveller / Innova (AC in plains; +₹2,000 in hills)','All 9 nights hotel (twin sharing, breakfast + dinner)','Experienced Garhwali guide throughout','VIP darshan at all 4 dhams — no queue','All tolls, parking, fuel, driver allowance','Biometric registration assistance (free)','Oxygen cylinder + first aid kit','24hr WhatsApp support','GST @ 5% (included, not extra)'].map(item => (
               <div key={item} style={{ fontSize:13, color:'#334155', padding:'4px 0', borderBottom:'1px solid rgba(21,128,61,0.12)', display:'flex', gap:6 }}>
                 <span style={{ color:'#15803D', fontWeight:700, flexShrink:0 }}>✓</span>{item}
               </div>

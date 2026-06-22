@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
+import WhyOurPrice from '@/components/WhyOurPrice';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
@@ -240,6 +241,7 @@ export default async function PackageDetailPage({ params }) {
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
   const isYatra  = pkg.category !== 'uttarakhand';
+  const isCharDham = pkg.category === 'char-dham';
   const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
   const dham2026 = [
     { dham:'Yamunotri', opens:'19 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
@@ -336,7 +338,8 @@ export default async function PackageDetailPage({ params }) {
             ))}
           </div>
 
-          {/* Budget Tiers — TravelVaidya style */}
+          {/* Budget Tiers + Vehicle Fare — Char Dham full-route packages ONLY */}
+          {isCharDham && (
           <section>
             <h2 style={SH}>Package Pricing — Budget, Deluxe & Premium</h2>
             <p style={{ fontSize:14, color:'var(--text-mid)', marginBottom:16, lineHeight:1.7 }}>
@@ -393,6 +396,9 @@ export default async function PackageDetailPage({ params }) {
             </div>
             <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for the 2026 season. Contact us for exact quote basis your departure date and group size.</p>
           </section>
+          )}
+
+          <WhyOurPrice />
 
           {/* Highlights */}
           <section>
