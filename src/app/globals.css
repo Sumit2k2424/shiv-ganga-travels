@@ -2669,3 +2669,147 @@ img:not([width]):not([height]) {
   .hero-content [style*="sgPulse"],
   .hero-badge-left [style*="sgPulse"] { animation: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM CONSOLIDATION — v2 (authoritative, last-in-cascade)
+   ──────────────────────────────────────────────────────────────
+   This block is the single source of truth for tokens that were
+   previously defined more than once above. It resolves the shadow,
+   radius, focus, shimmer and pkg-card conflicts to ONE canonical
+   value each, and adds the 8px spacing scale + a professional form
+   system that was missing on desktop. Inline styles still win, so
+   nothing already styled per-component changes — this only fixes the
+   system layer and fills gaps.
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── 8px SPACING SCALE — single source of truth ── */
+  --space-0:0; --space-1:4px; --space-2:8px; --space-3:12px;
+  --space-4:16px; --space-5:24px; --space-6:32px; --space-7:40px;
+  --space-8:48px; --space-9:56px; --space-10:64px; --space-12:80px;
+  --space-14:96px; --space-16:128px;
+
+  /* ── CANONICAL RADIUS (8/4px grid) ── */
+  --r-xs:4px; --r-sm:8px; --r:12px; --r-md:12px;
+  --r-lg:16px; --r-xl:20px; --r-2xl:24px; --r-full:9999px;
+
+  /* ── CANONICAL ELEVATION (one consistent shadow ramp) ── */
+  --shadow-xs:0 1px 2px rgba(15,43,91,0.05);
+  --shadow-sm:0 2px 6px rgba(15,43,91,0.08);
+  --shadow:0 4px 12px rgba(15,43,91,0.08);
+  --shadow-md:0 6px 18px rgba(15,43,91,0.10);
+  --shadow-lg:0 12px 32px rgba(15,43,91,0.12);
+  --shadow-xl:0 20px 48px rgba(15,43,91,0.16);
+  --shadow-gold:0 4px 14px rgba(232,146,10,0.35);
+
+  /* ── CANONICAL MOTION (200–300ms, GPU-friendly) ── */
+  --t:0.2s cubic-bezier(0.4,0,0.2,1);
+  --t-out:0.3s cubic-bezier(0.16,1,0.3,1);
+
+  /* ── FOCUS RING (one branded ring, used everywhere) ── */
+  --focus-ring:0 0 0 3px rgba(232,146,10,0.45);
+}
+
+/* ── ONE focus style for the whole site (overrides the 4 earlier,
+      including the mobile teal inconsistency) ── */
+*:focus-visible,
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline:2px solid var(--gold) !important;
+  outline-offset:3px !important;
+  border-radius:var(--r-xs);
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline:none !important;        /* inputs use border + ring glow instead */
+}
+
+/* ── PROFESSIONAL FORM SYSTEM ──────────────────────────────────
+   Applies to native controls that DON'T set these inline. Excludes
+   the dark newsletter field. Inline styles override, so already-
+   designed inputs are untouched; bare desktop inputs get polished. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.newsletter-input):not([type="submit"]):not([type="button"]),
+select:not(.newsletter-input),
+textarea:not(.newsletter-input) {
+  font-family:var(--font);
+  font-size:15px;
+  line-height:1.5;
+  color:var(--text);
+  background:var(--white);
+  border:1.5px solid var(--border-dark);
+  border-radius:var(--r-sm);
+  padding:var(--space-3) var(--space-4);
+  transition:border-color var(--t), box-shadow var(--t), background var(--t);
+  -webkit-appearance:none;
+  appearance:none;
+  max-width:100%;
+}
+textarea:not(.newsletter-input) { line-height:1.65; resize:vertical; min-height:96px; }
+input::placeholder, textarea::placeholder { color:var(--text-muted); opacity:1; }
+
+input:not(.newsletter-input):hover,
+select:not(.newsletter-input):hover,
+textarea:not(.newsletter-input):hover { border-color:var(--navy-mid); }
+
+input:not(.newsletter-input):focus,
+select:not(.newsletter-input):focus,
+textarea:not(.newsletter-input):focus {
+  border-color:var(--gold);
+  box-shadow:var(--focus-ring);
+  background:var(--white);
+}
+/* Error + disabled states for accessible, professional forms */
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border-color:var(--red);
+}
+input[aria-invalid="true"]:focus, textarea[aria-invalid="true"]:focus {
+  box-shadow:0 0 0 3px rgba(220,38,38,0.35);
+}
+input:disabled, select:disabled, textarea:disabled {
+  background:var(--bg); color:var(--text-muted); cursor:not-allowed; opacity:0.7;
+}
+/* Native select caret restored after appearance reset */
+select:not(.newsletter-input) {
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right var(--space-3) center;
+  padding-right:var(--space-7);
+}
+
+/* ── CANONICAL .pkg-card (resolves the two earlier conflicting defs) ── */
+.pkg-card {
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:transform var(--t-out), box-shadow var(--t-out), border-color var(--t);
+  will-change:transform;
+}
+.pkg-card:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-lg);
+  border-color:rgba(15,43,91,0.14);
+}
+
+/* ── BUTTON STATE CONSISTENCY (uniform focus + active across variants) ── */
+.btn, .btn-primary, .btn-navy, .btn-outline, .btn-ghost, .view-all { transition:all var(--t); }
+.btn:focus-visible, .btn-primary:focus-visible, .btn-navy:focus-visible,
+.btn-outline:focus-visible, .btn-ghost:focus-visible {
+  outline:2px solid var(--gold) !important; outline-offset:3px !important;
+}
+.btn:active, .btn-primary:active, .btn-navy:active, .btn-outline:active {
+  transform:translateY(0) scale(0.985);
+}
+
+/* ── ONE shimmer keyframe wins for skeletons (left→right, consistent) ── */
+.skeleton, .img-shimmer { animation:shimmer 1.4s linear infinite; }
+@keyframes shimmer { from { background-position:200% 0; } to { background-position:-200% 0; } }
+
+/* ── Resolve the stray 36px tap-target against the 44px standard ── */
+@media (max-width:768px) {
+  a, button, [role="button"] { min-height:44px; }
+  p a, li a, .inline-link, .chip, .badge, .section-tag, .nav-link, .footer-link {
+    min-height:unset; min-width:unset;
+  }
+}
