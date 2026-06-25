@@ -418,7 +418,7 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <ChatBot/>
-        {/* GA4 — deferred 2s after load so it never competes with LCP/FID */}
+        {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
           window.dataLayer=window.dataLayer||[];
           function gtag(){dataLayer.push(arguments);}
