@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import DoDhamConfigurator from '@/components/DoDhamConfigurator';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
@@ -40,7 +41,30 @@ function Schema() {
       { '@type':'ListItem',position:3,name:'2 Dham Yatra — Kedarnath & Badrinath',item:`${SITE.baseUrl}/do-dham-yatra` },
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+  const trip = {
+    '@context':'https://schema.org','@type':'TouristTrip',
+    name:'Do Dham Yatra 2026 — Kedarnath & Badrinath',
+    description:'5N/6D Do Dham Yatra from Haridwar covering Kedarnath (3,583m) and Badrinath (3,133m) — AC vehicle, hotels, meals, VIP darshan and registration. Direct operator since 2010.',
+    url:`${SITE.baseUrl}/do-dham-yatra`,
+    image:[`${SITE.baseUrl}/opengraph-image`],
+    touristType:['Pilgrims','Families','Senior citizens'],
+    itinerary:{ '@type':'ItemList', itemListElement:[
+      {'@type':'ListItem',position:1,name:'Haridwar → Guptkashi'},
+      {'@type':'ListItem',position:2,name:'Guptkashi → Kedarnath (16 km trek)'},
+      {'@type':'ListItem',position:3,name:'Kedarnath darshan → Rudraprayag'},
+      {'@type':'ListItem',position:4,name:'Rudraprayag → Badrinath'},
+      {'@type':'ListItem',position:5,name:'Badrinath & Mana Village → Joshimath'},
+      {'@type':'ListItem',position:6,name:'Joshimath → Haridwar'},
+    ]},
+    provider:{ '@type':'TravelAgency', name:SITE.name, telephone:SITE.phone, url:SITE.baseUrl, image:`${SITE.baseUrl}/opengraph-image` },
+    offers:[
+      {'@type':'Offer', name:'Do Dham Standard 5N/6D', price:'10999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham Private 5N/6D', price:'14999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham + Helicopter 5N/6D', price:'22999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham Senior Special 6N/7D', price:'13999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+    ],
+  };
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/></>);
 }
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
@@ -217,6 +241,37 @@ export default function DoDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>All prices include AC vehicle, hotel twin sharing, breakfast + dinner, VIP darshan, guide, toll, parking. Kedarnath pony/helicopter extra. 5% GST included. Zero commission.</p>
+
+        <DoDhamConfigurator whatsapp={SITE.whatsapp}/>
+
+        <h3 style={{ fontSize:'1.15rem', fontWeight:700, color:'var(--navy)', marginBottom:10, marginTop:8 }}>How our price compares to the big operators</h3>
+        <p style={p}>
+          The Do Dham listings you'll see from the large national operators are real — but you're paying a brand markup and a chain of middlemen. Here is what the same Kedarnath + Badrinath yatra costs across published 2026 rates, so you can judge for yourself.
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:10 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:480 }}>
+            <thead><tr style={{ background:'var(--navy)' }}>
+              {['Operator','Do Dham 2026 from','Booking'].map(h=>(<th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['Shiv Ganga Travels (us — direct operator)','₹10,999 / person','Direct, zero commission'],
+                ['IRCTC Tourism (ex-Haridwar, NDH27)','₹31,000 / person','Govt portal'],
+                ['IRCTC Tourism (ex-Delhi, NDH26)','₹35,000 / person','Govt portal'],
+                ['Large national OTAs (typical)','₹30,000–48,000 / person','Aggregator'],
+              ].map((r,i)=>(
+                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i===0?'#F0FDF4':(i%2===0?'#fff':'var(--bg)') }}>
+                  <td style={{ padding:'10px 12px', fontWeight:i===0?800:600, color:'var(--navy)' }}>{r[0]}</td>
+                  <td style={{ padding:'10px 12px', fontWeight:800, color:i===0?'#1D9E75':'#475569', fontSize:i===0?15:13.5 }}>{r[1]}</td>
+                  <td style={{ padding:'10px 12px', color:'#64748b', fontSize:13 }}>{r[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
+          Competitor figures are their own published 2026 starting prices. We run this route ourselves from Haridwar since 2010 — same hotels, same temples, same registration handled, without the brand premium. That's the whole difference.
+        </p>
 
         {/* What makes it special */}
         <h2 style={h2}>Why Most Pilgrims Remember Do Dham Longer Than Char Dham</h2>

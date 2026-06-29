@@ -195,7 +195,7 @@ export default function TrekTimings() {
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/blog/kedarnath-pony-palki-rates-2026'], ['VIP Darshan', '/blog/vip-darshan-kedarnath-booking'], ['Kedarnath Registration', '/blog/kedarnath-registration-2026'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
+            {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Registration', '/blog/kedarnath-registration-2026'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

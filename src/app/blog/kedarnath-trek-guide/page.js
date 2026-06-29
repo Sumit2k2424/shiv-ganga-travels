@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import KedarnathTrekProfile from '@/components/KedarnathTrekProfile';
 
 export const metadata = {
   title: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
@@ -140,6 +141,8 @@ export default function KedarnathTrekGuide() {
         {/* ROUTE */}
         <h2 id="route" style={h2}>Kedarnath Trek Route & Distance</h2>
         <p style={p}>The trek covers <strong>16 kilometres one way</strong> from <strong>Gaurikund</strong> (1,982m) to <strong>Kedarnath Temple</strong> (3,583m) — a total elevation gain of roughly 1,600 metres. Most trekkers take 5–7 hours to ascend and 4–5 hours to descend. The trail is well-paved with concrete and stone steps for the majority of the route.</p>
+
+        <KedarnathTrekProfile/>
 
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:12 }}>📍 Trail Waypoints</div>
@@ -338,7 +341,7 @@ export default function KedarnathTrekGuide() {
               { label:'Kedarnath Yatra Package →', href:'/kedarnath-yatra' },
               { label:'Kedarnath Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking' },
               { label:'Kedarnath Registration 2026 →', href:'/blog/kedarnath-registration-2026' },
-              { label:'Pony & Palki Rates 2026 →', href:'/blog/kedarnath-pony-palki-rates-2026' },
+              { label:'Pony & Palki Rates 2026 →', href:'/kedarnath-pony-palki-kandi-rates' },
               { label:'View Kedarnath Package →', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar' },
             ].map(l => (
               <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label}</Link>

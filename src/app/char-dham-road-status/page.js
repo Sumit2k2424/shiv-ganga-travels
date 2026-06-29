@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
 
 const UPDATED = 'June 2026';
 const UPDATED_ISO = '2026-06-01';
@@ -124,6 +125,8 @@ export default function CharDhamRoadStatus() {
       </div>
       <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Status reflects the typical {UPDATED} season picture, not a minute-by-minute feed. Always verify live before travel.</p>
 
+      <CharDhamRoadChecker/>
+
       <h2 style={h2}>Route-by-route road condition</h2>
       {ROUTES.map(r => (
         <div key={r.dham} style={{ marginBottom:18 }}>
@@ -184,6 +187,7 @@ export default function CharDhamRoadStatus() {
             </li>
           ))}
           <li style={{ padding:'8px 0', fontSize:13.5 }}>📞 <strong style={{ color:'var(--navy)' }}>Uttarakhand emergency / disaster helpline: 112 and 1070.</strong> District police control rooms give the fastest read on a live closure.</li>
+          <li style={{ padding:'8px 0', fontSize:13.5 }}>📞 <strong style={{ color:'var(--navy)' }}>Rudraprayag (Kedarnath route) control room: 01364-233727</strong> · State control room: 0135-2722002 — call before moving on a monsoon morning.</li>
         </ul>
       </div>
       <p style={p}>There are also 177 ambulances stationed along the routes and an AIIMS Rishikesh helicopter ambulance for emergencies — useful to know if you're travelling with elderly pilgrims. Honestly, the quickest real-time check we have is calling our own drivers each morning before they roll; if you're booked with us, just ask and we'll tell you exactly what's moving.</p>

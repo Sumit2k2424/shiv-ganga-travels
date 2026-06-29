@@ -84,6 +84,8 @@ const nextConfig = {
       { source: '/blog/char-dham-budget-guide',    destination: '/blog/char-dham-yatra-cost', permanent: true },
       { source: '/blog/kedarnath-yatra-package',   destination: '/kedarnath-yatra',          permanent: true },
       { source: '/blog/kedarnath-yatra-guide',     destination: '/blog/kedarnath-yatra-complete-guide', permanent: true },
+      { source: '/blog/kedarnath-pony-palki-rates-2026', destination: '/kedarnath-pony-palki-kandi-rates', permanent: true },
+      { source: '/blog/vip-darshan-kedarnath-booking', destination: '/kedarnath-vip-darshan', permanent: true },
       { source: '/blog/badrinath-temple-guide',    destination: '/badrinath-temple',         permanent: true },
       { source: '/blog/yamunotri-yatra-guide',     destination: '/yamunotri-yatra',          permanent: true },
       { source: '/blog/gangotri-yatra-guide',      destination: '/gangotri-yatra',           permanent: true },

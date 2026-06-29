@@ -188,7 +188,7 @@ export default function KedarnathRegistration() {
               ['Char Dham Registration', '/blog/char-dham-yatra-registration'],
               ['Kedarnath Yatra Package', '/kedarnath-yatra'],
               ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'],
-              ['Pony & Palki Rates', '/blog/kedarnath-pony-palki-rates-2026'],
+              ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'],
               ['Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
               ['New Rules 2026', '/blog/char-dham-yatra-2026-new-rules'],
             ].map(([l, h]) => (
