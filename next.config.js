@@ -92,6 +92,7 @@ const nextConfig = {
       { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
       { source: '/blog/kedarnath-weather-guide',   destination: '/kedarnath-weather',        permanent: true },
       { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
+      { source: '/char-dham-yatra-checklist',      destination: '/blog/char-dham-yatra-packing-list', permanent: true },
       // ── Duplicate city pages (92% identical content) → main Char Dham page ──
       // Keeps: Delhi, Noida, Mumbai, Bangalore, Chennai, Kolkata, Pune, Hyderabad, Chandigarh
       // Redirects: all other city pages that add no unique value

@@ -256,7 +256,7 @@ export default function KedarnathTourPackage() {
           <li style={{ marginBottom: 8 }}><strong>Health check for 55+.</strong> The state advises a basic fitness check for pilgrims over 55 or anyone with heart, BP, asthma or diabetes conditions. Carry a doctor&apos;s note. This is a high-altitude climb, not a temple visit on the plains.</li>
           <li style={{ marginBottom: 8 }}><strong>Daily darshan caps apply.</strong> Authorities limit numbers each day for safety, so peak-season dates and Kedarnath-night stays fill early. Book ahead.</li>
         </ul>
-        <p style={{ ...p, fontSize: 13.5 }}>More detail: <Link href="/kedarnath-weather" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath weather by month</Link> · <Link href="/char-dham-yatra-checklist" style={{ color: 'var(--teal)', fontWeight: 600 }}>what to pack</Link> · <Link href="/char-dham-yatra-emergency-contacts" style={{ color: 'var(--teal)', fontWeight: 600 }}>emergency contacts</Link>.</p>
+        <p style={{ ...p, fontSize: 13.5 }}>More detail: <Link href="/kedarnath-weather" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath weather by month</Link> · <Link href="/blog/char-dham-yatra-packing-list" style={{ color: 'var(--teal)', fontWeight: 600 }}>what to pack</Link> · <Link href="/char-dham-yatra-emergency-contacts" style={{ color: 'var(--teal)', fontWeight: 600 }}>emergency contacts</Link>.</p>
 
         <h2 style={h2}>Who this package suits (and who should pick a different one)</h2>
         <p style={p}>Honesty sells better than a hard close, so here is the truth about fit.</p>

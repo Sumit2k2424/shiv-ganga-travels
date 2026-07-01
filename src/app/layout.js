@@ -294,6 +294,7 @@ function SiteSchema() {
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
       'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
+      'https://www.tripadvisor.com/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html',
       `https://wa.me/${SITE.whatsapp}`,
       'https://www.shivgangatravels.com',
     ],
