@@ -353,6 +353,7 @@ export default function BadrinathYatraPage() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
+              ['2N/3D Tour Package ₹5,999', '/badrinath-tour-package'],
               ['Char Dham Yatra', '/char-dham-yatra'],
               ['Kedarnath Yatra', '/kedarnath-yatra'],
               ['Do Dham Package', '/do-dham-yatra'],

@@ -4,7 +4,7 @@ import { SITE } from '@/data/packages';
 const COLS = [
   { heading:'Char Dham Packages', links:[
     {l:'Char Dham Yatra 2026',       h:'/char-dham-yatra'},
-    {l:'Char Dham Guide 2026',       h:'/char-dham-yatra'},
+    {l:'Char Dham Guide 2026',       h:'/blog/char-dham-guide'},
     {l:'Classic 9N/10D',             h:'/packages/char-dham-yatra-9n-10d-haridwar'},
     {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
     {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
@@ -16,6 +16,8 @@ const COLS = [
   ]},
   { heading:'Single & Do Dham', links:[
     {l:'Kedarnath Yatra',            h:'/kedarnath-yatra'},
+    {l:'Kedarnath Package 3N/4D',    h:'/kedarnath-tour-package'},
+    {l:'Badrinath Package 2N/3D',    h:'/badrinath-tour-package'},
     {l:'Badrinath Yatra',            h:'/badrinath-yatra'},
     {l:'Gangotri Yatra',             h:'/gangotri-yatra'},
     {l:'Yamunotri Yatra',            h:'/yamunotri-yatra'},

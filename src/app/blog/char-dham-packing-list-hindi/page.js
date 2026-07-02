@@ -4,7 +4,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'चार धाम यात्रा पैकिंग लिस्ट 2026 — क्या ले जाएं, क्या छोड़ें (Print करें)',
+  title: 'चार धाम यात्रा पैकिंग लिस्ट 2026 (हिंदी में)',
   description: 'चार धाम यात्रा के लिए 2026 की पूरी पैकिंग लिस्ट — कपड़े, दवाइयां, जूते और जरूरी दस्तावेज़। इसे प्रिंट करें और घर से निकलने से पहले check करें। हिंदी में।',
   keywords: ['चार धाम यात्रा में क्या ले जाएं', 'char dham yatra packing list hindi', 'चार धाम यात्रा सामान 2026', 'char dham yatra kya le jayen', 'चार धाम यात्रा दवाइयां'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },

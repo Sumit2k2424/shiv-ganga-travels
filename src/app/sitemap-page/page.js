@@ -16,6 +16,8 @@ const sections = [
       { label: 'Char Dham by Helicopter', href: '/char-dham-helicopter' },
       { label: 'Do Dham Yatra', href: '/do-dham-yatra' },
       { label: 'Kedarnath Yatra', href: '/kedarnath-yatra' },
+      { label: 'Kedarnath Tour Package 3N/4D', href: '/kedarnath-tour-package' },
+      { label: 'Badrinath Tour Package 2N/3D', href: '/badrinath-tour-package' },
       { label: 'Gangotri Yatra', href: '/gangotri-yatra' },
       { label: 'Yamunotri Yatra', href: '/yamunotri-yatra' },
       { label: 'Panch Kedar Yatra', href: '/panch-kedar-yatra' },
@@ -74,6 +76,9 @@ const sections = [
   {
     title: 'Planning Tools',
     links: [
+      { label: 'Kedarnath VIP Darshan Guide', href: '/kedarnath-vip-darshan' },
+      { label: 'Kedarnath Pony, Palki & Kandi Rates', href: '/kedarnath-pony-palki-kandi-rates' },
+      { label: 'Char Dham Yatra Scams to Avoid', href: '/char-dham-yatra-scams' },
       { label: 'Char Dham Cost Calculator', href: '/char-dham-yatra-cost-calculator' },
       { label: 'Char Dham Route Map 2026', href: '/char-dham-yatra-route-map' },
     ],

@@ -5,8 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Char Dham Yatra Scam 2026 — Spot & Avoid Booking Fraud',
-  description:
-    'Char Dham Yatra scams 2026: fake helicopter, hotel & registration booking fraud is rising. Spot the red flags, verify any operator in 60 seconds, book safely. Official portals + report steps inside.',
+  description: 'Char Dham Yatra scams 2026: fake helicopter, hotel and registration fraud is rising. Spot the red flags and verify any operator in 60 seconds.',
   keywords: [
     'char dham yatra scam', 'char dham yatra booking scam 2026', 'kedarnath helicopter booking scam',
     'chardham hotel booking scam', 'char dham fake website', 'char dham fraud agent',

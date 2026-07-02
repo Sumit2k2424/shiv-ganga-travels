@@ -173,6 +173,11 @@ export default function sitemap() {
   }));
 
   const authority = [
+    { url: `${b}/kedarnath-tour-package`,                           p: 0.92, cf: 'weekly'  },
+    { url: `${b}/badrinath-tour-package`,                           p: 0.90, cf: 'weekly'  },
+    { url: `${b}/kedarnath-vip-darshan`,                            p: 0.86, cf: 'monthly' },
+    { url: `${b}/kedarnath-pony-palki-kandi-rates`,                 p: 0.86, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-scams`,                            p: 0.82, cf: 'monthly' },
     { url: `${b}/best-char-dham-yatra-operators-haridwar`,          p: 0.86, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-statistics`,                       p: 0.78, cf: 'monthly' },
     { url: `${b}/shiv-ganga-travels-vs-makemytrip-char-dham`,       p: 0.80, cf: 'monthly' },

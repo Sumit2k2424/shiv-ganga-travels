@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Kolkata 2026 — Packages, Routes & Direct Booking',
-  description: 'Char Dham Yatra from Kolkata 2026. 1,500 km · Doon Express 27.5h direct · or 2h flight. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Kolkata pickup, VIP darshan, registration handled free.',
+  title: 'Char Dham Yatra from Kolkata 2026: Packages',
+  description: 'Char Dham Yatra from Kolkata 2026 — packages from ₹24,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
   keywords: ['char dham yatra from kolkata','char dham yatra kolkata 2026','char dham package from kolkata','kedarnath from kolkata','haridwar from kolkata'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-kolkata` },
   openGraph: {

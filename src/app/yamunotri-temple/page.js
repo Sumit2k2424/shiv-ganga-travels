@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Yamunotri Temple 2026 — Timings, Trek, History & Guide',
-  description: 'Complete Yamunotri Temple guide 2026 — darshan timings, 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, altitude 3,291m, opening April 19. First dham of Char Dham.',
+  description: 'Yamunotri Temple guide 2026 — darshan timings, 6 km trek from Janki Chatti, Surya Kund hot spring, Divya Shila and April 19 opening. First of the 4 dhams.',
   keywords: ['yamunotri temple','yamunotri temple timings 2026','yamunotri dham','yamunotri trek','yamunotri opening date 2026','surya kund yamunotri','yamunotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-temple` },
   openGraph: { title: 'Yamunotri Temple 2026 — Trek, Timings, History & Complete Guide', description: 'The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and 2026 opening dates.', url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website' },

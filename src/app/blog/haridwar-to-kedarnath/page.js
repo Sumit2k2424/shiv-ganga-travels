@@ -4,7 +4,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
   title: 'Haridwar to Kedarnath 2026 — Distance, Cab, Bus & Helicopter',
-  description: 'Haridwar to Kedarnath is 228km by road + 16km trek. 2026 guide to every option — cab/taxi fare, bus ticket price, helicopter, train route, map and journey time. Packages from ₹6,499.',
+  description: 'Haridwar to Kedarnath is 228 km by road + 16 km trek. Cab fare, bus ticket price, helicopter, train route and journey time. Packages from ₹6,499.',
   keywords: ['haridwar to kedarnath distance 2026', 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
 };

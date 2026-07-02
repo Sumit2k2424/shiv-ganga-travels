@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Statistics 2026 — Pilgrim Data, Routes, Costs & Trends',
-  description: 'Definitive Char Dham Yatra statistics for 2026 — pilgrim numbers, opening dates, route distances, costs, hotel availability, and operator data. Free to cite with attribution.',
+  title: 'Char Dham Yatra Statistics: Pilgrim Data & Trends',
+  description: 'Char Dham Yatra statistics 2026 — pilgrim numbers, opening dates, route distances, costs and operator data. Free to cite with attribution.',
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', 'char dham statistics 2026', 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
   openGraph: {
@@ -53,7 +53,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra Statistics 2026 — Pilgrim Data, Routes, Costs & Trends',
+    headline: 'Char Dham Yatra Statistics: Pilgrim Data & Trends',
     description: 'Comprehensive operator-verified statistics on the Char Dham Yatra 2026.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-05-26',

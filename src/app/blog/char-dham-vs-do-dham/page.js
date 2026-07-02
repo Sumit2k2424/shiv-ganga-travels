@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham vs Do Dham Yatra 2026 – Which Is Right for You? Honest Comparison',
-  description: 'Char Dham Yatra vs Do Dham — compare time (10 vs 6 days), cost (₹21,000 vs ₹12,500), difficulty, and spiritual significance. Expert guide to help you choose the right pilgrimage in 2026.',
+  title: 'Char Dham vs Do Dham Yatra: Which Suits You?',
+  description: 'Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹12,500), difficulty and significance to pick the right pilgrimage for 2026.',
   keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };

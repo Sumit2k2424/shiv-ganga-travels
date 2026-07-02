@@ -5,12 +5,12 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Complete Guide 2026 – Route, Cost, Registration & Travel Tips',
-  description: 'Complete Char Dham Yatra 2026 planning guide: day-by-day route, total cost breakdown, registration steps, packing list, and expert tips from a 15-year Haridwar operator.',
+  title: 'Char Dham Yatra Guide 2026: Route, Cost & Tips',
+  description: 'Complete Char Dham Yatra 2026 planning guide: day-by-day route, cost breakdown, registration steps and packing tips from a 15-year Haridwar operator.',
   keywords: ['char dham yatra complete guide 2026', 'char dham yatra route map', 'char dham yatra cost 2026', 'char dham yatra registration', 'char dham yatra packing list', 'char dham yatra tips 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-guide` },
   openGraph: {
-    title: 'Char Dham Yatra Complete Guide 2026 – Route, Cost, Registration & Travel Tips',
+    title: 'Char Dham Yatra Guide 2026: Route, Cost & Tips',
     description: 'Everything you need to know before planning your Char Dham Yatra — route, cost, registration, tips.',
     url: `${SITE.baseUrl}/blog/char-dham-guide`,
     type: 'article',

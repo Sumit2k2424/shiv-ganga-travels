@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026 — Price, Inclusions & Who Wins',
-  description: 'Shiv Ganga Travels starts from ₹21,000 direct. MakeMyTrip starts from ₹32,479 with commission. Full comparison of price, inclusions, accountability and post-booking support for Char Dham Yatra 2026.',
+  title: 'Shiv Ganga vs MakeMyTrip: Char Dham Compared',
+  description: 'Shiv Ganga Travels from ₹21,000 direct vs MakeMyTrip from ₹32,479 with commission. Price, inclusions and support compared for Char Dham Yatra 2026.',
   keywords: ['shiv ganga travels vs makemytrip char dham','char dham yatra direct booking vs makemytrip','char dham yatra no commission','makemytrip char dham price','char dham yatra hidden charges','book char dham without agent'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham` },
   openGraph: {
@@ -20,7 +20,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026 — Price, Inclusions & Who Wins',
+    headline: 'Shiv Ganga vs MakeMyTrip: Char Dham Compared',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
     author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },

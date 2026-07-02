@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Pune 2026 — Packages, Routes & Direct Booking',
-  description: 'Char Dham Yatra from Pune 2026. 1,360 km · Pune–Dehradun train (30h) · or fly Delhi + train. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Pune pickup, VIP darshan, registration handled free.',
+  title: 'Char Dham Yatra from Pune 2026: Packages',
+  description: 'Char Dham Yatra from Pune 2026 — packages from ₹24,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
   keywords: ['char dham yatra from pune','char dham yatra pune 2026','char dham package from pune','kedarnath from pune','haridwar from pune'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
   openGraph: {

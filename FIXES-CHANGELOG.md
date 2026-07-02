@@ -61,3 +61,40 @@ to deleted/redirected URLs, no sync `params` remain, no duplicate React keys.
   Reddit/Quora/YouTube off-site mention plan for AI-engine citations.
 - Build a real `/hi` Hindi section (you already have Hindi blog content) and then
   restore the hreflang languages map.
+
+## SEO Audit Round — July 2026
+
+Validated with a full `next build` (all 130+ routes compile; sitemap emits 177 clean URLs).
+
+### Indexing & sitemap
+- Added 5 missing high-value pages to `sitemap.js` (they were live but invisible to
+  Google): `/kedarnath-tour-package`, `/badrinath-tour-package`, `/kedarnath-vip-darshan`,
+  `/kedarnath-pony-palki-kandi-rates`, `/char-dham-yatra-scams`.
+- Deleted 15 dead route folders that had crept back in and were shadowed by 301s
+  (`char-dham-yatra-2025`, 11 redirected city folders, 3 redirected blog stubs).
+
+### SERP display (titles & descriptions)
+- Root layout appends `| Shiv Ganga` to every title. 61 titles ran 66–90 chars
+  *before* the suffix — all rewritten to ~45–55 chars, primary keyword first.
+- Homepage title was double-branded via the template; now `title.absolute`, 64 chars.
+- 68 meta descriptions over 165 chars trimmed to ≤160, keeping price + USP up front.
+- Fixed a truncated OG title on `/blog/best-time-char-dham` ("…Crowd & P").
+
+### Structured data
+- `/char-dham-yatra` emitted a second rated TravelAgency on top of the layout org
+  node → the exact "multiple aggregate ratings" GSC error. Page-level duplicate removed;
+  Product node (with its rating) kept.
+
+### Internal linking
+- Kedarnath hub → 3N/4D package, VIP darshan, pony/palki rates.
+- Badrinath hub → 2N/3D package. Aggregator page → scams guide.
+- Footer: added both tour-package links; fixed duplicate `/char-dham-yatra` href
+  (was a React duplicate-key bug); "Char Dham Guide" now points at the guide post.
+- HTML sitemap page: added the 5 new pages.
+
+### Data consistency & copy
+- llms.txt still claimed ₹19,500 (repriced to ₹21,000 months ago) and quoted the old
+  MakeMyTrip figure — synced to ₹21,000 / ₹32,479 across llms.txt, blogs.json, homepage.
+- Fixed duplicate altitude typo (Nandanvan 4,450 m, not 4,463 m twice).
+- Softened a few AI-sounding lines ("Embark — your blessed journey begins", "most
+  seamless document").

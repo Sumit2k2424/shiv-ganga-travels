@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Places to See in & Around Kedarnath 2026 — Beyond the Temple',
-  description: 'What to see at Kedarnath besides the temple in 2026 — Bhairavnath, Shankaracharya Samadhi, Vasuki Tal, Gandhi Sarovar, Sonprayag, Triyuginarayan and Guptkashi — with how long each takes and whether it is worth it.',
+  description: 'What to see at Kedarnath besides the temple — Bhairavnath, Vasuki Tal, Gandhi Sarovar, Triyuginarayan and Guptkashi, with time needed for each.',
   keywords: ['kedarnath places to see', 'places to visit kedarnath', 'kedarnath sightseeing', 'vasuki tal kedarnath', 'triyuginarayan temple'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-places-to-see` },
   openGraph: { title: 'Places to See in & Around Kedarnath 2026', url: `${SITE.baseUrl}/blog/kedarnath-places-to-see`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Places to See Around Kedarnath' }] },

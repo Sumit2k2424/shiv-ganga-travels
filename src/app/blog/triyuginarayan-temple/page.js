@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Triyuginarayan Temple 2026 – Where Shiva Married Parvati, Route & Darshan Guide',
-  description: 'Complete guide to Triyuginarayan Temple 2026 — where Lord Shiva and Goddess Parvati were married. Located 12km from Sonprayag, darshan timings, how to reach, and best time to visit.',
+  title: 'Triyuginarayan Temple: Where Shiva Wed Parvati',
+  description: 'Triyuginarayan Temple — where Shiva and Parvati were married. 12 km from Sonprayag: darshan timings, how to reach and the best time to visit.',
   keywords: ['triyuginarayan temple 2026', 'triyuginarayan temple kedarnath', 'triyuginarayan shiva parvati wedding', 'triyuginarayan temple guide', 'triyuginarayan yatra', 'sonprayag to triyuginarayan', 'triyuginarayan temple distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },
 };
@@ -17,7 +17,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Triyuginarayan Temple 2026 – Where Shiva Married Parvati, Route & Darshan Guide',
+    headline: 'Triyuginarayan Temple: Where Shiva Wed Parvati',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2024-06-01',

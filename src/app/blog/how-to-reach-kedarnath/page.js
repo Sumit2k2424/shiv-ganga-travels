@@ -4,12 +4,12 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'How to Reach Kedarnath 2026 – By Road, Train, Flight & Helicopter from Major Cities',
-  description: 'Complete guide to reaching Kedarnath in 2026 from Delhi, Mumbai, Bengaluru, and Hyderabad. Nearest railway station, airport, road route to Gaurikund, and helicopter options from Phata.',
+  title: 'How to Reach Kedarnath 2026: Road, Train & Heli',
+  description: 'How to reach Kedarnath in 2026 from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.',
   keywords: ['how to reach kedarnath 2026', 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', 'kedarnath journey guide 2026'],
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },
-  openGraph: { title: 'How to Reach Kedarnath 2026 – By Road, Train, Flight & Helicopter from Major Cities', url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
+  openGraph: { title: 'How to Reach Kedarnath 2026: Road, Train & Heli', url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'How to Reach Kedarnath 2026 — All Routes Explained | Shiv Ganga Travels' }],
 };
 

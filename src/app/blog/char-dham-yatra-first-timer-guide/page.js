@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra for First Timers 2026 – Complete Planning Guide from Start to Finish',
-  description: 'Planning your first Char Dham Yatra in 2026? Everything you need: registration, packing, fitness prep, total cost, route order, do\'s and don\'ts — written by a 15-year Haridwar yatra operator.',
+  title: 'Char Dham Yatra for First Timers: 2026 Guide',
+  description: 'First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.',
   keywords: ['char dham yatra for first timers', 'char dham yatra beginners guide 2026', 'first time char dham yatra tips', 'char dham yatra what to expect', 'char dham yatra complete planning guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-first-timer-guide` },
 };

@@ -5,8 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Kedarnath Tour Package 2026 — 3N/4D from ₹6,999 | Ex-Haridwar',
-  description:
-    'Kedarnath tour package 2026 from Haridwar — 3N/4D from ₹6,999/person. Real day-by-day itinerary, honest cost breakdown, pony & helicopter rates, 2026 registration. 4.6★ (38 reviews). ₹0 to enquire.',
+  description: 'Kedarnath tour package 2026 from Haridwar — 3N/4D from ₹6,999/person. Day-by-day itinerary, pony and helicopter rates. 4.6★ (38 reviews). ₹0 to enquire.',
   keywords: [
     'kedarnath tour package', 'kedarnath yatra package', 'kedarnath tour package 2026',
     'kedarnath package from haridwar', 'kedarnath trip cost', 'kedarnath tour package price',

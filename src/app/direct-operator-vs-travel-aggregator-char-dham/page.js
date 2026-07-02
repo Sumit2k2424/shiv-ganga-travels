@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Direct Operator vs Travel Aggregator — Char Dham Yatra 2026 Booking Guide',
-  description: 'How to book Char Dham Yatra without an agent: direct operators vs aggregators explained. What you pay extra for, who is accountable when things go wrong, and how to find a verified local operator.',
+  title: 'Direct Operator vs Aggregator: Char Dham Booking',
+  description: 'Book Char Dham Yatra without an agent: direct operators vs aggregators — what you pay extra for, who is accountable, and how to verify a local operator.',
   keywords: ['char dham yatra direct operator vs aggregator','how to book char dham yatra without agent','char dham yatra hidden charges','direct booking char dham haridwar','char dham yatra no commission','char dham local operator vs online portal'],
   alternates: { canonical: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham` },
   openGraph: {
@@ -20,7 +20,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Direct Operator vs Travel Aggregator — Char Dham Yatra 2026 Booking Guide',
+    headline: 'Direct Operator vs Aggregator: Char Dham Booking',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
     author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
@@ -224,6 +224,7 @@ export default function DirectVsAggregator() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
             <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators 2026 →</Link>
+            <Link href="/char-dham-yatra-scams" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Yatra Scams to Avoid →</Link>
             <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book Direct — ₹21,000 →</Link>
           </div>
         </div>

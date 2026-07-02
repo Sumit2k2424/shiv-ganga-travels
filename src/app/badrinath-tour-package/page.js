@@ -5,8 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Badrinath Tour Package 2026 — 2N/3D from ₹5,999 | Ex-Haridwar',
-  description:
-    'Badrinath tour package 2026 from Haridwar — 2N/3D from ₹5,999/person, no trek. Real day-by-day itinerary, honest cost breakdown, Mana village & Tapt Kund, 2026 registration. 4.6★ (38 reviews). ₹0 to enquire.',
+  description: 'Badrinath tour package 2026 from Haridwar — 2N/3D from ₹5,999/person, no trek. Day-by-day itinerary, Mana village, Tapt Kund. 4.6★ (38 reviews). ₹0 to enquire.',
   keywords: [
     'badrinath tour package', 'badrinath yatra package', 'badrinath tour package 2026',
     'badrinath package from haridwar', 'badrinath yatra package from haridwar', 'badrinath ek dham yatra',

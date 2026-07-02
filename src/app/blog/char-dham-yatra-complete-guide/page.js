@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Complete Guide 2026 — History, Significance, Route & FAQs',
-  description: 'Everything about Char Dham Yatra 2026: the sacred history of Kedarnath, Badrinath, Gangotri & Yamunotri, their significance, order of visit, nearby places, who should go and why, and 50 expert-answered FAQs.',
+  title: 'Char Dham Yatra 2026: History, Significance & Route',
+  description: 'Everything about Char Dham Yatra 2026: the history of Kedarnath, Badrinath, Gangotri and Yamunotri, order of visit, who should go and expert-answered FAQs.',
   keywords: [
     'char dham yatra complete guide','char dham history','char dham significance','char dham yatra 2026',
     'char dham order of visit','kedarnath history','badrinath significance','gangotri temple history',
@@ -31,7 +31,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra Complete Guide 2026 — History, Significance, Route & FAQs',
+    headline: 'Char Dham Yatra 2026: History, Significance & Route',
     description: 'Comprehensive guide to Char Dham Yatra 2026 covering history, significance, order of visit, nearby attractions and expert FAQs.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-05-21',
@@ -130,7 +130,7 @@ const DHAMS = [
       { name:'Bhagirath Shila', desc:'The rock where King Bhagirath sat in tapas (penance) to persuade Lord Brahma to allow the Ganges to descend to Earth.' },
       { name:'Suryakund', desc:'A deep pool where the river makes a natural swirl — considered sacred for bathing.' },
       { name:'Kedar Tal', desc:'A pristine alpine lake at 4,750 m, 18 km from Gangotri. For serious trekkers — requires 3 days return.' },
-      { name:'Nandanvan & Tapovan', desc:'High-altitude meadows (4,463 m and 4,463 m) beyond Gaumukh with breathtaking views of the Bhagirathi peaks.' },
+      { name:'Nandanvan & Tapovan', desc:'High-altitude meadows (4,450 m and 4,463 m) beyond Gaumukh, with close-up views of the Bhagirathi peaks.' },
     ],
     nearby:[
       { place:'Harsil', dist:'25 km', note:'Exceptionally beautiful Himalayan valley on the banks of the Bhagirathi. Apple orchards, deodar forests, and relative solitude. Also a restricted military area with special access now allowed for tourists.' },

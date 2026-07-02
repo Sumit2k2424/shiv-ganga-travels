@@ -4,11 +4,11 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Group Package 2026 – Price, Discount & Custom Itinerary for 10+ Pilgrims',
-  description: 'Book Char Dham Yatra for groups of 10 or more and save 10–15%. Custom itinerary, dedicated vehicle, group meals included. Packages from ₹17,500 per person. WhatsApp to get a quote.',
+  title: 'Char Dham Group Package 2026: Price & Discounts',
+  description: 'Char Dham Yatra group packages for 10+ pilgrims — save 10–15% with a custom itinerary, dedicated vehicle and group meals. From ₹17,500/person. WhatsApp a quote.',
   keywords: ['char dham yatra group package 2026', 'char dham yatra group booking', 'char dham group package price 2026', 'char dham yatra large group', 'char dham group tour haridwar', 'char dham group discount 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
-  openGraph: { title: 'Char Dham Yatra Group Package 2026 – Price, Discount & Custom Itinerary for 10+ Pilgrims', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
+  openGraph: { title: 'Char Dham Group Package 2026: Price & Discounts', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Group Package 2026 — Book for 10+ Pilgrims | Shiv Ganga Travels' }],
 };
 

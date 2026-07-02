@@ -4,12 +4,12 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Road Conditions 2026 – Route Status, Landslide Zones & Highway Update',
-  description: 'Current Char Dham Yatra 2026 road conditions: all 4 route statuses, known landslide-prone stretches, All-Weather Road project progress, and Joshimath situation — updated regularly.',
+  title: 'Char Dham Road Conditions 2026: Live Route Status',
+  description: 'Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.',
   keywords: ['char dham yatra road condition 2026', 'char dham road status 2026', 'char dham yatra route condition', 'kedarnath route road condition 2026', 'badrinath road condition 2026', 'char dham all weather road update'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026` },
   openGraph: {
-    title: 'Char Dham Yatra Road Conditions 2026 – Route Status, Landslide Zones & Highway Update',
+    title: 'Char Dham Road Conditions 2026: Live Route Status',
     description: 'Current road conditions for all 4 Char Dham routes 2026. Landslide zones, All-Weather Road project status, Joshimath update, and mountain driving tips.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Road Conditions 2026 — Current Status, Landslide Zones | Shiv Ganga Travels' }],

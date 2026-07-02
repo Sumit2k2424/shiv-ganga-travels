@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Registration 2026 – Free e-Pass, Yatra Parchi, Online & Offline Guide',
-  description: 'Char Dham Yatra 2026 registration is FREE. Step-by-step guide: online (registrationandtouristcare.uk.gov.in), WhatsApp, app, and offline. e-Pass download, OTP fixes, daily limits, NRI rules and documents.',
+  title: 'Char Dham Yatra Registration 2026: Free e-Pass Guide',
+  description: 'Char Dham Yatra 2026 registration is free. Step-by-step: online, WhatsApp, app and offline. e-Pass download, OTP fixes, daily limits and NRI rules.',
   keywords: [
     'char dham yatra registration 2026',
     'char dham yatra registration online',
@@ -32,7 +32,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-registration` },
   openGraph: {
-    title: 'Char Dham Yatra Registration 2026 – Free e-Pass, Yatra Parchi, Online & Offline Guide',
+    title: 'Char Dham Yatra Registration 2026: Free e-Pass Guide',
     description: 'Everything about mandatory Char Dham Yatra registration 2026 — e-Pass download, yatra parchi, OTP troubleshooting, NRI rules, documents, daily limits and what to do when the portal is down.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-registration`,
     type: 'article',
@@ -138,7 +138,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'Can I use Voter ID or PAN card instead of Aadhaar for Char Dham registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. While Aadhaar is the preferred and most seamless document, the official portal also accepts Voter ID, PAN card, and Driving Licence for Indian pilgrims. However, Aadhaar is strongly recommended because OTP-based verification with Aadhaar is fastest. Foreign nationals must use their passport. Any valid government-issued photo ID is accepted at offline registration centres.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. While Aadhaar is the preferred document, the official portal also accepts Voter ID, PAN card, and Driving Licence for Indian pilgrims. However, Aadhaar is strongly recommended because OTP-based verification with Aadhaar is fastest. Foreign nationals must use their passport. Any valid government-issued photo ID is accepted at offline registration centres.' },
       },
       {
         '@type': 'Question',

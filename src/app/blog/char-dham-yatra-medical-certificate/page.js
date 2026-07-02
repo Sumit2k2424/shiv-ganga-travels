@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Medical Certificate 2026 – Who Needs It, How to Get It & What Tests',
-  description: 'Char Dham Yatra 2026 medical certificate is mandatory for pilgrims aged 55+. SpO2 below 85% at checkpoints means being turned back. Find out which tests, which doctors, and how to prepare.',
+  title: 'Char Dham Medical Certificate 2026: Who Needs It',
+  description: 'Char Dham Yatra 2026 medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.',
   keywords: ['char dham yatra medical certificate 2026', 'char dham yatra fitness certificate', 'medical certificate kedarnath 2026', 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };

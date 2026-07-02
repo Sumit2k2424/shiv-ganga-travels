@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra with Kids 2026 – Age Tips, Altitude Safety & Family Planning Guide',
-  description: 'Planning Char Dham Yatra with children in 2026? Altitude safety tips for kids, which dhams are child-friendly, what to pack, and how to keep young pilgrims comfortable throughout.',
+  title: 'Char Dham Yatra with Kids: Age & Altitude Safety',
+  description: 'Char Dham Yatra with children in 2026: altitude safety for kids, which dhams are child-friendly, what to pack and keeping young pilgrims comfortable.',
   keywords: ['char dham yatra with kids 2026', 'char dham yatra with children', 'kedarnath yatra with family', 'char dham yatra family package', 'char dham with small children', 'kids char dham yatra altitude safety'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
 };
@@ -17,7 +17,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra with Kids 2026 – Age Tips, Altitude Safety & Family Planning Guide',
+    headline: 'Char Dham Yatra with Kids: Age & Altitude Safety',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2025-01-01',

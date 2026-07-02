@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { CAB_BASES, getCabRoutesByBase } from '@/data/cabRoutes';
 
 export const metadata = {
-  title: 'Uttarakhand Cab & Taxi Service 2026 — Haridwar, Rishikesh, Dehradun',
+  title: 'Uttarakhand Taxi Service: Haridwar & Char Dham',
   description: 'Book cabs from Haridwar, Rishikesh & Dehradun to Kedarnath, Badrinath, Yamunotri, Mussoorie, Auli, Chopta & Nainital. Fixed 2026 fares, hill drivers, AC vehicles.',
   keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', 'char dham taxi 2026', 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },

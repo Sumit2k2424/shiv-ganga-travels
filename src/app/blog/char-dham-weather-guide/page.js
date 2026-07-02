@@ -2,8 +2,8 @@ import GuideArticle, { H2, P, UL, Callout } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Weather 2026 — Month-by-Month Temperatures & What to Expect',
-  description: 'Real month-by-month weather for Yamunotri, Gangotri, Kedarnath and Badrinath in 2026 — temperatures, rain, snow risk and the days we actually recommend booking, from a Haridwar operator.',
+  title: 'Char Dham Yatra Weather 2026: Month-by-Month',
+  description: 'Month-by-month weather for Yamunotri, Gangotri, Kedarnath and Badrinath in 2026 — temperatures, rain, snow risk and the weeks we actually recommend booking.',
   keywords: ['char dham weather 2026', 'char dham yatra weather', 'kedarnath temperature', 'badrinath weather month wise', 'char dham best weather month'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-weather-guide` },
   openGraph: { title: 'Char Dham Yatra Weather 2026 — Month by Month', url: `${SITE.baseUrl}/blog/char-dham-weather-guide`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Weather 2026' }] },

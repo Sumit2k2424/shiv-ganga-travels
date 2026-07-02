@@ -4,12 +4,12 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Types of Char Dham Yatra Packages 2026 – Budget, Deluxe, Luxury & Helicopter Compared',
-  description: 'All types of Char Dham Yatra packages 2026 compared: Budget (₹21,000), Deluxe (₹35,000), Premium (₹55,000), and Helicopter (₹1.8L+). What each includes and which one suits you best.',
+  title: 'Char Dham Package Types: Budget to Helicopter',
+  description: 'Char Dham packages compared: Budget ₹21,000, Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.',
   keywords: ['types of char dham yatra packages 2026', 'char dham yatra package types', 'budget char dham package', 'deluxe char dham package', 'char dham package comparison 2026', 'which char dham package to choose', 'char dham budget vs luxury'],
   alternates: { canonical: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages` },
   openGraph: {
-    title: 'Types of Char Dham Yatra Packages 2026 – Budget, Deluxe, Luxury & Helicopter Compared',
+    title: 'Char Dham Package Types: Budget to Helicopter',
     description: 'Budget ₹21,000 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year operator.',
     url: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Types of Char Dham Yatra Packages 2026 — Budget, Deluxe, Premium & Hel | Shiv Ganga Travels' }],

@@ -31,28 +31,10 @@ export const metadata = {
 };
 
 function Schema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'TravelAgency',
-    name: SITE.name,
-    url: SITE.baseUrl,
-    telephone: SITE.phone,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala',
-      addressLocality: 'Haridwar',
-      addressRegion: 'Uttarakhand',
-      postalCode: '249410',
-      addressCountry: 'IN',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 4.6,
-      reviewCount: 38,
-      bestRating: 5,
-    },
-  };
-
+  // The full TravelAgency organization node (with its single sitewide
+  // aggregateRating) is emitted once in layout.js. Emitting a second rated
+  // TravelAgency here triggered Google's "multiple aggregate ratings" error,
+  // so this page only carries the Product node below.
   const product = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -87,7 +69,6 @@ function Schema() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>

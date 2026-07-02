@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Chandigarh 2026 — Packages, Routes & Direct Booking',
-  description: 'Char Dham Yatra from Chandigarh 2026. 290 km · 5h road · 4h train · closest major city. All-inclusive packages from ₹21,499/person. Direct Haridwar operator — zero commission. Chandigarh pickup, VIP darshan, registration handled free.',
+  title: 'Char Dham Yatra from Chandigarh 2026: Packages',
+  description: 'Char Dham Yatra from Chandigarh 2026 — packages from ₹21,499/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
   keywords: ['char dham yatra from chandigarh','char dham yatra chandigarh 2026','char dham package from chandigarh','kedarnath from chandigarh','haridwar from chandigarh'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },
   openGraph: {

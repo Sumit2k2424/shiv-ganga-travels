@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Noida 2026 — Packages, Routes & Direct Booking',
-  description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹22,999/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registration handled free.',
+  title: 'Char Dham Yatra from Noida 2026: Packages',
+  description: 'Char Dham Yatra from Noida 2026 — packages from ₹22,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
   keywords: ['char dham yatra from noida','char dham yatra noida 2026','char dham package from noida','kedarnath from noida','haridwar from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {

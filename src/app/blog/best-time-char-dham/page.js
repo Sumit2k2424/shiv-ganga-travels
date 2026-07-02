@@ -4,19 +4,19 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
-  description: 'When is the best time for Char Dham Yatra 2026? May and Sept–Oct are ideal. Month-by-month weather, opening & closing dates, crowd levels, and honest advice from a Haridwar operator.',
+  title: 'Best Time for Char Dham Yatra 2026: Month by Month',
+  description: 'When is the best time for Char Dham Yatra 2026? May and Sept–Oct are ideal. Month-by-month weather, opening dates and crowd levels from a Haridwar operator.',
   keywords: ['best time for char dham yatra', 'char dham yatra best month 2026', 'char dham yatra weather month wise', 'char dham opening dates 2026', 'char dham yatra season', 'best month char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/best-time-char-dham` },
   openGraph: {
-    title: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
+    title: 'Best Time for Char Dham Yatra 2026: Month by Month',
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
     url: `${SITE.baseUrl}/blog/best-time-char-dham`, type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & P | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Best Time for Char Dham Yatra 2026: Month by Month | Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, Crowd & P',
+    title: 'Best Time for Char Dham Yatra 2026: Month by Month',
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
     images: [{ url: '/opengraph-image', alt: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, | Shiv Ganga Travels' }],
   },
@@ -44,7 +44,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Best Time for Char Dham Yatra 2026 – Month-by-Month Weather & Opening Dates',
+    headline: 'Best Time for Char Dham Yatra 2026: Month by Month',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2025-01-01',

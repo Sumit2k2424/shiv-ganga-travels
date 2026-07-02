@@ -33,7 +33,7 @@ export const metadata = {
     default: `Shiv Ganga Travels — Char Dham Yatra 2026 Haridwar`,
     template: `%s | Shiv Ganga`,
   },
-  description: 'Char Dham Yatra 2026 from Haridwar. Zero commission, direct operator. From ₹21,000. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims. Founded by Retd. Army Officer.',
+  description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹21,000. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims since 2010.',
   keywords: [
     'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
     'Kedarnath Yatra package 2026', 'Badrinath Yatra package',

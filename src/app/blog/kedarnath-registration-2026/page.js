@@ -4,12 +4,12 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Yatra Registration 2026 – Online Process, Documents & WhatsApp Registration',
-  description: 'Step-by-step Kedarnath Yatra registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents needed, daily pilgrim limits, and 55+ age rules explained.',
+  title: 'Kedarnath Registration 2026: Online & WhatsApp',
+  description: 'Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.',
   keywords: ['kedarnath yatra registration 2026', 'kedarnath registration 2026', 'kedarnath yatra registration online', 'kedarnath registration process', 'kedarnath yatra biometric', 'kedarnath registration documents'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-registration-2026` },
   openGraph: {
-    title: 'Kedarnath Yatra Registration 2026 – Online Process, Documents & WhatsApp Registration',
+    title: 'Kedarnath Registration 2026: Online & WhatsApp',
     description: 'Mandatory registration for Kedarnath 2026. Step-by-step online guide, WhatsApp option, daily 18,000 pilgrim cap. Free e-pass with QR code. Portal opened March 6.',
     url: `${SITE.baseUrl}/blog/kedarnath-registration-2026`,
     type: 'article',

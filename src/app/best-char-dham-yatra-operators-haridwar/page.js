@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: '6 Best Char Dham Yatra Operators from Haridwar 2026 — Compared & Ranked',
-  description: 'Ranked comparison of the best Char Dham Yatra operators from Haridwar 2026. Criteria: Google rating, years of operation, pricing transparency, Uttarakhand registration, on-ground presence.',
+  title: '6 Best Char Dham Yatra Operators in Haridwar (2026)',
+  description: 'Ranked comparison of the best Char Dham Yatra operators from Haridwar 2026 — Google rating, years running, pricing transparency and Uttarakhand registration.',
   keywords: ['best char dham yatra operators haridwar 2026','best char dham operator haridwar review','top char dham yatra operators 2026','char dham yatra haridwar operator comparison','best char dham package operator'],
   alternates: { canonical: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar` },
   openGraph: {
@@ -20,7 +20,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '6 Best Char Dham Yatra Operators from Haridwar 2026 — Compared & Ranked',
+    headline: '6 Best Char Dham Yatra Operators in Haridwar (2026)',
     datePublished: '2026-05-21', dateModified: '2026-05-21',
     author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },

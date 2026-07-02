@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra in October 2026 – Weather, Crowds, Closing Dates & Is It Worth It?',
-  description: 'Is October a good time for Char Dham Yatra? Fewer crowds, cheaper hotels, clear skies — but cold nights and temple closing dates to plan around. Complete October 2026 guide with honest advice.',
+  title: 'Char Dham Yatra in October: Weather, Crowds & Dates',
+  description: 'Is October good for Char Dham Yatra? Fewer crowds, cheaper hotels and clear skies — but cold nights and closing dates to plan around. October 2026 guide.',
   keywords: ['char dham yatra in october 2026', 'kedarnath yatra october', 'char dham yatra october weather', 'char dham october closing dates', 'char dham off season october', 'best time char dham october'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
 };
@@ -17,7 +17,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra in October 2026 – Weather, Crowds, Closing Dates & Is It Worth It?',
+    headline: 'Char Dham Yatra in October: Weather, Crowds & Dates',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2025-01-01',

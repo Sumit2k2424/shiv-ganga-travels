@@ -5,12 +5,12 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathTrekProfile from '@/components/KedarnathTrekProfile';
 
 export const metadata = {
-  title: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
+  title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
   description: 'Complete Kedarnath trek guide 2026: 16km route from Gaurikund, difficulty, stay options at Kedarnath, best time to visit, pony vs helicopter, and what to pack.',
   keywords: ['kedarnath trek guide 2026','kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips','kedarnath yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
   openGraph: {
-    title: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
+    title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
     description: 'Complete Kedarnath trek guide — 16km route from Gaurikund, difficulty, stay options, best time to visit, and what to carry.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     type: 'article',
@@ -18,7 +18,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
+    title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
     description: 'Complete Kedarnath trek guide — 16km route, difficulty, stay options, best time to visit, and what to carry.',
     images: [{ url: '/opengraph-image', alt: 'Kedarnath Trek Guide 2026 | Shiv Ganga Travels' }],
   },
@@ -37,7 +37,7 @@ const faqData = [
 function Schema() {
   const article = {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
-    headline: 'Kedarnath Trek Guide 2026 – 16 KM Route, Stay Options & Best Time to Visit',
+    headline: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
     description: 'Complete guide to the Kedarnath trek from Gaurikund — distance, difficulty, stay options, best time to visit, pony and helicopter options.',
     author: {
         '@type': 'Person',

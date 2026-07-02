@@ -4,7 +4,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'बुजुर्गों के लिए चार धाम यात्रा 2026 — घोड़ा, पालकी और हेलिकॉप्टर गाइड',
+  title: 'बुजुर्गों के लिए चार धाम यात्रा 2026: पूरी गाइड',
   description: '60-80 साल के बुजुर्ग भी आराम से कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर विकल्प, मेडिकल सर्टिफिकेट, और Special Senior Package ₹24,500 — सब हिंदी में।',
   keywords: ['बुजुर्गों के लिए चार धाम यात्रा 2026', 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },

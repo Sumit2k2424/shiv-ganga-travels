@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Heart Patients 2026 – Altitude Risk, Safer Routes & Helicopter Options',
-  description: 'Can heart patients do Char Dham Yatra? Yes, with precautions. Altitude risk per dham, mandatory medical certificate, safer alternatives, and helicopter options for cardiac pilgrims in 2026.',
+  title: 'Char Dham Yatra for Heart Patients: Safe Routes',
+  description: 'Can heart patients do Char Dham Yatra? Yes, with precautions. Altitude risk per dham, medical certificate rules and helicopter options for 2026.',
   keywords: ['char dham yatra for heart patients', 'char dham yatra medical conditions 2026', 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', 'char dham medical certificate 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
 };
@@ -17,7 +17,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra for Heart Patients 2026 – Altitude Risk, Safer Routes & Helicopter Options',
+    headline: 'Char Dham Yatra for Heart Patients: Safe Routes',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2025-01-01',

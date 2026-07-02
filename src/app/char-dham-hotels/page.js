@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: 'Char Dham Yatra Hotels 2026 | Where to Stay at Every Stop',
-  description: 'Char Dham Yatra hotels 2026 — where to stay at Barkot, Uttarkashi, Guptkashi, Badrinath & Haridwar. Honest price bands, comfort ratings and booking tips for every stop.',
+  description: 'Char Dham Yatra hotels 2026 — where to stay at Barkot, Uttarkashi, Guptkashi, Badrinath and Haridwar. Honest price bands and booking tips.',
   keywords: ['char dham hotels','char dham yatra hotels','where to stay char dham yatra','barkot hotels','uttarkashi hotels','guptkashi hotels','badrinath hotels','char dham accommodation 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-hotels` },
   openGraph: {

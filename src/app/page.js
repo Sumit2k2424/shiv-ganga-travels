@@ -13,7 +13,7 @@ const CounterStat = dynamic(() => import('@/components/CounterStat'), {
 });
 
 export const metadata = {
-  title: `Shiv Ganga Travels — Char Dham Yatra Packages 2026 from Haridwar | Est. 2010`,
+  title: { absolute: `Char Dham Yatra 2026 Packages from Haridwar — Shiv Ganga Travels` },
   description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹21,000. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
@@ -479,7 +479,7 @@ export default function HomePage() {
 
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(220px,100%),1fr))', gap:12, marginBottom:24 }}>
             {[
-              { source:'MakeMyTrip', price:'₹30,337', type:'Online Travel Agent', badge:'Commission included', badgeBg:'#DC2626', detail:'Aggregator markup + platform fee + agent commission' },
+              { source:'MakeMyTrip', price:'₹32,479', type:'Online Travel Agent', badge:'Commission included', badgeBg:'#DC2626', detail:'Aggregator markup + platform fee + agent commission' },
               { source:'Thrillophilia', price:'₹24,000+', type:'Activity Aggregator', badge:'Upto 20% commission', badgeBg:'#DC2626', detail:'Their "15% off" is off their inflated base price' },
               { source:'Local Agent', price:'₹22,000+', type:'Travel Agent', badge:'Hidden markup', badgeBg:'#B45309', detail:'Agent earns ₹2,000–4,000 per booking from your payment' },
               { source:'Shiv Ganga Travels', price:'₹21,000', type:'Direct Operator', badge:'Zero commission', badgeBg:'#15803D', detail:'You pay the operator directly — no one takes a cut', highlight:true },
@@ -689,7 +689,7 @@ export default function HomePage() {
               {n:'01', icon:'💬', t:'Enquire',     d:'Call or WhatsApp us. Tell us your dates and group size.'},
               {n:'02', icon:'📋', t:'Customise',   d:'Review the itinerary. We adjust to your preferences.'},
               {n:'03', icon:'💳', t:'Confirm',     d:'Pay 25% advance. Receive complete kit & registration.'},
-              {n:'04', icon:'🙏', t:'Embark',      d:'Pickup at Haridwar. Your blessed journey begins.'},
+              {n:'04', icon:'🙏', t:'Depart',      d:'Pickup at Haridwar, and you are on the road.'},
             ].map((s,i,a)=>(
               <div key={s.n} style={{ position:'relative', textAlign:'center', padding:'0 8px' }}>
                 {i < a.length-1 && (

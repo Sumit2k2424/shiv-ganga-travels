@@ -4,11 +4,11 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Road Trip 2026 – Distance, Route, Drive Time & Best Stops',
-  description: 'Haridwar to Kedarnath road trip guide 2026: 250km route, 7–8 hour drive via Devprayag, Rudraprayag, and Guptkashi. Road tips, fuel stations, and best overnight stops along the way.',
+  title: 'Haridwar to Kedarnath Road Trip: Route & Stops',
+  description: 'Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.',
   keywords: ['haridwar to kedarnath road trip 2026', 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
-  openGraph: { title: 'Haridwar to Kedarnath Road Trip 2026 – Distance, Route, Drive Time & Best Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
+  openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Haridwar to Kedarnath Distance, Route & Road Trip Guide 2026 | Shiv Ganga Travels' }],
 };
 
