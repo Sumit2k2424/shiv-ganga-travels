@@ -5,7 +5,10 @@ import { SITE } from '@/data/packages';
  * BlogAuthor — E-E-A-T author byline for all blog posts
  * variant: 'top' (compact, above article) | 'bottom' (full bio card, after article)
  */
-export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
+export default function BlogAuthor({ variant = 'top', author = 'sumit', article = null }) {
+  // article: { slug, title, description, datePublished, dateModified } — when
+  // provided on the 'top' variant, emits BlogPosting JSON-LD so every post gets
+  // Article rich-result eligibility + clear freshness signals for AI crawlers.
 
   const authors = {
     sumit: {
@@ -40,7 +43,30 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
   const a = authors[author] || authors.sumit;
 
   if (variant === 'top') {
+    const posting = article && article.slug && article.title ? {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': `${SITE.baseUrl}/blog/${article.slug}#article`,
+      headline: article.title,
+      description: article.description || undefined,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/${article.slug}` },
+      url: `${SITE.baseUrl}/blog/${article.slug}`,
+      image: [`${SITE.baseUrl}/opengraph-image`],
+      inLanguage: article.lang || 'en-IN',
+      datePublished: article.datePublished || '2025-08-15',
+      dateModified: article.dateModified || '2026-06-20',
+      author: {
+        '@type': 'Person',
+        name: a.name,
+        jobTitle: a.role,
+        url: a.linkedin || SITE.baseUrl,
+        worksFor: { '@id': `${SITE.baseUrl}/#organization` },
+      },
+      publisher: { '@id': `${SITE.baseUrl}/#organization` },
+    } : null;
     return (
+      <>
+      {posting && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }}/>}
       <div style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderBottom:'1px solid var(--border)', marginBottom:24 }}>
         <div style={{ width:40, height:40, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:14, color:'#FFD166' }}>
           {a.initials}
@@ -69,6 +95,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit' }) {
           <Link href="/about" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>About us →</Link>
         </div>
       </div>
+      </>
     );
   }
 

@@ -142,7 +142,7 @@ export default function PlacesToVisit() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "places-to-visit-during-char-dham-yatra", "title": "Top 10 Places to Visit on Char Dham Yatra 2026", "description": "Best places to visit during Char Dham Yatra 2026 beyond the temples: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta and Lakhamandal.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels — 15 seasons on this route
         </div>

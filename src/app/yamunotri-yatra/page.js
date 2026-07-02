@@ -4,14 +4,14 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: 'Yamunotri Yatra 2026 — Trek, Package, Surya',
-  description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
+  description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
   keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
-  openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
+  openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide',
-    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,499 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
+    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
     images: [{ url: '/opengraph-image', alt: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels' }],
   },
 };
@@ -45,7 +45,7 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function Page() {
@@ -113,7 +113,7 @@ export default function Page() {
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 2N/3D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
             </div>
-            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹5,499</div>
+            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹5,999</div>
           </Link>
         </div>
 

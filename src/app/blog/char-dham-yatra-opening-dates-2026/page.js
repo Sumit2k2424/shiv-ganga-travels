@@ -83,7 +83,7 @@ export default function OpeningDates() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-opening-dates-2026", "title": "Char Dham Yatra Opening Dates 2026: All 4 Dhams", "description": "Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Officially verified</div>
 
         {/* Quick dates card */}

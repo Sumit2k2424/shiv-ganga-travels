@@ -58,7 +58,7 @@ export default function GroupPackage() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-group-package", "title": "Char Dham Group Package 2026: Price & Discounts", "description": "Char Dham Yatra group packages for 10+ pilgrims — save 10–15% with a custom itinerary, dedicated vehicle and group meals. From ₹17,500/person. WhatsApp a quote.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

@@ -109,7 +109,7 @@ export default function PackageTypes() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹21,000, Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>

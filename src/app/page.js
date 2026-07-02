@@ -226,7 +226,7 @@ export default function HomePage() {
                 emoji:'🕌', title:'Kedarnath Yatra',
                 desc:'3 nights 4 days — Lord Shiva\'s abode at 3,583m',
                 tag:'Fastest booking', tagColor:'var(--teal)', tagBg:'#E6F7F9',
-                from:'₹6,499', href:'/kedarnath-yatra',
+                from:'₹6,999', href:'/kedarnath-yatra',
                 accent:'var(--teal)',
               },
               {
@@ -441,7 +441,7 @@ export default function HomePage() {
               { label:'👴 Senior Special',      sub:'14N/15D — pony included', href:'/packages/char-dham-yatra-senior-citizen-14n-15d',  bg:'linear-gradient(130deg,#1A0E3B 0%,#4C3A9E 100%)' },
               { label:'🏔️ Char Dham Classic',  sub:'9N/10D from ₹21,000',  href:'/packages/char-dham-yatra-10n-11d-haridwar',         bg:'linear-gradient(130deg,#0B2C44 0%,#E8920A 100%)' },
               { label:'🕌 Kedarnath–Badrinath', sub:'Best value — ₹10,999', href:'/packages/kedarnath-badrinath-do-dham-5n-6d',         bg:'linear-gradient(130deg,#09274F 0%,#0B7B8B 100%)' },
-              { label:'🌊 Yamunotri–Gangotri',  sub:'4N/5D — ₹8,999',       href:'/packages/yamunotri-gangotri-do-dham-4n-5d',          bg:'linear-gradient(130deg,#0B2C44 0%,#15803D 100%)' },
+              { label:'🌊 Yamunotri–Gangotri',  sub:'4N/5D — ₹9,499',       href:'/packages/yamunotri-gangotri-do-dham-4n-5d',          bg:'linear-gradient(130deg,#0B2C44 0%,#15803D 100%)' },
             ].map(b => (
               <Link key={b.href} href={b.href}
                 style={{
@@ -812,7 +812,7 @@ export default function HomePage() {
               {[
                 { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹21,000', href:'/char-dham-yatra' },
                 { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
-                { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,499', href:'/kedarnath-yatra' },
+                { img:'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,999', href:'/kedarnath-yatra' },
                 { img:'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/badrinath-yatra' },
                 { img:'https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Gangotri Yatra', desc:'2N/3D · From ₹5,299', href:'/gangotri-yatra' },
                 { img:'https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=800', title:'Yamunotri Yatra', desc:'2N/3D · From ₹5,499', href:'/yamunotri-yatra' },

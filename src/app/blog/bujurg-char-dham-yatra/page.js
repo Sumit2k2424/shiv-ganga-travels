@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'बुजुर्गों के लिए चार धाम यात्रा 2026: पूरी गाइड',
-  description: '60-80 साल के बुजुर्ग भी आराम से कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर विकल्प, मेडिकल सर्टिफिकेट, और Special Senior Package ₹24,500 — सब हिंदी में।',
+  description: '60-80 साल के बुजुर्ग भी आराम से कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर विकल्प, मेडिकल सर्टिफिकेट, और Special Senior Package ₹27,999 — सब हिंदी में।',
   keywords: ['बुजुर्गों के लिए चार धाम यात्रा 2026', 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },
   openGraph: { title: 'बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है? — 12 जरूरी बातें', description: '60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर — सब जानकारी।', url: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra`, type: 'article' },
@@ -120,7 +120,7 @@ export default function BujurgCharDham() {
 
         <h2 style={h2}>शिव गंगा ट्रेवल्स — Senior Citizen Special Package</h2>
         <div style={{ background: 'rgba(29,158,117,0.06)', borderRadius: 14, padding: '20px 24px', border: '1px solid #9FE1CB', marginBottom: 28 }}>
-          <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹24,500 प्रति व्यक्ति</div>
+          <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹27,999 प्रति व्यक्ति</div>
           <div style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>12 रात / 13 दिन (अतिरिक्त दिन — थकान के लिए)</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8 }}>
             {['केदारनाथ + यमुनोत्री में घोड़ा शुल्क शामिल','Ground Floor कमरे की प्राथमिकता','पालकी सेवा (जरूरत पड़ने पर)','हर गाड़ी में ऑक्सीजन + First Aid','VIP दर्शन — लाइन में नहीं खड़ा होना','शुद्ध सात्विक भोजन (Jain option)','24/7 WhatsApp support','ऑक्सीजन + First Aid हर वाहन में'].map(f => (

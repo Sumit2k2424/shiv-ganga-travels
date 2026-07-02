@@ -77,7 +77,7 @@ export default function KedarnathRegistration() {
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-registration-2026", "title": "Kedarnath Registration 2026: Online & WhatsApp", "description": "Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 2026
         </div>

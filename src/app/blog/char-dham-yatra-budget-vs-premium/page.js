@@ -64,7 +64,7 @@ export default function BudgetVsPremium() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹21,000) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

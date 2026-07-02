@@ -70,7 +70,7 @@ export default function SevenDaysBlog() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-7-days", "title": "Char Dham Yatra in 7 Days: Itinerary & Honest Advice", "description": "Can you finish Char Dham Yatra in 7 days? Yes, with the right plan. Day-by-day itinerary, what to skip and honest advice for pilgrims short on time in 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Verdict box */}

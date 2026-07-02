@@ -3,9 +3,10 @@ import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
+import GoogleReviews from '@/components/GoogleReviews';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar',
+  title: 'Char Dham Yatra Package 2026 from Haridwar ₹21,000',
   description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹21,000/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
@@ -379,7 +380,7 @@ export default function CharDhamYatra() {
           {[
             { tier:'Budget', range:'Rs.21,000', couple:'Rs.42,000', duration:'9N/10D', vehicle:'Swift Dzire', hotel:'Standard lodges', best:'Solo, young pilgrims' },
             { tier:'Deluxe', range:'Rs.30,000', couple:'Rs.60,000', duration:'11N/12D', vehicle:'Innova Crysta', hotel:'2-3 star hotels', best:'Families, seniors' },
-            { tier:'Senior Special', range:'Rs.24,500-Rs.28,000', couple:'Rs.49,000-Rs.56,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
+            { tier:'Senior Special', range:'Rs.27,999-Rs.32,000', couple:'Rs.56,000-Rs.64,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
             { tier:'Helicopter', range:'Rs.85,000-Rs.95,000', couple:'Rs.1,70,000-Rs.1,90,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
           ].map(p => (
             <div key={p.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
@@ -409,6 +410,8 @@ export default function CharDhamYatra() {
                 ['Innova Crysta','4-7 persons','Rs.55,000-75,000','~Rs.11,000','Most popular'],
                 ['Tempo Traveller 12-seater','8-12 persons','Rs.90,000-1.2L','~Rs.9,000','Groups'],
                 ['Tempo Traveller 17-seater','13-17 persons','Rs.1.1L-1.5L','~Rs.7,500','Large group'],
+                ['Force Urbania 13-17 seater','13-17 persons','Rs.1.0L-1.4L','~Rs.8,000','Comfort groups'],
+                ['27-seater Bus','20-27 persons','Rs.1.6L-2.1L','~Rs.6,500','Society/temple groups'],
               ].map(([v,cap,fare,pp,best],i)=>(
                 <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
@@ -461,6 +464,8 @@ export default function CharDhamYatra() {
             { name:'Auli Skiing/Sightseeing', type:'Scenic', detail:'India\'s premier skiing destination at 2,519m, just 16km from Joshimath. Best in Feb–March for skiing; year-round for Himalayan views and the Auli Gondola (Asia\'s highest cable car). Add to Badrinath day.' },
             { name:'Hemkund Sahib', type:'Sacred (Sikh)', detail:'Sacred Sikh gurudwara at 4,632m — the highest gurudwara in the world. Near Govindghat (Badrinath route). Adds 1 day: 14km trek round trip from Ghangaria. Many Hindu pilgrims visit alongside the Char Dham.' },
             { name:'Valley of Flowers', type:'UNESCO', detail:'UNESCO World Heritage Site near Joshimath. Open July–September only (monsoon flowers). 3km trek from Ghangaria. Combine with Hemkund Sahib for a 2-day Joshimath side trip.' },
+            { name:'Mana Village', type:'Included Free', detail:'India\'s last village, 3km past Badrinath — Vyas Gufa, Bhim Pul and the Saraswati river. We include it in every Badrinath day at no extra cost. Most operators quietly skip it; ask your driver and he will take you.' },
+            { name:'Triyuginarayan Temple', type:'Sacred', detail:'Where Shiva and Parvati were married — the eternal flame from that wedding still burns. 12km detour from Sonprayag on the Kedarnath leg. Adds half a day and roughly ₹1,500 in vehicle cost. Worth it if weddings run in the family.' },
           ].map(item => (
             <div key={item.name} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:6 }}>
@@ -537,6 +542,7 @@ export default function CharDhamYatra() {
         </div>
 
         <h2 style={h2Style}>Why Choose Shiv Ganga Travels?</h2>
+        <p style={pStyle}>Most Char Dham "operators" you find online are booking desks in Delhi or Lucknow. They take your money, forward your yatra to whichever Haridwar driver has a free vehicle that week, and hope nothing goes wrong. We are the Haridwar driver. Our office is near Shantikunj Gate No. 1 — walk in and check before you pay a rupee. Our drivers have crossed Rudraprayag more times than they can count, our hotel owners in Barkot and Guptkashi hold rooms for us in peak May because we have filled them every season since 2010, and when your father calls at 10 pm from Joshimath because the altitude is bothering him, the phone is answered by someone who knows exactly which chemist is still open there.</p>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { icon:'🙏', point:'50,000+ pilgrims served since 2010' },
@@ -554,6 +560,10 @@ export default function CharDhamYatra() {
             </li>
           ))}
         </ul>
+
+        <h2 style={h2Style}>What Pilgrims Who Travelled With Us Say</h2>
+        <p style={pStyle}>These are real Google reviews — the full set (all 38) is on our Google Maps listing, unedited, including the critical ones.</p>
+        <div style={{ marginBottom:28 }}><GoogleReviews/></div>
 
         <h2 style={h2Style}>Frequently Asked Questions</h2>
         <FAQAccordion faqs={GLOBAL_FAQS}/>

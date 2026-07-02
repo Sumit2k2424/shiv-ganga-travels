@@ -71,7 +71,7 @@ export default function FirstTimerGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-first-timer-guide", "title": "Char Dham Yatra for First Timers: 2026 Guide", "description": "First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>📋 What this guide covers</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:6 }}>

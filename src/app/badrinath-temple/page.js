@@ -18,6 +18,7 @@ const PAA = [
   { q:'Where is Badrinath Temple located?', a:'In Chamoli district of Uttarakhand, on the bank of the Alaknanda river between the Nar and Narayan peaks, at about 3,133 m altitude. It\'s fully motorable — no trek required.' },
   { q:'Why is Badrinath Temple famous?', a:'Dedicated to Lord Vishnu, it\'s the most important of the four Char Dham shrines and one of the 108 Divya Desams. Tradition credits Adi Shankaracharya with establishing the temple in the 8th century.' },
   { q:'What are the Badrinath darshan timings?', a:'Roughly 4:30 AM to 1:00 PM and 4:00 PM to 9:00 PM during the season, with the morning Maha Abhishek aarti at 4:30 AM and Shayan aarti around 8:30–9:00 PM. Verify on the day, as festival timings vary.' },
+  { q:'How much does the Badrinath Maha Abhishek puja cost in 2026?', a:'The Maha Abhishek (booked online at badrinath-kedarnath.gov.in) costs ₹4,700 per person for the 4:30–6:30 AM slot and effectively works as priority darshan. Other BKTC pujas run ₹1,100–₹5,100 — Ved Path and Geet Govind recitation are popular. Bookings are non-refundable and non-transferable, so lock your travel dates before paying. We handle the booking free for package guests.' },
   { q:'When does Badrinath Temple open in 2026?', a:'April 23, 2026, at 6:15 AM (Brahma Muhurta). It stays open until roughly mid-November before closing for winter.' },
   { q:'What is Tapt Kund at Badrinath?', a:'A natural hot-water spring just below the temple, around 45–55°C. Pilgrims traditionally bathe here before darshan — it\'s believed to be purifying, and warms the body in the cold mountain air.' },
 ];
@@ -25,7 +26,7 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function BadrinathTemple() {

@@ -148,7 +148,7 @@ export default function KedarnathPehliBaar() {
         <BlogCTA variant="inline" intent="kedarnath" />
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>हमारे साथ केदारनाथ जाएं — ₹6,499 से</h3>
+          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>हमारे साथ केदारनाथ जाएं — ₹6,999 से</h3>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 8 }}>✅ VIP दर्शन शामिल · ✅ अनुभवी पहाड़ी ड्राइवर · ✅ 24/7 WhatsApp support</p>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>3 रात / 4 दिन · रजिस्ट्रेशन हम करते हैं · ऑक्सीजन + First Aid हर गाड़ी में</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>

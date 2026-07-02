@@ -98,3 +98,56 @@ Validated with a full `next build` (all 130+ routes compile; sitemap emits 177 c
 - Fixed duplicate altitude typo (Nandanvan 4,450 m, not 4,463 m twice).
 - Softened a few AI-sounding lines ("Embark — your blessed journey begins", "most
   seamless document").
+
+## GEO / AI-Citability Round — July 2, 2026
+
+Goal: make the site the source LLMs (ChatGPT, Claude, Perplexity, Google AI
+Overviews) quote for Char Dham queries. Validated with a full build (193 pages).
+
+### Price consistency (LLMs punish contradictions hardest)
+Site quoted 3 different prices for the same package depending on the page.
+Canonical prices reconciled everywhere (pages, FAQ schema, chatbot, llms.txt,
+blogs.json): Kedarnath 3N/4D ₹6,999 · Badrinath 2N/3D ₹5,999 (data file updated
+to match both landing pages) · Do Dham ₹10,999 · Yamunotri ₹5,999 · Gangotri
+₹5,699 · Yam+Gan Do Dham ₹9,499 · Senior 12N/13D ₹27,999 · Chopta ₹8,499 ·
+Nainital circuit ₹13,499 · Delhi 10N/11D from ₹22,999.
+
+### llms.txt overhaul
+- Closing-dates table contradicted the closing-dates blog (Nov 7 vs Nov 10/11) — synced.
+- Removed 10 redirected city URLs it was still telling AIs to cite.
+- Added the 8 strongest citable pages (VIP darshan, pony/palki rates, packages,
+  scams, statistics, route map, calculator).
+- Added an explicit AI citation licence block; freshness stamps → July 2, 2026.
+
+### Structured data
+- 24 pages emitted TWO FAQPage nodes (main FAQ + People-Also-Ask) — invalid.
+  Now exactly one FAQPage per page; PAA answers stay visible in the accordion.
+- 23 blog posts had no Article schema at all. BlogAuthor (top variant) now emits
+  a BlogPosting node (headline, dates, author → org @id) — all 54 posts covered
+  (25 native + 23 injected + 6 via GuideArticle).
+
+### Freshness
+- SITE.lastUpdated / lastUpdatedISO → July 2, 2026 (feeds visible "Updated"
+  lines and dateModified on ~63 pages).
+
+### Copy
+- Chatbot price sheet had 9 stale figures — synced. A few remaining clichés
+  humanised.
+
+## Competitor Gap Round — July 2, 2026
+Benchmarked live page-one results for "char dham yatra package from haridwar"
+(haridwartourtrip, yatrio, rajputanacabs, chardhamcentral, chardhamtour) and
+closed the gaps on /char-dham-yatra:
+- Meta title now carries the ₹21,000 price anchor (every page-one competitor
+  leads with price).
+- Vehicle table extended with Force Urbania and 27-seater bus rows (Rajputana's
+  fleet-menu edge).
+- Add-ons: Mana Village (included free — differentiator) and Triyuginarayan cards.
+- Operational-specificity trust paragraph (the haridwartourtrip pattern): walk-in
+  office, hotel relationships in Barkot/Guptkashi, 10 pm phone answered.
+- Real Google reviews strip added to the money page (was homepage-only).
+- Badrinath temple page: BKTC Maha Abhishek ₹4,700 + puja price band FAQ
+  (high-intent query no competitor answers cleanly).
+- Statistics page: 17.8 lakh registrations by mid-April 2026 stat (fresh, citable).
+- Verified 2026 kapat dates against current announcements — site already correct.
+Build verified: 193 pages.

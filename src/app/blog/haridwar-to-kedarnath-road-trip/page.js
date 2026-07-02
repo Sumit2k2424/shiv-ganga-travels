@@ -72,7 +72,7 @@ export default function HaridwarToKedarnath() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>

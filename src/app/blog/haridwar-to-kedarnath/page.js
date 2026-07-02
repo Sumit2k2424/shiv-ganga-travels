@@ -4,7 +4,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
   title: 'Haridwar to Kedarnath 2026 — Distance, Cab, Bus & Helicopter',
-  description: 'Haridwar to Kedarnath is 228 km by road + 16 km trek. Cab fare, bus ticket price, helicopter, train route and journey time. Packages from ₹6,499.',
+  description: 'Haridwar to Kedarnath is 228 km by road + 16 km trek. Cab fare, bus ticket price, helicopter, train route and journey time. Packages from ₹6,999.',
   keywords: ['haridwar to kedarnath distance 2026', 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
 };
@@ -170,7 +170,7 @@ export default function HaridwarToKedarnath() {
 
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Package from Haridwar</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹6,499 all-inclusive · Pickup from Haridwar · Expert guide</p>
+        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹6,999 all-inclusive · Pickup from Haridwar · Expert guide</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra from Haridwar 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
           View Package →

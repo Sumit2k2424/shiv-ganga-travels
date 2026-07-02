@@ -81,7 +81,7 @@ export default function GreenCard() {
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#791F1F' }}>

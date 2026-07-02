@@ -55,7 +55,7 @@ export default function MedicalCertificate() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-medical-certificate", "title": "Char Dham Medical Certificate 2026: Who Needs It", "description": "Char Dham Yatra 2026 medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>

@@ -53,7 +53,7 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function CharDhamFromNoida() {

@@ -116,7 +116,7 @@ export default function ClosingDates() {
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} — dates confirmed for 2026 season
         </div>

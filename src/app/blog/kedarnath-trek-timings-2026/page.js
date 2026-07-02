@@ -75,7 +75,7 @@ export default function TrekTimings() {
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-trek-timings-2026", "title": "Kedarnath Trek Timings 2026: Cut-Offs & Rules", "description": "Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Checkpoint cut-offs, last-entry rules and why 5 AM starts are best.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Verified by Shiv Ganga Travels, Haridwar
         </div>

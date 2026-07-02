@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Kedarnath Yatra Guide 2026: Route, Cost & Darshan',
-  description: 'Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹6,499.',
+  description: 'Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹6,999.',
   keywords: ['kedarnath yatra 2026 complete guide', 'kedarnath yatra guide', 'how to do kedarnath yatra', 'kedarnath yatra cost 2026', 'kedarnath yatra package haridwar', 'kedarnath yatra planning guide 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
   openGraph: { title: 'Kedarnath Yatra Guide 2026: Route, Cost & Darshan', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
@@ -17,7 +17,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'How much does Kedarnath Yatra cost in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath Yatra cost 2026: All-inclusive 3N/4D package from ₹6,499 per person (Haridwar base, Innova Crysta, hotels, meals). Add pony at Kedarnath ₹3,000–5,000 or helicopter ₹7,000–9,000 (one way). Total trip cost including personal expenses: ₹10,000–18,000 per person.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath Yatra cost 2026: All-inclusive 3N/4D package from ₹6,999 per person (Haridwar base, Innova Crysta, hotels, meals). Add pony at Kedarnath ₹3,000–5,000 or helicopter ₹7,000–9,000 (one way). Total trip cost including personal expenses: ₹10,000–18,000 per person.' }},
       { '@type': 'Question', name: 'How many days are needed for Kedarnath Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'A comfortable Kedarnath Yatra takes 3 nights 4 days from Haridwar: Day 1 Haridwar to Guptkashi, Day 2 trek to Kedarnath (16km) and overnight stay near temple, Day 3 morning darshan and return to Guptkashi, Day 4 return to Haridwar. For helicopter option, same schedule without the trek.' }},
       { '@type': 'Question', name: 'Is Kedarnath Yatra registration mandatory in 2026?',
@@ -41,7 +41,7 @@ export default function KedarnathCompleteGuide() {
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
             Route · Cost · Registration · Trek · Helicopter · Darshan Timings · Hotels · Packages — Everything in one place
           </p>
-          {['🕌 Opens April 22','📍 218km from Haridwar','🏔️ 16km trek','From ₹6,499/person'].map(t => (
+          {['🕌 Opens April 22','📍 218km from Haridwar','🏔️ 16km trek','From ₹6,999/person'].map(t => (
             <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
           ))}
         </div>
@@ -58,12 +58,12 @@ export default function KedarnathCompleteGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-yatra-complete-guide", "title": "Kedarnath Yatra Guide 2026: Route, Cost & Darshan", "description": "Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹6,999.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
 
         {/* Quick facts */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
-          {[['Altitude','3,583 metres'],['Opens','April 22, 2026'],['Closes','November 11, 2026'],['Distance (road)','218km from Haridwar'],['Trek distance','16km one way'],['Daily limit','15,000–17,000 pilgrims'],['Package from','₹6,499/person'],['Trek time','5–7 hrs ascending']].map(([k,v])=>(
+          {[['Altitude','3,583 metres'],['Opens','April 22, 2026'],['Closes','November 11, 2026'],['Distance (road)','218km from Haridwar'],['Trek distance','16km one way'],['Daily limit','15,000–17,000 pilgrims'],['Package from','₹6,999/person'],['Trek time','5–7 hrs ascending']].map(([k,v])=>(
             <div key={k}>
               <div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div>
               <div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div>
@@ -83,7 +83,7 @@ export default function KedarnathCompleteGuide() {
         </h2>
         {[
           { step:'1', title:'Complete Biometric Registration', desc:'Register at registrationandtouristcare.uk.gov.in (free). Upload Aadhaar details and download your yatra card. Pilgrims 55+ upload medical fitness certificate. Shiv Ganga Travels handles this for all package pilgrims.', link:'/blog/char-dham-yatra-registration', linkText:'Registration Guide →' },
-          { step:'2', title:'Book Your Package', desc:'Packages from Haridwar start at ₹6,499 per person for 3N/4D. Price includes vehicle, hotels at Guptkashi, meals, guide, and darshan assistance. Book 30–60 days ahead for May–June.', link:'/kedarnath-yatra', linkText:'View Packages →' },
+          { step:'2', title:'Book Your Package', desc:'Packages from Haridwar start at ₹6,999 per person for 3N/4D. Price includes vehicle, hotels at Guptkashi, meals, guide, and darshan assistance. Book 30–60 days ahead for May–June.', link:'/kedarnath-yatra', linkText:'View Packages →' },
           { step:'3', title:'Decide: Trek, Pony, or Helicopter', desc:'Trek (16km, 5–7 hrs) — most rewarding and free. Pony (₹3,000–5,000 one way) — for 60+ or knee problems. Helicopter (₹7,000–9,000 one way) — book via IRCTC, mandatory 2026 rule.', link:'/blog/kedarnath-helicopter-booking', linkText:'Helicopter Booking Guide →' },
           { step:'4', title:'Plan Your Darshan Timing', desc:'Arrive at Kedarnath by 7–9 AM for shortest queue. Mahabhishek at 4 AM (advance booking ₹3,100) is the deepest experience. Shringaar Aarti at 7:30 PM is unmissable — arrive by 7 PM.', link:'/blog/kedarnath-darshan-timing', linkText:'Darshan Timings →' },
           { step:'5', title:'Pack for High Altitude', desc:'Thermal inners (mandatory — nights 0–5°C even in June), fleece, windproof jacket, warm cap, gloves, trekking boots, ORS sachets, personal medicines for 2 extra days, headtorch for 5 AM trek start.', link:'/blog/char-dham-yatra-packing-list', linkText:'Packing List →' },
@@ -114,7 +114,7 @@ export default function KedarnathCompleteGuide() {
             </thead>
             <tbody>
               {[
-                ['Package (3N/4D from Haridwar)','₹6,499','₹9,999–12,000','Includes vehicle, hotels, meals, guide'],
+                ['Package (3N/4D from Haridwar)','₹6,999','₹9,999–12,000','Includes vehicle, hotels, meals, guide'],
                 ['Kedarnath trek','Free','Free','No cost — walk yourself'],
                 ['Pony (instead of trek)','₹3,000–5,000','₹3,000–5,000','Per person, one way. Negotiable.'],
                 ['Helicopter (one way)','₹7,000–9,000','₹7,000–9,000','Via IRCTC booking only'],

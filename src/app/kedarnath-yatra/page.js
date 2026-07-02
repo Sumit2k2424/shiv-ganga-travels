@@ -5,20 +5,20 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Kedarnath Yatra Package 2026 — Ek Dham Yatra',
-  description: 'Kedarnath Yatra 2026 — Ek Dham package from ₹6,499/person. 16km trek guide, pony ₹3,500, helicopter ₹7,500. Group discounts.',
+  description: 'Kedarnath Yatra 2026 — Ek Dham package from ₹6,999/person. 16km trek guide, pony ₹3,500, helicopter ₹7,500. Group discounts.',
   keywords: ['Kedarnath Yatra 2026','ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide','Kedarnath helicopter booking 2026','kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
     title: 'Kedarnath Yatra 2026 — Complete Trek, Packages & Helicopter Guide',
-    description: 'Complete Kedarnath Yatra guide 2026. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹6,499. Direct operator since 2010.',
+    description: 'Complete Kedarnath Yatra guide 2026. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹6,999. Direct operator since 2010.',
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra Package 2026 from Haridwar — Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Yatra 2026 — Package from ₹6,499 | Direct Operator',
-    description: 'Kedarnath Yatra 2026 from Haridwar from ₹6,499. 16km trek guide, pony, helicopter options. Zero commission.',
+    title: 'Kedarnath Yatra 2026 — Package from ₹6,999 | Direct Operator',
+    description: 'Kedarnath Yatra 2026 from Haridwar from ₹6,999. 16km trek guide, pony, helicopter options. Zero commission.',
     images: [{ url: '/opengraph-image', alt: 'Kedarnath Yatra Package 2026 from Haridwar' }],
   },
 };
@@ -31,7 +31,7 @@ function Schema() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'How long is the Kedarnath trek from Gaurikund?', acceptedAnswer: { '@type': 'Answer', text: 'The Kedarnath trek is 16km one way from Gaurikund (1,982m) to Kedarnath temple (3,583m), gaining 1,601 metres in altitude. Most healthy pilgrims take 5–7 hours for the ascent and 3–4 hours for the descent. The trail has rest points at Jungle Chatti (4km), Bheembali (6.5km), Lincholi (9km), and Base Camp (13km).' } },
-      { '@type': 'Question', name: 'What is the cost of Kedarnath Yatra from Haridwar in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath Yatra from Haridwar costs ₹6,499 per person for a 3N/4D all-inclusive package with Shiv Ganga Travels. This includes AC cab, hotel at Guptkashi, breakfast and dinner, and VIP darshan. Pony (₹3,500–4,500 one way) and helicopter (₹7,500–9,500 round trip) are optional extras.' } },
+      { '@type': 'Question', name: 'What is the cost of Kedarnath Yatra from Haridwar in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath Yatra from Haridwar costs ₹6,999 per person for a 3N/4D all-inclusive package with Shiv Ganga Travels. This includes AC cab, hotel at Guptkashi, breakfast and dinner, and VIP darshan. Pony (₹3,500–4,500 one way) and helicopter (₹7,500–9,500 round trip) are optional extras.' } },
       { '@type': 'Question', name: 'When does Kedarnath temple open in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple opens on April 22, 2026 for the summer season. The temple closes in November around Bhai Dooj. The exact opening muhurat (auspicious time) is announced by the Badrinath-Kedarnath Temple Committee (BKTC) in advance.' } },
       { '@type': 'Question', name: 'Is Kedarnath open for senior citizens?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. For pilgrims above 60 who cannot trek, pony (₹3,500–4,500 one way) or palki/doli (₹8,000–12,000 round trip) are available at Gaurikund. Helicopter (₹7,500–9,500 round trip from Phata/Sersi/Guptkashi) is the most comfortable. From 2026, pilgrims above 55 must carry a medical fitness certificate.' } },
       { '@type': 'Question', name: 'What are Kedarnath temple darshan timings?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple opens at 4:30 AM for the Mahabhishek puja. Regular darshan runs 7:00 AM to 1:00 PM and 5:00 PM to 9:00 PM. The temple closes 1:00–5:00 PM for the midday puja. Evening aarti at 7:00 PM is the most visually spectacular ritual of the day.' } },
@@ -58,7 +58,7 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function KedarnathYatra() {
@@ -69,7 +69,7 @@ export default function KedarnathYatra() {
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>12th Jyotirlinga · 3,583m · Opens April 22, 2026</span>
           <h1 className="display-title speakable-answer" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 16 }}>Kedarnath Yatra 2026 — Complete Guide</h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>Lord Shiva's highest Himalayan abode · 16km trek from Gaurikund<br/>Packages from <strong style={{ color: '#FFD166' }}>₹6,499</strong> · Pony · Helicopter · VIP Darshan</p>
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>Lord Shiva's highest Himalayan abode · 16km trek from Gaurikund<br/>Packages from <strong style={{ color: '#FFD166' }}>₹6,999</strong> · Pony · Helicopter · VIP Darshan</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book Now</a>
             <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
@@ -89,19 +89,19 @@ export default function KedarnathYatra() {
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season Open — Trek Active</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '16px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
-          {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹6,499/person'],['Pony one-way','₹3,500–4,500']].map(([k,v]) => (
+          {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹6,999/person'],['Pony one-way','₹3,500–4,500']].map(([k,v]) => (
             <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13, color: '#FFD166' }}>{v}</div></div>
           ))}
         </div>
 
-        <p style={p}><strong>Kedarnath temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for ₹3,500–4,500 one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹6,499 per person all-inclusive. <strong>Biometric registration is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
+        <p style={p}><strong>Kedarnath temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for ₹3,500–4,500 one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹6,999 per person all-inclusive. <strong>Biometric registration is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
         <p style={p}>Kedarnath is one of the 12 Jyotirlingas of Lord Shiva — the only one in the Himalayas. The current stone temple was built by Adi Shankaracharya in the 8th century CE on a site venerated since the Mahabharata era (the Pandavas sought Shiva's penance here after the Kurukshetra war). The structure survived the 2013 cloudburst that killed over 5,000 people in the valley — a massive boulder deflected the floodwaters around the shrine and still stands directly behind the temple. Every season, approximately 15–20 lakh pilgrims attempt the trek. On peak May days, the darshan queue stretches 4–6 hours for general pilgrims. Our VIP darshan arrangement, included in all packages, reduces this to under 30 minutes.</p>
 
         {kedarnathPkgs.length > 0 && (
           <>
             <h2 style={h2}>Kedarnath Yatra Packages 2026</h2>
             <AnswerBox>
-              Kedarnath Yatra from Haridwar costs ₹6,499 per person for a 3N/4D all-inclusive
+              Kedarnath Yatra from Haridwar costs ₹6,999 per person for a 3N/4D all-inclusive
               package — AC cab, Guptkashi hotel, breakfast and dinner, and VIP darshan. The temple
               opens 22 April 2026; reaching it is a 16km trek from Gaurikund, or a helicopter from
               Phata/Sersi/Guptkashi (₹7,500–9,500 round trip). Pony/palki are available for seniors.
@@ -280,7 +280,7 @@ export default function KedarnathYatra() {
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 6 }}>🏔️ Kedarnath 2026 · Opens April 22 · Limited seats per batch</div>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>Book Kedarnath Yatra — Direct Operator</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>Zero commission. Registration handled. Free itinerary in 2 hours. ₹6,499/person all-inclusive.</p>
+          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>Zero commission. Registration handled. Free itinerary in 2 hours. ₹6,999/person all-inclusive.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             View Package
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026 from Haridwar.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp</a>

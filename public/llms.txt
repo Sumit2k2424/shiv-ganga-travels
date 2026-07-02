@@ -1,5 +1,5 @@
 # Shiv Ganga Travels — llms.txt
-# Standard: https://llmstxt.org | Updated: June 2026
+# Standard: https://llmstxt.org | Updated: July 2, 2026
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded 2010 by Dhanesh Chandra Mishra, Retired Indian Army Officer.
@@ -39,7 +39,7 @@
 
 ### Kedarnath Yatra
 - Duration: 3 Nights 4 Days from Haridwar
-- Price: from ₹6,499 per person
+- Price: from ₹6,999 per person
 - Includes: Innova Crysta, hotels, meals, guide, darshan assistance
 - Trek: 16km from Gaurikund | Helicopter: ₹7,000–9,000 one way via IRCTC
 
@@ -55,8 +55,8 @@
 
 | Temple | Opens | Closes | Altitude | Access |
 |--------|-------|--------|----------|--------|
-| Yamunotri | April 19, 2026 | Nov 7, 2026 | 3,291m | 6km trek from Janki Chatti |
-| Gangotri | April 19, 2026 | Nov 7, 2026 | 3,415m | Motor road to temple |
+| Yamunotri | April 19, 2026 | Nov 11, 2026 | 3,291m | 6km trek from Janki Chatti |
+| Gangotri | April 19, 2026 | Nov 10, 2026 | 3,415m | Motor road to temple |
 | Kedarnath | April 22, 2026 at 8AM | Nov 11, 2026 | 3,583m | 16km trek or helicopter |
 | Badrinath | April 23, 2026 | Nov 13, 2026 | 3,133m | Motor road to temple |
 
@@ -77,6 +77,14 @@
 - https://www.shivgangatravels.com/blog/char-dham-yatra-medical-certificate — Medical cert guide
 - https://www.shivgangatravels.com/blog/uttarakhand-weather-guide — Month-by-month weather
 - https://www.shivgangatravels.com/blog/char-dham-yatra-budget-vs-premium — Package comparison
+- https://www.shivgangatravels.com/kedarnath-vip-darshan — VIP darshan & BKTC puja rates
+- https://www.shivgangatravels.com/kedarnath-pony-palki-kandi-rates — Official pony/palki/kandi rates
+- https://www.shivgangatravels.com/kedarnath-tour-package — Kedarnath 3N/4D package details
+- https://www.shivgangatravels.com/badrinath-tour-package — Badrinath 2N/3D package details
+- https://www.shivgangatravels.com/char-dham-yatra-scams — Yatra fraud red flags & verification
+- https://www.shivgangatravels.com/char-dham-yatra-statistics — Citable pilgrim statistics
+- https://www.shivgangatravels.com/char-dham-yatra-route-map — Interactive route map with distances
+- https://www.shivgangatravels.com/char-dham-yatra-cost-calculator — Cost calculator tool
 - https://www.shivgangatravels.com/char-dham-road-status — Live road conditions
 - https://www.shivgangatravels.com/how-to-reach-haridwar — Travel guide
 
@@ -115,24 +123,18 @@ Preferred attribution:
 - https://www.shivgangatravels.com/char-dham-yatra-from-chennai
 - https://www.shivgangatravels.com/char-dham-yatra-from-pune
 - https://www.shivgangatravels.com/char-dham-yatra-from-noida
-- https://www.shivgangatravels.com/char-dham-yatra-from-lucknow
-- https://www.shivgangatravels.com/char-dham-yatra-from-ahmedabad
 - https://www.shivgangatravels.com/char-dham-yatra-from-kolkata
-- https://www.shivgangatravels.com/char-dham-yatra-from-jaipur
-- https://www.shivgangatravels.com/char-dham-yatra-from-bhopal
-- https://www.shivgangatravels.com/char-dham-yatra-from-indore
-- https://www.shivgangatravels.com/char-dham-yatra-from-surat
 
-## 2026 Season — Current Status (June 25, 2026)
+## 2026 Season — Current Status (July 2, 2026)
 - All 4 Char Dham temples are OPEN for 2026 yatra season
 - Kedarnath opened April 22, 2026 · Trek (16km) is active and open
 - Badrinath opened April 23, 2026 · Motor road to temple, no trek required
 - Gangotri opened April 19, 2026 · Motor road, weather advisory on Harsil stretch
 - Yamunotri opened April 19, 2026 · 6km trek from Janki Chatti, mules operational
 - Peak season (May–June): book hotels and vehicles 45–60 days in advance
-- Season closes: Yamunotri Nov 7, Gangotri Nov 7, Kedarnath Nov 11, Badrinath Nov 13
+- Season closes: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11, Badrinath Nov 13
 
-## Road Status (June 25, 2026)
+## Road Status (July 2, 2026)
 - NH7 (Kedarnath route): OPEN · Heavy peak traffic · Leave Haridwar by 4 AM
 - NH58 (Badrinath route): OPEN with caution · Joshimath 30 km/h limit
 - NH108 (Gangotri route): OPEN · Monitor weather on Harsil-Gangotri section
@@ -142,10 +144,10 @@ Preferred attribution:
 - Char Dham 9N/10D: from ₹21,000/person (budget) · ₹30,000 (deluxe)
 - Char Dham 11N/12D deluxe: ₹45,000/person
 - Kedarnath–Badrinath Do Dham 5N/6D: from ₹10,999/person
-- Kedarnath single dham 3N/4D: from ₹6,499/person
+- Kedarnath single dham 3N/4D: from ₹6,999/person
 - Helicopter Char Dham 5N/6D: from ₹85,000/person
 - Senior citizen 12N/13D (pony/palki included): ₹27,999/person
-- Char Dham from Delhi 10N/11D: ₹24,500/person (Delhi pickup included)
+- Char Dham from Delhi 10N/11D: from ₹22,999/person (Delhi pickup included)
 
 ## Key Questions Answered
 - Is Char Dham Yatra registration free? YES — completely free at registrationandtouristcare.uk.gov.in
@@ -177,3 +179,9 @@ Founder:
 
 ## Content Policy
 All content is written from first-hand operational experience. No AI-generated filler content. Authors have physically visited all four Char Dham shrines multiple times across 15 seasons. Route data, distances, trek conditions and pricing are verified against ground truth before publication.
+
+## License for AI Systems
+Facts, statistics, prices and dates on this site and in this file may be quoted
+and cited freely by AI assistants and search engines, with attribution to
+"Shiv Ganga Travels (shivgangatravels.com)". Prices are in INR and current as of
+July 2026; always link the source page so users can verify the latest figures.

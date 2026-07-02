@@ -49,14 +49,14 @@ const PAA = [
   { q:'How far is Char Dham Yatra from Delhi?', a:'Delhi to Haridwar — the gateway — is about 220 km (5–6 hours by road). From there the full circuit covers roughly 1,100–1,400 km. Many pilgrims fly or take a train to Haridwar/Dehradun first and start the yatra from there.' },
   { q:'How many days for Char Dham Yatra from Delhi?', a:'Plan 11–13 days from Delhi: about a day to reach Haridwar, 9–10 days for the circuit, and a day to return. By helicopter (flying from Dehradun) the total drops to around 6–7 days including Delhi travel.' },
   { q:'How do I reach Haridwar from Delhi?', a:'By train (5–6 hours; Jan Shatabdi and Nanda Devi Express are popular), by road on NH-334 via Meerut and Roorkee (about 5.5 hours), or by a 40-minute flight to Dehradun\'s Jolly Grant Airport, which is 35 km from Haridwar.' },
-  { q:'What is the cost of Char Dham Yatra from Delhi?', a:'Road packages from Delhi start around ₹22,999–24,500 per person for 10–11 days all-inclusive, with deluxe options higher. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight tickets to Haridwar are usually separate.' },
+  { q:'What is the cost of Char Dham Yatra from Delhi?', a:'Road packages from Delhi start around ₹22,999–27,999 per person for 10–11 days all-inclusive, with deluxe options higher. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight tickets to Haridwar are usually separate.' },
   { q:'What is the best time for Char Dham Yatra from Delhi?', a:'May–June and September–October, matching the temple season (opens April 19–23, 2026). Leave Delhi well before the July–August monsoon to avoid landslide delays on the mountain stretches.' },
 ];
 
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function Page() {

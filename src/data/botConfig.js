@@ -38,13 +38,13 @@ export const CUSTOM_QA = [
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
   {
     keywords: ['price','cost','rate','charge','fee','kitna','how much','budget','affordable','cheap','expensive','tariff'],
-    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,499 · 2N/3D\n• Gangotri — ₹5,299 · 2N/3D\n• Kedarnath — ₹6,499 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹8,999 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹21,000 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹24,500 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
+    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,999 · 2N/3D\n• Gangotri — ₹5,699 · 2N/3D\n• Kedarnath — ₹6,999 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹9,499 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹21,000 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹27,999 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
   },
 
   // ── 3. CHAR DHAM OVERVIEW ────────────────────────────────────
   {
     keywords: ['char dham','chardham','4 dham','four dham','all four','all 4'],
-    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹21,000/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹24,500/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
+    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹21,000/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹27,999/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
   },
 
   // ── 4. BEST TIME TO VISIT ────────────────────────────────────
@@ -56,7 +56,7 @@ export const CUSTOM_QA = [
   // ── 5. KEDARNATH ─────────────────────────────────────────────
   {
     keywords: ['kedarnath','kedar','kedarna'],
-    answer: `**Kedarnath Yatra** — Lord Shiva at 3,583m:\n\n💰 Single package: **₹6,499** (3N/4D)\n🗺️ Route: Haridwar → Guptkashi → Gaurikund → Kedarnath\n🥾 Trek: 16 km one way from Gaurikund (3–5 hrs)\n\n**No-Trek Options:**\n🐴 Pony — ₹3,500–4,500 one way\n🛕 Palki/Doli — ₹8,000–12,000 one way\n🚁 Helicopter — ₹7,500–9,500 round trip (Phata/Sersi helipad)\n\n✨ **Must-see at Kedarnath:**\n• Kedarnath Temple (12th Jyotirlinga)\n• Adi Shankaracharya Samadhi\n• Bhairavnath Temple (10 min walk)\n• Mandakini River & glacial views\n\nBest time: May–June & Sept–Oct. 🙏`,
+    answer: `**Kedarnath Yatra** — Lord Shiva at 3,583m:\n\n💰 Single package: **₹6,999** (3N/4D)\n🗺️ Route: Haridwar → Guptkashi → Gaurikund → Kedarnath\n🥾 Trek: 16 km one way from Gaurikund (3–5 hrs)\n\n**No-Trek Options:**\n🐴 Pony — ₹3,500–4,500 one way\n🛕 Palki/Doli — ₹8,000–12,000 one way\n🚁 Helicopter — ₹7,500–9,500 round trip (Phata/Sersi helipad)\n\n✨ **Must-see at Kedarnath:**\n• Kedarnath Temple (12th Jyotirlinga)\n• Adi Shankaracharya Samadhi\n• Bhairavnath Temple (10 min walk)\n• Mandakini River & glacial views\n\nBest time: May–June & Sept–Oct. 🙏`,
   },
 
   // ── 6. BADRINATH ─────────────────────────────────────────────
@@ -68,13 +68,13 @@ export const CUSTOM_QA = [
   // ── 7. YAMUNOTRI ─────────────────────────────────────────────
   {
     keywords: ['yamunotri','yamuna','yamnotri'],
-    answer: `**Yamunotri Yatra** — Goddess Yamuna at 3,291m:\n\n💰 Single package: **₹5,499** (2N/3D)\n🗺️ Route: Haridwar → Barkot → Janki Chatti → Yamunotri\n🥾 Trek: 6 km from Janki Chatti (2–3 hrs)\n🐴 Pony available from Janki Chatti\n\n✨ **Must-see at Yamunotri:**\n• Yamunotri Temple (Goddess Yamuna's idol)\n• Surya Kund — boiling hot spring (cook rice in it!)\n• Divya Shila — sacred rock pillar\n• Janki Chatti — base camp with Yamuna river views\n\n📍 **Starting point:** Haridwar or Barkot\n🌡️ Temperature at Yamunotri: 5°C–15°C in season\n\nFirst stop in the Char Dham circuit! 🙏`,
+    answer: `**Yamunotri Yatra** — Goddess Yamuna at 3,291m:\n\n💰 Single package: **₹5,999** (2N/3D)\n🗺️ Route: Haridwar → Barkot → Janki Chatti → Yamunotri\n🥾 Trek: 6 km from Janki Chatti (2–3 hrs)\n🐴 Pony available from Janki Chatti\n\n✨ **Must-see at Yamunotri:**\n• Yamunotri Temple (Goddess Yamuna's idol)\n• Surya Kund — boiling hot spring (cook rice in it!)\n• Divya Shila — sacred rock pillar\n• Janki Chatti — base camp with Yamuna river views\n\n📍 **Starting point:** Haridwar or Barkot\n🌡️ Temperature at Yamunotri: 5°C–15°C in season\n\nFirst stop in the Char Dham circuit! 🙏`,
   },
 
   // ── 8. GANGOTRI ──────────────────────────────────────────────
   {
     keywords: ['gangotri','ganges origin','ganga source','gaumukh','bhagirathi'],
-    answer: `**Gangotri Yatra** — Source of the Holy Ganga at 3,415m:\n\n💰 Single package: **₹5,299** (2N/3D)\n🗺️ Route: Haridwar → Uttarkashi → Gangotri\n✅ **No trek needed** — motor road to the temple!\n\n✨ **Must-see at Gangotri:**\n• Gangotri Temple (Goddess Ganga)\n• Bhagirathi River gorge — stunning scenery\n• Harsil Valley (25 km before Gangotri) — apple orchards, serene village\n• Kedar Ganga confluence at Gangotri\n• Uttarkashi — Kashi Vishwanath Temple en route\n\n🏔️ **Gaumukh Trek** (20 km from Gangotri) — actual glacier source of Ganga — available as add-on!\n\n🌡️ Temperature: 8°C–20°C in season. Carry warm clothes!`,
+    answer: `**Gangotri Yatra** — Source of the Holy Ganga at 3,415m:\n\n💰 Single package: **₹5,699** (2N/3D)\n🗺️ Route: Haridwar → Uttarkashi → Gangotri\n✅ **No trek needed** — motor road to the temple!\n\n✨ **Must-see at Gangotri:**\n• Gangotri Temple (Goddess Ganga)\n• Bhagirathi River gorge — stunning scenery\n• Harsil Valley (25 km before Gangotri) — apple orchards, serene village\n• Kedar Ganga confluence at Gangotri\n• Uttarkashi — Kashi Vishwanath Temple en route\n\n🏔️ **Gaumukh Trek** (20 km from Gangotri) — actual glacier source of Ganga — available as add-on!\n\n🌡️ Temperature: 8°C–20°C in season. Carry warm clothes!`,
   },
 
   // ── 9. HELICOPTER PACKAGES ───────────────────────────────────
@@ -98,7 +98,7 @@ export const CUSTOM_QA = [
   // ── 12. SENIOR CITIZENS ──────────────────────────────────────
   {
     keywords: ['senior','elderly','old age','aged','parents','mata pita','grandfather','grandmother','70','75','80','health issue'],
-    answer: `👴👵 **Senior Citizen Char Dham Package — ₹24,500 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony/palki included at Yamunotri & Kedarnath\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7817996730`,
+    answer: `👴👵 **Senior Citizen Char Dham Package — ₹27,999 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony/palki included at Yamunotri & Kedarnath\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7817996730`,
   },
 
   // ── 13. HOW TO BOOK ──────────────────────────────────────────
@@ -164,7 +164,7 @@ export const CUSTOM_QA = [
   // ── 23. SOLO TRAVEL ──────────────────────────────────────────
   {
     keywords: ['solo','alone','single','one person','alone travel','solo travel','by myself','single person'],
-    answer: `**Solo Pilgrims — Yes, we welcome you!**\n\n**For solo travelers:**\n• You can join a scheduled shared batch (cost-effective)\n• Or book a private car (higher cost)\n\n**Solo pricing (joining batch):**\n• Char Dham: from ₹21,000/person\n• Do Dham: from ₹10,999/person\n• Single Dham: from ₹5,299/person\n\n**Solo Female Pilgrims:**\n✅ We assign female guide companions on request\n✅ All-female batches available during peak season\n✅ Vetted, trusted hotels — no sharing with strangers\n✅ Emergency contact shared with family at home\n\n**Solo International Travelers:**\n✅ English-speaking guide available\n✅ Biometric registration assistance included\n✅ Airport pickup from Dehradun available\n\nMany solo pilgrims have found lifelong friends in our group batches! 🙏`,
+    answer: `**Solo Pilgrims — Yes, we welcome you!**\n\n**For solo travelers:**\n• You can join a scheduled shared batch (cost-effective)\n• Or book a private car (higher cost)\n\n**Solo pricing (joining batch):**\n• Char Dham: from ₹21,000/person\n• Do Dham: from ₹10,999/person\n• Single Dham: from ₹5,699/person\n\n**Solo Female Pilgrims:**\n✅ We assign female guide companions on request\n✅ All-female batches available during peak season\n✅ Vetted, trusted hotels — no sharing with strangers\n✅ Emergency contact shared with family at home\n\n**Solo International Travelers:**\n✅ English-speaking guide available\n✅ Biometric registration assistance included\n✅ Airport pickup from Dehradun available\n\nMany solo pilgrims have found lifelong friends in our group batches! 🙏`,
   },
 
   // ── 24. CHILDREN / FAMILY ────────────────────────────────────
@@ -188,7 +188,7 @@ export const CUSTOM_QA = [
   // ── 27. UTTARAKHAND TOURS (NON-PILGRIMAGE) ──────────────────
   {
     keywords: ['mussoorie','nainital','rishikesh','chopta','auli','corbett','skiing','rafting','adventure','hill station','wildlife'],
-    answer: `**Uttarakhand Tour Packages (Non-Pilgrimage):**\n\n🏔️ **Adventure & Hills:**\n• Chopta + Tungnath Trek — ₹6,499 (2N/3D)\n• Auli Skiing Tour — ₹12,499 (3N/4D)\n• Rishikesh Adventure (Rafting + Bungee) — ₹4,999 (2N/3D)\n\n🌸 **Leisure & Sightseeing:**\n• Mussoorie + Rishikesh + Kanatal — ₹8,499 (4N/5D)\n• Haridwar + Rishikesh Spiritual — ₹5,999 (4N/5D)\n• Nainital + Kausani + Ranikhet — ₹9,999 (4N/5D)\n\n🦁 **Wildlife:**\n• Jim Corbett + Nainital — ₹13,999 (5N/6D)\n\n🌺 **UNESCO Special:**\n• Valley of Flowers + Hemkund Sahib — ₹13,499 (5N/6D)\n\n🗺️ **Complete:**\n• Grand Uttarakhand Tour — ₹22,999 (10N/11D)\n\nBrowse all at /packages/uttarakhand! 🙏`,
+    answer: `**Uttarakhand Tour Packages (Non-Pilgrimage):**\n\n🏔️ **Adventure & Hills:**\n• Chopta + Tungnath Trek — ₹8,499 (2N/3D)\n• Auli Skiing Tour — ₹12,499 (3N/4D)\n• Rishikesh Adventure (Rafting + Bungee) — ₹4,999 (2N/3D)\n\n🌸 **Leisure & Sightseeing:**\n• Mussoorie + Rishikesh + Kanatal — ₹8,499 (4N/5D)\n• Haridwar + Rishikesh Spiritual — ₹5,999 (4N/5D)\n• Nainital + Kausani + Ranikhet — ₹13,499 (4N/5D)\n\n🦁 **Wildlife:**\n• Jim Corbett + Nainital — ₹13,999 (5N/6D)\n\n🌺 **UNESCO Special:**\n• Valley of Flowers + Hemkund Sahib — ₹13,499 (5N/6D)\n\n🗺️ **Complete:**\n• Grand Uttarakhand Tour — ₹22,999 (10N/11D)\n\nBrowse all at /packages/uttarakhand! 🙏`,
   },
 
   // ── 28. ADVANCE BOOKING / HOW EARLY ─────────────────────────
@@ -206,7 +206,7 @@ export const CUSTOM_QA = [
   // ── 30. DIFFERENCE BETWEEN CHAR DHAM & DO DHAM ──────────────
   {
     keywords: ['difference','do dham vs','char dham vs','which one','which package','2 dham or 4','choose'],
-    answer: `**Char Dham vs Do Dham — Which to Choose?**\n\n🕌 **Do Dham (2 Shrines)**\n✅ Less time needed (4–7 days)\n✅ Less expensive (from ₹8,999)\n✅ Less physically demanding\n✅ Good for first-timers or limited time\n\n**Popular Do Dham options:**\n• Kedarnath + Badrinath — ₹10,999 (5N/6D)\n• Yamunotri + Gangotri — ₹8,999 (4N/5D)\n\n🏔️ **Char Dham (All 4 Shrines)**\n✅ Complete spiritual journey (Hindu belief: moksha)\n✅ Done clockwise: Yamunotri → Gangotri → Kedarnath → Badrinath\n✅ Life-changing experience\n✅ Takes 9–15 days from ₹21,000\n\n💡 **Our recommendation:**\nIf time permits — always go for **Char Dham**. Many pilgrims regret not doing all 4 in one trip. You can always do Do Dham as your first visit and return for the other 2 later!`,
+    answer: `**Char Dham vs Do Dham — Which to Choose?**\n\n🕌 **Do Dham (2 Shrines)**\n✅ Less time needed (4–7 days)\n✅ Less expensive (from ₹9,499)\n✅ Less physically demanding\n✅ Good for first-timers or limited time\n\n**Popular Do Dham options:**\n• Kedarnath + Badrinath — ₹10,999 (5N/6D)\n• Yamunotri + Gangotri — ₹9,499 (4N/5D)\n\n🏔️ **Char Dham (All 4 Shrines)**\n✅ Complete spiritual journey (Hindu belief: moksha)\n✅ Done clockwise: Yamunotri → Gangotri → Kedarnath → Badrinath\n✅ Life-changing experience\n✅ Takes 9–15 days from ₹21,000\n\n💡 **Our recommendation:**\nIf time permits — always go for **Char Dham**. Many pilgrims regret not doing all 4 in one trip. You can always do Do Dham as your first visit and return for the other 2 later!`,
   },
 
   // ── 31. VALLEY OF FLOWERS / HEMKUND SAHIB ──────────────────
@@ -250,7 +250,7 @@ Key facts:
 - Location: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410
 - Speciality: Char Dham Yatra, Uttarakhand tours
 - All packages are zero-commission, all-inclusive (hotel + meals + transport + guide)
-- Prices: Single dham from ₹5,299, Do Dham from ₹8,999, Char Dham from ₹21,000, Helicopter ₹85,000
+- Prices: Single dham from ₹5,699, Do Dham from ₹9,499, Char Dham from ₹21,000, Helicopter ₹85,000
 - Working hours: 7 AM - 9 PM IST, WhatsApp 24/7
 
 Rules:

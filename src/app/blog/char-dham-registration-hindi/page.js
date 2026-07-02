@@ -65,7 +65,7 @@ export default function CharDhamRegistrationHindi() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-registration-hindi", "title": "चार धाम यात्रा रजिस्ट्रेशन 2026: मोबाइल से कैसे करें", "description": "चार धाम यात्रा 2026 का ऑनलाइन रजिस्ट्रेशन मुफ्त है। WhatsApp और website से — 9 आसान steps में पूरी जानकारी हिंदी में। जरूरी दस्तावेज़ और 55+ उम्र के नियम।", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "hi-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

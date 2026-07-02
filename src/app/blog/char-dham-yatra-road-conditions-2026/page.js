@@ -98,7 +98,7 @@ export default function RoadConditions() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Peak Season — All Routes Open</div>
 
         <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#15803D' }}>

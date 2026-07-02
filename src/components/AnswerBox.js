@@ -12,7 +12,7 @@
  *
  * Usage:
  *   <AnswerBox>
- *     Kedarnath Yatra from Haridwar costs ₹6,499 per person for a 3N/4D
+ *     Kedarnath Yatra from Haridwar costs ₹6,999 per person for a 3N/4D
  *     all-inclusive package — AC cab, Guptkashi hotel, meals and VIP darshan.
  *     The temple opens 22 April 2026; the trek is 16km from Gaurikund.
  *   </AnswerBox>

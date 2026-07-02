@@ -97,7 +97,7 @@ export default function KedarnathTimings() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-darshan-timing", "title": "Kedarnath Darshan Timings 2026: Aarti & VIP Slots", "description": "Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
 
         {/* Quick summary box */}

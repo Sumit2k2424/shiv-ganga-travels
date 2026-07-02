@@ -78,7 +78,7 @@ return (
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>There is no official age limit for Char Dham Yatra.</strong> However, the Uttarakhand government does recommend that pilgrims above 60 years with pre-existing medical conditions (heart disease, severe BP, recent surgery) get a fitness certificate from their doctor before travelling. This is good advice, not a barrier.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The reality is: every year, thousands of pilgrims aged 70–80+ complete the Char Dham Yatra safely. With proper planning, the right pacing, and a good operator, it is very much achievable.</p>
 
-        <h2 style={h2}>Our Senior Citizen Special Package — ₹24,500 (12N/13D)</h2>
+        <h2 style={h2}>Our Senior Citizen Special Package — ₹27,999 (12N/13D)</h2>
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:14 }}>What makes it different:</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10 }}>
@@ -124,7 +124,7 @@ return (
         <BlogCTA variant="inline" intent="info" />
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book the Senior Citizen Package</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>₹24,500 per person · 12N/13D · Pony included · Medical attendant · No worries.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>₹27,999 per person · 12N/13D · Pony included · Medical attendant · No worries.</p>
           <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>

@@ -17,8 +17,8 @@ export const SITE = {
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
-  lastUpdated   : 'June 25, 2026', // human-readable, shown on-page
-  lastUpdatedISO: '2026-06-25',   // schema.org dateModified format
+  lastUpdated   : 'July 2, 2026', // human-readable, shown on-page
+  lastUpdatedISO: '2026-07-02',   // schema.org dateModified format
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────
@@ -349,7 +349,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:18000, discounted:11000, currency:'₹', perPerson:true, isRange:true },
+    price    : { original:18000, discounted:10999, currency:'₹', perPerson:true, isRange:true },
     photo     : 'https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg?auto=compress&cs=tinysrgb&w=800',
     highlights:[
       'Kedarnath Jyotirlinga — sacred hump of Lord Shiva',
@@ -578,7 +578,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Badrinath: 3,133m',
-    price    : { original:8000, discounted:6499, currency:'₹', perPerson:true },
+    price    : { original:8000, discounted:5999, currency:'₹', perPerson:true },
     photo     : 'https://images.pexels.com/photos/2404046/pexels-photo-2404046.jpeg?auto=compress&cs=tinysrgb&w=800',
     highlights:[
       'Badrinath — one of 108 Vishnu Divya Desams',
@@ -601,8 +601,8 @@ export const PACKAGES = [
     photo    : `${FP}/Badrinath_Temple_(front_view).JPG?width=900`,
     images   : ['badrinath'],
     tags     : ['badrinath','single dham','haridwar','vishnu','no trek','easy'],
-    metaTitle: 'Badrinath Ek Dham Yatra Package 2026 — 2N/3D from ₹6,499 | Mana Village | Tapt Kund',
-    metaDesc : 'Badrinath Ek Dham Yatra 2026 — 2N/3D from Haridwar from ₹6,499/person. Tapt Kund ritual bath, Mana Village (last Indian village), Brahma Kapal Pind Daan, VIP darshan Lord Vishnu. All-inclusive.',
+    metaTitle: 'Badrinath Ek Dham Yatra Package 2026 — 2N/3D from ₹5,999 | Mana Village | Tapt Kund',
+    metaDesc : 'Badrinath Ek Dham Yatra 2026 — 2N/3D from Haridwar from ₹5,999/person. Tapt Kund ritual bath, Mana Village (last Indian village), Brahma Kapal Pind Daan, VIP darshan Lord Vishnu. All-inclusive.',
     faqs:[],
   },
 

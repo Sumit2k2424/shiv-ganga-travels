@@ -79,9 +79,8 @@ function Schema() {
     ],
   };
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify({ ...faq, mainEntity:[...faq.mainEntity, ...paa.mainEntity] }) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);
 }

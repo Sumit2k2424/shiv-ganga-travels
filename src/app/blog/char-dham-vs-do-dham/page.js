@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham vs Do Dham Yatra: Which Suits You?',
-  description: 'Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹12,500), difficulty and significance to pick the right pilgrimage for 2026.',
+  description: 'Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.',
   keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
@@ -65,7 +65,7 @@ export default function ComparisonPage() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.

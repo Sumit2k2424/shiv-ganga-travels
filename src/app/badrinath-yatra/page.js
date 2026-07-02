@@ -125,7 +125,7 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(paa) }}/>);
+  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function BadrinathYatraPage() {
@@ -304,7 +304,7 @@ export default function BadrinathYatraPage() {
         <h2 style={h2}>Places to See Near Badrinath</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
-            { place: 'Mana Village', dist: '3 km', desc: 'Last Indian village before the Tibet border. Visit Vyas Gufa (cave where the Mahabharata was composed) and Bhim Pul (natural rock bridge). A must-visit.' },
+            { place: 'Mana Village', dist: '3 km', desc: 'Last Indian village before the Tibet border. Visit Vyas Gufa (cave where the Mahabharata was composed) and Bhim Pul (natural rock bridge). Most pilgrims regret skipping it.' },
             { place: 'Brahma Kapal', dist: '0.5 km', desc: 'Sacred platform on the bank of Alaknanda where Hindu pilgrims perform Pind Daan (ancestral rites) for departed souls.' },
             { place: 'Tapt Kund', dist: 'At temple', desc: 'Natural sulphur hot spring where water temperature stays around 45°C. Devotees take a holy dip before darshan — believed to cure skin ailments.' },
             { place: 'Narad Kund', dist: 'Near temple', desc: 'Where the original Badrivishal idol was found by Adi Shankaracharya. Small but spiritually important.' },

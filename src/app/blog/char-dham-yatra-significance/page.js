@@ -67,7 +67,7 @@ export default function Significance() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-significance", "title": "Char Dham Yatra: History & Spiritual Significance", "description": "Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <h2 style={h2}>What Is Char Dham Yatra?</h2>

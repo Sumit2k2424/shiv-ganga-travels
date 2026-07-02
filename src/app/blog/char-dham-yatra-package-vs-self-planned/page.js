@@ -56,7 +56,7 @@ export default function PkgVsSelf() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-package-vs-self-planned", "title": "Char Dham Package vs Self-Planned Trip: Real Costs", "description": "Char Dham package vs going independent in 2026 — honest cost comparison, what you gain and lose, and which option suits which type of pilgrim.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           An honest answer from someone who runs packages: self-planned is absolutely possible, and for some pilgrims it is the better choice. But for most first-time pilgrims and senior citizens, a direct operator package wins on cost, convenience, and safety — especially if you book with a zero-commission direct operator rather than an aggregator.
         </p>

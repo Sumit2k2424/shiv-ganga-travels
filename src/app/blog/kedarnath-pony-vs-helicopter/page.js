@@ -64,7 +64,7 @@ export default function PonyVsHelicopter() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         {/* Quick comparison table */}
         <h2 style={H2}>At a Glance — Pony vs Helicopter vs Trek vs Palki</h2>

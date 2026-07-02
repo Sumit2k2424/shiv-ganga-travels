@@ -114,7 +114,7 @@ export default function Page() {
         {/* Quick Answer Box — built for AI Overviews + featured snippets */}
         <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:28 }}>
           <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>📊 Quick Answer</div>
-          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>The Char Dham Yatra circuit covers approximately 1,607 km across four Himalayan shrines</strong> — Yamunotri (3,291m), Gangotri (3,415m), Kedarnath (3,583m) and Badrinath (3,133m). The 2026 season runs April 19 to November 13. Annual pilgrim footfall has exceeded 50 lakh (5 million) in recent years, with most pilgrimages completed between May and June or September and October.</p>
+          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>The Char Dham Yatra circuit covers approximately 1,607 km across four Himalayan shrines</strong> — Yamunotri (3,291m), Gangotri (3,415m), Kedarnath (3,583m) and Badrinath (3,133m). The 2026 season runs April 19 to November 13, and it opened as the busiest booking window in five years: over 17.8 lakh pilgrims had completed Char Dham registration by mid-April 2026, before Badrinath&apos;s doors even opened (Uttarakhand Tourism). Annual pilgrim footfall has exceeded 50 lakh (5 million) in recent years, with most pilgrimages completed between May and June or September and October.</p>
         </div>
 
         <div style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
