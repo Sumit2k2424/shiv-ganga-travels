@@ -24,12 +24,26 @@ export default function LeadPopup() {
     name: '', phone: '', package: '', month: '', pilgrims: '2',
   });
 
-  /* Show once per session after 5 s */
+  /* Show once per session — only after real engagement (60% scroll AND 30s).
+     A 5s full-screen popup is exactly what Google's mobile intrusive-
+     interstitial penalty targets; engagement-gating keeps the lead capture
+     without the ranking risk. */
   useEffect(() => {
     const already = sessionStorage.getItem(STORAGE_KEY);
     if (already) return;
-    const t = setTimeout(() => setVisible(true), 5000);
-    return () => clearTimeout(t);
+    let timeOk = false, scrollOk = false, fired = false;
+    function maybeShow() {
+      if (timeOk && scrollOk && !fired) { fired = true; setVisible(true); cleanup(); }
+    }
+    const t = setTimeout(() => { timeOk = true; maybeShow(); }, 30000);
+    function onScroll() {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      if (max > 0 && window.scrollY / max >= 0.6) { scrollOk = true; maybeShow(); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    function cleanup() { clearTimeout(t); window.removeEventListener('scroll', onScroll); }
+    return cleanup;
   }, []);
 
   /* Lock background scroll while the modal is open */
@@ -332,7 +346,7 @@ export default function LeadPopup() {
 const inputStyle = {
   width: '100%', padding: '10px 13px',
   border: '1.5px solid var(--border)',
-  borderRadius: 9, fontSize: 13.5,
+  borderRadius: 9, fontSize: 16,
   background: '#fff', color: 'var(--text)',
   outline: 'none', fontFamily: 'var(--font)',
   transition: 'border-color .15s, box-shadow .15s',

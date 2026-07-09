@@ -236,3 +236,49 @@ User direction: keep logo and colour palette exactly as before.
   rgba(232,146,10). Chip background now uses var(--bg).
 - Logo (animated LogoMark in Navbar) was never modified — unchanged.
 OTA layout grammar (widget, cards, tables, shadows) retained.
+
+## UX Enhancement Pass — July 9, 2026
+Hands-on audit of the OTA build; six real fixes shipped:
+1. Anchor offset — scroll-margin-top:96px on all [id] targets so in-page links
+   no longer land headings underneath the sticky navbar.
+2. Search widget affordance — custom chevron icons restored on all three
+   selects (appearance:none had removed the native arrows), plus a
+   focus-within ring on the whole field (.hs-field) for keyboard users.
+3. iOS zoom bug — "Any month" placeholder select was 15px; anything under
+   16px makes iOS Safari auto-zoom on focus. Bumped to 16.
+4. Contrast — hero trust-tick row lifted from rgba(255,255,255,0.5) to 0.78
+   (the 0.5 value failed WCAG AA on the dark scene).
+5. Mobile tables — article/fare tables now scroll horizontally on ≤768px
+   instead of forcing page-level overflow on 360px phones.
+6. Polish — visible a:focus-visible outline sitewide, branded ::selection,
+   tap-highlight removed, reduced-motion coverage extended to the new
+   hover transforms.
+Verified: widget corner stacking (chatbot/WA/book CTA) already correct — untouched.
+
+## Mobile SEO & Responsiveness Audit — July 9, 2026
+Audited against mobile-first indexing requirements (Google crawls mobile-only).
+
+### Critical fix — intrusive interstitial (direct ranking factor)
+- LeadPopup fired a full-screen modal 5 seconds after landing — the exact
+  pattern Google's mobile intrusive-interstitial penalty targets. Rewritten to
+  engagement-gating: shows only after BOTH 30s on page AND 60% scroll, once
+  per session. Lead capture kept, ranking risk removed.
+
+### iOS auto-zoom (conversion killer on ~60% of mobile traffic)
+- LeadPopup form inputs were 13.5px and ChatBot input 13px — under 16px makes
+  iOS Safari zoom the page on focus. Both bumped to 16px.
+
+### Touch targets & layout
+- Selects get min-height 44px on mobile (48px standard with padding).
+- Hero SEARCH pill becomes a full-width static button on ≤768px — bigger
+  thumb target, no floating-overlap risk on stacked fields.
+- Budget-vs-premium blog: rigid repeat(3,1fr) price grid → auto-fit minmax
+  (was squeezing three cards into 360px).
+- ≤480px guard: img/video/iframe capped at container width.
+
+### Verified already correct (no changes)
+- Viewport export (device-width, viewportFit cover, themeColor) ✓
+- html/body overflow-x hidden ✓ · fonts display:swap ✓ · base 16px ✓
+- Trek elevation SVG already in its own overflow-x wrapper ✓
+- Snow animation already disabled on mobile for INP/LCP ✓
+- Mobile table scrolling + 44px link targets shipped in earlier layers ✓

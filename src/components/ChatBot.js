@@ -390,7 +390,7 @@ export default function ChatBot() {
                 padding: '9px 13px',
                 border: '1.5px solid var(--border)',
                 borderRadius: 100,
-                fontSize: 13, fontFamily: 'var(--font)',
+                fontSize: 16, fontFamily: 'var(--font)',
                 background: 'var(--bg)', color: 'var(--text)',
                 outline: 'none',
                 transition: 'border-color .15s',

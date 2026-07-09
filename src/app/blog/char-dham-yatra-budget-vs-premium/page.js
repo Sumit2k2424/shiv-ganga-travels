@@ -72,7 +72,7 @@ export default function BudgetVsPremium() {
         </p>
 
         {/* Three-tier price summary */}
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12, marginBottom:28 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:28 }}>
           {[
             { tier:'Budget', price:'₹21,000–22,000', icon:'💼', for:'Groups of 6–10 · Fit adults · Budget families', highlight:false },
             { tier:'Standard', price:'₹26,000–32,000', icon:'🏨', for:'Families of 4–6 · Mixed ages · Comfort seekers', highlight:true },

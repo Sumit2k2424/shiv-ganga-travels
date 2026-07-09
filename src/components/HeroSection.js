@@ -608,7 +608,7 @@ export default function HeroSection() {
 
         <div style={{
           display:'flex', justifyContent:'center', gap:20, flexWrap:'wrap',
-          marginTop:20, fontSize:12, color:'rgba(255,255,255,0.5)',
+          marginTop:20, fontSize:12.5, color:'rgba(255,255,255,0.78)',
         }}>
           {['✓ No hidden charges','✓ VIP darshan included','✓ Free cancellation 30 days','✓ 25% advance confirms seat'].map(t => (
             <span key={t} style={{ whiteSpace:'nowrap' }}>{t}</span>

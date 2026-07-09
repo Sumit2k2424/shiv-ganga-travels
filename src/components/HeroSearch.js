@@ -30,9 +30,15 @@ export default function HeroSearch() {
   const fieldWrap = {
     flex:'1 1 150px', minWidth:130,
     border:'1px solid var(--border)', borderRadius:10,
-    padding:'10px 14px 8px', background:'#fff',
+    padding:'10px 32px 8px 14px', background:'#fff',
     transition:'border-color .15s, box-shadow .15s',
+    position:'relative',
   };
+  const chevron = (
+    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" style={{ position:'absolute', right:12, top:'50%', transform:'translateY(-25%)', pointerEvents:'none' }}>
+      <path d="M2 4l4 4 4-4" fill="none" stroke="var(--text-muted)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
   const labelStyle = {
     display:'block', fontSize:10, fontWeight:700,
     color:'var(--text-muted)', marginBottom:2,
@@ -82,20 +88,23 @@ export default function HeroSearch() {
 
       {/* Fields */}
       <form onSubmit={handleSearch} className="hero-search-form" style={{ padding:'18px 20px 10px', display:'flex', gap:12, flexWrap:'wrap' }}>
-        <div style={fieldWrap}>
+        <div className="hs-field" style={fieldWrap}>
+          {chevron}
           <label style={labelStyle} htmlFor="hs-city">Starting From</label>
           <select id="hs-city" value={city} onChange={e=>setCity(e.target.value)} style={bigSelect}>
             {CITIES.map(c=><option key={c}>{c}</option>)}
           </select>
         </div>
-        <div style={fieldWrap}>
+        <div className="hs-field" style={fieldWrap}>
+          {chevron}
           <label style={labelStyle} htmlFor="hs-month">Travel Month</label>
-          <select id="hs-month" value={month} onChange={e=>setMonth(e.target.value)} style={{ ...bigSelect, fontSize: month ? 19 : 15, fontWeight: month ? 800 : 600, color: month ? 'var(--text)' : 'var(--text-muted)' }}>
+          <select id="hs-month" value={month} onChange={e=>setMonth(e.target.value)} style={{ ...bigSelect, fontSize: month ? 19 : 16, fontWeight: month ? 800 : 600, color: month ? 'var(--text)' : 'var(--text-muted)' }}>
             <option value="">Any month</option>
             {MONTHS.map(m=><option key={m}>{m}</option>)}
           </select>
         </div>
-        <div style={fieldWrap}>
+        <div className="hs-field" style={fieldWrap}>
+          {chevron}
           <label style={labelStyle} htmlFor="hs-pax">Pilgrims</label>
           <select id="hs-pax" value={pilgrims} onChange={e=>setPilgrims(e.target.value)} style={bigSelect}>
             {['1','2','3','4','5','6','7','8','9','10+'].map(n=>(

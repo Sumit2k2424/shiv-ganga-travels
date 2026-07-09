@@ -2892,3 +2892,69 @@ article table tbody tr:nth-child(even) { background: #F7F9FD; }
   .hero-search-form { padding: 14px 14px 8px !important; }
   .hero-search-form > div { flex: 1 1 100% !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   UX ENHANCEMENT LAYER — July 9, 2026 (pro UX audit pass)
+═══════════════════════════════════════════════════════════════ */
+
+/* Anchor links land below the sticky navbar instead of under it */
+:target, [id] { scroll-margin-top: 96px; }
+
+/* Keyboard users always see where they are */
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Search widget: visible focus ring on the whole field, not just the select */
+.hs-field:focus-within {
+  border-color: var(--navy) !important;
+  box-shadow: 0 0 0 3px rgba(15,43,91,0.12);
+}
+
+/* Branded, readable text selection */
+::selection { background: var(--gold-light); color: var(--navy); }
+
+/* Kill the grey tap flash on mobile — active states already handle feedback */
+a, button { -webkit-tap-highlight-color: transparent; }
+
+/* Data tables scroll sideways on small phones instead of breaking layout */
+@media (max-width: 768px) {
+  article table, .fare-table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Respect reduced motion for the new hover transforms too */
+@media (prefers-reduced-motion: reduce) {
+  .pkg-card:hover { transform: none; }
+  .hs-field, .btn-primary { transition: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE SEO & RESPONSIVENESS LAYER — July 9, 2026
+═══════════════════════════════════════════════════════════════ */
+
+/* Selects meet the 44px touch-target standard on mobile */
+@media (max-width: 768px) {
+  select { min-height: 44px; }
+
+  /* Search widget: full-width SEARCH pill is easier to hit than a floating
+     circle-of-thumb target, and can't overflow narrow screens */
+  .hero-search-form button[type="submit"] {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    margin-top: 4px;
+    border-radius: 12px !important;
+  }
+}
+
+/* Media can never force horizontal scroll on small screens */
+@media (max-width: 480px) {
+  img, video, iframe { max-width: 100%; }
+}
