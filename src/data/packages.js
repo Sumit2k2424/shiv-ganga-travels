@@ -17,8 +17,8 @@ export const SITE = {
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
-  lastUpdated   : 'July 2, 2026', // human-readable, shown on-page
-  lastUpdatedISO: '2026-07-02',   // schema.org dateModified format
+  lastUpdated   : 'July 9, 2026', // human-readable, shown on-page
+  lastUpdatedISO: '2026-07-09',   // schema.org dateModified format
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────

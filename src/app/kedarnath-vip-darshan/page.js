@@ -25,7 +25,7 @@ export const metadata = {
   },
 };
 
-const UPDATED = 'June 2026';
+const UPDATED = 'July 2026';
 
 function Schema() {
   const faq = {

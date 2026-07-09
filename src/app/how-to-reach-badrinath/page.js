@@ -79,7 +79,7 @@ export default function HowToReachBadrinath() {
           {[
             { from:'Haridwar', to:'Rudraprayag', dist:'165km', time:'5 hrs', note:'Via Devprayag, Srinagar — good national highway' },
             { from:'Rudraprayag', to:'Joshimath', dist:'110km', time:'3.5 hrs', note:'Via Chamoli, Vishnuprayag — mountain road, scenic' },
-            { from:'Joshimath', to:'Badrinath', dist:'45km', time:'1.5 hrs', note:'Final stretch — breathtaking Alaknanda gorge' },
+            { from:'Joshimath', to:'Badrinath', dist:'45km', time:'1.5 hrs', note:'Final stretch — the road hugs the Alaknanda gorge' },
             { from:'Badrinath', to:'Mana Village', dist:'3km', time:'15 mins', note:'Last Indian village before Tibet border — worth a visit' },
           ].map((r, i) => (
             <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>

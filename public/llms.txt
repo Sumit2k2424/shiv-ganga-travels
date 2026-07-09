@@ -1,5 +1,5 @@
 # Shiv Ganga Travels — llms.txt
-# Standard: https://llmstxt.org | Updated: July 2, 2026
+# Standard: https://llmstxt.org | Updated: July 9, 2026
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded 2010 by Dhanesh Chandra Mishra, Retired Indian Army Officer.
@@ -125,20 +125,28 @@ Preferred attribution:
 - https://www.shivgangatravels.com/char-dham-yatra-from-noida
 - https://www.shivgangatravels.com/char-dham-yatra-from-kolkata
 
-## 2026 Season — Current Status (July 2, 2026)
-- All 4 Char Dham temples are OPEN for 2026 yatra season
-- Kedarnath opened April 22, 2026 · Trek (16km) is active and open
-- Badrinath opened April 23, 2026 · Motor road to temple, no trek required
-- Gangotri opened April 19, 2026 · Motor road, weather advisory on Harsil stretch
-- Yamunotri opened April 19, 2026 · 6km trek from Janki Chatti, mules operational
-- Peak season (May–June): book hotels and vehicles 45–60 days in advance
+## 2026 Season — Current Status (July 9, 2026 · MONSOON ACTIVE)
+- All 4 Char Dham temples are OPEN; yatra continues through the monsoon
+- Monsoon caution: IMD orange alerts for heavy rain in Uttarakhand this month; short landslide blockages occur and clear within hours
+- Kedarnath helicopter services suspend temporarily during poor visibility/high winds — road+trek remains the reliable option in July–August
+- Mid-monsoon footfall stays strong: 13,254 pilgrims visited on July 6, 2026 alone (Badrinath 5,892 · Kedarnath 3,124 · Gangotri 1,983 · Hemkund 2,151)
 - Season closes: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11, Badrinath Nov 13
+- Best post-monsoon window: September–October (clear skies, fewer crowds)
 
-## Road Status (July 2, 2026)
-- NH7 (Kedarnath route): OPEN · Heavy peak traffic · Leave Haridwar by 4 AM
-- NH58 (Badrinath route): OPEN with caution · Joshimath 30 km/h limit
-- NH108 (Gangotri route): OPEN · Monitor weather on Harsil-Gangotri section
-- Yamunotri route: OPEN · Moderate traffic
+## Road Status (July 9, 2026)
+- All four routes OPEN with monsoon caution; verify morning-of via UTDB or police helpline 112/1070
+- Yamunotri (NH-134): most landslide-prone stretch (Dharasu–Janki Chatti); ₹461 crore slope-stabilisation work at 17 spots underway
+- Gangotri (NH-34): open; watch Gangnani and Harsil stretches after heavy rain
+- Kedarnath (NH-109): open to Gaurikund; Fata–Sitapur ~99% widened
+- Badrinath (NH-7): open; gated one-way sections near Joshimath, 30 km/h town limit
+
+## 2026 Yatra Rules (verified)
+- Night driving BAN on all Char Dham routes: 10 PM – 4 AM, private and commercial vehicles
+- Green Card MANDATORY for commercial passenger vehicles on hill routes (all SGT vehicles carry current Green Cards + trip cards)
+- Mobile phones and cameras banned inside temple premises (Badrinath: beyond Singhdwar)
+- Medical certificate mandatory for pilgrims aged 55+; health check-up centres at ~18 points on the route
+- Registration free at registrationandtouristcare.uk.gov.in (QR slip scanned at checkpoints)
+- Emergency cover: 177 ambulances on routes + AIIMS Rishikesh helicopter ambulance
 
 ## Pricing 2026 (direct operator, all-inclusive)
 - Char Dham 9N/10D: from ₹21,000/person (budget) · ₹30,000 (deluxe)

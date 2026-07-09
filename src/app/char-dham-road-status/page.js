@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
 
-const UPDATED = 'June 2026';
-const UPDATED_ISO = '2026-06-01';
+const UPDATED = 'July 9, 2026';
+const UPDATED_ISO = '2026-07-09';
 
 export const metadata = {
   title: 'Char Dham Road Status Today 2026 | Live Route Updates',
@@ -18,6 +18,8 @@ export const metadata = {
     type: 'article',
   },
 };
+
+const MONSOON_NOTE = `Monsoon update (${UPDATED}): all four routes are open, but the IMD has been issuing orange alerts for heavy rain across Uttarakhand this month. Landslides have caused short blockages on the yatra corridor, and Kedarnath helicopter services get suspended whenever visibility drops. Night driving on Char Dham routes is banned between 10 PM and 4 AM, and passenger vehicles need a valid Green Card to ply hill routes. Confirm conditions on the morning you travel — our drivers report road status daily, or check the official links below.`;
 
 const ROUTES = [
   { dham:'Yamunotri', via:'NH-134, Dharasu → Barkot → Janki Chatti', status:'Open · drive with caution', tone:'caution',
@@ -45,7 +47,9 @@ const SOURCES = [
 ];
 
 const PAA = [
-  { q:'Is the Char Dham road open today?', a:`As of ${UPDATED}, all four routes — Yamunotri, Gangotri, Kedarnath (up to Gaurikund) and Badrinath — are open and motorable. During the monsoon (July–August) any of them can shut for a few hours after heavy rain or a landslide, so always confirm on the day with UTDB or the local police helpline before you set off.` },
+  { q:'Is the Char Dham road open today?', a:`As of ${UPDATED}, all four routes — Yamunotri, Gangotri, Kedarnath (up to Gaurikund) and Badrinath — are open, but the monsoon is now active. The IMD has issued orange alerts for heavy rain this month and landslides have caused short blockages on the corridor; Kedarnath helicopter services also pause when visibility drops. Any route can shut for a few hours after heavy rain, so confirm on the day with UTDB or the police helpline (112 / 1070) before you set off.` },
+  { q:'Can I travel Char Dham routes at night?', a:'No. Vehicle movement on all Char Dham routes is banned between 10 PM and 4 AM — for private and commercial vehicles alike. The rule cuts accident risk from fog, landslide debris and poor visibility on narrow hill roads, and violations attract penalties. Plan each leg so you reach your night halt before 8–9 PM.' },
+  { q:'What is the Green Card rule for Char Dham vehicles?', a:'Every commercial passenger vehicle running on Uttarakhand hill routes — Char Dham, Chopta and other hill destinations — must carry a valid Green Card issued after a fitness check by the transport department. Vehicles without one are turned back at checkpoints. All Shiv Ganga Travels vehicles carry current Green Cards and trip cards, so our guests never face this issue.' },
   { q:'Which Char Dham route has the worst roads in 2026?', a:'Yamunotri (NH-134) is the roughest. It is only about 57% widened under the all-weather project, has narrow single-lane sections between Dharasu and Janki Chatti, and historically sees the most landslide closures. The government approved ₹461 crore in April 2026 for slope and drainage work at 17 sensitive spots on this stretch, but it is not finished yet.' },
   { q:'Is the Char Dham highway project complete?', a:'No. The Chardham Mahamarg Vikas Pariyojana covers about 825 km across 53 packages. Roughly 629 km were complete by mid-2025, so most of the network is done but pockets — chiefly the Yamunotri route — are still under construction. The Kedarnath route (Fata–Sitapur) is about 99% complete.' },
   { q:'How do I check live road conditions before travelling?', a:'Use official sources, not random social posts: the UTDB tourism site for advisories, the IMD site for district rain warnings, and the Uttarakhand Police / district control room helplines (112 and 1070) for live closures. We also call our drivers on the ground each morning — that is usually the fastest read on what is actually moving.' },
@@ -112,6 +116,11 @@ export default function CharDhamRoadStatus() {
       <p style={{ ...p, fontSize:16.5, background:'var(--navy-light)', borderRadius:12, padding:'16px 18px' }}>
         <strong>Short answer:</strong> as of {UPDATED}, all four Char Dham routes are open and motorable — Yamunotri, Gangotri, Kedarnath (road runs to Gaurikund, then a 16 km trek) and Badrinath (drive to the gate). Roads can still close for a few hours during monsoon landslides, so treat the table below as the season picture and confirm live status on the day using the <a href="#live" style={{ color:'var(--teal)', fontWeight:600 }}>official sources here</a> before you set off.
       </p>
+
+      <div style={{ background:'#fff8ed', border:'1px solid #f5d9a8', borderRadius:12, padding:'14px 18px', marginBottom:22 }}>
+        <div style={{ fontSize:12, fontWeight:700, color:'#9a6b1f', textTransform:'uppercase', letterSpacing:'0.06em', marginBottom:6 }}>⛈️ Monsoon advisory</div>
+        <p style={{ ...p, margin:0, fontSize:14 }}>{MONSOON_NOTE}</p>
+      </div>
 
       <h2 style={h2}>Char Dham road status today — quick view</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(210px,1fr))', gap:12, marginBottom:14 }}>

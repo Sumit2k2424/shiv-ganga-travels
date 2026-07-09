@@ -151,3 +151,39 @@ closed the gaps on /char-dham-yatra:
 - Statistics page: 17.8 lakh registrations by mid-April 2026 stat (fresh, citable).
 - Verified 2026 kapat dates against current announcements — site already correct.
 Build verified: 193 pages.
+
+## Monsoon Freshness Round — July 9, 2026
+
+Goal: keep the site the most current source on the SERP + in AI answers now that
+the monsoon is active. All facts verified against July 2026 news (IMD alerts,
+euttaranchal daily counts, government notifications).
+
+### Fresh, citable facts added
+- /char-dham-road-status: monsoon advisory box (orange alerts, short landslide
+  blockages, Kedarnath heli suspensions in poor visibility), UPDATED → July 9,
+  2026, plus 2 new PAA answers no competitor page covers cleanly: the 10 PM–4 AM
+  night-driving ban and the mandatory Green Card for hill-route passenger
+  vehicles (with the trust line that all SGT vehicles carry current Green Cards).
+- /char-dham-yatra-statistics: July 6, 2026 single-day monsoon footfall stat
+  (13,254 pilgrims — Badrinath 5,892, Kedarnath 3,124, Gangotri 1,983, Hemkund
+  2,151). Last-updated + schema dateModified → July 9.
+- Blog road-conditions post: stale green "April — no closures / Peak Season
+  Active" box replaced with an amber monsoon status box linking to the live
+  road-status page; dateModified → 2026-07-09.
+
+### llms.txt
+- Season status rewritten for the monsoon (MONSOON ACTIVE header, heli caveat,
+  July 6 footfall stat, Sept–Oct post-monsoon window).
+- Road status per-route refreshed with correct NH numbers and the ₹461 crore
+  NH-134 slope-work detail.
+- New "2026 Yatra Rules (verified)" block: night ban, Green Card, phone/camera
+  ban (Badrinath beyond Singhdwar), 55+ medical cert, free registration,
+  177 ambulances + AIIMS heli ambulance. Stamp → July 9, 2026.
+
+### Freshness & humanising
+- SITE.lastUpdated / ISO → July 9, 2026 (feeds ~63 pages + schema).
+- kedarnath-vip-darshan and pony/palki rate pages: verified stamps → July 2026.
+- Two AI-sounding lines rewritten ("breathtaking Alaknanda gorge",
+  "most spiritually powerful experiences" group-page opener).
+
+Validation: all 8 edited files parse clean via esbuild (jsx loader).

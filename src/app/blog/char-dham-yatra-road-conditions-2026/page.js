@@ -76,7 +76,7 @@ export default function RoadConditions() {
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Updated {SITE.lastUpdated} · Peak Season Active
+            Updated {SITE.lastUpdated} · Monsoon Season — Routes Open
           </span>
           <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
             Char Dham Yatra Road Conditions 2026
@@ -98,11 +98,11 @@ export default function RoadConditions() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Peak Season — All Routes Open</div>
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": "2026-07-09", "lang": "en-IN"}} />
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Monsoon Season — All Routes Open, Travel With Caution</div>
 
-        <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#15803D' }}>
-          <strong>2026 Season Status:</strong> All four Char Dham routes are open as of April 2026. Yamunotri and Gangotri opened April 19, Kedarnath April 22, Badrinath April 23. No major road closures reported at time of writing. Monsoon season (July–August) is when conditions deteriorate — plan accordingly.
+        <div style={{ background: '#FFF8ED', border: '1px solid #F5D9A8', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#9A6B1F' }}>
+          <strong>Monsoon Status ({SITE.lastUpdated}):</strong> All four routes remain open, but the monsoon is now active. The IMD has issued orange alerts for heavy rain in Uttarakhand this month; landslides have caused short blockages that clear within hours, and Kedarnath helicopter services pause during poor visibility. Night driving is banned 10 PM–4 AM on all Char Dham routes. Verify conditions the morning you travel — police helpline 112 / 1070, or check our <Link href="/char-dham-road-status" style={{ color:'#9A6B1F', fontWeight:700 }}>live road status page</Link>.
         </div>
 
         <p style={p}>Mountain roads are fundamentally different from plains highways. Char Dham routes cross geological zones with active seismicity, heavy snowmelt in spring, and monsoon-triggered landslides in July–August. Understanding the current conditions and the specific hazard zones on each route is essential for safe travel. Below is the 2026 status for each route compiled from BRO (Border Roads Organisation) updates, NHAI bulletins, and our own driver reports.</p>
