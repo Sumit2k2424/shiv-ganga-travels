@@ -9,178 +9,114 @@ const CAT_FALLBACK = {
   'uttarakhand': 'linear-gradient(160deg, #14532D 0%, #15803D 60%, #16A34A 100%)',
 };
 
-const URGENCY = [
-  { seats: 4,  text: '4 seats left', hot: true  },
-  { seats: 6,  text: '6 seats left', hot: true  },
-  { seats: 8,  text: '8 seats left', hot: false },
-  { seats: 10, text: 'Filling fast', hot: false },
-];
-function getUrgency(slug) {
-  const idx = slug.split("").reduce((a, c) => a + c.charCodeAt(0), 0) % URGENCY.length;
-  return URGENCY[idx];
-}
-
-const PROOF = ["2 hrs ago", "yesterday", "3 days ago", "1 day ago"];
-function getProof(slug) { return PROOF[slug.length % PROOF.length]; }
-
-function Stars() {
-  return (
-    <div style={{ display:"flex", gap:2 }} aria-label="5 stars">
-      {[...Array(5)].map((_,i) => (
-        <svg key={i} width="11" height="11" viewBox="0 0 12 12" fill="#E8920A">
-          <path d="M6 0l1.854 3.76 4.146.602-3 2.924.708 4.128L6 9.384l-3.708 2.03L3 7.286 0 4.362l4.146-.602z"/>
-        </svg>
-      ))}
-    </div>
-  );
-}
-
 export default function PackageCard({ pkg }) {
   const savings = pkg.price.original - pkg.price.discounted;
   const pct     = Math.round((savings / pkg.price.original) * 100);
-  const fallBg  = CAT_FALLBACK[pkg.category] || CAT_FALLBACK["char-dham"];
-  const urgency = getUrgency(pkg.slug);
-  const proof   = getProof(pkg.slug);
+  const fallBg  = CAT_FALLBACK[pkg.category] || CAT_FALLBACK['char-dham'];
   const msg     = encodeURIComponent(
     `Namaste! I am interested in "${pkg.name}" for Char Dham Yatra 2026. Please share details and availability.`
   );
 
   return (
-    <article className="pkg-card" style={{ display:"flex", flexDirection:"column", position:"relative" }}>
+    <article className="pkg-card" style={{ display:'flex', flexDirection:'column', position:'relative', background:'#fff' }}>
 
       {/* Image */}
-      <Link href={`/packages/${pkg.slug}`} style={{ display:"block", textDecoration:"none" }}>
-        <div style={{ height:200, position:"relative", overflow:"hidden", flexShrink:0, background: fallBg }}>
+      <Link href={`/packages/${pkg.slug}`} style={{ display:'block', textDecoration:'none' }}>
+        <div style={{ height:182, position:'relative', overflow:'hidden', flexShrink:0, background:fallBg }}>
           {pkg.photo && (
-            <img
-              src={pkg.photo}
-              alt={pkg.name}
-              width={400} height={200}
+            <img src={pkg.photo} alt={pkg.name} width={400} height={182}
               loading="lazy" decoding="async"
-              style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", display:"block" }}
-            />
+              style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}/>
           )}
-          {/* Overlay gradient */}
-          <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg,rgba(15,43,91,0.06) 0%,rgba(15,43,91,0.72) 100%)", pointerEvents:"none" }}/>
-
-          {/* Top badges */}
-          <div style={{ position:"absolute", top:10, left:10, right:10, display:"flex", justifyContent:"space-between", zIndex:2 }}>
-            <span style={{
-              background: urgency.hot ? "#DC2626" : "rgba(0,0,0,0.5)",
-              backdropFilter:"blur(6px)", color:"#fff",
-              fontSize:10.5, fontWeight:700, padding:"4px 9px", borderRadius:7,
-              display:"flex", alignItems:"center", gap:4,
-            }}>
-              {urgency.hot ? "🔥" : "⏳"} {urgency.text}
-            </span>
-            <span style={{
-              background:"rgba(0,0,0,0.45)", backdropFilter:"blur(6px)",
-              color:"#fff", fontSize:10.5, fontWeight:600, padding:"4px 9px", borderRadius:7,
-            }}>
-              {pkg.duration.nights}N / {pkg.duration.days}D
-            </span>
-          </div>
-
-          {/* Savings badge */}
+          {/* OTA deal ribbon */}
           {pct >= 10 && (
-            <div style={{
-              position:"absolute", top:10, left:"50%", transform:"translateX(-50%)",
-              background:"#16A34A", color:"#fff", fontSize:10, fontWeight:800,
-              padding:"3px 10px", borderRadius:100, zIndex:2, whiteSpace:"nowrap",
-            }}>
-              {pct}% OFF
-            </div>
+            <span style={{
+              position:'absolute', top:12, left:0, zIndex:2,
+              background:'#16A34A', color:'#fff', fontSize:11, fontWeight:800,
+              padding:'4px 12px 4px 10px', borderRadius:'0 6px 6px 0',
+              boxShadow:'0 2px 6px rgba(22,163,74,0.35)', letterSpacing:'0.02em',
+            }}>{pct}% OFF</span>
           )}
-
-          {/* Name + stars overlay */}
-          <div style={{
-            position:"absolute", bottom:0, left:0, right:0,
-            padding:"12px 14px 14px", zIndex:2,
-            background:"linear-gradient(to top,rgba(15,43,91,0.95) 0%,transparent 100%)",
-          }}>
-            <h3 style={{
-              color:"#fff", fontWeight:700, fontSize:14.5, lineHeight:1.3,
-              textShadow:"0 1px 4px rgba(0,0,0,0.5)", marginBottom:5,
-            }}>{pkg.name}</h3>
-            <div style={{ display:"flex", alignItems:"center", gap:7 }}>
-              <Stars/>
-              <span style={{ fontSize:11, color:"rgba(255,255,255,0.75)" }}>
-                4.6 · Last booked {proof}
-              </span>
-            </div>
-          </div>
+          {/* Duration chip */}
+          <span style={{
+            position:'absolute', top:12, right:12, zIndex:2,
+            background:'rgba(15,23,42,0.62)', backdropFilter:'blur(6px)',
+            color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:6,
+          }}>{pkg.duration.nights}N / {pkg.duration.days}D</span>
         </div>
       </Link>
 
       {/* Body */}
-      <div style={{ padding:"14px", flex:1, display:"flex", flexDirection:"column", gap:10 }}>
+      <div style={{ padding:'13px 15px 15px', flex:1, display:'flex', flexDirection:'column', gap:9 }}>
+
+        {/* Title + rating tile (Agoda-style) */}
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:10 }}>
+          <Link href={`/packages/${pkg.slug}`} style={{ textDecoration:'none', flex:1 }}>
+            <h3 style={{ color:'var(--navy)', fontWeight:700, fontSize:15, lineHeight:1.35, margin:0 }}>{pkg.name}</h3>
+          </Link>
+          <div style={{ textAlign:'right', flexShrink:0 }}>
+            <span style={{
+              display:'inline-block', background:'var(--navy)', color:'#fff',
+              fontSize:12.5, fontWeight:800, padding:'4px 8px', borderRadius:'8px 8px 8px 0',
+            }}>4.6</span>
+            <div style={{ fontSize:9.5, color:'var(--text-muted)', marginTop:3, whiteSpace:'nowrap' }}>38 Google reviews</div>
+          </div>
+        </div>
 
         {/* Meta chips */}
-        <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+        <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
           <span className="chip">📍 {pkg.startCity}</span>
-          <span className="chip">🚌 {pkg.transport.split("/")[0].trim()}</span>
+          <span className="chip">🚌 {pkg.transport.split('/')[0].trim()}</span>
           <span className="chip">🎯 {pkg.difficulty}</span>
         </div>
 
         {/* Highlights */}
-        <ul style={{ listStyle:"none", display:"flex", flexDirection:"column", gap:4, flex:1 }}>
-          {pkg.highlights.slice(0,3).map((h,i) => (
-            <li key={i} style={{
-              fontSize:12.5, color:"var(--text-mid)", lineHeight:1.5,
-              paddingLeft:15, position:"relative",
-            }}>
-              <span style={{ position:"absolute", left:0, color:"var(--teal)", fontWeight:700, fontSize:10, top:3 }}>✓</span>
+        <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:4, flex:1, margin:0, padding:0 }}>
+          {pkg.highlights.slice(0,2).map((h,i) => (
+            <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5, paddingLeft:15, position:'relative' }}>
+              <span style={{ position:'absolute', left:0, color:'#16A34A', fontWeight:700, fontSize:10, top:3 }}>✓</span>
               {h}
             </li>
           ))}
         </ul>
 
-        {/* Season */}
-        <div style={{ fontSize:11.5, color:"var(--text-muted)", borderTop:"1px solid var(--border)", paddingTop:9 }}>
-          📅 {pkg.season}
+        {/* Honest reassurance line (real policy) */}
+        <div style={{ fontSize:11.5, color:'#15803D', fontWeight:600 }}>
+          ✓ Free cancellation up to 30 days before departure
         </div>
 
-        {/* Price + CTA */}
-        <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", gap:8, flexWrap:"wrap" }}>
+        {/* Price + CTA — OTA layout */}
+        <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', gap:10, borderTop:'1px solid var(--border)', paddingTop:11, flexWrap:'wrap' }}>
           <div>
-            <div style={{ fontSize:11, color:"var(--text-muted)", textDecoration:"line-through" }}>
-              ₹{pkg.price.original.toLocaleString("en-IN")}
+            <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>
+              <s style={{ color:'#DC2626', opacity:0.75 }}>₹{pkg.price.original.toLocaleString('en-IN')}</s>
+              {savings > 0 && <span style={{ color:'#16A34A', fontWeight:700, marginLeft:6 }}>Save ₹{savings.toLocaleString('en-IN')}</span>}
             </div>
-            <div style={{
-              fontWeight:800, fontSize:22, color:"var(--navy)",
-              lineHeight:1, letterSpacing:"-0.03em", fontFamily:"var(--font-display)",
-            }}>
-              ₹{pkg.price.discounted.toLocaleString("en-IN")}
-              <span style={{ fontSize:11.5, fontWeight:500, color:"var(--text-muted)", fontFamily:"var(--font)" }}>/pp</span>
+            <div style={{ fontWeight:800, fontSize:23, color:'var(--text)', lineHeight:1.15, letterSpacing:'-0.02em' }}>
+              ₹{pkg.price.discounted.toLocaleString('en-IN')}
+              <span style={{ fontSize:11.5, fontWeight:500, color:'var(--text-muted)' }}> /person</span>
             </div>
-            {savings > 0 && (
-              <div style={{ fontSize:11, color:"#16A34A", fontWeight:700, marginTop:2 }}>
-                ↓ Save ₹{savings.toLocaleString("en-IN")}
-              </div>
-            )}
+            <div style={{ fontSize:10.5, color:'var(--text-muted)' }}>All-inclusive · No hidden charges</div>
           </div>
 
-          <div style={{ display:"flex", flexDirection:"column", gap:6, flexShrink:0 }}>
+          <div style={{ display:'flex', flexDirection:'column', gap:6, flexShrink:0 }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{
-                background:"#25D366", color:"#fff",
-                padding:"9px 14px", borderRadius:8,
-                fontSize:12.5, fontWeight:700,
-                textDecoration:"none", textAlign:"center",
-                display:"flex", alignItems:"center", justifyContent:"center", gap:5,
-                boxShadow:"0 2px 8px rgba(37,211,102,0.3)",
+                background:'linear-gradient(135deg,#F5A82A,#C67A08)', color:'#fff',
+                padding:'10px 16px', borderRadius:8, fontSize:12.5, fontWeight:800,
+                textDecoration:'none', textAlign:'center', letterSpacing:'0.02em',
+                boxShadow:'0 3px 10px rgba(232,146,10,0.35)',
               }}>
-              💬 Book Now
+              Get Free Quote
             </a>
             <Link href={`/packages/${pkg.slug}`}
               style={{
-                color:"var(--navy)", border:"1px solid var(--border)",
-                padding:"7px 14px", borderRadius:8,
-                fontSize:12, fontWeight:600, textDecoration:"none",
-                textAlign:"center", background:"var(--bg)",
+                color:'var(--navy)', border:'1px solid var(--border-dark)',
+                padding:'7px 16px', borderRadius:8, fontSize:12, fontWeight:700,
+                textDecoration:'none', textAlign:'center', background:'#fff',
               }}>
-              View Details →
+              View Details
             </Link>
           </div>
         </div>

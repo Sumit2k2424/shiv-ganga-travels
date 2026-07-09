@@ -2813,3 +2813,82 @@ select:not(.newsletter-input) {
     min-height:unset; min-width:unset;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   OTA DESIGN LAYER — July 9, 2026 (MakeMyTrip / Agoda direction)
+   Authoritative layer: cool OTA canvas, deal-forward cards,
+   gradient action buttons, rating tiles. Appended last so it
+   wins over earlier class rules; inline styles stay untouched.
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --cta-grad    : linear-gradient(135deg,#F5A82A,#E8920A 55%,#C67A08); /* brand Sacred Gold */
+  --shadow-card : 0 1px 2px rgba(15,43,91,0.06), 0 6px 20px rgba(15,43,91,0.08);
+  --shadow-card-hover: 0 4px 8px rgba(15,43,91,0.08), 0 16px 36px rgba(15,43,91,0.16);
+}
+
+/* Cards — flat white, tight radius, lift on hover (OTA card grammar) */
+.pkg-card {
+  border-radius: 14px;
+  border: 1px solid #E6EAF2;
+  box-shadow: var(--shadow-card);
+}
+.pkg-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(15,43,91,0.16);
+}
+
+/* Primary actions — saffron gradient, the site-wide deal color */
+.btn-primary {
+  background: var(--cta-grad) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 3px 12px rgba(232,146,10,0.35);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover { filter: brightness(1.06); box-shadow: 0 6px 18px rgba(232,146,10,0.45); }
+
+/* Meta chips — quieter, cooler (Agoda info chips) */
+.chip {
+  background: var(--bg);
+  border: 1px solid #E6EAF2;
+  color: var(--text-mid);
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+/* Rating tile utility (navy square, Agoda-style) */
+.rating-tile {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 8px 8px 8px 0;
+}
+
+/* Section headers gain OTA "View all" affordance */
+.view-all {
+  color: #0B7B8B;
+  font-weight: 700;
+}
+.view-all:hover { text-decoration: underline; }
+
+/* Tables read like OTA fare tables: zebra + navy header */
+article table thead th, .fare-table thead th {
+  background: var(--navy);
+  color: #fff;
+}
+article table tbody tr:nth-child(even) { background: #F7F9FD; }
+
+/* Search widget selects keep native arrows hidden but stay accessible */
+.hero-search-form select { min-height: 30px; }
+
+/* Mobile: floating SEARCH pill and tab row stay usable */
+@media (max-width: 640px) {
+  .hero-search-form { padding: 14px 14px 8px !important; }
+  .hero-search-form > div { flex: 1 1 100% !important; }
+}

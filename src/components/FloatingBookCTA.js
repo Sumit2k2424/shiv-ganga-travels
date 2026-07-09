@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 const SOCIAL_PROOF = [
-  '3 pilgrims just enquired',
-  '5 seats left for May batch',
-  'Popular choice this week',
-  '2 groups booked today',
-  'Last batch before June',
+  'Direct operator · zero commission',
+  'Sept–Oct batches booking now',
+  '4.6★ on Google · 38 reviews',
+  'Free cancellation up to 30 days',
+  'Founder replies personally on WhatsApp',
 ];
 
 export default function FloatingBookCTA({ packageName = '' }) {

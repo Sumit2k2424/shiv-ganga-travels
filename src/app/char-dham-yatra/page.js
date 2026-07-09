@@ -190,12 +190,12 @@ export default function CharDhamYatra() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(140px,45%),1fr))', gap:8, marginBottom:14 }}>
             {[
-              {date:'May 1–10, 2026',   seats:'4 seats left',  hot:true},
-              {date:'May 10–19, 2026',  seats:'6 seats left',  hot:true},
-              {date:'May 20–29, 2026',  seats:'8 seats left',  hot:false},
-              {date:'June 1–10, 2026',  seats:'12 seats left', hot:false},
-              {date:'Sept 10–19, 2026', seats:'Open batch',    hot:false},
-              {date:'Oct 1–10, 2026',   seats:'Open batch',    hot:false},
+              {date:'July 17–26, 2026',  seats:'Booking open',           hot:false},
+              {date:'Aug 7–16, 2026',    seats:'Booking open',           hot:false},
+              {date:'Sept 4–13, 2026',   seats:'Post-monsoon · popular', hot:true},
+              {date:'Sept 18–27, 2026',  seats:'Post-monsoon · popular', hot:true},
+              {date:'Oct 2–11, 2026',    seats:'Clear skies season',     hot:true},
+              {date:'Oct 16–25, 2026',   seats:'Booking open',           hot:false},
             ].map(d => (
               <div key={d.date} style={{ background:'rgba(255,255,255,0.07)', borderRadius:9, padding:'11px 12px', border:`1px solid ${d.hot ? 'rgba(232,146,10,0.5)' : 'rgba(255,255,255,0.12)'}` }}>
                 <div style={{ fontSize:13, fontWeight:700, color:'#fff', marginBottom:3 }}>{d.date}</div>
@@ -311,20 +311,18 @@ export default function CharDhamYatra() {
           <table style={{ borderCollapse:'collapse', fontSize:12.5, width:'100%' }}>
             <thead>
               <tr style={{ background:'var(--navy)' }}>
-                {['Month','Departure dates','Seats','Status'].map(h => (
+                {['Month','Departure dates','Season notes','Status'].map(h => (
                   <th key={h} style={{ padding:'9px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ['May 2026',   '5, 10, 15, 17, 20, 22, 26, 29',   '2–8 seats left',  'FILLING FAST'],
-                ['June 2026',  '3, 7, 12, 15, 19, 22, 26, 29',    '10–25 seats',     'Available'],
-                ['July 2026',  '3, 10, 17, 24, 31',               '30–45 seats',     'Open'],
-                ['August 2026','7, 14, 21, 28',                    '45–60 seats',     'Open'],
-                ['Sept 2026',  '4, 8, 11, 14, 18, 21, 24, 27',    '15–35 seats',     'Booking fast'],
-                ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', '20–50 seats',     'Available'],
-                ['Nov 2026',   '1, 3 (last batches)',              'Limited',         'Final season'],
+                ['July 2026',  '10, 17, 24, 31',                  'Monsoon batches — flexible rescheduling', 'Open'],
+                ['August 2026','7, 14, 21, 28',                    'Monsoon batches — flexible rescheduling', 'Open'],
+                ['Sept 2026',  '4, 8, 11, 14, 18, 21, 24, 27',    'Post-monsoon — clearest views',           'Booking fast'],
+                ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', 'Peak post-monsoon demand',                'Booking fast'],
+                ['Nov 2026',   '1, 3 (last batches)',              'Season closes Nov 10–13',                 'Final season'],
               ].map(([month, dates, seats, status], i) => (
                 <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 14px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{month}</td>

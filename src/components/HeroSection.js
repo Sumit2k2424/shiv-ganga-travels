@@ -451,11 +451,11 @@ export default function HeroSection() {
   return (
     <section style={{
       position:'relative',
-      minHeight:'100svh',
+      minHeight:'clamp(600px,78vh,760px)',
       background:'#010508',
       display:'flex', flexDirection:'column',
       alignItems:'center', justifyContent:'center',
-      padding:'clamp(70px,8vw,100px) 16px clamp(70px,10vw,120px)',
+      padding:'clamp(64px,7vw,88px) 16px clamp(56px,7vw,80px)',
       overflow:'hidden',
     }}>
       <Scene/>
@@ -498,7 +498,7 @@ export default function HeroSection() {
         </div>
       </a>
 
-      <div className="hero-content" style={{ maxWidth:820, width:'100%', position:'relative', zIndex:10 }}>
+      <div className="hero-content" style={{ maxWidth:1000, width:'100%', position:'relative', zIndex:10 }}>
 
         <div style={{
           display:'inline-flex', alignItems:'center', gap:8,
@@ -517,7 +517,7 @@ export default function HeroSection() {
         </div>
 
         <h1 className="display-title speakable-answer" style={{
-          color:'#fff', fontSize:'clamp(2rem,6vw,4.2rem)',
+          color:'#fff', fontSize:'clamp(1.8rem,4.6vw,3.2rem)',
           fontWeight:600, lineHeight:1.07, marginBottom:18,
           textShadow:'0 4px 40px rgba(0,0,0,0.6)',
         }}>
@@ -557,7 +557,7 @@ export default function HeroSection() {
 
         <HeroSearch/>
 
-        <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap', marginTop:22 }}>
+        <div style={{ display:'flex', justifyContent:'center', gap:12, flexWrap:'wrap', marginTop:56 }}>
           <Link href="/char-dham-yatra-cost-calculator" style={{
             display:'inline-flex', alignItems:'center', gap:9,
             background:'linear-gradient(135deg,#E8920A,#f5a82a)',
@@ -615,34 +615,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="hero-offer-pills" style={{
-          display:'flex', justifyContent:'center', gap:10, flexWrap:'wrap', marginTop:14,
-        }}>
-          {[{icon:'👴',text:'Senior Special — Pony included'},{icon:'🚁',text:'Helicopter — all 4 dhams in 6 days'},{icon:'💳',text:'EMI available — 25% advance books seat'}].map(o=>(
-            <div key={o.text} style={{
-              display:'inline-flex', alignItems:'center', gap:7,
-              background:'rgba(255,255,255,0.05)', backdropFilter:'blur(10px)',
-              border:'1px solid rgba(255,255,255,0.1)',
-              borderRadius:100, padding:'7px 16px',
-              fontSize:12, color:'rgba(255,255,255,0.75)', fontWeight:500,
-            }}>
-              <span style={{ fontSize:14 }}>{o.icon}</span>
-              <span>{o.text}</span>
-            </div>
-          ))}
-        </div>
 
-        {/* Scroll cue */}
-        <div style={{
-          marginTop:40, display:'flex', flexDirection:'column',
-          alignItems:'center', gap:5, opacity:0.4,
-        }}>
-          <span style={{ fontSize:10, color:'rgba(255,255,255,0.7)', letterSpacing:'0.14em' }}>SCROLL TO EXPLORE</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-            style={{ animation:'sgBounce 2s ease-in-out infinite' }}>
-            <path d="M5 8l5 5 5-5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
       </div>
 
       {/* Wave */}
@@ -657,7 +630,6 @@ export default function HeroSection() {
         @keyframes sgBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
         @keyframes sgShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
         @media(max-width:640px){
-          .hero-offer-pills>div{font-size:11px!important}
           .hero-badge-right{display:none!important}
         }
       `}}/>

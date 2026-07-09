@@ -187,3 +187,52 @@ euttaranchal daily counts, government notifications).
   "most spiritually powerful experiences" group-page opener).
 
 Validation: all 8 edited files parse clean via esbuild (jsx loader).
+
+## OTA Redesign Round — July 9, 2026 (MakeMyTrip / Agoda direction)
+
+Goal: OTA design grammar sitewide without touching 190+ pages individually.
+Delivered via 3 component rewrites + an authoritative CSS layer.
+
+### Search widget (HeroSearch) — the signature element
+- MMT-style icon product tabs (Char Dham / Do Dham / Single Dham / Helicopter /
+  Cabs), big bold field values (Starting From city, Travel Month, Pilgrims),
+  and the floating saffron-gradient SEARCH pill that breaks the card's bottom
+  edge. Months updated to July–Oct 2026. Cabs tab routes a cab-specific
+  WhatsApp message. "No login, no payment to enquire" reassurance line.
+
+### Hero (HeroSection) — compact OTA band
+- 100svh full-screen scene → clamp(600px,78vh,760px) band; headline scaled to
+  OTA size; content width 820→1000 for the wider widget; CTA row pushed below
+  the overhanging pill; offer-pills row and scroll cue removed (clutter).
+  The animated Himalaya scene stays — no competitor has it.
+
+### Package cards (PackageCard) — Agoda card grammar
+- White card, green left deal ribbon (X% OFF), duration chip, navy Agoda-style
+  rating tile (4.6 + 38 Google reviews), quieter meta chips, red strikethrough
+  anchor price + big bold price + green savings, saffron-gradient "Get Free
+  Quote" CTA, honest "Free cancellation up to 30 days" line (real policy).
+- REMOVED fake urgency ("4 seats left") and fabricated social proof ("Last
+  booked 2 hrs ago") — these contradicted our own /char-dham-yatra-scams page.
+
+### Honesty + staleness fixes surfaced by the redesign
+- /char-dham-yatra: expired May/June departure batches (with fake seat counts)
+  replaced by real July–Oct 2026 batches with honest labels; departure table
+  past months dropped, "Seats" column → "Season notes" with truthful copy.
+- FloatingBookCTA: fake rotating proof ("3 pilgrims just enquired") → true
+  facts (direct operator, 4.6★/38 reviews, free cancellation, founder replies).
+
+### Global OTA layer (globals.css, appended authoritative block)
+- Cooler canvas --bg #F1F4F9, card shadow/hover system, saffron gradient on
+  .btn-primary, quieter chips, .rating-tile utility, navy zebra fare tables,
+  mobile stacking for the search form.
+
+Validation: all edited files parse via esbuild; globals.css braces balanced.
+
+## Palette Revert — July 9, 2026
+User direction: keep logo and colour palette exactly as before.
+- Page background restored to original --bg #F8F9FC (OTA override removed).
+- All CTA gradients (SEARCH pill, Get Free Quote, .btn-primary) re-anchored to
+  brand Sacred Gold #E8920A (#F5A82A → #E8920A → #C67A08); shadows to
+  rgba(232,146,10). Chip background now uses var(--bg).
+- Logo (animated LogoMark in Navbar) was never modified — unchanged.
+OTA layout grammar (widget, cards, tables, shadows) retained.
