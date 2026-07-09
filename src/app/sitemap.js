@@ -112,6 +112,9 @@ export default function sitemap() {
     { url: `${b}/online-puja-booking`,                 p: 0.82, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-emergency-contacts`,  p: 0.78, cf: 'monthly' },
     { url: `${b}/char-dham-road-status`,               p: 0.80, cf: 'weekly'  },
+    { url: `${b}/gaurikund-guide`,                     p: 0.85, cf: 'monthly' },
+    { url: `${b}/guptkashi-guide`,                     p: 0.85, cf: 'monthly' },
+    { url: `${b}/kedarnath-to-badrinath-distance`,     p: 0.85, cf: 'monthly' },
   ];
 
   const weatherPages = [

@@ -282,3 +282,42 @@ Audited against mobile-first indexing requirements (Google crawls mobile-only).
 - Trek elevation SVG already in its own overflow-x wrapper ✓
 - Snow animation already disabled on mobile for INP/LCP ✓
 - Mobile table scrolling + 44px link targets shipped in earlier layers ✓
+
+## SEMrush Data Round — July 9, 2026
+Inputs: Organic Positions (88 kw, ALL at pos 4-30, zero on page 1 yet),
+Keyword Gap vs 4 competitors (5,107 kw / 279 relevant missing), Backlink
+Matrix (631 gap domains). Full plan in SEMRUSH-ACTION-PLAN.md.
+
+### New pages (missing-keyword clusters)
+- /kedarnath-to-badrinath-distance — 42k/mo cluster, KD12. Leg table, 1-day
+  vs 2-day plan, fares, Article+FAQ schema.
+- /gaurikund-guide — ~165k/mo cluster. Shuttle system, legend, hot-spring
+  status, stay comparison, TouristAttraction+FAQ schema.
+- /guptkashi-guide — ~66k/mo cluster. Temples, night-halt logic, distance
+  table, helipad fares, TouristAttraction+FAQ schema.
+All three registered in sitemap.js + llms.txt and cross-linked.
+
+### Striking-distance upgrades (existing pages, pos 4-30)
+- yamunotri-weather: temperature-first answer box ("yamunotri temperature"
+  9.9k @29)
+- haridwar-to-gangotri-cab: Quick Answer distance block (3.6k @13 — closest
+  page-1 push)
+- blog/haridwar-to-kedarnath: ASCII road-map section + freshened answer
+  (22.2k weak @32, "road map" 880)
+- blog/kedarnath-trek-guide: trek-time + height/altitude section (trek time
+  1.6k @25; height cluster 24.6k from gap)
+- blog/kedarnath-darshan-timing: answer-first timings box (2k @30)
+- blog/how-to-reach-kedarnath: nearest-railway-station + from-Bangalore/metros
+  sections (1.3k + 480 + 260)
+- badrinath-temple: "Badrinath shivling" PAA answer (1.3k @24)
+- cabRoutes.js: Kainchi Dham/Neem Karoli distance FAQ on nainital route
+  (1.9k @29)
+- chopta-tungnath: Tungnath height/winter-worship section (tungnath 165k,
+  height 5.4k, mahadev 4.4k)
+
+### Verified, no action needed
+- VIP-darshan cannibalization already fixed by 301 in next.config.js —
+  SEMrush still shows the old blog URL; consolidation in progress.
+- rishikesh-badrinath & nainital distance FAQs already present in cab data.
+
+Validation: 13 files esbuild-clean.

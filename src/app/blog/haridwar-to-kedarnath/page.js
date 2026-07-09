@@ -51,7 +51,7 @@ export default function HaridwarToKedarnath() {
       {/* Quick Answer — self-contained block for AI Overviews / featured snippet */}
       <div style={{ background:'var(--bg)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
         <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
-        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Haridwar to Kedarnath is <strong>228 km by road</strong> to Gaurikund, then a <strong>16 km trek</strong> (or pony/helicopter) to the temple. By cab it is 8–9 hours of driving (one-way fare from ₹3,500); there is no direct bus or train, and helicopters fly only the final leg from Phata/Guptkashi. Kedarnath opens 22 April 2026. Most pilgrims take a 2–3 day package with a night at Guptkashi.</p>
+        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Haridwar to Kedarnath is <strong>228 km by road</strong> to Gaurikund, then a <strong>16 km trek</strong> (or pony/helicopter) to the temple. By cab it is 8–9 hours of driving (one-way fare from ₹3,500); there is no direct bus or train, and helicopters fly only the final leg from Phata/Guptkashi. Kedarnath is open for 2026 (until 11 November). Most pilgrims take a 2–3 day package with a night at Guptkashi.</p>
       </div>
 
       <h2 style={h2}>Total Distance: Haridwar to Kedarnath</h2>
@@ -73,6 +73,14 @@ export default function HaridwarToKedarnath() {
             <div style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>{d.desc}</div>
           </div>
         ))}
+      </div>
+
+      <h2 style={h2}>Haridwar to Kedarnath Road Map</h2>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', padding:'16px 18px', marginBottom:24 }}>
+        <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:2.1, fontFamily:'monospace, monospace', overflowX:'auto', whiteSpace:'nowrap' }}>
+          Haridwar ─24km→ Rishikesh ─70km→ Devprayag ─34km→ Srinagar ─33km→ Rudraprayag ─40km→ Guptkashi ─31km→ Sonprayag ─5km→ Gaurikund ─16km trek→ Kedarnath
+        </div>
+        <p style={{ fontSize:13, color:'var(--text-muted)', margin:'10px 0 0' }}>The route follows NH-7 along the Ganga to Rudraprayag, then NH-107 up the Mandakini valley. For the interactive version with halts and fuel stops, open our <a href="/char-dham-yatra-route-map" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham route map</a>.</p>
       </div>
 
       <h2 style={h2}>Key Stops Along the Route</h2>

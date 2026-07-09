@@ -75,6 +75,9 @@ export default function ChoptaTungnath() {
           Tungnath is one of the Panch Kedar — the five sacred Shiva shrines of Uttarakhand. At 3,680 metres, it holds the record as the world's highest temple dedicated to Lord Shiva. The temple, over 1,000 years old and attributed to Adi Shankaracharya, is a compact stone structure that feels intimate despite its dramatic setting. In the foreground: a high-altitude meadow called Deoriatal pasture. Behind it: the Kedarnath range in full view on clear mornings. The trek from Chopta to Tungnath is 3.5km — gentle enough for reasonably fit families.
         </p>
 
+        <h2 style={h2}>Tungnath Height and Why It Matters</h2>
+        <p style={p}>Tungnath temple stands at <strong>3,680 m (12,073 ft)</strong> — the highest Shiva temple anywhere in the world, higher than Kedarnath itself. The trail gains about 1,000 m from Chopta (2,700 m) over 3.5 km, which is steep but short: most reasonably fit walkers do it in 2–3 hours. In the Panch Kedar tradition Tungnath is the Tritiya Kedar, where Shiva's arms appeared; locals simply call the deity Tungnath Mahadev. From November to April the murti moves down to Mukunath village for winter worship, and the trail itself becomes a snow walk — doable, magical, and cold.</p>
+
         <h2 style={h2}>The Chandrashila Summit (4,000m)</h2>
         <p style={p}>
           From Tungnath, an additional 1.5km steep climb brings you to the Chandrashila summit at 4,000 metres. This is where the trek becomes truly spectacular. On a clear morning, you can see Nanda Devi (7,817m), Trishul (7,120m), Chaukhamba (7,138m), Kedarnath (6,940m), and the Gangotri group — all in a single panorama. Most trekkers start from Chopta at 5–6 AM to reach the summit for sunrise. By 9 AM the cloud cover rolls in.

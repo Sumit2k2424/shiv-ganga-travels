@@ -159,6 +159,12 @@ export default function HowToReachKedarnath() {
           </table>
         </div>
 
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Nearest Railway Station to Kedarnath</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>No railway line goes anywhere near Kedarnath. The nearest station of any size is <strong>Rishikesh (approx. 216 km from Gaurikund)</strong>, but <strong>Haridwar Junction (approx. 240 km)</strong> is what almost everyone actually uses — it has far better train connections from Delhi, Mumbai, Kolkata, Chennai and Bengaluru, and every cab operator and package (including ours) starts there. From either station the journey is road to Sonprayag, shuttle to Gaurikund, then the 16 km trek.</p>
+
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Reaching Kedarnath from Bangalore, Mumbai & Other Metros</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>From Bangalore</strong> it is roughly 2,480 km — fly to Dehradun (Jolly Grant) or Delhi, then come by road or train to Haridwar. Flights to Dehradun save a full day versus the Delhi route. <strong>From Mumbai</strong> (~1,900 km) and <strong>Kolkata</strong> (~1,650 km), the same logic applies: fly or take an overnight train to Delhi/Haridwar, then join the road journey. Whatever metro you start from, the hill portion is identical — Haridwar to Gaurikund by road, then the trek — so plan two buffer days around it for delays and recovery.</p>
+
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
 

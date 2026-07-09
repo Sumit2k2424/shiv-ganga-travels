@@ -74,6 +74,11 @@ export default function Page() {
         ))}
       </div>
 
+      <div style={{ background:'var(--bg)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
+        <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
+        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Haridwar to Gangotri distance is <strong>288 km by road</strong>, taking <strong>9–10 hours</strong> via Rishikesh, Chamba, Uttarkashi and Harsil on NH-34. The return (Gangotri to Haridwar) is the same 288 km, usually a touch faster downhill. One-way sedan fare starts around ₹5,500; the temple sits right at the roadhead — no trek.</p>
+      </div>
+
       <h2 style={{...h2}}>Full Route</h2>
       <p style={{...p}}>
         <strong>Rishikesh → Chamba → Tehri → Dharasu → Uttarkashi → Harsil → Gangotri</strong><br/>

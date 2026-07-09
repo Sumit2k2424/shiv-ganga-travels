@@ -73,6 +73,13 @@ export default function YamunotriWeather() {
           Yamunotri, the westernmost shrine of the Char Dham circuit and the source of the Yamuna River, sits at 3,291 metres in the Uttarkashi district of Uttarakhand. The final stretch of the pilgrimage involves a 6km trek from Janki Chatti — and weather plays a huge role in how comfortable (or challenging) that trek is. Rain, snow, or sudden cloud cover can make the rocky mountain trail slippery and exhausting. Knowing what to expect each month is the difference between a comfortable darshan and a stressful one.
         </p>
 
+        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:12, padding:'14px 18px', marginBottom:18 }}>
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🌡️ Yamunotri temperature right now (July)</div>
+          <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}>
+            In July, Yamunotri runs roughly <strong>10–15°C in the day and 6–9°C at night</strong>, with heavy monsoon rain most afternoons. Annual range: summer (May–June) 7–20°C, post-monsoon (Sept–Oct) 4–15°C, and well below freezing from December to March when the shrine is closed. At 3,291 m it stays 15–20 degrees colder than Haridwar year-round — carry a warm layer even in June.
+          </p>
+        </div>
+
         <div style={{ background:'#dcfce7', border:'1px solid #86efac', borderRadius:12, padding:'14px 18px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#15803d', marginBottom:6 }}>✅ Best months to visit Yamunotri</div>
           <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}>

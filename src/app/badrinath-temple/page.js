@@ -20,6 +20,7 @@ const PAA = [
   { q:'What are the Badrinath darshan timings?', a:'Roughly 4:30 AM to 1:00 PM and 4:00 PM to 9:00 PM during the season, with the morning Maha Abhishek aarti at 4:30 AM and Shayan aarti around 8:30–9:00 PM. Verify on the day, as festival timings vary.' },
   { q:'How much does the Badrinath Maha Abhishek puja cost in 2026?', a:'The Maha Abhishek (booked online at badrinath-kedarnath.gov.in) costs ₹4,700 per person for the 4:30–6:30 AM slot and effectively works as priority darshan. Other BKTC pujas run ₹1,100–₹5,100 — Ved Path and Geet Govind recitation are popular. Bookings are non-refundable and non-transferable, so lock your travel dates before paying. We handle the booking free for package guests.' },
   { q:'When does Badrinath Temple open in 2026?', a:'April 23, 2026, at 6:15 AM (Brahma Muhurta). It stays open until roughly mid-November before closing for winter.' },
+  { q:'Is there a shivling at Badrinath temple?', a:'Badrinath is a Vishnu temple, so the main sanctum has no shivling — the black shaligram idol shows Badrinarayan in meditation. Searches for a "Badrinath shivling" usually mean either the Adi Kedareshwar shrine near the temple complex, or Neelkanth peak above the valley, which is sacred to Shiva. For shivling worship on this circuit, Kedarnath is the jyotirlinga.' },
   { q:'What is Tapt Kund at Badrinath?', a:'A natural hot-water spring just below the temple, around 45–55°C. Pilgrims traditionally bathe here before darshan — it\'s believed to be purifying, and warms the body in the cold mountain air.' },
 ];
 

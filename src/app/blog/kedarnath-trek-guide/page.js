@@ -168,6 +168,10 @@ export default function KedarnathTrekGuide() {
         <p style={p}>In peak season (May–June) the trail gets extremely crowded. Start by <strong>5:00–5:30 AM</strong> to avoid the worst of it and to give yourself enough daylight for a comfortable ascent and descent.</p>
 
         {/* DIFFICULTY */}
+        <h2 id="trek-time" style={h2}>How Much Time Does the Kedarnath Trek Take?</h2>
+        <p style={p}>Going up, budget <strong>6–9 hours</strong> for the 16 km from Gaurikund — fit trekkers do it in 6, most family groups take 8–9 with tea stops. Coming down takes <strong>5–7 hours</strong>; it feels faster but punishes the knees more. Ponies cut the ascent to about 5 hours, and the helicopter reduces the whole thing to minutes. Start by 6 AM either way: afternoon weather in this valley turns without warning, and the trek gates close entry by early afternoon.</p>
+        <p style={p}>Height matters as much as distance here. Kedarnath temple stands at <strong>3,583 m (11,755 ft)</strong> and Gaurikund at 1,982 m — you climb 1,600 vertical metres in a day. That altitude, not the path itself, is what tires people. Walk slower than feels natural, drink more water than you want, and the mountain treats you kindly.</p>
+
         <h2 id="difficulty" style={h2}>How Difficult Is the Kedarnath Trek?</h2>
         <p style={p}>Let's be honest — the Kedarnath trek is <strong>not easy</strong>. The combination of altitude, steep incline, and 16km distance makes it genuinely demanding. But it is not technical. No rock climbing, no river crossings. Our rating: <strong>Moderate to Challenging.</strong></p>
         <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8, marginBottom:20 }}>

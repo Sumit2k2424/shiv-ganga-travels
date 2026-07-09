@@ -95,6 +95,10 @@ export default function KedarnathTimings() {
       </nav>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <div style={{ background:'var(--bg)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', margin:'0 0 24px' }}>
+        <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
+        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath temple timings: opens <strong>4:00 AM</strong> for Maha Abhishek, general darshan roughly <strong>6:00 AM–3:00 PM</strong>, closed 3:00–5:00 PM, evening darshan and Shayan Aarti <strong>5:00–7:00 PM</strong> (temple closes ~7:30 PM). Timings shift slightly with festivals and BKTC notices — verify on the day.</p>
+      </div>
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-darshan-timing", "title": "Kedarnath Darshan Timings 2026: Aarti & VIP Slots", "description": "Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />

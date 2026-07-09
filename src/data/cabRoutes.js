@@ -110,6 +110,7 @@ export const CAB_ROUTES = [
       ['How far is Nainital from Haridwar?', 'About 265 km, 6.5–7.5 hours by cab via Haldwani. Most of it is good highway, with the hill climb only in the final stretch.'],
       ['What is the Haridwar to Nainital taxi fare?', 'Around ₹6,500–₹7,500 one way in a sedan and ₹9,500–₹11,500 in an Innova. A round trip with a Corbett halt is a common family package.'],
       ['Can I add Jim Corbett to a Nainital trip from Haridwar?', 'Easily — Ramnagar (the Corbett gateway) is on the way, so a Haridwar → Corbett → Nainital loop works well over 3–4 days.'],
+      ['How far is Neem Karoli Baba ashram (Kainchi Dham) from Haridwar?', 'About 285 km — you follow the same Haldwani route as Nainital, then continue 17 km past the lake town on the Almora road to Kainchi Dham. Most of our Nainital bookings add the ashram as a half-day extension.'],
     ],
   },
   {
