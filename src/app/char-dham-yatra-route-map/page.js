@@ -5,7 +5,7 @@ import RouteMapInteractive from './RouteMapInteractive';
 export const metadata = {
   title: 'Char Dham Yatra Route Map 2026 — Complete Road',
   description: 'Char Dham Yatra route map 2026. Interactive distances from Haridwar — Yamunotri, Gangotri, Kedarnath, Badrinath. Day-wise road distances and driving times.',
-  keywords: ['char dham yatra route map','char dham route map 2026','char dham yatra road map','haridwar to char dham route','char dham yatra distance chart','char dham yatra map'],
+  keywords: ['char dham yatra route map','char dham route map 2026','char dham yatra road map','haridwar to char dham route','char dham yatra distance chart','char dham yatra map','kedarnath route map','haridwar to kedarnath route map','chardham route map'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-route-map` },
   openGraph: {
     title: 'Char Dham Yatra Route Map 2026 — Distances, Times & Key Stops',
@@ -217,6 +217,10 @@ export default function RouteMap() {
             </div>
           ))}
         </div>
+
+        {/* Kedarnath route — most-searched single-dham route */}
+        <h2 style={h2}>Kedarnath Route Map — The Segment Everyone Asks About</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The Kedarnath leg is the only part of the circuit with a mandatory trek, so its route deserves its own line. From Haridwar the road runs <strong>Rishikesh → Devprayag → Srinagar → Rudraprayag → Tilwara → Agastyamuni → Guptkashi → Sonprayag (235 km)</strong>. Private vehicles stop at Sonprayag; a shuttle jeep covers the 5 km to Gaurikund; and the final <strong>16 km to the temple is on foot</strong> via Jungle Chatti, Bheembali and Lincholi — or 8 minutes by helicopter from Phata/Sersi/Guptkashi. Coming from Gangotri on the full circuit, you join this road at Guptkashi via Ghansali instead of driving back through Rishikesh. The one navigation mistake pilgrims still make: following an old map to the pre-2013 Rambara trail. That route no longer exists — the rebuilt trail crosses to the true left bank of the Mandakini after Bheembali.</p>
 
         {/* Distance table */}
         <h2 style={h2}>Distance Reference Table</h2>

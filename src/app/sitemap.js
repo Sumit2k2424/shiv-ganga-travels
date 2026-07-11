@@ -106,6 +106,8 @@ export default function sitemap() {
 
   const guides = [
     { url: `${b}/kedarnath-temple`,                    p: 0.88, cf: 'monthly' },
+    { url: `${b}/dhari-devi-temple`,                   p: 0.80, cf: 'monthly' },
+    { url: `${b}/kedarnath-height`,                    p: 0.75, cf: 'monthly' },
     { url: `${b}/badrinath-temple`,                    p: 0.86, cf: 'monthly' },
     { url: `${b}/gangotri-temple`,                     p: 0.86, cf: 'monthly' },
     { url: `${b}/yamunotri-temple`,                    p: 0.86, cf: 'monthly' },

@@ -91,6 +91,8 @@ const places = [
     type: 'Sacred/Shakti Peetha',
     desc: 'One of the most powerful Shakti shrines in Uttarakhand, built in the middle of the Alaknanda river on a rock platform. The idol of Dhari Devi (Goddess Kali) was famously relocated during the Srinagar hydroelectric project construction in 2013 — and within hours, the Kedarnath floods occurred (June 16, 2013). Whether coincidence or causation, this story is deeply embedded in Uttarakhand spiritual consciousness. The current temple is elevated on a platform above the river and is accessible by a short bridge.',
     tip: 'If you pass Srinagar after 7 PM, the temple is lit and the river reflections are beautiful. The aarti here is small and intimate — far more accessible than the Haridwar Ganga Aarti.',
+    link: '/dhari-devi-temple',
+    linkLabel: 'Full Dhari Devi Temple guide — story, timings & how to reach',
   },
   {
     name: 'Lakhamandal Temple',
@@ -173,6 +175,9 @@ export default function PlacesToVisit() {
               <div style={{ background: 'rgba(232,146,10,0.07)', border: '1px solid rgba(232,146,10,0.2)', borderRadius: 8, padding: '9px 12px', fontSize: 13, color: '#7B3F00' }}>
                 💡 <strong>Operator tip:</strong> {place.tip}
               </div>
+              {place.link && (
+                <Link href={place.link} style={{ display:'inline-block', marginTop:10, fontSize:13, fontWeight:600, color:'var(--teal)', textDecoration:'none' }}>{place.linkLabel} →</Link>
+              )}
             </div>
           ))}
         </div>

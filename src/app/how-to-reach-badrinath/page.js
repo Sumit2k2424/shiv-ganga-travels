@@ -92,6 +92,30 @@ export default function HowToReachBadrinath() {
           ))}
         </div>
 
+        <h2 style={h2}>Badrinath Distance Chart — From Every Point That Matters</h2>
+        <p style={p}>
+          The number people search most is <strong>Rishikesh to Badrinath: 295 km</strong>, roughly 10 hours of mountain driving — do not let Google Maps&apos; optimistic estimate fool you into planning it as a day trip. Here is the full chart, measured along the actual NH-7 route:
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+          {[
+            { from:'Haridwar', dist:'320 km', time:'10–12 hrs', note:'Our standard package start point' },
+            { from:'Rishikesh', dist:'295 km', time:'9–11 hrs', note:'Same route, one hour saved' },
+            { from:'Dehradun (Jolly Grant)', dist:'315 km', time:'10–11 hrs', note:'For fly-in pilgrims' },
+            { from:'Delhi', dist:'525 km', time:'2 days', note:'Overnight halt at Haridwar or Srinagar essential' },
+            { from:'Rudraprayag', dist:'160 km', time:'5 hrs', note:'Where the Kedarnath and Badrinath roads split' },
+            { from:'Pipalkoti', dist:'75 km', time:'2.5 hrs', note:'Popular night halt when Badrinath hotels are full' },
+            { from:'Joshimath', dist:'45 km', time:'1.5 hrs', note:'Last major town — gate-system timings apply' },
+            { from:'Kedarnath (Gaurikund)', dist:'230 km', time:'8–9 hrs', note:'The Do Dham leg, via Chopta or Rudraprayag' },
+          ].map((r, i) => (
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.3fr 80px 90px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+              <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from} → Badrinath</span>
+              <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
+              <span style={{ color:'#475569' }}>{r.time}</span>
+              <span style={{ fontSize:12, color:'var(--text-muted)' }}>{r.note}</span>
+            </div>
+          ))}
+        </div>
+
         <h2 style={h2}>Helicopter to Badrinath</h2>
         <p style={p}>
           Badrinath has a helipad directly adjacent to the temple complex — which means helicopter pilgrims land virtually at the temple gate. This is the most convenient helicopter arrangement of all four dhams. Flights operate from Sahastradhara Helipad in Dehradun, and the flight time is approximately 45 minutes. For the Char Dham helicopter package, Badrinath is typically Day 5 or Day 6. Book via the official IRCTC heliyatra portal only — not through any agent.

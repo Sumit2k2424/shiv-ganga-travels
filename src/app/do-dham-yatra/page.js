@@ -137,6 +137,10 @@ export default function DoDhamYatra() {
           <strong>Do Dham Yatra covers Kedarnath and Badrinath</strong> — the two highest and most sacred dhams on the circuit. The 5N/6D package from Haridwar is ₹10,999/person all-inclusive. You get the 16km Kedarnath trek, a night at the temple at 3,583m, early morning Mahabhishek darshan, and then Badrinath with Mana Village and Tapt Kund. This is the package most of our repeat pilgrims choose — those who have done Char Dham and want to go back to the two that moved them most.
         </p>
 
+        <h2 style={h2}>What Does &quot;Dham Yatra&quot; Actually Mean? — Do, Char and 5 Dham Explained</h2>
+        <p style={p}>A <strong>dham</strong> is a sacred abode — a seat of the divine — and a <strong>dham yatra</strong> is the pilgrimage that connects them. In Uttarakhand the term almost always means the Chota Char Dham circuit: Yamunotri, Gangotri, Kedarnath and Badrinath. From there the numbers are simple counting. <strong>Ek Dham</strong> is a single shrine (usually Kedarnath or Badrinath alone). <strong>Do Dham</strong> — this page — pairs Kedarnath and Badrinath. <strong>Char Dham</strong> is all four. And the <strong>5 Dham Yatra</strong> you may have seen advertised adds <strong>Hemkund Sahib</strong>, the glacial-lake gurudwara at 4,329 m near the Valley of Flowers, to the four dhams — a Sikh-Hindu combined circuit that needs 12–13 days and opens later (late May) because of snow on the Hemkund trail.</p>
+        <p style={p}>Worth knowing before you compare packages: the original <em>Bada</em> Char Dham of Adi Shankaracharya spans all of India — Badrinath, Dwarka, Puri and Rameswaram. When Uttarakhand operators (us included) say Char Dham, we mean the Himalayan circuit. If a quote looks suspiciously cheap for a "char dham", check which four temples it actually covers.</p>
+
         {/* Do Dham vs Char Dham — the decision most searchers are making */}
         <h2 style={h2}>Do Dham or Char Dham? — Honest Comparison</h2>
         <AnswerBox>

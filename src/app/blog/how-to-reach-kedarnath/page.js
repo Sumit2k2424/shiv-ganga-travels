@@ -159,6 +159,34 @@ export default function HowToReachKedarnath() {
           </table>
         </div>
 
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Kedarnath Distance Chart — From Major Cities &amp; Key Points</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Two numbers do most of the planning work: <strong>Haridwar to Sonprayag is 235 km</strong> (8–9 hours — this is where your vehicle stops), and Gaurikund to the temple is 16 km on foot. Everything else is just getting to Haridwar. Road distances below are along the actual driving route, not straight-line:</p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+          {[
+            { from:'Haridwar → Sonprayag', dist:'235 km', time:'8–9 hrs', note:'Vehicles stop here; shuttle to Gaurikund' },
+            { from:'Sonprayag → Gaurikund', dist:'5 km', time:'20 min', note:'Shuttle jeep only, ₹50 fixed' },
+            { from:'Gaurikund → Kedarnath', dist:'16 km', time:'6–8 hrs trek', note:'Foot, pony, palki or helicopter' },
+            { from:'Phata → Kedarnath', dist:'~14 km aerial', time:'8 min heli', note:'By road there is no route — heli or trek only' },
+            { from:'Delhi → Kedarnath', dist:'~458 km', time:'2 days', note:'Via Haridwar; overnight halt essential' },
+            { from:'Mumbai → Kedarnath', dist:'~1,900 km', time:'2.5–3 days', note:'Fly to Dehradun to save a day' },
+            { from:'Bangalore → Kedarnath', dist:'~2,480 km', time:'2.5–3 days', note:'Fly to Dehradun or Delhi first' },
+            { from:'Ahmedabad → Kedarnath', dist:'~1,340 km', time:'2–2.5 days', note:'Train to Haridwar, then road' },
+            { from:'Kedarnath → Haridwar (return)', dist:'251 km', time:'1.5 days', note:'Trek down + drive; most do it over two days' },
+          ].map((r, i) => (
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.5fr 90px 100px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+              <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from}</span>
+              <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
+              <span style={{ color:'#475569' }}>{r.time}</span>
+              <span style={{ fontSize:12, color:'var(--text-muted)' }}>{r.note}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Flights to Kedarnath — What You Can and Cannot Book</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There is no airport at Kedarnath and no commercial flight lands there — anyone selling a "Kedarnath flight ticket" is selling either a Dehradun flight or a scam. What exists is a two-part air journey. First, a regular flight to <strong>Jolly Grant Airport, Dehradun (DED)</strong> — IndiGo, Air India and SpiceJet fly in daily from Delhi, Mumbai, Bengaluru and Hyderabad, and fares from Delhi start around ₹3,000. Second, the <strong>helicopter shuttle</strong> from Phata, Sersi or Guptkashi helipads to the Kedarnath helipad, booked only on <strong>heliyatra.irctc.co.in</strong> after your yatra registration is done — roughly ₹7,500–9,500 round trip, weather permitting.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Between the airport and the helipad still sits a 7–8 hour road journey (Dehradun → Rishikesh → Guptkashi), which is why "flying to Kedarnath" in practice means: flight to Dehradun, cab up the valley, helicopter for the final hop. Our <Link href="/blog/kedarnath-helicopter-booking" style={{ color:'var(--teal)', fontWeight:600 }}>helicopter booking guide</Link> walks through the IRCTC slots, and the road leg is exactly what our <Link href="/kedarnath-tour-package" style={{ color:'var(--teal)', fontWeight:600 }}>Kedarnath package</Link> covers.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>केदारनाथ जाने का रास्ता (हिंदी में):</strong> हरिद्वार या ऋषिकेश से सड़क मार्ग से सोनप्रयाग (लगभग 235 किमी), वहां से शटल जीप में गौरीकुंड (5 किमी), और फिर 16 किमी की पैदल चढ़ाई मंदिर तक। हेलीकॉप्टर से जाना हो तो फाटा या सेरसी हेलीपैड से IRCTC बुकिंग के ज़रिए।</p>
+
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Nearest Railway Station to Kedarnath</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>No railway line goes anywhere near Kedarnath. The nearest station of any size is <strong>Rishikesh (approx. 216 km from Gaurikund)</strong>, but <strong>Haridwar Junction (approx. 240 km)</strong> is what almost everyone actually uses — it has far better train connections from Delhi, Mumbai, Kolkata, Chennai and Bengaluru, and every cab operator and package (including ours) starts there. From either station the journey is road to Sonprayag, shuttle to Gaurikund, then the 16 km trek.</p>
 

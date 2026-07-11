@@ -31,6 +31,8 @@ const sections = [
     title: 'Temple & Pilgrimage Guides',
     links: [
       { label: 'Kedarnath Temple Guide', href: '/kedarnath-temple' },
+      { label: 'Kedarnath Height & Facts', href: '/kedarnath-height' },
+      { label: 'Dhari Devi Temple', href: '/dhari-devi-temple' },
       { label: 'Badrinath Temple Guide', href: '/badrinath-temple' },
       { label: 'Online Puja Booking', href: '/online-puja-booking' },
       { label: 'Emergency Contacts', href: '/char-dham-yatra-emergency-contacts' },

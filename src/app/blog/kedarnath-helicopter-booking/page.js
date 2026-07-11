@@ -4,9 +4,9 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Helicopter Booking 2026: Price & IRCTC',
-  description: 'Kedarnath helicopter booking 2026: IRCTC fares — Sersi ₹6,390, Phata ₹10,164, Guptkashi ₹12,762 round trip. Heliyatra portal steps and weather tips.',
-  keywords: ['kedarnath helicopter booking 2026', 'kedarnath helicopter price 2026', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'kedarnath helicopter cost 2026', 'guptkashi kedarnath helicopter'],
+  title: 'Kedarnath Helicopter Booking 2026: Price, IRCTC & Helipads',
+  description: 'Kedarnath helicopter (chopper) booking 2026: IRCTC HeliYatra fares — Sersi ₹6,390, Phata ₹10,164, Guptkashi ₹12,762 round trip. Dehradun charter option, GMVN facts, weather tips.',
+  keywords: ['kedarnath helicopter booking 2026', 'kedarnath helicopter price 2026', 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {
     title: 'Kedarnath Helicopter Booking 2026: Price & IRCTC',
@@ -29,6 +29,8 @@ const faqData = [
   { q: 'What happens if the Kedarnath helicopter is cancelled due to weather?', a: 'Weather cancellations are fully refunded or rescheduled at no extra cost. Cloud cover at Kedarnath is common in the afternoon — morning slots (6–10 AM) have the best success rate. Always book return flight for the same day and plan an extra buffer day in your itinerary.' },
   { q: 'Can I book Kedarnath helicopter for senior citizens?', a: 'Yes, absolutely. Helicopter is actually our recommended option for pilgrims above 65 years of age, those with heart or lung conditions, or anyone who cannot manage the 16km trek. The flight is just 7–10 minutes and completely safe.' },
   { q: 'How early in advance should I book Kedarnath helicopter?', a: 'For May and June (peak season), book helicopter slots at least 60–90 days in advance. Slots fill up very quickly. September–October is slightly more flexible but still books up 30–45 days ahead. Last-minute bookings are possible but risky.' },
+  { q: 'Can GMVN book my Kedarnath helicopter ticket?', a: 'No. GMVN (Garhwal Mandal Vikas Nigam) is the state tourism corporation — it runs guesthouses and road packages but does not sell helicopter tickets. All Kedarnath shuttle tickets are sold only on the IRCTC HeliYatra portal, heliyatra.irctc.co.in, after your yatra registration is complete.' },
+  { q: 'Is there a direct helicopter from Dehradun to Kedarnath?', a: 'Yes, as a private charter from Sahastradhara helipad, Dehradun — typically ₹1.1–1.5 lakh per seat for a same-day darshan trip with VIP darshan included. This is separate from the IRCTC valley shuttle (₹6,390–12,762 round trip from Sersi, Phata or Guptkashi), which requires reaching the valley by road first.' },
 ];
 
 function Schema() {
@@ -77,7 +79,7 @@ export default function KedarnathHelicopterBooking() {
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you’re booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong>, written honestly from 15 years of arranging these flights for our pilgrims.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you’re booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong> — or “Kedarnath chopper booking”, as half of North India searches for it — written honestly from 15 years of arranging these flights for our pilgrims.</p>
 
         {/* Quick Answer — claim-first, extractable for AI Overviews / ChatGPT */}
         <div style={{ background:'var(--navy-light)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
@@ -117,6 +119,15 @@ export default function KedarnathHelicopterBooking() {
 
         <h2 style={h2}>The Three Helipads — Which One Should You Choose?</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>All three reach Kedarnath in roughly 7–10 minutes; the choice comes down to budget, road access and how fast slots vanish. <strong>Sersi</strong> is cheapest but its slots sell out fastest. <strong>Phata</strong> is the practical middle choice with the most operators and best availability. <strong>Guptkashi</strong> costs the most but is the easiest helipad to drive to and to stay near the night before. If you’re on a Kedarnath or Char Dham package with us, we point you to <strong>Phata or Sersi</strong> for the best price-to-availability balance and book your road leg to match.</p>
+
+        <h2 style={h2}>Dehradun to Kedarnath Helicopter — Charter, Not Shuttle</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A question we get weekly: can you fly straight from Dehradun to Kedarnath? Yes — but not on the IRCTC shuttle. The Sahastradhara helipad in Dehradun runs <strong>full-day charter and semi-charter packages</strong> operated by private aviation companies, typically ₹1.1–1.5 lakh per seat for a same-day Dehradun → Kedarnath → Dehradun darshan trip, with VIP darshan slots included. It is a completely different product from the ₹6,000–13,000 valley shuttle: you skip the entire 7–8 hour road journey, and you pay accordingly. For most families the sensible split is our road package up the valley plus the Phata/Sersi shuttle for the final hop; the Dehradun charter makes sense for elderly pilgrims, tight schedules or corporate groups. Ask us and we will connect you to the authorised charter operators — never wire money to a charter "agent" who found you on Instagram.</p>
+
+        <h2 style={h2}>GMVN and the Kedarnath Helicopter — Clearing Up a Common Mix-Up</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Thousands of pilgrims search for "GMVN Kedarnath helicopter booking" every month, and the honest answer is: <strong>GMVN does not sell helicopter tickets</strong>. Garhwal Mandal Vikas Nigam is the state tourism corporation — it runs guesthouses (including at Kedarnath and near the helipads) and package tours, and in earlier years it handled heli bookings, which is where the confusion comes from. Since the system moved to IRCTC, <strong>heliyatra.irctc.co.in is the only place shuttle tickets exist</strong>. What GMVN is still genuinely useful for: a fixed-rate room at Phata or Guptkashi the night before your morning slot (gmvnonline.com), and its own road packages. If a website pairs "GMVN" with "confirmed helicopter tickets", treat it as the impersonation it is.</p>
+
+        <h2 style={h2}>Is There a Helicopter from Gaurikund?</h2>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>No — <strong>Gaurikund has no helipad</strong>. Gaurikund is the trek roadhead; the three shuttle helipads are Sersi, Phata and Guptkashi, all on the road <em>before</em> Sonprayag. If you have already reached Gaurikund, your options are the 16 km trail on foot, pony or palki. Plan the helicopter decision at Guptkashi the evening before, not at the trek gate.</p>
 
         <h2 style={h2}>Weather & When to Book Morning Slots</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is the most important practical tip — and most operators won’t tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>

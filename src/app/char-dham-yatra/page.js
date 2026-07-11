@@ -372,7 +372,7 @@ export default function CharDhamYatra() {
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
-          Our packages start at <strong>₹21,000 per person</strong> (₹42,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. Choose your comfort tier:
+          Our Uttarakhand Char Dham yatra packages start at <strong>₹21,000 per person</strong> (₹42,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. A note on names before the prices: this circuit — Yamunotri, Gangotri, Kedarnath and Badrinath — is formally called the <strong>Chota Char Dham</strong>, to distinguish it from Adi Shankaracharya&apos;s all-India Bada Char Dham (Badrinath, Dwarka, Puri, Rameswaram). A &quot;chota char dham yatra package&quot; and a &quot;char dham yatra package uttarakhand&quot; are the same trip; only the label changes. Choose your comfort tier:
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
