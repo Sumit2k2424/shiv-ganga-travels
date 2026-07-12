@@ -2958,3 +2958,10 @@ a, button { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 480px) {
   img, video, iframe { max-width: 100%; }
 }
+
+/* ── DirectOperatorStrip (site-wide trust bar) — authoritative layer ── */
+/* On narrow screens keep the strip to one short line: hide the long-form
+   phrase and inline phone so it never wraps to 3 lines or pushes the hero. */
+@media (max-width: 560px) {
+  .dos-long { display: none; }
+}

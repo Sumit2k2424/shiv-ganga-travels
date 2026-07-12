@@ -1,6 +1,7 @@
 import './globals.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import DirectOperatorStrip from '@/components/DirectOperatorStrip';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 // LeadPopup + ChatBot loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
@@ -117,6 +118,8 @@ function SiteSchema() {
       'Shiv Ganga Char Dham Tours',
     ],
     url: SITE.baseUrl,
+    slogan: 'Direct Char Dham Operator — Zero Commission',
+    disambiguatingDescription: 'Direct Char Dham Yatra tour operator based in Haridwar since 2010. Pilgrims book and pay the operator directly — no agents, no aggregators, no commission or middleman markup.',
     telephone: ['+91-7817996730', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
@@ -414,6 +417,7 @@ export default function RootLayout({ children }) {
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Navbar/>
+        <DirectOperatorStrip/>
         <main id="main-content" style={{ flex:1 }} role="main">{children}</main>
         <Footer/>
         <WhatsAppButton/>

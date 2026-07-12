@@ -95,6 +95,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
         <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginBottom: 22 }}>
           {[
             ['⭐', '4.6/5 Rating', '38 reviews'],
+            ['🤝', 'Direct Operator', 'Zero commission — no middleman'],
             ['✅', 'No Hidden Costs', 'All-inclusive price'],
             ['📞', '24×7 Support', 'On-route helpline'],
             ['🏆', 'Est. 2010', '15 years on these routes'],
