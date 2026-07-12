@@ -8,6 +8,8 @@ export const metadata = {
 };
 
 const POSTS = [
+  { slug:'char-dham-monsoon-safety', title:'Char Dham Yatra in Monsoon 2026 — Safety Guide by Local Drivers', excerpt:'Sunrise departures, landslide zones by name, monsoon packing, live route checks. What 15 rainy seasons on these roads taught us.', tag:'Monsoon 2026', readTime:'8 min', icon:'🌧️' },
+  { slug:'september-char-dham-yatra', title:'September Char Dham Yatra 2026 — Post-Monsoon Pre-Booking', excerpt:'Clearest skies of the year, thin crowds, hotels 25–40% cheaper. Week-by-week September weather and why autumn seats fill by August.', tag:'Autumn 2026', readTime:'7 min', icon:'🍂' },
   { slug:'char-dham-yatra-2026-new-rules', title:'Char Dham Yatra 2026 New Rules — Phone Ban, Age 55+, IRCTC Helicopter', excerpt:'All 2026 rule changes: mobile phone ban, medical certificate for 55+, IRCTC helicopter booking, non-Hindu entry, GPS tracking. Must-read before you travel.', tag:'2026 Update', readTime:'6 min', icon:'📢' },
   { slug:'char-dham-guide', title:'Char Dham Yatra Complete Guide 2026', excerpt:'Route, itinerary, cost, registration, packing list, and expert tips — everything in one place.', tag:'Complete Guide', readTime:'8 min', icon:'🏔️' },
   { slug:'best-time-char-dham', title:'Best Time for Char Dham Yatra 2026', excerpt:'Month-by-month weather guide, temple opening dates, and honest advice on peak vs off-season.', tag:'Travel Tips', readTime:'5 min', icon:'📅' },
@@ -59,6 +61,8 @@ const TAG_COLORS = {
   'Nature Trek': { bg:'#f0fdf4', color:'#14532d' },
   'Adventure': { bg:'#ecfeff', color:'#164e63' },
   'हिंदी गाइड': { bg:'#FFF3CC', color:'#7C4A00' },
+  'Monsoon 2026': { bg:'#e0f2fe', color:'#075985' },
+  'Autumn 2026': { bg:'#ffedd5', color:'#9a3412' },
 };
 
 export default function Blog() {

@@ -152,7 +152,7 @@ export default function Page() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Best Time for Char Dham',h:'/blog/best-time-char-dham'},{l:'Char Dham Opening Dates',h:'/blog/char-dham-yatra-opening-dates-2026'},{l:'Uttarakhand Weather Guide',h:'/blog/uttarakhand-weather-guide'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
+            {[{l:'September Yatra & Pre-Booking',h:'/blog/september-char-dham-yatra'},{l:'Best Time for Char Dham',h:'/blog/best-time-char-dham'},{l:'Char Dham Opening Dates',h:'/blog/char-dham-yatra-opening-dates-2026'},{l:'Uttarakhand Weather Guide',h:'/blog/uttarakhand-weather-guide'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
             ))}
           </div>

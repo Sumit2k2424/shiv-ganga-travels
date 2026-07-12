@@ -321,3 +321,9 @@ All three registered in sitemap.js + llms.txt and cross-linked.
 - rishikesh-badrinath & nainital distance FAQs already present in cab data.
 
 Validation: 13 files esbuild-clean.
+
+## July 12, 2026 — Monsoon & Post-Monsoon Content (Google Trends response)
+- NEW /blog/char-dham-monsoon-safety — targets: char dham monsoon travel safety, kedarnath route live updates, safe mountain drivers uttarakhand, monsoon pilgrimage taxi haridwar, best time of day to travel char dham. Article + FAQPage schema, 6 AM sunrise-departure section, named landslide zones table, monsoon packing additions, links to /char-dham-road-status + emergency contacts.
+- NEW /blog/september-char-dham-yatra — targets: september char dham yatra package 2026, post monsoon char dham, pre-book char dham autumn. Week-by-week Sept weather table, canonical price table (₹21,000/₹30,000/₹10,999/₹6,999/₹5,999), pre-booking explainer (no fake urgency), CTA to /char-dham-yatra. Article + FAQPage schema.
+- Wired: blog listing (2 entries + Monsoon/Autumn tag colors), sitemap priorities (0.87/0.86), llms.txt blog list, inbound links from /char-dham-road-status, October blog, road-conditions-2026 blog. Cross-links between both new posts.
+- Bumped SITE.lastUpdated → July 12, 2026.

@@ -21,7 +21,8 @@ const BLOG_PRIORITY = {
   'kedarnath-pony-vs-helicopter': 0.84, 'kedarnath-darshan-timing': 0.84,
   'kedarnath-pony-palki-kandi-rates': 0.9, 'kedarnath-trek-timings-2026': 0.84,
   'kedarnath-vip-darshan': 0.9, 'kedarnath-places-to-see': 0.84,
-  'char-dham-yatra-road-conditions-2026': 0.83, 'char-dham-yatra-in-october': 0.83,
+  'char-dham-yatra-road-conditions-2026': 0.83,
+  'char-dham-monsoon-safety': 0.87, 'september-char-dham-yatra': 0.86, 'char-dham-yatra-in-october': 0.83,
   'char-dham-yatra-7-days': 0.83, 'char-dham-yatra-with-kids': 0.83,
   'types-of-char-dham-yatra-packages': 0.83, 'char-dham-packing-list-hindi': 0.83,
 };
