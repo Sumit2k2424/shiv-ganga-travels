@@ -26,13 +26,13 @@ function PAAItem({ q, a, isOpen, onToggle }) {
   );
 }
 
-export default function PeopleAlsoAsk({ items = [], heading = 'People Also Ask' }) {
+export default function PeopleAlsoAsk({ items = [], heading = 'People Also Ask', subtext = 'The questions pilgrims most commonly search on Google about this yatra.' }) {
   const [open, setOpen] = useState(0);
   if (!items.length) return null;
   return (
     <section aria-label="People also ask" style={{ marginTop:8 }}>
-      <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>{heading}</h2>
-      <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:10 }}>The questions pilgrims most commonly search on Google about this yatra.</p>
+      {heading ? <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>{heading}</h2> : null}
+      {subtext ? <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:10 }}>{subtext}</p> : null}
       <div style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'4px 16px' }}>
         {items.map((it, i) => (
           <PAAItem key={i} q={it.q} a={it.a} isOpen={open===i} onToggle={() => setOpen(open===i?-1:i)} />

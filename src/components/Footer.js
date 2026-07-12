@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { LANGUAGE_PAGES } from '@/data/languages';
 
 const COLS = [
   { heading:'Char Dham Packages', links:[
@@ -76,6 +77,11 @@ const COLS = [
   ]},
 ];
 
+const LANGUAGE_COL = {
+  heading: 'Char Dham in Your Language',
+  links: LANGUAGE_PAGES.map(l => ({ l: `${l.native} · ${l.label}`, h: `/${l.slug}` })),
+};
+
 export default function Footer() {
   return (
     <footer style={{ background:'var(--navy)', color:'rgba(255,255,255,0.65)' }}>
@@ -135,7 +141,7 @@ export default function Footer() {
 
           </div>
           {/* Link columns */}
-          {COLS.map(col => (
+          {[...COLS, LANGUAGE_COL].map(col => (
             <div key={col.heading}>
               <h3 style={{
                 color:'#fff', fontWeight:700, fontSize:11.5, marginBottom:14,

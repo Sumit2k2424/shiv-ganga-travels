@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { CAB_ROUTES } from '@/data/cabRoutes';
+import { LANGUAGE_PAGES } from '@/data/languages';
 
 // ── Blog priority hints. Any blog not listed falls back to DEFAULT_BLOG_P. ──
 const BLOG_PRIORITY = {
@@ -189,10 +190,12 @@ export default function sitemap() {
     { url: `${b}/direct-operator-vs-travel-aggregator-char-dham`,   p: 0.78, cf: 'monthly' },
   ];
 
+  const languagePages = LANGUAGE_PAGES.map(l => ({ url: `${b}/${l.slug}`, p: 0.84, cf: 'monthly' }));
+
   const all = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...cities,
-    ...authority, ...categoryPages, ...packagePages,
+    ...authority, ...categoryPages, ...packagePages, ...languagePages,
   ];
 
   return all.map(({ url, p, cf }) => ({
