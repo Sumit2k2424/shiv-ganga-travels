@@ -59,10 +59,16 @@ export default function HeroSearch() {
       maxWidth:960, margin:'0 auto',
       position:'relative', paddingBottom:28,
     }}>
-      {/* Icon tabs — OTA product row */}
+      {/* Icon tabs — OTA product row.
+          Outer div scrolls; inner div uses margin:auto so tabs centre on
+          desktop but stay fully reachable (incl. first + last tab) when
+          they overflow on narrow phones. */}
+      <div style={{
+        borderBottom:'1px solid var(--border)', padding:'6px 8px 0',
+        overflowX:'auto', WebkitOverflowScrolling:'touch', scrollbarWidth:'none',
+      }}>
       <div role="tablist" aria-label="Package type" style={{
-        display:'flex', justifyContent:'center', gap:2,
-        borderBottom:'1px solid var(--border)', padding:'6px 8px 0', overflowX:'auto',
+        display:'flex', gap:2, margin:'0 auto', width:'max-content',
       }}>
         {TABS.map(t => {
           const active = tab === t.id;
@@ -70,7 +76,7 @@ export default function HeroSearch() {
             <button key={t.id} role="tab" aria-selected={active} onClick={()=>setTab(t.id)}
               style={{
                 display:'flex', flexDirection:'column', alignItems:'center', gap:3,
-                padding:'10px 18px 12px', minWidth:84,
+                padding:'10px 14px 12px', minWidth:72,
                 border:'none', background:'none', cursor:'pointer',
                 borderBottom: active ? '3px solid var(--gold)' : '3px solid transparent',
                 color: active ? 'var(--navy)' : 'var(--text-muted)',
@@ -84,6 +90,7 @@ export default function HeroSearch() {
             </button>
           );
         })}
+      </div>
       </div>
 
       {/* Fields */}
