@@ -36,37 +36,47 @@ function HeroScene() {
 
         {/* Sky + sun */}
         <rect width="1440" height="900" fill="url(#sg-sky)"/>
-        <circle className="sg-sun" cx="1160" cy="150" r="130" fill="url(#sg-sunglow)"/>
+        <circle cx="1160" cy="150" r="130" fill="url(#sg-sunglow)">
+          <animate attributeName="opacity" values="0.85;1;0.85" dur="5s" repeatCount="indefinite"/>
+        </circle>
         <circle cx="1160" cy="150" r="52" fill="#FFE066"/>
 
         {/* Drifting clouds */}
-        <g className="sg-cloud sg-cloud1" fill="#fff" opacity="0.95">
+        <g fill="#fff" opacity="0.95">
+          <animateTransform attributeName="transform" type="translate" from="-260 128" to="1720 128" dur="75s" begin="-14s" repeatCount="indefinite"/>
           <ellipse cx="0" cy="0" rx="58" ry="20"/><ellipse cx="38" cy="-12" rx="40" ry="18"/><ellipse cx="-40" cy="-8" rx="34" ry="15"/>
         </g>
-        <g className="sg-cloud sg-cloud2" fill="#fff" opacity="0.8">
+        <g fill="#fff" opacity="0.8">
+          <animateTransform attributeName="transform" type="translate" from="-260 212" to="1720 212" dur="95s" begin="-52s" repeatCount="indefinite"/>
           <ellipse cx="0" cy="0" rx="46" ry="16"/><ellipse cx="30" cy="-10" rx="32" ry="14"/><ellipse cx="-32" cy="-6" rx="26" ry="12"/>
         </g>
-        <g className="sg-cloud sg-cloud3" fill="#fff" opacity="0.65">
+        <g fill="#fff" opacity="0.65">
+          <animateTransform attributeName="transform" type="translate" from="-260 92" to="1720 92" dur="115s" begin="-84s" repeatCount="indefinite"/>
           <ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="48" cy="-14" rx="44" ry="19"/><ellipse cx="-50" cy="-9" rx="38" ry="16"/>
         </g>
 
         {/* Planes with contrails */}
-        <g className="sg-plane sg-plane1">
+        <g>
+          <animateTransform attributeName="transform" type="translate" from="-180 150" to="1620 96" dur="30s" repeatCount="indefinite"/>
           <rect x="-92" y="4" width="78" height="2.6" rx="1.3" fill="rgba(255,255,255,0.55)"/>
           <path d="M0,0 Q10,-2 22,0 L38,4 Q40,6 38,8 L22,10 Q10,12 0,10 Q-4,5 0,0 Z" fill="#fff"/>
           <path d="M14,4 L4,-10 L10,-10 L22,3 Z" fill="#E9F6FF"/>
           <path d="M14,7 L4,20 L10,20 L22,8 Z" fill="#D4EDFC"/>
           <circle cx="34" cy="6" r="2.4" fill="#E23B2E"/>
         </g>
-        <g className="sg-plane sg-plane2">
-          <rect x="-80" y="4" width="66" height="2.2" rx="1.1" fill="rgba(255,255,255,0.45)"/>
-          <path d="M0,0 Q8,-1.6 18,0 L31,3.4 Q33,5 31,6.6 L18,8.4 Q8,10 0,8.4 Q-3,4.2 0,0 Z" fill="#fff"/>
-          <path d="M11,3.4 L3,-8 L8,-8 L18,2.6 Z" fill="#E9F6FF"/>
-          <path d="M11,5.8 L3,16 L8,16 L18,6.6 Z" fill="#D4EDFC"/>
+        <g>
+          <animateTransform attributeName="transform" type="translate" from="1620 238" to="-220 196" dur="42s" begin="-18s" repeatCount="indefinite"/>
+          <g transform="scale(-1,1)">
+            <rect x="-80" y="4" width="66" height="2.2" rx="1.1" fill="rgba(255,255,255,0.45)"/>
+            <path d="M0,0 Q8,-1.6 18,0 L31,3.4 Q33,5 31,6.6 L18,8.4 Q8,10 0,8.4 Q-3,4.2 0,0 Z" fill="#fff"/>
+            <path d="M11,3.4 L3,-8 L8,-8 L18,2.6 Z" fill="#E9F6FF"/>
+            <path d="M11,5.8 L3,16 L8,16 L18,6.6 Z" fill="#D4EDFC"/>
+          </g>
         </g>
 
         {/* Birds */}
-        <g className="sg-birds" stroke="#1B5E8C" strokeWidth="2.4" strokeLinecap="round" fill="none" opacity="0.7">
+        <g stroke="#1B5E8C" strokeWidth="2.4" strokeLinecap="round" fill="none" opacity="0.7">
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0" dur="2.6s" repeatCount="indefinite"/>
           <path d="M300,250 q7,-8 14,0 q7,-8 14,0"/>
           <path d="M350,230 q6,-7 12,0 q6,-7 12,0"/>
         </g>
@@ -102,7 +112,7 @@ function HeroScene() {
         </g>
 
         {/* Little red car - drives the road forever */}
-        <g className="sg-car">
+        <g>
           <animateMotion dur="17s" repeatCount="indefinite" rotate="auto">
             <mpath href="#sg-roadPath"/>
           </animateMotion>
@@ -313,29 +323,13 @@ export default function HeroSection() {
 
         /* -- Animated day scene -- */
         @keyframes sgRise { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
-        @keyframes sgCloudDrift { from{transform:translateX(-260px)} to{transform:translateX(1720px)} }
-        @keyframes sgPlaneLR { from{transform:translate(-180px,150px)} to{transform:translate(1620px,96px)} }
-        @keyframes sgPlaneRL { from{transform:translate(1620px,238px) scaleX(-1)} to{transform:translate(-220px,196px) scaleX(-1)} }
-        @keyframes sgSunGlow { 0%,100%{opacity:0.85} 50%{opacity:1} }
-        @keyframes sgBirdBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
-        .sg-cloud1 { translate: 0 128px; animation: sgCloudDrift 75s linear infinite; animation-delay:-14s; }
-        .sg-cloud2 { translate: 0 212px; animation: sgCloudDrift 95s linear infinite; animation-delay:-52s; }
-        .sg-cloud3 { translate: 0 92px;  animation: sgCloudDrift 115s linear infinite; animation-delay:-84s; }
-        .sg-plane1 { animation: sgPlaneLR 30s linear infinite; }
-        .sg-plane2 { animation: sgPlaneRL 42s linear infinite; animation-delay:-18s; }
-        .sg-sun    { animation: sgSunGlow 5s ease-in-out infinite; }
-        .sg-birds  { animation: sgBirdBob 2.6s ease-in-out infinite; }
         .hero-content    { animation: sgRise 0.8s cubic-bezier(0.22,1,0.36,1) both; }
         .hero-badge-left, .hero-badge-right { animation: sgRise 0.9s 0.25s cubic-bezier(0.22,1,0.36,1) both; }
 
         @media(max-width:640px){
           .hero-badge-right{display:none!important}
         }
-        @media (prefers-reduced-motion: reduce){
-          .sg-cloud1,.sg-cloud2,.sg-cloud3,.sg-sun,.sg-birds,.hero-content,
-          .hero-badge-left,.hero-badge-right { animation: none !important; }
-          .sg-plane1,.sg-plane2,.sg-car { display:none; }
-        }
+
       `}}/>
     </section>
   );
