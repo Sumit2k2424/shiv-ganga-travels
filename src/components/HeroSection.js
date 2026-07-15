@@ -32,6 +32,7 @@ function HeroScene() {
             <stop offset="55%" stopColor="rgba(255,220,110,0.35)"/>
             <stop offset="100%" stopColor="rgba(255,220,110,0)"/>
           </radialGradient>
+          <clipPath id="sg-snowclip"><rect x="-20" y="330" width="300" height="310"/></clipPath>
         </defs>
 
         {/* Sky + sun */}
@@ -85,6 +86,45 @@ function HeroScene() {
         <path d="M-20,640 L150,400 L260,530 L420,330 L560,560 L700,380 L830,570 L980,410 L1130,590 L1290,450 L1460,620 L1460,900 L-20,900 Z" fill="url(#sg-back)"/>
         <path d="M150,400 L196,468 L172,462 L150,486 L128,458 L108,462 Z M420,330 L470,404 L444,396 L420,424 L398,392 L376,398 Z M700,380 L748,450 L722,442 L700,468 L678,438 L658,444 Z M980,410 L1024,472 L1002,466 L980,490 L960,462 L942,468 Z M1290,450 L1330,506 L1310,500 L1290,522 L1272,498 L1256,504 Z" fill="#FFFFFF"/>
 
+        {/* Toon Shiva - meditating on the far-left peak, trishul in hand */}
+        <g transform="translate(150,398)">
+          <animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 -2.5;0 0" dur="4.5s" repeatCount="indefinite"/>
+          <circle cx="0" cy="-28" r="15" fill="rgba(255,224,102,0.4)">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="4.5s" repeatCount="indefinite"/>
+          </circle>
+          <rect x="13.2" y="-54" width="2" height="54" rx="1" fill="#C67A08"/>
+          <path d="M14.2,-54 L14.2,-66 M8.5,-54 Q8.5,-62 14.2,-64 M19.9,-54 Q19.9,-62 14.2,-64" stroke="#C67A08" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <circle cx="14.2" cy="-50" r="1.6" fill="#FFD166"/>
+          <path d="M-15,3 Q0,-6 15,3 Q0,9 -15,3 Z" fill="#E8920A"/>
+          <path d="M-9,2 Q-10,-16 0,-18 Q10,-16 9,2 Z" fill="#7FB8E6"/>
+          <path d="M-7,-13 Q-15,-15 -16.5,-21" stroke="#7FB8E6" strokeWidth="3.4" fill="none" strokeLinecap="round"/>
+          <circle cx="-17" cy="-22.5" r="2.4" fill="#8CC4EE"/>
+          <path d="M7,-13 Q12,-14 13.6,-19" stroke="#7FB8E6" strokeWidth="3.4" fill="none" strokeLinecap="round"/>
+          <circle cx="14.2" cy="-20.5" r="2.4" fill="#8CC4EE"/>
+          <path d="M-6,-16.5 q6,5 12,0" stroke="#8A5A2B" strokeWidth="1.4" strokeDasharray="1.6 1.6" fill="none"/>
+          <circle cx="0" cy="-27" r="8.5" fill="#8CC4EE"/>
+          <path d="M-6.5,-32 Q0,-41 6.5,-32 Q3,-37 0,-37.5 Q-3,-37 -6.5,-32 Z" fill="#2E2A3B"/>
+          <circle cx="0" cy="-38.5" r="3" fill="#2E2A3B"/>
+          <path d="M5,-43 a3.2,3.2 0 1,0 3.4,3.4 a2.5,2.5 0 1,1 -3.4,-3.4" fill="#FFE066"/>
+          <rect x="-0.6" y="-33.5" width="1.2" height="3" rx="0.6" fill="#2E2A3B"/>
+          <path d="M-4.6,-27.5 q1.6,1.7 3.2,0 M1.4,-27.5 q1.6,1.7 3.2,0" stroke="#2E2A3B" strokeWidth="0.9" fill="none" strokeLinecap="round"/>
+          <path d="M-3.2,-23.2 q3.2,3.2 6.4,0" stroke="#2E2A3B" strokeWidth="1.1" fill="none" strokeLinecap="round"/>
+        </g>
+
+        {/* Fresh falling snow - extreme left peak only */}
+        <g clipPath="url(#sg-snowclip)" fill="#FFFFFF">
+          <circle cx="30"  cy="340" r="2.4" opacity="0.9"><animateTransform attributeName="transform" type="translate" from="0 0" to="10 300" dur="5.2s" begin="-1s"   repeatCount="indefinite"/></circle>
+          <circle cx="60"  cy="340" r="1.8" opacity="0.75"><animateTransform attributeName="transform" type="translate" from="0 0" to="-8 300" dur="6.8s" begin="-3.4s" repeatCount="indefinite"/></circle>
+          <circle cx="95"  cy="340" r="2.8" opacity="0.95"><animateTransform attributeName="transform" type="translate" from="0 0" to="12 300" dur="4.6s" begin="-2.2s" repeatCount="indefinite"/></circle>
+          <circle cx="125" cy="340" r="2"   opacity="0.8"><animateTransform attributeName="transform" type="translate" from="0 0" to="-6 300" dur="7.4s" begin="-5s"   repeatCount="indefinite"/></circle>
+          <circle cx="155" cy="340" r="2.5" opacity="0.9"><animateTransform attributeName="transform" type="translate" from="0 0" to="9 300"  dur="5.8s" begin="-0.6s" repeatCount="indefinite"/></circle>
+          <circle cx="185" cy="340" r="1.7" opacity="0.7"><animateTransform attributeName="transform" type="translate" from="0 0" to="-10 300" dur="6.2s" begin="-4.1s" repeatCount="indefinite"/></circle>
+          <circle cx="215" cy="340" r="2.6" opacity="0.9"><animateTransform attributeName="transform" type="translate" from="0 0" to="7 300"  dur="5s"   begin="-2.8s" repeatCount="indefinite"/></circle>
+          <circle cx="245" cy="340" r="2"   opacity="0.8"><animateTransform attributeName="transform" type="translate" from="0 0" to="-7 300" dur="6.6s" begin="-1.7s" repeatCount="indefinite"/></circle>
+          <circle cx="75"  cy="340" r="1.5" opacity="0.65"><animateTransform attributeName="transform" type="translate" from="0 0" to="5 300"  dur="7.8s" begin="-6.3s" repeatCount="indefinite"/></circle>
+          <circle cx="170" cy="340" r="1.5" opacity="0.6"><animateTransform attributeName="transform" type="translate" from="0 0" to="-5 300" dur="8.2s" begin="-3.9s" repeatCount="indefinite"/></circle>
+        </g>
+
         {/* Mid range + tiny temple */}
         <path d="M-20,720 L180,540 L340,660 L520,500 L720,680 L900,530 L1080,690 L1250,560 L1460,700 L1460,900 L-20,900 Z" fill="url(#sg-mid)"/>
         <g transform="translate(893,505)">
@@ -121,9 +161,57 @@ function HeroScene() {
             <rect x="0" y="6" width="48" height="12" rx="5.5" fill="#E23B2E"/>
             <path d="M9,7 Q13,-1 21,-1 L31,-1 Q37,-1 40,7 Z" fill="#C22B20"/>
             <rect x="15" y="1.5" width="14" height="6" rx="2" fill="#BFE9FF"/>
+            <circle cx="19" cy="4.6" r="2.2" fill="#FFD9A0"/><circle cx="25" cy="4.6" r="2.2" fill="#FFD9A0"/>
+            <path d="M17.8,5.3 q1.2,1.2 2.4,0 M23.8,5.3 q1.2,1.2 2.4,0" stroke="#7A4A1F" strokeWidth="0.7" fill="none" strokeLinecap="round"/>
+            <rect x="16" y="-5.2" width="12" height="4.4" rx="1.2" fill="#8A5A2B"/>
+            <rect x="19.5" y="-5.2" width="1.4" height="4.4" fill="#5C3A1A"/><rect x="24" y="-5.2" width="1.4" height="4.4" fill="#5C3A1A"/>
+            <rect x="29" y="-4" width="6" height="3.2" rx="1" fill="#0B7B8B"/>
             <rect x="44" y="9" width="4" height="4" rx="1.4" fill="#FFE066"/>
             <circle cx="12" cy="18.5" r="5" fill="#22252B"/><circle cx="36" cy="18.5" r="5" fill="#22252B"/>
             <circle cx="12" cy="18.5" r="2.2" fill="#9AA3AE"/><circle cx="36" cy="18.5" r="2.2" fill="#9AA3AE"/>
+          </g>
+        </g>
+
+        {/* Tempo traveller - full of happy pilgrims + roof luggage */}
+        <g>
+          <animateMotion dur="17s" begin="-6s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#sg-roadPath"/>
+          </animateMotion>
+          <g transform="translate(-29,-18)">
+            <ellipse cx="29" cy="24" rx="27" ry="3.8" fill="rgba(10,30,20,0.25)"/>
+            <rect x="0" y="4" width="58" height="15" rx="4" fill="#F4F6F8"/>
+            <rect x="0" y="12" width="58" height="3.4" fill="#0B7B8B"/>
+            <rect x="47" y="6" width="8" height="5.5" rx="1" fill="#BFE9FF"/>
+            <rect x="5" y="6" width="38" height="5.5" rx="1" fill="#BFE9FF"/>
+            <circle cx="12" cy="9" r="2.3" fill="#FFD9A0"/><circle cx="22" cy="9" r="2.3" fill="#FFD9A0"/><circle cx="32" cy="9" r="2.3" fill="#FFD9A0"/>
+            <path d="M10.8,9.8 q1.2,1.2 2.4,0 M20.8,9.8 q1.2,1.2 2.4,0 M30.8,9.8 q1.2,1.2 2.4,0" stroke="#7A4A1F" strokeWidth="0.7" fill="none" strokeLinecap="round"/>
+            <rect x="8" y="-2.6" width="11" height="5" rx="1.2" fill="#E8920A"/>
+            <rect x="21" y="-2.2" width="9" height="4.6" rx="1.2" fill="#C0392B"/>
+            <rect x="32" y="-1.8" width="10" height="4.2" rx="2" fill="#2E9E4F"/>
+            <rect x="6" y="2" width="38" height="1.4" rx="0.7" fill="#8A93A0"/>
+            <rect x="55" y="8.5" width="3" height="3.4" rx="1" fill="#FFE066"/>
+            <circle cx="13" cy="19.5" r="5" fill="#22252B"/><circle cx="45" cy="19.5" r="5" fill="#22252B"/>
+            <circle cx="13" cy="19.5" r="2.2" fill="#9AA3AE"/><circle cx="45" cy="19.5" r="2.2" fill="#9AA3AE"/>
+          </g>
+        </g>
+
+        {/* Little blue hatchback - couple with a roof bag */}
+        <g>
+          <animateMotion dur="17s" begin="-11.5s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#sg-roadPath"/>
+          </animateMotion>
+          <g transform="translate(-20,-13)">
+            <ellipse cx="20" cy="18" rx="18" ry="3" fill="rgba(10,30,20,0.25)"/>
+            <rect x="0" y="5" width="40" height="10" rx="4.5" fill="#1260CC"/>
+            <path d="M7,6 Q10,0 16,0 L26,0 Q31,0 34,6 Z" fill="#0E4DA4"/>
+            <rect x="12" y="1.5" width="12" height="5" rx="1.5" fill="#BFE9FF"/>
+            <circle cx="15.6" cy="4.2" r="1.9" fill="#FFD9A0"/><circle cx="20.4" cy="4.2" r="1.9" fill="#FFD9A0"/>
+            <path d="M14.6,4.8 q1,1 2,0 M19.4,4.8 q1,1 2,0" stroke="#7A4A1F" strokeWidth="0.6" fill="none" strokeLinecap="round"/>
+            <rect x="14" y="-3.6" width="9" height="4" rx="1.2" fill="#E23B2E"/>
+            <rect x="16.6" y="-3.6" width="1.2" height="4" fill="#A81F14"/>
+            <rect x="36.5" y="7.5" width="3.5" height="3.4" rx="1.2" fill="#FFE066"/>
+            <circle cx="10" cy="15" r="4.3" fill="#22252B"/><circle cx="30" cy="15" r="4.3" fill="#22252B"/>
+            <circle cx="10" cy="15" r="1.9" fill="#9AA3AE"/><circle cx="30" cy="15" r="1.9" fill="#9AA3AE"/>
           </g>
         </g>
       </svg>
