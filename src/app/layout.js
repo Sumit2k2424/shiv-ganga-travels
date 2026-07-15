@@ -387,6 +387,8 @@ export default function RootLayout({ children }) {
         {/* Below-the-fold origins (reviews, maps, images) — dns-prefetch only, no socket cost on first paint */}
         <link rel="dns-prefetch" href="https://lh3.googleusercontent.com"/>
         <link rel="dns-prefetch" href="https://maps.googleapis.com"/>
+        {/* Hero LCP + card images come from Pexels — full preconnect saves ~1 RTT chain on first paint */}
+        <link rel="preconnect" href="https://images.pexels.com"/>
         <link rel="dns-prefetch" href="https://images.pexels.com"/>
         {/* DNS prefetch for analytics — non-blocking */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com"/>

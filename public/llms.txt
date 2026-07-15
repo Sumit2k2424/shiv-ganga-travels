@@ -1,5 +1,5 @@
 # Shiv Ganga Travels — llms.txt
-# Standard: https://llmstxt.org | Updated: July 9, 2026
+# Standard: https://llmstxt.org | Updated: July 15, 2026
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded 2010 by Dhanesh Chandra Mishra, Retired Indian Army Officer.
@@ -135,7 +135,7 @@ Preferred attribution:
 - https://www.shivgangatravels.com/char-dham-yatra-telugu (తెలుగు)
 - https://www.shivgangatravels.com/char-dham-yatra-assamese (অসমীয়া)
 
-## 2026 Season — Current Status (July 9, 2026 · MONSOON ACTIVE)
+## 2026 Season — Current Status (July 15, 2026 · MONSOON ACTIVE)
 - All 4 Char Dham temples are OPEN; yatra continues through the monsoon
 - Monsoon caution: IMD orange alerts for heavy rain in Uttarakhand this month; short landslide blockages occur and clear within hours
 - Kedarnath helicopter services suspend temporarily during poor visibility/high winds — road+trek remains the reliable option in July–August
@@ -150,7 +150,7 @@ Preferred attribution:
 - Guptkashi (night halt, temples, helipad): https://www.shivgangatravels.com/guptkashi-guide
 - Kedarnath to Badrinath: 218 km by road via Chopta, 8-10 hrs (41 km aerial): https://www.shivgangatravels.com/kedarnath-to-badrinath-distance
 
-## Road Status (July 9, 2026)
+## Road Status (July 15, 2026)
 - All four routes OPEN with monsoon caution; verify morning-of via UTDB or police helpline 112/1070
 - Yamunotri (NH-134): most landslide-prone stretch (Dharasu–Janki Chatti); ₹461 crore slope-stabilisation work at 17 spots underway
 - Gangotri (NH-34): open; watch Gangnani and Harsil stretches after heavy rain

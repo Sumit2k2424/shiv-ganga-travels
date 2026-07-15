@@ -68,24 +68,46 @@ function Snow() {
   }}/>;
 }
 
-/* ─── Scene SVG ────────────────────────────────────────────── */
-/* ─── Photographic backdrop (Kedarnath, Pexels) ───────────── */
+/* ─── Animated photographic backdrop (Pexels, CSS-only Ken Burns) ── */
+const px = (id, w, h) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}&h=${h}&fit=crop`;
+
+// Frame 1 is the LCP image — eager + high priority. Frames 2–3 lazy-load
+// and crossfade in on an infinite 24s cycle (pure CSS, GPU-composited).
+const FRAMES = [
+  { id: 34376161, pos: 'center 42%' }, // Aerial — Kedarnath temple in the Himalayas
+  { id: 35408529, pos: 'center 58%' }, // Badrinath temple with prayer flags
+  { id: 18590571, pos: 'center 45%' }, // Bhagirathi peaks above Gangotri, winter
+];
+
 function HeroPhoto() {
-  const base = 'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb';
   return (
-    <div aria-hidden="true" style={{ position:'absolute', inset:0, zIndex:2 }}>
-      <img
-        src={`${base}&w=1600&h=1000&fit=crop`}
-        srcSet={`${base}&w=800&h=600&fit=crop 800w, ${base}&w=1200&h=800&fit=crop 1200w, ${base}&w=1920&h=1080&fit=crop 1920w`}
-        sizes="100vw"
-        alt="" fetchPriority="high" decoding="async"
-        style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 30%' }}
-      />
-      {/* Legibility overlays — deep navy wash + bottom anchor, MakeMyTrip style */}
+    <div aria-hidden="true" style={{ position:'absolute', inset:0, zIndex:2, overflow:'hidden' }}>
+      {FRAMES.map((f, i) => (
+        <img key={f.id}
+          src={px(f.id, 1600, 1000)}
+          srcSet={`${px(f.id,800,600)} 800w, ${px(f.id,1200,800)} 1200w, ${px(f.id,1920,1080)} 1920w`}
+          sizes="100vw"
+          alt="" decoding="async"
+          fetchPriority={i === 0 ? 'high' : 'low'}
+          loading={i === 0 ? 'eager' : 'lazy'}
+          className={i === 0 ? 'hero-frame-base' : 'hero-frame'}
+          style={{
+            position:'absolute', inset:0, width:'100%', height:'100%',
+            objectFit:'cover', objectPosition:f.pos, willChange:'transform, opacity',
+            ...(i === 0 ? {} : { opacity:0, animationDelay:`${i * 8}s` }),
+          }}
+        />
+      ))}
+      {/* Legibility overlays — deep navy wash + bottom anchor + vignette */}
       <div style={{ position:'absolute', inset:0,
         background:'linear-gradient(180deg, rgba(1,8,18,0.78) 0%, rgba(3,15,32,0.46) 42%, rgba(1,6,14,0.88) 100%)' }}/>
       <div style={{ position:'absolute', inset:0,
         background:'radial-gradient(ellipse 70% 55% at 50% 46%, rgba(0,0,0,0) 0%, rgba(1,5,10,0.42) 100%)' }}/>
+      {/* Slow-drifting gold light sweep — premium sheen */}
+      <div className="hero-sheen" style={{ position:'absolute', inset:0, opacity:0.5,
+        background:'linear-gradient(115deg, transparent 30%, rgba(232,146,10,0.10) 47%, rgba(255,209,102,0.14) 50%, rgba(232,146,10,0.10) 53%, transparent 70%)',
+        backgroundSize:'280% 100%' }}/>
     </div>
   );
 }
@@ -274,8 +296,32 @@ export default function HeroSection() {
         @keyframes sgPulse  { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.55;transform:scale(0.82)} }
         @keyframes sgBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
         @keyframes sgShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+        /* ── Animated hero backdrop ── */
+        @keyframes sgKenBurns { from{transform:scale(1) translateY(0)} to{transform:scale(1.14) translateY(-1.5%)} }
+        @keyframes sgFrameCycle {
+          0%{opacity:0; transform:scale(1.02)}
+          4%{opacity:1}
+          30%{opacity:1; transform:scale(1.12)}
+          37%{opacity:0; transform:scale(1.13)}
+          100%{opacity:0; transform:scale(1.02)}
+        }
+        @keyframes sgSheenDrift { 0%{background-position:120% 0} 100%{background-position:-120% 0} }
+        @keyframes sgRise { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
+        .hero-frame-base { animation: sgKenBurns 24s ease-in-out infinite alternate; }
+        .hero-frame      { animation: sgFrameCycle 24s ease-in-out infinite; }
+        .hero-sheen      { animation: sgSheenDrift 14s linear infinite; }
+        .hero-content    { animation: sgRise 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-badge-left, .hero-badge-right { animation: sgRise 0.9s 0.25s cubic-bezier(0.22,1,0.36,1) both; }
+
         @media(max-width:640px){
           .hero-badge-right{display:none!important}
+          .hero-frame-base, .hero-frame { object-position: 62% 40% !important; }
+        }
+        @media (prefers-reduced-motion: reduce){
+          .hero-frame-base, .hero-frame, .hero-sheen, .hero-content,
+          .hero-badge-left, .hero-badge-right { animation: none !important; }
+          .hero-frame { opacity: 0 !important; }
         }
       `}}/>
     </section>
