@@ -1,113 +1,128 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
 import HeroSearch from '@/components/HeroSearch';
 import { SITE } from '@/data/packages';
 
-/* ─── Snowfall canvas ──────────────────────────────────────── */
-function Snow() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const canvas = ref.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let raf, w, h;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobile = window.matchMedia('(max-width: 640px)').matches;
-
-    function resize() {
-      w = canvas.offsetWidth; h = canvas.offsetHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.scale(dpr, dpr);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    // On mobile (or reduced-motion) skip the rAF snow loop entirely — it is the
-    // single biggest main-thread cost on phones, and Lighthouse measures mobile.
-    const FLAKES = (reduce || isMobile) ? 0 : 90;
-    if (FLAKES === 0) {
-      return () => { window.removeEventListener('resize', resize); };
-    }
-    const flakes = Array.from({ length: FLAKES }, () => ({
-      x:  Math.random() * 1440,
-      y:  Math.random() * 900,
-      r:  Math.random() * 2.2 + 0.4,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: Math.random() * 0.9 + 0.25,
-      alpha: Math.random() * 0.55 + 0.15,
-      wobble: Math.random() * Math.PI * 2,
-      wobbleSpeed: Math.random() * 0.012 + 0.004,
-    }));
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      const scaleX = w / 1440, scaleY = h / 900;
-      flakes.forEach(f => {
-        f.wobble += f.wobbleSpeed;
-        f.x += f.vx + Math.sin(f.wobble) * 0.35;
-        f.y += f.vy;
-        if (f.y > h / scaleY + 10) { f.y = -6; f.x = Math.random() * 1440; }
-        if (f.x > 1450) f.x = -5;
-        if (f.x < -10) f.x = 1445;
-        ctx.beginPath();
-        ctx.arc(f.x * scaleX, f.y * scaleY, f.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(220,235,255,${f.alpha})`;
-        ctx.fill();
-      });
-      raf = requestAnimationFrame(draw);
-    }
-    raf = requestAnimationFrame(draw);
-    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize); };
-  }, []);
-
-  return <canvas ref={ref} aria-hidden="true" style={{
-    position:'absolute', inset:0, width:'100%', height:'100%',
-    pointerEvents:'none', zIndex:4,
-  }}/>;
-}
-
-/* ─── Animated photographic backdrop (Pexels, CSS-only Ken Burns) ── */
-const px = (id, w, h) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}&h=${h}&fit=crop`;
-
-// Frame 1 is the LCP image — eager + high priority. Frames 2–3 lazy-load
-// and crossfade in on an infinite 24s cycle (pure CSS, GPU-composited).
-const FRAMES = [
-  { id: 34376161, pos: 'center 42%' }, // Aerial — Kedarnath temple in the Himalayas
-  { id: 35408529, pos: 'center 58%' }, // Badrinath temple with prayer flags
-  { id: 18590571, pos: 'center 45%' }, // Bhagirathi peaks above Gangotri, winter
-];
-
-function HeroPhoto() {
+/* --- Stylized animated day scene ------------------------------
+   Vibrant flat-design Himalaya: clear blue sky, drifting clouds,
+   planes with contrails, winding mountain road and a little red
+   car driving it (SMIL animateMotion - zero JS, GPU-cheap).     */
+function HeroScene() {
   return (
     <div aria-hidden="true" style={{ position:'absolute', inset:0, zIndex:2, overflow:'hidden' }}>
-      {FRAMES.map((f, i) => (
-        <img key={f.id}
-          src={px(f.id, 1600, 1000)}
-          srcSet={`${px(f.id,800,600)} 800w, ${px(f.id,1200,800)} 1200w, ${px(f.id,1920,1080)} 1920w`}
-          sizes="100vw"
-          alt="" decoding="async"
-          fetchPriority={i === 0 ? 'high' : 'low'}
-          loading={i === 0 ? 'eager' : 'lazy'}
-          className={i === 0 ? 'hero-frame-base' : 'hero-frame'}
-          style={{
-            position:'absolute', inset:0, width:'100%', height:'100%',
-            objectFit:'cover', objectPosition:f.pos, willChange:'transform, opacity',
-            ...(i === 0 ? {} : { opacity:0, animationDelay:`${i * 8}s` }),
-          }}
-        />
-      ))}
-      {/* Legibility overlays — deep navy wash + bottom anchor + vignette */}
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+        style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+        <defs>
+          <linearGradient id="sg-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#1E9BE9"/>
+            <stop offset="55%" stopColor="#4FC3F7"/>
+            <stop offset="100%" stopColor="#A6E4FF"/>
+          </linearGradient>
+          <linearGradient id="sg-back" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#B6C9F0"/><stop offset="100%" stopColor="#8FA9DC"/>
+          </linearGradient>
+          <linearGradient id="sg-mid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#2FB39B"/><stop offset="100%" stopColor="#1E8A78"/>
+          </linearGradient>
+          <linearGradient id="sg-front" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#5BC85F"/><stop offset="100%" stopColor="#2E9E4F"/>
+          </linearGradient>
+          <radialGradient id="sg-sunglow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0%" stopColor="rgba(255,236,150,0.95)"/>
+            <stop offset="55%" stopColor="rgba(255,220,110,0.35)"/>
+            <stop offset="100%" stopColor="rgba(255,220,110,0)"/>
+          </radialGradient>
+        </defs>
+
+        {/* Sky + sun */}
+        <rect width="1440" height="900" fill="url(#sg-sky)"/>
+        <circle className="sg-sun" cx="1160" cy="150" r="130" fill="url(#sg-sunglow)"/>
+        <circle cx="1160" cy="150" r="52" fill="#FFE066"/>
+
+        {/* Drifting clouds */}
+        <g className="sg-cloud sg-cloud1" fill="#fff" opacity="0.95">
+          <ellipse cx="0" cy="0" rx="58" ry="20"/><ellipse cx="38" cy="-12" rx="40" ry="18"/><ellipse cx="-40" cy="-8" rx="34" ry="15"/>
+        </g>
+        <g className="sg-cloud sg-cloud2" fill="#fff" opacity="0.8">
+          <ellipse cx="0" cy="0" rx="46" ry="16"/><ellipse cx="30" cy="-10" rx="32" ry="14"/><ellipse cx="-32" cy="-6" rx="26" ry="12"/>
+        </g>
+        <g className="sg-cloud sg-cloud3" fill="#fff" opacity="0.65">
+          <ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="48" cy="-14" rx="44" ry="19"/><ellipse cx="-50" cy="-9" rx="38" ry="16"/>
+        </g>
+
+        {/* Planes with contrails */}
+        <g className="sg-plane sg-plane1">
+          <rect x="-92" y="4" width="78" height="2.6" rx="1.3" fill="rgba(255,255,255,0.55)"/>
+          <path d="M0,0 Q10,-2 22,0 L38,4 Q40,6 38,8 L22,10 Q10,12 0,10 Q-4,5 0,0 Z" fill="#fff"/>
+          <path d="M14,4 L4,-10 L10,-10 L22,3 Z" fill="#E9F6FF"/>
+          <path d="M14,7 L4,20 L10,20 L22,8 Z" fill="#D4EDFC"/>
+          <circle cx="34" cy="6" r="2.4" fill="#E23B2E"/>
+        </g>
+        <g className="sg-plane sg-plane2">
+          <rect x="-80" y="4" width="66" height="2.2" rx="1.1" fill="rgba(255,255,255,0.45)"/>
+          <path d="M0,0 Q8,-1.6 18,0 L31,3.4 Q33,5 31,6.6 L18,8.4 Q8,10 0,8.4 Q-3,4.2 0,0 Z" fill="#fff"/>
+          <path d="M11,3.4 L3,-8 L8,-8 L18,2.6 Z" fill="#E9F6FF"/>
+          <path d="M11,5.8 L3,16 L8,16 L18,6.6 Z" fill="#D4EDFC"/>
+        </g>
+
+        {/* Birds */}
+        <g className="sg-birds" stroke="#1B5E8C" strokeWidth="2.4" strokeLinecap="round" fill="none" opacity="0.7">
+          <path d="M300,250 q7,-8 14,0 q7,-8 14,0"/>
+          <path d="M350,230 q6,-7 12,0 q6,-7 12,0"/>
+        </g>
+
+        {/* Back range - snow-capped */}
+        <path d="M-20,640 L150,400 L260,530 L420,330 L560,560 L700,380 L830,570 L980,410 L1130,590 L1290,450 L1460,620 L1460,900 L-20,900 Z" fill="url(#sg-back)"/>
+        <path d="M150,400 L196,468 L172,462 L150,486 L128,458 L108,462 Z M420,330 L470,404 L444,396 L420,424 L398,392 L376,398 Z M700,380 L748,450 L722,442 L700,468 L678,438 L658,444 Z M980,410 L1024,472 L1002,466 L980,490 L960,462 L942,468 Z M1290,450 L1330,506 L1310,500 L1290,522 L1272,498 L1256,504 Z" fill="#FFFFFF"/>
+
+        {/* Mid range + tiny temple */}
+        <path d="M-20,720 L180,540 L340,660 L520,500 L720,680 L900,530 L1080,690 L1250,560 L1460,700 L1460,900 L-20,900 Z" fill="url(#sg-mid)"/>
+        <g transform="translate(893,505)">
+          <rect x="-14" y="12" width="28" height="16" rx="2" fill="#F4E3C1"/>
+          <path d="M-16,12 L16,12 L0,-10 Z" fill="#E8920A"/>
+          <rect x="-2.4" y="-16" width="4.8" height="8" fill="#C67A08"/>
+          <circle cx="0" cy="-18" r="3" fill="#FFD166"/>
+          <rect x="-3.5" y="18" width="7" height="10" rx="1" fill="#8A5A2B"/>
+        </g>
+
+        {/* Front hill */}
+        <path d="M-20,900 L-20,760 C220,690 420,730 640,690 C880,646 1120,668 1460,600 L1460,900 Z" fill="url(#sg-front)"/>
+
+        {/* Winding road (car follows the same path) */}
+        <path id="sg-roadPath" d="M-60,846 C240,850 420,776 600,752 C790,727 880,682 1060,664 C1240,646 1360,622 1520,610" fill="none" stroke="none"/>
+        <path d="M-60,846 C240,850 420,776 600,752 C790,727 880,682 1060,664 C1240,646 1360,622 1520,610" fill="none" stroke="#46536B" strokeWidth="30" strokeLinecap="round"/>
+        <path d="M-60,846 C240,850 420,776 600,752 C790,727 880,682 1060,664 C1240,646 1360,622 1520,610" fill="none" stroke="#FFE066" strokeWidth="3" strokeDasharray="22 18"/>
+
+        {/* Pines */}
+        <g fill="#1E7A3C">
+          <path d="M150,742 L166,706 L182,742 Z M150,724 L166,692 L182,724 Z"/><rect x="163" y="742" width="6" height="10" fill="#6B4423"/>
+          <path d="M420,704 L434,672 L448,704 Z M420,688 L434,660 L448,688 Z"/><rect x="431" y="704" width="5" height="9" fill="#6B4423"/>
+          <path d="M950,640 L963,610 L976,640 Z M950,625 L963,599 L976,625 Z"/><rect x="960" y="640" width="5" height="8" fill="#6B4423"/>
+          <path d="M1240,606 L1252,578 L1264,606 Z M1240,592 L1252,568 L1264,592 Z"/><rect x="1249" y="606" width="5" height="8" fill="#6B4423"/>
+        </g>
+
+        {/* Little red car - drives the road forever */}
+        <g className="sg-car">
+          <animateMotion dur="17s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#sg-roadPath"/>
+          </animateMotion>
+          <g transform="translate(-24,-15)">
+            <ellipse cx="24" cy="21" rx="22" ry="3.6" fill="rgba(10,30,20,0.25)"/>
+            <rect x="0" y="6" width="48" height="12" rx="5.5" fill="#E23B2E"/>
+            <path d="M9,7 Q13,-1 21,-1 L31,-1 Q37,-1 40,7 Z" fill="#C22B20"/>
+            <rect x="15" y="1.5" width="14" height="6" rx="2" fill="#BFE9FF"/>
+            <rect x="44" y="9" width="4" height="4" rx="1.4" fill="#FFE066"/>
+            <circle cx="12" cy="18.5" r="5" fill="#22252B"/><circle cx="36" cy="18.5" r="5" fill="#22252B"/>
+            <circle cx="12" cy="18.5" r="2.2" fill="#9AA3AE"/><circle cx="36" cy="18.5" r="2.2" fill="#9AA3AE"/>
+          </g>
+        </g>
+      </svg>
+
+      {/* Legibility scrims - keep the scene vibrant, keep white text readable */}
       <div style={{ position:'absolute', inset:0,
-        background:'linear-gradient(180deg, rgba(1,8,18,0.78) 0%, rgba(3,15,32,0.46) 42%, rgba(1,6,14,0.88) 100%)' }}/>
+        background:'radial-gradient(ellipse 64% 52% at 50% 44%, rgba(6,20,42,0.62) 0%, rgba(6,20,42,0.34) 52%, rgba(6,20,42,0) 76%)' }}/>
       <div style={{ position:'absolute', inset:0,
-        background:'radial-gradient(ellipse 70% 55% at 50% 46%, rgba(0,0,0,0) 0%, rgba(1,5,10,0.42) 100%)' }}/>
-      {/* Slow-drifting gold light sweep — premium sheen */}
-      <div className="hero-sheen" style={{ position:'absolute', inset:0, opacity:0.5,
-        background:'linear-gradient(115deg, transparent 30%, rgba(232,146,10,0.10) 47%, rgba(255,209,102,0.14) 50%, rgba(232,146,10,0.10) 53%, transparent 70%)',
-        backgroundSize:'280% 100%' }}/>
+        background:'linear-gradient(180deg, rgba(6,18,38,0.30) 0%, rgba(6,18,38,0) 30%, rgba(4,12,26,0) 68%, rgba(4,12,26,0.45) 100%)' }}/>
     </div>
   );
 }
@@ -119,14 +134,13 @@ export default function HeroSection() {
     <section style={{
       position:'relative',
       minHeight:'clamp(600px,78vh,760px)',
-      background:'#010508',
+      background:'#2FB9EF',
       display:'flex', flexDirection:'column',
       alignItems:'center', justifyContent:'center',
       padding:'clamp(64px,7vw,88px) 16px clamp(56px,7vw,80px)',
       overflow:'hidden',
     }}>
-      <HeroPhoto/>
-      <Snow/>
+      <HeroScene/>
 
       {/* Season badge */}
       <div className="hero-badge-left" style={{
@@ -297,31 +311,30 @@ export default function HeroSection() {
         @keyframes sgBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
         @keyframes sgShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
-        /* ── Animated hero backdrop ── */
-        @keyframes sgKenBurns { from{transform:scale(1) translateY(0)} to{transform:scale(1.14) translateY(-1.5%)} }
-        @keyframes sgFrameCycle {
-          0%{opacity:0; transform:scale(1.02)}
-          4%{opacity:1}
-          30%{opacity:1; transform:scale(1.12)}
-          37%{opacity:0; transform:scale(1.13)}
-          100%{opacity:0; transform:scale(1.02)}
-        }
-        @keyframes sgSheenDrift { 0%{background-position:120% 0} 100%{background-position:-120% 0} }
+        /* -- Animated day scene -- */
         @keyframes sgRise { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
-        .hero-frame-base { animation: sgKenBurns 24s ease-in-out infinite alternate; }
-        .hero-frame      { animation: sgFrameCycle 24s ease-in-out infinite; }
-        .hero-sheen      { animation: sgSheenDrift 14s linear infinite; }
+        @keyframes sgCloudDrift { from{transform:translateX(-260px)} to{transform:translateX(1720px)} }
+        @keyframes sgPlaneLR { from{transform:translate(-180px,150px)} to{transform:translate(1620px,96px)} }
+        @keyframes sgPlaneRL { from{transform:translate(1620px,238px) scaleX(-1)} to{transform:translate(-220px,196px) scaleX(-1)} }
+        @keyframes sgSunGlow { 0%,100%{opacity:0.85} 50%{opacity:1} }
+        @keyframes sgBirdBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+        .sg-cloud1 { translate: 0 128px; animation: sgCloudDrift 75s linear infinite; animation-delay:-14s; }
+        .sg-cloud2 { translate: 0 212px; animation: sgCloudDrift 95s linear infinite; animation-delay:-52s; }
+        .sg-cloud3 { translate: 0 92px;  animation: sgCloudDrift 115s linear infinite; animation-delay:-84s; }
+        .sg-plane1 { animation: sgPlaneLR 30s linear infinite; }
+        .sg-plane2 { animation: sgPlaneRL 42s linear infinite; animation-delay:-18s; }
+        .sg-sun    { animation: sgSunGlow 5s ease-in-out infinite; }
+        .sg-birds  { animation: sgBirdBob 2.6s ease-in-out infinite; }
         .hero-content    { animation: sgRise 0.8s cubic-bezier(0.22,1,0.36,1) both; }
         .hero-badge-left, .hero-badge-right { animation: sgRise 0.9s 0.25s cubic-bezier(0.22,1,0.36,1) both; }
 
         @media(max-width:640px){
           .hero-badge-right{display:none!important}
-          .hero-frame-base, .hero-frame { object-position: 62% 40% !important; }
         }
         @media (prefers-reduced-motion: reduce){
-          .hero-frame-base, .hero-frame, .hero-sheen, .hero-content,
-          .hero-badge-left, .hero-badge-right { animation: none !important; }
-          .hero-frame { opacity: 0 !important; }
+          .sg-cloud1,.sg-cloud2,.sg-cloud3,.sg-sun,.sg-birds,.hero-content,
+          .hero-badge-left,.hero-badge-right { animation: none !important; }
+          .sg-plane1,.sg-plane2,.sg-car { display:none; }
         }
       `}}/>
     </section>
