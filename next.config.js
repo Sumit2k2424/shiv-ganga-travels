@@ -113,6 +113,12 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: '/:asset(logo.png|logo-square.png|favicon.ico|manifest.json)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },

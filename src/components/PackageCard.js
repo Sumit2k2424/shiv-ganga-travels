@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 
 const CAT_FALLBACK = {
   'char-dham':   'linear-gradient(160deg, #0F2B5B 0%, #1A3E75 50%, #0B7B8B 100%)',
@@ -24,7 +25,9 @@ export default function PackageCard({ pkg }) {
       <Link href={`/packages/${pkg.slug}`} style={{ display:'block', textDecoration:'none' }}>
         <div style={{ height:182, position:'relative', overflow:'hidden', flexShrink:0, background:fallBg }}>
           {pkg.photo && (
-            <img src={pkg.photo} alt={pkg.name} width={400} height={182}
+            <img src={pxAt(pkg.photo, 480, 300)} alt={pkg.name} width={400} height={182}
+              srcSet={pxSrcSet(pkg.photo, [[400,250],[800,500]])}
+              sizes="(max-width:640px) 92vw, 400px"
               loading="lazy" decoding="async" className="card-img"
               style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block', transition:'transform .45s ease' }}/>
           )}

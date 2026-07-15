@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
@@ -184,7 +185,9 @@ export default async function PackageDetailPage({ params }) {
                   <Link key={p.slug} href={`/packages/${p.slug}`} className="pkg-card" style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column' }}>
                     <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0, background:'linear-gradient(160deg,var(--navy),var(--teal))' }}>
                       {p.photo && (
-                        <img src={p.photo} alt={p.name} width={290} height={200} loading="lazy" decoding="async"
+                        <img src={pxAt(p.photo, 320, 220)} alt={p.name} width={290} height={200}
+                          srcSet={pxSrcSet(p.photo, [[320,220],[580,400]])} sizes="290px"
+                          loading="lazy" decoding="async"
                           style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}/>
                       )}
                       <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%)', pointerEvents:'none' }}/>

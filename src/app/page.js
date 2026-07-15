@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS, TRUST, getFeaturedPackages } from '@/data/packages';
 import HeroSection from '@/components/HeroSection';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 import ScrollReveal from '@/components/ScrollReveal';
 import FAQAccordion from '@/components/FAQAccordion';
 // ssr:false dynamic imports moved to Client Component wrapper (Next.js 15 requirement)
@@ -83,7 +84,9 @@ function PkgCard({ pkg }) {
       <div style={{ height:168, position:'relative', overflow:'hidden', flexShrink:0, background: fallBg[pkg.category] || fallBg['char-dham'] }}>
         {pkg.photo && (
           <img
-            src={pkg.photo}
+            src={pxAt(pkg.photo, 320, 200)}
+            srcSet={pxSrcSet(pkg.photo, [[320,200],[560,340]])}
+            sizes="260px"
             alt={pkg.name}
             width={280} height={168}
             loading="lazy" decoding="async"
