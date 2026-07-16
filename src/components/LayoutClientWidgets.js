@@ -13,3 +13,8 @@ export const ChatBot = dynamic(() => import('@/components/ChatBot'), {
   ssr: false,
   loading: () => null,
 });
+
+export const LeadTracker = dynamic(() => import('@/components/LeadTracker'), {
+  ssr: false,
+  loading: () => null,
+});

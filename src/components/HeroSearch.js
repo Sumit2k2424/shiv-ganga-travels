@@ -24,6 +24,12 @@ export default function HeroSearch() {
     const msg = tab === 'cab'
       ? `Namaste! I want to book a cab from ${city} for ${pilgrims} passenger(s) in ${month||'the upcoming weeks'}. Please share rates.`
       : `Namaste! I want to book a ${label} package from ${city} for ${pilgrims} pilgrim(s) in ${month||'upcoming season'}.`;
+    try {
+      window.dispatchEvent(new CustomEvent('sgt:lead', { detail: {
+        type: 'Hero Search', package: label, number: '+' + SITE.whatsapp,
+        detail: `From: ${city} | Month: ${month||'—'} | Pilgrims: ${pilgrims}`,
+      }}));
+    } catch {}
     window.open(`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank');
   }
 

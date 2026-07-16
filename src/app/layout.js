@@ -5,7 +5,7 @@ import DirectOperatorStrip from '@/components/DirectOperatorStrip';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 // LeadPopup + ChatBot loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
-import { LeadPopup, ChatBot } from '@/components/LayoutClientWidgets';
+import { LeadPopup, ChatBot, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
@@ -425,6 +425,7 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <ChatBot/>
+        <LeadTracker/>
         {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
           window.dataLayer=window.dataLayer||[];

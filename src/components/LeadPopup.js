@@ -75,6 +75,14 @@ export default function LeadPopup() {
       `Month: ${form.month || 'Not decided'}\n` +
       `Pilgrims: ${form.pilgrims}`
     );
+    // Report the lead (with the visitor's own number) to the tracking sheet
+    try {
+      window.dispatchEvent(new CustomEvent('sgt:lead', { detail: {
+        type: 'Popup Form', name: form.name, number: form.phone,
+        package: form.package || 'Not decided',
+        detail: `Month: ${form.month || 'Not decided'} | Pilgrims: ${form.pilgrims}`,
+      }}));
+    } catch {}
     window.open(`https://wa.me/${SITE.whatsapp}?text=${msg}`, '_blank');
     setStep(2);
     sessionStorage.setItem(STORAGE_KEY, '1');
