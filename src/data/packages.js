@@ -17,8 +17,8 @@ export const SITE = {
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
-  lastUpdated   : 'July 16, 2026', // human-readable, shown on-page
-  lastUpdatedISO: '2026-07-16',   // schema.org dateModified format
+  lastUpdated   : 'July 18, 2026', // human-readable, shown on-page
+  lastUpdatedISO: '2026-07-18',   // schema.org dateModified format
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────
@@ -79,7 +79,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:24000, discounted:21000, currency:'₹', perPerson:true },
+    price    : { original:24000, discounted:18500, currency:'₹', perPerson:true },
     highlights:[
       'All 4 Dhams — Yamunotri, Gangotri, Kedarnath & Badrinath',
       '6 km trek / pony ride to Yamunotri from Janki Chatti',
@@ -107,10 +107,10 @@ export const PACKAGES = [
     badge    : 'Most Popular',
     images   : ['kedarnath','badrinath','gangotri','yamunotri'],
     tags     : ['char dham','chardham','haridwar','9 nights','family','group','2026','ex haridwar','private tour','budget','deluxe','customized'],
-    metaTitle: 'Char Dham Yatra Package from Haridwar 2026 | 9N/10D ₹21,000',
-    metaDesc : 'Char Dham Yatra package from Haridwar 2026, 9N/10D from ₹21,000/person. All 4 dhams, AC vehicle (plains; optional at ₹2,000 extra in hilly areas), VIP darshan, meals, GMVN hotels. Direct operator since 2010.',
+    metaTitle: 'Char Dham Yatra Package from Haridwar 2026 | 9N/10D ₹18,500',
+    metaDesc : 'Char Dham Yatra package from Haridwar 2026, 9N/10D from ₹18,500/person. All 4 dhams, AC vehicle (plains; optional at ₹2,000 extra in hilly areas), VIP darshan, meals, GMVN hotels. Direct operator since 2010.',
     faqs:[
-      {q:'How much does the Char Dham Yatra package from Haridwar cost in 2026?', a:'Our 9N/10D Char Dham Yatra from Haridwar starts at ₹21,000 per person on the budget tier (shared Tempo Traveller, clean guesthouses). Deluxe with an Innova Crysta and 2–3 star hotels runs ₹30,000. A private couple package is roughly ₹42,000–₹60,000 depending on tier. These are direct operator rates — no agent margin sits on top. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra.'},
+      {q:'How much does the Char Dham Yatra package from Haridwar cost in 2026?', a:'Our 9N/10D Char Dham Yatra from Haridwar starts at ₹18,500 per person on the budget tier (shared Tempo Traveller, clean guesthouses). Deluxe with an Innova Crysta and 2–3 star hotels runs ₹30,000. A private couple package is roughly ₹42,000–₹60,000 depending on tier. These are direct operator rates — no agent margin sits on top. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra.'},
       {q:'What is included in the package?', a:'AC transport for the full route, twin-sharing hotels, daily breakfast and dinner, an experienced driver-cum-guide, pujari assistance at the temples, an oxygen cylinder in the vehicle, help with the mandatory Char Dham registration, and pickup/drop at Haridwar railway station. Pony, palki and helicopter at Kedarnath are extra.'},
       {q:'Is the Char Dham 2026 registration mandatory, and do you handle it?', a:'Yes. Every pilgrim must register on the Uttarakhand government Tourist Care portal (registrationandtouristcare.uk.gov.in) before darshan, and you cannot enter Kedarnath or Yamunotri without the QR slip. We complete the registration for every guest on the package using your ID and photo — you do not have to fight the portal yourself.'},
       {q:'Is the Kedarnath trek mandatory?', a:'No. The 16 km from Gaurikund can be done on foot, by pony (₹3,500–4,500), palki (₹8,000–12,000) or helicopter (from ₹3,043 one way, official IRCTC fare). We book any of these for you. Most fit pilgrims walk up and ride down; senior travellers usually take the pony both ways.'},
@@ -1872,7 +1872,7 @@ export const GLOBAL_FAQS = [
   { q:'Do I need to register for Char Dham Yatra 2026?',
     a:'Yes — registration is mandatory and enforced at police checkpoints. You register online at the Uttarakhand Tourism portal or in person at biometric centres in Haridwar and Rishikesh. Register before you leave home. Police turn back unregistered pilgrims at Sonprayag (Kedarnath route) and other checkpoints, even if you have driven 6 hours from Haridwar. We handle registration for all pilgrims in our packages.' },
   { q:'What does Char Dham Yatra cost from Haridwar in 2026?',
-    a:'Our Char Dham packages start at ₹21,000 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹85,000. All prices are direct — no agent commission, no hidden charges.' },
+    a:'Our Char Dham packages start at ₹18,500 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹85,000. All prices are direct — no agent commission, no hidden charges.' },
   { q:'What is the Char Dham Yatra route from Haridwar?',
     a:'The circuit follows a clockwise direction: Haridwar → Barkot → Yamunotri (Day 3) → Uttarkashi → Gangotri (Day 5) → Guptkashi → Kedarnath (Day 7) → Rudraprayag → Badrinath (Day 9-10) → return to Haridwar (Day 11). Total road distance: approximately 1,100km. Yamunotri requires a 6km trek from Janki Chatti. Kedarnath requires a 16km trek from Gaurikund. Gangotri and Badrinath are fully motorable.' },
   { q:'Is Char Dham Yatra safe for senior citizens?',

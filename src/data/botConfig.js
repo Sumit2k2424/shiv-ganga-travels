@@ -38,13 +38,13 @@ export const CUSTOM_QA = [
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
   {
     keywords: ['price','cost','rate','charge','fee','kitna','how much','budget','affordable','cheap','expensive','tariff'],
-    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,999 · 2N/3D\n• Gangotri — ₹5,699 · 2N/3D\n• Kedarnath — ₹6,999 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹9,499 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹21,000 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹27,999 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
+    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,999 · 2N/3D\n• Gangotri — ₹5,699 · 2N/3D\n• Kedarnath — ₹6,999 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹9,499 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹18,500 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹27,999 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
   },
 
   // ── 3. CHAR DHAM OVERVIEW ────────────────────────────────────
   {
     keywords: ['char dham','chardham','4 dham','four dham','all four','all 4'],
-    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹21,000/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹27,999/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
+    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹18,500/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹27,999/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
   },
 
   // ── 4. BEST TIME TO VISIT ────────────────────────────────────
@@ -164,7 +164,7 @@ export const CUSTOM_QA = [
   // ── 23. SOLO TRAVEL ──────────────────────────────────────────
   {
     keywords: ['solo','alone','single','one person','alone travel','solo travel','by myself','single person'],
-    answer: `**Solo Pilgrims — Yes, we welcome you!**\n\n**For solo travelers:**\n• You can join a scheduled shared batch (cost-effective)\n• Or book a private car (higher cost)\n\n**Solo pricing (joining batch):**\n• Char Dham: from ₹21,000/person\n• Do Dham: from ₹10,999/person\n• Single Dham: from ₹5,699/person\n\n**Solo Female Pilgrims:**\n✅ We assign female guide companions on request\n✅ All-female batches available during peak season\n✅ Vetted, trusted hotels — no sharing with strangers\n✅ Emergency contact shared with family at home\n\n**Solo International Travelers:**\n✅ English-speaking guide available\n✅ Biometric registration assistance included\n✅ Airport pickup from Dehradun available\n\nMany solo pilgrims have found lifelong friends in our group batches! 🙏`,
+    answer: `**Solo Pilgrims — Yes, we welcome you!**\n\n**For solo travelers:**\n• You can join a scheduled shared batch (cost-effective)\n• Or book a private car (higher cost)\n\n**Solo pricing (joining batch):**\n• Char Dham: from ₹18,500/person\n• Do Dham: from ₹10,999/person\n• Single Dham: from ₹5,699/person\n\n**Solo Female Pilgrims:**\n✅ We assign female guide companions on request\n✅ All-female batches available during peak season\n✅ Vetted, trusted hotels — no sharing with strangers\n✅ Emergency contact shared with family at home\n\n**Solo International Travelers:**\n✅ English-speaking guide available\n✅ Biometric registration assistance included\n✅ Airport pickup from Dehradun available\n\nMany solo pilgrims have found lifelong friends in our group batches! 🙏`,
   },
 
   // ── 24. CHILDREN / FAMILY ────────────────────────────────────
@@ -206,7 +206,7 @@ export const CUSTOM_QA = [
   // ── 30. DIFFERENCE BETWEEN CHAR DHAM & DO DHAM ──────────────
   {
     keywords: ['difference','do dham vs','char dham vs','which one','which package','2 dham or 4','choose'],
-    answer: `**Char Dham vs Do Dham — Which to Choose?**\n\n🕌 **Do Dham (2 Shrines)**\n✅ Less time needed (4–7 days)\n✅ Less expensive (from ₹9,499)\n✅ Less physically demanding\n✅ Good for first-timers or limited time\n\n**Popular Do Dham options:**\n• Kedarnath + Badrinath — ₹10,999 (5N/6D)\n• Yamunotri + Gangotri — ₹9,499 (4N/5D)\n\n🏔️ **Char Dham (All 4 Shrines)**\n✅ Complete spiritual journey (Hindu belief: moksha)\n✅ Done clockwise: Yamunotri → Gangotri → Kedarnath → Badrinath\n✅ Life-changing experience\n✅ Takes 9–15 days from ₹21,000\n\n💡 **Our recommendation:**\nIf time permits — always go for **Char Dham**. Many pilgrims regret not doing all 4 in one trip. You can always do Do Dham as your first visit and return for the other 2 later!`,
+    answer: `**Char Dham vs Do Dham — Which to Choose?**\n\n🕌 **Do Dham (2 Shrines)**\n✅ Less time needed (4–7 days)\n✅ Less expensive (from ₹9,499)\n✅ Less physically demanding\n✅ Good for first-timers or limited time\n\n**Popular Do Dham options:**\n• Kedarnath + Badrinath — ₹10,999 (5N/6D)\n• Yamunotri + Gangotri — ₹9,499 (4N/5D)\n\n🏔️ **Char Dham (All 4 Shrines)**\n✅ Complete spiritual journey (Hindu belief: moksha)\n✅ Done clockwise: Yamunotri → Gangotri → Kedarnath → Badrinath\n✅ Life-changing experience\n✅ Takes 9–15 days from ₹18,500\n\n💡 **Our recommendation:**\nIf time permits — always go for **Char Dham**. Many pilgrims regret not doing all 4 in one trip. You can always do Do Dham as your first visit and return for the other 2 later!`,
   },
 
   // ── 31. VALLEY OF FLOWERS / HEMKUND SAHIB ──────────────────
@@ -250,7 +250,7 @@ Key facts:
 - Location: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410
 - Speciality: Char Dham Yatra, Uttarakhand tours
 - All packages are zero-commission, all-inclusive (hotel + meals + transport + guide)
-- Prices: Single dham from ₹5,699, Do Dham from ₹9,499, Char Dham from ₹21,000, Helicopter ₹85,000
+- Prices: Single dham from ₹5,699, Do Dham from ₹9,499, Char Dham from ₹18,500, Helicopter ₹85,000
 - Working hours: 7 AM - 9 PM IST, WhatsApp 24/7
 
 Rules:

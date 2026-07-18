@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Char Dham vs Do Dham Yatra: Which Suits You?',
-  description: 'Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.',
+  description: 'Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹18,500 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.',
   keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
@@ -15,7 +15,7 @@ const ROWS = [
   ['Duration', '10–12 days (minimum)', '5–6 days (comfortable)'],
   ['Road distance', '~1,500–1,600 km from Haridwar', '~750–800 km from Haridwar'],
   ['Total trekking', '22 km (6km Yamunotri + 16km Kedarnath)', '16 km (Kedarnath only)'],
-  ['Package cost (road)', 'From ₹21,000 per person', 'From ₹10,999 per person'],
+  ['Package cost (road)', 'From ₹18,500 per person', 'From ₹10,999 per person'],
   ['Package cost (helicopter)', 'From ₹85,000 per person', 'From ₹18,000 per person'],
   ['Difficulty level', 'Moderate — 10+ days of mountain travel', 'Easy to moderate — manageable in 5 days'],
   ['Best for', 'First-time complete pilgrims, those with 12+ days', 'Limited time, first-time yatris, repeat pilgrims'],
@@ -29,7 +29,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the difference between Char Dham and Do Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra covers all 4 sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers 2 dhams (typically Kedarnath + Badrinath) in 5–6 days. Char Dham costs ₹21,000+ per person; Do Dham costs ₹10,999+ per person.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra covers all 4 sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers 2 dhams (typically Kedarnath + Badrinath) in 5–6 days. Char Dham costs ₹18,500+ per person; Do Dham costs ₹10,999+ per person.' }},
       { '@type': 'Question', name: 'Which is better — Char Dham or Do Dham Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'For pilgrims with 10+ days, Char Dham is the complete and most spiritually fulfilling option. For those with limited time (5–7 days), first-time pilgrims wanting to test mountain travel, or senior citizens, Do Dham (Kedarnath + Badrinath) is the better choice — it covers the two most significant shrines and is more manageable.' }},
       { '@type': 'Question', name: 'Can I do Char Dham Yatra in 7 days?',
@@ -65,7 +65,7 @@ export default function ComparisonPage() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹21,000 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹18,500 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.

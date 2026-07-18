@@ -23,7 +23,7 @@ export default function LanguageLinkMesh({ current = '' }) {
 
       <p style={heading}>Plan &amp; book your yatra</p>
       <div style={row}>
-        <Link href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D Package — ₹21,000 →</Link>
+        <Link href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D Package — ₹18,500 →</Link>
         <Link href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
         <Link href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
         <Link href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>

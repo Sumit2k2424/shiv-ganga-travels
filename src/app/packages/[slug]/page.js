@@ -350,7 +350,7 @@ export default async function PackageDetailPage({ params }) {
             </p>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
               {[
-                { tier:'Budget', range:'₹21,000', perCouple:'₹42,000', vehicle:'Swift Dzire / Shared', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
+                { tier:'Budget', range:'₹18,500', perCouple:'₹42,000', vehicle:'Swift Dzire / Shared', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
                 { tier:'Deluxe', range:'₹30,000', perCouple:'₹60,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
                 { tier:'Premium', range:'₹42,000–₹55,000', perCouple:'₹84,000–₹1,10,000', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
               ].map(t => (
@@ -627,7 +627,7 @@ export default async function PackageDetailPage({ params }) {
                     ['June','Peak','Very high','₹22,000–₹28,000','8–18°C, some rain','Peak pilgrim rush — book 2–3 months early'],
                     ['July–Aug','Monsoon','Low','₹16,000–₹20,000','10–15°C, heavy rain','Landslide risk — not recommended'],
                     ['September','Post-monsoon','Medium','₹18,000–₹22,000','0–15°C, crisp','Hidden gem — best skies, fewer crowds'],
-                    ['October','Last season','Medium-low','₹17,000–₹21,000','-2 to 10°C','Great value — dhams open till Nov 11'],
+                    ['October','Last season','Medium-low','₹17,000–₹18,500','-2 to 10°C','Great value — dhams open till Nov 11'],
                     ['November (1–13)','Closing','Very low','₹14,000–₹18,000','-5 to 5°C','Last chance — temple closes mid-November'],
                   ].map(([month, season, crowd, price, weather, verdict], i)=>(
                     <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i===3||i===4 ? 'rgba(29,158,117,0.06)' : i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>

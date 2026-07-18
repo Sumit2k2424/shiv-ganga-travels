@@ -119,7 +119,7 @@ export default function CharDhamGuide() {
         </div>
 
         <h2 style={h2}>Char Dham Yatra Cost Breakdown 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹21,000 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹18,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { item:'Hotel Accommodation', type:'Included', note:'All nights, twin sharing' },

@@ -329,7 +329,7 @@ export default function HeroSection() {
         }}>
           From{' '}
           <span style={{ color:'#FFD166', fontWeight:700, fontSize:17, textShadow:'0 0 20px rgba(232,146,10,0.5)' }}>
-            ₹21,000/person
+            ₹18,500/person
           </span>
           {' '}all-inclusive · Zero commission · 50,000+ pilgrims served
         </p>

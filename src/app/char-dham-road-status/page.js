@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
 
-const UPDATED = 'July 9, 2026';
-const UPDATED_ISO = '2026-07-09';
+const UPDATED = 'July 18, 2026';
+const UPDATED_ISO = '2026-07-18';
 
 export const metadata = {
   title: 'Char Dham Road Status Today 2026 | Live Route Updates',
@@ -19,7 +19,15 @@ export const metadata = {
   },
 };
 
-const MONSOON_NOTE = `Monsoon update (${UPDATED}): all four routes are open, but the IMD has been issuing orange alerts for heavy rain across Uttarakhand this month. Landslides have caused short blockages on the yatra corridor, and Kedarnath helicopter services get suspended whenever visibility drops. Night driving on Char Dham routes is banned between 10 PM and 4 AM, and passenger vehicles need a valid Green Card to ply hill routes. Confirm conditions on the morning you travel — our drivers report road status daily, or check the official links below.`;
+const MONSOON_NOTE = `Monsoon update (${UPDATED}): all four routes are open and the yatra is running, but the IMD's orange alert for heavy rain across Uttarakhand (issued July 3) is still active and the corridor is seeing short, rain-triggered blockages. On July 12 a landslide blocked the Kedarnath highway at Munkatiya near Sonprayag (Rudraprayag); JCB teams cleared it and traffic resumed. The Rishikesh–Badrinath highway (NH-58) has seen partial blockages near Joshimath, with boulder-fall points around Patalganga and Tangni that close for short spells. Kedarnath helicopter services keep getting suspended whenever visibility drops and winds pick up. Night driving on Char Dham routes is banned between 10 PM and 4 AM, and passenger vehicles need a valid Green Card to ply hill routes. Confirm conditions on the morning you travel — our drivers report road status daily, or check the official links below.`;
+
+// Dated bulletins from the field & official advisories (most recent first)
+const LATEST_UPDATES = [
+  { date:'Jul 12, 2026', text:'Landslide blocked the Kedarnath highway at Munkatiya, near Sonprayag (Rudraprayag), after continuous heavy rain. JCBs deployed and vehicular movement restored; the district disaster control room confirmed the yatra continued. Debris also fell near Mussoorie Bend (Kempty) on the Tehri side, briefly suspending the Nainbagh route.' },
+  { date:'Jul 3, 2026',  text:'IMD issued an orange alert for heavy-to-very-heavy rain across Uttarakhand. Authorities advised pilgrims to avoid unnecessary night travel and expect 3–5 hour delays on major highways; NH-58 near Joshimath reported partial blockage, with Patalganga and Tangni points shutting intermittently.' },
+  { date:'Jul 1, 2026',  text:'Kedarnath helicopter services suspended due to poor visibility and high winds; shuttle and pony/palki operations from Gaurikund continued as weather allowed.' },
+  { date:'Apr 2026',     text:'Government sanctioned ₹461 crore for landslide mitigation at 17 sensitive locations on the Yamunotri route (NH-134) — slope and drainage work is ongoing, so expect single-lane stretches this season.' },
+];
 
 const ROUTES = [
   { dham:'Yamunotri', via:'NH-134, Dharasu → Barkot → Janki Chatti', status:'Open · drive with caution', tone:'caution',
@@ -27,9 +35,9 @@ const ROUTES = [
   { dham:'Gangotri', via:'NH-34, Uttarkashi → Harsil → Gangotri', status:'Open', tone:'open',
     note:'Largely motorable right up to the temple. The Uttarkashi–Gangotri stretch is scenic but has a handful of chronic slide spots near Gangnani and Sungar that get cleared quickly. Snow can briefly shut the road in early and late season.' },
   { dham:'Kedarnath', via:'NH-109, Rudraprayag → Sonprayag → Gaurikund', status:'Open to Gaurikund · then 16 km trek', tone:'open',
-    note:'The road end is Sonprayag; from there a shuttle runs to Gaurikund, and the 16–18 km trek (or pony/palki/helicopter) begins. The Fata–Sitapur section is now about 99% widened, so the drive up is far smoother than it used to be.' },
-  { dham:'Badrinath', via:'NH-7, Joshimath → Govindghat → Badrinath', status:'Open · fully motorable', tone:'open',
-    note:'You can drive to the temple gate — no trek. The one stretch to respect is the gated section around Joshimath–Badrinath, where the army/BRO regulate one-way traffic through narrow cuttings. Time your run with the gate timings and you are fine.' },
+    note:'The road end is Sonprayag; from there a shuttle runs to Gaurikund, and the 16–18 km trek (or pony/palki/helicopter) begins. The Fata–Sitapur section is now about 99% widened, so the drive up is far smoother than it used to be. Current watch (July 2026): the Munkatiya point near Sonprayag has been closing briefly after heavy rain — a landslide blocked it on July 12 and was cleared the same day by JCBs. Helicopter services from the Kedarnath sector get suspended whenever visibility drops.' },
+  { dham:'Badrinath', via:'NH-58, Joshimath → Govindghat → Badrinath', status:'Open · fully motorable', tone:'open',
+    note:'You can drive to the temple gate — no trek. The one stretch to respect is the gated section around Joshimath–Badrinath, where the army/BRO regulate one-way traffic through narrow cuttings. Current watch (July 2026): NH-58 has seen partial blockages near Joshimath, with boulder-fall points at Patalganga and Tangni that shut for short spells during heavy rain before being cleared. Time your run with the gate timings and check the morning status.' },
 ];
 
 const DISTANCES = [
@@ -47,7 +55,7 @@ const SOURCES = [
 ];
 
 const PAA = [
-  { q:'Is the Char Dham road open today?', a:`As of ${UPDATED}, all four routes — Yamunotri, Gangotri, Kedarnath (up to Gaurikund) and Badrinath — are open, but the monsoon is now active. The IMD has issued orange alerts for heavy rain this month and landslides have caused short blockages on the corridor; Kedarnath helicopter services also pause when visibility drops. Any route can shut for a few hours after heavy rain, so confirm on the day with UTDB or the police helpline (112 / 1070) before you set off.` },
+  { q:'Is the Char Dham road open today?', a:`As of ${UPDATED}, all four routes — Yamunotri, Gangotri, Kedarnath (up to Gaurikund) and Badrinath — are open and the yatra is running, but the monsoon is active. An IMD orange alert for heavy rain (issued July 3) is still in force; a landslide briefly blocked the Kedarnath highway at Munkatiya near Sonprayag on July 12 before JCBs cleared it, and NH-58 to Badrinath has seen partial blockages near Joshimath (Patalganga/Tangni). Kedarnath helicopter services pause when visibility drops. Any route can shut for a few hours after heavy rain, so confirm on the day with UTDB or the police helpline (112 / 1070) before you set off.` },
   { q:'Can I travel Char Dham routes at night?', a:'No. Vehicle movement on all Char Dham routes is banned between 10 PM and 4 AM — for private and commercial vehicles alike. The rule cuts accident risk from fog, landslide debris and poor visibility on narrow hill roads, and violations attract penalties. Plan each leg so you reach your night halt before 8–9 PM.' },
   { q:'What is the Green Card rule for Char Dham vehicles?', a:'Every commercial passenger vehicle running on Uttarakhand hill routes — Char Dham, Chopta and other hill destinations — must carry a valid Green Card issued after a fitness check by the transport department. Vehicles without one are turned back at checkpoints. All Shiv Ganga Travels vehicles carry current Green Cards and trip cards, so our guests never face this issue.' },
   { q:'Which Char Dham route has the worst roads in 2026?', a:'Yamunotri (NH-134) is the roughest. It is only about 57% widened under the all-weather project, has narrow single-lane sections between Dharasu and Janki Chatti, and historically sees the most landslide closures. The government approved ₹461 crore in April 2026 for slope and drainage work at 17 sensitive spots on this stretch, but it is not finished yet.' },
@@ -121,6 +129,18 @@ export default function CharDhamRoadStatus() {
         <div style={{ fontSize:12, fontWeight:700, color:'#9a6b1f', textTransform:'uppercase', letterSpacing:'0.06em', marginBottom:6 }}>⛈️ Monsoon advisory</div>
         <p style={{ ...p, margin:0, fontSize:14 }}>{MONSOON_NOTE}</p>
       </div>
+
+      <h2 style={h2}>Latest road updates ({UPDATED})</h2>
+      <p style={p}>Dated bulletins from our route desk and official advisories — most recent first. These are point-in-time events; a stretch that shut in the morning is often cleared by afternoon, so always confirm live before you roll.</p>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:22 }}>
+        {LATEST_UPDATES.map((u,i) => (
+          <div key={u.date} style={{ display:'grid', gridTemplateColumns:'96px 1fr', gap:12, padding:'12px 16px', borderTop: i===0?'none':'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+            <div style={{ fontSize:12, fontWeight:700, color:'var(--teal)', whiteSpace:'nowrap' }}>{u.date}</div>
+            <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7 }}>{u.text}</div>
+          </div>
+        ))}
+      </div>
+      <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>Sources: Uttarakhand district disaster control rooms, IMD advisories and on-ground driver reports. For anything happening right now, call the helplines listed under <a href="#live" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</a>.</p>
 
       <h2 style={h2}>Char Dham road status today — quick view</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(210px,1fr))', gap:12, marginBottom:14 }}>

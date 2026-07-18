@@ -41,7 +41,7 @@ function Schema() {
       '@id': `${SITE.baseUrl}/#organization`,
     },
     keywords: ['Char Dham Yatra', 'Pilgrim Statistics', 'Uttarakhand Tourism', 'Kedarnath', 'Badrinath', 'Gangotri', 'Yamunotri'],
-    dateModified: '2026-07-09',
+    dateModified: '2026-07-18',
     spatialCoverage: {
       '@type': 'Place',
       name: 'Char Dham Circuit, Uttarakhand, India',
@@ -57,7 +57,7 @@ function Schema() {
     description: 'Comprehensive operator-verified statistics on the Char Dham Yatra 2026.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-05-26',
-    dateModified: '2026-07-09',
+    dateModified: '2026-07-18',
     author: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, '@id':`${SITE.baseUrl}/#organization` },
     publisher: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
     mainEntityOfPage: `${SITE.baseUrl}/char-dham-yatra-statistics`,
@@ -128,7 +128,7 @@ export default function Page() {
           <Stat value="208 days" label="2026 Season Length (Apr 19–Nov 13)" source="Devasthanam Board" />
           <Stat value="3,583 m" label="Kedarnath — Highest Dham" source="Survey of India" />
           <Stat value="18,000/day" label="Kedarnath Daily Pilgrim Cap" source="District Administration" />
-          <Stat value="₹21,000" label="Median Direct-Operator Package Cost" source="2026 booking data" />
+          <Stat value="₹18,500" label="Median Direct-Operator Package Cost" source="2026 booking data" />
         </div>
 
         <h2 style={h2}>1. Pilgrim Demographics & Patterns</h2>
@@ -245,11 +245,11 @@ export default function Page() {
             </thead>
             <tbody>
               {[
-                ['Shiv Ganga Travels (direct)','₹21,000','— (baseline)'],
-                ['MakeMyTrip (May 2025)','₹30,337','+55.6%'],
-                ['Thomas Cook (May 2025)','₹28,900','+48.2%'],
-                ['Thrillophilia (May 2025)','₹26,500','+35.9%'],
-                ['Yatra.com (May 2025)','₹27,800','+42.6%'],
+                ['Shiv Ganga Travels (direct)','₹18,500','— (baseline)'],
+                ['MakeMyTrip (May 2025)','₹30,337','+64.0%'],
+                ['Thomas Cook (May 2025)','₹28,900','+56.2%'],
+                ['Thrillophilia (May 2025)','₹26,500','+43.2%'],
+                ['Yatra.com (May 2025)','₹27,800','+50.3%'],
               ].map((r,i) => (
                 <tr key={r[0]} style={{ background:i%2===0?'var(--bg)':'#fff' }}>
                   {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid var(--border)', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}

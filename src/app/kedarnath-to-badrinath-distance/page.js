@@ -26,7 +26,7 @@ function Schema() {
     author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
     publisher:{ '@id':`${SITE.baseUrl}/#organization` },
     image:[`${SITE.baseUrl}/opengraph-image`],
-    datePublished:'2026-07-09', dateModified: SITE.lastUpdatedISO,
+    datePublished:'2026-07-18', dateModified: SITE.lastUpdatedISO,
     mainEntityOfPage:`${SITE.baseUrl}/kedarnath-to-badrinath-distance`,
   },{
     '@context':'https://schema.org','@type':'FAQPage',

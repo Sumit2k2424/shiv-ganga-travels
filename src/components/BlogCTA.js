@@ -135,7 +135,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
 
         {/* Price anchor */}
         <div style={{ marginTop: 14, fontSize: 12.5, color: 'rgba(255,255,255,0.45)' }}>
-          Packages from <strong style={{ color: 'rgba(255,255,255,0.75)' }}>₹21,000 per person</strong> · All-inclusive · Haridwar pickup
+          Packages from <strong style={{ color: 'rgba(255,255,255,0.75)' }}>₹18,500 per person</strong> · All-inclusive · Haridwar pickup
         </div>
       </div>
     </div>

@@ -302,7 +302,7 @@ export default function AboutPage() {
             {[
               {
                 num: '01', title: 'Zero Commission, Zero Middlemen',
-                body: 'Every rupee you pay goes directly to Shiv Ganga Travels. We are not aggregators. We do not use sub-agents or commission-based booking platforms. When you pay ₹21,000 for a package, that is the final amount — no hidden facilitation fee, no "agent service charge" added at the end. This was a non-negotiable principle from day one and it has never changed.',
+                body: 'Every rupee you pay goes directly to Shiv Ganga Travels. We are not aggregators. We do not use sub-agents or commission-based booking platforms. When you pay ₹18,500 for a package, that is the final amount — no hidden facilitation fee, no "agent service charge" added at the end. This was a non-negotiable principle from day one and it has never changed.',
                 icon: '🚫',
               },
               {

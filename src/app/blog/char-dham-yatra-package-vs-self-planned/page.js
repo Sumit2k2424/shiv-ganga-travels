@@ -34,7 +34,7 @@ export default function PkgVsSelf() {
     ['Emergency support', 'Operator on call 24/7', 'On your own'],
     ['Flexibility', 'Fixed itinerary — less spontaneous', 'Change plans freely'],
     ['Cost (2 people, peak)', '₹22,000–28,000 per person', '₹24,000–32,000 per person (peak hotels)'],
-    ['Cost (10 people, peak)', '₹21,000 per person', '₹18,000–22,000 per person (possible saving)'],
+    ['Cost (10 people, peak)', '₹18,500 per person', '₹18,000–22,000 per person (possible saving)'],
     ['Best for', 'First-time, senior, 2–8 person groups', 'Experienced, 10+ people, repeat pilgrims'],
   ];
   return (

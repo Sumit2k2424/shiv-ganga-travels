@@ -249,7 +249,7 @@ export default function BadrinathYatraPage() {
             { name: 'Badrinath Yatra', duration: '2N/3D', price: '₹5,999', original: '₹8,000', badge: 'Most Popular', href: '/packages/badrinath-yatra-package-2n-3d-haridwar', desc: 'AC cab + hotel + meals + VIP darshan' },
             { name: 'Do Dham — Kedarnath + Badrinath', duration: '5N/6D', price: '₹10,999', original: '₹14,000', badge: 'Best Value', href: '/packages/kedarnath-badrinath-do-dham-5n-6d', desc: 'Both sacred dhams in one trip' },
             { name: 'Badrinath + Hemkund Sahib', duration: '3N/4D', price: '₹8,499', original: '₹11,000', badge: 'Combo', href: '/packages', desc: 'Badrinath + Sikh pilgrimage' },
-            { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹21,000', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
+            { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹18,500', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
               style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>

@@ -17,7 +17,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the per person cost for a group Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Per person cost for group Char Dham Yatra (9N/10D from Haridwar): 2 people ₹24,000–27,000. 4 people ₹21,000–23,000. 6–8 people ₹21,000–21,000. 10–15 people ₹18,500–21,000. 20+ people ₹16,000–18,000. Larger groups benefit from Tempo Traveller economics and bulk hotel negotiation.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Per person cost for group Char Dham Yatra (9N/10D from Haridwar): 2 people ₹22,000–25,000. 4 people ₹20,500–22,000. 6–8 people ₹16,000–18,000. 10–15 people ₹16,000–18,000. 20+ people ₹15,000–16,600. Larger groups benefit from Tempo Traveller economics and bulk hotel negotiation.' }},
       { '@type': 'Question', name: 'What is the minimum group size for Char Dham Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'There is no minimum group size — Shiv Ganga Travels accepts bookings for 2 people onwards. However, the most economical packages start from groups of 6–8 (filling one Innova Crysta). Groups above 10 get dedicated Tempo Traveller economics.' }},
       { '@type': 'Question', name: 'How far in advance should a group book Char Dham Yatra?',

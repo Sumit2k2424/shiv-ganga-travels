@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'September Char Dham Yatra 2026: Post-Monsoon Packages & Pre-Booking',
-  description: 'Skip the monsoon, catch the best views of the year. September Char Dham Yatra 2026 — weather week by week, package prices from ₹21,000, and why autumn seats fill by August.',
+  description: 'Skip the monsoon, catch the best views of the year. September Char Dham Yatra 2026 — weather week by week, package prices from ₹18,500, and why autumn seats fill by August.',
   keywords: ['september char dham yatra package 2026', 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
 };
@@ -15,7 +15,7 @@ const p = { fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const FAQS = [
   { q:'Is September a good month for Char Dham Yatra?', a:'The second half of September is one of the two best windows of the year (the other is early October). The monsoon withdraws, skies clear, peaks carry fresh snow, and the May–June crowds are long gone. The first week of September can still catch the monsoon tail, so we advise starting from around September 15 onwards.' },
-  { q:'What is the price of a September Char Dham package from Haridwar?', a:'Our 9 nights / 10 days Char Dham package starts at ₹21,000 per person (budget) and ₹30,000 per person (deluxe) from Haridwar. September pricing is the same as our published rates — we do not add season surcharges — and off-season hotel savings are already built in.' },
+  { q:'What is the price of a September Char Dham package from Haridwar?', a:'Our 9 nights / 10 days Char Dham package starts at ₹18,500 per person (budget) and ₹30,000 per person (deluxe) from Haridwar. September pricing is the same as our published rates — we do not add season surcharges — and off-season hotel savings are already built in.' },
   { q:'When should I book a September or October Char Dham trip?', a:'By early August, ideally. Everyone who postponed a monsoon trip aims for the same mid-September to mid-October window, so good hotels in Guptkashi, Badrinath and Barkot fill first. Pre-booking costs nothing extra with us and locks your dates, vehicle and hotels.' },
   { q:'How is the weather at Kedarnath in September?', a:'Daytime 10–15°C, nights 3–7°C, occasional light showers in the first half of the month and mostly clear after mid-September. Carry proper warm layers for early mornings — the 4 AM Mahabhishek queue is cold even when the day is pleasant.' },
   { q:'Is the Kedarnath trek open in September?', a:'Yes, the trek, ponies, palkis and helicopter services all operate through September and October until the temple closes in November. Helicopters actually fly more reliably after the monsoon because visibility improves.' },
@@ -66,7 +66,7 @@ export default function Page() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Beat the Monsoon · Autumn 2026 Pre-Booking Open</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>September Char Dham Yatra 2026 — The Window Locals Wait For</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹21,000 · Book by August</p>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹18,500 · Book by August</p>
         </div>
       </section>
 
@@ -138,7 +138,7 @@ export default function Page() {
             </tr></thead>
             <tbody>
               {[
-                ['Char Dham Budget','9N / 10D','₹21,000','Families and groups who want the full circuit at honest cost'],
+                ['Char Dham Budget','9N / 10D','₹18,500','Families and groups who want the full circuit at honest cost'],
                 ['Char Dham Deluxe','9N / 10D','₹30,000','Better hotels, more comfort on the long driving days'],
                 ['Do Dham (Kedarnath + Badrinath)','5N / 6D','₹10,999','Limited leave — the two most-visited dhams'],
                 ['Kedarnath','3N / 4D','₹6,999','Short focused darshan trip'],
@@ -173,7 +173,7 @@ export default function Page() {
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Lock Your Post-Monsoon Dates Now</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>September 15 – October 15 is the best month of the Char Dham year. Token advance, flexible start date, direct-operator pricing from ₹21,000.</p>
+          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>September 15 – October 15 is the best month of the Char Dham year. Token advance, flexible start date, direct-operator pricing from ₹18,500.</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to pre-book a September/October 2026 Char Dham package. Please share dates and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Pre-Book on WhatsApp</a>

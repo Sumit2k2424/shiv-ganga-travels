@@ -15,7 +15,7 @@ const CounterStat = dynamic(() => import('@/components/CounterStat'), {
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra 2026 Packages from Haridwar — Shiv Ganga Travels` },
-  description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹21,000. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
+  description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹18,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
     title: 'Char Dham Yatra 2026 Packages Haridwar',
@@ -47,7 +47,7 @@ function Schema() {
     brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
     offers: {
       '@type': 'Offer',
-      price: '21000',
+      price: '18500',
       priceCurrency: 'INR',
       priceValidUntil: '2026-11-30',
       availability: 'https://schema.org/InStock',
@@ -222,7 +222,7 @@ export default function HomePage() {
                 emoji:'🏔️', title:'Char Dham Yatra',
                 desc:'All 4 sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath',
                 tag:'Most popular', tagColor:'#16A34A', tagBg:'#F0FDF4',
-                from:'₹21,000', href:'/char-dham-yatra',
+                from:'₹18,500', href:'/char-dham-yatra',
                 accent:'var(--navy)',
               },
               {
@@ -442,7 +442,7 @@ export default function HomePage() {
             {[
               { label:'🚁 Helicopter Yatra',   sub:'All 4 dhams in 6 days', href:'/packages/char-dham-yatra-helicopter-5n-6d-dehradun', bg:'linear-gradient(130deg,#0F2B5B 0%,#0B7B8B 100%)' },
               { label:'👴 Senior Special',      sub:'14N/15D — pony included', href:'/packages/char-dham-yatra-senior-citizen-14n-15d',  bg:'linear-gradient(130deg,#1A0E3B 0%,#4C3A9E 100%)' },
-              { label:'🏔️ Char Dham Classic',  sub:'9N/10D from ₹21,000',  href:'/packages/char-dham-yatra-10n-11d-haridwar',         bg:'linear-gradient(130deg,#0B2C44 0%,#E8920A 100%)' },
+              { label:'🏔️ Char Dham Classic',  sub:'9N/10D from ₹18,500',  href:'/packages/char-dham-yatra-10n-11d-haridwar',         bg:'linear-gradient(130deg,#0B2C44 0%,#E8920A 100%)' },
               { label:'🕌 Kedarnath–Badrinath', sub:'Best value — ₹10,999', href:'/packages/kedarnath-badrinath-do-dham-5n-6d',         bg:'linear-gradient(130deg,#09274F 0%,#0B7B8B 100%)' },
               { label:'🌊 Yamunotri–Gangotri',  sub:'4N/5D — ₹9,499',       href:'/packages/yamunotri-gangotri-do-dham-4n-5d',          bg:'linear-gradient(130deg,#0B2C44 0%,#15803D 100%)' },
             ].map(b => (
@@ -485,7 +485,7 @@ export default function HomePage() {
               { source:'MakeMyTrip', price:'₹32,479', type:'Online Travel Agent', badge:'Commission included', badgeBg:'#DC2626', detail:'Aggregator markup + platform fee + agent commission' },
               { source:'Thrillophilia', price:'₹24,000+', type:'Activity Aggregator', badge:'Upto 20% commission', badgeBg:'#DC2626', detail:'Their "15% off" is off their inflated base price' },
               { source:'Local Agent', price:'₹22,000+', type:'Travel Agent', badge:'Hidden markup', badgeBg:'#B45309', detail:'Agent earns ₹2,000–4,000 per booking from your payment' },
-              { source:'Shiv Ganga Travels', price:'₹21,000', type:'Direct Operator', badge:'Zero commission', badgeBg:'#15803D', detail:'You pay the operator directly — no one takes a cut', highlight:true },
+              { source:'Shiv Ganga Travels', price:'₹18,500', type:'Direct Operator', badge:'Zero commission', badgeBg:'#15803D', detail:'You pay the operator directly — no one takes a cut', highlight:true },
             ].map(r => (
               <div key={r.source} style={{
                 background: r.highlight ? 'rgba(232,146,10,0.15)' : 'rgba(255,255,255,0.06)',
@@ -813,7 +813,7 @@ export default function HomePage() {
             </div>
             <div className='pkg-dir-grid' style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
               {[
-                { img:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹21,000', href:'/char-dham-yatra' },
+                { img:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Char Dham Yatra', desc:'All 4 dhams · From ₹18,500', href:'/char-dham-yatra' },
                 { img:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Do Dham Yatra', desc:'Kedarnath + Badrinath', href:'/do-dham-yatra' },
                 { img:'https://images.pexels.com/photos/12151764/pexels-photo-12151764.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Kedarnath Yatra', desc:'3N/4D · From ₹6,999', href:'/kedarnath-yatra' },
                 { img:'https://images.pexels.com/photos/34783867/pexels-photo-34783867.jpeg?auto=compress&cs=tinysrgb&w=400&h=260&fit=crop', title:'Badrinath Yatra', desc:'2N/3D · From ₹5,999', href:'/badrinath-yatra' },

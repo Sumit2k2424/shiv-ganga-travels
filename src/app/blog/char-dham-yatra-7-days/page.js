@@ -112,7 +112,7 @@ export default function SevenDaysBlog() {
                 ['Rest stops','Zero','1–2 per day','2–3 per day'],
                 ['Altitude sickness risk','High','Moderate','Low'],
                 ['Senior-friendly','No','With modifications','Yes — recommended'],
-                ['Cost difference','₹21,000/person','₹21,000/person','₹22,000/person (+₹2,500)'],
+                ['Cost difference','₹18,500/person','₹18,500/person','₹22,000/person (+₹2,500)'],
                 ['Best for','Fit adults < 60, urgent','Most pilgrims','Families, 60+, first-timers'],
               ].map(([f,...vals],i)=>(
                 <tr key={f} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>

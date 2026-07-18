@@ -7,8 +7,8 @@ import AnswerBox from '@/components/AnswerBox';
 import GoogleReviews from '@/components/GoogleReviews';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar ₹21,000',
-  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹21,000/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
+  title: 'Char Dham Yatra Package 2026 from Haridwar ₹18,500',
+  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹18,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
     'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',
@@ -18,17 +18,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹21,000, No Hidden Charges | Book Direct',
-    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹21,000.',
+    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹18,500, No Hidden Charges | Book Direct',
+    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹18,500.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Package 2026 from Haridwar — Shiv Ganga Travels, Zero Commission Direct Operator' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹21,000, No Hidden Charge',
-    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹21,000.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Package 2026 from Haridwar — ₹21,000, No Hid | Shiv Ganga Travels' }],
+    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹18,500, No Hidden Charge',
+    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹18,500.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Package 2026 from Haridwar — ₹18,500, No Hid | Shiv Ganga Travels' }],
   },
 };
 
@@ -46,7 +46,7 @@ function Schema() {
     brand: { '@type': 'Brand', name: SITE.name },
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '21000',
+      lowPrice: '18500',
       highPrice: '85000',
       priceCurrency: 'INR',
       offerCount: '5',
@@ -165,7 +165,7 @@ export default function CharDhamYatra() {
               ['Route', 'Yamunotri → Gangotri → Kedarnath → Badrinath'],
               ['Season 2026', 'April 19 – November 2026'],
               ['Registration', 'Mandatory biometric / online'],
-              ['Starts from', '₹21,000/person all-inclusive'],
+              ['Starts from', '₹18,500/person all-inclusive'],
               ['Trek required', 'Kedarnath (16km) + Yamunotri (6km)'],
             ].map(([k,v]) => (
               <div key={k} style={{ fontSize:13, display:'flex', flexDirection:'column', gap:1 }}>
@@ -180,7 +180,7 @@ export default function CharDhamYatra() {
           The <strong>Char Dham Yatra</strong> covers four sacred Himalayan shrines in Garhwal, Uttarakhand — <strong>Yamunotri</strong> (source of the Yamuna), <strong>Gangotri</strong> (source of the Ganges), <strong>Kedarnath</strong> (Shiva's Jyotirlinga at 3,583m) and <strong>Badrinath</strong> (Vishnu's abode on the banks of the Alaknanda). Completing all four in a single circuit is called the Chhota Char Dham Yatra — the northern Hindu pilgrimage circuit established by Adi Shankaracharya in the 8th century.
         </p>
         <p style={pStyle}>
-          We run this circuit from Haridwar every year since 2010. Over 50,000 pilgrims have travelled with us across 15 seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹21,000, that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
+          We run this circuit from Haridwar every year since 2010. Over 50,000 pilgrims have travelled with us across 15 seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹18,500, that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
         </p>
 
         {/* Departure dates + urgency + EMI */}
@@ -222,7 +222,7 @@ export default function CharDhamYatra() {
           <h2 style={{ ...h2Style, marginTop:0, fontSize:'1.2rem' }}>Our Char Dham Yatra Packages 2026:</h2>
           <AnswerBox>
             Char Dham Yatra from Haridwar covers all four shrines — Yamunotri, Gangotri, Kedarnath
-            and Badrinath — in a 9N/10D all-inclusive package from ₹21,000 per person with Shiv Ganga
+            and Badrinath — in a 9N/10D all-inclusive package from ₹18,500 per person with Shiv Ganga
             Travels. Price includes AC transport, hotels, meals, and darshan assistance. The 2026
             season runs late April to November. Shorter Do Dham and helicopter options are available.
           </AnswerBox>
@@ -354,7 +354,7 @@ export default function CharDhamYatra() {
             </thead>
             <tbody>
               {[
-                ['Sharing (3–4 in room)', 'Groups, solo pilgrims', '₹21,000', '₹42,000 per couple'],
+                ['Sharing (3–4 in room)', 'Groups, solo pilgrims', '₹18,500', '₹42,000 per couple'],
                 ['Triple sharing', 'Families of 3', '₹21,500', '₹64,500 per 3'],
                 ['Double / Twin', 'Couples, pairs', '₹24,500', '₹49,000 per couple'],
                 ['Single occupancy', 'Solo with private room', '₹32,500', '₹32,500 (1 person)'],
@@ -373,7 +373,7 @@ export default function CharDhamYatra() {
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>
-          Our Uttarakhand Char Dham yatra packages start at <strong>₹21,000 per person</strong> (₹42,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. A note on names before the prices: this circuit — Yamunotri, Gangotri, Kedarnath and Badrinath — is formally called the <strong>Chota Char Dham</strong>, to distinguish it from Adi Shankaracharya&apos;s all-India Bada Char Dham (Badrinath, Dwarka, Puri, Rameswaram). A &quot;chota char dham yatra package&quot; and a &quot;char dham yatra package uttarakhand&quot; are the same trip; only the label changes. Choose your comfort tier:
+          Our Uttarakhand Char Dham yatra packages start at <strong>₹18,500 per person</strong> (₹42,000 per couple) for a 9N/10D all-inclusive trip from Haridwar. A note on names before the prices: this circuit — Yamunotri, Gangotri, Kedarnath and Badrinath — is formally called the <strong>Chota Char Dham</strong>, to distinguish it from Adi Shankaracharya&apos;s all-India Bada Char Dham (Badrinath, Dwarka, Puri, Rameswaram). A &quot;chota char dham yatra package&quot; and a &quot;char dham yatra package uttarakhand&quot; are the same trip; only the label changes. Choose your comfort tier:
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
@@ -428,13 +428,13 @@ export default function CharDhamYatra() {
         <WhyOurPrice />
 
         {/* No hidden charges breakdown — competitor Yatrio ranks heavily on this */}
-        <h2 style={h2Style}>No Hidden Charges — What ₹21,000 Includes (and Doesn't)</h2>
+        <h2 style={h2Style}>No Hidden Charges — What ₹18,500 Includes (and Doesn't)</h2>
         <p style={pStyle}>
-          The phrase "no hidden charges" is used by every operator. Here is what it actually means with Shiv Ganga Travels — a line-by-line breakdown of what is included in the ₹21,000 base price and what is genuinely a personal choice extra.
+          The phrase "no hidden charges" is used by every operator. Here is what it actually means with Shiv Ganga Travels — a line-by-line breakdown of what is included in the ₹18,500 base price and what is genuinely a personal choice extra.
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:24 }}>
           <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'16px' }}>
-            <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:10 }}>✅ Included in ₹21,000</div>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:10 }}>✅ Included in ₹18,500</div>
             {['Private vehicle — Tempo Traveller / Innova (AC in plains; +₹2,000 in hills)','All 9 nights hotel (twin sharing, breakfast + dinner)','Experienced Garhwali guide throughout','VIP darshan at all 4 dhams — no queue','All tolls, parking, fuel, driver allowance','Biometric registration assistance (free)','Oxygen cylinder + first aid kit','24hr WhatsApp support','GST @ 5% (included, not extra)'].map(item => (
               <div key={item} style={{ fontSize:13, color:'#334155', padding:'4px 0', borderBottom:'1px solid rgba(21,128,61,0.12)', display:'flex', gap:6 }}>
                 <span style={{ color:'#15803D', fontWeight:700, flexShrink:0 }}>✓</span>{item}
@@ -613,7 +613,7 @@ export default function CharDhamYatra() {
             Book Your Char Dham Yatra 2026
           </h3>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>
-            Free custom itinerary within 2 hours. Zero commission. ₹21,000 onwards all-inclusive.
+            Free custom itinerary within 2 hours. Zero commission. ₹18,500 onwards all-inclusive.
           </p>
           <div className="cta-row" style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026.')}`}
