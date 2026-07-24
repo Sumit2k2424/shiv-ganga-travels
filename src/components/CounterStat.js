@@ -70,7 +70,7 @@ export default function CounterStat({ icon, value, label, sub, border = false })
       borderRight: border ? '1px solid rgba(255,255,255,0.12)' : 'none',
       minWidth: 0,
     }}>
-      <div style={{ fontSize: 22, marginBottom: 6, opacity: .85 }}>{icon}</div>
+      {icon && <div style={{ fontSize: 22, marginBottom: 6, opacity: .85 }}>{icon}</div>}
       <div className="counter-value" style={{
         color: '#fff', fontWeight: 700, fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
         lineHeight: 1, fontFamily: 'var(--font-display)', letterSpacing: '-0.02em',

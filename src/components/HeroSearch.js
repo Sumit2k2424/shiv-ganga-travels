@@ -1,32 +1,30 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { WhatsAppIcon } from '@/components/Icon';
 
-const TABS = [
-  { id:'char-dham',   label:'Char Dham',   icon:'🛕' },
-  { id:'do-dham',     label:'Do Dham',     icon:'⛰️' },
-  { id:'single-dham', label:'Single Dham', icon:'🙏' },
-  { id:'helicopter',  label:'Helicopter',  icon:'🚁' },
-  { id:'cab',         label:'Cabs',        icon:'🚕' },
-];
+/*
+ * HeroSearch — simplified enquiry widget.
+ * The old five-tab / four-dropdown "SEARCH" card promised a results engine
+ * the site doesn't have (the conversion model is enquiry). This version asks
+ * only what the operator actually needs — month and group size — and labels
+ * the CTA with what really happens next. Cab & helicopter intents are links.
+ */
 const MONTHS = ['July 2026','August 2026','September 2026','October 2026'];
 const CITIES = ['Haridwar','Delhi','Rishikesh','Dehradun'];
 
 export default function HeroSearch() {
-  const [tab,      setTab]      = useState('char-dham');
   const [city,     setCity]     = useState('Haridwar');
   const [month,    setMonth]    = useState('');
   const [pilgrims, setPilgrims] = useState('2');
 
-  function handleSearch(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    const label = TABS.find(t=>t.id===tab)?.label || tab;
-    const msg = tab === 'cab'
-      ? `Namaste! I want to book a cab from ${city} for ${pilgrims} passenger(s) in ${month||'the upcoming weeks'}. Please share rates.`
-      : `Namaste! I want to book a ${label} package from ${city} for ${pilgrims} pilgrim(s) in ${month||'upcoming season'}.`;
+    const msg = `Namaste! I want to plan a Char Dham Yatra from ${city} for ${pilgrims} pilgrim(s) in ${month || 'the upcoming season'}. Please share the itinerary and price.`;
     try {
       window.dispatchEvent(new CustomEvent('sgt:lead', { detail: {
-        type: 'Hero Search', package: label, number: '+' + SITE.whatsapp,
+        type: 'Hero Enquiry', package: 'Char Dham', number: '+' + SITE.whatsapp,
         detail: `From: ${city} | Month: ${month||'—'} | Pilgrims: ${pilgrims}`,
       }}));
     } catch {}
@@ -38,7 +36,7 @@ export default function HeroSearch() {
     border:'1px solid var(--border)', borderRadius:10,
     padding:'10px 32px 8px 14px', background:'#fff',
     transition:'border-color .15s, box-shadow .15s',
-    position:'relative',
+    position:'relative', textAlign:'left',
   };
   const chevron = (
     <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" style={{ position:'absolute', right:12, top:'50%', transform:'translateY(-25%)', pointerEvents:'none' }}>
@@ -46,13 +44,13 @@ export default function HeroSearch() {
     </svg>
   );
   const labelStyle = {
-    display:'block', fontSize:10, fontWeight:700,
+    display:'block', fontSize:10.5, fontWeight:700,
     color:'var(--text-muted)', marginBottom:2,
     textTransform:'uppercase', letterSpacing:'0.08em',
   };
   const bigSelect = {
     width:'100%', border:'none', outline:'none', background:'transparent',
-    fontSize:19, fontWeight:800, color:'var(--text)',
+    fontSize:17, fontWeight:700, color:'var(--text)',
     fontFamily:'var(--font)', cursor:'pointer', padding:0,
     appearance:'none', WebkitAppearance:'none',
   };
@@ -62,56 +60,22 @@ export default function HeroSearch() {
       background:'#fff',
       borderRadius:16,
       boxShadow:'0 24px 64px rgba(15,43,91,0.3), 0 4px 12px rgba(15,43,91,0.1)',
-      maxWidth:960, margin:'0 auto',
-      position:'relative', paddingBottom:28,
+      maxWidth:860, margin:'0 auto',
+      position:'relative', padding:'20px 20px 14px',
+      textAlign:'left',
     }}>
-      {/* Icon tabs — OTA product row.
-          Outer div scrolls; inner div uses margin:auto so tabs centre on
-          desktop but stay fully reachable (incl. first + last tab) when
-          they overflow on narrow phones. */}
-      <div style={{
-        borderBottom:'1px solid var(--border)', padding:'6px 8px 0',
-        overflowX:'auto', WebkitOverflowScrolling:'touch', scrollbarWidth:'none',
-      }}>
-      <div role="tablist" aria-label="Package type" style={{
-        display:'flex', gap:2, margin:'0 auto', width:'max-content',
-      }}>
-        {TABS.map(t => {
-          const active = tab === t.id;
-          return (
-            <button key={t.id} role="tab" aria-selected={active} onClick={()=>setTab(t.id)}
-              style={{
-                display:'flex', flexDirection:'column', alignItems:'center', gap:3,
-                padding:'10px 14px 12px', minWidth:72,
-                border:'none', background:'none', cursor:'pointer',
-                borderBottom: active ? '3px solid var(--gold)' : '3px solid transparent',
-                color: active ? 'var(--navy)' : 'var(--text-muted)',
-                fontFamily:'var(--font)', transition:'color .15s, border-color .15s',
-              }}>
-              <span aria-hidden="true" style={{
-                fontSize:20, lineHeight:1,
-                filter: active ? 'none' : 'grayscale(0.6) opacity(0.75)',
-              }}>{t.icon}</span>
-              <span style={{ fontSize:12.5, fontWeight: active ? 800 : 600, whiteSpace:'nowrap' }}>{t.label}</span>
-            </button>
-          );
-        })}
-      </div>
-      </div>
-
-      {/* Fields */}
-      <form onSubmit={handleSearch} className="hero-search-form" style={{ padding:'18px 20px 10px', display:'flex', gap:12, flexWrap:'wrap' }}>
+      <form onSubmit={handleSubmit} className="hero-search-form" style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'stretch' }}>
         <div className="hs-field" style={fieldWrap}>
           {chevron}
-          <label style={labelStyle} htmlFor="hs-city">Starting From</label>
+          <label style={labelStyle} htmlFor="hs-city">Starting from</label>
           <select id="hs-city" value={city} onChange={e=>setCity(e.target.value)} style={bigSelect}>
             {CITIES.map(c=><option key={c}>{c}</option>)}
           </select>
         </div>
         <div className="hs-field" style={fieldWrap}>
           {chevron}
-          <label style={labelStyle} htmlFor="hs-month">Travel Month</label>
-          <select id="hs-month" value={month} onChange={e=>setMonth(e.target.value)} style={{ ...bigSelect, fontSize: month ? 19 : 16, fontWeight: month ? 800 : 600, color: month ? 'var(--text)' : 'var(--text-muted)' }}>
+          <label style={labelStyle} htmlFor="hs-month">Travel month</label>
+          <select id="hs-month" value={month} onChange={e=>setMonth(e.target.value)} style={{ ...bigSelect, color: month ? 'var(--text)' : 'var(--text-muted)', fontWeight: month ? 700 : 600 }}>
             <option value="">Any month</option>
             {MONTHS.map(m=><option key={m}>{m}</option>)}
           </select>
@@ -125,30 +89,34 @@ export default function HeroSearch() {
             ))}
           </select>
         </div>
-        <div style={{ ...fieldWrap, background:'var(--navy-light)', borderColor:'transparent' }}>
-          <span style={labelStyle}>Trip Type</span>
-          <div style={{ fontSize:19, fontWeight:800, color:'var(--navy)' }}>{TABS.find(t=>t.id===tab)?.label}</div>
-        </div>
 
-        {/* Floating SEARCH pill — breaks the card edge, MMT-style */}
-        <button type="submit" aria-label="Search packages" style={{
-          position:'absolute', left:'50%', bottom:0, transform:'translate(-50%,50%)',
-          background:'linear-gradient(93deg,#F5A82A,#E8920A 55%,#C67A08)',
+        {/* Primary action — gold, labelled with what actually happens */}
+        <button type="submit" style={{
+          flex:'1 1 200px', minWidth:190,
+          background:'var(--gold)',
           color:'#fff', border:'none', cursor:'pointer',
-          padding:'15px 54px', borderRadius:50,
-          fontSize:16, fontWeight:800, letterSpacing:'0.14em',
+          padding:'14px 22px', borderRadius:10,
+          fontSize:15, fontWeight:700,
           fontFamily:'var(--font)',
-          boxShadow:'0 10px 26px rgba(232,146,10,0.45), inset 0 1px 0 rgba(255,255,255,0.3)',
-          transition:'transform .15s, box-shadow .15s',
+          transition:'background .15s',
         }}
-          onMouseEnter={e=>{e.currentTarget.style.transform='translate(-50%,50%) scale(1.04)'}}
-          onMouseLeave={e=>{e.currentTarget.style.transform='translate(-50%,50%)'}}>
-          SEARCH
+          onMouseEnter={e=>{e.currentTarget.style.background='var(--gold-dark)'}}
+          onMouseLeave={e=>{e.currentTarget.style.background='var(--gold)'}}>
+          Get My Itinerary &amp; Price
         </button>
       </form>
 
-      <div style={{ textAlign:'center', fontSize:11.5, color:'var(--text-muted)', paddingBottom:6 }}>
-        Instant quote on WhatsApp · No login, no payment to enquire
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8, marginTop:12, paddingTop:10, borderTop:'1px solid var(--border)' }}>
+        <span style={{ display:'inline-flex', alignItems:'center', gap:6, fontSize:12, color:'var(--text-muted)' }}>
+          <WhatsAppIcon size={13} color="#25D366"/>
+          Replies on WhatsApp within 2 hours · No login, no payment to enquire
+        </span>
+        <span style={{ fontSize:12.5, color:'var(--text-mid)' }}>
+          Need something else?{' '}
+          <Link href="/char-dham-yatra-cab-booking" style={{ color:'var(--navy)', fontWeight:600 }}>Cab only</Link>
+          {' · '}
+          <Link href="/char-dham-helicopter" style={{ color:'var(--navy)', fontWeight:600 }}>Helicopter yatra</Link>
+        </span>
       </div>
     </div>
   );

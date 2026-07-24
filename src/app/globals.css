@@ -128,8 +128,12 @@ button { font-family: var(--font); }
   letter-spacing: -0.025em;
   margin-bottom: 10px;
 }
-.section-title em {
-  font-style: italic;
+/* Accent words inside headlines keep the navy colour but drop the italic —
+   the italic-serif accent device was overused (10+ sections) and read as a
+   template formula. Italic Playfair is now reserved for pull-quotes only. */
+.section-title em,
+.display-title em {
+  font-style: normal;
   color: var(--navy);
 }
 .section-subtitle {
@@ -726,8 +730,9 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 
 /* ─── 3. NAVBAR UTILITY STRIP ───────────────────────────────── */
 @media (max-width: 640px) {
-  .utility-strip-left { display: none !important; }
-  .utility-strip      { justify-content: center !important; }
+  .utility-strip-left  { display: none !important; }
+  .utility-strip-short { display: inline !important; }
+  .utility-strip       { justify-content: center !important; }
 }
 
 /* ─── 4. HERO SECTION ───────────────────────────────────────── */
@@ -823,6 +828,11 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 @media (max-width: 860px) {
   .why-split { grid-template-columns: 1fr !important; }
   .why-split-image { height: 240px !important; order: -1 !important; }
+}
+/* Base two-column layout for the why-us split (was undefined → single
+   column, which left a viewport-tall blank gap under the feature grid) */
+@media (min-width: 861px) {
+  .why-split { grid-template-columns: 1.05fr 0.95fr; }
 }
 
 /* ─── 12b. FOUNDER STORY ────────────────────────────────────── */

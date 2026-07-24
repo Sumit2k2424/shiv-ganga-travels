@@ -37,7 +37,13 @@ function ReviewCard({ review }) {
   const [expanded, setExpanded] = useState(false);
   const text = review.text || '';
   const long = text.length > 220;
-  const shown = (!long || expanded) ? text : text.slice(0, 220) + '…';
+  // Sentence-aware truncation — never cut mid-word ("fo… more")
+  let shown = text;
+  if (long && !expanded) {
+    const head = text.slice(0, 220);
+    const lastBreak = Math.max(head.lastIndexOf('. '), head.lastIndexOf(' '));
+    shown = head.slice(0, lastBreak > 120 ? lastBreak : 220).replace(/[,;.\s]+$/, '') + '…';
+  }
 
   return (
     <div style={{
@@ -162,7 +168,7 @@ export default function GoogleReviews() {
               <Stars n={Math.round(data.rating || 4.7)}/>
             </div>
             <div style={{ fontSize:12, color:'#8898a6', marginTop:2 }}>
-              {data.total ? `${data.total.toLocaleString('en-IN')}+` : '54+'} reviews on Google
+              Public reviews on Google — open and read them all
               {data.source === 'live' && (
                 <span style={{ marginLeft:6, background:'#dcfce7', color:'#15803d',
                   fontSize:10, fontWeight:700, padding:'1px 6px', borderRadius:20 }}>LIVE</span>

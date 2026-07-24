@@ -1888,17 +1888,21 @@ export const GLOBAL_FAQS = [
 // TRUST SIGNALS
 // ================================================================
 export const TRUST = {
+  // Three claims, stated once each. "100% Safe / zero incident" was an
+  // absolutist claim no serious operator can stand behind publicly —
+  // safety is now framed as practice (hill-trained drivers, oxygen on
+  // board, vehicle checks) in section copy instead.
   stats: [
-    { icon:'🏆', value:'15+',     label:'Years of Trust',    sub:'Serving pilgrims since 2010' },
-    { icon:'🙏', value:'50,000+', label:'Happy Pilgrims',    sub:'From all 28 states of India' },
-    { icon:'⭐', value:'4.7/5',   label:'Google Rating',     sub:'Based on 54 verified reviews' },
-    { icon:'🛡️', value:'100%',   label:'Safe Journeys',     sub:'Zero incident record in 15 years' },
+    { value:'15+',     label:'Years Operating',  sub:'Direct operator since 2010' },
+    { value:'50,000+', label:'Pilgrims Served',  sub:'Across every season since 2010' },
+    { value:'4.7/5',   label:'Google Rating',    sub:'Public, verifiable reviews' },
   ],
+  // IATA / IATO / ISO badges removed until accreditation numbers can be
+  // shown alongside them — an unverifiable badge costs more trust than it
+  // buys. Restore any of these with its registration number when available.
   certifications: [
     { text:'Registered with Uttarakhand Tourism Development Board', url:'https://uttarakhandtourism.gov.in', linkText:'Verify →' },
     { text:'Yatra Permit Authority: Uttarakhand Tourism', url:'https://registrationandtouristcare.uk.gov.in', linkText:'Registration Portal →' },
-    { text:'Member of IATO (Indian Association of Tour Operators)', url:'https://www.iato.in', linkText:'IATO →' },
-    { text:'ISO 9001:2015 Certified Quality Management System', url:null, linkText:null },
     { text:'Government-approved Char Dham Yatra Operator 2026', url:null, linkText:null },
   ],
 };

@@ -1,11 +1,10 @@
 import './globals.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
-import DirectOperatorStrip from '@/components/DirectOperatorStrip';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-// LeadPopup + ChatBot loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
-import { LeadPopup, ChatBot, LeadTracker } from '@/components/LayoutClientWidgets';
+// LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
+import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
@@ -419,12 +418,14 @@ export default function RootLayout({ children }) {
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Navbar/>
-        <DirectOperatorStrip/>
+        {/* DirectOperatorStrip removed — its message now lives in the Navbar
+            utility strip, collapsing four stacked header bars into two. */}
         <main id="main-content" style={{ flex:1 }} role="main">{children}</main>
         <Footer/>
+        {/* Single floating contact bubble. ChatBot removed: two overlapping
+            bubbles + a fake "1" unread badge is a dark pattern. */}
         <WhatsAppButton/>
         <LeadPopup/>
-        <ChatBot/>
         <LeadTracker/>
         {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
