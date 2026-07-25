@@ -1,171 +1,135 @@
+/* ══════════════════════════════════════════════════════════════
+   Footer.
+
+   Two jobs, in this order: close the sale, then carry the internal
+   link graph. Every route from the previous footer survives in
+   footerLinks.js — the presentation changed, the link architecture
+   did not, because that is what the site's crawl depth depends on.
+
+   Server component. No client JS.
+   ══════════════════════════════════════════════════════════════ */
+
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
-import { LANGUAGE_PAGES } from '@/data/languages';
+import { REVIEWS } from '@/data/experience';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
+import { COLS, LANGUAGE_COL } from '@/components/footerLinks';
 
-const COLS = [
-  { heading:'Char Dham Packages', links:[
-    {l:'Char Dham Yatra 2026',       h:'/char-dham-yatra'},
-    {l:'Char Dham Guide 2026',       h:'/blog/char-dham-guide'},
-    {l:'Classic 9N/10D',             h:'/packages/char-dham-yatra-9n-10d-haridwar'},
-    {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
-    {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
-    {l:'Senior Special 12N/13D',     h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
-    {l:'From Delhi',                 h:'/char-dham-yatra-from-delhi'},
-    {l:'From Noida',                 h:'/char-dham-yatra-from-noida'},
-    {l:'From Mumbai',                h:'/char-dham-yatra-from-mumbai'},
-    {l:'From Bangalore',             h:'/char-dham-yatra-from-bangalore'},
-  ]},
-  { heading:'Single & Do Dham', links:[
-    {l:'Kedarnath Yatra',            h:'/kedarnath-yatra'},
-    {l:'Kedarnath Package 3N/4D',    h:'/kedarnath-tour-package'},
-    {l:'Badrinath Package 2N/3D',    h:'/badrinath-tour-package'},
-    {l:'Badrinath Yatra',            h:'/badrinath-yatra'},
-    {l:'Gangotri Yatra',             h:'/gangotri-yatra'},
-    {l:'Yamunotri Yatra',            h:'/yamunotri-yatra'},
-    {l:'Do Dham Yatra',              h:'/do-dham-yatra'},
-    {l:'Panch Kedar Yatra',          h:'/panch-kedar-yatra'},
-    {l:'Panch Badri Yatra',          h:'/panch-badri-yatra'},
-    {l:'Chopta & Tungnath',          h:'/chopta-tungnath'},
-    {l:'Uttarakhand Tours',          h:'/uttarakhand-tour-packages'},
-    {l:'Valley of Flowers',          h:'/packages/valley-of-flowers-hemkund-sahib-5n-6d'},
-  ]},
-  { heading:'Cabs & Transport', links:[
-    {l:'All Uttarakhand Cabs',         h:'/cabs'},
-    {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
-    {l:'Haridwar → Kedarnath Cab',    h:'/haridwar-to-kedarnath-cab'},
-    {l:'Haridwar → Badrinath Cab',    h:'/haridwar-to-badrinath-cab'},
-    {l:'Haridwar → Gangotri Cab',     h:'/haridwar-to-gangotri-cab'},
-    {l:'Delhi → Haridwar Cab',        h:'/delhi-to-haridwar-cab'},
-  ]},
-  { heading:'Guides & Tools', links:[
-    {l:'2026 New Rules',             h:'/blog/char-dham-yatra-2026-new-rules'},
-    {l:'Cost Calculator',            h:'/char-dham-yatra-cost-calculator'},
-    {l:'Route Map',                  h:'/char-dham-yatra-route-map'},
-    {l:'Kedarnath Trek Guide',       h:'/blog/kedarnath-trek-guide'},
-    {l:'Helicopter Booking',         h:'/blog/kedarnath-helicopter-booking'},
-    {l:'Packing List',               h:'/blog/char-dham-yatra-packing-list'},
-    {l:'Cost Breakdown',             h:'/blog/char-dham-yatra-cost'},
-    {l:'Registration Guide',         h:'/blog/char-dham-yatra-registration'},
-    {l:'Best Time to Visit',         h:'/blog/best-time-char-dham'},
-    {l:'All Blog Posts',             h:'/blog'},
-  ]},
-  { heading:'Temples & Weather', links:[
-    {l:'Kedarnath Temple Guide',     h:'/kedarnath-temple'},
-    {l:'Badrinath Temple Guide',     h:'/badrinath-temple'},
-    {l:'Gangotri Temple Guide',      h:'/gangotri-temple'},
-    {l:'Yamunotri Temple Guide',     h:'/yamunotri-temple'},
-    {l:'Dhari Devi Temple',          h:'/dhari-devi-temple'},
-    {l:'Kedarnath Height & Facts',   h:'/kedarnath-height'},
-    {l:'Kedarnath Weather',          h:'/kedarnath-weather'},
-    {l:'Badrinath Weather',          h:'/badrinath-weather'},
-    {l:'Gangotri Weather',           h:'/gangotri-weather'},
-    {l:'Yamunotri Weather',          h:'/yamunotri-weather'},
-  ]},
-  { heading:'How to Reach', links:[
-    {l:'How to Reach Kedarnath',     h:'/blog/how-to-reach-kedarnath'},
-    {l:'How to Reach Badrinath',     h:'/how-to-reach-badrinath'},
-    {l:'How to Reach Gangotri',      h:'/how-to-reach-gangotri'},
-    {l:'How to Reach Yamunotri',     h:'/how-to-reach-yamunotri'},
-    {l:'Kedarnath Hotels',           h:'/kedarnath-hotels'},
-    {l:'Badrinath Hotels',           h:'/badrinath-hotels'},
-    {l:'Emergency Contacts',         h:'/char-dham-yatra-emergency-contacts'},
-  ]},
-  { heading:'Company', links:[
-    {l:'About Us',                   h:'/about'},
-    {l:'Contact Us',                 h:'/contact'},
-    {l:'All Packages',               h:'/packages'},
-    {l:'Online Puja Booking',        h:'/online-puja-booking'},
-    {l:'Senior Citizen Package',     h:'/blog/senior-citizen-char-dham'},
-    {l:'Leave a Review',             h:'/review'},
-    {l:'Site Map',                   h:'/sitemap-page'},
-  ]},
-];
-
-const LANGUAGE_COL = {
-  heading: 'Char Dham in Your Language',
-  links: LANGUAGE_PAGES.map(l => ({ l: `${l.native} · ${l.label}`, h: `/${l.slug}` })),
-};
+const WA_HREF = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
+  'Namaste! I want to plan a Char Dham Yatra for 2026. Please share options.'
+)}`;
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer style={{ background:'var(--navy)', color:'rgba(255,255,255,0.65)' }}>
-
-      {/* Brand + links grid — the gold season ticker is gone (third
-          rendition of the season dates on one page) */}
-      <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'40px 20px 32px' }}>
-        <div className="footer-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:'32px 24px' }}>
-
-          {/* Brand col */}
-          <div>
-            <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:16 }}>
-              <div style={{
-                width:40, height:40, borderRadius:10, flexShrink:0,
-                background:'linear-gradient(135deg, var(--navy-mid), var(--gold))',
-                display:'flex', alignItems:'center', justifyContent:'center',
-                color:'#fff', fontSize:20, fontWeight:700,
-              }}>ॐ</div>
-              <div>
-                <div style={{ fontWeight:700, fontSize:15, color:'#fff' }}>{SITE.name}</div>
-                <div style={{ fontSize:11, color:'var(--gold)', fontWeight:500, marginTop:1 }}>{SITE.tagline}</div>
-              </div>
-            </div>
-            <p style={{ fontSize:12.5, lineHeight:1.7, color:'rgba(255,255,255,0.55)', marginBottom:18, maxWidth:240 }}>
-              Haridwar's trusted Char Dham Yatra specialist since {SITE.established}. 50,000+ blessed pilgrims. Zero commission.
+    <footer style={{ background: 'var(--ink)', color: 'rgba(255,255,255,0.6)' }}>
+      {/* ── Closing call ──────────────────────────────── */}
+      <div className="lux-wrap" style={{ paddingTop: 'clamp(56px, 7vw, 96px)', paddingBottom: 'clamp(44px, 5vw, 68px)' }}>
+        <div className="lux-footer__top">
+          <div style={{ maxWidth: 520 }}>
+            <span className="lux-eyebrow lux-eyebrow--light">Shiv Ganga Travels</span>
+            <p className="lux-display lux-display--md" style={{ color: '#fff', marginTop: 20 }}>
+              Speak to the people who actually run the trip.
             </p>
-            <div style={{ display:'flex', gap:8, flexWrap:'wrap', alignItems:'center' }}>
-              <a href='tel:+917817996730' aria-label="Call us"
-                style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(255,255,255,0.1)', color:'#fff', padding:'8px 12px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', border:'1px solid rgba(255,255,255,0.12)', whiteSpace:'nowrap' }}>
-                <Icon name="phone" size={13}/> Call
-              </a>
-              <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="nofollow noopener noreferrer" aria-label="WhatsApp"
-                style={{ display:'inline-flex', alignItems:'center', gap:6, background:'#25D366', color:'#fff', padding:'8px 12px', borderRadius:8, fontSize:12, fontWeight:600, textDecoration:'none', whiteSpace:'nowrap' }}>
-                <WhatsAppIcon size={13}/> WhatsApp
-              </a>
-              {/* Social marks — monochrome; brand-colour chips fought the palette */}
-              <div style={{ display:'flex', gap:6 }}>
-                <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
-                  style={{ width:34, height:34, borderRadius:'50%', background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.12)', color:'rgba(255,255,255,0.8)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100083198213052" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"
-                  style={{ width:34, height:34, borderRadius:'50%', background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.12)', color:'rgba(255,255,255,0.8)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@Shivgangatravelsharidwar" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"
-                  style={{ width:34, height:34, borderRadius:'50%', background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.12)', color:'rgba(255,255,255,0.8)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-                  <svg width="16" height="11" viewBox="0 0 24 17" fill="currentColor" aria-hidden="true"><path d="M23.495 2.656A3.016 3.016 0 0 0 21.37.516C19.505 0 12 0 12 0S4.495 0 2.63.516A3.016 3.016 0 0 0 .505 2.656C0 4.532 0 8.45 0 8.45s0 3.918.505 5.794a3.016 3.016 0 0 0 2.125 2.14C4.495 16.9 12 16.9 12 16.9s7.505 0 9.37-.516a3.016 3.016 0 0 0 2.125-2.14C24 12.368 24 8.45 24 8.45s0-3.918-.505-5.794zM9.545 12.027V4.873l6.272 3.577-6.272 3.577z"/></svg>
-                </a>
-              </div>
-            </div>
+            <p className="lux-body" style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14.5, marginTop: 18 }}>
+              Haridwar’s Char Dham specialist since {SITE.established}. Fifty thousand pilgrims,
+              zero agent commission, and one phone number that a person answers.
+            </p>
 
-          </div>
-          {/* Link columns */}
-          {[...COLS, LANGUAGE_COL].map(col => (
-            <div key={col.heading}>
-              <h3 style={{
-                color:'#fff', fontWeight:700, fontSize:11.5, marginBottom:14,
-                textTransform:'uppercase', letterSpacing:'0.1em',
-                paddingBottom:8, borderBottom:'1px solid rgba(255,255,255,0.1)',
-              }}>
-                {col.heading}
-              </h3>
-              <ul style={{ listStyle:'none' }}>
-                {col.links.map(l => (
-                  <li key={l.h}><Link href={l.h} className="footer-link">{l.l}</Link></li>
-                ))}
-              </ul>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 30 }}>
+              <a href={WA_HREF} target="_blank" rel="nofollow noopener noreferrer" className="lux-btn lux-btn--gold">
+                <WhatsAppIcon size={15} /> WhatsApp us
+              </a>
+              <a href={`tel:${SITE.phone.replace(/-/g, '')}`} className="lux-btn lux-btn--ghost-light">
+                <Icon name="phone" size={14} /> {SITE.phone}
+              </a>
             </div>
-          ))}
+          </div>
+
+          <dl className="lux-facts lux-footer__facts">
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">Office</dt>
+              <dd className="lux-facts__v">{SITE.address}</dd>
+            </div>
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">Hours</dt>
+              <dd className="lux-facts__v">7:00 AM – 9:00 PM, every day</dd>
+            </div>
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">Email</dt>
+              <dd className="lux-facts__v">
+                <a href={`mailto:${SITE.email}`} style={{ color: 'inherit' }}>{SITE.email}</a>
+              </dd>
+            </div>
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">Second number</dt>
+              <dd className="lux-facts__v">
+                <a href={`tel:${SITE.phone2.replace(/-/g, '')}`} style={{ color: 'inherit' }}>{SITE.phone2}</a>
+              </dd>
+            </div>
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">Rating</dt>
+              <dd className="lux-facts__v">
+                <a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer" style={{ color: 'inherit' }}>
+                  {REVIEWS.rating} / 5 · {REVIEWS.count} Google reviews
+                </a>
+              </dd>
+            </div>
+            <div className="lux-facts__row">
+              <dt className="lux-facts__k">2026 season</dt>
+              <dd className="lux-facts__v">April 19 – November 13</dd>
+            </div>
+          </dl>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="footer-bottom" style={{ borderTop:'1px solid rgba(255,255,255,0.07)', maxWidth:'var(--container)', margin:'0 auto', padding:'16px 20px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
-        <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>
-          © {new Date().getFullYear()} {SITE.name}. All rights reserved. Made with ❤️ in Haridwar.
-        </span>
-        <span style={{ fontSize:12, color:'rgba(255,255,255,0.35)' }}>{SITE.address}</span>
+      {/* ── Link architecture ─────────────────────────── */}
+      <div style={{ borderTop: '1px solid var(--rule-light-soft)' }}>
+        <div className="lux-wrap" style={{ paddingTop: 'clamp(40px, 5vw, 60px)', paddingBottom: 'clamp(36px, 4vw, 52px)' }}>
+          <nav className="lux-footer__grid" aria-label="Footer">
+            {COLS.map((col) => (
+              <div key={col.heading}>
+                <h2 className="lux-footer__h">{col.heading}</h2>
+                <ul className="lux-footer__list">
+                  {col.links.map((l) => (
+                    <li key={l.h + l.l}>
+                      <Link href={l.h}>{l.l}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            <div>
+              <h2 className="lux-footer__h">{LANGUAGE_COL.heading}</h2>
+              <ul className="lux-footer__list">
+                {LANGUAGE_COL.links.map((l) => (
+                  <li key={l.h}>
+                    <Link href={l.h}>{l.l}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      {/* ── Legal ─────────────────────────────────────── */}
+      <div style={{ borderTop: '1px solid var(--rule-light-soft)' }}>
+        <div className="lux-wrap lux-footer__legal">
+          <p style={{ margin: 0 }}>
+            © {year} {SITE.name}. Registered with the Uttarakhand Tourism Development Board.
+          </p>
+          <div style={{ display: 'flex', gap: '10px 24px', flexWrap: 'wrap' }}>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/sitemap-page">Sitemap</Link>
+            <Link href="/review">Leave a review</Link>
+            <a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer">Google</a>
+            <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="nofollow noopener noreferrer">Instagram</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

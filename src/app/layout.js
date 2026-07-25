@@ -1,10 +1,12 @@
 import './globals.css';
+import './luxury.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
+import LuxMotion from '@/components/lux/LuxMotion';
 import { SITE } from '@/data/packages';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
@@ -417,6 +419,8 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
+        {/* Scroll progress rail — a single 2px gold line, no layout cost */}
+        <div className="lux-progress" data-lux-progress="" aria-hidden="true"/>
         <Navbar/>
         {/* DirectOperatorStrip removed — its message now lives in the Navbar
             utility strip, collapsing four stacked header bars into two. */}
@@ -427,6 +431,9 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <LeadTracker/>
+        {/* The site's single motion island: Lenis + every scroll reveal.
+            Server components elsewhere just write data-lux-* attributes. */}
+        <LuxMotion/>
         {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
           window.dataLayer=window.dataLayer||[];
