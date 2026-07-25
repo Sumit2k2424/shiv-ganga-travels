@@ -53,6 +53,49 @@ const WA_TEXT = encodeURIComponent(
 );
 const WA_HREF = `https://wa.me/${SITE.whatsapp}?text=${WA_TEXT}`;
 
+/* ── Credential ticker ──────────────────────────────────────────
+   The two facts that decide whether someone trusts a pilgrimage
+   operator — who founded it, and whether anyone is skimming the
+   price — rolled on every page of the site.
+
+   Pure CSS: one transform keyframe on a stacked list, no timers,
+   no state, no re-renders. The last row repeats the first so the
+   loop point is invisible.
+
+   Accessibility: the roll is decorative and hidden from assistive
+   tech; one static sentence carries the same information. Under
+   prefers-reduced-motion the animation is dropped and the first
+   credential simply sits there.
+   ─────────────────────────────────────────────────────────────── */
+
+const CREDENTIALS = [
+  'Founded by a retired Indian Army officer',
+  'Direct operator — zero agent commission',
+  'You pay us, never a middleman',
+  `Haridwar, since ${SITE.established} · 50,000+ pilgrims`,
+];
+
+function CredentialTicker() {
+  return (
+    <p className="lux-ticker">
+      <span className="sr-only">
+        {`Shiv Ganga Travels — founded by a retired Indian Army officer. Direct operator in Haridwar since ${SITE.established}, zero agent commission, 50,000+ pilgrims served.`}
+      </span>
+
+      <span className="lux-ticker__mark" aria-hidden="true" />
+
+      <span className="lux-ticker__win" aria-hidden="true">
+        <span className="lux-ticker__list">
+          {/* The repeat of index 0 at the end is what makes the loop seamless */}
+          {[...CREDENTIALS, CREDENTIALS[0]].map((text, i) => (
+            <span className="lux-ticker__row" key={i}>{text}</span>
+          ))}
+        </span>
+      </span>
+    </p>
+  );
+}
+
 /* ── Small parts ────────────────────────────────────────────── */
 
 function Chevron({ open }) {
@@ -82,11 +125,14 @@ export default function Navbar() {
   const lastY = useRef(0);
   const headerRef = useRef(null);
 
-  /* Pages that open with a full-bleed cinematic hero get a transparent header */
+  /* Pages that open with a full-bleed cinematic hero get a transparent header.
+     This list must match exactly the pages that render `.lux-hero` as their
+     first section — a transparent header over an ordinary light page renders
+     white nav text on white background, i.e. an invisible menu. */
   const overHero =
     pathname === '/' ||
-    pathname?.startsWith('/packages/') ||
-    pathname === '/char-dham-yatra';
+    pathname === '/packages' ||
+    pathname?.startsWith('/packages/');
 
   const solid = scrolled || !overHero || !!openMenu || mobileOpen;
 
@@ -144,42 +190,32 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Utility strip ────────────────────────────────── */}
-      <div style={{ background: 'var(--ink)', position: 'relative', zIndex: 101 }}>
-        <div className="lux-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, height: 34 }}>
-          <p style={{ fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.72)', fontWeight: 500, margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-            Direct operator in Haridwar since {SITE.established}
-            <span className="hidden md:inline" style={{ color: 'rgba(255,255,255,0.26)', margin: '0 12px' }}>·</span>
-            <span className="hidden md:inline">You pay us, never a middleman</span>
-          </p>
-          <div className="hidden lg:flex" style={{ alignItems: 'center', gap: 20, flex: 'none' }}>
-            <span style={{ fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 600 }}>
-              2026 season · Apr 19 – Nov 13
-            </span>
-            <a href={`mailto:${SITE.email}`} style={{ fontSize: 10.5, letterSpacing: '0.08em', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>
-              {SITE.email}
-            </a>
+      {/* ── Header block ──────────────────────────────────
+          The utility strip and the header live in ONE sticky
+          wrapper pinned at top:-34px. The strip scrolls away, the
+          header pins. Previously these were two siblings with
+          competing z-indexes and a negative margin, which buried
+          the top half of the navigation under the strip. */}
+      <div
+        ref={headerRef}
+        className={`lux-headwrap${solid ? ' is-solid' : ''}${hidden ? ' is-hidden' : ''}`}
+      >
+        <div className="lux-utility">
+          <div className="lux-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, height: '100%' }}>
+            <CredentialTicker />
+            <div className="lux-utility__right">
+              <span style={{ fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 600 }}>
+                2026 season · Apr 19 – Nov 13
+              </span>
+              <a href={`mailto:${SITE.email}`} style={{ fontSize: 10.5, letterSpacing: '0.08em', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>
+                {SITE.email}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* ── Main header ──────────────────────────────────── */}
-      <header
-        ref={headerRef}
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 100,
-          background: solid ? 'rgba(251,250,247,0.92)' : 'transparent',
-          backdropFilter: solid ? 'saturate(180%) blur(18px)' : 'none',
-          WebkitBackdropFilter: solid ? 'saturate(180%) blur(18px)' : 'none',
-          borderBottom: `1px solid ${solid ? 'var(--rule)' : 'rgba(255,255,255,0.16)'}`,
-          transform: hidden ? 'translate3d(0,-100%,0)' : 'none',
-          transition: 'transform .5s cubic-bezier(.22,1,.36,1), background .4s, border-color .4s',
-          marginTop: overHero && !scrolled ? -34 : 0,
-        }}
-      >
-        <div className="lux-wrap" style={{ display: 'flex', alignItems: 'center', gap: 8, height: 76 }}>
+        <header className="lux-header">
+          <div className="lux-wrap" style={{ display: 'flex', alignItems: 'center', gap: 8, height: '100%' }}>
 
           {/* Wordmark */}
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', flex: 'none' }}>
@@ -195,7 +231,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop navigation */}
-          <nav className="hidden lg:flex" style={{ alignItems: 'center', gap: 4, marginLeft: 48 }} aria-label="Primary">
+          <nav className="lux-nav" style={{ alignItems: 'center', gap: 4, marginLeft: 48 }} aria-label="Primary">
             <MenuTrigger label="Journeys" open={openMenu === 'packages'} onClick={() => toggle('packages')} color={ink} />
             <MenuTrigger label="Private Cars" open={openMenu === 'cabs'} onClick={() => toggle('cabs')} color={ink} />
             {FLAT_LINKS.map((l) => (
@@ -227,16 +263,14 @@ export default function Navbar() {
               Enquire
             </a>
 
+            {/* Display lives in CSS, not inline: an inline `display:flex`
+                outranks `lg:hidden` and left the burger on screen next to
+                the desktop menu. */}
             <button
               onClick={() => setMobileOpen((o) => !o)}
-              className="lg:hidden"
+              className="lux-burger"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
-              style={{
-                display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5,
-                width: 44, height: 44, border: 0, background: 'none', cursor: 'pointer',
-                padding: '0 8px', marginRight: -8,
-              }}
             >
               <span style={{ display: 'block', height: 1.5, background: mobileOpen ? 'var(--ink)' : ink, transition: 'transform .4s cubic-bezier(.22,1,.36,1), opacity .3s, background .4s', transform: mobileOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
               <span style={{ display: 'block', height: 1.5, background: mobileOpen ? 'var(--ink)' : ink, transition: 'opacity .2s, background .4s', opacity: mobileOpen ? 0 : 1 }} />
@@ -296,7 +330,8 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      </header>
+        </header>
+      </div>
 
       {/* ── Mobile overlay ───────────────────────────────── */}
       <AnimatePresence>
