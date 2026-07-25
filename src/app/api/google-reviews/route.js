@@ -25,7 +25,11 @@ async function findPlaceId(apiKey) {
   if (!res.ok) throw new Error(`Find Place HTTP ${res.status}`);
   const data = await res.json();
   if (data.status !== 'OK' || !data.candidates?.length) {
-    throw new Error(`Find Place: ${data.status}`);
+    // Google puts the actual reason in error_message; without it
+    // REQUEST_DENIED is unactionable. Surface it.
+    throw new Error(
+      `Find Place: ${data.status}${data.error_message ? ` — ${data.error_message}` : ''}`
+    );
   }
   return data.candidates[0].place_id;
 }
@@ -126,10 +130,17 @@ export async function GET() {
     );
   } catch (err) {
     console.error('Google Reviews error:', err.message);
-    return Response.json({
-      error: err.message,
-      reviews: [], rating: null, total: null,
-      mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL,
-    });
+    // Never cache a failure. Previously this empty payload inherited the
+    // 24-hour cache, so one bad build baked "no reviews" into production
+    // for a day even after the key started working. no-store means the
+    // next request retries.
+    return Response.json(
+      {
+        error: err.message,
+        reviews: [], rating: null, total: null,
+        mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL,
+      },
+      { headers: { 'Cache-Control': 'no-store' } }
+    );
   }
 }
