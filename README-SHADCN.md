@@ -188,3 +188,89 @@ you ever want to consolidate:
 
 No migration has been done — the existing components are untouched and
 still in use.
+
+---
+
+# Packages page redesign
+
+`/packages` and `/packages/[slug]` were rebuilt in Tailwind using the
+installed components. `PackageCard` is now a Tailwind server component (zero
+JS, all hover effects are pure CSS); the listing page uses shadcn `Input` +
+`Select` and MagicUI `BlurFade` + `NumberTicker`.
+
+## Measured cost
+
+| route | before | after |
+|---|---|---|
+| `/packages` First Load JS | 183 kB | **270 kB** |
+| `/packages/[slug]` First Load JS | 180 kB | **225 kB** |
+| CSS, gzipped (all routes) | 12.8 kB | **21.1 kB** |
+
+The extra JS is `motion` (framer-motion), which BlurFade and NumberTicker
+depend on. Two lighter variants were built and measured before settling here:
+
+| variant | `/packages` |
+|---|---|
+| MagicUI + Radix Select (current) | 270 kB |
+| Light reveals + Radix Select | 226 kB |
+| Light reveals + native `<select>` | 185 kB |
+
+If the Core Web Vitals cost ever bites, `src/components/Reveal.js` and
+`src/components/CountUp.js` are drop-in replacements for `BlurFade` and
+`NumberTicker` that use an IntersectionObserver instead and cost ~1 kB. They
+are already written and left in the tree unused. Swapping the imports in
+`src/app/packages/page.js` gets you the 226 kB variant.
+
+## Two deliberate deviations
+
+**Itinerary and FAQs use native `<details>`, not the shadcn Accordion.**
+Radix unmounts collapsed content, which would have stripped every itinerary
+day and FAQ answer out of the server-rendered HTML on your highest-traffic
+pages. `src/components/package/ItineraryTimeline.js` and
+`PackageFaqs.js` collapse visually while keeping all the text in the markup,
+and ship no JS. Verified on a built page: 10/10 itinerary day descriptions
+and 8/8 FAQ answers present in the rendered HTML outside the JSON-LD.
+
+**`BlurFade` is only applied to presentational chrome on detail pages.**
+motion writes its initial `opacity: 0` into the SSR HTML, so wrapping the
+long-form itinerary/inclusions/FAQ copy would ship your ranking content
+invisible in the raw markup. Hero elements, stat tiles and CTAs animate;
+body copy does not.
+
+Related: `NumberTicker` renders `0` in the SSR HTML, so the hero stats also
+emit the real figure in an `sr-only` span for crawlers and screen readers.
+
+## Accessibility
+
+`blur-fade.jsx` and `number-ticker.jsx` carry a local patch (marked
+`LOCAL PATCH` in the source) making them honour `prefers-reduced-motion`.
+Upstream MagicUI does not — motion animates through rAF-driven inline styles,
+so the global `prefers-reduced-motion` rule in `globals.css` cannot stop it.
+Re-running `npx shadcn add` for these two components will overwrite the patch.
+
+Everything else uses Tailwind's `motion-safe:` prefix, which the global rule
+already covers.
+
+## Content fixes
+
+- The hero read **"11 curated packages"**. There are **39**. The count is now
+  computed from `PACKAGES.length` so it cannot drift again. (The comment in
+  `src/data/packages.js` still says 31 — also wrong, worth correcting.)
+- **"Starting from" now resolves to ₹3,499**, which is the Nag Tibba weekend
+  trek — an Uttarakhand adventure tour, not a yatra. It is the honest
+  catalogue minimum, but it is a much lower anchor than the ₹18,500 Char Dham
+  price used in your site metadata. To restrict it to pilgrimage packages
+  (₹5,699), see the note above `lowestPrice` in `src/app/packages/page.js`.
+- Two dead links on the detail page were bare text nodes with no anchor:
+  `Flexible cancellation →` and `✉️ Send Enquiry Form`. Now linked to
+  `/cancellation-policy` and `/contact`.
+- Detail-page breadcrumb had `Home` and `Packages` as plain text. Both are
+  real links now.
+- Cards previously emitted two anchors to the same package URL (image + title).
+  Now one, via a `::after` overlay on the title link.
+
+## What was NOT touched
+
+All schema/JSON-LD, `generateMetadata`, `generateStaticParams`, canonicals and
+the long-form SEO content sections on detail pages are unchanged. `/ui-kit` is
+still there as the component reference.

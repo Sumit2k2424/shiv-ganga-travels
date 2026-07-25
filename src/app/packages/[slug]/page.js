@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
 import WhyOurPrice from '@/components/WhyOurPrice';
+import ItineraryTimeline from '@/components/package/ItineraryTimeline';
+import PackageFaqs from '@/components/package/PackageFaqs';
+import { BlurFade } from '@/components/magicui/blur-fade';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
@@ -268,19 +271,64 @@ export default async function PackageDetailPage({ params }) {
       <Schemas pkg={pkg}/>
 
       {/* Hero */}
-      <section style={{ minHeight:340, background:pkg.photo?`linear-gradient(180deg,rgba(10,25,60,0.55) 0%,rgba(10,25,60,0.88) 100%),url('${pkg.photo}') center/cover`:'linear-gradient(145deg,var(--navy),var(--teal))', display:'flex', alignItems:'flex-end', padding:'0 20px 28px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', width:'100%' }}>
-          <nav style={{ fontSize:11.5, color:'rgba(255,255,255,0.6)', marginBottom:12, display:'flex', gap:5, flexWrap:'wrap' }}>
-            Home<span>›</span>
-            Packages<span>›</span>
-            <Link href={`/packages/${pkg.category}`} style={{ color:'rgba(255,255,255,0.7)', textDecoration:'none', textTransform:'capitalize' }}>{CATEGORIES[pkg.category]?.name||pkg.category}</Link><span>›</span>
-            <span style={{ color:'#FFD166' }}>{pkg.name}</span>
+      <section
+        className="relative flex min-h-[380px] items-end overflow-hidden px-5 pb-8 pt-24"
+        style={{
+          background: pkg.photo
+            ? `linear-gradient(180deg,rgba(8,20,48,0.42) 0%,rgba(8,20,48,0.78) 62%,rgba(6,16,38,0.94) 100%),url('${pkg.photo}') center/cover`
+            : 'linear-gradient(145deg,var(--navy),var(--teal))',
+        }}
+      >
+        <div className="mx-auto w-full max-w-[var(--container)]">
+          {/* Breadcrumb — every level is now a real link (Home and Packages
+              were previously plain text, so the trail dead-ended). */}
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] text-white/60"
+          >
+            <Link href="/" className="transition-colors hover:text-white">Home</Link>
+            <span aria-hidden="true">›</span>
+            <Link href="/packages" className="transition-colors hover:text-white">Packages</Link>
+            <span aria-hidden="true">›</span>
+            <Link
+              href={`/packages/${pkg.category}`}
+              className="capitalize text-white/70 transition-colors hover:text-white"
+            >
+              {CATEGORIES[pkg.category]?.name || pkg.category}
+            </Link>
+            <span aria-hidden="true">›</span>
+            <span className="text-gold" aria-current="page">{pkg.name}</span>
           </nav>
-          {pkg.badge && <span style={{ background:'var(--gold)', color:'#fff', fontSize:11, fontWeight:700, padding:'3px 12px', borderRadius:100, display:'inline-block', marginBottom:8 }}>{pkg.badge}</span>}
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.5rem,3.5vw,2.4rem)', fontWeight:600, lineHeight:1.15, marginBottom:14 }}>{pkg.seoHeading||pkg.name}</h1>
-          <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
-            {[{icon:'📅',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',val:`${pkg.startCity} → ${pkg.endCity||pkg.startCity}`},{icon:'🎯',val:pkg.difficulty},{icon:'🚌',val:pkg.transport},{icon:'📅',val:pkg.season}].map(c=>(
-              <span key={c.val} style={{ background:'rgba(255,255,255,0.15)', backdropFilter:'blur(6px)', color:'#fff', fontSize:12, padding:'5px 12px', borderRadius:100, display:'flex', gap:5, alignItems:'center' }}>{c.icon} {c.val}</span>
+
+          {pkg.badge && (
+            <span className="mb-2.5 inline-block rounded-full bg-gold px-3 py-1 text-[11px]
+                             font-bold uppercase tracking-wide text-white
+                             shadow-[0_4px_14px_rgba(232,146,10,0.4)]">
+              {pkg.badge}
+            </span>
+          )}
+
+          <h1 className="font-display mb-4 max-w-3xl text-[clamp(1.6rem,3.6vw,2.5rem)] font-semibold
+                         leading-[1.14] tracking-[-0.02em] text-white">
+            {pkg.seoHeading || pkg.name}
+          </h1>
+
+          <div className="flex flex-wrap gap-2">
+            {[
+              { icon: '📅', val: `${pkg.duration.nights}N/${pkg.duration.days}D` },
+              { icon: '📍', val: `${pkg.startCity} → ${pkg.endCity || pkg.startCity}` },
+              { icon: '🎯', val: pkg.difficulty },
+              { icon: '🚌', val: pkg.transport },
+              { icon: '📅', val: pkg.season },
+            ].filter(c => c.val).map((c) => (
+              <span
+                key={c.val}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15
+                           bg-white/10 px-3 py-1.5 text-[12px] font-medium text-white
+                           backdrop-blur-md transition-colors duration-200 hover:bg-white/20"
+              >
+                <span aria-hidden="true">{c.icon}</span> {c.val}
+              </span>
             ))}
           </div>
         </div>
@@ -302,7 +350,11 @@ export default async function PackageDetailPage({ params }) {
         <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
         <span>✓ Est. 2010 · Retd. Army Officer founder</span>
-        Flexible cancellation →
+        {/* Was a bare text node reading "Flexible cancellation →" with no link
+            attached — restored to the cancellation policy page it points at. */}
+        <Link href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>
+          Flexible cancellation →
+        </Link>
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
@@ -330,16 +382,33 @@ export default async function PackageDetailPage({ params }) {
         {/* LEFT */}
         <div style={{ display:'flex', flexDirection:'column', gap:28 }}>
 
-          {/* Quick stats */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10 }}>
-            {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'👥',label:'Group',val:pkg.groupSize||'2–40'},{icon:'🏔️',label:'Altitude',val:pkg.altitude||'3,583m'},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'🚌',label:'Transport',val:pkg.transport},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(
-              <div key={s.label} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px', textAlign:'center' }}>
-                <div style={{ fontSize:20, marginBottom:3 }}>{s.icon}</div>
-                <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{s.label}</div>
-                <div style={{ fontSize:12.5, fontWeight:700, color:'var(--navy)', lineHeight:1.3 }}>{s.val}</div>
-              </div>
-            ))}
-          </div>
+          {/* Quick stats — BlurFade is applied only to presentational chrome
+              like this, never to the long-form itinerary / inclusions / FAQ
+              copy, because motion renders its initial `opacity:0` into the
+              SSR HTML and that text is what ranks. */}
+          <BlurFade inView offset={12}>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-2.5">
+              {[
+                { icon:'⏱',  label:'Duration',   val:`${pkg.duration.nights}N/${pkg.duration.days}D` },
+                { icon:'👥',  label:'Group',      val:pkg.groupSize || '2–40' },
+                { icon:'🏔️', label:'Altitude',   val:pkg.altitude  || '3,583m' },
+                { icon:'🎯',  label:'Difficulty', val:pkg.difficulty },
+                { icon:'🚌',  label:'Transport',  val:pkg.transport },
+                { icon:'📅',  label:'Season',     val:pkg.season    || 'May–Oct 2026' },
+              ].map(s => (
+                <div
+                  key={s.label}
+                  className="rounded-xl border border-transparent bg-navy-light p-3 text-center
+                             transition-all duration-200 hover:border-navy/15
+                             motion-safe:hover:-translate-y-0.5"
+                >
+                  <div className="mb-1 text-[20px]" aria-hidden="true">{s.icon}</div>
+                  <div className="mb-0.5 text-[11px] text-slate-500">{s.label}</div>
+                  <div className="text-[12.5px] font-bold leading-tight text-navy">{s.val}</div>
+                </div>
+              ))}
+            </div>
+          </BlurFade>
 
           {/* Budget Tiers + Vehicle Fare — Char Dham full-route packages ONLY */}
           {isCharDham && (
@@ -428,22 +497,7 @@ export default async function PackageDetailPage({ params }) {
               ))}
             </div>
             <h2 style={SH}>🗓️ Day-wise Itinerary (Detailed)</h2>
-            <div style={{ position:'relative' }}>
-              {pkg.itinerary.map((day,idx)=>(
-                <div key={day.day} style={{ display:'grid', gridTemplateColumns:'44px 1fr', gap:0, marginBottom: idx < pkg.itinerary.length-1 ? 20 : 0 }}>
-                  <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
-                    <div style={{ width:32, height:32, background:'var(--navy)', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', fontSize:11, fontWeight:700, flexShrink:0 }}>D{day.day}</div>
-                    {idx < pkg.itinerary.length-1 && <div style={{ width:2, flex:1, background:'var(--border)', marginTop:4 }}/>}
-                  </div>
-                  <div style={{ paddingTop:4, paddingLeft:8, paddingBottom: idx < pkg.itinerary.length-1 ? 16 : 0 }}>
-                    <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{day.title}</div>
-                    <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.75 }}>{day.desc}</div>
-                    {day.meals && <div style={{ marginTop:8, display:'flex', gap:5, flexWrap:'wrap' }}>{day.meals.map(m=><span key={m} style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:11, fontWeight:600, padding:'2px 8px', borderRadius:100 }}>{m}</span>)}</div>}
-                    {day.stay && <div style={{ marginTop:5, fontSize:12, color:'var(--text-muted)' }}>🏨 Stay: {day.stay}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ItineraryTimeline itinerary={pkg.itinerary}/>
           </section>
 
           {/* Inclusions / Exclusions */}
@@ -493,14 +547,7 @@ export default async function PackageDetailPage({ params }) {
           {pkg.faqs?.length > 0 && (
             <section>
               <h2 style={SH}>❓ Frequently Asked Questions</h2>
-              <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto' }}>
-                {pkg.faqs.map((faq,i)=>(
-                  <div key={i} style={{ padding:'16px 20px', borderBottom:i<pkg.faqs.length-1?'1px solid var(--border)':'none' }}>
-                    <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:7 }}>Q. {faq.q}</div>
-                    <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7 }}>{faq.a}</div>
-                  </div>
-                ))}
-              </div>
+              <PackageFaqs faqs={pkg.faqs}/>
             </section>
           )}
 
@@ -893,10 +940,35 @@ export default async function PackageDetailPage({ params }) {
                 </>
               )}
             </div>
-            <div style={{ padding:16, background:'#fff', display:'flex', flexDirection:'column', gap:10 }}>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'13px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:14, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
-              <a href='tel:+917817996730' style={{ background:'var(--navy)', color:'#fff', padding:'12px', borderRadius:10, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call to Book</a>
-              ✉️ Send Enquiry Form
+            <div className="flex flex-col gap-2.5 bg-white p-4">
+              <a
+                href={`https://wa.me/${SITE.whatsapp}?text=${msg}`}
+                target="_blank" rel="nofollow noopener noreferrer"
+                className="block rounded-xl bg-[#25D366] px-4 py-3.5 text-center text-[14px]
+                           font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.32)]
+                           transition-all duration-200 hover:brightness-105
+                           motion-safe:hover:-translate-y-0.5"
+              >
+                💬 Book via WhatsApp
+              </a>
+              <a
+                href="tel:+917817996730"
+                className="block rounded-xl bg-navy px-4 py-3 text-center text-[13px] font-bold
+                           text-white transition-all duration-200 hover:bg-navy-mid
+                           motion-safe:hover:-translate-y-0.5"
+              >
+                📞 Call to Book
+              </a>
+              {/* Was a bare text node reading "✉️ Send Enquiry Form" with nothing
+                  wrapping it — now a working link to the enquiry form. */}
+              <Link
+                href="/contact"
+                className="block rounded-xl border border-slate-200 px-4 py-2.5 text-center
+                           text-[12.5px] font-bold text-navy transition-colors duration-200
+                           hover:border-navy hover:bg-navy-light"
+              >
+                ✉️ Send Enquiry Form
+              </Link>
             </div>
             <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
               {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',label:'Start',val:pkg.startCity},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(

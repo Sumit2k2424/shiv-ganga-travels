@@ -1,11 +1,18 @@
 "use client";
 import { useRef } from "react";
-import { AnimatePresence, motion, useInView, } from "motion/react";
+import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
 const getFilter = (v) => typeof v === "function" ? undefined : v.filter;
 export function BlurFade({ children, className, variant, duration = 0.4, delay = 0, offset = 6, direction = "down", inView = false, inViewMargin = "-50px", blur = "6px", ...props }) {
     const ref = useRef(null);
     const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
     const isInView = !inView || inViewResult;
+    // LOCAL PATCH (not upstream): motion animates via rAF-driven inline styles,
+    // so the site's global `prefers-reduced-motion` CSS rule cannot stop it.
+    // Opt out here instead and render the content plainly.
+    const shouldReduceMotion = useReducedMotion();
+    if (shouldReduceMotion) {
+        return (<div ref={ref} className={className} {...props}>{children}</div>);
+    }
     const defaultVariants = {
         hidden: {
             [direction === "left" || direction === "right" ? "x" : "y"]: direction === "right" || direction === "down" ? -offset : offset,
