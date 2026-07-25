@@ -17,7 +17,7 @@ import { REVIEWS, ASSURANCES, TEMPLES, GALLERY } from '@/data/experience';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { Section, Reveal, Stagger, SectionHead, Eyebrow, Pill, Facts } from '@/components/lux/primitives';
 import { FaqList, Gallery, ReviewsWall } from '@/components/lux/PackageSections';
-import KedarnathScene from '@/components/lux/KedarnathScene';
+import HeroScene from '@/components/lux/HeroScene';
 import Schema from './homeSchema';
 
 export const metadata = {
@@ -76,7 +76,7 @@ export default function HomePage() {
           brand's rather than the same stock frame every other
           operator licenses. */}
       <section className="lux-hero lux-hero--illustrated">
-        <KedarnathScene />
+        <HeroScene />
 
         <div className="lux-hero__body lux-wrap">
           <Reveal variant="fade">

@@ -893,6 +893,18 @@ html.lenis, html.lenis body { height: auto; }
 .lux-hero__body { position: relative; z-index: 2; padding-bottom: clamp(40px, 6vw, 76px); padding-top: clamp(52px, 7vw, 96px); }
 .lux-hero h1 { color: #fff; max-width: 20ch; }
 .lux-hero .lux-lede { font-size: clamp(0.95rem, 1.15vw, 1.075rem); }
+
+/* Second line of defence for legibility. The scene is already dark
+   enough on its own (see HeroScene.js for the measured ratios), but
+   package heroes sit on photography whose brightness we do not
+   control — a soft shadow costs nothing and holds white type on any
+   frame. Kept low and diffuse so it reads as depth, not as an
+   outline. */
+.lux-hero h1,
+.lux-hero .lux-lede,
+.lux-hero__v,
+.lux-hero__k,
+.lux-hero .lux-eyebrow { text-shadow: 0 1px 24px rgba(5, 13, 28, 0.7), 0 1px 3px rgba(5, 13, 28, 0.45); }
 .lux-hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -936,89 +948,127 @@ html.lenis, html.lenis body { height: auto; }
 /* The scene carries its own vignette, so the photo veil is not needed */
 .lux-hero--illustrated { background: #050f24; }
 
-/* Stars — uneven twinkle, never in sync */
-.k-star { animation: kTwinkle 5.5s ease-in-out infinite; transform-origin: center; }
-@keyframes kTwinkle {
-  0%, 100% { opacity: 0.18; }
-  50%      { opacity: 0.9; }
+/* ── Hero scene: sunrise over the Garhwal ────────────────
+   Contrast-first. All brightness lives above the ridge; the
+   silhouetted valley below carries the headline. See the measured
+   ratios in HeroScene.js. */
+
+/* The sun clears the ridge once, on load, then holds and breathes */
+.h-sunrise { animation: hSunUp 3.4s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes hSunUp {
+  from { transform: translateY(120px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+.h-sunglow { animation: hSunPulse 9s ease-in-out infinite; transform-origin: 880px 500px; }
+@keyframes hSunPulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.07); }
 }
 
-/* First light behind the massif, breathing very slowly */
-.k-dawn { animation: kDawn 14s ease-in-out infinite; transform-origin: 880px 560px; }
-@keyframes kDawn {
-  0%, 100% { opacity: 0.65; transform: scale(1); }
-  50%      { opacity: 1;    transform: scale(1.06); }
-}
-.k-firstlight { animation: kDawn 14s ease-in-out infinite; }
-
-/* Cloud bands drifting across at different speeds */
-.k-cloud--a { animation: kDrift 78s linear infinite; }
-.k-cloud--b { animation: kDriftBack 96s linear infinite; }
-@keyframes kDrift     { from { transform: translateX(-320px); } to { transform: translateX(1560px); } }
-@keyframes kDriftBack { from { transform: translateX(1560px); } to { transform: translateX(-420px); } }
-
-/* Mist layers — the valley never sits still */
-.k-mist--a { animation: kMist 42s ease-in-out infinite; }
-.k-mist--b { animation: kMist 58s ease-in-out infinite reverse; }
-.k-mist--c { animation: kMist 34s ease-in-out infinite; animation-delay: -12s; }
-@keyframes kMist {
-  0%, 100% { transform: translateX(-60px); opacity: 0.55; }
-  50%      { transform: translateX(60px);  opacity: 1; }
+/* Rays sweep slowly, the way light does through moving air */
+.h-rays { animation: hRays 34s ease-in-out infinite; transform-origin: 880px 500px; }
+@keyframes hRays {
+  0%, 100% { transform: rotate(-3deg); opacity: 0.55; }
+  50%      { transform: rotate(3deg);  opacity: 1; }
 }
 
-/* Aarti spilling from the doorway */
-.k-aarti { animation: kAarti 5s ease-in-out infinite; transform-origin: 720px 742px; }
-@keyframes kAarti {
-  0%, 100% { opacity: 0.5;  transform: scale(0.97); }
-  45%      { opacity: 0.95; transform: scale(1.05); }
-}
-.k-door   { animation: kAarti 5s ease-in-out infinite; }
-.k-kalash { animation: kGlint 6s ease-in-out infinite; transform-origin: 720px 592px; }
-@keyframes kGlint {
-  0%, 100% { opacity: 0.75; }
+/* Cloud banks drifting at three speeds so they never sync up */
+.h-cl--a { animation: hCloud 82s linear infinite; }
+.h-cl--b { animation: hCloudBack 104s linear infinite; }
+.h-cl--c { animation: hCloud 68s linear infinite; animation-delay: -25s; }
+@keyframes hCloud     { from { transform: translateX(-420px); } to { transform: translateX(1620px); } }
+@keyframes hCloudBack { from { transform: translateX(1620px); } to { transform: translateX(-520px); } }
+
+/* Alpenglow on the crests */
+.h-alpen { animation: hGlow 11s ease-in-out infinite; }
+@keyframes hGlow {
+  0%, 100% { opacity: 0.55; }
   50%      { opacity: 1; }
 }
-.k-flag { animation: kFlag 3.4s ease-in-out infinite; transform-origin: 721px 559px; }
-@keyframes kFlag {
-  0%, 100% { transform: scaleX(1);    }
-  50%      { transform: scaleX(0.82); }
-}
 
-/* Lamps along the approach path */
-.k-lamp { animation: kGlint 4s ease-in-out infinite; }
-
-/* Snow — drifts sideways as it falls, like it actually does up there */
-.k-flake {
-  animation-name: kFall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-@keyframes kFall {
-  0%   { transform: translate(0, 0);        opacity: 0; }
-  8%   { opacity: 0.85; }
-  92%  { opacity: 0.6; }
-  100% { transform: translate(-70px, 940px); opacity: 0; }
+/* Valley mist */
+.h-mist--a { animation: hMistDrift 46s ease-in-out infinite; }
+.h-mist--b { animation: hMistDrift 62s ease-in-out infinite reverse; }
+.h-mist--c { animation: hMistDrift 38s ease-in-out infinite; animation-delay: -14s; }
+@keyframes hMistDrift {
+  0%, 100% { transform: translateX(-70px); opacity: 0.5; }
+  50%      { transform: translateX(70px);  opacity: 1; }
 }
 
 /* Birds crossing the valley, long gaps between passes */
-.k-bird       { animation: kFly 26s linear infinite; }
-.k-bird--2    { animation: kFly 26s linear infinite; animation-delay: -3.5s; }
-.k-bird--3    { animation: kFly 26s linear infinite; animation-delay: -6s; }
-@keyframes kFly {
-  0%   { transform: translate(-60px, 300px);  opacity: 0; }
-  10%  { opacity: 0.7; }
-  85%  { opacity: 0.5; }
-  100% { transform: translate(1520px, 210px); opacity: 0; }
+.h-bird {
+  animation-name: hFlyAcross;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+@keyframes hFlyAcross {
+  0%   { transform: translate(-80px, var(--by)) scale(var(--bs)); opacity: 0; }
+  9%   { opacity: 0.55; }
+  86%  { opacity: 0.4; }
+  100% { transform: translate(1540px, calc(var(--by) - 70px)) scale(var(--bs)); opacity: 0; }
+}
+
+/* Mountain parallax */
+.h-drift { animation: hDrift 44s ease-in-out infinite; }
+@keyframes hDrift {
+  0%, 100% { transform: translateX(-14px) scale(1.01); }
+  50%      { transform: translateX(14px)  scale(1.03); }
+}
+
+/* ── The route drawing itself ─────────────────────────────
+   16s cycle: 8s to trace west to east, hold, fade, restart.
+   pathLength="1" normalises the dash maths so timing is
+   independent of the path's real length. */
+.h-route__line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hDraw 16s cubic-bezier(0.4, 0, 0.25, 1) infinite;
+  filter: drop-shadow(0 0 7px rgba(255, 233, 176, 0.75));
+}
+@keyframes hDraw {
+  0%        { stroke-dashoffset: 1; opacity: 0; }
+  4%        { opacity: 1; }
+  50%, 82%  { stroke-dashoffset: 0; opacity: 1; }
+  94%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* Each shrine ignites as the line arrives, then holds */
+.h-dham {
+  opacity: 0;
+  animation: hIgnite 16s ease-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes hIgnite {
+  0%, 4%    { opacity: 0; transform: scale(0.7); }
+  10%       { opacity: 1; transform: scale(1.14); }
+  16%, 82%  { opacity: 1; transform: scale(1); }
+  94%, 100% { opacity: 0; transform: scale(1); }
+}
+.h-dham__ring {
+  opacity: 0;
+  animation: hRing 16s ease-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes hRing {
+  0%, 5% { opacity: 0;   transform: scale(0.3); }
+  12%    { opacity: 0.9; transform: scale(1); }
+  26%    { opacity: 0;   transform: scale(1.9); }
+  100%   { opacity: 0;   transform: scale(1.9); }
 }
 
 /* Motion is a luxury, never a barrier: the scene holds a still frame */
 @media (prefers-reduced-motion: reduce) {
-  .k-star, .k-dawn, .k-firstlight, .k-cloud--a, .k-cloud--b,
-  .k-mist--a, .k-mist--b, .k-mist--c, .k-aarti, .k-door,
-  .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird,
-  .k-bird--2, .k-bird--3 { animation: none !important; }
-  .k-snowfall, .k-birds { display: none; }
-  .k-star { opacity: 0.6; }
+  .h-sunrise, .h-sunglow, .h-rays, .h-cl--a, .h-cl--b, .h-cl--c,
+  .h-alpen, .h-mist--a, .h-mist--b, .h-mist--c, .h-bird, .h-drift,
+  .h-route__line, .h-dham, .h-dham__ring { animation: none !important; }
+  /* Hold the finished frame: sun up, route drawn, all four lit */
+  .h-sunrise { transform: none; opacity: 1; }
+  .h-route__line { stroke-dashoffset: 0; opacity: 1; }
+  .h-dham { opacity: 1; }
+  .h-dham__ring, .h-bird { display: none; }
 }
 .lux-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(28px, 3.5vw, 40px); }
 .lux-hero__cue { position: absolute; right: var(--lux-gutter); bottom: 34px; z-index: 3; }
