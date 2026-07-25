@@ -1088,6 +1088,14 @@ html.lenis, html.lenis body { height: auto; }
   transform-box: fill-box;
   transform-origin: center;
 }
+
+/* On narrow viewports `slice` crops hard horizontally — only the
+   middle of the viewBox survives, so shrine names arrive clipped or
+   half off-frame. The markers and the drawn line still read; the
+   labels only add noise at that size. */
+@media (max-width: 900px) {
+  .h-dham text { display: none; }
+}
 @keyframes hRing {
   0%, 5% { opacity: 0;   transform: scale(0.3); }
   12%    { opacity: 0.9; transform: scale(1); }

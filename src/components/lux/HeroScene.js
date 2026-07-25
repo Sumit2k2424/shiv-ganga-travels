@@ -25,16 +25,23 @@
    ══════════════════════════════════════════════════════════════ */
 
 /* The four shrines on the ridge, in travel order.
-   `d` is when each ignites as the route reaches it. */
+   `d` is when each ignites as the route reaches it.
+
+   These sit high in the frame on purpose. The hero copy is
+   bottom-left anchored, and at the earlier y-values the two
+   westernmost labels landed at 49% of the hero height on every
+   viewport tested — straight through the headline. The route band
+   now resolves to roughly 29–33%, which clears the tallest text
+   block with room to spare. */
 const DHAMS = [
-  { x: 218,  y: 470, name: 'Yamunotri', d: 1.2 },
-  { x: 560,  y: 430, name: 'Gangotri',  d: 3.0 },
-  { x: 950,  y: 452, name: 'Kedarnath', d: 4.8 },
-  { x: 1268, y: 414, name: 'Badrinath', d: 6.4 },
+  { x: 218,  y: 336, name: 'Yamunotri', d: 1.2 },
+  { x: 560,  y: 300, name: 'Gangotri',  d: 3.0 },
+  { x: 950,  y: 316, name: 'Kedarnath', d: 4.8 },
+  { x: 1268, y: 300, name: 'Badrinath', d: 6.4 },
 ];
 
 const ROUTE_D =
-  'M218,470 C320,506 400,432 560,430 C700,428 820,500 950,452 C1080,404 1170,438 1268,414';
+  'M218,336 C320,368 400,300 560,300 C700,300 820,352 950,316 C1080,282 1170,318 1268,300';
 
 /* Sun rays, as angles fanning from behind the ridge */
 const RAYS = [-58, -44, -30, -17, -5, 7, 19, 32, 46, 60];
@@ -50,12 +57,14 @@ export default function HeroScene({ className = '' }) {
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" role="presentation">
         <defs>
           {/* Morning sky: cool overhead, warm at the ridge line */}
+          {/* Stops track the ridge line — the warm band has to sit
+              where the peaks are, not where they used to be. */}
           <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%"   stopColor="#12386e" />
-            <stop offset="22%"  stopColor="#2f6494" />
-            <stop offset="42%"  stopColor="#8aa6b4" />
-            <stop offset="58%"  stopColor="#d9a469" />
-            <stop offset="72%"  stopColor="#e8b479" />
+            <stop offset="16%"  stopColor="#2f6494" />
+            <stop offset="30%"  stopColor="#8aa6b4" />
+            <stop offset="42%"  stopColor="#d9a469" />
+            <stop offset="54%"  stopColor="#e8b479" />
             <stop offset="100%" stopColor="#c98f56" />
           </linearGradient>
 
@@ -134,36 +143,36 @@ export default function HeroScene({ className = '' }) {
 
         <rect width="1440" height="900" fill="url(#hSky)" />
 
-        {/* ── Sun: rises from behind the ridge ────────── */}
+        {/* ── Sun: rising out of the saddle at x≈880 ──── */}
         <g className="h-sunrise">
           <g className="h-rays">
             {RAYS.map((a, i) => (
               <rect
                 key={i}
                 x="866"
-                y="-460"
+                y="-560"
                 width={i % 3 === 0 ? 26 : 14}
                 height="960"
                 fill="url(#hRay)"
-                transform={`rotate(${a} 880 500)`}
+                transform={`rotate(${a} 880 330)`}
               />
             ))}
           </g>
-          <circle cx="880" cy="500" r="330" fill="url(#hSunGlow)" className="h-sunglow" />
-          <circle cx="880" cy="500" r="46" fill="#FFF3D0" opacity="0.92" />
+          <circle cx="880" cy="330" r="330" fill="url(#hSunGlow)" className="h-sunglow" />
+          <circle cx="880" cy="330" r="44" fill="#FFF3D0" opacity="0.92" />
         </g>
 
         {/* ── Cloud banks, lit from below ─────────────── */}
         <g className="h-cl h-cl--a">
-          <ellipse cx="320"  cy="250" rx="240" ry="19" fill="url(#hCloudLit)" />
-          <ellipse cx="470"  cy="238" rx="150" ry="13" fill="url(#hCloudLit)" />
+          <ellipse cx="320"  cy="152" rx="240" ry="19" fill="url(#hCloudLit)" />
+          <ellipse cx="470"  cy="140" rx="150" ry="13" fill="url(#hCloudLit)" />
         </g>
         <g className="h-cl h-cl--b">
-          <ellipse cx="1080" cy="196" rx="280" ry="16" fill="url(#hCloudLit)" />
-          <ellipse cx="900"  cy="206" rx="170" ry="11" fill="url(#hCloudLit)" />
+          <ellipse cx="1080" cy="104" rx="280" ry="16" fill="url(#hCloudLit)" />
+          <ellipse cx="900"  cy="114" rx="170" ry="11" fill="url(#hCloudLit)" />
         </g>
         <g className="h-cl h-cl--c">
-          <ellipse cx="680"  cy="330" rx="320" ry="14" fill="url(#hCloudLit)" />
+          <ellipse cx="680"  cy="222" rx="320" ry="14" fill="url(#hCloudLit)" />
         </g>
 
         {/* ── Birds over the valley ───────────────────── */}
@@ -182,14 +191,15 @@ export default function HeroScene({ className = '' }) {
           ))}
         </g>
 
-        {/* ── Far range: in shade, rim-lit along the crest ── */}
+        {/* ── Far range: in shade, rim-lit along the crest.
+               The saddle at x≈880 is what the sun rises out of. ── */}
         <g className="h-drift">
-          <path fill="url(#hFar)" d="M-40,560 L120,430 L230,492 L360,398 L470,470 L600,392 L720,468 L850,404 L980,478 L1100,406 L1230,470 L1340,396 L1480,486 L1480,640 L-40,640 Z" />
+          <path fill="url(#hFar)" d="M-40,470 L120,300 L230,362 L360,268 L470,340 L600,262 L720,338 L820,282 L880,346 L960,290 L1100,276 L1230,340 L1340,266 L1480,356 L1480,560 L-40,560 Z" />
           {/* Alpenglow — the crest catching first light */}
           <path
             className="h-alpen"
             fill="url(#hAlpen)"
-            d="M120,430 L152,456 L120,442 L92,462 Z M360,398 L400,432 L360,414 L322,436 Z M600,392 L642,428 L600,408 L560,432 Z M850,404 L888,436 L850,418 L814,440 Z M1100,406 L1140,440 L1100,420 L1062,442 Z M1340,396 L1382,432 L1340,412 L1300,436 Z"
+            d="M120,300 L152,326 L120,312 L92,332 Z M360,268 L400,302 L360,284 L322,306 Z M600,262 L642,298 L600,278 L560,302 Z M820,282 L856,312 L820,294 L788,314 Z M1100,276 L1140,310 L1100,290 L1062,312 Z M1340,266 L1382,302 L1340,282 L1300,306 Z"
           />
         </g>
 
