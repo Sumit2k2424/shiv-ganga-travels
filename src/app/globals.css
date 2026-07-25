@@ -2975,3 +2975,84 @@ a, button { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 560px) {
   .dos-long { display: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   shadcn/ui + MagicUI TOKEN LAYER
+   ──────────────────────────────────────────────────────────────
+   Added by the shadcn/MagicUI install. These are ADDITIVE only —
+   every variable above this line is untouched.
+
+   Each shadcn semantic token is mapped to the Shiv Ganga palette
+   so components pulled from either registry inherit the brand
+   automatically instead of arriving slate-grey.
+
+     --primary      → navy       #0F2B5B
+     --secondary    → gold       #E8920A
+     --accent       → navy-light #E8F0FB
+     --chart-3      → teal       #0B7B8B
+
+   These are standard shadcn token names, so any component copied
+   from either registry works verbatim. Nothing above collides: an
+   audit of src/ found zero Tailwind colour utilities in use — the
+   site styles entirely through inline styles and the classes
+   defined above this block.
+────────────────────────────────────────────────────────────── */
+:root {
+  --background:            225 40% 98%;    /* #F8F9FC — page bg   */
+  --foreground:            222 47% 11%;    /* #0F172A — body text */
+
+  --card:                  0 0% 100%;
+  --card-foreground:       222 47% 11%;
+  --popover:               0 0% 100%;
+  --popover-foreground:    222 47% 11%;
+
+  --primary:               218 72% 21%;    /* navy      #0F2B5B */
+  --primary-foreground:    0 0% 100%;
+  --secondary:             37 92% 47%;     /* gold      #E8920A */
+  --secondary-foreground:  218 72% 21%;    /* navy on gold — 5.9:1 */
+
+  --accent:                215 70% 95%;    /* navy-light #E8F0FB */
+  --accent-foreground:     218 72% 21%;
+
+  --muted:                 210 40% 96%;    /* #F1F5F9 surface   */
+  --muted-foreground:      215 16% 47%;    /* #64748B meta text */
+
+  --destructive:           0 72% 51%;      /* #DC2626 */
+  --destructive-foreground: 0 0% 100%;
+
+  --border:                214 32% 91%;    /* #E2E8F0 */
+  --input:                 214 32% 91%;
+  --ring:                  218 72% 21%;    /* navy focus ring */
+
+  --chart-1:               218 72% 21%;    /* navy      */
+  --chart-2:               37 92% 47%;     /* gold      */
+  --chart-3:               188 85% 29%;    /* teal      */
+  --chart-4:               216 64% 28%;    /* navy-mid  */
+  --chart-5:               36 92% 40%;     /* gold-dark */
+
+  --radius:                0.75rem;        /* matches --r: 12px */
+}
+
+/* Inert unless a `dark` class is placed on <html>. Provided so shadcn
+   components degrade sensibly if dark mode is ever switched on. */
+.dark {
+  --background:            219 75% 15%;    /* #0A1F45 */
+  --foreground:            0 0% 100%;
+  --card:                  218 72% 21%;
+  --card-foreground:       0 0% 100%;
+  --popover:               218 72% 21%;
+  --popover-foreground:    0 0% 100%;
+  --primary:               215 70% 95%;
+  --primary-foreground:    218 72% 21%;
+  --secondary:             37 92% 47%;
+  --secondary-foreground:  218 72% 21%;
+  --accent:                216 64% 28%;
+  --accent-foreground:     0 0% 100%;
+  --muted:                 216 64% 28%;
+  --muted-foreground:      215 30% 75%;
+  --destructive:           0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border:                216 64% 28%;
+  --input:                 216 64% 28%;
+  --ring:                  215 70% 95%;
+}
