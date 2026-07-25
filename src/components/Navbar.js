@@ -24,6 +24,8 @@ import { AnimatePresence, motion } from 'motion/react';
 import { SITE } from '@/data/packages';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import LogoMark from '@/components/lux/LogoMark';
+import { SOCIAL_LIVE } from '@/data/social';
+import { SocialRow } from '@/components/lux/SocialIcons';
 
 /* ── Navigation model ───────────────────────────────────────── */
 
@@ -277,7 +279,10 @@ export default function Navbar() {
               style={{ alignItems: 'center', gap: 8, fontSize: 12.5, fontWeight: 600, color: ink, textDecoration: 'none', letterSpacing: '0.02em', transition: 'color .4s' }}
             >
               <Icon name="phone" size={14} />
-              <span className="hidden xl:inline">{SITE.phone}</span>
+              {/* `hidden xl:inline` was hiding this at every width — this
+                  codebase's hand-rolled utility block has md: and lg: but
+                  never defined xl:, so the number never rendered. */}
+              <span className="lux-phone-num">{SITE.phone}</span>
             </a>
 
             <a
@@ -403,6 +408,12 @@ export default function Navbar() {
                 <a href={`tel:${SITE.phone.replace(/-/g, '')}`} className="lux-btn lux-btn--ghost lux-btn--wide">
                   <Icon name="phone" size={14} /> {SITE.phone}
                 </a>
+
+                {SOCIAL_LIVE.length > 0 && (
+                  <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 18, marginTop: 4, borderTop: '1px solid var(--rule)' }}>
+                    <SocialRow accounts={SOCIAL_LIVE} tone="dark" size={18} />
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

@@ -767,6 +767,42 @@ html.lenis, html.lenis body { height: auto; }
   .lux-nav-link::after { left: 16px; right: 16px; }
 }
 
+/* Phone number beside the icon. Shown wherever the phone link itself
+   is (768px up); below that the number lives in the mobile menu as a
+   full-width tap target instead. */
+.lux-phone-num { display: none; white-space: nowrap; }
+@media (min-width: 768px) { .lux-phone-num { display: inline; } }
+
+/* ── Social ─────────────────────────────────────────────── */
+.lux-social {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lux-social a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--rule-light-soft);
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition: color 0.35s var(--ease-lux), border-color 0.35s var(--ease-lux),
+              background 0.35s var(--ease-lux);
+}
+.lux-social a:hover {
+  color: var(--gold);
+  border-color: var(--gold-hair);
+  background: var(--gold-wash);
+}
+.lux-social--dark a { border-color: var(--rule); color: var(--ink-faint); }
+.lux-social--dark a:hover { color: var(--gold-dark); border-color: var(--gold-hair); }
+.lux-social a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 .lux-nav-link {
   position: relative;
   padding: 10px 16px;

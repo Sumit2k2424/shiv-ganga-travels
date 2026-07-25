@@ -8,6 +8,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import LuxMotion from '@/components/lux/LuxMotion';
 import { SITE } from '@/data/packages';
+import { SOCIAL_SAME_AS } from '@/data/social';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({
@@ -296,7 +297,10 @@ function SiteSchema() {
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
-      'https://www.instagram.com/shivgangatravels/',
+      // Social profiles come from src/data/social.js — verified ones only.
+      // A 404 in sameAs damages knowledge-panel trust, so unconfirmed
+      // accounts are deliberately left out until their URL is filled in.
+      ...SOCIAL_SAME_AS,
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       'https://www.tripadvisor.com/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html',
       `https://wa.me/${SITE.whatsapp}`,

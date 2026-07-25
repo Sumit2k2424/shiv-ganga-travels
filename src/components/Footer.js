@@ -14,6 +14,8 @@ import { SITE } from '@/data/packages';
 import { REVIEWS } from '@/data/experience';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import { COLS, LANGUAGE_COL } from '@/components/footerLinks';
+import { SOCIAL_LIVE } from '@/data/social';
+import { SocialRow } from '@/components/lux/SocialIcons';
 
 const WA_HREF = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
   'Namaste! I want to plan a Char Dham Yatra for 2026. Please share options.'
@@ -45,6 +47,15 @@ export default function Footer() {
                 <Icon name="phone" size={14} /> {SITE.phone}
               </a>
             </div>
+
+            {SOCIAL_LIVE.length > 0 && (
+              <div style={{ marginTop: 30 }}>
+                <span className="lux-facts__k" style={{ display: 'block', marginBottom: 12, color: 'rgba(255,255,255,0.44)' }}>
+                  Follow the yatra
+                </span>
+                <SocialRow accounts={SOCIAL_LIVE} />
+              </div>
+            )}
           </div>
 
           <dl className="lux-facts lux-footer__facts">
@@ -127,7 +138,9 @@ export default function Footer() {
             <Link href="/sitemap-page">Sitemap</Link>
             <Link href="/review">Leave a review</Link>
             <a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer">Google</a>
-            <a href="https://www.instagram.com/shivgangatravels/" target="_blank" rel="nofollow noopener noreferrer">Instagram</a>
+            {SOCIAL_LIVE.map((s) => (
+              <a key={s.id} href={s.url} target="_blank" rel="me noopener noreferrer">{s.label}</a>
+            ))}
           </div>
         </div>
       </div>
