@@ -559,11 +559,28 @@ html.lenis, html.lenis body { height: auto; }
   position: sticky;
   top: -34px;
   z-index: 100;
-  transition: transform 0.5s var(--ease-lux);
+  transition: transform 0.5s var(--ease-lux), box-shadow 0.4s var(--ease-lux);
 }
 .lux-headwrap.is-hidden { transform: translate3d(0, -100%, 0); }
+/* Lifts off the page once you start reading, not before */
+.lux-headwrap.is-scrolled { box-shadow: 0 18px 34px -30px rgba(11, 27, 56, 0.5); }
 
-.lux-utility { background: var(--ink); height: 34px; }
+/* ── Utility strip ──────────────────────────────────────────
+   Deep navy with a touch of gradient and a gold hairline at the
+   bottom edge — the two-tone (dark bar over paper bar) is what
+   makes the header read as a designed object rather than a
+   floating overlay. */
+.lux-utility {
+  height: 34px;
+  background: linear-gradient(180deg, var(--ink) 0%, #0d2148 100%);
+  border-bottom: 1px solid var(--gold-hair);
+}
+.lux-utility__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
 .lux-utility__right { display: none; align-items: center; gap: 20px; flex: none; }
 @media (min-width: 1024px) { .lux-utility__right { display: flex; } }
 
@@ -575,14 +592,27 @@ html.lenis, html.lenis body { height: auto; }
    Everything animated is a transform or an opacity, so it stays
    on the compositor and never triggers layout. */
 
+/* Centre-left: the ticker centres itself inside the space left of the
+   season/email block, so it sits mid-bar rather than jammed against
+   the edge. Collapses to flush-left on phones where there is no
+   spare width to centre within. */
 .lux-ticker {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 11px;
   margin: 0;
   min-width: 0;
+  flex: 1;
   height: 100%;
 }
+.lux-ticker__inner {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+@media (max-width: 1023px) { .lux-ticker { justify-content: flex-start; } }
 
 /* The gold marker: a slow pulse, so the eye is drawn to the line
    without anything blinking at it. */
@@ -616,7 +646,7 @@ html.lenis, html.lenis body { height: auto; }
   height: 34px;
   overflow: hidden;
   min-width: 0;
-  flex: 1;
+  flex: 0 1 auto;
   /* Feathered right edge so a long credential on a narrow phone
      dissolves instead of colliding with the email address. */
   -webkit-mask-image: linear-gradient(90deg, #000 84%, transparent 100%);
@@ -660,23 +690,15 @@ html.lenis, html.lenis body { height: auto; }
   .lux-ticker__mark::after { animation: none; }
 }
 
+/* ── Header bar ─────────────────────────────────────────────
+   Always opaque paper. Photography belongs in the hero, not
+   behind the navigation — a header that lets an image through
+   is unreadable half the time and reads as a template the rest. */
 .lux-header {
   height: 76px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  background: transparent;
-  transition: background 0.4s var(--ease-lux), border-color 0.4s var(--ease-lux);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--paper) 100%);
+  border-bottom: 1px solid var(--rule);
 }
-.lux-headwrap.is-solid .lux-header {
-  background: rgba(251, 250, 247, 0.92);
-  backdrop-filter: saturate(180%) blur(18px);
-  -webkit-backdrop-filter: saturate(180%) blur(18px);
-  border-bottom-color: var(--rule);
-}
-
-/* Cinematic pages let the hero run up behind the transparent header.
-   Every .lux-hero on the site is the leading section of its page, and
-   .lux-hero__body already carries 140px of top padding to clear it. */
-.lux-hero { margin-top: -110px; }
 
 /* Desktop menu / burger — display owned by CSS so the breakpoint
    actually holds (an inline display beats any class). */
@@ -800,9 +822,11 @@ html.lenis, html.lenis body { height: auto; }
    12 · PACKAGE PAGE — hero
    ══════════════════════════════════════════════════════════════ */
 
+/* The header is opaque and 110px tall, so the hero fills exactly what
+   is left of the viewport rather than pushing the fold off-screen. */
 .lux-hero {
   position: relative;
-  min-height: min(100svh, 940px);
+  min-height: min(calc(100svh - 110px), 900px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -820,7 +844,7 @@ html.lenis, html.lenis body { height: auto; }
     linear-gradient(180deg, rgba(11,27,56,0.58) 0%, rgba(11,27,56,0.18) 32%, rgba(11,27,56,0.78) 76%, rgba(11,27,56,0.94) 100%),
     linear-gradient(90deg, rgba(11,27,56,0.5) 0%, rgba(11,27,56,0) 62%);
 }
-.lux-hero__body { position: relative; z-index: 2; padding-bottom: clamp(40px, 6vw, 76px); padding-top: 140px; }
+.lux-hero__body { position: relative; z-index: 2; padding-bottom: clamp(40px, 6vw, 76px); padding-top: clamp(52px, 7vw, 96px); }
 .lux-hero h1 { color: #fff; max-width: 17ch; }
 .lux-hero__meta {
   display: flex;

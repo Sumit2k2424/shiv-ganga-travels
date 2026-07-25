@@ -82,14 +82,15 @@ function CredentialTicker() {
         {`Shiv Ganga Travels — founded by a retired Indian Army officer. Direct operator in Haridwar since ${SITE.established}, zero agent commission, 50,000+ pilgrims served.`}
       </span>
 
-      <span className="lux-ticker__mark" aria-hidden="true" />
-
-      <span className="lux-ticker__win" aria-hidden="true">
-        <span className="lux-ticker__list">
-          {/* The repeat of index 0 at the end is what makes the loop seamless */}
-          {[...CREDENTIALS, CREDENTIALS[0]].map((text, i) => (
-            <span className="lux-ticker__row" key={i}>{text}</span>
-          ))}
+      <span className="lux-ticker__inner" aria-hidden="true">
+        <span className="lux-ticker__mark" />
+        <span className="lux-ticker__win">
+          <span className="lux-ticker__list">
+            {/* The repeat of index 0 at the end is what makes the loop seamless */}
+            {[...CREDENTIALS, CREDENTIALS[0]].map((text, i) => (
+              <span className="lux-ticker__row" key={i}>{text}</span>
+            ))}
+          </span>
         </span>
       </span>
     </p>
@@ -125,16 +126,10 @@ export default function Navbar() {
   const lastY = useRef(0);
   const headerRef = useRef(null);
 
-  /* Pages that open with a full-bleed cinematic hero get a transparent header.
-     This list must match exactly the pages that render `.lux-hero` as their
-     first section — a transparent header over an ordinary light page renders
-     white nav text on white background, i.e. an invisible menu. */
-  const overHero =
-    pathname === '/' ||
-    pathname === '/packages' ||
-    pathname?.startsWith('/packages/');
-
-  const solid = scrolled || !overHero || !!openMenu || mobileOpen;
+  /* The header carries its own background on every page — dark strip over a
+     paper bar. It never goes transparent, so hero photography is never the
+     thing sitting behind the navigation. `scrolled` only deepens the
+     hairline and shadow slightly. */
 
   /* Scroll state: elevation + hide-on-scroll-down */
   useEffect(() => {
@@ -185,8 +180,8 @@ export default function Navbar() {
     []
   );
 
-  const ink = solid ? 'var(--ink)' : '#fff';
-  const faint = solid ? 'var(--ink-faint)' : 'rgba(255,255,255,0.72)';
+  const ink = 'var(--ink)';
+  const faint = 'var(--ink-faint)';
 
   return (
     <>
@@ -198,10 +193,10 @@ export default function Navbar() {
           the top half of the navigation under the strip. */}
       <div
         ref={headerRef}
-        className={`lux-headwrap${solid ? ' is-solid' : ''}${hidden ? ' is-hidden' : ''}`}
+        className={`lux-headwrap${scrolled ? ' is-scrolled' : ''}${hidden ? ' is-hidden' : ''}`}
       >
         <div className="lux-utility">
-          <div className="lux-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, height: '100%' }}>
+          <div className="lux-wrap lux-utility__row">
             <CredentialTicker />
             <div className="lux-utility__right">
               <span style={{ fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 600 }}>
@@ -256,7 +251,7 @@ export default function Navbar() {
               href={WA_HREF}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className={`lux-btn ${solid ? 'lux-btn--ink' : 'lux-btn--ghost-light'} lux-from-md`}
+              className="lux-btn lux-btn--ink lux-from-md"
               style={{ padding: '12px 22px', minHeight: 42 }}
             >
               <WhatsAppIcon size={14} />
