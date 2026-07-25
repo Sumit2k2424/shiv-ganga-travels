@@ -50,10 +50,13 @@
   color: var(--ink);
   text-wrap: balance;
 }
-.lux-display--xl { font-size: clamp(2.6rem, 7.2vw, 5.6rem); }
-.lux-display--lg { font-size: clamp(2.1rem, 5vw, 3.7rem); }
-.lux-display--md { font-size: clamp(1.7rem, 3.4vw, 2.6rem); letter-spacing: -0.018em; }
-.lux-display--sm { font-size: clamp(1.35rem, 2.2vw, 1.85rem); letter-spacing: -0.014em; }
+/* Dialled back from the first pass — the xl was topping out at 5.6rem,
+   which reads as a poster rather than a masthead and pushed the hero
+   metadata below the fold on laptops. */
+.lux-display--xl { font-size: clamp(1.95rem, 4.4vw, 3.5rem); }
+.lux-display--lg { font-size: clamp(1.7rem, 3.2vw, 2.6rem); }
+.lux-display--md { font-size: clamp(1.4rem, 2.4vw, 1.95rem); letter-spacing: -0.018em; }
+.lux-display--sm { font-size: clamp(1.15rem, 1.8vw, 1.4rem); letter-spacing: -0.014em; }
 
 /* Optical italic accent used sparingly for one word in a headline */
 .lux-accent {
@@ -562,6 +565,12 @@ html.lenis, html.lenis body { height: auto; }
   transition: transform 0.5s var(--ease-lux), box-shadow 0.4s var(--ease-lux);
 }
 .lux-headwrap.is-hidden { transform: translate3d(0, -100%, 0); }
+
+/* Belt and braces for the mobile pinning above: even if `is-hidden`
+   were somehow set on a phone, CSS refuses to retract the bar. */
+@media (max-width: 1079px) {
+  .lux-headwrap.is-hidden { transform: none; }
+}
 /* Lifts off the page once you start reading, not before */
 .lux-headwrap.is-scrolled { box-shadow: 0 18px 34px -30px rgba(11, 27, 56, 0.5); }
 
@@ -582,7 +591,7 @@ html.lenis, html.lenis body { height: auto; }
   height: 100%;
 }
 .lux-utility__right { display: none; align-items: center; gap: 20px; flex: none; }
-@media (min-width: 1024px) { .lux-utility__right { display: flex; } }
+@media (min-width: 1080px) { .lux-utility__right { display: flex; } }
 
 /* ── Credential ticker ──────────────────────────────────────
    Departure-board roll, not a marquee. Four credentials, each
@@ -612,7 +621,7 @@ html.lenis, html.lenis body { height: auto; }
   gap: 11px;
   min-width: 0;
 }
-@media (max-width: 1023px) { .lux-ticker { justify-content: flex-start; } }
+@media (max-width: 1079px) { .lux-ticker { justify-content: flex-start; } }
 
 /* The gold marker: a slow pulse, so the eye is drawn to the line
    without anything blinking at it. */
@@ -700,25 +709,62 @@ html.lenis, html.lenis body { height: auto; }
   border-bottom: 1px solid var(--rule);
 }
 
-/* Desktop menu / burger — display owned by CSS so the breakpoint
-   actually holds (an inline display beats any class). */
+/* ── Menu / burger breakpoints ──────────────────────────────
+   The first pass moved the nav to a 1024px breakpoint, which put a
+   burger on tablets and small laptops that previously showed links.
+   The bar now carries four links from 768px and all six from 1080px;
+   only true phone widths get the burger. */
 .lux-nav { display: none; }
+.lux-nav-link--wide { display: none; }
+
 .lux-burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   height: 44px;
   border: 0;
   background: none;
   cursor: pointer;
-  padding: 0 8px;
-  margin-right: -8px;
+  padding: 0 4px;
+  margin-right: -4px;
+  font-family: var(--font);
 }
-@media (min-width: 1024px) {
+.lux-burger__bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 22px;
+  flex: none;
+}
+.lux-burger__bars > span {
+  display: block;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.4s var(--ease-lux), opacity 0.3s;
+}
+.lux-burger__label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+@media (min-width: 768px) {
   .lux-nav { display: flex; }
   .lux-burger { display: none; }
+  /* Tighter spacing in the 768–1080 band so four links plus the
+     logo and the WhatsApp CTA fit without wrapping */
+  .lux-nav { margin-left: 20px !important; }
+  .lux-nav-link { padding: 10px 11px; font-size: 0.6875rem; letter-spacing: 0.1em; }
+  .lux-nav-link::after { left: 11px; right: 11px; }
+}
+@media (min-width: 1080px) {
+  .lux-nav-link--wide { display: inline-flex; }
+  .lux-nav { margin-left: 44px !important; }
+  .lux-nav-link { padding: 10px 16px; font-size: 0.75rem; letter-spacing: 0.13em; }
+  .lux-nav-link::after { left: 16px; right: 16px; }
 }
 
 .lux-nav-link {
@@ -845,7 +891,8 @@ html.lenis, html.lenis body { height: auto; }
     linear-gradient(90deg, rgba(11,27,56,0.5) 0%, rgba(11,27,56,0) 62%);
 }
 .lux-hero__body { position: relative; z-index: 2; padding-bottom: clamp(40px, 6vw, 76px); padding-top: clamp(52px, 7vw, 96px); }
-.lux-hero h1 { color: #fff; max-width: 17ch; }
+.lux-hero h1 { color: #fff; max-width: 20ch; }
+.lux-hero .lux-lede { font-size: clamp(0.95rem, 1.15vw, 1.075rem); }
 .lux-hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -871,10 +918,107 @@ html.lenis, html.lenis body { height: auto; }
   display: block;
   margin-top: 8px;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #fff;
   font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   12b · KEDARNATH SCENE
+   Flat-vector hero illustration. Every animation below is a
+   transform or an opacity, so the scene stays on the compositor.
+   ══════════════════════════════════════════════════════════════ */
+
+.k-scene { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+.k-scene svg { width: 100%; height: 100%; display: block; }
+
+/* The scene carries its own vignette, so the photo veil is not needed */
+.lux-hero--illustrated { background: #050f24; }
+
+/* Stars — uneven twinkle, never in sync */
+.k-star { animation: kTwinkle 5.5s ease-in-out infinite; transform-origin: center; }
+@keyframes kTwinkle {
+  0%, 100% { opacity: 0.18; }
+  50%      { opacity: 0.9; }
+}
+
+/* First light behind the massif, breathing very slowly */
+.k-dawn { animation: kDawn 14s ease-in-out infinite; transform-origin: 880px 560px; }
+@keyframes kDawn {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.06); }
+}
+.k-firstlight { animation: kDawn 14s ease-in-out infinite; }
+
+/* Cloud bands drifting across at different speeds */
+.k-cloud--a { animation: kDrift 78s linear infinite; }
+.k-cloud--b { animation: kDriftBack 96s linear infinite; }
+@keyframes kDrift     { from { transform: translateX(-320px); } to { transform: translateX(1560px); } }
+@keyframes kDriftBack { from { transform: translateX(1560px); } to { transform: translateX(-420px); } }
+
+/* Mist layers — the valley never sits still */
+.k-mist--a { animation: kMist 42s ease-in-out infinite; }
+.k-mist--b { animation: kMist 58s ease-in-out infinite reverse; }
+.k-mist--c { animation: kMist 34s ease-in-out infinite; animation-delay: -12s; }
+@keyframes kMist {
+  0%, 100% { transform: translateX(-60px); opacity: 0.55; }
+  50%      { transform: translateX(60px);  opacity: 1; }
+}
+
+/* Aarti spilling from the doorway */
+.k-aarti { animation: kAarti 5s ease-in-out infinite; transform-origin: 720px 742px; }
+@keyframes kAarti {
+  0%, 100% { opacity: 0.5;  transform: scale(0.97); }
+  45%      { opacity: 0.95; transform: scale(1.05); }
+}
+.k-door   { animation: kAarti 5s ease-in-out infinite; }
+.k-kalash { animation: kGlint 6s ease-in-out infinite; transform-origin: 720px 592px; }
+@keyframes kGlint {
+  0%, 100% { opacity: 0.75; }
+  50%      { opacity: 1; }
+}
+.k-flag { animation: kFlag 3.4s ease-in-out infinite; transform-origin: 721px 559px; }
+@keyframes kFlag {
+  0%, 100% { transform: scaleX(1);    }
+  50%      { transform: scaleX(0.82); }
+}
+
+/* Lamps along the approach path */
+.k-lamp { animation: kGlint 4s ease-in-out infinite; }
+
+/* Snow — drifts sideways as it falls, like it actually does up there */
+.k-flake {
+  animation-name: kFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes kFall {
+  0%   { transform: translate(0, 0);        opacity: 0; }
+  8%   { opacity: 0.85; }
+  92%  { opacity: 0.6; }
+  100% { transform: translate(-70px, 940px); opacity: 0; }
+}
+
+/* Birds crossing the valley, long gaps between passes */
+.k-bird       { animation: kFly 26s linear infinite; }
+.k-bird--2    { animation: kFly 26s linear infinite; animation-delay: -3.5s; }
+.k-bird--3    { animation: kFly 26s linear infinite; animation-delay: -6s; }
+@keyframes kFly {
+  0%   { transform: translate(-60px, 300px);  opacity: 0; }
+  10%  { opacity: 0.7; }
+  85%  { opacity: 0.5; }
+  100% { transform: translate(1520px, 210px); opacity: 0; }
+}
+
+/* Motion is a luxury, never a barrier: the scene holds a still frame */
+@media (prefers-reduced-motion: reduce) {
+  .k-star, .k-dawn, .k-firstlight, .k-cloud--a, .k-cloud--b,
+  .k-mist--a, .k-mist--b, .k-mist--c, .k-aarti, .k-door,
+  .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird,
+  .k-bird--2, .k-bird--3 { animation: none !important; }
+  .k-snowfall, .k-birds { display: none; }
+  .k-star { opacity: 0.6; }
 }
 .lux-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(28px, 3.5vw, 40px); }
 .lux-hero__cue { position: absolute; right: var(--lux-gutter); bottom: 34px; z-index: 3; }

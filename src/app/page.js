@@ -17,6 +17,7 @@ import { REVIEWS, ASSURANCES, TEMPLES, GALLERY } from '@/data/experience';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { Section, Reveal, Stagger, SectionHead, Eyebrow, Pill, Facts } from '@/components/lux/primitives';
 import { FaqList, Gallery, ReviewsWall } from '@/components/lux/PackageSections';
+import KedarnathScene from '@/components/lux/KedarnathScene';
 import Schema from './homeSchema';
 
 export const metadata = {
@@ -46,8 +47,6 @@ export const metadata = {
   alternates: { canonical: 'https://www.shivgangatravels.com' },
 };
 
-const HERO = 'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg';
-
 const DHAMS = [
   { id: 'yamunotri', href: '/yamunotri-yatra', order: 'First' },
   { id: 'gangotri',  href: '/gangotri-yatra',  order: 'Second' },
@@ -70,22 +69,14 @@ export default function HomePage() {
     <>
       <Schema />
 
-      {/* ══ COVER ════════════════════════════════════════════ */}
-      <section className="lux-hero">
-        <div className="lux-hero__media" data-lux-parallax="0.1">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={pxAt(HERO, 1920, 1280)}
-            srcSet={pxSrcSet(HERO, [[750, 1000], [1200, 1400], [1920, 1280]])}
-            sizes="100vw"
-            alt="Kedarnath Temple below snow-covered Himalayan peaks — Char Dham Yatra 2026 from Haridwar"
-            fetchPriority="high"
-            decoding="sync"
-            width={1920}
-            height={1280}
-          />
-        </div>
-        <div className="lux-hero__veil" aria-hidden="true" />
+      {/* ══ COVER ════════════════════════════════════════════
+          Illustrated rather than photographed. It renders instantly
+          (no image request, so nothing to wait on for LCP), it is
+          sharp at every resolution, and it is unmistakably this
+          brand's rather than the same stock frame every other
+          operator licenses. */}
+      <section className="lux-hero lux-hero--illustrated">
+        <KedarnathScene />
 
         <div className="lux-hero__body lux-wrap">
           <Reveal variant="fade">

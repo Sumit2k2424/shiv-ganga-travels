@@ -5,8 +5,12 @@
 
    Behaviour
    ─────────
-   · Sits transparent over a cinematic hero, turns to paper on scroll
-   · Hides on scroll-down, returns on scroll-up (reading gets the screen)
+   · Opaque on every page: dark credential strip over a paper bar.
+     Photography never sits behind the navigation.
+   · Nav links from 768px (four) and 1080px (all six). Only true
+     phone widths get the burger, and it is labelled "Menu".
+   · Retracts on scroll-down at desktop widths only — pinned on
+     mobile, where the menu and call button matter more than 76px.
    · Mega-menu panels with real photography, not a list of links
    · Full-screen mobile overlay with staggered entry
 
@@ -41,11 +45,15 @@ const CAB_LINKS = [
   { label: 'Delhi → Haridwar',      href: '/delhi-to-haridwar-cab',       sub: '210 km · 4–5 hrs · from ₹2,800',        icon: 'car' },
 ];
 
+/* `wide: true` links only appear once there is room for six items.
+   Between 768px and 1080px the bar carries the four that earn their
+   place; About and Contact live in the Journeys panel and the footer
+   anyway, so nothing becomes unreachable. */
 const FLAT_LINKS = [
   { label: 'Kedarnath', href: '/kedarnath-yatra' },
   { label: 'Journal',   href: '/blog' },
-  { label: 'About',     href: '/about' },
-  { label: 'Contact',   href: '/contact' },
+  { label: 'About',     href: '/about', wide: true },
+  { label: 'Contact',   href: '/contact', wide: true },
 ];
 
 const WA_TEXT = encodeURIComponent(
@@ -131,18 +139,38 @@ export default function Navbar() {
      thing sitting behind the navigation. `scrolled` only deepens the
      hairline and shadow slightly. */
 
-  /* Scroll state: elevation + hide-on-scroll-down */
+  /* Scroll state: elevation, plus hide-on-scroll-down on desktop only.
+     On a phone the header retracting is the wrong trade: the menu and
+     the call button are the two things a visitor reaches for most, the
+     screen is small enough that 76px costs little, and mobile browsers
+     fire scroll events during URL-bar collapse and rubber-band bounce
+     that the naive "y > lastY" test reads as deliberate downward
+     scrolling — so the bar hides when nobody asked it to. Pinned on
+     mobile, retracting on desktop. */
   useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1080px) and (pointer: fine)');
+
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 24);
-      // Don't retract while a menu is open or near the top of the page
-      setHidden(y > 320 && y > lastY.current && !openMenu && !mobileOpen);
+      if (!desktop.matches) {
+        setHidden(false);
+        lastY.current = y;
+        return;
+      }
+      // 6px deadzone so trackpad jitter doesn't toggle the bar
+      if (y > 320 && y > lastY.current + 6 && !openMenu && !mobileOpen) setHidden(true);
+      else if (y < lastY.current - 6 || y <= 320) setHidden(false);
       lastY.current = y;
     };
+
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    desktop.addEventListener('change', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      desktop.removeEventListener('change', onScroll);
+    };
   }, [openMenu, mobileOpen]);
 
   /* Close menus on route change */
@@ -230,7 +258,12 @@ export default function Navbar() {
             <MenuTrigger label="Journeys" open={openMenu === 'packages'} onClick={() => toggle('packages')} color={ink} />
             <MenuTrigger label="Private Cars" open={openMenu === 'cabs'} onClick={() => toggle('cabs')} color={ink} />
             {FLAT_LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="lux-nav-link" style={{ color: ink }}>
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`lux-nav-link${l.wide ? ' lux-nav-link--wide' : ''}`}
+                style={{ color: ink }}
+              >
                 {l.label}
               </Link>
             ))}
@@ -267,9 +300,15 @@ export default function Navbar() {
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
-              <span style={{ display: 'block', height: 1.5, background: mobileOpen ? 'var(--ink)' : ink, transition: 'transform .4s cubic-bezier(.22,1,.36,1), opacity .3s, background .4s', transform: mobileOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
-              <span style={{ display: 'block', height: 1.5, background: mobileOpen ? 'var(--ink)' : ink, transition: 'opacity .2s, background .4s', opacity: mobileOpen ? 0 : 1 }} />
-              <span style={{ display: 'block', height: 1.5, background: mobileOpen ? 'var(--ink)' : ink, transition: 'transform .4s cubic-bezier(.22,1,.36,1), background .4s', transform: mobileOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none' }} />
+              <span className="lux-burger__bars" aria-hidden="true">
+                <span style={{ transform: mobileOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
+                <span style={{ opacity: mobileOpen ? 0 : 1 }} />
+                <span style={{ transform: mobileOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none' }} />
+              </span>
+              {/* Spelling it out removes any doubt about where the menu went */}
+              <span className="lux-burger__label" aria-hidden="true">
+                {mobileOpen ? 'Close' : 'Menu'}
+              </span>
             </button>
           </div>
         </div>
