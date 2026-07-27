@@ -1,52 +1,23 @@
-/* ══════════════════════════════════════════════════════════════
-   Package experience page.
-
-   The page is a server component end to end. Only five leaves
-   hydrate — the timeline, the showcases, the map, the gallery and
-   the booking surfaces — which is what keeps a page this rich
-   inside the performance budget.
-
-   Narrative order, deliberately: arrive → understand the shape of
-   the trip → see the ground → walk it day by day → see where you
-   sleep and what you travel in → know exactly what is and is not
-   included → understand the temples → look at it → hear from people
-   who went → answer the last objections → book.
-   ══════════════════════════════════════════════════════════════ */
-
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
-import {
-  getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES,
-} from '@/data/packages';
-import {
-  HOTELS, VEHICLES, VEHICLE_MATRIX, TEMPLES, MEAL_PLAN,
-  WEATHER, GALLERY, REVIEWS, ASSURANCES,
-} from '@/data/experience';
-import { nodesForCategory } from '@/lib/route-geometry';
-import Schemas, { CATEGORY_GUIDES } from './schemas';
-import CategoryView from './CategoryView';
-
-import { Section, Reveal, Stagger, SectionHead, Eyebrow, Facts, Pill } from '@/components/lux/primitives';
-import RouteMap from '@/components/lux/RouteMap';
-import {
-  DayTimeline, HotelShowcase, VehicleShowcase, TempleGuide, Gallery, ReviewsWall, FaqList,
-} from '@/components/lux/PackageSections';
-import { BookingProvider, BookingRail, BookingBar, CostBuilder } from '@/components/lux/BookingPanel';
-
-export const dynamicParams = false;
+import { notFound } from 'next/navigation';
+import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
+import FloatingBookCTA from '@/components/FloatingBookCTA';
+import WhyOurPrice from '@/components/WhyOurPrice';
+import ItineraryTimeline from '@/components/package/ItineraryTimeline';
+import PackageFaqs from '@/components/package/PackageFaqs';
+import { BlurFade } from '@/components/magicui/blur-fade';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
-/* ── Routing ────────────────────────────────────────────────── */
-
 export async function generateStaticParams() {
-  return [...getAllSlugs(), ...CATEGORY_SLUGS.map((slug) => ({ slug }))];
+  const pkgSlugs = getAllSlugs();
+  const catSlugs = CATEGORY_SLUGS.map(s => ({ slug: s }));
+  return [...pkgSlugs, ...catSlugs];
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-
   if (CATEGORY_SLUGS.includes(slug)) {
     const cat = CATEGORIES[slug];
     return {
@@ -55,553 +26,975 @@ export async function generateMetadata({ params }) {
       alternates: { canonical: `${SITE.baseUrl}/packages/${slug}` },
     };
   }
-
   const pkg = getPackageBySlug(slug);
   if (!pkg) return {};
-
   return {
     title: pkg.metaTitle,
     description: pkg.metaDesc,
     keywords: pkg.tags || [],
     alternates: { canonical: `${SITE.baseUrl}/packages/${pkg.slug}` },
     openGraph: {
-      title: pkg.metaTitle,
-      description: pkg.metaDesc,
-      type: 'website',
-      url: `${SITE.baseUrl}/packages/${pkg.slug}`,
-      siteName: SITE.name,
-      locale: 'en_IN',
-      images: pkg.photo ? [{ url: pkg.photo, width: 900, height: 560, alt: pkg.name }] : [],
+      title: pkg.metaTitle, description: pkg.metaDesc, type: 'website',
+      url: `${SITE.baseUrl}/packages/${pkg.slug}`, siteName: SITE.name, locale: 'en_IN',
+      images: pkg.photo ? [{ url: pkg.photo, width:900, height:560, alt: pkg.name }] : [],
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: pkg.metaTitle,
-      description: pkg.metaDesc,
-      images: pkg.photo ? [pkg.photo] : [],
-    },
+    twitter: { card:'summary_large_image', title: pkg.metaTitle, description: pkg.metaDesc, images: pkg.photo ? [pkg.photo] : [] },
   };
 }
 
-/* ── Content selection ──────────────────────────────────────── */
+const CATEGORY_GUIDES = {
+  'char-dham': [
+    { label:'Char Dham Yatra 2026 Guide', href:'/char-dham-yatra' },
+    { label:'Best Time for Char Dham', href:'/blog/best-time-char-dham' },
+    { label:'Packing List', href:'/blog/char-dham-yatra-packing-list' },
+    { label:'Cost Breakdown', href:'/blog/char-dham-yatra-cost' },
+    { label:'Registration Guide', href:'/blog/char-dham-yatra-registration' },
+  ],
+  'do-dham': [
+    { label:'Kedarnath Yatra Guide', href:'/kedarnath-yatra' },
+    { label:'Kedarnath Trek Guide', href:'/blog/kedarnath-trek-guide' },
+    { label:'Badrinath Yatra Guide', href:'/badrinath-yatra' },
+    { label:'Best Time to Visit', href:'/blog/best-time-char-dham' },
+  ],
+  'single-dham': [
+    { label:'Kedarnath Yatra Guide', href:'/kedarnath-yatra' },
+    { label:'Kedarnath Trek Guide', href:'/blog/kedarnath-trek-guide' },
+    { label:'Kedarnath Helicopter Booking', href:'/blog/kedarnath-helicopter-booking' },
+    { label:'Badrinath Yatra Guide', href:'/badrinath-yatra' },
+    { label:'Haridwar to Kedarnath Route', href:'/blog/haridwar-to-kedarnath' },
+  ],
+  'helicopter': [
+    { label:'Kedarnath Helicopter Guide', href:'/blog/kedarnath-helicopter-booking' },
+    { label:'Char Dham 2026 Overview', href:'/char-dham-yatra' },
+    { label:'Senior Citizen Char Dham', href:'/blog/senior-citizen-char-dham' },
+  ],
+  'uttarakhand': [
+    { label:'Valley of Flowers Trek', href:'/blog/valley-of-flowers-trek' },
+    { label:'Rishikesh Adventure Guide', href:'/blog/rishikesh-adventure-guide' },
+    { label:'Best Time to Visit', href:'/blog/best-time-char-dham' },
+  ],
+};
 
-/** Which temples this itinerary actually visits. Never show a dham the trip skips. */
-function templesFor(pkg) {
-  const hay = `${pkg.name} ${pkg.itinerary.map((d) => d.title + d.desc).join(' ')}`.toLowerCase();
-  return ['yamunotri', 'gangotri', 'kedarnath', 'badrinath']
-    .filter((id) => hay.includes(id))
-    .map((id) => TEMPLES[id]);
+function Schemas({ pkg }) {
+  // TouristTrip — describes the itinerary. NO aggregateRating here:
+  // Google does NOT support Review snippets on TouristTrip type.
+  const trip = {
+    '@context':'https://schema.org','@type':'TouristTrip',
+    '@id':`${SITE.baseUrl}/packages/${pkg.slug}#trip`,
+    name:pkg.name, description:pkg.metaDesc,
+    touristType:['Pilgrim','ReligiousTourist'],
+    url:`${SITE.baseUrl}/packages/${pkg.slug}`,
+    image:pkg.photo||'', duration:`P${pkg.duration.days}D`,
+    itinerary:{ '@type':'ItemList', itemListElement:pkg.itinerary.map((d,i)=>({'@type':'ListItem',position:i+1,name:`Day ${d.day}: ${d.title}`,description:d.desc})) },
+    offers:[{ '@type':'Offer', price:pkg.price.discounted, priceCurrency:'INR', priceValidUntil:'2026-10-31', availability:'https://schema.org/InStock', validFrom:'2026-04-01', validThrough:'2026-10-31', seller:{'@type':'TravelAgency',name:SITE.name,url:SITE.baseUrl,telephone:SITE.phone}, url:`${SITE.baseUrl}/packages/${pkg.slug}` }],
+    provider:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
+    startLocation:{ '@type':'Place', name:pkg.startCity, address:{'@type':'PostalAddress',addressLocality:pkg.startCity,addressRegion:'Uttarakhand',addressCountry:'IN'} },
+    keywords:(pkg.tags||[]).join(', '),
+  };
+
+  // Product schema — carries aggregateRating for Review rich result.
+  // Google supports Review snippets on Product type. This is the correct parent.
+  const product = {
+    '@context':'https://schema.org','@type':'Product',
+    '@id':`${SITE.baseUrl}/packages/${pkg.slug}#product`,
+    name:pkg.name,
+    description:pkg.metaDesc,
+    url:`${SITE.baseUrl}/packages/${pkg.slug}`,
+    image:pkg.photo||'https://www.shivgangatravels.com/logo.png',
+    brand:{ '@type':'Brand', name:SITE.name },
+    offers:{
+      '@type':'Offer',
+      price:pkg.price.discounted,
+      priceCurrency:'INR',
+      priceValidUntil:'2026-10-31',
+      availability:'https://schema.org/InStock',
+      seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
+      url:`${SITE.baseUrl}/packages/${pkg.slug}`,
+    },
+    aggregateRating:{
+      '@type':'AggregateRating',
+      ratingValue: 4.7,
+      reviewCount: 54,
+      bestRating:5,
+      worstRating:1,
+    },
+    review:[
+      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Rakesh Sharma'}, reviewBody:'Excellent Char Dham yatra experience. Zero commission as promised. Hotel stays were clean, driver was knowledgeable. Highly recommend Shiv Ganga Travels.' },
+      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Priya Mehta'}, reviewBody:'Booked Kedarnath package from Haridwar. Everything was well organised. The VIP darshan arrangement saved us 3 hours of queue time. Will book again for Badrinath.' },
+      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Suresh Gupta'}, reviewBody:'Senior citizen package was perfect for my parents. Slow itinerary, ground floor rooms, pony arranged at Kedarnath. Dhanesh ji personally called to check on them.' },
+    ],
+  };
+
+  const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
+  const breadcrumb = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
+    {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
+    {'@type':'ListItem',position:2,name:'Packages',item:`${SITE.baseUrl}/packages`},
+    {'@type':'ListItem',position:3,name:CATEGORIES[pkg.category]?.name||pkg.category,item:`${SITE.baseUrl}/packages/${pkg.category}`},
+    {'@type':'ListItem',position:4,name:pkg.name,item:`${SITE.baseUrl}/packages/${pkg.slug}`},
+  ]};
+  const author = {
+    '@context':'https://schema.org','@type':'Person',
+    '@id':`${SITE.baseUrl}/#dhanesh-chandra-mishra`,
+    name:'Dhanesh Chandra Mishra',
+    jobTitle:'Founder & Char Dham Yatra Specialist',
+    description:'Retired Indian Army officer who founded Shiv Ganga Travels in 2010. 15+ seasons organising Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
+    worksFor:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl },
+    knowsAbout:['Char Dham Yatra','Kedarnath Yatra','Badrinath','Gangotri','Yamunotri','Uttarakhand pilgrimage travel','Char Dham registration'],
+    address:{ '@type':'PostalAddress', addressLocality:'Haridwar', addressRegion:'Uttarakhand', addressCountry:'IN' },
+    sameAs:['https://www.instagram.com/shivgangatravels/','https://www.google.com/maps?cid=16074078434377735602'],
+  };
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
+    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>}
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(breadcrumb) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(author) }}/>
+  </>);
 }
 
-/** Which hotels this itinerary actually uses. */
-function hotelsFor(pkg) {
-  const hay = pkg.itinerary.map((d) => d.title).join(' ').toLowerCase();
-  const used = HOTELS.filter((h) => hay.includes(h.stop.toLowerCase()));
-  return used.length >= 3 ? used : HOTELS.slice(0, 4);
-}
-
-/* ── Page ───────────────────────────────────────────────────── */
-
-export default async function PackagePage({ params }) {
+export default async function PackageDetailPage({ params }) {
   const { slug } = await params;
 
   if (CATEGORY_SLUGS.includes(slug)) {
-    const cat = CATEGORIES[slug];
-    const pkgs = PACKAGES.filter((p) => p.category === slug);
-    return <CategoryView category={cat} packages={pkgs} guides={CATEGORY_GUIDES[slug] || []} />;
+    const cat  = CATEGORIES[slug];
+    const pkgs = PACKAGES.filter(p => p.category === slug);
+    const guides = CATEGORY_GUIDES[slug] || [];
+    return (
+      <>
+        <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
+          <div style={{ maxWidth:720, margin:'0 auto' }}>
+            {cat.cover && (
+              <div style={{ width:80, height:80, borderRadius:16, overflow:'hidden', margin:'0 auto 14px', border:'3px solid rgba(255,255,255,0.25)' }}>
+                <img src={cat.cover} alt={cat.name} width={80} height={80} style={{ width:'100%', height:'100%', objectFit:'cover' }} loading="eager"/>
+              </div>
+            )}
+            <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5vw,2.8rem)', marginBottom:12 }}>{cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em></h1>
+            <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>{pkgs.length} packages · From Haridwar · VIP darshan · Zero commission</p>
+          </div>
+        </section>
+        <div style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+          <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
+            Home<span>›</span>
+            Packages<span>›</span>
+            <span>{cat.name}</span>
+          </div>
+        </div>
+        <section style={{ background:'var(--bg)', padding:'40px 20px 60px' }}>
+          <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
+            <div className="card-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(290px,100%),1fr))', gap:20 }}>
+              {pkgs.map(p => {
+                const sav = p.price.original - p.price.discounted;
+                return (
+                  <Link key={p.slug} href={`/packages/${p.slug}`} className="pkg-card" style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column' }}>
+                    <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0, background:'linear-gradient(160deg,var(--navy),var(--teal))' }}>
+                      {p.photo && (
+                        <img src={pxAt(p.photo, 320, 220)} alt={p.name} width={290} height={200}
+                          srcSet={pxSrcSet(p.photo, [[320,220],[580,400]])} sizes="290px"
+                          loading="lazy" decoding="async"
+                          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}/>
+                      )}
+                      <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%)', pointerEvents:'none' }}/>
+                      {p.badge && <span className="badge badge-gold" style={{ position:'absolute', top:12, left:12, zIndex:2 }}>{p.badge}</span>}
+                      <span style={{ position:'absolute', top:12, right:12, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:11, fontWeight:600, padding:'3px 10px', borderRadius:6, zIndex:2 }}>{p.duration.nights}N/{p.duration.days}D</span>
+                      <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'12px 16px', zIndex:2 }}>
+                        <h2 style={{ color:'#fff', fontWeight:700, fontSize:15, lineHeight:1.3, textShadow:'0 1px 4px rgba(0,0,0,0.6)' }}>{p.name}</h2>
+                      </div>
+                    </div>
+                    <div style={{ padding:'14px 16px', flex:1, display:'flex', flexDirection:'column', gap:10 }}>
+                      <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
+                        <span className="chip">📍 {p.startCity}</span>
+                        <span className="chip">🚌 {p.transport}</span>
+                        <span className="chip">🎯 {p.difficulty}</span>
+                      </div>
+                      <ul style={{ listStyle:'none', flex:1 }}>
+                        {p.highlights.slice(0,3).map((h,i) => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', paddingLeft:16, position:'relative', lineHeight:1.5, marginBottom:4 }}><span style={{ position:'absolute', left:0, color:'var(--teal)', fontWeight:700, fontSize:11 }}>✓</span>{h}</li>)}
+                      </ul>
+                      <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', paddingTop:10, borderTop:'1px solid var(--border)' }}>
+                        <div>
+                          <div style={{ fontSize:11, color:'var(--text-muted)', textDecoration:'line-through' }}>₹{p.price.original.toLocaleString('en-IN')}</div>
+                          <div style={{ fontWeight:800, fontSize:22, color:'var(--navy)', lineHeight:1, fontFamily:'var(--font-display)' }}>₹{p.price.discounted.toLocaleString('en-IN')}</div>
+                          {sav>0 && <div style={{ fontSize:11, color:'var(--green)', fontWeight:600, marginTop:2 }}>Save ₹{sav.toLocaleString('en-IN')}</div>}
+                        </div>
+                        <span className="btn btn-primary" style={{ fontSize:12, padding:'8px 16px' }}>View Details →</span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            {guides.length > 0 && (
+              <div style={{ marginTop:36, background:'var(--navy-light)', borderRadius:14, padding:'20px 22px' }}>
+                <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>📖 {cat.name} Yatra Guides:</div>
+                <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+                  {guides.map(g => <Link key={g.href} href={g.href} style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{g.label} →</Link>)}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      </>
+    );
   }
 
   const pkg = getPackageBySlug(slug);
   if (!pkg) notFound();
 
-  const cat = CATEGORIES[pkg.category];
-  const nodes = nodesForCategory(pkg.category);
-  const temples = templesFor(pkg);
-  const hotels = hotelsFor(pkg);
-  const guides = CATEGORY_GUIDES[pkg.category] || [];
-  const related = PACKAGES.filter((p) => p.category === pkg.category && p.slug !== pkg.slug).slice(0, 3);
+  const savings  = pkg.price.isRange ? 0 : pkg.price.original - pkg.price.discounted;
+  const isRange  = !!pkg.price.isRange;
+  const priceTxt = isRange
+    ? `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')} – ${pkg.price.currency}${pkg.price.original.toLocaleString('en-IN')}`
+    : `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
+  const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
+  const guides   = CATEGORY_GUIDES[pkg.category] || [];
+  const isYatra  = pkg.category !== 'uttarakhand';
+  const isCharDham = pkg.category === 'char-dham';
+  const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
+  const dham2026 = [
+    { dham:'Yamunotri', opens:'19 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
+    { dham:'Gangotri',  opens:'19 April 2026', closes:'10 Nov 2026', reg:'Mandatory' },
+    { dham:'Kedarnath', opens:'22 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
+    { dham:'Badrinath', opens:'23 April 2026', closes:'13 Nov 2026', reg:'Mandatory' },
+  ];
+  const delhiModes = [
+    { mode:'Volvo / AC Bus (overnight)', time:'~6 hrs', cost:'Included in package', note:'Sleep through the journey, arrive Haridwar by 6 AM. Best value for groups.' },
+    { mode:'Private Car (Innova/Ertiga)', time:'5–6 hrs', cost:'₹6,500–₹9,000 one way', note:'Door pickup anywhere in Delhi NCR; same vehicle stays for the full yatra.' },
+    { mode:'Train (Shatabdi/Jan Shatabdi)', time:'4.5–6 hrs', cost:'₹350–₹1,200/person', note:'Fastest budget option. We receive you at Haridwar station and switch to the 9N/10D plan.' },
+    { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'From ₹85,000 (5N/6D heli)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
+  ];
+  const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
+  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
+
+  const SH = { fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' };
 
   return (
-    <BookingProvider pkg={pkg}>
-      <Schemas pkg={pkg} />
+    <>
+      <Schemas pkg={pkg}/>
 
-      {/* ══ HERO ═════════════════════════════════════════════ */}
-      <section className="lux-hero">
-        <div className="lux-hero__media" data-lux-parallax="0.12">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={pxAt(pkg.photo, 1920, 1280)}
-            srcSet={pxSrcSet(pkg.photo, [[750, 1000], [1200, 1400], [1920, 1280]])}
-            sizes="100vw"
-            alt={`${pkg.name} — ${cat?.coverAlt || 'Char Dham Yatra 2026'}`}
-            fetchPriority="high"
-            decoding="sync"
-            width={1920}
-            height={1280}
-          />
-        </div>
-        <div className="lux-hero__veil" aria-hidden="true" />
+      {/* Hero */}
+      <section
+        className="relative flex min-h-[380px] items-end overflow-hidden px-5 pb-8 pt-24"
+        style={{
+          background: pkg.photo
+            ? `linear-gradient(180deg,rgba(8,20,48,0.42) 0%,rgba(8,20,48,0.78) 62%,rgba(6,16,38,0.94) 100%),url('${pkg.photo}') center/cover`
+            : 'linear-gradient(145deg,var(--navy),var(--teal))',
+        }}
+      >
+        <div className="mx-auto w-full max-w-[var(--container)]">
+          {/* Breadcrumb — every level is now a real link (Home and Packages
+              were previously plain text, so the trail dead-ended). */}
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] text-white/60"
+          >
+            <Link href="/" className="transition-colors hover:text-white">Home</Link>
+            <span aria-hidden="true">›</span>
+            <Link href="/packages" className="transition-colors hover:text-white">Packages</Link>
+            <span aria-hidden="true">›</span>
+            <Link
+              href={`/packages/${pkg.category}`}
+              className="capitalize text-white/70 transition-colors hover:text-white"
+            >
+              {CATEGORIES[pkg.category]?.name || pkg.category}
+            </Link>
+            <span aria-hidden="true">›</span>
+            <span className="text-gold" aria-current="page">{pkg.name}</span>
+          </nav>
 
-        <div className="lux-hero__body lux-wrap">
-          <Reveal variant="fade">
-            <nav aria-label="Breadcrumb" style={{ marginBottom: 26 }}>
-              <ol style={{ display: 'flex', gap: 10, listStyle: 'none', margin: 0, padding: 0, flexWrap: 'wrap', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
-                <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
-                <li aria-hidden="true">/</li>
-                <li><Link href="/packages" style={{ color: 'inherit', textDecoration: 'none' }}>Journeys</Link></li>
-                <li aria-hidden="true">/</li>
-                <li><Link href={`/packages/${pkg.category}`} style={{ color: 'inherit', textDecoration: 'none' }}>{cat?.shortName}</Link></li>
-              </ol>
-            </nav>
-          </Reveal>
+          {pkg.badge && (
+            <span className="mb-2.5 inline-block rounded-full bg-gold px-3 py-1 text-[11px]
+                             font-bold uppercase tracking-wide text-white
+                             shadow-[0_4px_14px_rgba(232,146,10,0.4)]">
+              {pkg.badge}
+            </span>
+          )}
 
-          <Reveal variant="fade">
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 26 }}>
-              {pkg.badge && <Pill tone="solid">{pkg.badge}</Pill>}
-              <Pill tone="light">{cat?.name}</Pill>
-              <Pill tone="light">★ {REVIEWS.rating} · {REVIEWS.count} reviews</Pill>
-              <Pill tone="light">50,000+ pilgrims since 2010</Pill>
-            </div>
-          </Reveal>
+          <h1 className="font-display mb-4 max-w-3xl text-[clamp(1.6rem,3.6vw,2.5rem)] font-semibold
+                         leading-[1.14] tracking-[-0.02em] text-white">
+            {pkg.seoHeading || pkg.name}
+          </h1>
 
-          <Reveal>
-            <h1 className="lux-display lux-display--xl">
-              {pkg.seoHeading || pkg.name}
-            </h1>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.82)', marginTop: 24, maxWidth: '46ch' }}>
-              {pkg.subtitle}. Run by the people who run it — a Haridwar operator since {SITE.established},
-              with no agent between you and the mountain.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.16}>
-            <div className="lux-hero__meta">
-              <div><span className="lux-hero__k">Duration</span><span className="lux-hero__v">{pkg.duration.nights}N / {pkg.duration.days}D</span></div>
-              <div><span className="lux-hero__k">From</span><span className="lux-hero__v">₹{pkg.price.discounted.toLocaleString('en-IN')}</span></div>
-              <div><span className="lux-hero__k">Season</span><span className="lux-hero__v">{pkg.season.split('&')[0].trim()}</span></div>
-              <div><span className="lux-hero__k">Highest point</span><span className="lux-hero__v">{pkg.altitude.replace('Max: ', '')}</span></div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.22}>
-            <div className="lux-hero__cta">
-              <a
-                href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I am interested in ${pkg.name}. Please share availability and the detailed costing.`)}`}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="lux-btn lux-btn--gold"
+          <div className="flex flex-wrap gap-2">
+            {[
+              { icon: '📅', val: `${pkg.duration.nights}N/${pkg.duration.days}D` },
+              { icon: '📍', val: `${pkg.startCity} → ${pkg.endCity || pkg.startCity}` },
+              { icon: '🎯', val: pkg.difficulty },
+              { icon: '🚌', val: pkg.transport },
+              { icon: '📅', val: pkg.season },
+            ].filter(c => c.val).map((c) => (
+              <span
+                key={c.val}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15
+                           bg-white/10 px-3 py-1.5 text-[12px] font-medium text-white
+                           backdrop-blur-md transition-colors duration-200 hover:bg-white/20"
               >
-                Check availability
-              </a>
-              <a href="#itinerary" className="lux-btn lux-btn--ghost-light">See the itinerary</a>
-              <a href={`tel:${SITE.phone.replace(/-/g, '')}`} className="lux-btn lux-btn--ghost-light">{SITE.phone}</a>
-            </div>
-          </Reveal>
+                <span aria-hidden="true">{c.icon}</span> {c.val}
+              </span>
+            ))}
+          </div>
         </div>
-
-        <a href="#overview" className="lux-scroll-cue lux-hero__cue" aria-label="Scroll to the journey overview">
-          <span className="lux-scroll-cue__line" aria-hidden="true" />
-          Scroll
-        </a>
       </section>
 
-      {/* ══ OVERVIEW ═════════════════════════════════════════ */}
-      <Section id="overview" tone="paper">
-        <div className="lux-rail">
-          <div className="lux-rail__aside">
-            <Eyebrow>The journey at a glance</Eyebrow>
-            <Reveal>
-              <p className="lux-display lux-display--md" style={{ marginTop: 22 }}>
-                {pkg.duration.days} days,{' '}
-                <span className="lux-accent">{temples.length || 4} shrines</span>,
-                one road through the Garhwal Himalaya.
-              </p>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <div style={{ marginTop: 30 }}>
-                <a href="#cost" className="lux-link">Build your costing</a>
-              </div>
-            </Reveal>
-          </div>
+      {/* Sticky bar */}
+      <div className="sticky-book-bar">
+        <div>
+          <span style={{ fontSize:11, color:'var(--text-muted)', display:'block' }}>{isRange ? 'range' : 'from'}</span>
+          <span style={{ fontWeight:800, fontSize:isRange?14:18, color:'var(--navy)' }}>
+            {isRange ? `₹${pkg.price.discounted.toLocaleString('en-IN')}–₹${pkg.price.original.toLocaleString('en-IN')}` : `₹${pkg.price.discounted.toLocaleString('en-IN')}`}
+          </span>
+        </div>
+        <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ flex:1, background:'#25D366', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>💬 Book via WhatsApp</a>
+        <a href='tel:+917817996730' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
+      </div>
+      {/* Trust micro-signals below sticky bar */}
+      <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid var(--border)' }}>
+        <span>✓ 50,000+ pilgrims served</span>
+        <span>✓ Zero commission</span>
+        <span>✓ Est. 2010 · Retd. Army Officer founder</span>
+        {/* Was a bare text node reading "Flexible cancellation →" with no link
+            attached — restored to the cancellation policy page it points at. */}
+        <Link href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>
+          Flexible cancellation →
+        </Link>
+      </div>
+      {/* Date updated — E-E-A-T freshness signal */}
+      <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
+        <span>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open Apr 19 – Nov 2026</span>
+        <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · 15 seasons)</span>
+      </div>
 
-          <div>
-            <Stagger className="lux-grid lux-grid--2">
+      {/* Quick Answer — self-contained, claim-first block for AI Overviews / ChatGPT citation */}
+      <div style={{ maxWidth:1100, margin:'14px auto 0', padding:'0 16px' }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px' }}>
+          <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
+          <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>{quickAnswer}</p>
+          <ul style={{ listStyle:'none', display:'flex', flexWrap:'wrap', gap:'6px 18px', margin:'10px 0 0', padding:0, fontSize:12.5, color:'var(--text-mid)' }}>
+            <li><strong>Price:</strong> from {priceTxt}/person</li>
+            <li><strong>Duration:</strong> {pkg.duration.nights}N/{pkg.duration.days}D</li>
+            <li><strong>Start:</strong> {pkg.startCity}</li>
+            <li><strong>Season:</strong> {pkg.season || 'Apr–Nov 2026'}</li>
+            <li><strong>Operator:</strong> Shiv Ganga Travels (est. 2010)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'1fr min(340px,38%)', gap:28, alignItems:'start' }}>
+
+        {/* LEFT */}
+        <div style={{ display:'flex', flexDirection:'column', gap:28 }}>
+
+          {/* Quick stats — BlurFade is applied only to presentational chrome
+              like this, never to the long-form itinerary / inclusions / FAQ
+              copy, because motion renders its initial `opacity:0` into the
+              SSR HTML and that text is what ranks. */}
+          <BlurFade inView offset={12}>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] gap-2.5">
               {[
-                { k: 'Duration',       v: `${pkg.duration.nights} nights · ${pkg.duration.days} days` },
-                { k: 'Difficulty',     v: pkg.difficulty },
-                { k: 'Highest point',  v: pkg.altitude.replace('Max: ', '') },
-                { k: 'Best season',    v: pkg.season },
-                { k: 'Group size',     v: pkg.groupSize },
-                { k: 'Vehicle',        v: pkg.transport },
-                { k: 'Accommodation',  v: 'Twin / triple sharing, hotels and lodges' },
-                { k: 'Meals',          v: 'Breakfast and dinner daily, pure vegetarian' },
-                { k: 'Guide',          v: 'Local guide plus pujari at every darshan' },
-                { k: 'Medical',        v: 'Oxygen cylinder and first-aid on every vehicle' },
-                { k: 'Starts / ends',  v: `${pkg.startCity} → ${pkg.endCity}` },
-                { k: 'Registration',   v: 'Uttarakhand Tourist Care — handled by us' },
-              ].map((f) => (
-                <div key={f.k} className="lux-card" style={{ padding: '22px 24px' }}>
-                  <span className="lux-facts__k">{f.k}</span>
-                  <span style={{ display: 'block', fontSize: 15, color: 'var(--ink)', marginTop: 9, fontWeight: 500, lineHeight: 1.5 }}>
-                    {f.v}
-                  </span>
+                { icon:'⏱',  label:'Duration',   val:`${pkg.duration.nights}N/${pkg.duration.days}D` },
+                { icon:'👥',  label:'Group',      val:pkg.groupSize || '2–40' },
+                { icon:'🏔️', label:'Altitude',   val:pkg.altitude  || '3,583m' },
+                { icon:'🎯',  label:'Difficulty', val:pkg.difficulty },
+                { icon:'🚌',  label:'Transport',  val:pkg.transport },
+                { icon:'📅',  label:'Season',     val:pkg.season    || 'May–Oct 2026' },
+              ].map(s => (
+                <div
+                  key={s.label}
+                  className="rounded-xl border border-transparent bg-navy-light p-3 text-center
+                             transition-all duration-200 hover:border-navy/15
+                             motion-safe:hover:-translate-y-0.5"
+                >
+                  <div className="mb-1 text-[20px]" aria-hidden="true">{s.icon}</div>
+                  <div className="mb-0.5 text-[11px] text-slate-500">{s.label}</div>
+                  <div className="text-[12.5px] font-bold leading-tight text-navy">{s.val}</div>
                 </div>
               ))}
-            </Stagger>
+            </div>
+          </BlurFade>
 
-            <Reveal>
-              <div className="lux-mark" style={{ marginTop: 40 }}>
-                <Eyebrow plain>What makes this itinerary work</Eyebrow>
-                <ul className="lux-list" style={{ marginTop: 18 }}>
-                  {pkg.highlights.map((h) => <li key={h}>{h}</li>)}
-                </ul>
+          {/* Budget Tiers + Vehicle Fare — Char Dham full-route packages ONLY */}
+          {isCharDham && (
+          <section>
+            <h2 style={SH}>Package Pricing — Budget, Deluxe & Premium</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', marginBottom:16, lineHeight:1.7 }}>
+              All packages cover the same temples and itinerary. The difference is the hotel standard and vehicle type. Choose based on your comfort preference and group size.
+            </p>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
+              {[
+                { tier:'Budget', range:'₹18,500', perCouple:'₹42,000', vehicle:'Swift Dzire / Shared', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
+                { tier:'Deluxe', range:'₹30,000', perCouple:'₹60,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
+                { tier:'Premium', range:'₹42,000–₹55,000', perCouple:'₹84,000–₹1,10,000', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
+              ].map(t => (
+                <div key={t.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:`2px solid ${t.color}`, position:'relative', overflow:'hidden' }}>
+                  <div style={{ fontWeight:800, fontSize:15, color:t.color, marginBottom:4 }}>{t.tier}</div>
+                  <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', marginBottom:2 }}>{t.range}</div>
+                  <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>per person</div>
+                  <div style={{ fontSize:12.5, fontWeight:600, color:t.color, marginBottom:8 }}>Per couple: {t.perCouple}</div>
+                  {[['Vehicle', t.vehicle],['Hotel', t.hotel],['Ideal for', t.ideal]].map(([k,v])=>(
+                    <div key={k} style={{ fontSize:12, color:'var(--text-mid)', marginBottom:3 }}><strong>{k}:</strong> {v}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🚗 Vehicle-wise Private Taxi Fare (Full Char Dham Route)</h3>
+            <div style={{ overflowX:'auto', marginBottom:8 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Vehicle','Capacity','Total Fare','Per Person (4–6 pax)','Best For'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {[
+                    ['Swift Dzire','2–3 persons','₹28,000–₹30,000','~₹14,000–₹15,000','Budget couple/solo'],
+                    ['Ertiga','4–5 persons','₹36,000–₹38,000','~₹9,000–₹9,500','Small family'],
+                    ['Innova Crysta','4–7 persons','₹50,000–₹55,000','~₹8,000–₹9,000','Most popular choice'],
+                    ['Tempo Traveller 12-seater','8–12 persons','₹65,000–₹70,000','~₹6,000–₹7,000','Groups & extended family'],
+                    ['Tempo Traveller 17-seater','13–17 persons','₹75,000–₹80,000','~₹5,000–₹5,500','Large group'],
+                    ['Tempo Traveller 20-seater','15–20 persons','₹85,000–₹90,000','~₹4,500–₹5,000','Very large group'],
+                  ].map(([v,cap,fare,pp,best],i)=>(
+                    <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                      <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
+                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
+                      <td style={{ padding:'8px 12px', color:'var(--teal)', fontWeight:600, fontSize:13 }}>{pp}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{best}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div style={{ background:'#FFF8E7', border:'1px solid #E8920A', borderRadius:9, padding:'10px 14px', marginBottom:6, fontSize:13, color:'#7B3F00', lineHeight:1.7 }}>
+              <strong>❄️ AC Policy:</strong> Air conditioning is available as standard in plain areas (Haridwar, Rishikesh, Dehradun). In hilly/mountain areas (above Rishikesh), AC can be availed on request at an additional charge of <strong>₹2,000</strong> for the full hill section.
+            </div>
+            <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for the 2026 season. Contact us for exact quote basis your departure date and group size.</p>
+          </section>
+          )}
+
+          <WhyOurPrice />
+
+          {/* Highlights */}
+          <section>
+            <h2 style={SH}>Package Highlights</h2>
+            <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:8 }}>
+              {pkg.highlights.map((h,i)=>(
+                <li key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', padding:'8px 10px', background:'#fff', borderRadius:8, border:'1px solid var(--border)', fontSize:13 }}>
+                  <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>
+                  <span style={{ color:'var(--text-mid)' }}>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Day-wise Itinerary */}
+          <section>
+            <h2 style={SH}>🗓️ Brief Itinerary at a Glance</h2>
+            <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:20 }}>
+              {pkg.itinerary.map((day, i) => (
+                <div key={day.day} style={{ display:'grid', gridTemplateColumns:'70px 1fr', gap:8, padding:'6px 0', borderBottom: i < pkg.itinerary.length-1 ? '1px solid rgba(15,43,91,0.1)' : 'none' }}>
+                  <div style={{ fontSize:12, fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>Day {day.day}:</div>
+                  <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{day.title}</div>
+                </div>
+              ))}
+            </div>
+            <h2 style={SH}>🗓️ Day-wise Itinerary (Detailed)</h2>
+            <ItineraryTimeline itinerary={pkg.itinerary}/>
+          </section>
+
+          {/* Inclusions / Exclusions */}
+          <section>
+            <h2 style={SH}>✅ What&apos;s Included / Excluded</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(260px,100%),1fr))', gap:12 }}>
+              <div style={{ background:'#f0fdf4', borderRadius:12, padding:'16px' }}>
+                <div style={{ fontWeight:700, fontSize:13, color:'#15803d', marginBottom:10 }}>✅ Included</div>
+                {(pkg.inclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#15803d', flexShrink:0 }}>✓</span>{item}</div>)}
               </div>
-            </Reveal>
-          </div>
-        </div>
-      </Section>
+              <div style={{ background:'#fff1f2', borderRadius:12, padding:'16px' }}>
+                <div style={{ fontWeight:700, fontSize:13, color:'#9f1239', marginBottom:10 }}>❌ Not Included</div>
+                {(pkg.exclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#9f1239', flexShrink:0 }}>✗</span>{item}</div>)}
+              </div>
+            </div>
+          </section>
 
-      {/* ══ ROUTE ════════════════════════════════════════════ */}
-      <Section id="route" tone="paper-deep">
-        <SectionHead
-          eyebrow="The ground you cover"
-          title="Every turn of the circuit"
-          lede="The route draws itself as you scroll. Hover any stop to see what happens there, and read the elevation profile below for what the climb actually asks of you."
-        />
-        <RouteMap nodes={nodes} category={pkg.category} />
-      </Section>
-
-      {/* ══ ITINERARY ════════════════════════════════════════ */}
-      <Section id="itinerary">
-        <SectionHead
-          eyebrow="Day by day"
-          title="How the journey unfolds"
-          lede="Open any day for the drive, the distance, where you sleep and what to expect when you get there."
-          aside={<span className="lux-caption">{pkg.itinerary.length} days · tap to expand</span>}
-        />
-
-        <div className="lux-itin">
-          <DayTimeline days={pkg.itinerary} stops={nodes} />
-          {/* The rail and the sticky mobile bar are mutually exclusive by
-              design — they share a breakpoint so two price surfaces never
-              compete for the same thumb. */}
-          <div className="lux-hide-narrow">
-            <BookingRail />
-          </div>
-        </div>
-      </Section>
-
-      {/* ══ HOTELS ═══════════════════════════════════════════ */}
-      <Section id="stays" tone="paper">
-        <SectionHead
-          eyebrow="Where you sleep"
-          title="Every night at a different altitude"
-          lede="A riverside room in Haridwar and a heated hut at 3,583 metres are not the same promise, and we do not pretend otherwise. Here is exactly what each night looks like."
-        />
-        <HotelShowcase hotels={hotels} />
-      </Section>
-
-      {/* ══ VEHICLES ═════════════════════════════════════════ */}
-      <Section id="vehicles">
-        <SectionHead
-          eyebrow="How you travel"
-          title="The vehicle is most of the trip"
-          lede="You spend more hours in this than anywhere else on the yatra. Every vehicle is hill-serviced before departure and carries oxygen from Haridwar onwards."
-        />
-        <VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} />
-      </Section>
-
-      {/* ══ INCLUSIONS ═══════════════════════════════════════ */}
-      <Section id="inclusions" tone="ink">
-        <SectionHead
-          light
-          eyebrow="The fine print, in plain sight"
-          title="What is included, and what is not"
-          lede="We put the exclusions next to the inclusions at the same size. Anything that would surprise you at the end of the trip belongs on this page, not in a footnote."
-        />
-
-        <div className="lux-grid lux-grid--2">
-          <Reveal>
-            <div className="lux-card lux-card--dark" style={{ padding: 'clamp(26px, 3vw, 38px)' }}>
-              <Eyebrow light>Included in the price</Eyebrow>
-              <ul className="lux-list lux-list--check" style={{ marginTop: 24 }}>
-                {pkg.inclusions.map((i) => (
-                  <li key={i} style={{ color: 'rgba(255,255,255,0.82)' }}>{i}</li>
+          {/* Travel Tips */}
+          {pkg.travelTips?.length > 0 && (
+            <section>
+              <h2 style={SH}>💡 Travel Tips</h2>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {pkg.travelTips.map((tip,i)=>(
+                  <div key={i} style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                    <span style={{ color:'var(--gold)', flexShrink:0 }}>💡</span>{tip}
+                  </div>
                 ))}
-              </ul>
-            </div>
-          </Reveal>
+              </div>
+            </section>
+          )}
 
-          <Reveal delay={0.08}>
-            <div className="lux-card lux-card--dark" style={{ padding: 'clamp(26px, 3vw, 38px)' }}>
-              <Eyebrow light>Not included</Eyebrow>
-              <ul className="lux-list lux-list--cross" style={{ marginTop: 24 }}>
-                {pkg.exclusions.map((e) => (
-                  <li key={e} style={{ color: 'rgba(255,255,255,0.62)' }}>{e}</li>
+          {/* Local Insights */}
+          {pkg.localInsights?.length > 0 && (
+            <section>
+              <h2 style={SH}>🧭 Local Insights</h2>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {pkg.localInsights.map((insight,i)=>(
+                  <div key={i} style={{ display:'flex', gap:10, padding:'10px 14px', background:'var(--navy-light)', borderRadius:9, border:'1px solid rgba(15,43,91,0.1)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                    <span style={{ flexShrink:0 }}>🧭</span>{insight}
+                  </div>
                 ))}
-              </ul>
-            </div>
-          </Reveal>
-        </div>
+              </div>
+            </section>
+          )}
 
-        <Reveal>
-          <p className="lux-caption" style={{ marginTop: 34, color: 'rgba(255,255,255,0.5)', maxWidth: '70ch', lineHeight: 1.75 }}>
-            Lunch is left out on purpose. Drivers stop where they eat themselves, it runs ₹150–300 a head,
-            and building it into the package would mean charging you a margin on a dhaba bill.
-          </p>
-        </Reveal>
-      </Section>
+          {/* FAQs */}
+          {pkg.faqs?.length > 0 && (
+            <section>
+              <h2 style={SH}>❓ Frequently Asked Questions</h2>
+              <PackageFaqs faqs={pkg.faqs}/>
+            </section>
+          )}
 
-      {/* ══ MEALS ════════════════════════════════════════════ */}
-      <Section id="meals" tone="paper">
-        <SectionHead eyebrow="At the table" title="Pure vegetarian, every day" lede={MEAL_PLAN.summary} />
+          {/* Related Guides — FIX 3 */}
+          {guides.length > 0 && (
+            <section>
+              <h2 style={SH}>📖 Related Guides & Resources</h2>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(210px,1fr))', gap:10 }}>
+                {guides.map(g=>(
+                  <Link key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none' }}>
+                    <span style={{ fontSize:18 }}>📖</span>
+                    <span style={{ fontSize:13, fontWeight:600, color:'var(--navy)', lineHeight:1.3 }}>{g.label} →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
-        <Stagger className="lux-grid lux-grid--3">
-          {MEAL_PLAN.meals.map((m) => (
-            <div key={m.name} className="lux-card" style={{ padding: 'clamp(24px, 2.6vw, 32px)' }}>
-              <h3 className="lux-display lux-display--sm">{m.name}</h3>
-              <span className="lux-caption" style={{ display: 'block', marginTop: 10 }}>{m.time}</span>
-              <span className="lux-caption" style={{ display: 'block', marginTop: 4 }}>{m.served}</span>
-              <p className="lux-body" style={{ fontSize: 14.5, marginTop: 18 }}>{m.typical}</p>
-            </div>
-          ))}
-        </Stagger>
+          {/* Related Packages */}
+          {related.length > 0 && (
+            <section>
+              <h2 style={SH}>🔄 You Might Also Like</h2>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:12 }}>
+                {related.map(r=>(
+                  <Link key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)', textDecoration:'none' }}>
+                    <div style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4, lineHeight:1.3 }}>{r.name}</div>
+                    <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6 }}>{r.duration.nights}N/{r.duration.days}D</div>
+                    <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)' }}>₹{r.price.discounted.toLocaleString('en-IN')}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
-        <div className="lux-rail" style={{ marginTop: 'clamp(40px, 5vw, 68px)' }}>
-          <div className="lux-rail__aside">
-            <Eyebrow>Dietary requirements</Eyebrow>
-          </div>
-          <div>
-            <Facts items={MEAL_PLAN.dietary.map((d) => ({ k: d.label, v: d.detail }))} />
-            <Reveal>
-              <p className="lux-mark lux-body" style={{ fontSize: 14.5, marginTop: 30 }}>{MEAL_PLAN.note}</p>
-            </Reveal>
-          </div>
-        </div>
-      </Section>
-
-      {/* ══ TEMPLES ══════════════════════════════════════════ */}
-      {temples.length > 0 && (
-        <Section id="temples">
-          <SectionHead
-            eyebrow="The shrines"
-            title="What you are actually walking towards"
-            lede="History, ritual, timings and the things nobody tells you until you are standing there."
-          />
-          <TempleGuide temples={temples} />
-        </Section>
-      )}
-
-      {/* ══ WEATHER ══════════════════════════════════════════ */}
-      <Section id="weather" tone="paper-deep">
-        <SectionHead
-          eyebrow="Conditions"
-          title="What the mountain will be doing"
-          lede="Four stations across three thousand metres of altitude change. Pack for the highest one, not the one you fly into."
-          aside={<span className="lux-caption">{WEATHER.updated}</span>}
-        />
-
-        <Stagger className="lux-weather">
-          {WEATHER.stations.map((s) => (
-            <div key={s.place}>
-              <h3 className="lux-display lux-display--sm">{s.place}</h3>
-              <span className="lux-caption" style={{ display: 'block', marginTop: 6 }}>{s.alt}</span>
-              <div style={{ marginTop: 22 }}>
-                {s.bands.map((b) => (
-                  <div key={b.months} style={{ paddingBottom: 18, marginBottom: 18, borderBottom: '1px solid var(--rule)' }}>
-                    <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 10 }}>
-                      <span className="lux-facts__k">{b.months}</span>
-                      <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', fontVariantNumeric: 'tabular-nums' }}>
-                        {b.high}° / {b.low}°
-                      </span>
+          {/* Packing List */}
+          <section>
+            <h2 style={SH}>🎒 Packing List for This Yatra</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:8, marginBottom:8 }}>
+              {[
+                ['Clothing','Heavy jacket / down vest','Thermal inner layers (2 sets)','Woollen cap, gloves, socks','Waterproof poncho / raincoat','Comfortable trekking shoes'],
+                ['Health','Personal medicines (with extra)','Altitude sickness tablets','ORS sachets & glucose tablets','Pulse oximeter (small, cheap)','Sunscreen SPF 50+'],
+                ['Documents','Aadhaar card / valid ID','Char Dham registration QR','Medical fitness certificate (50+)','Travel insurance document','Emergency contact card (printed)'],
+                ['Practical','Power bank (20,000 mAh)','Cash (₹5,000–10,000 minimum)','Reusable water bottle (1L)','Light torch / headlamp','Walking stick (collapsible)'],
+              ].map(([cat, ...items]) => (
+                <div key={cat} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
+                  <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.05em' }}>{cat}</div>
+                  {items.map(item => (
+                    <div key={item} style={{ display:'flex', gap:6, fontSize:12, color:'var(--text-mid)', marginBottom:4, lineHeight:1.4 }}>
+                      <span style={{ color:'var(--teal)', flexShrink:0, fontWeight:700 }}>✓</span>{item}
                     </div>
-                    <span className="lux-caption" style={{ display: 'block', marginTop: 8, color: 'var(--teal-dark)' }}>
-                      Rain: {b.rain}
-                    </span>
-                    <p className="lux-body" style={{ fontSize: 13.5, marginTop: 8 }}>{b.note}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:12, color:'var(--text-muted)' }}>💡 We share a detailed packing checklist PDF with every confirmed booking. WhatsApp us to receive it in advance.</p>
+          </section>
+
+          {/* Travel Tips — 15 numbered tips for featured snippets */}
+          <section>
+            <h2 style={SH}>💡 15 Essential Travel Tips for This Yatra</h2>
+            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+              {[
+                'Complete Char Dham biometric registration before leaving home — you cannot proceed past Rishikesh/Haridwar checkpoints without it.',
+                'Start driving by 6 AM every day. Night driving is prohibited on Himalayan roads after 9 PM for safety reasons.',
+                'Pack warm clothes even in May–June. Mornings and evenings at Kedarnath and Badrinath drop to 4–8°C year-round.',
+                'Carry at least ₹7,000–10,000 in cash. ATMs are sparse, unreliable, and frequently out of cash in peak season.',
+                'Book hotels in advance at Barkot, Uttarkashi, Guptkashi, and Joshimath — all four fill up by noon in May-June.',
+                'Pre-book Kedarnath helicopter from the IRCTC portal (heliyatra.irctc.co.in) 60+ days in advance for peak season.',
+                'Eat light vegetarian food throughout — heavy meals worsen altitude sickness. Dhabas along the route serve dal-rice and rotis.',
+                'Stay hydrated — drink 3–4 litres of water daily at high altitude. Avoid alcohol entirely; it worsens acclimatisation.',
+                'Jio and Airtel work better than Vi/BSNL on the Char Dham route. Airtel is more reliable near Kedarnath.',
+                'Poncho / raincoat is essential even in May. Afternoon showers are common at all four dhams.',
+                'For Kedarnath trek, start no later than 6 AM. The path gets crowded and unsafe to return after 2 PM.',
+                'Senior citizens and those with BP / heart / diabetes must carry a medical fitness certificate — it is checked at Sonprayag and Pandukeshwar.',
+                'Respect the "no photography inside temple sanctum" rule strictly. Cameras and phones are banned inside Kedarnath temple from 2026.',
+                'Hire only government-registered pony wallahs and porters at Gaurikund (Kedarnath) and Janki Chatti (Yamunotri) — avoid touts.',
+                'Keep your Char Dham registration QR code (printed AND digital) accessible at all times — it is checked at 8–10 points on the route.',
+              ].map((tip, i) => (
+                <div key={i} style={{ display:'flex', gap:12, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                  <span style={{ background:'var(--navy)', color:'#fff', fontWeight:700, fontSize:11, width:22, height:22, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, marginTop:1 }}>{i+1}</span>
+                  {tip}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Emergency contacts */}
+          <section>
+            <h2 style={SH}>🚨 Emergency Contacts & Yatra Helplines</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:16 }}>
+              {[
+                { label:'Uttarakhand Disaster Helpline', num:'1070', note:'24/7 emergency' },
+                { label:'Police Helpline', num:'100', note:'All districts' },
+                { label:'Ambulance / Medical', num:'108', note:'Free, 24/7' },
+                { label:'Kedarnath Control Room', num:'+91-1364-222-734', note:'During yatra season' },
+                { label:'GMVN Enquiry', num:'+91-135-2746817', note:'Accommodation' },
+                { label:'Shiv Ganga Travels', num:'+91-7817996730', note:'24/7 on-ground support' },
+              ].map(c => (
+                <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)', textDecoration:'none', display:'block' }}>
+                  <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{c.label}</div>
+                  <div style={{ fontWeight:800, fontSize:16, color:'var(--teal)', marginBottom:2 }}>{c.num}</div>
+                  <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{c.note}</div>
+                </a>
+              ))}
+            </div>
+            <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>
+              Save the Uttarakhand Disaster Helpline (1070) and ambulance number (108) in your phone before departing. Mountain networks can be patchy — also note numbers on paper. Our team at Shiv Ganga Travels is on WhatsApp 24/7 during your yatra.
+            </p>
+          </section>
+
+          {/* Season Pricing — competitors all show peak vs off-peak variation */}
+          <section style={{ marginBottom:4 }}>
+            <h2 style={SH}>📅 Best Season to Book — Price & Crowd Guide</h2>
+            <div style={{ overflowX:'auto', marginBottom:16 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Month','Season','Crowd level','Typical package price','Weather at Kedarnath','Verdict'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {[
+                    ['May','Opening','Very high','₹22,000–₹28,000','5–18°C, clear','High demand — book 3 months early'],
+                    ['June','Peak','Very high','₹22,000–₹28,000','8–18°C, some rain','Peak pilgrim rush — book 2–3 months early'],
+                    ['July–Aug','Monsoon','Low','₹16,000–₹20,000','10–15°C, heavy rain','Landslide risk — not recommended'],
+                    ['September','Post-monsoon','Medium','₹18,000–₹22,000','0–15°C, crisp','Hidden gem — best skies, fewer crowds'],
+                    ['October','Last season','Medium-low','₹17,000–₹18,500','-2 to 10°C','Great value — dhams open till Nov 11'],
+                    ['November (1–13)','Closing','Very low','₹14,000–₹18,000','-5 to 5°C','Last chance — temple closes mid-November'],
+                  ].map(([month, season, crowd, price, weather, verdict], i)=>(
+                    <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i===3||i===4 ? 'rgba(29,158,117,0.06)' : i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
+                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>{month}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{season}</td>
+                      <td style={{ padding:'8px 12px', color: crowd.includes('Very high')?'#D85A30': crowd.includes('Low')?'#6B7280':'#15803D', fontWeight:600, fontSize:12.5 }}>{crowd}</td>
+                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, whiteSpace:'nowrap' }}>{price}</td>
+                      <td style={{ padding:'8px 12px', color:'#64748b', fontSize:12 }}>{weather}</td>
+                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12, lineHeight:1.5 }}>{verdict}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12.5, color:'var(--text-muted)', fontStyle:'italic' }}>
+              💡 September and October are our most consistently rated months across 15 years. Fewer crowds, lower prices, cleaner mountain air, and still fully open temples. Many repeat pilgrims specifically choose October.
+            </p>
+          </section>
+
+          {/* AMS Warning — all top competitors have this, builds trust */}
+          <section style={{ marginBottom:4 }}>
+            <h2 style={SH}>⛰️ Altitude & Health — What Every Pilgrim Must Know</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:16 }}>
+              <div style={{ background:'#FCEBEB', border:'1px solid #F09595', borderRadius:12, padding:'14px 16px' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'#791F1F', marginBottom:6 }}>🩺 Altitude Mountain Sickness (AMS)</div>
+                <div style={{ fontSize:13.5, color:'#7f1d1d', lineHeight:1.7 }}>
+                  Kedarnath (3,583m) and Badrinath (3,133m) are high-altitude shrines. AMS symptoms — headache, nausea, dizziness, breathlessness — can affect anyone regardless of fitness. Our driver carries an oxygen cylinder. Spend one night at Guptkashi (1,319m) before ascending to acclimatize. If symptoms worsen, descend immediately.
+                </div>
+              </div>
+              <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:12, padding:'14px 16px' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'#0C447C', marginBottom:6 }}>📱 Network & Connectivity</div>
+                <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>
+                  BSNL works best throughout the Char Dham route and at Kedarnath temple. Jio works at Gaurikund and lower altitudes. Airtel/Vi have limited to no signal above Sonprayag. Buy a BSNL SIM before departure if you need to stay connected during the trek.
+                </div>
+              </div>
+              <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'14px 16px' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:6 }}>💊 Medical Preparation</div>
+                <div style={{ fontSize:13.5, color:'#166534', lineHeight:1.7 }}>
+                  Carry: Diamox (altitude medication, consult doctor first), Dolo 650 (fever/pain), ORS sachets, antacid, personal prescription medicines. Medical camps are placed every 3–5km on the Kedarnath route. Our vehicle carries a basic first aid kit and oxygen.
+                </div>
+              </div>
+              <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:12, padding:'14px 16px' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'#7B3F00', marginBottom:6 }}>🍽️ Food & Hydration</div>
+                <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7 }}>
+                  Eat light vegetarian meals — dal, rice, sabzi, chapati. Avoid oily or heavy food at altitude. Drink 3–4 litres of water daily. Do NOT drink tea/chai at altitude as it dehydrates. Packaged biscuits and dry fruits for energy during the trek.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Why Haridwar — all top competitors have this section */}
+          <section style={{ marginBottom:4 }}>
+            <h2 style={SH}>📍 Why Start Your Char Dham Yatra from Haridwar?</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:10, marginBottom:12 }}>
+              {[
+                { icon:'🏠', title:'Base city for all 4 dhams', body:'Haridwar is equidistant from all four dhams — Barkot (Yamunotri, 210km), Uttarkashi (Gangotri, 180km), Guptkashi (Kedarnath, 200km), Joshimath (Badrinath, 275km). Rishikesh is only 24km from Haridwar and adds 1 hour. Starting from Delhi adds 250km (4–5 hours) each way.' },
+                { icon:'🚂', title:'Best rail connectivity', body:'Haridwar Railway Station has direct trains from Delhi (Mussoorie Express, Jan Shatabdi), Mumbai (Dehradun Express), Kolkata (Doon Express), Lucknow, Jaipur, Chandigarh and almost every major city. Rishikesh station is 3km further. Dehradun station adds 55km drive.' },
+                { icon:'🙏', title:'Sacred start — Ganga Aarti', body:'Every Char Dham Yatra begins with the evening Ganga Aarti at Har Ki Pauri, Haridwar — a spiritual ritual that has been performed daily since the 6th century. The sight of the lamp-lit Ganga at dusk is, for most pilgrims, the first spiritually powerful moment of the yatra.' },
+                { icon:'🏢', title:'Our office is here', body:'We are based at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. Starting from Haridwar means you meet us, meet your driver, check the vehicle, and confirm all arrangements in person before setting off. This is not possible if we send a vehicle from Delhi.' },
+              ].map(item=>(
+                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)' }}>
+                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:5 }}>{item.icon} {item.title}</div>
+                  <div style={{ fontSize:13, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Delhi → Haridwar travel options — fills the by-car/train/bus/helicopter intent */}
+          {fromDelhi && (
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+            <h2 style={SH}>🚗 Char Dham Yatra from Delhi — Travel Options Compared</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+              Delhi to Haridwar is about 220–240 km, roughly 5–6 hours on the Delhi–Dehradun Expressway. How you cover that first leg decides your cost and comfort. Here is how the four ways stack up, and what we recommend for each kind of traveller.
+            </p>
+            <div style={{ overflowX:'auto', marginBottom:8 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:560 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Mode','Time','Cost','Notes'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {delhiModes.map((m,i)=>(
+                    <tr key={m.mode} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
+                      <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{m.mode}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)', whiteSpace:'nowrap' }}>{m.time}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{m.cost}</td>
+                      <td style={{ padding:'9px 12px', color:'#475569', lineHeight:1.6 }}>{m.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
+              Our group package uses the overnight Volvo so you do not lose a daytime leg. Want door pickup from Noida, Greater Noida, Gurugram or Faridabad instead? We send a private car across Delhi NCR, usually at no extra charge within the region — just ask when you book.
+            </p>
+          </section>
+          )}
+
+          {/* Char Dham 2026 Registration — high-intent, GEO-citable, fills competitor gap */}
+          {isYatra && (
+          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'2px solid var(--gold)' }}>
+            <h2 style={SH}>📋 Char Dham Yatra 2026 Registration — and How We Handle It For You</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
+              Registration is compulsory in 2026. No pilgrim is allowed darshan at any of the four dhams without a valid Tourist Care Uttarakhand registration, and at Kedarnath and Yamunotri the QR slip is checked before you start the trek. The good news: if you book this package, <strong>we do the whole registration for you</strong>. You send us your photo and a government ID, and we hand you the printed QR slips at Haridwar before departure. You never touch the portal.
+            </p>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
+              If you would rather register yourself, it is free and takes about ten minutes on the official government site — <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>registrationandtouristcare.uk.gov.in</a>. Register one ID per traveller, pick your darshan dates, and save the slip to your phone. Avoid the dozens of look-alike sites that charge a fee; the government portal never asks for payment.
+            </p>
+            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🗓️ Char Dham 2026 Opening & Closing Dates (Confirmed)</h3>
+            <div style={{ overflowX:'auto', marginBottom:12 }}>
+              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:480 }}>
+                <thead><tr style={{ background:'var(--navy)' }}>
+                  {['Dham','Opens (Kapat)','Closes','Registration'].map(h=>(
+                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                  ))}
+                </tr></thead>
+                <tbody>
+                  {dham2026.map((d,i)=>(
+                    <tr key={d.dham} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
+                      <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{d.dham}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.opens}</td>
+                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.closes}</td>
+                      <td style={{ padding:'9px 12px', color:'#B45309', fontWeight:600 }}>{d.reg}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
+              Yamunotri and Gangotri open together on Akshaya Tritiya; Kedarnath and Badrinath follow a day or two later. Dates are set by the temple committees each year and are confirmed for 2026. Keep a digital and a printed copy of your registration slip — network drops on the higher stretches and a paper backup saves trouble at the check posts.
+            </p>
+          </section>
+          )}
+
+          {/* Optional Add-ons — matches competitor upsell, drives internal links + conversions */}
+          {isYatra && (
+          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+            <h2 style={SH}>🧭 Optional Add-ons &amp; Extensions</h2>
+            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
+              Most pilgrims keep to the four dhams, but if you have a spare day and the legs for it, a few detours are well worth folding in. We add these on request — just tell us when you enquire and we will adjust the route and the quote. Each one needs roughly one extra day and is charged at actuals, no markup.
+            </p>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12 }}>
+              {[
+                { t:'Tungnath & Chopta', d:'World\u2019s highest Shiva temple (3,680m) and the meadows of Chopta. A short, rewarding trek near Kedarnath.', href:'/chopta-tungnath', add:'+1 day' },
+                { t:'Mana Village', d:'India\u2019s last village before Tibet — Vyas Gufa, Bhim Pul and the Saraswati\u2019s source, 3 km past Badrinath.', href:'/blog/mana-village-badrinath', add:'half day' },
+                { t:'Triyuginarayan Temple', d:'Where Shiva and Parvati married, with its eternal flame. An easy detour from Sonprayag.', href:'/blog/triyuginarayan-temple', add:'half day' },
+                { t:'Valley of Flowers', d:'UNESCO alpine valley in bloom (Jul\u2013Aug), paired with Hemkund Sahib near Govindghat.', href:'/blog/valley-of-flowers-trek', add:'+2 days' },
+              ].map(a => (
+                <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid var(--border)', display:'block' }}>
+                  <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
+                    <span style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{a.t}</span>
+                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--gold-dark)', background:'#FFF8E7', padding:'2px 8px', borderRadius:100, whiteSpace:'nowrap' }}>{a.add}</span>
+                  </div>
+                  <p style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.6, margin:0 }}>{a.d}</p>
+                  <span style={{ fontSize:12, color:'var(--teal)', fontWeight:600, marginTop:8, display:'inline-block' }}>Read more →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+          )}
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:4 }}>
+            <h2 style={SH}>🏔️ Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🎖️ Founded by a Retired Army Officer</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army. Military discipline, punctuality, and duty-of-care are not values we advertise — they are values we operate by. Every single departure runs on schedule.</div>
+              </div>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📍 Based in Haridwar — Not Delhi</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator, not a broker. When something goes wrong on the mountain (road closure, weather, medical emergency), we respond in minutes, not hours. Delhi-based aggregators call a subcontractor. We call our own driver.</div>
+              </div>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.7/5 · 54 verified Google reviews</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 54 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has held at 4.7/5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
+              </div>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Uttarakhand Tourism Registered</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Registered with the Uttarakhand Tourism Development Board. Member of IATO (Indian Association of Tour Operators). All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. You can verify our registration at the Haridwar Tourism office.</div>
+              </div>
+            </div>
+
+            {/* Real review quotes */}
+            <div style={{ marginBottom:8 }}>
+              <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10 }}>What our pilgrims say (from verified Google reviews):</div>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {[
+                  { name:'Rakesh Sharma, Delhi', stars:'★★★★★', text:'"Zero commission as promised. Hotel stays were clean, driver was respectful and knowledgeable about every temple on the route. The VIP darshan at Kedarnath saved us 4 hours of queue. Will do Char Dham again next year with Shiv Ganga."' },
+                  { name:'Priya Mehta, Mumbai', stars:'★★★★★', text:'"My 72-year-old mother did Char Dham with them. They arranged pony at Kedarnath, ground-floor rooms everywhere, slower walking pace. Dhanesh ji personally called twice to check on her. This is not what you get from an online aggregator."' },
+                  { name:'Suresh & Kamla Gupta, Jaipur', stars:'★★★★★', text:'"We did the senior citizen package. The driver Ramesh ji was with us for 12 days like family. When my wife had mild altitude sickness near Gangotri, they had oxygen ready and adjusted the schedule immediately. No panic, complete professionalism."' },
+                ].map(r => (
+                  <div key={r.name} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px 14px', borderLeft:'3px solid var(--gold)' }}>
+                    <div style={{ fontSize:13, color:'#E8920A', fontWeight:700, marginBottom:4 }}>{r.stars} {r.name}</div>
+                    <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7, fontStyle:'italic' }}>{r.text}</div>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
-        </Stagger>
+          </section>
 
-        <div className="lux-rail" style={{ marginTop: 'clamp(40px, 5vw, 64px)' }}>
-          <div className="lux-rail__aside"><Eyebrow>What to pack</Eyebrow></div>
-          <Stagger className="lux-grid lux-grid--3">
-            {WEATHER.packing.map((p) => (
-              <div key={p.group}>
-                <h4 className="lux-facts__k">{p.group}</h4>
-                <ul className="lux-list" style={{ marginTop: 14 }}>
-                  {p.items.map((i) => <li key={i} style={{ fontSize: 14 }}>{i}</li>)}
-                </ul>
-              </div>
-            ))}
-          </Stagger>
+
+          {/* E-E-A-T: Operator credentials */}
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+            <h2 style={SH}>Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
+              {[
+                { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
+                { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
+                { icon:'⭐', title:'4.7/5 · 54 verified Google reviews', body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. Our 4.7/5 rating over 15 years has currently at 4.7/5.' },
+                { icon:'📋', title:'Uttarakhand Tourism Registered', body:'Registered with Uttarakhand Tourism Development Board. Member of IATO. All vehicles hold valid tourism permits and hill-route licences. Registration verifiable at the Haridwar Tourism office.' },
+              ].map(item => (
+                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
+                  <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10 }}>What pilgrims say (verified Google reviews):</div>
+            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+              {[
+                { name:'Rakesh Sharma, Delhi', text:'"Zero commission as promised. Hotel stays were clean, driver knowledgeable. VIP darshan at Kedarnath saved us 4 hours of queue. Will return next year."' },
+                { name:'Priya Mehta, Mumbai', text:'"My 72-year-old mother did Char Dham with them. Pony at Kedarnath, ground-floor rooms, slower pace arranged. Dhanesh ji personally called twice to check on her. This is not what you get from an online aggregator."' },
+                { name:'Suresh & Kamla Gupta, Jaipur', text:'"When my wife had mild altitude sickness near Gangotri, they had oxygen ready and adjusted the schedule immediately. No panic, complete professionalism. 12 days felt like travelling with family."' },
+              ].map(r => (
+                <div key={r.name} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px 14px', borderLeft:'3px solid var(--gold)' }}>
+                  <div style={{ fontSize:13, color:'#E8920A', fontWeight:700, marginBottom:4 }}>★★★★★ {r.name}</div>
+                  <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7, fontStyle:'italic' }}>{r.text}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Bottom CTA */}
+          <section style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
+            <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book?</h2>
+            <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary · Zero commission · Reply in 2 hrs</p>
+            <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
+              <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+            </div>
+          </section>
         </div>
-      </Section>
 
-      {/* ══ GALLERY ══════════════════════════════════════════ */}
-      <Section id="gallery">
-        <SectionHead
-          eyebrow="Photography"
-          title="The Garhwal, unretouched"
-          aside={<span className="lux-caption">Click any frame to enlarge</span>}
-        />
-        <Gallery items={GALLERY} />
-      </Section>
-
-      {/* ══ ASSURANCES ═══════════════════════════════════════ */}
-      <Section tone="navy" tight>
-        <SectionHead light eyebrow="Why book direct" title="Six things we will put in writing" size="md" />
-        <Stagger className="lux-grid lux-grid--3">
-          {ASSURANCES.map((a) => (
-            <div key={a.title} style={{ paddingTop: 24, borderTop: '1px solid var(--rule-light)' }}>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: '#fff' }}>{a.title}</h3>
-              <p className="lux-body" style={{ fontSize: 14, marginTop: 12, color: 'rgba(255,255,255,0.66)' }}>{a.body}</p>
+        {/* RIGHT — Sticky booking card */}
+        <div style={{ position:'sticky', top:80 }}>
+          <div style={{ borderRadius:16, overflow:'hidden', border:'2px solid var(--border)', boxShadow:'var(--shadow-lg)' }}>
+            <div style={{ background:'linear-gradient(135deg,var(--navy),var(--navy-mid))', padding:'20px 20px 16px', textAlign:'center' }}>
+              <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12, marginBottom:3 }}>{isRange ? 'Price range per person' : 'Starting from'}</p>
+              {!isRange && savings>0 && <p style={{ color:'rgba(255,255,255,0.4)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>}
+              {isRange ? (
+                <>
+                  <p style={{ color:'#fff', fontWeight:800, fontSize:28, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')} – ₹{pkg.price.original.toLocaleString('en-IN')}</p>
+                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
+                  <p style={{ color:'#FFD166', fontSize:12.5, fontWeight:600, marginTop:4 }}>Budget · Standard · Deluxe tiers available</p>
+                </>
+              ) : (
+                <>
+                  <p style={{ color:'#fff', fontWeight:800, fontSize:36, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</p>
+                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
+                  <p style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginTop:4 }}>≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
+                  {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
+                </>
+              )}
             </div>
-          ))}
-        </Stagger>
-      </Section>
-
-      {/* ══ REVIEWS ══════════════════════════════════════════ */}
-      <Section id="reviews" tone="paper">
-        <SectionHead
-          eyebrow="Travellers"
-          title="What people said afterwards"
-          aside={
-            <a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer" className="lux-link">
-              Read on Google
-            </a>
-          }
-        />
-        <ReviewsWall reviews={REVIEWS} />
-      </Section>
-
-      {/* ══ COST BUILDER ═════════════════════════════════════ */}
-      <Section id="cost">
-        <SectionHead
-          eyebrow="Your costing"
-          title="Change anything, watch the number move"
-          lede="Travellers, hotel tier, vehicle, pickup city, extra nights and add-ons. When it looks right, send the whole configuration to us on WhatsApp in one tap."
-        />
-        <CostBuilder />
-      </Section>
-
-      {/* ══ FAQ ══════════════════════════════════════════════ */}
-      {pkg.faqs?.length > 0 && (
-        <Section id="faq" tone="paper-deep">
-          <div className="lux-rail">
-            <div className="lux-rail__aside">
-              <Eyebrow>Questions</Eyebrow>
-              <Reveal>
-                <p className="lux-display lux-display--md" style={{ marginTop: 20 }}>
-                  Everything people ask before they book.
-                </p>
-              </Reveal>
-              <Reveal delay={0.08}>
-                <p className="lux-body" style={{ fontSize: 14.5, marginTop: 20 }}>
-                  Not here? Message us — you will get a person, in Haridwar, who has run this route.
-                </p>
-              </Reveal>
-            </div>
-            <FaqList faqs={pkg.faqs} />
-          </div>
-        </Section>
-      )}
-
-      {/* ══ BOOKING CLOSE ════════════════════════════════════ */}
-      <Section id="book" tone="ink">
-        <div style={{ maxWidth: 780 }}>
-          <Reveal variant="fade"><Eyebrow light>Booking</Eyebrow></Reveal>
-          <Reveal>
-            <h2 className="lux-display lux-display--lg" style={{ color: '#fff', marginTop: 22 }}>
-              Twenty-five percent holds your{' '}
-              <span className="lux-accent">{pkg.duration.days} days</span> on the mountain.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.72)', marginTop: 24 }}>
-              Send us your dates and we come back within two hours with a written costing —
-              hotels named, vehicle confirmed, inclusions and exclusions itemised. Nothing is
-              charged until you have read it.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.14}>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 36 }}>
+            <div className="flex flex-col gap-2.5 bg-white p-4">
               <a
-                href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I want to book ${pkg.name} (${pkg.duration.nights}N/${pkg.duration.days}D). Please share the detailed costing and availability.`)}`}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="lux-btn lux-btn--gold"
+                href={`https://wa.me/${SITE.whatsapp}?text=${msg}`}
+                target="_blank" rel="nofollow noopener noreferrer"
+                className="block rounded-xl bg-[#25D366] px-4 py-3.5 text-center text-[14px]
+                           font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.32)]
+                           transition-all duration-200 hover:brightness-105
+                           motion-safe:hover:-translate-y-0.5"
               >
-                Enquire on WhatsApp
+                💬 Book via WhatsApp
               </a>
-              <a href={`tel:${SITE.phone.replace(/-/g, '')}`} className="lux-btn lux-btn--ghost-light">
-                Call {SITE.phone}
+              <a
+                href="tel:+917817996730"
+                className="block rounded-xl bg-navy px-4 py-3 text-center text-[13px] font-bold
+                           text-white transition-all duration-200 hover:bg-navy-mid
+                           motion-safe:hover:-translate-y-0.5"
+              >
+                📞 Call to Book
               </a>
-              <a href={`mailto:${SITE.email}`} className="lux-btn lux-btn--ghost-light">Email us</a>
+              {/* Was a bare text node reading "✉️ Send Enquiry Form" with nothing
+                  wrapping it — now a working link to the enquiry form. */}
+              <Link
+                href="/contact"
+                className="block rounded-xl border border-slate-200 px-4 py-2.5 text-center
+                           text-[12.5px] font-bold text-navy transition-colors duration-200
+                           hover:border-navy hover:bg-navy-light"
+              >
+                ✉️ Send Enquiry Form
+              </Link>
             </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <dl className="lux-facts" style={{ marginTop: 44, maxWidth: 560 }}>
-              <div className="lux-facts__row"><dt className="lux-facts__k">Office</dt><dd className="lux-facts__v">{SITE.address}</dd></div>
-              <div className="lux-facts__row"><dt className="lux-facts__k">Hours</dt><dd className="lux-facts__v">7:00 AM – 9:00 PM, every day</dd></div>
-              <div className="lux-facts__row"><dt className="lux-facts__k">2026 season</dt><dd className="lux-facts__v">April 19 – November 13</dd></div>
-              <div className="lux-facts__row"><dt className="lux-facts__k">Payment</dt><dd className="lux-facts__v">UPI, bank transfer, cards. No booking fee.</dd></div>
-            </dl>
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* ══ RELATED + GUIDES ═════════════════════════════════ */}
-      {(related.length > 0 || guides.length > 0) && (
-        <Section tone="paper" tight>
-          {related.length > 0 && (
-            <>
-              <SectionHead
-                eyebrow="Other ways to do this"
-                title={`More ${cat?.shortName} journeys`}
-                size="md"
-                aside={<Link href={`/packages/${pkg.category}`} className="lux-link">View all</Link>}
-              />
-              <Stagger className="lux-grid lux-grid--3">
-                {related.map((r) => (
-                  <Link key={r.slug} href={`/packages/${r.slug}`} className="lux-zoom-host" style={{ textDecoration: 'none', display: 'block' }}>
-                    <span className="lux-frame lux-frame--3x2 lux-frame--zoom" style={{ display: 'block' }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={pxAt(r.photo, 600, 400)} alt={r.name} loading="lazy" decoding="async" width={600} height={400} />
-                    </span>
-                    <span className="lux-caption" style={{ display: 'block', marginTop: 18 }}>
-                      {r.duration.nights}N / {r.duration.days}D · from ₹{r.price.discounted.toLocaleString('en-IN')}
-                    </span>
-                    <span className="lux-display lux-display--sm" style={{ display: 'block', marginTop: 8 }}>
-                      {r.name.replace(' Package', '')}
-                    </span>
-                  </Link>
-                ))}
-              </Stagger>
-            </>
-          )}
-
-          {guides.length > 0 && (
-            <div style={{ marginTop: 'clamp(44px, 5vw, 72px)', paddingTop: 34, borderTop: '1px solid var(--rule)' }}>
-              <Eyebrow>Planning reading</Eyebrow>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px 28px', marginTop: 22 }}>
-                {guides.map((g) => (
-                  <Link key={g.href} href={g.href} className="lux-link">{g.label}</Link>
+            <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
+              {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',label:'Start',val:pkg.startCity},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(
+                <div key={s.label} style={{ display:'flex', justifyContent:'space-between', padding:'6px 0', borderBottom:'1px solid var(--border)', fontSize:12.5 }}>
+                  <span style={{ color:'var(--text-muted)' }}>{s.icon} {s.label}</span>
+                  <span style={{ fontWeight:600, color:'var(--text)' }}>{s.val}</span>
+                </div>
+              ))}
+            </div>
+            <div style={{ padding:'12px 16px', background:'#fff' }}>
+              {['✅ Zero commission','🛡️ Verified operator','💰 Price match guarantee','📋 Free registration help'].map(t=>(
+                <div key={t} style={{ fontSize:12, color:'var(--text-mid)', padding:'3px 0' }}>{t}</div>
+              ))}
+            </div>
+            {guides.length>0 && (
+              <div style={{ padding:'12px 16px', background:'var(--navy-light)', borderTop:'1px solid var(--border)' }}>
+                <div style={{ fontSize:11.5, fontWeight:700, color:'var(--navy)', marginBottom:8 }}>📖 Helpful Guides:</div>
+                {guides.slice(0,3).map(g=>(
+                  <Link key={g.href} href={g.href} style={{ display:'block', fontSize:12, color:'var(--navy)', textDecoration:'none', padding:'4px 0', borderBottom:'1px solid rgba(15,43,91,0.08)' }}>→ {g.label}</Link>
                 ))}
               </div>
-            </div>
-          )}
-        </Section>
-      )}
-
-      <BookingBar />
-    </BookingProvider>
+            )}
+          </div>
+        </div>
+      </div>
+      <FloatingBookCTA packageName={pkg.name}/>
+    </>
   );
 }

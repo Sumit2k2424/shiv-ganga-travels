@@ -1,14 +1,11 @@
 import './globals.css';
-import './luxury.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
-import LuxMotion from '@/components/lux/LuxMotion';
 import { SITE } from '@/data/packages';
-import { SOCIAL_SAME_AS } from '@/data/social';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({
@@ -297,10 +294,7 @@ function SiteSchema() {
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
-      // Social profiles come from src/data/social.js — verified ones only.
-      // A 404 in sameAs damages knowledge-panel trust, so unconfirmed
-      // accounts are deliberately left out until their URL is filled in.
-      ...SOCIAL_SAME_AS,
+      'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       'https://www.tripadvisor.com/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html',
       `https://wa.me/${SITE.whatsapp}`,
@@ -423,8 +417,6 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
-        {/* Scroll progress rail — a single 2px gold line, no layout cost */}
-        <div className="lux-progress" data-lux-progress="" aria-hidden="true"/>
         <Navbar/>
         {/* DirectOperatorStrip removed — its message now lives in the Navbar
             utility strip, collapsing four stacked header bars into two. */}
@@ -435,9 +427,6 @@ export default function RootLayout({ children }) {
         <WhatsAppButton/>
         <LeadPopup/>
         <LeadTracker/>
-        {/* The site's single motion island: Lenis + every scroll reveal.
-            Server components elsewhere just write data-lux-* attributes. */}
-        <LuxMotion/>
         {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
           window.dataLayer=window.dataLayer||[];
