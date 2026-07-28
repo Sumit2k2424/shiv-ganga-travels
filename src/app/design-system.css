@@ -442,6 +442,20 @@
    via scaleX from the left edge); without it the fixed bar collapses to 0. */
 .lux-progress { width: 100%; }
 
+/* Route map with the caption stacked BELOW the plate rather than overlaid.
+   Used in narrow columns (e.g. the package detail page) where the absolute
+   overlay would otherwise cover a short map. */
+.lux-map-stacked .lux-map__caption {
+  position: static;
+  max-width: none;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  background: #fff;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
 /* ══════════════════════════════════════════════════════════════
    REDUCED MOTION · every spinner/loader must degrade gracefully
    ══════════════════════════════════════════════════════════════ */

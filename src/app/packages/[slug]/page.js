@@ -298,7 +298,7 @@ export default async function PackageDetailPage({ params }) {
         </div>
       </div>
 
-      <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'1fr min(340px,38%)', gap:28, alignItems:'start' }}>
+      <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'minmax(0,1fr) min(340px,38%)', gap:28, alignItems:'start' }}>
 
         {/* LEFT */}
         <div style={{ display:'flex', flexDirection:'column', gap:28 }}>
@@ -406,14 +406,6 @@ export default async function PackageDetailPage({ params }) {
             </ul>
           </section>
 
-          {/* Interactive route map — yatra packages */}
-          {isYatra && routeNodes.length > 1 && (
-            <section>
-              <h2 style={SH}>The route, mapped</h2>
-              <RouteMap nodes={routeNodes} category={pkg.category} title={`${pkg.name} route`} />
-            </section>
-          )}
-
           {/* Day-wise Itinerary */}
           <section>
             <h2 style={SH}>Itinerary at a glance</h2>
@@ -428,6 +420,16 @@ export default async function PackageDetailPage({ params }) {
             <h2 style={SH}>Day by day</h2>
             <DayTimeline days={pkg.itinerary} stops={[]} />
           </section>
+
+          {/* Interactive route map — yatra packages (after the itinerary it visualises) */}
+          {isYatra && routeNodes.length > 1 && (
+            <section>
+              <h2 style={SH}>The route, mapped</h2>
+              <div className="lux-map-stacked">
+                <RouteMap nodes={routeNodes} category={pkg.category} title={`${pkg.name} route`} />
+              </div>
+            </section>
+          )}
 
           {/* Inclusions / Exclusions */}
           <section>
