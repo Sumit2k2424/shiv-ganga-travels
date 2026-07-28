@@ -30,42 +30,22 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  // Reduce JS bundle size — tree-shake large packages
+  // Reduce JS bundle size — tree-shake large barrel packages.
+  // Only list packages that expose a barrel (index) file; react/react-dom
+  // and next/* are NOT barrels and don't belong here.
   experimental: {
     optimizePackageImports: [
-      'react',
-      'react-dom',
-      'next/link',
-      'next/image',
+      'lucide-react',
     ],
   },
 
-  // Webpack: split vendor chunks for better caching on mobile
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.optimization.splitChunks = {
-        ...config.optimization.splitChunks,
-        cacheGroups: {
-          ...(config.optimization.splitChunks?.cacheGroups || {}),
-          // Separate React into its own cached chunk
-          react: {
-            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
-            name: 'react',
-            chunks: 'all',
-            priority: 20,
-          },
-          // Separate Next.js internals
-          nextjs: {
-            test: /[\\/]node_modules[\\/]next[\\/]/,
-            name: 'nextjs',
-            chunks: 'all',
-            priority: 10,
-          },
-        },
-      };
-    }
-    return config;
-  },
+  // NOTE: Do NOT override webpack `optimization.splitChunks` here. The Next.js
+  // App Router owns its chunk graph, and a custom cacheGroup named "nextjs"
+  // collided with Next's own framework chunk — Next then emitted the CSS as
+  // `nextjs.css` AND injected it as `<script src=".../nextjs.css">`. The
+  // browser can't execute CSS as JS, so the client runtime crashed: no
+  // hydration, dead nav dropdowns, and unrendered ssr:false widgets. Let Next
+  // handle chunk splitting.
 
   async redirects() {
     return [
