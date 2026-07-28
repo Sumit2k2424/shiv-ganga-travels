@@ -339,7 +339,9 @@ export default function HomePage() {
       <Section tone="paper-deep">
         <SectionHead eyebrow="The route" title="Haridwar to the four dhams, and back"
           lede="Roughly eleven hundred kilometres, clockwise through the Garhwal. Scroll to trace the line — and see what the body is actually asked to climb." />
-        <RouteMap nodes={ROUTE.nodes} category="char-dham" title="The Char Dham circuit" />
+        <div className="lux-map-stacked">
+          <RouteMap nodes={ROUTE.nodes} category="char-dham" title="The Char Dham circuit" />
+        </div>
       </Section>
 
       {/* ═══ 5 · LUXURY PACKAGE RAILS ═══ */}
