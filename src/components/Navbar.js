@@ -173,18 +173,52 @@ const CAB_LINKS = [
   { label:'Delhi → Haridwar',      href:'/delhi-to-haridwar-cab',       sub:'210 km · 4–5 hrs · from ₹2,800',        icon:'car' },
 ];
 
+/* Editorial chrome styling — scoped to the navbar. Uses the site-wide
+   `lux-`/`--` tokens (now global via layout.js). */
+const NAV_CSS = `
+  .eq-nav { background:var(--paper); border-bottom:1px solid var(--rule); transition:box-shadow .4s var(--ease-lux), border-color .4s var(--ease-lux); }
+  .eq-nav.is-scrolled { box-shadow:var(--ds-elev-2); border-bottom-color:transparent; }
+  .eq-wordmark__name { font-size:16px; font-weight:700; color:var(--ink); letter-spacing:0.02em; line-height:1; text-transform:uppercase; }
+  .eq-wordmark__name .lt { font-weight:400; color:var(--ink-faint); }
+  .eq-wordmark__sub { font-size:9px; color:var(--teal-dark); letter-spacing:0.22em; text-transform:uppercase; margin-top:4px; font-weight:600; }
+
+  .eq-navlink { font-size:0.72rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); background:none; border:0; cursor:pointer; padding:10px 13px; display:inline-flex; align-items:center; gap:5px; text-decoration:none; position:relative; font-family:var(--font); transition:color .35s var(--ease-lux); }
+  .eq-navlink:hover, .eq-navlink[aria-expanded="true"] { color:var(--ink); }
+  .eq-navlink::after { content:''; position:absolute; left:13px; right:13px; bottom:4px; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease-lux); }
+  .eq-navlink:hover::after, .eq-navlink[aria-expanded="true"]::after { transform:scaleX(1); }
+  .eq-navlink:focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:1px; }
+
+  .eq-drop { position:absolute; top:calc(100% + 10px); left:-8px; background:#fff; border:1px solid var(--rule); border-radius:var(--ds-r-2); min-width:308px; box-shadow:var(--ds-elev-3); overflow:hidden; z-index:200; animation:eqDrop .22s var(--ease-lux); }
+  @keyframes eqDrop { from { opacity:0; transform:translateY(-6px);} to { opacity:1; transform:none;} }
+  .eq-drop__h { padding:14px 18px 11px; border-bottom:1px solid var(--rule); }
+  .eq-drop__i { display:flex; align-items:center; gap:13px; padding:12px 18px; text-decoration:none; border-bottom:1px solid var(--rule); transition:background .3s var(--ease-lux); }
+  .eq-drop__i:last-child { border-bottom:0; }
+  .eq-drop__i:hover { background:var(--paper); }
+  .eq-drop__t { font-size:0.85rem; font-weight:600; color:var(--ink); line-height:1.3; }
+  .eq-drop__s { font-size:0.72rem; color:var(--ink-faint); margin-top:2px; }
+
+  .eq-phone { display:flex; align-items:center; gap:6px; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; color:var(--ink); text-decoration:none; padding:8px 10px; border-radius:1px; transition:color .3s var(--ease-lux); }
+  .eq-phone:hover { color:var(--gold-dark); }
+  .eq-wa { display:flex; align-items:center; gap:8px; background:#25D366; color:#fff; padding:11px 20px; border-radius:100px; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; flex-shrink:0; transition:background .3s var(--ease-lux); }
+  .eq-wa:hover { background:#1DA851; }
+
+  .eq-burger { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:var(--ds-r-2); border:1px solid var(--rule-strong); background:#fff; cursor:pointer; color:var(--ink); margin-left:4px; flex-shrink:0; transition:border-color .3s var(--ease-lux); }
+  .eq-burger:hover { border-color:var(--ink); }
+
+  .eq-mobile { background:#fff; border-top:1px solid var(--rule); max-height:80vh; overflow-y:auto; }
+  .eq-mob-link { display:block; padding:15px 20px; font-size:0.85rem; letter-spacing:0.04em; color:var(--ink); border-bottom:1px solid var(--rule); text-decoration:none; }
+  .eq-mob-acc { border-bottom:1px solid var(--rule); }
+  .eq-mob-acc__h { width:100%; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:none; border:none; cursor:pointer; font-family:var(--font); font-size:0.75rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink); }
+`;
+
 function MobileAccordion({ label, children }) {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ borderBottom:'1px solid var(--border)' }}>
-      <button onClick={() => setOpen(o => !o)} style={{
-        width:'100%', padding:'15px 20px', display:'flex', justifyContent:'space-between',
-        alignItems:'center', background:'none', border:'none', cursor:'pointer',
-        fontFamily:'var(--font)', fontSize:14, fontWeight:500, color:'var(--text)',
-      }}>
+    <div className="eq-mob-acc">
+      <button onClick={() => setOpen(o => !o)} className="eq-mob-acc__h">
         {label} <ChevronDown open={open}/>
       </button>
-      {open && <div style={{ background:'var(--bg)', padding:'4px 0' }}>{children}</div>}
+      {open && <div style={{ background:'var(--paper)', padding:'4px 0' }}>{children}</div>}
     </div>
   );
 }
@@ -217,94 +251,47 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Sticky header stack: TrustStrip pinned above the navbar, so the
-             Army-founder and pay-us-directly facts stay on screen instead of
-             scrolling away with the old utility bar. ── */}
+      <style dangerouslySetInnerHTML={{ __html: NAV_CSS }} />
+      {/* ── Sticky header stack: TrustStrip pinned above the navbar ── */}
       <div className="header-sticky">
       <TrustStrip/>
 
       {/* ── Main navbar ─────────────────────────────────── */}
-      <header style={{
-        background:'#fff',
-        borderBottom:`1px solid ${scrolled ? 'transparent' : 'var(--border)'}`,
-        boxShadow: scrolled ? '0 2px 20px rgba(15,43,91,0.1)' : 'none',
-        transition:'box-shadow .3s, border-color .3s',
-      }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px', height:64, display:'flex', alignItems:'center', gap:0 }}>
+      <header className={`eq-nav${scrolled ? ' is-scrolled' : ''}`}>
+        <div style={{ maxWidth:'var(--lux-max, 1320px)', margin:'0 auto', padding:'0 clamp(20px,4vw,40px)', height:70, display:'flex', alignItems:'center', gap:0 }}>
 
           {/* Logo */}
-          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'flex-start', gap:10, textDecoration:'none', flexShrink:0, paddingTop:4 }}>
+          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'flex-start', gap:11, textDecoration:'none', flexShrink:0, paddingTop:4 }}>
             <LogoMark size={36}/>
-            <div style={{ lineHeight:1, paddingTop:2 }}>
-              <div style={{ display:'flex', alignItems:'baseline', gap:5 }}>
-                <span style={{
-                  fontSize:17, fontWeight:800, color:'var(--navy)',
-                  letterSpacing:'-0.04em', lineHeight:1, fontFamily:'var(--font)',
-                  textTransform:'uppercase',
-                }}>SHIV GANGA</span>
-                <span style={{
-                  fontSize:17, fontWeight:300, color:'var(--navy)',
-                  letterSpacing:'-0.01em', lineHeight:1,
-                }}>TRAVELS</span>
-              </div>
-              <div style={{
-                fontSize:9.5, color:'var(--teal)', letterSpacing:'0.18em',
-                textTransform:'uppercase', marginTop:3, fontWeight:600,
-              }}>
-                HARIDWAR · EST. {SITE.established}
-              </div>
+            <div style={{ lineHeight:1, paddingTop:3 }}>
+              <div className="eq-wordmark__name">Shiv&nbsp;Ganga <span className="lt">Travels</span></div>
+              <div className="eq-wordmark__sub">Haridwar · Est. {SITE.established}</div>
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex" style={{ display:'flex', alignItems:'center', gap:2, flex:1 }}>
+          <nav className="hidden md:flex" style={{ display:'flex', alignItems:'center', gap:2, flex:1, marginLeft:28 }}>
 
             {/* Packages dropdown */}
             <div ref={dropRef} style={{ position:'relative' }}>
-              <button onClick={() => setDropOpen(o => !o)}
-                style={{
-                  display:'flex', alignItems:'center', gap:3,
-                  padding:'8px 12px', fontSize:13.5, fontWeight:500,
-                  color: dropOpen ? 'var(--navy)' : 'var(--text-mid)',
-                  background:'none', border:'none', cursor:'pointer',
-                  fontFamily:'var(--font)', borderRadius:'var(--r-sm)',
-                  transition:'color var(--t)',
-                }}
+              <button onClick={() => setDropOpen(o => !o)} className="eq-navlink"
                 aria-expanded={dropOpen} aria-haspopup="true">
                 Packages <ChevronDown open={dropOpen}/>
               </button>
 
               {dropOpen && (
-                <div style={{
-                  position:'absolute', top:'calc(100% + 10px)', left:'-8px',
-                  background:'#fff', border:'1px solid var(--border)',
-                  borderRadius:16, minWidth:290,
-                  boxShadow:'0 16px 48px rgba(15,43,91,0.15), 0 4px 12px rgba(15,43,91,0.08)',
-                  overflow:'hidden', zIndex:200,
-                  animation:'dropIn .18s ease',
-                }}>
-                  {/* Dropdown header */}
-                  <div style={{ padding:'12px 18px 10px', borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
-                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.12em' }}>
-                      Yatra Packages
-                    </span>
+                <div className="eq-drop">
+                  <div className="eq-drop__h">
+                    <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Yatra Packages</span>
                   </div>
-                  {PKG_LINKS.map((l, i) => (
-                    <Link key={l.href} href={l.href} onClick={() => setDropOpen(false)}
-                      style={{
-                        display:'flex', alignItems:'center', gap:12,
-                        padding:'10px 16px', textDecoration:'none',
-                        borderBottom: i < PKG_LINKS.length-1 ? '1px solid var(--border)' : 'none',
-                        transition:'background var(--t)',
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.background='var(--bg)'}
-                      onMouseLeave={e => e.currentTarget.style.background='transparent'}>
-                      <img src={l.img} alt={l.label} width={44} height={44}
-                        style={{ width:44, height:44, borderRadius:8, objectFit:'cover', flexShrink:0 }}
+                  {PKG_LINKS.map((l) => (
+                    <Link key={l.href} href={l.href} onClick={() => setDropOpen(false)} className="eq-drop__i">
+                      <img src={l.img} alt={l.imgAlt || l.label} width={44} height={44}
+                        style={{ width:44, height:44, borderRadius:'var(--ds-r-2)', objectFit:'cover', flexShrink:0 }}
                         loading="lazy" decoding="async"/>
                       <div>
-                        <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{l.label}</div>
-                        <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{l.sub}</div>
+                        <div className="eq-drop__t">{l.label}</div>
+                        <div className="eq-drop__s">{l.sub}</div>
                       </div>
                     </Link>
                   ))}
@@ -314,51 +301,22 @@ export default function Navbar() {
 
             {/* Cabs dropdown */}
             <div ref={cabRef} style={{ position:'relative' }}>
-              <button onClick={() => setCabOpen(o => !o)}
-                style={{
-                  display:'flex', alignItems:'center', gap:3,
-                  padding:'8px 12px', fontSize:13.5, fontWeight:500,
-                  color: cabOpen ? 'var(--navy)' : 'var(--text-mid)',
-                  background:'none', border:'none', cursor:'pointer',
-                  fontFamily:'var(--font)', borderRadius:'var(--r-sm)',
-                  transition:'color var(--t)',
-                }}
+              <button onClick={() => setCabOpen(o => !o)} className="eq-navlink"
                 aria-expanded={cabOpen} aria-haspopup="true">
                 Cabs <ChevronDown open={cabOpen}/>
               </button>
 
               {cabOpen && (
-                <div style={{
-                  position:'absolute', top:'calc(100% + 10px)', left:'-8px',
-                  background:'#fff', border:'1px solid var(--border)',
-                  borderRadius:16, minWidth:290,
-                  boxShadow:'0 16px 48px rgba(15,43,91,0.15), 0 4px 12px rgba(15,43,91,0.08)',
-                  overflow:'hidden', zIndex:200,
-                  animation:'dropIn .18s ease',
-                }}>
-                  <div style={{ padding:'12px 18px 10px', borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
-                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.12em' }}>
-                      Cab & Taxi Service
-                    </span>
+                <div className="eq-drop">
+                  <div className="eq-drop__h">
+                    <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Cab &amp; Taxi Service</span>
                   </div>
-                  {CAB_LINKS.map((l, i) => (
-                    <Link key={l.href} href={l.href} onClick={() => setCabOpen(false)}
-                      style={{
-                        display:'flex', alignItems:'center', gap:12,
-                        padding:'12px 18px', textDecoration:'none',
-                        borderBottom: i < CAB_LINKS.length-1 ? '1px solid var(--border)' : 'none',
-                        transition:'background var(--t)',
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.background='var(--bg)'}
-                      onMouseLeave={e => e.currentTarget.style.background='transparent'}>
-                      <span style={{
-                        width:36, height:36, borderRadius:10, flexShrink:0,
-                        background:'var(--navy-light)', color:'var(--navy)',
-                        display:'flex', alignItems:'center', justifyContent:'center',
-                      }}><Icon name={l.icon} size={17}/></span>
+                  {CAB_LINKS.map((l) => (
+                    <Link key={l.label} href={l.href} onClick={() => setCabOpen(false)} className="eq-drop__i">
+                      <span className="lux-ico-chip" style={{ width:38, height:38 }}><Icon name={l.icon} size={17}/></span>
                       <div>
-                        <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{l.label}</div>
-                        <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:2 }}>{l.sub}</div>
+                        <div className="eq-drop__t">{l.label}</div>
+                        <div className="eq-drop__s">{l.sub}</div>
                       </div>
                     </Link>
                   ))}
@@ -371,27 +329,17 @@ export default function Navbar() {
               { label:'Kedarnath',   href:'/kedarnath-yatra' },
               { label:'Blog',        href:'/blog' },
               { label:'About',       href:'/about' },
-              { label:'Contact Us',  href:'/contact' },
+              { label:'Contact',     href:'/contact' },
             ].map(l => (
-              <Link key={l.href} href={l.href} className="nav-link">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="eq-navlink">{l.label}</Link>
             ))}
 
-            {/* Spacer */}
             <div style={{ flex: 1 }}/>
           </nav>
 
-          {/* Right CTAs — one phone instance above the fold, one WhatsApp CTA.
-              CTA grammar: green = WhatsApp, navy = quiet secondary. */}
-          <div style={{ display:'flex', alignItems:'center', gap:8, marginLeft:'auto', flexShrink:0 }}>
-            <a href='tel:+917817996730'
-              className="hidden md:flex"
-              style={{
-                display:'flex', alignItems:'center', gap:6, fontSize:12.5, fontWeight:600,
-                color:'var(--navy)', textDecoration:'none', padding:'7px 10px',
-                borderRadius:'var(--r-sm)', transition:'background var(--t)',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background='var(--navy-light)'}
-              onMouseLeave={e => e.currentTarget.style.background='transparent'}>
+          {/* Right CTAs */}
+          <div style={{ display:'flex', alignItems:'center', gap:10, marginLeft:'auto', flexShrink:0 }}>
+            <a href="tel:+917817996730" className="eq-phone hidden md:flex">
               <Icon name="phone" size={14}/>
               <span className="hidden lg:inline">+91-7817996730</span>
             </a>
@@ -399,31 +347,17 @@ export default function Navbar() {
             <a
               href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share packages and availability.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
-              className="hidden md:flex"
-              style={{
-                display: 'flex', alignItems: 'center', gap: 7,
-                background: '#25D366',
-                color: '#fff', padding: '9px 18px',
-                borderRadius: 100, fontSize: 13, fontWeight: 700,
-                textDecoration: 'none', flexShrink: 0,
-              }}
+              className="eq-wa hidden md:flex"
             >
-              <WhatsAppIcon size={15}/>
-              Free Quote
+              <WhatsAppIcon size={15}/> Free Quote
             </a>
 
-            <button onClick={() => setMobileOpen(o => !o)} className="md:hidden"
-              style={{
-                display:'flex', alignItems:'center', justifyContent:'center',
-                width:42, height:42, borderRadius:10,
-                border:'1px solid var(--border)', background:'var(--navy-light)', cursor:'pointer',
-                color:'var(--navy)', marginLeft:4, flexShrink:0, transition:'background var(--t)',
-              }}
+            <button onClick={() => setMobileOpen(o => !o)} className="eq-burger md:hidden"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}>
               {mobileOpen
-                ? <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
-                : <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h10"/></svg>
+                ? <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M6 18L18 6M6 6l12 12"/></svg>
+                : <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 6h16M4 12h16M4 18h10"/></svg>
               }
             </button>
           </div>
@@ -431,42 +365,40 @@ export default function Navbar() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <div className="md:hidden" style={{ background:'#fff', borderTop:'1px solid var(--border)', maxHeight:'80vh', overflowY:'auto' }}>
+          <div className="eq-mobile md:hidden">
             <MobileAccordion label="Packages">
               {PKG_LINKS.map(l => (
                 <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
-                  style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:13.5, color:'var(--text-mid)', textDecoration:'none', borderBottom:'1px solid var(--border)' }}>
-                  <span>{l.icon}</span> {l.label}
+                  style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:'0.82rem', color:'var(--ink-soft)', textDecoration:'none', borderBottom:'1px solid var(--rule)' }}>
+                  {l.label}
                 </Link>
               ))}
             </MobileAccordion>
             <MobileAccordion label="Cabs">
               {CAB_LINKS.map(l => (
-                <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
-                  style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:13.5, color:'var(--text-mid)', textDecoration:'none', borderBottom:'1px solid var(--border)' }}>
-                  <Icon name={l.icon} size={16} style={{ color:'var(--navy)', flexShrink:0 }}/>
+                <Link key={l.label} href={l.href} onClick={() => setMobileOpen(false)}
+                  style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:'0.82rem', color:'var(--ink-soft)', textDecoration:'none', borderBottom:'1px solid var(--rule)' }}>
+                  <Icon name={l.icon} size={16} style={{ color:'var(--teal-dark)', flexShrink:0 }}/>
                   <div>
-                    <div style={{ fontWeight:600 }}>{l.label}</div>
-                    <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:1 }}>{l.sub}</div>
+                    <div style={{ fontWeight:600, color:'var(--ink)' }}>{l.label}</div>
+                    <div style={{ fontSize:'0.72rem', color:'var(--ink-faint)', marginTop:1 }}>{l.sub}</div>
                   </div>
                 </Link>
               ))}
             </MobileAccordion>
             {[{label:'Char Dham Yatra',href:'/char-dham-yatra'},{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'From Noida',href:'/char-dham-yatra-from-noida'},{label:'From Mumbai',href:'/char-dham-yatra-from-mumbai'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
-              <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
-                style={{ display:'block', padding:'15px 20px', fontSize:14, color:'var(--text)', borderBottom:'1px solid var(--border)', textDecoration:'none' }}>
+              <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="eq-mob-link">
                 {l.label}
               </Link>
             ))}
-            <div style={{ padding:'14px 16px', display:'flex', flexDirection:'column', gap:10 }}>
-              <a href='tel:+917817996730'
-                style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:600, color:'var(--navy)', border:'1.5px solid var(--navy)', background:'var(--navy-light)', textDecoration:'none' }}>
+            <div style={{ padding:'16px', display:'flex', flexDirection:'column', gap:10 }}>
+              <a href="tel:+917817996730" className="lux-btn lux-btn--ghost lux-btn--wide">
                 <Icon name="phone" size={15}/> {SITE.phone}
               </a>
               <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share package details.')}`}
                 target="_blank" rel="nofollow noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'13px', borderRadius:'var(--r-sm)', fontSize:14, fontWeight:700, color:'#fff', background:'#25D366', textDecoration:'none' }}>
+                className="eq-wa" style={{ justifyContent:'center', borderRadius:'var(--ds-r-2)' }}>
                 <WhatsAppIcon size={15}/> Enquire on WhatsApp
               </a>
             </div>

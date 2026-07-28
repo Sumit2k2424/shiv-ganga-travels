@@ -1,0 +1,443 @@
+/* ══════════════════════════════════════════════════════════════
+   SHIV GANGA TRAVELS — DESIGN SYSTEM · PHASE 1 ELEVATION LAYER
+   ────────────────────────────────────────────────────────────
+   Extends the editorial `lux-` system (luxury.css). This file is
+   ADDITIVE and namespaced under `lux-` so it reads as one system.
+
+   It supplies the pieces the editorial layer never formalised:
+     · a complete, named token scale (space / radius / elevation /
+       z-index / semantic-status)
+     · glass morphism (with a mobile + reduced-transparency fallback)
+     · restrained editorial elevation utilities
+     · a skeleton system
+     · loading states (spinner · bar · dots · button)
+     · formalised overlays + icon sizing
+
+   Palette is UNCHANGED — Navy #0F2B5B · Sacred Gold #E8920A ·
+   Himalayan Teal #0B7B8B. Brand + font vars come from globals.css
+   (loaded site-wide); editorial vars come from luxury.css.
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── SPACING · 4px rhythm ─────────────────────────────────────
+     Component-level spacing. Section rhythm still uses luxury.css
+     --lux-y / --lux-gutter; these are for the inside of components. */
+  --ds-space-0 : 0;
+  --ds-space-1 : 4px;
+  --ds-space-2 : 8px;
+  --ds-space-3 : 12px;
+  --ds-space-4 : 16px;
+  --ds-space-5 : 20px;
+  --ds-space-6 : 24px;
+  --ds-space-8 : 32px;
+  --ds-space-10: 40px;
+  --ds-space-12: 48px;
+  --ds-space-16: 64px;
+  --ds-space-20: 80px;
+
+  /* ── RADIUS · editorial = tight ───────────────────────────────
+     The editorial voice keeps corners nearly square. Soft radii are
+     reserved for pills and floating glass surfaces only. */
+  --ds-r-0   : 0;
+  --ds-r-1   : 1px;    /* buttons */
+  --ds-r-2   : 2px;    /* cards, frames — the house default */
+  --ds-r-3   : 4px;    /* inputs, small chips */
+  --ds-r-4   : 8px;    /* floating panels, glass */
+  --ds-r-pill: 100px;
+
+  /* ── ELEVATION · navy-tinted, restrained ──────────────────────
+     Editorial prefers hairlines over shadows. Elevation exists only
+     for things that genuinely float: drawers, popovers, sticky
+     booking rails, glass. Shadows are navy-tinted, never neutral
+     grey, so they read as depth in the palette rather than dirt. */
+  --ds-elev-0    : none;
+  --ds-elev-1    : 0 1px 2px rgba(11,27,56,0.06), 0 1px 1px rgba(11,27,56,0.04);
+  --ds-elev-2    : 0 6px 16px rgba(11,27,56,0.08), 0 2px 4px rgba(11,27,56,0.05);
+  --ds-elev-3    : 0 18px 40px rgba(11,27,56,0.12), 0 6px 12px rgba(11,27,56,0.06);
+  --ds-elev-float: 0 24px 60px rgba(11,27,56,0.18), 0 8px 20px rgba(11,27,56,0.10);
+  --ds-elev-gold : 0 8px 24px rgba(232,146,10,0.28);
+
+  /* ── GLASS ────────────────────────────────────────────────────*/
+  --ds-glass-bg      : rgba(255,255,255,0.62);
+  --ds-glass-border  : rgba(255,255,255,0.55);
+  --ds-glass-bg-dark : rgba(11,27,56,0.42);
+  --ds-glass-border-d: rgba(255,255,255,0.14);
+  --ds-glass-blur    : 16px;
+
+  /* ── Z-INDEX SCALE ────────────────────────────────────────────
+     Named so overlays, sticky rails and drawers can never fight.
+     Mirrors the values already in use across luxury.css. */
+  --ds-z-base    : 1;
+  --ds-z-sticky  : 100;   /* header (lux-headwrap) */
+  --ds-z-progress: 120;   /* scroll progress rail */
+  --ds-z-overlay : 400;   /* scrims behind modals */
+  --ds-z-drawer  : 500;   /* booking drawer, mobile menu */
+  --ds-z-toast   : 800;
+  --ds-z-curtain : 9999;  /* page-entry curtain */
+
+  /* ── SEMANTIC / STATUS · editorial tints ──────────────────────
+     For booking validation, availability and inline feedback in the
+     later phases. Muted enough to sit inside the quiet palette. */
+  --ds-ok        : #1E7A4D;
+  --ds-ok-tint   : #EAF4EE;
+  --ds-info       : var(--teal);
+  --ds-info-tint  : var(--teal-light);
+  --ds-warn      : #B7791F;
+  --ds-warn-tint : #FBF1DE;
+  --ds-danger    : #C23A34;
+  --ds-danger-tint:#FBEBEA;
+
+  /* ── MOTION · aliases so components read from one place ────────*/
+  --ds-dur-fast : 0.25s;
+  --ds-dur-base : 0.45s;
+  --ds-dur-slow : 0.9s;
+  --ds-ease     : var(--ease-lux,   cubic-bezier(0.22,1,0.36,1));
+  --ds-ease-glide:var(--ease-glide, cubic-bezier(0.16,1,0.30,1));
+
+  /* ── ICON SIZES · sit on the 24px line-icon grid ──────────────*/
+  --ds-ico-sm: 16px;
+  --ds-ico-md: 20px;
+  --ds-ico-lg: 24px;
+  --ds-ico-xl: 32px;
+
+  /* ── Skeleton wash (paper-toned, not grey) ────────────────────*/
+  --ds-skel-base: #ECEAE4;
+  --ds-skel-hi  : #F7F5F1;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ELEVATION UTILITIES
+   ══════════════════════════════════════════════════════════════ */
+.lux-elev-1     { box-shadow: var(--ds-elev-1); }
+.lux-elev-2     { box-shadow: var(--ds-elev-2); }
+.lux-elev-3     { box-shadow: var(--ds-elev-3); }
+.lux-elev-float { box-shadow: var(--ds-elev-float); }
+.lux-elev-gold  { box-shadow: var(--ds-elev-gold); }
+
+/* Card that lifts on hover — used where a card is a primary target
+   (package cards) rather than a quiet content block. */
+.lux-lift {
+  transition: transform var(--ds-dur-base) var(--ds-ease),
+              box-shadow var(--ds-dur-base) var(--ds-ease);
+  will-change: transform;
+}
+.lux-lift:hover { transform: translateY(-4px); box-shadow: var(--ds-elev-3); }
+
+/* ══════════════════════════════════════════════════════════════
+   RADIUS UTILITIES
+   ══════════════════════════════════════════════════════════════ */
+.lux-r-0    { border-radius: var(--ds-r-0); }
+.lux-r-2    { border-radius: var(--ds-r-2); }
+.lux-r-3    { border-radius: var(--ds-r-3); }
+.lux-r-4    { border-radius: var(--ds-r-4); }
+.lux-r-pill { border-radius: var(--ds-r-pill); }
+
+/* ══════════════════════════════════════════════════════════════
+   GLASS MORPHISM
+   Frosted surface for overlays, sticky rails and the booking bar.
+   backdrop-filter is costly on mobile GPUs, so there is a solid
+   fallback for small screens and for reduced-transparency users.
+   ══════════════════════════════════════════════════════════════ */
+.lux-glass {
+  background: var(--ds-glass-bg);
+  border: 1px solid var(--ds-glass-border);
+  border-radius: var(--ds-r-4);
+  box-shadow: var(--ds-elev-2);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lux-glass {
+    -webkit-backdrop-filter: saturate(160%) blur(var(--ds-glass-blur));
+    backdrop-filter: saturate(160%) blur(var(--ds-glass-blur));
+    background: rgba(255,255,255,0.48);
+  }
+}
+.lux-glass--dark {
+  background: var(--ds-glass-bg-dark);
+  border-color: var(--ds-glass-border-d);
+  color: #fff;
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lux-glass--dark { background: rgba(11,27,56,0.34); }
+}
+.lux-glass--gold {
+  background: rgba(232,146,10,0.10);
+  border-color: var(--gold-hair, rgba(232,146,10,0.32));
+}
+
+/* Mobile + accessibility fallback: drop the blur, keep an opaque
+   surface so text stays legible and the GPU stays free. */
+@media (max-width: 680px) {
+  .lux-glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(255,255,255,0.94); }
+  .lux-glass--dark { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(11,27,56,0.92); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .lux-glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: #fff; }
+  .lux-glass--dark { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--ink, #0B1B38); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   OVERLAYS · dark veils behind modals / drawers
+   Complements luxury.css `.lux-scrim` (which is for text-over-image).
+   ══════════════════════════════════════════════════════════════ */
+.lux-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,27,56,0.58);
+  z-index: var(--ds-z-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--ds-dur-base) var(--ds-ease), visibility var(--ds-dur-base);
+}
+.lux-overlay.is-open { opacity: 1; visibility: visible; }
+.lux-overlay--soft { background: rgba(11,27,56,0.32); }
+
+/* ══════════════════════════════════════════════════════════════
+   ICON SIZING · the 24px line-icon system (Icon.js)
+   ══════════════════════════════════════════════════════════════ */
+.lux-ico    { display: inline-flex; flex: none; color: currentColor; }
+.lux-ico-sm { width: var(--ds-ico-sm); height: var(--ds-ico-sm); }
+.lux-ico-md { width: var(--ds-ico-md); height: var(--ds-ico-md); }
+.lux-ico-lg { width: var(--ds-ico-lg); height: var(--ds-ico-lg); }
+.lux-ico-xl { width: var(--ds-ico-xl); height: var(--ds-ico-xl); }
+
+/* Circular icon chip — quiet gold wash, used beside facts / features */
+.lux-ico-chip {
+  display: inline-grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: var(--ds-r-pill);
+  background: var(--gold-wash, rgba(232,146,10,0.07));
+  border: 1px solid var(--gold-hair, rgba(232,146,10,0.32));
+  color: var(--gold-dark, #C67A08);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BUTTON STATES · extends luxury.css .lux-btn
+   Adds the states the editorial layer never covered:
+   :disabled and .is-loading. Base + hover + focus already exist.
+   ══════════════════════════════════════════════════════════════ */
+.lux-btn:disabled,
+.lux-btn[aria-disabled='true'],
+.lux-btn.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.lux-btn--sm { padding: 10px 18px; min-height: 38px; font-size: 0.6875rem; }
+.lux-btn--lg { padding: 18px 38px; min-height: 56px; }
+
+/* Loading: label fades, a spinner fills the gap; width stays fixed
+   so nothing reflows (no CLS). */
+.lux-btn.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+}
+.lux-btn.is-loading::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-radius: var(--ds-r-pill);
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  color: inherit;
+  /* inherit the label colour that was zeroed above via a fixed value */
+  animation: luxSpin 0.7s linear infinite;
+}
+.lux-btn--gold.is-loading::after  { border-color: #10203C; border-top-color: transparent; }
+.lux-btn--ink.is-loading::after,
+.lux-btn--ghost-light.is-loading::after { border-color: #fff; border-top-color: transparent; }
+.lux-btn--ghost.is-loading::after { border-color: var(--ink, #0B1B38); border-top-color: transparent; }
+
+/* ══════════════════════════════════════════════════════════════
+   LOADING · spinner · bar · dots
+   ══════════════════════════════════════════════════════════════ */
+.lux-spinner {
+  display: inline-block;
+  width: 24px; height: 24px;
+  border-radius: var(--ds-r-pill);
+  border: 2px solid var(--rule-strong, rgba(15,43,91,0.22));
+  border-top-color: var(--gold, #E8920A);
+  animation: luxSpin 0.7s linear infinite;
+}
+.lux-spinner--sm { width: 16px; height: 16px; border-width: 2px; }
+.lux-spinner--lg { width: 40px; height: 40px; border-width: 3px; }
+.lux-spinner--light { border-color: rgba(255,255,255,0.28); border-top-color: #fff; }
+@keyframes luxSpin { to { transform: rotate(360deg); } }
+
+/* Indeterminate progress bar */
+.lux-bar {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background: var(--rule, rgba(15,43,91,0.12));
+  overflow: hidden;
+}
+.lux-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 40%;
+  background: var(--gold, #E8920A);
+  animation: luxBar 1.15s var(--ds-ease-glide) infinite;
+}
+@keyframes luxBar {
+  0%   { transform: translateX(-100%); }
+  60%  { transform: translateX(150%); }
+  100% { transform: translateX(250%); }
+}
+
+/* Three-dot thinking indicator (chat / async submit) */
+.lux-dots { display: inline-flex; gap: 5px; align-items: center; }
+.lux-dots > span {
+  width: 6px; height: 6px; border-radius: var(--ds-r-pill);
+  background: var(--ink-faint, #7A8699);
+  animation: luxDot 1.2s var(--ds-ease) infinite;
+}
+.lux-dots > span:nth-child(2) { animation-delay: 0.15s; }
+.lux-dots > span:nth-child(3) { animation-delay: 0.30s; }
+@keyframes luxDot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30%           { opacity: 1;    transform: translateY(-3px); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SKELETONS · paper-toned, one shimmer, no CLS
+   The skeleton mirrors the footprint of the content it stands in
+   for, so when real content arrives nothing shifts.
+   ══════════════════════════════════════════════════════════════ */
+.lux-skel {
+  --_r: var(--ds-r-2);
+  display: block;
+  border-radius: var(--_r);
+  background: linear-gradient(
+    100deg,
+    var(--ds-skel-base) 30%,
+    var(--ds-skel-hi) 50%,
+    var(--ds-skel-base) 70%
+  );
+  background-size: 200% 100%;
+  animation: luxSkel 1.4s linear infinite;
+}
+@keyframes luxSkel {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+.lux-skel--line   { height: 12px; }
+.lux-skel--text   { height: 12px; width: 100%; }
+.lux-skel--text.is-short { width: 60%; }
+.lux-skel--title  { height: 26px; border-radius: var(--ds-r-1); }
+.lux-skel--figure { height: 40px; width: 88px; }
+.lux-skel--circle { border-radius: var(--ds-r-pill); width: 44px; height: 44px; }
+.lux-skel--img    { aspect-ratio: 3 / 2; width: 100%; height: auto; }
+.lux-skel--img-portrait { aspect-ratio: 3 / 4; width: 100%; }
+.lux-skel--chip   { height: 28px; width: 96px; border-radius: var(--ds-r-pill); }
+
+/* A ready-made skeleton for a package/editorial card */
+.lux-skel-card {
+  border: 1px solid var(--rule, rgba(15,43,91,0.12));
+  border-radius: var(--ds-r-2);
+  padding: 0 0 20px;
+  overflow: hidden;
+  background: #fff;
+}
+.lux-skel-card__body { display: grid; gap: 12px; padding: 20px; }
+
+/* Stack helper for skeleton text runs */
+.lux-skel-stack { display: grid; gap: 10px; }
+
+/* ══════════════════════════════════════════════════════════════
+   INPUTS · editorial form controls (for the Phase 5 booking flow)
+   Defined now so the system is complete; underline-first, hairline.
+   ══════════════════════════════════════════════════════════════ */
+.lux-field { display: grid; gap: 7px; }
+.lux-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint, #7A8699);
+  font-weight: 600;
+}
+.lux-input,
+.lux-select,
+.lux-textarea {
+  width: 100%;
+  font-family: var(--font, inherit);
+  font-size: 0.9375rem;
+  color: var(--ink, #0B1B38);
+  background: #fff;
+  border: 1px solid var(--rule-strong, rgba(15,43,91,0.22));
+  border-radius: var(--ds-r-3);
+  padding: 13px 15px;
+  min-height: 48px;
+  transition: border-color var(--ds-dur-base) var(--ds-ease),
+              box-shadow var(--ds-dur-base) var(--ds-ease);
+}
+.lux-textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+.lux-input:focus,
+.lux-select:focus,
+.lux-textarea:focus {
+  outline: none;
+  border-color: var(--gold, #E8920A);
+  box-shadow: 0 0 0 3px var(--gold-wash, rgba(232,146,10,0.14));
+}
+.lux-input::placeholder,
+.lux-textarea::placeholder { color: var(--ink-faint, #7A8699); }
+.lux-field.is-invalid .lux-input,
+.lux-field.is-invalid .lux-select,
+.lux-field.is-invalid .lux-textarea { border-color: var(--ds-danger); box-shadow: 0 0 0 3px var(--ds-danger-tint); }
+.lux-field.is-valid .lux-input { border-color: var(--ds-ok); }
+.lux-hint { font-size: 0.75rem; color: var(--ink-faint, #7A8699); }
+.lux-hint--error { color: var(--ds-danger); }
+
+/* ══════════════════════════════════════════════════════════════
+   STATUS CHIPS · availability, dates, feedback
+   ══════════════════════════════════════════════════════════════ */
+.lux-status {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 12px; font-size: 0.6875rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: var(--ds-r-pill); line-height: 1;
+}
+.lux-status::before { content: ''; width: 6px; height: 6px; border-radius: var(--ds-r-pill); background: currentColor; }
+.lux-status--ok     { color: var(--ds-ok);     background: var(--ds-ok-tint); }
+.lux-status--info   { color: var(--teal-dark); background: var(--ds-info-tint); }
+.lux-status--warn   { color: var(--ds-warn);   background: var(--ds-warn-tint); }
+.lux-status--danger { color: var(--ds-danger); background: var(--ds-danger-tint); }
+
+/* ══════════════════════════════════════════════════════════════
+   PACKAGE GRID CARD · editorial card for listing grids
+   (distinct from the homepage rail card `.lux-pcard`)
+   ══════════════════════════════════════════════════════════════ */
+.lux-gcard {
+  display: flex; flex-direction: column; height: 100%;
+  overflow: hidden; text-decoration: none; color: inherit; background: #fff;
+}
+.lux-gcard__media { position: relative; }
+.lux-gcard__badge { position: absolute; top: 12px; left: 12px; z-index: 2; }
+.lux-gcard__dur {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  background: rgba(11,27,56,0.55); color: #fff; font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.06em; padding: 4px 10px; border-radius: var(--ds-r-pill);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+}
+.lux-gcard__body { padding: 20px; display: flex; flex-direction: column; gap: 9px; flex: 1; }
+.lux-gcard__chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.lux-gcard__foot {
+  margin-top: auto; padding-top: 16px; border-top: 1px solid var(--rule);
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+}
+.lux-gcard__price { font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+.lux-gcard__was { font-size: 0.75rem; color: var(--ink-faint); text-decoration: line-through; }
+.lux-gcard__save { font-size: 0.7rem; color: var(--ds-ok); font-weight: 600; letter-spacing: 0.02em; }
+
+/* ══════════════════════════════════════════════════════════════
+   REDUCED MOTION · every spinner/loader must degrade gracefully
+   ══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .lux-spinner,
+  .lux-btn.is-loading::after { animation-duration: 1.4s; }
+  .lux-skel { animation: none; background: var(--ds-skel-base); }
+  .lux-bar::after { animation: none; width: 100%; opacity: 0.6; }
+  .lux-dots > span { animation: none; opacity: 0.6; }
+}

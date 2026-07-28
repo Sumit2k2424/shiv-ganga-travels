@@ -1,4 +1,10 @@
 import './globals.css';
+// Editorial layer, now site-wide (Phase 2 · site chrome). Leak-safe: these
+// files declare only `.lux-*` classes + CSS vars — no global element selectors —
+// so the not-yet-redesigned routes render unchanged, while Navbar/Footer and any
+// editorial page can use the system.
+import './luxury.css';
+import './design-system.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';

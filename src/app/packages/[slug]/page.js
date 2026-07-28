@@ -4,9 +4,14 @@ import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
 import WhyOurPrice from '@/components/WhyOurPrice';
-import ItineraryTimeline from '@/components/package/ItineraryTimeline';
-import PackageFaqs from '@/components/package/PackageFaqs';
 import { BlurFade } from '@/components/magicui/blur-fade';
+import CategoryView from './CategoryView';
+import LuxMotion from '@/components/lux/LuxMotion';
+import RouteMap from '@/components/lux/RouteMap';
+import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
+import { HOTELS, ROUTE, ROUTE_BY_CATEGORY } from '@/data/experience';
+import Icon, { WhatsAppIcon } from '@/components/Icon';
+import { Pill } from '@/components/lux/primitives';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
@@ -161,77 +166,8 @@ export default async function PackageDetailPage({ params }) {
     const guides = CATEGORY_GUIDES[slug] || [];
     return (
       <>
-        <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-          <div style={{ maxWidth:720, margin:'0 auto' }}>
-            {cat.cover && (
-              <div style={{ width:80, height:80, borderRadius:16, overflow:'hidden', margin:'0 auto 14px', border:'3px solid rgba(255,255,255,0.25)' }}>
-                <img src={cat.cover} alt={cat.name} width={80} height={80} style={{ width:'100%', height:'100%', objectFit:'cover' }} loading="eager"/>
-              </div>
-            )}
-            <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.6rem,5vw,2.8rem)', marginBottom:12 }}>{cat.name} <em style={{ color:'#FFD166', fontStyle:'italic' }}>Packages 2026</em></h1>
-            <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14.5, lineHeight:1.7 }}>{pkgs.length} packages · From Haridwar · VIP darshan · Zero commission</p>
-          </div>
-        </section>
-        <div style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
-          <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-            Home<span>›</span>
-            Packages<span>›</span>
-            <span>{cat.name}</span>
-          </div>
-        </div>
-        <section style={{ background:'var(--bg)', padding:'40px 20px 60px' }}>
-          <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-            <div className="card-grid" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(290px,100%),1fr))', gap:20 }}>
-              {pkgs.map(p => {
-                const sav = p.price.original - p.price.discounted;
-                return (
-                  <Link key={p.slug} href={`/packages/${p.slug}`} className="pkg-card" style={{ textDecoration:'none', color:'inherit', display:'flex', flexDirection:'column' }}>
-                    <div style={{ height:200, position:'relative', overflow:'hidden', flexShrink:0, background:'linear-gradient(160deg,var(--navy),var(--teal))' }}>
-                      {p.photo && (
-                        <img src={pxAt(p.photo, 320, 220)} alt={p.name} width={290} height={200}
-                          srcSet={pxSrcSet(p.photo, [[320,220],[580,400]])} sizes="290px"
-                          loading="lazy" decoding="async"
-                          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', display:'block' }}/>
-                      )}
-                      <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(15,43,91,0.1) 0%,rgba(15,43,91,0.72) 100%)', pointerEvents:'none' }}/>
-                      {p.badge && <span className="badge badge-gold" style={{ position:'absolute', top:12, left:12, zIndex:2 }}>{p.badge}</span>}
-                      <span style={{ position:'absolute', top:12, right:12, background:'rgba(0,0,0,0.5)', backdropFilter:'blur(4px)', color:'#fff', fontSize:11, fontWeight:600, padding:'3px 10px', borderRadius:6, zIndex:2 }}>{p.duration.nights}N/{p.duration.days}D</span>
-                      <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'12px 16px', zIndex:2 }}>
-                        <h2 style={{ color:'#fff', fontWeight:700, fontSize:15, lineHeight:1.3, textShadow:'0 1px 4px rgba(0,0,0,0.6)' }}>{p.name}</h2>
-                      </div>
-                    </div>
-                    <div style={{ padding:'14px 16px', flex:1, display:'flex', flexDirection:'column', gap:10 }}>
-                      <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
-                        <span className="chip">📍 {p.startCity}</span>
-                        <span className="chip">🚌 {p.transport}</span>
-                        <span className="chip">🎯 {p.difficulty}</span>
-                      </div>
-                      <ul style={{ listStyle:'none', flex:1 }}>
-                        {p.highlights.slice(0,3).map((h,i) => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', paddingLeft:16, position:'relative', lineHeight:1.5, marginBottom:4 }}><span style={{ position:'absolute', left:0, color:'var(--teal)', fontWeight:700, fontSize:11 }}>✓</span>{h}</li>)}
-                      </ul>
-                      <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', paddingTop:10, borderTop:'1px solid var(--border)' }}>
-                        <div>
-                          <div style={{ fontSize:11, color:'var(--text-muted)', textDecoration:'line-through' }}>₹{p.price.original.toLocaleString('en-IN')}</div>
-                          <div style={{ fontWeight:800, fontSize:22, color:'var(--navy)', lineHeight:1, fontFamily:'var(--font-display)' }}>₹{p.price.discounted.toLocaleString('en-IN')}</div>
-                          {sav>0 && <div style={{ fontSize:11, color:'var(--green)', fontWeight:600, marginTop:2 }}>Save ₹{sav.toLocaleString('en-IN')}</div>}
-                        </div>
-                        <span className="btn btn-primary" style={{ fontSize:12, padding:'8px 16px' }}>View Details →</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-            {guides.length > 0 && (
-              <div style={{ marginTop:36, background:'var(--navy-light)', borderRadius:14, padding:'20px 22px' }}>
-                <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>📖 {cat.name} Yatra Guides:</div>
-                <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-                  {guides.map(g => <Link key={g.href} href={g.href} style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{g.label} →</Link>)}
-                </div>
-              </div>
-            )}
-          </div>
-        </section>
+        <LuxMotion />
+        <CategoryView category={cat} packages={pkgs} guides={guides} />
       </>
     );
   }
@@ -264,72 +200,57 @@ export default async function PackageDetailPage({ params }) {
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
   const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
 
-  const SH = { fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, paddingBottom:10, borderBottom:'2px solid var(--navy-light)' };
+  // Editorial section header — one change restyles every <h2 style={SH}> below.
+  const SH = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.4vw,1.75rem)', fontWeight:600, color:'var(--ink)', letterSpacing:'-0.018em', lineHeight:1.15, marginBottom:18, paddingBottom:14, borderBottom:'1px solid var(--rule)' };
+
+  // Route nodes for the interactive map (yatra packages only).
+  const routeNodes = ROUTE.nodes.filter(n => (ROUTE_BY_CATEGORY[pkg.category] || []).includes(n.id));
 
   return (
     <>
       <Schemas pkg={pkg}/>
+      <LuxMotion />
+      <div className="lux-progress" data-lux-progress aria-hidden="true" />
 
-      {/* Hero */}
-      <section
-        className="relative flex min-h-[380px] items-end overflow-hidden px-5 pb-8 pt-24"
-        style={{
-          background: pkg.photo
-            ? `linear-gradient(180deg,rgba(8,20,48,0.42) 0%,rgba(8,20,48,0.78) 62%,rgba(6,16,38,0.94) 100%),url('${pkg.photo}') center/cover`
-            : 'linear-gradient(145deg,var(--navy),var(--teal))',
-        }}
-      >
-        <div className="mx-auto w-full max-w-[var(--container)]">
-          {/* Breadcrumb — every level is now a real link (Home and Packages
-              were previously plain text, so the trail dead-ended). */}
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] text-white/60"
-          >
-            <Link href="/" className="transition-colors hover:text-white">Home</Link>
-            <span aria-hidden="true">›</span>
-            <Link href="/packages" className="transition-colors hover:text-white">Packages</Link>
-            <span aria-hidden="true">›</span>
-            <Link
-              href={`/packages/${pkg.category}`}
-              className="capitalize text-white/70 transition-colors hover:text-white"
-            >
-              {CATEGORIES[pkg.category]?.name || pkg.category}
-            </Link>
-            <span aria-hidden="true">›</span>
-            <span className="text-gold" aria-current="page">{pkg.name}</span>
+      {/* Hero — editorial masthead */}
+      <section className="lux-hero" style={{ minHeight:'min(62svh,540px)' }}>
+        {pkg.photo && (
+          <div className="lux-hero__media" data-lux-parallax="0.08">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={pxAt(pkg.photo, 1920, 1100)}
+              srcSet={pxSrcSet(pkg.photo, [[900,560],[1400,860],[1920,1100]])}
+              sizes="100vw"
+              alt={pkg.name}
+              fetchPriority="high" decoding="sync" width={1920} height={1100}
+            />
+          </div>
+        )}
+        <div className="lux-hero__veil" aria-hidden="true"/>
+        <div className="lux-hero__body lux-wrap">
+          {/* Breadcrumb — every level a real link */}
+          <nav aria-label="Breadcrumb" style={{ marginBottom:22 }}>
+            <ol style={{ display:'flex', flexWrap:'wrap', gap:8, listStyle:'none', margin:0, padding:0, fontSize:11, letterSpacing:'0.12em', textTransform:'uppercase', color:'rgba(255,255,255,0.6)' }}>
+              <li><Link href="/" style={{ color:'inherit', textDecoration:'none' }}>Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/packages" style={{ color:'inherit', textDecoration:'none' }}>Packages</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href={`/packages/${pkg.category}`} style={{ color:'inherit', textDecoration:'none' }}>{CATEGORIES[pkg.category]?.name || pkg.category}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li style={{ color:'var(--gold)' }} aria-current="page">{pkg.name}</li>
+            </ol>
           </nav>
 
-          {pkg.badge && (
-            <span className="mb-2.5 inline-block rounded-full bg-gold px-3 py-1 text-[11px]
-                             font-bold uppercase tracking-wide text-white
-                             shadow-[0_4px_14px_rgba(232,146,10,0.4)]">
-              {pkg.badge}
-            </span>
-          )}
+          {pkg.badge && <Pill tone="solid" style={{ marginBottom:16 }}>{pkg.badge}</Pill>}
 
-          <h1 className="font-display mb-4 max-w-3xl text-[clamp(1.6rem,3.6vw,2.5rem)] font-semibold
-                         leading-[1.14] tracking-[-0.02em] text-white">
-            {pkg.seoHeading || pkg.name}
-          </h1>
+          <h1 className="lux-display lux-display--xl" style={{ maxWidth:'20ch' }}>{pkg.seoHeading || pkg.name}</h1>
 
-          <div className="flex flex-wrap gap-2">
+          <div style={{ display:'flex', flexWrap:'wrap', gap:9, marginTop:26 }}>
             {[
-              { icon: '📅', val: `${pkg.duration.nights}N/${pkg.duration.days}D` },
-              { icon: '📍', val: `${pkg.startCity} → ${pkg.endCity || pkg.startCity}` },
-              { icon: '🎯', val: pkg.difficulty },
-              { icon: '🚌', val: pkg.transport },
-              { icon: '📅', val: pkg.season },
-            ].filter(c => c.val).map((c) => (
-              <span
-                key={c.val}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/15
-                           bg-white/10 px-3 py-1.5 text-[12px] font-medium text-white
-                           backdrop-blur-md transition-colors duration-200 hover:bg-white/20"
-              >
-                <span aria-hidden="true">{c.icon}</span> {c.val}
-              </span>
-            ))}
+              `${pkg.duration.nights}N / ${pkg.duration.days}D`,
+              `${pkg.startCity} → ${pkg.endCity || pkg.startCity}`,
+              pkg.difficulty, pkg.transport, pkg.season,
+            ].filter(Boolean).map((v) => <Pill key={v} tone="light">{v}</Pill>)}
           </div>
         </div>
       </section>
@@ -485,19 +406,27 @@ export default async function PackageDetailPage({ params }) {
             </ul>
           </section>
 
+          {/* Interactive route map — yatra packages */}
+          {isYatra && routeNodes.length > 1 && (
+            <section>
+              <h2 style={SH}>The route, mapped</h2>
+              <RouteMap nodes={routeNodes} category={pkg.category} title={`${pkg.name} route`} />
+            </section>
+          )}
+
           {/* Day-wise Itinerary */}
           <section>
-            <h2 style={SH}>🗓️ Brief Itinerary at a Glance</h2>
-            <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:20 }}>
+            <h2 style={SH}>Itinerary at a glance</h2>
+            <div style={{ border:'1px solid var(--rule)', borderRadius:'var(--ds-r-2)', padding:'18px 20px', marginBottom:26 }}>
               {pkg.itinerary.map((day, i) => (
-                <div key={day.day} style={{ display:'grid', gridTemplateColumns:'70px 1fr', gap:8, padding:'6px 0', borderBottom: i < pkg.itinerary.length-1 ? '1px solid rgba(15,43,91,0.1)' : 'none' }}>
-                  <div style={{ fontSize:12, fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>Day {day.day}:</div>
-                  <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{day.title}</div>
+                <div key={day.day} style={{ display:'grid', gridTemplateColumns:'70px 1fr', gap:12, padding:'9px 0', borderBottom: i < pkg.itinerary.length-1 ? '1px solid var(--rule)' : 'none' }}>
+                  <div style={{ fontSize:11, fontWeight:600, color:'var(--ink-faint)', whiteSpace:'nowrap', letterSpacing:'0.1em', textTransform:'uppercase' }}>Day {day.day}</div>
+                  <div style={{ fontSize:13.5, color:'var(--ink-soft)', lineHeight:1.5 }}>{day.title}</div>
                 </div>
               ))}
             </div>
-            <h2 style={SH}>🗓️ Day-wise Itinerary (Detailed)</h2>
-            <ItineraryTimeline itinerary={pkg.itinerary}/>
+            <h2 style={SH}>Day by day</h2>
+            <DayTimeline days={pkg.itinerary} stops={[]} />
           </section>
 
           {/* Inclusions / Exclusions */}
@@ -514,6 +443,17 @@ export default async function PackageDetailPage({ params }) {
               </div>
             </div>
           </section>
+
+          {/* Where you stay — yatra packages */}
+          {isYatra && (
+            <section>
+              <h2 style={SH}>Where you stay</h2>
+              <p style={{ fontSize:14, color:'var(--ink-soft)', lineHeight:1.7, marginBottom:22 }}>
+                Confirmed hotels near each temple — named before you pay, and honest about what a bed at altitude actually is.
+              </p>
+              <HotelShowcase hotels={HOTELS} />
+            </section>
+          )}
 
           {/* Travel Tips */}
           {pkg.travelTips?.length > 0 && (
@@ -546,8 +486,8 @@ export default async function PackageDetailPage({ params }) {
           {/* FAQs */}
           {pkg.faqs?.length > 0 && (
             <section>
-              <h2 style={SH}>❓ Frequently Asked Questions</h2>
-              <PackageFaqs faqs={pkg.faqs}/>
+              <h2 style={SH}>Frequently asked questions</h2>
+              <FaqList faqs={pkg.faqs} />
             </section>
           )}
 
@@ -909,86 +849,73 @@ export default async function PackageDetailPage({ params }) {
           </section>
 
           {/* Bottom CTA */}
-          <section style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
-            <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book?</h2>
-            <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free itinerary · Zero commission · Reply in 2 hrs</p>
+          <section className="lux-card lux-card--dark" style={{ background:'var(--ink)', padding:'clamp(28px,4vw,44px)', textAlign:'center' }}>
+            <h2 className="lux-display lux-display--md" style={{ color:'#fff', marginBottom:10 }}>Ready to begin?</h2>
+            <p className="lux-caption" style={{ color:'rgba(255,255,255,0.66)', marginBottom:24 }}>Free itinerary · Zero commission · Reply in 2 hrs</p>
             <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-              <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer" className="lux-btn" style={{ background:'#25D366', color:'#fff', borderColor:'#25D366' }}><WhatsAppIcon size={16}/> Book on WhatsApp</a>
+              <a href='tel:+917817996730' className="lux-btn lux-btn--ghost-light"><Icon name="phone" size={15}/> {SITE.phone}</a>
             </div>
           </section>
         </div>
 
-        {/* RIGHT — Sticky booking card */}
-        <div style={{ position:'sticky', top:80 }}>
-          <div style={{ borderRadius:16, overflow:'hidden', border:'2px solid var(--border)', boxShadow:'var(--shadow-lg)' }}>
-            <div style={{ background:'linear-gradient(135deg,var(--navy),var(--navy-mid))', padding:'20px 20px 16px', textAlign:'center' }}>
-              <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12, marginBottom:3 }}>{isRange ? 'Price range per person' : 'Starting from'}</p>
-              {!isRange && savings>0 && <p style={{ color:'rgba(255,255,255,0.4)', fontSize:13, textDecoration:'line-through' }}>₹{pkg.price.original.toLocaleString('en-IN')}</p>}
+        {/* RIGHT — Editorial sticky booking rail */}
+        <div style={{ position:'sticky', top:96 }}>
+          <div className="lux-card" style={{ overflow:'hidden' }}>
+            {/* Price */}
+            <div style={{ background:'var(--ink)', color:'#fff', padding:'24px 22px' }}>
+              <span className="lux-eyebrow lux-eyebrow--light">{isRange ? 'Price range · per person' : 'From · per person'}</span>
+              {!isRange && savings>0 && <div style={{ color:'rgba(255,255,255,0.45)', fontSize:14, textDecoration:'line-through', marginTop:12 }}>₹{pkg.price.original.toLocaleString('en-IN')}</div>}
               {isRange ? (
                 <>
-                  <p style={{ color:'#fff', fontWeight:800, fontSize:28, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')} – ₹{pkg.price.original.toLocaleString('en-IN')}</p>
-                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
-                  <p style={{ color:'#FFD166', fontSize:12.5, fontWeight:600, marginTop:4 }}>Budget · Standard · Deluxe tiers available</p>
+                  <div className="lux-figure" style={{ color:'#fff', fontSize:'clamp(1.5rem,3vw,2rem)', marginTop:10 }}>₹{pkg.price.discounted.toLocaleString('en-IN')} – ₹{pkg.price.original.toLocaleString('en-IN')}</div>
+                  <p className="lux-caption" style={{ color:'rgba(255,255,255,0.6)', marginTop:8 }}>all inclusive · Budget · Standard · Deluxe</p>
                 </>
               ) : (
                 <>
-                  <p style={{ color:'#fff', fontWeight:800, fontSize:36, lineHeight:1, margin:'4px 0', fontFamily:'var(--font-display)' }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</p>
-                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:12 }}>per person · all inclusive</p>
-                  <p style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginTop:4 }}>≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
-                  {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12, fontWeight:600, marginTop:6 }}>Save ₹{savings.toLocaleString('en-IN')}!</p>}
+                  <div className="lux-figure" style={{ color:'#fff', fontSize:'clamp(2.2rem,4vw,3rem)', marginTop:6 }}>₹{pkg.price.discounted.toLocaleString('en-IN')}</div>
+                  <p className="lux-caption" style={{ color:'rgba(255,255,255,0.6)', marginTop:8 }}>all inclusive · ≈ ₹{(pkg.price.discounted*2).toLocaleString('en-IN')} per couple</p>
+                  {savings>0 && <p style={{ color:'#6ee7b7', fontSize:12.5, fontWeight:600, marginTop:8 }}>Save ₹{savings.toLocaleString('en-IN')}</p>}
                 </>
               )}
             </div>
-            <div className="flex flex-col gap-2.5 bg-white p-4">
-              <a
-                href={`https://wa.me/${SITE.whatsapp}?text=${msg}`}
-                target="_blank" rel="nofollow noopener noreferrer"
-                className="block rounded-xl bg-[#25D366] px-4 py-3.5 text-center text-[14px]
-                           font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.32)]
-                           transition-all duration-200 hover:brightness-105
-                           motion-safe:hover:-translate-y-0.5"
-              >
-                💬 Book via WhatsApp
+            {/* CTAs */}
+            <div style={{ display:'flex', flexDirection:'column', gap:10, padding:18 }}>
+              <a href={`https://wa.me/${SITE.whatsapp}?text=${msg}`} target="_blank" rel="nofollow noopener noreferrer"
+                className="lux-btn lux-btn--wide" style={{ background:'#25D366', color:'#fff', borderColor:'#25D366' }}>
+                <WhatsAppIcon size={15}/> Book via WhatsApp
               </a>
-              <a
-                href="tel:+917817996730"
-                className="block rounded-xl bg-navy px-4 py-3 text-center text-[13px] font-bold
-                           text-white transition-all duration-200 hover:bg-navy-mid
-                           motion-safe:hover:-translate-y-0.5"
-              >
-                📞 Call to Book
+              <a href="tel:+917817996730" className="lux-btn lux-btn--ink lux-btn--wide">
+                <Icon name="phone" size={14}/> Call to book
               </a>
-              {/* Was a bare text node reading "✉️ Send Enquiry Form" with nothing
-                  wrapping it — now a working link to the enquiry form. */}
-              <Link
-                href="/contact"
-                className="block rounded-xl border border-slate-200 px-4 py-2.5 text-center
-                           text-[12.5px] font-bold text-navy transition-colors duration-200
-                           hover:border-navy hover:bg-navy-light"
-              >
-                ✉️ Send Enquiry Form
+              <Link href={`/book?pkg=${pkg.slug}`} className="lux-btn lux-btn--ghost lux-btn--wide">
+                <Icon name="clipboard" size={14}/> Build your booking
               </Link>
             </div>
-            <div style={{ padding:'14px 16px', background:'var(--bg)', borderTop:'1px solid var(--border)' }}>
-              {[{icon:'⏱',label:'Duration',val:`${pkg.duration.nights}N/${pkg.duration.days}D`},{icon:'📍',label:'Start',val:pkg.startCity},{icon:'🎯',label:'Difficulty',val:pkg.difficulty},{icon:'📅',label:'Season',val:pkg.season||'May–Oct 2026'}].map(s=>(
-                <div key={s.label} style={{ display:'flex', justifyContent:'space-between', padding:'6px 0', borderBottom:'1px solid var(--border)', fontSize:12.5 }}>
-                  <span style={{ color:'var(--text-muted)' }}>{s.icon} {s.label}</span>
-                  <span style={{ fontWeight:600, color:'var(--text)' }}>{s.val}</span>
+            {/* Facts */}
+            <div style={{ padding:'4px 20px 18px' }}>
+              <dl className="lux-facts">
+                {[['Duration',`${pkg.duration.nights}N / ${pkg.duration.days}D`],['Start',pkg.startCity],['Difficulty',pkg.difficulty],['Season',pkg.season||'May–Oct 2026']].map(([k,v])=>(
+                  <div className="lux-facts__row" key={k}><dt className="lux-facts__k">{k}</dt><dd className="lux-facts__v">{v}</dd></div>
+                ))}
+              </dl>
+            </div>
+            {/* Assurances */}
+            <div style={{ padding:'16px 20px', borderTop:'1px solid var(--rule)' }}>
+              {['Zero commission','Verified operator','Price match guarantee','Free registration help'].map(t=>(
+                <div key={t} style={{ fontSize:12.5, color:'var(--ink-soft)', padding:'4px 0', display:'flex', gap:8, alignItems:'center' }}>
+                  <Icon name="check" size={13} style={{ color:'var(--gold-dark)', flexShrink:0 }}/>{t}
                 </div>
               ))}
             </div>
-            <div style={{ padding:'12px 16px', background:'#fff' }}>
-              {['✅ Zero commission','🛡️ Verified operator','💰 Price match guarantee','📋 Free registration help'].map(t=>(
-                <div key={t} style={{ fontSize:12, color:'var(--text-mid)', padding:'3px 0' }}>{t}</div>
-              ))}
-            </div>
             {guides.length>0 && (
-              <div style={{ padding:'12px 16px', background:'var(--navy-light)', borderTop:'1px solid var(--border)' }}>
-                <div style={{ fontSize:11.5, fontWeight:700, color:'var(--navy)', marginBottom:8 }}>📖 Helpful Guides:</div>
-                {guides.slice(0,3).map(g=>(
-                  <Link key={g.href} href={g.href} style={{ display:'block', fontSize:12, color:'var(--navy)', textDecoration:'none', padding:'4px 0', borderBottom:'1px solid rgba(15,43,91,0.08)' }}>→ {g.label}</Link>
-                ))}
+              <div style={{ padding:'16px 20px', borderTop:'1px solid var(--rule)', background:'var(--paper-deep)' }}>
+                <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Helpful guides</span>
+                <div style={{ marginTop:12, display:'grid', gap:10 }}>
+                  {guides.slice(0,3).map(g=>(
+                    <Link key={g.href} href={g.href} className="lux-link" style={{ fontSize:'0.7rem' }}>{g.label}</Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>

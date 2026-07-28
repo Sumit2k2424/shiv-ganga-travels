@@ -1141,11 +1141,27 @@ html.lenis, html.lenis body { height: auto; }
   left: clamp(18px, 3vw, 34px);
   bottom: clamp(18px, 3vw, 34px);
   background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid var(--rule);
   padding: clamp(18px, 2.4vw, 26px);
   max-width: min(420px, calc(100% - 36px));
   border-radius: 2px;
+}
+/* On narrow layouts the overlay would cover a short map — flow the caption
+   below the plate instead, as a joined panel. Fixes the mobile overlap. */
+@media (max-width: 900px) {
+  .lux-map__caption {
+    position: static;
+    max-width: none;
+    border: 0;
+    border-top: 1px solid var(--rule);
+    border-radius: 0;
+    background: #fff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: clamp(18px, 4vw, 24px);
+  }
 }
 .lux-map__gl { width: 100%; aspect-ratio: 16 / 10; border: 1px solid var(--rule); }
 .lux-map__meta {
