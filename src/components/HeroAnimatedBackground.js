@@ -39,16 +39,9 @@ uniform vec2  uMouse;   // eased pointer, -1..1
 uniform float uScroll;  // hero scroll progress, 0..1
 uniform float uQual;    // 1.0 high, 0.0 low
 
-/* ---------- palette (deep Himalayan blue → slate → sunrise gold) ---------- */
-const vec3 SKY_TOP  = vec3(0.035, 0.075, 0.185);
-const vec3 SKY_MID  = vec3(0.130, 0.185, 0.320);
-const vec3 SKY_LOW  = vec3(0.560, 0.470, 0.470);
-const vec3 GOLD     = vec3(0.980, 0.760, 0.470);
-const vec3 SUN      = vec3(1.000, 0.900, 0.680);
-const vec3 MIST     = vec3(0.820, 0.880, 0.955);
-const vec3 ICE      = vec3(0.680, 0.800, 0.910);
-const vec3 SNOW     = vec3(0.930, 0.960, 1.000);
-const vec3 EMERALD  = vec3(0.130, 0.320, 0.290);
+/* ---------- palette ---------- */
+const vec3 GOLD = vec3(1.000, 0.820, 0.520);
+const vec3 MIST = vec3(0.860, 0.910, 0.975);
 
 /* ---------- noise ---------- */
 float hash(vec2 p){
@@ -74,110 +67,80 @@ float fbm(vec2 p){
   return v;
 }
 
-/* ---------- one parallax mountain ridge ---------- */
-vec3 ridge(vec3 col, vec2 uv, float aspect, float baseH, float amp,
-           float freq, float seed, vec3 near, vec3 far, float depth,
-           float parX, float parY, float snowT){
-  float x = uv.x * aspect + parX;
-  float h = baseH + parY + amp * (fbm(vec2(x * freq, seed)) - 0.5)
-                        + amp * 0.4 * (fbm(vec2(x * freq * 2.7, seed + 5.0)) - 0.5);
-  float aa = 1.5 / uRes.y;
-  float m = smoothstep(h + aa, h - aa, uv.y);          // 1 below the ridge line
-  if (m <= 0.0015) return col;
-  float shade = smoothstep(baseH - amp, h, uv.y);      // darker toward the base
-  vec3 body = mix(near * 0.82, near, shade);
-  body = mix(body, far, depth);                        // atmospheric perspective
-  float snow = smoothstep(h - snowT, h - snowT * 0.15, uv.y);
-  body = mix(body, SNOW, snow * (0.85 - depth * 0.45));
-  return mix(col, body, m);
-}
-
+/*
+ * TRANSPARENT ATMOSPHERIC OVERLAY.
+ * The real hero photo stays visible underneath (this canvas sits above the
+ * <img> and blends over it). We draw ONLY light: a soft sun bloom, drifting
+ * god rays, rising mist, high haze and floating dust — accumulated into a
+ * straight (non-premultiplied) colour + alpha so most of the frame is
+ * transparent and the photograph reads through. No opaque sky or mountains.
+ */
 void main(){
-  vec2 uv = vUv;
   float aspect = uRes.x / uRes.y;
 
-  /* cinematic camera: micro-breathing + drone-hover drift + tiny scroll push */
-  vec2 cam = vec2(
-    sin(uTime * 0.11) * 0.006 + uMouse.x * 0.010,
-    cos(uTime * 0.09) * 0.004 + uMouse.y * 0.008 - uScroll * 0.05
+  /* cinematic drift: micro-breathing + drone hover + tiny scroll push */
+  vec2 p = vUv + vec2(
+    sin(uTime * 0.11) * 0.005 + uMouse.x * 0.008,
+    cos(uTime * 0.09) * 0.004 + uMouse.y * 0.006 - uScroll * 0.04
   );
-  uv += cam;
 
-  /* ---------- sky + atmospheric scattering ---------- */
-  vec3 col = mix(SKY_MID, SKY_TOP, smoothstep(0.42, 1.0, uv.y));
-  col = mix(col, SKY_LOW, smoothstep(0.55, 0.30, uv.y));
+  vec3 col = vec3(0.0);
+  float a = 0.0;
 
-  vec2 sunPos = vec2(0.30 + uMouse.x * 0.02, 0.62 + uScroll * 0.05);
-  float sd = distance(vec2(uv.x * aspect, uv.y), vec2(sunPos.x * aspect, sunPos.y));
+  /* sun high on the left, drifts a touch with the pointer */
+  vec2 sunPos = vec2(0.30 + uMouse.x * 0.02, 0.74);
+  vec2 rd = vec2((p.x - sunPos.x) * aspect, p.y - sunPos.y);
+  float sd = length(rd);
 
-  float horizonGlow = smoothstep(0.62, 0.30, uv.y);
-  col = mix(col, GOLD, horizonGlow * 0.55 * smoothstep(1.1, 0.1, sd));
-  col += SUN * exp(-sd * 3.2) * 0.45;                  // soft bloom around the sun
-  col += SUN * exp(-sd * 12.0) * 0.9;                  // core
+  /* soft golden bloom */
+  float bloom = exp(-sd * 3.4) * 0.45 + exp(-sd * 9.0) * 0.45;
+  col += GOLD * bloom; a += bloom * 0.5;
 
-  /* volumetric god rays sweeping from the sun */
-  vec2 rd = vec2(uv.x * aspect, uv.y) - vec2(sunPos.x * aspect, sunPos.y);
+  /* slow volumetric god rays */
   float ang = atan(rd.y, rd.x);
-  float rays = fbm(vec2(ang * 3.5 + uTime * 0.025, 1.7))
-             * fbm(vec2(ang * 8.0 - uTime * 0.015, 4.2));
-  col += GOLD * rays * smoothstep(1.0, 0.05, sd) * 0.30;
+  float rays = fbm(vec2(ang * 3.5 + uTime * 0.022, 1.7))
+             * fbm(vec2(ang * 8.0 - uTime * 0.013, 4.0))
+             * smoothstep(1.0, 0.05, sd);
+  col += GOLD * rays; a += rays * 0.42;
 
-  /* thin drifting high clouds */
-  float cloudRegion = smoothstep(0.52, 0.95, uv.y);
-  float cl = fbm(vec2(uv.x * 1.6 - uTime * 0.010, uv.y * 2.2 + 3.0));
-  col = mix(col, MIST, cloudRegion * smoothstep(0.55, 0.92, cl) * 0.35);
+  /* rising valley mist across the lower third */
+  float band = smoothstep(0.10, 0.42, p.y) * (1.0 - smoothstep(0.42, 0.66, p.y));
+  vec2 mq = vec2(p.x * 2.2 - uTime * 0.020, p.y * 3.0 + uTime * 0.012);
+  float mist = band * smoothstep(0.45, 0.95, fbm(mq + fbm(mq)));
+  col += MIST * mist; a += mist * 0.42;
 
-  /* ---------- mountain depth layers (far → near) ---------- */
-  float mx = uMouse.x, sc = uScroll;
-  // far range
-  col = ridge(col, uv, aspect, 0.470, 0.10, 0.55, 21.0, ICE, MIST,
-              0.72, mx * 0.012 + sc * 0.02, mx * 0.0, 0.045);
-  col = ridge(col, uv, aspect, 0.430, 0.13, 0.75, 47.0, mix(ICE, SKY_MID, 0.4),
-              MIST, 0.55, mx * 0.020 + sc * 0.035, uMouse.y * 0.004, 0.055);
-  // mid range
-  col = ridge(col, uv, aspect, 0.380, 0.17, 1.05, 73.0, mix(SKY_MID, EMERALD, 0.25),
-              ICE, 0.34, mx * 0.032 + sc * 0.06, uMouse.y * 0.007, 0.06);
-  // near range
-  col = ridge(col, uv, aspect, 0.310, 0.22, 1.45, 95.0, SKY_TOP * 1.4,
-              mix(SKY_MID, EMERALD, 0.35), 0.16, mx * 0.050 + sc * 0.10,
-              uMouse.y * 0.010, 0.05);
+  /* thin drifting high haze */
+  float haze = smoothstep(0.50, 0.98, p.y)
+             * smoothstep(0.55, 0.92, fbm(vec2(p.x * 1.6 - uTime * 0.010, p.y * 2.0 + 3.0)));
+  col += MIST * haze; a += haze * 0.22;
 
-  /* ---------- rising valley mist between ridges ---------- */
-  float band = smoothstep(0.22, 0.40, uv.y) * (1.0 - smoothstep(0.40, 0.60, uv.y));
-  vec2 mq = vec2(uv.x * 2.2 - uTime * 0.020, uv.y * 3.2 + uTime * 0.012);
-  float mistN = fbm(mq + fbm(mq));
-  col = mix(col, MIST, band * smoothstep(0.42, 0.95, mistN) * 0.6);
-
-  /* depth haze toward the horizon */
-  col = mix(col, MIST, smoothstep(0.44, 0.34, uv.y) * 0.18);
-
-  /* ---------- floating atmospheric particles (snow dust / pollen) ---------- */
-  float p = 0.0;
+  /* floating atmospheric dust / pollen */
+  float part = 0.0;
   for (int k = 0; k < 3; k++){
     float fk = float(k);
-    float scale = 26.0 + fk * 34.0;
+    float scale = 28.0 + fk * 36.0;
     float speed = 0.020 + fk * 0.016;
-    vec2 g = vec2(uv.x * aspect, uv.y) * scale;
+    vec2 g = vec2(p.x * aspect, p.y) * scale;
     g.y += uTime * speed * scale;
     g.x += sin(uTime * 0.2 + floor(g.y) + fk) * 0.6 + uMouse.x * (1.0 + fk);
     vec2 id = floor(g), f = fract(g);
     vec2 c = vec2(hash(id + fk * 3.1), hash(id + fk * 7.7 + 1.0));
     float d = length(f - c);
     float on = step(0.86 - fk * 0.06, hash(id + fk * 13.0));
-    p += smoothstep(0.14 + fk * 0.05, 0.0, d) * on * (0.5 - fk * 0.12);
+    part += smoothstep(0.14 + fk * 0.05, 0.0, d) * on * (0.5 - fk * 0.12);
     if (k >= 1 && uQual < 0.5) break;
   }
-  col += MIST * p * 0.6;
+  col += MIST * part; a += part * 0.6;
 
-  /* ---------- grade: bloom lift, film grain, vignette ---------- */
-  col += pow(max(col - 0.75, 0.0), vec3(1.4)) * 0.6;   // gentle highlight bloom
-  float grain = (hash(uv * uRes + uTime) - 0.5) * 0.045;
-  col += grain;
-  vec2 vc = uv - 0.5; vc.x *= aspect;
-  col *= 1.0 - dot(vc, vc) * 0.55;                      // soft vignette
+  /* subtle grain, only where the overlay is actually visible */
+  col += (hash(p * uRes + uTime) - 0.5) * 0.04 * a;
 
+  /* convert accumulated (premultiplied-ish) colour to straight colour */
+  if (a > 0.001) col /= a;
   col = clamp(col, 0.0, 1.0);
-  gl_FragColor = vec4(col, 1.0);
+  a = clamp(a, 0.0, 0.78);
+
+  gl_FragColor = vec4(col, a);
 }`;
 
 function compile(gl, type, src) {
@@ -232,6 +195,12 @@ export default function HeroAnimatedBackground() {
       return;
     }
     gl.useProgram(prog);
+
+    // Transparent overlay: composite the light we draw over the hero photo
+    // beneath. Straight (non-premultiplied) alpha to match the context option.
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.clearColor(0, 0, 0, 0);
 
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
@@ -289,6 +258,7 @@ export default function HeroAnimatedBackground() {
       gl.uniform1f(uTime, (now - start) / 1000);
       gl.uniform2f(uMouse, mouse.x, mouse.y);
       gl.uniform1f(uScroll, scroll);
+      gl.clear(gl.COLOR_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     };
 
@@ -303,6 +273,7 @@ export default function HeroAnimatedBackground() {
       gl.uniform1f(uTime, 8.0);
       gl.uniform2f(uMouse, 0, 0);
       gl.uniform1f(uScroll, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     } else {
       window.addEventListener('pointermove', onPointer, { passive: true });
