@@ -51,7 +51,7 @@ export default function PackageCard({ pkg }) {
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover object-center
-                       transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)]
+                       transition-transform [transition-duration:900ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)]
                        motion-safe:group-hover:scale-[1.07]"
           />
         )}
