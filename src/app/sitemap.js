@@ -193,11 +193,30 @@ export default function sitemap() {
 
   const languagePages = LANGUAGE_PAGES.map(l => ({ url: `${b}/${l.slug}`, p: 0.84, cf: 'monthly' }));
 
-  const all = [
+  const listed = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...cities,
     ...authority, ...categoryPages, ...packagePages, ...languagePages,
   ];
+
+  // ── Safety net: auto-discover every top-level route folder that has a real
+  // page file and is not already listed above. Stops new landing pages from
+  // silently missing the sitemap (the main cause of "Discovered - currently
+  // not indexed" in Search Console). Excludes noindex/utility routes and any
+  // slug that is 301-redirected in next.config.js.
+  const EXCLUDE_TOP = new Set([
+    'ui-kit', 'review', 'packages', 'blog', 'cabs',
+    'opengraph-image', 'sitemap-page',
+  ]);
+  const seen = new Set(listed.map(x => x.url));
+  const discovered = discoverDirSlugs('src/app')
+    .filter(slug => !EXCLUDE_TOP.has(slug))
+    .filter(slug => !slug.startsWith('['))
+    .filter(slug => !REDIRECTED_CITIES.has(slug))
+    .map(slug => ({ url: `${b}/${slug}`, p: 0.78, cf: 'monthly' }))
+    .filter(x => !seen.has(x.url));
+
+  const all = [...listed, ...discovered];
 
   return all.map(({ url, p, cf }) => ({
     url,

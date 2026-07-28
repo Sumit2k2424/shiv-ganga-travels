@@ -8,6 +8,20 @@ export const metadata = {
 };
 
 const POSTS = [
+  { slug:'char-dham-yatra-complete-guide', title:'Char Dham Yatra 2026 — History, Significance & Full Route', excerpt:'The long-form reference: why these four shrines, the order pilgrims follow, who should attempt it, and the questions we get asked every season.', tag:'Complete Guide', readTime:'12 min', icon:'📖' },
+  { slug:'char-dham-yatra-faq', title:'Char Dham Yatra FAQ — 50 Questions Answered', excerpt:'Cost, registration, best time, medical rules, senior citizens, helicopter slots and the 2026 rule changes — answered in plain language.', tag:'Complete Guide', readTime:'14 min', icon:'❓' },
+  { slug:'green-card-char-dham-yatra-2026', title:'Green Card for Char Dham Yatra 2026 — Rules & Cost', excerpt:'Non-Uttarakhand vehicles need a Trip Card on yatra routes. How to apply, what it costs, which routes check it, and the penalty if you skip it.', tag:'2026 Update', readTime:'6 min', icon:'🪪' },
+  { slug:'kedarnath-registration-2026', title:'Kedarnath Registration 2026 — Online & WhatsApp', excerpt:'Free registration on the Uttarakhand portal or WhatsApp 8394833833. Documents, daily caps, and the extra step for anyone above 55.', tag:'Registration', readTime:'5 min', icon:'📝' },
+  { slug:'kedarnath-trek-timings-2026', title:'Kedarnath Trek Timings 2026 — Cut-Offs & Rules', excerpt:'Leave Gaurikund before 1:30 PM or the checkpoints turn you back. Cut-off times, last-entry rules, and why we push a 5 AM start.', tag:'Trek Guide', readTime:'6 min', icon:'⏱️' },
+  { slug:'kedarnath-pony-vs-helicopter', title:'Kedarnath Pony vs Helicopter — Cost & Honest Verdict', excerpt:'Pony ₹3,000–5,000 against a helicopter seat from ₹3,043 one way. Time, comfort, weather risk, and which one suits your age and fitness.', tag:'Helicopter', readTime:'6 min', icon:'🐎' },
+  { slug:'char-dham-yatra-road-conditions-2026', title:'Char Dham Road Conditions 2026 — Route Status', excerpt:'All four routes, the landslide stretches we watch, All-Weather Road progress, and where Joshimath stands this season.', tag:'2026 Update', readTime:'7 min', icon:'🛣️' },
+  { slug:'char-dham-yatra-closing-dates-2026', title:'Char Dham Closing Dates 2026 — All 4 Temples', excerpt:'Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 on Bhai Dooj, Badrinath Nov 13. Plan the last-visit window properly.', tag:'2026 Update', readTime:'5 min', icon:'🔒' },
+  { slug:'char-dham-vs-do-dham', title:'Char Dham vs Do Dham Yatra — Which One Suits You', excerpt:'Ten days against six, ₹18,500 against ₹10,999, and the difficulty gap nobody mentions. How to choose without regret.', tag:'Itinerary', readTime:'6 min', icon:'⚖️' },
+  { slug:'char-dham-yatra-package-vs-self-planned', title:'Char Dham Package vs Self-Planned Trip — Real Costs', excerpt:'What you actually save going independent in 2026, what it costs you in time and risk, and which pilgrim each option suits.', tag:'Budget Guide', readTime:'7 min', icon:'🧾' },
+  { slug:'types-of-char-dham-yatra-packages', title:'Char Dham Package Types — Budget to Helicopter', excerpt:'Budget ₹18,500, Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L and up. What changes at each tier, in detail.', tag:'Budget Guide', readTime:'6 min', icon:'🏷️' },
+  { slug:'places-to-visit-during-char-dham-yatra', title:'Top 10 Places to Visit on Char Dham Yatra', excerpt:'Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta, Lakhamandal — the stops worth the detour between dhams.', tag:'Travel Tips', readTime:'8 min', icon:'📍' },
+  { slug:'char-dham-yatra-significance', title:'Char Dham Yatra — History & Spiritual Significance', excerpt:'Why Adi Shankaracharya set up this circuit in the 8th century, the mythology behind each dham, and what moksha means here.', tag:'Complete Guide', readTime:'8 min', icon:'🕉️' },
+
   { slug:'char-dham-monsoon-safety', title:'Char Dham Yatra in Monsoon 2026 — Safety Guide by Local Drivers', excerpt:'Sunrise departures, landslide zones by name, monsoon packing, live route checks. What 15 rainy seasons on these roads taught us.', tag:'Monsoon 2026', readTime:'8 min', icon:'🌧️' },
   { slug:'september-char-dham-yatra', title:'September Char Dham Yatra 2026 — Post-Monsoon Pre-Booking', excerpt:'Clearest skies of the year, thin crowds, hotels 25–40% cheaper. Week-by-week September weather and why autumn seats fill by August.', tag:'Autumn 2026', readTime:'7 min', icon:'🍂' },
   { slug:'char-dham-yatra-2026-new-rules', title:'Char Dham Yatra 2026 New Rules — Phone Ban, Age 55+, IRCTC Helicopter', excerpt:'All 2026 rule changes: mobile phone ban, medical certificate for 55+, IRCTC helicopter booking, non-Hindu entry, GPS tracking. Must-read before you travel.', tag:'2026 Update', readTime:'6 min', icon:'📢' },
@@ -21,7 +35,7 @@ const POSTS = [
   { slug:'haridwar-to-kedarnath', title:'Haridwar to Kedarnath — Complete Route Guide 2026', excerpt:'228km by road + 16km trek. Key stops, journey times, overnight stays, and everything in between.', tag:'Route Guide', readTime:'5 min', icon:'🗺️' },
   { slug:'char-dham-yatra-by-train', title:'Char Dham Yatra by Train 2026 — Nearest Stations & Routes', excerpt:'Nearest railheads (Haridwar, Rishikesh, Dehradun), best trains from Delhi, Mumbai & Kolkata, IRCTC tips, and how the yatra starts once you arrive.', tag:'Route Guide', readTime:'6 min', icon:'🚂' },
   { slug:'char-dham-yatra-registration', title:'Char Dham Yatra Registration 2026 — How It Works', excerpt:'Mandatory biometric registration explained — documents, daily limits, yatra card, and how we handle it for you.', tag:'Registration', readTime:'5 min', icon:'📋' },
-  { slug:'badrinath-yatra-guide', title:'Badrinath Yatra Guide 2026 — Timings, Mana Village & Tips', excerpt:'Darshan timings, Tapt Kund, Mana village, Vyas Gufa — the complete Badrinath experience beyond the main temple.', tag:'Yatra Guide', readTime:'6 min', icon:'🕌' },
+  { slug:'badrinath-yatra-guide', href:'/badrinath-yatra', title:'Badrinath Yatra Guide 2026 — Timings, Mana Village & Tips', excerpt:'Darshan timings, Tapt Kund, Mana village, Vyas Gufa — the complete Badrinath experience beyond the main temple.', tag:'Yatra Guide', readTime:'6 min', icon:'🕌' },
   { slug:'valley-of-flowers-trek', title:'Valley of Flowers Trek Guide 2026 — Best Time & Route', excerpt:'UNESCO World Heritage site with 500+ wildflowers. Best in August. Combined with Hemkund Sahib.', tag:'Nature Trek', readTime:'7 min', icon:'🌸' },
   { slug:'char-dham-yatra-7-days', title:'Char Dham Yatra in 7 Days — Is It Possible?', excerpt:'Honest 7-day itinerary with daily driving, warnings, and when a 7-day plan actually makes sense.', tag:'Itinerary', readTime:'6 min', icon:'📆' },
   { slug:'kedarnath-darshan-timing', title:'Kedarnath Darshan Timings 2026 — Complete Schedule', excerpt:'Morning 6 AM, Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. All timings, puja prices, and best time to visit.', tag:'Temple Guide', readTime:'5 min', icon:'⛩️' },
@@ -94,7 +108,7 @@ export default function Blog() {
             {POSTS.map(post => {
               const tc = TAG_COLORS[post.tag] || { bg:'var(--navy-light)', color:'var(--navy)' };
               return (
-                <Link key={post.slug} href={`/blog/${post.slug}`}
+                <Link key={post.slug} href={post.href || `/blog/${post.slug}`}
                   style={{ textDecoration:'none', color:'inherit', display:'block' }}>
                   <article className="pkg-card" style={{
                     background:'#fff', borderRadius:16, overflow:'hidden',

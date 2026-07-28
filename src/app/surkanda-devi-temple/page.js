@@ -272,12 +272,12 @@ export default function SurkandaDeviTemple() {
       </ul>
 
       <h2 style={h2}>Fitting Surkanda Devi into Your Mussoorie or Dhanaulti Trip</h2>
-      <p style={p}>This temple already shows up as a stop in several of our existing Uttarakhand itineraries — the Mussoorie–Rishikesh–Kanatal circuit, the Tehri Lake and Kanatal weekend, and the longer Chopta/Badrinath route all route through Kaddukhal for exactly this darshan. If you&rsquo;re coming up via our <Link href="/haridwar-to-mussoorie-cab" style={teal}>Haridwar to Mussoorie cab</Link>, <Link href="/rishikesh-to-mussoorie-cab" style={teal}>Rishikesh to Mussoorie cab</Link> or <Link href="/dehradun-to-mussoorie-cab" style={teal}>Dehradun to Mussoorie cab</Link>, adding a Surkanda Devi detour via Dhanaulti costs a couple of hours, not a full extra day.</p>
+      <p style={p}>This temple already shows up as a stop in several of our existing Uttarakhand itineraries — the Mussoorie–Rishikesh–Kanatal circuit, the Tehri Lake and Kanatal weekend, and the longer Chopta/Badrinath route all route through Kaddukhal for exactly this darshan. If you&rsquo;re coming up via our <Link href="/cabs/haridwar-to-mussoorie-cab" style={teal}>Haridwar to Mussoorie cab</Link>, <Link href="/cabs/rishikesh-to-mussoorie-cab" style={teal}>Rishikesh to Mussoorie cab</Link> or <Link href="/cabs/dehradun-to-mussoorie-cab" style={teal}>Dehradun to Mussoorie cab</Link>, adding a Surkanda Devi detour via Dhanaulti costs a couple of hours, not a full extra day.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Haridwar to Mussoorie Cab',h:'/haridwar-to-mussoorie-cab'},{l:'Rishikesh to Mussoorie Cab',h:'/rishikesh-to-mussoorie-cab'},{l:'Dehradun to Mussoorie Cab',h:'/dehradun-to-mussoorie-cab'}].map(l=>(
+          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Haridwar to Mussoorie Cab',h:'/cabs/haridwar-to-mussoorie-cab'},{l:'Rishikesh to Mussoorie Cab',h:'/cabs/rishikesh-to-mussoorie-cab'},{l:'Dehradun to Mussoorie Cab',h:'/cabs/dehradun-to-mussoorie-cab'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
           ))}
         </div>

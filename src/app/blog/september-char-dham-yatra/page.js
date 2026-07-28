@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'September Char Dham Yatra 2026: Post-Monsoon Packages & Pre-Booking',
-  description: 'Skip the monsoon, catch the best views of the year. September Char Dham Yatra 2026 — weather week by week, package prices from ₹18,500, and why autumn seats fill by August.',
+  title: 'September Char Dham Yatra 2026: Post-Monsoon Packages',
+  description: 'September Char Dham Yatra 2026: clearest skies of the year, weather week by week, packages from ₹18,500, and why autumn seats fill up by August.',
   keywords: ['september char dham yatra package 2026', 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
 };
@@ -25,7 +25,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'September Char Dham Yatra 2026: Post-Monsoon Packages & Pre-Booking',
+    headline: 'September Char Dham Yatra 2026: Post-Monsoon Packages',
     description: 'Why mid-September to mid-October is the best window of the year for Char Dham, weather week by week, and how post-monsoon pre-booking works.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-07-12',

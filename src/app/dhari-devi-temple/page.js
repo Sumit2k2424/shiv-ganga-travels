@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Dhari Devi Temple 2026 — Story, Timings & How to Reach',
-  description: 'Dhari Devi Temple near Srinagar, Pauri Garhwal — the guardian goddess of Char Dham. Darshan timings 6 AM–8 PM, the 2013 flood story, how to reach, distances and the temple most pilgrims visit before Kedarnath.',
+  description: 'Dhari Devi Temple near Srinagar, Pauri Garhwal — guardian goddess of Char Dham. Darshan 6 AM–8 PM, the 2013 flood story, how to reach and distances.',
   keywords: ['dhari devi temple','dhari devi mandir','dhari devi','dhari devi temple story','dhari devi temple history','dhari devi temple timings','dhari devi temple location','dhari devi temple distance from srinagar','dhari devi kalyasaur','dhari devi temple uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/dhari-devi-temple` },
   openGraph: {

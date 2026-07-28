@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import TrustStrip from '@/components/TrustStrip';
 import { SITE } from '@/data/packages';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 
@@ -216,27 +217,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Utility strip — the single bar above the navbar.
-             Positive framing of the direct-operator fact (the old red
-             "Warning" bar and the duplicate sub-nav strip are gone). ── */}
-      <div style={{ background:'var(--navy)', padding:'0' }}>
-        <div className='utility-strip' style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'8px 16px', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8 }}>
-          <div className='utility-strip-left' style={{ display:'flex', gap:14, fontSize:11.5, color:'rgba(255,255,255,0.62)', flexWrap:'wrap', alignItems:'center' }}>
-            <span style={{ color:'#fff', fontWeight:600 }}>Direct Char Dham operator in Haridwar since {SITE.established} — you pay us, not a middleman</span>
-            <span className="hidden md:inline" style={{ color:'rgba(255,255,255,0.3)' }}>·</span>
-            <span className="hidden md:inline">2026 season open · Apr 19 – Nov 13</span>
-          </div>
-          {/* Compact line shown only on small screens (CSS swaps the two) */}
-          <span className='utility-strip-short' style={{ display:'none', fontSize:11.5, color:'#fff', fontWeight:600, textAlign:'center' }}>
-            Direct operator in Haridwar · Est. {SITE.established}
-          </span>
-          <a href={`mailto:${SITE.email}`} className="hidden lg:inline" style={{ color:'rgba(255,255,255,0.5)', textDecoration:'none', fontSize:11.5 }}>{SITE.email}</a>
-        </div>
-      </div>
+      {/* ── Sticky header stack: TrustStrip pinned above the navbar, so the
+             Army-founder and pay-us-directly facts stay on screen instead of
+             scrolling away with the old utility bar. ── */}
+      <div className="header-sticky">
+      <TrustStrip/>
 
       {/* ── Main navbar ─────────────────────────────────── */}
       <header style={{
-        position:'sticky', top:0, zIndex:100,
         background:'#fff',
         borderBottom:`1px solid ${scrolled ? 'transparent' : 'var(--border)'}`,
         boxShadow: scrolled ? '0 2px 20px rgba(15,43,91,0.1)' : 'none',
@@ -485,6 +473,7 @@ export default function Navbar() {
           </div>
         )}
       </header>
+      </div>
     </>
   );
 }

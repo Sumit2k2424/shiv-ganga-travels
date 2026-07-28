@@ -5,7 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: 'Kedarnath Helicopter Booking 2026: Price, IRCTC & Helipads',
-  description: 'Kedarnath helicopter (chopper) booking 2026: IRCTC HeliYatra fares — Sersi ₹6,390, Phata ₹10,164, Guptkashi ₹12,762 round trip. Dehradun charter option, GMVN facts, weather tips.',
+  description: 'Kedarnath helicopter booking 2026: IRCTC HeliYatra fares from Sersi ₹6,390, Phata ₹10,164, Guptkashi ₹12,762 round trip, plus Dehradun charter and weather tips.',
   keywords: ['kedarnath helicopter booking 2026', 'kedarnath helicopter price 2026', 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {

@@ -8,7 +8,7 @@ const noto = Noto_Sans_Telugu({ subsets: ['telugu'], weight: ['400', '500', '600
 
 export const metadata = {
   title: 'చార్ ధామ్ యాత్ర 2026 తెలుగులో (Char Dham in Telugu)',
-  description: 'చార్ ధామ్ యాత్ర 2026 సంపూర్ణ సమాచారం తెలుగులో — యమునోత్రి, గంగోత్రి, కేదారనాథ్, బద్రీనాథ్. హరిద్వార్ నుండి 9 రాత్రులు/10 రోజుల ప్యాకేజీ ₹18,500 నుండి. ప్రత్యక్ష ఆపరేటర్, కమిషన్ లేదు.',
+  description: 'చార్ ధామ్ యాత్ర 2026 సంపూర్ణ సమాచారం తెలుగులో — యమునోత్రి, గంగోత్రి, కేదారనాథ్, బద్రీనాథ్. హరిద్వార్ నుండి 9 రాత్రులు/10 రోజుల ప్యాకేజీ ₹18,500 నుండి.',
   keywords: ['చార్ ధామ్ యాత్ర తెలుగు', 'char dham yatra in telugu', 'char dham yatra telugu guide', 'chardham yatra telugu vivaralu', 'హరిద్వార్ నుండి చార్ ధామ్ యాత్ర'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {

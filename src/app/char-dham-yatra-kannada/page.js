@@ -8,7 +8,7 @@ const noto = Noto_Sans_Kannada({ subsets: ['kannada'], weight: ['400', '500', '6
 
 export const metadata = {
   title: 'ಚಾರ್ ಧಾಮ್ ಯಾತ್ರೆ 2026 ಕನ್ನಡದಲ್ಲಿ (Char Dham in Kannada)',
-  description: 'ಚಾರ್ ಧಾಮ್ ಯಾತ್ರೆ 2026 ಸಂಪೂರ್ಣ ಮಾಹಿತಿ ಕನ್ನಡದಲ್ಲಿ — ಯಮುನೋತ್ರಿ, ಗಂಗೋತ್ರಿ, ಕೇದಾರನಾಥ, ಬದರಿನಾಥ. ಹರಿದ್ವಾರದಿಂದ 9 ರಾತ್ರಿ/10 ದಿನ ಪ್ಯಾಕೇಜ್ ₹18,500ದಿಂದ. ನೇರ ಆಪರೇಟರ್, ಕಮಿಷನ್ ಇಲ್ಲ.',
+  description: 'ಚಾರ್ ಧಾಮ್ ಯಾತ್ರೆ 2026 ಸಂಪೂರ್ಣ ಮಾಹಿತಿ ಕನ್ನಡದಲ್ಲಿ — ಯಮುನೋತ್ರಿ, ಗಂಗೋತ್ರಿ, ಕೇದಾರನಾಥ, ಬದರಿನಾಥ. ಹರಿದ್ವಾರದಿಂದ 9 ರಾತ್ರಿ/10 ದಿನ ಪ್ಯಾಕೇಜ್ ₹18,500ದಿಂದ.',
   keywords: ['ಚಾರ್ ಧಾಮ್ ಯಾತ್ರೆ ಕನ್ನಡ', 'char dham yatra in kannada', 'char dham yatra kannada guide', 'chardham yatre kannada mahiti', 'ಹರಿದ್ವಾರದಿಂದ ಚಾರ್ ಧಾಮ್ ಯಾತ್ರೆ'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {

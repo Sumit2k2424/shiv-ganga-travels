@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
+import { CAB_ROUTES } from '@/data/cabRoutes';
+import { LANGUAGE_PAGES } from '@/data/languages';
 
 export const metadata = {
   title: 'Sitemap — All Char Dham Pages',
@@ -138,6 +140,68 @@ const sections = [
     ],
   },
   {
+    title: 'Temples & Destinations',
+    links: [
+      { label: 'Gangotri Temple Guide', href: '/gangotri-temple' },
+      { label: 'Yamunotri Temple Guide', href: '/yamunotri-temple' },
+      { label: 'Gaurikund Guide', href: '/gaurikund-guide' },
+      { label: 'Guptkashi Guide', href: '/guptkashi-guide' },
+      { label: 'Kedarnath to Badrinath Distance', href: '/kedarnath-to-badrinath-distance' },
+      { label: 'Harsil Valley Guide', href: '/harsil-valley' },
+      { label: 'Surkanda Devi Temple', href: '/surkanda-devi-temple' },
+      { label: 'Chitai Golu Devta Temple', href: '/chitai-golu-devta-temple' },
+      { label: 'Rajaji National Park', href: '/rajaji-national-park' },
+      { label: 'Adi Kailash Yatra', href: '/adi-kailash-yatra' },
+    ],
+  },
+  {
+    title: 'Regional Tour Packages',
+    links: [
+      { label: 'Haridwar Tour Packages', href: '/haridwar-tour-packages' },
+      { label: 'Rishikesh Tour Packages', href: '/rishikesh-tour-packages' },
+      { label: 'Char Dham Hotels', href: '/char-dham-hotels' },
+      { label: 'Char Dham Yatra from Haridwar', href: '/char-dham-yatra-from-haridwar' },
+    ],
+  },
+  {
+    title: 'Why Book Direct',
+    links: [
+      { label: 'Best Char Dham Operators in Haridwar', href: '/best-char-dham-yatra-operators-haridwar' },
+      { label: 'Shiv Ganga Travels vs MakeMyTrip', href: '/shiv-ganga-travels-vs-makemytrip-char-dham' },
+      { label: 'Direct Operator vs Aggregator', href: '/direct-operator-vs-travel-aggregator-char-dham' },
+      { label: 'Char Dham Yatra Statistics', href: '/char-dham-yatra-statistics' },
+      { label: 'Char Dham Yatra Scams to Avoid', href: '/char-dham-yatra-scams' },
+    ],
+  },
+  {
+    title: 'More Guides',
+    links: [
+      { label: 'Char Dham Yatra Complete Reference', href: '/blog/char-dham-yatra-complete-guide' },
+      { label: 'History & Spiritual Significance', href: '/blog/char-dham-yatra-significance' },
+      { label: 'Char Dham Yatra History', href: '/blog/char-dham-yatra-history' },
+      { label: 'Closing Dates 2026', href: '/blog/char-dham-yatra-closing-dates-2026' },
+      { label: 'Road Conditions 2026', href: '/blog/char-dham-yatra-road-conditions-2026' },
+      { label: 'Green Card / Trip Card 2026', href: '/blog/green-card-char-dham-yatra-2026' },
+      { label: 'Kedarnath Registration 2026', href: '/blog/kedarnath-registration-2026' },
+      { label: 'Kedarnath Trek Timings 2026', href: '/blog/kedarnath-trek-timings-2026' },
+      { label: 'Kedarnath Places to See', href: '/blog/kedarnath-places-to-see' },
+      { label: 'Kedarnath Pehli Baar (Hindi)', href: '/blog/kedarnath-pehli-baar' },
+      { label: 'Places to Visit on the Yatra', href: '/blog/places-to-visit-during-char-dham-yatra' },
+      { label: 'Types of Char Dham Packages', href: '/blog/types-of-char-dham-yatra-packages' },
+      { label: 'Char Dham Yatra by Train', href: '/blog/char-dham-yatra-by-train' },
+      { label: 'Char Dham Yatra Hotels', href: '/blog/char-dham-yatra-hotels' },
+      { label: 'Solo Women Travellers', href: '/blog/char-dham-yatra-solo-women' },
+      { label: 'Monsoon Safety Guide', href: '/blog/char-dham-monsoon-safety' },
+      { label: 'September Char Dham Yatra', href: '/blog/september-char-dham-yatra' },
+      { label: 'Char Dham Weather Guide', href: '/blog/char-dham-weather-guide' },
+      { label: 'Char Dham Kab Jayen (Hindi)', href: '/blog/char-dham-kab-jayen' },
+      { label: 'Kitna Kharcha Aayega (Hindi)', href: '/blog/char-dham-yatra-kitna-kharcha' },
+      { label: 'Bujurg Char Dham Yatra (Hindi)', href: '/blog/bujurg-char-dham-yatra' },
+      { label: 'Registration Guide (Hindi)', href: '/blog/char-dham-registration-hindi' },
+      { label: 'Packing List (Hindi)', href: '/blog/char-dham-packing-list-hindi' },
+    ],
+  },
+  {
     title: 'Company',
     links: [
       { label: 'About Shiv Ganga Travels', href: '/about' },
@@ -194,6 +258,46 @@ export default function SitemapPage() {
                   <Link href={`/packages/${slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     {cat.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Cab routes */}
+          <div>
+            <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:12, paddingBottom:8, borderBottom:'2px solid var(--gold)' }}>
+              Cab & Taxi Routes
+            </h2>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
+              <li>
+                <Link href="/cabs" style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
+                  All Cab Routes
+                </Link>
+              </li>
+              {CAB_ROUTES.map(r => (
+                <li key={r.slug}>
+                  <Link href={`/cabs/${r.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
+                    {r.from} to {r.to} Cab
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Language pages */}
+          <div>
+            <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:12, paddingBottom:8, borderBottom:'2px solid var(--gold)' }}>
+              Char Dham in Your Language
+            </h2>
+            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
+              {LANGUAGE_PAGES.map(l => (
+                <li key={l.slug}>
+                  <Link href={`/${l.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
+                    Char Dham Yatra in {l.label}
                   </Link>
                 </li>
               ))}

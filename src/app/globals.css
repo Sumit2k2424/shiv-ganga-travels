@@ -2908,7 +2908,7 @@ article table tbody tr:nth-child(even) { background: #F7F9FD; }
 ═══════════════════════════════════════════════════════════════ */
 
 /* Anchor links land below the sticky navbar instead of under it */
-:target, [id] { scroll-margin-top: 96px; }
+:target, [id] { scroll-margin-top: 112px; } /* trust strip (36) + navbar (64) + breathing room */
 
 /* Keyboard users always see where they are */
 a:focus-visible {
@@ -3055,4 +3055,189 @@ a, button { -webkit-tap-highlight-color: transparent; }
   --border:                216 64% 28%;
   --input:                 216 64% 28%;
   --ring:                  215 70% 95%;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TRUST STRIP — top-of-page credibility bar
+   ──────────────────────────────────────────────────────────────
+   Sits inside the sticky header (above the navbar) so the two
+   facts that close deals — retired Army officer founder, and pay
+   the operator directly — are visible the second any page opens
+   and stay visible while the visitor scrolls.
+
+   Fixed height on both breakpoints, so it adds nothing to CLS.
+   All motion is decorative and disabled for reduced-motion users.
+   ══════════════════════════════════════════════════════════════ */
+
+/* The whole header stack pins together — strip on top, navbar under it. */
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.trust-strip {
+  position: relative;
+  height: 36px;
+  background: linear-gradient(96deg, #0B2145 0%, var(--navy) 45%, #123a72 100%);
+  border-bottom: 2px solid var(--gold);
+  overflow: hidden;
+}
+
+/* One-off gold sweep on load — draws the eye to the bar, then stops.
+   Runs twice, ~1.4s each, and never loops after that. */
+.trust-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(232,146,10,0)   35%,
+    rgba(255,209,102,.30) 50%,
+    rgba(232,146,10,0)   65%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: trust-sweep 1.5s ease-in-out .35s 2 both;
+}
+
+@keyframes trust-sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+.trust-strip-inner {
+  max-width: var(--container);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-strip-full {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, .88);
+  letter-spacing: .01em;
+}
+
+.trust-strip-full strong { color: #fff; font-weight: 700; }
+
+.trust-strip-hi {
+  color: #FFD166 !important;
+  text-shadow: 0 0 14px rgba(255, 209, 102, .35);
+}
+
+.trust-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  animation: trust-rise .55s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.trust-strip-a { animation-delay: .10s; }
+.trust-strip-b { animation-delay: .28s; }
+
+@keyframes trust-rise {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.trust-strip-icon { font-size: 13px; line-height: 1; }
+
+.trust-strip-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  opacity: .75;
+}
+
+.trust-strip-phone {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 209, 102, .45);
+  background: rgba(255, 209, 102, .10);
+  transition: background .2s, border-color .2s;
+}
+
+.trust-strip-phone::before { content: '📞 '; }
+.trust-strip-phone:hover {
+  background: rgba(255, 209, 102, .22);
+  border-color: rgba(255, 209, 102, .8);
+}
+
+/* Rotator is mobile-only */
+.trust-strip-rotator { display: none; }
+
+/* ── Mobile: one fact at a time, alternating every 4s ───────── */
+@media (max-width: 860px) {
+  .trust-strip { height: 30px; }
+  .trust-strip-full { display: none; }
+
+  .trust-strip-rotator {
+    position: relative;
+    display: block;
+    flex: 1;
+    height: 16px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .trust-strip-rot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, .9);
+    animation: trust-rotate 8s ease-in-out infinite;
+  }
+
+  .trust-strip-rot strong { color: #fff; font-weight: 700; }
+  .trust-strip-rot-2 { animation-delay: 4s; }
+
+  @keyframes trust-rotate {
+    0%             { opacity: 0; transform: translateY(9px); }
+    5%, 45%        { opacity: 1; transform: translateY(0); }
+    50%, 100%      { opacity: 0; transform: translateY(-9px); }
+  }
+
+  .trust-strip-phone { font-size: 11.5px; padding: 3px 9px; }
+}
+
+@media (max-width: 400px) {
+  .trust-strip-rot   { font-size: 11px; }
+  .trust-strip-phone { display: none; }
+}
+
+/* ── Respect reduced motion: keep the message, drop the movement ── */
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip::after { animation: none; opacity: 0; }
+  .trust-strip-item   { opacity: 1; animation: none; }
+  .trust-strip-rot    { animation: none; }
+  .trust-strip-rot-2  { display: none; }
 }

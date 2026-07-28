@@ -69,6 +69,24 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // ── Cab routes that were linked without the /cabs prefix (live 404s in GSC) ──
+      { source: '/haridwar-to-mussoorie-cab',  destination: '/cabs/haridwar-to-mussoorie-cab',  permanent: true },
+      { source: '/rishikesh-to-mussoorie-cab', destination: '/cabs/rishikesh-to-mussoorie-cab', permanent: true },
+      { source: '/dehradun-to-mussoorie-cab',  destination: '/cabs/dehradun-to-mussoorie-cab',  permanent: true },
+      { source: '/haridwar-to-yamunotri-cab',  destination: '/cabs/haridwar-to-yamunotri-cab',  permanent: true },
+      { source: '/haridwar-to-auli-cab',       destination: '/cabs/haridwar-to-auli-cab',       permanent: true },
+      { source: '/haridwar-to-chopta-cab',     destination: '/cabs/haridwar-to-chopta-cab',     permanent: true },
+      { source: '/haridwar-to-nainital-cab',   destination: '/cabs/haridwar-to-nainital-cab',   permanent: true },
+      { source: '/haridwar-to-mukteshwar-cab', destination: '/cabs/haridwar-to-mukteshwar-cab', permanent: true },
+      { source: '/rishikesh-to-kedarnath-cab', destination: '/cabs/rishikesh-to-kedarnath-cab', permanent: true },
+      { source: '/rishikesh-to-badrinath-cab', destination: '/cabs/rishikesh-to-badrinath-cab', permanent: true },
+      { source: '/rishikesh-to-auli-cab',      destination: '/cabs/rishikesh-to-auli-cab',      permanent: true },
+      { source: '/dehradun-to-kedarnath-cab',  destination: '/cabs/dehradun-to-kedarnath-cab',  permanent: true },
+      { source: '/dehradun-to-badrinath-cab',  destination: '/cabs/dehradun-to-badrinath-cab',  permanent: true },
+      { source: '/dehradun-to-nainital-cab',   destination: '/cabs/dehradun-to-nainital-cab',   permanent: true },
+      { source: '/dehradun-to-mukteshwar-cab', destination: '/cabs/dehradun-to-mukteshwar-cab', permanent: true },
+      // ── Retired /blog/[slug] JSON route: send its old slugs to the real pages ──
+      { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
       // Redirect stale 2025 guide URL → main char dham page (2026 content)
       { source: '/char-dham-yatra-2025', destination: '/char-dham-yatra', permanent: true },
       // Fix internal 404s found by Screaming Frog

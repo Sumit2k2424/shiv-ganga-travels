@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: 'Guptkashi — Kedarnath Night Halt: Temples, Hotels & Helipad',
-  description: 'Guptkashi (1,319 m) is the main night halt on the Kedarnath route — 31 km from Sonprayag. Vishwanath temple, Ardhnarishwar shrine, Manikarnika Kund, helicopter base, hotels and why every Kedarnath itinerary passes through it.',
+  description: 'Guptkashi (1,319 m) is the main night halt on the Kedarnath route, 31 km from Sonprayag — Vishwanath temple, helipad, hotels and why itineraries stop here.',
   keywords: ['guptkashi','guptkashi uttarakhand','guptkashi to kedarnath','guptkashi temple','guptkashi to kedarnath distance','guptkashi helipad'],
   alternates: { canonical: `${SITE.baseUrl}/guptkashi-guide` },
 };
