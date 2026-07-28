@@ -36,7 +36,12 @@ export default function HeroSection() {
   return (
     <section style={{
       position:'relative',
-      minHeight:'clamp(600px,80vh,760px)',
+      /* svh, not vh: on mobile `vh` is pinned to the browser's address-bar
+         state, so the hero grew/shrank as the bar hid on scroll and every
+         section below jumped. `svh` is the stable (small) viewport unit —
+         the hero holds one height, so nothing reflows while scrolling.
+         Matches the package hero (luxury.css `.lux-hero`). */
+      minHeight:'clamp(600px,80svh,760px)',
       background:'#050f24',
       display:'flex', flexDirection:'column',
       alignItems:'center', justifyContent:'center',
@@ -190,6 +195,21 @@ export default function HeroSection() {
           .hero-photo { animation: none; }
           .hero-in { opacity:1; animation: none; }
           .hero-scroll__dot { animation: none; opacity:0.7; }
+        }
+
+        /* Mobile: freeze the scene's decorative motion (stars, clouds, mist,
+           snow, birds, lamps, aarti, flag, plus the 40s push-in) — same
+           reasoning as the sitewide mobile-hero rule this replaces: this many
+           concurrent compositor layers under overflow:hidden, directly below
+           the sticky header, is what shows up on real phones as the hero
+           flickering/going blank while scrolling. Static dawn frame, held. */
+        @media (max-width: 640px) {
+          .hero-photo { animation: none; }
+          .k-star, .k-dawn, .k-cloud--a, .k-cloud--b, .k-firstlight, .k-layer--far,
+          .k-layer--mid, .k-mist--a, .k-mist--b, .k-mist--c, .k-aarti, .k-door,
+          .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird { animation: none !important; }
+          .k-flake, .k-bird { display: none; }
+          .k-star, .k-firstlight, .k-aarti, .k-door, .k-kalash { opacity: 1; }
         }
       `}}/>
     </section>
