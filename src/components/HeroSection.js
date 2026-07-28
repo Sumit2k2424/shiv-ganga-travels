@@ -1,7 +1,17 @@
 'use client';
+import dynamic from 'next/dynamic';
 import HeroSearch from '@/components/HeroSearch';
 import { SITE } from '@/data/packages';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
+
+// Background-only enhancement. Loaded client-side ({ssr:false}) so it never
+// blocks SSR/LCP; sits between the hero photo and the readability scrims and
+// falls back to the photo when WebGL/motion is unavailable. Foreground is
+// untouched.
+const HeroAnimatedBackground = dynamic(
+  () => import('@/components/HeroAnimatedBackground'),
+  { ssr: false },
+);
 
 /*
  * Hero — photographic, journey-first.
@@ -32,6 +42,9 @@ export default function HeroSection() {
         fetchPriority="high"
         style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 30%' }}
       />
+      {/* Animated cinematic Himalayan background — sits above the photo, below the
+          scrims (so the scrims keep text AAA-readable). Background only. */}
+      <HeroAnimatedBackground/>
       {/* Scrims — deep navy, heavier at the base, so white type stays AAA-readable */}
       <div aria-hidden="true" style={{ position:'absolute', inset:0,
         background:'linear-gradient(180deg, rgba(9,22,48,0.55) 0%, rgba(9,22,48,0.35) 40%, rgba(9,22,48,0.72) 100%)' }}/>
