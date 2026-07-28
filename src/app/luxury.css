@@ -984,6 +984,102 @@ html.lenis, html.lenis body { height: auto; }
 /* The scene carries its own vignette, so the photo veil is not needed */
 .lux-hero--illustrated { background: #050f24; }
 
+/* ══ KEDARNATH TEMPLE SCENE — motion ═══════════════════════════
+   Brahma-muhurta over Kedarnath: the temple, the massif, snow and
+   first light. Everything below is transform or opacity ONLY, so the
+   whole scene stays on the compositor and never triggers layout. Slow
+   on purpose — nothing here should read as "animation", only as
+   weather and the sun coming up. Motion is a luxury, never a barrier;
+   the reduced-motion block at the end holds a finished dawn frame. */
+
+/* Stars, breathing out as dawn rises (delay is set per-star inline) */
+.k-star { animation: kTwinkle 5s ease-in-out infinite; }
+@keyframes kTwinkle { 0%, 100% { opacity: 0.22; } 50% { opacity: 1; } }
+
+/* First light swelling behind the massif */
+.k-dawn { animation: kDawn 12s ease-in-out infinite; transform-origin: 880px 560px; }
+@keyframes kDawn {
+  0%, 100% { opacity: 0.72; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.06); }
+}
+
+/* Cloud bands at two speeds so they never sync up */
+.k-cloud--a { animation: kCloud 96s linear infinite; }
+.k-cloud--b { animation: kCloudBack 120s linear infinite; }
+@keyframes kCloud     { from { transform: translateX(-360px); } to { transform: translateX(1560px); } }
+@keyframes kCloudBack { from { transform: translateX(1560px); } to { transform: translateX(-460px); } }
+
+/* Gold first-light on the summit — a slow swell */
+.k-firstlight { animation: kGlow 9s ease-in-out infinite; }
+@keyframes kGlow { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+
+/* Range parallax — a breath of drift; the far range moves least */
+.k-layer--far { animation: kDriftF 64s ease-in-out infinite; }
+.k-layer--mid { animation: kDriftM 54s ease-in-out infinite; }
+@keyframes kDriftF { 0%, 100% { transform: translateX(-6px); } 50% { transform: translateX(6px); } }
+@keyframes kDriftM { 0%, 100% { transform: translateX(7px); }  50% { transform: translateX(-7px); } }
+
+/* Valley mist drifting across the lower third */
+.k-mist--a { animation: kMist 52s ease-in-out infinite; }
+.k-mist--b { animation: kMist 68s ease-in-out infinite reverse; }
+.k-mist--c { animation: kMist 44s ease-in-out infinite; animation-delay: -16s; }
+@keyframes kMist {
+  0%, 100% { transform: translateX(-80px); opacity: 0.5; }
+  50%      { transform: translateX(80px);  opacity: 1; }
+}
+
+/* Aarti glow spilling from the sanctum — a slow devotional pulse */
+.k-aarti { animation: kAarti 6s ease-in-out infinite; transform-origin: 720px 742px; }
+@keyframes kAarti {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.05); }
+}
+.k-door   { animation: kBreathe 6s ease-in-out infinite; }
+.k-kalash { animation: kTwinkle 4.5s ease-in-out infinite; }
+@keyframes kBreathe { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+
+/* The flag lifting in a slow mountain breeze */
+.k-flag { animation: kFlag 5s ease-in-out infinite; transform-box: fill-box; transform-origin: left center; }
+@keyframes kFlag { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-3.5deg); } }
+
+/* Approach lamps flickering (delay set per-lamp inline) */
+.k-lamp { animation: kLamp 3.6s ease-in-out infinite; }
+@keyframes kLamp { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+/* Snowfall — slow, sparse, drifting sideways as it falls
+   (duration + delay are set per-flake inline) */
+.k-flake {
+  animation-name: kFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+@keyframes kFall {
+  0%   { transform: translate(0, -10px);     opacity: 0; }
+  8%   { opacity: 0.9; }
+  92%  { opacity: 0.9; }
+  100% { transform: translate(26px, 920px);  opacity: 0; }
+}
+
+/* Birds crossing far off, long gaps between passes */
+.k-bird    { animation: kBird 42s linear infinite; opacity: 0; }
+.k-bird--2 { animation-duration: 54s; animation-delay: -19s; }
+.k-bird--3 { animation-duration: 47s; animation-delay: -33s; }
+@keyframes kBird {
+  0%   { transform: translate(170px, 150px); opacity: 0; }
+  10%  { opacity: 0.6; }
+  85%  { opacity: 0.42; }
+  100% { transform: translate(1180px, 96px); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .k-star, .k-dawn, .k-cloud--a, .k-cloud--b, .k-firstlight, .k-layer--far,
+  .k-layer--mid, .k-mist--a, .k-mist--b, .k-mist--c, .k-aarti, .k-door,
+  .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird { animation: none !important; }
+  .k-flake, .k-bird { display: none; }
+  .k-star, .k-firstlight, .k-aarti, .k-door, .k-kalash { opacity: 1; }
+}
+
 /* ── Hero scene: sunrise over the Garhwal ────────────────
    Contrast-first. All brightness lives above the ridge; the
    silhouetted valley below carries the headline. See the measured

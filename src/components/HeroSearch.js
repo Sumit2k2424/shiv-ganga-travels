@@ -90,21 +90,34 @@ export default function HeroSearch() {
           </select>
         </div>
 
-        {/* Primary action — gold, labelled with what actually happens */}
-        <button type="submit" style={{
+        {/* Primary action — gold, labelled with what actually happens. The
+            hs-cta class adds one soft glow every ~9s (never a nagging pulse),
+            drawing the eye to the action calmly. Glow is disabled under
+            prefers-reduced-motion in the style block below. */}
+        <button type="submit" className="hs-cta" style={{
           flex:'1 1 200px', minWidth:190,
           background:'var(--gold)',
           color:'#fff', border:'none', cursor:'pointer',
           padding:'14px 22px', borderRadius:10,
           fontSize:15, fontWeight:700,
           fontFamily:'var(--font)',
-          transition:'background .15s',
+          transition:'background .15s, transform .15s, box-shadow .3s',
         }}
-          onMouseEnter={e=>{e.currentTarget.style.background='var(--gold-dark)'}}
-          onMouseLeave={e=>{e.currentTarget.style.background='var(--gold)'}}>
+          onMouseEnter={e=>{e.currentTarget.style.background='var(--gold-dark)'; e.currentTarget.style.transform='translateY(-1px)'}}
+          onMouseLeave={e=>{e.currentTarget.style.background='var(--gold)'; e.currentTarget.style.transform='translateY(0)'}}>
           Get My Itinerary &amp; Price
         </button>
       </form>
+
+      <style dangerouslySetInnerHTML={{ __html:`
+        @keyframes hsGlow {
+          0%, 82%, 100% { box-shadow: 0 0 0 0 rgba(232,146,10,0); }
+          90%           { box-shadow: 0 0 22px 2px rgba(232,146,10,0.5); }
+        }
+        .hs-cta { animation: hsGlow 9s ease-in-out 3s infinite; }
+        .hs-cta:hover { box-shadow: 0 8px 22px rgba(232,146,10,0.45); }
+        @media (prefers-reduced-motion: reduce) { .hs-cta { animation: none; } }
+      `}}/>
 
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8, marginTop:12, paddingTop:10, borderTop:'1px solid var(--border)' }}>
         <span style={{ display:'inline-flex', alignItems:'center', gap:6, fontSize:12, color:'var(--text-muted)' }}>
