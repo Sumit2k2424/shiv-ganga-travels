@@ -3223,7 +3223,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
     line-height: 1;
     white-space: nowrap;
     color: rgba(255, 255, 255, .9);
-    animation: trust-rotate 8s ease-in-out infinite;
+    /* `both` fill-mode is essential: message 2 has a 4s animation-delay, and
+       without a backwards fill it would sit at its default opacity:1 during
+       that delay — showing both messages stacked (overlapping) for the first
+       4s after load. `both` applies the 0% (opacity:0) keyframe during the
+       delay so only one message is ever visible. */
+    animation: trust-rotate 8s ease-in-out infinite both;
   }
 
   .trust-strip-rot strong { color: #fff; font-weight: 700; }
