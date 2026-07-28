@@ -3,6 +3,7 @@ import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { CAB_ROUTES } from '@/data/cabRoutes';
 import { LANGUAGE_PAGES } from '@/data/languages';
+import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 
 // ── Blog priority hints. Any blog not listed falls back to DEFAULT_BLOG_P. ──
 const BLOG_PRIORITY = {
@@ -54,21 +55,13 @@ function discoverDirSlugs(relDir, exclude = []) {
 
 // Auto-discover every "Char Dham Yatra from <city>" landing page so new city
 // pages are indexed the moment they ship — but never list slugs that are
-// 301-redirected in next.config.js (duplicate-content cleanup). A sitemap must
-// only contain canonical 200 URLs. Keep this set in sync with next.config.js.
-const REDIRECTED_CITIES = new Set([
-  'char-dham-yatra-from-lucknow', 'char-dham-yatra-from-varanasi',
-  'char-dham-yatra-from-jaipur', 'char-dham-yatra-from-ahmedabad',
-  'char-dham-yatra-from-indore', 'char-dham-yatra-from-bhopal',
-  'char-dham-yatra-from-nagpur', 'char-dham-yatra-from-surat',
-  'char-dham-yatra-from-patna', 'char-dham-yatra-from-rishikesh',
-  'char-dham-yatra-from-dehradun',
-]);
-
+// 301-redirected (duplicate-content cleanup). A sitemap must only contain
+// canonical 200 URLs. Redirect sources come from the shared redirect table
+// (src/data/redirects.js), so this stays in sync automatically.
 function discoverCitySlugs() {
   return discoverDirSlugs('src/app')
     .filter(s => s.startsWith('char-dham-yatra-from-'))
-    .filter(s => !REDIRECTED_CITIES.has(s));
+    .filter(s => !REDIRECT_SOURCE_PATHS.has(s));
 }
 
 const CITY_PRIORITY = {
@@ -212,11 +205,19 @@ export default function sitemap() {
   const discovered = discoverDirSlugs('src/app')
     .filter(slug => !EXCLUDE_TOP.has(slug))
     .filter(slug => !slug.startsWith('['))
-    .filter(slug => !REDIRECTED_CITIES.has(slug))
+    .filter(slug => !REDIRECT_SOURCE_PATHS.has(slug))
     .map(slug => ({ url: `${b}/${slug}`, p: 0.78, cf: 'monthly' }))
     .filter(x => !seen.has(x.url));
 
-  const all = [...listed, ...discovered];
+  // Final guard: strip any URL whose path is a 301 redirect source. This
+  // catches redirected slugs that still have a real page.js on disk (e.g.
+  // blog posts consolidated via next.config.js), which the folder-discovery
+  // above would otherwise treat as live 200 pages. Sitemaps must list only
+  // canonical URLs — no redirects.
+  const all = [...listed, ...discovered].filter(({ url }) => {
+    const slugPath = url.replace(b, '').replace(/^\//, '');
+    return !REDIRECT_SOURCE_PATHS.has(slugPath);
+  });
 
   return all.map(({ url, p, cf }) => ({
     url,
