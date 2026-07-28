@@ -3078,11 +3078,18 @@ a, button { -webkit-tap-highlight-color: transparent; }
    All motion is decorative and disabled for reduced-motion users.
    ══════════════════════════════════════════════════════════════ */
 
-/* The whole header stack pins together — strip on top, navbar under it. */
+/* The whole header stack pins together — strip on top, navbar under it.
+   isolation + a forced GPU layer keep it pinned to its own compositing
+   layer: mobile WebKit is known to drop a `position: sticky` element's
+   stacking priority mid-scroll, letting animated content behind it
+   (the hero's Kedarnath scene) briefly paint on top of the logo/navbar. */
 .header-sticky {
   position: sticky;
   top: 0;
   z-index: 100;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .trust-strip {
