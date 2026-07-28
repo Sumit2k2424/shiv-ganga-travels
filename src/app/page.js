@@ -102,8 +102,8 @@ const HOME_CSS = `
   .lux-wa--sm { padding:11px 20px; font-size:0.6875rem; }
 
   /* Intent cards */
-  .lux-intent { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); }
-  @media (max-width:900px){ .lux-intent{ grid-template-columns:repeat(2,1fr);} }
+  .lux-intent { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  @media (max-width:900px){ .lux-intent{ grid-template-columns:repeat(2,minmax(0,1fr));} }
   @media (max-width:560px){ .lux-intent{ grid-template-columns:1fr;} }
   .lux-intent__card { background:#fff; padding:28px 24px; display:flex; flex-direction:column; gap:14px; text-decoration:none; color:inherit; transition:background .4s var(--ease-lux); position:relative; }
   .lux-intent__card:hover { background:var(--paper); }
@@ -138,8 +138,8 @@ const HOME_CSS = `
   .lux-section--ink .lux-route-row, .lux-section--navy .lux-route-row { border-bottom-color:var(--rule-light-soft); }
 
   /* Journey steps */
-  .lux-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); }
-  @media (max-width:820px){ .lux-steps{ grid-template-columns:repeat(2,1fr);} }
+  .lux-steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  @media (max-width:820px){ .lux-steps{ grid-template-columns:repeat(2,minmax(0,1fr));} }
   @media (max-width:480px){ .lux-steps{ grid-template-columns:1fr;} }
   .lux-step { background:#fff; padding:30px 24px; }
   .lux-step__n { font-family:var(--font-display); font-size:2.4rem; color:var(--gold); line-height:1; letter-spacing:-0.03em; }

@@ -40,7 +40,7 @@ const BOOK_CSS = `
   .bk { background:var(--paper); min-height:100vh; }
   .bk-hero { background:var(--ink); color:#fff; padding:clamp(48px,7vw,88px) var(--lux-gutter) clamp(32px,4vw,52px); }
   .bk-hero__in { max-width:var(--lux-max,1320px); margin:0 auto; }
-  .bk-wrap { max-width:1140px; margin:0 auto; padding:clamp(28px,4vw,52px) var(--lux-gutter) 120px; display:grid; grid-template-columns:1fr 360px; gap:clamp(28px,4vw,56px); align-items:start; }
+  .bk-wrap { max-width:1140px; margin:0 auto; padding:clamp(28px,4vw,52px) var(--lux-gutter) 120px; display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:clamp(28px,4vw,56px); align-items:start; }
   @media (max-width:900px){ .bk-wrap{ grid-template-columns:1fr; padding-bottom:200px; } }
 
   .bk-steps { display:flex; gap:8px; margin-bottom:34px; }

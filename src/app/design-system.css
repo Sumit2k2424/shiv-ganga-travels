@@ -432,6 +432,17 @@
 .lux-gcard__save { font-size: 0.7rem; color: var(--ds-ok); font-weight: 600; letter-spacing: 0.02em; }
 
 /* ══════════════════════════════════════════════════════════════
+   HORIZONTAL-OVERFLOW GUARD
+   globals.css clips html/body, but `main` is only guarded under 768px.
+   Guard it on every width too — `clip` (not `hidden`) so it never turns
+   into a scroll container and never breaks the sticky booking rail inside.
+   ══════════════════════════════════════════════════════════════ */
+#main-content { overflow-x: clip; }
+/* The scroll-progress rail needs an explicit width to render (it animates
+   via scaleX from the left edge); without it the fixed bar collapses to 0. */
+.lux-progress { width: 100%; }
+
+/* ══════════════════════════════════════════════════════════════
    REDUCED MOTION · every spinner/loader must degrade gracefully
    ══════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
