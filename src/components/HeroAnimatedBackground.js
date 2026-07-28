@@ -334,8 +334,12 @@ export default function HeroAnimatedBackground() {
       gl.deleteProgram(prog);
       gl.deleteShader(vs);
       gl.deleteShader(fs);
-      const lose = gl.getExtension('WEBGL_lose_context');
-      if (lose) lose.loseContext();
+      // NOTE: deliberately do NOT call WEBGL_lose_context.loseContext() here.
+      // React reuses this canvas DOM node across remounts (e.g. StrictMode's
+      // mount→cleanup→mount in dev); a force-lost context poisons the canvas so
+      // the next getContext() returns the dead context and every shader compile
+      // fails. Deleting the program/shaders/buffer already frees the GPU
+      // resources; the context is reclaimed when the canvas leaves the DOM.
     };
   }, []);
 
