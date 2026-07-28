@@ -1084,11 +1084,18 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
    Rules use only valid CSS3 selectors — no colon in attr values
 ═══════════════════════════════════════════════════════════════ */
 
-/* 1. Body never scrolls horizontally */
-html, body { overflow-x: hidden; }
+/* 1. Body never scrolls horizontally.
+   NOTE: use `clip`, not `hidden`, on the sticky header's ancestors (html, body).
+   `overflow-x: hidden` turns the element into a scroll container, which silently
+   breaks `position: sticky` on descendants — the TrustStrip + navbar would scroll
+   away instead of staying pinned. `clip` prevents horizontal scroll WITHOUT
+   creating a scroll container, so the sticky header keeps working. `main` is a
+   sibling of the header (not an ancestor), so it can safely keep `hidden` to
+   catch content overflow on every browser. */
+html, body { overflow-x: clip; }
 @media (max-width: 768px) {
-  body    { overflow-x: hidden !important; }
-  #__next { overflow-x: hidden !important; max-width: 100vw; }
+  body    { overflow-x: clip !important; }
+  #__next { overflow-x: clip !important; max-width: 100vw; }
   main    { overflow-x: hidden !important; }
 }
 
@@ -1878,8 +1885,10 @@ html {
 ═══════════════════════════════════════════════════════════════ */
 
 /* ─── A. BASE — prevent ALL horizontal overflow ─────────────── */
+/* `clip` (not `hidden`) so the sticky TrustStrip + navbar stay pinned — see note
+   in the MOBILE OVERFLOW ELIMINATION block above. */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -2155,7 +2164,7 @@ img, video, iframe, embed { max-width: 100%; height: auto; }
 @media (max-width: 768px) {
   /* Prevent any element from exceeding viewport */
   * { box-sizing: border-box; }
-  body { overflow-x: hidden; }
+  body { overflow-x: clip; } /* clip, not hidden — keeps sticky header pinned */
   img, video, svg, canvas { max-width: 100%; height: auto; }
 
   /* Articles and content wrappers */
