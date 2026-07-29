@@ -95,7 +95,9 @@ function Schema() {
       postalCode: '249410',
       addressCountry: 'IN',
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating: 5 },
+    // NO aggregateRating here — this org shares its @id with the sitewide
+    // TravelAgency in layout.js, which already carries the rating. A second
+    // rated node here triggered Google's "multiple aggregate ratings" error.
     award: 'Uttarakhand Tourism Registered Tour Operator',
   };
 

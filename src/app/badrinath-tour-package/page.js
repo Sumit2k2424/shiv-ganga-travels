@@ -113,7 +113,8 @@ function Schema() {
     telephone: SITE.phone, email: SITE.email, image: `${SITE.baseUrl}/opengraph-image`,
     address: { '@type': 'PostalAddress', streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality: 'Haridwar', addressRegion: 'Uttarakhand', postalCode: '249410', addressCountry: 'IN' },
     areaServed: 'Badrinath, Uttarakhand', foundingDate: '2010',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.7', reviewCount: '54', bestRating: '5' },
+    // NO aggregateRating — the sitewide rating for Shiv Ganga Travels
+    // already lives on the organization node in layout.js.
   };
   const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
   const bc = {

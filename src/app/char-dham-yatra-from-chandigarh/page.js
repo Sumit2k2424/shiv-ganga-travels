@@ -25,7 +25,8 @@ function Schema() {
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     '@id': `${SITE.baseUrl}/#organization`,
     address: { '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating: { '@type':'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating:5 },
+    // NO aggregateRating — this org shares its @id with the sitewide
+    // TravelAgency in layout.js, which already carries the rating.
     areaServed: [{ '@type':'City', name:'Chandigarh' }, { '@type':'State', name:'Uttarakhand' }],
   };
   const faq = {

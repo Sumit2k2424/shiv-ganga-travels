@@ -20,7 +20,8 @@ function Schema() {
     '@context':'https://schema.org','@type':'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     address:{ '@type':'PostalAddress', streetAddress:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality:'Haridwar', addressRegion:'Uttarakhand', postalCode:'249410', addressCountry:'IN' },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating:5 },
+    // NO aggregateRating — the sitewide rating for Shiv Ganga Travels
+    // already lives on the organization node in layout.js.
   };
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',

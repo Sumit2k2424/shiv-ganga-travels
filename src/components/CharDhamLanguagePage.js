@@ -15,7 +15,10 @@ function Schema({ c, slug }) {
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
     '@id': `${SITE.baseUrl}/#organization`,
     address: { '@type': 'PostalAddress', streetAddress: 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala', addressLocality: 'Haridwar', addressRegion: 'Uttarakhand', postalCode: '249410', addressCountry: 'IN' },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating: 5 },
+    // NO aggregateRating here — the sitewide rating for this same
+    // #organization @id is emitted once in layout.js. A second rated
+    // TravelAgency node on every page triggers Google's "Review has
+    // multiple aggregate ratings" error.
     areaServed: [{ '@type': 'State', name: c.region }, { '@type': 'State', name: 'Uttarakhand' }],
     inLanguage: c.code,
   };
