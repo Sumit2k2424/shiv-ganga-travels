@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Patna 2026 — Train, Flight',
-  description: 'Char Dham Yatra from Patna 2026. 1,100 km — train (16–18 hrs) or fly. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
+  title: { absolute: 'Char Dham Yatra from Patna 2026 | Price Starts at ₹22,999 | Train & Flight Options' },
+  description: 'Char Dham Yatra from Patna 2026 — 1,100km, train (16–18 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from patna','char dham yatra package from patna','patna to haridwar char dham','char dham tour from patna 2026','chardham yatra patna','patna char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-patna` },
   openGraph: {

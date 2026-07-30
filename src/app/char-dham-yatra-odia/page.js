@@ -7,8 +7,8 @@ const SLUG = 'char-dham-yatra-odia';
 const noto = Noto_Sans_Oriya({ subsets: ['oriya'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: 'ଚାର ଧାମ ଯାତ୍ରା 2026 ଓଡ଼ିଆରେ (Char Dham in Odia)',
-  description: 'ଚାର ଧାମ ଯାତ୍ରା 2026 ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା ଓଡ଼ିଆରେ — ଯମୁନୋତ୍ରୀ, ଗଙ୍ଗୋତ୍ରୀ, କେଦାରନାଥ, ବଦ୍ରୀନାଥ। ହରିଦ୍ୱାରରୁ 9 ରାତି/10 ଦିନ ପ୍ୟାକେଜ ₹18,500ରୁ। ସିଧାସଳଖ ଅପରେଟର, କମିଶନ ନାହିଁ।',
+  title: { absolute: 'ଚାର ଧାମ ଯାତ୍ରା 2026 | ₹18,500ରୁ ଆରମ୍ଭ | ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ଗାଇଡ' },
+  description: 'ଚାର ଧାମ ଯାତ୍ରା 2026 ଓଡ଼ିଆରେ — ହରିଦ୍ୱାରରୁ ₹18,500ରୁ। ବିଶ୍ୱସ୍ତ ଅପରେଟର, 15+ ବର୍ଷର ଅଭିଜ୍ଞତା, ତତକ୍ଷଣାତ ନିଶ୍ଚିତକରଣ।',
   keywords: ['ଚାର ଧାମ ଯାତ୍ରା ଓଡ଼ିଆ', 'char dham yatra in odia', 'char dham yatra odia guide', 'chardham yatra odia', 'ପୁରୀ ଧାମ ଓ ଚାର ଧାମ ଯାତ୍ରା'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {

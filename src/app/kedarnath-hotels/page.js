@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Kedarnath 2026',
-  description: 'Best hotels near Kedarnath 2026. Guptkashi, Sonprayag, Kedarnath Top and Phata stays — honest guide with prices, comfort ratings and tips.',
+  title: { absolute: 'Hotels Near Kedarnath 2026 | Best Stays | Guptkashi, Sonprayag & Phata' },
+  description: 'Hotels near Kedarnath 2026 — Guptkashi, Sonprayag, Kedarnath Top & Phata. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['hotels near kedarnath','kedarnath hotels 2026','guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-hotels` },
   openGraph: {

@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Nagpur 2026 — Train,',
-  description: 'Char Dham Yatra from Nagpur 2026. 1,450 km — fly via Dehradun (2 hrs). Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
+  title: { absolute: 'Char Dham Yatra from Nagpur 2026 | Price Starts at ₹22,999 | Direct Flight Available' },
+  description: 'Char Dham Yatra from Nagpur 2026 — 1,450km, fly via Dehradun (2 hrs). Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from nagpur','char dham yatra package from nagpur','nagpur to haridwar char dham','char dham tour from nagpur 2026','chardham yatra nagpur','nagpur char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-nagpur` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Nagpur 2026 — Trains, Flights & Packages from ₹22',
+    title: 'Char Dham Yatra from Nagpur 2026 | Price Starts at ₹22,999',
     description: '1,450 km — fly via Dehradun (2 hrs). Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Nagpur — Shiv Ganga Travels' }],
   },

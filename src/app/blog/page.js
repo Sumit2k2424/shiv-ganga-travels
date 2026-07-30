@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Blog: Guides, Costs & Planning',
-  description: 'Char Dham Yatra guides, trek tips, packing lists and cost breakdowns from Shiv Ganga Travels — Haridwar\'s trusted yatra specialist since 2010.',
+  title: { absolute: 'Char Dham Yatra Blog 2026 | Guides, Costs & Planning' },
+  description: 'Char Dham Yatra guides, trek tips, packing lists & cost breakdowns. Trusted operator, 15+ yrs experience, instant confirmation.',
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };
 

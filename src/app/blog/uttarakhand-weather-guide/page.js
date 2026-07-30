@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Uttarakhand Weather 2026: All Char Dham Shrines',
-  description: 'Month-by-month Uttarakhand weather for Char Dham Yatra 2026: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.',
+  title: { absolute: 'Uttarakhand Weather 2026 | All Char Dham Shrines | Month-wise' },
+  description: 'Uttarakhand weather 2026 — temperatures at all four shrines. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['uttarakhand weather month by month 2026', 'kedarnath weather 2026', 'char dham yatra weather guide', 'badrinath temperature month wise', 'uttarakhand climate chart', 'kedarnath temperature june', 'char dham yatra weather september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
   openGraph: { title: 'Uttarakhand Weather 2026: All Char Dham Shrines', url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },

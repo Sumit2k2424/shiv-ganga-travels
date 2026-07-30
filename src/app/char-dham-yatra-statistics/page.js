@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Statistics: Pilgrim Data & Trends',
-  description: 'Char Dham Yatra statistics 2026 — pilgrim numbers, opening dates, route distances, costs and operator data. Free to cite with attribution.',
+  title: { absolute: 'Char Dham Yatra Statistics 2026 | Pilgrim Data & Trends' },
+  description: 'Char Dham Yatra statistics 2026 — pilgrim numbers, costs, route data. Trusted operator, 15+ yrs experience, free to cite with attribution.',
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', 'char dham statistics 2026', 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
   openGraph: {

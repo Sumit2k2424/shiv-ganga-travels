@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: '6 Best Char Dham Yatra Operators in Haridwar (2026)',
-  description: 'Ranked comparison of the best Char Dham Yatra operators from Haridwar 2026 — Google rating, years running, pricing transparency and Uttarakhand registration.',
+  title: { absolute: '6 Best Char Dham Yatra Operators in Haridwar 2026 | Ranked & Compared' },
+  description: 'Ranked Char Dham operators in Haridwar 2026 by rating, experience & pricing. Trusted operator, 15+ yrs experience, transparent pricing.',
   keywords: ['best char dham yatra operators haridwar 2026','best char dham operator haridwar review','top char dham yatra operators 2026','char dham yatra haridwar operator comparison','best char dham package operator'],
   alternates: { canonical: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar` },
   openGraph: {

@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Road Conditions 2026: Live Route Status',
-  description: 'Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.',
+  title: { absolute: 'Char Dham Road Conditions 2026 | Live Route Status' },
+  description: 'Char Dham Yatra 2026 road conditions — all 4 routes, landslide stretches. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra road condition 2026', 'char dham road status 2026', 'char dham yatra route condition', 'kedarnath route road condition 2026', 'badrinath road condition 2026', 'char dham all weather road update'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026` },
   openGraph: {

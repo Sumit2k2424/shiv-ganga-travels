@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Heart Patients: Safe Routes',
-  description: 'Can heart patients do Char Dham Yatra? Yes, with precautions. Altitude risk per dham, medical certificate rules and helicopter options for 2026.',
+  title: { absolute: 'Char Dham Yatra for Heart Patients 2026 | Safe Routes' },
+  description: 'Char Dham Yatra for heart patients 2026 — altitude risk, precautions. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra for heart patients', 'char dham yatra medical conditions 2026', 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', 'char dham medical certificate 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
 };

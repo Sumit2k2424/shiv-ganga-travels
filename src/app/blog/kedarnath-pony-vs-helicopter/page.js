@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Pony vs Helicopter: Cost & Verdict',
-  description: 'Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.',
+  title: { absolute: 'Kedarnath Pony vs Helicopter 2026 | Cost & Verdict' },
+  description: 'Kedarnath pony vs helicopter 2026 — cost, time, comfort compared. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['kedarnath pony vs helicopter 2026', 'kedarnath helicopter or pony', 'kedarnath pony cost 2026', 'kedarnath helicopter cost 2026', 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };

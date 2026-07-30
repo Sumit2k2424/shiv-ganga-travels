@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Indore 2026 — Train,',
-  description: 'Char Dham Yatra from Indore 2026. 1,050 km — fly via Delhi or train. Trains, flights, pickups explained. All-inclusive packages from ₹23,999.',
+  title: { absolute: 'Char Dham Yatra from Indore 2026 | Price Starts at ₹23,999 | Train & Flight Options' },
+  description: 'Char Dham Yatra from Indore 2026 — 1,050km, fly via Delhi or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from indore','char dham yatra package from indore','indore to haridwar char dham','char dham tour from indore 2026','chardham yatra indore','indore char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-indore` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Indore 2026 — Trains, Flights & Packages from ₹23',
+    title: 'Char Dham Yatra from Indore 2026 | Price Starts at ₹23,999',
     description: '1,050 km — fly via Delhi or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Indore — Shiv Ganga Travels' }],
   },

@@ -26,8 +26,8 @@ export async function generateMetadata({ params }) {
   if (CATEGORY_SLUGS.includes(slug)) {
     const cat = CATEGORIES[slug];
     return {
-      title: `${cat.name} Packages 2026 from Haridwar`,
-      description: `Book ${cat.name} from Haridwar. Expert guides, VIP darshan, all-inclusive. Trusted since 2010.`,
+      title: { absolute: `${cat.name} Packages 2026 | Direct Operator | Zero Commission` },
+      description: `${cat.name} Packages 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
       alternates: { canonical: `${SITE.baseUrl}/packages/${slug}` },
     };
   }

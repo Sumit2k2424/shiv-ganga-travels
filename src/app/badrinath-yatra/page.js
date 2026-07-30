@@ -4,8 +4,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: 'Badrinath Yatra Package 2026',
-  description: 'Badrinath Yatra package from Haridwar 2026. 2N/3D all-inclusive from ₹5,999. Direct operator, zero commission. VIP darshan, AC cab, hotel.',
+  title: { absolute: 'Badrinath Yatra Package 2026 | Price Starts at ₹5,999 | VIP Darshan Included' },
+  description: 'Badrinath Yatra Package 2026 from Haridwar — 2N/3D from ₹5,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar','badrinath yatra 2026',
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',

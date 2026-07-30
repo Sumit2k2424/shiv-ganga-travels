@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan',
-  description: 'Kedarnath VIP darshan 2026: there is no flat pass — priority sanctum access comes with BKTC pujas (₹300 to ₹28,600). Online booking steps, helicopter combo, sparsh darshan, Badrinath rates & fraud warning.',
+  title: { absolute: 'Kedarnath VIP Darshan Booking 2026 | Price Starts at ₹300 | Guide' },
+  description: 'Kedarnath VIP darshan 2026 — priority sanctum access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['VIP darshan kedarnath 2026', 'kedarnath VIP darshan price', 'vip darshan kedarnath online booking', 'kedarnath VIP darshan with helicopter', 'kedarnath sparsh darshan booking', 'VIP darshan pass kedarnath', 'badrinath VIP darshan ticket price', 'badrinath temple VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking` },
   openGraph: {

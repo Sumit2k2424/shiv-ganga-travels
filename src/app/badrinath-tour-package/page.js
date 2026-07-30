@@ -4,8 +4,8 @@ import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Badrinath Tour Package 2026 — 2N/3D from ₹5,999 | Ex-Haridwar',
-  description: 'Badrinath tour package 2026 from Haridwar — 2N/3D from ₹5,999/person, no trek. Day-by-day itinerary, Mana village, Tapt Kund. 4.7★ (54 reviews). ₹0 to enquire.',
+  title: { absolute: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999 | Hotels & Transport Included' },
+  description: 'Badrinath Tour Package 2026 — 2N/3D from ₹5,999/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
   keywords: [
     'badrinath tour package', 'badrinath yatra package', 'badrinath tour package 2026',
     'badrinath package from haridwar', 'badrinath yatra package from haridwar', 'badrinath ek dham yatra',
@@ -13,17 +13,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-tour-package` },
   openGraph: {
-    title: 'Badrinath Tour Package 2026 — 2N/3D from ₹5,999 (Ex-Haridwar)',
+    title: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999 | Hotels & Transport Included',
     description:
-      'No trek to the temple. Real itinerary, honest costs, Mana village & Tapt Kund, and 2026 registration help. Direct Haridwar operator since 2010 · 4.7★ from 54 reviews.',
+      'No trek to the temple. Customizable itinerary, Mana village & Tapt Kund, 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
     url: `${SITE.baseUrl}/badrinath-tour-package`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Badrinath Tour Package 2026 from Haridwar — Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Tour Package 2026 — from ₹5,999 | Direct Operator',
-    description: 'Badrinath 2N/3D from Haridwar, no trek. Real itinerary, honest cost breakdown, Mana & Tapt Kund. ₹0 to enquire.',
+    title: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999',
+    description: 'Badrinath 2N/3D from Haridwar, no trek. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
     images: [{ url: '/opengraph-image', alt: 'Badrinath Tour Package 2026 from Haridwar' }],
   },
 };

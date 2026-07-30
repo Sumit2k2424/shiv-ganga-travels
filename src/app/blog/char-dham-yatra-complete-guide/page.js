@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra 2026: History, Significance & Route',
-  description: 'Everything about Char Dham Yatra 2026: the history of Kedarnath, Badrinath, Gangotri and Yamunotri, order of visit, who should go and expert-answered FAQs.',
+  title: { absolute: 'Char Dham Yatra 2026 | History, Significance & Route Guide' },
+  description: 'Char Dham Yatra 2026 — history, order of visit, expert FAQs. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: [
     'char dham yatra complete guide','char dham history','char dham significance','char dham yatra 2026',
     'char dham order of visit','kedarnath history','badrinath significance','gangotri temple history',

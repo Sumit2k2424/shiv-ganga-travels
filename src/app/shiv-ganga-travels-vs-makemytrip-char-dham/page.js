@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Shiv Ganga vs MakeMyTrip: Char Dham Compared',
-  description: 'Shiv Ganga Travels from ₹18,500 direct vs MakeMyTrip from ₹32,479 with commission. Price, inclusions and support compared for Char Dham Yatra 2026.',
+  title: { absolute: 'Shiv Ganga vs MakeMyTrip 2026 | Price Starts at ₹18,500 | Char Dham' },
+  description: 'Shiv Ganga Travels ₹18,500 direct vs MakeMyTrip ₹32,479 with commission. Trusted operator, 15+ yrs experience, zero commission, instant confirmation.',
   keywords: ['shiv ganga travels vs makemytrip char dham','char dham yatra direct booking vs makemytrip','char dham yatra no commission','makemytrip char dham price','char dham yatra hidden charges','book char dham without agent'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham` },
   openGraph: {

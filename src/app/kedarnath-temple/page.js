@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
-  title: 'Kedarnath Temple 2026 — History, Timings & Trek Guide',
-  description: 'Complete Kedarnath Temple guide 2026. Temple history, darshan timings (4 AM–9 PM), dress code, puja types, altitude 3,583m, trek route from Gaurikund',
+  title: { absolute: 'Kedarnath Temple Guide 2026 | Darshan Timings & History | Trek Guide' },
+  description: 'Kedarnath Temple 2026 — darshan timings, history, altitude 3,583m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['kedarnath temple','kedarnath temple timings 2026','kedarnath temple history','kedarnath darshan 2026','kedarnath temple opening date 2026'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
   openGraph: { title: 'Kedarnath Temple 2026 — Darshan Timings, History & Complete Guide', description: 'Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & 2026 opening dates.', url: `${SITE.baseUrl}/kedarnath-temple`, type: 'website' },

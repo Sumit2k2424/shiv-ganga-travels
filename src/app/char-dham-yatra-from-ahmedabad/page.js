@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Ahmedabad 2026 — Train,',
-  description: 'Char Dham Yatra from Ahmedabad 2026. 1,100 km — train (14–16 hrs) or fly. Trains, flights, pickups explained. All-inclusive packages from ₹23,999.',
+  title: { absolute: 'Char Dham Yatra from Ahmedabad 2026 | Price Starts at ₹23,999 | Train & Flight Options' },
+  description: 'Char Dham Yatra from Ahmedabad 2026 — 1,100km, train (14–16 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from ahmedabad','char dham yatra package from ahmedabad','ahmedabad to haridwar char dham','char dham tour from ahmedabad 2026','chardham yatra ahmedabad','ahmedabad char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-ahmedabad` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Ahmedabad 2026 — Trains, Flights & Packages from ',
+    title: 'Char Dham Yatra from Ahmedabad 2026 | Price Starts at ₹23,999',
     description: '1,100 km — train (14–16 hrs) or fly. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Ahmedabad — Shiv Ganga Travels' }],
   },

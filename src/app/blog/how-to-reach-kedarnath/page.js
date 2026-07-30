@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'How to Reach Kedarnath 2026: Road, Train & Heli',
-  description: 'How to reach Kedarnath in 2026 from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.',
+  title: { absolute: 'How to Reach Kedarnath 2026 | Road, Train & Helicopter' },
+  description: 'How to reach Kedarnath 2026 from Delhi, Mumbai, Bengaluru. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['how to reach kedarnath 2026', 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', 'kedarnath journey guide 2026'],
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },

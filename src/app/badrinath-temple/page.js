@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
-  title: 'Badrinath Temple 2026 — Darshan Timings & Guide',
-  description: 'Complete Badrinath Temple guide 2026. Opening April 23. Darshan timings 4:30 AM–9 PM. Mahabhishek at 4:30 AM. Motor road to temple — no trek. Lord',
+  title: { absolute: 'Badrinath Temple Guide 2026 | Darshan Timings, Opening Apr 23' },
+  description: 'Badrinath Temple 2026 — darshan timings 4:30 AM–9 PM, Mahabhishek, no trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['badrinath temple','badrinath temple timings 2026','badrinath darshan timings','badrinath temple opening date 2026','badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };

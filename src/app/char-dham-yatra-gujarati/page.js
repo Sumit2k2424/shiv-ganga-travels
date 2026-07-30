@@ -7,8 +7,8 @@ const SLUG = 'char-dham-yatra-gujarati';
 const noto = Noto_Sans_Gujarati({ subsets: ['gujarati'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: 'ચાર ધામ યાત્રા 2026 ગુજરાતીમાં (Char Dham in Gujarati)',
-  description: 'ચાર ધામ યાત્રા 2026 સંપૂર્ણ માહિતી ગુજરાતીમાં — યમુનોત્રી, ગંગોત્રી, કેદારનાથ, બદ્રીનાથ. હરિદ્વારથી 9 રાત/10 દિવસ પેકેજ ₹18,500થી. સીધા ઓપરેટર, કોઈ કમિશન નહીં.',
+  title: { absolute: 'ચાર ધામ યાત્રા 2026 | ₹18,500થી શરૂ | ગુજરાતીમાં સંપૂર્ણ ગાઇડ' },
+  description: 'ચાર ધામ યાત્રા 2026 ગુજરાતીમાં — હરિદ્વારથી ₹18,500થી. વિશ્વસનીય ઓપરેટર, 15+ વર્ષનો અનુભવ, તાત્કાલિક પુષ્ટિ.',
   keywords: ['ચાર ધામ યાત્રા ગુજરાતી', 'char dham yatra in gujarati', 'char dham yatra gujarati guide', 'chardham yatra gujarati mahiti', 'હરિદ્વારથી ચાર ધામ યાત્રા'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {

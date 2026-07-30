@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra for Senior Citizens 2026: Guide',
-  description: 'Senior citizens on Char Dham Yatra 2026: medical certificate for 55+, pony and palki costs, VIP darshan, oxygen stops and our senior-friendly package.',
+  title: { absolute: 'Char Dham Yatra for Senior Citizens 2026 | Complete Guide' },
+  description: 'Senior citizens on Char Dham Yatra 2026 — medical certificate, pony, VIP darshan. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['senior citizen char dham yatra 2026', 'char dham yatra for elderly', 'char dham yatra age limit 2026', 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
   openGraph: { title:'Char Dham Yatra for Senior Citizens 2026: Guide', description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article' },

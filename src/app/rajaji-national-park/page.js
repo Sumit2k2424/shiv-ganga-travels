@@ -5,8 +5,8 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Rajaji National Park Safari 2026 — Zones, Fees & Timings',
-  description: 'Rajaji National Park jungle safari: entry fees, Chilla/Motichur/Ranipur zones, booking steps, elephant and tiger sightings, and the route from Haridwar.',
+  title: { absolute: 'Rajaji National Park Safari 2026 | Zones, Fees & Timings' },
+  description: 'Rajaji National Park jungle safari — entry fees, zones, tiger sightings. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['rajaji national park','rajaji national park safari','rajaji national park entry fee','rajaji national park timings','rajaji national park zones','chilla range safari','rajaji national park booking','rajaji national park from haridwar','rajaji national park from rishikesh','rajaji tiger reserve','best time to visit rajaji national park'],
   alternates: { canonical: `${SITE.baseUrl}/rajaji-national-park` },
   openGraph: {

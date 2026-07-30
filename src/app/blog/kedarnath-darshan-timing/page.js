@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Darshan Timings 2026: Aarti & VIP Slots',
-  description: 'Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.',
+  title: { absolute: 'Kedarnath Darshan Timings 2026 | Aarti & VIP Slots' },
+  description: 'Kedarnath darshan timings 2026 — morning & evening slots, VIP darshan. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['kedarnath darshan timings 2026', 'kedarnath temple opening time', 'kedarnath darshan time', 'kedarnath mandir timing 2026', 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
   openGraph: { title: 'Kedarnath Darshan Timings 2026: Aarti & VIP Slots', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },

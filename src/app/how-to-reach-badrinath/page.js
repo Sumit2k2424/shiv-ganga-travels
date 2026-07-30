@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'How to Reach Badrinath 2026 — Road & Route',
-  description: 'How to reach Badrinath Dham 2026. Road route from Haridwar via Joshimath (320km, 9-10 hrs). Helicopter from Dehradun. No trekking needed.',
+  title: { absolute: 'How to Reach Badrinath 2026 | Road Route & Helicopter Guide' },
+  description: 'How to reach Badrinath Dham 2026 — road via Joshimath, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath','badrinath by road 2026','nearest airport badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-badrinath` },
   openGraph: {

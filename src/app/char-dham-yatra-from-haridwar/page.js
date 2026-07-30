@@ -8,8 +8,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Haridwar 2026 | Shiv Ganga Travels',
-  description: 'Char Dham Yatra from Haridwar 2026 — itinerary, cost, registration, route map & helicopter options. All-inclusive packages from ₹20,999. Direct Haridwar operator.',
+  title: { absolute: 'Char Dham Yatra from Haridwar 2026 | Price Starts at ₹20,999 | Direct Operator' },
+  description: 'Char Dham Yatra from Haridwar 2026 — itinerary, cost, registration & route map. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from haridwar','char dham yatra package from haridwar','char dham package haridwar 2026','haridwar char dham yatra','char dham yatra cost from haridwar','char dham itinerary from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-haridwar` },
   openGraph: {

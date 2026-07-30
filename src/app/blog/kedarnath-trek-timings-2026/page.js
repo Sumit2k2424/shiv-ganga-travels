@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Trek Timings 2026: Cut-Offs & Rules',
-  description: 'Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Checkpoint cut-offs, last-entry rules and why 5 AM starts are best.',
+  title: { absolute: 'Kedarnath Trek Timings 2026 | Cut-Offs & Rules' },
+  description: 'Kedarnath trek timings 2026 — start before 1:30 PM, checkpoint rules. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['kedarnath trek timings 2026', 'kedarnath trek timing', 'kedarnath trek start time 2026', 'gaurikund to kedarnath trek timing', 'kedarnath trek last time', 'kedarnath trek cut off time', 'when to start kedarnath trek'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026` },
   openGraph: {

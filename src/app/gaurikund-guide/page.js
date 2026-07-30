@@ -4,8 +4,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: 'Gaurikund — Kedarnath Trek Base: How to Reach, Stay & Tips',
-  description: 'Gaurikund (1,982 m) is where the 16 km Kedarnath trek starts. Reaching it from Haridwar and Sonprayag, the shuttle system, stays and pony rates.',
+  title: { absolute: 'Gaurikund Guide 2026 | Kedarnath Trek Base | How to Reach & Stay' },
+  description: 'Gaurikund (1,982m) — Kedarnath trek starting point. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['gaurikund','gauri kund','gaurikund to kedarnath','gaurikund temple','gaurikund uttarakhand','sonprayag to gaurikund'],
   alternates: { canonical: `${SITE.baseUrl}/gaurikund-guide` },
 };

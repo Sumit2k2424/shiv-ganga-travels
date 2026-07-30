@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Uttarakhand Tour Packages 2026 — Hills & Pilgrimage',
-  description: 'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.',
+  title: { absolute: 'Uttarakhand Tour Packages 2026 | Price Starts at ₹4,999 | Hills & Pilgrimage' },
+  description: 'Uttarakhand Tour Packages 2026 from Haridwar, from ₹4,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['uttarakhand tour packages, uttarakhand tour packages 2026, uttarakhand tourism packages, best uttarakhand packages from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
   openGraph: { title:'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrimage', description:'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.', url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },

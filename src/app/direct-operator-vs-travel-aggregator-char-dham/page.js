@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Direct Operator vs Aggregator: Char Dham Booking',
-  description: 'Book Char Dham Yatra without an agent: direct operators vs aggregators — what you pay extra for, who is accountable, and how to verify a local operator.',
+  title: { absolute: 'Direct Operator vs Aggregator 2026 | Char Dham Booking Guide' },
+  description: 'Book Char Dham Yatra without an agent. Trusted operator, 15+ yrs experience, zero commission, instant confirmation. Verify any local operator.',
   keywords: ['char dham yatra direct operator vs aggregator','how to book char dham yatra without agent','char dham yatra hidden charges','direct booking char dham haridwar','char dham yatra no commission','char dham local operator vs online portal'],
   alternates: { canonical: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham` },
   openGraph: {

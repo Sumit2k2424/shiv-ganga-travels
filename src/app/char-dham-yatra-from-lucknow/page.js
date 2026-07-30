@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Lucknow 2026 — Train,',
-  description: 'Char Dham Yatra from Lucknow 2026. 485 km by road (8–9 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
+  title: { absolute: 'Char Dham Yatra from Lucknow 2026 | Price Starts at ₹22,999 | Road & Train Options' },
+  description: 'Char Dham Yatra from Lucknow 2026 — 485km by road (8–9 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from lucknow','char dham yatra package from lucknow','lucknow to haridwar char dham','char dham tour from lucknow 2026','chardham yatra lucknow','lucknow char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-lucknow` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Lucknow 2026 — Trains, Flights & Packages from ₹2',
+    title: 'Char Dham Yatra from Lucknow 2026 | Price Starts at ₹22,999',
     description: '485 km by road (8–9 hrs) or train. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Lucknow — Shiv Ganga Travels' }],
   },

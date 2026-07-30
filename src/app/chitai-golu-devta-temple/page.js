@@ -5,8 +5,8 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Chitai Golu Devta Temple 2026 — Timings, Letters & Route',
-  description: 'Chitai Golu Devta Temple, Almora — the court where devotees file written petitions. Darshan timings, the letter ritual, real distances and route.',
+  title: { absolute: 'Chitai Golu Devta Temple 2026 | Timings & Route | Almora' },
+  description: 'Chitai Golu Devta Temple, Almora — darshan timings & the letter ritual. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['chitai golu devta temple','golu devta temple almora','chitai golu devta temple almora uttarakhand','chitai temple almora','golu devta god of justice','chitai golu devta temple timings','golu devta ki chitthi','golu devta mandir almora','how to reach chitai golu devta temple','chitai golu devta temple bells','goljyu','chitai vs ghorakhal golu devta'],
   alternates: { canonical: `${SITE.baseUrl}/chitai-golu-devta-temple` },
   openGraph: {

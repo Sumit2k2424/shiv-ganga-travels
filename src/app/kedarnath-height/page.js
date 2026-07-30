@@ -4,8 +4,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: 'Kedarnath Height: 3,583 m (11,755 ft) — Location, State & Facts',
-  description: 'Kedarnath temple sits at 3,583 m (11,755 ft) in Rudraprayag district, Uttarakhand. How high the trek climbs, oxygen levels and why altitude matters.',
+  title: { absolute: 'Kedarnath Height 2026 | 3,583m Altitude & Location Facts' },
+  description: 'Kedarnath sits at 3,583m in Rudraprayag district. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['kedarnath height','kedarnath altitude','kedarnath height in km','kedarnath sea level height','kedarnath which state','kedarnath location','kedarnath district','kedarnath uttarakhand 246445','elevation of kedarnath'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-height` },
   openGraph: {

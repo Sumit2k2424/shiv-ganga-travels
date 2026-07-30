@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Mumbai 2026: Packages',
-  description: 'Char Dham Yatra from Mumbai 2026 — packages from ₹24,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
+  title: { absolute: 'Char Dham Yatra from Mumbai 2026 | Price Starts at ₹24,999 | Pickup & VIP Darshan' },
+  description: 'Char Dham Yatra from Mumbai 2026 — 1,450km, 1h45m flight or 26h train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from mumbai','char dham yatra mumbai 2026','char dham package from mumbai','kedarnath from mumbai','haridwar from mumbai'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-mumbai` },
   openGraph: {

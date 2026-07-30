@@ -7,8 +7,8 @@ const SLUG = 'char-dham-yatra-bengali';
 const noto = Noto_Sans_Bengali({ subsets: ['bengali'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: 'চার ধাম যাত্রা 2026 বাংলায় (Char Dham in Bengali)',
-  description: 'চার ধাম যাত্রা 2026 গাইড বাংলায় — যমুনোত্রী, গঙ্গোত্রী, কেদারনাথ, বদ্রীনাথ। হরিদ্বার থেকে 9 রাত/10 দিন প্যাকেজ ₹18,500 থেকে।',
+  title: { absolute: 'চার ধাম যাত্রা 2026 | ₹18,500 থেকে শুরু | বাংলায় সম্পূর্ণ গাইড' },
+  description: 'চার ধাম যাত্রা 2026 বাংলায় — হরিদ্বার থেকে ₹18,500 থেকে। বিশ্বস্ত অপারেটর, 15+ বছরের অভিজ্ঞতা, তাৎক্ষণিক নিশ্চিতকরণ।',
   keywords: ['চার ধাম যাত্রা বাংলা', 'char dham yatra in bengali', 'char dham yatra bengali guide', 'chardham yatra bangla', 'হরিদ্বার থেকে চার ধাম যাত্রা', 'kedarnath yatra bengali'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {

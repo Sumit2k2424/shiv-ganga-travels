@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'September Char Dham Yatra 2026: Post-Monsoon Packages',
-  description: 'September Char Dham Yatra 2026: clearest skies of the year, weather week by week, packages from ₹18,500, and why autumn seats fill up by August.',
+  title: { absolute: 'September Char Dham Yatra 2026 | Price Starts at ₹18,500 | Post-Monsoon' },
+  description: 'September Char Dham Yatra 2026 — clearest skies of the year. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['september char dham yatra package 2026', 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
 };

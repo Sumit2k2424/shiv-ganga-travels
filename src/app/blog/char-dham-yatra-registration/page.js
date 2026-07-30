@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Registration 2026: Free e-Pass Guide',
-  description: 'Char Dham Yatra 2026 registration is free. Step-by-step: online, WhatsApp, app and offline. e-Pass download, OTP fixes, daily limits and NRI rules.',
+  title: { absolute: 'Char Dham Yatra Registration 2026 | Free e-Pass Guide' },
+  description: 'Char Dham Yatra 2026 registration is free — step-by-step guide. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: [
     'char dham yatra registration 2026',
     'char dham yatra registration online',

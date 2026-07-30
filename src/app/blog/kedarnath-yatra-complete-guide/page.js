@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Yatra Guide 2026: Route, Cost & Darshan',
-  description: 'Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹6,999.',
+  title: { absolute: 'Kedarnath Yatra Guide 2026 | Price Starts at ₹6,999 | Route & Darshan' },
+  description: 'Kedarnath Yatra 2026 guide — 16km trek, registration, darshan timings. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['kedarnath yatra 2026 complete guide', 'kedarnath yatra guide', 'how to do kedarnath yatra', 'kedarnath yatra cost 2026', 'kedarnath yatra package haridwar', 'kedarnath yatra planning guide 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
   openGraph: { title: 'Kedarnath Yatra Guide 2026: Route, Cost & Darshan', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },

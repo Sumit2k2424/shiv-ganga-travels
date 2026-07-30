@@ -4,8 +4,8 @@ import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Kedarnath Tour Package 2026 — 3N/4D from ₹6,999 | Ex-Haridwar',
-  description: 'Kedarnath tour package 2026 from Haridwar — 3N/4D from ₹6,999/person. Day-by-day itinerary, pony and helicopter rates. 4.7★ (54 reviews). ₹0 to enquire.',
+  title: { absolute: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999 | Hotels & Transport Included' },
+  description: 'Kedarnath Tour Package 2026 — 3N/4D from ₹6,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
   keywords: [
     'kedarnath tour package', 'kedarnath yatra package', 'kedarnath tour package 2026',
     'kedarnath package from haridwar', 'kedarnath trip cost', 'kedarnath tour package price',
@@ -13,17 +13,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-tour-package` },
   openGraph: {
-    title: 'Kedarnath Tour Package 2026 — 3N/4D from ₹6,999 (Ex-Haridwar)',
+    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999 | Hotels & Transport Included',
     description:
-      'Real itinerary, honest costs, pony & helicopter rates, and 2026 registration help. Direct Haridwar operator since 2010 · 4.7★ from 54 reviews.',
+      'Customizable itinerary, pony & helicopter rates, and 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
     url: `${SITE.baseUrl}/kedarnath-tour-package`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Tour Package 2026 from Haridwar — Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Tour Package 2026 — from ₹6,999 | Direct Operator',
-    description: 'Kedarnath 3N/4D from Haridwar. Real itinerary, honest cost breakdown, pony/heli rates. ₹0 to enquire.',
+    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999',
+    description: 'Kedarnath 3N/4D from Haridwar. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
     images: [{ url: '/opengraph-image', alt: 'Kedarnath Tour Package 2026 from Haridwar' }],
   },
 };

@@ -5,8 +5,8 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide',
-  description: 'Surkanda Devi Temple near Dhanaulti: real timings, ropeway fare, the Kaddukhal trek, and how to reach from Haridwar, Rishikesh or Mussoorie.',
+  title: { absolute: 'Surkanda Devi Temple 2026 | Timings, Ropeway & Route | Dhanaulti' },
+  description: 'Surkanda Devi Temple near Dhanaulti — timings, ropeway fare, trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['surkanda devi temple','surkanda devi temple timings','surkanda devi ropeway price','how to reach surkanda devi temple','surkanda devi temple trek','surkanda devi temple from haridwar','kaddukhal to surkanda devi','surkanda devi temple near dhanaulti','surkanda devi temple near mussoorie','shakti peeth triangle uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/surkanda-devi-temple` },
   openGraph: {

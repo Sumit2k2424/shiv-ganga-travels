@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathFareCalc from '@/components/KedarnathFareCalc';
 
 export const metadata = {
-  title: 'Kedarnath Pony, Palki & Kandi Rates 2026 — Gaurikund Prices',
-  description: 'Kedarnath pony ₹3,000–4,500 one way, palki ₹8,000–12,000, kandi ₹3,500–5,000 from Gaurikund in 2026. Weight slabs, booking and avoiding overcharging.',
+  title: { absolute: 'Kedarnath Pony & Palki Rates 2026 | Price Starts at ₹3,000 | Gaurikund' },
+  description: 'Kedarnath pony ₹3,000–4,500, palki ₹8,000–12,000 from Gaurikund. Trusted operator, 15+ yrs experience, honest pricing, instant confirmation.',
   keywords: ['kedarnath pony palki kandi rates 2026','kedarnath pony charges 2026','kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates` },
   openGraph: {

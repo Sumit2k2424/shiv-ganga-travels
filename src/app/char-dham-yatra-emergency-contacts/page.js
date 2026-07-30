@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 export const metadata = {
-  title: 'Char Dham Emergency Contacts — SDRF & Hospital',
-  description: 'Char Dham emergency contacts 2026. SDRF helpline, hospital numbers, police contacts for Kedarnath, Badrinath, Gangotri, Yamunotri. Save before you travel.',
+  title: { absolute: 'Char Dham Emergency Contacts 2026 | SDRF & Hospital Numbers' },
+  description: 'Char Dham emergency contacts 2026 — SDRF, hospital & police numbers. Trusted operator, 15+ yrs experience, save before you travel.',
   keywords: ['char dham yatra emergency contacts','kedarnath helpline number','char dham yatra helpline 2026','badrinath temple committee number','char dham yatra police number'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-emergency-contacts` },
 };

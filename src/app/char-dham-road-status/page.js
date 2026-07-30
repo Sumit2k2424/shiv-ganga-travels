@@ -7,8 +7,8 @@ const UPDATED = 'July 18, 2026';
 const UPDATED_ISO = '2026-07-18';
 
 export const metadata = {
-  title: 'Char Dham Road Status Today 2026 | Live Route Updates',
-  description: 'Char Dham road status today: open/closed updates for all four dham routes, highway completion %, landslide stretches and live sources to check before you go.',
+  title: { absolute: 'Char Dham Road Status 2026 | Live Route Updates | All 4 Routes' },
+  description: 'Char Dham road status today — open/closed updates, landslide stretches. Trusted operator, 15+ yrs experience, live route checks.',
   keywords: ['char dham road status','char dham yatra road condition today','char dham highway completion date','kedarnath road condition today live','badrinath road condition today','yamunotri road condition today','gangotri road condition today','char dham road project current status'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },
   openGraph: {

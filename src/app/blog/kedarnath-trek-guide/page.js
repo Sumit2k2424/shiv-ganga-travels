@@ -5,8 +5,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathTrekProfile from '@/components/KedarnathTrekProfile';
 
 export const metadata = {
-  title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
-  description: 'Complete Kedarnath trek guide 2026: 16km route from Gaurikund, difficulty, stay options at Kedarnath, best time to visit, pony vs helicopter, and what to pack.',
+  title: { absolute: 'Kedarnath Trek Guide 2026 | 16 km Route & Stays' },
+  description: 'Kedarnath trek guide 2026 — 16km route from Gaurikund, stays, pony vs heli. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['kedarnath trek guide 2026','kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips','kedarnath yatra 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
   openGraph: {

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Cab 2026 — Fare & Taxi Distance',
-  description: 'Book cab from Haridwar to Kedarnath 2026. 228km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.',
+  title: { absolute: 'Haridwar to Kedarnath Cab 2026 | Price Starts at ₹3,500 | Fixed Fare' },
+  description: 'Haridwar to Kedarnath Cab 2026 — 228km via Guptkashi, Swift Dzire from ₹3,500. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation.',
   keywords: ['haridwar to kedarnath cab,haridwar to kedarnath taxi fare,haridwar to kedarnath distance,cab from haridwar to kedarnath 2026'],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-to-kedarnath-cab` },
   openGraph: { title: 'Haridwar to Kedarnath Cab 2026 — Fare, Distance, Innova & Tempo Traveller', description: 'Book cab from Haridwar to Kedarnath 2026. 228km via Guptkashi, 6–7 hours. Swift Dzire from ₹3,500. Experienced hill drivers. Pickup from railway station.', url: `${SITE.baseUrl}/haridwar-to-kedarnath-cab`, type:'website' },

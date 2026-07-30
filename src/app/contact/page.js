@@ -1,9 +1,9 @@
 import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
-  title: 'Contact — Shiv Ganga Travels Haridwar',
+  title: { absolute: 'Contact Shiv Ganga Travels 2026 | Haridwar | Instant Confirmation' },
   alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
-  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra packages. Call, WhatsApp or email us. Saptrishi Road, Haridwar, Uttarakhand.',
+  description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra packages. Trusted operator, 15+ yrs experience, call, WhatsApp or email for instant confirmation.',
 };
 
 export default function ContactPage() {

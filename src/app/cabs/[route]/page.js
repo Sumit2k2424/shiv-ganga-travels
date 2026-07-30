@@ -11,10 +11,11 @@ export async function generateMetadata({ params }) {
   const { route } = await params;
   const r = getCabRoute(route);
   if (!r) return {};
-  const title = `${r.from} to ${r.to} Cab 2026 — Fare & Distance`;
-  const desc = `${r.from} to ${r.to} taxi 2026: ${r.distance}, ${r.time}. Fares from ${r.fares[0][2].split('–')[0]}. Experienced hill drivers, fixed price, pickup from ${r.from}.`;
+  const lowFare = r.fares[0][2].split('–')[0];
+  const title = `${r.from} to ${r.to} Cab 2026 | Price Starts at ${lowFare} | Fixed Fare`;
+  const desc = `${r.from} to ${r.to} Cab 2026 — ${r.distance}, ${r.time}. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. Pickup from ${r.from}.`;
   return {
-    title, description: desc,
+    title: { absolute: title }, description: desc,
     keywords: [`${r.from} to ${r.to} cab`, `${r.from} to ${r.to} taxi fare`, `${r.from} to ${r.to} distance`, `${r.from} to ${r.to} taxi 2026`, `cab from ${r.from} to ${r.to}`],
     alternates: { canonical: `${SITE.baseUrl}/cabs/${r.slug}` },
     openGraph: { title, description: desc, url: `${SITE.baseUrl}/cabs/${r.slug}`, type: 'website', siteName: SITE.name, locale: 'en_IN' },

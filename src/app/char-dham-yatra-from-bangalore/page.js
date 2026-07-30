@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Bangalore 2026: Packages',
-  description: 'Char Dham Yatra from Bangalore 2026 — packages from ₹26,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
+  title: { absolute: 'Char Dham Yatra from Bangalore 2026 | Price Starts at ₹26,999 | Pickup & VIP Darshan' },
+  description: 'Char Dham Yatra from Bangalore 2026 — 2,100km, 2h30m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from bangalore','char dham yatra bangalore 2026','char dham package from bangalore','kedarnath from bangalore','haridwar from bangalore'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bangalore` },
   openGraph: {

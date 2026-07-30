@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
-  title: 'Valley of Flowers Trek 2026: Best Time & Route',
-  description: 'Valley of Flowers trek 2026: UNESCO site, best time July–September, 17 km route from Govindghat, entry fee ₹150 and 500+ wildflower species.',
+  title: { absolute: 'Valley of Flowers Trek 2026 | Price Starts at ₹150 | Best Time & Route' },
+  description: 'Valley of Flowers trek 2026 — UNESCO site, 17km route from Govindghat. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['valley of flowers trek 2026', 'valley of flowers best time', 'valley of flowers trek guide', 'govindghat to valley of flowers', 'valley of flowers uttarakhand', 'valley of flowers entry fee 2026', 'valley of flowers flowers list'],
   alternates: { canonical: `${SITE.baseUrl}/blog/valley-of-flowers-trek` },
 };

@@ -2,8 +2,8 @@ import GuideArticle, { H2, P, UL, Callout } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra by Train: Stations & Best Routes',
-  description: 'Char Dham Yatra by train in 2026: nearest stations (Haridwar, Rishikesh, Dehradun), best trains from Delhi, Mumbai and Kolkata, plus IRCTC booking tips.',
+  title: { absolute: 'Char Dham Yatra by Train 2026 | Stations & Best Routes' },
+  description: 'Char Dham Yatra by train 2026 — nearest stations, IRCTC tips. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra by train','nearest railway station to char dham','haridwar railway station char dham','train to char dham yatra','how to reach haridwar by train','char dham yatra train package 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-by-train` },
   openGraph: { title: 'Char Dham Yatra by Train 2026 — Nearest Stations & Routes', description: 'Nearest railheads, best trains from major cities, IRCTC tips, and how the yatra starts once you reach Haridwar.', url: `${SITE.baseUrl}/blog/char-dham-yatra-by-train`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra by Train 2026 | Shiv Ganga Travels' }] },

@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'चार धाम यात्रा में कितना खर्चा आता है? (2026)',
-  description: 'हरिद्वार से चार धाम यात्रा 2026 में 1 व्यक्ति का खर्चा ₹18,500 से शुरू। गाड़ी, होटल, खाना, घोड़ा, पंजीकरण — हर चीज़ का अलग-अलग हिसाब हिंदी में।',
+  title: { absolute: 'चार धाम यात्रा 2026 खर्चा | कीमत ₹18,500 से शुरू | पूरी जानकारी' },
+  description: 'हरिद्वार से चार धाम यात्रा 2026 का खर्चा ₹18,500 से शुरू। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
   keywords: ['चार धाम यात्रा 2026 खर्चा', 'char dham yatra kitna kharcha 2026', 'हरिद्वार से चार धाम यात्रा कितने रुपये', 'char dham yatra cost hindi', 'चार धाम यात्रा प्रति व्यक्ति खर्च'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` },
   openGraph: { title: 'चार धाम यात्रा 2026 में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा', description: 'हरिद्वार से चार धाम यात्रा 2026 में 1 आदमी का खर्चा ₹18,500 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।', url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article' },

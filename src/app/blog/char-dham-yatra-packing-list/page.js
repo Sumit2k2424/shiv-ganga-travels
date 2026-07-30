@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Packing List 2026 (Printable)',
-  description: 'Char Dham Yatra packing list 2026: exactly what to carry for 10–12 days in the Himalayas, what to leave behind, and the mistakes first-timers regret.',
+  title: { absolute: 'Char Dham Yatra Packing List 2026 | Printable Checklist' },
+  description: 'Char Dham Yatra packing list 2026 — exactly what to carry. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra packing list 2026', 'what to carry for char dham yatra', 'char dham yatra essentials', 'char dham yatra clothes list', 'char dham yatra medicine list', 'char dham yatra documents required'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
   openGraph: { title:'Char Dham Yatra Packing List 2026 (Printable)', description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article' },

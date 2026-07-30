@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples',
-  description: 'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹21,999. 8N/9D.',
+  title: { absolute: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹21,999 | All 5 Shiva Temples' },
+  description: 'Panch Kedar Yatra 2026 — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 8N/9D from ₹21,999/person. Trusted operator, 15+ yrs experience, fixed departures.',
   keywords: ['panch kedar yatra, panch kedar yatra 2026, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek'],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
   openGraph: { title:'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package', description:'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹21,999. 8N/9D.', url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },

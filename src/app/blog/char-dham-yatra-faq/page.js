@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra FAQ: 50 Questions Answered (2026)',
-  description: '50 expert answers to common Char Dham Yatra questions: cost, registration, best time, medical rules, senior citizens, helicopter and new 2026 rules.',
+  title: { absolute: 'Char Dham Yatra FAQ 2026 | 50 Questions Answered' },
+  description: 'Char Dham Yatra 2026 — 50 expert-answered questions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra faq 2026', 'char dham yatra questions answers', 'char dham yatra 2026 questions', 'kedarnath yatra faq', 'char dham yatra common questions'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },
   openGraph: {

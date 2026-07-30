@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Gangotri Yatra 2026 — Package, Route, Temple',
-  description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,699 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek',
+  title: { absolute: 'Gangotri Yatra Package 2026 | Price Starts at ₹5,699 | Motor Road, No Trek' },
+  description: 'Gangotri Yatra 2026 from Haridwar — ₹5,699 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.',
   keywords: ['gangotri yatra, gangotri yatra 2026, gangotri yatra package, haridwar to gangotri, gangotri temple guide'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
   openGraph: { title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide', description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹5,699 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek', url:`${SITE.baseUrl}/gangotri-yatra`, type:'website' },

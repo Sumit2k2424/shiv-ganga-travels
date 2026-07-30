@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Kedarnath Registration 2026: Online & WhatsApp',
-  description: 'Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.',
+  title: { absolute: 'Kedarnath Registration 2026 | Online & WhatsApp' },
+  description: 'Kedarnath registration 2026 is free — documents, daily limits, 55+ rules. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['kedarnath yatra registration 2026', 'kedarnath registration 2026', 'kedarnath yatra registration online', 'kedarnath registration process', 'kedarnath yatra biometric', 'kedarnath registration documents'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-registration-2026` },
   openGraph: {

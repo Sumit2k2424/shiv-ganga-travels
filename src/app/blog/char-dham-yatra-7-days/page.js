@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice',
-  description: 'Can you finish Char Dham Yatra in 7 days? Yes, with the right plan. Day-by-day itinerary, what to skip and honest advice for pilgrims short on time in 2026.',
+  title: { absolute: 'Char Dham Yatra in 7 Days 2026 | Itinerary & Honest Advice' },
+  description: 'Char Dham Yatra in 7 days 2026 — day-by-day itinerary. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', 'char dham yatra short duration 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },

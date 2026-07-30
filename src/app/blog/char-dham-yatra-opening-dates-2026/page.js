@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Opening Dates 2026: All 4 Dhams',
-  description: 'Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.',
+  title: { absolute: 'Char Dham Yatra Opening Dates 2026 | All 4 Dhams' },
+  description: 'Char Dham Yatra 2026 opening dates for all 4 dhams. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra opening dates 2026', 'kedarnath opening date 2026', 'badrinath opening date 2026', 'gangotri opening date 2026', 'yamunotri opening date 2026', 'char dham 2026 start date', 'char dham season 2026 dates'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026` },
   openGraph: { title: 'Char Dham Yatra Opening Dates 2026: All 4 Dhams', description: 'Official opening and closing dates for all 4 Char Dham shrines in 2026 with booking guide.', url: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`, type: 'article' },

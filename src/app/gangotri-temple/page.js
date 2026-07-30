@@ -4,8 +4,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: 'Gangotri Temple 2026 — Timings, History, Aarti & Guide',
-  description: 'Complete Gangotri Temple guide 2026 — darshan timings, Ganga aarti, history, dress code, altitude 3,415m, opening April 19 & closing Nov 10. Source of the Ganga.',
+  title: { absolute: 'Gangotri Temple Guide 2026 | Darshan Timings, History & Aarti' },
+  description: 'Gangotri Temple 2026 — darshan timings, Ganga aarti, altitude 3,415m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['gangotri temple','gangotri temple timings 2026','gangotri dham','gangotri opening date 2026','gangotri ganga aarti','gangotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-temple` },
   openGraph: { title: 'Gangotri Temple 2026 — Darshan Timings, History & Complete Guide', description: 'Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and 2026 opening dates for Gangotri Dham.', url: `${SITE.baseUrl}/gangotri-temple`, type: 'website' },

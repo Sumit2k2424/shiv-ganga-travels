@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Bhopal 2026 — Train,',
-  description: 'Char Dham Yatra from Bhopal 2026. 900 km by road (14–15 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹23,999.',
+  title: { absolute: 'Char Dham Yatra from Bhopal 2026 | Price Starts at ₹23,999 | Road & Train Options' },
+  description: 'Char Dham Yatra from Bhopal 2026 — 900km by road (14–15 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from bhopal','char dham yatra package from bhopal','bhopal to haridwar char dham','char dham tour from bhopal 2026','chardham yatra bhopal','bhopal char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bhopal` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Bhopal 2026 — Trains, Flights & Packages from ₹23',
+    title: 'Char Dham Yatra from Bhopal 2026 | Price Starts at ₹23,999',
     description: '900 km by road (14–15 hrs) or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Bhopal — Shiv Ganga Travels' }],
   },

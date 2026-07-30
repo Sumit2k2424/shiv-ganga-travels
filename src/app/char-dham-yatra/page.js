@@ -7,8 +7,8 @@ import AnswerBox from '@/components/AnswerBox';
 import GoogleReviews from '@/components/GoogleReviews';
 
 export const metadata = {
-  title: 'Char Dham Yatra Package 2026 from Haridwar ₹18,500',
-  description: 'Chota Char Dham Yatra 2026 from Haridwar. 9N/10D from ₹18,500/person. No hidden charges. Group + family packages. Fixed departures May–Oct.',
+  title: { absolute: 'Char Dham Yatra Package 2026 | Price Starts at ₹18,500 | Hotels & Transport Included' },
+  description: 'Char Dham Yatra Package 2026 from Haridwar — 9N/10D from ₹18,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
     'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',

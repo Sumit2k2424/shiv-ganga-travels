@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Package vs Self-Planned Trip: Real Costs',
-  description: 'Char Dham package vs going independent in 2026 — honest cost comparison, what you gain and lose, and which option suits which type of pilgrim.',
+  title: { absolute: 'Char Dham Package vs Self-Planned Trip 2026 | Real Costs' },
+  description: 'Char Dham package vs self-planned 2026 — honest cost comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra package vs self planned', 'char dham yatra self booking', 'is char dham yatra package worth it', 'char dham yatra independent travel', 'char dham package or self arranged 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned` },
 };

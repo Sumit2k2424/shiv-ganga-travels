@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'About Shiv Ganga Travels — Founded by Army',
-  description: 'Shiv Ganga Travels, Haridwar. Founded 2010 by Retd. Army Officer. Zero commission, direct Char Dham operator. 50,000+ pilgrims served across 15 seasons.',
+  title: { absolute: 'About Shiv Ganga Travels 2026 | 15+ Years, Founded by Army Officer' },
+  description: 'Shiv Ganga Travels, Haridwar — trusted operator since 2010, 15+ yrs experience. Zero commission, 50,000+ pilgrims served, instant confirmation.',
   keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
   alternates: { canonical: `${SITE.baseUrl}/about` },
   openGraph: {

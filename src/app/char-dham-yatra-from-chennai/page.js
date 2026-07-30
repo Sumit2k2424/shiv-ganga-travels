@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Chennai 2026: Packages',
-  description: 'Char Dham Yatra from Chennai 2026 — packages from ₹26,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
+  title: { absolute: 'Char Dham Yatra from Chennai 2026 | Price Starts at ₹26,999 | Pickup & VIP Darshan' },
+  description: 'Char Dham Yatra from Chennai 2026 — 2,200km, fly to Delhi + overnight train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from chennai','char dham yatra chennai 2026','char dham package from chennai','kedarnath from chennai','haridwar from chennai'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chennai` },
   openGraph: {

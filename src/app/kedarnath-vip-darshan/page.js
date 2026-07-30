@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathPujaPicker from '@/components/KedarnathPujaPicker';
 
 export const metadata = {
-  title: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan',
-  description: 'Kedarnath VIP darshan 2026: no flat pass — priority access comes bundled with BKTC pujas (₹300–₹28,600). Booking steps, sparsh darshan and scams to avoid.',
+  title: { absolute: 'Kedarnath VIP Darshan 2026 | Price Starts at ₹300 | Booking Guide' },
+  description: 'Kedarnath VIP darshan 2026 — priority access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation. Booking steps & scam guide.',
   keywords: ['kedarnath vip darshan 2026','kedarnath vip darshan booking','kedarnath vip darshan ticket price','kedarnath vip darshan online booking','kedarnath puja booking','kedarnath rudrabhishek price','kedarnath special darshan','kedarnath sparsh darshan','kedarnath mahabhishek booking','bktc puja booking','kedarnath vip darshan cost','kedarnath darshan timing 2026','badrinath vip darshan price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-vip-darshan` },
   openGraph: {

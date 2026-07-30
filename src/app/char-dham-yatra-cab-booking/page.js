@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Cab Booking 2026 — Innova & Tempo',
-  description: 'Book Char Dham Yatra cab from Haridwar 2026. Innova, Tempo Traveller, SUV. Door-to-door pickup. Direct operator, best rates.',
+  title: { absolute: 'Char Dham Cab Booking 2026 | Innova & Tempo | Fixed Fares, Door-to-Door' },
+  description: 'Char Dham Yatra Cab Booking 2026 from Haridwar. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. Innova, Tempo Traveller, SUV.',
   keywords: ['char dham yatra cab booking','char dham yatra taxi','haridwar to char dham cab','char dham yatra innova','char dham yatra tempo traveller','char dham cab price 2026'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
   openGraph: { title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar', description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking`, type: 'website' },

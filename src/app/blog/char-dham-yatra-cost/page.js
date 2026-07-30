@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra Cost 2026: Full Per-Person Breakdown',
-  description: 'Char Dham Yatra cost 2026 per person: budget package ₹18,500, pony ₹3,500, helicopter ₹7,500, VIP darshan ₹1,100. Full breakdown, no hidden costs.',
+  title: { absolute: 'Char Dham Yatra Cost 2026 | Price Starts at ₹18,500 | Full Breakdown' },
+  description: 'Char Dham Yatra cost 2026 — full per-person breakdown, no hidden costs. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra cost 2026', 'char dham yatra total cost per person', 'char dham yatra package price 2026', 'char dham yatra budget breakdown', 'kedarnath pony cost 2026', 'char dham helicopter cost 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title: 'Char Dham Yatra Cost 2026: Full Per-Person Breakdown', description: 'Char Dham Yatra cost 2026 per person: budget ₹18,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter ₹1.5L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.', url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article' },

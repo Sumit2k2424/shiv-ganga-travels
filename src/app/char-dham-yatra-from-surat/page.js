@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Surat 2026 — Train, Flight',
-  description: 'Char Dham Yatra from Surat 2026. 1,250 km — train (18–20 hrs) or fly. Trains, flights, pickups explained. All-inclusive packages from ₹23,999.',
+  title: { absolute: 'Char Dham Yatra from Surat 2026 | Price Starts at ₹23,999 | Train & Flight Options' },
+  description: 'Char Dham Yatra from Surat 2026 — 1,250km, train (18–20 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from surat','char dham yatra package from surat','surat to haridwar char dham','char dham tour from surat 2026','chardham yatra surat','surat char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-surat` },
   openGraph: {

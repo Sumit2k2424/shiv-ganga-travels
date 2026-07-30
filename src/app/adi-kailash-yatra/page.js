@@ -5,8 +5,8 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide',
-  description: 'Adi Kailash Yatra: real Inner Line Permit steps, the road-vs-trek route from Kathgodam, Om Parvat, cost, and how to reach from Haridwar.',
+  title: { absolute: 'Adi Kailash Yatra Package 2026 | Price Starts at ₹36,000 | Permit & Om Parvat' },
+  description: 'Adi Kailash Yatra 2026 — 7N/8D road package from Kathgodam, ₹36,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.',
   keywords: ['adi kailash yatra','adi kailash permit','how to reach adi kailash','adi kailash cost','adi kailash yatra itinerary','om parvat yatra','adi kailash best time to visit','chhota kailash yatra','adi kailash from haridwar','adi kailash inner line permit'],
   alternates: { canonical: `${SITE.baseUrl}/adi-kailash-yatra` },
   openGraph: {

@@ -4,8 +4,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: 'Kedarnath to Badrinath Distance — Route, Time & Taxi Fare',
-  description: 'Kedarnath to Badrinath is 218 km by road (via Guptkashi–Chopta–Joshimath), 8–10 hours by taxi. Route breakdown, halts, fares and the one shortcut most pilgrims miss.',
+  title: { absolute: 'Kedarnath to Badrinath Distance 2026 | Route, Time & Taxi Fare' },
+  description: 'Kedarnath to Badrinath — 218km by road, 8–10 hours. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['kedarnath to badrinath distance','badrinath to kedarnath distance','kedarnath to badrinath','badrinath to kedarnath','kedarnath to badrinath taxi','kedarnath to badrinath route'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-to-badrinath-distance` },
 };

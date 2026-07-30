@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Haridwar Tour Package 2026',
-  description: 'Haridwar tour packages 2026 from ₹2,999. Har Ki Pauri, Ganga Aarti, Mansa Devi, Chandi Devi. Haridwar + Rishikesh combo. Direct operator, zero commission.',
+  title: { absolute: 'Haridwar Tour Package 2026 | Price Starts at ₹2,999 | Ganga Aarti Included' },
+  description: 'Haridwar Tour Package 2026 from ₹2,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Har Ki Pauri, Mansa Devi.',
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',
     'haridwar trip package','haridwar rishikesh tour package','haridwar tour package from delhi',

@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Varanasi 2026 — Train,',
-  description: 'Char Dham Yatra from Varanasi 2026. 800 km by road (12–13 hrs) or train. Trains, flights, pickups explained. All-inclusive packages from ₹22,999.',
+  title: { absolute: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹22,999 | Road & Train Options' },
+  description: 'Char Dham Yatra from Varanasi 2026 — 800km by road (12–13 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from varanasi','char dham yatra package from varanasi','varanasi to haridwar char dham','char dham tour from varanasi 2026','chardham yatra varanasi','varanasi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-varanasi` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Varanasi 2026 — Trains, Flights & Packages from ₹',
+    title: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹22,999',
     description: '800 km by road (12–13 hrs) or train. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Varanasi — Shiv Ganga Travels' }],
   },

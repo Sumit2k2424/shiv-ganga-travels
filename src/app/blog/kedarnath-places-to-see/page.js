@@ -2,8 +2,8 @@ import GuideArticle, { H2, P, UL } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Places to See in & Around Kedarnath 2026 — Beyond the Temple',
-  description: 'What to see at Kedarnath besides the temple — Bhairavnath, Vasuki Tal, Gandhi Sarovar, Triyuginarayan and Guptkashi, with time needed for each.',
+  title: { absolute: 'Places to See Around Kedarnath 2026 | Beyond the Temple' },
+  description: 'What to see at Kedarnath besides the temple — Vasuki Tal, Triyuginarayan. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['kedarnath places to see', 'places to visit kedarnath', 'kedarnath sightseeing', 'vasuki tal kedarnath', 'triyuginarayan temple'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-places-to-see` },
   openGraph: { title: 'Places to See in & Around Kedarnath 2026', url: `${SITE.baseUrl}/blog/kedarnath-places-to-see`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Places to See Around Kedarnath' }] },

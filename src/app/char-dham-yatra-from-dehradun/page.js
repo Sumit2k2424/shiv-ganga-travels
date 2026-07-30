@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Dehradun 2026',
-  description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport gateway. Road & helicopter packages from ₹21,000. 54km to Haridwar.',
+  title: { absolute: 'Char Dham Yatra from Dehradun 2026 | Price Starts at ₹21,000 | Road & Heli Options' },
+  description: 'Char Dham Yatra from Dehradun 2026 — Jolly Grant Airport gateway, 54km to Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: [
     'char dham yatra from dehradun', 'char dham yatra package dehradun 2026',
     'dehradun to char dham yatra', 'char dham helicopter dehradun',

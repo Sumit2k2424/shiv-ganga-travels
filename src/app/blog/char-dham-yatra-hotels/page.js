@@ -2,8 +2,8 @@ import GuideArticle, { H2, P, UL, Callout } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Char Dham Yatra Hotels 2026 — Where Pilgrims Actually Stay',
-  description: 'Where you really stay on Char Dham Yatra 2026 — Barkot, Uttarkashi, Guptkashi, Joshimath and Badrinath. Budget vs premium rooms and booking tips.',
+  title: { absolute: 'Char Dham Yatra Hotels 2026 | Where Pilgrims Actually Stay' },
+  description: 'Char Dham Yatra hotels 2026 — Barkot, Uttarkashi, Guptkashi, Badrinath. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra hotels', 'char dham hotels 2026', 'where to stay char dham', 'kedarnath accommodation', 'badrinath hotels booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-hotels` },
   openGraph: { title: 'Char Dham Yatra Hotels 2026 — Where Pilgrims Stay', url: `${SITE.baseUrl}/blog/char-dham-yatra-hotels`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Hotels 2026' }] },

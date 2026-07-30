@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 export const metadata = {
-  title: 'Badrinath Yatra Guide 2026 – Temple Timings, Route from Haridwar & Travel Tips',
-  description: 'Complete Badrinath Yatra 2026 guide: darshan timings 4:30 AM–9 PM, Tapt Kund, Mana Village, best time to visit, and how to reach from Haridwar. Packages from ₹5,999.',
+  title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹5,999 | Timings & Route' },
+  description: 'Badrinath Yatra 2026 guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['badrinath yatra guide 2026', 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', 'badrinath yatra package 2026', 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
 };

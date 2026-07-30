@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Haridwar to Kedarnath Road Trip: Route & Stops',
-  description: 'Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.',
+  title: { absolute: 'Haridwar to Kedarnath Road Trip 2026 | Route & Stops' },
+  description: 'Haridwar to Kedarnath road trip 2026 — 250km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['haridwar to kedarnath road trip 2026', 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
   openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },

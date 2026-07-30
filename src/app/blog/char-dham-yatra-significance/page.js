@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra: History & Spiritual Significance',
-  description: 'Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.',
+  title: { absolute: 'Char Dham Yatra History & Spiritual Significance 2026' },
+  description: 'Char Dham Yatra 2026 — history & spiritual significance of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra history', 'char dham yatra significance', 'why char dham yatra is important', 'char dham yatra mythology', 'adi shankaracharya char dham', 'char dham yatra spiritual meaning', 'importance of char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
   openGraph: {

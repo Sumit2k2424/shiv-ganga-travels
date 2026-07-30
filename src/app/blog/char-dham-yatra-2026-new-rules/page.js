@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Char Dham Yatra New Rules 2026: Phone Ban & Green Card',
-  description: 'New Char Dham Yatra 2026 rules: phone ban inside temples, medical certificate for pilgrims 55+, Green Card vehicle permit and IRCTC helicopter booking.',
+  title: { absolute: 'Char Dham Yatra New Rules 2026 | Phone Ban & Green Card' },
+  description: 'Char Dham Yatra 2026 new rules — phone ban, medical certificate, Green Card. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra 2026 new rules', 'char dham yatra 2026 mobile phone ban', 'char dham yatra 2026 medical certificate', 'char dham green card 2026', 'kedarnath new rules 2026', 'char dham yatra 2026 regulations'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules` },
   openGraph: {

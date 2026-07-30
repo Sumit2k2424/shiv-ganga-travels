@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Hotels Near Badrinath 2026',
-  description: 'Best hotels near Badrinath 2026. Badrinath town, Joshimath, Chamoli and Rudraprayag stays — honest guide with prices and recommendations.',
+  title: { absolute: 'Hotels Near Badrinath 2026 | Best Stays | Joshimath & Chamoli' },
+  description: 'Hotels near Badrinath 2026 — Badrinath town, Joshimath, Chamoli & Rudraprayag. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['hotels near badrinath','badrinath hotels 2026','joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },
   openGraph: {

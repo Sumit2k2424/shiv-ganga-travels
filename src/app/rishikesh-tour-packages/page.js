@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Rishikesh Tour Packages 2026 — Rishikesh Trip',
-  description: 'Rishikesh tour packages 2026 from ₹3,999. Rishikesh trip package — Haridwar + Rishikesh combo, adventure, Ganga Aarti, ashram stays.',
+  title: { absolute: 'Rishikesh Tour Package 2026 | Price Starts at ₹3,999 | Ganga Aarti & Rafting' },
+  description: 'Rishikesh Tour Package 2026 from ₹3,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Haridwar combo, ashram stays.',
   keywords: [
     'rishikesh tour package','rishikesh package','rishikesh trip package','rishikesh travel packages',
     'rishikesh tours','trip to rishikesh','rishikesh tour','rishikesh haridwar tour package',

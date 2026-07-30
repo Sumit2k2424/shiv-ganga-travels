@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Yamunotri Yatra 2026 — Trek, Package, Surya',
-  description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
+  title: { absolute: 'Yamunotri Yatra Package 2026 | Price Starts at ₹5,999 | Trek & Pony Guide' },
+  description: 'Yamunotri Yatra 2026 from Haridwar — ₹5,999 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.',
   keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
   openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },

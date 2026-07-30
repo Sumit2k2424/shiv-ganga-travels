@@ -2,19 +2,19 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Chopta Tungnath 2026 — Trek, Best Time & Guide',
-  description: 'Chopta Tungnath Chandrashila trek 2026. Highest Shiva temple at 3,680m. Best time, how to reach and packages from Haridwar.',
+  title: { absolute: 'Chopta Tungnath Trek Guide 2026 | Best Time, Route & Packages' },
+  description: 'Chopta Tungnath Chandrashila trek 2026 — highest Shiva temple at 3,680m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek','chopta best time to visit 2026','chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
   openGraph: {
-    title: 'Chopta Tungnath 2026 — Complete Travel Guide',
+    title: 'Chopta Tungnath Trek Guide 2026 | Best Time, Route & Packages',
     description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple, Chandrashila summit, best time, how to reach, and packages from Haridwar.',
     url: `${SITE.baseUrl}/chopta-tungnath`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chopta Tungnath 2026 — Complete Travel Guide',
-    description: 'Complete guide to Chopta and Tungnath — India',
+    title: 'Chopta Tungnath Trek Guide 2026',
+    description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple. Trusted operator, 15+ yrs experience, fixed departures.',
     images: [{ url: '/opengraph-image', alt: 'Chopta Tungnath 2026 — Complete Travel Guide | Shiv Ganga Travels' }],
   },
 };

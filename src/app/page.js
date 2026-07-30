@@ -27,12 +27,12 @@ import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/
 const CounterStat = dynamic(() => import('@/components/CounterStat'), { ssr: true });
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra 2026 Packages from Haridwar — Shiv Ganga Travels` },
-  description: 'Char Dham Yatra 2026 packages from Haridwar. Direct operator, zero commission. From ₹18,500. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ served.',
+  title: { absolute: `Char Dham Yatra 2026 | Price Starts at ₹18,500 | Direct Operator, Zero Commission` },
+  description: 'Char Dham Yatra 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹18,500.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: 'Char Dham Yatra 2026 Packages Haridwar',
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Zero commission. Direct operator since 2010.',
+    title: 'Char Dham Yatra 2026 | Price Starts at ₹18,500',
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels Haridwar' }],

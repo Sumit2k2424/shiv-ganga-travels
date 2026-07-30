@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'Triyuginarayan Temple: Where Shiva Wed Parvati',
-  description: 'Triyuginarayan Temple — where Shiva and Parvati were married. 12 km from Sonprayag: darshan timings, how to reach and the best time to visit.',
+  title: { absolute: 'Triyuginarayan Temple 2026 | Where Shiva Wed Parvati | Guide' },
+  description: 'Triyuginarayan Temple — 12km from Sonprayag, darshan timings. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['triyuginarayan temple 2026', 'triyuginarayan temple kedarnath', 'triyuginarayan shiva parvati wedding', 'triyuginarayan temple guide', 'triyuginarayan yatra', 'sonprayag to triyuginarayan', 'triyuginarayan temple distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },
 };

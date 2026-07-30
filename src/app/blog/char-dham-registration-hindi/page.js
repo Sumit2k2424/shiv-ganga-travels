@@ -4,8 +4,8 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
-  title: 'चार धाम यात्रा रजिस्ट्रेशन 2026: मोबाइल से कैसे करें',
-  description: 'चार धाम यात्रा 2026 का ऑनलाइन रजिस्ट्रेशन मुफ्त है। WhatsApp और website से — 9 आसान steps में पूरी जानकारी हिंदी में। जरूरी दस्तावेज़ और 55+ उम्र के नियम।',
+  title: { absolute: 'चार धाम यात्रा रजिस्ट्रेशन 2026 | मोबाइल से कैसे करें | फ्री गाइड' },
+  description: 'चार धाम यात्रा 2026 रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
   keywords: ['चार धाम यात्रा रजिस्ट्रेशन 2026', 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', 'चार धाम पंजीकरण 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-registration-hindi` },
   openGraph: { title: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से घर बैठे कैसे करें?', description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article' },

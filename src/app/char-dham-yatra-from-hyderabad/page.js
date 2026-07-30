@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Hyderabad 2026: Packages',
-  description: 'Char Dham Yatra from Hyderabad 2026 — packages from ₹25,999/person with pickup, VIP darshan and free registration help. Direct Haridwar operator.',
+  title: { absolute: 'Char Dham Yatra from Hyderabad 2026 | Price Starts at ₹25,999 | Pickup & VIP Darshan' },
+  description: 'Char Dham Yatra from Hyderabad 2026 — 1,800km, 2h15m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from hyderabad','char dham yatra hyderabad 2026','char dham package from hyderabad','kedarnath from hyderabad','haridwar from hyderabad'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad` },
   openGraph: {

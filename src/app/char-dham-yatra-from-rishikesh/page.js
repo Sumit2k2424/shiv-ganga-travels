@@ -4,8 +4,8 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: 'Char Dham Yatra from Rishikesh 2026 — Packages',
-  description: 'Char Dham Yatra from Rishikesh 2026. 24km from Haridwar. All-inclusive packages from ₹21,000/person. Direct operator, zero commission.',
+  title: { absolute: 'Char Dham Yatra from Rishikesh 2026 | Price Starts at ₹21,000 | Door Pickup' },
+  description: 'Char Dham Yatra from Rishikesh 2026 — just 24km from Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. Zero commission.',
   keywords: [
     'char dham yatra from rishikesh', 'char dham yatra package rishikesh 2026',
     'rishikesh to char dham yatra', 'char dham tour from rishikesh',

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: 'Delhi to Haridwar Cab 2026 — Taxi Fare & Distance',
-  description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.',
+  title: { absolute: 'Delhi to Haridwar Cab 2026 | Price Starts at ₹2,800 | Fixed Fare' },
+  description: 'Delhi to Haridwar Cab 2026 — 210km via NH58, Swift Dzire from ₹2,800. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation.',
   keywords: ['delhi to haridwar cab,delhi to haridwar taxi fare,delhi to haridwar distance,cab from delhi to haridwar char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/delhi-to-haridwar-cab` },
   openGraph: { title: 'Delhi to Haridwar Cab 2026 — Taxi Fare, Distance, Char Dham Pickup', description: 'Book cab from Delhi to Haridwar for Char Dham Yatra 2026. 210km via NH58, 4–5 hours. Swift Dzire from ₹2,800. Pickup from IGI Airport, NDLS, or home.', url: `${SITE.baseUrl}/delhi-to-haridwar-cab`, type:'website' },
