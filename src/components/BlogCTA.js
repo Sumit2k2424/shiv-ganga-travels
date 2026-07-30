@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { WhatsAppIcon } from '@/components/Icon';
 
 /**
  * BlogCTA — full-width conversion block for blog articles
@@ -51,9 +52,9 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
           <a
             href={waHref}
             target="_blank" rel="nofollow noopener noreferrer"
-            style={{ background: '#25D366', color: '#fff', padding: '10px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}
+            style={{ background: '#25D366', color: '#fff', padding: '10px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: 7 }}
           >
-            💬 WhatsApp Quote
+            <WhatsAppIcon size={15} color="#fff" /> WhatsApp Quote
           </a>
           <Link
             href="/char-dham-yatra"
@@ -75,8 +76,8 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
       marginTop: 44,
     }}>
       {/* Top strip */}
-      <div style={{ background: 'var(--gold)', padding: '10px 24px', display: 'flex', alignItems: 'center', gap: 8 }}>
-        <span style={{ fontSize: 16 }}>🙏</span>
+      <div className="blog-cta__top" style={{ background: 'var(--gold)', padding: '10px 24px', display: 'flex', alignItems: 'center', gap: 8, position: 'relative', overflow: 'hidden' }}>
+        <span className="blog-cta__top-icon" style={{ fontSize: 16 }}>🙏</span>
         <span style={{ fontWeight: 800, fontSize: 13, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
           Plan Your Yatra — Shiv Ganga Travels, Haridwar · Est. 2010
         </span>
@@ -92,16 +93,16 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
         </p>
 
         {/* Trust proof row */}
-        <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginBottom: 22 }}>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 22 }}>
           {[
             ['⭐', '4.7/5 Rating', '54 reviews'],
             ['🤝', 'Direct Operator', 'Zero commission — no middleman'],
             ['✅', 'No Hidden Costs', 'All-inclusive price'],
             ['📞', '24×7 Support', 'On-route helpline'],
             ['🏆', 'Est. 2010', '15 years on these routes'],
-          ].map(([icon, title, sub]) => (
-            <div key={title} style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 140 }}>
-              <span style={{ fontSize: 20 }}>{icon}</span>
+          ].map(([icon, title, sub], i) => (
+            <div key={title} className="blog-cta__trust-item" style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 140, '--i': i }}>
+              <span className="blog-cta__trust-ico" style={{ fontSize: 20 }}>{icon}</span>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 12.5, color: '#FFD166' }}>{title}</div>
                 <div style={{ fontSize: 11.5, color: 'rgba(255,255,255,0.55)' }}>{sub}</div>
@@ -115,9 +116,10 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
           <a
             href={waHref}
             target="_blank" rel="nofollow noopener noreferrer"
+            className="blog-cta__btn-wa"
             style={{ background: '#25D366', color: '#fff', padding: '13px 24px', borderRadius: 10, fontWeight: 800, fontSize: 14.5, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
           >
-            💬 Book on WhatsApp
+            <WhatsAppIcon size={18} color="#fff" /> Book on WhatsApp
           </a>
           <Link
             href="/char-dham-yatra"
@@ -134,7 +136,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
         </div>
 
         {/* Price anchor */}
-        <div style={{ marginTop: 14, fontSize: 12.5, color: 'rgba(255,255,255,0.45)' }}>
+        <div className="blog-cta__price" style={{ marginTop: 14, fontSize: 12.5, color: 'rgba(255,255,255,0.45)' }}>
           Packages from <strong style={{ color: 'rgba(255,255,255,0.75)' }}>₹18,500 per person</strong> · All-inclusive · Haridwar pickup
         </div>
       </div>

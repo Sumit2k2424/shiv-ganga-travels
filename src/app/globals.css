@@ -1839,6 +1839,85 @@ body:has(.blog-progress) .lux-progress { display: none; }
 }
 .blog-cta--footer a[href^="https://wa.me"]:hover::after { left: 130%; }
 
+/* Premium polish on the footer CTA — gold strip shimmer, icon pulse,
+   hoverable trust chips, a highlighted price pill. All additive to the
+   card/button styling above; nothing here changes existing selectors. */
+.blog-cta--footer { position: relative; }
+.blog-cta--footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(232,146,10,0.5), rgba(37,211,102,0.45) 35%, rgba(11,123,139,0.4) 70%, rgba(232,146,10,0.5));
+  background-size: 220% 220%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: ctaBorderDrift 7s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes ctaBorderDrift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+.blog-cta__top {
+  isolation: isolate;
+}
+.blog-cta__top::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
+  transform: skewX(-18deg);
+  animation: ctaTopSheen 6s ease-in-out infinite;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+@keyframes ctaTopSheen {
+  0%, 15%  { left: -60%; }
+  35%, 100% { left: 130%; }
+}
+.blog-cta__top-icon {
+  display: inline-block;
+  animation: ctaIconPulse 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes ctaIconPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(1.18) rotate(-6deg); }
+}
+
+.blog-cta__trust-item {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background 0.3s cubic-bezier(.16,1,.3,1), border-color 0.3s cubic-bezier(.16,1,.3,1), transform 0.3s cubic-bezier(.16,1,.3,1);
+}
+.blog-cta__trust-item:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,209,102,0.35);
+  transform: translateY(-3px);
+}
+.blog-cta__trust-ico { display: inline-block; transition: transform 0.35s cubic-bezier(.16,1,.3,1); }
+.blog-cta__trust-item:hover .blog-cta__trust-ico { transform: scale(1.25) rotate(-8deg); }
+
+.blog-cta__price {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 100px;
+  background: rgba(255,209,102,0.08);
+  border: 1px solid rgba(255,209,102,0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-cta--footer::before { animation: none; background-position: 0% 50%; }
+  .blog-cta__top::after { animation: none; display: none; }
+  .blog-cta__top-icon { animation: none; }
+}
+
 /* Inline CTA on small screens: stack it so the button row can never overflow
    the box or overlap the headline text. Buttons go full-width and wrap. */
 @media (max-width: 560px) {
