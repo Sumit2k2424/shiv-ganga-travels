@@ -109,44 +109,6 @@ const HOME_CSS = `
   .lux-intent__top { display:flex; align-items:center; justify-content:space-between; }
   .lux-intent__price { font-family:var(--font-display); font-size:1.5rem; color:var(--ink); letter-spacing:-0.02em; }
 
-  /* Three-pillar band — replaces the old counter row (its figures already
-     live in the hero trust strip). Glass panels on the warm paper-deep tone
-     read as "transparent" rather than a solid block; the conic-gradient
-     glow rotating behind each one is the "catches the eye" motion. */
-  .lux-pillars { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
-  @media (max-width:820px){ .lux-pillars{ grid-template-columns:1fr; } }
-  .lux-pillar {
-    position:relative; overflow:hidden;
-    padding:34px 28px; display:flex; flex-direction:column; gap:12px;
-    transition:transform .5s var(--ease-lux), box-shadow .5s var(--ease-lux), border-color .5s var(--ease-lux);
-  }
-  .lux-pillar:hover { transform:translateY(-5px); box-shadow:var(--ds-elev-gold); border-color:var(--gold-hair); }
-  .lux-pillar > * { position:relative; z-index:1; }
-  .lux-pillar__glow {
-    position:absolute; inset:-60%; z-index:0; opacity:0.16;
-    background:conic-gradient(from 0deg, transparent 0 60%, var(--gold) 78%, transparent 92%);
-    animation:pillarSpin 8s linear infinite;
-  }
-  .lux-pillar:nth-child(2) .lux-pillar__glow { animation-duration:10s; animation-direction:reverse; }
-  .lux-pillar:nth-child(3) .lux-pillar__glow { animation-duration:7s; }
-  @keyframes pillarSpin { to { transform:rotate(360deg); } }
-  .lux-pillar__ico {
-    width:52px; height:52px; border-radius:var(--ds-r-pill);
-    display:grid; place-items:center; flex:none;
-    background:var(--gold-wash); border:1px solid var(--gold-hair); color:var(--gold-dark);
-    animation:pillarPulse 3.2s var(--ease-lux) infinite;
-  }
-  .lux-pillar:nth-child(2) .lux-pillar__ico { animation-delay:0.3s; }
-  .lux-pillar:nth-child(3) .lux-pillar__ico { animation-delay:0.6s; }
-  @keyframes pillarPulse {
-    0%, 100% { box-shadow:0 0 0 0 rgba(232,146,10,0.28); }
-    50%      { box-shadow:0 0 0 8px rgba(232,146,10,0); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .lux-pillar__glow { animation:none; opacity:0.08; }
-    .lux-pillar__ico { animation:none; }
-  }
-
   /* Destination cards */
   .lux-dest { position:relative; display:block; overflow:hidden; border-radius:var(--ds-r-2); text-decoration:none; }
   .lux-dest__cap { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:24px; color:#fff; }
@@ -229,12 +191,6 @@ const INTENTS = [
   { icon:'mountain', title:'Kedarnath Yatra', desc:'Three nights, four days — Lord Shiva’s abode at 3,583 m.', tag:'Shortest trip', from:'₹6,999', href:'/kedarnath-yatra' },
   { icon:'helicopter', title:'Helicopter Package', desc:'All four dhams in six days — for seniors and VIP darshan.', tag:'Premium', from:'₹85,000', href:'/char-dham-helicopter' },
   { icon:'car', title:'Just the Cab', desc:'Vehicle only — Innova, Ertiga or Tempo from Haridwar.', tag:'Cab only', from:'₹5,500', href:'/char-dham-yatra-cab-booking' },
-];
-
-const PILLARS = [
-  { icon:'handshake', t:'Direct Operator', d:'You book with the people who run your yatra — no reseller in between, no reseller markup either.' },
-  { icon:'receipt',   t:'Zero Commission', d:'The price you see is the price we charge. No agent cut quietly folded into the quote.' },
-  { icon:'compass',   t:'Local Handling',  d:'Haridwar-based, on the ground every season — hotels, drivers and guides we know personally.' },
 ];
 
 const DESTINATIONS = [
@@ -341,19 +297,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ═══ 2 · WHY BOOK DIRECT — three pillars (figures already live in the hero) ═══ */}
-      <Section tone="paper-deep" tight>
-        <div className="lux-pillars" data-lux-stagger="">
-          {PILLARS.map((p) => (
-            <div key={p.t} className="lux-pillar lux-glass">
-              <span className="lux-pillar__glow" aria-hidden="true" />
-              <span className="lux-pillar__ico"><Icon name={p.icon} size={22} /></span>
-              <h3 className="lux-display lux-display--sm">{p.t}</h3>
-              <p className="lux-body" style={{ fontSize: '0.875rem', margin: 0 }}>{p.d}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      {/* Why-book-direct pillars now render site-wide from app/layout.js
+          (WhyBookDirect.js), just above the footer, instead of here. */}
 
       {/* ═══ 3 · IMMERSIVE DESTINATIONS — The Sacred Four ═══ */}
       <Section tone="paper">

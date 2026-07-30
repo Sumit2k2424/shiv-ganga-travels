@@ -566,6 +566,60 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: hidden; }
 
 /* ══════════════════════════════════════════════════════════════
+   9b · WHY-BOOK-DIRECT PILLARS (WhyBookDirect.js)
+   Site-wide reassurance band, mounted once in app/layout.js just
+   above the footer. Glass panels on the warm paper-deep tone read
+   as "transparent" rather than a solid block; the conic-gradient
+   glow rotating behind each one is the "catches the eye" motion.
+   ══════════════════════════════════════════════════════════════ */
+.lux-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 820px) { .lux-pillars { grid-template-columns: 1fr; } }
+.lux-pillar {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.5s var(--ease-lux), box-shadow 0.5s var(--ease-lux), border-color 0.5s var(--ease-lux);
+}
+.lux-pillar:hover { transform: translateY(-5px); box-shadow: var(--ds-elev-gold); border-color: var(--gold-hair); }
+.lux-pillar > * { position: relative; z-index: 1; }
+.lux-pillar__glow {
+  position: absolute;
+  inset: -60%;
+  z-index: 0;
+  opacity: 0.16;
+  background: conic-gradient(from 0deg, transparent 0 60%, var(--gold) 78%, transparent 92%);
+  animation: pillarSpin 8s linear infinite;
+}
+.lux-pillar:nth-child(2) .lux-pillar__glow { animation-duration: 10s; animation-direction: reverse; }
+.lux-pillar:nth-child(3) .lux-pillar__glow { animation-duration: 7s; }
+@keyframes pillarSpin { to { transform: rotate(360deg); } }
+.lux-pillar__ico {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--ds-r-pill);
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--gold-wash);
+  border: 1px solid var(--gold-hair);
+  color: var(--gold-dark);
+  animation: pillarPulse 3.2s var(--ease-lux) infinite;
+}
+.lux-pillar:nth-child(2) .lux-pillar__ico { animation-delay: 0.3s; }
+.lux-pillar:nth-child(3) .lux-pillar__ico { animation-delay: 0.6s; }
+@keyframes pillarPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 146, 10, 0.28); }
+  50%      { box-shadow: 0 0 0 8px rgba(232, 146, 10, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lux-pillar__glow { animation: none; opacity: 0.08; }
+  .lux-pillar__ico { animation: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════
    10 · UTILITIES
    ══════════════════════════════════════════════════════════════ */
 
