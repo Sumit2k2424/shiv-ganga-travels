@@ -7,6 +7,7 @@ import WhyOurPrice from '@/components/WhyOurPrice';
 import { BlurFade } from '@/components/magicui/blur-fade';
 import CategoryView from './CategoryView';
 import RouteMap from '@/components/lux/RouteMap';
+import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
 import { HOTELS, ROUTE, ROUTE_BY_CATEGORY } from '@/data/experience';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
@@ -247,6 +248,9 @@ export default async function PackageDetailPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* Why book direct — always immediately below the hero */}
+      <WhyBookDirect />
 
       {/* Sticky bar */}
       <div className="sticky-book-bar">

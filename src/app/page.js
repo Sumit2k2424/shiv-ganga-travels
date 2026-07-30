@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import { HOTELS, VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import HeroSection from '@/components/HeroSection';
+import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import RouteMap from '@/components/lux/RouteMap';
 import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
@@ -274,6 +275,9 @@ export default function HomePage() {
 
       {/* ── Cinematic hero (preserved: LCP, speakable, animated bg) ── */}
       <HeroSection />
+
+      {/* Why book direct — always immediately below the hero */}
+      <WhyBookDirect />
 
       {/* ═══ 1 · INTENT SELECTOR ═══ */}
       <Section tone="paper" tight>

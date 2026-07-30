@@ -11,7 +11,6 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LuxMotion from '@/components/lux/LuxMotion';
 import LuxCursor from '@/components/lux/LuxCursor';
-import WhyBookDirect from '@/components/lux/WhyBookDirect';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
@@ -443,7 +442,6 @@ export default function RootLayout({ children }) {
         {/* DirectOperatorStrip removed — its message now lives in the Navbar
             utility strip, collapsing four stacked header bars into two. */}
         <main id="main-content" style={{ flex:1 }} role="main">{children}</main>
-        <WhyBookDirect/>
         <Footer/>
         {/* Single floating contact bubble. ChatBot removed: two overlapping
             bubbles + a fake "1" unread badge is a dark pattern. */}

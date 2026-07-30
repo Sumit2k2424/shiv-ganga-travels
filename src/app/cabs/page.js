@@ -4,6 +4,7 @@ import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import { CAB_BASES, getCabRoutesByBase } from '@/data/cabRoutes';
 import CabBookingWizard from '@/components/CabBookingWizard';
 import RouteMap from '@/components/lux/RouteMap';
+import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import { Section, SectionHead, Reveal, Eyebrow, Pill } from '@/components/lux/primitives';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
@@ -62,6 +63,9 @@ export default function CabsPage() {
           </Reveal>
         </div>
       </Section>
+
+      {/* Why book direct — always immediately below the hero */}
+      <WhyBookDirect />
 
       {/* ── Booking wizard ── */}
       <Section tone="paper" tight>
