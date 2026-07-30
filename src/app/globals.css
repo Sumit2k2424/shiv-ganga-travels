@@ -1486,12 +1486,19 @@ article .section-rule {
   article thead th, article tbody td { padding: 8px 10px; }
 }
 
-/* Blog page max-width for readable line length */
+/* Blog page width — wider shell fills the desktop; body prose is capped
+   below (.blog-container > p) so line length stays readable. */
 .blog-container {
-  max-width: 860px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 40px 20px 60px;
 }
+/* Keep the running text at a comfortable measure even though the shell is
+   wide — only body paragraphs (flat or section-wrapped); cards, callouts,
+   tables and grids still fill the full width. */
+.blog-container > p,
+.blog-container > section > p { max-width: 760px; }
+.blog-container > p.blog-lede { max-width: 820px; }
 
 /* Blog meta strip (author, date, read time) */
 .blog-meta {
@@ -1640,7 +1647,7 @@ article .section-rule {
 /* Quick-facts strip — overlaps the hero base */
 .blog-facts-wrap { padding: 0 20px; margin-top: -60px; position: relative; z-index: 3; }
 .blog-facts {
-  max-width: 820px; margin: 0 auto;
+  max-width: 1040px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1px; background: var(--border);
   border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
