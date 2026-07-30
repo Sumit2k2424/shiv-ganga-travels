@@ -1,3 +1,5 @@
+import WhyBookDirect from '@/components/lux/WhyBookDirect';
+
 /**
  * BlogHero — premium editorial hero for blog articles.
  *
@@ -90,6 +92,9 @@ export default function BlogHero({
           </div>
         </div>
       )}
+
+      {/* Why book direct — always immediately below the hero */}
+      <WhyBookDirect />
     </>
   );
 }
