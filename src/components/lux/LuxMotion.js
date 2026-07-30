@@ -31,6 +31,24 @@ export default function LuxMotion() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const cleanups = [];
 
+    /* ── 0 · Page-entry curtain ─────────────────────────────────
+       Renders only on pages that opt in (currently the homepage).
+       Fades once its own loading bar finishes filling, so the wait
+       always reads as purposeful rather than an arbitrary delay. */
+    const curtain = document.querySelector('[data-lux-curtain]');
+    if (curtain) {
+      const finish = () => curtain.classList.add('is-done');
+      if (reduced) {
+        finish();
+      } else {
+        const bar = curtain.querySelector('.lux-curtain__bar > i');
+        if (bar) bar.addEventListener('animationend', finish, { once: true });
+        // Safety net: never let the curtain outlast ~1.6s, even if the
+        // animationend event is missed (backgrounded tab, slow paint).
+        setTimeout(finish, 1600);
+      }
+    }
+
     /* ── 1 · Reveal observer ────────────────────────────────── */
     const seen = new WeakSet();
 

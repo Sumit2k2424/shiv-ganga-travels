@@ -13,7 +13,6 @@
 
 import '../luxury.css';
 import '../design-system.css';
-import LuxMotion from '@/components/lux/LuxMotion';
 import Icon from '@/components/Icon';
 import {
   Section, SectionHead, Reveal, Stagger, Eyebrow, Pill, Rule, Facts, Frame,
@@ -86,7 +85,6 @@ export default function StyleGuide() {
   return (
     <div className="sg-body lux-noscroll-x">
       <style dangerouslySetInnerHTML={{ __html: SCAFFOLD }} />
-      <LuxMotion />
 
       {/* ── Masthead ─────────────────────────────────────────── */}
       <Section tone="ink" className="sg-block" style={{ paddingTop: 'clamp(72px,10vw,132px)' }}>

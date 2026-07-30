@@ -18,7 +18,6 @@ import { PACKAGES, SITE, GLOBAL_FAQS, TRUST } from '@/data/packages';
 import { HOTELS, VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import HeroSection from '@/components/HeroSection';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
-import LuxMotion from '@/components/lux/LuxMotion';
 import RouteMap from '@/components/lux/RouteMap';
 import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
@@ -105,10 +104,12 @@ const HOME_CSS = `
   .lux-intent { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); }
   @media (max-width:900px){ .lux-intent{ grid-template-columns:repeat(2,minmax(0,1fr));} }
   @media (max-width:560px){ .lux-intent{ grid-template-columns:1fr;} }
-  .lux-intent__card { background:#fff; padding:28px 24px; display:flex; flex-direction:column; gap:14px; text-decoration:none; color:inherit; transition:background .4s var(--ease-lux); position:relative; }
-  .lux-intent__card:hover { background:var(--paper); }
+  .lux-intent__card { background:#fff; padding:34px 28px; display:flex; flex-direction:column; gap:16px; text-decoration:none; color:inherit; transition:background .4s var(--ease-lux), transform .4s var(--ease-lux), box-shadow .4s var(--ease-lux); position:relative; }
+  .lux-intent__card:hover { background:var(--paper); transform:translateY(-3px); box-shadow:var(--ds-elev-2); }
   .lux-intent__card::after { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--gold); transform:scaleY(0); transform-origin:top; transition:transform .45s var(--ease-lux); }
   .lux-intent__card:hover::after { transform:scaleY(1); }
+  .lux-intent__card .lux-link svg { transition:transform .45s var(--ease-lux); }
+  .lux-intent__card:hover .lux-link svg { transform:translateX(3px); }
   .lux-intent__top { display:flex; align-items:center; justify-content:space-between; }
   .lux-intent__price { font-family:var(--font-display); font-size:1.5rem; color:var(--ink); letter-spacing:-0.02em; }
 
@@ -141,12 +142,15 @@ const HOME_CSS = `
   .lux-steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); }
   @media (max-width:820px){ .lux-steps{ grid-template-columns:repeat(2,minmax(0,1fr));} }
   @media (max-width:480px){ .lux-steps{ grid-template-columns:1fr;} }
-  .lux-step { background:#fff; padding:30px 24px; }
+  .lux-step { background:#fff; padding:36px 28px; transition:background .4s var(--ease-lux); }
+  .lux-step:hover { background:var(--paper); }
   .lux-step__n { font-family:var(--font-display); font-size:2.4rem; color:var(--gold); line-height:1; letter-spacing:-0.03em; }
 
   /* Funnel columns */
   .lux-funnel-link { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--rule); border-radius:var(--ds-r-2); text-decoration:none; color:var(--ink); font-size:0.875rem; transition:border-color .35s var(--ease-lux), background .35s var(--ease-lux); }
   .lux-funnel-link:hover { border-color:var(--gold-hair); background:var(--gold-wash); }
+  .lux-funnel-link svg { transition:transform .35s var(--ease-lux); }
+  .lux-funnel-link:hover svg { transform:translateX(3px); }
   .lux-section--ink .lux-funnel-link, .lux-section--navy .lux-funnel-link { border-color:var(--rule-light-soft); color:#fff; }
 
   .lux-inline-links a { color:var(--teal-dark); font-weight:500; text-decoration:none; }
@@ -160,7 +164,7 @@ const HOME_CSS = `
 function LuxPkgCard({ pkg }) {
   const n = pkg.duration?.nights, d = pkg.duration?.days;
   return (
-    <Link href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-pcard" data-lux-reveal="">
+    <Link href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-pcard" data-lux-reveal="" data-cursor="View">
       <div className="lux-frame lux-frame--3x2 lux-frame--zoom" style={{ position: 'relative' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={pkg.photo} alt={pkg.name} loading="lazy" decoding="async" width={560} height={373} />
@@ -269,8 +273,8 @@ export default function HomePage() {
     <div className="lux-home lux-noscroll-x">
       <Schema />
       <style dangerouslySetInnerHTML={{ __html: HOME_CSS }} />
-      <LuxMotion />
-      <div className="lux-progress" data-lux-progress aria-hidden="true" />
+      {/* Motion runtime, scroll-progress rail and page-entry curtain are
+          mounted once, site-wide, in app/layout.js. */}
 
       {/* ── Cinematic hero (preserved: LCP, speakable, animated bg) ── */}
       <HeroSection />
@@ -281,7 +285,7 @@ export default function HomePage() {
           lede="Four ways to travel the Himalaya. Choose the one that fits your time and your pace — each opens to a full itinerary and honest pricing." />
         <div className="lux-intent" data-lux-reveal="">
           {INTENTS.map((c) => (
-            <Link key={c.href} href={c.href} className="lux-intent__card">
+            <Link key={c.href} href={c.href} className="lux-intent__card" data-cursor="Explore">
               <div className="lux-intent__top">
                 <span className="lux-ico-chip"><Icon name={c.icon} size={20} /></span>
                 <Pill tone="gold">{c.tag}</Pill>
@@ -314,10 +318,10 @@ export default function HomePage() {
           lede="Four shrines strung across the Garhwal Himalaya — a journey Hindus make once in a lifetime. Each is a world of its own." />
         <div className="lux-grid lux-grid--4" data-lux-stagger="">
           {DESTINATIONS.map((dn) => (
-            <Link key={dn.name} href={dn.href} className="lux-dest lux-scrim lux-zoom-host">
+            <Link key={dn.name} href={dn.href} className="lux-dest lux-scrim lux-zoom-host" data-cursor="View">
               <div className="lux-frame lux-frame--4x5 lux-frame--zoom">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={dn.photo} alt={dn.alt2} loading="lazy" decoding="async" width={800} height={1000} />
+                <img src={dn.photo} alt={dn.alt2} loading="lazy" decoding="async" width={800} height={1000} data-lux-parallax="0.06" />
               </div>
               <div className="lux-dest__cap">
                 <span className="lux-caption">{dn.alt}</span>
@@ -382,7 +386,7 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{ marginTop: 40, textAlign: 'center' }}>
-          <a href={wa('Namaste! Please send me the full line-by-line price breakdown for Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa">
+          <a href={wa('Namaste! Please send me the full line-by-line price breakdown for Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa" data-magnetic data-cursor="Chat">
             <WhatsAppIcon size={16} /> Get my full price breakdown
           </a>
           <p className="lux-caption" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '18px auto 0' }}>
@@ -463,7 +467,7 @@ export default function HomePage() {
           <Reveal variant="right">
             <div className="lux-frame lux-frame--4x5 lux-scrim lux-zoom-host">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt="Kedarnath at 3,583 m — the final darshan of the circuit" loading="lazy" decoding="async" width={900} height={1125} />
+              <img src="https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt="Kedarnath at 3,583 m — the final darshan of the circuit" loading="lazy" decoding="async" width={900} height={1125} data-lux-parallax="0.08" />
               <div className="lux-dest__cap">
                 <h3 className="lux-display lux-display--sm" style={{ color: '#fff' }}>Kedarnath, 3,583 m</h3>
                 <span className="lux-caption">The final darshan of the circuit — and the reason every checklist exists.</span>
@@ -645,10 +649,10 @@ export default function HomePage() {
             </p>
           </Reveal>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', margin: '34px 0 44px' }}>
-            <a href={wa('Namaste! I want to book Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa">
+            <a href={wa('Namaste! I want to book Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa" data-magnetic data-cursor="Chat">
               <WhatsAppIcon size={16} /> WhatsApp us now
             </a>
-            <a href={tel} className="lux-btn lux-btn--ghost-light">
+            <a href={tel} className="lux-btn lux-btn--ghost-light" data-magnetic>
               <Icon name="phone" size={15} /> {SITE.phone}
             </a>
           </div>

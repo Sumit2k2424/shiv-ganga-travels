@@ -94,7 +94,7 @@ export default function HeroSearch() {
             hs-cta class adds one soft glow every ~9s (never a nagging pulse),
             drawing the eye to the action calmly. Glow is disabled under
             prefers-reduced-motion in the style block below. */}
-        <button type="submit" className="hs-cta" style={{
+        <button type="submit" className="hs-cta" data-magnetic data-cursor="Go" style={{
           flex:'1 1 200px', minWidth:190,
           background:'var(--gold)',
           color:'#fff', border:'none', cursor:'pointer',

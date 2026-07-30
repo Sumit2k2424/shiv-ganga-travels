@@ -9,6 +9,8 @@ import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import LuxMotion from '@/components/lux/LuxMotion';
+import LuxCursor from '@/components/lux/LuxCursor';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
@@ -422,6 +424,19 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guidance"/>
       </head>
       <body style={{ display:'flex', flexDirection:'column', minHeight:'100vh' }}>
+        {/* Site-wide motion runtime: Lenis smooth scroll (desktop pointer
+            devices), the IntersectionObserver reveal/parallax engine, and the
+            scroll-progress rail. A no-op on pages with no data-lux-* markup. */}
+        <LuxMotion/>
+        <LuxCursor/>
+        <div className="lux-progress" data-lux-progress aria-hidden="true"/>
+        {/* Cinematic page-entry loader — fades once its own bar fills. */}
+        <div className="lux-curtain" data-lux-curtain aria-hidden="true">
+          <div>
+            <div className="lux-curtain__mark">Shiv Ganga</div>
+            <div className="lux-curtain__bar"><i/></div>
+          </div>
+        </div>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Navbar/>
         {/* DirectOperatorStrip removed — its message now lives in the Navbar

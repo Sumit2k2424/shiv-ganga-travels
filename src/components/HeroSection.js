@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useRef } from 'react';
 import HeroSearch from '@/components/HeroSearch';
 import Icon from '@/components/Icon';
 import KedarnathScene from '@/components/lux/KedarnathScene';
@@ -33,6 +34,37 @@ const HERO_TRUST = [
 ];
 
 export default function HeroSection() {
+  // Restrained pointer-parallax on the scene — a nod to the reactive heroes
+  // on sites like cuberto.com, kept small (max ~10px) so it reads as the
+  // scene quietly drifting rather than a gimmick. Desktop fine-pointer only;
+  // a full no-op under prefers-reduced-motion. Lives on an inner wrapper so
+  // it composes with (never fights) the CSS `heroPush` scale animation on
+  // the outer `.hero-photo` element.
+  const parallaxRef = useRef(null);
+  useEffect(() => {
+    const el = parallaxRef.current;
+    if (!el) return;
+    const fine = window.matchMedia('(pointer: fine)').matches;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!fine || reduced) return;
+
+    const AMPLITUDE = 10; // px
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+    const paint = () => {
+      cx += (tx - cx) * 0.06;
+      cy += (ty - cy) * 0.06;
+      el.style.transform = `translate3d(${(cx * AMPLITUDE).toFixed(2)}px, ${(cy * AMPLITUDE * 0.6).toFixed(2)}px, 0)`;
+      raf = requestAnimationFrame(paint);
+    };
+    const onMove = (e) => {
+      tx = (e.clientX / window.innerWidth - 0.5) * 2;
+      ty = (e.clientY / window.innerHeight - 0.5) * 2;
+    };
+    window.addEventListener('mousemove', onMove, { passive: true });
+    raf = requestAnimationFrame(paint);
+    return () => { window.removeEventListener('mousemove', onMove); cancelAnimationFrame(raf); };
+  }, []);
+
   return (
     <section style={{
       position:'relative',
@@ -51,7 +83,9 @@ export default function HeroSection() {
       {/* Animated Kedarnath scene — wrapped so the slow push-in scales the
           frame, not the SVG box. Vector, so it stays crisp at any scale. */}
       <div className="hero-photo" aria-hidden="true" style={{ position:'absolute', inset:0, overflow:'hidden' }}>
-        <KedarnathScene/>
+        <div ref={parallaxRef} style={{ width:'100%', height:'100%' }}>
+          <KedarnathScene/>
+        </div>
       </div>
 
       {/* Scrims — the scene is already dark at the base, so these are lighter

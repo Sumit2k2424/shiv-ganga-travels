@@ -457,6 +457,65 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   7b · MAGNETIC CURSOR (LuxCursor.js)
+   A trailing ring that grows into a text label over `data-cursor`
+   targets. Hidden entirely unless JS confirms a fine pointer and no
+   reduced-motion preference — see `html.lux-cursor-active` below —
+   so touch devices and no-JS visitors never see a stray ring.
+   ══════════════════════════════════════════════════════════════ */
+.lux-cursor__ring { display: none; }
+html.lux-cursor-active .lux-cursor__ring {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
+  border-radius: 100px;
+  border: 1.5px solid var(--gold);
+  background: rgba(232, 146, 10, 0.08);
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: width 0.4s var(--ease-lux), height 0.4s var(--ease-lux),
+              margin 0.4s var(--ease-lux), background 0.4s var(--ease-lux),
+              border-color 0.4s var(--ease-lux), opacity 0.3s var(--ease-lux);
+}
+.lux-cursor__ring--hide { opacity: 0 !important; }
+.lux-cursor__ring-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #10203C;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.25s var(--ease-lux);
+}
+.lux-cursor__ring--label {
+  width: 68px;
+  height: 68px;
+  margin: -34px 0 0 -34px;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.lux-cursor__ring--label .lux-cursor__ring-label { opacity: 1; }
+
+/* Elements the ring grows over read as clickable at a glance, so it is
+   worth a small honesty check: only ever attach `data-cursor` to things
+   that really are. `data-magnetic` elements ease toward the pointer via
+   inline transforms set by LuxCursor.js — the transition below is what
+   makes the release (on mouseleave, when JS resets the inline style to
+   '') read as a spring rather than a snap. */
+[data-magnetic] { transition: transform 0.5s var(--ease-glide); }
+
+@media (pointer: coarse) {
+  html.lux-cursor-active .lux-cursor__ring { display: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════
    8 · CINEMATIC PAGE ENTRY
    ══════════════════════════════════════════════════════════════ */
 

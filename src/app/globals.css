@@ -1592,6 +1592,10 @@ article .section-rule {
   will-change: width;
   pointer-events: none;
 }
+/* Blog posts run their own reading-progress bar above. Suppress the
+   generic site-wide scroll rail (app/layout.js) so pages never stack two
+   fixed bars at the same position. */
+body:has(.blog-progress) .lux-progress { display: none; }
 
 /* ── Editorial hero ── */
 .blog-hero {
@@ -1834,6 +1838,25 @@ article .section-rule {
   transform: skewX(-18deg); transition: left .55s ease; pointer-events: none;
 }
 .blog-cta--footer a[href^="https://wa.me"]:hover::after { left: 130%; }
+
+/* Inline CTA on small screens: stack it so the button row can never overflow
+   the box or overlap the headline text. Buttons go full-width and wrap. */
+@media (max-width: 560px) {
+  .blog-cta:not(.blog-cta--footer) {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .blog-cta:not(.blog-cta--footer) > div:last-child {
+    width: 100%;
+    justify-content: center;
+  }
+  .blog-cta:not(.blog-cta--footer) > div:last-child > a {
+    flex: 1 1 140px;
+    justify-content: center;
+    text-align: center;
+  }
+}
 
 @media (max-width: 640px) {
   .blog-hero { padding: 44px 18px 84px; }

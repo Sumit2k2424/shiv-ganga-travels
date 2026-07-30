@@ -6,7 +6,6 @@ import FloatingBookCTA from '@/components/FloatingBookCTA';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import { BlurFade } from '@/components/magicui/blur-fade';
 import CategoryView from './CategoryView';
-import LuxMotion from '@/components/lux/LuxMotion';
 import RouteMap from '@/components/lux/RouteMap';
 import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
 import { HOTELS, ROUTE, ROUTE_BY_CATEGORY } from '@/data/experience';
@@ -164,12 +163,7 @@ export default async function PackageDetailPage({ params }) {
     const cat  = CATEGORIES[slug];
     const pkgs = PACKAGES.filter(p => p.category === slug);
     const guides = CATEGORY_GUIDES[slug] || [];
-    return (
-      <>
-        <LuxMotion />
-        <CategoryView category={cat} packages={pkgs} guides={guides} />
-      </>
-    );
+    return <CategoryView category={cat} packages={pkgs} guides={guides} />;
   }
 
   const pkg = getPackageBySlug(slug);
@@ -209,8 +203,7 @@ export default async function PackageDetailPage({ params }) {
   return (
     <>
       <Schemas pkg={pkg}/>
-      <LuxMotion />
-      <div className="lux-progress" data-lux-progress aria-hidden="true" />
+      {/* Motion runtime + scroll-progress rail are mounted site-wide in app/layout.js. */}
 
       {/* Hero — editorial masthead */}
       <section className="lux-hero" style={{ minHeight:'min(62svh,540px)' }}>
