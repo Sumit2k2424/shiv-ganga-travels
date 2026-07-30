@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'चार धाम यात्रा पैकिंग लिस्ट 2026 | हिंदी में | प्रिंट करें' },
@@ -47,23 +50,33 @@ export default function CharDhamPackingListHindi() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>🎒 पैकिंग गाइड · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं?</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>यह लिस्ट Print करके बैग में रख लो — घर से निकलने से पहले एक बार check करना</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="🎒 पैकिंग गाइड · 2026"
+        title="चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं?"
+        dek="यह लिस्ट Print करके बैग में रख लो — घर से निकलने से पहले एक बार check करना"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="6 मिनट"
+        facts={[
+          { label:"वजन", value:"10–12 kg" },
+          { label:"कपड़े", value:"थर्मल + जैकेट" },
+          { label:"कैश", value:"₹8,000+" },
+          { label:"जूते", value:"ट्रेकिंग शूज़" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम पैकिंग लिस्ट 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -73,7 +86,18 @@ export default function CharDhamPackingListHindi() {
           <strong style={{ color: '#993C1D' }}>याद रखें:</strong><span style={{ color: '#334155', fontSize: 14 }}> 10-11 दिन की यात्रा। केदारनाथ में 16 km + यमुनोत्री में 6 km पैदल चलना है। <strong>जो उठाने में दर्द हो, वो घर छोड़ दो।</strong></span>
         </div>
 
-        <h2 style={{ ...h2, marginTop: 8 }}>🧥 Part 1 — कपड़े</h2>
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"part1", label:"कपड़े" },
+          { id:"part2", label:"दवाइयां" },
+          { id:"part3", label:"Electronics" },
+          { id:"part4", label:"दस्तावेज" },
+          { id:"part5", label:"पूजा सामग्री" },
+          { id:"part6", label:"खाने-पीने का सामान" },
+          { id:"leave-home", label:"क्या न ले जाएं" },
+          { id:"checklist", label:"लास्ट-मिनट चेकलिस्ट" },
+        ]}/>
+
+        <h2 id="part1" style={{ ...h2, marginTop: 8 }}>🧥 Part 1 — कपड़े</h2>
         <p style={{ ...p, fontSize: 14, marginBottom: 8 }}><strong>गर्म कपड़े (सबसे जरूरी)</strong> — केदारनाथ में रात को 2-5°C होती है, जून में भी</p>
         <CheckList color="#533AB7" items={[
           ['थर्मल इनर (ऊपर)','2 पीस'],['थर्मल इनर (नीचे)','2 पीस'],['ऊनी Sweater / Fleece','2'],
@@ -90,7 +114,7 @@ export default function CharDhamPackingListHindi() {
           ['ट्रेकिंग जूते (Anti-slip)','1 जोड़ी — नए जूते मत लाएं'],['साधारण चप्पल','होटल के लिए'],['Rubber Slippers','मंदिर के लिए'],
         ]}/>
 
-        <h2 style={h2}>💊 Part 2 — दवाइयां (Medical Kit)</h2>
+        <h2 id="part2" style={h2}>💊 Part 2 — दवाइयां (Medical Kit)</h2>
         <div style={{ background: 'rgba(216,90,48,0.05)', borderRadius: 10, padding: '12px 16px', border: '1px solid #F5C4B3', marginBottom: 12, fontSize: 13.5, color: '#334155' }}>
           <strong>हमारी हर गाड़ी में ऑक्सीजन सिलेंडर और First Aid Kit होती है।</strong> फिर भी अपनी दवाइयां जरूर लाएं।
         </div>
@@ -102,28 +126,28 @@ export default function CharDhamPackingListHindi() {
           ['Band-Aid + Betadine','घाव, कट'],['अपनी नियमित दवाएं','Extra 3 दिन की'],
         ]}/>
 
-        <h2 style={h2}>🔦 Part 3 — Electronics</h2>
+        <h2 id="part3" style={h2}>🔦 Part 3 — Electronics</h2>
         <CheckList color="#533AB7" items={[
           ['Power Bank (20,000 mAh)','सबसे जरूरी — केदारनाथ में चार्जिंग नहीं'],
           ['Charging Cable + Adapter','1'],['BSNL SIM','पहाड़ों में जरूरी'],
           ['Torch / Headlamp','रात को'],['Extra Batteries','2-4'],
         ]}/>
 
-        <h2 style={h2}>📦 Part 4 — जरूरी दस्तावेज</h2>
+        <h2 id="part4" style={h2}>📦 Part 4 — जरूरी दस्तावेज</h2>
         <CheckList color="#1D9E75" items={[
           ['Aadhaar Card (original + copy)','हर यात्री का'],['E-Pass (Mobile + Print)','रजिस्ट्रेशन का'],
           ['Passport Size Photos (4-6)','जरूरत पड़ सकती है'],['Doctor Certificate','55+ उम्र के लिए अनिवार्य'],
           ['₹20,000+ नकद','ATM नहीं मिलते'],
         ]}/>
 
-        <h2 style={h2}>🙏 Part 5 — पूजा सामग्री</h2>
+        <h2 id="part5" style={h2}>🙏 Part 5 — पूजा सामग्री</h2>
         <CheckList items={[
           ['धोती / दुपट्टा','पूजा के लिए'],['रोली, चावल, फूल','घर से लाएं, सस्ता पड़ेगा'],
           ['Camphor (कपूर)','1 डिब्बी'],['माचिस','1-2'],
           ['प्रसाद (पेड़े/मिठाई)','थोड़ा'],['छोटी थैली','प्रसाद के लिए'],
         ]}/>
 
-        <h2 style={h2}>🍎 Part 6 — खाने-पीने का सामान</h2>
+        <h2 id="part6" style={h2}>🍎 Part 6 — खाने-पीने का सामान</h2>
         <CheckList color="#1D9E75" items={[
           ['पानी की बोतल (1L, Reusable)','2'],['Energy Bars / Dry Fruits','Cashew, Badam'],
           ['Glucose Biscuits','2-3 Packs'],['Dark Chocolate','ट्रेक पर Energy'],
@@ -133,7 +157,7 @@ export default function CharDhamPackingListHindi() {
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="packing" />
-        <h2 style={h2}>❌ यह सब घर पर छोड़ दो</h2>
+        <h2 id="leave-home" style={h2}>❌ यह सब घर पर छोड़ दो</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 8, marginBottom: 28 }}>
           {[
             ['5+ साड़ियां','ट्रेक में बहुत भारी'],['बड़ा सूटकेस','ट्रेक पर नहीं जाएगा'],
@@ -147,7 +171,7 @@ export default function CharDhamPackingListHindi() {
           ))}
         </div>
 
-        <h2 style={h2}>✅ Last Minute Checklist — घर से निकलने से 1 घंटे पहले</h2>
+        <h2 id="checklist" style={h2}>✅ Last Minute Checklist — घर से निकलने से 1 घंटे पहले</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 8, marginBottom: 28 }}>
           {['Aadhaar Card ✓','E-Pass (Mobile + Print) ✓','ऊनी कपड़े ✓','ट्रेकिंग जूते ✓','दवाइयां (Extra 3 दिन) ✓','Power Bank (Charged) ✓','BSNL SIM ✓','नकद ₹20,000+ ✓','Doctor Certificate (60+) ✓','रेनकोट ✓','Sunscreen + Sunglasses ✓'].map(item => (
             <div key={item} style={{ display: 'flex', gap: 8, background: 'rgba(29,158,117,0.06)', borderRadius: 8, padding: '10px 12px', border: '1px solid #9FE1CB', fontSize: 13, color: '#0F6E56', fontWeight: 600 }}>

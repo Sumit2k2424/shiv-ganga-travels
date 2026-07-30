@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Route Map 2026 | Complete Road Guide & Distances' },
@@ -63,29 +67,32 @@ export default function RouteMap() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Operator-Verified Route Guide · 2026 · Updated May
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Char Dham Yatra Route Map 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Complete road route from Haridwar — 1,500km total, 10 days, day-wise distances, altitudes, highway numbers, and key stops. Written by operators who drive this route every season.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Operator-Verified Route Guide · 2026"
+        title="Char Dham Yatra Route Map 2026"
+        dek="Complete road route from Haridwar — 1,500km total, 10 days, day-wise distances, altitudes, highway numbers, and key stops. Written by operators who drive this route every season."
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="7 min read"
+        facts={[
+          { label:'Total distance', value:'~1,500 km (RT)' },
+          { label:'Duration',       value:'9N/10D min' },
+          { label:'Altitude',       value:'249m → 3,583m' },
+          { label:'Treks',          value:'Yamunotri + Kedarnath' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra Route Map 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -106,11 +113,18 @@ export default function RouteMap() {
           </div>
         </div>
 
-        <p style={p}>
+        <p className="blog-lede">
           The Char Dham Yatra route covers 1,500km round trip from Haridwar, visiting the four sacred dhams of Uttarakhand in the traditional clockwise sequence: Yamunotri first (source of Yamuna), Gangotri second (source of Ganga), Kedarnath third (Shiva Jyotirlinga), and Badrinath last (Vishnu abode). Below is the complete day-by-day road route with actual highway numbers, driving distances, altitudes, and what to see at each stop — compiled from 15 seasons of operating this route.
         </p>
 
-        <h2 style={h2}>Day-by-Day Route — Distances, Times & Key Stops</h2>
+        <BlogTOC items={[
+          { id:'day-by-day',  label:'Day-by-day route' },
+          { id:'road-guide',  label:'Road conditions & highways' },
+          { id:'prayags',     label:'Key confluences (Prayags)' },
+          { id:'insider-tips', label:'Insider route tips' },
+        ]}/>
+
+        <h2 id="day-by-day" style={h2}>Day-by-Day Route — Distances, Times & Key Stops</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
           {route.map((day, i) => (
             <div key={day.day} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid var(--border)', borderLeft: `4px solid ${i < 2 ? '#f59e0b' : i < 4 ? '#0D9488' : i < 6 ? '#DC2626' : i < 8 ? '#7C3AED' : 'var(--navy)'}` }}>
@@ -133,7 +147,7 @@ export default function RouteMap() {
           ))}
         </div>
 
-        <h2 style={h2}>Road Conditions & Highway Guide</h2>
+        <h2 id="road-guide" style={h2}>Road Conditions & Highway Guide</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { route: 'Haridwar → Barkot (NH7)', condition: 'Good', detail: 'Well-maintained 4-lane highway from Haridwar to Dehradun bypass, then NH7 via Vikasnagar and Yamuna Valley. Road narrows after Barkot. Kempty Falls and Mussoorie bypass available for sightseeing.' },
@@ -153,7 +167,7 @@ export default function RouteMap() {
           ))}
         </div>
 
-        <h2 style={h2}>Key Confluences (Prayags) on the Route</h2>
+        <h2 id="prayags" style={h2}>Key Confluences (Prayags) on the Route</h2>
         <p style={p}>The Char Dham route passes through the Panch Prayag — five sacred river confluences in Garhwal. Each is worth a brief stop. They are listed in the order you encounter them on the route from Haridwar:</p>
         <div style={{ overflowX: 'auto', marginBottom: 28 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
@@ -185,7 +199,7 @@ export default function RouteMap() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="route" />
 
-        <h2 style={h2}>Insider Route Tips — 15 Seasons on This Road</h2>
+        <h2 id="insider-tips" style={h2}>Insider Route Tips — 15 Seasons on This Road</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
             { tip: 'Leave Haridwar before 6 AM on Day 1', detail: 'The stretch from Haridwar to Rishikesh (24km) and onward to the hills gets congested after 8 AM in peak season. An early start means reaching Barkot by 2-3 PM with time to rest before the trek day.' },

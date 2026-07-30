@@ -3,6 +3,11 @@ import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathTrekProfile from '@/components/KedarnathTrekProfile';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Trek Guide 2026 | 16 km Route & Stays' },
@@ -84,23 +89,30 @@ export default function KedarnathTrekGuide() {
     <>
       <Schema/>
 
+      <ReadingProgress/>
+
       {/* HERO */}
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Trek Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Kedarnath Trek Guide 2026 — 16 KM Route, Stay Options &amp; Best Time to Visit
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>16km Gaurikund to Kedarnath · Difficulty Breakdown · Stay Options · Best Time · Pony vs Helicopter</p>
-        </div>
-      </section>
+      <BlogHero
+        badge="Trek Guide · 2026"
+        title="Kedarnath Trek Guide 2026 — 16 KM Route, Stay Options & Best Time to Visit"
+        dek="16km Gaurikund to Kedarnath · Difficulty Breakdown · Stay Options · Best Time · Pony vs Helicopter"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="9 min read"
+        facts={[
+          { label:'Distance',   value:'16 km one way' },
+          { label:'Altitude',   value:'3,583 m' },
+          { label:'Trek time',  value:'6–9 hours' },
+          { label:'Options',    value:'Foot · Pony · Heli' },
+        ]}
+      />
 
       {/* BREADCRUMB */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Kedarnath Trek Guide 2026</span>
         </div>
@@ -112,31 +124,32 @@ export default function KedarnathTrekGuide() {
         <BlogAuthor variant="top" author="sumit" />
 
         {/* INTRO */}
-        <p style={p}>I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims — a 58-year-old retired school teacher from Lucknow — was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli, with the Mandakini river roaring below and the first glimpse of snow peaks ahead, she turned to me and said, <em>"Yeh toh swarg hai."</em> She reached the temple, touched the Shivalinga, and wept.</p>
+        <p className="blog-lede">I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims — a 58-year-old retired school teacher from Lucknow — was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli, with the Mandakini river roaring below and the first glimpse of snow peaks ahead, she turned to me and said, <em>"Yeh toh swarg hai."</em> She reached the temple, touched the Shivalinga, and wept.</p>
         <p style={p}>That's what the <strong>Kedarnath trek</strong> does to people. It breaks you down physically and builds you back up spiritually. This guide covers the complete 16km route, difficulty, best time to visit, how to reach Gaurikund, stay options at Kedarnath, and everything you need to pack.</p>
 
+        <KeyTakeaways
+          points={[
+            <>The trek is <strong>16 km one way</strong> from Gaurikund to Kedarnath (3,583 m), typically <strong>6–9 hours</strong> up.</>,
+            <>It's a <strong>steady, non-technical climb</strong> — hard on stamina, not skill. Fitness and pacing matter more than trekking experience.</>,
+            <>Choices: walk, <strong>pony</strong> (₹3,000–5,000), <strong>palki</strong>, or <strong>helicopter</strong> (₹7,500–9,500 return).</>,
+            <>Start by <strong>6 AM</strong> — afternoon clouds and rain build fast above the treeline.</>,
+            <>Best months: <strong>May–June and mid-Sep–October</strong>. Avoid the July–August monsoon.</>,
+          ]}
+        />
+
         {/* TABLE OF CONTENTS */}
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid var(--border)', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10, textTransform:'uppercase', letterSpacing:'0.06em' }}>In This Guide</div>
-          <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
-            {[
-              ['#route','Kedarnath Trek Route & Waypoints'],
-              ['#difficulty','Difficulty — Honest Segment Breakdown'],
-              ['#best-time','Best Time to Visit Kedarnath (Month-by-Month)'],
-              ['#how-to-reach','How to Reach Gaurikund'],
-              ['#stay','Where to Stay at Kedarnath'],
-              ['#transport','Pony, Palki or Helicopter?'],
-              ['#alt-routes','Alternative Routes & the Ropeway'],
-              ['#packing','What to Carry'],
-              ['#preparation','6-Week Training Plan'],
-              ['#faq','Frequently Asked Questions'],
-            ].map(([href, label]) => (
-              <a key={href} href={href} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', gap:8, alignItems:'center' }}>
-                <span style={{ color:'var(--gold)', fontSize:10 }}>▶</span>{label}
-              </a>
-            ))}
-          </div>
-        </div>
+        <BlogTOC items={[
+          { id:'route',        label:'Trek route & waypoints' },
+          { id:'difficulty',   label:'Difficulty breakdown' },
+          { id:'best-time',    label:'Best time to visit' },
+          { id:'how-to-reach', label:'How to reach Gaurikund' },
+          { id:'stay',         label:'Where to stay' },
+          { id:'transport',    label:'Pony, palki or helicopter?' },
+          { id:'alt-routes',   label:'Alternative routes & ropeway' },
+          { id:'packing',      label:'What to carry' },
+          { id:'preparation',  label:'6-week training plan' },
+          { id:'faq',          label:'FAQs' },
+        ]}/>
 
         {/* ROUTE */}
         <h2 id="route" style={h2}>Kedarnath Trek Route & Distance</h2>
@@ -189,6 +202,10 @@ export default function KedarnathTrekGuide() {
         </ul>
 
         {/* BEST TIME */}
+        <ExpertNote variant="tip">
+          The mistake that ends more Kedarnath treks than any other isn't fitness — it's <strong>going out too fast in the first 3 km.</strong> The stretch from Gaurikund feels easy and everyone charges up it. Walk the first hour slower than feels natural, take a 5-minute break every 45 minutes, and sip water constantly. You'll pass the people who sprinted past you, sitting exhausted at Jungle Chatti.
+        </ExpertNote>
+
         <h2 id="best-time" style={h2}>Best Time to Visit Kedarnath in 2026</h2>
         <p style={p}>Kedarnath temple opens around <strong>Akshaya Tritiya (April–May)</strong> and closes on <strong>Bhai Dooj (October–November)</strong>. Outside this window the shrine is under snow. Here is a month-by-month breakdown so you can plan around your schedule:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))', gap:10, marginBottom:20 }}>
@@ -316,6 +333,10 @@ export default function KedarnathTrekGuide() {
         </div>
 
         {/* PREPARATION */}
+        <ExpertNote variant="usp">
+          On our Kedarnath departures we <strong>pre-book pony and helicopter slots</strong> before you arrive, hold a room at Guptkashi the night before so you start fresh, and put a guide on the trail who knows every tea stall and shelter by name. If the weather turns, that guide makes the call to hold or descend — not a stranger you met that morning at Gaurikund.
+        </ExpertNote>
+
         <h2 id="preparation" style={h2}>6-Week Kedarnath Trek Preparation Plan</h2>
         <p style={p}>Start training at least <strong>4–6 weeks before</strong> your yatra. You do not need a gym membership — just consistency:</p>
         <ul style={{ paddingLeft:20, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2 }}>

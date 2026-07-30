@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony vs Helicopter 2026 | Cost & Verdict' },
@@ -34,17 +37,22 @@ export default function PonyVsHelicopter() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Kedarnath Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Kedarnath Pony vs Helicopter 2026<br/><em style={{ color:'#FFD166' }}>Complete Comparison Guide</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.75, maxWidth:700, margin:'0 auto' }}>
-            Cost, time, availability, booking process, and which option suits which pilgrim. Honest analysis from 15 years of operating Kedarnath Yatra from Haridwar.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Kedarnath Guide · 2026"
+        title="Kedarnath Pony vs Helicopter 2026 — Complete Comparison Guide"
+        dek="Cost, time, availability, booking process, and which option suits which pilgrim. Honest analysis from 15 years of operating Kedarnath Yatra from Haridwar."
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Pony',      value:'₹3,000–5,000' },
+          { label:'Helicopter', value:'From ₹3,043 (1-way)' },
+          { label:'Trek',      value:'16 km · free' },
+          { label:'Palki',     value:'4-porter doli' },
+        ]}
+      />
 
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
@@ -55,8 +63,8 @@ export default function PonyVsHelicopter() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Kedarnath Yatra<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/kedarnath-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span>
           <span>Pony vs Helicopter</span>
         </div>
       </nav>
@@ -66,8 +74,15 @@ export default function PonyVsHelicopter() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
+        <BlogTOC items={[
+          { id:'at-a-glance', label:'At a glance — all 4 options' },
+          { id:'pony',        label:'Kedarnath pony' },
+          { id:'helicopter',  label:'Kedarnath helicopter' },
+          { id:'recommendation', label:'Who should choose what' },
+        ]}/>
+
         {/* Quick comparison table */}
-        <h2 style={H2}>At a Glance — Pony vs Helicopter vs Trek vs Palki</h2>
+        <h2 id="at-a-glance" style={H2}>At a Glance — Pony vs Helicopter vs Trek vs Palki</h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -95,7 +110,7 @@ export default function PonyVsHelicopter() {
           </table>
         </div>
 
-        <h2 style={H2}>Kedarnath Pony — Everything You Need to Know</h2>
+        <h2 id="pony" style={H2}>Kedarnath Pony — Everything You Need to Know</h2>
         <p>The pony (locally called <strong>ghoda</strong>) is the most popular alternative to trekking at Kedarnath. About 2,000+ ponies operate on the Gaurikund–Kedarnath route during peak season. Here is what you need to know:</p>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:20 }}>
           {[
@@ -114,7 +129,7 @@ export default function PonyVsHelicopter() {
           ))}
         </div>
 
-        <h2 style={H2}>Kedarnath Helicopter — Everything You Need to Know in 2026</h2>
+        <h2 id="helicopter" style={H2}>Kedarnath Helicopter — Everything You Need to Know in 2026</h2>
         <div style={{ background:'#FEF3E2', border:'2px solid var(--gold)', borderRadius:12, padding:'14px 18px', marginBottom:16 }}>
           <strong style={{ color:'#7B3F00' }}>⚠️ Critical 2026 Rule:</strong>
           <span style={{ color:'#7B3F00', fontSize:14 }}> All Kedarnath helicopter bookings must be made through irctc.co.in — walk-in bookings at Phata, Sersi, and Guptkashi helipads are not permitted. Shiv Ganga Travels assists with IRCTC booking for all our pilgrims.</span>
@@ -139,7 +154,7 @@ export default function PonyVsHelicopter() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
 
-        <h2 style={H2}>Who Should Choose What — Our Recommendation</h2>
+        <h2 id="recommendation" style={H2}>Who Should Choose What — Our Recommendation</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(220px,100%),1fr))', gap:14, marginBottom:28 }}>
           {[
             { title:'Trek (Walk)', emoji:'🥾', for:'Fit pilgrims under 50 who want the full spiritual experience of the mountain', why:'The trek itself is part of the pilgrimage. The physical challenge creates a deeper sense of arrival at the temple.', cost:'Free', book:'No advance booking needed', col:'var(--teal)' },

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath VIP Darshan Booking 2026 | Price Starts at ₹300 | Guide' },
@@ -63,29 +66,32 @@ export default function VIPDarshan() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Kedarnath 2026 · Official BKTC Booking Only
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Kedarnath VIP Darshan 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 660, margin: '0 auto 16px' }}>
-            Prices, online booking on the BKTC portal, sparsh darshan, the helicopter combo, and Badrinath rates — plus the one scam that catches first-timers every season.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Kedarnath 2026 · Official BKTC Booking Only"
+        title="Kedarnath VIP Darshan 2026"
+        dek="Prices, online booking on the BKTC portal, sparsh darshan, the helicopter combo, and Badrinath rates — plus the one scam that catches first-timers every season."
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="8 min read"
+        facts={[
+          { label:'Booking',  value:'Official BKTC portal' },
+          { label:'Sparsh',   value:'Touch-the-Shivling puja' },
+          { label:'Combo',    value:'Helicopter + VIP' },
+          { label:'Watch',    value:'Fake-VIP scams' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Blog</Link><span>›</span>
+          <Link href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath VIP Darshan 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 28, 2026</div>
@@ -102,7 +108,20 @@ export default function VIPDarshan() {
           </div>
         </div>
 
-        <h2 style={h2}>What "VIP Darshan" Actually Means at Kedarnath</h2>
+        <BlogTOC items={[
+          { id:'what-it-means', label:'What VIP darshan means' },
+          { id:'price-table',   label:'Price table 2026' },
+          { id:'how-to-book',   label:'How to book online' },
+          { id:'heli-combo',    label:'VIP + helicopter combo' },
+          { id:'sparsh',        label:'Sparsh (touch) darshan' },
+          { id:'suspended',     label:'When it gets suspended' },
+          { id:'worth-it',      label:'Is it worth it?' },
+          { id:'badrinath',     label:'Badrinath VIP darshan' },
+          { id:'timings',       label:'Temple timings 2026' },
+          { id:'faq',           label:'FAQs' },
+        ]}/>
+
+        <h2 id="what-it-means" style={h2}>What "VIP Darshan" Actually Means at Kedarnath</h2>
         <p style={p}>
           Most websites quote you a single confusing number — ₹1,100, or ₹3,000, or ₹11,000 — as if there's one VIP ticket. There isn't. At Kedarnath, the temple committee doesn't run a separate paid express lane that anyone can walk up and buy. What you're actually paying for is a <strong>puja</strong>. When you book a puja, the priest needs you inside the sanctum to perform it, so you get priority entry, a few minutes before the Shivling, and the chance to touch it — sparsh darshan. The "VIP" label is marketing. The mechanism is the puja booking.
         </p>
@@ -110,7 +129,7 @@ export default function VIPDarshan() {
           That's why the prices look all over the place online: each writer is quoting a different puja. A ₹300 special darshan and a ₹28,600 full-day puja both get you priority — they just buy very different rituals. Once you understand it's puja-linked, the pricing stops being mysterious.
         </p>
 
-        <h2 style={h2}>Kedarnath VIP Darshan Price 2026 — Full Puja Table</h2>
+        <h2 id="price-table" style={h2}>Kedarnath VIP Darshan Price 2026 — Full Puja Table</h2>
         <p style={p}>These are the BKTC-managed special-darshan and puja rates for the 2026 season. Treat them as a guide — the committee revises charges before each season and slots are limited in May–June. Confirm the live amount on the official portal before booking.</p>
         <div style={{ overflowX: 'auto', marginBottom: 18 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
@@ -163,7 +182,7 @@ export default function VIPDarshan() {
           </div>
         </div>
 
-        <h2 style={h2}>How to Book Kedarnath VIP Darshan Online (Step by Step)</h2>
+        <h2 id="how-to-book" style={h2}>How to Book Kedarnath VIP Darshan Online (Step by Step)</h2>
         <p style={p}>The only authorised online route is the BKTC portal. It takes about ten minutes. Here's exactly what happens:</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>
           {[
@@ -184,7 +203,7 @@ export default function VIPDarshan() {
           One thing that confuses people: <strong>you don't need Yatra Registration to book the puja online.</strong> But you do need Yatra Registration to actually complete the yatra and enter the valley. Carry both. If online slots are sold out, you can still book at the official BKTC counter beside the temple on arrival — subject to that day's availability.
         </p>
 
-        <h2 style={h2}>Kedarnath VIP Darshan With Helicopter</h2>
+        <h2 id="heli-combo" style={h2}>Kedarnath VIP Darshan With Helicopter</h2>
         <p style={p}>
           If you're short on time or travelling with elders, the helicopter route is the real "VIP" experience — and priority darshan is usually built into it. Choppers run from <strong>Phata, Sersi, Guptkashi and Sitapur</strong>, landing about 500 metres from the temple. Round-trip fares run roughly ₹6,000 to ₹9,999 per person depending on the helipad, with Phata typically the cheapest and Guptkashi the priciest.
         </p>
@@ -192,7 +211,7 @@ export default function VIPDarshan() {
           On most heli packages the operator's ground team meets you at the helipad and walks you to the sanctum through the priority lane, so you're in and out in 30–90 minutes instead of standing in the general queue for hours. The catch: not every cheap heli ticket includes it. Get it in writing that <strong>priority/VIP darshan is part of the package</strong> before you pay — and book the chopper only through a registered operator or the official IRCTC/heliservices portal, never a random WhatsApp number.
         </p>
 
-        <h2 style={h2}>Sparsh Darshan — Touching the Shivling</h2>
+        <h2 id="sparsh" style={h2}>Sparsh Darshan — Touching the Shivling</h2>
         <p style={p}>
           "Sparsh darshan" simply means touching the deity rather than viewing it from a distance. At Kedarnath this matters more than at most temples. The Shivling here isn't a carved idol — it's a natural rock in a distinctive trapezoidal shape, believed to be the hump of Lord Shiva's bull form, and it's covered in ghee and offerings through the day.
         </p>
@@ -200,7 +219,7 @@ export default function VIPDarshan() {
           General darshan pilgrims see it from the outer hall, three or four metres back. Sparsh darshan lets you stand inside the Garbha Griha and place your hands on the stone — available only to puja/VIP holders, and only before 3:00 PM, after which the sanctum closes for the afternoon. There's no separate "sparsh ticket": book any special-darshan puja above and sparsh darshan comes with it. For most pilgrims who've trekked 16km to get there, that contact is the whole point of the journey.
         </p>
 
-        <h2 style={h2}>When VIP Darshan Gets Suspended</h2>
+        <h2 id="suspended" style={h2}>When VIP Darshan Gets Suspended</h2>
         <div style={{ background: '#FFF8F0', border: '1px solid #FDBA74', borderRadius: 12, padding: '14px 16px', marginBottom: 24 }}>
           <p style={{ fontSize: 13.5, color: '#78350F', lineHeight: 1.8, margin: 0 }}>
             In peak season — usually May and June, when 15,000–18,000 pilgrims arrive daily — the committee sometimes <strong>suspends VIP/priority darshan completely</strong>. The reason is physical: the sanctum passage is narrow, and a separate queue just jams it further. When the temple is at capacity, everyone is on general darshan. You won't be told in advance — ask at the BKTC counter when you reach Kedarnath. If it's suspended, general darshan is still a full, complete darshan; the Shivling is right there.
@@ -210,7 +229,7 @@ export default function VIPDarshan() {
           </div>
         </div>
 
-        <h2 style={h2}>Is VIP Darshan Worth It? (Honest Take)</h2>
+        <h2 id="worth-it" style={h2}>Is VIP Darshan Worth It? (Honest Take)</h2>
         <p style={p}>
           For senior citizens, families with young kids, anyone with a knee or heart issue, or pilgrims on a tight schedule — yes, easily. Standing 3–6 hours in a peak-season queue at 3,500m altitude is genuinely hard on the body, and a puja booking can cut that to under an hour. That alone justifies the ₹1,100.
         </p>
@@ -221,7 +240,7 @@ export default function VIPDarshan() {
         {/* Mid-article CTA */}
         <BlogCTA variant="inline" intent="kedarnath" />
 
-        <h2 style={h2}>Badrinath VIP Darshan Price & Booking 2026</h2>
+        <h2 id="badrinath" style={h2}>Badrinath VIP Darshan Price & Booking 2026</h2>
         <p style={p}>
           People planning Kedarnath usually do Badrinath too, and it runs on the exact same logic — same committee, same portal, puja-linked priority. Basic special darshan starts at <strong>₹300 per person</strong>. Puja-based access ranges from about ₹151 for the Kapoor Aarti up to <strong>₹5,500 for the pre-dawn Maha Abhishek</strong> (4:30–6:30 AM), which is the most-booked VIP option and the one that gets you closest to Lord Badri Narayan before the gates open to the public. Note: BKTC raised special-puja charges by roughly 10–20% for 2026, so older price lists are out of date.
         </p>
@@ -254,7 +273,7 @@ export default function VIPDarshan() {
           Booking is identical to Kedarnath — same portal, just select Badrinath as the temple. The same fraud rule applies: agents sell fake Badrinath VIP passes over WhatsApp every season. Book only on <strong>badrinath-kedarnath.gov.in</strong>.
         </p>
 
-        <h2 style={h2}>Kedarnath Temple Darshan Timings 2026</h2>
+        <h2 id="timings" style={h2}>Kedarnath Temple Darshan Timings 2026</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead>
@@ -284,7 +303,7 @@ export default function VIPDarshan() {
           </table>
         </div>
 
-        <h2 style={h2}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {[
           ['Is there a separate VIP darshan pass at Kedarnath?', 'No. There\'s no standalone pass sold at a window. Priority access is always tied to a booked puja through the temple committee. Anyone offering a loose "VIP pass" in cash is scamming you.'],
           ['Do I need Yatra Registration for VIP darshan?', 'Not to book the puja online — you can do that without it. But Yatra Registration is mandatory to complete the yatra and enter the valley, so carry both your registration and your puja slip.'],

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Haridwar to Kedarnath Road Trip 2026 | Route & Stops' },
@@ -46,25 +49,27 @@ export default function HaridwarToKedarnath() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Route Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Haridwar to Kedarnath — Complete Route &amp; Road Trip Guide 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            218km by road via NH7 · 6–7 hours driving · 9 checkpoints explained · Sonprayag one-way rules · What time to leave
-          </p>
-          {['📍 218km total','⏱️ 6–7 hrs drive','🚧 Sonprayag checkpoint','🏔️ 16km Kedarnath trek'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Route Guide · 2026"
+        title="Haridwar to Kedarnath — Complete Route & Road Trip Guide 2026"
+        dek="218km by road via NH7 · 6–7 hours driving · 9 checkpoints explained · Sonprayag one-way rules · What time to leave"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="7 min read"
+        facts={[
+          { label:'Distance',  value:'218 km by road' },
+          { label:'Drive',     value:'6–7 hours' },
+          { label:'Then',      value:'16 km trek' },
+          { label:'Key stop',  value:'Sonprayag' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Haridwar to Kedarnath Road Trip</span>
         </div>
       </nav>
@@ -84,7 +89,13 @@ export default function HaridwarToKedarnath() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'turn-by-turn',     label:'Turn-by-turn route' },
+          { id:'sonprayag',        label:'The Sonprayag checkpoint' },
+          { id:'gaurikund-options', label:'Gaurikund to Kedarnath — 3 options' },
+        ]}/>
+
+        <h2 id="turn-by-turn" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Turn-by-Turn Route — Haridwar to Gaurikund
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:0, marginBottom:28, position:'relative' }}>
@@ -110,7 +121,7 @@ export default function HaridwarToKedarnath() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="sonprayag" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           The Sonprayag Checkpoint — What Pilgrims Don't Know
         </h2>
         <div style={{ background:'#FFF1F2', border:'2px solid #FECDD3', borderRadius:12, padding:'16px 20px', marginBottom:20 }}>
@@ -125,7 +136,7 @@ export default function HaridwarToKedarnath() {
           </ul>
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="gaurikund-options" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           From Gaurikund to Kedarnath — 3 Options
         </h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:24 }}>

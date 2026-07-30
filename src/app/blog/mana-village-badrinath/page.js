@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Mana Village Near Badrinath 2026 | India\'s Last Village' },
@@ -45,23 +48,32 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Badrinath · Hidden Gem</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Mana Village — India's Last Village Before Tibet</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>3km from Badrinath · Vyas Gufa · Bhim Pul · Saraswati River · Local Shawl Weavers</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Badrinath · Hidden Gem"
+        title="Mana Village — India's Last Village Before Tibet"
+        dek="3km from Badrinath · Vyas Gufa · Bhim Pul · Saraswati River · Local Shawl Weavers"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="5 min read"
+        facts={[
+          { label:'Distance', value:'3 km from Badrinath' },
+          { label:'Altitude', value:'3,219 m' },
+          { label:'Highlights', value:'Vyas Gufa · Bhim Pul' },
+          { label:'River',    value:'Saraswati source' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Mana Village Guide</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -70,7 +82,14 @@ export default function Page() {
         <p style={p}>Most Badrinath pilgrims spend their entire time at the temple, do their darshan, and leave without ever knowing that 3km up the same road is one of the most extraordinary places in India. Mana Village — officially the last inhabited village before the China (Tibet) border — sits at 3,200m at the confluence of the Saraswati and Alaknanda rivers, surrounded by peaks above 6,000m, and it has been continuously inhabited for over a thousand years.</p>
         <p style={p}>The village is small — maybe 70–80 stone houses — and for eight months of the year it is completely buried under snow. The Bhotia community who live here migrate to the lower valleys every winter and return in April when the Badrinath temple reopens. When we say India's last village, we mean it literally: beyond Mana, the road continues to the Mana Pass and into Tibet. There is a signboard at the village entrance that says exactly this.</p>
 
-        <h2 style={h2}>What to See in Mana Village</h2>
+        <BlogTOC items={[
+        { id:'what-to-see', label:'What to see in Mana' },
+        { id:'pandavas',    label:'The Pandavas story' },
+        { id:'tips',        label:'Practical visiting tips' },
+        { id:'open-2026',   label:'Is Mana open in 2026?' },
+      ]}/>
+
+      <h2 id="what-to-see" style={h2}>What to See in Mana Village</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
           {[
             { name:'Vyas Gufa', desc:'A natural cave where the sage Vyas Muni is said to have composed — and dictated — the Mahabharata to Lord Ganesha. The cave is small and dark, with a small shrine inside. You can enter, though it is a tight fit. Standing in it knowing the story is one of those moments that makes pilgrimage different from tourism.' },
@@ -87,10 +106,10 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 style={h2}>The Story of the Pandavas and Mana</h2>
+        <h2 id="pandavas" style={h2}>The Story of the Pandavas and Mana</h2>
         <p style={p}>Mana sits on what is believed to be the route the Pandavas took to heaven (Swargarohini) after the Kurukshetra war. The entire stretch from Badrinath through Mana and up toward the high passes carries Mahabharata mythology so thickly that it is impossible to separate the landscape from the story. Bhim Pul, Vyas Gufa, Ganesh Gufa, the Saraswati river — these are not isolated sights but parts of the same narrative. Walking through the village with this in mind transforms it completely. The stone lanes, the cave entrances, the roaring river — it all becomes a scene from an epic that Indians have been telling for three thousand years.</p>
 
-        <h2 style={h2}>Practical Tips for Visiting Mana</h2>
+        <h2 id="tips" style={h2}>Practical Tips for Visiting Mana</h2>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
           {[
             ['Best time to visit', 'Early morning — before 8 AM — when the tour buses have not arrived. The village has a completely different quality in the first light.'],
@@ -110,7 +129,7 @@ export default function Page() {
 
         </div>
 
-        <h2 style={h2}>Is Mana Village Open in 2026?</h2>
+        <h2 id="open-2026" style={h2}>Is Mana Village Open in 2026?</h2>
         <p style={p}>Mana Village opens with the Badrinath temple in late April and closes when the temple closes in November. In 2026, Badrinath opens on April 23 — so Mana will be accessible from that date. The village is open to all Indian citizens. Foreign nationals require an Inner Line Permit (ILP) issued at Joshimath, as Mana is in a restricted area near the international border.</p>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>

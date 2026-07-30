@@ -4,9 +4,13 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import FAQAccordion from '@/components/FAQAccordion';
 import ScrollReveal from '@/components/ScrollReveal';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
 
-export const H2 = ({ children }) => (
-  <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>{children}</h2>
+export const H2 = ({ id, children }) => (
+  <h2 id={id} style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>{children}</h2>
 );
 export const P = ({ children }) => (
   <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>{children}</p>
@@ -34,6 +38,9 @@ export default function GuideArticle({
   subtitle,
   pills = [],
   facts = [],
+  takeaways = [],
+  toc = [],
+  readTime,
   updated = SITE.lastUpdated,
   author = 'sumit',
   ctaIntent = 'info',
@@ -42,6 +49,7 @@ export default function GuideArticle({
   related = [],
   children,
 }) {
+  const authorName = author === 'dhanesh' ? 'Dhanesh Chandra Mishra' : 'Sumit Mishra';
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -82,16 +90,17 @@ export default function GuideArticle({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div className="guide-hero-inner" style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          {badge && <span className="guide-hero-pill" style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>{badge}</span>}
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>{title}</h1>
-          {subtitle && <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>{subtitle}</p>}
-          {pills.map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress />
+
+      <BlogHero
+        badge={badge}
+        title={title}
+        dek={subtitle}
+        author={authorName}
+        updated={`Updated ${updated}`}
+        readTime={readTime}
+        facts={facts.map(([label, value]) => ({ label, value }))}
+      />
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div className="guide-breadcrumb" style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
@@ -106,16 +115,8 @@ export default function GuideArticle({
         <BlogAuthor variant="top" author={author} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {updated} · Verified for current season</div>
 
-        {facts.length > 0 && (
-          <ScrollReveal className="guide-facts" style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
-            {facts.map(([k,v]) => (
-              <div key={k} className="guide-fact">
-                <div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div>
-              </div>
-            ))}
-          </ScrollReveal>
-        )}
+        {takeaways.length > 0 && <KeyTakeaways points={takeaways} />}
+        {toc.length > 0 && <BlogTOC items={toc} />}
 
         <ScrollReveal>{children}</ScrollReveal>
 

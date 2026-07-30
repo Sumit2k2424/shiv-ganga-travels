@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'How to Reach Kedarnath 2026 | Road, Train & Helicopter' },
@@ -40,25 +43,27 @@ export default function HowToReachKedarnath() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Journey Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            How to Reach Kedarnath 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Train · Flight · Road · Trek · Helicopter — From Delhi, Mumbai, Bangalore &amp; all major cities to Kedarnath temple
-          </p>
-          {['🚂 Train to Haridwar','✈️ Fly to Dehradun','🚗 Drive to Gaurikund','🏔️ 16km Trek to Temple'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Journey Guide · 2026"
+        title="How to Reach Kedarnath 2026"
+        dek="Train · Flight · Road · Trek · Helicopter — From Delhi, Mumbai, Bangalore & all major cities to Kedarnath temple"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Railhead',  value:'Haridwar Jn' },
+          { label:'Airport',   value:'Dehradun (DED)' },
+          { label:'Road ends', value:'Gaurikund' },
+          { label:'Then',      value:'16 km trek' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>How to Reach Kedarnath 2026</span>
         </div>
       </nav>
@@ -78,7 +83,17 @@ export default function HowToReachKedarnath() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'stages',        label:'The 4 stages of the journey' },
+          { id:'city-by-city',  label:'City-by-city route guide' },
+          { id:'stage3',        label:'Gaurikund to Kedarnath options' },
+          { id:'distance-chart', label:'Distance chart' },
+          { id:'flights',       label:'Flights — what you can book' },
+          { id:'railway',       label:'Nearest railway station' },
+          { id:'metros',        label:'From Bangalore, Mumbai & metros' },
+        ]}/>
+
+        <h2 id="stages" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           The 4 Stages of Every Kedarnath Journey
         </h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
@@ -99,7 +114,7 @@ export default function HowToReachKedarnath() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="city-by-city" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           City-by-City Route Guide
         </h2>
         {CITY_ROUTES.map(city => (
@@ -127,7 +142,7 @@ export default function HowToReachKedarnath() {
           </details>
         ))}
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
+        <h2 id="stage3" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
           Stage 3 Options: Gaurikund to Kedarnath
         </h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
@@ -159,7 +174,7 @@ export default function HowToReachKedarnath() {
           </table>
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Kedarnath Distance Chart — From Major Cities &amp; Key Points</h2>
+        <h2 id="distance-chart" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Kedarnath Distance Chart — From Major Cities &amp; Key Points</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Two numbers do most of the planning work: <strong>Haridwar to Sonprayag is 235 km</strong> (8–9 hours — this is where your vehicle stops), and Gaurikund to the temple is 16 km on foot. Everything else is just getting to Haridwar. Road distances below are along the actual driving route, not straight-line:</p>
         <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
           {[
@@ -182,15 +197,15 @@ export default function HowToReachKedarnath() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Flights to Kedarnath — What You Can and Cannot Book</h2>
+        <h2 id="flights" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Flights to Kedarnath — What You Can and Cannot Book</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There is no airport at Kedarnath and no commercial flight lands there — anyone selling a "Kedarnath flight ticket" is selling either a Dehradun flight or a scam. What exists is a two-part air journey. First, a regular flight to <strong>Jolly Grant Airport, Dehradun (DED)</strong> — IndiGo, Air India and SpiceJet fly in daily from Delhi, Mumbai, Bengaluru and Hyderabad, and fares from Delhi start around ₹3,000. Second, the <strong>helicopter shuttle</strong> from Phata, Sersi or Guptkashi helipads to the Kedarnath helipad, booked only on <strong>heliyatra.irctc.co.in</strong> after your yatra registration is done — roughly ₹7,500–9,500 round trip, weather permitting.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Between the airport and the helipad still sits a 7–8 hour road journey (Dehradun → Rishikesh → Guptkashi), which is why "flying to Kedarnath" in practice means: flight to Dehradun, cab up the valley, helicopter for the final hop. Our <Link href="/blog/kedarnath-helicopter-booking" style={{ color:'var(--teal)', fontWeight:600 }}>helicopter booking guide</Link> walks through the IRCTC slots, and the road leg is exactly what our <Link href="/kedarnath-tour-package" style={{ color:'var(--teal)', fontWeight:600 }}>Kedarnath package</Link> covers.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>केदारनाथ जाने का रास्ता (हिंदी में):</strong> हरिद्वार या ऋषिकेश से सड़क मार्ग से सोनप्रयाग (लगभग 235 किमी), वहां से शटल जीप में गौरीकुंड (5 किमी), और फिर 16 किमी की पैदल चढ़ाई मंदिर तक। हेलीकॉप्टर से जाना हो तो फाटा या सेरसी हेलीपैड से IRCTC बुकिंग के ज़रिए।</p>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Nearest Railway Station to Kedarnath</h2>
+        <h2 id="railway" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Nearest Railway Station to Kedarnath</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>No railway line goes anywhere near Kedarnath. The nearest station of any size is <strong>Rishikesh (approx. 216 km from Gaurikund)</strong>, but <strong>Haridwar Junction (approx. 240 km)</strong> is what almost everyone actually uses — it has far better train connections from Delhi, Mumbai, Kolkata, Chennai and Bengaluru, and every cab operator and package (including ours) starts there. From either station the journey is road to Sonprayag, shuttle to Gaurikund, then the 16 km trek.</p>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Reaching Kedarnath from Bangalore, Mumbai & Other Metros</h2>
+        <h2 id="metros" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Reaching Kedarnath from Bangalore, Mumbai & Other Metros</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>From Bangalore</strong> it is roughly 2,480 km — fly to Dehradun (Jolly Grant) or Delhi, then come by road or train to Haridwar. Flights to Dehradun save a full day versus the Delhi route. <strong>From Mumbai</strong> (~1,900 km) and <strong>Kolkata</strong> (~1,650 km), the same logic applies: fly or take an overnight train to Delhi/Haridwar, then join the road journey. Whatever metro you start from, the hill portion is identical — Haridwar to Gaurikund by road, then the trek — so plan two buffer days around it for delays and recovery.</p>
 
         {/* ── Mid-article conversion CTA ── */}

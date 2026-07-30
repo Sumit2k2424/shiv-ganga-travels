@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'बुजुर्गों के लिए चार धाम यात्रा 2026 | कीमत ₹27,999 से शुरू | पूरी गाइड' },
@@ -40,23 +43,33 @@ export default function BujurgCharDham() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>👴 सीनियर यात्री गाइड · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है?</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>यह 12 बातें पहले जान लें — पछताएंगे नहीं</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="👴 सीनियर यात्री गाइड · 2026"
+        title="बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है?"
+        dek="यह 12 बातें पहले जान लें — पछताएंगे नहीं"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="7 मिनट"
+        facts={[
+          { label:"उम्र", value:"60–85+ संभव" },
+          { label:"केदारनाथ", value:"घोड़ा/पालकी/हेली" },
+          { label:"पैकेज", value:"₹27,999 से" },
+          { label:"सहायता", value:"मेडिकल अटेंडेंट" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>बुजुर्गों के लिए चार धाम यात्रा</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -75,7 +88,14 @@ export default function BujurgCharDham() {
           </div>
         </div>
 
-        <h2 style={h2}>केदारनाथ के लिए विकल्प — 16 km ट्रेक के बदले</h2>
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"kedarnath-options", label:"केदारनाथ के विकल्प" },
+          { id:"tips-12", label:"12 जरूरी बातें" },
+          { id:"package", label:"सीनियर स्पेशल पैकेज" },
+          { id:"faq", label:"सवाल-जवाब" },
+        ]}/>
+
+        <h2 id="kedarnath-options" style={h2}>केदारनाथ के लिए विकल्प — 16 km ट्रेक के बदले</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 24 }}>
           {[
             { icon:'🐴', title:'घोड़ा / खच्चर', cost:'₹3,500–₹4,500', dir:'एक तरफ', note:'सबसे किफायती। पीक में सुबह 5:30 बजे बुक कराएं।', color:'#1D9E75' },
@@ -92,7 +112,7 @@ export default function BujurgCharDham() {
           ))}
         </div>
 
-        <h2 style={h2}>12 जरूरी बातें — परिवार को पहले जाननी चाहिए</h2>
+        <h2 id="tips-12" style={h2}>12 जरूरी बातें — परिवार को पहले जाननी चाहिए</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             ['1', 'सीधे ऑपरेटर से जाएं, एजेंट से नहीं', 'बुजुर्गों की यात्रा में मेडिकल इमरजेंसी और रूट बदलाव आम बात है। जमीन पर मौजूद टीम ही काम आती है — एजेंट नहीं।'],
@@ -118,7 +138,7 @@ export default function BujurgCharDham() {
           ))}
         </div>
 
-        <h2 style={h2}>शिव गंगा ट्रेवल्स — Senior Citizen Special Package</h2>
+        <h2 id="package" style={h2}>शिव गंगा ट्रेवल्स — Senior Citizen Special Package</h2>
         <div style={{ background: 'rgba(29,158,117,0.06)', borderRadius: 14, padding: '20px 24px', border: '1px solid #9FE1CB', marginBottom: 28 }}>
           <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹27,999 प्रति व्यक्ति</div>
           <div style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>12 रात / 13 दिन (अतिरिक्त दिन — थकान के लिए)</div>
@@ -132,7 +152,7 @@ export default function BujurgCharDham() {
         <BlogCTA variant="inline" intent="info" />
         </div>
 
-        <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
+        <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             ['क्या 80 साल के बुजुर्ग चार धाम यात्रा कर सकते हैं?','हाँ। हमने 82 साल के श्रद्धालुओं को केदारनाथ दर्शन करवाए हैं — हेलिकॉप्टर और पालकी की मदद से। डॉक्टर की अनुमति जरूरी है।'],

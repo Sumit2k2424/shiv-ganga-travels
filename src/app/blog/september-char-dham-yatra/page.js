@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'September Char Dham Yatra 2026 | Price Starts at ₹18,500 | Post-Monsoon' },
@@ -62,13 +65,22 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Beat the Monsoon · Autumn 2026 Pre-Booking Open</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>September Char Dham Yatra 2026 — The Window Locals Wait For</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹18,500 · Book by August</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Beat the Monsoon · Autumn 2026 Pre-Booking Open"
+        title="September Char Dham Yatra 2026 — The Window Locals Wait For"
+        dek="Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹18,500 · Book by August"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="7 min read"
+        facts={[
+          { label:'Best window', value:'Sep 15 – Oct 15' },
+          { label:'Crowds',      value:'A fraction of May' },
+          { label:'Packages from', value:'₹18,500' },
+          { label:'Book by',     value:'August' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
@@ -78,7 +90,7 @@ export default function Page() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
@@ -88,7 +100,15 @@ export default function Page() {
           <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.7 }}>If we could pick the dates for every pilgrim who calls us, we would put most of them between September 15 and October 15. The monsoon has just rinsed the mountains, the air is the clearest it gets all year, the peaks have new snow, and the temple queues that run to hours in May take minutes. The only catch: everyone who postponed a monsoon trip is aiming for the same four weeks, so hotels in the small halt towns fill by August. That is why we open autumn pre-booking in July.</div>
         </div>
 
-        <h2 style={h2}>Why Post-Monsoon Beats Peak Season</h2>
+        <BlogTOC items={[
+          { id:'why-post-monsoon', label:'Why post-monsoon beats peak' },
+          { id:'week-by-week',     label:'September, week by week' },
+          { id:'prices',           label:'September package prices' },
+          { id:'pre-booking',      label:'How autumn pre-booking works' },
+          { id:'faq',              label:'September FAQs' },
+        ]}/>
+
+        <h2 id="why-post-monsoon" style={h2}>Why Post-Monsoon Beats Peak Season</h2>
         <p style={p}>May and June get the crowds because of school holidays, not because the mountains are at their best. Ask anyone who has done both. In June you share the Kedarnath trek with thousands of people and the valley haze hides the peaks by 9 AM. In late September you can stand at Badrinath in the evening and see Neelkanth glowing without a cloud near it. Our drivers — who have no reason to flatter any month — call the post-monsoon weeks "dhulai ke baad ka pahad": the mountains after their wash.</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:24 }}>
           {[
@@ -105,7 +125,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 style={h2}>September 2026, Week by Week</h2>
+        <h2 id="week-by-week" style={h2}>September 2026, Week by Week</h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -129,7 +149,7 @@ export default function Page() {
         </div>
         <p style={p}>One honesty note: monsoon withdrawal dates move a little every year. Some years the rain lingers to September 20, some years it is gone by the 12th. This is why we keep September itineraries flexible on the front end — if the forecast says wait two days, we wait two days. For live conditions closer to your dates, check our <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>road status page</Link>.</p>
 
-        <h2 style={h2}>September Package Prices from Haridwar</h2>
+        <h2 id="prices" style={h2}>September Package Prices from Haridwar</h2>
         <p style={p}>Our published prices hold for September — no season surcharge, no "festive pricing". The off-season hotel savings are already inside these numbers:</p>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
@@ -158,12 +178,12 @@ export default function Page() {
 
         <BlogCTA variant="inline" intent="booking" />
 
-        <h2 style={h2}>How Autumn Pre-Booking Works (and Why July–August Is the Time)</h2>
+        <h2 id="pre-booking" style={h2}>How Autumn Pre-Booking Works (and Why July–August Is the Time)</h2>
         <p style={p}>Every year the same thing happens. Pilgrims postpone their July plans because of the rain — sensible — and then in late August everyone tries to book the same mid-September dates at once. The bottleneck is never our vehicles; it is rooms in the small halt towns. Guptkashi, Barkot and Badrinath have limited good hotels, and the decent ones are committed weeks ahead for the autumn window.</p>
         <p style={p}>Pre-booking with us is simple and costs nothing extra. You lock your dates with a token advance, we block the hotels and vehicle immediately, and the balance is due closer to travel as per our <Link href="/cancellation-policy" style={{ color:'var(--teal)', fontWeight:600 }}>cancellation policy</Link>. If the monsoon lingers over your start date, we shift your departure within the season at no charge — we would rather move your trip two days than send you into rain we warned you about on this very page.</p>
         <p style={p}>To be clear about what pre-booking is not: there is no fake countdown here, no "only 3 seats left" banner. The pressure is real but boring — small towns, few rooms, one good month. Book when you are ready; just know that in our 15 seasons, "ready" in mid-September has usually meant "compromising on hotels".</p>
 
-        <h2 style={h2}>September Yatra FAQs</h2>
+        <h2 id="faq" style={h2}>September Yatra FAQs</h2>
         {FAQS.map((f,i)=>(
           <div key={i} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>

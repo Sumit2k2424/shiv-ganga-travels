@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra with Kids 2026 | Age & Altitude Safety' },
@@ -45,23 +48,32 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Family Travel · Honest Guide</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Char Dham Yatra with Kids — What Parents Need to Know</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Age guidelines · Altitude safety · Which dhams are kid-friendly · Packing for children · Our honest take</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Family Travel · Honest Guide"
+        title="Char Dham Yatra with Kids — What Parents Need to Know"
+        dek="Age guidelines · Altitude safety · Which dhams are kid-friendly · Packing for children · Our honest take"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'Gangotri & Badrinath', value:'All ages (road)' },
+          { label:'Yamunotri',  value:'8+ (6 km trek)' },
+          { label:'Kedarnath',  value:'12+ or heli' },
+          { label:'Under 10',   value:'Skip the K-trek' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham with Kids</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -72,7 +84,14 @@ export default function Page() {
           <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.7 }}>Yes, children can do the Char Dham Yatra — but the experience varies a lot by age, fitness, and which dhams you prioritise. Badrinath and Gangotri are very manageable for children of all ages. Yamunotri involves a 6km trek. Kedarnath involves a 16km trek at altitude — which is genuinely difficult and not appropriate for children under 10. Helicopter is the right option if you want to include Kedarnath with young children.</div>
         </div>
 
-        <h2 style={h2}>Dham-by-Dham: What to Expect with Children</h2>
+        <BlogTOC items={[
+          { id:'dham-by-dham', label:'Dham-by-dham with children' },
+          { id:'altitude',     label:'Altitude sickness in children' },
+          { id:'packing',      label:'Packing list for children' },
+          { id:'meaningful',   label:'Making it meaningful for kids' },
+        ]}/>
+
+        <h2 id="dham-by-dham" style={h2}>Dham-by-Dham: What to Expect with Children</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:28 }}>
           {[
             { dham:'Yamunotri', age:'8+ recommended', trek:'6km from Janki Chatti', verdict:'Doable for fit children 8+. Ponies available from ₹1,800 for those who cannot walk. The trek through forest is actually the most child-friendly of all — shorter, cooler, and interesting (hot spring cooking ritual at the top is a huge hit with kids).' },
@@ -89,11 +108,11 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 style={h2}>Altitude Sickness in Children — What Parents Must Know</h2>
+        <h2 id="altitude" style={h2}>Altitude Sickness in Children — What Parents Must Know</h2>
         <p style={p}>Children are actually more susceptible to altitude sickness (AMS) than adults, and they are often less able to communicate how they are feeling. The key altitudes are Kedarnath (3,583m), Badrinath (3,133m), Gangotri (3,415m), and Yamunotri (3,291m) — all above 3,000m. AMS symptoms to watch for include headache, vomiting, loss of appetite, irritability (beyond normal), and breathlessness at rest.</p>
         <p style={p}>Our standard precautions for children: ascend slowly and give an extra half-day acclimatisation at an intermediate altitude (Guptkashi for Kedarnath, Joshimath for Badrinath). Ensure constant hydration — children dehydrate faster. Avoid any physical exertion in the first 4–6 hours at high altitude. We carry oxygen cylinders on all our vehicles and have basic medical training. If a child shows symptoms, we descend immediately — non-negotiable.</p>
 
-        <h2 style={h2}>Packing List for Children on Char Dham Yatra</h2>
+        <h2 id="packing" style={h2}>Packing List for Children on Char Dham Yatra</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:10, marginBottom:24 }}>
           {['Warm inner thermals (2 pairs)','Heavy fleece or down jacket','Waterproof outer jacket','Woollen hat and gloves','Comfortable trekking shoes (not new)','Extra socks (wool preferred)','Child-specific altitude sickness medicine (consult doctor)','Oral rehydration salts','High-energy snacks (dry fruits, energy bars)','Small backpack child can carry themselves','Sunscreen SPF 50+ (altitude UV is intense)','Wet wipes and hand sanitiser'].map(i=>(
             <div key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', fontSize:13, color:'var(--text-mid)', background:'var(--bg)', padding:'8px 12px', borderRadius:8, border:'1px solid var(--border)' }}>
@@ -105,7 +124,7 @@ export default function Page() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
-        <h2 style={h2}>Making the Yatra Meaningful for Children</h2>
+        <h2 id="meaningful" style={h2}>Making the Yatra Meaningful for Children</h2>
         <p style={p}>The Char Dham Yatra is not just a physical journey — it is a story. Children who understand the stories respond to it completely differently from those who are just being taken along. Before the trip, tell them the stories: why the Pandavas went to Kedarnath, why King Bhagirath performed penance at Gangotri, who Adi Shankaracharya was. The trek to Kedarnath becomes an adventure when a child knows they are following in the footsteps of the Pandavas.</p>
         <p style={p}>The Surya Kund at Yamunotri — where you cook rice in a 94°C natural hot spring — is genuinely magical for children. The Bhim Pul boulder bridge at Mana Village. The marmots that pop out of their burrows along the Kedarnath valley. The Himalayan monals (the jewel-coloured pheasants) that cross the path. A child who comes home from the Char Dham Yatra has experienced things that most adults never will.</p>
 

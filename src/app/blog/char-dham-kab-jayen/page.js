@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'चार धाम यात्रा 2026 कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी' },
@@ -56,23 +60,33 @@ export default function CharDhamKabJayen() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>📅 यात्रा का सही समय · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>चार धाम यात्रा 2026 में कब जाएं?</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>हर महीने का सच — मौसम, भीड़, खर्चा और आपके लिए सबसे सही समय</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="📅 यात्रा का सही समय · 2026"
+        title="चार धाम यात्रा 2026 में कब जाएं?"
+        dek="हर महीने का सच — मौसम, भीड़, खर्चा और आपके लिए सबसे सही समय"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="6 मिनट"
+        facts={[
+          { label:"सबसे अच्छा", value:"मई और सित–अक्टू" },
+          { label:"बचें", value:"जुलाई–अगस्त" },
+          { label:"खुलते हैं", value:"अप्रैल 19–23" },
+          { label:"बंद", value:"नवंबर" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम यात्रा कब जाएं</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -112,7 +126,21 @@ export default function CharDhamKabJayen() {
           ))}
         </div>
 
-        <h2 style={h2}>अलग-अलग लोगों के लिए अलग सुझाव</h2>
+        <KeyTakeaways title="एक नज़र में — कब जाएं"
+          points={[
+            <>सबसे अच्छे महीने: <strong>मई–मध्य जून</strong> और <strong>मध्य सितंबर–अक्टूबर</strong>।</>,
+            <><strong>जुलाई–अगस्त</strong> मानसून में लैंडस्लाइड का खतरा — बचें।</>,
+            <>मंदिर <strong>अप्रैल 19–23</strong> को खुलते हैं और नवंबर में बंद हो जाते हैं।</>,
+            <>अक्टूबर में <strong>भीड़ कम, नज़ारे साफ और होटल सस्ते</strong> — लौटने वालों की पसंद।</>,
+          ]}
+        />
+
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"for-everyone", label:"किसके लिए कौन सा महीना" },
+          { id:"faq", label:"सवाल-जवाब" },
+        ]}/>
+
+        <h2 id="for-everyone" style={h2}>अलग-अलग लोगों के लिए अलग सुझाव</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { icon:'🧓', who:'बुजुर्ग माँ-बाप के साथ', rec:'सितंबर पहला हफ्ता', why:'कम भीड़, घोड़ा आसानी से मिलता है' },
@@ -134,7 +162,7 @@ export default function CharDhamKabJayen() {
 
         </div>
 
-        <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
+        <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             ['Diwali के आसपास जाना कैसा?','नवंबर में मंदिर बंद होने वाले होते हैं। Closing ceremony देखना हो तो जाएं, लेकिन मौसम बहुत ठंडा।'],

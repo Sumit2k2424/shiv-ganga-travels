@@ -2,6 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Packing List 2026 | Printable Checklist' },
@@ -104,21 +109,28 @@ export default function PackingList() {
 return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Preparation Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra Packing List 2026 — What to Carry
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Clothes · Shoes · Medicines · Documents · Gadgets — from 15 years of guiding pilgrims</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Preparation Guide · 2026"
+        title="Char Dham Yatra Packing List 2026 — What to Carry"
+        dek="Clothes · Shoes · Medicines · Documents · Gadgets — from 15 years of guiding pilgrims"
+        author="Sumit Mishra"
+        updated="Updated Apr 2026"
+        readTime="7 min read"
+        facts={[
+          { label:'Total weight', value:'Under 10–12 kg' },
+          { label:'Layers',       value:'Thermal + fleece' },
+          { label:'Cash',         value:'₹8,000–10,000' },
+          { label:'Categories',   value:'6 checklists' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Packing List</span>
         </div>
@@ -129,18 +141,33 @@ return (
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
+        <p className="blog-lede">Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This packing list comes from 15 years of guiding over 50,000 pilgrims through the Char Dham. It's not a generic "what to carry" list from the internet. It's what we actually tell our pilgrims the week before departure, after years of watching what people wish they'd brought and what they wish they'd left at home.</p>
+
+        <KeyTakeaways title="Pack this, skip the rest"
+          points={[
+            <>Keep everything under <strong>10–12 kg</strong> in a backpack or soft duffel — no trolley suitcases.</>,
+            <><strong>Layers beat bulk:</strong> thermal innerwear + fleece + a windcheater handle 5–10°C nights.</>,
+            <>Worn-in <strong>trekking shoes</strong> are non-negotiable for Yamunotri and Kedarnath.</>,
+            <>Carry <strong>double</strong> your regular medicines, ORS, and a pulse oximeter if you're 60+.</>,
+            <>Bring <strong>₹8,000–10,000 cash</strong> — ATMs are scarce and digital payments rarely work past Rishikesh.</>,
+          ]}
+        />
+
+        <BlogTOC title="Jump to a checklist" items={[
+          ...categories.map((cat, i) => ({ id:`pack-${i}`, label: cat.title })),
+          { id:'final-tip', label:'One final tip' },
+        ]}/>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:28, border:'1px solid rgba(15,43,91,0.1)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>🎒 The Golden Rule of Char Dham Packing:</div>
           <p style={{ fontSize:14.5, color:'var(--text-mid)', margin:0, lineHeight:1.7 }}>Keep your total luggage under <strong>10–12 kg</strong>. You will be loading and unloading your bags at 8–10 different hotels. The roads are bumpy. The porters charge ₹50–100 per bag at some stops. Travel light and your body will thank you for it.</p>
         </div>
 
-        {categories.map(cat => (
+        {categories.map((cat, i) => (
           <div key={cat.title} style={{ marginBottom:28 }}>
-            <h2 style={h2}>{cat.title}</h2>
+            <h2 id={`pack-${i}`} style={h2}>{cat.title}</h2>
             <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
               {cat.items.map(item => (
                 <div key={item.item} style={{ background:cat.color, border:`1px solid ${cat.border}`, borderRadius:10, padding:'12px 16px', display:'grid', gridTemplateColumns:'1fr 1.2fr', gap:12 }}>
@@ -152,7 +179,11 @@ return (
           </div>
         ))}
 
-        <h2 style={h2}>One Final Tip — Pack a Day Before, Not the Night Before</h2>
+        <ExpertNote variant="usp">
+          Pilgrims who book with us get a <strong>personalised packing list 7 days before departure</strong> — adjusted for your exact dates, dham order and age. In peak monsoon we add rain gear; for October departures we flag the extra warm layers. It's a small thing that saves that panicked call from Guptkashi.
+        </ExpertNote>
+
+        <h2 id="final-tip" style={h2}>One Final Tip — Pack a Day Before, Not the Night Before</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Pack at least 24 hours before your departure. Lay everything out on your bed. Then remove 20% of it — you always pack more than you need. Sleep on it. In the morning you'll know what you actually need.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>And if you forget something minor — toothbrush, a pair of socks, a torch — don’t panic. Haridwar and Rishikesh have everything you'd need. Even Guptkashi and Joshimath have decent shops. The Himalayas are not a wilderness expedition. You will not starve or freeze. Just travel light, travel safe, and travel with an open heart.</p>
 

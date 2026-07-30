@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Helicopter Booking 2026 | Price Starts at ₹6,390 | IRCTC Guide' },
@@ -52,21 +55,28 @@ export default function KedarnathHelicopterBooking() {
   return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Helicopter Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Kedarnath Helicopter Booking 2026 — Complete Guide
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Official IRCTC fares ₹6,390–₹12,762 round trip · Sersi · Phata · Guptkashi · How to book</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Helicopter Guide · 2026"
+        title="Kedarnath Helicopter Booking 2026 — Complete Guide"
+        dek="Official IRCTC fares ₹6,390–₹12,762 round trip · Sersi · Phata · Guptkashi · How to book"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Round trip', value:'₹6,390–₹12,762' },
+          { label:'Helipads',   value:'Sersi · Phata · Guptkashi' },
+          { label:'Flight',     value:'8–10 minutes' },
+          { label:'Booking',    value:'IRCTC only' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Kedarnath Helicopter Booking 2026</span>
         </div>
@@ -77,7 +87,7 @@ export default function KedarnathHelicopterBooking() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
+        <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you’re booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong> — or “Kedarnath chopper booking”, as half of North India searches for it — written honestly from 15 years of arranging these flights for our pilgrims.</p>
 
@@ -87,7 +97,18 @@ export default function KedarnathHelicopterBooking() {
           <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath helicopters fly from three helipads — <strong>Sersi, Phata and Guptkashi</strong> — reaching the temple in 7–10 minutes. Official 2026 round-trip fares are <strong>₹6,390 (Sersi), ₹10,164 (Phata) and ₹12,762 (Guptkashi)</strong> per person, plus a ₹300 IRCTC fee and 18% GST. Tickets are booked only on the IRCTC HeliYatra portal (heliyatra.irctc.co.in) and require a valid Char Dham registration. Shiv Ganga Travels arranges the road journey, registration and morning-slot guidance around your flight.</p>
         </div>
 
-        <h2 style={h2}>Kedarnath Helicopter Price 2026 (Official IRCTC Fares)</h2>
+        <BlogTOC items={[
+          { id:'price',       label:'Official IRCTC price 2026' },
+          { id:'helipads',    label:'Which helipad to choose' },
+          { id:'dehradun',    label:'Dehradun charter option' },
+          { id:'gmvn',        label:'GMVN mix-up cleared up' },
+          { id:'gaurikund',   label:'Helicopter from Gaurikund?' },
+          { id:'weather',     label:'Weather & morning slots' },
+          { id:'how-to-book', label:'How to book on IRCTC' },
+          { id:'faq',         label:'FAQs' },
+        ]}/>
+
+        <h2 id="price" style={h2}>Kedarnath Helicopter Price 2026 (Official IRCTC Fares)</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Fares are fixed per helipad by the Uttarakhand Civil Aviation Development Authority (UCADA) and charged <strong>per person</strong>. The difference reflects distance from Kedarnath, not service quality — Sersi is closest and cheapest, Guptkashi farthest and priciest. All fares below exclude the ₹300 IRCTC convenience fee and 18% GST.</p>
         <div style={{ overflowX:'auto', marginBottom:14 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:540 }}>
@@ -117,23 +138,23 @@ export default function KedarnathHelicopterBooking() {
           ⚠️ <strong>Book only on the official portal:</strong> Kedarnath helicopter tickets are sold exclusively on <strong>heliyatra.irctc.co.in</strong>. IRCTC allocates the operator per flight — you don’t choose it. Any site or agent selling &ldquo;guaranteed&rdquo; heli tickets outside IRCTC is unauthorised; the Uttarakhand administration has flagged fake booking sites every season. A one-way ticket up plus trek down is a popular money-saver for fit pilgrims.
         </p>
 
-        <h2 style={h2}>The Three Helipads — Which One Should You Choose?</h2>
+        <h2 id="helipads" style={h2}>The Three Helipads — Which One Should You Choose?</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>All three reach Kedarnath in roughly 7–10 minutes; the choice comes down to budget, road access and how fast slots vanish. <strong>Sersi</strong> is cheapest but its slots sell out fastest. <strong>Phata</strong> is the practical middle choice with the most operators and best availability. <strong>Guptkashi</strong> costs the most but is the easiest helipad to drive to and to stay near the night before. If you’re on a Kedarnath or Char Dham package with us, we point you to <strong>Phata or Sersi</strong> for the best price-to-availability balance and book your road leg to match.</p>
 
-        <h2 style={h2}>Dehradun to Kedarnath Helicopter — Charter, Not Shuttle</h2>
+        <h2 id="dehradun" style={h2}>Dehradun to Kedarnath Helicopter — Charter, Not Shuttle</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A question we get weekly: can you fly straight from Dehradun to Kedarnath? Yes — but not on the IRCTC shuttle. The Sahastradhara helipad in Dehradun runs <strong>full-day charter and semi-charter packages</strong> operated by private aviation companies, typically ₹1.1–1.5 lakh per seat for a same-day Dehradun → Kedarnath → Dehradun darshan trip, with VIP darshan slots included. It is a completely different product from the ₹6,000–13,000 valley shuttle: you skip the entire 7–8 hour road journey, and you pay accordingly. For most families the sensible split is our road package up the valley plus the Phata/Sersi shuttle for the final hop; the Dehradun charter makes sense for elderly pilgrims, tight schedules or corporate groups. Ask us and we will connect you to the authorised charter operators — never wire money to a charter "agent" who found you on Instagram.</p>
 
-        <h2 style={h2}>GMVN and the Kedarnath Helicopter — Clearing Up a Common Mix-Up</h2>
+        <h2 id="gmvn" style={h2}>GMVN and the Kedarnath Helicopter — Clearing Up a Common Mix-Up</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Thousands of pilgrims search for "GMVN Kedarnath helicopter booking" every month, and the honest answer is: <strong>GMVN does not sell helicopter tickets</strong>. Garhwal Mandal Vikas Nigam is the state tourism corporation — it runs guesthouses (including at Kedarnath and near the helipads) and package tours, and in earlier years it handled heli bookings, which is where the confusion comes from. Since the system moved to IRCTC, <strong>heliyatra.irctc.co.in is the only place shuttle tickets exist</strong>. What GMVN is still genuinely useful for: a fixed-rate room at Phata or Guptkashi the night before your morning slot (gmvnonline.com), and its own road packages. If a website pairs "GMVN" with "confirmed helicopter tickets", treat it as the impersonation it is.</p>
 
-        <h2 style={h2}>Is There a Helicopter from Gaurikund?</h2>
+        <h2 id="gaurikund" style={h2}>Is There a Helicopter from Gaurikund?</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>No — <strong>Gaurikund has no helipad</strong>. Gaurikund is the trek roadhead; the three shuttle helipads are Sersi, Phata and Guptkashi, all on the road <em>before</em> Sonprayag. If you have already reached Gaurikund, your options are the 16 km trail on foot, pony or palki. Plan the helicopter decision at Guptkashi the evening before, not at the trek gate.</p>
 
-        <h2 style={h2}>Weather & When to Book Morning Slots</h2>
+        <h2 id="weather" style={h2}>Weather & When to Book Morning Slots</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is the most important practical tip — and most operators won’t tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But the success rate for morning flights is over 95%. Afternoon flights, especially in May–June, get cancelled frequently. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
 
-        <h2 style={h2}>How to Book on the IRCTC HeliYatra Portal (Step by Step)</h2>
+        <h2 id="how-to-book" style={h2}>How to Book on the IRCTC HeliYatra Portal (Step by Step)</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since the system moved fully to IRCTC, this is the only official way to buy a Kedarnath helicopter ticket online. Bookings typically open in mid-April for the season, with a 6 PM daily release window — and prime Sersi/Phata slots can vanish within hours.</p>
         <ol style={{ paddingLeft:22, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.1 }}>
           <li>Complete your <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'underline' }}>Char Dham registration</Link> first — you cannot book a heli ticket without a valid registration ID.</li>
@@ -157,7 +178,7 @@ export default function KedarnathHelicopterBooking() {
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
-        <h2 style={h2}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:24 }}>
           {faqData.map((f, i) => (
             <div key={i} style={{ padding:'16px 20px', borderBottom:i<faqData.length-1?'1px solid var(--border)':'none' }}>

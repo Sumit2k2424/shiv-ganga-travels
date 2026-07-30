@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Budget vs Premium 2026 | Price Starts at ₹18,500 | Compared' },
@@ -41,22 +44,27 @@ export default function BudgetVsPremium() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Honest Comparison · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra — Budget vs Premium Package 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            What actually changes between ₹18,500 and ₹50,000 per person · Honest breakdown from a 15-year operator
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Honest Comparison · 2026"
+        title="Char Dham Yatra — Budget vs Premium Package 2026"
+        dek="What actually changes between ₹18,500 and ₹50,000 per person · Honest breakdown from a 15-year operator"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Budget',  value:'₹18,500 pp' },
+          { label:'Premium', value:'₹50,000 pp' },
+          { label:'Same',    value:'Route & darshan' },
+          { label:'Differs', value:'Hotels & vehicle' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Budget vs Premium Char Dham Package</span>
         </div>
       </nav>
@@ -88,7 +96,12 @@ export default function BudgetVsPremium() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'comparison',   label:'Factor-by-factor comparison' },
+          { id:'premium-wins', label:'Where premium genuinely wins' },
+        ]}/>
+
+        <h2 id="comparison" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Factor-by-Factor Comparison
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:28 }}>
@@ -110,7 +123,7 @@ export default function BudgetVsPremium() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="premium-wins" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           The One Area Where Premium Genuinely Wins — Darshan Quality
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Package Types 2026 | Price Starts at ₹18,500 | Budget to Heli' },
@@ -84,29 +87,32 @@ export default function PackageTypes() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Honest Comparison · From a 15-Year Haridwar Operator
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Types of Char Dham Yatra Packages 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Budget · Deluxe · Premium · Helicopter. What each includes, who it is actually for, and the honest difference between them.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Honest Comparison · 15-Year Haridwar Operator"
+        title="Types of Char Dham Yatra Packages 2026"
+        dek="Budget · Deluxe · Premium · Helicopter. What each includes, who it is actually for, and the honest difference between them."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'Budget',     value:'₹18,500' },
+          { label:'Deluxe',     value:'₹35,000' },
+          { label:'Premium',    value:'₹55,000' },
+          { label:'Helicopter', value:'₹1.8L+' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Types of Char Dham Packages</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹18,500, Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -114,9 +120,15 @@ export default function PackageTypes() {
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>
 
-        <p style={p}>
+        <p id="packages" style={p}>
           Every Char Dham Yatra package covers the same 4 temples in the same order. What differs between a ₹18,500 budget package and a ₹55,000 premium package is not the spiritual experience — it is the comfort, the vehicle, the hotel standard, and the level of hand-holding. This guide explains exactly what each tier includes, who genuinely needs it, and what the honest difference is (not the marketing version).
         </p>
+
+        <BlogTOC items={[
+          { id:'packages',      label:'The four package tiers' },
+          { id:'comparison',    label:'Comparison at a glance' },
+          { id:'which-package', label:'Which should you choose?' },
+        ]}/>
 
         {tiers.map(tier => (
           <div key={tier.type} style={{ background: tier.bg, borderRadius: 14, padding: '20px 22px', border: `2px solid ${tier.color}`, marginBottom: 20 }}>
@@ -151,7 +163,7 @@ export default function PackageTypes() {
           </div>
         ))}
 
-        <h2 style={h2}>Comparison at a Glance</h2>
+        <h2 id="comparison" style={h2}>Comparison at a Glance</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>
@@ -185,7 +197,7 @@ export default function PackageTypes() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
-        <h2 style={h2}>Which Package Should You Choose?</h2>
+        <h2 id="which-package" style={h2}>Which Package Should You Choose?</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
             { condition: 'You are 25–45, physically fit, travelling with friends', answer: '→ Budget or Deluxe. Save the difference for the pony at Kedarnath and the Gangnani hot spring stop.' },

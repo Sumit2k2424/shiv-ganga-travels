@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra History & Spiritual Significance 2026' },
@@ -42,35 +45,46 @@ export default function Significance() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            History · Mythology · Spiritual Significance
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Char Dham Yatra — History & Significance
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Why Adi Shankaracharya established this circuit in the 8th century, the mythology of all 4 dhams, and why completing Char Dham Yatra is considered one of the most spiritually complete acts a Hindu can perform.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="History · Mythology · Significance"
+        title="Char Dham Yatra — History & Significance"
+        dek="Why Adi Shankaracharya established this circuit in the 8th century, the mythology of all 4 dhams, and why completing Char Dham Yatra is considered one of the most spiritually complete acts a Hindu can perform."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="8 min read"
+        facts={[
+          { label:'Founder', value:'Adi Shankaracharya' },
+          { label:'Era',     value:'8th century CE' },
+          { label:'Deities', value:'Yamuna · Ganga · Shiva · Vishnu' },
+          { label:'Also called', value:'Chota Char Dham' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham History & Significance</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-significance", "title": "Char Dham Yatra: History & Spiritual Significance", "description": "Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
-        <h2 style={h2}>What Is Char Dham Yatra?</h2>
+        <BlogTOC items={[
+          { id:'what-is',       label:'What is Char Dham Yatra?' },
+          { id:'shankaracharya', label:'Adi Shankaracharya' },
+          { id:'mythology',     label:'Mythology of each dham' },
+          { id:'why-special',   label:'Why completing it is special' },
+          { id:'chota-vs',      label:'Chota Char Dham vs Char Dham' },
+        ]}/>
+
+        <h2 id="what-is" style={h2}>What Is Char Dham Yatra?</h2>
         <p style={p}>
           Char Dham Yatra (literally "pilgrimage to the four abodes") refers to the circuit of four sacred Himalayan shrines in Uttarakhand: Yamunotri (source of the Yamuna), Gangotri (source of the Ganga), Kedarnath (Shiva Jyotirlinga), and Badrinath (Vishnu kshetra). The four shrines sit between 3,048m (Gangotri) and 3,583m (Kedarnath), in the Garhwal Himalaya, and are collectively known as the Chota Char Dham — distinct from the pan-India Char Dham (Badrinath, Dwarka, Puri, Rameswaram) established by the same saint.
         </p>
@@ -78,7 +92,7 @@ export default function Significance() {
           The yatra follows a fixed clockwise sequence — Yamunotri, Gangotri, Kedarnath, Badrinath — which follows the natural geographic progression from west to east and corresponds to the spiritual progression from purification (Yamunotri, water of Yamuna) through sanctification (Gangotri, holy Ganga) to liberation (Kedarnath, Shiva's grace) and final blessing (Badrinath, Vishnu's abode). Completing all four in sequence is considered one of the most complete acts of Hindu devotion.
         </p>
 
-        <h2 style={h2}>Adi Shankaracharya — The Architect of Char Dham</h2>
+        <h2 id="shankaracharya" style={h2}>Adi Shankaracharya — The Architect of Char Dham</h2>
         <p style={p}>
           The formal establishment of the Char Dham Yatra circuit is attributed to Adi Shankaracharya (788–820 CE), the 8th-century Hindu philosopher, theologian, and reformer from Kerala who walked the length of India multiple times in his 32-year life. Shankaracharya's contribution to Hinduism was a systematic consolidation of scattered belief systems, sacred sites, and philosophical schools that were fragmenting under centuries of divergent regional traditions.
         </p>
@@ -89,7 +103,7 @@ export default function Significance() {
           <strong>Notable fact:</strong> Adi Shankaracharya died at Kedarnath at age 32. His Samadhi (memorial) is located directly behind the temple, just steps from the main sanctum. Most pilgrims who rush through for darshan never see it — it takes 5 minutes to walk to. This is one of the most compelling reasons to stay overnight at Kedarnath.
         </div>
 
-        <h2 style={h2}>The Mythology of Each Dham</h2>
+        <h2 id="mythology" style={h2}>The Mythology of Each Dham</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 28 }}>
           {[
             {
@@ -138,7 +152,7 @@ export default function Significance() {
           ))}
         </div>
 
-        <h2 style={h2}>Why Completing Char Dham Yatra Is Considered Special</h2>
+        <h2 id="why-special" style={h2}>Why Completing Char Dham Yatra Is Considered Special</h2>
         <p style={p}>
           Hindu scripture (specifically the Skanda Purana and Padma Purana) describes the Char Dham circuit as a path to moksha — liberation from the cycle of birth and death. The theological logic is specific rather than general: each dham addresses a different dimension of spiritual purification. Yamunotri cleanses fear of death. Gangotri purifies ancestral karma. Kedarnath grants Shiva's grace for sins of action. Badrinath completes the journey with Vishnu's blessing for final liberation. Together, they are understood as a complete circuit of spiritual completion.
         </p>
@@ -146,7 +160,7 @@ export default function Significance() {
           Beyond scripture, the practical reality of Char Dham Yatra in the Hindu tradition is that completing all four in one lifetime is considered a significant spiritual accomplishment — not because of any mechanical formula but because the effort involved (the 16km Kedarnath trek, the 6km Yamunotri trek, the mountain roads, the altitude, the physical demand) is understood as a form of tapas (austerity). The yatra is difficult enough that completing it is understood as an act of will and devotion, not merely a tourist trip.
         </p>
 
-        <h2 style={h2}>Chota Char Dham vs Char Dham — The Important Distinction</h2>
+        <h2 id="chota-vs" style={h2}>Chota Char Dham vs Char Dham — The Important Distinction</h2>
         <p style={p}>
           The Uttarakhand circuit (Yamunotri, Gangotri, Kedarnath, Badrinath) is technically called <strong>Chota Char Dham</strong> (the small Char Dham). The larger <strong>Char Dham</strong> established by Adi Shankaracharya to represent all four cardinal directions of India consists of: Badrinath (north), Dwarka in Gujarat (west), Puri in Odisha (east), and Rameswaram in Tamil Nadu (south). In common modern usage, however, "Char Dham Yatra" almost universally refers to the Uttarakhand circuit — the distinction matters mainly in religious scholarship, not in pilgrimage planning.
         </p>

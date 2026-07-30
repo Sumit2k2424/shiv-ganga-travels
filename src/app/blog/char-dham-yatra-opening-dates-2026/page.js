@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Opening Dates 2026 | All 4 Dhams' },
@@ -58,24 +61,27 @@ export default function OpeningDates() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(21,128,61,0.25)', color:'#86EFAC', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:10 }}>🟢 Season Open — All 4 Dhams Active</span>
-          <br/>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Official Dates · 2026 Season</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra Opening Dates 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Official opening and closing dates for all 4 dhams — Yamunotri, Gangotri, Kedarnath, Badrinath — with best season guide and booking timeline
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="🟢 Season Open · Official Dates 2026"
+        title="Char Dham Yatra Opening Dates 2026"
+        dek="Official opening and closing dates for all 4 dhams — Yamunotri, Gangotri, Kedarnath, Badrinath — with best season guide and booking timeline"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="5 min read"
+        facts={[
+          { label:'Yamunotri', value:'April 19, 2026' },
+          { label:'Gangotri',  value:'April 19, 2026' },
+          { label:'Kedarnath', value:'April 22, 2026' },
+          { label:'Badrinath', value:'April 23, 2026' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Opening Dates 2026</span>
         </div>
       </nav>
@@ -85,6 +91,15 @@ export default function OpeningDates() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-opening-dates-2026", "title": "Char Dham Yatra Opening Dates 2026: All 4 Dhams", "description": "Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Officially verified</div>
+
+        <KeyTakeaways title="2026 opening dates at a glance"
+          points={[
+            <><strong>Yamunotri & Gangotri</strong> open April 19, 2026 (Akshaya Tritiya).</>,
+            <><strong>Kedarnath</strong> opens April 22 and <strong>Badrinath</strong> April 23, 2026.</>,
+            <>The season runs until early–mid November; all four close within a few days of Bhai Dooj.</>,
+            <>Best windows: <strong>May–mid June</strong> and <strong>mid September–October</strong>. Book May slots 60–90 days ahead.</>,
+          ]}
+        />
 
         {/* Quick dates card */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px', marginBottom:28 }}>

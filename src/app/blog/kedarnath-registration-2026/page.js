@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Registration 2026 | Online & WhatsApp' },
@@ -54,29 +57,32 @@ export default function KedarnathRegistration() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(29,158,117,0.25)', color: '#6EFFD0', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Registration opens March 6 · 100% free · QR e-pass
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Kedarnath Yatra Registration 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Step-by-step guide: Online · WhatsApp (8394833833) · Offline counter. Daily limit: 18,000 pilgrims. Without a valid QR pass, you are turned back at Sonprayag.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Registration opens March 6 · 100% free · QR e-pass"
+        title="Kedarnath Yatra Registration 2026"
+        dek="Step-by-step guide: Online · WhatsApp (8394833833) · Offline counter. Daily limit: 18,000 pilgrims. Without a valid QR pass, you are turned back at Sonprayag."
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Cost',        value:'FREE (₹0)' },
+          { label:'Daily limit', value:'~18,000/day' },
+          { label:'WhatsApp',    value:'YATRA → 8394833833' },
+          { label:'Temple opened', value:'April 22, 2026' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Registration 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-registration-2026", "title": "Kedarnath Registration 2026: Online & WhatsApp", "description": "Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -105,7 +111,17 @@ export default function KedarnathRegistration() {
           <strong>Critical:</strong> Without a valid QR-coded Yatra Registration Letter, you will be turned back at the <strong>Sonprayag barrier</strong> — even if you have reached Sonprayag from across India. Register before you travel, not at the last minute.
         </div>
 
-        <h2 style={h2}>Method 1 — Online Registration (Recommended)</h2>
+        <BlogTOC items={[
+          { id:'online',       label:'Method 1 — Online' },
+          { id:'whatsapp',     label:'Method 2 — WhatsApp' },
+          { id:'offline',      label:'Method 3 — Offline counter' },
+          { id:'daily-limit',  label:'Why the 18,000/day limit matters' },
+          { id:'helicopter',   label:'Helicopter registration notes' },
+          { id:'epass-names',  label:'E-pass vs registration vs travel pass' },
+          { id:'which-website', label:'Which website is which' },
+        ]}/>
+
+        <h2 id="online" style={h2}>Method 1 — Online Registration (Recommended)</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
           {[
             { n: '1', title: 'Go to the official portal', detail: 'Open registrationandtouristcare.uk.gov.in in your browser. This is the ONLY government-authorised portal. Beware of fake registration sites — check the URL carefully. The .uk.gov.in domain is Uttarakhand government.' },
@@ -127,7 +143,7 @@ export default function KedarnathRegistration() {
           <strong>Pro tip:</strong> The portal sees the highest traffic in the first week of March and again in late April. Register between <strong>5:30–7:30 AM IST</strong> for the smoothest server experience.
         </div>
 
-        <h2 style={h2}>Method 2 — WhatsApp Registration (Fastest During Peak)</h2>
+        <h2 id="whatsapp" style={h2}>Method 2 — WhatsApp Registration (Fastest During Peak)</h2>
         <div style={{ background: '#F0FDF4', border: '1px solid #86EFAC', borderRadius: 12, padding: '16px 18px', marginBottom: 24 }}>
           <div style={{ fontWeight: 700, fontSize: 14, color: '#15803D', marginBottom: 10 }}>💬 WhatsApp — Often Faster Than the Website</div>
           <div style={{ fontSize: 13.5, color: '#166534', lineHeight: 1.8 }}>
@@ -139,7 +155,7 @@ export default function KedarnathRegistration() {
           </div>
         </div>
 
-        <h2 style={h2}>Method 3 — Offline Counter Registration</h2>
+        <h2 id="offline" style={h2}>Method 3 — Offline Counter Registration</h2>
         <p style={p}>
           If you cannot register online, offline biometric counters are available at multiple locations. However, in peak season (May–June), queues at offline counters can be 2–4 hours long. Online or WhatsApp registration is always preferred.
         </p>
@@ -155,7 +171,7 @@ export default function KedarnathRegistration() {
         <BlogCTA variant="inline" intent="registration" />
         <p style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 24 }}>Offline counters open from April 15, 2026. Carry original Aadhaar + passport photo. Biometric scan done on-site.</p>
 
-        <h2 style={h2}>Why the 18,000/Day Limit Matters</h2>
+        <h2 id="daily-limit" style={h2}>Why the 18,000/Day Limit Matters</h2>
         <p style={p}>
           The government set a daily pilgrim cap after the 2013 Kedarnath floods, which killed over 5,000 people — in part because the area was completely overwhelmed with unregistered pilgrims. The 2026 cap is approximately <strong>18,000 pilgrims per day at Kedarnath</strong> (15,000 at Badrinath). This is a hard limit enforced at the Sonprayag barrier.
         </p>
@@ -163,16 +179,16 @@ export default function KedarnathRegistration() {
           In May and June, this cap fills within days of slots opening. If you plan to travel in May (peak season) or during school holidays, you may find your exact dates unavailable. Register as early as possible — ideally in the first week of March when the portal opens. If your preferred date is full, the system places you on a waitlist. Cancellations do open up regularly.
         </p>
 
-        <h2 style={h2}>Helicopter Yatra — Special Registration Notes</h2>
+        <h2 id="helicopter" style={h2}>Helicopter Yatra — Special Registration Notes</h2>
         <div style={{ background: '#EAF3DE', border: '1px solid #86EFAC', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#30000A' }}>
           <strong>Critical — helicopter booking requires registration first:</strong> In 2026, you CANNOT book a Kedarnath helicopter ticket on IRCTC without a Yatra Registration Number. Complete the registration first at registrationandtouristcare.uk.gov.in, get your registration number, then go to heliyatra.irctc.co.in to book the helicopter ticket. Anyone claiming to sell helicopter tickets without this registration is operating a scam.
         </div>
 
-        <h2 style={h2}>E-Pass, Registration, Travel Pass — Same Thing, Three Names</h2>
+        <h2 id="epass-names" style={h2}>E-Pass, Registration, Travel Pass — Same Thing, Three Names</h2>
         <p style={p}>People search for the "Kedarnath e-pass", the "Uttarakhand travel pass" and the "yatra registration" as if they were three documents. They are one: the QR-coded Yatra Registration Letter the portal generates after you submit your details. In some earlier seasons a separate biometric step was done at Rishikesh or Sonprayag; since the system moved fully online, the QR letter itself is your biometric-linked pass, verified against your Aadhaar at the checkpoint. There is no separate e-pass to apply for and nothing extra to pay.</p>
         <p style={p}>One pass covers your whole route too — if your trip includes Badrinath, you select both dhams in the same tour entry rather than registering twice. The Badrinath-Kedarnath e-pass rumor of separate applications comes from the pre-2022 system and no longer applies.</p>
 
-        <h2 style={h2}>Which Website Is Which — Don&apos;t Register on the Wrong One</h2>
+        <h2 id="which-website" style={h2}>Which Website Is Which — Don&apos;t Register on the Wrong One</h2>
         <p style={p}>Three official-looking sites confuse almost everyone, so here is the clean split. <strong>registrationandtouristcare.uk.gov.in</strong> is the Uttarakhand Tourism registration portal — the only place your yatra registration happens. <strong>badrinath-kedarnath.gov.in</strong> belongs to the <strong>BKTC</strong> (Badri Kedar Temple Committee), the body that runs both temples — you use it for puja bookings, donation receipts and temple announcements, not for registration. And <strong>heliyatra.irctc.co.in</strong> is IRCTC&apos;s helicopter portal, which only works after you already hold a registration number.</p>
         <p style={p}>If a site asks for a registration "fee", close the tab — the government pass is free. The only money that changes hands officially is for helicopter tickets (IRCTC) and BKTC puja bookings.</p>
 

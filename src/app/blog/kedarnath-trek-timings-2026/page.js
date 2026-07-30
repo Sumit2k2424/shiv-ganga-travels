@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Trek Timings 2026 | Cut-Offs & Rules' },
@@ -50,29 +53,32 @@ export default function TrekTimings() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Official DM Rudraprayag Order · 2026 Season
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Kedarnath Trek Timings 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Last trek start: 1:30 PM from Gaurikund · Descent deadline: 5:00 PM from Kedarnath · No night trek permitted · Cut-off points at each checkpoint
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Official DM Rudraprayag Order · 2026 Season"
+        title="Kedarnath Trek Timings 2026"
+        dek="Last trek start: 1:30 PM from Gaurikund · Descent deadline: 5:00 PM from Kedarnath · No night trek permitted · Cut-off points at each checkpoint"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'First start',  value:'4:00 AM' },
+          { label:'Last start',   value:'1:30 PM (strict)' },
+          { label:'Descend by',   value:'5:00 PM' },
+          { label:'Night trek',   value:'Not permitted' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Trek Timings 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-trek-timings-2026", "title": "Kedarnath Trek Timings 2026: Cut-Offs & Rules", "description": "Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Checkpoint cut-offs, last-entry rules and why 5 AM starts are best.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -106,7 +112,14 @@ export default function TrekTimings() {
           The Kedarnath trek from Gaurikund is 16km at altitude between 1,980m and 3,583m. The Rudraprayag district administration sets fixed cut-off timings every season to prevent pilgrims from being stranded in the dark on the Himalayan route. Understanding these timings before you leave Haridwar is essential — arriving at Gaurikund late will mean turning back without darshan.
         </p>
 
-        <h2 style={h2}>Trek Stage-by-Stage: Distance, Time & Cut-off Points</h2>
+        <BlogTOC items={[
+          { id:'stage-by-stage', label:'Stage-by-stage cut-offs' },
+          { id:'why-enforced',   label:'Why these timings are enforced' },
+          { id:'best-start',     label:'Best time to start' },
+          { id:'overnight',      label:'Overnight vs same-day return' },
+        ]}/>
+
+        <h2 id="stage-by-stage" style={h2}>Trek Stage-by-Stage: Distance, Time & Cut-off Points</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>
@@ -136,7 +149,7 @@ export default function TrekTimings() {
           </table>
         </div>
 
-        <h2 style={h2}>Why These Timings Are Enforced</h2>
+        <h2 id="why-enforced" style={h2}>Why These Timings Are Enforced</h2>
         <p style={p}>
           The 2013 Kedarnath disaster (June 16, 2013) killed over 5,000 people. A significant factor was that thousands of pilgrims were caught on the 16km route when catastrophic flooding and landslides struck. Since then, the Uttarakhand government has systematically tightened safety protocols, including strict daily pilgrim caps (18,000/day) and movement cut-off times.
         </p>
@@ -144,7 +157,7 @@ export default function TrekTimings() {
           The 1:30 PM cut-off is calculated so that even a slow pilgrim (walking at 2km/hr) who starts at 1:30 PM from Gaurikund can reach Kedarnath by 9:30 PM — but the administration errs on the side of caution and enforces turnaround at the checkpoint. The 5 PM descent cut-off ensures all foot traffic is off the mountain by dark (sunset at approximately 7 PM in season).
         </p>
 
-        <h2 style={h2}>Best Time to Start the Trek</h2>
+        <h2 id="best-start" style={h2}>Best Time to Start the Trek</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 12, marginBottom: 24 }}>
           {[
             { time: '4:00–5:00 AM', badge: 'Best for same-day return', color: '#1D9E75', detail: 'Start at 4 AM if you want to reach Kedarnath by 11–12 PM, attend the afternoon darshan, and return to Gaurikund the same evening. This is the timetable most pilgrims on a day-trip basis follow. The trail is cool, quiet, and clear at this hour. Bring a torch.' },
@@ -165,7 +178,7 @@ export default function TrekTimings() {
           ))}
         </div>
 
-        <h2 style={h2}>Overnight Stay vs Same-Day Return — Which Is Better?</h2>
+        <h2 id="overnight" style={h2}>Overnight Stay vs Same-Day Return — Which Is Better?</h2>
         <p style={p}>
           This is the single most important decision for your Kedarnath visit. From 15 seasons of sending pilgrims to Kedarnath, our honest advice is this: if you can manage it physically, <strong>stay overnight at Kedarnath</strong>. The reasons are not logistical — they are experiential.
         </p>

@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Best Time for Char Dham Yatra 2026 | Month-by-Month Guide' },
@@ -92,27 +96,32 @@ export default function BestTimeCharDham() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
 
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:800, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Travel Guide · Updated May 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Best Time for Char Dham Yatra 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15.5, lineHeight:1.75, maxWidth:580, margin:'0 auto' }}>
-            Month-by-month weather · Temple opening dates · When to book · Honest advice from 15 years of running Char Dham yatras
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Travel Guide · Updated May 2026"
+        title="Best Time for Char Dham Yatra 2026"
+        dek="Month-by-month weather · Temple opening dates · When to book · Honest advice from 15 years of running Char Dham yatras"
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="5 min read"
+        facts={[
+          { label:'Season',     value:'Late Apr–early Nov' },
+          { label:'Best months', value:'May & Sep–Oct' },
+          { label:'Avoid',      value:'July–August' },
+          { label:'Opens 2026', value:'Apr 19–23' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Best Time for Char Dham Yatra 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:860, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -141,12 +150,21 @@ export default function BestTimeCharDham() {
           </div>
         </div>
 
-        <p style={p}>
+        <p className="blog-lede">
           The Char Dham season runs from late April to early November. But not every month within that window works equally well. The window matters enormously — travel in May and you get blooming mountains and pleasant trekking weather. Travel in August and you risk being stranded by landslides. Here is the honest, month-by-month picture we give our own pilgrims.
         </p>
 
+        <BlogTOC items={[
+          { id:'month-by-month', label:'Month-by-month weather' },
+          { id:'best-windows',   label:'The two best windows' },
+          { id:'opening-dates',  label:'2026 opening dates' },
+          { id:'weather-impact', label:'Weather by dham' },
+          { id:'when-to-book',   label:'When to book' },
+          { id:'faq',            label:'FAQs' },
+        ]}/>
+
         {/* Month table */}
-        <h2 style={h2}>Month-by-Month: Char Dham Weather & Conditions</h2>
+        <h2 id="month-by-month" style={h2}>Month-by-Month: Char Dham Weather & Conditions</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
           {months.map(m => (
             <div key={m.month} style={{ background:m.color, borderRadius:12, padding:'14px 18px', border:`1px solid ${m.border}` }}>
@@ -163,7 +181,7 @@ export default function BestTimeCharDham() {
           ))}
         </div>
 
-        <h2 style={h2}>The Two Best Windows — What You Actually Experience</h2>
+        <h2 id="best-windows" style={h2}>The Two Best Windows — What You Actually Experience</h2>
         <h3 style={h3}>May–June: The Classic Peak Season</h3>
         <p style={p}>
           May is when Char Dham Yatra hits full swing. The Garhwal Himalayas turn green after the snowmelt. Rhododendron forests blaze red and pink along the Kedarnath trek route. Daytime temperatures at the dhams sit between 12–22°C — warm enough to walk comfortably, cool enough to sleep well at altitude. The Yamunotri trek is dry and firm underfoot. At Gangotri, the Bhagirathi River runs blue-green from the snowmelt rather than the silty brown of monsoon.
@@ -173,6 +191,9 @@ export default function BestTimeCharDham() {
         </p>
 
         <h3 style={h3}>September–October: The Insider's Choice</h3>
+        <ExpertNote variant="insider">
+          If you can only remember one line from this guide: <strong>book late September to mid-October.</strong> Same darshan, a fraction of the crowd, hotels 25–40% cheaper, and the clearest mountain views of the entire year. It's the window our own guides pick when they bring their families.
+        </ExpertNote>
         <p style={p}>
           After the monsoon ends — usually by September 10–15 — the Uttarakhand sky does something dramatic. The haze and cloud cover vanish. The peaks emerge in sharp, crystalline detail. The Nilkantha range behind Badrinath, the ridgeline above Kedarnath, the Bhagirathi peaks at Gangotri — all fully visible. Our guides consistently say: the most powerful darshan moments they witness happen in October, not May.
         </p>
@@ -180,7 +201,7 @@ export default function BestTimeCharDham() {
           Practically: October crowds are a fraction of May. You walk straight to the Kedarnath temple. Hotels have last-minute availability. Roads are dry and fast. The autumn colour on the descent from Kedarnath — the birch and rhododendron in gold and crimson — makes the trek visually spectacular in both directions. Night temperatures drop to 2–5°C at the dhams, so pack thermals and a warm jacket. Temples close by Bhai Dooj (late October/early November) — plan departures before October 20 to be completely safe.
         </p>
 
-        <h2 style={h2}>Char Dham Yatra 2026 — Official Opening Dates</h2>
+        <h2 id="opening-dates" style={h2}>Char Dham Yatra 2026 — Official Opening Dates</h2>
         <div style={{ overflowX:'auto', borderRadius:12, border:'1px solid var(--border)', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14, minWidth:460 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -212,7 +233,7 @@ export default function BestTimeCharDham() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
-        <h2 style={h2}>How Weather Affects Each Part of the Journey</h2>
+        <h2 id="weather-impact" style={h2}>How Weather Affects Each Part of the Journey</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { place:'Yamunotri (6km trek)', impact:'Rain makes the rocky trail slippery. Good boots are non-negotiable. In monsoon, the path alongside the Yamuna can flood. Best in May or October.' },
@@ -227,7 +248,7 @@ export default function BestTimeCharDham() {
           ))}
         </div>
 
-        <h2 style={h2}>When to Book — Practical Timing</h2>
+        <h2 id="when-to-book" style={h2}>When to Book — Practical Timing</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:8, marginBottom:24 }}>
           {[
             { window:'May departure', rule:'Book 60–90 days before. VIP darshan, good hotels and confirmed seats go first. Waiting past March risks getting pushed to June.' },
@@ -242,7 +263,7 @@ export default function BestTimeCharDham() {
           ))}
         </div>
 
-        <h2 style={h2}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {faqSchema.mainEntity.map((q, i) => (
           <div key={i} style={{ marginBottom:16, padding:'16px 18px', background:'var(--bg)', borderRadius:12, border:'1px solid var(--border)' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:8 }}>Q: {q.name}</div>

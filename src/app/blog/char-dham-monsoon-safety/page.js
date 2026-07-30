@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Monsoon Safety 2026 | Local Driver Guide' },
@@ -62,13 +65,22 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Monsoon 2026 · Written by Hill Drivers</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Char Dham Yatra in Monsoon — How We Keep Pilgrims Safe</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Sunrise departures · Landslide zones · What to pack · Live route checks · The honest version</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Monsoon 2026 · Written by Hill Drivers"
+        title="Char Dham Yatra in Monsoon — How We Keep Pilgrims Safe"
+        dek="Sunrise departures · Landslide zones · What to pack · Live route checks · The honest version"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="8 min read"
+        facts={[
+          { label:'Dhams open',  value:'Yes, all monsoon' },
+          { label:'Golden rule', value:'Wheels by 6 AM' },
+          { label:'Buffer',      value:'1 spare day' },
+          { label:'Best switch', value:'Mid-September' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
@@ -78,7 +90,7 @@ export default function Page() {
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="sumit" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
@@ -88,16 +100,27 @@ export default function Page() {
           <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.7 }}>Yes, pilgrims complete Char Dham in July and August every year — the dhams stay open right through the monsoon. But this is the one season where who is driving you matters more than which hotel you booked. Our rule is simple: wheels rolling by 6 AM, off the exposed stretches before afternoon rain, one buffer day in the plan, and the route status checked every single morning. Follow that discipline and the monsoon yatra is quiet, green, and surprisingly beautiful. Ignore it and you will spend an evening parked behind a landslide.</div>
         </div>
 
-        <h2 style={h2}>First, the Honest Picture of Monsoon 2026</h2>
+        <BlogTOC items={[
+          { id:'honest-picture', label:'The honest picture of monsoon 2026' },
+          { id:'6am-rule',       label:'The 6 AM rule' },
+          { id:'trouble-zones',  label:'Where roads give trouble' },
+          { id:'driver-matters', label:'Why the driver matters most' },
+          { id:'monsoon-packing', label:'Monsoon packing' },
+          { id:'route-status',   label:'Checking route status' },
+          { id:'flexible-dates', label:'If your dates are flexible' },
+          { id:'faq',            label:'Monsoon FAQs' },
+        ]}/>
+
+        <h2 id="honest-picture" style={h2}>First, the Honest Picture of Monsoon 2026</h2>
         <p style={p}>The southwest monsoon over Uttarakhand this July has been strong. IMD has been issuing heavy-rain alerts for the hill districts, and stretches of the Kedarnath highway around Sonprayag have seen short closures after slides. None of this is unusual — it happens every monsoon — but it means you should not plan a July yatra the way you would plan a May one.</p>
         <p style={p}>We will not tell you monsoon travel is risk-free, because it is not, and our own <Link href="/char-dham-yatra-scams" style={{ color:'var(--teal)', fontWeight:600 }}>scams page</Link> exists precisely because operators who oversell get pilgrims into trouble. What we can tell you is what 15 seasons of driving these roads in the rain has taught us, and what we actually do differently between July and mid-September.</p>
 
-        <h2 style={h2}>The 6 AM Rule — Why Our Monsoon Convoys Leave at Sunrise</h2>
+        <h2 id="6am-rule" style={h2}>The 6 AM Rule — Why Our Monsoon Convoys Leave at Sunrise</h2>
         <p style={p}>If you remember one thing from this page, make it this. Mountain rain in Uttarakhand has a daily rhythm: mornings are usually the calmest, cloud builds through midday, and the heavy downpours — the ones that loosen hillsides — concentrate in the afternoon and evening. Landslides need saturated slopes, and slopes saturate as the day's rain accumulates.</p>
         <p style={p}>So in monsoon we leave hotels at 5:30–6:00 AM without exception. Not because we enjoy waking pilgrims early, but because a 6 AM start from Guptkashi means you cross the slide-prone Sonprayag stretch before 8, while a 10 AM start puts you on the same stretch at noon with rain already falling. Same road, completely different risk. Our drivers also aim to have the vehicle parked at the night halt by 3–4 PM. Whatever sightseeing gets squeezed by this, we squeeze it. Darshan and safe roads come first; the photo stops can wait for your next trip.</p>
         <p style={p}>There is a bonus nobody mentions: early morning is also when the valleys are clearest. Some of the best views our pilgrims have ever had of the Mandakini valley came at 6:30 AM in August, between two days of rain.</p>
 
-        <h2 style={h2}>Where the Roads Actually Give Trouble</h2>
+        <h2 id="trouble-zones" style={h2}>Where the Roads Actually Give Trouble</h2>
         <p style={p}>Slides do not happen randomly. The same zones act up every monsoon, and every local driver knows them by name:</p>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
@@ -122,13 +145,13 @@ export default function Page() {
         </div>
         <p style={p}>These zones shift a little year to year as BRO stabilises one slope and the rain finds another. That is exactly why a driver who did this route last week is worth more in monsoon than any itinerary PDF. Check today's conditions on our <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live Char Dham road status page</Link> — we update it from driver reports and official bulletins.</p>
 
-        <h2 style={h2}>Why the Driver Matters More Than the Vehicle</h2>
+        <h2 id="driver-matters" style={h2}>Why the Driver Matters More Than the Vehicle</h2>
         <p style={p}>A common mistake: pilgrims book a taxi from Delhi or a broker's "all India" fleet, and the driver who turns up has done the Char Dham circuit twice in his life. In dry May weather he manages. In August he is a liability. He does not know that you never park under a fresh cut slope. He does not know the Tilwara diversion exists. He drives the same speed in rain that he drives in sun.</p>
         <p style={p}>Every driver in our monsoon rotation is Uttarakhand-based and has driven these specific routes across multiple rainy seasons. They talk to each other on WhatsApp all day — one convoy hits a blockage at Sirobagad at 7 AM, every Shiv Ganga vehicle behind them knows by 7:10 and re-plans. That informal driver network clears more problems than any app. It is also, frankly, the part of our service no competitor can copy-paste from our website.</p>
 
         <BlogCTA variant="inline" intent="info" />
 
-        <h2 style={h2}>Monsoon Packing — Beyond the Usual List</h2>
+        <h2 id="monsoon-packing" style={h2}>Monsoon Packing — Beyond the Usual List</h2>
         <p style={p}>Our full <Link href="/blog/char-dham-yatra-packing-list" style={{ color:'var(--teal)', fontWeight:600 }}>packing list</Link> covers the basics. For July–August, add these:</p>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
           {[
@@ -145,14 +168,14 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 style={h2}>Checking Route Status the Right Way</h2>
+        <h2 id="route-status" style={h2}>Checking Route Status the Right Way</h2>
         <p style={p}>Every monsoon morning follows the same drill in our office: driver reports come in by 5 AM, we cross-check with BRO and district control room updates, and departures adjust before pilgrims have finished their tea. You can run a lighter version of the same drill yourself:</p>
         <p style={p}>1. Check our <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>road status page</Link> after 6 AM. 2. If something looks blocked, call the state disaster helpline <strong>1070</strong> or police <strong>112</strong> — they have the freshest ground truth. 3. Keep our <Link href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)', fontWeight:600 }}>emergency contacts page</Link> saved offline, because network drops in exactly the places you need it. What you should not do is trust a news article from four days ago or a WhatsApp forward. Monsoon roads change faster than headlines.</p>
 
-        <h2 style={h2}>And If Your Dates Are Flexible…</h2>
+        <h2 id="flexible-dates" style={h2}>And If Your Dates Are Flexible…</h2>
         <p style={p}>Skip the monsoon entirely. The window from mid-September to mid-October is, in our honest opinion, the finest time of the whole year — washed skies, snow-dusted peaks, thin crowds, cheaper hotels. We have written a separate guide on <Link href="/blog/september-char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>September Char Dham Yatra and post-monsoon pre-booking</Link>, and autumn seats do fill early because everyone who postponed their July trip lands in the same window. Worth reading before you decide.</p>
 
-        <h2 style={h2}>Monsoon Yatra FAQs</h2>
+        <h2 id="faq" style={h2}>Monsoon Yatra FAQs</h2>
         {FAQS.map((f,i)=>(
           <div key={i} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>

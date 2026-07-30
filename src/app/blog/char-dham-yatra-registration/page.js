@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Registration 2026 | Free e-Pass Guide' },
@@ -185,26 +189,24 @@ export default function RegistrationBlog() {
     <>
       <Schema />
 
+      <ReadingProgress/>
+
       {/* Hero */}
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'56px 20px 44px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>
-            Step-by-Step Guide · Updated {SITE.lastUpdated}
-          </span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', fontWeight:700, letterSpacing:'-0.03em', lineHeight:1.2, marginBottom:16 }}>
-            Char Dham Yatra Registration 2026<br/>
-            <em style={{ color:'#FFD166', fontStyle:'italic' }}>Step-by-Step Guide</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15.5, lineHeight:1.75, maxWidth:700, margin:'0 auto 20px' }}>
-            Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Your 6-hour drive from Haridwar counts for nothing without a valid registration. Here is the complete step-by-step process from operators who've helped 50,000+ pilgrims register successfully.
-          </p>
-          <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap' }}>
-            {['⏱️ 20 min to complete','💰 Completely FREE — ₹0','📱 Online / WhatsApp / App / Offline','🪪 Aadhaar mandatory'].map(t => (
-              <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BlogHero
+        badge={`Step-by-Step Guide · Updated ${SITE.lastUpdated}`}
+        title="Char Dham Yatra Registration 2026 — Step-by-Step Guide"
+        dek="Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Here is the complete step-by-step process from operators who've helped 50,000+ pilgrims register successfully."
+        author="Dhanesh Chandra Mishra"
+        authorInitials="DM"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="9 min read"
+        facts={[
+          { label:'Time',     value:'~20 minutes' },
+          { label:'Cost',     value:'FREE (₹0)' },
+          { label:'Methods',  value:'Online · App · Offline' },
+          { label:'Required', value:'Aadhaar' },
+        ]}
+      />
 
       {/* Author + freshness strip */}
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
@@ -217,9 +219,9 @@ export default function RegistrationBlog() {
       {/* Breadcrumb */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Yatra Registration 2026</span>
         </div>
@@ -261,29 +263,20 @@ export default function RegistrationBlog() {
         </div>
 
         {/* Table of contents */}
-        <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:36 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>📋 What This Guide Covers</div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:6 }}>
-            {[
-              ['#why','Why registration is mandatory'],
-              ['#official','Official website + e-Pass terminology + 2026 stats'],
-              ['#online','How to register online — 6 steps'],
-              ['#offline','Offline centres + helpline'],
-              ['#documents','Documents — Aadhaar, Voter ID, PAN card'],
-              ['#limits','Daily pilgrim limits 2026'],
-              ['#helicopter','Helicopter booking — register first'],
-              ['#55plus','Special rules for 55+ pilgrims'],
-              ['#foreign','Foreign nationals + NRI rules'],
-              ['#troubleshoot','Portal not working? OTP not coming?'],
-              ['#mistakes','5 common registration mistakes'],
-              ['#operator','How Shiv Ganga Travels helps'],
-            ].map(([href, text]) => (
-              <a key={href} href={href} style={{ color:'var(--navy)', fontSize:13, fontWeight:500, textDecoration:'none', display:'flex', gap:6, alignItems:'center' }}>
-                <span style={{ color:'var(--gold)', fontWeight:700, fontSize:10 }}>→</span> {text}
-              </a>
-            ))}
-          </div>
-        </div>
+        <BlogTOC title="What this guide covers" items={[
+          { id:'why',          label:'Why registration is mandatory' },
+          { id:'official',     label:'Official website + e-Pass' },
+          { id:'online',       label:'Register online — 6 steps' },
+          { id:'offline',      label:'Offline centres + helpline' },
+          { id:'documents',    label:'Documents required' },
+          { id:'limits',       label:'Daily pilgrim limits 2026' },
+          { id:'helicopter',   label:'Helicopter — register first' },
+          { id:'55plus',       label:'Special rules for 55+' },
+          { id:'foreign',      label:'Foreign nationals + NRIs' },
+          { id:'troubleshoot', label:'Portal not working?' },
+          { id:'mistakes',     label:'5 common mistakes' },
+          { id:'operator',     label:'How we handle it' },
+        ]}/>
 
         {/* Body */}
         <div style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85 }}>
@@ -559,6 +552,10 @@ export default function RegistrationBlog() {
               <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span> {r}
             </div>
           ))}
+
+          <ExpertNote variant="tip">
+            The portal is busiest — and slowest — between <strong>8 PM and 11 PM</strong> when everyone tries after work. If OTPs are timing out or pages won't load, register early morning (6–8 AM) instead. Nine times out of ten it's server load, not your phone. And never register on a public/shared computer — your Aadhaar OTP is involved.
+          </ExpertNote>
 
           <h2 id="troubleshoot" style={H2}>Registration Portal Not Working? OTP Not Coming? Fix It Here.</h2>
           <p>The portal at <strong>registrationandtouristcare.uk.gov.in</strong> handles millions of requests after registration opens in March. Server load is real. These are the exact problems our pilgrims report, and how to solve each one.</p>

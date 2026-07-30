@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Darshan Timings 2026 | Aarti & VIP Slots' },
@@ -71,25 +74,27 @@ export default function KedarnathTimings() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Temple Guide · 2026 Season</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Kedarnath Darshan Timings 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Complete schedule — General darshan, Mahabhishek, Shringaar Aarti, Shayan Aarti · Puja prices · Best time to visit · VIP darshan booking
-          </p>
-          {['🕕 Opens 6:00 AM','🌙 Closes 9:00 PM','🔔 Mahabhishek 4:00 AM','⭐ Best time: 5–8 AM'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Temple Guide · 2026 Season"
+        title="Kedarnath Darshan Timings 2026"
+        dek="Complete schedule — General darshan, Mahabhishek, Shringaar Aarti, Shayan Aarti · Puja prices · Best time to visit · VIP darshan booking"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Opens',       value:'6:00 AM' },
+          { label:'Closes',      value:'9:00 PM' },
+          { label:'Mahabhishek', value:'4:00 AM' },
+          { label:'Best time',   value:'5–8 AM' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Darshan Timings 2026</span>
         </div>
       </nav>
@@ -114,7 +119,14 @@ export default function KedarnathTimings() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'schedule',     label:'Complete daily schedule' },
+          { id:'puja-booking', label:'Puja booking — prices' },
+          { id:'shringaar',    label:'The Shringaar Aarti' },
+          { id:'faq',          label:'FAQs' },
+        ]}/>
+
+        <h2 id="schedule" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Complete Kedarnath Temple Schedule 2026
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:20 }}>
@@ -144,7 +156,7 @@ export default function KedarnathTimings() {
           })}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="puja-booking" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Kedarnath Puja Booking — Prices & Types
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -177,7 +189,7 @@ export default function KedarnathTimings() {
           </table>
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="shringaar" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           What to Expect During the Shringaar Aarti (7:30 PM)
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
@@ -203,7 +215,7 @@ export default function KedarnathTimings() {
         </div>
 
         {/* FAQ */}
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Frequently Asked Questions</h2>
         {[
           ['Can I book Kedarnath Mahabhishek online?', 'Yes. Mahabhishek you can book through the Shri Kedarnath temple website or through your tour operator. Shiv Ganga Travels books Mahabhishek puja for all our Kedarnath packages as standard. The puja is at 4:00 AM, so your vehicle must reach Gaurikund by 2 AM at the latest — which means leaving Guptkashi at 1 AM.'],
           ['Is there a separate darshan line for senior citizens?', 'Yes. A dedicated Divyangjan (disabled) and Senior Citizens queue is maintained at Kedarnath temple. Our guides facilitate access to this queue for pilgrims aged 70+ or those with mobility limitations. Ask your guide to approach the queue management staff at the temple entrance.'],

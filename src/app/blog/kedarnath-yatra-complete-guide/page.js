@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Yatra Guide 2026 | Price Starts at ₹6,999 | Route & Darshan' },
@@ -32,25 +35,27 @@ export default function KedarnathCompleteGuide() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Complete A-Z Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Kedarnath Yatra 2026 — Complete Guide
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Route · Cost · Registration · Trek · Helicopter · Darshan Timings · Hotels · Packages — Everything in one place
-          </p>
-          {['🕌 Opens April 22','📍 218km from Haridwar','🏔️ 16km trek','From ₹6,999/person'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Complete A-Z Guide · 2026"
+        title="Kedarnath Yatra 2026 — Complete Guide"
+        dek="Route · Cost · Registration · Trek · Helicopter · Darshan Timings · Hotels · Packages — Everything in one place"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="8 min read"
+        facts={[
+          { label:'Altitude',   value:'3,583 m' },
+          { label:'Opens',      value:'April 22, 2026' },
+          { label:'Trek',       value:'16 km one way' },
+          { label:'Package from', value:'₹6,999 pp' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Yatra Complete Guide 2026</span>
         </div>
       </nav>
@@ -71,14 +76,20 @@ export default function KedarnathCompleteGuide() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'significance', label:'Significance of Kedarnath' },
+          { id:'plan',         label:'How to plan (step by step)' },
+          { id:'cost',         label:'Complete cost breakdown' },
+        ]}/>
+
+        <h2 id="significance" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Significance of Kedarnath
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
           Kedarnath is not merely a temple — it is one of the twelve Jyotirlingas (primordial pillars of light) of Lord Shiva and one of the four dhams in the Char Dham circuit. Situated at 3,583m in the Rudraprayag district, it sits in the shadow of the Kedarnath peak (6,940m) with the Mandakini river originating from the Chorabari glacier above. The temple was built (or rebuilt after earlier construction) by Adi Shankaracharya in the 8th century CE. It survived the catastrophic 2013 floods when a massive boulder deflected the floodwaters, protecting the main temple structure — an event widely considered miraculous.
         </p>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="plan" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Step-by-Step: How to Plan Kedarnath Yatra 2026
         </h2>
         {[
@@ -100,7 +111,7 @@ export default function KedarnathCompleteGuide() {
           </div>
         ))}
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
+        <h2 id="cost" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
           Complete Cost Breakdown — Kedarnath Yatra 2026
         </h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>

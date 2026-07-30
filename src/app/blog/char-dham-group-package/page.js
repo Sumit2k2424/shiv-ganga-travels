@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Group Package 2026 | Price Starts at ₹17,500 | 10+ Pilgrims' },
@@ -32,25 +35,27 @@ export default function GroupPackage() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Group Travel Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra Group Package 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Vehicle options for 2–50 pilgrims · Per-person pricing table · Group discounts · 90-day advance booking guide
-          </p>
-          {['👨‍👩‍👧‍👦 2–50 pilgrims','💰 Group discounts from 6+','🚌 Dedicated Tempo Travellers','📋 Group registration included'].map(t => (
-            <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)', display:'inline-block', margin:'4px' }}>{t}</span>
-          ))}
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Group Travel Guide · 2026"
+        title="Char Dham Yatra Group Package 2026"
+        dek="Vehicle options for 2–50 pilgrims · Per-person pricing table · Group discounts · 90-day advance booking guide"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="5 min read"
+        facts={[
+          { label:'Group size', value:'2–50 pilgrims' },
+          { label:'Discounts',  value:'From 6+ pilgrims' },
+          { label:'Vehicles',   value:'Dedicated Tempo' },
+          { label:'Registration', value:'Handled for group' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Group Package 2026</span>
         </div>
       </nav>
@@ -65,7 +70,13 @@ export default function GroupPackage() {
           Family reunions, office pilgrimages, temple committee tours, retirement groups — we run all of them, and groups get something solo pilgrims miss. You share the Kedarnath trek, hold hands at Gangotri's river bank, and see each other's darshan. This guide covers everything about group Char Dham Yatra from Haridwar.
         </p>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'pricing',        label:'Group size & per-person pricing' },
+          { id:'timeline',       label:'Advance booking timeline' },
+          { id:'what-we-handle', label:'What we handle for groups' },
+        ]}/>
+
+        <h2 id="pricing" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Group Size, Vehicle &amp; Per-Person Pricing
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -104,7 +115,7 @@ export default function GroupPackage() {
           <strong>Highlighted rows</strong> (6–9 people) represent the sweet spot for group Char Dham Yatra — best per-person price with comfortable, private vehicle and maximum group bonding.
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="timeline" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Advance Booking Timeline for Groups
         </h2>
         {[
@@ -128,7 +139,7 @@ export default function GroupPackage() {
           </div>
         ))}
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
+        <h2 id="what-we-handle" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
           What Shiv Ganga Travels Handles for Group Yatras
         </h2>
         {[

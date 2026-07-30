@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'चार धाम यात्रा 2026 खर्चा | कीमत ₹18,500 से शुरू | पूरी जानकारी' },
@@ -40,23 +43,33 @@ export default function CharDhamKharcha() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>💰 खर्चे का पूरा हिसाब · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>चार धाम यात्रा 2026 में कितना पैसा लगता है?</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>गाड़ी · होटल · खाना · पंजीकरण · केदारनाथ घोड़ा · सब कुछ अलग-अलग</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="💰 खर्चे का पूरा हिसाब · 2026"
+        title="चार धाम यात्रा 2026 में कितना पैसा लगता है?"
+        dek="गाड़ी · होटल · खाना · पंजीकरण · केदारनाथ घोड़ा · सब कुछ अलग-अलग"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="7 मिनट"
+        facts={[
+          { label:"बजट यात्री", value:"₹22,000–28,000" },
+          { label:"आरामदायक", value:"₹30,000–40,000" },
+          { label:"पंजीकरण", value:"मुफ्त (₹0)" },
+          { label:"पैकेज", value:"₹18,500 से" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम यात्रा खर्चा 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -74,7 +87,15 @@ export default function CharDhamKharcha() {
 
         <p style={p}>जब भी घर में चार धाम यात्रा की बात होती है, पहला सवाल यही उठता है — <strong>"कितना पैसा लगेगा?"</strong> और यह सवाल बिल्कुल सही है। इस लेख में हम आपको पूरा सच बताएंगे — हर मद का हिसाब, कोई छुपा खर्चा नहीं। शिव गंगा ट्रेवल्स 2010 से 50,000+ तीर्थयात्रियों को सेवा दे रहा है।</p>
 
-        <h2 style={h2}>यात्रा के प्रकार के अनुसार खर्चा</h2>
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"types", label:"प्रकार के अनुसार खर्चा" },
+          { id:"breakdown", label:"हर मद का हिसाब" },
+          { id:"example", label:"फैमिली का असली उदाहरण" },
+          { id:"operator-vs-agent", label:"ऑपरेटर vs एजेंट" },
+          { id:"faq", label:"सवाल-जवाब" },
+        ]}/>
+
+        <h2 id="types" style={h2}>यात्रा के प्रकार के अनुसार खर्चा</h2>
         <div style={{ overflowX: 'auto', marginBottom: 28 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>{['यात्रा का प्रकार','खर्चा (प्रति व्यक्ति)','दिन','क्या शामिल'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
@@ -99,7 +120,7 @@ export default function CharDhamKharcha() {
           <strong>शिव गंगा ट्रेवल्स का बेसिक पैकेज ₹18,500 से शुरू होता है</strong> — इसमें गाड़ी, होटल, खाना, गाइड और VIP दर्शन सब शामिल हैं। कोई छुपा खर्चा नहीं।
         </p>
 
-        <h2 style={h2}>हर मद का अलग-अलग हिसाब</h2>
+        <h2 id="breakdown" style={h2}>हर मद का अलग-अलग हिसाब</h2>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
           {[
@@ -122,7 +143,7 @@ export default function CharDhamKharcha() {
           ))}
         </div>
 
-        <h2 style={h2}>असली उदाहरण — 4 लोगों की फैमिली का पूरा खर्चा</h2>
+        <h2 id="example" style={h2}>असली उदाहरण — 4 लोगों की फैमिली का पूरा खर्चा</h2>
         <p style={p}><strong>रामपुर (UP) से एक परिवार — 4 लोग, मई 2025</strong></p>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
@@ -149,7 +170,7 @@ export default function CharDhamKharcha() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="cost" />
 
-        <h2 style={h2}>सीधे ऑपरेटर vs एजेंट — कितना फर्क पड़ता है?</h2>
+        <h2 id="operator-vs-agent" style={h2}>सीधे ऑपरेटर vs एजेंट — कितना फर्क पड़ता है?</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>{['बुकिंग का तरीका','प्रति व्यक्ति','कमीशन'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
@@ -170,7 +191,7 @@ export default function CharDhamKharcha() {
           </table>
         </div>
 
-        <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
+        <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             ['क्या ₹10,000 में चार धाम यात्रा हो सकती है?','नहीं। ₹10,000 में सिर्फ गाड़ी का किराया भी नहीं निकलता। जो इतने में करने का दावा करते हैं, वे या तो झूठ बोलते हैं या धर्मशाला में रहते और खुद खाना बनाते हैं।'],

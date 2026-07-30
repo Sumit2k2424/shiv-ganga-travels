@@ -2,6 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra for Senior Citizens 2026 | Complete Guide' },
@@ -48,20 +53,27 @@ export default function SeniorCitizenCharDham() {
 return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>For Elderly Pilgrims · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra for Senior Citizens — Yes, It Is Possible. Here's How.
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Age 60–85+ · Safety tips · Medical support · Pony & helicopter · Special package</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="For Elderly Pilgrims · 2026"
+        title="Char Dham Yatra for Senior Citizens — Yes, It Is Possible. Here's How."
+        dek="Age 60–85+ · Safety tips · Medical support · Pony & helicopter · Special package"
+        author="Sumit Mishra"
+        updated="Updated Apr 2026"
+        readTime="7 min read"
+        facts={[
+          { label:'Age',      value:'No limit (60–85+)' },
+          { label:'Package',  value:'₹27,999 · 12N/13D' },
+          { label:'Kedarnath', value:'Pony / Palki / Heli' },
+          { label:'Support',  value:'Medical attendant' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Senior Citizen Char Dham Yatra</span>
         </div>
       </nav>
@@ -70,15 +82,36 @@ return (
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
+        <p className="blog-lede">Our oldest ever Char Dham pilgrim was 86 years old. Sardar Gurpreet Singh from Amritsar. His family was terrified. His doctor was concerned. He himself had a bad knee and was on blood pressure medication. But he had waited 60 years for this yatra and was not going to wait any longer.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>He completed all four dhams in 14 days. He took ponies at Yamunotri and Kedarnath. Our medical attendant monitored his oxygen levels every evening. He slept in ground-floor rooms with attached bathrooms at every stop. On the last day at Badrinath, watching the Tapt Kund steam rise in the morning mist, he folded his hands and said — "Ab jaana ho sakta hai. Darshan ho gaye." (Now I can go. I have had the darshan.)</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Sardar Gurpreet Singh is why we created our <strong>Senior Citizen Special Package</strong>. Not as an afterthought, but as a central part of what we do.</p>
 
-        <h2 style={h2}>Is There an Age Limit for Char Dham Yatra?</h2>
+        <KeyTakeaways
+          points={[
+            <>There is <strong>no official age limit</strong> — pilgrims aged 70–80+ complete the yatra safely every year.</>,
+            <>A doctor's <strong>fitness certificate</strong> is advised (and mandatory at 55+) for anyone with heart, BP or recent-surgery history.</>,
+            <>Our <strong>Senior Special Package — ₹27,999 (12N/13D)</strong> includes pony/palki, a medical attendant, oxygen, pulse oximeters and ground-floor rooms.</>,
+            <>Only <strong>Kedarnath and Yamunotri</strong> involve a climb — pony, palki or helicopter cover both; Badrinath and Gangotri are road-accessible.</>,
+            <>For high-risk conditions, the <strong>helicopter package</strong> removes almost all altitude stress.</>,
+          ]}
+        />
+
+        <BlogTOC items={[
+          { id:'age-limit',          label:'Is there an age limit?' },
+          { id:'senior-package',     label:'Our Senior Special Package' },
+          { id:'medical-conditions', label:'Which conditions can travel' },
+          { id:'tips',               label:'10 tips for senior pilgrims' },
+        ]}/>
+
+        <h2 id="age-limit" style={h2}>Is There an Age Limit for Char Dham Yatra?</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>There is no official age limit for Char Dham Yatra.</strong> However, the Uttarakhand government does recommend that pilgrims above 60 years with pre-existing medical conditions (heart disease, severe BP, recent surgery) get a fitness certificate from their doctor before travelling. This is good advice, not a barrier.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The reality is: every year, thousands of pilgrims aged 70–80+ complete the Char Dham Yatra safely. With proper planning, the right pacing, and a good operator, it is very much achievable.</p>
 
-        <h2 style={h2}>Our Senior Citizen Special Package — ₹27,999 (12N/13D)</h2>
+        <ExpertNote variant="insider">
+          The single biggest factor for elderly pilgrims isn't fitness — it's <strong>pace</strong>. The standard 9-night itinerary tries to do too much too fast for a 75-year-old body. Adding three rest days so altitude builds gradually is what turns "risky" into "comfortable." It's the first thing we change for every senior booking.
+        </ExpertNote>
+
+        <h2 id="senior-package" style={h2}>Our Senior Citizen Special Package — ₹27,999 (12N/13D)</h2>
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:14 }}>What makes it different:</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10 }}>
@@ -100,12 +133,16 @@ return (
           </div>
         </div>
 
-        <h2 style={h2}>Medical Conditions — What Can & Cannot Travel</h2>
+        <h2 id="medical-conditions" style={h2}>Medical Conditions — What Can & Cannot Travel</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Can travel with precautions:</strong> Controlled blood pressure, Type 2 diabetes, mild asthma, arthritis, knee replacements, hip replacements (within 6+ months), controlled thyroid. Consult your doctor and carry medications.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Should consider helicopter package:</strong> Heart stents or bypass surgery (within 12 months), severe COPD, recent stroke, uncontrolled diabetes, oxygen dependency at sea level. The helicopter package eliminates altitude stress by minimising time at high elevation.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>Should postpone:</strong> Active cancer treatment, very recent major surgery (under 3 months), severe unstable heart conditions. Your health comes first. The dhams will be there next year.</p>
 
-        <h2 style={h2}>10 Practical Tips for Senior Pilgrims</h2>
+        <ExpertNote variant="warning">
+          We will tell you honestly if we think a pilgrim shouldn't travel this year — even if it costs us the booking. A darshan is not worth a medical emergency at 3,500 m where the nearest hospital is hours away. When in doubt, get the fitness certificate and let your cardiologist make the call, not the calendar.
+        </ExpertNote>
+
+        <h2 id="tips" style={h2}>10 Practical Tips for Senior Pilgrims</h2>
         <ol style={{ paddingLeft:22, marginBottom:24, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.5 }}>
           <li><strong>Visit your doctor 4 weeks before departure.</strong> Get a full checkup. Adjust any medications if needed. Carry the doctor’s contact number.</li>
           <li><strong>Start daily walks 6 weeks before.</strong> Even 20–30 minutes daily builds the stamina for driving and short walks between vehicles and temples.</li>

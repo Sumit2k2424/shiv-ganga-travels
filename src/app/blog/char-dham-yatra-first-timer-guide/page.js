@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra for First Timers 2026 | Complete Guide' },
@@ -37,20 +40,22 @@ export default function FirstTimerGuide() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>
-            Beginner&apos;s Guide · 2026
-          </span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra for First Timers 2026<br/>
-            <em style={{ color:'#FFD166' }}>Complete Step-by-Step Guide</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.75, maxWidth:700, margin:'0 auto' }}>
-            Everything a first-time pilgrim needs to know — from registration to packing to what happens on the trek. No fluff. Real advice from 15 years of guiding 50,000+ pilgrims through the circuit.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Beginner's Guide · 2026"
+        title="Char Dham Yatra for First Timers 2026 — Complete Step-by-Step Guide"
+        dek="Everything a first-time pilgrim needs to know — from registration to packing to what happens on the trek. No fluff. Real advice from 15 years of guiding 50,000+ pilgrims through the circuit."
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="12 min read"
+        facts={[
+          { label:'Duration',   value:'10–12 days' },
+          { label:'From',       value:'₹18,500 pp' },
+          { label:'Best months', value:'May & Sep–Oct' },
+          { label:'Register',   value:'Free · mandatory' },
+        ]}
+      />
 
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
@@ -62,8 +67,8 @@ export default function FirstTimerGuide() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra First Timer Guide</span>
         </div>
       </nav>
@@ -72,23 +77,24 @@ export default function FirstTimerGuide() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-first-timer-guide", "title": "Char Dham Yatra for First Timers: 2026 Guide", "description": "First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>📋 What this guide covers</div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:6 }}>
-            {['Is Char Dham Yatra right for you?','How many days you need','What to do 3 months before','Registration step by step','Packing — what to carry and what not to','The Kedarnath trek — what to expect','Altitude sickness — how to prevent it','Costs — realistic budget breakdown','10 common mistakes and how to avoid them','How to choose the right operator'].map(t=>(
-              <div key={t} style={{ fontSize:13, color:'var(--navy)', fontWeight:500, display:'flex', gap:6, alignItems:'center' }}>
-                <span style={{ color:'var(--gold)', fontWeight:700, fontSize:10 }}>→</span> {t}
-              </div>
-            ))}
-          </div>
-        </div>
+        <BlogTOC items={[
+          { id:'right-for-you', label:'Is it right for you?' },
+          { id:'how-many-days', label:'How many days it takes' },
+          { id:'pre-checklist', label:'3-month pre-yatra checklist' },
+          { id:'packing',       label:'Packing list' },
+          { id:'kedarnath-trek', label:'The Kedarnath trek' },
+          { id:'altitude',      label:'Altitude sickness' },
+          { id:'cost',          label:'Realistic cost breakdown' },
+          { id:'mistakes',      label:'10 first-timer mistakes' },
+          { id:'choose-operator', label:'Choosing an operator' },
+        ]}/>
 
-        <h2 style={H2}>Is Char Dham Yatra Right for You?</h2>
+        <h2 id="right-for-you" style={H2}>Is Char Dham Yatra Right for You?</h2>
         <p>The Char Dham Yatra — Yamunotri, Gangotri, Kedarnath, and Badrinath — is not a holiday. It is a pilgrimage that takes you to altitudes between 3,133m and 3,583m on narrow Himalayan mountain roads, in weather that can change from sunshine to snow in a single afternoon. If you are prepared for that, it becomes one of the most profound experiences of your life. If you are not, it can become a difficult and stressful journey.</p>
         <p>The good news: with 15 years of operating Char Dham Yatra from Haridwar, we have guided pilgrims aged 14 to 83, people with knee replacements, people on blood pressure medication, people who had never trekked a day in their life. Almost all of them completed the circuit successfully — because they planned properly and travelled with an experienced operator.</p>
         <p>The one type of person we advise to reconsider: anyone with unstable heart disease, severe COPD, or who cannot walk 500 metres without stopping. The high altitude genuinely poses risk for these conditions. Speak to your doctor before booking.</p>
 
-        <h2 style={H2}>How Many Days Does Char Dham Yatra Take?</h2>
+        <h2 id="how-many-days" style={H2}>How Many Days Does Char Dham Yatra Take?</h2>
         <div style={{ overflowX:'auto', marginBottom:20 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -111,7 +117,7 @@ export default function FirstTimerGuide() {
           </table>
         </div>
 
-        <h2 style={H2}>3 Months Before — Your Pre-Yatra Checklist</h2>
+        <h2 id="pre-checklist" style={H2}>3 Months Before — Your Pre-Yatra Checklist</h2>
         {[
           { n:'1', t:'Book your package', d:'Book with a direct operator 60–90 days before peak season (May–June) or 30–45 days before September–October. Hotels at Guptkashi and Joshimath fill 60 days ahead. Do not wait.' },
           { n:'2', t:'Get a medical check-up', d:'Mandatory for 55+ (medical certificate from MBBS doctor). Recommended for anyone with BP, diabetes, or heart history. Your doctor should specifically clear you for high-altitude travel.' },
@@ -131,7 +137,7 @@ export default function FirstTimerGuide() {
           </div>
         ))}
 
-        <h2 style={H2}>Packing List — What to Carry (and What to Leave Behind)</h2>
+        <h2 id="packing" style={H2}>Packing List — What to Carry (and What to Leave Behind)</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:16, marginBottom:20 }}>
           <div style={{ background:'#F0FDF4', borderRadius:12, padding:'16px', border:'1px solid #86EFAC' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#15803D', marginBottom:10 }}>✅ Must Carry</div>
@@ -147,7 +153,7 @@ export default function FirstTimerGuide() {
           </div>
         </div>
 
-        <h2 style={H2}>The Kedarnath Trek — What First Timers Need to Know</h2>
+        <h2 id="kedarnath-trek" style={H2}>The Kedarnath Trek — What First Timers Need to Know</h2>
         <p>This is the part most first timers are most nervous about — and the part most people end up proud of completing. Here is an honest breakdown.</p>
         <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:20 }}>
           {[
@@ -166,7 +172,7 @@ export default function FirstTimerGuide() {
           ))}
         </div>
 
-        <h2 style={H2}>Altitude Sickness — Prevention and Recognition</h2>
+        <h2 id="altitude" style={H2}>Altitude Sickness — Prevention and Recognition</h2>
         <div style={{ background:'#FEF3E2', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:16 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#7B3F00', marginBottom:8 }}>⚠️ Know These Symptoms</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:8, fontSize:13.5, color:'#7B3F00' }}>
@@ -177,7 +183,7 @@ export default function FirstTimerGuide() {
         </div>
         <p><strong>Prevention:</strong> Acclimatise at Guptkashi (1,319m) for one night before ascending to Kedarnath. Drink 3–4 litres of water daily. Avoid alcohol. Ascend slowly — do not rush. Shiv Ganga Travels carries oxygen cylinders in all our vehicles and advises all pilgrims on acclimatisation protocol before the trek.</p>
 
-        <h2 style={H2}>Realistic Cost Breakdown for First Timers</h2>
+        <h2 id="cost" style={H2}>Realistic Cost Breakdown for First Timers</h2>
         <div style={{ overflowX:'auto', marginBottom:20 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -208,7 +214,7 @@ export default function FirstTimerGuide() {
         <BlogCTA variant="inline" intent="info" />
         <p style={{ fontSize:13.5, color:'var(--text-muted)' }}>Note: These are Shiv Ganga Travels direct operator prices. Booking through MakeMyTrip or Thrillophilia adds ₹3,000–8,000 per person in platform fees and agent commissions. See our complete cost breakdown →</p>
 
-        <h2 style={H2}>10 Mistakes First Time Pilgrims Make — And How to Avoid Them</h2>
+        <h2 id="mistakes" style={H2}>10 Mistakes First Time Pilgrims Make — And How to Avoid Them</h2>
         {[
           ['Booking too late','Hotels fill 45–60 days ahead in peak season. Book by March for May departures.'],
           ['Carrying too much luggage','You will regret every extra kilo on the Kedarnath trek. Pack for 10 days in a 7kg bag.'],
@@ -230,7 +236,7 @@ export default function FirstTimerGuide() {
           </div>
         ))}
 
-        <h2 style={H2}>How to Choose the Right Char Dham Operator</h2>
+        <h2 id="choose-operator" style={H2}>How to Choose the Right Char Dham Operator</h2>
         <p>This is the most important decision. A good operator makes the yatra smooth and meaningful. A bad one makes it stressful and expensive. Ask these five questions before booking:</p>
         {['Do you own the vehicles or hire them?','Can I speak to your driver before departure?','Which specific hotels are booked — can I see the names?','What is your cancellation and refund policy in writing?','Are you a registered Uttarakhand Tourism operator?'].map((q,i)=>(
           <div key={q} style={{ display:'flex', gap:10, padding:'10px 0', borderBottom:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)' }}>

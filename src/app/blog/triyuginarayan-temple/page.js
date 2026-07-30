@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Triyuginarayan Temple 2026 | Where Shiva Wed Parvati | Guide' },
@@ -45,23 +48,32 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--gold-dark) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🔥 Eternal Flame · 1,900m</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Triyuginarayan Temple — Shiva and Parvati's Wedding Site</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Near Kedarnath · Eternal fire burning since the divine wedding · Vishnu as priest · 12km from Sonprayag</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="🔥 Eternal Flame · 1,900m"
+        title="Triyuginarayan Temple — Shiva and Parvati's Wedding Site"
+        dek="Near Kedarnath · Eternal fire burning since the divine wedding · Vishnu as priest · 12km from Sonprayag"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="5 min read"
+        facts={[
+          { label:'Altitude',  value:'1,980 m' },
+          { label:'Famous for', value:'Akhand Dhuni fire' },
+          { label:'Deity',     value:'Vishnu (as priest)' },
+          { label:'From Sonprayag', value:'12 km' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Triyuginarayan Temple</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -80,18 +92,25 @@ export default function Page() {
         <p style={p}>If you ask a hundred people visiting Kedarnath what Triyuginarayan is, perhaps five will know. And yet this small village temple — 12km from Sonprayag on the way to Kedarnath — contains one of the most beautiful and least-known stories in all of Hindu mythology: this is where Lord Shiva and Goddess Parvati were married.</p>
         <p style={p}>Not symbolically. Not in a general "Shiva and Parvati existed in this region" sense. According to Skanda Purana, the actual divine wedding took place here, in this village, on this ground. Lord Vishnu officiated as the brother of the bride (Parvati). Brahma was the priest. The Himalayan peaks and rivers were the witnesses. And a fire was lit for the wedding havan — which has not gone out since. Through three yugas (cosmic ages). Which is how the village and temple got the name Triyuginarayan: tri (three) yugas, Narayan (Vishnu).</p>
 
-        <h2 style={h2}>The Eternal Fire — Akhand Dhuni</h2>
+        <BlogTOC items={[
+        { id:'eternal-fire', label:'The eternal fire (Akhand Dhuni)' },
+        { id:'story',        label:'Why Vishnu is the deity' },
+        { id:'weddings',     label:'A wedding blessing site' },
+        { id:'how-to-visit', label:'How to visit' },
+      ]}/>
+
+      <h2 id="eternal-fire" style={h2}>The Eternal Fire — Akhand Dhuni</h2>
         <p style={p}>The most extraordinary feature of Triyuginarayan is the <strong>Akhand Dhuni</strong> — the eternal fire in the temple courtyard that is said to have been burning continuously since the divine wedding. Priests maintain it day and night, adding wood and ghee. The ash from this fire, called <em>vibhuti</em>, is distributed to devotees and is considered exceptionally sacred — ash from the same fire that burned when Shiva married Parvati.</p>
         <p style={p}>Pilgrims bring small logs of wood to add to the fire as an offering — you can buy them near the temple entrance. Adding your piece of wood to a flame that (in tradition) has been burning for three cosmic ages is one of the most quietly moving things you can do on the entire Char Dham circuit. No queue, no rush, no crowd. Just the fire, the mountains, and the story.</p>
 
-        <h2 style={h2}>The Story — Why Vishnu is the Presiding Deity</h2>
+        <h2 id="story" style={h2}>The Story — Why Vishnu is the Presiding Deity</h2>
         <p style={p}>The name of the presiding deity at Triyuginarayan is Narayana (Vishnu), not Shiva — which surprises most visitors who expect a Shiva temple near Kedarnath. The reason is that Vishnu was here as Parvati's brother, giving her away in marriage. He is the host deity of this occasion. Shiva and Parvati are the bride and groom, and there are separate shrines for them, but the main temple honours Vishnu in his role as the presiding guardian of the wedding.</p>
         <p style={p}>Three sacred ponds near the temple — the Brahma Kund, Vishnu Kund, and Rudra Kund — are where the divine beings are said to have bathed before the ceremony. Pilgrims traditionally dip in the Rudra Kund before entering the temple. The water is glacier-fed and extremely cold, but the ritual is short and considered highly auspicious — particularly for couples praying for a blessed marriage or for those recently married.</p>
 
-        <h2 style={h2}>Triyuginarayan as a Wedding Blessing Site</h2>
+        <h2 id="weddings" style={h2}>Triyuginarayan as a Wedding Blessing Site</h2>
         <p style={p}>In recent years, Triyuginarayan has become a quietly popular destination for Hindu couples — a pilgrimage to seek blessings at the site of the divine marriage. Some couples come here after their wedding, some before. Some come with their parents to seek marital blessings. A small number of real weddings are conducted here each year, officiated by the temple priests. If this interests you, contact the temple trust or let us know — our team can help arrange the puja.</p>
 
-        <h2 style={h2}>How to Visit Triyuginarayan</h2>
+        <h2 id="how-to-visit" style={h2}>How to Visit Triyuginarayan</h2>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
           {[
             ['From Haridwar','220km via Rishikesh–Devprayag–Rudraprayag–Sonprayag, then 12km to Triyuginarayan. About 8–9 hours drive total.'],

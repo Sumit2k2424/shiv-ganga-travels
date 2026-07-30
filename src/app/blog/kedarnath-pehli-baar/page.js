@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'केदारनाथ यात्रा 2026 | पहली बार जाने वालों के लिए गाइड' },
@@ -60,23 +64,33 @@ export default function KedarnathPehliBaar() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>🏔️ पहली बार केदारनाथ · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>केदारनाथ पहली बार जा रहे हैं?</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>ये 18 गलतियाँ मत करना — वरना यात्रा बर्बाद हो जाएगी</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="🏔️ पहली बार केदारनाथ · 2026"
+        title="केदारनाथ पहली बार जा रहे हैं?"
+        dek="ये 18 गलतियाँ मत करना — वरना यात्रा बर्बाद हो जाएगी"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="9 मिनट"
+        facts={[
+          { label:"ट्रेक", value:"16 km" },
+          { label:"ऊंचाई", value:"3,583m" },
+          { label:"समय", value:"6–9 घंटे" },
+          { label:"सबसे अच्छा", value:"मई / सितंबर" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>केदारनाथ पहली बार 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -106,7 +120,21 @@ export default function KedarnathPehliBaar() {
           ))}
         </div>
 
-        <h2 style={h2}>केदारनाथ ट्रेक — घंटे दर घंटे</h2>
+        <KeyTakeaways title="पहली बार जाने से पहले — जरूरी बातें"
+          points={[
+            <>रजिस्ट्रेशन <strong>मुफ्त और अनिवार्य</strong> है — बिना QR पास सोनप्रयाग से वापस भेज देते हैं।</>,
+            <>गौरीकुंड से <strong>16 km ट्रेक</strong>; घोड़ा, पालकी या हेलिकॉप्टर का विकल्प भी है।</>,
+            <>सुबह <strong>5–6 बजे</strong> ट्रेक शुरू करें — दोपहर बाद बादल और बारिश आ जाती है।</>,
+            <><strong>थर्मल और अच्छे जूते</strong> जरूरी — रात में 2–5°C तक ठंड।</>,
+          ]}
+        />
+
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"trek-hourly", label:"केदारनाथ ट्रेक — घंटे दर घंटे" },
+          { id:"when-to-go", label:"कब जाएं" },
+        ]}/>
+
+        <h2 id="trek-hourly" style={h2}>केदारनाथ ट्रेक — घंटे दर घंटे</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>{['पड़ाव','गौरीकुंड से दूरी','सुविधाएं'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
@@ -122,7 +150,7 @@ export default function KedarnathPehliBaar() {
           </table>
         </div>
 
-        <h2 style={h2}>कब जाएं — महीने के हिसाब से</h2>
+        <h2 id="when-to-go" style={h2}>कब जाएं — महीने के हिसाब से</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>{['महीना','मौसम','भीड़','सिफारिश'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>

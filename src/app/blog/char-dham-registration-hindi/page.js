@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'चार धाम यात्रा रजिस्ट्रेशन 2026 | मोबाइल से कैसे करें | फ्री गाइड' },
@@ -46,23 +49,33 @@ export default function CharDhamRegistrationHindi() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>📋 रजिस्ट्रेशन गाइड · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>चार धाम यात्रा रजिस्ट्रेशन 2026</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>मोबाइल से घर बैठे करें — मुफ्त · 9 आसान स्टेप · हिंदी में</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="📋 रजिस्ट्रेशन गाइड · 2026"
+        title="चार धाम यात्रा रजिस्ट्रेशन 2026"
+        dek="मोबाइल से घर बैठे करें — मुफ्त · 9 आसान स्टेप · हिंदी में"
+        author="सुमित मिश्रा"
+        authorInitials="SM"
+        updated="अपडेटेड 2026"
+        readTime="5 मिनट"
+        facts={[
+          { label:"शुल्क", value:"मुफ्त (₹0)" },
+          { label:"तरीके", value:"Website / WhatsApp" },
+          { label:"जरूरी", value:"आधार कार्ड" },
+          { label:"बिना पंजीकरण", value:"सोनप्रयाग से वापस" },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम रजिस्ट्रेशन 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-registration-hindi", "title": "चार धाम यात्रा रजिस्ट्रेशन 2026: मोबाइल से कैसे करें", "description": "चार धाम यात्रा 2026 का ऑनलाइन रजिस्ट्रेशन मुफ्त है। WhatsApp और website से — 9 आसान steps में पूरी जानकारी हिंदी में। जरूरी दस्तावेज़ और 55+ उम्र के नियम।", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "hi-IN"}} />
@@ -93,7 +106,13 @@ export default function CharDhamRegistrationHindi() {
           ))}
         </div>
 
-        <h2 style={h2}>Website से रजिस्ट्रेशन — 9 Steps</h2>
+        <BlogTOC title="इस गाइड में" items={[
+          { id:"website-steps", label:"Website से — 9 Steps" },
+          { id:"documents", label:"जरूरी दस्तावेज" },
+          { id:"faq", label:"सवाल-जवाब" },
+        ]}/>
+
+        <h2 id="website-steps" style={h2}>Website से रजिस्ट्रेशन — 9 Steps</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {steps.map(([title, detail], i) => (
             <div key={i} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
@@ -108,7 +127,7 @@ export default function CharDhamRegistrationHindi() {
           ))}
         </div>
 
-        <h2 style={h2}>जरूरी दस्तावेज</h2>
+        <h2 id="documents" style={h2}>जरूरी दस्तावेज</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead><tr style={{ background: 'var(--navy)' }}>{['दस्तावेज','जरूरी है?','नोट'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
@@ -133,7 +152,7 @@ export default function CharDhamRegistrationHindi() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="registration" />
 
-        <h2 style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
+        <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             ['क्या रजिस्ट्रेशन हिंदी में होता है?','WhatsApp वाले option में Hindi निर्देश मिलते हैं। Website English में है।'],

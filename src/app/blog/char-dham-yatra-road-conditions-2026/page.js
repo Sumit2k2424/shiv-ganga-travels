@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Road Conditions 2026 | Live Route Status' },
@@ -73,29 +76,32 @@ export default function RoadConditions() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Updated {SITE.lastUpdated} · Monsoon Season — Routes Open
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Char Dham Yatra Road Conditions 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Current status of all 4 routes, landslide-prone zones, All-Weather Road project update, Joshimath situation, and mountain driving rules.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge={`Updated ${SITE.lastUpdated} · Routes Open`}
+        title="Char Dham Yatra Road Conditions 2026"
+        dek="Current status of all 4 routes, landslide-prone zones, All-Weather Road project update, Joshimath situation, and mountain driving rules."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="7 min read"
+        facts={[
+          { label:'All 4 routes', value:'Open' },
+          { label:'Watch',        value:'Monsoon slides' },
+          { label:'All-Weather Rd', value:'Mostly complete' },
+          { label:'Leave by',     value:'6 AM' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Road Conditions 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": "2026-07-18", "lang": "en-IN"}} />
@@ -107,7 +113,14 @@ export default function RoadConditions() {
 
         <p style={p}>Mountain roads are fundamentally different from plains highways. Char Dham routes cross geological zones with active seismicity, heavy snowmelt in spring, and monsoon-triggered landslides in July–August. Understanding the current conditions and the specific hazard zones on each route is essential for safe travel. Below is the 2026 status for each route compiled from BRO (Border Roads Organisation) updates, NHAI bulletins, and our own driver reports.</p>
 
-        <h2 style={h2}>Route-by-Route Road Condition Status</h2>
+        <BlogTOC items={[
+          { id:'route-status',  label:'Route-by-route status' },
+          { id:'all-weather',   label:'All-Weather Road project' },
+          { id:'driving-rules', label:'Mountain driving rules' },
+          { id:'live-status',   label:'Check live road status' },
+        ]}/>
+
+        <h2 id="route-status" style={h2}>Route-by-Route Road Condition Status</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 28 }}>
           {routes.map(route => (
             <div key={route.route} style={{ background: '#fff', borderRadius: 12, padding: '16px 18px', border: '1px solid var(--border)' }}>
@@ -131,7 +144,7 @@ export default function RoadConditions() {
           ))}
         </div>
 
-        <h2 style={h2}>All-Weather Road Project — 2026 Status</h2>
+        <h2 id="all-weather" style={h2}>All-Weather Road Project — 2026 Status</h2>
         <p style={p}>
           The Char Dham All-Weather Road project (officially: Char Dham Pariyojana) is an NHAI infrastructure initiative to upgrade all four Char Dham routes to double-lane, all-weather connectivity. The project has been under construction since 2018 and is still partially underway in 2026, with most of the work on the Kedarnath (Rishikesh–Gangotri–Yamunotri) and Badrinath corridors. Completed sections of the widened road significantly reduce travel times and improve safety. Under-construction sections have intermittent delays of 15–30 minutes at construction zones.
         </p>
@@ -139,7 +152,7 @@ export default function RoadConditions() {
           <strong>Important note from the Supreme Court (2020):</strong> The Supreme Court of India ordered that roads in the Char Dham project should be widened to 5.5m carriageway maximum (not the originally proposed 10m) to protect the Himalayan ecology and reduce landslide risk. This narrower specification is now standard for the project. The road remains single-lane + passing zones in many sections by design, not by neglect.
         </div>
 
-        <h2 style={h2}>Mountain Driving Rules — 2026</h2>
+        <h2 id="driving-rules" style={h2}>Mountain Driving Rules — 2026</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 10, marginBottom: 28 }}>
           {[
             { rule: '10 PM–4 AM vehicle ban', detail: 'All vehicles (private and commercial) are banned from all Char Dham routes between 10 PM and 4 AM. Plan to reach your overnight stop by 9 PM maximum.' },
@@ -159,7 +172,7 @@ export default function RoadConditions() {
 
         </div>
 
-        <h2 style={h2}>How to Check Live Road Status</h2>
+        <h2 id="live-status" style={h2}>How to Check Live Road Status</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
           {[
             { source: 'NHAI Helpline', detail: '1033 — National Highways Authority helpline for road status queries on NH58 and NH108.' },

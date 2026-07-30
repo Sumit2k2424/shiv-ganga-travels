@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'Char Dham Package vs Self-Planned Trip 2026 | Real Costs' },
@@ -40,13 +43,23 @@ export default function PkgVsSelf() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Honest Comparison · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Package vs Self-Planned<br/><em style={{ color:'#FFD166', fontStyle:'italic' }}>Char Dham Yatra 2026</em></h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15 }}>Honest analysis from Dhanesh Chandra Mishra — 15-year Char Dham operator · Shiv Ganga Travels, Haridwar</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Honest Comparison · 2026"
+        title="Package vs Self-Planned Char Dham Yatra 2026"
+        dek="Honest analysis from Dhanesh Chandra Mishra — 15-year Char Dham operator · Shiv Ganga Travels, Haridwar"
+        author="Dhanesh Chandra Mishra"
+        authorInitials="DM"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="7 min read"
+        facts={[
+          { label:'Package from', value:'₹18,500 pp' },
+          { label:'Self-planned', value:'Similar, more effort' },
+          { label:'Best for DIY',  value:'Fit, flexible groups' },
+          { label:'Direct operator', value:'Zero commission' },
+        ]}
+      />
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra · Founder, Shiv Ganga Travels · Retd. Army Officer</span>
@@ -57,9 +70,18 @@ export default function PkgVsSelf() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-package-vs-self-planned", "title": "Char Dham Package vs Self-Planned Trip: Real Costs", "description": "Char Dham package vs going independent in 2026 — honest cost comparison, what you gain and lose, and which option suits which type of pilgrim.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
+        <p className="blog-lede">
           An honest answer from someone who runs packages: self-planned is absolutely possible, and for some pilgrims it is the better choice. But for most first-time pilgrims and senior citizens, a direct operator package wins on cost, convenience, and safety — especially if you book with a zero-commission direct operator rather than an aggregator.
         </p>
+
+        <KeyTakeaways title="The honest verdict"
+          points={[
+            <><strong>Self-planned</strong> suits fit, flexible groups who enjoy logistics and have done the route before.</>,
+            <>For <strong>first-timers and seniors</strong>, a package wins on cost, convenience and safety.</>,
+            <>Going independent rarely saves much once you count fuel, hotels, registration and time.</>,
+            <>A <strong>direct operator</strong> (not an aggregator) gives package convenience without the 15–25% middleman margin.</>,
+          ]}
+        />
         <div style={{ overflowX:'auto', marginBottom:36 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>

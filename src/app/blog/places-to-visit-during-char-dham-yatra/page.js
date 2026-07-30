@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'Top 10 Places to Visit on Char Dham Yatra 2026' },
@@ -119,29 +122,32 @@ export default function PlacesToVisit() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Go Beyond the 4 Dhams · Operator Insider Guide
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Top Places to Visit During Char Dham Yatra 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            The 4 dhams are the destination. But the route has 8 places that most pilgrims miss — and several of them are more memorable than the darshan itself.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Go Beyond the 4 Dhams · Insider Guide"
+        title="Top Places to Visit During Char Dham Yatra 2026"
+        dek="The 4 dhams are the destination. But the route has 8 places that most pilgrims miss — and several of them are more memorable than the darshan itself."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="8 min read"
+        facts={[
+          { label:'Stops',     value:'8 worth the detour' },
+          { label:'Highlights', value:'Harsil · Mana · Chopta' },
+          { label:'Extra days', value:'None (mostly on-route)' },
+          { label:'Best add-on', value:'Chopta–Tungnath' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Places to Visit During Char Dham Yatra</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "places-to-visit-during-char-dham-yatra", "title": "Top 10 Places to Visit on Char Dham Yatra 2026", "description": "Best places to visit during Char Dham Yatra 2026 beyond the temples: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta and Lakhamandal.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -149,9 +155,19 @@ export default function PlacesToVisit() {
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels — 15 seasons on this route
         </div>
 
-        <p style={p}>
+        <p className="blog-lede">
           Most pilgrims arrive at Haridwar, do the 4 dhams in 10 days, and return home. The darshan is complete but the Himalayas remain unseen. After 15 seasons of operating Char Dham Yatras, the places listed below are the ones our pilgrims most frequently say they wished they had known about before the trip. None require additional days — most are directly on route or minor detours.
         </p>
+
+        <KeyTakeaways title="Don't-miss stops on the route"
+          points={[
+            <><strong>Devprayag</strong> — where the Ganga is born, right on the main road.</>,
+            <><strong>Harsil Valley</strong> near Gangotri — apple orchards and the prettiest halt on the circuit.</>,
+            <><strong>Triyuginarayan</strong> — the eternal-flame temple where Shiva married Parvati.</>,
+            <><strong>Mana Village</strong> — India's last village, 3 km beyond Badrinath.</>,
+            <><strong>Chopta–Tungnath</strong> — the world's highest Shiva temple; the one add-on worth a half day.</>,
+          ]}
+        />
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 28 }}>
           {places.map((place, i) => (

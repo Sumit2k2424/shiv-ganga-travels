@@ -2,6 +2,11 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra 2026 | History, Significance & Route Guide' },
@@ -227,29 +232,24 @@ export default function CharDhamCompleteGuide() {
     <>
       <Schema />
 
+      <ReadingProgress/>
+
       {/* Hero */}
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 55%,var(--teal) 100%)', padding:'56px 20px 44px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.2)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 18px', borderRadius:100, display:'inline-block', marginBottom:14 }}>
-            Complete Guide · Est. Knowledge Base 2026
-          </span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.8rem,4.5vw,2.9rem)', fontWeight:800, letterSpacing:'-0.025em', marginBottom:16, lineHeight:1.22 }}>
-            Char Dham Yatra — The Complete Guide
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:16, lineHeight:1.8, maxWidth:680, margin:'0 auto 20px' }}>
-            History, significance, order of visit, landmarks, nearby places, who should go and why — plus 20 expert-answered FAQs covering everything pilgrims ask before booking.
-          </p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap', marginBottom:24 }}>
-            {['🌊 Yamunotri','🏔️ Gangotri','⛰️ Kedarnath','🕌 Badrinath'].map(d => (
-              <span key={d} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'6px 16px', borderRadius:100, fontSize:13, fontWeight:600, border:'1px solid rgba(255,255,255,0.2)' }}>{d}</span>
-            ))}
-          </div>
-          <div style={{ display:'inline-flex', gap:8, alignItems:'center', background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.15)', borderRadius:10, padding:'8px 18px', fontSize:12.5, color:'rgba(255,255,255,0.7)' }}>
-            ✍️ Written by the Shiv Ganga Travels operations team ·
-            <strong style={{ color:'#FFD166', marginLeft:4 }}>15 seasons on these routes since 2010</strong>
-          </div>
-        </div>
-      </section>
+      <BlogHero
+        badge="Complete Guide · Knowledge Base 2026"
+        title="Char Dham Yatra — The Complete Guide"
+        dek="History, significance, order of visit, landmarks, nearby places, who should go and why — plus 20 expert-answered FAQs covering everything pilgrims ask before booking."
+        author="Shiv Ganga Travels team"
+        authorInitials="SG"
+        updated="Updated May 2026"
+        readTime="12 min read"
+        facts={[
+          { label:'Shrines', value:'4 Dhams' },
+          { label:'Region',  value:'Garhwal Himalaya' },
+          { label:'Since',   value:'2010 · 15 seasons' },
+          { label:'FAQs',    value:'20 answered' },
+        ]}
+      />
 
       {/* Breadcrumb */}
       <nav aria-label="breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
@@ -261,28 +261,6 @@ export default function CharDhamCompleteGuide() {
           <span>Char Dham Complete Guide 2026</span>
         </div>
       </nav>
-
-      {/* Table of Contents */}
-      <div style={{ background:'var(--navy-light)', borderBottom:'1px solid var(--border)', padding:'16px 20px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto' }}>
-          <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:10 }}>In This Guide</div>
-          <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[
-              ['What is Char Dham?','#what-is-char-dham'],
-              ['History & Origin','#history'],
-              ['Order of Visit','#order-of-visit'],
-              ['Yamunotri','#yamunotri'],
-              ['Gangotri','#gangotri'],
-              ['Kedarnath','#kedarnath'],
-              ['Badrinath','#badrinath'],
-              ['Who Should Go','#who-should-go'],
-              ['FAQs','#faq'],
-            ].map(([label, href]) => (
-              <a key={href} href={href} style={{ background:'#fff', color:'var(--navy)', padding:'5px 13px', borderRadius:7, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{label}</a>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
@@ -302,6 +280,28 @@ export default function CharDhamCompleteGuide() {
             </p>
           </div>
         </div>
+
+        <KeyTakeaways
+          points={[
+            <>Char Dham = <strong>Yamunotri, Gangotri, Kedarnath, Badrinath</strong> — four Himalayan shrines in Uttarakhand.</>,
+            <>Adi Shankaracharya organised the circuit in the <strong>8th century</strong>; pilgrims walk it clockwise, west to east.</>,
+            <>Yamunotri and Kedarnath need a <strong>trek</strong>; Gangotri and Badrinath are reachable by road.</>,
+            <>The season runs <strong>late April to early November</strong>; the shrines close for winter under snow.</>,
+            <>Suited to almost anyone with reasonable health and the right pacing — including seniors, with support.</>,
+          ]}
+        />
+
+        <BlogTOC items={[
+          { id:'what-is-char-dham', label:'What is Char Dham?' },
+          { id:'history',           label:'History & origin' },
+          { id:'order-of-visit',    label:'Order of visit' },
+          { id:'yamunotri',         label:'Yamunotri' },
+          { id:'gangotri',          label:'Gangotri' },
+          { id:'kedarnath',         label:'Kedarnath' },
+          { id:'badrinath',         label:'Badrinath' },
+          { id:'who-should-go',     label:'Who should go' },
+          { id:'faq',               label:'FAQs' },
+        ]}/>
 
         {/* Section: What is Char Dham */}
         <section id="what-is-char-dham">
@@ -361,6 +361,10 @@ export default function CharDhamCompleteGuide() {
           <p style={pStyle}>
             Yamunotri and Gangotri are visited first to seek the blessings of the two sacred rivers — they purify the pilgrim's body and soul for the more demanding shrines ahead. Kedarnath, the Shiva shrine, is visited third — Shiva represents destruction of the ego. Badrinath is saved for last as the ultimate destination — Vishnu, the preserver, represents the final liberation.
           </p>
+
+          <ExpertNote variant="insider">
+            The spiritual order and the <strong>practical</strong> order happen to agree — which is why we've never broken it in 15 seasons. Yamunotri and Gangotri at lower altitude let your body acclimatise before Kedarnath's 3,583 m climb, and ending at road-accessible Badrinath means you finish rested rather than wrecked. Operators who reshuffle the order to save a day usually cost you the acclimatisation.
+          </ExpertNote>
           <p style={pStyle}>
             From a logistical standpoint, this order also makes geographical sense. Yamunotri is the westernmost shrine, and travelling east from there to Gangotri → Kedarnath → Badrinath follows a natural circuit that minimises backtracking.
           </p>

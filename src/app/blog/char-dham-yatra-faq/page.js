@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra FAQ 2026 | 50 Questions Answered' },
@@ -237,30 +239,23 @@ export default function FAQ() {
     <>
       <FAQSchema/>
 
+      <ReadingProgress/>
+
       {/* Hero */}
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding: '56px 20px 44px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 820, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>
-            Expert FAQ · Updated {SITE.lastUpdated}
-          </span>
-          <h1 className="display-title speakable-answer" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 14 }}>
-            Char Dham Yatra FAQ 2026<br/>
-            <em style={{ color: '#FFD166', fontStyle: 'italic' }}>50 Questions, Expert Answers</em>
-          </h1>
-          <p className="speakable-answer" style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>
-            Answered by Sumit Mishra, Operations Manager at Shiv Ganga Travels — running Char Dham Yatra operations since 2015, 500+ groups every season. Based on 50,000+ pilgrims served since 2010.
-          </p>
-          {/* Category jump links */}
-          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            {categories.map(cat => (
-              <a key={cat} href={`#${cat.toLowerCase().replace(/[^a-z]/g, '-')}`}
-                style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '5px 14px', borderRadius: 100, fontSize: 12, fontWeight: 600, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
-                {cat}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BlogHero
+        badge={`Expert FAQ · Updated ${SITE.lastUpdated}`}
+        title="Char Dham Yatra FAQ 2026 — 50 Questions, Expert Answers"
+        dek="Answered by Sumit Mishra, Operations Manager at Shiv Ganga Travels — running Char Dham Yatra operations since 2015, 500+ groups every season. Based on 50,000+ pilgrims served since 2010."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="14 min read"
+        facts={[
+          { label:'Questions',  value:'50 answered' },
+          { label:'Experience', value:'15 seasons' },
+          { label:'Pilgrims',   value:'50,000+' },
+          { label:'Packages from', value:'₹18,500' },
+        ]}
+      />
 
       {/* Freshness + author strip */}
       <div style={{ background: '#fff', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
@@ -274,9 +269,9 @@ export default function FAQ() {
       {/* Breadcrumb */}
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Yatra FAQ 2026</span>
         </div>
@@ -321,7 +316,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ sections by category */}
-        {categories.map(cat => (
+        {categories.map((cat, ci) => (
           <div key={cat} id={cat.toLowerCase().replace(/[^a-z]/g, '-')} style={{ marginBottom: 44 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20, paddingBottom: 10, borderBottom: '2px solid var(--navy-light)' }}>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--navy)', margin: 0 }}>{cat}</h2>
@@ -339,12 +334,12 @@ export default function FAQ() {
                   <div style={{ padding: '0 18px 18px', fontSize: 14.5, color: 'var(--text-mid)', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>
                     <p style={{ marginTop: 14, marginBottom: 0 }}>{faq.a}</p>
                   </div>
-
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
                 </details>
               ))}
             </div>
+
+            {/* ── Mid-article conversion CTA — once, after the second category ── */}
+            {ci === 1 && <BlogCTA variant="inline" intent="info" />}
           </div>
         ))}
 

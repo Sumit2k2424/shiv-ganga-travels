@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Cost 2026 | Price Starts at ₹18,500 | Full Breakdown' },
@@ -41,23 +45,32 @@ export default function CharDhamCost() {
   return (
     <>
       <Schema/>
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>Pricing Guide · 2026</span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.6rem)', fontWeight: 700, marginBottom: 14 }}>Char Dham Yatra Cost 2026 — Every Rupee Explained</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>Package price · Pony & helicopter · Registration · Train fare · Hidden costs · Budget scenarios</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Pricing Guide · 2026"
+        title="Char Dham Yatra Cost 2026 — Every Rupee Explained"
+        dek="Package price · Pony & helicopter · Registration · Train fare · Hidden costs · Budget scenarios"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Budget pilgrim', value:'₹22,000–28,000' },
+          { label:'Comfortable',    value:'₹30,000–40,000' },
+          { label:'Registration',   value:'FREE (₹0)' },
+          { label:'Package from',   value:'₹18,500' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra Cost 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -73,9 +86,20 @@ export default function CharDhamCost() {
           </div>
         </div>
 
-        <p style={p}><strong>The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person</strong> for a budget-conscious pilgrim, and ₹30,000–₹40,000 for a comfortable experience with a private vehicle and better hotels. The biggest variable is the Kedarnath section: pilgrims who trek on foot spend ₹0 extra; those who take pony add ₹3,500–₹4,500; those who take helicopter add ₹7,500–₹9,500. Everything else — registration (free in 2026), VIP darshan, meals, temples — is included in a good all-inclusive package. Here is every cost, broken down.</p>
+        <p className="blog-lede"><strong>The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person</strong> for a budget-conscious pilgrim, and ₹30,000–₹40,000 for a comfortable experience with a private vehicle and better hotels. The biggest variable is the Kedarnath section: pilgrims who trek on foot spend ₹0 extra; those who take pony add ₹3,500–₹4,500; those who take helicopter add ₹7,500–₹9,500. Everything else — registration (free in 2026), VIP darshan, meals, temples — is included in a good all-inclusive package. Here is every cost, broken down.</p>
 
-        <h2 style={h2}>1. Package Cost — What's Included and What's Not</h2>
+        <BlogTOC title="Every cost, in order" items={[
+          { id:'package-cost',        label:'1. Package cost' },
+          { id:'kedarnath-extras',    label:'2. Kedarnath extras' },
+          { id:'registration-cost',   label:'3. Registration (free)' },
+          { id:'getting-there',        label:'4. Getting to Haridwar' },
+          { id:'extra-costs',          label:'5. Costs to budget separately' },
+          { id:'total-budget',         label:'6. Four budget scenarios' },
+          { id:'price-drivers',        label:'7. Keeping costs down' },
+          { id:'aggregator-vs-direct', label:'8. Aggregator vs direct' },
+        ]}/>
+
+        <h2 id="package-cost" style={h2}>1. Package Cost — What's Included and What's Not</h2>
         <p style={p}>A <strong>reputable all-inclusive Char Dham Yatra package</strong> from a registered direct operator covers the following — this is what Shiv Ganga Travels includes in our packages. If a price lower than ₹17,000 is quoted, something from this list is missing.</p>
 
         <div style={{ overflowX: 'auto', marginBottom: 28 }}>
@@ -102,7 +126,11 @@ export default function CharDhamCost() {
 
         <p style={p}>All packages include: AC vehicle (shared or private as listed), hotels with breakfast and dinner, experienced guide, VIP darshan at all 4 dhams (skips general queue), all tolls and parking fees, driver allowance, and GST. Registration is handled by us — completely free (₹0 government fee in 2026).</p>
 
-        <h2 style={h2}>2. Kedarnath Extras — The Biggest Variable Cost</h2>
+        <ExpertNote variant="usp">
+          Here's the money maths most sites won't show you: an aggregator adds a <strong>15–25% booking margin</strong> on top of the operator's price. We <em>are</em> the operator — our vehicles, our driver-guides, our pre-blocked hotels — so that margin simply doesn't exist. Same yatra, same hotels, the price you see is the price we run it at.
+        </ExpertNote>
+
+        <h2 id="kedarnath-extras" style={h2}>2. Kedarnath Extras — The Biggest Variable Cost</h2>
         <p style={p}>The Kedarnath section is where costs vary most between pilgrims. The 16km trek from Gaurikund is free, but most pilgrims above 50 or those with joint/cardiac issues opt for pony or helicopter. Here are the exact costs in 2026:</p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
@@ -125,13 +153,13 @@ export default function CharDhamCost() {
           ))}
         </div>
 
-        <h2 style={h2}>3. Registration — FREE in 2026 (₹0, Government Removed the Fee)</h2>
+        <h2 id="registration-cost" style={h2}>3. Registration — FREE in 2026 (₹0, Government Removed the Fee)</h2>
         <p style={p}><strong>All Char Dham pilgrims must register</strong> at registrationandtouristcare.uk.gov.in before reaching checkpoints. <strong>Registration is completely free in 2026 — ₹0.</strong> The Uttarakhand government removed the previous ₹150 fee this season. Register online, via WhatsApp (type "Yatra" to +91-8394833833), or via the Tourist Care Uttarakhand mobile app. Police checkpoints at Sonprayag (Kedarnath), Uttarkashi (Gangotri), Barkot (Yamunotri), and Joshimath (Badrinath) verify the printed QR certificate. Pilgrims without it are turned back regardless of how far they have driven.</p>
         <p style={{ ...p, fontSize: 13.5, background: 'rgba(29,158,117,0.08)', padding: '12px 16px', borderRadius: 8, borderLeft: '3px solid #1D9E75' }}>
           <strong>Included in every Shiv Ganga Travels package:</strong> We handle registration for all pilgrims at no cost. You provide Aadhaar details — we do the rest, including printing and carrying permits in the vehicle.
         </p>
 
-        <h2 style={h2}>4. Getting to Haridwar — Train & Flight Costs</h2>
+        <h2 id="getting-there" style={h2}>4. Getting to Haridwar — Train & Flight Costs</h2>
         <p style={p}>The package cost starts from Haridwar. Getting to Haridwar from your city is a separate cost. Here are the typical ranges in 2026:</p>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
@@ -156,7 +184,7 @@ export default function CharDhamCost() {
           </table>
         </div>
 
-        <h2 style={h2}>5. Costs Not in the Package — What to Budget Separately</h2>
+        <h2 id="extra-costs" style={h2}>5. Costs Not in the Package — What to Budget Separately</h2>
         <p style={p}>Every genuine operator lists inclusions. What they don't always list upfront are the mandatory extras you will encounter. Here is our honest breakdown — the same list we share with every Shiv Ganga Travels pilgrim before booking:</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
@@ -177,7 +205,7 @@ export default function CharDhamCost() {
           ))}
         </div>
 
-        <h2 style={h2}>6. Total Budget — Four Realistic Scenarios</h2>
+        <h2 id="total-budget" style={h2}>6. Total Budget — Four Realistic Scenarios</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             {
@@ -221,7 +249,7 @@ export default function CharDhamCost() {
 
         </div>
 
-        <h2 style={h2}>7. What Drives the Price Up — and How to Keep Costs Down</h2>
+        <h2 id="price-drivers" style={h2}>7. What Drives the Price Up — and How to Keep Costs Down</h2>
         <h3 style={h3}>Why prices vary by 40–50% between operators</h3>
         <p style={p}>When you see a Char Dham package for ₹12,000 and another for ₹18,500, you are usually comparing different things. Budget packages often exclude VIP darshan (₹1,500–₹2,500 value per pilgrim), use non-AC or shared vehicles with overcrowded seats, book hotel rooms that accommodate 4–6 pilgrims (not 2), and omit the guide. The ₹18,500 direct-operator price is genuinely all-inclusive. The ₹12,000 price is a base that grows to ₹18,000 with unavoidable additions.</p>
 
@@ -241,7 +269,7 @@ export default function CharDhamCost() {
           ))}
         </div>
 
-        <h2 style={h2}>8. Aggregator vs Direct Operator — Price Comparison</h2>
+        <h2 id="aggregator-vs-direct" style={h2}>8. Aggregator vs Direct Operator — Price Comparison</h2>
         <p style={p}>The following comparison is for the same 9N/10D Char Dham Yatra package from Haridwar, same itinerary, same inclusions. These are approximate market prices as of April 2026:</p>
         <div style={{ overflowX: 'auto', marginBottom: 28 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>

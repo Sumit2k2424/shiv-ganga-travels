@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony & Palki Rates 2026 | Price Starts at ₹3,000 | Gaurikund' },
@@ -63,34 +66,32 @@ export default function KedarnathPonyRates() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            Kedarnath 2026 · Horse · Pony · Palki · Kandi
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Kedarnath Pony, Palki & Horse Rates 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 660, margin: '0 auto 16px' }}>
-            Official Gaurikund rates · Horse ₹3,000–4,500 one way (3–4 hrs) · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000 · Offline booking only · No horse from Sonprayag · No heli from Gaurikund
-          </p>
-          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            {['🗓️ Updated May 2026', '⚠️ No online booking', '📍 Gaurikund counter only', '🚫 Zero fraud tolerance'].map(t => (
-              <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12, fontWeight: 600, padding: '5px 12px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Kedarnath 2026 · Horse · Pony · Palki · Kandi"
+        title="Kedarnath Pony, Palki & Horse Rates 2026"
+        dek="Official Gaurikund rates · Horse ₹3,000–4,500 one way (3–4 hrs) · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000 · Offline booking only · No horse from Sonprayag · No heli from Gaurikund"
+        author="Sumit Mishra"
+        updated="Updated May 2026"
+        readTime="8 min read"
+        facts={[
+          { label:'Horse', value:'₹3,000–4,500' },
+          { label:'Palki', value:'₹8,000–12,000' },
+          { label:'Kandi', value:'₹3,500–5,000' },
+          { label:'Booking', value:'Gaurikund counter' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Blog</Link><span>›</span>
+          <Link href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Pony Palki Rates 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -128,7 +129,19 @@ export default function KedarnathPonyRates() {
           The trek from Gaurikund to Kedarnath is 16km, climbing from about 1,980m to 3,583m. Plenty of pilgrims can't or shouldn't walk it — and they don't have to. Horses (called pony, ghoda, or khachar locally), palki (a 4-porter palanquin), and kandi (a porter carrying you in a basket) have worked this route for generations. The rates are set and monitored by the Rudraprayag district administration, so the price is the same whether you're 25 or 75. Here's what each costs in 2026, how long it takes, and the booking traps to avoid.
         </p>
 
-        <h2 style={h2}>Complete Rate Table — Kedarnath 2026 (All Services)</h2>
+        <BlogTOC items={[
+          { id:'rate-table',    label:'Complete rate table' },
+          { id:'duration',      label:'How long each option takes' },
+          { id:'sonprayag-horse', label:'Sonprayag by horse — read first' },
+          { id:'how-to-book',   label:'How to book' },
+          { id:'online-booking', label:'Can you book online?' },
+          { id:'which-to-choose', label:'Which option to choose' },
+          { id:'fraud-warning', label:'Fraud warning' },
+          { id:'tips',          label:'Practical tips' },
+          { id:'faq',           label:'FAQs' },
+        ]}/>
+
+        <h2 id="rate-table" style={h2}>Complete Rate Table — Kedarnath 2026 (All Services)</h2>
         <div style={{ overflowX: 'auto', marginBottom: 16 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead>
@@ -164,7 +177,7 @@ export default function KedarnathPonyRates() {
         </p>
 
         {/* ── PAA gap: how long does it take ── */}
-        <h2 style={h2}>How Long Does Each Option Take?</h2>
+        <h2 id="duration" style={h2}>How Long Does Each Option Take?</h2>
         <p style={p}>This is the question that decides your day. The horse is the quickest of the assisted options; palki and kandi are slower because humans carry the load. Plan to reach Kedarnath well before the temple's 3 PM afternoon closing.</p>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
@@ -195,14 +208,14 @@ export default function KedarnathPonyRates() {
         </div>
 
         {/* ── PAA gap: Sonprayag clarification ── */}
-        <h2 style={h2}>"Sonprayag to Kedarnath by Horse" — Read This First</h2>
+        <h2 id="sonprayag-horse" style={h2}>"Sonprayag to Kedarnath by Horse" — Read This First</h2>
         <div style={{ background: '#EFF6FF', border: '1px solid #93C5FD', borderRadius: 12, padding: '14px 16px', marginBottom: 24 }}>
           <p style={{ fontSize: 14, color: '#1E3A8A', lineHeight: 1.8, margin: 0 }}>
             A lot of people search for the Sonprayag-to-Kedarnath horse price, so let's clear it up: <strong>there are no horses from Sonprayag.</strong> Private vehicles aren't allowed past Sonprayag, and the trek officially begins at <strong>Gaurikund</strong>, 5km further up. You cover that 5km by <strong>shared jeep (about ₹50–60 per person)</strong> — they run from around 3 AM. Horses, palki and kandi all start at Gaurikund. So "Sonprayag to Kedarnath by horse" = the short jeep to Gaurikund, then the ₹3,000–4,500 horse ride to the temple. Budget for both.
           </p>
         </div>
 
-        <h2 style={h2}>How to Book — Step by Step</h2>
+        <h2 id="how-to-book" style={h2}>How to Book — Step by Step</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {[
             { step: 'Step 1 — Reach Gaurikund before 5 AM', detail: 'The prepaid counter opens around 4 AM and pilgrims queue before that. Arrive after 7 AM in peak season (May–June) and pony availability tightens. Stay at Sonprayag or Rampur the night before and take the shared jeep (5km, ₹50–60) up to Gaurikund.' },
@@ -219,12 +232,12 @@ export default function KedarnathPonyRates() {
         </div>
 
         {/* ── PAA gap: online booking ── */}
-        <h2 style={h2}>Can You Book Kedarnath Pony or Palki Online?</h2>
+        <h2 id="online-booking" style={h2}>Can You Book Kedarnath Pony or Palki Online?</h2>
         <p style={p}>
           No — and this matters because the scams target exactly this search. As of 2026 there is <strong>no official online booking</strong> for pony, palki or kandi at Kedarnath. Every booking happens offline at the prepaid counters (Sonprayag and Gaurikund) or directly with a registered provider on the route. The <strong>only</strong> Kedarnath service you book online is the helicopter, through the IRCTC heliyatra portal. If a website or WhatsApp number offers "online palki booking" and asks for advance payment, it's fraudulent. Don't pay anyone before you're standing at the counter with a slip in hand.
         </p>
 
-        <h2 style={h2}>Horse vs Palki vs Kandi vs Helicopter — Which to Choose</h2>
+        <h2 id="which-to-choose" style={h2}>Horse vs Palki vs Kandi vs Helicopter — Which to Choose</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { title: '🐴 Horse / Pony', tag: 'Most popular', points: ['Quickest assisted option (3–4 hrs up)', 'Suits most fitness levels', 'Steadier on the long middle stretch', 'Available from Gaurikund and Jungle Chatti', 'Pick if: you have basic balance and are okay on animals'] },
@@ -250,12 +263,12 @@ export default function KedarnathPonyRates() {
         <BlogCTA variant="inline" intent="kedarnath" />
 
         {/* ── PAA gap: helicopter from Gaurikund clarification ── */}
-        <h2 style={h2}>"Gaurikund to Kedarnath by Helicopter" — There Isn't One</h2>
+        <h2 id="gaurikund-heli" style={h2}>"Gaurikund to Kedarnath by Helicopter" — There Isn't One</h2>
         <p style={p}>
           Another common mix-up. There is <strong>no helicopter from Gaurikund</strong>. Kedarnath choppers fly from three helipads further down the valley — <strong>Phata, Sersi and Guptkashi</strong> — and land near the temple, skipping the trek entirely. Round-trip fares run about ₹6,000–9,999 per person depending on the helipad (Phata is usually cheapest). If you're already at Gaurikund, your only ways up are foot, pony, palki or kandi. To fly, you'd book from one of those helipads instead — see our <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath helicopter booking guide</Link> for the IRCTC process and current fares.
         </p>
 
-        <h2 style={h2}>⚠️ Fraud Warning — Protect Yourself</h2>
+        <h2 id="fraud-warning" style={h2}>⚠️ Fraud Warning — Protect Yourself</h2>
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '16px 18px', marginBottom: 28 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: '#A32D2D', marginBottom: 10 }}>Common scams at Kedarnath — know them before you arrive</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -276,7 +289,7 @@ export default function KedarnathPonyRates() {
           </div>
         </div>
 
-        <h2 style={h2}>Practical Tips for Horse / Palki at Kedarnath</h2>
+        <h2 id="tips" style={h2}>Practical Tips for Horse / Palki at Kedarnath</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 10, marginBottom: 28 }}>
           {[
             { tip: 'Night travel is banned', detail: 'Pony, palki and foot traffic are stopped between 5 PM and 5 AM on the route. Plan your ascent to reach Kedarnath before 3 PM, when the temple also closes for afternoon prayers.' },
@@ -292,7 +305,7 @@ export default function KedarnathPonyRates() {
           ))}
         </div>
 
-        <h2 style={h2}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {[
           ['What is the Kedarnath horse price in 2026?', 'About ₹3,000–4,500 one way from Gaurikund for the full 16km, with round trip around ₹6,000–9,000. A weight surcharge of roughly ₹200 per 15kg over 75kg applies. These are the regulated prepaid-counter rates — confirm at Gaurikund on arrival.'],
           ['How long does the Gaurikund to Kedarnath horse ride take?', 'Around 3–4 hours uphill and 2.5–3 hours down, versus 6–8 hours walking. Crowd on the trail and weather can stretch it, so start by 5–6 AM.'],

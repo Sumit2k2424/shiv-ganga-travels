@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Uttarakhand Weather 2026 | All Char Dham Shrines | Month-wise' },
@@ -47,22 +50,27 @@ export default function WeatherGuide() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Climate Guide · 2026 Season</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Uttarakhand Weather Month by Month
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            Complete weather data for Kedarnath, Badrinath, Gangotri &amp; Yamunotri — temperatures, rainfall, snowfall, best months, and what to pack
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Climate Guide · 2026 Season"
+        title="Uttarakhand Weather Month by Month"
+        dek="Complete weather data for Kedarnath, Badrinath, Gangotri & Yamunotri — temperatures, rainfall, snowfall, best months, and what to pack"
+        author="Sumit Mishra"
+        updated="Updated 2026"
+        readTime="6 min read"
+        facts={[
+          { label:'Best months', value:'May & Sep–Oct' },
+          { label:'Avoid',       value:'July–August' },
+          { label:'Coldest',     value:'Dec–Feb (snow)' },
+          { label:'Dhams',       value:'All 4 covered' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Uttarakhand Weather Guide</span>
         </div>
       </nav>
@@ -84,7 +92,12 @@ export default function WeatherGuide() {
           ))}
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <BlogTOC items={[
+          { id:'month-by-month', label:'Month-by-month conditions' },
+          { id:'what-to-pack',   label:'What to pack by month' },
+        ]}/>
+
+        <h2 id="month-by-month" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           Month-by-Month Temperature &amp; Conditions
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -112,7 +125,7 @@ export default function WeatherGuide() {
           </table>
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="what-to-pack" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
           What to Pack by Month
         </h2>
         {[

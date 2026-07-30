@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra New Rules 2026 | Phone Ban & Green Card' },
@@ -137,24 +140,27 @@ export default function NewRules2026() {
   return (
     <>
       <Schema/>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.25)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>
-            🔴 Live — Updated {SITE.lastUpdated}
-          </span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra 2026 New Rules — What Changed
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
-            Phone ban · Medical certificate for 55+ · IRCTC helicopter · Non-Hindu entry · Real-time tracking
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge={`🔴 Live — Updated ${SITE.lastUpdated}`}
+        title="Char Dham Yatra 2026 New Rules — What Changed"
+        dek="Phone ban · Medical certificate for 55+ · IRCTC helicopter · Non-Hindu entry · Real-time tracking"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'Changes',    value:'7 new rules' },
+          { label:'Medical cert', value:'Age 55+' },
+          { label:'Kedarnath heli', value:'IRCTC only' },
+          { label:'Night driving', value:'Banned 10PM–4AM' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra 2026 New Rules</span>
         </div>
       </nav>
@@ -171,7 +177,17 @@ export default function NewRules2026() {
           </p>
         </div>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of May 2026.</p>
+        <p className="blog-lede">Every year, the Uttarakhand government and temple committees introduce changes to improve pilgrim safety and manage the growing footfall at the Char Dham shrines. The 2026 season has brought several significant rule changes — some controversial, some genuinely safety-improving. This guide covers every change confirmed as of May 2026.</p>
+
+        <KeyTakeaways title="The 2026 changes at a glance"
+          points={[
+            <><strong>Medical certificate</strong> is now mandatory for pilgrims aged 55+ and those with health conditions.</>,
+            <>Kedarnath <strong>helicopter tickets only through IRCTC</strong> — no private counter booking.</>,
+            <><strong>Mobile phones banned</strong> inside the temples; night vehicle movement banned 10 PM–4 AM.</>,
+            <>Non-UK vehicles need a <strong>Green Card / trip permit</strong>; SpO2 oxygen screening at Sonprayag.</>,
+            <>All yatra vehicles carry <strong>real-time GPS tracking</strong>; 177 ambulances on route.</>,
+          ]}
+        />
 
         <h2 style={h2}>All 7 Rule Changes for 2026</h2>
 

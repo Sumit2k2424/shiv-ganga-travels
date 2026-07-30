@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 export const metadata = {
   title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹5,999 | Timings & Route' },
   description: 'Badrinath Yatra 2026 guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
@@ -17,17 +20,27 @@ const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom
 export default function BadrinathYatraGuide() {
   return (<>
     <Schema/>
-    <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-      <div style={{ maxWidth:820, margin:'0 auto' }}>
-        <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
-        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Badrinath Yatra Guide 2026 — Temple, Timings & Travel Tips</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹5,999</p>
-      </div>
-    </section>
+    <ReadingProgress/>
+
+    <BlogHero
+      badge="Yatra Guide · 2026"
+      title="Badrinath Yatra Guide 2026 — Temple, Timings & Travel Tips"
+      dek="3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹5,999"
+      author="Sumit Mishra"
+      updated="Updated 2026"
+      readTime="6 min read"
+      facts={[
+        { label:'Altitude', value:'3,133 m' },
+        { label:'Deity',    value:'Lord Vishnu' },
+        { label:'Access',   value:'Road — no trek' },
+        { label:'Package from', value:'₹5,999' },
+      ]}
+    />
+
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        Home<span>›</span>
-        Blog<span>›</span>
+        <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
         <span>Badrinath Yatra Guide 2026</span>
       </div>
     </nav>
@@ -38,7 +51,13 @@ export default function BadrinathYatraGuide() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 
-      <h2 style={h2}>Badrinath Temple — Quick Facts</h2>
+      <BlogTOC items={[
+        { id:'quick-facts', label:'Badrinath quick facts' },
+        { id:'timings',     label:'Darshan timings 2026' },
+        { id:'beyond',      label:'Beyond the temple' },
+      ]}/>
+
+      <h2 id="quick-facts" style={h2}>Badrinath Temple — Quick Facts</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:24 }}>
         {[
           { label:'Altitude', value:'3,133 metres' },
@@ -55,7 +74,7 @@ export default function BadrinathYatraGuide() {
         ))}
       </div>
 
-      <h2 style={h2}>Badrinath Temple Darshan Timings 2026</h2>
+      <h2 id="timings" style={h2}>Badrinath Temple Darshan Timings 2026</h2>
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:20, fontSize:14 }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
           {[
@@ -78,7 +97,7 @@ export default function BadrinathYatraGuide() {
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-      <h2 style={h2}>Beyond the Temple — What Else to See</h2>
+      <h2 id="beyond" style={h2}>Beyond the Temple — What Else to See</h2>
       <div style={{ display:'flex', flexDirection:'column', gap:8, marginBottom:24 }}>
         {[
           { place:'Tapt Kund', desc:'The natural hot spring right outside the temple. Pilgrims take a holy dip here before entering the temple. Temperature stays around 45°C even in snow. Sacred and purifying.' },

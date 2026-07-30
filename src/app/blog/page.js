@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogHero from '@/components/BlogHero';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Blog 2026 | Guides, Costs & Planning' },
@@ -82,21 +83,15 @@ const TAG_COLORS = {
 export default function Blog() {
   return (
     <>
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:720, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Knowledge Hub</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>
-            Char Dham Yatra <em style={{ color:'#FFD166', fontStyle:'italic' }}>Travel Blog</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
-            12 expert guides written by people who have guided 50,000+ pilgrims through the Himalayas
-          </p>
-        </div>
-      </section>
+      <BlogHero
+        badge="Yatra Knowledge Hub"
+        title="Char Dham Yatra Travel Blog"
+        dek={`${POSTS.length}+ expert guides written by people who have guided 50,000+ pilgrims through the Himalayas`}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
           <span>Blog</span>
         </div>

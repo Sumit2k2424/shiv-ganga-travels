@@ -3,6 +3,12 @@ import { SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
+import ExpertNote from '@/components/ExpertNote';
+import PullQuote from '@/components/PullQuote';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Guide 2026 | Route, Cost & Registration Tips' },
@@ -50,30 +56,44 @@ function Schema() {
 }
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
+
+const TOC = [
+  { id:'what-is',      label:'What is the Char Dham Yatra?' },
+  { id:'best-time',    label:'Best time to go in 2026' },
+  { id:'route',        label:'Route from Haridwar' },
+  { id:'cost',         label:'Cost breakdown 2026' },
+  { id:'registration', label:'Registration, step by step' },
+  { id:'packing',      label:'Packing list' },
+  { id:'faq',          label:'Frequently asked questions' },
+];
 
 export default function CharDhamGuide() {
   return (
     <>
       <Schema/>
+      <ReadingProgress/>
 
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:800, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Travel Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham Yatra Complete Guide 2026
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>
-            Route · Itinerary · Cost · Registration · Packing List · Expert Tips
-          </p>
-        </div>
-      </section>
+      <BlogHero
+        badge="Travel Guide · 2026"
+        title="Char Dham Yatra Complete Guide 2026"
+        dek="Route · Itinerary · Cost · Registration · Packing List · Expert Tips — from an operator who runs these roads every season."
+        author="Sumit Mishra"
+        updated="Updated Jan 2026"
+        readTime="8 min read"
+        facts={[
+          { label:'Duration',    value:'10–12 days' },
+          { label:'Packages from', value:'₹18,500 pp' },
+          { label:'Best months', value:'May & Sep–Oct' },
+          { label:'Shrines',     value:'4 Dhams' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          Blog
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Yatra Guide</span>
         </div>
@@ -84,10 +104,22 @@ export default function CharDhamGuide() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
+        <p className="blog-lede">Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 
-        <h2 style={h2}>What is the Char Dham Yatra?</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The Char Dham Yatra consists of four sacred shrines in the Garhwal Himalayas of Uttarakhand state, India. The four dhams are:</p>
+        <KeyTakeaways
+          points={[
+            <>Four shrines — <strong>Yamunotri, Gangotri, Kedarnath, Badrinath</strong> — over ~10–12 days and roughly 1,200 km by road.</>,
+            <>Go in <strong>May–mid June</strong> or <strong>mid September–October</strong>. Avoid July–August (monsoon, landslides).</>,
+            <>Packages run <strong>₹18,500–₹85,000 per person</strong>, all-inclusive from Haridwar.</>,
+            <>Biometric registration is <strong>mandatory</strong> — we handle it for every pilgrim.</>,
+            <>Only Kedarnath needs a <strong>16 km trek</strong> (pony or helicopter optional); the other three reach the temple by road.</>,
+          ]}
+        />
+
+        <BlogTOC items={TOC} />
+
+        <h2 id="what-is" style={h2}>What is the Char Dham Yatra?</h2>
+        <p style={p}>The Char Dham Yatra consists of four sacred shrines in the Garhwal Himalayas of Uttarakhand state, India. The four dhams are:</p>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { name:'Yamunotri', alt:'3,291m', god:'Goddess Yamuna', desc:'Source of the Yamuna river. First stop on the circuit.' },
@@ -103,8 +135,12 @@ export default function CharDhamGuide() {
           ))}
         </ul>
 
-        <h2 style={h2}>Best Time for Char Dham Yatra 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The temples open in <strong>May</strong> (Akshaya Tritiya) and close in <strong>November</strong> (Bhai Dooj). The ideal windows are:</p>
+        <PullQuote cite="Dhanesh Chandra Mishra, Founder — Shiv Ganga Travels">
+          You don't conquer the Char Dham — you surrender to it. Our only job is to make sure the logistics never break your focus.
+        </PullQuote>
+
+        <h2 id="best-time" style={h2}>Best Time for Char Dham Yatra 2026</h2>
+        <p style={p}>The temples open in <strong>May</strong> (Akshaya Tritiya) and close in <strong>November</strong> (Bhai Dooj). The ideal windows are:</p>
         <ul style={{ paddingLeft:20, marginBottom:16, color:'var(--text-mid)', fontSize:14.5, lineHeight:2 }}>
           <li><strong style={{ color:'var(--navy)' }}>May – Mid June</strong> — Spring season, post-opening rush, pleasant weather. Book 90 days ahead.</li>
           <li><strong style={{ color:'var(--navy)' }}>Mid September – October</strong> — Post-monsoon, crystal-clear views, less crowded. Best season overall.</li>
@@ -112,14 +148,22 @@ export default function CharDhamGuide() {
           <li><strong style={{ color:'var(--red)' }}>November – April</strong> — Temples closed, snow-covered roads. Not accessible.</li>
         </ul>
 
-        <h2 style={h2}>Char Dham Yatra Route from Haridwar</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The complete route follows a clockwise direction and covers approximately <strong>1,200 km</strong> by road plus trekking:</p>
+        <ExpertNote variant="insider">
+          If your dates are flexible, we quietly push pilgrims toward <strong>late September and October</strong>. The monsoon has washed the haze out of the valleys, the peaks are sharp against the sky, hotels drop 25–40%, and the crowds from the May rush are long gone. It's the season we'd choose for our own families.
+        </ExpertNote>
+
+        <h2 id="route" style={h2}>Char Dham Yatra Route from Haridwar</h2>
+        <p style={p}>The complete route follows a clockwise direction and covers approximately <strong>1,200 km</strong> by road plus trekking:</p>
         <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
           <strong>Haridwar</strong> → Rishikesh → Barkot → <strong>Yamunotri</strong> → Uttarkashi → <strong>Gangotri</strong> → Guptkashi → Gaurikund → <strong>Kedarnath</strong> (16km trek) → Rudraprayag → Joshimath → <strong>Badrinath</strong> → Mana Village → Devprayag → Rishikesh → <strong>Haridwar</strong>
         </div>
 
-        <h2 style={h2}>Char Dham Yatra Cost Breakdown 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹18,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
+        <ExpertNote variant="usp">
+          Pilgrims walk the circuit west to east — Yamunotri first, Badrinath last — for a reason: it acclimatises you gradually and keeps the hardest climb (Kedarnath) in the middle when you're rested but not yet exhausted. We've run this exact order for <strong>15 seasons</strong>, pre-blocking hotels in each base town before peak dates so you're never stranded looking for a room at 9 PM in Guptkashi. Direct operator, zero agent commission.
+        </ExpertNote>
+
+        <h2 id="cost" style={h2}>Char Dham Yatra Cost Breakdown 2026</h2>
+        <p style={p}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹18,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { item:'Hotel Accommodation', type:'Included', note:'All nights, twin sharing' },
@@ -139,10 +183,17 @@ export default function CharDhamGuide() {
           ))}
         </div>
 
-        <h2 style={h2}>Char Dham Yatra Registration 2026</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="cost" />
 
-        <h2 style={h2}>Char Dham Yatra Packing List</h2>
+        <h2 id="registration" style={h2}>Char Dham Yatra Registration 2026</h2>
+        <p style={p}>Since 2017, all Char Dham Yatra pilgrims must complete <strong>mandatory biometric registration</strong> on the Uttarakhand Tourism portal. Daily pilgrim limits are enforced at Kedarnath and Badrinath. <strong>Shiv Ganga Travels handles the complete registration</strong> for all our pilgrims — just provide your Aadhaar/passport, a photo, and travel dates.</p>
+
+        <ExpertNote variant="warning">
+          Don't skip this. At <strong>Sonprayag and Gaurikund</strong>, police check registration before they let vehicles or trekkers through — every season we see unregistered families turned back within sight of the checkpoint. If you book with us, you never touch the portal; if you're going independent, register before you leave home, not on the road where the mobile network drops.
+        </ExpertNote>
+
+        <h2 id="packing" style={h2}>Char Dham Yatra Packing List</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { cat:'👗 Clothing', items:['Heavy jacket / fleece', 'Rain poncho', 'Thermal innerwear', 'Trekking shoes', 'Woollen socks & cap'] },
@@ -155,14 +206,15 @@ export default function CharDhamGuide() {
               <ul style={{ paddingLeft:14, margin:0 }}>
                 {c.items.map(i => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{i}</li>)}
               </ul>
-            </div>          ))}
-
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
-
+            </div>
+          ))}
         </div>
 
-        <h2 style={h2}>Frequently Asked Questions</h2>
+        <ExpertNote variant="tip">
+          The one thing first-timers forget: <strong>break in your trekking shoes before you arrive.</strong> New shoes on the 16 km Kedarnath climb are the fastest way to end a yatra early. Wear them on a few long walks at home first.
+        </ExpertNote>
+
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         <FAQAccordion faqs={GLOBAL_FAQS}/>
 
         {/* Internal links */}
@@ -184,23 +236,12 @@ export default function CharDhamGuide() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Char Dham Yatra?</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Expert guidance. Zero commission. Free custom itinerary in 2 hours.</p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            View Packages →
-          </div>
-        </div>
-      
         {/* Author bio card — E-E-A-T */}
         <BlogAuthor variant="bottom" author="sumit" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
-</article>
+      </article>
     </>
   );
 }

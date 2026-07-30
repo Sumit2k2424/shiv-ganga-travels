@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra for Heart Patients 2026 | Safe Routes' },
@@ -45,23 +48,32 @@ export default function Page() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Medical Conditions · 2026 Guide</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Char Dham Yatra with Heart Conditions & Diabetes — Honest Guide</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Medical certificate requirements · Altitude effects · What specialists advise · Helicopter option · Our experience on the ground</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Medical Conditions · 2026 Guide"
+        title="Char Dham Yatra with Heart Conditions & Diabetes — Honest Guide"
+        dek="Medical certificate requirements · Altitude effects · What specialists advise · Helicopter option · Our experience on the ground"
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="7 min read"
+        facts={[
+          { label:'Medical cert', value:'Mandatory 55+' },
+          { label:'Altitude',     value:'All dhams 3,000m+' },
+          { label:'Lowest-stress', value:'Helicopter option' },
+          { label:'First step',   value:'Ask your cardiologist' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham for Heart Patients</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
@@ -75,16 +87,24 @@ export default function Page() {
         <p style={p}>Every year, we receive dozens of WhatsApp messages that read some version of: "My father had a heart bypass two years ago. Can he do Char Dham?" or "I am a diabetic on insulin. Is Kedarnath safe for me?" These are not edge-case questions — they are among the most common things our team discusses with pilgrims planning the yatra.</p>
         <p style={p}>The answers are nuanced. High altitude is a real physiological stress. But many people with managed conditions complete the yatra safely every year. The key variables are: how well your condition is controlled, which dhams you are doing (road vs. trek), what travel style you choose, and whether your physician has cleared you. Here is what we have learned from fifteen years and thousands of pilgrims.</p>
 
-        <h2 style={h2}>How Altitude Affects the Heart and Blood Sugar</h2>
+        <BlogTOC items={[
+          { id:'altitude-effects', label:'How altitude affects heart & sugar' },
+          { id:'medical-cert',     label:'2026 medical certificate rule' },
+          { id:'risk-assessment',  label:'Dham-by-dham risk assessment' },
+          { id:'preparations',     label:'Practical preparations' },
+          { id:'senior-package',   label:'Our medical-friendly package' },
+        ]}/>
+
+        <h2 id="altitude-effects" style={h2}>How Altitude Affects the Heart and Blood Sugar</h2>
         <p style={p}>At 3,000m+ altitude, the air contains about 30% less oxygen than at sea level. For a healthy person, the body adapts within a day or two. For someone with a compromised cardiovascular system or insulin-dependent diabetes, the adaptation is harder and the risks are higher.</p>
         <p style={p}><strong>Heart conditions:</strong> Reduced oxygen means the heart works harder to pump oxygenated blood. For someone with coronary artery disease, heart failure, or a recent cardiac event, this additional load can trigger angina or worse. Blood pressure also tends to rise at altitude. If your condition is well-managed and your cardiologist clears you specifically for altitudes of 3,000–3,600m, many heart patients can do the yatra safely — particularly if they choose the road dhams (Badrinath, Gangotri) and avoid the Kedarnath trek.</p>
         <p style={p}><strong>Diabetes:</strong> Altitude affects blood glucose regulation. Physical exertion (especially the Kedarnath trek) can cause rapid drops in blood sugar. Cold temperatures affect insulin absorption. Higher altitude also means less oxygen for wound healing — which matters if you develop blisters or minor injuries. Well-controlled Type 2 diabetics generally manage fine. Insulin-dependent diabetics require more careful planning and should discuss specifically with their endocrinologist.</p>
 
-        <h2 style={h2}>The 2026 Medical Certificate Requirement</h2>
+        <h2 id="medical-cert" style={h2}>The 2026 Medical Certificate Requirement</h2>
         <p style={p}>From 2026, a medical fitness certificate is mandatory for all pilgrims above the age of 50 on the Char Dham circuit. The certificate must be from a registered medical practitioner and must confirm fitness for high-altitude travel. You will be checked at multiple points including Sonprayag (for Kedarnath) and Pandukeshwar (for Badrinath).</p>
         <p style={p}>For pilgrims with heart conditions or diabetes, this certificate must specifically address high-altitude fitness. A general "fit and fine" letter is no longer sufficient — doctors are being asked to specify known conditions and confirm these have been accounted for in the clearance. Get this in writing from your specialist, not your general physician.</p>
 
-        <h2 style={h2}>Dham-by-Dham Risk Assessment</h2>
+        <h2 id="risk-assessment" style={h2}>Dham-by-Dham Risk Assessment</h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
@@ -109,7 +129,7 @@ export default function Page() {
           </table>
         </div>
 
-        <h2 style={h2}>Practical Preparations for Medical Conditions</h2>
+        <h2 id="preparations" style={h2}>Practical Preparations for Medical Conditions</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { title:'Before You Travel', items:['Get explicit clearance from your specialist (not just GP)','Stabilise your condition 4–6 weeks before departure','Adjust medications for altitude if advised (especially BP meds)','Carry double your medication supply','Bring written prescription and medical history summary'] },
@@ -131,7 +151,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 style={h2}>Our Senior Special Package — Designed for Pilgrims with Medical Conditions</h2>
+        <h2 id="senior-package" style={h2}>Our Senior Special Package — Designed for Pilgrims with Medical Conditions</h2>
         <p style={p}>Our Senior Special 12N/13D package was built specifically with medically at-risk pilgrims in mind. It includes 3 extra rest days versus the standard itinerary, ground-floor hotel rooms at all stops, a trained medical attendant on the vehicle with pulse oximeter and oxygen cylinder, and built-in acclimatisation halts. For pilgrims with heart conditions or diabetes, this is the package we recommend — not because it is the most profitable for us, but because it is the safest for you.</p>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>

@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham vs Do Dham Yatra 2026 | Price Starts at ₹10,999 | Compare' },
@@ -44,15 +48,23 @@ export default function ComparisonPage() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-        <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Comparison Guide · 2026</span>
-          <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>
-            Char Dham vs Do Dham Yatra<br/><em style={{ color:'#FFD166', fontStyle:'italic' }}>Which is Right for You?</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15 }}>Full comparison — duration, cost, difficulty, best for whom · Expert guide by Dhanesh Chandra Mishra, Shiv Ganga Travels</p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Comparison Guide · 2026"
+        title="Char Dham vs Do Dham Yatra — Which is Right for You?"
+        dek="Full comparison — duration, cost, difficulty, best for whom · Expert guide by Dhanesh Chandra Mishra, Shiv Ganga Travels"
+        author="Dhanesh Chandra Mishra"
+        authorInitials="DM"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'Char Dham', value:'10–12 days' },
+          { label:'Do Dham',   value:'5–7 days' },
+          { label:'Char Dham from', value:'₹18,500' },
+          { label:'Do Dham from',   value:'₹10,999' },
+        ]}
+      />
 
       <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
@@ -67,12 +79,27 @@ export default function ComparisonPage() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹18,500 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
-        <p style={{ fontSize:15.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
+        <p className="blog-lede">
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.
         </p>
 
+        <KeyTakeaways title="The short answer"
+          points={[
+            <><strong>Char Dham</strong> (all 4) needs ~10–12 days and suits first-timers wanting the complete circuit, reasonable fitness, and a vow to honour.</>,
+            <><strong>Do Dham</strong> (Kedarnath + Badrinath) fits 5–7 days, tighter budgets, and pilgrims 65+ or short on time.</>,
+            <>Do Dham costs roughly <strong>40% less</strong> — from ₹10,999 vs ₹18,500.</>,
+            <>Both include the two hardest/holiest shrines; Do Dham simply skips Yamunotri and Gangotri.</>,
+          ]}
+        />
+
+        <BlogTOC items={[
+          { id:'comparison',   label:'Side-by-side comparison' },
+          { id:'choose-char',  label:'Choose Char Dham if…' },
+          { id:'choose-do',    label:'Choose Do Dham if…' },
+        ]}/>
+
         {/* Comparison table */}
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:600, color:'var(--navy)', marginBottom:16 }}>Side-by-Side Comparison</h2>
+        <h2 id="comparison" style={{ fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:600, color:'var(--navy)', marginBottom:16 }}>Side-by-Side Comparison</h2>
         <div style={{ overflowX:'auto', marginBottom:36 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>
@@ -94,12 +121,12 @@ export default function ComparisonPage() {
           </table>
         </div>
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12 }}>Choose Char Dham if...</h2>
+        <h2 id="choose-char" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12 }}>Choose Char Dham if...</h2>
         {['You have 10+ days available and no serious health conditions at altitude','You are completing the yatra for the first time and want the full spiritual circuit','You are aged 40–65 and in reasonable fitness','Family reunion or group pilgrimage where all members want the complete experience','You want to honour a vow (mannat) that requires all four dhams'].map(r => (
           <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
-        <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12, marginTop:28 }}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
+        <h2 id="choose-do" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12, marginTop:28 }}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
         {['You have only 5–7 days available','You are above 65 or have health conditions','You are a first-time yatri wanting to experience mountain pilgrimage before committing to the full circuit','You have previously done Yamunotri and Gangotri and want to complete Kedarnath + Badrinath','Budget is a key consideration — Do Dham costs approximately 40% less than Char Dham'].map(r => (
           <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
         ))}

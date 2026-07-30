@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Green Card for Char Dham Yatra 2026 | Rules & Cost' },
@@ -51,34 +54,32 @@ export default function GreenCard() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(29,158,117,0.25)', color: '#6EFFD0', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            New 2026 Rule · Non-UK Vehicles · ₹50 Permit
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Green Card for Char Dham Yatra 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            All vehicles with non-Uttarakhand registration (DL, HR, UP, RJ, MH, and all others) must obtain this ₹50 vehicle permit before entering Char Dham routes.
-          </p>
-          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            {['🚗 DL · HR · UP · RJ and all non-UK plates', '💰 Only ₹50', '🌐 Apply at greencard.uk.gov.in', '⚠️ Checked at route checkposts'].map(t => (
-              <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12, fontWeight: 600, padding: '5px 12px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="New 2026 Rule · Non-UK Vehicles · ₹50 Permit"
+        title="Green Card for Char Dham Yatra 2026"
+        dek="All vehicles with non-Uttarakhand registration (DL, HR, UP, RJ, MH, and all others) must obtain this ₹50 vehicle permit before entering Char Dham routes."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="6 min read"
+        facts={[
+          { label:'Who',   value:'Non-UK vehicles' },
+          { label:'Cost',  value:'₹50 permit' },
+          { label:'Apply', value:'greencard.uk.gov.in' },
+          { label:'Checked at', value:'Route checkposts' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Green Card Char Dham 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -92,7 +93,14 @@ export default function GreenCard() {
           In 2026, the Uttarakhand government introduced the Green Card (officially: Trip Card) system for all Char Dham Yatra routes. It requires every vehicle with a non-Uttarakhand registration plate to register the trip in advance through the online portal. The permit is ₹50, takes 5 minutes to apply for, and is valid for the duration of your yatra. This is a crowd management and safety measure — the registration system helps authorities track vehicles on fragile Himalayan roads.
         </p>
 
-        <h2 style={h2}>Who Needs a Green Card?</h2>
+        <BlogTOC items={[
+          { id:'who-needs',    label:'Who needs a Green Card' },
+          { id:'how-to-apply', label:'How to apply (step by step)' },
+          { id:'why-exists',   label:'Why this rule exists' },
+          { id:'rules-summary', label:'2026 new rules summary' },
+        ]}/>
+
+        <h2 id="who-needs" style={h2}>Who Needs a Green Card?</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8, marginBottom: 24 }}>
           {[
             { needs: true, label: 'Delhi — DL plates', detail: 'All DL registration vehicles' },
@@ -114,7 +122,7 @@ export default function GreenCard() {
           ))}
         </div>
 
-        <h2 style={h2}>How to Apply — Step by Step</h2>
+        <h2 id="how-to-apply" style={h2}>How to Apply — Step by Step</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
           {[
             { n: '1', title: 'Go to greencard.uk.gov.in', detail: 'Open the official Uttarakhand government portal. This is the only legitimate site for the Green Card. Do not apply through third-party agents.' },
@@ -133,7 +141,7 @@ export default function GreenCard() {
           ))}
         </div>
 
-        <h2 style={h2}>Why This Rule Exists — and Why You Should Care</h2>
+        <h2 id="why-exists" style={h2}>Why This Rule Exists — and Why You Should Care</h2>
         <p style={p}>
           The Char Dham Yatra routes pass through some of the most geologically fragile terrain in India. The roads to Kedarnath (via Sonprayag), Badrinath (via Joshimath), Gangotri (via Uttarkashi), and Yamunotri (via Barkot) are single-lane mountain roads with regular landslides, rockfall, and weather closures. In 2022–2023, road congestion on the Kedarnath route created backups stretching 40–60km, stranding pilgrims for 24–48 hours.
         </p>
@@ -145,7 +153,7 @@ export default function GreenCard() {
           <strong>💡 Book a Haridwar-based operator and skip the Green Card entirely:</strong> Our vehicles are registered in Uttarakhand (UK plates) and do not require the Green Card permit. When you book a Char Dham package with Shiv Ganga Travels, your transport is handled in our vehicles — no permit hassle, no checkpost delays, no online applications needed.
         </div>
 
-        <h2 style={h2}>Complete 2026 New Rules Summary</h2>
+        <h2 id="rules-summary" style={h2}>Complete 2026 New Rules Summary</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
             { rule: 'Green Card / Trip Permit', detail: 'Non-UK vehicles must register at greencard.uk.gov.in before entering Char Dham routes. Fee ₹50. Online only.' },

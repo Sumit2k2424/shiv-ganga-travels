@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Medical Certificate 2026 | Who Needs It' },
@@ -32,22 +35,27 @@ export default function MedicalCertificate() {
   return (
     <>
       <Schema />
-      <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding:'52px 20px 40px' }}>
-        <div style={{ maxWidth:860, margin:'0 auto', textAlign:'center' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Health Guide · 2026</span>
-          <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.7rem,4vw,2.6rem)', fontWeight:700, letterSpacing:'-0.02em', marginBottom:14 }}>
-            Char Dham Yatra Medical Certificate 2026<br/><em style={{ color:'#FFD166' }}>Who Needs It & How to Get It</em>
-          </h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.75, maxWidth:700, margin:'0 auto' }}>
-            Mandatory for all pilgrims 55+. Without it, you will be turned back at the checkpoint. Here is exactly what you need, in what format, and from which doctor.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="Health Guide · 2026"
+        title="Char Dham Yatra Medical Certificate 2026 — Who Needs It & How to Get It"
+        dek="Mandatory for all pilgrims 55+. Without it, you will be turned back at the checkpoint. Here is exactly what you need, in what format, and from which doctor."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="5 min read"
+        facts={[
+          { label:'Mandatory for', value:'Age 55+' },
+          { label:'Format',        value:'Doctor fitness cert' },
+          { label:'Checkpoint',    value:'SpO2 screening' },
+          { label:'Get it',        value:'≤15 days before' },
+        ]}
+      />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
-          Registration<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'none' }}>Registration</Link><span>›</span>
           <span>Medical Certificate</span>
         </div>
       </nav>
@@ -66,7 +74,15 @@ export default function MedicalCertificate() {
           </div>
         </div>
 
-        <h2 style={H2}>Who Needs the Medical Certificate?</h2>
+        <BlogTOC items={[
+          { id:'who-needs',  label:'Who needs the certificate' },
+          { id:'format',     label:'Exact format required' },
+          { id:'which-doctor', label:'Which doctor can issue it' },
+          { id:'when',       label:'When to get it' },
+          { id:'without',    label:'What happens without it' },
+        ]}/>
+
+        <h2 id="who-needs" style={H2}>Who Needs the Medical Certificate?</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12, marginBottom:20 }}>
           <div style={{ background:'#FFF1F2', borderRadius:12, padding:'14px 16px', border:'1px solid #FECDD3' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#9F1239', marginBottom:8 }}>❌ Must have certificate</div>
@@ -82,7 +98,7 @@ export default function MedicalCertificate() {
           </div>
         </div>
 
-        <h2 style={H2}>Exact Format — What the Certificate Must Say</h2>
+        <h2 id="format" style={H2}>Exact Format — What the Certificate Must Say</h2>
         <div style={{ background:'var(--navy-light)', borderRadius:14, border:'2px solid var(--navy)', padding:'20px 24px', marginBottom:20, fontFamily:'monospace', fontSize:13.5 }}>
           <div style={{ fontWeight:700, color:'var(--navy)', marginBottom:12, fontFamily:'var(--font)' }}>Sample Certificate Format (Copy this for your doctor)</div>
           <div style={{ lineHeight:2, color:'#334155' }}>
@@ -103,7 +119,7 @@ export default function MedicalCertificate() {
           </div>
         </div>
 
-        <h2 style={H2}>Which Doctor Can Issue It?</h2>
+        <h2 id="which-doctor" style={H2}>Which Doctor Can Issue It?</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:20 }}>
           {[
             { ok:true, type:'Government MBBS Doctor (District Hospital, PHC)', note:'Best option — stamp is widely accepted. Free or nominal charge. Long queue possible.' },
@@ -126,11 +142,11 @@ export default function MedicalCertificate() {
           ))}
         </div>
 
-        <h2 style={H2}>When to Get the Certificate</h2>
+        <h2 id="when" style={H2}>When to Get the Certificate</h2>
         <p>Get the certificate <strong>no more than 30 days before your yatra start date</strong> and <strong>at least 7 days before departure</strong>. Do not get it too far in advance — checkpoints may question a certificate dated 60+ days before travel.</p>
         <p>If any correction is needed (wrong name spelling, missing information), you have time to go back to the doctor. Shiv Ganga Travels sends a reminder to all pilgrims 30 days before departure with the exact format the doctor should use.</p>
 
-        <h2 style={H2}>What Happens Without the Certificate?</h2>
+        <h2 id="without" style={H2}>What Happens Without the Certificate?</h2>
         <p>Biometric registration checkpoints at Sonprayag (for Kedarnath), Joshimath (for Badrinath), Barkot (for Yamunotri), and Uttarkashi (for Gangotri) check documents. A pilgrim aged 55+ without a valid medical certificate will be denied entry and must return to the nearest town.</p>
         <p>There is <strong>no on-the-spot doctor</strong> at these checkpoints who can issue the certificate. There is no way to "explain your way through." The rule has been strictly enforced since 2023 and is even stricter in 2026 following several high-altitude health incidents in previous seasons.</p>
 

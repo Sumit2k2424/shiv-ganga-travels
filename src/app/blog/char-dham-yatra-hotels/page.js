@@ -25,6 +25,13 @@ export default function Page() {
       subtitle="The honest version: which towns you really sleep in, what a budget room versus a premium room gets you at each stop, and how booking works in peak season."
       pills={['🏨 Base-town stays','🔥 Hot water everywhere','⛺ Basic at temple sites']}
       facts={[['Yamunotri base','Barkot'],['Gangotri base','Uttarkashi'],['Kedarnath base','Guptkashi / Sersi'],['Badrinath stay','Joshimath / Badrinath'],['Peak season','book 3–4 wks ahead'],['Kedarnath temple','huts & tents only']]}
+      readTime="6 min read"
+      takeaways={[
+        <>You sleep in <strong>base towns</strong>, not at the temples — Barkot, Uttarkashi, Guptkashi/Sersi, Joshimath/Badrinath.</>,
+        <>Kedarnath temple has only <strong>GMVN huts and tents</strong> — book your comfort at Guptkashi instead.</>,
+        <>In peak <strong>May–June</strong>, operators pre-block the few good rooms — packages beat peak walk-in rates.</>,
+        <>On this route, <strong>location beats star rating</strong>. Always confirm hot water and attached bathroom.</>,
+      ]}
       ctaIntent="char-dham"
       faqs={faqs}
       related={[['Char Dham Cost','/blog/char-dham-yatra-cost'],['Kedarnath Hotels','/kedarnath-hotels'],['Badrinath Hotels','/badrinath-hotels'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Char Dham Packages','/char-dham-yatra']]}

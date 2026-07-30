@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
+import BlogHero from '@/components/BlogHero';
+import ReadingProgress from '@/components/ReadingProgress';
+import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Closing Dates 2026 | All 4 Temples' },
@@ -91,29 +94,32 @@ export default function ClosingDates() {
   return (
     <>
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 14 }}>
-            2026 Season End · Kapat Band Dates
-          </span>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4vw,2.5rem)', fontWeight: 700, marginBottom: 14 }}>
-            Char Dham Closing Dates 2026
-          </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, maxWidth: 640, margin: '0 auto 16px' }}>
-            Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath Nov 13. Complete closing ceremony guide, winter abodes, and last-chance visit tips.
-          </p>
-        </div>
-      </section>
+      <ReadingProgress/>
+
+      <BlogHero
+        badge="2026 Season End · Kapat Band Dates"
+        title="Char Dham Closing Dates 2026"
+        dek="Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath Nov 13. Complete closing ceremony guide, winter abodes, and last-chance visit tips."
+        author="Sumit Mishra"
+        updated={`Updated ${SITE.lastUpdated}`}
+        readTime="5 min read"
+        facts={[
+          { label:'Gangotri',  value:'Nov 10, 2026' },
+          { label:'Yamunotri', value:'Nov 11, 2026' },
+          { label:'Kedarnath', value:'Nov 11 (Bhai Dooj)' },
+          { label:'Badrinath', value:'Nov 13, 2026' },
+        ]}
+      />
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          Home<span>›</span>
-          Blog<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Closing Dates 2026</span>
         </div>
       </nav>
 
-      <article style={{ maxWidth: 860, margin: '0 auto', padding: '40px 20px 60px' }}>
+      <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
@@ -150,7 +156,13 @@ export default function ClosingDates() {
           Note: Exact closing dates are confirmed by temple committees on Vijayadashami (Dussehra). Dates above are based on 2026 Hindu calendar calculations and are tentative until official confirmation. Gangotri and Yamunotri dates follow Diwali; Kedarnath follows Bhai Dooj; Badrinath is confirmed approximately 1–2 weeks post-Diwali.
         </p>
 
-        <h2 style={h2}>Each Dham — Closing Ceremony & What Happens</h2>
+        <BlogTOC items={[
+          { id:'each-dham',   label:'Each dham — closing ceremony' },
+          { id:'akhand-jyot', label:"The Akhand Jyot — eternal flame" },
+          { id:'last-visit',  label:'Planning a last-season visit' },
+        ]}/>
+
+        <h2 id="each-dham" style={h2}>Each Dham — Closing Ceremony & What Happens</h2>
         {dhams.map(d => (
           <div key={d.name} style={{ background: '#fff', borderRadius: 12, padding: '18px 20px', border: '1px solid var(--border)', borderLeft: '4px solid var(--navy)', marginBottom: 16 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
@@ -164,7 +176,7 @@ export default function ClosingDates() {
           </div>
         ))}
 
-        <h2 style={h2}>The Akhand Jyot — Kedarnath's Eternal Flame</h2>
+        <h2 id="akhand-jyot" style={h2}>The Akhand Jyot — Kedarnath's Eternal Flame</h2>
         <p style={p}>
           Before the Kedarnath temple doors close for winter, the chief priest performs a final ritual: lighting the <strong>Akhand Jyot</strong> (eternal flame) inside the Garbha Griha (inner sanctum). This flame burns continuously for the entire 6 months while the temple is locked under 20–30 feet of snow. No human enters. No one tends it. When the doors reopen in April to the sounds of Vedic chanting and the first darshan of the season, the flame is still burning.
         </p>
@@ -175,7 +187,7 @@ export default function ClosingDates() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
-        <h2 style={h2}>Planning a Last-Season Visit? Book October</h2>
+        <h2 id="last-visit" style={h2}>Planning a Last-Season Visit? Book October</h2>
         <p style={p}>
           October is genuinely the best month for Char Dham Yatra — a fact that experienced pilgrims know but first-timers rarely consider. The monsoon has ended, the roads are freshly cleaned, the Himalayan skies are crystal clear, and pilgrim numbers drop by 70% from peak season. Hotels that are ₹3,000/night in May are ₹1,200–1,500 in October. Pony and palki availability is better. Darshan queues are shorter.
         </p>
