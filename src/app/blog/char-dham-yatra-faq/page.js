@@ -294,7 +294,7 @@ export default function FAQ() {
             </a>
             <a href="/char-dham-yatra"
               style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'9px 16px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)', whiteSpace:'nowrap' }}>
-              View Packages →
+              <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
             </a>
           </div>
         </div>
