@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import { CAB_BASES, getCabRoutesByBase } from '@/data/cabRoutes';
+import CabBookingWizard from '@/components/CabBookingWizard';
+import RouteMap from '@/components/lux/RouteMap';
+import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
+import { Section, SectionHead, Reveal, Eyebrow, Pill } from '@/components/lux/primitives';
+import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 export const metadata = {
-  title: { absolute: 'Uttarakhand Taxi Service 2026 | Fixed Fares | Trusted Hill Drivers' },
+  title: { absolute: 'Uttarakhand Taxi Service 2026 | Fixed Fares | Instant Enquiry' },
   description: 'Book Uttarakhand cabs from Haridwar, Rishikesh & Dehradun. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. AC vehicles, hill drivers.',
   keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', 'char dham taxi 2026', 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },
@@ -18,56 +24,140 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />;
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.8vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 14, marginTop: 32 };
+const wa = (msg) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 
-export default function CabsIndexPage() {
+const TRUST = [
+  { icon: 'receipt',  t: 'Fixed fare, no surge',     d: 'The price we quote is the price you pay — rain, festival or peak season makes no difference.' },
+  { icon: 'shield',   t: 'Hill-trained drivers',     d: 'Every driver runs these routes year-round and carries a valid Green Card and trip permit.' },
+  { icon: 'medical',  t: 'Oxygen on board',          d: 'Standard in every vehicle above 2,500 m — not an add-on.' },
+  { icon: 'headset',  t: '24/7 on-road support',     d: 'A person on WhatsApp, not a call centre queue, for the whole journey.' },
+];
+
+const CAB_FAQS = [
+  { q: 'Are your cab fares fixed, or do they change with demand?', a: 'Fixed. The fare we quote for a route and vehicle is what you pay — no surge pricing for weekends, festivals or peak season, and no last-minute add-ons.' },
+  { q: 'Can I travel Uttarakhand hill routes at night?', a: 'No — vehicle movement on Char Dham and most hill routes is banned between 10 PM and 4 AM. We plan pickup times so you reach your halt well before dark.' },
+  { q: 'Do your vehicles have the Green Card required for hill routes?', a: 'Yes. Every vehicle we send carries a current Green Card and trip card, so you never get turned back at a checkpost.' },
+  { q: 'How do I actually book — is there online payment?', a: 'No online payment step. Send your trip details on WhatsApp (or use the enquiry form above), we confirm the fixed fare and vehicle, and you pay the driver directly — cash or UPI, your choice.' },
+  { q: 'Which vehicle should I choose for a hill route?', a: 'A sedan or Ertiga suits couples and small families on well-paved stretches; an Innova Crysta gives the smoothest ride for families and senior travellers; a Tempo Traveller is the standard choice for groups of eight or more.' },
+];
+
+export default function CabsPage() {
   return (
-    <>
+    <div className="lux-noscroll-x">
       <Schema />
-      <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 820, margin: '0 auto' }}>
-          <h1 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem,4.5vw,2.6rem)', fontWeight: 700, marginBottom: 12 }}>Uttarakhand Cab &amp; Taxi Service 2026</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7 }}>Fixed-fare cabs from Haridwar, Rishikesh and Dehradun to every dham and hill station — driven by people who know these mountain roads.</p>
-        </div>
-      </section>
 
-      <article style={{ maxWidth: 900, margin: '0 auto', padding: '8px 16px 80px' }}>
-        <div style={{ background: 'var(--navy-light)', borderLeft: '4px solid var(--gold)', borderRadius: 12, padding: '16px 18px', marginTop: 18 }}>
-          <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--gold-dark)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 6 }}>Quick Answer</div>
-          <p style={{ fontSize: 14.5, color: 'var(--navy)', lineHeight: 1.75, margin: 0 }}>Shiv Ganga Travels runs fixed-fare cabs across Uttarakhand from three base cities — Haridwar, Rishikesh and Dehradun (Jolly Grant airport) — to Kedarnath, Badrinath, Yamunotri, Mussoorie, Auli, Chopta and Nainital. Sedans, SUVs, Innova Crysta and Tempo Travellers, all with experienced hill drivers. Pick your route below for distance, fare and the full road map.</p>
+      {/* ── Hero ── */}
+      <Section tone="ink">
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <Reveal variant="fade"><Pill tone="gold">Fixed fares · zero commission</Pill></Reveal>
+          <Reveal>
+            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
+              Uttarakhand cabs, <span className="lux-accent">booked in a minute</span>
+            </h1>
+          </Reveal>
+          <Reveal>
+            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
+              Haridwar, Rishikesh and Dehradun to every dham and hill station — sedans, SUVs, Innova Crysta and Tempo Travellers, driven by people who know these mountain roads.
+            </p>
+          </Reveal>
         </div>
+      </Section>
 
-        {CAB_BASES.map(base => {
+      {/* ── Booking wizard ── */}
+      <Section tone="paper" tight>
+        <CabBookingWizard />
+      </Section>
+
+      {/* ── Trust band ── */}
+      <Section tone="paper-deep" tight>
+        <div className="lux-grid lux-grid--4" data-lux-stagger="">
+          {TRUST.map((t) => (
+            <div key={t.t} className="lux-feat">
+              <span className="lux-feat__i"><Icon name={t.icon} size={18} /></span>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--ink)' }}>{t.t}</div>
+                <p className="lux-body" style={{ fontSize: '0.82rem', marginTop: 3 }}>{t.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── Vehicle showcase ── */}
+      <Section tone="paper">
+        <SectionHead eyebrow="The fleet" title="The vehicle you travel in"
+          lede="Hill-seasoned drivers, fixed rates including fuel, driver and tolls." />
+        <Reveal><VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} /></Reveal>
+      </Section>
+
+      {/* ── Illustrative circuit map ── */}
+      <Section tone="paper-deep">
+        <SectionHead eyebrow="Where we run" title="The Char Dham circuit, at a glance"
+          lede="Most of our cab bookings feed into this circuit — Haridwar out to the four dhams and back. Scroll to trace it." />
+        <div className="lux-map-stacked">
+          <RouteMap nodes={ROUTE.nodes} category="char-dham" title="The Char Dham circuit" />
+        </div>
+      </Section>
+
+      {/* ── Popular routes (preserves every existing route link) ── */}
+      <Section tone="paper">
+        <SectionHead eyebrow="Popular routes" title="Pick a route for the full fare & road map" />
+        {CAB_BASES.map((base) => {
           const routes = getCabRoutesByBase(base);
           if (!routes.length) return null;
           return (
-            <section key={base}>
-              <h2 style={h2}>Cabs from {base}</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(min(260px,100%),1fr))', gap: 12 }}>
-                {routes.map(r => (
-                  <Link key={r.slug} href={`/cabs/${r.slug}`} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 12, padding: '16px', textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--navy)' }}>{r.from} → {r.to}</div>
-                    <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', fontSize: 12, color: 'var(--text-muted)' }}>
-                      <span>📏 {r.distance}</span><span>⏱ {r.time}</span>
+            <div key={base} style={{ marginBottom: 36 }}>
+              <Eyebrow plain>Cabs from {base}</Eyebrow>
+              <div className="lux-grid lux-grid--4" style={{ marginTop: 16 }} data-lux-stagger="">
+                {routes.map((r) => (
+                  <Link key={r.slug} href={`/cabs/${r.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+                    <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>{r.from} → {r.to}</div>
+                    <div className="lux-caption" style={{ marginTop: 6 }}>{r.distance} · {r.time}</div>
+                    <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--gold-dark)', marginTop: 10 }}>
+                      from {r.fares[0][2].split('–')[0]}
                     </div>
-                    <div style={{ fontWeight: 800, fontSize: 16, color: 'var(--teal)' }}>from {r.fares[0][2].split('–')[0]}</div>
-                    <span style={{ fontSize: 12.5, color: 'var(--gold-dark)', fontWeight: 600 }}>View fare &amp; route →</span>
                   </Link>
                 ))}
               </div>
-            </section>
+            </div>
           );
         })}
-
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 36 }}>
-          <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Char Dham cab routes</div>
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Haridwar → Kedarnath', '/haridwar-to-kedarnath-cab'], ['Haridwar → Badrinath', '/haridwar-to-badrinath-cab'], ['Haridwar → Gangotri', '/haridwar-to-gangotri-cab'], ['Delhi → Haridwar', '/delhi-to-haridwar-cab'], ['Full Char Dham Cab', '/char-dham-yatra-cab-booking']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
-            ))}
-          </div>
+        <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          {[['Haridwar → Kedarnath', '/haridwar-to-kedarnath-cab'], ['Haridwar → Badrinath', '/haridwar-to-badrinath-cab'], ['Haridwar → Gangotri', '/haridwar-to-gangotri-cab'], ['Delhi → Haridwar', '/delhi-to-haridwar-cab'], ['Full Char Dham Cab', '/char-dham-yatra-cab-booking']].map(([l, h]) => (
+            <Link key={h} href={h} className="lux-funnel-link" style={{ flex: '0 1 auto' }}>{l}<Icon name="arrowRight" size={13} /></Link>
+          ))}
         </div>
-      </article>
-    </>
+      </Section>
+
+      {/* ── Reviews ── */}
+      <Section tone="paper-deep">
+        <SectionHead eyebrow="Real stories" title="What our passengers say"
+          aside={<a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer" className="lux-link">All {REVIEWS.count} on Google <Icon name="external" size={13} /></a>} />
+        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section tone="paper" wrapWidth="narrow">
+        <SectionHead eyebrow="Have questions?" title="Cab booking, answered clearly" />
+        <FaqList faqs={CAB_FAQS} />
+      </Section>
+
+      {/* ── Final CTA ── */}
+      <Section tone="ink">
+        <div style={{ maxWidth: 620, margin: '0 auto', textAlign: 'center' }}>
+          <Reveal>
+            <h2 className="lux-display lux-display--lg" style={{ color: '#fff', marginBottom: 16 }}>Ready to book your cab?</h2>
+          </Reveal>
+          <Reveal>
+            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto 30px' }}>
+              Send your route on WhatsApp and we&rsquo;ll confirm the fixed fare within two hours.
+            </p>
+          </Reveal>
+          <a href={wa('Namaste! I want to book a cab. Please share routes and fares.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-btn" style={{ background: '#25D366', color: '#fff', borderColor: '#25D366' }} data-magnetic data-cursor="Chat">
+            <WhatsAppIcon size={16} /> WhatsApp us now
+          </a>
+        </div>
+      </Section>
+    </div>
   );
 }
