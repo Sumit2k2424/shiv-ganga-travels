@@ -75,12 +75,6 @@ export default function BlogHero({
             fill="#0A1F45" fillOpacity="0.55"
             points="0,240 0,215 260,150 520,205 760,150 1020,210 1280,155 1440,195 1440,240"
           />
-          {/* snow caps on the near peaks */}
-          <g fill="#ffffff" fillOpacity="0.9">
-            <polygon points="249,171 260,150 271,171" />
-            <polygon points="749,171 760,150 771,171" />
-            <polygon points="1269,176 1280,155 1291,176" />
-          </g>
         </svg>
       </header>
 
