@@ -1492,6 +1492,7 @@ article .section-rule {
   max-width: 1040px;
   margin: 0 auto;
   padding: 40px 20px 60px;
+  overflow-wrap: break-word; /* long URLs/domains never force horizontal scroll on mobile */
 }
 /* Keep the running text at a comfortable measure even though the shell is
    wide — only body paragraphs (flat or section-wrapped); cards, callouts,
@@ -1653,9 +1654,9 @@ article .section-rule {
   border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
   box-shadow: var(--shadow-md);
 }
-.blog-facts__item { background: #fff; padding: 14px 16px; text-align: center; }
+.blog-facts__item { background: #fff; padding: 14px 16px; text-align: center; min-width: 0; }
 .blog-facts__label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
-.blog-facts__value { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.25; }
+.blog-facts__value { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.25; overflow-wrap: anywhere; }
 
 /* ── Lede with drop-cap ── */
 .blog-lede {
@@ -1784,6 +1785,11 @@ article .section-rule {
   .blog-facts { grid-template-columns: repeat(2, 1fr); }
   .blog-lede::first-letter { font-size: 2.8em; }
   .blog-toc2 ol { grid-template-columns: 1fr; }
+  /* accessible tap targets on touch screens */
+  .blog-toc2 a { padding: 11px 10px; min-height: 44px; align-items: center; }
+}
+@media (max-width: 400px) {
+  .blog-hero { padding: 40px 16px 78px; }
 }
 
 /* faq-answer-inner override for better readability */
