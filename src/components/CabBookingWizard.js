@@ -94,6 +94,14 @@ const CW_CSS = `
 
   .cw-nav { display:flex; justify-content:space-between; gap:12px; margin-top:30px; padding-top:22px; border-top:1px solid var(--rule); }
 
+  /* Keyboard focus — matches the site convention (.lux-btn:focus-visible).
+     Without these the whole wizard is unnavigable by keyboard: nothing
+     indicates which option, vehicle or chip is currently selected. */
+  .cw-opt:focus-visible,
+  .cw-vehicle:focus-visible,
+  .cw-chip:focus-visible,
+  .cw-count button:focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:var(--ds-r-2); }
+
   .cw-sum { position:sticky; top:96px; padding:24px; }
   @media (max-width:900px){
     .cw-sum { position:fixed; left:0; right:0; bottom:0; top:auto; z-index:40; border-radius:16px 16px 0 0; padding:16px 20px calc(16px + env(safe-area-inset-bottom)); max-height:60vh; overflow:auto; }
@@ -220,6 +228,7 @@ export default function CabBookingWizard() {
               <div className="cw-opt-grid">
                 {CAB_BASES.map((b) => (
                   <button key={b} type="button" className={`cw-opt${f.base === b ? ' is-on' : ''}`}
+                    aria-pressed={f.base === b}
                     onClick={() => setF((s) => ({ ...s, base: b, destination: '' }))}>
                     <div className="cw-opt__t">{b}</div>
                   </button>
@@ -230,6 +239,7 @@ export default function CabBookingWizard() {
               <div className="cw-opt-grid">
                 {destinations.map((d) => (
                   <button key={d} type="button" className={`cw-opt${f.destination === d ? ' is-on' : ''}`}
+                    aria-pressed={f.destination === d}
                     onClick={() => set('destination', d)}>
                     <div className="cw-opt__t">{d}</div>
                   </button>
@@ -246,7 +256,7 @@ export default function CabBookingWizard() {
               <label className="lux-label" style={{ display: 'block', margin: '22px 0 10px' }}>Trip type</label>
               <div className="cw-chips">
                 {TRIP_TYPES.map((t) => (
-                  <button key={t} type="button" className={`cw-chip${f.tripType === t ? ' is-on' : ''}`} onClick={() => set('tripType', t)}>{t}</button>
+                  <button key={t} type="button" className={`cw-chip${f.tripType === t ? ' is-on' : ''}`} aria-pressed={f.tripType === t} onClick={() => set('tripType', t)}>{t}</button>
                 ))}
               </div>
 
@@ -279,7 +289,7 @@ export default function CabBookingWizard() {
                   const note = vehicleNote(name);
                   const isOn = f.vehicleName === name;
                   return (
-                    <button key={name} type="button" className={`cw-vehicle${isOn ? ' is-on' : ''}`} onClick={() => set('vehicleName', name)}>
+                    <button key={name} type="button" className={`cw-vehicle${isOn ? ' is-on' : ''}`} aria-pressed={isOn} onClick={() => set('vehicleName', name)}>
                       <span className="cw-vehicle__check" aria-hidden="true">{isOn && <Icon name="check" size={12} />}</span>
                       <div className="cw-vehicle__top">
                         <div>

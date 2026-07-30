@@ -292,7 +292,9 @@
     transform 1.05s var(--ease-lux);
   will-change: opacity, transform;
 }
-[data-lux-reveal].is-in { opacity: 1; transform: none; }
+/* Release the compositor layer once the element has arrived — a permanent
+   will-change keeps a layer alive for every reveal target on the page. */
+[data-lux-reveal].is-in { opacity: 1; transform: none; will-change: auto; }
 [data-lux-reveal='fade'] { transform: none; }
 [data-lux-reveal='left']  { transform: translate3d(-32px, 0, 0); }
 [data-lux-reveal='right'] { transform: translate3d(32px, 0, 0); }
@@ -528,7 +530,18 @@ html.lux-cursor-active .lux-cursor__ring {
   place-items: center;
   pointer-events: none;
   transition: opacity 0.75s var(--ease-lux), visibility 0.75s;
+  /* Self-dismissing in pure CSS. The curtain is an opaque full-screen layer
+     rendered server-side on every route, so it must NEVER need JS to clear —
+     a blocked or failed bundle would otherwise leave the whole site a blank
+     navy screen. LuxMotion's .is-done is only a fast path (fires the moment
+     the loading bar fills); this keyframe is the guarantee. */
+  animation: luxCurtainOut 0.6s var(--ease-lux) 1.5s forwards;
 }
+/* Opacity only — `visibility` is a discrete property, so inside a keyframe it
+   would flip at the 50% mark and pop the curtain out mid-fade. The element is
+   already pointer-events:none and aria-hidden, so a transparent leftover layer
+   blocks nothing. */
+@keyframes luxCurtainOut { to { opacity: 0; } }
 .lux-curtain.is-done { opacity: 0; visibility: hidden; }
 .lux-curtain__mark {
   font-family: var(--font-display);
@@ -597,6 +610,7 @@ html.lenis, html.lenis body { height: auto; }
 .lux-pillar:nth-child(3) .lux-pillar__glow { animation-duration: 7s; }
 @keyframes pillarSpin { to { transform: rotate(360deg); } }
 .lux-pillar__ico {
+  position: relative;
   width: 52px;
   height: 52px;
   border-radius: var(--ds-r-pill);
@@ -606,17 +620,35 @@ html.lenis, html.lenis body { height: auto; }
   background: var(--gold-wash);
   border: 1px solid var(--gold-hair);
   color: var(--gold-dark);
-  animation: pillarPulse 3.2s var(--ease-lux) infinite;
 }
-.lux-pillar:nth-child(2) .lux-pillar__ico { animation-delay: 0.3s; }
-.lux-pillar:nth-child(3) .lux-pillar__ico { animation-delay: 0.6s; }
+/* The pulse ring is a separate absolutely-positioned layer animating only
+   transform+opacity. It was previously an animated box-shadow on the chip
+   itself, which repaints every frame — tolerable in one place, but this band
+   now renders on every route, so it was repainting 3x forever site-wide. */
+.lux-pillar__ico::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid var(--gold);
+  animation: pillarPulse 3.2s var(--ease-lux) infinite;
+  pointer-events: none;
+}
+.lux-pillar:nth-child(2) .lux-pillar__ico::after { animation-delay: 0.3s; }
+.lux-pillar:nth-child(3) .lux-pillar__ico::after { animation-delay: 0.6s; }
 @keyframes pillarPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 146, 10, 0.28); }
-  50%      { box-shadow: 0 0 0 8px rgba(232, 146, 10, 0); }
+  0%        { transform: scale(1);    opacity: 0.55; }
+  70%, 100% { transform: scale(1.38); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .lux-pillar__glow { animation: none; opacity: 0.08; }
-  .lux-pillar__ico { animation: none; }
+  .lux-pillar__ico::after { animation: none; opacity: 0; }
+}
+/* Phones freeze the decorative loops — same precedent as the hero scene,
+   which flickered on real devices under too many concurrent animations. */
+@media (max-width: 640px) {
+  .lux-pillar__glow { animation: none; opacity: 0.10; }
+  .lux-pillar__ico::after { animation: none; opacity: 0; }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -2261,7 +2293,8 @@ html.lenis, html.lenis body { height: auto; }
   .lux-section--ink, .lux-section--navy { background: #fff !important; color: #000 !important; }
   header, footer, .lux-bookbar, .lux-progress, .lux-drawer,
   .wa-float, .float-book-cta, .lux-arrow, .lux-tabs,
-  .lux-rail-book, .lux-cost__controls, .lux-lightbox { display: none !important; }
+  .lux-rail-book, .lux-cost__controls, .lux-lightbox,
+  .lux-curtain, .lux-cursor__ring { display: none !important; }
   .lux-section { padding: 18px 0 !important; page-break-inside: avoid; }
   [data-lux-reveal], [data-lux-stagger] > * { opacity: 1 !important; transform: none !important; }
   .lux-timeline__body { display: block !important; height: auto !important; padding-left: 0 !important; }
@@ -2289,6 +2322,17 @@ html.lenis, html.lenis body { height: auto; }
   .lux-curtain { display: none; }
 }
 
-/* Safety net: if JS never runs, content must still be visible */
-.no-js [data-lux-reveal],
-.no-js [data-lux-stagger] > * { opacity: 1; transform: none; }
+/* Safety net: if JS never runs, content must still be visible.
+   The old `.no-js` rules here were dead — nothing in the app ever set that
+   class, so the guard never applied. `scripting: none` is the real feature
+   for this and needs no class plumbing: with scripting off the reveal
+   targets (and the curtain, which is otherwise only cleared by JS) stay
+   visible instead of leaving blank sections behind an opaque overlay. */
+@media (scripting: none) {
+  [data-lux-reveal],
+  [data-lux-stagger] > * { opacity: 1 !important; transform: none !important; }
+  .lux-lines .lux-line > span { transform: none !important; }
+  .lux-reveal-img > * { transform: none !important; }
+  .lux-reveal-img::after { display: none; }
+  .lux-curtain { display: none !important; }
+}

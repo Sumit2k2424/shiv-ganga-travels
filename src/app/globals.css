@@ -1833,11 +1833,11 @@ body:has(.blog-progress) .lux-progress { display: none; }
 /* Sheen sweep across the footer CTA's primary button on hover */
 .blog-cta--footer a[href^="https://wa.me"] { position: relative; overflow: hidden; }
 .blog-cta--footer a[href^="https://wa.me"]::after {
-  content: ''; position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
+  content: ''; position: absolute; top: 0; left: 0; width: 45%; height: 100%;
   background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
-  transform: skewX(-18deg); transition: left .55s ease; pointer-events: none;
+  transform: translateX(-134%) skewX(-18deg); transition: transform .55s ease; pointer-events: none;
 }
-.blog-cta--footer a[href^="https://wa.me"]:hover::after { left: 130%; }
+.blog-cta--footer a[href^="https://wa.me"]:hover::after { transform: translateX(289%) skewX(-18deg); }
 
 /* Premium polish on the footer CTA — gold strip shimmer, icon pulse,
    hoverable trust chips, a highlighted price pill. All additive to the
@@ -1865,20 +1865,22 @@ body:has(.blog-progress) .lux-progress { display: none; }
 .blog-cta__top {
   isolation: isolate;
 }
+/* Sheen travels via transform, not `left` — animating `left` relayouts the
+   strip every frame, and this loop runs forever on all 60 blog posts. */
 .blog-cta__top::after {
   content: '';
   position: absolute;
-  top: 0; left: -60%;
+  top: 0; left: 0;
   width: 40%; height: 100%;
   background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
-  transform: skewX(-18deg);
+  transform: translateX(-150%) skewX(-18deg);
   animation: ctaTopSheen 6s ease-in-out infinite;
   animation-delay: 1.2s;
   pointer-events: none;
 }
 @keyframes ctaTopSheen {
-  0%, 15%  { left: -60%; }
-  35%, 100% { left: 130%; }
+  0%, 15%   { transform: translateX(-150%) skewX(-18deg); }
+  35%, 100% { transform: translateX(325%)  skewX(-18deg); }
 }
 .blog-cta__top-icon {
   display: inline-block;
@@ -1913,6 +1915,14 @@ body:has(.blog-progress) .lux-progress { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .blog-cta--footer::before { animation: none; background-position: 0% 50%; }
+  .blog-cta__top::after { animation: none; display: none; }
+  .blog-cta__top-icon { animation: none; }
+}
+/* Phones freeze the ambient loops. ctaBorderDrift animates background-position
+   (a repaint) and the sheen keeps a layer alive — cheap enough on desktop,
+   not worth the battery on mobile where the card sits far below the fold. */
+@media (max-width: 640px) {
   .blog-cta--footer::before { animation: none; background-position: 0% 50%; }
   .blog-cta__top::after { animation: none; display: none; }
   .blog-cta__top-icon { animation: none; }
