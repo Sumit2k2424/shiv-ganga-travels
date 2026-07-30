@@ -28,7 +28,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
 
   if (variant === 'inline') {
     return (
-      <div style={{
+      <div className="blog-cta" style={{
         background: 'linear-gradient(135deg, var(--navy) 0%, #1A3E75 60%, var(--teal) 100%)',
         borderRadius: 14,
         padding: '20px 22px',
@@ -68,7 +68,7 @@ export default function BlogCTA({ variant = 'footer', intent = 'booking', pkg = 
 
   // variant === 'footer'
   return (
-    <div style={{
+    <div className="blog-cta blog-cta--footer" style={{
       background: 'var(--navy)',
       borderRadius: 16,
       overflow: 'hidden',

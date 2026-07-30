@@ -1779,6 +1779,62 @@ article .section-rule {
   font-size: 13px; color: var(--text-muted); letter-spacing: 0.02em;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   BLOG MOTION — hero entrance, scroll-reveal, CTA polish
+   All auto-disabled by the global prefers-reduced-motion rule.
+═══════════════════════════════════════════════════════════════ */
+
+/* Hero entrance — staggered fade-rise on load (CSS-only, no JS dependency) */
+@keyframes blogHeroRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.blog-hero__badge     { animation: blogHeroRise .6s cubic-bezier(.16,1,.3,1) both; }
+.blog-hero__title     { animation: blogHeroRise .7s cubic-bezier(.16,1,.3,1) .08s both; }
+.blog-hero__dek       { animation: blogHeroRise .7s cubic-bezier(.16,1,.3,1) .16s both; }
+.blog-hero__meta      { animation: blogHeroRise .7s cubic-bezier(.16,1,.3,1) .24s both; }
+.blog-hero__mountains { animation: blogHeroRise .9s ease-out .10s both; }
+
+/* Scroll-reveal — hidden state applies only once JS adds .reveal-ready to
+   <html>; if JS/IO is unavailable nothing is ever hidden. */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal-ready .reveal.reveal-in { opacity: 1; transform: none; will-change: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .reveal { opacity: 1 !important; transform: none !important; }
+  .blog-hero__badge, .blog-hero__title, .blog-hero__dek,
+  .blog-hero__meta, .blog-hero__mountains { animation: none !important; }
+}
+@media print { .reveal-ready .reveal { opacity: 1 !important; transform: none !important; } }
+
+/* CTA + button micro-interactions. These only set transform/shadow/filter —
+   properties the inline-styled buttons don't set — so they apply cleanly. */
+.blog-container a[href^="https://wa.me"],
+.blog-container a[href^="tel:"],
+.blog-cta a, .blog-toc2 a, .blog-related-link, .guide-chip {
+  transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s, filter .2s;
+}
+.blog-container a[href^="https://wa.me"]:hover {
+  transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,211,102,.38); filter: brightness(1.04);
+}
+.blog-cta a:not([href^="https://wa.me"]):hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.22); }
+.blog-related-link:hover, .guide-chip:hover { transform: translateY(-2px); }
+
+/* Callout & takeaways: a gentle lift so blocks feel alive on hover */
+.blog-callout, .blog-keytakeaways { transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s; }
+.blog-callout:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* Sheen sweep across the footer CTA's primary button on hover */
+.blog-cta--footer a[href^="https://wa.me"] { position: relative; overflow: hidden; }
+.blog-cta--footer a[href^="https://wa.me"]::after {
+  content: ''; position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-18deg); transition: left .55s ease; pointer-events: none;
+}
+.blog-cta--footer a[href^="https://wa.me"]:hover::after { left: 130%; }
+
 @media (max-width: 640px) {
   .blog-hero { padding: 44px 18px 84px; }
   .blog-facts-wrap { margin-top: -52px; }
