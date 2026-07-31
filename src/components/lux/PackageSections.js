@@ -11,6 +11,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { AnimatePresence, motion } from 'motion/react';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 import {
   ChevronDown, ChevronLeft, ChevronRight, X, Star, MapPin,
   Clock, Utensils, Camera, Mountain, BedDouble, Check,
@@ -190,7 +191,12 @@ export function HotelShowcase({ hotels = [] }) {
             <article key={h.id} className="lux-embla__slide lux-embla__slide--hotel lux-zoom-host">
               <div className="lux-frame lux-frame--4x5 lux-frame--zoom">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={h.photo} alt={h.photoAlt} loading="lazy" decoding="async" width={700} height={875} />
+                <img
+                  src={pxAt(h.photo, 700, 875)}
+                  srcSet={pxSrcSet(h.photo, [[400, 500], [560, 700], [800, 1000]])}
+                  sizes="(max-width: 487px) 82vw, 400px"
+                  alt={h.photoAlt} loading="lazy" decoding="async" width={700} height={875}
+                />
                 <span className="lux-embla__badge">{h.stop}</span>
               </div>
 
@@ -301,7 +307,12 @@ export function VehicleShowcase({ vehicles = [], matrix }) {
           >
             <div className="lux-frame lux-frame--3x2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={v.photo} alt={v.photoAlt} loading="lazy" decoding="async" width={1400} height={933} />
+              <img
+                src={pxAt(v.photo, 1400, 933)}
+                srcSet={pxSrcSet(v.photo, [[700, 467], [1000, 667], [1400, 933]])}
+                sizes="(max-width: 620px) 94vw, 46vw"
+                alt={v.photoAlt} loading="lazy" decoding="async" width={1400} height={933}
+              />
             </div>
 
             <div>
@@ -364,7 +375,12 @@ export function TempleGuide({ temples = [] }) {
           <div className="lux-temple__media lux-zoom-host">
             <div className="lux-frame lux-frame--3x4 lux-frame--zoom">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={t.photo} alt={t.photoAlt} loading="lazy" decoding="async" width={900} height={1200} />
+              <img
+                src={pxAt(t.photo, 900, 1200)}
+                srcSet={pxSrcSet(t.photo, [[450, 600], [700, 933], [900, 1200]])}
+                sizes="(max-width: 620px) 94vw, 46vw"
+                alt={t.photoAlt} loading="lazy" decoding="async" width={900} height={1200}
+              />
             </div>
             <dl className="lux-facts" style={{ marginTop: 26 }}>
               <div className="lux-facts__row"><dt className="lux-facts__k">Deity</dt><dd className="lux-facts__v">{t.deity}</dd></div>
@@ -412,18 +428,36 @@ export function TempleGuide({ temples = [] }) {
 export function Gallery({ items = [] }) {
   const [open, setOpen] = useState(null);
   const closeRef = useRef(null);
+  const boxRef = useRef(null);
+  const restoreRef = useRef(null); // the gallery cell that opened the lightbox
 
   const move = useCallback(
     (dir) => setOpen((i) => (i == null ? i : (i + dir + items.length) % items.length)),
     [items.length]
   );
 
+  // Keyed on open/closed only — arrow-key navigation changes `open` but must
+  // not re-run this effect (that would fire the focus-restore mid-session).
+  const isOpen = open != null;
   useEffect(() => {
-    if (open == null) return;
+    if (!isOpen) return;
     const onKey = (e) => {
       if (e.key === 'Escape') setOpen(null);
       if (e.key === 'ArrowRight') move(1);
       if (e.key === 'ArrowLeft') move(-1);
+      // Keep Tab inside the dialog — it's aria-modal, so focus must not
+      // wander into the page behind the backdrop.
+      if (e.key === 'Tab' && boxRef.current) {
+        const focusables = boxRef.current.querySelectorAll('button');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
     };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -431,8 +465,10 @@ export function Gallery({ items = [] }) {
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      // Hand focus back to the cell that opened us (dialog exit contract)
+      restoreRef.current?.focus?.();
     };
-  }, [open, move]);
+  }, [isOpen, move]);
 
   const src = (u, w, h) => `${u}?auto=compress&cs=tinysrgb&w=${w}&h=${h}&fit=crop`;
 
@@ -443,12 +479,17 @@ export function Gallery({ items = [] }) {
           <button
             key={i}
             className={`lux-gallery__cell${g.span ? ` lux-gallery__cell--${g.span}` : ''} lux-zoom-host`}
-            onClick={() => setOpen(i)}
+            onClick={(e) => { restoreRef.current = e.currentTarget; setOpen(i); }}
             aria-label={`Open image: ${g.caption}`}
           >
             <span className="lux-frame lux-frame--zoom" style={{ display: 'block', height: '100%' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src(g.src, 900, 700)} alt={g.alt} loading="lazy" decoding="async" />
+              <img
+                src={src(g.src, 900, 700)}
+                srcSet={pxSrcSet(g.src, [[450, 350], [700, 544], [900, 700]])}
+                sizes="(max-width: 860px) 50vw, 25vw"
+                alt={g.alt} loading="lazy" decoding="async"
+              />
             </span>
             <span className="lux-gallery__cap">
               <span className="lux-gallery__cap-t">{g.caption}</span>
@@ -461,6 +502,7 @@ export function Gallery({ items = [] }) {
       <AnimatePresence>
         {open != null && (
           <motion.div
+            ref={boxRef}
             className="lux-lightbox"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

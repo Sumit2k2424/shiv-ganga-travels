@@ -63,6 +63,7 @@ export default function CharDhamKabJayen() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="📅 यात्रा का सही समय · 2026"
         title="चार धाम यात्रा 2026 में कब जाएं?"
         dek="हर महीने का सच — मौसम, भीड़, खर्चा और आपके लिए सबसे सही समय"
@@ -86,7 +87,7 @@ export default function CharDhamKabJayen() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />

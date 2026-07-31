@@ -46,6 +46,7 @@ export default function BujurgCharDham() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="👴 सीनियर यात्री गाइड · 2026"
         title="बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है?"
         dek="यह 12 बातें पहले जान लें — पछताएंगे नहीं"
@@ -69,7 +70,7 @@ export default function BujurgCharDham() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />

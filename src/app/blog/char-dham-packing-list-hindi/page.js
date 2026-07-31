@@ -53,6 +53,7 @@ export default function CharDhamPackingListHindi() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="🎒 पैकिंग गाइड · 2026"
         title="चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं?"
         dek="यह लिस्ट Print करके बैग में रख लो — घर से निकलने से पहले एक बार check करना"
@@ -76,7 +77,7 @@ export default function CharDhamPackingListHindi() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />

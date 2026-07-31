@@ -505,7 +505,7 @@ button { font-family: var(--font); }
 .faq-question[aria-expanded="true"] .faq-icon {
   background: var(--gold); color: #fff; transform: rotate(45deg);
 }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--t-out); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--t-out), visibility 0.35s; }
 .faq-answer-inner { padding: 0 20px 20px; font-size: 13.5px; color: var(--text-mid); line-height: 1.75; }
 
 /* ═══════════════════════════════════════════════════════════════

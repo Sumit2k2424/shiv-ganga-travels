@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SITE } from '@/data/packages';
 
 const STORAGE_KEY = 'sgt_popup_shown';
@@ -53,6 +53,23 @@ export default function LeadPopup() {
       document.body.style.overflow = 'hidden';
       return () => { document.body.style.overflow = prev; };
     }
+  }, [visible]);
+
+  /* Keyboard support: Escape dismisses; focus moves into the dialog on
+     open and returns to wherever the visitor was when it closes. */
+  const closeBtnRef = useRef(null);
+  const restoreFocusRef = useRef(null);
+  useEffect(() => {
+    if (!visible) return;
+    restoreFocusRef.current = document.activeElement;
+    closeBtnRef.current?.focus();
+    const onKey = (e) => { if (e.key === 'Escape') close(); };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      restoreFocusRef.current?.focus?.();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
   function close() {
@@ -141,6 +158,7 @@ export default function LeadPopup() {
             }}>
               {/* Close button */}
               <button
+                ref={closeBtnRef}
                 onClick={close}
                 aria-label="Close"
                 style={{
@@ -204,9 +222,9 @@ export default function LeadPopup() {
             <form onSubmit={handleSubmit} style={{ padding: '22px 24px 24px' }}>
               <div className="lead-popup-form-row" style={{ display: 'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 12, marginBottom: 12 }}>
                 <div>
-                  <label style={labelStyle}>Full Name <span style={{ color: 'var(--gold)' }}>*</span></label>
+                  <label style={labelStyle} htmlFor="lead-name">Full Name <span style={{ color: 'var(--gold)' }}>*</span></label>
                   <input
-                    type="text" name="name" required
+                    id="lead-name" type="text" name="name" required autoComplete="name"
                     value={form.name} onChange={handleChange}
                     placeholder="Ramesh Sharma"
                     style={inputStyle}
@@ -214,9 +232,9 @@ export default function LeadPopup() {
                   />
                 </div>
                 <div>
-                  <label style={labelStyle}>WhatsApp No. <span style={{ color: 'var(--gold)' }}>*</span></label>
+                  <label style={labelStyle} htmlFor="lead-phone">WhatsApp No. <span style={{ color: 'var(--gold)' }}>*</span></label>
                   <input
-                    type="tel" name="phone" required
+                    id="lead-phone" type="tel" name="phone" required autoComplete="tel"
                     value={form.phone} onChange={handleChange}
                     placeholder="+91-98765-43210"
                     style={inputStyle}
@@ -226,8 +244,8 @@ export default function LeadPopup() {
               </div>
 
               <div style={{ marginBottom: 12 }}>
-                <label style={labelStyle}>Interested Package</label>
-                <select name="package" value={form.package} onChange={handleChange} style={inputStyle}>
+                <label style={labelStyle} htmlFor="lead-package">Interested Package</label>
+                <select id="lead-package" name="package" value={form.package} onChange={handleChange} style={inputStyle}>
                   <option value="">— Select a package —</option>
                   {PACKAGES_LIST.map(p => <option key={p}>{p}</option>)}
                 </select>
@@ -235,15 +253,15 @@ export default function LeadPopup() {
 
               <div className="lead-popup-form-row" style={{ display: 'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 12, marginBottom: 20 }}>
                 <div>
-                  <label style={labelStyle}>Travel Month</label>
-                  <select name="month" value={form.month} onChange={handleChange} style={inputStyle}>
+                  <label style={labelStyle} htmlFor="lead-month">Travel Month</label>
+                  <select id="lead-month" name="month" value={form.month} onChange={handleChange} style={inputStyle}>
                     <option value="">— Select month —</option>
                     {MONTHS.map(m => <option key={m}>{m}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>No. of Pilgrims</label>
-                  <select name="pilgrims" value={form.pilgrims} onChange={handleChange} style={inputStyle}>
+                  <label style={labelStyle} htmlFor="lead-pilgrims">No. of Pilgrims</label>
+                  <select id="lead-pilgrims" name="pilgrims" value={form.pilgrims} onChange={handleChange} style={inputStyle}>
                     {['1','2','3','4','5','6','7','8','9','10+'].map(n => (
                       <option key={n} value={n}>{n} pilgrim{n !== '1' ? 's' : ''}</option>
                     ))}

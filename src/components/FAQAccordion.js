@@ -1,10 +1,11 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useId } from 'react';
 
 function FAQItem({ q, a, idx, openIdx, setOpenIdx }) {
   const isOpen = openIdx === idx;
   const answerRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const panelId = useId();
 
   useEffect(() => {
     if (answerRef.current) setHeight(answerRef.current.scrollHeight);
@@ -15,14 +16,19 @@ function FAQItem({ q, a, idx, openIdx, setOpenIdx }) {
       <button
         className="faq-question"
         aria-expanded={isOpen}
+        aria-controls={panelId}
         onClick={() => setOpenIdx(isOpen ? -1 : idx)}
       >
         <span>{q}</span>
-        <span className="faq-icon">+</span>
+        <span className="faq-icon" aria-hidden="true">+</span>
       </button>
       <div
+        id={panelId}
         className="faq-answer"
-        style={{ maxHeight: isOpen ? height : 0 }}
+        /* visibility (not just max-height) so links inside a collapsed
+           answer leave the tab order; the CSS transition delays the hide
+           until the collapse animation finishes. */
+        style={{ maxHeight: isOpen ? height : 0, visibility: isOpen ? 'visible' : 'hidden' }}
         aria-hidden={!isOpen}
       >
         <div ref={answerRef} className="faq-answer-inner">

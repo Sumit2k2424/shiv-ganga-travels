@@ -25,6 +25,7 @@ export default function BlogHero({
   updated,
   readTime,
   facts = [],
+  lang, // BCP-47 tag when the title/dek aren't in the site language (e.g. "hi")
 }) {
   const initials =
     authorInitials ||
@@ -32,7 +33,7 @@ export default function BlogHero({
 
   return (
     <>
-      <header className="blog-hero">
+      <header className="blog-hero" lang={lang}>
         <div className="blog-hero__inner">
           {badge && <span className="blog-hero__badge">{badge}</span>}
           <h1 className="blog-hero__title">{title}</h1>

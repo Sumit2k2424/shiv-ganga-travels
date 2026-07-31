@@ -75,7 +75,7 @@ function MobileAccordion({ label, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="eq-mob-acc">
-      <button onClick={() => setOpen(o => !o)} className="eq-mob-acc__h">
+      <button onClick={() => setOpen(o => !o)} className="eq-mob-acc__h" aria-expanded={open}>
         {label} <ChevronDown open={open}/>
       </button>
       {open && <div style={{ background:'var(--paper)', padding:'4px 0' }}>{children}</div>}
@@ -107,6 +107,19 @@ export default function Navbar() {
     const fn = e => { if (cabRef.current && !cabRef.current.contains(e.target)) setCabOpen(false); };
     document.addEventListener('mousedown', fn);
     return () => document.removeEventListener('mousedown', fn);
+  }, []);
+
+  /* Escape dismisses any open dropdown or the mobile drawer (keyboard parity
+     with the outside-click handlers above). */
+  useEffect(() => {
+    const fn = e => {
+      if (e.key !== 'Escape') return;
+      setDropOpen(false);
+      setCabOpen(false);
+      setMobileOpen(false);
+    };
+    document.addEventListener('keydown', fn);
+    return () => document.removeEventListener('keydown', fn);
   }, []);
 
   return (
@@ -225,7 +238,7 @@ export default function Navbar() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <div className="eq-mobile md:hidden">
+          <nav className="eq-mobile md:hidden" aria-label="Mobile">
             <MobileAccordion label="Packages">
               {PKG_LINKS.map(l => (
                 <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
@@ -262,7 +275,7 @@ export default function Navbar() {
                 <WhatsAppIcon size={15}/> Enquire on WhatsApp
               </a>
             </div>
-          </div>
+          </nav>
         )}
       </header>
       </div>

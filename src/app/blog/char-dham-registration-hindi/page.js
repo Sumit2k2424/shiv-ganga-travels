@@ -52,6 +52,7 @@ export default function CharDhamRegistrationHindi() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="📋 रजिस्ट्रेशन गाइड · 2026"
         title="चार धाम यात्रा रजिस्ट्रेशन 2026"
         dek="मोबाइल से घर बैठे करें — मुफ्त · 9 आसान स्टेप · हिंदी में"
@@ -75,7 +76,7 @@ export default function CharDhamRegistrationHindi() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-registration-hindi", "title": "चार धाम यात्रा रजिस्ट्रेशन 2026: मोबाइल से कैसे करें", "description": "चार धाम यात्रा 2026 का ऑनलाइन रजिस्ट्रेशन मुफ्त है। WhatsApp और website से — 9 आसान steps में पूरी जानकारी हिंदी में। जरूरी दस्तावेज़ और 55+ उम्र के नियम।", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "hi-IN"}} />

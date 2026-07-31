@@ -46,6 +46,7 @@ export default function CharDhamKharcha() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="💰 खर्चे का पूरा हिसाब · 2026"
         title="चार धाम यात्रा 2026 में कितना पैसा लगता है?"
         dek="गाड़ी · होटल · खाना · पंजीकरण · केदारनाथ घोड़ा · सब कुछ अलग-अलग"
@@ -69,7 +70,7 @@ export default function CharDhamKharcha() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />

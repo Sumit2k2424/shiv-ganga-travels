@@ -67,6 +67,7 @@ export default function KedarnathPehliBaar() {
       <ReadingProgress/>
 
       <BlogHero
+        lang="hi"
         badge="🏔️ पहली बार केदारनाथ · 2026"
         title="केदारनाथ पहली बार जा रहे हैं?"
         dek="ये 18 गलतियाँ मत करना — वरना यात्रा बर्बाद हो जाएगी"
@@ -90,7 +91,7 @@ export default function KedarnathPehliBaar() {
         </div>
       </nav>
 
-      <article className="blog-container" itemScope itemType="https://schema.org/Article">
+      <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="sumit" />
