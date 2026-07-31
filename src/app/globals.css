@@ -948,12 +948,11 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
 
 /* ─── 21. LEAD POPUP ────────────────────────────────────────── */
 @media (max-width: 500px) {
-  .lead-popup-form-row { grid-template-columns: 1fr !important; }
-  .lead-popup-inner {
-    padding: 20px 16px !important;
-    max-width: 95vw !important;
-    border-radius: 16px !important;
-  }
+  /* Name + WhatsApp are free-text and need the room, so they stack on
+     phones. The month/pilgrims pair uses --pair instead and is left to
+     auto-fit, so two short selects stay side by side wherever they fit.
+     (.lead-popup-inner removed — no markup ever used that class.) */
+  .lead-popup-form-row:not(.lead-popup-form-row--pair) { grid-template-columns: 1fr !important; }
 }
 
 /* ─── 22. TESTIMONIALS ──────────────────────────────────────── */
