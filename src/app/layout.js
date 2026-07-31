@@ -11,6 +11,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LuxMotion from '@/components/lux/LuxMotion';
 import LuxCursor from '@/components/lux/LuxCursor';
+import LogoMark from '@/components/lux/LogoMark';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
@@ -433,6 +434,7 @@ export default function RootLayout({ children }) {
         {/* Cinematic page-entry loader — fades once its own bar fills. */}
         <div className="lux-curtain" data-lux-curtain aria-hidden="true">
           <div>
+            <div className="lux-curtain__logo"><LogoMark size={60}/></div>
             <div className="lux-curtain__mark">Shiv Ganga</div>
             <div className="lux-curtain__bar"><i/></div>
           </div>

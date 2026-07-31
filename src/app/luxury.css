@@ -543,6 +543,14 @@ html.lux-cursor-active .lux-cursor__ring {
    blocks nothing. */
 @keyframes luxCurtainOut { to { opacity: 0; } }
 .lux-curtain.is-done { opacity: 0; visibility: hidden; }
+.lux-curtain > div { display: flex; flex-direction: column; align-items: center; }
+.lux-curtain__logo {
+  display: flex; justify-content: center;
+  margin-bottom: 18px;
+  opacity: 0; transform: scale(0.82);
+  animation: curtainLogoIn 0.7s var(--ease-lux) 0.1s forwards;
+}
+@keyframes curtainLogoIn { to { opacity: 1; transform: scale(1); } }
 .lux-curtain__mark {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 2.4vw, 1.6rem);
