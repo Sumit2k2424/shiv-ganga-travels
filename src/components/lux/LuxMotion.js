@@ -24,6 +24,7 @@ const REVEAL_SELECTOR = [
   '[data-lux-stagger]',
   '.lux-lines',
   '.lux-reveal-img',
+  '.lux-rule', // hairline rules draw themselves in (scaleX 0 → 1)
 ].join(',');
 
 export default function LuxMotion() {
@@ -134,6 +135,43 @@ export default function LuxMotion() {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     });
+
+    /* ── 2b · Magnetic CTAs — fine pointer only ─────────────────
+       Buttons drift a few px toward the cursor and glide back on
+       leave (the CSS transform transition supplies the ease). Wired
+       lazily via one delegated pointerover, so the cost is zero
+       until a button is actually hovered. Max travel is deliberately
+       small: attraction should be felt, not seen. */
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const PULL_X = 3.5, PULL_Y = 2.5; // px at the button's far edge
+      const onOver = (e) => {
+        const btn = e.target.closest?.('.lux-btn');
+        if (!btn || btn.dataset.luxMag) return;
+        btn.dataset.luxMag = '1';
+        let raf = 0;
+        const move = (ev) => {
+          const r = btn.getBoundingClientRect();
+          const dx = (ev.clientX - (r.left + r.width / 2)) / (r.width / 2);
+          const dy = (ev.clientY - (r.top + r.height / 2)) / (r.height / 2);
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            btn.style.transform =
+              `translate(${(dx * PULL_X).toFixed(1)}px, ${(dy * PULL_Y).toFixed(1)}px)`;
+          });
+        };
+        const leave = () => {
+          cancelAnimationFrame(raf);
+          btn.style.transform = '';
+          btn.removeEventListener('pointermove', move);
+          btn.removeEventListener('pointerleave', leave);
+          delete btn.dataset.luxMag;
+        };
+        btn.addEventListener('pointermove', move, { passive: true });
+        btn.addEventListener('pointerleave', leave, { once: true });
+      };
+      document.addEventListener('pointerover', onOver, { passive: true });
+      cleanups.push(() => document.removeEventListener('pointerover', onOver));
+    }
 
     /* ── 3 · Lenis — pointer devices only ───────────────────── */
     // Touch devices already have excellent native inertia; overriding it
