@@ -1,9 +1,21 @@
 'use client';
 
-/* Brand logo mark — extracted from the original Navbar, unchanged. */
+import { useId } from 'react';
 
+/* Brand logo mark — extracted from the original Navbar, unchanged.
+
+   The SVG <defs> ids below are scoped with useId() because this mark now
+   renders twice in the same document (navbar + page-entry curtain). Two
+   elements sharing one id is invalid SVG — browsers disagree on how to
+   resolve it, which showed up as the gradient-filled mountains falling
+   back to a flat grey and, on mobile Safari in particular, the clipPath
+   failing to resolve at all (the mountain group just didn't render). */
 
 export function LogoMark({ size = 36 }) {
+  // useId()'s raw output contains colons (e.g. ":r0:") — strip them so the
+  // id is safe wherever url(#...) references get resolved through CSS.
+  const uid = useId().replace(/:/g, '');
+  const id = (name) => `${name}-${uid}`;
   return (
     <div style={{ position:'relative', width:size, height:size + 14, flexShrink:0 }} aria-hidden="true">
       <style dangerouslySetInnerHTML={{ __html:`
@@ -54,48 +66,48 @@ export function LogoMark({ size = 36 }) {
       {/* Main logo mark */}
       <svg width={size} height={size} viewBox="0 0 44 44" fill="none" style={{ display:'block' }}>
         <defs>
-          <radialGradient id="lgAura" cx="50%" cy="50%" r="50%">
+          <radialGradient id={id('lgAura')} cx="50%" cy="50%" r="50%">
             <stop offset="0%"   stopColor="#E8920A" stopOpacity=".3"/>
             <stop offset="100%" stopColor="#E8920A" stopOpacity="0"/>
           </radialGradient>
-          <radialGradient id="lgBg" cx="40%" cy="35%" r="70%">
+          <radialGradient id={id('lgBg')} cx="40%" cy="35%" r="70%">
             <stop offset="0%"   stopColor="#1a3d7c"/>
             <stop offset="100%" stopColor="#0F2B5B"/>
           </radialGradient>
-          <linearGradient id="lgPeak" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={id('lgPeak')} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%"   stopColor="#FFD166"/>
             <stop offset="100%" stopColor="#E8920A"/>
           </linearGradient>
-          <linearGradient id="lgSnow" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={id('lgSnow')} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%"   stopColor="#fff"   stopOpacity=".95"/>
             <stop offset="100%" stopColor="#d8eeff" stopOpacity=".7"/>
           </linearGradient>
-          <clipPath id="lgClip">
+          <clipPath id={id('lgClip')}>
             <circle cx="22" cy="22" r="19"/>
           </clipPath>
         </defs>
 
         {/* Outer aura glow */}
-        <circle cx="22" cy="22" r="21" fill="url(#lgAura)" className="logo-aura"/>
+        <circle cx="22" cy="22" r="21" fill={`url(#${id('lgAura')})`} className="logo-aura"/>
 
         {/* Rotating dotted ring */}
         <circle cx="22" cy="22" r="20" stroke="#E8920A" strokeWidth="1"
           strokeDasharray="3 5" strokeOpacity=".5" fill="none" className="logo-ring"/>
 
         {/* Main circle bg */}
-        <circle cx="22" cy="22" r="19" fill="url(#lgBg)"/>
+        <circle cx="22" cy="22" r="19" fill={`url(#${id('lgBg')})`}/>
 
         {/* Inner content clipped */}
-        <g clipPath="url(#lgClip)">
+        <g clipPath={`url(#${id('lgClip')})`}>
           {/* Far mountain — blue-grey */}
           <path d="M4,34 L13,20 L18,26 L23,14 L28,22 L33,16 L40,30 L40,36 L4,36 Z"
             fill="rgba(11,123,139,0.35)"/>
           {/* Near mountain peaks — gold gradient */}
           <path d="M4,36 L14,22 L19,28 L22,10 L25,28 L30,20 L40,36 Z"
-            fill="url(#lgPeak)"/>
+            fill={`url(#${id('lgPeak')})`}/>
           {/* Snow caps */}
           <path d="M19,28 L22,10 L25,28 L23.5,24 L22,18 L20.5,24 Z"
-            fill="url(#lgSnow)" className="snow-glint"/>
+            fill={`url(#${id('lgSnow')})`} className="snow-glint"/>
           <path d="M27,22 L30,20 L33,24 L31,22.5 L30,21 Z"
             fill="rgba(255,255,255,.6)" className="snow-glint"/>
           <path d="M11,24 L14,22 L17,26 L15.5,24.5 L14,23 Z"
@@ -114,7 +126,7 @@ export function LogoMark({ size = 36 }) {
       <svg width={size} height={16} viewBox="0 0 44 16" fill="none"
         style={{ display:'block', marginTop:-2, overflow:'visible' }}>
         <defs>
-          <linearGradient id="rvGrad" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id={id('rvGrad')} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%"   stopColor="#0B7B8B" stopOpacity=".9"/>
             <stop offset="100%" stopColor="#0B7B8B" stopOpacity="0"/>
           </linearGradient>
@@ -122,7 +134,7 @@ export function LogoMark({ size = 36 }) {
 
         {/* Main river stream */}
         <path d="M22,0 Q20,4 22,8 Q24,12 22,16"
-          stroke="url(#rvGrad)" strokeWidth="2.5" strokeLinecap="round"
+          stroke={`url(#${id('rvGrad')})`} strokeWidth="2.5" strokeLinecap="round"
           fill="none" className="river-main"/>
 
         {/* Side tributary left */}
