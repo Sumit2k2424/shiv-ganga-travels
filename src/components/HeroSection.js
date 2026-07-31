@@ -117,30 +117,31 @@ export default function HeroSection() {
           Uttarakhand Tourism Registered · Est. {SITE.established}
         </div>
 
-        <h1 className="display-title speakable-answer hero-in" style={{ '--d':'0.17s',
+        <h1 className="display-title speakable-answer hero-title" style={{
           color:'#fff', fontSize:'clamp(2.15rem,5vw,3.65rem)',
           fontWeight:600, lineHeight:1.06, letterSpacing:'-0.02em',
           marginBottom:18,
-          textShadow:'0 2px 28px rgba(0,0,0,0.5)',
         }}>
-          Char Dham Yatra 2026,<br/>from Haridwar
+          <span className="hero-title__mask"><span className="hero-title__ln" style={{ '--ld':'0.15s' }}>Char Dham Yatra <span className="hero-title__accent">2026</span>,</span></span>
+          <span className="hero-title__mask"><span className="hero-title__ln" style={{ '--ld':'0.32s' }}>from Haridwar</span></span>
         </h1>
 
-        <p className="speakable-answer hero-in" style={{ '--d':'0.29s',
+        <p className="speakable-answer hero-in" style={{ '--d':'0.5s',
           color:'rgba(255,255,255,0.9)', fontSize:'clamp(15px,1.8vw,17.5px)', lineHeight:1.72,
           maxWidth:580, margin:'0 auto 34px',
           textShadow:'0 1px 12px rgba(0,0,0,0.45)',
         }}>
           Yamunotri · Gangotri · Kedarnath · Badrinath — with the operator who has
-          carried 50,000+ pilgrims since {SITE.established}. From ₹18,500 per person, all-inclusive.
+          carried <span className="hero-highlight">50,000+ pilgrims</span> since {SITE.established}.
+          From <span className="hero-highlight">₹18,500</span> per person, all-inclusive.
         </p>
 
-        <div className="hero-in" style={{ '--d':'0.41s' }}>
+        <div className="hero-in" style={{ '--d':'0.62s' }}>
           <HeroSearch/>
         </div>
 
         {/* Proof, shown — quiet line-icons with the figures anxious pilgrims scan for */}
-        <div className="hero-trust hero-in" style={{ '--d':'0.55s' }}>
+        <div className="hero-trust hero-in" style={{ '--d':'0.76s' }}>
           {HERO_TRUST.map((t) => (
             <span key={t.label} className="hero-trust__item">
               <span className="hero-trust__ico"><Icon name={t.icon} size={17} /></span>
@@ -173,9 +174,43 @@ export default function HeroSection() {
         @keyframes heroPush { from { transform: scale(1); } to { transform: scale(1.045); } }
         .hero-photo { animation: heroPush 40s linear both; transform-origin: 50% 46%; will-change: transform; }
 
-        /* Sequenced reveal: each line composed one after another, not all at once. */
-        @keyframes heroReveal { from { opacity:0; transform: translateY(18px); } to { opacity:1; transform: translateY(0); } }
-        .hero-in { opacity:0; animation: heroReveal 0.7s cubic-bezier(0.22,1,0.36,1) both; animation-delay: var(--d, 0s); }
+        /* Sequenced reveal: each line composed one after another, not all at once.
+           Blur-to-focus, not just fade — the same "coming into clarity" read
+           used on Linear/Vercel-style hero copy, kept slow enough to stay
+           documentary rather than flashy. */
+        @keyframes heroReveal { from { opacity:0; transform: translateY(18px); filter: blur(6px); } to { opacity:1; transform: translateY(0); filter: blur(0); } }
+        .hero-in { opacity:0; animation: heroReveal 0.85s cubic-bezier(0.22,1,0.36,1) both; animation-delay: var(--d, 0s); }
+
+        /* Headline — each line rises out of a mask like a curtain lifting,
+           composed one after another rather than the whole block fading at
+           once. The mask (overflow:hidden) is what makes the translateY
+           read as a reveal instead of a slide. */
+        /* Padding/negative-margin pair so overflow:hidden doesn't clip
+           descenders (the comma after "2026") while the mask is animating. */
+        .hero-title__mask { display:block; overflow:hidden; padding-bottom:0.16em; margin-bottom:-0.16em; }
+        .hero-title__ln {
+          display:block; transform: translateY(112%); opacity:0; filter: blur(10px);
+          animation: heroLineIn 1s cubic-bezier(0.16,1,0.3,1) both;
+          animation-delay: var(--ld, 0s);
+          text-shadow: 0 2px 28px rgba(0,0,0,0.5);
+        }
+        @keyframes heroLineIn { to { transform: translateY(0); opacity:1; filter: blur(0); } }
+
+        /* "2026" — the one accent in an otherwise all-white headline: a slow
+           gold shimmer sweeping through the numerals, like light moving
+           across brushed metal. Quiet, continuous, never garish. */
+        .hero-title__accent {
+          background: linear-gradient(100deg, #E8920A 0%, #F4B860 22%, #FFE9C7 42%, #F4B860 62%, #E8920A 100%);
+          background-size: 260% 100%;
+          -webkit-background-clip: text; background-clip: text; color: transparent;
+          filter: drop-shadow(0 0 20px rgba(244,184,96,0.38));
+          animation: heroShimmer 6s linear infinite;
+        }
+        @keyframes heroShimmer { to { background-position: -260% 0; } }
+
+        /* Subtitle — the two figures a pilgrim is actually scanning for get
+           a quiet gold weight instead of sitting flat in the paragraph. */
+        .hero-highlight { color:#F4B860; font-weight:600; }
 
         /* Proof row */
         .hero-trust {
@@ -227,7 +262,9 @@ export default function HeroSection() {
         /* Nothing moves for visitors who asked for stillness. */
         @media (prefers-reduced-motion: reduce) {
           .hero-photo { animation: none; }
-          .hero-in { opacity:1; animation: none; }
+          .hero-in { opacity:1; animation: none; filter:none; }
+          .hero-title__ln { opacity:1; transform:none; filter:none; animation:none; }
+          .hero-title__accent { animation:none; }
           .hero-scroll__dot { animation: none; opacity:0.7; }
         }
 
