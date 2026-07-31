@@ -13,6 +13,7 @@
 
 // Editorial layer + tokens are imported site-wide in app/layout.js (site chrome).
 import Link from 'next/link';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import { HOTELS, VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import HeroSection from '@/components/HeroSection';
@@ -164,7 +165,12 @@ function LuxPkgCard({ pkg }) {
     <Link href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-pcard" data-lux-reveal="" data-cursor="View">
       <div className="lux-frame lux-frame--3x2 lux-frame--zoom" style={{ position: 'relative' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={pkg.photo} alt={pkg.name} loading="lazy" decoding="async" width={560} height={373} />
+        <img
+          src={pxAt(pkg.photo, 560, 373)}
+          srcSet={pxSrcSet(pkg.photo, [[420, 280], [560, 373], [750, 500]])}
+          sizes="(max-width: 560px) 82vw, 300px"
+          alt={pkg.name} loading="lazy" decoding="async" width={560} height={373}
+        />
         {pkg.badge && <span className="lux-pill lux-pill--solid lux-pcard__badge">{pkg.badge}</span>}
       </div>
       <div className="lux-pcard__body">
@@ -313,7 +319,12 @@ export default function HomePage() {
             <Link key={dn.name} href={dn.href} className="lux-dest lux-scrim lux-zoom-host" data-cursor="View">
               <div className="lux-frame lux-frame--4x5 lux-frame--zoom">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={dn.photo} alt={dn.alt2} loading="lazy" decoding="async" width={800} height={1000} data-lux-parallax="0.06" />
+                <img
+                  src={pxAt(dn.photo, 800, 1000)}
+                  srcSet={pxSrcSet(dn.photo, [[420, 525], [600, 750], [800, 1000]])}
+                  sizes="(max-width: 620px) 94vw, (max-width: 980px) 46vw, 300px"
+                  alt={dn.alt2} loading="lazy" decoding="async" width={800} height={1000} data-lux-parallax="0.06"
+                />
               </div>
               <div className="lux-dest__cap">
                 <span className="lux-caption">{dn.alt}</span>
@@ -459,7 +470,12 @@ export default function HomePage() {
           <Reveal variant="right">
             <div className="lux-frame lux-frame--4x5 lux-scrim lux-zoom-host">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt="Kedarnath at 3,583 m — the final darshan of the circuit" loading="lazy" decoding="async" width={900} height={1125} data-lux-parallax="0.08" />
+              <img
+                src={pxAt('https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb', 900, 1125)}
+                srcSet={pxSrcSet('https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb', [[600, 750], [900, 1125], [1200, 1500]])}
+                sizes="(max-width: 620px) 94vw, 46vw"
+                alt="Kedarnath at 3,583 m — the final darshan of the circuit" loading="lazy" decoding="async" width={900} height={1125} data-lux-parallax="0.08"
+              />
               <div className="lux-dest__cap">
                 <h3 className="lux-display lux-display--sm" style={{ color: '#fff' }}>Kedarnath, 3,583 m</h3>
                 <span className="lux-caption">The final darshan of the circuit — and the reason every checklist exists.</span>

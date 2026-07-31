@@ -11,6 +11,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { PACKAGES, CATEGORIES, SITE } from '@/data/packages';
+import { pxAt, pxSrcSet } from '@/lib/pximg';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import PackageCardLux from '@/components/PackageCardLux';
 
@@ -103,7 +104,12 @@ export default function PackagesPage() {
       {/* ══ Editorial masthead ══ */}
       <section className="pk-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={HERO_IMG} alt="" aria-hidden="true" className="pk-hero__img" fetchPriority="high" decoding="async" />
+        <img
+          src={pxAt(HERO_IMG, 1600, 700)}
+          srcSet={pxSrcSet(HERO_IMG, [[750, 328], [1200, 525], [1600, 700], [2000, 875]])}
+          sizes="100vw"
+          alt="" aria-hidden="true" className="pk-hero__img" fetchPriority="high" decoding="async"
+        />
         <div className="pk-hero__veil" aria-hidden="true" />
         <div className="pk-hero__in">
           <span className="lux-eyebrow lux-eyebrow--light">Complete catalogue · 2026 season</span>

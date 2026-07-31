@@ -171,7 +171,12 @@ export default function CategoryView({ category, packages, guides = [] }) {
             <Link key={c.slug} href={`/packages/${c.slug}`} className="lux-zoom-host" style={{ textDecoration: 'none', display: 'block' }}>
               <span className="lux-frame lux-frame--4x5 lux-frame--zoom" style={{ display: 'block' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={pxAt(c.cover, 500, 625)} alt={c.coverAlt || c.name} loading="lazy" decoding="async" width={500} height={625} />
+                <img
+                  src={pxAt(c.cover, 500, 625)}
+                  srcSet={pxSrcSet(c.cover, [[300, 375], [500, 625], [640, 800]])}
+                  sizes="(max-width: 620px) 94vw, (max-width: 980px) 46vw, 300px"
+                  alt={c.coverAlt || c.name} loading="lazy" decoding="async" width={500} height={625}
+                />
               </span>
               <span className="lux-display lux-display--sm" style={{ display: 'block', marginTop: 16 }}>{c.name}</span>
               <span className="lux-caption" style={{ display: 'block', marginTop: 6 }}>{c.desc}</span>

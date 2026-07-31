@@ -74,8 +74,7 @@ const CITY_PRIORITY = {
 const DEFAULT_CITY_P = 0.80;
 
 export default function sitemap() {
-  const now = new Date().toISOString();
-  const b   = SITE.baseUrl;
+  const b = SITE.baseUrl;
 
   const core = [
     { url: b,                                          p: 1.00, cf: 'weekly'  },
@@ -200,6 +199,8 @@ export default function sitemap() {
   const EXCLUDE_TOP = new Set([
     'ui-kit', 'review', 'packages', 'blog', 'cabs',
     'opengraph-image', 'sitemap-page',
+    // noindex routes — a sitemap must never list a URL that asks not to be indexed
+    'book', 'styleguide',
   ]);
   const seen = new Set(listed.map(x => x.url));
   const discovered = discoverDirSlugs('src/app')
@@ -219,9 +220,11 @@ export default function sitemap() {
     return !REDIRECT_SOURCE_PATHS.has(slugPath);
   });
 
+  // No lastModified: stamping every URL with the build time on every deploy
+  // teaches Google the field is noise and it stops trusting it. Omitting it
+  // is the accurate signal until real per-page updated dates exist.
   return all.map(({ url, p, cf }) => ({
     url,
-    lastModified: now,
     priority: p,
     changeFrequency: cf,
   }));

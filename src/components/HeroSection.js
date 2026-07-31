@@ -276,6 +276,12 @@ export default function HeroSection() {
            flickering/going blank while scrolling. Static dawn frame, held. */
         @media (max-width: 640px) {
           .hero-photo { animation: none; }
+          /* Text paints immediately — the staged reveal starts each line at
+             opacity:0, and Chrome won't count the h1/paragraph toward LCP
+             until it's visible, costing ~1.2s of measured LCP on phones.
+             Same logic as freezing the scene: mobile gets the held frame. */
+          .hero-in { opacity:1; animation: none; filter:none; }
+          .hero-title__ln { opacity:1; transform:none; filter:none; animation:none; }
           .k-star, .k-dawn, .k-cloud--a, .k-cloud--b, .k-firstlight, .k-layer--far,
           .k-layer--mid, .k-mist--a, .k-mist--b, .k-mist--c, .k-aarti, .k-door,
           .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird { animation: none !important; }
