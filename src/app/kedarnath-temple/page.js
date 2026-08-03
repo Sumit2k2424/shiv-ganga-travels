@@ -129,7 +129,7 @@ export default function KedarnathTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Online Puja Booking',h:'/online-puja-booking'},{l:'Haridwar to Kedarnath Cab',h:'/haridwar-to-kedarnath-cab'}].map(l=>(
+          {[{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Online Puja Booking',h:'/online-puja-booking'},{l:'Haridwar to Kedarnath Cab',h:'/cabs/haridwar-to-kedarnath-cab'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
           ))}
         </div>

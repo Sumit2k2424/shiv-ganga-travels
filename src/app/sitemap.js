@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
-import { CAB_ROUTES } from '@/data/cabRoutes';
+import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations } from '@/data/cabs';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 
@@ -138,14 +138,16 @@ export default function sitemap() {
     { url: `${b}/char-dham-yatra-route-map`,           p: 0.87, cf: 'monthly' },
   ];
 
+  // Every cab URL is generated from the data layer, and only from entries that
+  // pass the publishability gate in @/data/cabs — so a half-written route can
+  // never reach the sitemap. Destination and origin hubs outrank the individual
+  // routes because they carry the comparison tables people actually land on.
   const cabs = [
-    { url: `${b}/cabs`,                                p: 0.88, cf: 'monthly' },
-    { url: `${b}/char-dham-yatra-cab-booking`,         p: 0.85, cf: 'monthly' },
-    { url: `${b}/haridwar-to-kedarnath-cab`,           p: 0.84, cf: 'monthly' },
-    { url: `${b}/haridwar-to-badrinath-cab`,           p: 0.83, cf: 'monthly' },
-    { url: `${b}/haridwar-to-gangotri-cab`,            p: 0.82, cf: 'monthly' },
-    { url: `${b}/delhi-to-haridwar-cab`,               p: 0.82, cf: 'monthly' },
-    ...CAB_ROUTES.map(r => ({ url: `${b}/cabs/${r.slug}`, p: 0.82, cf: 'monthly' })),
+    { url: `${b}/cabs`,                        p: 0.88, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-cab-booking`, p: 0.85, cf: 'monthly' },
+    ...getPublishedDestinations().map(d => ({ url: `${b}/cabs/to/${d.slug}`,   p: 0.84, cf: 'monthly' })),
+    ...getPublishedOrigins().map(o      => ({ url: `${b}/cabs/from/${o.slug}`, p: 0.83, cf: 'monthly' })),
+    ...getPublishedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
   ];
 
   const blog = [

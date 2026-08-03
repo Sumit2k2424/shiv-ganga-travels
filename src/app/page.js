@@ -226,10 +226,10 @@ const INCLUDES = [
 ];
 
 const CAB_ROUTES = [
-  { from:'Haridwar', to:'Kedarnath', dist:'225 km', time:'6–7 hrs', fare:'from ₹3,500', href:'/haridwar-to-kedarnath-cab' },
-  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'8–9 hrs', fare:'from ₹4,500', href:'/haridwar-to-badrinath-cab' },
-  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'7–8 hrs', fare:'from ₹4,000', href:'/haridwar-to-gangotri-cab' },
-  { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs', fare:'from ₹2,800', href:'/delhi-to-haridwar-cab' },
+  { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500', href:'/cabs/haridwar-to-kedarnath-cab' },
+  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500', href:'/cabs/haridwar-to-badrinath-cab' },
+  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-gangotri-cab' },
+  { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs',  fare:'from ₹2,800', href:'/cabs/delhi-to-haridwar-cab' },
 ];
 
 const STEPS = [

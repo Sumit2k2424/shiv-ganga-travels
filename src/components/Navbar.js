@@ -26,11 +26,13 @@ const PKG_LINKS = [
 const CAB_LINKS = [
   { label:'All Cabs & Fares',      href:'/cabs',                        sub:'Book online · fixed fares · all routes', icon:'car' },
   { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'Innova · Ertiga · Tempo · Full circuit',  icon:'car' },
-  { label:'Haridwar → Kedarnath',  href:'/haridwar-to-kedarnath-cab',   sub:'218 km · 6–7 hrs · from ₹3,500',        icon:'route' },
-  { label:'Haridwar → Badrinath',  href:'/haridwar-to-badrinath-cab',   sub:'320 km · 8–9 hrs · from ₹4,500',        icon:'route' },
-  { label:'Haridwar → Gangotri',   href:'/haridwar-to-gangotri-cab',    sub:'265 km · 7–8 hrs · from ₹4,000',        icon:'route' },
-  { label:'Haridwar → Yamunotri',  href:'/char-dham-yatra-cab-booking', sub:'175 km · 5–6 hrs · from ₹4,500',        icon:'route' },
-  { label:'Delhi → Haridwar',      href:'/delhi-to-haridwar-cab',       sub:'210 km · 4–5 hrs · from ₹2,800',        icon:'car' },
+  { label:'Cabs from Haridwar',    href:'/cabs/from/haridwar',          sub:'9 routes · our home base · lowest fares', icon:'city' },
+  { label:'Cabs to Kedarnath',     href:'/cabs/to/kedarnath',           sub:'Fares from every pickup city',            icon:'temple' },
+  { label:'Cabs to Badrinath',     href:'/cabs/to/badrinath',           sub:'Road reaches the temple · no trek',       icon:'temple' },
+  { label:'Haridwar → Kedarnath',  href:'/cabs/haridwar-to-kedarnath-cab', sub:'235 km · 8–9 hrs · from ₹3,500',      icon:'route' },
+  { label:'Haridwar → Badrinath',  href:'/cabs/haridwar-to-badrinath-cab', sub:'320 km · 10–11 hrs · from ₹4,500',    icon:'route' },
+  { label:'Haridwar → Gangotri',   href:'/cabs/haridwar-to-gangotri-cab',  sub:'265 km · 8–9 hrs · from ₹4,000',      icon:'route' },
+  { label:'Delhi → Haridwar',      href:'/cabs/delhi-to-haridwar-cab',     sub:'210 km · 4–5 hrs · from ₹2,800',      icon:'car' },
 ];
 
 /* Editorial chrome styling — scoped to the navbar. Uses the site-wide

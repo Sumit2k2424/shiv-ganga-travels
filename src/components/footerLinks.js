@@ -33,10 +33,11 @@ export const COLS = [
   { heading:'Cabs & Transport', links:[
     {l:'All Uttarakhand Cabs',         h:'/cabs'},
     {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
-    {l:'Haridwar → Kedarnath Cab',    h:'/haridwar-to-kedarnath-cab'},
-    {l:'Haridwar → Badrinath Cab',    h:'/haridwar-to-badrinath-cab'},
-    {l:'Haridwar → Gangotri Cab',     h:'/haridwar-to-gangotri-cab'},
-    {l:'Delhi → Haridwar Cab',        h:'/delhi-to-haridwar-cab'},
+    {l:'Cabs from Haridwar',          h:'/cabs/from/haridwar'},
+    {l:'Cabs to Kedarnath',           h:'/cabs/to/kedarnath'},
+    {l:'Cabs to Badrinath',           h:'/cabs/to/badrinath'},
+    {l:'Haridwar → Kedarnath Cab',    h:'/cabs/haridwar-to-kedarnath-cab'},
+    {l:'Delhi → Haridwar Cab',        h:'/cabs/delhi-to-haridwar-cab'},
   ]},
   { heading:'Guides & Tools', links:[
     {l:'2026 New Rules',             h:'/blog/char-dham-yatra-2026-new-rules'},

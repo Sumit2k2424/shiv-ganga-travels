@@ -236,7 +236,7 @@ export default function HaridwarTourPackages() {
               ['Rishikesh Tour Packages', '/rishikesh-tour-packages'],
               ['Char Dham from Haridwar', '/char-dham-yatra'],
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],
-              ['Delhi to Haridwar Cab', '/delhi-to-haridwar-cab'],
+              ['Delhi to Haridwar Cab', '/cabs/delhi-to-haridwar-cab'],
               ['Cost Calculator', '/char-dham-yatra-cost-calculator'],
             ].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>

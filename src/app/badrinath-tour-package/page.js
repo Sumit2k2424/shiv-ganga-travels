@@ -278,7 +278,7 @@ export default function BadrinathTourPackage() {
               <li>Want Badrinath + Kedarnath — see <Link href="/do-dham-yatra" style={{ color: 'var(--teal)' }}>Do Dham Yatra</Link></li>
               <li>Want all four dhams — see <Link href="/char-dham-yatra" style={{ color: 'var(--teal)' }}>Char Dham Yatra</Link></li>
               <li>Want the five Badri shrines — see <Link href="/panch-badri-yatra" style={{ color: 'var(--teal)' }}>Panch Badri Yatra</Link></li>
-              <li>Only need a cab — see <Link href="/haridwar-to-badrinath-cab" style={{ color: 'var(--teal)' }}>Haridwar to Badrinath cab</Link></li>
+              <li>Only need a cab — see <Link href="/cabs/haridwar-to-badrinath-cab" style={{ color: 'var(--teal)' }}>Haridwar to Badrinath cab</Link></li>
             </ul>
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function BadrinathTourPackage() {
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Plan the rest of your yatra</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Badrinath Yatra Guide', '/badrinath-yatra'], ['Haridwar → Badrinath Cab', '/haridwar-to-badrinath-cab'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath Temple', '/badrinath-temple'], ['Badrinath Hotels', '/badrinath-hotels'], ['Badrinath Weather', '/badrinath-weather'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra']].map(([l, h]) => (
+            {[['Badrinath Yatra Guide', '/badrinath-yatra'], ['Haridwar → Badrinath Cab', '/cabs/haridwar-to-badrinath-cab'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath Temple', '/badrinath-temple'], ['Badrinath Hotels', '/badrinath-hotels'], ['Badrinath Weather', '/badrinath-weather'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

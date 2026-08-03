@@ -19,7 +19,11 @@
 
 import { useState, useMemo } from 'react';
 import { SITE } from '@/data/packages';
-import { CAB_BASES, CAB_ROUTES, getCabRoutesByBase } from '@/data/cabRoutes';
+import { getBookableBases, getBookableRoutes, getBookableRoutesByBase } from '@/data/cabs';
+
+const CAB_BASES = getBookableBases();
+const CAB_ROUTES = getBookableRoutes();
+const getCabRoutesByBase = getBookableRoutesByBase;
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 const STEPS = ['Route', 'Trip', 'Vehicle', 'Contact'];

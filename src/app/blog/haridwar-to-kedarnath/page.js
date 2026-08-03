@@ -152,7 +152,7 @@ export default function HaridwarToKedarnath() {
           </tbody>
         </table>
       </div>
-      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link href="/haridwar-to-kedarnath-cab" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
+      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link href="/cabs/haridwar-to-kedarnath-cab" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
 
       <h2 id="taxi-fare" style={h2}>Haridwar to Kedarnath Taxi Fare (by vehicle)</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>

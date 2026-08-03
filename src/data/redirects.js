@@ -26,6 +26,14 @@ const REDIRECTS = [
   { source: '/dehradun-to-badrinath-cab',  destination: '/cabs/dehradun-to-badrinath-cab',  permanent: true },
   { source: '/dehradun-to-nainital-cab',   destination: '/cabs/dehradun-to-nainital-cab',   permanent: true },
   { source: '/dehradun-to-mukteshwar-cab', destination: '/cabs/dehradun-to-mukteshwar-cab', permanent: true },
+  // ── The last four root-level cab pages, consolidated under /cabs/ ──
+  // These were real pages until the cab-section rebuild; every other route
+  // already lived under /cabs/, so these were the odd ones out. Their content
+  // moved verbatim into data/cabs/routes.js and now renders at the /cabs/ URL.
+  { source: '/haridwar-to-kedarnath-cab',  destination: '/cabs/haridwar-to-kedarnath-cab',  permanent: true },
+  { source: '/haridwar-to-badrinath-cab',  destination: '/cabs/haridwar-to-badrinath-cab',  permanent: true },
+  { source: '/haridwar-to-gangotri-cab',   destination: '/cabs/haridwar-to-gangotri-cab',   permanent: true },
+  { source: '/delhi-to-haridwar-cab',      destination: '/cabs/delhi-to-haridwar-cab',      permanent: true },
   // ── Retired /blog/[slug] JSON route: send its old slugs to the real pages ──
   { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
   // Redirect stale 2025 guide URL → main char dham page (2026 content)

@@ -1,177 +1,304 @@
 import Link from 'next/link';
+
 import { SITE } from '@/data/packages';
+import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
+import {
+  getPublishedDestinations, getRoutesToDestination, getRoutesFromOrigin,
+  routeFrom, routeTo, routeLowestFare, getExpert,
+} from '@/data/cabs';
+
+import Icon from '@/components/Icon';
+import AnswerBox from '@/components/AnswerBox';
+import CabBookingWizard from '@/components/CabBookingWizard';
+import RouteMap from '@/components/lux/RouteMap';
+import WhyBookDirect from '@/components/lux/WhyBookDirect';
+import { Section, SectionHead, Reveal, Pill, Eyebrow } from '@/components/lux/primitives';
+import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
+import {
+  FactPills, VerifiedStrip, FareTable, InclusionsGrid, CancellationTerms,
+  RoadRules, OperatorCard, CabLinkMesh, CabCTA,
+} from '@/components/cabs/CabSections';
+import { JsonLd, breadcrumb, faqPage } from '@/components/cabs/cabSchema';
+
+const URL = `${SITE.baseUrl}/char-dham-yatra-cab-booking`;
 
 export const metadata = {
-  title: { absolute: 'Char Dham Cab Booking 2026 | Innova & Tempo | Fixed Fares, Door-to-Door' },
-  description: 'Char Dham Yatra Cab Booking 2026 from Haridwar. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. Innova, Tempo Traveller, SUV.',
-  keywords: ['char dham yatra cab booking','char dham yatra taxi','haridwar to char dham cab','char dham yatra innova','char dham yatra tempo traveller','char dham cab price 2026'],
-  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
-  openGraph: { title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar', description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking`, type: 'website' },
+  title: { absolute: 'Char Dham Yatra Cab Booking 2026 | Full Circuit from ₹18,000 | Fixed Fare' },
+  description:
+    'Book a cab for the full Char Dham circuit 2026 — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator since 2010.',
+  keywords: [
+    'char dham yatra cab booking', 'char dham taxi 2026', 'char dham yatra car rental',
+    'innova crysta char dham', 'tempo traveller char dham', 'char dham cab fare from haridwar',
+  ],
+  alternates: { canonical: URL },
+  openGraph: {
+    title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar',
+    description: 'Full Char Dham circuit by road. Fixed all-inclusive fares, our own vehicles, hill-experienced drivers.',
+    url: URL, type: 'website', siteName: SITE.name, locale: 'en_IN',
+  },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar',
-    description: 'Innova, Tempo Traveller, Ertiga for Char Dham Yatra from Haridwar. Fixed rates, AC vehicles, hill-experienced drivers.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwa | Shiv Ganga Travels' }],
+    title: 'Char Dham Yatra Cab Booking 2026',
+    description: 'Full Char Dham circuit by road. Fixed all-inclusive fares from ₹18,000.',
   },
 };
 
-function Schema() {
-  // Single multi-typed node: Service keeps semantic accuracy, Product is the
-  // Google-supported review-snippet parent. Avoids the "invalid object type for
-  // field <parent_node>" error that Service/TaxiService alone triggers.
-  const ld = {
-    '@context':'https://schema.org','@type':['Product','Service'],
-    name:'Char Dham Yatra Cab & Taxi Booking from Haridwar',
-    description:'Hill-certified AC cabs and tempo travellers for the Char Dham Yatra circuit from Haridwar — Swift Dzire, Innova Crysta and 12-seater Tempo Traveller with experienced mountain drivers.',
-    image:[`${SITE.baseUrl}/opengraph-image`],
-    url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`,
-    serviceType:'Char Dham Yatra cab & taxi hire',
-    areaServed:'Uttarakhand',
-    brand:{ '@type':'Brand', name:SITE.name },
-    provider:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, telephone:SITE.phone },
-    offers:{ '@type':'Offer', price:'18000', priceCurrency:'INR', priceValidUntil:'2026-10-31', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/char-dham-yatra-cab-booking`, seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl } },
-    aggregateRating:{ '@type':'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating:5 },
-  };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
-    { '@type':'Question', name:'What is the cab fare for Char Dham Yatra from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Cab fares for Char Dham Yatra from Haridwar start at ₹18,000 for a Swift Dzire (4-seater) and go up to ₹45,000 for a Tempo Traveller (12-seater) for the complete 10-12 day circuit. Innova Crysta is ₹26,000–32,000 for the full Char Dham route.' }},
-    { '@type':'Question', name:'Which vehicle is best for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Innova Crysta is the most popular for families of 4-6. Tempo Traveller (12-seater) is best for groups. Swift Dzire is economical for small groups. All vehicles must be hill-certified and our drivers have 5+ years mountain driving experience.' }},
-    { '@type':'Question', name:'Is cab included in Char Dham Yatra packages?', acceptedAnswer:{ '@type':'Answer', text:'Yes — all our Char Dham Yatra packages include a dedicated vehicle. AC is standard in plain areas (Haridwar, Rishikesh, Dehradun); in hilly areas it can be availed on request at an additional ₹2,000 for the full hill section. You can also book just the cab service separately if you have your own accommodation arranged.' }},
-  ]};
-  const bc = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
-    {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
-    {'@type':'ListItem',position:2,name:'Cab Booking',item:`${SITE.baseUrl}/char-dham-yatra-cab-booking`},
-  ]};
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
-  </>);
-}
-
-const vehicles = [
-  { name:'Swift Dzire', seats:4, type:'Sedan', price:'₹18,000–24,000', best:'Couples & small families', ac:true, luggage:'2 bags', img:'🚗', features:['AC','4 comfortable seats','Best for budget travel','Hill-terrain certified'] },
-  { name:'Innova Crysta', seats:6, type:'Premium SUV', price:'₹26,000–32,000', best:'Families of 4–6', ac:true, luggage:'4 bags', img:'🚙', features:['AC','6 plush seats','Most popular choice','Excellent mountain grip','High ground clearance'], popular:true },
-  { name:'Innova HyCross', seats:6, type:'Premium Hybrid', price:'₹30,000–38,000', best:'Premium travelers', ac:true, luggage:'4 bags', img:'🚙', features:['AC','Hybrid engine','Better fuel efficiency','Smooth hill performance','Premium interiors'] },
-  { name:'Tempo Traveller (9-seater)', seats:9, type:'Mini Van', price:'₹32,000–40,000', best:'Groups of 7–9', ac:true, luggage:'6 bags', img:'🚐', features:['AC','9 push-back seats','Ideal for groups','Luggage carrier roof'] },
-  { name:'Tempo Traveller (12-seater)', seats:12, type:'Group Van', price:'₹38,000–46,000', best:'Groups of 10–12', ac:true, luggage:'8 bags', img:'🚐', features:['AC','12 seats','Best per-seat economy','Roof carrier','Group pilgrimages'] },
+/* Full-circuit rates — priced per trip, not per km, because the whole
+   point of the circuit booking is that the vehicle stays with you. */
+const CIRCUIT_FARES = [
+  ['Swift Dzire', '4', '₹18,000–₹24,000'],
+  ['Maruti Ertiga', '6', '₹22,000–₹28,000'],
+  ['Innova Crysta', '6', '₹26,000–₹32,000'],
+  ['Innova HyCross', '6', '₹30,000–₹38,000'],
+  ['Tempo Traveller (12)', '12', '₹38,000–₹46,000'],
 ];
 
-const routes = [
-  { from:'Haridwar', to:'Kedarnath Base (Gaurikund)', dist:'225 km', time:'6–7 hrs', note:'Via Guptkashi', href:'/haridwar-to-kedarnath-cab' },
-  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'8–9 hrs', note:'Via Joshimath', href:'/haridwar-to-badrinath-cab' },
-  { from:'Haridwar', to:'Gangotri', dist:'265 km', time:'7–8 hrs', note:'Via Uttarkashi', href:'/haridwar-to-gangotri-cab' },
-  { from:'Delhi', to:'Haridwar', dist:'210 km', time:'4–5 hrs', note:'NH58 via Meerut', href:'/delhi-to-haridwar-cab' },
-  { from:'Haridwar', to:'Yamunotri Base (Janki Chatti)', dist:'175 km', time:'5–6 hrs', note:'Via Barkot', href:'/yamunotri-yatra' },
+const CIRCUIT_FAQS = [
+  ['What is the cab fare for the full Char Dham Yatra from Haridwar?',
+   'The whole circuit runs ₹18,000–₹24,000 in a Swift Dzire, ₹26,000–₹32,000 in an Innova Crysta and ₹38,000–₹46,000 in a 12-seater Tempo Traveller. That is the vehicle for the entire 10–12 day trip including fuel, driver, tolls and state taxes — not a per-day rate.'],
+  ['Which vehicle is best for the Char Dham circuit?',
+   'Innova Crysta for families of four to six — it has the best suspension on the Rudraprayag–Guptkashi stretch and it is what we put senior travellers in. Tempo Traveller for groups of eight and up. A sedan is fine for a couple, but the boot is small, so pack soft duffels.'],
+  ['Can I book only the cab, without hotels and meals?',
+   'Yes. Cab-only is a normal booking here — plenty of people arrange their own stays, or already have ashram accommodation. You get the vehicle, the driver and everything the fare covers, and nothing else is bundled in.'],
+  ['How many days does the full Char Dham circuit take by road?',
+   'Ten to twelve days from Haridwar covering all four dhams. Anything advertised under nine days is either skipping a dham or assuming a helicopter leg at Kedarnath.'],
+  ['What happens if a landslide blocks the road?',
+   'It happens, particularly July to September. Our drivers know the alternate routes and we watch the BRO and district updates daily. If a road closes entirely we hold you at a safe halt rather than pushing through — and any extra night is quoted before it happens, not billed afterwards.'],
+  ['Is the same driver with us for the whole trip?',
+   'Yes. One vehicle and one driver from the first pickup to the final drop. Changing drivers mid-circuit is how the aggregator model works; it is not how ours does.'],
 ];
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.7rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
+export default function CharDhamCabBooking() {
+  const expert = getExpert();
+  const dhams = getPublishedDestinations().filter((d) => d.kind === 'dham');
+  const haridwarRoutes = getRoutesFromOrigin('haridwar');
 
-export default function CabBooking() {
-  return (<>
-    <Schema/>
-    <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
-      <div style={{ maxWidth:820, margin:'0 auto' }}>
-        <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🚙 Cab Booking · 2026</span>
-        <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Yatra Cab Booking 2026</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Innova Crysta · Tempo Traveller · Swift Dzire · from Haridwar · Hill-experienced drivers · Fixed rates · AC in plains (₹2,000 extra in hills)</p>
-        <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginTop:24 }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
-            style={{ background:'#25D366', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book Cab on WhatsApp</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'13px 28px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
+  const schema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TaxiService',
+      name: 'Char Dham Yatra Cab Booking 2026',
+      description: 'Full Char Dham circuit by road from Haridwar — Yamunotri, Gangotri, Kedarnath and Badrinath — in a private vehicle with a hill-experienced driver.',
+      url: URL,
+      provider: {
+        '@type': 'TravelAgency',
+        '@id': `${SITE.baseUrl}/#organization`,
+        name: SITE.name,
+        url: SITE.baseUrl,
+        telephone: SITE.phone,
+      },
+      areaServed: ['Haridwar', 'Yamunotri', 'Gangotri', 'Kedarnath', 'Badrinath'].map((n) => ({ '@type': 'Place', name: n })),
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'INR',
+        lowPrice: '18000',
+        highPrice: '46000',
+        offerCount: String(CIRCUIT_FARES.length),
+        url: URL,
+      },
+    },
+    faqPage(CIRCUIT_FAQS),
+    breadcrumb([['Home', '/'], ['Cabs', '/cabs'], ['Char Dham Cab Booking', '/char-dham-yatra-cab-booking']]),
+  ];
+
+  const linkGroups = [
+    { label: 'The four dhams, one at a time', links: dhams.map((d) => [`Cabs to ${d.name}`, `/cabs/to/${d.slug}`]) },
+    { label: 'Single-leg routes from Haridwar', links: haridwarRoutes.slice(0, 6).map((r) => [`${routeFrom(r)} → ${routeTo(r)}`, `/cabs/${r.slug}`]) },
+    { label: 'Planning the yatra', links: [
+      ['Char Dham Yatra packages', '/char-dham-yatra'],
+      ['Registration 2026', '/char-dham-yatra-registration'],
+      ['Opening dates 2026', '/char-dham-yatra-opening-dates-2026'],
+      ['Road status', '/char-dham-road-status'],
+      ['Route map', '/char-dham-yatra-route-map'],
+    ]},
+  ];
+
+  return (
+    <div className="lux-noscroll-x">
+      <JsonLd items={schema} />
+
+      {/* ── Hero ── */}
+      <Section tone="ink">
+        <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
+          <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
+            <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
+              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
+              <li aria-hidden="true">›</li>
+              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
+              <li aria-hidden="true">›</li>
+              <li aria-current="page">Char Dham Cab Booking</li>
+            </ol>
+          </nav>
+          <Reveal variant="fade"><Pill tone="gold">Full circuit · fixed fare · 2026 season</Pill></Reveal>
+          <Reveal>
+            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
+              Char Dham Yatra <span className="lux-accent">cab booking</span>
+            </h1>
+          </Reveal>
+          <Reveal>
+            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
+              One vehicle, one driver, all four dhams. Priced for the whole trip rather than by the kilometre.
+            </p>
+          </Reveal>
+          <FactPills items={[
+            ['calendar', '10–12 days'],
+            ['route', 'All four dhams'],
+            ['rupee', 'from ₹18,000'],
+            ['car', 'Haridwar start'],
+          ]} />
         </div>
-      </div>
-    </section>
+      </Section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
-      <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        Home<span>›</span>
-        <span>Char Dham Cab Booking</span>
-      </div>
-    </nav>
+      <WhyBookDirect />
 
-    <div style={{ maxWidth:960, margin:'0 auto', padding:'40px 20px 60px' }}>
+      {/* ── Quick answer ── */}
+      <Section tone="paper" wrapWidth="narrow" tight>
+        <AnswerBox>
+          A cab for the full Char Dham circuit from Haridwar costs <strong>₹18,000–₹24,000</strong> in a sedan,
+          <strong> ₹26,000–₹32,000</strong> in an Innova Crysta and <strong>₹38,000–₹46,000</strong> in a 12-seater
+          Tempo Traveller — for the entire 10–12 day trip, with fuel, driver, tolls and state taxes included.
+          The same vehicle and driver stay with you from the first pickup to the final drop.
+        </AnswerBox>
+        <VerifiedStrip expert={expert} subject="the full Char Dham circuit" />
+        <p className="lux-body" style={{ marginTop: 22 }}>
+          We run the Char Dham circuit by road out of Haridwar, Rishikesh, Dehradun and Delhi. Every vehicle is our
+          own, carries a current Green Card, and is driven by someone who works these roads through the whole season
+          rather than being pulled in from the plains in May. You can book the cab on its own if you have your stays
+          arranged, or as part of a full package — the vehicle and the driver are identical either way.
+        </p>
+      </Section>
 
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Shiv Ganga Travels provides dedicated cab service for Char Dham Yatra 2026 from Haridwar, Rishikesh, and Delhi. All our vehicles are AC, hill-terrain certified, and driven by experienced Garhwali drivers who know every curve of the Kedarnath, Badrinath, Gangotri, and Yamunotri routes. You can book a cab as a standalone service or as part of our all-inclusive Char Dham Yatra package.</p>
+      {/* ── Booking wizard ── */}
+      <Section tone="paper-deep" tight>
+        <CabBookingWizard />
+      </Section>
 
-      <div style={{ background:'#dcfce7', border:'1px solid #86efac', borderRadius:12, padding:'14px 18px', marginBottom:28 }}>
-        <div style={{ fontWeight:700, fontSize:13.5, color:'#15803d', marginBottom:4 }}>✅ What's included in every cab booking</div>
-        <div style={{ display:'flex', flexWrap:'wrap', gap:10, fontSize:13, color:'var(--text-mid)' }}>
-          {['AC in plains (hills +₹2,000)','Hill-experienced driver','Toll & parking paid','Fuel included','Driver allowance included','10+ years mountain driving experience'].map(f => <span key={f}>✓ {f}</span>)}
+      {/* ── Circuit fares ── */}
+      <Section tone="paper">
+        <SectionHead
+          eyebrow="What it costs"
+          title="Full circuit rates by vehicle"
+          lede="Whole-trip pricing for the standard 10–12 day circuit covering Yamunotri, Gangotri, Kedarnath and Badrinath. Not a daily rate, and not a per-kilometre one."
+        />
+        <Reveal>
+          <FareTable
+            fares={CIRCUIT_FARES}
+            caption="Indicative 2026 bands for the complete circuit from Haridwar. Starting from Delhi, Jaipur or another city adds the transfer leg at both ends — we quote it as one number. Every enquiry gets a fixed all-in price."
+          />
+        </Reveal>
+      </Section>
+
+      {/* ── What the fare covers ── */}
+      <Section tone="paper-deep">
+        <SectionHead
+          eyebrow="No surprises"
+          title="Exactly what the fare covers"
+          lede="Both columns, published. On a twelve-day circuit the exclusions matter more than they do on a single transfer, so here they are up front."
+        />
+        <InclusionsGrid />
+      </Section>
+
+      {/* ── The circuit map ── */}
+      <Section tone="paper">
+        <SectionHead
+          eyebrow="The circuit"
+          title="Where the vehicle actually goes"
+          lede="Haridwar out to the four dhams and back. Scroll to trace it."
+        />
+        <div className="lux-map-stacked">
+          <RouteMap nodes={ROUTE.nodes} category="char-dham" title="The Char Dham circuit" />
         </div>
-      </div>
+      </Section>
 
-      <h2 style={h2}>Vehicle Options & Rates</h2>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(270px,100%),1fr))', gap:14, marginBottom:32 }}>
-        {vehicles.map(v => (
-          <div key={v.name} style={{ background:'#fff', borderRadius:14, border:`${v.popular ? '2px solid var(--navy)' : '1px solid var(--border)'}`, padding:'18px', position:'relative', overflow:'hidden' }}>
-            {v.popular && <div style={{ position:'absolute', top:0, right:0, background:'var(--navy)', color:'#fff', fontSize:10, fontWeight:700, padding:'4px 12px', borderRadius:'0 14px 0 8px', letterSpacing:'0.06em' }}>MOST POPULAR</div>}
-            <div style={{ fontSize:32, marginBottom:8 }}>{v.img}</div>
-            <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:2 }}>{v.name}</div>
-            <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:10 }}>{v.type} · {v.seats} seats · {v.luggage}</div>
-            <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', fontFamily:'var(--font-display)', marginBottom:8 }}>{v.price}</div>
-            <div style={{ fontSize:11.5, color:'var(--text-muted)', marginBottom:12 }}>Full Char Dham circuit (10–12 days)</div>
-            <ul style={{ listStyle:'none', marginBottom:14 }}>
-              {v.features.map(f => <li key={f} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'3px 0', display:'flex', gap:6 }}><span style={{ color:'var(--teal)' }}>✓</span>{f}</li>)}
-            </ul>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(`Namaste! I want to book a ${v.name} for Char Dham Yatra 2026.`)}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: v.popular ? 'var(--navy)' : 'var(--navy-light)', color: v.popular ? '#fff' : 'var(--navy)', padding:'9px 16px', borderRadius:8, fontWeight:700, fontSize:12.5, textDecoration:'none', display:'block', textAlign:'center' }}>
-              Book {v.name} →
+      {/* ── The four dhams ── */}
+      <Section tone="paper-deep">
+        <SectionHead
+          eyebrow="Leg by leg"
+          title="What each dham demands of the vehicle"
+          lede="Two of the four have a road to the temple. The other two end at a trailhead, and knowing which is which is most of the planning."
+        />
+        <div className="lux-grid lux-grid--4" data-lux-stagger="">
+          {dhams.map((d) => {
+            const routes = getRoutesToDestination(d.slug);
+            return (
+              <Link key={d.slug} href={`/cabs/to/${d.slug}`} className="lux-card lux-lift" style={{ padding: 20, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+                <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--ink)' }}>{d.name}</div>
+                <div className="lux-caption" style={{ marginTop: 6 }}>{d.altitude}</div>
+                <p className="lux-body" style={{ fontSize: '0.82rem', marginTop: 10 }}>
+                  Road ends at {d.lastMotorable}. {d.trek && d.trek !== 'None' ? `Then ${d.trek.toLowerCase()}.` : 'No trek.'}
+                </p>
+                {routes.length > 0 && (
+                  <div className="lux-caption" style={{ marginTop: 10 }}>
+                    from {routeLowestFare(routes[0])} as a single leg
+                  </div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      </Section>
+
+      {/* ── Fleet ── */}
+      <Section tone="paper">
+        <SectionHead
+          eyebrow="The fleet"
+          title="The vehicle you live in for twelve days"
+          lede="On a circuit this long the seat matters more than the badge. This is what each one is actually like on the hill sections."
+        />
+        <Reveal><VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} /></Reveal>
+      </Section>
+
+      {/* ── Rules of the road ── */}
+      <Section tone="paper-deep">
+        <SectionHead eyebrow="Before you book" title="Rules of the road up here" />
+        <RoadRules />
+      </Section>
+
+      {/* ── Cancellation ── */}
+      <Section tone="paper" wrapWidth="narrow">
+        <SectionHead eyebrow="If plans change" title="Cancellation, in plain terms" />
+        <Reveal><CancellationTerms /></Reveal>
+      </Section>
+
+      {/* ── Reviews ── */}
+      <Section tone="paper-deep">
+        <SectionHead
+          eyebrow="Real stories"
+          title="What our passengers say"
+          aside={
+            <a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer" className="lux-link">
+              All {REVIEWS.count} on Google <Icon name="external" size={13} />
             </a>
-          </div>
-        ))}
-      </div>
+          }
+        />
+        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+      </Section>
 
-      <h2 style={h2}>Key Routes & Distances</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
-          <thead>
-            <tr style={{ background:'var(--navy-light)' }}>
-              <th style={{ padding:'10px 16px', textAlign:'left', fontWeight:700, fontSize:11.5, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em' }}>Route</th>
-              <th style={{ padding:'10px 16px', textAlign:'center', fontWeight:700, fontSize:11.5, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em' }}>Distance</th>
-              <th style={{ padding:'10px 16px', textAlign:'center', fontWeight:700, fontSize:11.5, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em' }}>Drive Time</th>
-              <th style={{ padding:'10px 16px', textAlign:'left', fontWeight:700, fontSize:11.5, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.06em' }}>Note</th>
-            </tr>
-          </thead>
-          <tbody>
-            {routes.map((r, i) => (
-              <tr key={r.to} style={{ borderTop:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
-                <td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)' }}>
-                  <Link href={r.href} style={{ color:'var(--navy)', textDecoration:'none' }}>{r.from} → {r.to}</Link>
-                </td>
-                <td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-mid)' }}>{r.dist}</td>
-                <td style={{ padding:'11px 16px', textAlign:'center', fontWeight:600, color:'var(--navy)' }}>{r.time}</td>
-                <td style={{ padding:'11px 16px', color:'var(--text-muted)', fontSize:12.5 }}>{r.note}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {/* ── FAQ ── */}
+      <Section tone="paper" wrapWidth="narrow">
+        <SectionHead eyebrow="Have questions?" title="Char Dham cab booking, answered" />
+        <FaqList faqs={CIRCUIT_FAQS.map(([q, a]) => ({ q, a }))} />
+      </Section>
 
-      <h2 style={h2}>Frequently Asked Questions</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:32 }}>
-        {[
-          { q:'What is the cab fare for Char Dham Yatra from Haridwar?', a:'Full Char Dham Yatra cab fares start at ₹18,000 for a Swift Dzire (4-seater) and go up to ₹46,000 for a 12-seater Tempo Traveller for the complete 10–12 day circuit. Innova Crysta — the most popular choice — costs ₹26,000–32,000. All fares include fuel, toll, parking, and driver allowance.' },
-          { q:'Which vehicle is best for Char Dham Yatra?', a:'Innova Crysta is best for families of 4–6. Tempo Traveller is ideal for groups of 7–12. Swift Dzire is economical for couples or small groups. All vehicles are hill-terrain certified with drivers who have 5+ years of mountain driving experience on Char Dham routes.' },
-          { q:'Can I book just the cab without a full package?', a:'Yes. We offer standalone cab-only service for the Char Dham circuit if you have your own accommodation arranged. Contact us on WhatsApp with your dates, group size, and pickup point to get an exact quote.' },
-          { q:'What happens if the road is blocked due to landslide?', a:'Mountain roads in Uttarakhand are subject to weather disruptions. Our drivers are experienced in alternate routes and we stay connected with local traffic authorities. We do not charge extra for unavoidable detours or delays.' },
-        ].map((faq, i, arr) => (
-          <div key={i} style={{ padding:'16px 20px', borderBottom: i < arr.length-1 ? '1px solid var(--border)' : 'none' }}>
-            <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:7 }}>Q. {faq.q}</div>
-            <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7 }}>{faq.a}</div>
-          </div>
-        ))}
-      </div>
+      {/* ── Operator ── */}
+      <Section tone="paper-deep" wrapWidth="narrow">
+        <Reveal><OperatorCard /></Reveal>
+      </Section>
 
-      <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
-        <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book Your Char Dham Cab Today</h2>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>Free quote in 30 minutes · Fixed rates · No hidden charges · 2026 season open</p>
-        <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share vehicle options and rates.')}`} target="_blank" rel="nofollow noopener noreferrer"
-            style={{ background:'#25D366', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp for Quote</a>
-          <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'12px 26px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>📞 {SITE.phone}</a>
-        </div>
-      </div>
+      {/* ── Link mesh ── */}
+      <Section tone="paper">
+        <SectionHead eyebrow="Keep looking" title="Routes, dhams and guides" />
+        <CabLinkMesh groups={linkGroups} />
+      </Section>
+
+      {/* ── CTA ── */}
+      <Section tone="ink">
+        <CabCTA
+          title="Book your Char Dham cab"
+          lede="Tell us your dates, how many of you there are, and where you want to start. One fixed all-in fare back, usually within two hours."
+          message="Namaste! I want to book a cab for Char Dham Yatra 2026. Please share vehicle options and rates."
+        />
+      </Section>
     </div>
-  </>);
+  );
 }

@@ -384,6 +384,48 @@
 .lux-link--light { color: #fff; border-bottom-color: rgba(255,255,255,0.34); }
 .lux-link--light:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
+/* Funnel link — the pill-shaped internal links used in link meshes
+   on the homepage and across the cab section. */
+.lux-funnel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.3;
+  transition: border-color 0.4s var(--ease-lux), color 0.4s var(--ease-lux), gap 0.4s var(--ease-lux);
+}
+.lux-funnel-link:hover { border-color: var(--gold); color: var(--gold-dark); gap: 12px; }
+.lux-section--ink .lux-funnel-link,
+.lux-section--navy .lux-funnel-link {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--rule-light-soft);
+  color: #fff;
+}
+.lux-section--ink .lux-funnel-link:hover,
+.lux-section--navy .lux-funnel-link:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Feature row — icon beside a short title and description. */
+.lux-feat { display: flex; gap: 13px; align-items: flex-start; }
+.lux-feat__i {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--teal);
+}
+.lux-section--ink .lux-feat__i,
+.lux-section--navy .lux-feat__i { border-color: var(--rule-light-soft); color: var(--gold); }
+
 /* Pill — trust badges, tags */
 .lux-pill {
   display: inline-flex;

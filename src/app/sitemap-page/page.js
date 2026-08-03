@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
-import { CAB_ROUTES } from '@/data/cabRoutes';
+import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations, routeFrom, routeTo } from '@/data/cabs';
 import { LANGUAGE_PAGES } from '@/data/languages';
 
 export const metadata = {
@@ -71,10 +71,11 @@ const sections = [
     title: 'Cab & Transport',
     links: [
       { label: 'Char Dham Cab Booking', href: '/char-dham-yatra-cab-booking' },
-      { label: 'Haridwar to Kedarnath Cab', href: '/haridwar-to-kedarnath-cab' },
-      { label: 'Haridwar to Badrinath Cab', href: '/haridwar-to-badrinath-cab' },
-      { label: 'Haridwar to Gangotri Cab', href: '/haridwar-to-gangotri-cab' },
-      { label: 'Delhi to Haridwar Cab', href: '/delhi-to-haridwar-cab' },
+      { label: 'All Uttarakhand Cabs', href: '/cabs' },
+      { label: 'Cabs from Haridwar', href: '/cabs/from/haridwar' },
+      { label: 'Kedarnath Taxi Service', href: '/cabs/to/kedarnath' },
+      { label: 'Badrinath Taxi Service', href: '/cabs/to/badrinath' },
+      { label: 'Delhi to Haridwar Cab', href: '/cabs/delhi-to-haridwar-cab' },
     ],
   },
   {
@@ -276,11 +277,27 @@ export default function SitemapPage() {
                   All Cab Routes
                 </Link>
               </li>
-              {CAB_ROUTES.map(r => (
+              {getPublishedDestinations().map(d => (
+                <li key={`to-${d.slug}`}>
+                  <Link href={`/cabs/to/${d.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
+                    {d.name} Taxi Service
+                  </Link>
+                </li>
+              ))}
+              {getPublishedOrigins().map(o => (
+                <li key={`from-${o.slug}`}>
+                  <Link href={`/cabs/from/${o.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
+                    Cab Service in {o.name}
+                  </Link>
+                </li>
+              ))}
+              {getPublishedRoutes().map(r => (
                 <li key={r.slug}>
                   <Link href={`/cabs/${r.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                    {r.from} to {r.to} Cab
+                    {routeFrom(r)} to {routeTo(r)} Cab
                   </Link>
                 </li>
               ))}

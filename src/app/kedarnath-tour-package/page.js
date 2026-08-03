@@ -277,7 +277,7 @@ export default function KedarnathTourPackage() {
               <li>Want all four dhams — see <Link href="/char-dham-yatra" style={{ color: 'var(--teal)' }}>Char Dham Yatra</Link></li>
               <li>Want Kedarnath + Badrinath — see <Link href="/do-dham-yatra" style={{ color: 'var(--teal)' }}>Do Dham Yatra</Link></li>
               <li>Cannot trek at all and want to fly — ask about the <Link href="/char-dham-helicopter" style={{ color: 'var(--teal)' }}>helicopter yatra</Link></li>
-              <li>Only need a cab — see <Link href="/haridwar-to-kedarnath-cab" style={{ color: 'var(--teal)' }}>Haridwar to Kedarnath cab</Link></li>
+              <li>Only need a cab — see <Link href="/cabs/haridwar-to-kedarnath-cab" style={{ color: 'var(--teal)' }}>Haridwar to Kedarnath cab</Link></li>
             </ul>
           </div>
         </div>
@@ -328,7 +328,7 @@ export default function KedarnathTourPackage() {
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Plan the rest of your yatra</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Kedarnath Yatra Guide', '/kedarnath-yatra'], ['Haridwar → Kedarnath Cab', '/haridwar-to-kedarnath-cab'], ['Pony / Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Hotels', '/kedarnath-hotels'], ['Kedarnath Weather', '/kedarnath-weather'], ['Kedarnath Height & Facts', '/kedarnath-height'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra']].map(([l, h]) => (
+            {[['Kedarnath Yatra Guide', '/kedarnath-yatra'], ['Haridwar → Kedarnath Cab', '/cabs/haridwar-to-kedarnath-cab'], ['Pony / Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Hotels', '/kedarnath-hotels'], ['Kedarnath Weather', '/kedarnath-weather'], ['Kedarnath Height & Facts', '/kedarnath-height'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
