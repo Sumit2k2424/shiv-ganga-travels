@@ -81,6 +81,7 @@ export default function sitemap() {
     { url: `${b}/char-dham-yatra`,                     p: 0.98, cf: 'weekly'  },
     { url: `${b}/rishikesh-tour-packages`,             p: 0.92, cf: 'monthly' },
     { url: `${b}/haridwar-tour-packages`,              p: 0.92, cf: 'monthly' },
+    { url: `${b}/mussoorie-tour-packages`,             p: 0.90, cf: 'monthly' },
     { url: `${b}/kedarnath-yatra`,                     p: 0.92, cf: 'weekly'  },
     { url: `${b}/badrinath-yatra`,                     p: 0.92, cf: 'weekly'  },
     { url: `${b}/packages`,                            p: 0.92, cf: 'weekly'  },

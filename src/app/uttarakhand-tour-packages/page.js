@@ -76,9 +76,13 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
+          <a href="/mussoorie-tour-packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie Tour Packages</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹8,499 · Kempty Falls, Mall Road, Gun Hill</div>
+          </a>
           <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
-            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Rishikesh</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹8,499 · Hill station + spiritual</div>
+            <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Dhanaulti</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹9,999 · Hill station + eco park</div>
           </a>
           <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌊 Nainital + Kausani</div>

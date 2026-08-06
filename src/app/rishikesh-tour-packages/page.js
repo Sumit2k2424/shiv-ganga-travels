@@ -266,6 +266,7 @@ export default function RishikeshTourPackages() {
             {[
               ['Char Dham from Rishikesh', '/char-dham-yatra-from-delhi'],
               ['Haridwar Tour Packages', '/haridwar-tour-packages'],
+              ['Mussoorie Tour Packages', '/mussoorie-tour-packages'],
               ['Char Dham Yatra 2026', '/char-dham-yatra'],
               ['Kedarnath Yatra', '/kedarnath-yatra'],
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],

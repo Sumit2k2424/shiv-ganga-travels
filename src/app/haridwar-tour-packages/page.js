@@ -234,6 +234,7 @@ export default function HaridwarTourPackages() {
             {[
               ['Char Dham Yatra', '/char-dham-yatra'],
               ['Rishikesh Tour Packages', '/rishikesh-tour-packages'],
+              ['Mussoorie Tour Packages', '/mussoorie-tour-packages'],
               ['Char Dham from Haridwar', '/char-dham-yatra'],
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],
               ['Delhi to Haridwar Cab', '/cabs/delhi-to-haridwar-cab'],
