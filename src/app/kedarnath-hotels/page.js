@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import BlogAuthor from '@/components/BlogAuthor';
 
 export const metadata = {
   title: { absolute: 'Hotels Near Kedarnath 2026 | Best Stays | Guptkashi, Sonprayag & Phata' },
@@ -21,6 +22,19 @@ export const metadata = {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
+
+const faqs = [
+  ['Are there hotels right next to the Kedarnath temple?', 'Yes — a cluster of basic guesthouses and ashrams sit within 35–200 metres of the temple. These are simple pilgrim lodgings, not resort-style hotels: expect a clean room, an attached bathroom and hot water, nothing more. If you want a proper mid-range room with better food and comfort, Guptkashi (our recommended halt, 40km away) is the better base.'],
+  ['Is parking available near Kedarnath temple?', "No. Private vehicles stop at Sonprayag — from there it's the trek or pony ride from Gaurikund, or a helicopter from Phata. Your vehicle and main luggage stay at Sonprayag; carry only what you need for the Kedarnath Top stay."],
+  ['What is the price range for staying near Kedarnath?', 'At Kedarnath Top itself, a GMVN dorm bed runs ₹300–800; private guesthouses near the temple range roughly ₹1,500–5,000 depending on season and room type. Guptkashi and Rudraprayag offer better-value rooms from ₹1,200–5,000 with proper attached bathrooms and food service. Prices rise sharply in peak season (May–June, September–October).'],
+  ['Do I need to book my Kedarnath stay in advance?', "Yes — in peak season, good rooms at every halt (Guptkashi especially) fill 30–45 days ahead. Last-minute travellers are often left with whatever GMVN dormitory beds remain. We pre-block hotels for every package, so this isn't a concern if you book with us."],
+  ['Which is better to stay in — Guptkashi or Sonprayag?', "Guptkashi, for most pilgrims. It sits at a lower, more comfortable altitude, has a wider range of hotels (₹1,500–5,000) with attached bathrooms and proper meals, and is only 40km from Gaurikund. Sonprayag is cheaper and closer to the trek start, but the guesthouses are more basic — it suits budget travellers who don't mind a shorter, more spartan stay before the shared jeep to Gaurikund."],
+  ['What facilities can I expect — hot water, food, Wi-Fi?', "Hot water (via geyser) is standard even at basic guesthouses near the temple. Food is available at almost every property, usually simple vegetarian thalis. Don't expect Wi-Fi or reliable mobile data at Kedarnath Top — the connection is patchy at best; Guptkashi and Rudraprayag have decent network coverage."],
+  ['Can I stay overnight at Kedarnath Top for the early-morning Abhishek puja?', "Yes — that's exactly what the GMVN tents and dormitories at the top are for. It's basic: shared bathrooms, minimal bedding, temperatures of 2–5°C even in May. Most pilgrims doing this book one night at the top and the rest of their nights at Guptkashi."],
+  ['Are lifts or ground-floor rooms available near Kedarnath?', 'No lifts anywhere near Kedarnath — the terrain and construction don\'t allow for it. If stairs are a concern, especially for elderly pilgrims, tell us in advance and we can request ground-floor rooms, or route you through Rudraprayag instead, which we use as the buffer night in our Senior Citizen packages.'],
+  ['What are GMVN guest houses, and can I book them directly?', 'GMVN (Garhwal Mandal Vikas Nigam) is Uttarakhand\'s state tourism corporation — it runs the dormitories and basic guest houses at Kedarnath Top and along the route. You can book them yourself through the GMVN website, though availability during peak season is tight. Our packages include GMVN bookings where relevant, handled as part of the itinerary.'],
+  ['Is there a helicopter option that skips the overnight stay at Kedarnath Top?', "Yes — helicopter services run from Phata, Guptkashi and Sirsi helipads, letting you reach Kedarnath and back the same day without an overnight at the top. If you're flying, we recommend staying the previous night in Phata or Guptkashi so you're close to the helipad for an early check-in."],
+];
 
 const stays = [
   {
@@ -55,15 +69,38 @@ const stays = [
   },
 ];
 
+function Schema() {
+  const webpage = {
+    '@context':'https://schema.org','@type':'WebPage',
+    name:'Hotels Near Kedarnath 2026 — Complete Guide',
+    description:'Where to stay for Kedarnath Yatra — hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
+    url:`${SITE.baseUrl}/kedarnath-hotels`,
+  };
+  const faq = {
+    '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faqs.map(([q, a]) => ({
+      '@type':'Question', name:q,
+      acceptedAnswer:{ '@type':'Answer', text:a },
+    })),
+  };
+  const bc = {
+    '@context':'https://schema.org','@type':'BreadcrumbList',
+    itemListElement: [
+      { '@type':'ListItem', position:1, name:'Home', item: SITE.baseUrl },
+      { '@type':'ListItem', position:2, name:'Hotels Near Kedarnath', item: `${SITE.baseUrl}/kedarnath-hotels` },
+    ],
+  };
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpage) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/>
+  </>);
+}
+
 export default function KedarnathHotels() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'WebPage',
-        name:'Hotels Near Kedarnath 2026 — Complete Guide',
-        description:'Where to stay for Kedarnath Yatra — hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
-        url:`${SITE.baseUrl}/kedarnath-hotels`,
-      })}}/>
+      <Schema/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'52px 20px 40px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -118,6 +155,18 @@ export default function KedarnathHotels() {
         <p style={p}>
           All Shiv Ganga Travels Kedarnath packages include pre-confirmed hotel bookings. For the standard 3N/4D Kedarnath package, we include 1 night in Guptkashi on the way up, 1 night at Kedarnath Top (GMVN tent) if requested, and 1 night in Guptkashi or Rudraprayag on the way back. For senior citizen packages, we substitute the Kedarnath Top tent with an extra Guptkashi night. Every hotel is vetted by us personally — no surprises.
         </p>
+
+        <h2 style={h2}>FAQ — Hotels Near Kedarnath</h2>
+        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:8 }}>
+          {faqs.map(([q, a]) => (
+            <div key={q} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{q}</div>
+              <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{a}</div>
+            </div>
+          ))}
+        </div>
+
+        <BlogAuthor variant="bottom" author="dhanesh"/>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.2rem', marginBottom:8 }}>Book Kedarnath Yatra — Hotels Included</h3>
