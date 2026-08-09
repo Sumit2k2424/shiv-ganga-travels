@@ -559,6 +559,144 @@ export const ROUTES = [
       ['Do you pick up from Pushkar?', 'Yes, at the same fare — Pushkar is 15 km from Ajmer and we treat them as one pickup zone.'],
     ],
   },
+
+  // ═══════════════ STAGED — NOT YET LIVE ═══════════════
+  //  Every entry below deliberately fails isPublishable(): `distance`,
+  //  `time`, `intro`, `stops` and `faqs` are blank. That means none of
+  //  them render, none reach generateStaticParams, and none reach the
+  //  sitemap. They are safe to leave here half-written.
+  //
+  //  WHY THEY EXIST — Search Console (Aug 2026) had nine cab hub pages
+  //  sitting in "Discovered - currently not indexed", never crawled.
+  //  All nine wrapped exactly ONE route, which reads to Google as a
+  //  doorway page. isOriginPublishable / isDestinationPublishable pass
+  //  a hub at >= 1 route, so a single-route city still gets a landing
+  //  page. These routes take the six thin hubs up to three each:
+  //
+  //    /cabs/from/delhi      1 -> 3      /cabs/to/gangotri    1 -> 3
+  //    /cabs/from/noida      1 -> 3      /cabs/to/yamunotri   1 -> 3
+  //    /cabs/from/gurugram   1 -> 3      /cabs/to/chopta      1 -> 3
+  //    /cabs/from/ghaziabad  1 -> 3
+  //
+  //  (Jaipur and Ajmer are still on 1 route and are NOT scaffolded here
+  //  — from Rajasthan the real product is the full-circuit yatra
+  //  vehicle, not a point-to-point hill run. Decide those separately.)
+  //
+  //  TO PUBLISH ONE — confirm it is a journey you actually sell, then:
+  //    1. `distance` and `time`. distance also drives computeFares(),
+  //       so a wrong number becomes a wrong published fare.
+  //    2. `intro` — must be over 120 chars.
+  //    3. `stops` — 2 or more.
+  //    4. `faqs` — 2 or more.
+  //    5. `fares` only if you want to override the computed rate.
+  //  `via`, `endPoint` and `terrain` are pre-filled from the road route;
+  //  check them anyway. Delete any route you do not actually run.
+
+  // ── Into Gangotri (hub currently has only haridwar) ──
+  {
+    slug: 'rishikesh-to-gangotri-cab',
+    origin: 'rishikesh', destination: 'gangotri', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Gangotri temple',
+    via: 'Rishikesh → Narendranagar → Chamba → Tehri → Dharasu → Uttarkashi → Harsil → Gangotri',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'dehradun-to-gangotri-cab',
+    origin: 'dehradun', destination: 'gangotri', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Gangotri temple',
+    via: 'Dehradun → Mussoorie → Dhanaulti → Chamba → Dharasu → Uttarkashi → Harsil → Gangotri',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+
+  // ── Into Yamunotri (hub currently has only haridwar) ──
+  {
+    slug: 'rishikesh-to-yamunotri-cab',
+    origin: 'rishikesh', destination: 'yamunotri', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Janki Chatti (6 km trek to temple)',
+    via: 'Rishikesh → Narendranagar → Chamba → Tehri → Dharasu → Barkot → Janki Chatti',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'dehradun-to-yamunotri-cab',
+    origin: 'dehradun', destination: 'yamunotri', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Janki Chatti (6 km trek to temple)',
+    via: 'Dehradun → Vikasnagar → Naugaon → Barkot → Janki Chatti',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+
+  // ── Into Chopta (hub currently has only haridwar) ──
+  {
+    slug: 'rishikesh-to-chopta-cab',
+    origin: 'rishikesh', destination: 'chopta', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Chopta',
+    via: 'Rishikesh → Devprayag → Srinagar → Rudraprayag → Ukhimath → Chopta',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'dehradun-to-chopta-cab',
+    origin: 'dehradun', destination: 'chopta', terrain: 'hills',
+    distance: '', time: '', endPoint: 'Chopta',
+    via: 'Dehradun → Rishikesh → Devprayag → Srinagar → Rudraprayag → Ukhimath → Chopta',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+
+  // ── Out of Delhi NCR (all four hubs currently have only haridwar) ──
+  {
+    slug: 'delhi-to-mussoorie-cab',
+    origin: 'delhi', destination: 'mussoorie', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Mussoorie',
+    via: 'Delhi → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'delhi-to-nainital-cab',
+    origin: 'delhi', destination: 'nainital', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Nainital',
+    via: 'Delhi → Hapur → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'noida-to-mussoorie-cab',
+    origin: 'noida', destination: 'mussoorie', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Mussoorie',
+    via: 'Noida → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'noida-to-nainital-cab',
+    origin: 'noida', destination: 'nainital', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Nainital',
+    via: 'Noida → Hapur → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'gurugram-to-mussoorie-cab',
+    origin: 'gurugram', destination: 'mussoorie', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Mussoorie',
+    via: 'Gurugram → Delhi → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'gurugram-to-nainital-cab',
+    origin: 'gurugram', destination: 'nainital', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Nainital',
+    via: 'Gurugram → Delhi → Hapur → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'ghaziabad-to-mussoorie-cab',
+    origin: 'ghaziabad', destination: 'mussoorie', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Mussoorie',
+    via: 'Ghaziabad → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
+  {
+    slug: 'ghaziabad-to-nainital-cab',
+    origin: 'ghaziabad', destination: 'nainital', terrain: 'plains',
+    distance: '', time: '', endPoint: 'Anywhere in Nainital',
+    via: 'Ghaziabad → Hapur → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
+    intro: '', stops: [], highlights: [], tip: '', faqs: [],
+  },
 ];
 
 export const ROUTES_BY_SLUG = Object.fromEntries(ROUTES.map((r) => [r.slug, r]));

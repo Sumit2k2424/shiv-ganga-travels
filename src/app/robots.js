@@ -6,7 +6,10 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/static/', '/ui-kit'],
+        // /opengraph-image is a generated PNG, not a page. Google was crawling
+        // it (and its ?hash variant) as HTML and filing both under
+        // "Crawled - currently not indexed" — pure wasted crawl budget.
+        disallow: ['/api/', '/_next/', '/static/', '/ui-kit', '/opengraph-image'],
       },
       { userAgent: 'Googlebot',       allow: '/' },
       { userAgent: 'GPTBot',          allow: '/' },

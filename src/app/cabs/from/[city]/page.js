@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   const routes = getRoutesFromOrigin(o.slug);
   const url = `${SITE.baseUrl}/cabs/from/${o.slug}`;
 
-  const title = `Cab Service in ${o.name} 2026 | Outstation Taxi Fares | ${routes.length} Routes`;
+  const title = `Cab Service in ${o.name} 2026 | Outstation Taxi Fares | ${routes.length} ${routes.length === 1 ? 'Route' : 'Routes'}`;
   const desc = `Book an outstation cab from ${o.name} — ${routes.map(routeTo).slice(0, 4).join(', ')} and more. Fixed all-inclusive fares, doorstep pickup, hill-experienced drivers. Operator since 2010.`;
 
   return {

@@ -74,6 +74,18 @@ const REDIRECTS = [
   { source: '/char-dham-yatra-from-patna',       destination: '/char-dham-yatra-from-delhi', permanent: true },
   { source: '/char-dham-yatra-from-rishikesh',   destination: '/char-dham-yatra-from-delhi', permanent: true },
   { source: '/char-dham-yatra-from-dehradun',    destination: '/char-dham-yatra-from-delhi', permanent: true },
+  // ── Hindi cluster: moved root → /blog/ without redirects (live 404s in GSC) ──
+  // Google still crawls the root-level URLs (last hit Jul 25, 2026) and gets a
+  // 404 each time, so none of the original URLs' history carries over.
+  { source: '/char-dham-packing-list-hindi',  destination: '/blog/char-dham-packing-list-hindi',  permanent: true },
+  { source: '/char-dham-registration-hindi',  destination: '/blog/char-dham-registration-hindi',  permanent: true },
+  { source: '/bujurg-char-dham-yatra',        destination: '/blog/bujurg-char-dham-yatra',        permanent: true },
+  { source: '/char-dham-yatra-kitna-kharcha', destination: '/blog/char-dham-yatra-kitna-kharcha', permanent: true },
+  { source: '/kedarnath-pehli-baar',          destination: '/blog/kedarnath-pehli-baar',          permanent: true },
+  { source: '/char-dham-kab-jayen',           destination: '/blog/char-dham-kab-jayen',           permanent: true },
+  // ── Comparison posts: moved /blog/ → root without redirects (live 404s in GSC) ──
+  { source: '/blog/direct-operator-vs-travel-aggregator-char-dham', destination: '/direct-operator-vs-travel-aggregator-char-dham', permanent: true },
+  { source: '/blog/shiv-ganga-travels-vs-makemytrip-char-dham',     destination: '/shiv-ganga-travels-vs-makemytrip-char-dham',     permanent: true },
 ];
 
 // Set of source paths without leading slash (matches sitemap slug form), e.g.
