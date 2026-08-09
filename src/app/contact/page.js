@@ -239,7 +239,7 @@ export default function ContactPage() {
                 </p>
 
                 {/* Dhanesh */}
-                <div itemScope itemType="https://schema.org/Person" itemID="/contact#dhanesh-mishra"
+                <div itemScope itemType="https://schema.org/Person" itemID="https://www.shivgangatravels.com/#founder"
                   style={{ borderTop:'1px solid var(--border)', paddingTop:16 }}>
                   <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
                     <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#FFD166', flexShrink:0 }}>DM</div>

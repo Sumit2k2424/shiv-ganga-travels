@@ -40,7 +40,36 @@ export const SOCIAL = [
     label: 'YouTube',
     handle: '@Shivgangatravelsharidwar',
     url: 'https://www.youtube.com/@Shivgangatravelsharidwar',
-    verified: true,
+    verified: true,   // fetched 2026-08-09: 200, title "Shiv Ganga Travels - YouTube"
+  },
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    handle: 'shiv-ganga-travels',
+    url: 'https://www.linkedin.com/company/shiv-ganga-travels',
+    verified: true,   // fetched 2026-08-09: 200, title "Shiv Ganga Travels | LinkedIn"
+  },
+];
+
+/**
+ * Brand-operated properties that are NOT identity profiles of the business.
+ *
+ * r/CharDham_Guide is a topic community we run, not a page *about* Shiv Ganga
+ * Travels — its own description is "a focused corner for anyone planning,
+ * researching, or just curious about the Char Dham pilgrimage". schema.org
+ * sameAs means "a page that unambiguously indicates THIS item's identity", so
+ * pointing it at a topic subreddit muddies entity resolution rather than
+ * confirming it. It stays in the footer (where the link and the brand mention
+ * still count, and where Perplexity/ChatGPT pick Reddit signals up from the
+ * community itself) but deliberately out of sameAs.
+ */
+export const SOCIAL_COMMUNITY = [
+  {
+    id: 'reddit',
+    label: 'Reddit',
+    handle: 'r/CharDham_Guide',
+    url: 'https://www.reddit.com/r/CharDham_Guide/',
+    verified: true,   // fetched 2026-08-09 via old.reddit.com: 200, real sidebar description
   },
 ];
 

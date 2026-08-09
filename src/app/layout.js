@@ -14,6 +14,7 @@ import LuxCursor from '@/components/lux/LuxCursor';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
+import { SOCIAL_SAME_AS } from '@/data/social';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 const jakarta = Plus_Jakarta_Sans({
@@ -299,14 +300,19 @@ function SiteSchema() {
       'Himalayan Travel', 'Char Dham Helicopter',
     ],
 
+    // Directory/identity URLs first, then every verified social profile from
+    // src/data/social.js. That module's header always claimed it fed sameAs,
+    // but nothing imported it — so Facebook, YouTube and LinkedIn were live in
+    // the footer and absent from the entity graph. Reading it here makes the
+    // claim true: add an account there, and it lands in sameAs automatically.
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
-      'https://www.instagram.com/shivgangatravels/',
       'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
       'https://www.tripadvisor.com/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html',
       `https://wa.me/${SITE.whatsapp}`,
       'https://www.shivgangatravels.com',
+      ...SOCIAL_SAME_AS,
     ],
   };
 
@@ -371,6 +377,7 @@ function SiteSchema() {
     name: 'Dhanesh Chandra Mishra',
     jobTitle: 'Founder & Managing Director',
     description: 'Retired Indian Army Officer who founded Shiv Ganga Travels in 2010. Pioneered the zero-commission model for Char Dham Yatra operators in Haridwar.',
+    url: `${SITE.baseUrl}/about`,
     worksFor: { '@id': `${SITE.baseUrl}/#organization` },
     alumniOf: { '@type': 'Organization', name: 'Indian Army' },
     knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Uttarakhand pilgrimage', 'Mountain travel logistics'],

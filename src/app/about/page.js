@@ -24,7 +24,10 @@ function Schema() {
   const dhanesh = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${SITE.baseUrl}/about#dhanesh-mishra`,
+    // Same @id as the sitewide founder node in layout.js on purpose. Two
+    // different @ids for one person split him into two entities in the graph,
+    // which is the opposite of what we want AI assistants to resolve.
+    '@id': `${SITE.baseUrl}/#founder`,
     name: 'Dhanesh Chandra Mishra',
     jobTitle: 'Founder & Director',
     description: 'Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. Has led Char Dham Yatra operations for 15 seasons, serving 50,000+ pilgrims.',
@@ -42,10 +45,13 @@ function Schema() {
       addressCountry: 'IN',
     },
     knowsAbout: ['Char Dham Yatra', 'Kedarnath', 'Badrinath', 'Himalayan Travel', 'Pilgrim Safety'],
-    sameAs: [
-      SITE.baseUrl,
-      `https://www.google.com/maps?cid=16074078434377735602`,
-    ],
+    // `url` is the page that describes him. There is deliberately no `sameAs`:
+    // it previously listed the site root and the company's Google Maps listing,
+    // which asserts that this person IS the website and IS the business — a
+    // false identity claim that undermines the entity resolution it was meant
+    // to help. Restore sameAs only with a real personal profile (LinkedIn,
+    // Wikidata, an authored byline elsewhere).
+    url: `${SITE.baseUrl}/about`,
   };
 
   const sumit = {
@@ -81,7 +87,7 @@ function Schema() {
     name: SITE.name,
     url: SITE.baseUrl,
     foundingDate: '2010',
-    founder: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#dhanesh-mishra`, name: 'Dhanesh Chandra Mishra' },
+    founder: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     employee: [
       { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra' },
     ],
