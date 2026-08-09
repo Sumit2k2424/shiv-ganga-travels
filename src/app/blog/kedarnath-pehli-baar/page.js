@@ -27,6 +27,7 @@ function Schema() {
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'केदारनाथ यात्रा 2026 पहली बार — पूरी जानकारी', inLanguage: 'hi', author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

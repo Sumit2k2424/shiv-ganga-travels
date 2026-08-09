@@ -39,6 +39,7 @@ const faqData = [
 function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book', author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

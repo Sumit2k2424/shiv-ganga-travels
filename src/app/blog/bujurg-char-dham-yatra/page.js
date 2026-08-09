@@ -26,6 +26,7 @@ function Schema() {
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'बुजुर्गों के लिए चार धाम यात्रा 2026', inLanguage: 'hi', author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

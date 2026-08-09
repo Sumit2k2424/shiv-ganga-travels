@@ -259,7 +259,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Sumit */}
-                <div itemScope itemType="https://schema.org/Person" itemID="/contact#sumit-mishra"
+                <div itemScope itemType="https://schema.org/Person" itemID="https://www.shivgangatravels.com/about#sumit-mishra"
                   style={{ borderTop:'1px solid var(--border)', paddingTop:16, marginTop:16 }}>
                   <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
                     <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#fff', flexShrink:0 }}>SM</div>

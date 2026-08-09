@@ -46,6 +46,7 @@ function Schema() {
     description: 'Complete guide to the Kedarnath trek from Gaurikund — distance, difficulty, stay options, best time to visit, pony and helicopter options.',
     author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

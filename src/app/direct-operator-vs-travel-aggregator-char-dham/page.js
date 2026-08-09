@@ -23,7 +23,7 @@ function Schema() {
     headline: 'Direct Operator vs Aggregator: Char Dham Booking',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
-    author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham`,
   };

@@ -23,7 +23,7 @@ function Schema() {
     headline: 'Shiv Ganga vs MakeMyTrip: Char Dham Compared',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
-    author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham`,
     about: [{ '@type': 'Thing', name: 'Shiv Ganga Travels' }, { '@type': 'Thing', name: 'MakeMyTrip' }, { '@type': 'Thing', name: 'Char Dham Yatra' }],

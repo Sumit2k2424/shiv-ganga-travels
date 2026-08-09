@@ -10,8 +10,14 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
   // provided on the 'top' variant, emits BlogPosting JSON-LD so every post gets
   // Article rich-result eligibility + clear freshness signals for AI crawlers.
 
+  // `id` is the canonical @id for each author. Without it every post minted a
+  // fresh anonymous Person node, so "Sumit Mishra" existed as ~54 unrelated
+  // entities instead of one author with a LinkedIn behind him — which is
+  // exactly the author authority signal AI assistants look for. These ids match
+  // the ones already used on /about and in layout.js so the graph converges.
   const authors = {
     sumit: {
+      id: `${SITE.baseUrl}/about#sumit-mishra`,
       name: 'Sumit Mishra',
       role: 'Operations Manager & Content Lead, Shiv Ganga Travels',
       bio: `Sumit Mishra manages day-to-day operations at Shiv Ganga Travels and has personally accompanied pilgrim groups on the Char Dham circuit since 2015. He handles route planning, hotel pre-blocking during peak season, and yatra coordination for 500+ pilgrims annually. Everything published on this site is written from first-hand experience on these routes.`,
@@ -25,6 +31,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
       initials: 'SM',
     },
     dhanesh: {
+      id: `${SITE.baseUrl}/#founder`,
       name: 'Dhanesh Chandra Mishra',
       role: 'Founder & Director, Shiv Ganga Travels',
       bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
@@ -57,9 +64,19 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
       dateModified: article.dateModified || '2026-06-20',
       author: {
         '@type': 'Person',
+        '@id': a.id,
         name: a.name,
         jobTitle: a.role,
-        url: a.linkedin || SITE.baseUrl,
+        // `url` is the page that describes the person; external profiles belong
+        // in `sameAs`. LinkedIn was previously sitting in `url`, which both lost
+        // the profile as an identity signal and pointed the canonical page off
+        // our own domain.
+        url: `${SITE.baseUrl}/about`,
+        // undefined (not []) when an author has no profiles yet — JSON.stringify
+        // drops the key entirely rather than emitting an empty sameAs.
+        sameAs: [a.linkedin, a.facebook].filter(Boolean).length
+          ? [a.linkedin, a.facebook].filter(Boolean)
+          : undefined,
         worksFor: { '@id': `${SITE.baseUrl}/#organization` },
       },
       publisher: { '@id': `${SITE.baseUrl}/#organization` },

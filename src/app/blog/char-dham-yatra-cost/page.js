@@ -28,6 +28,7 @@ function Schema() {
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

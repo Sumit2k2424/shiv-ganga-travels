@@ -20,6 +20,7 @@ export const metadata = {
 function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Senior Citizen Char Dham Yatra 2026 — Tips, Special Package & Safety Guide', author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,

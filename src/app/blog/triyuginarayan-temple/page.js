@@ -27,6 +27,7 @@ function Schema() {
     dateModified: '2026-05-21',
     author: {
       '@type': 'Person',
+      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
       name: 'Sumit Mishra',
       jobTitle: 'Operations Manager, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,

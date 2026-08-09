@@ -58,6 +58,7 @@ function Schema() {
     description: 'Step-by-step process to complete mandatory Char Dham Yatra biometric registration online at registrationandtouristcare.uk.gov.in or at designated',
     author: {
         '@type': 'Person',
+        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
         name: 'Sumit Mishra',
         jobTitle: 'Operations Manager, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
