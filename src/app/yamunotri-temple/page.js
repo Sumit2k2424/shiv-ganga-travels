@@ -23,6 +23,8 @@ function Schema() {
     {'@type':'Question',name:'What are the darshan timings at Yamunotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens around 6:00 AM and closes by about 8:00 PM, with a midday break in the afternoon. Because the 6km trek from Janki Chatti takes 3–4 hours up, most pilgrims aim to start early and reach the temple before noon.'}},
     {'@type':'Question',name:'When does Yamunotri Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens on April 19, 2026 (Akshaya Tritiya). It closes for winter on November 11, 2026 (Bhai Dooj), after which the idol of Goddess Yamuna is carried to Kharsali (Syana Chattra) village for winter worship.'}},
     {'@type':'Question',name:'How long is the Yamunotri trek?',acceptedAnswer:{'@type':'Answer',text:'The trek to Yamunotri is about 6km from Janki Chatti, the road-head. It takes most pilgrims 3–4 hours uphill. Pony, palki (palanquin) and pittu (porter) services are available for those who cannot walk the climb.'}},
+    {'@type':'Question',name:'Do I need to register before visiting Yamunotri in 2026?',acceptedAnswer:{'@type':'Answer',text:'Yes. Char Dham Yatra registration is mandatory and free for every pilgrim, including those visiting only Yamunotri. Registration for the 2026 season opened on March 6, 2026 through the official Tourist Care Uttarakhand portal or app. We handle this for anyone travelling with us — just share your ID details in advance.'}},
+    {'@type':'Question',name:'Are mobile phones and cameras allowed inside Yamunotri Temple?',acceptedAnswer:{'@type':'Answer',text:'No. Ahead of the 2026 season, the Uttarakhand administration banned mobile phones and cameras inside the temple premises at all four Char Dham shrines, including Yamunotri, to preserve the sanctity of darshan. Devices must be deposited at lockers near the entrance before you go in and are returned afterward.'}},
   ]};
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
@@ -35,6 +37,8 @@ const PAA = [
   { q:'What is Surya Kund at Yamunotri?', a:'Surya Kund is a natural hot spring beside the temple where the water is hot enough to cook food. Pilgrims tie rice and potatoes in a cloth and dip them in the spring — the cooked rice is then offered to the Goddess and taken home as prasad. It is one of the most distinctive rituals on the whole yatra.' },
   { q:'Can elderly pilgrims do the Yamunotri trek?', a:'Yes, with help. The 6km climb is steep in places, but pony, palki and porter services are available at Janki Chatti for those who cannot walk it. We arrange these in advance for senior pilgrims so there is no scramble at the road-head.' },
   { q:'What is Divya Shila?', a:'Divya Shila is a revered rock pillar near the temple that pilgrims worship before entering the shrine. It is customary to offer prayers at Divya Shila first, then bathe in or touch the hot spring water, and only then proceed to the darshan of Goddess Yamuna.' },
+  { q:'Do I need to register before visiting Yamunotri in 2026?', a:'Yes, registration is mandatory and free for every pilgrim on the Char Dham Yatra, including a Yamunotri-only visit. It opened on March 6, 2026 through the Tourist Care Uttarakhand portal or app, with offline counters also available in Haridwar, Rishikesh and Dehradun. We register anyone travelling with us as part of the booking.' },
+  { q:'Are mobile phones and cameras allowed inside Yamunotri Temple?', a:'No. Ahead of the 2026 season, phones and cameras were banned inside the temple premises at all four Char Dham shrines to protect the sanctity of darshan. Lockers are provided near the entrance to deposit devices before you go in, and you collect them on your way out.' },
 ];
 
 function PAASchema() {
@@ -102,6 +106,20 @@ export default function YamunotriTemple() {
       <h2 style={h2}>The Trek: What to Expect</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The 6km from Janki Chatti gains altitude steadily and the steepest stretch comes near the end. Allow 3–4 hours up and around 2 hours down. The path is paved and railed in most places, with tea stalls and rest points along the way. <strong>Ponies, palkis (four-porter palanquins) and pittus (a porter who carries a child or a small adult in a basket)</strong> are all available at the base — and for elderly pilgrims or anyone unsure of the climb, we strongly recommend pre-arranging one rather than negotiating on the spot.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>A practical tip our team gives every group: start early, wear proper grip footwear, and carry water and a light snack. The weather here turns fast — bright sun can become cold drizzle within an hour. Most pilgrims tell us afterwards that the climb, hard as it was, made reaching the temple feel like a genuine arrival rather than just a stop.</p>
+
+      <h2 style={h2}>2026 Char Dham Rules You Need to Know</h2>
+      <div style={{ background:'#fffbeb', border:'1px solid #fcd34d', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
+        <div style={{ fontWeight:700, fontSize:13.5, color:'#92400e', marginBottom:8 }}>⚠️ Two rules changed for the 2026 season</div>
+        <p style={{ margin:'0 0 10px', fontSize:13.5, color:'#78350f', lineHeight:1.75 }}>
+          <strong>Registration is mandatory.</strong> Every pilgrim, even those visiting only Yamunotri, must register before starting the yatra. Registration for 2026 opened on March 6 and is free — done online through the Tourist Care Uttarakhand portal or app, or offline at counters in Haridwar, Rishikesh and Dehradun. We complete this on behalf of anyone who books with us.
+        </p>
+        <p style={{ margin:0, fontSize:13.5, color:'#78350f', lineHeight:1.75 }}>
+          <strong>Mobile phones and cameras are banned inside the temple.</strong> Ahead of the 2026 season, the district administration banned phones and cameras inside the premises at all four Char Dham shrines, including Yamunotri, to keep darshan focused and orderly. Deposit your device at the lockers near the entrance before you go in — you get it back on the way out.
+        </p>
+        <p style={{ margin:'10px 0 0', fontSize:12.5 }}>
+          <a href="https://registrationandtouristcare.uk.gov.in/signin.php" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', fontWeight:600, textDecoration:'none' }}>Register on the official Uttarakhand Tourist Care portal →</a>
+        </p>
+      </div>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
