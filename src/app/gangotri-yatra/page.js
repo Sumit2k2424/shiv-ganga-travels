@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Gangotri Yatra Package 2026 | Price Starts at ₹5,699 | Motor Road, No Trek' },
@@ -70,6 +71,13 @@ export default function Page() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
           <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+
+        <AnswerBox>
+          Gangotri Yatra costs ₹5,699 per person from Haridwar. Gangotri sits at 3,415 m in
+          Uttarkashi district and is the origin shrine of the Ganga. It is the only Char Dham
+          shrine with a motor road right to the temple — no trek at all — which makes it the
+          easiest of the four for elderly pilgrims. The temple is open May to November.
+        </AnswerBox>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Gangotri sits at 3,415 metres in the Uttarkashi district of Uttarakhand, on the banks of the Bhagirathi river. It is the mythological and geographical origin of the Ganga — the river that has shaped Indian civilisation for millennia. The temple here, dedicated to Goddess Ganga, is one of the Char Dham shrines and draws hundreds of thousands of pilgrims every year between May and November.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Unlike Yamunotri and Kedarnath, Gangotri requires <strong>no trekking</strong>. A well-maintained motor road leads directly to the temple town. This makes it one of the most accessible of the four dhams, suitable for all ages and fitness levels.</p>

@@ -24,6 +24,19 @@ export default function robots() {
       { userAgent: 'CCBot',           allow: '/' },
       { userAgent: 'cohere-ai',       allow: '/' },
       { userAgent: 'GoogleOther',     allow: '/' },
+      // Assistants that answer travel questions but were falling through to
+      // the '*' rule. Named explicitly so the grant is unambiguous and so a
+      // future tightening of '*' can't silently cut off AI answer surfaces.
+      { userAgent: 'Google-CloudVertexBot', allow: '/' },  // Gemini grounding
+      { userAgent: 'Applebot',        allow: '/' },        // Siri / Spotlight
+      { userAgent: 'Applebot-Extended', allow: '/' },      // Apple Intelligence
+      { userAgent: 'Meta-ExternalAgent', allow: '/' },     // Meta AI
+      { userAgent: 'meta-externalagent', allow: '/' },
+      { userAgent: 'Amazonbot',       allow: '/' },        // Alexa
+      { userAgent: 'DuckAssistBot',   allow: '/' },        // DuckDuckGo AI
+      { userAgent: 'MistralAI-User',  allow: '/' },
+      { userAgent: 'YouBot',          allow: '/' },        // You.com
+      { userAgent: 'Bingbot',         allow: '/' },        // Copilot's index
     ],
     sitemap: `${SITE.baseUrl}/sitemap.xml`,
     host: SITE.baseUrl,

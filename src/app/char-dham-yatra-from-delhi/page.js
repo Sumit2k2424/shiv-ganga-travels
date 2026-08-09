@@ -2,6 +2,7 @@ import Link from 'next/link';
 import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Delhi 2026 | Price Starts at ₹22,999 | Train & Flight Pickup' },
@@ -97,6 +98,13 @@ export default function Page() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open: Apr 19 – Nov 2026</div>
+
+        <AnswerBox>
+          Char Dham Yatra from Delhi costs from ₹22,999 per person and takes 11–13 days door to
+          door. Haridwar, where the circuit starts, is 250 km from Delhi — four to five hours by
+          road on the Delhi–Meerut Expressway, or a direct train. Registration is mandatory and
+          free, and we complete it for you. The 2026 season runs 19 April to November.
+        </AnswerBox>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Distance','250 km'],['Best route','Road or direct train'],['Total trip','11–13 days'],['Package from','₹22,999/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Yamunotri Yatra Package 2026 | Price Starts at ₹5,999 | Trek & Pony Guide' },
@@ -70,6 +71,13 @@ export default function Page() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
           <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+
+        <AnswerBox>
+          Yamunotri Yatra costs ₹5,999 per person from Haridwar. Yamunotri sits at 3,291 m in
+          Uttarkashi district and is the source of the Yamuna, the first of the four dhams in the
+          traditional circuit. The road ends at Janki Chatti; the temple is a 6 km trek above it,
+          with pony, palki and porter available. Open late April to early November.
+        </AnswerBox>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Yamunotri, at 3,291 metres in the Uttarkashi district, is the source of the Yamuna river and the westernmost of the four Char Dhams. It is always the first shrine visited in the traditional Char Dham Yatra circuit, before Gangotri, Kedarnath, and Badrinath. The temple enshrines a black marble idol of Goddess Yamuna.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>The Story of Yamunotri — The Sage, the Goddess, and a River's Origin</h2>
