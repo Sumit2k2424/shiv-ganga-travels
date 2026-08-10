@@ -186,7 +186,12 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Max: Kedarnath 3,583m (helipad at 3,566m)',
-    price    : { original:95000, discounted:85000, currency:'₹', perPerson:true },
+    // Repriced Aug 2026 to ₹2,30,000. The previous ₹85,000 was a stale figure
+    // that described a full charter at a ground-package price — the site's own
+    // /char-dham-helicopter page already stated the real market band of
+    // ₹2,09,000–2,50,000, so the data and the copy contradicted each other.
+    // No struck-through "original": we do not invent a was-price we never charged.
+    price    : { original:230000, discounted:230000, currency:'₹', perPerson:true },
     highlights:[
       'Complete Char Dham in just 6 days by helicopter',
       'Departs from Sahastradhara Helipad, Dehradun',
@@ -198,6 +203,10 @@ export const PACKAGES = [
     ],
     inclusions:['Helicopter transfers between all 4 dhams & Dehradun','Luxury hotel (4-star equivalent) accommodation','All meals — breakfast, lunch & dinner','VIP darshan passes + personal pujari','Duffle bag (5 kg) provided','Pickup & drop at Dehradun airport/railway station','Body weight check-in + pre-departure briefing','Basic travel insurance'],
     exclusions:['Airfare / train to Dehradun','Personal expenses and tips','Helicopter cancellation due to bad weather (reschedule/refund policy applies)'],
+    // The aircraft is flown by a DGCA-approved third-party operator; we book and
+    // coordinate the charter and act as agent for that portion. Stated plainly
+    // because the 2026 DGCA capacity cuts make cancellations more likely.
+    operatorNote: 'Helicopter flights are operated by DGCA-approved third-party operators. Shiv Ganga Travels books and coordinates the charter and handles all ground arrangements; for the flying portion we act as agent, and the operator\'s weather and cancellation rules apply.',
     itinerary:[
       {day:1, title:'Arrive Dehradun — Pre-Yatra Briefing', desc:'Receive at Dehradun airport/railway station. Check in hotel. 8:30 PM mandatory pre-yatra briefing — itinerary, duffle bag distribution, body weight recording (helicopter weight limits apply). Dinner and overnight Dehradun.'},
       {day:2, title:'Dehradun → Kharsali (Yamunotri) → Harsil/Uttarkashi', desc:'6 AM fly from Sahastradhara Helipad to Kharsali helipad. 1 km walk/pony to Yamunotri temple. Divya Shila puja, Surya Kund ritual, full darshan. Fly to Harsil/Gangotri area. Overnight Uttarkashi luxury hotel.'},
@@ -210,8 +219,8 @@ export const PACKAGES = [
     badge    : 'Premium',
     images   : ['helicopter','kedarnath','badrinath'],
     tags     : ['char dham','helicopter','4 dham by helicopter','DGCA approved','sahastradhara','luxury','dehradun','vip','senior','fast','no trek'],
-    metaTitle: 'Char Dham Helicopter Package 2026 | Price Starts at ₹85,000 | DGCA Approved',
-    metaDesc : 'Char Dham Helicopter Package 2026 — 5N/6D from ₹85,000/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Char Dham Helicopter Package 2026 | ₹2,30,000/person | DGCA Approved',
+    metaDesc : 'Char Dham Helicopter Package 2026 — 5N/6D from Dehradun, ₹2,30,000/person all-inclusive. DGCA-approved third-party operators. Direct booking, no agent commission.',
     faqs:[{q:'What is the luggage limit for helicopter yatra?', a:'5 kg per person in the provided duffle bag. No hard-shell suitcases permitted.'},{q:'What if helicopter gets cancelled due to weather?', a:'We reschedule to next available slot. If rescheduling is not possible, the helicopter portion is fully refunded.'}],
   },
 
@@ -694,7 +703,12 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Max: Kedarnath 3,566m (helipad)',
-    price    : { original:55000, discounted:45000, currency:'₹', perPerson:true },
+    // Repriced Aug 2026 to ₹1,25,000, confirmed by the owner. The previous
+    // ₹45,000 was stale for a full Dehradun→Kedarnath→Badrinath→Dehradun
+    // charter — market for the identical product is ₹1,10,000–₹1,45,000, and
+    // /blog/kedarnath-helicopter-booking already quoted ₹1.1–1.5 lakh for a
+    // same-day Dehradun charter to a single dham. No invented was-price.
+    price    : { original:125000, discounted:125000, currency:'₹', perPerson:true },
     highlights:[
       'Visit both Kedarnath & Badrinath in a single day',
       'Aerial views of Garhwal Himalayas from helicopter',
@@ -712,8 +726,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['helicopter','kedarnath','badrinath'],
     tags     : ['helicopter','same day','do dham','kedarnath','badrinath','dehradun','vip','one day'],
-    metaTitle: 'Kedarnath Badrinath Same-Day Helicopter Tour 2026 | Price Starts at ₹45,000 | 1 Day',
-    metaDesc : 'Kedarnath Badrinath Same-Day Helicopter Tour 2026 — both dhams in 1 day from ₹45,000/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Kedarnath Badrinath Same-Day Helicopter Tour 2026 | ₹1,25,000 | 1 Day',
+    metaDesc : 'Kedarnath Badrinath by helicopter in one day from Dehradun — ₹1,25,000/person, VIP darshan at both dhams. DGCA-approved third-party charter, direct booking.',
     faqs:[],
   },
 
@@ -1872,7 +1886,7 @@ export const GLOBAL_FAQS = [
   { q:'Do I need to register for Char Dham Yatra 2026?',
     a:'Yes — registration is mandatory and enforced at police checkpoints. You register online at the Uttarakhand Tourism portal or in person at biometric centres in Haridwar and Rishikesh. Register before you leave home. Police turn back unregistered pilgrims at Sonprayag (Kedarnath route) and other checkpoints, even if you have driven 6 hours from Haridwar. We handle registration for all pilgrims in our packages.' },
   { q:'What does Char Dham Yatra cost from Haridwar in 2026?',
-    a:'Our Char Dham packages start at ₹18,500 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹85,000. All prices are direct — no agent commission, no hidden charges.' },
+    a:'Our Char Dham packages start at ₹18,500 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹2,30,000 — helicopter charter is genuinely expensive and any "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately. All prices are direct — no agent commission, no hidden charges.' },
   { q:'What is the Char Dham Yatra route from Haridwar?',
     a:'The circuit follows a clockwise direction: Haridwar → Barkot → Yamunotri (Day 3) → Uttarkashi → Gangotri (Day 5) → Guptkashi → Kedarnath (Day 7) → Rudraprayag → Badrinath (Day 9-10) → return to Haridwar (Day 11). Total road distance: approximately 1,100km. Yamunotri requires a 6km trek from Janki Chatti. Kedarnath requires a 16km trek from Gaurikund. Gangotri and Badrinath are fully motorable.' },
   { q:'Is Char Dham Yatra safe for senior citizens?',
@@ -1882,7 +1896,7 @@ export const GLOBAL_FAQS = [
   { q:'How do I book Char Dham Yatra from Shiv Ganga Travels?',
     a:'WhatsApp us at +91-7817996730 with your preferred dates, group size, and city. We send a detailed custom itinerary with exact pricing within 2 hours. A 25% advance payment secures your booking and holds your hotel and darshan slots. We accept UPI, bank transfer and major cards. No booking fee, no processing charge.' },
   { q:'Can I do Char Dham Yatra by helicopter?',
-    a:'Yes. Our Char Dham by helicopter package covers all 4 dhams in 5N/6D from Dehradun (Sahastradhara Helipad). Helicopters land at dedicated helipads near each temple: Kharsali (Yamunotri, 1km walk), Harsil (Gangotri, 25km road), Phata or Sersi (Kedarnath, VIP darshan), Badrinath (adjacent to temple). Package price: ₹85,000 per person all-inclusive. Book via the IRCTC heliyatra portal for helicopter slots — we handle all ground arrangements.' },
+    a:'Yes. Our Char Dham by helicopter package covers all 4 dhams in 5N/6D from Dehradun (Sahastradhara Helipad). Helicopters land at dedicated helipads near each temple: Kharsali (Yamunotri, 1km walk), Harsil (Gangotri, 25km road), Phata or Sersi (Kedarnath, VIP darshan), Badrinath (adjacent to temple). Package price: ₹2,30,000 per person all-inclusive, with the charter flown by a DGCA-approved third-party operator. Note the distinction: this is a full charter. Kedarnath shuttle seats booked individually are a separate product and are sold only on the IRCTC HeliYatra portal.' },
 ];
 // ================================================================
 // TRUST SIGNALS

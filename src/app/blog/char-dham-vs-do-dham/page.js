@@ -20,7 +20,7 @@ const ROWS = [
   ['Road distance', '~1,500–1,600 km from Haridwar', '~750–800 km from Haridwar'],
   ['Total trekking', '22 km (6km Yamunotri + 16km Kedarnath)', '16 km (Kedarnath only)'],
   ['Package cost (road)', 'From ₹18,500 per person', 'From ₹10,999 per person'],
-  ['Package cost (helicopter)', 'From ₹85,000 per person', 'From ₹18,000 per person'],
+  ['Package cost (helicopter)', '₹2,30,000 per person', 'From ₹29,999 per person'],
   ['Difficulty level', 'Moderate — 10+ days of mountain travel', 'Easy to moderate — manageable in 5 days'],
   ['Best for', 'First-time complete pilgrims, those with 12+ days', 'Limited time, first-time yatris, repeat pilgrims'],
   ['Senior-friendly', 'Yes — with 12N/13D senior package', 'Yes — most manageable option for 65+'],

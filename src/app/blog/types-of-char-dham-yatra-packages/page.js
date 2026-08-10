@@ -29,7 +29,7 @@ function Schema() {
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What types of Char Dham Yatra packages are available?', acceptedAnswer: { '@type': 'Answer', text: 'There are four main types of Char Dham Yatra packages: (1) Budget packages — ₹18,500–₹28,000/person, shared tempo traveller or sedan, standard guesthouses, all meals included. (2) Deluxe packages — ₹28,000–₹40,000/person, private Innova Crysta, 2-3 star hotels with hot water, buffet meals. (3) Premium packages — ₹40,000–₹65,000/person, premium SUV or Tempo Traveller, best available hotels, VIP darshan, dedicated guide. (4) Helicopter packages — ₹85,000–₹2.4 lakh/person, aerial transfers, luxury hotels, all 4 dhams in 5-6 days.' } },
+      { '@type': 'Question', name: 'What types of Char Dham Yatra packages are available?', acceptedAnswer: { '@type': 'Answer', text: 'There are four main types of Char Dham Yatra packages: (1) Budget packages — ₹18,500–₹28,000/person, shared tempo traveller or sedan, standard guesthouses, all meals included. (2) Deluxe packages — ₹28,000–₹40,000/person, private Innova Crysta, 2-3 star hotels with hot water, buffet meals. (3) Premium packages — ₹40,000–₹65,000/person, premium SUV or Tempo Traveller, best available hotels, VIP darshan, dedicated guide. (4) Helicopter charter — ₹2,09,000–₹2,50,000/person, aerial transfers, luxury hotels, all 4 dhams in 5-6 days.' } },
       { '@type': 'Question', name: 'What is the difference between budget and deluxe Char Dham packages?', acceptedAnswer: { '@type': 'Answer', text: 'The main differences between budget and deluxe Char Dham packages are: Transport (budget uses shared tempo or basic sedan vs deluxe uses private Innova Crysta), Hotels (budget uses standard guesthouses with basic facilities vs deluxe uses 2-3 star hotels with attached bathrooms and hot water), Room sharing (budget rooms may have 3-4 per room vs deluxe guarantees twin sharing), and sometimes Meals (budget is standard dal-roti vs deluxe has proper buffet). The itinerary and dhams covered are identical.' } },
     ],
   };
@@ -75,12 +75,12 @@ export default function PackageTypes() {
       honest: 'Premium packages are about peace of mind and zero planning effort. Every stop, every room, every puja is pre-arranged. If you are traveling from the UK, US, or Singapore and have 12-14 days total, premium ensures none of those days are wasted on logistics.',
     },
     {
-      type: 'Helicopter', emoji: '🚁', price: '₹85,000–₹2.4L', perPerson: 'per person', duration: '5N/6D',
+      type: 'Helicopter', emoji: '🚁', price: '₹2,30,000', perPerson: 'per person', duration: '5N/6D',
       color: '#1D4ED8', bg: 'rgba(29,78,216,0.06)',
       vehicle: 'Helicopter (IRCTC-booked) + private car for transfers', hotel: 'Best available hotels at each dham (Sahastradhara departure)', meals: 'All meals included — breakfast, lunch, dinner', vip: 'VIP darshan all 4 dhams — no queue ever', guide: 'Personal guide + helicopter ground coordinator',
       ideal: ['Pilgrims 70+ who cannot trek at all', 'Working professionals with only 6-7 days', 'Those with cardiac, pulmonary, or joint conditions', 'Families wanting to complete yatra without physical strain'],
       notFor: ['Those who want the trek experience (helicopter bypasses it entirely)', 'Budget-conscious pilgrims (cost is 4-8x road packages)'],
-      honest: 'Two important things: (1) Budget helicopter packages (₹85,000) are ground packages with IRCTC helicopter tickets arranged separately — you still do some road travel. Full charter packages (₹2.1-2.5L) include the helicopter ticket. Know what you are buying. (2) The helicopter skips the 16km Kedarnath trek entirely — which is both the point and the limitation. For many seniors, helicopter is the only viable option.',
+      honest: 'Two important things: (1) A "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately — you still do most of the journey by road. A full charter, which is what ours is at ₹2,30,000, includes the flying. Charter hours are a hard cost nobody discounts by 60%, so a very low number always means a different product. (2) The helicopter skips the 16km Kedarnath trek entirely — which is both the point and the limitation. For many seniors, helicopter is the only viable option.',
     },
   ];
 

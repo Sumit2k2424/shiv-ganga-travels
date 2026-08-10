@@ -252,6 +252,9 @@ export default function VsMakeMyTrip() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators Haridwar 2026 →</Link>
             <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Direct vs Aggregator Guide →</Link>
+            <Link href="/shiv-ganga-travels-vs-thrillophilia" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>vs Thrillophilia →</Link>
+            <Link href="/char-dham-yatra-booking-sites-compared" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Where to Book — All Options →</Link>
+            <Link href="/how-to-choose-char-dham-tour-operator" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>How to Choose an Operator →</Link>
             <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>View Packages from ₹18,500 →</Link>
           </div>
         </div>

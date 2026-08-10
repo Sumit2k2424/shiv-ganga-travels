@@ -4,7 +4,12 @@ import { SITE } from '@/data/packages';
 export const metadata = {
   title: { absolute: 'How to Reach Haridwar 2026 | Train, Flight & Road Guide' },
   description: 'How to reach Haridwar 2026 — train from Delhi, flight to Dehradun, bus & road routes. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach','jolly grant airport haridwar','dehradun airport haridwar'],
+  // Note: airport-taxi keywords ('jolly grant airport haridwar', 'dehradun
+  // airport haridwar') deliberately live on /dehradun-airport-to-haridwar-taxi
+  // instead. That page owns the transactional intent; this one owns the
+  // informational "how do I get there" intent. Two pages chasing one query
+  // split the signal and both rank worse.
+  keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-haridwar` },
   openGraph: {
     title: 'How to Reach Haridwar for Char Dham Yatra 2026',
@@ -148,7 +153,8 @@ export default function HowToReachHaridwar() {
                 ))}
               </div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)' }}>
-                <strong>Airport → Haridwar:</strong> Prepaid taxi ₹800–1,200 · 35km · approximately 1 hour. Shiv Ganga Travels provides airport pickup from Jolly Grant — included in all packages.
+                <strong>Airport → Haridwar:</strong> 35km, approximately 1 hour. A pre-booked sedan is ₹1,200 fixed; the airport prepaid counter runs ₹1,200–1,450. Full fares, pickup process and fog-season advice on our{' '}
+                <Link href="/dehradun-airport-to-haridwar-taxi" style={{ color:'var(--teal)', fontWeight:600 }}>Dehradun airport to Haridwar taxi page</Link>.
               </div>
             </div>
           </div>
@@ -246,7 +252,7 @@ export default function HowToReachHaridwar() {
         <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Road Status 2026','/char-dham-road-status'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Emergency Contacts','/char-dham-yatra-emergency-contacts']].map(([label,href])=>(
+            {[['Char Dham Road Status 2026','/char-dham-road-status'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['Dehradun Airport to Haridwar Taxi','/dehradun-airport-to-haridwar-taxi'],['Taxi Service in Haridwar','/taxi-service-in-haridwar'],['Har Ki Pauri Guide','/har-ki-pauri-guide']].map(([label,href])=>(
               <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>

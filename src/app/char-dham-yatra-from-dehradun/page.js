@@ -15,7 +15,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-dehradun` },
   openGraph: {
     title: 'Char Dham Yatra from Dehradun 2026 — Road & Helicopter Packages',
-    description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹21,000. Helicopter packages from ₹85,000. Direct operator.',
+    description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹21,000. Helicopter charter ₹2,30,000. Direct operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-dehradun`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
@@ -41,12 +41,12 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'Does the Char Dham Helicopter package depart from Dehradun?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Char Dham Yatra by Helicopter package departs from Sahastradhara Helipad, Dehradun. All 4 dhams are covered in 5N/6D with helicopter flights to Phata/Sersi (Kedarnath), Harsil (Gangotri), Kharsali (Yamunotri), and Badrinath. Price: ₹85,000 per person all-inclusive. Ground transfers within Dehradun are included.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Char Dham Yatra by Helicopter package departs from Sahastradhara Helipad, Dehradun. All 4 dhams are covered in 5N/6D with helicopter flights to Phata/Sersi (Kedarnath), Harsil (Gangotri), Kharsali (Yamunotri), and Badrinath. Price: ₹2,30,000 per person all-inclusive, flown by a DGCA-approved third-party operator. Ground transfers within Dehradun are included.' },
       },
       {
         '@type': 'Question',
         name: 'What is the cost of Char Dham Yatra from Dehradun?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Dehradun starts at ₹21,000 per person (road package, 9N/10D from Haridwar with Dehradun pickup). Helicopter package starts at ₹85,000 per person (5N/6D, all 4 dhams from Sahastradhara Helipad). All packages are zero commission — you pay the operator directly.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra from Dehradun starts at ₹21,000 per person (road package, 9N/10D from Haridwar with Dehradun pickup). The helicopter charter is ₹2,30,000 per person (5N/6D, all 4 dhams from Sahastradhara Helipad) — charter flying is a hard cost, so treat any "helicopter package" quoted near ₹85,000 as a road package with IRCTC tickets bought separately. All packages are zero commission — you pay the operator directly.' },
       },
       {
         '@type': 'Question',
@@ -106,7 +106,7 @@ export default function Page() {
             Char Dham Yatra from Dehradun 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Road packages from <strong style={{ color: '#FFD166' }}>₹21,000</strong> · Helicopter from <strong style={{ color: '#FFD166' }}>₹85,000</strong> · Airport pickup · Zero commission
+            Road packages from <strong style={{ color: '#FFD166' }}>₹21,000</strong> · Helicopter charter <strong style={{ color: '#FFD166' }}>₹2,30,000</strong> · Airport pickup · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
             {['✈️ Jolly Grant Airport pickup', '🚁 Helicopter departs Dehradun', '📍 54km from Haridwar', '⭐ 4.6/5 · 38 reviews'].map(t => (
@@ -144,7 +144,7 @@ export default function Page() {
             ['Airport → Haridwar', '24 km · 40 min'],
             ['Yatra Duration', '9N/10D (road)'],
             ['Road Package From', '₹21,000/person'],
-            ['Helicopter From', '₹85,000/person'],
+            ['Helicopter Charter', '₹2,30,000/person'],
             ['Season 2026', 'Apr 19 – Nov'],
           ].map(([k, v]) => (
             <div key={k}>
@@ -172,7 +172,7 @@ export default function Page() {
             },
             {
               type: '🚁 By Helicopter',
-              price: 'From ₹85,000/person',
+              price: '₹2,30,000/person',
               duration: '5N/6D',
               desc: 'All 4 dhams in 6 days — helicopter departs from Sahastradhara Helipad, Dehradun. Visits all 4 sacred shrines with helicopter landings near each temple. VIP darshan at every stop. Ideal for seniors and those with limited time.',
               badge: 'Premium',
@@ -219,7 +219,7 @@ export default function Page() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { name: 'Char Dham Classic (Road)', duration: '9N/10D', price: '₹21,000', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
-            { name: 'Char Dham by Helicopter', duration: '5N/6D', price: '₹85,000', badge: 'From Dehradun', href: '/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
+            { name: 'Char Dham by Helicopter', duration: '5N/6D', price: '₹2,30,000', badge: 'From Dehradun', href: '/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
             { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹27,999', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
             { name: 'Kedarnath Yatra', duration: '3N/4D', price: '₹6,999', badge: 'Single Dham', href: '/kedarnath-yatra' },
           ].map(pkg => (

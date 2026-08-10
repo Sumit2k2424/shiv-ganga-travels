@@ -190,7 +190,7 @@ export default async function PackageDetailPage({ params }) {
     { mode:'Volvo / AC Bus (overnight)', time:'~6 hrs', cost:'Included in package', note:'Sleep through the journey, arrive Haridwar by 6 AM. Best value for groups.' },
     { mode:'Private Car (Innova/Ertiga)', time:'5–6 hrs', cost:'₹6,500–₹9,000 one way', note:'Door pickup anywhere in Delhi NCR; same vehicle stays for the full yatra.' },
     { mode:'Train (Shatabdi/Jan Shatabdi)', time:'4.5–6 hrs', cost:'₹350–₹1,200/person', note:'Fastest budget option. We receive you at Haridwar station and switch to the 9N/10D plan.' },
-    { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'From ₹85,000 (5N/6D heli)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
+    { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'₹2,30,000 (5N/6D heli charter)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
   const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;

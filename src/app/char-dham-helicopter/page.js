@@ -4,12 +4,12 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Helicopter Package 2026 | Price Starts at ₹85,000 | DGCA Approved' },
-  description: 'Char Dham Helicopter Package 2026 from Dehradun — 5N/6D from ₹85,000/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: 'Char Dham Helicopter Package 2026 | ₹2,30,000 | DGCA Approved' },
+  description: 'Char Dham by helicopter 2026 — 5N/6D from Dehradun, ₹2,30,000/person all-inclusive. DGCA-approved third-party operators, VIP darshan, luxury hotels.',
   keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','DGCA approved char dham helicopter','sahastradhara helipad char dham','char dham helicopter price 2026','char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
   openGraph: { title: 'Char Dham Helicopter Package 2026 — DGCA-Approved, Sahastradhara Dehradun', description:'Char Dham Helicopter Package 2026. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website', images:[{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days | Shiv Ganga Travels' }] },
-  twitter: { card: 'summary_large_image', title: 'Char Dham by Helicopter 2026 — 5N/6D from ₹85,000', description: 'All 4 Char Dhams in 6 days by helicopter. VIP darshan. From Dehradun. Zero commission.', images: [{ url: '/opengraph-image', alt: 'Char Dham Helicopter Package 2026' }] },
+  twitter: { card: 'summary_large_image', title: 'Char Dham by Helicopter 2026 — 5N/6D, ₹2,30,000', description: 'All 4 Char Dhams in 6 days by helicopter. VIP darshan. From Dehradun. Direct booking.', images: [{ url: '/opengraph-image', alt: 'Char Dham Helicopter Package 2026' }] },
 };
 
 function Schema() {
@@ -53,7 +53,7 @@ export default function Page() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>5N/6D · Dehradun base · ₹85,000/person · VIP darshan · Luxury hotels · No queues</p>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>5N/6D · Dehradun base · ₹2,30,000/person · VIP darshan · Luxury hotels · No queues</p>
         </div>
       </section>
 
@@ -73,8 +73,9 @@ export default function Page() {
         <AnswerBox>
           The Char Dham helicopter tour covers all four dhams in 5N/6D from Sahastradhara Helipad,
           Dehradun, with DGCA-approved operators, VIP darshan and luxury hotels — no treks or queues.
-          Packages start from ₹85,000 per person; full all-inclusive Char Dham heli itineraries
-          typically run ₹2,09,000–2,50,000 depending on season, operator and weather.
+          Our all-inclusive charter is ₹2,30,000 per person, which sits inside the ₹2,09,000–2,50,000
+          band this product runs at across the market. Anything advertised near ₹85,000 is a road
+          package with IRCTC shuttle tickets bought separately — a different thing entirely.
         </AnswerBox>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px',marginBottom:'20px'}}>
           <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
@@ -102,7 +103,7 @@ export default function Page() {
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 5N/6D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
             </div>
-            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹85,000</div>
+            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>₹2,30,000</div>
           </Link>
         </div>
 
@@ -159,7 +160,7 @@ export default function Page() {
             { icon:'🏛️', title:'DGCA-Approved Operators Only', body:'All Char Dham helicopter services must be DGCA (Directorate General of Civil Aviation) certified. We only coordinate with licensed operators — verify DGCA certification before booking any heli package. Many online portals use unlicensed resellers.' },
             { icon:'🎒', title:'5 kg Luggage Limit — Strictly Enforced', body:'Each helicopter passenger is allowed maximum 5 kg of luggage. This is strictly weighed and enforced at the helipad. Excess baggage is offloaded. Pack light: 2–3 days of warm clothes, medicines, documents. Ground luggage transfer arrangements can be made for larger bags.' },
             { icon:'⛅', title:'Weather Buffer Day — Essential', body:'Helicopter operations in the Himalayas are entirely weather-dependent. Morning fog, cloud cover, or winds at altitude can ground all flights for a full day. Every itinerary should include at least one buffer day — we build this into our 5N/6D structure. Book return flights one day after the scheduled end of the package.' },
-            { icon:'💰', title:'Price Transparency — No Surprise Extras', body:'Full Char Dham helicopter packages in 2026 range from ₹2.1 lakh to ₹2.5 lakh per person from established operators (helicopter transfer + hotel + meals + VIP darshan). Budget options starting at ₹85,000 cover ground arrangements only — helicopter ticket must be booked separately via IRCTC. We are transparent about what each tier includes.' },
+            { icon:'💰', title:'Price Transparency — No Surprise Extras', body:'Full Char Dham helicopter packages in 2026 run ₹2.09 lakh to ₹2.5 lakh per person across established operators (helicopter charter + hotels + meals + VIP darshan). Ours is ₹2,30,000, inside that band. If you see a "helicopter package" advertised near ₹85,000, it is a road package with IRCTC shuttle tickets bought separately — check what the number actually covers before comparing it with ours. Helicopter charter is a hard cost nobody discounts by 60%.' },
           ].map(item => (
             <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--navy)' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>

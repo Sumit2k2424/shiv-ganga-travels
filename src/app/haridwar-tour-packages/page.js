@@ -239,6 +239,12 @@ export default function HaridwarTourPackages() {
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],
               ['Delhi to Haridwar Cab', '/cabs/delhi-to-haridwar-cab'],
               ['Cost Calculator', '/char-dham-yatra-cost-calculator'],
+              ['Har Ki Pauri Guide', '/har-ki-pauri-guide'],
+              ['Taxi Service in Haridwar', '/taxi-service-in-haridwar'],
+              ['Haridwar to Rishikesh Taxi', '/haridwar-to-rishikesh-taxi'],
+              ['Places to Visit in Haridwar', '/haridwar-sightseeing-places'],
+              ['Mansa Devi Temple', '/mansa-devi-temple'],
+              ['Chandi Devi Temple', '/chandi-devi-temple'],
             ].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}

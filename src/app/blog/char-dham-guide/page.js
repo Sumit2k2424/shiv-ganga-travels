@@ -111,7 +111,7 @@ export default function CharDhamGuide() {
           points={[
             <>Four shrines — <strong>Yamunotri, Gangotri, Kedarnath, Badrinath</strong> — over ~10–12 days and roughly 1,200 km by road.</>,
             <>Go in <strong>May–mid June</strong> or <strong>mid September–October</strong>. Avoid July–August (monsoon, landslides).</>,
-            <>Packages run <strong>₹18,500–₹85,000 per person</strong>, all-inclusive from Haridwar.</>,
+            <>Road packages run <strong>₹18,500–₹45,000 per person</strong> all-inclusive from Haridwar; the helicopter charter from Dehradun is <strong>₹2,30,000</strong>.</>,
             <>Biometric registration is <strong>mandatory</strong> — we handle it for every pilgrim.</>,
             <>Only Kedarnath needs a <strong>16 km trek</strong> (pony or helicopter optional); the other three reach the temple by road.</>,
           ]}
@@ -164,7 +164,7 @@ export default function CharDhamGuide() {
         </ExpertNote>
 
         <h2 id="cost" style={h2}>Char Dham Yatra Cost Breakdown 2026</h2>
-        <p style={p}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹18,500 and ₹85,000 per person</strong> depending on the package type. Here is what is typically included:</p>
+        <p style={p}>A complete Char Dham Yatra package from a reputable operator like Shiv Ganga Travels costs between <strong>₹18,500 and ₹45,000 per person</strong> by road, depending on the package type — the helicopter charter is a separate product at ₹2,30,000. Here is what is typically included:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:10, marginBottom:20 }}>
           {[
             { item:'Hotel Accommodation', type:'Included', note:'All nights, twin sharing' },

@@ -167,7 +167,9 @@ export default function PackageCard({ pkg }) {
         <div className="flex flex-wrap items-end justify-between gap-3 border-t border-slate-200 pt-3">
           <div>
             <div className="text-[11.5px] text-slate-500">
-              <s className="text-rose-600/75">₹{pkg.price.original.toLocaleString('en-IN')}</s>
+              {/* Only show a struck-through price when there is a real saving —
+                  otherwise an undiscounted package renders ₹X crossed out beside ₹X. */}
+              {savings > 0 && <s className="text-rose-600/75">₹{pkg.price.original.toLocaleString('en-IN')}</s>}
               {savings > 0 && (
                 <span className="ml-1.5 font-bold text-emerald-600">
                   Save ₹{savings.toLocaleString('en-IN')}

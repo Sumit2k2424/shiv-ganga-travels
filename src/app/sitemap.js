@@ -96,6 +96,8 @@ export default function sitemap() {
     { url: `${b}/about`,                               p: 0.70, cf: 'monthly' },
     { url: `${b}/contact`,                             p: 0.75, cf: 'monthly' },
     { url: `${b}/cancellation-policy`,                 p: 0.50, cf: 'yearly'  },
+    { url: `${b}/privacy-policy`,                      p: 0.45, cf: 'yearly'  },
+    { url: `${b}/terms-and-conditions`,                p: 0.45, cf: 'yearly'  },
     { url: `${b}/sitemap-page`,                        p: 0.60, cf: 'monthly' },
   ];
 
@@ -184,14 +186,58 @@ export default function sitemap() {
     { url: `${b}/char-dham-yatra-statistics`,                       p: 0.78, cf: 'monthly' },
     { url: `${b}/shiv-ganga-travels-vs-makemytrip-char-dham`,       p: 0.80, cf: 'monthly' },
     { url: `${b}/direct-operator-vs-travel-aggregator-char-dham`,   p: 0.78, cf: 'monthly' },
+    // Tier 3 — comparison and commercial. Bottom-of-funnel: low volume,
+    // high intent, and the existing vs-MakeMyTrip page proves the pattern.
+    { url: `${b}/how-to-choose-char-dham-tour-operator`,            p: 0.86, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-booking-sites-compared`,           p: 0.84, cf: 'monthly' },
+    { url: `${b}/char-dham-helicopter-booking-guide`,               p: 0.85, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-for-temple-groups`,                p: 0.83, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-corporate-booking`,                p: 0.80, cf: 'monthly' },
+    { url: `${b}/shiv-ganga-travels-vs-thrillophilia`,              p: 0.80, cf: 'monthly' },
   ];
 
-  const languagePages = LANGUAGE_PAGES.map(l => ({ url: `${b}/${l.slug}`, p: 0.84, cf: 'monthly' }));
+  // Hindi outranks the other language pages because it is the primary search
+  // language for this pilgrimage, not a regional variant.
+  const languagePages = LANGUAGE_PAGES.map(l => ({
+    url: `${b}/${l.slug}`,
+    p: l.code === 'hi' ? 0.94 : 0.84,
+    cf: l.code === 'hi' ? 'weekly' : 'monthly',
+  }));
+
+  // ── Local Haridwar service pages. These target our own city, where organic
+  // competition is weakest and intent is transactional, so they rank higher
+  // than the 0.78 the auto-discovery fallback would otherwise assign them.
+  const localHaridwar = [
+    { url: `${b}/taxi-service-in-haridwar`,            p: 0.90, cf: 'monthly' },
+    { url: `${b}/haridwar-to-delhi-taxi`,              p: 0.86, cf: 'monthly' },
+    { url: `${b}/dehradun-airport-to-haridwar-taxi`,   p: 0.86, cf: 'monthly' },
+    { url: `${b}/haridwar-to-rishikesh-taxi`,          p: 0.85, cf: 'monthly' },
+    { url: `${b}/har-ki-pauri-guide`,                  p: 0.84, cf: 'monthly' },
+    { url: `${b}/haridwar-sightseeing-places`,         p: 0.86, cf: 'monthly' },
+    { url: `${b}/mansa-devi-temple`,                   p: 0.84, cf: 'monthly' },
+    { url: `${b}/chandi-devi-temple`,                  p: 0.83, cf: 'monthly' },
+    { url: `${b}/daksh-mahadev-temple`,                p: 0.82, cf: 'monthly' },
+    { url: `${b}/maya-devi-temple`,                    p: 0.80, cf: 'monthly' },
+    { url: `${b}/shantikunj-haridwar-guide`,           p: 0.80, cf: 'monthly' },
+  ];
+
+  // ── Winter Char Dham. These carry the off-season, when every Char Dham
+  // page above goes dead from mid-November to late April. Priority is high
+  // because the competition for these queries is close to nonexistent.
+  const winterSeats = [
+    { url: `${b}/winter-char-dham-yatra`,              p: 0.90, cf: 'weekly'  },
+    { url: `${b}/omkareshwar-temple-ukhimath`,         p: 0.86, cf: 'monthly' },
+    { url: `${b}/joshimath-narsingh-temple`,           p: 0.85, cf: 'monthly' },
+    { url: `${b}/kedarnath-doli-yatra`,                p: 0.84, cf: 'monthly' },
+    { url: `${b}/mukhba-gangotri-winter-seat`,         p: 0.83, cf: 'monthly' },
+    { url: `${b}/kharsali-yamunotri-winter-seat`,      p: 0.83, cf: 'monthly' },
+  ];
 
   const listed = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...cities,
     ...authority, ...categoryPages, ...packagePages, ...languagePages,
+    ...localHaridwar, ...winterSeats,
   ];
 
   // ── Safety net: auto-discover every top-level route folder that has a real

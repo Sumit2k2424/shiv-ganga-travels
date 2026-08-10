@@ -47,7 +47,7 @@ function Schema() {
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '18500',
-      highPrice: '85000',
+      highPrice: '230000',
       priceCurrency: 'INR',
       offerCount: '5',
       seller: { '@type': 'Organization', name: SITE.name },
@@ -380,7 +380,7 @@ export default function CharDhamYatra() {
             { tier:'Budget', range:'Rs.21,000', couple:'Rs.42,000', duration:'9N/10D', vehicle:'Swift Dzire', hotel:'Standard lodges', best:'Solo, young pilgrims' },
             { tier:'Deluxe', range:'Rs.30,000', couple:'Rs.60,000', duration:'11N/12D', vehicle:'Innova Crysta', hotel:'2-3 star hotels', best:'Families, seniors' },
             { tier:'Senior Special', range:'Rs.27,999-Rs.32,000', couple:'Rs.56,000-Rs.64,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
-            { tier:'Helicopter', range:'Rs.85,000-Rs.95,000', couple:'Rs.1,70,000-Rs.1,90,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
+            { tier:'Helicopter', range:'Rs.2,30,000', couple:'Rs.4,60,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
           ].map(p => (
             <div key={p.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
               <div style={{ fontWeight:800, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{p.tier}</div>

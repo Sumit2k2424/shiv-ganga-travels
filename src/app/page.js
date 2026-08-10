@@ -196,7 +196,7 @@ function LuxPkgCard({ pkg }) {
 const INTENTS = [
   { icon:'temple', title:'Char Dham Yatra', desc:'All four sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath.', tag:'Most chosen', from:'₹18,500', href:'/char-dham-yatra' },
   { icon:'mountain', title:'Kedarnath Yatra', desc:'Three nights, four days — Lord Shiva’s abode at 3,583 m.', tag:'Shortest trip', from:'₹6,999', href:'/kedarnath-yatra' },
-  { icon:'helicopter', title:'Helicopter Package', desc:'All four dhams in six days — for seniors and VIP darshan.', tag:'Premium', from:'₹85,000', href:'/char-dham-helicopter' },
+  { icon:'helicopter', title:'Helicopter Package', desc:'All four dhams in six days — for seniors and VIP darshan.', tag:'Premium', from:'₹2,30,000', href:'/char-dham-helicopter' },
   { icon:'car', title:'Just the Cab', desc:'Vehicle only — Innova, Ertiga or Tempo from Haridwar.', tag:'Cab only', from:'₹5,500', href:'/char-dham-yatra-cab-booking' },
 ];
 

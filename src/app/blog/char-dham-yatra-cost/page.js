@@ -12,7 +12,7 @@ export const metadata = {
   description: 'Char Dham Yatra cost 2026 — full per-person breakdown, no hidden costs. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra cost 2026', 'char dham yatra total cost per person', 'char dham yatra package price 2026', 'char dham yatra budget breakdown', 'kedarnath pony cost 2026', 'char dham helicopter cost 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
-  openGraph: { title: 'Char Dham Yatra Cost 2026: Full Per-Person Breakdown', description: 'Char Dham Yatra cost 2026 per person: budget ₹18,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter ₹1.5L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.', url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article' },
+  openGraph: { title: 'Char Dham Yatra Cost 2026: Full Per-Person Breakdown', description: 'Char Dham Yatra cost 2026 per person: budget ₹18,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter charter ₹2.09L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.', url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown (Every Rupee) | Shiv Ganga Travels' }],
 };
 
@@ -111,7 +111,7 @@ export default function CharDhamCost() {
                 ['Standard 9N/10D','₹18,500','Shared Tempo Traveller','Budget/standard hotels','Breakfast + dinner'],
                 ['Deluxe 11N/12D','₹30,000','Private AC Innova Crysta','3-star hotels, better rooms','Breakfast + dinner'],
                 ['Senior Special 12N/13D','₹27,999','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Kedarnath'],
-                ['Helicopter 5N/6D','₹85,000','Helicopter (Sahastradhara)','3-star hotels throughout','Breakfast + dinner + VIP darshan all 4 dhams'],
+                ['Helicopter 5N/6D','₹2,30,000','Helicopter charter (Sahastradhara)','Luxury hotels throughout','All meals + VIP darshan all 4 dhams'],
               ].map(([pkg,price,vehicle,hotel,meals],i) => (
                 <tr key={pkg} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)' }}>{pkg}</td>
@@ -232,9 +232,9 @@ export default function CharDhamCost() {
             },
             {
               title: '🚁 Premium helicopter',
-              total: '₹88,000–₹95,000',
+              total: '₹2,37,000',
               color: '#0F2B5B',
-              breakdown: ['Helicopter package 5N/6D: ₹85,000', 'Flight to Dehradun: ₹4,000', 'Registration: FREE (₹0)', 'Personal expenses: ₹3,000', 'All 4 dhams in 6 days', 'VIP darshan included'],
+              breakdown: ['Helicopter charter 5N/6D: ₹2,30,000', 'Flight to Dehradun: ₹4,000', 'Registration: FREE (₹0)', 'Personal expenses: ₹3,000', 'All 4 dhams in 6 days', 'VIP darshan included'],
               note: 'Complete helicopter package. All 4 dhams by air from Sahastradhara Helipad, Dehradun. 6 days total.',
             },
           ].map(({ title, total, color, breakdown, note }) => (

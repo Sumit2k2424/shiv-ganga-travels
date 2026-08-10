@@ -1,3 +1,12 @@
+// PRICES HERE MUST MATCH src/data/packages.js — this bot is a live sales
+// surface and a stale figure here is a wrong quote to a real customer.
+//
+// Aug 2026 audit: the bot was quoting ₹85,000 for the Char Dham helicopter
+// (now ₹2,30,000) and ₹28,000 for the same-day Do Dham charter (now
+// ₹1,25,000) — the latter a number that appeared nowhere else on the site.
+// Both were corrected against packages.js and confirmed by the owner.
+// When a package price changes, change it here in the same commit.
+
 // ================================================================
 // CHAT BOT CONFIGURATION — SHIV GANGA TRAVELS
 // ================================================================
@@ -38,13 +47,13 @@ export const CUSTOM_QA = [
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
   {
     keywords: ['price','cost','rate','charge','fee','kitna','how much','budget','affordable','cheap','expensive','tariff'],
-    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,999 · 2N/3D\n• Gangotri — ₹5,699 · 2N/3D\n• Kedarnath — ₹6,999 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹9,499 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹18,500 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹27,999 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹85,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
+    answer: `**Package Prices 2026 — All Inclusive:**\n\n🙏 **Single Dham** (1 shrine)\n• Yamunotri — ₹5,999 · 2N/3D\n• Gangotri — ₹5,699 · 2N/3D\n• Kedarnath — ₹6,999 · 3N/4D\n• Badrinath — ₹5,999 · 2N/3D\n\n🕌 **Do Dham** (2 shrines)\n• Kedarnath + Badrinath — ₹10,999 · 5N/6D\n• Yamunotri + Gangotri — ₹9,499 · 4N/5D\n\n🏔️ **Char Dham** (all 4)\n• Classic — ₹18,500 · 9N/10D\n• Deluxe — ₹30,000 · 11N/12D\n• Senior Special — ₹27,999 · 12N/13D\n\n🚁 **Helicopter Char Dham** — ₹2,30,000 · 5N/6D\n\nAll prices are **per person**, fully inclusive. Zero commission. 📞 +91-7817996730`,
   },
 
   // ── 3. CHAR DHAM OVERVIEW ────────────────────────────────────
   {
     keywords: ['char dham','chardham','4 dham','four dham','all four','all 4'],
-    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹18,500/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹27,999/person\n• Helicopter 5N/6D — ₹85,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
+    answer: `**Char Dham Yatra** — the holiest Hindu pilgrimage:\n\n🌊 **Yamunotri** (3,291m) — Goddess Yamuna · source of Yamuna river\n🌿 **Gangotri** (3,415m) — source of River Ganga · Bhagirathi gorge\n🏔️ **Kedarnath** (3,583m) — Lord Shiva · 12th Jyotirlinga\n🕌 **Badrinath** (3,133m) — Lord Vishnu · one of the 108 Divya Desams\n\nDone in clockwise order: Yamunotri → Gangotri → Kedarnath → Badrinath\n\n**Our Char Dham Packages:**\n• Classic 9N/10D — ₹18,500/person\n• Deluxe 11N/12D — ₹30,000/person\n• Senior Special 12N/13D — ₹27,999/person\n• Helicopter 5N/6D — ₹2,30,000/person\n\nWant more details? WhatsApp us! 📞 +91-7817996730`,
   },
 
   // ── 4. BEST TIME TO VISIT ────────────────────────────────────
@@ -80,7 +89,7 @@ export const CUSTOM_QA = [
   // ── 9. HELICOPTER PACKAGES ───────────────────────────────────
   {
     keywords: ['helicopter','heli','copter','aerial','fly','flight','air'],
-    answer: `🚁 **Helicopter Yatra Packages:**\n\n**Char Dham Helicopter** — ₹85,000/person (5N/6D)\n• Departs: Dehradun (Sahastradhara helipad)\n• All 4 dhams by air — Yamunotri, Gangotri, Kedarnath, Badrinath\n• VIP darshan at all shrines\n• Luxury hotels, all meals included\n• Best for: busy professionals, senior pilgrims\n\n**Do Dham Helicopter Same Day** — ₹28,000/person\n• Kedarnath + Badrinath in one day!\n• Departs from Phata/Sersi helipad\n• Back by evening\n\n**Kedarnath Only Helicopter** — ₹7,500–9,500 round trip\n• Available from Phata, Sersi, Guptkashi helipads\n• 7–10 minute flight each way\n\n⚠️ **Book 90+ days in advance** — helicopter slots sell out fast in peak season! 📞 +91-7817996730`,
+    answer: `🚁 **Helicopter Yatra Packages:**\n\n**Char Dham Helicopter** — ₹2,30,000/person (5N/6D)\n• Departs: Dehradun (Sahastradhara helipad)\n• All 4 dhams by air — Yamunotri, Gangotri, Kedarnath, Badrinath\n• VIP darshan at all shrines\n• Luxury hotels, all meals included\n• Best for: busy professionals, senior pilgrims\n\n**Do Dham Helicopter Same Day** — ₹1,25,000/person\n• Kedarnath + Badrinath in one day!\n• Departs Dehradun (Sahastradhara helipad)\n• VIP darshan at both temples, pujari, lunch\n• Back by evening\n\n**Kedarnath Only Helicopter** — ₹7,500–9,500 round trip\n• Available from Phata, Sersi, Guptkashi helipads\n• 7–10 minute flight each way\n\n⚠️ **Book 90+ days in advance** — helicopter slots sell out fast in peak season! 📞 +91-7817996730`,
   },
 
   // ── 10. WHAT IS INCLUDED ─────────────────────────────────────
@@ -250,7 +259,7 @@ Key facts:
 - Location: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410
 - Speciality: Char Dham Yatra, Uttarakhand tours
 - All packages are zero-commission, all-inclusive (hotel + meals + transport + guide)
-- Prices: Single dham from ₹5,699, Do Dham from ₹9,499, Char Dham from ₹18,500, Helicopter ₹85,000
+- Prices: Single dham from ₹5,699, Do Dham from ₹9,499, Char Dham from ₹18,500, Helicopter charter ₹2,30,000
 - Working hours: 7 AM - 9 PM IST, WhatsApp 24/7
 
 Rules:
