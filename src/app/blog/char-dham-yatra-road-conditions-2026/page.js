@@ -37,6 +37,10 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />;
 }
 
+// Road bulletin is re-verified on its own cadence, ahead of the site-wide SITE.lastUpdated.
+const ROAD_UPDATED = 'August 10, 2026';
+const ROAD_UPDATED_ISO = '2026-08-10';
+
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.15rem,2.5vw,1.4rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };
 const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
@@ -45,16 +49,16 @@ export default function RoadConditions() {
   const routes = [
     {
       route: 'Haridwar → Barkot (Yamunotri route)', highway: 'NH7 + Yamuna Valley Road', dist: '210 km',
-      status: 'Good', statusColor: '#15803D', statusBg: '#EAF3DE',
+      status: 'Open — monsoon caution', statusColor: '#B45309', statusBg: '#FFFBEB',
       desc: 'NH7 from Haridwar to Vikasnagar/Barkot is a well-maintained highway. Road narrows significantly after Barkot. The final 30km before Janki Chatti (Yamunotri base) is a narrow mountain road with some blind curves. NHAI has been widening this stretch — some construction zones with 10–15 minute delays possible.',
-      caution: 'Monsoon (July–August): this route has moderate landslide risk around the Dharasu Bend area. Check BRO/NHAI updates if traveling in July–August.',
+      caution: 'Monsoon (July–August): the most closure-prone of the four. NH-134 was blocked twice on August 6, 2026 — near Silai Bend in the Durbil area and near Silaiband at Syanachatti — both cleared the same day. Dharasu Bend is the other chronic spot. Check BRO/NHAI updates and keep a buffer day.',
       tip: 'From Janki Chatti, private vehicles cannot go further — the 6km trek begins here. Official shared jeeps run from Sankri Road to Janki Chatti.',
     },
     {
       route: 'Uttarkashi → Gangotri', highway: 'NH108', dist: '100 km',
-      status: 'Good (post-monsoon)', statusColor: '#15803D', statusBg: '#EAF3DE',
+      status: 'Open — rain delays possible', statusColor: '#B45309', statusBg: '#FFFBEB',
       desc: 'NH108 from Uttarkashi to Gangotri is mostly single-lane mountain road along the Bhagirathi. The road is well maintained by BRO (Border Roads Organisation) as this is also the route to the Gangotri glacier research stations. Several small bridges en route — heavy vehicles are restricted beyond Gangotri town.',
-      caution: 'Above Harsil (18km before Gangotri), the road becomes more exposed to rockfall. Avoid stopping in marked rockfall zones. The 10 PM–4 AM vehicle movement ban applies here.',
+      caution: 'Above Harsil (18km before Gangotri), the road becomes more exposed to rockfall. Avoid stopping in marked rockfall zones. NH-34 was blocked near Dharasu Nalu Pani on August 6, 2026 and reopened near Papdagad for small vehicles first, with heavy vehicles following — so a car clears these stretches well before a bus does. The 10 PM–4 AM vehicle movement ban applies here.',
       tip: 'Gangotri is at 3,048m. The road ends at the temple parking area. No vehicles beyond the main temple gate. The Gangotri Glacier (Gomukh source, 19km further) requires a separate trek permit.',
     },
     {
@@ -62,13 +66,13 @@ export default function RoadConditions() {
       status: 'Restricted (Sonprayag barrier)', statusColor: '#D85A30', statusBg: '#FCEBEB',
       desc: 'Private vehicles are not permitted beyond the Sonprayag checkpost. All pilgrims park at Sonprayag (free GMVN parking) and take government-run shared jeeps to Gaurikund (₹50/person, 5km). From Gaurikund, only foot/pony/helicopter. The Sonprayag–Gaurikund road is a narrow single-lane mountain road maintained for the shared jeep service.',
       caution: 'This is the most congested point in the entire Char Dham circuit during peak season. Arrive at Sonprayag before 7 AM to avoid 1–2 hour queues for the shared jeep. The checkpost also does SpO2 screening — carry your pulse oximeter.',
-      tip: 'Some operators park at Sitapur or Phata (cheaper parking) instead of Sonprayag. Phata has the Phata Helipad if you plan helicopter. Sonprayag is closer to Gaurikund.',
+      tip: 'Some operators park at Sitapur or Phata (cheaper parking) instead of Sonprayag; Sonprayag is closer to Gaurikund. Note the Phata helipad is not an option at the moment — Kedarnath helicopter services have been suspended since July 1, 2026 for the monsoon under DGCA guidance, with operators returned to base. Plan on the trek, pony or palki until they resume.',
     },
     {
       route: 'Joshimath → Badrinath', highway: 'NH58', dist: '46 km',
       status: 'Good (monitored)', statusColor: '#0C447C', statusBg: '#EEF6FF',
       desc: 'NH58 from Joshimath to Badrinath is a well-maintained NHAI highway in most sections. The Joshimath land subsidence crisis (2023) affected the town but the highway through and beyond is stable. Regular monitoring by Joshimath Disaster Management Authority. Road from Vishnuprayag onwards follows the Alaknanda gorge — spectacular but narrow in sections.',
-      caution: 'Joshimath subsidence: as of 2026, the situation in Joshimath town is stable but monitored. The highway through Joshimath is open and functional. The area near Niti Valley and some old residential sections remain restricted.',
+      caution: 'Joshimath subsidence: as of 2026, the situation in Joshimath town is stable but monitored. The highway through Joshimath is open and functional. The area near Niti Valley and some old residential sections remain restricted. Separately, debris blocked the highway near Helang on August 6, 2026 and the Chamoli administration asked people to avoid the stretch until it was cleared — Helang, Patalganga, Tangni, Lambagad and Pipalkoti are the recurring boulder-fall points in heavy rain.',
       tip: 'From Mana Village (3km beyond Badrinath temple, 3,219m), the road ends at the Indo-Tibet border. This is the highest accessible point by road on the Char Dham circuit. A short walk gives you views of the Saraswati river source.',
     },
   ];
@@ -79,11 +83,11 @@ export default function RoadConditions() {
       <ReadingProgress/>
 
       <BlogHero
-        badge={`Updated ${SITE.lastUpdated} · Routes Open`}
+        badge={`Updated ${ROAD_UPDATED} · Routes Open`}
         title="Char Dham Yatra Road Conditions 2026"
         dek="Current status of all 4 routes, landslide-prone zones, All-Weather Road project update, Joshimath situation, and mountain driving rules."
         author="Sumit Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${ROAD_UPDATED}`}
         readTime="7 min read"
         facts={[
           { label:'All 4 routes', value:'Open' },
@@ -104,11 +108,11 @@ export default function RoadConditions() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": "2026-07-30", "lang": "en-IN"}} />
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Monsoon Season — All Routes Open, Travel With Caution</div>
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": ROAD_UPDATED_ISO, "lang": "en-IN"}} />
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {ROAD_UPDATED} · Monsoon Season — All Routes Open, Travel With Caution</div>
 
         <div style={{ background: '#FFF8ED', border: '1px solid #F5D9A8', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#9A6B1F' }}>
-          <strong>Monsoon Status ({SITE.lastUpdated}):</strong> All four routes reopened at 6 AM today after a two-day administrative pause (July 28–29) triggered by fresh landslides — including a blockage on the Badrinath highway near Bhanerpani (Pipalkoti, Chamoli) and on the Pokhari–Rudraprayag link road. The monsoon remains active, so short, rain-triggered blockages that clear within hours are still likely, and Kedarnath helicopter services pause during poor visibility. Night driving is banned 10 PM–4 AM on all Char Dham routes. Verify conditions the morning you travel — police helpline 112 / 1070, or check our <Link href="/char-dham-road-status" style={{ color:'#9A6B1F', fontWeight:700 }}>live road status page</Link>, and read our <Link href="/blog/char-dham-monsoon-safety" style={{ color:'#9A6B1F', fontWeight:700 }}>monsoon safety guide</Link> for how we plan departures around the rain.
+          <strong>Monsoon Status ({ROAD_UPDATED}):</strong> All four routes are open and the yatra has run without a state-wide halt since the two-day pause of July 28–29 — but August has been wet. On August 6, debris blocked the Badrinath highway near Helang (Chamoli), the Gangotri highway (NH-34) near Dharasu Nalu Pani, and the Yamunotri highway (NH-134) near Silai Bend and at Syanachatti; crews cleared all three the same day. An IMD alert covering ten districts, including Uttarkashi, Chamoli and Rudraprayag, runs through August 10. Kedarnath helicopter services have been suspended since July 1 for the monsoon under DGCA guidance, so plan on the trek, pony or palki. Night driving is banned 10 PM–4 AM on all Char Dham routes. Verify conditions the morning you travel — police helpline 112 / 1070, or check our <Link href="/char-dham-road-status" style={{ color:'#9A6B1F', fontWeight:700 }}>live road status page</Link>, and read our <Link href="/blog/char-dham-monsoon-safety" style={{ color:'#9A6B1F', fontWeight:700 }}>monsoon safety guide</Link> for how we plan departures around the rain.
         </div>
 
         <p style={p}>Mountain roads are fundamentally different from plains highways. Char Dham routes cross geological zones with active seismicity, heavy snowmelt in spring, and monsoon-triggered landslides in July–August. Understanding the current conditions and the specific hazard zones on each route is essential for safe travel. Below is the 2026 status for each route compiled from BRO (Border Roads Organisation) updates, NHAI bulletins, and our own driver reports.</p>
@@ -177,6 +181,7 @@ export default function RoadConditions() {
           {[
             { source: 'NHAI Helpline', detail: '1033 — National Highways Authority helpline for road status queries on NH58 and NH108.' },
             { source: 'BRO Road Status', detail: 'BRO (Border Roads Organisation) maintains the Gangotri and Yamunotri routes. Check bro.gov.in or call local BRO office in Uttarkashi.' },
+            { source: 'Uttarakhand SDMA', detail: 'usdma.uk.gov.in carries the state road-status link and the State Emergency Operation Centre. SEOC helpline 1070 is the fastest read on a live closure.' },
             { source: 'Uttarakhand Police Twitter/X', detail: '@uttarakhandpolice posts real-time road closure updates during landslides and events.' },
             { source: 'WhatsApp our drivers', detail: 'Our Haridwar-based drivers get direct updates from the mountains. WhatsApp us the morning before any stretch — we confirm conditions from our own vehicle network on route.' },
           ].map(item => (
