@@ -95,7 +95,7 @@ export default function HowToChooseOperator() {
 
         <H2>The Twelve Checks</H2>
         {CHECKS.map(([q, why, ours], i) => (
-          <div key={q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
+          <div key={q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
             <div style={{ display:'flex', gap:12, marginBottom:8 }}>
               <span style={{ background:'var(--navy)', color:'#fff', width:24, height:24, borderRadius:100, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:700, flexShrink:0 }}>{i+1}</span>
               <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)' }}>{q}</div>

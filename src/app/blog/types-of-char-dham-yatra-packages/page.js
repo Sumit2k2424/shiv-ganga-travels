@@ -104,7 +104,7 @@ export default function PackageTypes() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -183,7 +183,7 @@ export default function PackageTypes() {
                 ['Yamunotri trek', 'Walking/pony', 'Walking/pony', 'Pony', '🚁 Helicopter'],
                 ['Best for', 'Young/solo', 'Families', 'NRIs/seniors', '70+/limited time'],
               ].map(([feat, ...vals], i) => (
-                <tr key={feat} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={feat} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '8px 12px', fontWeight: 600, color: 'var(--navy)', fontSize: 13 }}>{feat}</td>
                   {vals.map((v, j) => (
                     <td key={j} style={{ padding: '8px 12px', color: '#475569', fontSize: 13 }}>{v}</td>
@@ -206,7 +206,7 @@ export default function PackageTypes() {
             { condition: 'You are an NRI with only 12 days total including travel from UK/US', answer: '→ Premium or Helicopter. No margin for logistics failures on a short international trip.' },
             { condition: 'You want the cheapest possible option for spiritual yatra', answer: '→ Budget. The Ganga Aarti, Mahabhishek, and darshan at all 4 dhams are identical across all tiers.' },
           ].map(item => (
-            <div key={item.condition} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid var(--border)' }}>
+            <div key={item.condition} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontSize: 13.5, color: '#334155', marginBottom: 4 }}><strong>If:</strong> {item.condition}</div>
               <div style={{ fontSize: 13.5, color: 'var(--navy)', fontWeight: 600 }}>{item.answer}</div>
             </div>
@@ -223,11 +223,11 @@ export default function PackageTypes() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Budget vs Premium', '/blog/char-dham-yatra-budget-vs-premium'], ['Senior Citizen Guide', '/blog/senior-citizen-char-dham'], ['Helicopter Package', '/char-dham-helicopter'], ['Best Time to Visit', '/blog/best-time-char-dham']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

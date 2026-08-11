@@ -210,7 +210,7 @@ export default function RegistrationBlog() {
       />
 
       {/* Author + freshness strip */}
-      <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', display:'flex', gap:20, flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', fontSize:12.5, color:'var(--text-muted)' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>By Dhanesh Chandra Mishra</strong> — Founder, Shiv Ganga Travels · Retd. Indian Army Officer · 15 years, 50,000+ pilgrims</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> May 9, 2026 · Verified for current season — fee confirmed FREE</span>
@@ -218,7 +218,7 @@ export default function RegistrationBlog() {
       </div>
 
       {/* Breadcrumb */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -290,7 +290,7 @@ export default function RegistrationBlog() {
               ['2️⃣','Daily limit enforcement','Each dham has a maximum daily capacity. Registration allows the government to enforce these limits and prevent dangerous overcrowding.'],
               ['3️⃣','Medical screening','Pilgrims above 55 must submit a medical certificate. Registration creates a health record that helps emergency responders.'],
             ].map(([icon, title, desc]) => (
-              <div key={title} style={{ display:'flex', gap:12, padding:'14px 16px', background:'var(--bg)', borderRadius:10, border:'1px solid var(--border)' }}>
+              <div key={title} style={{ display:'flex', gap:12, padding:'14px 16px', background:'var(--bg)', borderRadius:10, border:'1px solid hsl(var(--border))' }}>
                 <span style={{ fontSize:20, flexShrink:0 }}>{icon}</span>
                 <div>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{title}</div>
@@ -324,7 +324,7 @@ export default function RegistrationBlog() {
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:8 }}>📋 What is the e-Pass called? (All names for the same document)</div>
             <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
               {['Yatra e-Pass','Yatra Parchi','Yatra Permit','Registration Card','Registration Letter','QR Code Slip'].map(n => (
-                <span key={n} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'4px 12px', borderRadius:20, fontSize:12.5, fontWeight:600 }}>{n}</span>
+                <span key={n} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'4px 12px', borderRadius:20, fontSize:12.5, fontWeight:600 }}>{n}</span>
               ))}
             </div>
             <p style={{ fontSize:13, color:'var(--text-muted)', margin:'10px 0 0', lineHeight:1.6 }}>
@@ -340,7 +340,7 @@ export default function RegistrationBlog() {
               { num:'40% Offline', label:'Slots for walk-in offline centres', icon:'🏢' },
               { num:'24×7 Open', label:'Centres in first 15 days of season', icon:'🕐' },
             ].map(s => (
-              <div key={s.label} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'14px', textAlign:'center' }}>
+              <div key={s.label} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'14px', textAlign:'center' }}>
                 <div style={{ fontSize:18, marginBottom:4 }}>{s.icon}</div>
                 <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)', fontFamily:'var(--font-display)' }}>{s.num}</div>
                 <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:4, lineHeight:1.4 }}>{s.label}</div>
@@ -356,7 +356,7 @@ export default function RegistrationBlog() {
               { icon:'📲', method:'Mobile App', detail:'"Tourist Care Uttarakhand" — available on Google Play Store and Apple App Store. Can register and re-download permit anytime.', badge:'Handy on journey' },
               { icon:'🏢', method:'Offline Centre', detail:'Walk-in registration at Haridwar, Rishikesh, Dehradun, and at each dham base. Bring original Aadhaar.', badge:'No internet needed' },
             ].map(m => (
-              <div key={m.method} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+              <div key={m.method} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:6 }}>
                   <span style={{ fontSize:22 }}>{m.icon}</span>
                   <span style={{ fontSize:10.5, fontWeight:700, background:'rgba(11,123,139,0.1)', color:'var(--teal)', padding:'2px 8px', borderRadius:20 }}>{m.badge}</span>
@@ -379,7 +379,7 @@ export default function RegistrationBlog() {
               { n:'05', title:'Upload medical certificate (if 55+)', desc:'If any group member is aged 55 years or above, upload a scanned copy of the medical fitness certificate from a registered MBBS doctor. The certificate must confirm fitness for high-altitude travel.' },
               { n:'06', title:'Download and print your yatra permit', desc:'After successful submission, download your Char Dham Yatra Permit as a PDF. Print it and carry it throughout the journey. Also save a digital copy on your phone. It will be checked at checkpoints before each dham.' },
             ].map(s => (
-              <div key={s.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+              <div key={s.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ background:'var(--navy)', minWidth:52, display:'flex', alignItems:'center', justifyContent:'center', padding:'16px 12px' }}>
                   <span style={{ color:'#FFD166', fontWeight:800, fontSize:18, fontFamily:'var(--font-display)' }}>{s.n}</span>
                 </div>
@@ -413,7 +413,7 @@ export default function RegistrationBlog() {
                   ['Sonprayag','Tourist Care Counter','Kedarnath base — register before the Sonprayag checkpoint.'],
                   ['Joshimath','Tourist Care Centre','Badrinath base — register before the Joshimath checkpoint.'],
                 ].map(([loc, addr, tip], i) => (
-                  <tr key={loc} style={{ background:i%2===0?'#fff':'var(--bg)', borderBottom:'1px solid var(--border)' }}>
+                  <tr key={loc} style={{ background:i%2===0?'#fff':'var(--bg)', borderBottom:'1px solid hsl(var(--border))' }}>
                     <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{loc}</td>
                     <td style={{ padding:'10px 14px', color:'var(--text-muted)', fontSize:13 }}>{addr}</td>
                     <td style={{ padding:'10px 14px', color:'var(--text-muted)', fontSize:13 }}>{tip}</td>
@@ -433,7 +433,7 @@ export default function RegistrationBlog() {
               { icon:'🚨', title:'Emergency Contact', note:'Name and mobile number of a family member not travelling with you.' },
               { icon:'🛂', title:'Passport (Foreign Nationals)', note:'Foreign passport holders must also complete Char Dham registration. Passport number is used instead of Aadhaar.' },
             ].map(d => (
-              <div key={d.title} style={{ padding:'14px', background:'var(--bg)', borderRadius:10, border:'1px solid var(--border)', display:'flex', gap:12 }}>
+              <div key={d.title} style={{ padding:'14px', background:'var(--bg)', borderRadius:10, border:'1px solid hsl(var(--border))', display:'flex', gap:12 }}>
                 <span style={{ fontSize:22, flexShrink:0, marginTop:2 }}>{d.icon}</span>
                 <div>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{d.title}</div>
@@ -519,7 +519,7 @@ export default function RegistrationBlog() {
           <p>Foreign nationals, NRIs, and Persons of Indian Origin (PIOs/OCI card holders) can complete Char Dham Yatra. Here is what is different for international pilgrims:</p>
 
           {/* NRI-specific callout */}
-          <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:16, border:'1px solid var(--border)' }}>
+          <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:16, border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:10 }}>🌏 NRI / Overseas Indian Checklist</div>
             {[
               'Have Aadhaar? Use it — process is exactly the same as domestic registration.',
@@ -549,7 +549,7 @@ export default function RegistrationBlog() {
             'Helicopter bookings via IRCTC (heliyatra.irctc.co.in) require a valid Indian phone number — international pilgrims should purchase a local SIM before booking',
             'Some hotels close to the dhams may request passport copy at check-in — carry photocopies',
           ].map(r => (
-            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#4A5568', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#4A5568', padding:'7px 0', borderBottom:'1px solid hsl(var(--border))' }}>
               <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span> {r}
             </div>
           ))}
@@ -568,7 +568,7 @@ export default function RegistrationBlog() {
               { icon:'🔒', problem:'Forgot password / can\'t log back in', fix:'Use the "Forgot Password" link on the login page — OTP will be sent to your registered mobile. If your registered number is no longer active, visit an offline centre at Haridwar or Rishikesh with your Aadhaar — they can help reset or re-register.', alt:'' },
               { icon:'❓', problem:'Registration submitted but no confirmation received', fix:'Check your SMS inbox for the confirmation message. Log back into the portal with your mobile number and check "My Registrations" — your permit PDF will be there. If nothing shows, call the helpline: 0135-1364.', alt:'' },
             ].map(e => (
-              <div key={e.problem} style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', padding:'16px 18px' }}>
+              <div key={e.problem} style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', padding:'16px 18px' }}>
                 <div style={{ display:'flex', gap:10, alignItems:'flex-start', marginBottom:8 }}>
                   <span style={{ fontSize:20, flexShrink:0 }}>{e.icon}</span>
                   <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{e.problem}</div>
@@ -593,7 +593,7 @@ export default function RegistrationBlog() {
               { num:'04', mistake:'Not carrying physical copy', fix:'A screenshot on your phone may not be accepted if connectivity is poor at mountain checkpoints. Always print a physical copy.' },
               { num:'05', mistake:'Not uploading medical certificate for 55+', fix:'Without the medical certificate, 55+ pilgrims will be turned back at the checkpoint regardless of their yatra permit. Get the certificate from a doctor at least 1 week before registration.' },
             ].map(e => (
-              <div key={e.num} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+              <div key={e.num} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ background:'#DC2626', minWidth:52, display:'flex', alignItems:'center', justifyContent:'center', padding:'16px 12px' }}>
                   <span style={{ color:'#fff', fontWeight:800, fontSize:16 }}>{e.num}</span>
                 </div>
@@ -615,7 +615,7 @@ export default function RegistrationBlog() {
             'If daily limits are hit at a checkpoint, our drivers know alternate timing strategies and holding points',
             'We monitor the official Char Dham daily count portal and alert groups in advance',
           ].map(r => (
-            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#334155', padding:'7px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={r} style={{ display:'flex', gap:8, fontSize:15, color:'#334155', padding:'7px 0', borderBottom:'1px solid hsl(var(--border))' }}>
               <span style={{ color:' var(--navy)', fontWeight:700, flexShrink:0 }}>✓</span> {r}
             </div>
           ))}
@@ -639,11 +639,11 @@ export default function RegistrationBlog() {
               ['What if I lose my yatra permit during the journey?', 'Log back into the portal or the Tourist Care Uttarakhand app and re-download the PDF. This is why you should register with your own mobile number — so you can always recover the permit yourself, even in the mountains.'],
               ['Does registration guarantee darshan on my chosen dates?', 'Registration allows you past the checkpoint. It does not guarantee entry if the daily cap is already reached. In peak May–June, Kedarnath and Badrinath dates fill fast. An experienced operator who monitors daily counts and adjusts your departure timing is your best protection against arriving at the checkpoint with a valid permit but a full dham.'],
                         ].map(([q, a], i) => (
-              <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden' }}>
+              <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
                 <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', display:'flex', justifyContent:'space-between', alignItems:'center', fontWeight:600, fontSize:14, color:'var(--navy)' }}>
                   {q} <span style={{ flexShrink:0, fontSize:18, color:'var(--navy)' }}>＋</span>
                 </summary>
-                <div style={{ padding:'0 16px 14px', fontSize:15.5, color:'#2D3748', lineHeight:1.75, borderTop:'1px solid var(--border)', paddingTop:12 }}>{a}</div>
+                <div style={{ padding:'0 16px 14px', fontSize:15.5, color:'#2D3748', lineHeight:1.75, borderTop:'1px solid hsl(var(--border))', paddingTop:12 }}>{a}</div>
               </details>
             ))}
           </div>
@@ -674,7 +674,7 @@ export default function RegistrationBlog() {
         </div>
 
         {/* Related links */}
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:14 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -685,7 +685,7 @@ export default function RegistrationBlog() {
               ['Kedarnath Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
             ].map(([label, href]) => (
               <Link key={href} href={href}
-                style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+                style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

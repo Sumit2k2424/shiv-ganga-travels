@@ -68,7 +68,7 @@ export default function CharDhamRegistrationHindi() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
@@ -98,7 +98,7 @@ export default function CharDhamRegistrationHindi() {
             { icon:'💬', title:'WhatsApp से', sub:'8394833833 पर "Hi" भेजें', link:'फिर निर्देश आएंगे', color:'#25D366' },
             { icon:'🏛️', title:'केंद्र पर', sub:'हरिद्वार / ऋषिकेश', link:'बायोमेट्रिक केंद्र', color:'#533AB7' },
           ].map(({ icon, title, sub, link, color }) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)', borderTop: `3px solid ${color}` }}>
+            <div key={title} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', borderTop: `3px solid ${color}` }}>
               <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 4 }}>{title}</div>
               <div style={{ fontSize: 12.5, color: '#475569', marginBottom: 4 }}>{sub}</div>
@@ -116,7 +116,7 @@ export default function CharDhamRegistrationHindi() {
         <h2 id="website-steps" style={h2}>Website से रजिस्ट्रेशन — 9 Steps</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {steps.map(([title, detail], i) => (
-            <div key={i} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={i} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ width: 36, height: 36, borderRadius: '50%', background: i === 8 ? '#1D9E75' : 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFD166', fontWeight: 800, fontSize: 14, flexShrink: 0 }}>
                 {i === 8 ? '✓' : i + 1}
               </div>
@@ -140,7 +140,7 @@ export default function CharDhamRegistrationHindi() {
                 ['Medical Certificate','✅ 55+ के लिए अनिवार्य','डॉक्टर से बनवाएं'],
                 ['Voter ID / PAN','❌ नहीं','Aadhaar काफी है'],
               ].map(([doc,req,note],i) => (
-                <tr key={doc} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={doc} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)' }}>{doc}</td>
                   <td style={{ padding:'9px 12px', color: req.includes('✅')?'#1D9E75':'#D85A30', fontWeight:700 }}>{req}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{note}</td>
@@ -161,7 +161,7 @@ export default function CharDhamRegistrationHindi() {
             ['क्या एक Registration पूरी family के लिए?','हाँ — एक में 10 लोगों तक जोड़ सकते हैं।'],
             ['एजेंट पैसे माँगें तो?','मना करें। रजिस्ट्रेशन मुफ्त है। खुद website पर करें।'],
           ].map(([q,a]) => (
-            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid var(--border)' }}>
+            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>❓ {q}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
@@ -182,11 +182,11 @@ export default function CharDhamRegistrationHindi() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['केदारनाथ पहली बार','/blog/kedarnath-pehli-baar'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['Registration Guide (English)','/blog/char-dham-yatra-registration']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

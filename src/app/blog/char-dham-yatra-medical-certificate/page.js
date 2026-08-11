@@ -52,7 +52,7 @@ export default function MedicalCertificate() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'none' }}>Registration</Link><span>›</span>
@@ -160,11 +160,11 @@ export default function MedicalCertificate() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham FAQ','/blog/char-dham-yatra-faq'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

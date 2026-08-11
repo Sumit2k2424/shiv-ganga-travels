@@ -131,7 +131,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -171,7 +171,7 @@ export default function Page() {
             { icon: '🚌', mode: 'Shared Cab / Bus', time: '45–60 min', cost: '₹40–80 per person', desc: 'Vikas Nagar–Haridwar shared cabs run every 15 minutes from Rishikesh bus stand. UP Roadways buses also connect the two cities. Budget option for solo travellers.' },
             { icon: '🚂', mode: 'Train (Rishikesh Railway Station)', time: '45 min', cost: '₹25–40 per person', desc: 'Rishikesh station is connected to Haridwar by local DEMU trains (a few daily). Limited service — check IRCTC for timings. More reliable trains come directly from Delhi to Haridwar station.' },
           ].map(r => (
-            <div key={r.mode} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={r.mode} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, marginBottom: 6 }}>
                 <strong style={{ fontSize: 13.5, color: 'var(--navy)' }}>{r.icon} {r.mode}</strong>
                 <div style={{ display: 'flex', gap: 8 }}>
@@ -210,7 +210,7 @@ export default function Page() {
                 ['Day 9', 'Joshimath → Badrinath darshan', '46 km', 'Badrinath'],
                 ['Day 10', 'Badrinath → Rishikesh (Return)', '290 km', 'Home'],
               ].map(([day, route, dist, night], i) => (
-                <tr key={day} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={day} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: 'var(--navy)', fontSize: 13, whiteSpace: 'nowrap' }}>{day}</td>
                   <td style={{ padding: '9px 12px', color: '#334155', fontSize: 13 }}>{route}</td>
                   <td style={{ padding: '9px 12px', color: '#475569', fontSize: 13, whiteSpace: 'nowrap' }}>{dist}</td>
@@ -230,7 +230,7 @@ export default function Page() {
             { name: 'Char Dham Helicopter', duration: '5N/6D', price: '₹2,30,000', badge: 'Premium', href: '/char-dham-helicopter' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
-              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
+              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{pkg.duration}</div>
@@ -265,7 +265,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -276,7 +276,7 @@ export default function Page() {
               ['Cost Calculator', '/char-dham-yatra-cost-calculator'],
               ['Registration Guide', '/blog/char-dham-yatra-registration'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

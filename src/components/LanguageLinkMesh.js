@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { LANGUAGE_PAGES } from '@/data/languages';
 
 const chip = {
-  background: '#fff', border: '1px solid var(--border)', color: 'var(--navy)',
+  background: '#fff', border: '1px solid hsl(var(--border))', color: 'var(--navy)',
   padding: '7px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none',
 };
 const heading = { fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', margin: '0 0 10px' };
@@ -12,7 +12,7 @@ const row = { display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 18 };
 export default function LanguageLinkMesh({ current = '' }) {
   const others = LANGUAGE_PAGES.filter(l => l.slug !== current);
   return (
-    <nav aria-label="Char Dham Yatra in other Indian languages" style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 36 }}>
+    <nav aria-label="Char Dham Yatra in other Indian languages" style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 36 }}>
       <p style={heading}>Read this in another language</p>
       <div style={row}>
         {others.map(l => (

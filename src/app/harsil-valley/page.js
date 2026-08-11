@@ -63,7 +63,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 const teal = { color:'var(--teal)', fontWeight:600 };
 
 const FACTS = [
@@ -118,7 +118,7 @@ export default function HarsilValley() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
         <Link href="/gangotri-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Gangotri Yatra</Link><span>&rsaquo;</span>
@@ -139,7 +139,7 @@ export default function HarsilValley() {
 
       <h2 style={h2}>Harsil Valley at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -157,7 +157,7 @@ export default function HarsilValley() {
 
       <h2 style={h2}>Weather Month by Month &mdash; When to Actually Go</h2>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:480 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:480 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Window','Temperature','What to know'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -208,7 +208,7 @@ export default function HarsilValley() {
 
       <h2 style={h2}>Short Treks Around Harsil</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:520 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:520 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Trek','Difficulty','Time','Notes'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -236,7 +236,7 @@ export default function HarsilValley() {
 
       <h2 style={h2}>Distance Chart</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:420 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:420 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['From / To','Distance','Time'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -262,7 +262,7 @@ export default function HarsilValley() {
       </ul>
 
       <h2 style={h2}>Where It Is on the Map</h2>
-      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
         <iframe
           title="Harsil Valley location map — Uttarkashi, Uttarakhand"
           src="https://www.google.com/maps?q=30.9192,78.7411&hl=en&z=11&output=embed"
@@ -290,7 +290,7 @@ export default function HarsilValley() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'Gangotri Temple Guide',h:'/gangotri-temple'},{l:'How to Reach Gangotri',h:'/how-to-reach-gangotri'},{l:'Haridwar to Gangotri Cab',h:'/cabs/haridwar-to-gangotri-cab'},{l:'Char Dham Road Status',h:'/char-dham-road-status'},{l:'Do Dham Yatra',h:'/do-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

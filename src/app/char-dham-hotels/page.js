@@ -106,7 +106,7 @@ export default function CharDhamHotelsPage() {
         <h2 style={h2}>Frequently Asked Questions</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {faqs.map(f=>(
-            <div key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px 16px' }}>
+            <div key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>
               <div style={{ fontSize:14, color:'#475569', lineHeight:1.75 }}>{f.a}</div>
             </div>
@@ -122,11 +122,11 @@ export default function CharDhamHotelsPage() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Best Time to Visit','/blog/best-time-char-dham'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Trek','/blog/kedarnath-trek-guide']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -111,7 +111,7 @@ export default function VsMakeMyTrip() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -139,7 +139,7 @@ export default function VsMakeMyTrip() {
 
         {/* Comparison table */}
         <h2 style={h2}>Full Comparison Table</h2>
-        <div style={{ overflowX: 'auto', marginBottom: 28, borderRadius: 12, border: '1px solid var(--border)' }}>
+        <div style={{ overflowX: 'auto', marginBottom: 28, borderRadius: 12, border: '1px solid hsl(var(--border))' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead>
               <tr style={{ background: 'var(--navy)' }}>
@@ -150,7 +150,7 @@ export default function VsMakeMyTrip() {
             </thead>
             <tbody>
               {ROWS.map(([feature, sgt, mmt, winner], i) => (
-                <tr key={feature} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={feature} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '10px 16px', fontWeight: 600, color: 'var(--navy)', fontSize: 13 }}>{feature}</td>
                   <td style={{ padding: '10px 16px', textAlign: 'center', color: winner === 'sgt' ? '#15803D' : '#334155', fontWeight: winner === 'sgt' ? 700 : 500, fontSize: 13 }}>
                     {winner === 'sgt' && <span style={{ marginRight: 4 }}>✅</span>}{sgt}
@@ -182,7 +182,7 @@ export default function VsMakeMyTrip() {
         <h2 style={h2}>2. Accountability — Who Picks Up When Things Go Wrong</h2>
         <p style={p}>The Char Dham circuit runs through some of India&apos;s most unpredictable mountain terrain. Kedarnath sits at 3,583 metres. Gangotri road can close without warning due to landslides. Hotels at Guptkashi fill up on peak dates. These are not edge cases — they happen every season.</p>
         <p style={p}>When you book through MakeMyTrip, your contract is with MakeMyTrip, not with the operator actually running the tour. If your vehicle breaks down on the Rishikesh–Uttarkashi highway at 6 PM, the person you call is a customer service agent who will escalate to a local vendor they may have never spoken to before.</p>
-        <div style={{ background: 'var(--navy-light)', border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 20, display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 16 }}>
+        <div style={{ background: 'var(--navy-light)', border: '1px solid hsl(var(--border))', borderRadius: 12, padding: '16px 20px', marginBottom: 20, display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap: 16 }}>
           <div>
             <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 8 }}>✅ Shiv Ganga Travels</div>
             <p style={{ fontSize: 13.5, color: '#334155', lineHeight: 1.75, margin: 0 }}>You have Sumit Mishra&apos;s direct WhatsApp. The office is in Haridwar — 45 minutes from where your yatra begins. The drivers have been on the Kedarnath road dozens of times. On-ground presence is not something a platform can replicate.</p>
@@ -222,10 +222,10 @@ export default function VsMakeMyTrip() {
               <div key={item} style={{ fontSize: 13.5, color: '#334155', padding: '4px 0', borderBottom: '1px solid #BBF7D0' }}>{item}</div>
             ))}
           </div>
-          <div style={{ background: '#F8FAFC', border: '1px solid var(--border)', borderRadius: 12, padding: '16px 18px' }}>
+          <div style={{ background: '#F8FAFC', border: '1px solid hsl(var(--border))', borderRadius: 12, padding: '16px 18px' }}>
             <div style={{ fontWeight: 800, fontSize: 14, color: '#64748b', marginBottom: 8 }}>Consider MakeMyTrip if:</div>
             {['You are booking from a city with no direct Haridwar train and need a multi-modal package', 'You want a standardised refund policy backed by a large platform', 'You want to compare multiple operators in one place before deciding'].map(item => (
-              <div key={item} style={{ fontSize: 13.5, color: '#64748b', padding: '4px 0', borderBottom: '1px solid var(--border)' }}>{item}</div>
+              <div key={item} style={{ fontSize: 13.5, color: '#64748b', padding: '4px 0', borderBottom: '1px solid hsl(var(--border))' }}>{item}</div>
             ))}
           </div>
         </div>
@@ -238,23 +238,23 @@ export default function VsMakeMyTrip() {
           ['What are hidden charges in Char Dham Yatra?', 'Common hidden charges in aggregator packages include pony/palki at Yamunotri and Kedarnath (₹2,000–8,000), porter charges, government permit fees, VIP darshan fees, and platform service charges. Shiv Ganga Travels includes all of these in the quoted package price.'],
           ['Can I negotiate price with Shiv Ganga Travels?', 'For groups of 6+ or for repeat bookings, we offer group discounts. WhatsApp us your group size and travel dates and we will send you the best rate available for that batch. We do not have dynamic pricing — the price is the same whether you call at 9 AM or 9 PM.'],
         ].map(([q, a], i) => (
-          <details key={i} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
+          <details key={i} style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
             <summary style={{ padding: '14px 16px', cursor: 'pointer', listStyle: 'none', fontWeight: 600, fontSize: 14.5, color: 'var(--navy)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               {q}<span style={{ fontSize: 18, color: 'var(--text-muted)', flexShrink: 0 }}>＋</span>
             </summary>
-            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>{a}</div>
+            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
 
         {/* Related */}
-        <div style={{ marginTop: 32, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
+        <div style={{ marginTop: 32, paddingTop: 20, borderTop: '1px solid hsl(var(--border))' }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related Comparisons</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators Haridwar 2026 →</Link>
-            <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Direct vs Aggregator Guide →</Link>
-            <Link href="/shiv-ganga-travels-vs-thrillophilia" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>vs Thrillophilia →</Link>
-            <Link href="/char-dham-yatra-booking-sites-compared" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Where to Book — All Options →</Link>
-            <Link href="/how-to-choose-char-dham-tour-operator" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>How to Choose an Operator →</Link>
+            <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Best Operators Haridwar 2026 →</Link>
+            <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Direct vs Aggregator Guide →</Link>
+            <Link href="/shiv-ganga-travels-vs-thrillophilia" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>vs Thrillophilia →</Link>
+            <Link href="/char-dham-yatra-booking-sites-compared" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Where to Book — All Options →</Link>
+            <Link href="/how-to-choose-char-dham-tour-operator" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>How to Choose an Operator →</Link>
             <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>View Packages from ₹18,500 →</Link>
           </div>
         </div>

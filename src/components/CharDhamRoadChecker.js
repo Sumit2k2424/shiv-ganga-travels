@@ -41,7 +41,7 @@ export default function CharDhamRoadChecker() {
 
   const pill = (active) => ({
     padding: '8px 13px', borderRadius: 8, border: '1.5px solid',
-    borderColor: active ? 'var(--navy)' : 'var(--border)',
+    borderColor: active ? 'var(--navy)' : 'hsl(var(--border))',
     background: active ? 'var(--navy)' : '#fff',
     color: active ? '#fff' : 'var(--navy)',
     fontWeight: 700, fontSize: 12.5, cursor: 'pointer', transition: '.15s',
@@ -49,7 +49,7 @@ export default function CharDhamRoadChecker() {
   const lab = { fontSize: 12.5, fontWeight: 700, color: 'var(--navy)', display: 'block', marginBottom: 6 };
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 16 }}>
+    <div style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 14, padding: '20px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 16 }}>
       <div style={{ fontWeight: 800, color: 'var(--navy)', fontSize: 15.5, marginBottom: 4 }}>Should I drive it now? Quick risk check</div>
       <p style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 14, lineHeight: 1.6 }}>Pick a route and travel month for an honest read — and exactly which source to verify on the day.</p>
 

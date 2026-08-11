@@ -88,7 +88,7 @@ export default function GaurikundGuide() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Pony/Palki Rates 2026',h:'/kedarnath-pony-palki-kandi-rates'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Haridwar to Kedarnath',h:'/blog/haridwar-to-kedarnath'},{l:'Guptkashi Guide',h:'/guptkashi-guide'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

@@ -113,7 +113,7 @@ export default function HaridwarToRishikeshTaxi() {
         </div>
       </section>
 
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/taxi-service-in-haridwar" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Taxi Service in Haridwar</Link><span>›</span>
@@ -170,7 +170,7 @@ export default function HaridwarToRishikeshTaxi() {
               {transferRows('haridwar-rishikesh').map(r=>{
                 const v = FLEET.find(f => f.id === r.id);
                 return (
-                  <tr key={r.id} style={{ borderBottom:'1px solid var(--border)' }}>
+                  <tr key={r.id} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                     <td style={{ padding:'10px', fontWeight:600, color:'var(--navy)' }}>{r.name}</td>
                     <td style={{ padding:'10px', color:'var(--text-muted)' }}>{r.seats}</td>
                     <td style={{ padding:'10px', fontWeight:700, color:'var(--teal)' }}>{inr(r.fare)}</td>
@@ -208,7 +208,7 @@ export default function HaridwarToRishikeshTaxi() {
                 ['Rafting camps (Shivpuri, Brahmpuri)','Camp gate directly','16–20 km past town. Add ₹500–800.'],
                 ['Neelkanth Mahadev','Temple car park','32 km hill road past Rishikesh. 90 min each way.'],
               ].map(([a,b,c])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)', fontSize:13 }}>{c}</td>
@@ -236,7 +236,7 @@ export default function HaridwarToRishikeshTaxi() {
             ['🚦 Best departure','Before 8 AM for a clear run. After 5 PM on a Friday is the worst it gets.'],
             ['🌧️ Monsoon','July–September the road stays open but visibility drops. Add 15–20 minutes.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={t} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t}</div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7 }}>{d}</div>
             </div>
@@ -264,7 +264,7 @@ export default function HaridwarToRishikeshTaxi() {
                 ['Taxi one-way drop', inr(R.fares.dzire), '40–55 min','Right choice with luggage, kids or elderly parents.'],
                 ['Taxi day hire', inr(dzire.local8), 'Your day','Best value if you are returning the same evening.'],
               ].map(([a,b,c,d])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--teal)', fontWeight:700 }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{c}</td>
@@ -278,14 +278,14 @@ export default function HaridwarToRishikeshTaxi() {
         <H2>Frequently Asked Questions</H2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
               <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{f.q}</summary>
               <div style={{ padding:'0 17px 15px', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{f.a}</div>
             </details>
           ))}
         </div>
 
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources</div>
           <ul style={{ paddingLeft:18, margin:0 }}>
             {[
@@ -321,7 +321,7 @@ export default function HaridwarToRishikeshTaxi() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -332,7 +332,7 @@ export default function HaridwarToRishikeshTaxi() {
               ['Dehradun Airport to Haridwar','/dehradun-airport-to-haridwar-taxi'],
               ['Rishikesh to Kedarnath Cab','/cabs/rishikesh-to-kedarnath-cab'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

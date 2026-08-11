@@ -137,7 +137,7 @@ export default function TaxiServiceInHaridwar() {
       </section>
 
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/cabs" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Cabs &amp; Taxi</Link><span>›</span>
@@ -185,7 +185,7 @@ export default function TaxiServiceInHaridwar() {
             </tr></thead>
             <tbody>
               {FLEET.map(v=>(
-                <tr key={v.id} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={v.id} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'10px', fontWeight:600, color:'var(--navy)' }}>
                     {v.name}
                     <div style={{ fontWeight:400, fontSize:12, color:'var(--text-muted)', marginTop:3 }}>{v.note}</div>
@@ -217,7 +217,7 @@ export default function TaxiServiceInHaridwar() {
           ['Driver allowance','A fixed ₹300 a night on outstation trips, covering the driver\'s food and lodging. It is not a tip and it is not optional. On local day hires there is no allowance.'],
           ['Hill charge','Applied past Rishikesh, where gradients roughly double fuel burn and halve the vehicle\'s life. On Char Dham routes we quote it inside the package price rather than adding it later. For local Haridwar work it never applies.'],
         ].map(([term, def])=>(
-          <div key={term} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid var(--border)' }}>
+          <div key={term} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', minWidth:150, flexShrink:0 }}>{term}</div>
             <div style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.75 }}>{def}</div>
           </div>
@@ -230,17 +230,17 @@ export default function TaxiServiceInHaridwar() {
         </p>
         <div style={{ display:'flex', flexDirection:'column', gap:14, marginBottom:8 }}>
           {CIRCUITS.map(c=>(
-            <div key={c.name} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px' }}>
+            <div key={c.name} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, flexWrap:'wrap', marginBottom:10 }}>
                 <div style={{ fontWeight:700, fontSize:15.5, color:'var(--navy)' }}>{c.name}</div>
                 <div style={{ display:'flex', gap:8 }}>
                   <span style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:100 }}>{c.hours}</span>
-                  <span style={{ background:'var(--bg)', color:'var(--text-muted)', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:100, border:'1px solid var(--border)' }}>{c.km}</span>
+                  <span style={{ background:'var(--bg)', color:'var(--text-muted)', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:100, border:'1px solid hsl(var(--border))' }}>{c.km}</span>
                 </div>
               </div>
               <div style={{ display:'flex', gap:7, flexWrap:'wrap', marginBottom:10 }}>
                 {c.stops.map(s=>(
-                  <span key={s} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--text-mid)', fontSize:12.5, padding:'4px 11px', borderRadius:7 }}>{s}</span>
+                  <span key={s} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--text-mid)', fontSize:12.5, padding:'4px 11px', borderRadius:7 }}>{s}</span>
                 ))}
               </div>
               <p style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7, margin:0 }}>{c.note}</p>
@@ -256,7 +256,7 @@ export default function TaxiServiceInHaridwar() {
         </p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:14 }}>
           {routes.map(([to, km, fare, href])=>(
-            <Link key={href} href={href} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'15px 17px', textDecoration:'none', display:'block' }}>
+            <Link key={href} href={href} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'15px 17px', textDecoration:'none', display:'block' }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:5 }}>Haridwar ↔ {to}</div>
               <div style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:8 }}>{km} km</div>
               <div style={{ fontWeight:700, fontSize:15, color:'var(--teal)' }}>from {inr(fare)} →</div>
@@ -303,7 +303,7 @@ export default function TaxiServiceInHaridwar() {
             ['🧾 Receipt','Ask and you get a printed bill with the odometer readings on it. Useful if you are claiming the trip, and a reasonable thing to expect from any operator.'],
             ['❌ Cancellation','Free more than 24 hours out. 25% inside 24 hours. Full charge for a no-show. Read the full terms on our cancellation policy page.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={t} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t}</div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7 }}>{d}</div>
             </div>
@@ -314,7 +314,7 @@ export default function TaxiServiceInHaridwar() {
         <H2>Haridwar Taxi — Questions We Get Asked</H2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
               <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>
                 {f.q}
               </summary>
@@ -324,7 +324,7 @@ export default function TaxiServiceInHaridwar() {
         </div>
 
         {/* Sources — OPPORTUNITY gap: nobody cites anything */}
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources &amp; official references</div>
           <ul style={{ paddingLeft:18, margin:0 }}>
             {[
@@ -365,7 +365,7 @@ export default function TaxiServiceInHaridwar() {
         </div>
 
         {/* Related */}
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -378,7 +378,7 @@ export default function TaxiServiceInHaridwar() {
               ['Char Dham Cab Booking','/char-dham-yatra-cab-booking'],
               ['How to Reach Haridwar','/how-to-reach-haridwar'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

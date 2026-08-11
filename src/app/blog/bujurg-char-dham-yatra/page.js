@@ -63,7 +63,7 @@ export default function BujurgCharDham() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
@@ -104,7 +104,7 @@ export default function BujurgCharDham() {
             { icon:'🛕', title:'पालकी (डंडी)', cost:'₹8,000–₹12,000', dir:'राउंड ट्रिप', note:'4-6 व्यक्ति उठाते हैं। जिन्हें घोड़े पर डर लगे।', color:'#BA7517' },
             { icon:'🚁', title:'हेलिकॉप्टर', cost:'₹7,500–₹9,500', dir:'एक तरफ', note:'7 मिनट में केदारनाथ। ह्रदय रोगियों के लिए सबसे सुरक्षित।', color:'#533AB7' },
           ].map(({ icon, title, cost, dir, note, color }) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 14, padding: '18px', border: '1px solid var(--border)', borderTop: `3px solid ${color}` }}>
+            <div key={title} style={{ background: '#fff', borderRadius: 14, padding: '18px', border: '1px solid hsl(var(--border))', borderTop: `3px solid ${color}` }}>
               <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 4 }}>{title}</div>
               <div style={{ fontWeight: 900, fontSize: 20, color, marginBottom: 4 }}>{cost}</div>
@@ -130,7 +130,7 @@ export default function BujurgCharDham() {
             ['11', 'यात्रा बीमा जरूर करवाएं', '₹500–1,000 में मेडिकल इमरजेंसी और हेलिकॉप्टर रेस्क्यू भी कवर।'],
             ['12', 'परिवार का कोई युवा साथ जाए', 'ऑनलाइन बुकिंग, रजिस्ट्रेशन, आपातकाल — युवा साथी बेहद जरूरी।'],
           ].map(([num, title, detail]) => (
-            <div key={num} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={num} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFD166', fontWeight: 800, fontSize: 13, flexShrink: 0 }}>{num}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{title}</div>
@@ -161,7 +161,7 @@ export default function BujurgCharDham() {
             ['क्या डायबिटीज के मरीज यात्रा कर सकते हैं?','हाँ — नियमित दवा लेते रहें, शुगर की नियमित जांच करें, और हमारे गाइड को पहले बता दें।'],
             ['अगर यात्रा के बीच में तबीयत खराब हो जाए?','हमारे ड्राइवर और गाइड को हेल्थ इमरजेंसी की ट्रेनिंग है। आसपास के अस्पताल की जानकारी हमारे पास रहती है। हेलिकॉप्टर रेस्क्यू भी उपलब्ध।'],
           ].map(([q,a]) => (
-            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid var(--border)' }}>
+            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>❓ {q}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
@@ -177,11 +177,11 @@ export default function BujurgCharDham() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['कब जाएं?','/blog/char-dham-kab-jayen'],['Senior Package','/packages/char-dham-yatra-senior-citizen-12n-13d']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

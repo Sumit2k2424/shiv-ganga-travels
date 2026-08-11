@@ -73,7 +73,7 @@ export default function KedarnathHelicopterBooking() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -180,9 +180,9 @@ export default function KedarnathHelicopterBooking() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
         <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
-        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:24 }}>
+        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:24 }}>
           {faqData.map((f, i) => (
-            <div key={i} style={{ padding:'16px 20px', borderBottom:i<faqData.length-1?'1px solid var(--border)':'none' }}>
+            <div key={i} style={{ padding:'16px 20px', borderBottom:i<faqData.length-1?'1px solid hsl(var(--border))':'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>
               <div style={{ fontSize:15, color:'#334155', lineHeight:1.7 }}>A: {f.a}</div>
             </div>
@@ -199,11 +199,11 @@ export default function KedarnathHelicopterBooking() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Packages','/kedarnath-yatra'],['Char Dham Helicopter','/char-dham-helicopter'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -57,7 +57,7 @@ export default function YamunotriTemple() {
         <p className="speakable-answer" style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Opening: April 19, 2026 · Closing: November 11, 2026 · Altitude 3,291m · 6km trek from Janki Chatti</p>
       </div>
     </section>
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         Home<span>›</span>
         Yamunotri Yatra<span>›</span>
@@ -85,9 +85,9 @@ export default function YamunotriTemple() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>What sets Yamunotri apart is the trek and the hot springs. Unlike Gangotri, you cannot drive to the temple — the last 6km from Janki Chatti must be covered on foot, by pony, or by palki. For many pilgrims this is the first real test of the yatra, which is exactly why it comes first: it sets the tone. By the time you reach the temple, steam rising from the hot springs against the cold mountain air, you have earned the darshan.</p>
 
       <h2 style={h2}>Darshan Timings 2026</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         {[['6:00 AM','Temple opens — morning aarti and darshan begin'],['6:30 AM – 12:00 PM','General darshan — best window, trek crowds arrive late morning'],['12:00 PM – 2:00 PM','Bhog offering and short midday break'],['2:00 PM – 7:00 PM','Afternoon darshan resumes'],['7:00 PM – 8:00 PM','Evening aarti, then temple closes'],].map(([time,desc],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(110px,38%,170px) 1fr', borderTop: i>0?'1px solid var(--border)':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(110px,38%,170px) 1fr', borderTop: i>0?'1px solid hsl(var(--border))':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{time}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)' }}>{desc}</div>
           </div>
@@ -125,7 +125,7 @@ export default function YamunotriTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Yamunotri Yatra Package',h:'/yamunotri-yatra'},{l:'How to Reach Yamunotri',h:'/how-to-reach-yamunotri'},{l:'Yamunotri Weather',h:'/yamunotri-weather'},{l:'Char Dham Yatra Package',h:'/char-dham-yatra'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

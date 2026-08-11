@@ -49,7 +49,7 @@ export default function HowToReachBadrinath() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Badrinath Temple<span>›</span>
@@ -75,14 +75,14 @@ export default function HowToReachBadrinath() {
           The classic route follows: <strong>Haridwar → Rishikesh → Devprayag → Srinagar → Rudraprayag → Chamoli → Joshimath → Badrinath</strong>. The entire 320km journey runs alongside the Alaknanda and Bhagirathi rivers. The stretch from Rudraprayag onwards is particularly scenic, passing the Panchprayag (five sacred river confluences). The final 45km from Joshimath to Badrinath is the most dramatic — a narrow road carved into a cliff face above the Alaknanda gorge.
         </p>
 
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:24 }}>
           {[
             { from:'Haridwar', to:'Rudraprayag', dist:'165km', time:'5 hrs', note:'Via Devprayag, Srinagar — good national highway' },
             { from:'Rudraprayag', to:'Joshimath', dist:'110km', time:'3.5 hrs', note:'Via Chamoli, Vishnuprayag — mountain road, scenic' },
             { from:'Joshimath', to:'Badrinath', dist:'45km', time:'1.5 hrs', note:'Final stretch — the road hugs the Alaknanda gorge' },
             { from:'Badrinath', to:'Mana Village', dist:'3km', time:'15 mins', note:'Last Indian village before Tibet border — worth a visit' },
           ].map((r, i) => (
-            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
               <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from}</span>
               <span style={{ color:'#475569' }}>→ {r.to}</span>
               <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
@@ -96,7 +96,7 @@ export default function HowToReachBadrinath() {
         <p style={p}>
           The number people search most is <strong>Rishikesh to Badrinath: 295 km</strong>, roughly 10 hours of mountain driving — do not let Google Maps&apos; optimistic estimate fool you into planning it as a day trip. Here is the full chart, measured along the actual NH-7 route:
         </p>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:24 }}>
           {[
             { from:'Haridwar', dist:'320 km', time:'10–12 hrs', note:'Our standard package start point' },
             { from:'Rishikesh', dist:'295 km', time:'9–11 hrs', note:'Same route, one hour saved' },
@@ -107,7 +107,7 @@ export default function HowToReachBadrinath() {
             { from:'Joshimath', dist:'45 km', time:'1.5 hrs', note:'Last major town — gate-system timings apply' },
             { from:'Kedarnath (Gaurikund)', dist:'230 km', time:'8–9 hrs', note:'The Do Dham leg, via Chopta or Rudraprayag' },
           ].map((r, i) => (
-            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.3fr 80px 90px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.3fr 80px 90px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
               <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from} → Badrinath</span>
               <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
               <span style={{ color:'#475569' }}>{r.time}</span>
@@ -137,11 +137,11 @@ export default function HowToReachBadrinath() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Badrinath Weather','/badrinath-weather'],['Badrinath Temple Guide','/badrinath-temple'],['Haridwar to Badrinath Cab','/cabs/haridwar-to-badrinath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

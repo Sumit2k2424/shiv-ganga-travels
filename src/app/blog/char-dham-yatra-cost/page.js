@@ -63,7 +63,7 @@ export default function CharDhamCost() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -113,7 +113,7 @@ export default function CharDhamCost() {
                 ['Senior Special 12N/13D','₹27,999','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Kedarnath'],
                 ['Helicopter 5N/6D','₹2,30,000','Helicopter charter (Sahastradhara)','Luxury hotels throughout','All meals + VIP darshan all 4 dhams'],
               ].map(([pkg,price,vehicle,hotel,meals],i) => (
-                <tr key={pkg} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={pkg} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)' }}>{pkg}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color:'#1D9E75' }}>{price}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:13 }}>{vehicle}</td>
@@ -144,7 +144,7 @@ export default function CharDhamCost() {
             { item:'🏠 Overnight at Kedarnath (GMVN tents)', cost:'₹800–₹1,500/night', detail:'Staying overnight gives you first-priority darshan the next morning at 4:30 AM Mahabhishek — without the queue. Worth considering if you have the energy.' },
             { item:'🙏 Mahabhishek puja booking', cost:'₹500–₹2,000', detail:'The dawn abhishek ritual — milk, ghee, honey on the Shivling. Can be booked through BKTC or your operator. The most sacred Kedarnath experience. Not the same as standard darshan.' },
           ].map(({ item, cost, detail }) => (
-            <div key={item} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)', flexWrap: 'wrap' }}>
+            <div key={item} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid hsl(var(--border))', flexWrap: 'wrap' }}>
               <div style={{ minWidth: 200 }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)' }}>{item}</div>
                 <div style={{ fontWeight: 800, fontSize: 15, color: '#1D9E75' }}>{cost}</div>
@@ -174,7 +174,7 @@ export default function CharDhamCost() {
                 ['Chandigarh','₹150–₹400 (SL/3AC), 3.5 hrs','No direct flight','₹800–₹1,200 fuel (200km)'],
                 ['Ahmedabad','₹450–₹1,200 (3AC), 15 hrs','₹3,000–₹7,000 + cab ₹1,500','Not practical'],
               ].map(([city,train,flight,road],i) => (
-                <tr key={city} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={city} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)' }}>{city}</td>
                   <td style={{ padding:'9px 12px', color:'#334155' }}>{train}</td>
                   <td style={{ padding:'9px 12px', color:'#334155' }}>{flight}</td>
@@ -198,7 +198,7 @@ export default function CharDhamCost() {
             ['Medical certificate (age 55+)','₹100–500','Doctor consultation fee. Required by government from 2026.'],
             ['Tips for driver and guide','₹500–1,000 per person (suggested)','Not mandatory, but our drivers and guides are genuinely excellent. Appreciated.'],
           ].map(([item, cost, note]) => (
-            <div key={item} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 3fr', gap: 12, padding: '10px 14px', background: '#fff', borderRadius: 8, border: '1px solid var(--border)', flexWrap: 'wrap' }}>
+            <div key={item} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 3fr', gap: 12, padding: '10px 14px', background: '#fff', borderRadius: 8, border: '1px solid hsl(var(--border))', flexWrap: 'wrap' }}>
               <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--navy)' }}>{item}</div>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: '#D85A30' }}>{cost}</div>
               <div style={{ fontSize: 12.5, color: '#64748b' }}>{note}</div>
@@ -238,7 +238,7 @@ export default function CharDhamCost() {
               note: 'Complete helicopter package. All 4 dhams by air from Sahastradhara Helipad, Dehradun. 6 days total.',
             },
           ].map(({ title, total, color, breakdown, note }) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 14, padding: '18px', border: `1px solid var(--border)`, borderTop: `3px solid ${color}` }}>
+            <div key={title} style={{ background: '#fff', borderRadius: 14, padding: '18px', border: `1px solid hsl(var(--border))`, borderTop: `3px solid ${color}` }}>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 4 }}>{title}</div>
               <div style={{ fontWeight: 900, fontSize: 20, color, marginBottom: 12 }}>{total}</div>
               {breakdown.map(line => (<div key={line} style={{ fontSize: 12.5, color: '#475569', padding: '3px 0', borderBottom: '1px solid var(--bg)', display: 'flex', gap: 6 }}><span style={{ color, flexShrink: 0 }}>•</span>{line}</div>))}
@@ -263,7 +263,7 @@ export default function CharDhamCost() {
             ['Trek Kedarnath instead of pony', 'If you are 18–55 and reasonably fit, the trek is free. The pony saves physical effort but costs ₹3,500–₹4,500 per person one way. A group of 4 saves ₹14,000–₹18,000 by trekking.'],
             ['Book direct with the operator', 'Aggregator platforms (MakeMyTrip, Thrillophilia) add 15–20% commission to the operator\'s price. The same package from the operator directly costs ₹5,000–₹10,000 less per person.'],
           ].map(([tip, detail]) => (
-            <div key={tip} style={{ background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)', borderLeft: '3px solid #1D9E75' }}>
+            <div key={tip} style={{ background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid #1D9E75' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{tip}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{detail}</div>
             </div>
@@ -282,7 +282,7 @@ export default function CharDhamCost() {
                 ['Local agent (middleman)','₹22,000–₹25,000','8–15%','₹19,000–₹21,000 goes to operator','Agent WhatsApp'],
                 ['Shiv Ganga Travels (direct)','₹18,500','0%','₹18,500 (full amount goes to operation)','Operator direct'],
               ].map(([channel,price,comm,pays,support],i) => (
-                <tr key={channel} style={{ borderBottom:'1px solid var(--border)', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={channel} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight: i===3?800:600, color:'var(--navy)' }}>{channel}{i===3 && <span style={{ background:'rgba(29,158,117,0.15)', color:'#1D9E75', fontSize:10, fontWeight:700, padding:'2px 7px', borderRadius:20, marginLeft:8 }}>Best price</span>}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color: i===3?'#1D9E75':'var(--navy)' }}>{price}</td>
                   <td style={{ padding:'10px 12px', color: i===3?'#1D9E75':'#D85A30', fontWeight:600 }}>{comm}</td>
@@ -303,11 +303,11 @@ export default function CharDhamCost() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

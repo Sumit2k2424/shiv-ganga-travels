@@ -131,7 +131,7 @@ export default function NewRules2026() {
       rule:'2026 confirmed temple opening & closing dates',
       status:'CONFIRMED',
       color:'#fff',
-      border:'var(--border)',
+      border:'hsl(var(--border))',
       detail:'Yamunotri: April 19 → November 11 | Gangotri: April 19 → November 10 | Kedarnath: April 22 → November 11 | Badrinath: April 23 → November 13. All four temples are now open for the 2026 season.',
       impact:'The 2026 season is already open. May–June and September–October remain the best windows. Peak season (May–June) is booking up fast.',
     },
@@ -157,7 +157,7 @@ export default function NewRules2026() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -232,7 +232,7 @@ export default function NewRules2026() {
               {label:'Kedarnath Helicopter Guide', href:'/blog/kedarnath-helicopter-booking'},
               {label:'Senior Citizen Package', href:'/blog/senior-citizen-char-dham'},
             ].map(l=>(
-              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label} →</Link>
+              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label} →</Link>
             ))}
           </div>
         </div>

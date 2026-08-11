@@ -47,7 +47,7 @@ export default function HaridwarToKedarnath() {
       ]}
     />
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
         <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -78,7 +78,7 @@ export default function HaridwarToKedarnath() {
       ]}/>
 
       <h2 id="total-distance" style={h2}>Total Distance: Haridwar to Kedarnath</h2>
-      <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24, fontSize:14.5, lineHeight:2.2 }}>
+      <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:24, fontSize:14.5, lineHeight:2.2 }}>
         🚗 <strong>By Road:</strong> Haridwar → Rishikesh → Devprayag → Rudraprayag → Agastyamuni → Guptkashi → Sonprayag → Gaurikund = <strong>228 km (~8–9 hours driving)</strong><br/>
         🥾 <strong>By Trek:</strong> Gaurikund → Kedarnath = <strong>16 km (5–7 hours)</strong><br/>
         📏 <strong>Total journey:</strong> 228km + 16km = approximately <strong>244 km and 13–16 hours total</strong>
@@ -91,7 +91,7 @@ export default function HaridwarToKedarnath() {
           { day:'Day 2', route:'Guptkashi → Gaurikund → Kedarnath (8 km drive + 16 km trek)', desc:'Drive from Guptkashi to Sonprayag (30 min), then shared jeep to Gaurikund (7 km). Hot spring dip at Gauri Kund. Begin the 16km trek by 6–7 AM for a comfortable ascent. Arrive Kedarnath by early afternoon. Evening darshan.' },
           { day:'Day 3', route:'Kedarnath → Gaurikund → Return (16 km descent)', desc:'4:30 AM Brahma Muhurta puja — the most auspicious time. Trek down or take the descent services. Continue journey to the next dham or return base.' },
         ].map(d => (
-          <div key={d.day} style={{ background:'#fff', borderRadius:10, padding:'16px', border:'1px solid var(--border)' }}>
+          <div key={d.day} style={{ background:'#fff', borderRadius:10, padding:'16px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:6 }}>{d.day}: {d.route}</div>
             <div style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>{d.desc}</div>
           </div>
@@ -99,7 +99,7 @@ export default function HaridwarToKedarnath() {
       </div>
 
       <h2 id="road-map" style={h2}>Haridwar to Kedarnath Road Map</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', padding:'16px 18px', marginBottom:24 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', padding:'16px 18px', marginBottom:24 }}>
         <div style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:2.1, fontFamily:'monospace, monospace', overflowX:'auto', whiteSpace:'nowrap' }}>
           Haridwar ─24km→ Rishikesh ─70km→ Devprayag ─34km→ Srinagar ─33km→ Rudraprayag ─40km→ Guptkashi ─31km→ Sonprayag ─5km→ Gaurikund ─16km trek→ Kedarnath
         </div>
@@ -115,7 +115,7 @@ export default function HaridwarToKedarnath() {
           { place:'Sonprayag', why:'Last motor vehicle point before Gaurikund. Mandakini + Songannga confluence.' },
           { place:'Gaurikund', why:'Trek starting point. Hot spring. Gauri Temple. Last food and supplies point.' },
         ].map(s => (
-          <div key={s.place} style={{ background:'var(--bg)', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
+          <div key={s.place} style={{ background:'var(--bg)', borderRadius:10, padding:'12px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{s.place}</div>
             <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5 }}>{s.why}</div>
           </div>        ))}
@@ -181,7 +181,7 @@ export default function HaridwarToKedarnath() {
       </div>
 
       <h2 style={h2}>Haridwar to Kedarnath Route Map</h2>
-      <div style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', marginBottom:24 }}>
+      <div style={{ borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
         <iframe
           title="Haridwar to Kedarnath route map"
           src="https://maps.google.com/maps?saddr=Haridwar,Uttarakhand&daddr=Gaurikund,Uttarakhand&output=embed"
@@ -192,7 +192,7 @@ export default function HaridwarToKedarnath() {
       <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
       <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:8 }}>
         {FAQS.map(f=>(
-          <div key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px 16px' }}>
+          <div key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px 16px' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>
             <div style={{ fontSize:14, color:'#475569', lineHeight:1.75 }}>{f.a}</div>
           </div>

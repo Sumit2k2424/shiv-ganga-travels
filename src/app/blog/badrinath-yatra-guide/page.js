@@ -37,7 +37,7 @@ export default function BadrinathYatraGuide() {
       ]}
     />
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
         <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -75,7 +75,7 @@ export default function BadrinathYatraGuide() {
       </div>
 
       <h2 id="timings" style={h2}>Badrinath Temple Darshan Timings 2026</h2>
-      <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:20, fontSize:14 }}>
+      <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:20, fontSize:14 }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
           {[
             { session:'Morning Opening', time:'4:30 AM' },
@@ -85,7 +85,7 @@ export default function BadrinathYatraGuide() {
             { session:'Evening Darshan', time:'4:00 PM – 9:00 PM' },
             { session:'Evening Aarti', time:'8:00 PM' },
           ].map(t => (
-            <div key={t.session} style={{ display:'flex', justifyContent:'space-between', padding:'8px 12px', background:'#fff', borderRadius:8, border:'1px solid var(--border)' }}>
+            <div key={t.session} style={{ display:'flex', justifyContent:'space-between', padding:'8px 12px', background:'#fff', borderRadius:8, border:'1px solid hsl(var(--border))' }}>
               <span style={{ fontWeight:600, color:'var(--text)', fontSize:13 }}>{t.session}</span>
               <span style={{ fontWeight:700, color:'var(--navy)', fontSize:13 }}>{t.time}</span>
             </div>
@@ -106,7 +106,7 @@ export default function BadrinathYatraGuide() {
           { place:'Neelkanth Peak', desc:'The majestic 6,596m peak visible from Badrinath. On clear days (early morning is best), the snow-covered summit glows in the dawn light. One of the most breathtaking views in the Himalayas.' },
           { place:'Satopanth Lake', desc:'20km trek from Mana — a high-altitude glacial lake at 4,402m shaped like an equilateral triangle. Only for fit trekkers. Available as an add-on.' },
         ].map(s => (
-          <div key={s.place} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+          <div key={s.place} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:5 }}>📍 {s.place}</div>
             <div style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>{s.desc}</div>
           </div>

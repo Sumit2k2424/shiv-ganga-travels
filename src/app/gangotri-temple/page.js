@@ -53,7 +53,7 @@ export default function GangotriTemple() {
         <p className="speakable-answer" style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Opening: April 19, 2026 · Closing: November 10, 2026 · Altitude 3,415m · Fully motorable — no trek required</p>
       </div>
     </section>
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         Home<span>›</span>
         Gangotri Yatra<span>›</span>
@@ -81,9 +81,9 @@ export default function GangotriTemple() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Of the four Char Dham shrines, Gangotri is the one most pilgrims find easiest on the body. The road runs all the way to the temple, so there is no trek — a real relief for older travellers after the climbs at Yamunotri and, later, Kedarnath. That said, the altitude is no joke. We always recommend arriving with a layer of warm clothing on hand and giving yourself an hour to settle before walking down to the river.</p>
 
       <h2 style={h2}>Darshan & Ganga Aarti Timings 2026</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         {[['6:15 AM','Temple opens — Mangala Aarti and morning darshan begin'],['6:30 AM – 2:00 PM','General darshan and abhishek'],['2:00 PM – 3:00 PM','Midday break (bhog) — sanctum briefly closed'],['3:00 PM – 7:00 PM','Afternoon darshan resumes'],['7:00 PM – 7:45 PM','Ganga Aarti on the riverbank — the highlight of the day'],['7:45 PM – 9:30 PM','Evening darshan, then Shayan Aarti and close'],].map(([time,desc],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(110px,38%,170px) 1fr', borderTop: i>0?'1px solid var(--border)':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(110px,38%,170px) 1fr', borderTop: i>0?'1px solid hsl(var(--border))':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{time}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)' }}>{desc}</div>
           </div>
@@ -105,7 +105,7 @@ export default function GangotriTemple() {
           { name:'Harsil Valley', dist:'~25km before Gangotri', desc:'A stunning apple-growing village on the Bhagirathi, ringed by deodar forest and snow peaks. Many pilgrims break their journey here — it is one of the most beautiful spots on the entire yatra route.' },
           { name:'Mukhba Village', dist:'~20km from Gangotri', desc:'The winter home of Goddess Ganga. When the temple closes in November, the idol is carried here and worshipped through the cold months. Visiting in season gives a sense of the living rhythm of the dham.' },
         ].map(pl => (
-          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
             <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
@@ -121,7 +121,7 @@ export default function GangotriTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'How to Reach Gangotri',h:'/how-to-reach-gangotri'},{l:'Gangotri Weather',h:'/gangotri-weather'},{l:'Haridwar to Gangotri Cab',h:'/cabs/haridwar-to-gangotri-cab'},{l:'Char Dham Yatra Package',h:'/char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

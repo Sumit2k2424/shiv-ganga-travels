@@ -66,7 +66,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -118,7 +118,7 @@ export default function Page() {
                 ['Kedarnath','3,583m','16km trek or helicopter','High (trek) / Moderate (helicopter)','Strongly recommend helicopter for anyone with heart/diabetes'],
                 ['Badrinath','3,133m','No trek — motor road','Low-Moderate — lowest risk of the 4 dhams','Accessible; Tapt Kund bath advised against (sudden temp change)'],
               ].map(([dham,alt,trek,risk,rec],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
                   <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{dham}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{alt}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{trek}</td>
@@ -138,7 +138,7 @@ export default function Page() {
             { title:'Diabetics', items:['Carry extra insulin beyond expected requirement','Bring glucose tablets and ORS sachets','Monitor blood sugar more frequently (every 4 hrs on trek)','Store insulin in inner pocket — not baggage (temperature)','Inform your guide/driver about your condition at the start'] },
             { title:'All Medical Conditions', items:['Carry complete medical history and emergency contacts','Travel with a companion who knows your condition','Get travel insurance that covers medical evacuation','Know the nearest hospital at each dham stop','Our team carries oxygen — ask for it early if needed'] },
           ].map(section=>(
-            <div key={section.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={section.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>{section.title}</div>
               {section.items.map(item=>(
                 <div key={item} style={{ display:'flex', gap:8, fontSize:12.5, color:'var(--text-mid)', marginBottom:5, lineHeight:1.5 }}>
@@ -169,7 +169,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

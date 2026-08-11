@@ -84,7 +84,7 @@ export default function KedarnathPehliBaar() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
@@ -112,7 +112,7 @@ export default function KedarnathPehliBaar() {
         <h2 style={{ ...h2, marginTop: 8 }}>18 गलतियाँ जो बिल्कुल मत करना</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
           {mistakes.map(([title, detail], i) => (
-            <div key={i} style={{ display: 'flex', gap: 14, background: i < 3 ? 'rgba(216,90,48,0.05)' : '#fff', borderRadius: 10, padding: '13px 16px', border: `1px solid ${i < 3 ? '#F5C4B3' : 'var(--border)'}` }}>
+            <div key={i} style={{ display: 'flex', gap: 14, background: i < 3 ? 'rgba(216,90,48,0.05)' : '#fff', borderRadius: 10, padding: '13px 16px', border: `1px solid ${i < 3 ? '#F5C4B3' : 'hsl(var(--border))'}` }}>
               <div style={{ width: 32, height: 32, borderRadius: '50%', background: i < 3 ? '#D85A30' : 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: 12, flexShrink: 0 }}>{i+1}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{title}</div>
@@ -142,7 +142,7 @@ export default function KedarnathPehliBaar() {
             <thead><tr style={{ background: 'var(--navy)' }}>{['पड़ाव','गौरीकुंड से दूरी','सुविधाएं'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
             <tbody>
               {[['जंगलचट्टी','4 km','चाय, पानी'],['भीमबली','7 km','मैगी, विश्राम'],['लिनचोली','11 km','खाना, पानी'],['रुद्रा पॉइंट','14 km','आखिरी विश्राम'],['केदारनाथ','16 km','मंदिर, होटल']].map(([stop,dist,fac],i) => (
-                <tr key={stop} style={{ borderBottom:'1px solid var(--border)', background: i===4?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={stop} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===4?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight: i===4?700:400, color:'var(--navy)' }}>{stop}</td>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)' }}>{dist}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{fac}</td>
@@ -163,7 +163,7 @@ export default function KedarnathPehliBaar() {
                 ['सितंबर','साफ मौसम','कम','✅✅ सबसे अच्छा'],
                 ['अक्टूबर','ठंडा, शानदार','बहुत कम','✅✅ सबसे अच्छा'],
               ].map(([month,weather,crowd,rec],i) => (
-                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)' }}>{month}</td>
                   <td style={{ padding:'9px 12px', color:'#475569' }}>{weather}</td>
                   <td style={{ padding:'9px 12px', color:'#475569' }}>{crowd}</td>
@@ -187,11 +187,11 @@ export default function KedarnathPehliBaar() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['रजिस्ट्रेशन कैसे करें','/blog/char-dham-registration-hindi'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

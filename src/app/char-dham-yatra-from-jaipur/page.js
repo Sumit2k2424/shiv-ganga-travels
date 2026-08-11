@@ -88,7 +88,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -123,7 +123,7 @@ export default function Page() {
                 ['Marudhar Express (14660)','Jaipur','04:40 PM','Haridwar','07:00 AM (+1)','~14h 20m','Overnight option, comfortable'],
                 ['Jaipur–Haridwar via Delhi route','Jaipur','Multiple','Delhi → Haridwar','12–14h total','₹400–₹1,400',''],
               ].map(([train,from_,dep,arr,dur,cost,tip],i)=>(
-                <tr key={train} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={train} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{train}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{from_}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dep}</td>
@@ -141,7 +141,7 @@ export default function Page() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Jaipur (JAI) to Dehradun — no direct flight. Jaipur to Haridwar by road in one day is feasible. Most Jaipur pilgrims drive or take the Marudhar Express (overnight train) to Haridwar directly.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🚗 By Road from Jaipur</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Jaipur to Haridwar by car via NH48 and Delhi bypass is very doable in a day — leave by 5 AM, arrive by 2–3 PM, attend evening Ganga Aarti. Avoid driving through Delhi city; take the Kundli–Manesar–Palwal (KMP) Expressway bypass.</div>
         </div>
@@ -154,7 +154,7 @@ export default function Page() {
         <h2 style={h2}>What's Included — Jaipur Char Dham Package</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:24 }}>
           {['✅ AC vehicle (Innova / Tempo Traveller)','✅ Station or airport pickup in Jaipur or Haridwar','✅ Hotel accommodation all 9 nights (twin sharing)','✅ Breakfast + dinner every day','✅ VIP darshan — no queue at all 4 dhams','✅ Experienced Garhwali guide throughout','✅ Biometric registration handled — completely free','✅ All tolls, parking, driver allowance included','✅ Oxygen cylinder + first aid kit on vehicle','✅ 24hr WhatsApp support during the entire yatra'].map(item=>(
-            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>
+            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>
           ))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
@@ -164,10 +164,10 @@ export default function Page() {
         <h2 style={h2}>Our Pickup Points in Jaipur</h2>
         <p style={p}>We pick up from these Jaipur locations. If you are at a different address, WhatsApp us — we accommodate almost all requests.</p>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:28 }}>
-          <span key='Jaipur Junction Railway Station' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Jaipur Junction Railway Station</span>
-          <span key='Jaipur International Airport' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Jaipur International Airport</span>
-          <span key='Mansarovar' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Mansarovar</span>
-          <span key='Vaishali Nagar' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Vaishali Nagar</span>
+          <span key='Jaipur Junction Railway Station' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Jaipur Junction Railway Station</span>
+          <span key='Jaipur International Airport' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Jaipur International Airport</span>
+          <span key='Mansarovar' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Mansarovar</span>
+          <span key='Vaishali Nagar' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Vaishali Nagar</span>
         </div>
 
         <h2 style={h2}>2026 Season — All 4 Dhams Are Open</h2>
@@ -192,11 +192,11 @@ export default function Page() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

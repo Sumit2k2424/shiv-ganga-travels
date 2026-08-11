@@ -111,7 +111,7 @@ export default function ClosingDates() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -139,7 +139,7 @@ export default function ClosingDates() {
             </thead>
             <tbody>
               {dhams.map((d, i) => (
-                <tr key={d.name} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={d.name} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '10px 14px', fontWeight: 700, color: 'var(--navy)', fontSize: 15 }}>
                     {d.name === 'Gangotri' ? '🌿' : d.name === 'Yamunotri' ? '🌊' : d.name === 'Kedarnath' ? '🏔️' : '🕌'} {d.name}
                   </td>
@@ -164,7 +164,7 @@ export default function ClosingDates() {
 
         <h2 id="each-dham" style={h2}>Each Dham — Closing Ceremony & What Happens</h2>
         {dhams.map(d => (
-          <div key={d.name} style={{ background: '#fff', borderRadius: 12, padding: '18px 20px', border: '1px solid var(--border)', borderLeft: '4px solid var(--navy)', marginBottom: 16 }}>
+          <div key={d.name} style={{ background: '#fff', borderRadius: 12, padding: '18px 20px', border: '1px solid hsl(var(--border))', borderLeft: '4px solid var(--navy)', marginBottom: 16 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', fontWeight: 700, color: 'var(--navy)', margin: 0 }}>{d.name}</h3>
               <span style={{ background: 'rgba(216,90,48,0.1)', color: '#D85A30', fontSize: 12, fontWeight: 700, padding: '3px 10px', borderRadius: 20 }}>Closes {d.closes}</span>
@@ -206,7 +206,7 @@ export default function ClosingDates() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
@@ -220,7 +220,7 @@ export default function ClosingDates() {
               ['Omkareshwar, Ukhimath', '/omkareshwar-temple-ukhimath'],
               ['Narsingh Temple, Joshimath', '/joshimath-narsingh-temple'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

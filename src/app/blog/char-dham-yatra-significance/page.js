@@ -62,7 +62,7 @@ export default function Significance() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -135,7 +135,7 @@ export default function Significance() {
               shankaracharya: 'Shankaracharya reportedly retrieved the idol of Badrinarayan from the Narad Kund (where it had been placed during Buddhist ascendancy) and re-installed it in the temple. The Kerala Nambudiri priest tradition he established continues today.',
             },
           ].map(dham => (
-            <div key={dham.name} style={{ background: '#fff', borderRadius: 12, padding: '18px 20px', border: '1px solid var(--border)' }}>
+            <div key={dham.name} style={{ background: '#fff', borderRadius: 12, padding: '18px 20px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 10, flexWrap: 'wrap' }}>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--navy)', margin: 0 }}>{dham.name}</h3>
                 <span style={{ fontSize: 11, background: 'var(--bg)', color: 'var(--teal)', padding: '2px 9px', borderRadius: 20, fontWeight: 700 }}>{dham.deity}</span>
@@ -175,11 +175,11 @@ export default function Significance() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Char Dham Package 2026', '/char-dham-yatra'], ['Route Map', '/blog/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

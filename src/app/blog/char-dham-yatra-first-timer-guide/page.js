@@ -57,7 +57,7 @@ export default function FirstTimerGuide() {
         ]}
       />
 
-      <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Shiv Ganga Travels</strong> · 15 years · 50,000+ pilgrims</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Updated:</strong> May 2026</span>
@@ -65,7 +65,7 @@ export default function FirstTimerGuide() {
         </div>
       </div>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -107,7 +107,7 @@ export default function FirstTimerGuide() {
                 ['11 Nights / 12 Days','Senior pilgrims, those who want relaxed pace','Slow start, more rest, extra day at dhams.'],
                 ['12 Nights / 13 Days','60+ pilgrims, anyone with health conditions','Senior package. Medical attendant included.'],
               ].map(([a,b,c],i)=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:14 }}>{a}</td>
                   <td style={{ padding:'10px 14px', color:'var(--text-mid)', fontSize:13.5 }}>{b}</td>
                   <td style={{ padding:'10px 14px', color:'var(--text-muted)', fontSize:13 }}>{c}</td>
@@ -125,7 +125,7 @@ export default function FirstTimerGuide() {
           { n:'4', t:'Complete biometric registration', d:'Register at registrationandtouristcare.uk.gov.in. Free. Takes 15 minutes. Mandatory for all 4 dhams. Shiv Ganga Travels handles this for all our package pilgrims.' },
           { n:'5', t:'Arrange your travel to Haridwar', d:'Book train or flight. Best trains from Delhi: Shatabdi Express (06:45 NDLS → 10:55 HW) or Mussoorie Express (overnight). See our guide: ' },
         ].map(item=>(
-          <div key={item.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+          <div key={item.n} style={{ display:'flex', gap:0, borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
             <div style={{ background:'var(--navy)', minWidth:44, display:'flex', alignItems:'center', justifyContent:'center', color:'#FFD166', fontWeight:800, fontSize:16, padding:'14px 8px', flexShrink:0 }}>{item.n}</div>
             <div style={{ padding:'14px 16px', flex:1 }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{item.t}</div>
@@ -163,11 +163,11 @@ export default function FirstTimerGuide() {
             { q:'What should I eat the day before the trek?', a:'Eat light the evening before — dal, rice, roti, nothing heavy. Drink 3 litres of water the day before. Start the trek before 6 AM to avoid afternoon crowds at Sonprayag checkpoint. Carry chocolate, biscuits, and ORS for the trek itself.' },
             { q:'What is the steepest part?', a:'The section from Jungle Chatti (9km) to Kedarnath (16km) is the steepest. This is where most pilgrims need to rest frequently. Tea stalls at Jungle Chatti and Bhimbali (12km) are your rest points.' },
           ].map((item,i)=>(
-            <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden' }}>
+            <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
               <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between' }}>
                 {item.q} <span>＋</span>
               </summary>
-              <div style={{ padding:'12px 16px', borderTop:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.a}</div>
+              <div style={{ padding:'12px 16px', borderTop:'1px solid hsl(var(--border))', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.a}</div>
             </details>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function FirstTimerGuide() {
                 ['Miscellaneous','₹1,500','₹3,000','Medicines, shopping, emergencies'],
                 ['Total (approximate)','₹27,000','₹41,000','Per person, Haridwar base'],
               ].map(([a,b,c,d],i)=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)', background:i===6?'var(--navy-light)':i%2===0?'#fff':'var(--bg)', fontWeight:i===6?700:400 }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))', background:i===6?'var(--navy-light)':i%2===0?'#fff':'var(--bg)', fontWeight:i===6?700:400 }}>
                   <td style={{ padding:'10px 14px', color:'var(--navy)', fontSize:14 }}>{a}</td>
                   <td style={{ padding:'10px 14px', color:'#15803D', fontWeight:700, fontSize:14 }}>{b}</td>
                   <td style={{ padding:'10px 14px', color:'var(--navy)', fontWeight:700, fontSize:14 }}>{c}</td>
@@ -227,7 +227,7 @@ export default function FirstTimerGuide() {
           ['Travelling in July–August as a first timer','Monsoon landslide risk is real. First timers should choose May–June or September–October.'],
           ['Booking through an agent without checking the actual operator','Ask: "Who owns the vehicles? Who employs the driver? What hotel is booked?" If they cannot answer, they are aggregators adding cost to your package.'],
         ].map(([mistake, fix],i)=>(
-          <div key={mistake} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid var(--border)', fontSize:14.5 }}>
+          <div key={mistake} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:14.5 }}>
             <span style={{ background:'#DC2626', color:'#fff', minWidth:26, height:26, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12.5, fontWeight:700, flexShrink:0, marginTop:1 }}>{i+1}</span>
             <div>
               <div style={{ fontWeight:700, color:'#DC2626', marginBottom:3 }}>❌ {mistake}</div>
@@ -239,7 +239,7 @@ export default function FirstTimerGuide() {
         <h2 id="choose-operator" style={H2}>How to Choose the Right Char Dham Operator</h2>
         <p>This is the most important decision. A good operator makes the yatra smooth and meaningful. A bad one makes it stressful and expensive. Ask these five questions before booking:</p>
         {['Do you own the vehicles or hire them?','Can I speak to your driver before departure?','Which specific hotels are booked — can I see the names?','What is your cancellation and refund policy in writing?','Are you a registered Uttarakhand Tourism operator?'].map((q,i)=>(
-          <div key={q} style={{ display:'flex', gap:10, padding:'10px 0', borderBottom:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)' }}>
+          <div key={q} style={{ display:'flex', gap:10, padding:'10px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:14.5, color:'var(--text-mid)' }}>
             <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>{i+1}.</span> {q}
           </div>
         ))}
@@ -259,11 +259,11 @@ export default function FirstTimerGuide() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides for First Timers</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra Cost 2026','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['FAQ — 50 Questions','/blog/char-dham-yatra-faq']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

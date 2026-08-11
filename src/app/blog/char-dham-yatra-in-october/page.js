@@ -66,7 +66,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -105,7 +105,7 @@ export default function Page() {
                 ['Kedarnath','April 22','Nov 11, 2026','Closes on Bhai Dooj — exact date announced annually'],
                 ['Badrinath','April 23','Nov 13, 2026','Last to close — usually 2 days after Kedarnath'],
               ].map(([dham,open,close,note],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{dham}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{open}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--gold-dark)', fontSize:13 }}>{close}</td>
@@ -126,7 +126,7 @@ export default function Page() {
             { icon:'🏨', title:'Hotels 30–40% cheaper', desc:'Off-season rates at our partner hotels are significantly lower than peak season. The same room at Guptkashi that costs ₹3,500 in May costs ₹2,200 in October. We pass these savings on directly.' },
             { icon:'🛣️', title:'Better roads', desc:'The heaviest vehicle traffic on the Char Dham route is May–June. In October, the roads are far less congested. Our drivers consistently report shorter travel times and less stress on October trips.' },
           ].map(c=>(
-            <div key={c.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={c.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontSize:24, marginBottom:8 }}>{c.icon}</div>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{c.title}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.65 }}>{c.desc}</div>
@@ -144,7 +144,7 @@ export default function Page() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
         <h2 id="recommendation" style={h2}>Our Recommendation for October Travel</h2>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           {[
             ['Start date','October 1–10 is ideal. October 11–18 is fine with a buffer day. After October 18, we strongly advise against starting.'],
             ['Buffer day','Always keep 1 extra day in the itinerary for weather. Do not book a flight home the day after Badrinath darshan.'],
@@ -152,7 +152,7 @@ export default function Page() {
             ['Warm clothes','We share a full packing list for October travel. Minimum: 2 heavy sweaters, a down or heavy synthetic jacket, thermal inner layers, gloves, and a woollen hat.'],
             ['Group size','October is ideal for smaller groups and couples — you get more personal attention and the roads are quieter. Large groups (15+) might find some facilities limited.'],
           ].map(([k,v],i)=>(
-            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 0' }}>
+            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 0' }}>
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{k}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>
@@ -173,7 +173,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'September Yatra & Pre-Booking',h:'/blog/september-char-dham-yatra'},{l:'Best Time for Char Dham',h:'/blog/best-time-char-dham'},{l:'Char Dham Opening Dates',h:'/blog/char-dham-yatra-opening-dates-2026'},{l:'Uttarakhand Weather Guide',h:'/blog/uttarakhand-weather-guide'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

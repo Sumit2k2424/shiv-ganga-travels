@@ -49,7 +49,7 @@ export default function ChoptaTungnath() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Uttarakhand Tours<span>›</span>
@@ -91,7 +91,7 @@ export default function ChoptaTungnath() {
             { season:'Sep–Nov (Autumn)', icon:'🍂', desc:'Post-monsoon clarity — Himalayan peaks are sharp and fully visible. Fewer tourists than May–June. Best photographic season for the Chandrashila summit. October is spectacular.' },
             { season:'Jul–Aug (Monsoon)', icon:'🌧️', desc:'Heavy rain, leeches on the trail, and persistent cloud cover blocking the summit views. Not recommended unless you enjoy the moody misty aesthetic and are comfortable with wet conditions.' },
           ].map(s => (
-            <div key={s.season} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px' }}>
+            <div key={s.season} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px' }}>
               <div style={{ fontWeight:700, color:'var(--navy)', fontSize:13.5, marginBottom:6 }}>{s.icon} {s.season}</div>
               <p style={{ margin:0, fontSize:13, color:'#475569', lineHeight:1.65 }}>{s.desc}</p>
             </div>
@@ -121,11 +121,11 @@ export default function ChoptaTungnath() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Panch Kedar Yatra','/panch-kedar-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Valley of Flowers','/blog/valley-of-flowers-trek'],['Uttarakhand Tours','/uttarakhand-tour-packages'],['Kedarnath Weather','/kedarnath-weather']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

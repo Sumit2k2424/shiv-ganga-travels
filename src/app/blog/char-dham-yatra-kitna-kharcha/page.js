@@ -63,7 +63,7 @@ export default function CharDhamKharcha() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
@@ -108,7 +108,7 @@ export default function CharDhamKharcha() {
                 ['सीनियर स्पेशल','₹27,999','12-13 दिन','घोड़ा शुल्क शामिल, ग्राउंड फ्लोर कमरा'],
                 ['हेलिकॉप्टर','₹2,30,000','5-6 दिन','सभी 4 धाम हेलिकॉप्टर चार्टर से, VIP दर्शन'],
               ].map(([type,price,days,inc],i) => (
-                <tr key={type} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={type} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)' }}>{type}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color:'#1D9E75', whiteSpace:'nowrap' }}>{price}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:13 }}>{days}</td>
@@ -135,7 +135,7 @@ export default function CharDhamKharcha() {
             { icon:'🙏', item:'VIP दर्शन', cost:'₹150–₹500/व्यक्ति', detail:'बिना VIP के 4-8 घंटे लाइन। हमारे सभी पैकेज में VIP दर्शन शामिल है — अलग से देने की जरूरत नहीं।' },
             { icon:'💵', item:'व्यक्तिगत खर्चे', cost:'₹1,500–₹3,000', detail:'प्रसाद, चाय-नाश्ता, टिप्स, स्मृति चिह्न, दवाइयां।' },
           ].map(({ icon, item, cost, detail }) => (
-            <div key={item} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)', flexWrap: 'wrap' }}>
+            <div key={item} style={{ display: 'flex', gap: 14, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid hsl(var(--border))', flexWrap: 'wrap' }}>
               <div style={{ minWidth: 220 }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)' }}>{icon} {item}</div>
                 <div style={{ fontWeight: 800, fontSize: 15, color: '#1D9E75' }}>{cost}</div>
@@ -160,7 +160,7 @@ export default function CharDhamKharcha() {
                 ['कुल','₹92,300'],
                 ['प्रति व्यक्ति औसत','₹23,075'],
               ].map(([item,cost],i) => (
-                <tr key={item} style={{ borderBottom:'1px solid var(--border)', background: i>=5?'rgba(29,158,117,0.08)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={item} style={{ borderBottom:'1px solid hsl(var(--border))', background: i>=5?'rgba(29,158,117,0.08)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight: i>=5?700:400, color:'var(--navy)' }}>{item}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color: i>=5?'#1D9E75':'var(--navy)' }}>{cost}</td>
                 </tr>
@@ -183,7 +183,7 @@ export default function CharDhamKharcha() {
                 ['लोकल एजेंट (बिचौलिया)','₹22,000–₹25,000','8–15%'],
                 ['शिव गंगा ट्रेवल्स (सीधे)','₹18,500','0% (शून्य)'],
               ].map(([ch,price,comm],i) => (
-                <tr key={ch} style={{ borderBottom:'1px solid var(--border)', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={ch} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight: i===3?800:600, color:'var(--navy)' }}>{ch}{i===3 && <span style={{ background:'rgba(29,158,117,0.15)', color:'#1D9E75', fontSize:10, fontWeight:700, padding:'2px 7px', borderRadius:20, marginLeft:8 }}>सबसे सस्ता</span>}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color: i===3?'#1D9E75':'var(--navy)' }}>{price}</td>
                   <td style={{ padding:'10px 12px', color: i===3?'#1D9E75':'#D85A30', fontWeight:600 }}>{comm}</td>
@@ -200,7 +200,7 @@ export default function CharDhamKharcha() {
             ['क्या चार धाम में ATM मिलते हैं?','हाँ — उत्तरकाशी, रुद्रप्रयाग, बद्रीनाथ में। लेकिन नेटवर्क की वजह से अक्सर बंद रहते हैं। ₹20,000 नकद जरूर साथ रखें।'],
             ['सितंबर-अक्टूबर में कितना सस्ता पड़ता है?','होटल 30-40% सस्ते, भीड़ कम, मौसम साफ। हम इसी समय जाने की खास सलाह देते हैं।'],
           ].map(([q,a]) => (
-            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid var(--border)' }}>
+            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 18px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>❓ {q}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
@@ -216,11 +216,11 @@ export default function CharDhamKharcha() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['बुजुर्गों के लिए चार धाम','/blog/bujurg-char-dham-yatra'],['रजिस्ट्रेशन कैसे करें','/blog/char-dham-registration-hindi'],['कब जाएं?','/blog/char-dham-kab-jayen'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['All Packages','/packages']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

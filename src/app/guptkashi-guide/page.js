@@ -66,7 +66,7 @@ export default function GuptkashiGuide() {
       <p style={p}>Practical reasons make Guptkashi the standard overnight stop. At 1,319 m the nights are mild — you sleep properly before a trek day, which matters more than pilgrims expect. The hotel spread is the widest anywhere on the Kedarnath road, from dharamshalas to genuinely comfortable properties with valley views toward Chaukhamba. And the arithmetic works: leave Guptkashi at 3:30–4 AM, reach the Sonprayag shuttle line by 5:30, and you are on the trail by first light. Our own packages use Guptkashi, Sitapur or Phata depending on the batch — details in the <Link href="/kedarnath-hotels" style={{ color:'var(--teal)', fontWeight:600 }}>Kedarnath hotels guide</Link>.</p>
 
       <h2 style={h2}>Distances from Guptkashi</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         {[
           ['Sonprayag (vehicle limit)','31 km','~1.5 hrs'],
           ['Gaurikund (trek start)','36 km','shuttle after Sonprayag'],
@@ -75,7 +75,7 @@ export default function GuptkashiGuide() {
           ['Ukhimath (winter seat)','13 km','~40 min'],
           ['Haridwar','204 km','7–8 hrs'],
         ].map(([to,dist,time],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr clamp(70px,22%,120px) clamp(110px,30%,180px)', borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 16px', background:i%2===0?'#fff':'var(--bg)' }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr clamp(70px,22%,120px) clamp(110px,30%,180px)', borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 16px', background:i%2===0?'#fff':'var(--bg)' }}>
             <div style={{ fontWeight:600, fontSize:13, color:'var(--navy)' }}>{to}</div>
             <div style={{ fontSize:13, fontWeight:700, color:'var(--text)' }}>{dist}</div>
             <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{time}</div>
@@ -93,7 +93,7 @@ export default function GuptkashiGuide() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Kedarnath Hotels',h:'/kedarnath-hotels'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Kedarnath to Badrinath',h:'/kedarnath-to-badrinath-distance'},{l:'Kedarnath Package',h:'/kedarnath-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

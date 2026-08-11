@@ -14,7 +14,7 @@ export default function WhyOurPrice({ compact = false }) {
   return (
     <section style={{
       background: 'var(--bg)',
-      border: '1px solid var(--border)',
+      border: '1px solid hsl(var(--border))',
       borderLeft: '4px solid var(--gold-dark)',
       borderRadius: 14,
       padding: compact ? '18px 20px' : '24px 26px',

@@ -84,7 +84,7 @@ export default function RouteMap() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -127,7 +127,7 @@ export default function RouteMap() {
         <h2 id="day-by-day" style={h2}>Day-by-Day Route — Distances, Times & Key Stops</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
           {route.map((day, i) => (
-            <div key={day.day} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid var(--border)', borderLeft: `4px solid ${i < 2 ? '#f59e0b' : i < 4 ? '#0D9488' : i < 6 ? '#DC2626' : i < 8 ? '#7C3AED' : 'var(--navy)'}` }}>
+            <div key={day.day} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid hsl(var(--border))', borderLeft: `4px solid ${i < 2 ? '#f59e0b' : i < 4 ? '#0D9488' : i < 6 ? '#DC2626' : i < 8 ? '#7C3AED' : 'var(--navy)'}` }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 8 }}>
                 <span style={{ background: 'var(--navy)', color: '#FFD166', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, whiteSpace: 'nowrap' }}>{day.day}</span>
                 <strong style={{ fontSize: 14, color: 'var(--navy)' }}>{day.from} → {day.to}</strong>
@@ -157,7 +157,7 @@ export default function RouteMap() {
             { route: 'Rudraprayag → Joshimath → Badrinath (NH58)', condition: 'Good', detail: 'NH58 is the main Badrinath highway — NHAI maintained, mostly good except during monsoon landslides. Joshimath land subsidence (2023 crisis) is monitored; current status is stable. Mana village road (4km beyond Badrinath) is open and accessible.' },
             { route: 'Badrinath → Haridwar (NH58)', condition: 'Good', detail: 'Return route via Chamoli, Srinagar (not Kashmir — Pauri Garhwal), Devprayag, Rishikesh. 290km, 7-8 hours. Devprayag is worth a 20-minute stop both ways. Rishikesh city traffic can add 30-45 minutes during evening hours.' },
           ].map(item => (
-            <div key={item.route} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)' }}>
+            <div key={item.route} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)' }}>{item.route}</div>
                 <span style={{ fontSize: 11, background: item.condition === 'Good' ? '#EAF3DE' : item.condition === 'Fair-Restricted' ? '#FCEBEB' : '#FFF8F0', color: item.condition === 'Good' ? '#30000A' : item.condition === 'Fair-Restricted' ? '#791F1F' : '#7B3F00', padding: '2px 8px', borderRadius: 20, fontWeight: 700 }}>{item.condition}</span>
@@ -184,7 +184,7 @@ export default function RouteMap() {
                 ['Nandprayag', 'Nandakini + Alaknanda', 'NH58, on route to Badrinath', '205 km', '⬜ Optional — small but sacred'],
                 ['Vishnuprayag', 'Dhauliganga + Alaknanda', 'NH58, just before Joshimath', '243 km', '✅ Yes — dramatic gorge view, visible from road'],
               ].map(([name, rivers, loc, dist, stop], i) => (
-                <tr key={name} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={name} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)' }}>{name}</td>
                   <td style={{ padding: '9px 12px', color: '#475569', fontSize: 13 }}>{rivers}</td>
                   <td style={{ padding: '9px 12px', color: '#64748b', fontSize: 12 }}>{loc}</td>
@@ -208,7 +208,7 @@ export default function RouteMap() {
             { tip: 'Do Devprayag twice — going and coming back', detail: 'On Day 1 heading out, Devprayag is on your left going north. On the return (Day 9-10), stop on the other bank for the full face-on confluence view. The color difference between the two rivers (green Alaknanda, blue-grey Bhagirathi) is most visible in the morning sun.' },
             { tip: 'Fuel: Fill up at Uttarkashi and Joshimath', detail: 'These are the last reliable full-service fuel stations before Gangotri and Badrinath respectively. Fuel is available at both dhams but at higher rates and sometimes from private vendors. Fill your tank at Uttarkashi before heading to Gangotri, and at Joshimath before Badrinath.' },
           ].map(item => (
-            <div key={item.tip} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)', borderLeft: '3px solid var(--teal)' }}>
+            <div key={item.tip} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--teal)' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 5 }}>💡 {item.tip}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{item.detail}</div>
             </div>
@@ -225,11 +225,11 @@ export default function RouteMap() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Char Dham Package 2026', '/char-dham-yatra'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Road Conditions', '/blog/char-dham-yatra-road-conditions-2026']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

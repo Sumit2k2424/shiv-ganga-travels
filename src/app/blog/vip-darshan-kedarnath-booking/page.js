@@ -83,7 +83,7 @@ export default function VIPDarshan() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Blog</Link><span>›</span>
@@ -150,7 +150,7 @@ export default function VIPDarshan() {
                 ['Maha Abhishek (4 AM)', '₹5,500+', 'Pre-dawn ritual bathing of the Shivling'],
                 ['Whole Day Puja', '₹28,600 (up to 5)', 'Full day of rituals in your family name'],
               ].map(([type, cost, gets], i) => (
-                <tr key={type} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={type} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)' }}>{type}</td>
                   <td style={{ padding: '9px 12px', color: '#334155', whiteSpace: 'nowrap' }}>{cost}</td>
                   <td style={{ padding: '9px 12px', color: '#64748b', fontSize: 13 }}>{gets}</td>
@@ -193,7 +193,7 @@ export default function VIPDarshan() {
             ['5. Pay online', 'Confirm the payable amount and pay by UPI, card or netbanking. Amounts are non-refundable.'],
             ['6. Download the QR slip', 'You get a QR-coded confirmation slip. Save it on your phone and carry a printout — you\'ll show it at the temple gate.'],
           ].map(([t, d]) => (
-            <div key={t} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)' }}>
+            <div key={t} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 5 }}>{t}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{d}</div>
             </div>
@@ -260,7 +260,7 @@ export default function VIPDarshan() {
                 ['Ved Path / Vishnu Sahasranama', '₹701 (approx)', 'Morning rituals'],
                 ['Maha Abhishek (most popular)', '₹5,500 / person', 'Pre-dawn 4:30–6:30 AM'],
               ].map(([type, cost, time], i) => (
-                <tr key={type} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={type} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)' }}>{type}</td>
                   <td style={{ padding: '9px 12px', color: '#334155', whiteSpace: 'nowrap' }}>{cost}</td>
                   <td style={{ padding: '9px 12px', color: '#64748b', fontSize: 13 }}>{time}</td>
@@ -293,7 +293,7 @@ export default function VIPDarshan() {
                 ['6:00 PM', 'Shayan aarti — evening lamp ceremony', 'All pilgrims, free to attend'],
                 ['9:00 PM', 'Temple closes for the night', 'Nobody'],
               ].map(([time, what, who], i) => (
-                <tr key={time} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={time} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)', whiteSpace: 'nowrap' }}>{time}</td>
                   <td style={{ padding: '9px 12px', color: '#334155' }}>{what}</td>
                   <td style={{ padding: '9px 12px', color: '#64748b', fontSize: 13 }}>{who}</td>
@@ -311,7 +311,7 @@ export default function VIPDarshan() {
           ['What is the cheapest VIP darshan option?', 'The committee-set special darshan minimum is ₹300 per person; the commonly bought parchi is ₹1,100. Either gets you priority entry and brief sanctum access.'],
           ['Is VIP darshan good for senior citizens?', 'Yes — it\'s the single best reason to book it. It cuts hours of standing at high altitude down to under an hour and reduces physical strain considerably.'],
         ].map(([q, a]) => (
-          <div key={q} style={{ borderBottom: '1px solid var(--border)', padding: '14px 0' }}>
+          <div key={q} style={{ borderBottom: '1px solid hsl(var(--border))', padding: '14px 0' }}>
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 6 }}>{q}</div>
             <div style={{ fontSize: 14, color: '#475569', lineHeight: 1.8 }}>{a}</div>
           </div>
@@ -328,7 +328,7 @@ export default function VIPDarshan() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
@@ -338,7 +338,7 @@ export default function VIPDarshan() {
               ['Kedarnath Complete Guide', '/blog/kedarnath-yatra-complete-guide'],
               ['Kedarnath Package', '/kedarnath-yatra'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

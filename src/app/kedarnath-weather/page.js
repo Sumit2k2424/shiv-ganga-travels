@@ -28,7 +28,7 @@ export default function KedarnathWeather() {
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Temperature, snowfall, rainfall and best visiting windows for each month</p>
       </div>
     </section>
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         Home<span>›</span>
         Kedarnath Yatra<span>›</span><span>Weather Guide</span>
@@ -41,7 +41,7 @@ export default function KedarnathWeather() {
         <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}><strong>May–June</strong> and <strong>September–October</strong> are the two ideal windows. May–June has clear skies, mild temperatures, and blooming rhododendrons. September–October has crystal-clear post-monsoon visibility — best for Himalayan photography. Avoid July–August (monsoon, landslides).</p>
       </div>
       <h2 style={h2}>Month-by-Month Weather</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
           <thead>
             <tr style={{ background:'var(--navy-light)' }}>
@@ -52,7 +52,7 @@ export default function KedarnathWeather() {
           </thead>
           <tbody>
             {weather.map((w,i)=>(
-              <tr key={w.month} style={{ borderTop:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+              <tr key={w.month} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                 <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)' }}>{w.month}</td>
                 <td style={{ padding:'10px 12px', color:'var(--text-mid)' }}>{w.temp}</td>
                 <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12 }}>{w.snow}</td>
@@ -67,7 +67,7 @@ export default function KedarnathWeather() {
       <h2 style={h2}>Essential Packing List for Kedarnath Weather</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:10, marginBottom:28 }}>
         {[{cat:'Clothing',items:['Thermal inners (2 sets)','Fleece jacket','Windproof outer jacket','Warm cap & gloves','Wool socks (3–4 pairs)']},{cat:'Footwear',items:['Waterproof trekking boots','Extra dry socks','Gaiters (if visiting Oct–Nov)']},{cat:'Essentials',items:['Sunscreen SPF 50+','Lip balm','Reusable water bottle','High-calorie snacks','Personal medicines']},{cat:'Safety',items:['Oxygen can (from Gaurikund)','Rain poncho','Trekking poles','Headtorch with spare batteries']}].map(c=>(
-          <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+          <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:8 }}>{c.cat}</div>
             {c.items.map(it=><div key={it} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'2px 0', display:'flex', gap:5 }}><span style={{ color:'var(--teal)' }}>✓</span>{it}</div>)}
           </div>

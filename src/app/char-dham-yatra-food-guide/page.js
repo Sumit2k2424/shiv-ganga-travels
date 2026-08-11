@@ -148,7 +148,7 @@ export default function FoodGuide() {
             ['🧴 Refillable bottle','Cheaper than buying bottled water at Kedarnath prices, and less plastic on a route drowning in it.'],
             ['💊 Your own medication','Nothing on this route can dispense a prescription. Bring what you need for the whole trip.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={t} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t}</div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7 }}>{d}</div>
             </div>

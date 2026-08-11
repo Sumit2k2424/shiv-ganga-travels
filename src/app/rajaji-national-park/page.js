@@ -63,7 +63,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 const teal = { color:'var(--teal)', fontWeight:600 };
 
 const FACTS = [
@@ -125,7 +125,7 @@ export default function RajajiNationalPark() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
         <Link href="/rishikesh-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Rishikesh Tour Packages</Link><span>&rsaquo;</span>
@@ -146,7 +146,7 @@ export default function RajajiNationalPark() {
 
       <h2 style={h2}>Rajaji National Park at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -161,7 +161,7 @@ export default function RajajiNationalPark() {
       <h2 style={h2}>Safari Zones Compared — Which Gate Should You Pick?</h2>
       <p style={p}>This is the one thing almost nobody lays out clearly, and it's the first real decision you have to make. Five zones, five different experiences.</p>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:560 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:560 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Zone','Access','Best for','Notes'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -182,7 +182,7 @@ export default function RajajiNationalPark() {
       <h2 style={h2}>Entry Fees &amp; Safari Costs 2026 — The Real Numbers</h2>
       <p style={p}>Fee information for Rajaji is scattered and inconsistent across the web &mdash; the one genuinely authoritative source is an old, unstyled forest-department-adjacent site with no images or FAQ, and even it lists two timing blocks without labelling which season each belongs to. Here's the reconciled picture:</p>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FEES.map(([k,v]) => (
               <tr key={k}>
@@ -198,7 +198,7 @@ export default function RajajiNationalPark() {
       <h2 style={h2}>Timings — Which Slot Is Summer, Which Is Winter</h2>
       <p style={p}>The park runs two safari sessions a day, and the exact clock times shift with the season &mdash; something the source data rarely spells out plainly:</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:480 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:480 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Season','Morning slot','Evening slot'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -223,7 +223,7 @@ export default function RajajiNationalPark() {
 
       <h2 style={h2}>Sample Half-Day Safari from Rishikesh</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:460 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:460 }}>
           <tbody>
             {[
               ['5:15 AM', 'Pickup from your Rishikesh hotel'],
@@ -256,7 +256,7 @@ export default function RajajiNationalPark() {
       <h2 style={h2}>How to Reach Rajaji National Park</h2>
       <p style={p}>Every gate is close by regional standards &mdash; this is one of the easiest wildlife safaris to add onto a Haridwar or Rishikesh trip without restructuring your whole itinerary.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:480 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:480 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Route','Distance','Time'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -292,7 +292,7 @@ export default function RajajiNationalPark() {
       </ul>
 
       <h2 style={h2}>Where It Is on the Map</h2>
-      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
         <iframe
           title="Rajaji National Park, Chilla Gate location map"
           src="https://www.google.com/maps?q=29.9667,78.2333&hl=en&z=11&output=embed"
@@ -308,7 +308,7 @@ export default function RajajiNationalPark() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Rishikesh Tour Packages',h:'/rishikesh-tour-packages'},{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

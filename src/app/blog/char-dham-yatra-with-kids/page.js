@@ -66,7 +66,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -100,7 +100,7 @@ export default function Page() {
             { dham:'Kedarnath', age:'12+ for trek', trek:'16km trek at 3,583m', verdict:'The 16km trek at high altitude is not appropriate for children under 10. For 10–14 year olds, pony is available. For younger children, the helicopter option from Phata or Sersi (20-minute flight) is the right choice and is actually thrilling for kids.' },
             { dham:'Badrinath', age:'All ages', trek:'No trek — motor road to temple', verdict:'Like Gangotri, fully accessible by car. The Mana Village walk (3km from temple) is excellent for children — the Bhim Pul boulder bridge, the caves, and the "last dhaba before Tibet" sign all make for memorable moments.' },
           ].map(d=>(
-            <div key={d.dham} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={d.dham} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:800, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{d.dham}</div>
               <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:3 }}>Min. age: {d.age}</div>
               <div style={{ fontSize:11.5, color:'var(--text-muted)', marginBottom:8 }}>Trek: {d.trek}</div>
@@ -116,7 +116,7 @@ export default function Page() {
         <h2 id="packing" style={h2}>Packing List for Children on Char Dham Yatra</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:10, marginBottom:24 }}>
           {['Warm inner thermals (2 pairs)','Heavy fleece or down jacket','Waterproof outer jacket','Woollen hat and gloves','Comfortable trekking shoes (not new)','Extra socks (wool preferred)','Child-specific altitude sickness medicine (consult doctor)','Oral rehydration salts','High-energy snacks (dry fruits, energy bars)','Small backpack child can carry themselves','Sunscreen SPF 50+ (altitude UV is intense)','Wet wipes and hand sanitiser'].map(i=>(
-            <div key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', fontSize:13, color:'var(--text-mid)', background:'var(--bg)', padding:'8px 12px', borderRadius:8, border:'1px solid var(--border)' }}>
+            <div key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', fontSize:13, color:'var(--text-mid)', background:'var(--bg)', padding:'8px 12px', borderRadius:8, border:'1px solid hsl(var(--border))' }}>
               <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>{i}
             </div>
           ))}
@@ -143,7 +143,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'},{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Char Dham Yatra Cost',h:'/blog/char-dham-yatra-cost'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

@@ -83,7 +83,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -135,7 +135,7 @@ export default function Page() {
                 ['Gangotri (Uttarkashi road)','Netala and slide zones past Bhatwari','Watch for shooting stones after overnight rain; no stopping under cut slopes'],
                 ['Yamunotri (Damta–Barkot)','Ojri–Dabarkot stretch','Earliest possible crossing; this zone closes most often'],
               ].map(([route,zone,action],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{route}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{zone}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:12.5 }}>{action}</td>
@@ -154,7 +154,7 @@ export default function Page() {
 
         <h2 id="monsoon-packing" style={h2}>Monsoon Packing — Beyond the Usual List</h2>
         <p style={p}>Our full <Link href="/blog/char-dham-yatra-packing-list" style={{ color:'var(--teal)', fontWeight:600 }}>packing list</Link> covers the basics. For July–August, add these:</p>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           {[
             ['Heavy-duty poncho','Not a thin ₹100 raincoat — it shreds in the first hour of the Kedarnath trek. A thick poncho that covers your daypack too. Umbrellas are useless in valley wind.'],
             ['Extra footwear grip','The trek path stones turn slick. Shoes with worn-flat soles cause most monsoon trek injuries we see. Anti-slip crampon bands cost ₹200 in Sonprayag and are worth it.'],
@@ -162,7 +162,7 @@ export default function Page() {
             ['Buffer day','Not a thing you pack, but the most important item. One flexible day absorbs a road blockage or a helicopter weather hold. Without it, a 3-hour slide becomes a missed train.'],
             ['ORS and basic medicines','Pharmacies at halts run low mid-season. Carry your own strip of essentials.'],
           ].map(([k,v],i)=>(
-            <div key={i} style={{ display:'grid', gridTemplateColumns:'170px 1fr', gap:12, borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 0' }}>
+            <div key={i} style={{ display:'grid', gridTemplateColumns:'170px 1fr', gap:12, borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 0' }}>
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{k}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>
@@ -178,7 +178,7 @@ export default function Page() {
 
         <h2 id="faq" style={h2}>Monsoon Yatra FAQs</h2>
         {FAQS.map((f,i)=>(
-          <div key={i} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
+          <div key={i} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>
             <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{f.a}</div>
           </div>
@@ -198,7 +198,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Live Road Status',h:'/char-dham-road-status'},{l:'Road Conditions 2026',h:'/blog/char-dham-yatra-road-conditions-2026'},{l:'September Yatra Guide',h:'/blog/september-char-dham-yatra'},{l:'Weather Month by Month',h:'/blog/char-dham-weather-guide'},{l:'Emergency Contacts',h:'/char-dham-yatra-emergency-contacts'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

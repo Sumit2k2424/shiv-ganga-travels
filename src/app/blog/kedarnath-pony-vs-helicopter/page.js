@@ -54,14 +54,14 @@ export default function PonyVsHelicopter() {
         ]}
       />
 
-      <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Shiv Ganga Travels</strong> · Haridwar · 15 years on Kedarnath route</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Updated:</strong> May 2026</span>
         </div>
       </div>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/kedarnath-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span>
@@ -100,7 +100,7 @@ export default function PonyVsHelicopter() {
                 ['Availability','Always available','Limited in peak season','Slot-based','Limited'],
                 ['Best for','Fit pilgrims under 55','Moderate fitness, all ages','Seniors, time-pressed','Pilgrims who cannot walk or ride'],
               ].map((row,i)=>(
-                <tr key={row[0]} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={row[0]} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   {row.map((cell,j)=>(
                     <td key={j} style={{ padding:'10px 14px', fontWeight:j===0?700:400, color:j===0?'var(--navy)':j===3?'var(--teal)':'var(--text-mid)', fontSize:j===0?14:13.5 }}>{cell}</td>
                   ))}
@@ -120,11 +120,11 @@ export default function PonyVsHelicopter() {
             { t:'Is it safe?', d:'Yes — ponies on this route have done the Kedarnath trail thousands of times. Handlers are experienced local Garhwalis. However, if you have severe vertigo or fear of heights, it may feel uncomfortable on certain steep sections. Most pilgrims find it comfortable.' },
             { t:'Physical requirements', d:'No fitness requirement — this is suitable for all ages including senior citizens. The only condition: you must be able to mount and dismount the pony (handlers assist). Maximum weight capacity is approximately 90kg.' },
           ].map(item=>(
-            <details key={item.t} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden' }}>
+            <details key={item.t} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
               <summary style={{ padding:'13px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between' }}>
                 {item.t} <span>＋</span>
               </summary>
-              <div style={{ padding:'12px 16px', borderTop:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.d}</div>
+              <div style={{ padding:'12px 16px', borderTop:'1px solid hsl(var(--border))', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.d}</div>
             </details>
           ))}
         </div>
@@ -142,11 +142,11 @@ export default function PonyVsHelicopter() {
             { t:'What is included in the helicopter ticket?', d:'The IRCTC helicopter ticket covers the flight only. VIP darshan at Kedarnath, hotel, meals, and ground transfers are not included. A full Char Dham package from Shiv Ganga Travels includes helicopter coordination, ground transfers, hotel, and VIP darshan arrangement.' },
             { t:'What if my slot is cancelled?', d:'IRCTC cancels helicopter slots due to weather, technical reasons, or official order. Full refund is issued within 7 days. In bad weather, helicopter operations stop for the day and all booked passengers are rescheduled. This is why we recommend building a buffer day into your Kedarnath itinerary.' },
           ].map(item=>(
-            <details key={item.t} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden' }}>
+            <details key={item.t} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
               <summary style={{ padding:'13px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between' }}>
                 {item.t} <span>＋</span>
               </summary>
-              <div style={{ padding:'12px 16px', borderTop:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.d}</div>
+              <div style={{ padding:'12px 16px', borderTop:'1px solid hsl(var(--border))', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{item.d}</div>
             </details>
           ))}
         </div>
@@ -192,11 +192,11 @@ export default function PonyVsHelicopter() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Kedarnath Darshan Timing','/blog/kedarnath-darshan-timing'],['Kedarnath Yatra Package','/kedarnath-yatra']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -108,7 +108,7 @@ export default function HaridwarTourPackages() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           Home<span>›</span>
           <span>Haridwar Tour Packages 2026</span>
@@ -163,7 +163,7 @@ export default function HaridwarTourPackages() {
               includes: ['Night before yatra', 'Har Ki Pauri Aarti', 'Ganga snan', 'Early morning departure', 'Included with all CDY packages'],
             },
           ].map(pkg => (
-            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid hsl(var(--border))', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontWeight: 800, fontSize: 18, color: '#1D9E75' }}>{pkg.price}<span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 400 }}> /person · {pkg.duration}</span></div>
@@ -192,7 +192,7 @@ export default function HaridwarTourPackages() {
             { place: 'Maya Devi Temple', note: 'At the city centre', desc: 'One of the oldest temples in Haridwar, dating back over 1,000 years. The Maya Devi temple is believed to mark the spot where the heart and navel of Goddess Sati fell in the Daksha Yagna legend. A Shakti Peetha with no commercial activity — small, quiet, and profoundly sacred.' },
             { place: 'Daksha Mahadev Temple', note: 'Kankhal, 4km from Har Ki Pauri', desc: 'Temple marking the site of King Daksha\'s yagna (sacrificial fire) where Goddess Sati immolated herself — the origin story of the 51 Shakti Peethas. In Kankhal, a quieter neighbourhood 4km from the main ghat area. Often skipped by tourists, never crowded, deeply significant in Hindu mythology.' },
           ].map(item => (
-            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)', display: 'grid', gridTemplateColumns: '200px 1fr', gap: 16 }}>
+            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))', display: 'grid', gridTemplateColumns: '200px 1fr', gap: 16 }}>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>{item.place}</div>
                 <div style={{ fontSize: 11.5, color: '#E8920A', fontWeight: 600, marginTop: 2 }}>{item.note}</div>
@@ -228,7 +228,7 @@ export default function HaridwarTourPackages() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -246,7 +246,7 @@ export default function HaridwarTourPackages() {
               ['Mansa Devi Temple', '/mansa-devi-temple'],
               ['Chandi Devi Temple', '/chandi-devi-temple'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

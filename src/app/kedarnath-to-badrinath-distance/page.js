@@ -57,7 +57,7 @@ export default function KedarnathToBadrinath() {
       </AnswerBox>
 
       <h2 style={h2}>Distance at a Glance</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         {[
           ['Kedarnath Temple → Gaurikund','16 km trek','5–7 hrs down (walk / pony / palki)'],
           ['Gaurikund → Guptkashi','31 km','1–1.5 hrs'],
@@ -67,7 +67,7 @@ export default function KedarnathToBadrinath() {
           ['Joshimath → Badrinath','44 km','1.5–2 hrs (gated one-way sections)'],
           ['Total road distance','218 km','8–10 hrs driving'],
         ].map(([leg,dist,time],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr clamp(70px,20%,110px) clamp(110px,32%,200px)', borderTop: i>0?'1px solid var(--border)':'none', padding:'10px 16px', background: i===6?'var(--navy-light)':(i%2===0?'#fff':'var(--bg)') }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr clamp(70px,20%,110px) clamp(110px,32%,200px)', borderTop: i>0?'1px solid hsl(var(--border))':'none', padding:'10px 16px', background: i===6?'var(--navy-light)':(i%2===0?'#fff':'var(--bg)') }}>
             <div style={{ fontWeight: i===6?800:600, fontSize:13, color:'var(--navy)' }}>{leg}</div>
             <div style={{ fontSize:13, fontWeight:700, color:'var(--text)' }}>{dist}</div>
             <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{time}</div>
@@ -84,7 +84,7 @@ export default function KedarnathToBadrinath() {
       <p style={p}>The plan that works, and the one we build into our packages: trek down in the morning, drive as far as <strong>Pipalkoti</strong> (about 6 hours from Gaurikund), sleep at a comfortable 1,260 m, and do the final 75 km to Badrinath early next morning — arriving in time for darshan before the day crowd. Pilgrims who want the Tungnath trek halt at <strong>Chopta</strong> instead.</p>
 
       <h2 style={h2}>Taxi Fare for This Leg</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:16 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:16 }}>
         {[
           ['Vehicle','Seats','Sonprayag → Badrinath (approx.)'],
           ['Swift Dzire (sedan)','4','₹7,500–9,000'],
@@ -92,7 +92,7 @@ export default function KedarnathToBadrinath() {
           ['Innova Crysta','6','₹10,000–12,500'],
           ['Tempo Traveller','12','₹14,000–17,000'],
         ].map((row,i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr 60px 1.2fr', borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 16px', background:i===0?'var(--navy)':(i%2?'var(--bg)':'#fff') }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'1fr 60px 1.2fr', borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 16px', background:i===0?'var(--navy)':(i%2?'var(--bg)':'#fff') }}>
             {row.map((c,j)=><div key={j} style={{ fontSize:13, fontWeight:i===0?700:(j===0?600:500), color:i===0?'#fff':'var(--text-mid)' }}>{c}</div>)}
           </div>
         ))}
@@ -106,7 +106,7 @@ export default function KedarnathToBadrinath() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Do Dham Package (Kedar+Badri)',h:'/do-dham-yatra'},{l:'Guptkashi Guide',h:'/guptkashi-guide'},{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Chopta Tungnath',h:'/chopta-tungnath'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},{l:'Haridwar → Badrinath Distance',h:'/haridwar-to-badrinath-distance'},{l:'Delhi → Kedarnath Distance',h:'/delhi-to-kedarnath-distance'},{l:'Altitude Sickness Guide',h:'/altitude-sickness-char-dham'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

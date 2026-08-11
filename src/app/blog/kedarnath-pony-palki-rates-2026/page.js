@@ -83,7 +83,7 @@ export default function KedarnathPonyRates() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Blog</Link><span>›</span>
@@ -160,7 +160,7 @@ export default function KedarnathPonyRates() {
                 ['🎒 Kandi / Pitthu (child)', 'Gaurikund', '₹2,000–3,000', '₹4,000–5,500', 'Children, very light adults', 'Counter / registered provider'],
                 ['🚁 Helicopter', 'Phata/Sersi/Guptkashi', '—', '₹6,000–9,999', 'Fastest, senior citizens', 'IRCTC heliyatra portal'],
               ].map(([service, from, oneWay, roundTrip, bestFor, bookAt], i) => (
-                <tr key={service + from} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)', verticalAlign: 'top' }}>
+                <tr key={service + from} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)', verticalAlign: 'top' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: 'var(--navy)' }}>{service}</td>
                   <td style={{ padding: '9px 12px', color: '#475569', fontSize: 13 }}>{from}</td>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: '#1D9E75' }}>{oneWay}</td>
@@ -196,7 +196,7 @@ export default function KedarnathPonyRates() {
                 ['🎒 Kandi / Pitthu', '6–8 hrs', '4–6 hrs', 'Pace of a single porter carrying you'],
                 ['🚁 Helicopter', '8–10 min', '8–10 min', 'From Phata/Sersi/Guptkashi, not Gaurikund'],
               ].map(([mode, up, down, notes], i) => (
-                <tr key={mode} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={mode} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)', whiteSpace: 'nowrap' }}>{mode}</td>
                   <td style={{ padding: '9px 12px', color: '#1D9E75', fontWeight: 600 }}>{up}</td>
                   <td style={{ padding: '9px 12px', color: '#334155' }}>{down}</td>
@@ -224,7 +224,7 @@ export default function KedarnathPonyRates() {
             { step: 'Step 4 — Palki is limited, ask the evening before', detail: 'Palki demand outstrips supply. If you need it, ask your Sonprayag/Rampur hotel the previous evening whether they can pre-arrange through a registered operator, then confirm at the Gaurikund counter by 4 AM.' },
             { step: 'Step 5 — Agree on-route kandi prices before starting', detail: 'Kandi carriers are available at Gaurikund, Jungle Chatti and Bhimbali. If the walk gets too hard midway, you can hire one on the spot — but fix the price first and check it matches the government rate.' },
           ].map((item, i) => (
-            <div key={i} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)' }}>
+            <div key={i} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--navy)' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>{item.step}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75 }}>{item.detail}</div>
             </div>
@@ -245,7 +245,7 @@ export default function KedarnathPonyRates() {
             { title: '🎒 Kandi / Pitthu', tag: 'Mid-budget', points: ['Porter carries you in a back basket', 'Good when a pony feels unsafe', 'Takes 6–8 hours', 'Weight limit around 70–80kg', 'Pick if: pony is uncomfortable but you can\'t walk'] },
             { title: '🚁 Helicopter', tag: 'Fastest — 10 min', points: ['8–10 minutes vs hours on the trail', '5kg luggage limit, strictly enforced', 'From Phata/Sersi/Guptkashi (not Gaurikund)', 'Needs Yatra Registration; book via IRCTC', 'Pick if: short on time, senior, or health limits'] },
           ].map(item => (
-            <div key={item.title} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid var(--border)', borderTop: '3px solid var(--navy)' }}>
+            <div key={item.title} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid hsl(var(--border))', borderTop: '3px solid var(--navy)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
                 <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--navy)' }}>{item.title}</div>
                 <span style={{ fontSize: 10.5, background: 'rgba(232,146,10,0.12)', color: '#7B3F00', padding: '2px 8px', borderRadius: 20, fontWeight: 700 }}>{item.tag}</span>
@@ -298,7 +298,7 @@ export default function KedarnathPonyRates() {
             { tip: 'BSNL is the only reliable network', detail: 'BSNL works on the trek and at the temple; Jio works around Gaurikund; Airtel and Vi usually don\'t go above Sonprayag. Keep a BSNL SIM if you need to stay reachable.' },
             { tip: 'Acclimatise before you climb', detail: 'Kedarnath sits at 3,583m. Even on a pony you\'re at altitude. Spend a night at Sonprayag or Guptkashi first — AMS can hit anyone, fit or not.' },
           ].map(item => (
-            <div key={item.tip} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)' }}>
+            <div key={item.tip} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 5 }}>💡 {item.tip}</div>
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.7 }}>{item.detail}</div>
             </div>
@@ -314,7 +314,7 @@ export default function KedarnathPonyRates() {
           ['What is the cheapest way up for someone who can\'t walk?', 'The kandi (pitthu) basket, roughly ₹3,500–5,000 one way for an adult and less for a child — cheaper than both pony and palki, though slower.'],
           ['Is the helicopter available from Gaurikund?', 'No. Helicopters fly from Phata, Sersi and Guptkashi, not Gaurikund, at about ₹6,000–9,999 round trip. From Gaurikund your options are foot, pony, palki or kandi.'],
         ].map(([q, a]) => (
-          <div key={q} style={{ borderBottom: '1px solid var(--border)', padding: '14px 0' }}>
+          <div key={q} style={{ borderBottom: '1px solid hsl(var(--border))', padding: '14px 0' }}>
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 6 }}>{q}</div>
             <div style={{ fontSize: 14, color: '#475569', lineHeight: 1.8 }}>{a}</div>
           </div>
@@ -335,7 +335,7 @@ export default function KedarnathPonyRates() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
@@ -347,7 +347,7 @@ export default function KedarnathPonyRates() {
               ['VIP Darshan Guide', '/blog/vip-darshan-kedarnath-booking'],
               ['Kedarnath Yatra Package', '/kedarnath-yatra'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

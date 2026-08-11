@@ -84,7 +84,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
     return (
       <>
       {posting && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }}/>}
-      <div style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderBottom:'1px solid var(--border)', marginBottom:24 }}>
+      <div style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))', marginBottom:24 }}>
         <div style={{ width:40, height:40, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:14, color:'#FFD166' }}>
           {a.initials}
         </div>
@@ -118,7 +118,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
 
   // variant === 'bottom'
   return (
-    <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:14, padding:'20px 22px', marginTop:36 }}
+    <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px 22px', marginTop:36 }}
       itemScope itemType="https://schema.org/Person">
       <div style={{ display:'flex', gap:16, alignItems:'flex-start', flexWrap:'wrap' }}>
         <div style={{ width:56, height:56, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:18, color:'#FFD166' }}>
@@ -146,7 +146,7 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
           <p style={{ fontSize:14, color:'#334155', lineHeight:1.75, margin:'0 0 10px' }} itemProp="description">{a.bio}</p>
           <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
             {a.credentials.map(c => (
-              <span key={c} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:6, fontSize:12, color:'var(--navy)', padding:'3px 10px', fontWeight:600 }}>✓ {c}</span>
+              <span key={c} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:6, fontSize:12, color:'var(--navy)', padding:'3px 10px', fontWeight:600 }}>✓ {c}</span>
             ))}
           </div>
         </div>

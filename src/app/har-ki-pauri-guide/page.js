@@ -128,7 +128,7 @@ export default function HarKiPauriGuide() {
         </div>
       </section>
 
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/haridwar-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Haridwar</Link><span>›</span>
@@ -160,7 +160,7 @@ export default function HarKiPauriGuide() {
             </tr></thead>
             <tbody>
               {AARTI.map(a=>(
-                <tr key={a.season} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a.season} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'11px', fontWeight:600, color:'var(--navy)' }}>{a.season}</td>
                   <td style={{ padding:'11px', color:'var(--text-mid)' }}>{a.morning}</td>
                   <td style={{ padding:'11px', fontWeight:700, color:'var(--teal)' }}>{a.evening}</td>
@@ -190,7 +190,7 @@ export default function HarKiPauriGuide() {
             ['Opposite bank','Fair','A clear view across the water of the whole ghat lit up — genuinely the better photograph, though you are further from the ritual itself.'],
             ['The footbridges','Poor','Where you end up if you arrive late. You will be moved along by volunteers keeping the bridge clear, repeatedly.'],
           ].map(([spot, rating, note])=>(
-            <div key={spot} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={spot} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ display:'flex', gap:10, alignItems:'center', marginBottom:6, flexWrap:'wrap' }}>
                 <span style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{spot}</span>
                 <span style={{
@@ -243,7 +243,7 @@ export default function HarKiPauriGuide() {
             ['🌊 Bathing','Hold the chains. The current is much stronger than it looks.'],
             ['🕐 Duration','Aarti runs 30–40 minutes. Allow 2 hours total with arrival and exit.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={t} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t}</div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7 }}>{d}</div>
             </div>
@@ -289,7 +289,7 @@ export default function HarKiPauriGuide() {
                 ['Shantikunj','6 km','1–2 hrs','Gayatri Pariwar headquarters. Our office is at its Gate No. 1.','/shantikunj-haridwar-guide'],
                 ['Rishikesh','25 km','Half day','Ram Jhula, Lakshman Jhula, a second aarti at Parmarth Niketan.','/haridwar-to-rishikesh-taxi'],
               ].map(([a,b,c,d,href])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600 }}>
                     <Link href={href} style={{ color:'var(--teal)', textDecoration:'none' }}>{a}</Link>
                   </td>
@@ -314,14 +314,14 @@ export default function HarKiPauriGuide() {
         <H2>Frequently Asked Questions</H2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
               <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{f.q}</summary>
               <div style={{ padding:'0 17px 15px', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{f.a}</div>
             </details>
           ))}
         </div>
 
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources</div>
           <ul style={{ paddingLeft:18, margin:0 }}>
             {[
@@ -357,7 +357,7 @@ export default function HarKiPauriGuide() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -368,7 +368,7 @@ export default function HarKiPauriGuide() {
               ['Char Dham Yatra','/char-dham-yatra'],
               ['Online Puja Booking','/online-puja-booking'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

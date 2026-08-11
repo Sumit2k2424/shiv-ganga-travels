@@ -79,7 +79,7 @@ export default function CharDhamFromChennai() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromChennai() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Tamil Nadu Express (12621)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Chennai Central`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`10:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~28h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`3AC ~₹1,500`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Fastest to Delhi`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`GT Express (12615)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Chennai Central`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:50 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~32h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Budget option`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Tamil Nadu Express (12621)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Chennai Central`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`10:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~28h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`3AC ~₹1,500`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Fastest to Delhi`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`GT Express (12615)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Chennai Central`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:50 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~32h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Budget option`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromChennai() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Chennai (MAA) to Delhi (DEL) — 1h 5m, from ₹2,500 early booking. Delhi to Haridwar: Mussoorie Express overnight (10h, ₹250 sleeper) or private cab (4.5h, ₹3,000 shared). Total door-to-door: 8–10 hours.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Chennai</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Chennai to Haridwar is 2,200km — four days by road. Fly to Delhi instead.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromChennai() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Chennai:</strong> ₹26,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromChennai() {
 
         <h2 style={{...h2}}>Pickup Points in Chennai</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Chennai Central Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chennai Central Station`}</span>
-          <span key="Chennai Airport (MAA)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chennai Airport (MAA)`}</span>
-          <span key="T Nagar" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`T Nagar`}</span>
-          <span key="Adyar" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Adyar`}</span>
-          <span key="Anna Nagar" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Anna Nagar`}</span>
-          <span key="Tambaram" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Tambaram`}</span>
+<span key="Chennai Central Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chennai Central Station`}</span>
+          <span key="Chennai Airport (MAA)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chennai Airport (MAA)`}</span>
+          <span key="T Nagar" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`T Nagar`}</span>
+          <span key="Adyar" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Adyar`}</span>
+          <span key="Anna Nagar" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Anna Nagar`}</span>
+          <span key="Tambaram" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Tambaram`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>Our Haridwar office has staff with basic Tamil communication ability for pre-trip coordination. We also brief all South Indian first-timers specifically on cold-weather preparation — the drop from Chennai heat (35°C) to Kedarnath cold (5°C) is dramatic and requires proper packing.</p>
 

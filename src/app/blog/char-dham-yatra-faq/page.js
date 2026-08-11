@@ -214,11 +214,11 @@ function FAQSchema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpage) }}/>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function FAQ() {
       />
 
       {/* Freshness + author strip */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <div style={{ background: '#fff', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', fontSize: 12.5, color: 'var(--text-muted)' }}>
           <span>✍️ <strong style={{ color: 'var(--navy)' }}>Author:</strong> Sumit Mishra, Operations Manager, Shiv Ganga Travels</span>
           <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated} — verified for current season</span>
@@ -268,7 +268,7 @@ export default function FAQ() {
       </div>
 
       {/* Breadcrumb */}
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -327,12 +327,12 @@ export default function FAQ() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {FAQS.filter(f => f.cat === cat).map((faq, i) => (
-                <details key={i} style={{ background: '#fff', borderRadius: 12, border: '1px solid var(--border)', overflow: 'hidden' }}>
+                <details key={i} style={{ background: '#fff', borderRadius: 12, border: '1px solid hsl(var(--border))', overflow: 'hidden' }}>
                   <summary style={{ padding: '16px 18px', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
                     <span style={h2s}>{faq.q}</span>
                     <span style={{ fontSize: 18, flexShrink: 0, color: 'var(--navy)', marginTop: 2 }}>＋</span>
                   </summary>
-                  <div style={{ padding: '0 18px 18px', fontSize: 14.5, color: 'var(--text-mid)', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>
+                  <div style={{ padding: '0 18px 18px', fontSize: 14.5, color: 'var(--text-mid)', lineHeight: 1.85, borderTop: '1px solid hsl(var(--border))' }}>
                     <p style={{ marginTop: 14, marginBottom: 0 }}>{faq.a}</p>
                   </div>
                 </details>
@@ -366,11 +366,11 @@ export default function FAQ() {
         </div>
       </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

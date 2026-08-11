@@ -116,7 +116,7 @@ export default function HowToReachHaridwar() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -146,7 +146,7 @@ export default function HowToReachHaridwar() {
               <div style={{ fontWeight:700, fontSize:16, color:'var(--navy)', marginBottom:6 }}>Jolly Grant Airport (DED) — Dehradun · 35km from Haridwar</div>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:10, marginBottom:12 }}>
                 {[['Delhi → Dehradun','1 hr · ₹2,500–5,000 · Daily'],['Mumbai → Dehradun','1.5 hrs · ₹3,000–7,000 · Daily'],['Bangalore → Dehradun','2.5 hrs · ₹3,500–8,000 · Daily'],['Hyderabad → Dehradun','2 hrs · ₹3,000–7,000 · Daily']].map(([r,d])=>(
-                  <div key={r} style={{ background:'var(--bg)', borderRadius:8, padding:'10px 12px', border:'1px solid var(--border)' }}>
+                  <div key={r} style={{ background:'var(--bg)', borderRadius:8, padding:'10px 12px', border:'1px solid hsl(var(--border))' }}>
                     <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)' }}>{r}</div>
                     <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>{d}</div>
                   </div>
@@ -166,7 +166,7 @@ export default function HowToReachHaridwar() {
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:16, marginBottom:32 }}>
           {CITY_DATA.map(city => (
-            <details key={city.city} style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden' }}>
+            <details key={city.city} style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
               <summary style={{ padding:'16px 18px', cursor:'pointer', listStyle:'none', display:'flex', justifyContent:'space-between', alignItems:'center', fontWeight:700, fontSize:15, color:'var(--navy)' }}>
                 <div style={{ display:'flex', gap:12, alignItems:'center' }}>
                   <span>{city.city}</span>
@@ -174,14 +174,14 @@ export default function HowToReachHaridwar() {
                 </div>
                 <span style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:11, fontWeight:700, padding:'3px 12px', borderRadius:100, flexShrink:0 }}>Best: {city.bestRoute.split(' ')[0]}</span>
               </summary>
-              <div style={{ padding:'0 18px 18px', borderTop:'1px solid var(--border)', paddingTop:16 }}>
+              <div style={{ padding:'0 18px 18px', borderTop:'1px solid hsl(var(--border))', paddingTop:16 }}>
                 <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:10, padding:'10px 14px', marginBottom:14 }}>
                   <strong style={{ color:'#15803D', fontSize:13 }}>✅ Recommended:</strong>
                   <span style={{ color:'#15803D', fontSize:13.5, marginLeft:6 }}>{city.bestRoute}</span>
                 </div>
                 <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:8, marginBottom:14 }}>
                   {[['🚗 Road',city.road],['🚂 Train',city.train],['✈️ Flight',city.flight],['🚌 Bus',city.bus]].map(([mode,info])=>(
-                    <div key={mode} style={{ background:'var(--bg)', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)' }}>
+                    <div key={mode} style={{ background:'var(--bg)', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))' }}>
                       <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:3 }}>{mode}</div>
                       <div style={{ fontSize:12.5, color:'var(--text-muted)' }}>{info}</div>
                     </div>
@@ -197,7 +197,7 @@ export default function HowToReachHaridwar() {
                         </tr></thead>
                         <tbody>
                           {city.trains.map(([t,r,d,a,f])=>(
-                            <tr key={t} style={{ borderBottom:'1px solid var(--border)' }}>
+                            <tr key={t} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                               {[t,r,d,a,f].map((v,i)=><td key={i} style={{ padding:'8px 10px', fontSize:13, color:i===0?'var(--navy)':'var(--text-muted)', fontWeight:i===0?600:400 }}>{v}</td>)}
                             </tr>
                           ))}
@@ -221,7 +221,7 @@ export default function HowToReachHaridwar() {
           ['🪪 Biometric Registration', 'Complete Char Dham biometric registration at the Haridwar centre near Har Ki Pauri (open 8 AM–8 PM). Bring original Aadhaar. Shiv Ganga Travels handles this for all our package pilgrims.'],
           ['📍 Our Office', 'Shiv Ganga Travels office: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar 249410. Open 7 AM–9 PM daily. Pre-departure briefing, final itinerary, vehicle inspection — all done the evening before.'],
         ].map(([icon_title, desc]) => (
-          <div key={icon_title} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid var(--border)', marginBottom:4 }}>
+          <div key={icon_title} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))', marginBottom:4 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', minWidth:180, flexShrink:0 }}>{icon_title}</div>
             <div style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.75 }}>{desc}</div>
           </div>
@@ -249,11 +249,11 @@ export default function HowToReachHaridwar() {
         </div>
 
         {/* Related */}
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Road Status 2026','/char-dham-road-status'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['Dehradun Airport to Haridwar Taxi','/dehradun-airport-to-haridwar-taxi'],['Taxi Service in Haridwar','/taxi-service-in-haridwar'],['Har Ki Pauri Guide','/har-ki-pauri-guide']].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

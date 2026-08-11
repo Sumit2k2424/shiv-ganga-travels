@@ -125,7 +125,7 @@ export default function HaridwarToDelhiTaxi() {
         </div>
       </section>
 
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/taxi-service-in-haridwar" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Taxi Service in Haridwar</Link><span>›</span>
@@ -156,7 +156,7 @@ export default function HaridwarToDelhiTaxi() {
             </tr></thead>
             <tbody>
               {transferRows('haridwar-delhi').map((r,i)=>(
-                <tr key={r.id} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={r.id} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'10px', fontWeight:600, color:'var(--navy)' }}>{r.name}</td>
                   <td style={{ padding:'10px', color:'var(--text-muted)' }}>{r.seats}</td>
                   <td style={{ padding:'10px', fontWeight:700, color:'var(--teal)' }}>{inr(r.fare)}</td>
@@ -192,7 +192,7 @@ export default function HaridwarToDelhiTaxi() {
                 ['Muzaffarnagar → Meerut','60 km','1 hr 30 min','The slow section. City traffic, unavoidable.'],
                 ['Meerut → Delhi','60 km','1 hr 30 min','NH-58 into Ghaziabad, then whichever Delhi entry suits your drop.'],
               ].map(([a,b,c,d])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{c}</td>
@@ -249,7 +249,7 @@ export default function HaridwarToDelhiTaxi() {
             ['🏙️ South & Central Delhi','Included in the fixed fare. Anywhere inside the Ring Road, no surcharge.'],
             ['🏢 Noida, Gurugram, Ghaziabad','Add ₹400–800 depending on sector. We quote it before you book, never after.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px' }}>
+            <div key={t} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{t}</div>
               <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.7 }}>{d}</div>
             </div>
@@ -271,7 +271,7 @@ export default function HaridwarToDelhiTaxi() {
                 ['Overnight train','₹245–950','6–7 hrs','Budget travel, arriving Delhi early morning'],
                 ['Volvo bus','₹600–1,100','6–8 hrs','Cheapest option, no booking needed, least comfortable'],
               ].map(([a,b,c,d])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--teal)', fontWeight:700 }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{c}</td>
@@ -291,14 +291,14 @@ export default function HaridwarToDelhiTaxi() {
         <H2>Frequently Asked Questions</H2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
               <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{f.q}</summary>
               <div style={{ padding:'0 17px 15px', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{f.a}</div>
             </details>
           ))}
         </div>
 
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources</div>
           <ul style={{ paddingLeft:18, margin:0 }}>
             {[
@@ -334,7 +334,7 @@ export default function HaridwarToDelhiTaxi() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -345,7 +345,7 @@ export default function HaridwarToDelhiTaxi() {
               ['How to Reach Haridwar','/how-to-reach-haridwar'],
               ['Char Dham from Delhi','/char-dham-yatra-from-delhi'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

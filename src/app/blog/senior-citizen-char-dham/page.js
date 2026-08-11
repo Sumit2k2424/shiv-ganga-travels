@@ -71,7 +71,7 @@ return (
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -126,7 +126,7 @@ return (
               { feature:'Compression Socks', detail:'We provide compression socks for the trek days — reduces swelling and DVT risk on long drives.' },
               { feature:'Slower Pace', detail:'We don\'t rush. Temple visits are at a comfortable time. Meals are never skipped.' },
             ].map(f => (
-              <div key={f.feature} style={{ background:'#fff', borderRadius:8, padding:'12px', border:'1px solid var(--border)' }}>
+              <div key={f.feature} style={{ background:'#fff', borderRadius:8, padding:'12px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:4 }}>✅ {f.feature}</div>
                 <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5 }}>{f.detail}</div>
               </div>
@@ -170,11 +170,11 @@ return (
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Senior-Friendly Packages','/char-dham-yatra'],['Medical Certificate Guide','/blog/char-dham-yatra-medical-certificate'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Packing List','/blog/char-dham-yatra-packing-list'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Cancellation Policy','/cancellation-policy']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

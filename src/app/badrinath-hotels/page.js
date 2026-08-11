@@ -69,7 +69,7 @@ export default function BadrinathHotels() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Badrinath Temple<span>›</span>
@@ -90,7 +90,7 @@ export default function BadrinathHotels() {
         </div>
 
         {stays.map(s => (
-          <div key={s.loc} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'18px 20px', marginBottom:14 }}>
+          <div key={s.loc} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'18px 20px', marginBottom:14 }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:8, marginBottom:10 }}>
               <div>
                 <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:11, fontWeight:700, padding:'2px 10px', borderRadius:20, marginBottom:6, display:'inline-block' }}>{s.type}</span>
@@ -124,11 +124,11 @@ export default function BadrinathHotels() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['All Char Dham Hotels','/char-dham-hotels'],['Kedarnath Hotels','/kedarnath-hotels'],['Badrinath Weather','/badrinath-weather'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Badrinath Temple','/badrinath-temple'],['Haridwar to Badrinath Cab','/cabs/haridwar-to-badrinath-cab']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

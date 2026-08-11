@@ -52,7 +52,7 @@ export default function KedarnathCompleteGuide() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -99,7 +99,7 @@ export default function KedarnathCompleteGuide() {
           { step:'4', title:'Plan Your Darshan Timing', desc:'Arrive at Kedarnath by 7–9 AM for shortest queue. Mahabhishek at 4 AM (advance booking ₹3,100) is the deepest experience. Shringaar Aarti at 7:30 PM is unmissable — arrive by 7 PM.', link:'/blog/kedarnath-darshan-timing', linkText:'Darshan Timings →' },
           { step:'5', title:'Pack for High Altitude', desc:'Thermal inners (mandatory — nights 0–5°C even in June), fleece, windproof jacket, warm cap, gloves, trekking boots, ORS sachets, personal medicines for 2 extra days, headtorch for 5 AM trek start.', link:'/blog/char-dham-yatra-packing-list', linkText:'Packing List →' },
         ].map(s => (
-          <div key={s.step} style={{ display:'flex', gap:0, borderRadius:10, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+          <div key={s.step} style={{ display:'flex', gap:0, borderRadius:10, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
             <div style={{ background:'var(--navy)', minWidth:44, display:'flex', alignItems:'center', justifyContent:'center', padding:'14px 8px' }}>
               <span style={{ color:'#FFD166', fontWeight:800, fontSize:18, fontFamily:'var(--font-display)' }}>{s.step}</span>
             </div>
@@ -137,7 +137,7 @@ export default function KedarnathCompleteGuide() {
                 ['Total estimated (trek)','₹7,000–9,000','₹10,500–15,000','Package + puja + personal'],
                 ['Total estimated (helicopter)','₹14,000–18,000','₹17,000–22,000','Package + helicopter both ways'],
               ].map(([exp,b,s,n],i)=>(
-                <tr key={exp} style={{ borderBottom:'1px solid var(--border)', background:i===9||i===10?'var(--navy-light)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={exp} style={{ borderBottom:'1px solid hsl(var(--border))', background:i===9||i===10?'var(--navy-light)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:i>=9?700:400, color:'var(--navy)', fontSize:13.5 }}>{exp}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:i>=9?15:13.5 }}>{b}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:i>=9?'#15803D':'var(--navy)', fontSize:i>=9?15:13.5 }}>{s}</td>
@@ -161,20 +161,20 @@ export default function KedarnathCompleteGuide() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Complete Kedarnath Reference</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Darshan Timings','/blog/kedarnath-darshan-timing'],['Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Packages','/kedarnath-yatra'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],['How to Reach Haridwar','/how-to-reach-haridwar']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

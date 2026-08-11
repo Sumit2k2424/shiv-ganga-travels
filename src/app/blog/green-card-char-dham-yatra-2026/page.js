@@ -71,7 +71,7 @@ export default function GreenCard() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -131,7 +131,7 @@ export default function GreenCard() {
             { n: '4', title: 'Select route and dates', detail: 'Enter your planned travel dates and the dhams you plan to visit. The permit is valid for the declared duration — apply 1–2 days before departure.' },
             { n: '5', title: 'Pay ₹50 and download', detail: 'Pay the ₹50 fee online. Download the Green Card as PDF. Print a copy AND save digitally. The QR code is checked at checkposts on the Char Dham route.' },
           ].map(item => (
-            <div key={item.n} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)', display: 'flex', gap: 12 }}>
+            <div key={item.n} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))', display: 'flex', gap: 12 }}>
               <div style={{ width: 28, height: 28, background: 'var(--teal)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 13, flexShrink: 0, marginTop: 2 }}>{item.n}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{item.title}</div>
@@ -162,7 +162,7 @@ export default function GreenCard() {
             { rule: 'SpO2 screening at Sonprayag', detail: 'Health screening at Sonprayag checkpoint. Pilgrims with SpO2 below 85% may be restricted from proceeding to Kedarnath. Carry a pulse oximeter.' },
             { rule: 'Mandatory Yatra Registration for all', detail: 'Registration at registrationandtouristcare.uk.gov.in required for ALL pilgrims including helicopter passengers. Free e-pass with QR code.' },
           ].map(item => (
-            <div key={item.rule} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)', display: 'flex', gap: 10 }}>
+            <div key={item.rule} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--navy)', display: 'flex', gap: 10 }}>
               <span style={{ color: '#1D9E75', fontWeight: 700, flexShrink: 0 }}>✓</span>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 3 }}>{item.rule}</div>
@@ -186,7 +186,7 @@ export default function GreenCard() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
@@ -196,7 +196,7 @@ export default function GreenCard() {
               ['Char Dham Package', '/char-dham-yatra'],
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

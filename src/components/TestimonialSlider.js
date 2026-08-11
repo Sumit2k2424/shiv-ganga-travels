@@ -47,7 +47,7 @@ export default function TestimonialSlider({ items }) {
       style={{
         width: 38, height: 38, borderRadius: '50%',
         background: '#fff',
-        border: '1px solid var(--border)',
+        border: '1px solid hsl(var(--border))',
         cursor: disabled ? 'not-allowed' : 'pointer',
         opacity: disabled ? 0.4 : 1,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -91,14 +91,14 @@ export default function TestimonialSlider({ items }) {
             {/* Author */}
             <div style={{
               display: 'flex', alignItems: 'center', gap: 12,
-              paddingTop: 14, borderTop: '1px solid var(--border)',
+              paddingTop: 14, borderTop: '1px solid hsl(var(--border))',
             }}>
               <div className="testimonial-avatar">{t.avatar}</div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--text)', lineHeight: 1.3 }}>
                   {t.name}
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2 }}>
+                <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
                   {t.location} · {t.date}
                 </div>
               </div>

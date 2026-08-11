@@ -43,14 +43,14 @@ export default function KedarnathFareCalc() {
   const label = { fontSize: 12.5, fontWeight: 700, color: 'var(--navy)', display: 'block', marginBottom: 6, letterSpacing: '0.02em' };
   const pill = (active) => ({
     padding: '8px 14px', borderRadius: 8, border: '1.5px solid',
-    borderColor: active ? 'var(--navy)' : 'var(--border)',
+    borderColor: active ? 'var(--navy)' : 'hsl(var(--border))',
     background: active ? 'var(--navy)' : '#fff',
     color: active ? '#fff' : 'var(--navy)',
     fontWeight: 700, fontSize: 13, cursor: 'pointer', transition: 'var(--t, .15s)',
   });
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 18px', boxShadow: 'var(--shadow-sm)' }}>
+    <div style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 14, padding: '20px 18px', boxShadow: 'var(--shadow-sm)' }}>
       <div style={{ fontWeight: 800, color: 'var(--navy)', fontSize: 15.5, marginBottom: 4 }}>Estimate your prepaid-counter fare</div>
       <p style={{ fontSize: 12.5, color: '#64748b', marginBottom: 16, lineHeight: 1.6 }}>
         A planning estimate for Gaurikund → Kedarnath. The figure printed on your prepaid-counter slip is the one that counts.

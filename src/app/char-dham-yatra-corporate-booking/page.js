@@ -126,7 +126,7 @@ export default function CorporateBooking() {
             ['CSR-sponsored yatra','Frequently for workers, retired staff or a supported community. Needs the most documentation: named beneficiary lists, itinerary as delivered, and a written post-trip report. Whether it qualifies as CSR expenditure is your compliance team\'s determination, not ours.'],
             ['Incentive and reward trips','Smaller, usually 8 to 20, higher specification — Innova Crysta rather than Tempo Traveller, better hotels, and often a helicopter leg. See the helicopter booking guide, because 2026 capacity is tighter than previous seasons.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px' }}>
+            <div key={t} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px' }}>
               <div style={{ fontWeight:700, fontSize:15.5, color:'var(--navy)', marginBottom:7 }}>{t}</div>
               <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8, margin:0 }}>{d}</p>
             </div>

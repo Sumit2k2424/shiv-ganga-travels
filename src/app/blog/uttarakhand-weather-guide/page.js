@@ -67,7 +67,7 @@ export default function WeatherGuide() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -84,7 +84,7 @@ export default function WeatherGuide() {
         {/* Season summary */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10, marginBottom:28 }}>
           {[['April–early May','Cold, quiet, beautiful','⭐⭐⭐'],['Mid May–June 15','Warm, peak, excellent','⭐⭐⭐⭐⭐'],['July–August','Monsoon risk, avoid','⭐'],['September','Best overall','⭐⭐⭐⭐⭐'],['October','Cold, spectacular','⭐⭐⭐⭐⭐'],['November','Closing, very cold','⭐⭐']].map(([period, desc, stars]) => (
-            <div key={period} style={{ background:'var(--bg)', borderRadius:10, padding:'12px', border:'1px solid var(--border)', textAlign:'center' }}>
+            <div key={period} style={{ background:'var(--bg)', borderRadius:10, padding:'12px', border:'1px solid hsl(var(--border))', textAlign:'center' }}>
               <div style={{ fontSize:11, fontWeight:700, color:'var(--navy)', marginBottom:4 }}>{period}</div>
               <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:4 }}>{desc}</div>
               <div style={{ fontSize:14 }}>{stars}</div>
@@ -111,7 +111,7 @@ export default function WeatherGuide() {
             </thead>
             <tbody>
               {WEATHER.map((w,i)=>(
-                <tr key={w.month} style={{ borderBottom:'1px solid var(--border)', background:w.verdict==='⭐⭐⭐⭐⭐'?'#F0FDF4':w.verdict==='⭐'||w.verdict==='⭐⭐'?'#FFF1F2':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={w.month} style={{ borderBottom:'1px solid hsl(var(--border))', background:w.verdict==='⭐⭐⭐⭐⭐'?'#F0FDF4':w.verdict==='⭐'||w.verdict==='⭐⭐'?'#FFF1F2':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 10px', fontWeight:700, color:'var(--navy)', fontSize:13, whiteSpace:'nowrap' }}>{w.month}</td>
                   <td style={{ padding:'9px 10px', color:'#334155', fontSize:12 }}>{w.kedarnath}</td>
                   <td style={{ padding:'9px 10px', color:'#334155', fontSize:12 }}>{w.badrinath}</td>
@@ -137,7 +137,7 @@ export default function WeatherGuide() {
             <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:10 }}>📦 {item.months} Packing</div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:6 }}>
               {item.pack.map(p => (
-                <div key={p} style={{ display:'flex', gap:8, fontSize:13.5, color:'#334155', padding:'6px 0', borderBottom:'1px solid var(--border)' }}>
+                <div key={p} style={{ display:'flex', gap:8, fontSize:13.5, color:'#334155', padding:'6px 0', borderBottom:'1px solid hsl(var(--border))' }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>{p}
                 </div>              ))}
 
@@ -158,11 +158,11 @@ export default function WeatherGuide() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

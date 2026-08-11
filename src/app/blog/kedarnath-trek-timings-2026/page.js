@@ -70,7 +70,7 @@ export default function TrekTimings() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -136,7 +136,7 @@ export default function TrekTimings() {
                 ['Stage 4', 'Kedarnath Base Camp', '13 km', '3,394m', '5–6 hrs', 'Arrive by 12–1 PM'],
                 ['Destination', 'Kedarnath Temple', '16 km', '3,583m', '6–8 hrs', 'Arrive by 1:30 PM (last cut-off)'],
               ].map(([stage, loc, dist, alt, time, cutoff], i) => (
-                <tr key={stage} style={{ borderBottom: '1px solid var(--border)', background: i === 5 ? 'rgba(220,38,38,0.05)' : i % 2 === 0 ? '#fff' : 'var(--bg)', verticalAlign: 'top' }}>
+                <tr key={stage} style={{ borderBottom: '1px solid hsl(var(--border))', background: i === 5 ? 'rgba(220,38,38,0.05)' : i % 2 === 0 ? '#fff' : 'var(--bg)', verticalAlign: 'top' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 700, color: 'var(--navy)' }}>{stage}</td>
                   <td style={{ padding: '9px 12px', color: '#475569' }}>{loc}</td>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: '#1D9E75' }}>{dist}</td>
@@ -165,7 +165,7 @@ export default function TrekTimings() {
             { time: '7:00 AM–12:00 PM', badge: 'Late start — overnight recommended', color: '#E8920A', detail: 'Starting after 7 AM means you arrive in the afternoon. Darshan may have a longer queue. If starting after 9 AM, plan to stay overnight at Kedarnath — attempting a same-day return from a late start is exhausting and cuts it close to the descent cut-off.' },
             { time: 'After 12 PM', badge: 'Turnaround risk', color: '#D85A30', detail: 'You may be stopped at checkposts. The 1:30 PM cut-off is strictly enforced during peak season. Some checkposts may turn you back as early as noon if the daily pilgrim count is near the cap. Do not rely on being allowed through.' },
           ].map(item => (
-            <div key={item.time} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: `1px solid var(--border)`, borderLeft: `3px solid ${item.color}` }}>
+            <div key={item.time} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: `1px solid hsl(var(--border))`, borderLeft: `3px solid ${item.color}` }}>
               <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 6 }}>
                 <strong style={{ fontSize: 14, color: 'var(--navy)' }}>{item.time}</strong>
                 <span style={{ fontSize: 11, background: 'var(--bg)', color: item.color, fontWeight: 700, padding: '2px 8px', borderRadius: 20 }}>{item.badge}</span>
@@ -189,7 +189,7 @@ export default function TrekTimings() {
             'The Shankaracharya Samadhi behind the temple is rarely visited because day-trippers are rushing for the descent. It takes 10 minutes and is among the most spiritually significant structures in India.',
             'The 2013 flood boulder (just behind the temple) deflected the flood waters that killed thousands in the valley below. The temple was untouched. You can touch this rock. Day-tippers almost never find it.',
           ].map((point, i) => (
-            <div key={i} style={{ background: '#fff', borderRadius: 8, padding: '10px 14px', border: '1px solid var(--border)', display: 'flex', gap: 10, fontSize: 13.5, color: '#334155', lineHeight: 1.7 }}>
+            <div key={i} style={{ background: '#fff', borderRadius: 8, padding: '10px 14px', border: '1px solid hsl(var(--border))', display: 'flex', gap: 10, fontSize: 13.5, color: '#334155', lineHeight: 1.7 }}>
               <span style={{ color: 'var(--navy)', fontWeight: 700, flexShrink: 0 }}>→</span>{point}
             </div>
           ))}
@@ -205,11 +205,11 @@ export default function TrekTimings() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Registration', '/blog/kedarnath-registration-2026'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

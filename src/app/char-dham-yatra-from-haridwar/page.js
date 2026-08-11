@@ -146,7 +146,7 @@ export default function Page() {
             ['Senior Citizen 12N/13D','₹27,999','Extra rest day · pony/palki · ground-floor rooms','/packages/char-dham-yatra-senior-citizen-12n-13d'],
             ['Char Dham by Helicopter 5N/6D','₹2,30,000','Ex-Dehradun · VIP darshan · all 4 dhams by air','/packages/char-dham-yatra-helicopter-5n-6d-dehradun'],
           ].map(([name,price,desc,href])=>(
-            <Link key={href} href={href} style={{ display:'block', background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', textDecoration:'none' }}>
+            <Link key={href} href={href} style={{ display:'block', background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', textDecoration:'none' }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{name}</div>
               <div style={{ fontWeight:700, fontSize:16, color:'var(--teal)', marginBottom:6 }}>{price} <span style={{ fontSize:11, color:'var(--text-muted)', fontWeight:600 }}>/person</span></div>
               <div style={{ fontSize:12.5, color:'#475569', lineHeight:1.6 }}>{desc}</div>
@@ -190,7 +190,7 @@ export default function Page() {
                 ['9','Badrinath → Rudraprayag','Mana village; return drive'],
                 ['10','Rudraprayag → Haridwar','Drive back via Devprayag sangam'],
               ].map(([d,r,hl],i)=>(
-                <tr key={d} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={d} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5 }}>{d}</td>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{r}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{hl}</td>
@@ -220,7 +220,7 @@ export default function Page() {
                 ['Guptkashi → Badrinath','215 km','8–9 hrs'],
                 ['Badrinath → Haridwar','320 km','10–11 hrs'],
               ].map(([s,d,t],i)=>(
-                <tr key={s} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={s} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{s}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{d}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{t}</td>
@@ -236,7 +236,7 @@ export default function Page() {
         <h2 style={h2}>Char Dham Yatra Cost &amp; What&apos;s Included</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:8, marginBottom:16 }}>
           {['✅ AC Tempo Traveller / Innova from Haridwar','✅ Pickup & drop at Haridwar station / bus stand','✅ Hotels all 9 nights (twin sharing)','✅ Daily breakfast + dinner (Jain options)','✅ VIP darshan — no queue at all 4 dhams','✅ Experienced Garhwali guide + pujari','✅ Biometric registration — completely free','✅ All tolls, parking, driver allowance','✅ Oxygen cylinder + first-aid kit in vehicle','✅ 24×7 WhatsApp support during the yatra'].map(item=>(
-            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>
+            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>
           ))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:16, fontSize:13.5, color:'#0F5132' }}>
@@ -287,7 +287,7 @@ export default function Page() {
         <div style={{ marginTop:32 }}><BlogAuthor variant="bottom" author="sumit"/></div>
 
         {/* SOURCES — citations (E-E-A-T gap) */}
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:18, marginTop:28 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:18, marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:8 }}>Sources &amp; official references</div>
           <ul style={{ margin:0, paddingLeft:18, fontSize:12.5, color:'#64748b', lineHeight:1.8 }}>
             <li>Uttarakhand Char Dham registration portal — <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="nofollow noopener noreferrer" style={{ color:'var(--teal)' }}>registrationandtouristcare.uk.gov.in</a></li>
@@ -297,11 +297,11 @@ export default function Page() {
         </div>
 
         {/* RELATED */}
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:28 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Route Map','/char-dham-yatra-route-map'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['By Helicopter','/char-dham-helicopter'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

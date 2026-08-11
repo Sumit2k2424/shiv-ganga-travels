@@ -58,7 +58,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 
 const FACTS = [
   ['Deity', 'Maa Dhari Devi — a form of Goddess Kali'],
@@ -95,7 +95,7 @@ export default function DhariDeviTemple() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
         <Link href="/char-dham-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -116,7 +116,7 @@ export default function DhariDeviTemple() {
 
       <h2 style={h2}>Dhari Devi at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -160,7 +160,7 @@ export default function DhariDeviTemple() {
 
       <h2 style={h2}>Distance Chart to Dhari Devi Temple</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:420 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:420 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['From','Distance','Drive time'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -186,7 +186,7 @@ export default function DhariDeviTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on the route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Char Dham Yatra',h:'/char-dham-yatra'},{l:'Do Dham Yatra',h:'/do-dham-yatra'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Badrinath Temple',h:'/badrinath-temple'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},{l:'Places to Visit En Route',h:'/blog/places-to-visit-during-char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

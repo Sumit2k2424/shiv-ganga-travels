@@ -55,7 +55,7 @@ export default function BadrinathWeather() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Badrinath Temple<span>›</span>
@@ -76,7 +76,7 @@ export default function BadrinathWeather() {
         </div>
 
         <h2 style={h2}>Month-by-Month Weather at Badrinath</h2>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead>
               <tr style={{ background:'var(--navy-light)' }}>
@@ -87,7 +87,7 @@ export default function BadrinathWeather() {
             </thead>
             <tbody>
               {weather.map((w, i) => (
-                <tr key={w.month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={w.month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{w.month}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{w.temp}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{w.snow}</td>
@@ -121,11 +121,11 @@ export default function BadrinathWeather() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Weather','/kedarnath-weather'],['Gangotri Weather','/gangotri-weather'],['Yamunotri Weather','/yamunotri-weather'],['Badrinath Temple','/badrinath-temple'],['Best Time to Visit','/blog/best-time-char-dham']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

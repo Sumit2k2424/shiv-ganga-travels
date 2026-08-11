@@ -102,7 +102,7 @@ export default function AltitudeSickness() {
             ['🟡 Mild — common, manageable','Headache, nausea, poor appetite, broken sleep, feeling more tired than the effort explains. Rest at the same height, drink water, do not go higher until it clears.'],
             ['🔴 Serious — descend now','Breathlessness while sitting still, confusion or odd behaviour, unsteady walking, a persistent wet cough, blue lips. These are not "push through" symptoms. Lose height immediately and get medical help.'],
           ].map(([t,d])=>(
-            <div key={t} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, padding:'15px 17px' }}>
+            <div key={t} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'15px 17px' }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:7 }}>{t}</div>
               <div style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.75 }}>{d}</div>
             </div>

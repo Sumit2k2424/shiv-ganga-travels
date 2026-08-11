@@ -42,7 +42,7 @@ export function Hero({ eyebrow, title, children }) {
 
 export function Crumbs({ trail }) {
   return (
-    <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link>
         {trail.map(([label, href], i) => (
@@ -69,7 +69,7 @@ export function FactGrid({ facts }) {
   return (
     <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(210px,1fr))', gap:12, marginBottom:8 }}>
       {facts.filter(Boolean).map(([label, value]) => (
-        <div key={label} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'13px 15px' }}>
+        <div key={label} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'13px 15px' }}>
           <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:5 }}>{label}</div>
           <div style={{ fontSize:13.5, color:'var(--text-muted)', lineHeight:1.65 }}>{value}</div>
         </div>
@@ -89,7 +89,7 @@ export function Table({ head, rows }) {
         </tr></thead>
         <tbody>
           {rows.map((r, i) => (
-            <tr key={i} style={{ borderBottom:'1px solid var(--border)' }}>
+            <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
               {r.map((c, j) => (
                 <td key={j} style={{ padding:'9px 10px', color:j===0?'var(--navy)':'var(--text-muted)', fontWeight:j===0?600:400 }}>{c}</td>
               ))}
@@ -120,7 +120,7 @@ export function FAQBlock({ faqs }) {
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
       {faqs.map(f => (
-        <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+        <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
           <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>
             {f.q}
           </summary>
@@ -133,7 +133,7 @@ export function FAQBlock({ faqs }) {
 
 export function Sources({ items }) {
   return (
-    <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+    <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
       <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources &amp; official references</div>
       <ul style={{ paddingLeft:18, margin:0 }}>
         {items.map(([label, href]) => (
@@ -168,11 +168,11 @@ export function CTA({ title, blurb, waMessage }) {
 
 export function Related({ links }) {
   return (
-    <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+    <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
       <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
       <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
         {links.map(([label, href]) => (
-          <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+          <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
             {label} →
           </Link>
         ))}

@@ -49,7 +49,7 @@ export default function HowToReachYamunotri() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Yamunotri Yatra<span>›</span>
@@ -76,14 +76,14 @@ export default function HowToReachYamunotri() {
           The standard road route from Haridwar to Janki Chatti covers approximately 250km and takes 7–8 hours. The route follows: <strong>Haridwar → Rishikesh → Narendranagar → Chamba → Barkot → Hanuman Chatti → Janki Chatti</strong>. The road from Barkot onwards runs alongside the Yamuna River through deep gorges — it's narrow and winding in places, but has been significantly improved in recent years. Our drivers know every turn.
         </p>
 
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:24 }}>
           {[
             { from:'Haridwar', to:'Barkot', dist:'220km', time:'6–7 hrs', note:'NH94 — good road, scenic drive' },
             { from:'Barkot', to:'Hanuman Chatti', dist:'22km', time:'45 mins', note:'Winding mountain road, take it slow' },
             { from:'Hanuman Chatti', to:'Janki Chatti', dist:'6km', time:'20 mins', note:'Last motorable point for Yamunotri' },
             { from:'Janki Chatti', to:'Yamunotri Temple', dist:'6km trek', time:'2.5–3 hrs', note:'Uphill mountain trail' },
           ].map((r, i) => (
-            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
               <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from}</span>
               <span style={{ color:'#475569' }}>→ {r.to}</span>
               <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
@@ -104,7 +104,7 @@ export default function HowToReachYamunotri() {
             { type:'Pony', cost:'₹1,000–1,500 one way', time:'2–2.5 hrs', note:'Book at Janki Chatti pony stand. Government-regulated. Ponies handle the climb well.' },
             { type:'Doli (Palanquin)', cost:'₹3,000–5,000 one way', time:'3–4 hrs', note:'Carried by 4 porters. Recommended for elderly, mobility-limited pilgrims.' },
           ].map(t => (
-            <div key={t.type} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px' }}>
+            <div key={t.type} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px' }}>
               <div style={{ fontWeight:700, color:'var(--navy)', fontSize:13.5, marginBottom:4 }}>{t.type}</div>
               <div style={{ color:'#E8920A', fontWeight:700, fontSize:13, marginBottom:4 }}>{t.cost}</div>
               <div style={{ fontSize:12.5, color:'#475569' }}>{t.note}</div>
@@ -123,7 +123,7 @@ export default function HowToReachYamunotri() {
             { icon:'✈️', type:'Nearest Airport', name:'Jolly Grant Airport, Dehradun', dist:'~175km from Janki Chatti', note:'IndiGo, Air India, SpiceJet fly daily from Delhi (40 mins). Taxi to Barkot from airport: ~5 hrs.' },
             { icon:'🚂', type:'Nearest Railway Station', name:'Haridwar or Dehradun', dist:'250km / 175km', note:'Haridwar has more train options from across India. Dehradun has direct trains from Delhi (Shatabdi, Jan Shatabdi).' },
           ].map(x => (
-            <div key={x.type} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px' }}>
+            <div key={x.type} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px' }}>
               <div style={{ fontSize:22, marginBottom:6 }}>{x.icon}</div>
               <div style={{ fontWeight:700, fontSize:12.5, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.05em', marginBottom:4 }}>{x.type}</div>
               <div style={{ fontWeight:700, color:'var(--navy)', fontSize:14, marginBottom:4 }}>{x.name}</div>
@@ -144,11 +144,11 @@ export default function HowToReachYamunotri() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['How to Reach Gangotri','/how-to-reach-gangotri'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Yamunotri Weather','/yamunotri-weather'],['Packing List','/blog/char-dham-yatra-packing-list'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

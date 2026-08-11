@@ -89,7 +89,7 @@ export default function Blog() {
         dek={`${POSTS.length}+ expert guides written by people who have guided 50,000+ pilgrims through the Himalayas`}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -107,7 +107,7 @@ export default function Blog() {
                   style={{ textDecoration:'none', color:'inherit', display:'block' }}>
                   <article className="pkg-card" style={{
                     background:'#fff', borderRadius:16, overflow:'hidden',
-                    border:'1px solid var(--border)', height:'100%',
+                    border:'1px solid hsl(var(--border))', height:'100%',
                     display:'flex', flexDirection:'column',
                   }}>
                     <div style={{ background:`linear-gradient(135deg,var(--navy),var(--teal))`, padding:'28px 20px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:44 }}>
@@ -144,7 +144,7 @@ export default function Blog() {
             { href:'/blog/mana-village-badrinath',            label:'Mana Village — Last Indian Village' },
             { href:'/blog/triyuginarayan-temple',             label:'Triyuginarayan Temple Guide' },
           ].map(l => (
-            <Link key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
+            <Link key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
               {l.label} →
             </Link>
           ))}

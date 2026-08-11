@@ -50,7 +50,7 @@ export default function KedarnathTemple() {
         <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Opening: April 22, 2026 · Darshan 4 AM–9 PM · Altitude 3,583m · 16km trek from Gaurikund</p>
       </div>
     </section>
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         Home<span>›</span>
         Kedarnath Yatra<span>›</span>
@@ -76,9 +76,9 @@ export default function KedarnathTemple() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Kedarnath is one of the twelve <strong>Jyotirlingas</strong> of Lord Shiva — the most sacred manifestations of the divine in Shaivite tradition. Located at 3,583 metres above sea level in the Rudraprayag district of Uttarakhand, the temple sits at the head of the Mandakini river valley, surrounded by snow-capped peaks. The existing stone temple is believed to have been built by Adi Shankaracharya in the 8th century CE, though the site's spiritual significance dates to the Mahabharata period — the Pandavas are said to have worshipped Lord Shiva here after the Kurukshetra war.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The temple survived the catastrophic 2013 floods with remarkably little structural damage — a massive boulder from the mountain behind acted as a natural shield, deflecting the floodwaters around the shrine. Many devotees see this as a divine miracle. The temple has since been restored with a stronger infrastructure including a wider trek path, proper drainage, and emergency facilities.</p>
       <h2 style={h2}>Darshan Timings 2026</h2>
-      <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
         {[['4:00 AM – 6:00 AM','Mahabhishek Puja — premium puja, advance booking required'],['6:00 AM – 7:00 AM','Balabhog (morning offering)'],['7:00 AM – 8:00 AM','Madhyan Darshan (general)'],['8:00 AM – 12:00 PM','General Darshan — peak hours'],['12:00 PM – 2:00 PM','Madhyan Mahabhishek + Sahastra Naam Archana'],['2:00 PM – 5:00 PM','Temple closed for break'],['5:00 PM – 7:00 PM','Panchomukhi Darshan'],['7:30 PM – 8:30 PM','Shringaar Aarti'],['8:30 PM – 9:00 PM','Shayan Aarti — temple closes for the night'],].map(([time,desc],i)=>(
-          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(100px,35%,160px) 1fr', borderTop: i>0?'1px solid var(--border)':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
+          <div key={i} style={{ display:'grid', gridTemplateColumns:'clamp(100px,35%,160px) 1fr', borderTop: i>0?'1px solid hsl(var(--border))':'none', padding:'11px 16px', background: i%2===0?'#fff':'var(--bg)' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{time}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)' }}>{desc}</div>
           </div>
@@ -87,7 +87,7 @@ export default function KedarnathTemple() {
       <h2 style={h2}>Types of Puja at Kedarnath</h2>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
         {[{puja:'Mahabhishek',price:'₹3,100',desc:'Pre-dawn ritual with milk, curd, honey, ghee — most auspicious',time:'4–6 AM'},{puja:'Rudrabhishek',price:'₹1,500',desc:'Abhishek with Panchagavya — powerful Shiva puja',time:'Morning'},{puja:'Sahastra Naam',price:'₹1,200',desc:'Recitation of 1,000 names of Lord Shiva',time:'Afternoon'},{puja:'Shringaar Aarti',price:'₹2,100',desc:'Evening aarti — Shiva adorned in flowers & jewels',time:'7:30 PM'}].map(pu=>(
-          <div key={pu.puja} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+          <div key={pu.puja} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{pu.puja}</div>
             <div style={{ fontWeight:800, fontSize:16, color:'var(--gold)', marginBottom:4 }}>{pu.price}</div>
             <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:4 }}>{pu.time}</div>
@@ -110,7 +110,7 @@ export default function KedarnathTemple() {
           { name:'Gaurikund', dist:'14km below (trek base)', desc:'The base of the Kedarnath trek at 1,982m. Named after Goddess Gauri (Parvati), there is a hot spring here where she is said to have bathed. The Gaurikund temple and the kund itself are worth visiting before starting the trek up.' },
           { name:'Triyuginarayan Temple', dist:'12km from Sonprayag', desc:'The mythological site where Lord Shiva and Parvati were married. The eternal flame in the temple courtyard is said to have been burning since their wedding. A remarkable detour, rarely crowded, with a deeply human story attached to it.' },
         ].map(pl => (
-          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+          <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
             <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
             <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
@@ -130,7 +130,7 @@ export default function KedarnathTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Online Puja Booking',h:'/online-puja-booking'},{l:'Haridwar to Kedarnath Cab',h:'/cabs/haridwar-to-kedarnath-cab'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

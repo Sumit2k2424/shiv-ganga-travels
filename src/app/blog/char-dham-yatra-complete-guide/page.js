@@ -252,7 +252,7 @@ export default function CharDhamCompleteGuide() {
       />
 
       {/* Breadcrumb */}
-      <nav aria-label="breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -271,7 +271,7 @@ export default function CharDhamCompleteGuide() {
         <meta itemProp="author" content="Shiv Ganga Travels" />
 
         {/* Author box */}
-        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:12, padding:'14px 18px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'14px 18px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>
           <span style={{ fontSize:32, flexShrink:0 }}>🙏</span>
           <div>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>Written by Shiv Ganga Travels — Haridwar</div>
@@ -393,7 +393,7 @@ export default function CharDhamCompleteGuide() {
                 { label:'2026 Opening', val:dham.opening },
                 { label:'2026 Closing', val:dham.closing },
               ].map(s => (
-                <div key={s.label} style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:10, padding:'10px 13px' }}>
+                <div key={s.label} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'10px 13px' }}>
                   <div style={{ fontSize:11, color:'var(--text-muted)', fontWeight:600, marginBottom:3, textTransform:'uppercase', letterSpacing:'0.05em' }}>{s.label}</div>
                   <div style={{ fontSize:13.5, fontWeight:700, color:'var(--navy)' }}>{s.val}</div>
                 </div>
@@ -409,7 +409,7 @@ export default function CharDhamCompleteGuide() {
             <h3 style={h3Style}>Key Landmarks & Sacred Sites</h3>
             <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:16 }}>
               {dham.landmarks.map(lm => (
-                <div key={lm.name} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'12px 15px', display:'flex', gap:12, alignItems:'flex-start' }}>
+                <div key={lm.name} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'12px 15px', display:'flex', gap:12, alignItems:'flex-start' }}>
                   <span style={{ width:8, height:8, background:dham.color, borderRadius:'50%', flexShrink:0, marginTop:7 }}/>
                   <div>
                     <strong style={{ fontSize:14, color:'var(--navy)', display:'block', marginBottom:3 }}>{lm.name}</strong>
@@ -422,7 +422,7 @@ export default function CharDhamCompleteGuide() {
             <h3 style={h3Style}>Nearby Places Worth Visiting</h3>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,280px),1fr))', gap:10, marginBottom:8 }}>
               {dham.nearby.map(n => (
-                <div key={n.place} style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:10, padding:'12px 14px' }}>
+                <div key={n.place} style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'12px 14px' }}>
                   <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:5 }}>
                     <strong style={{ fontSize:13.5, color:'var(--navy)' }}>{n.place}</strong>
                     <span style={{ fontSize:11.5, color:'var(--text-muted)', background:'#fff', padding:'2px 8px', borderRadius:6 }}>{n.dist}</span>
@@ -469,7 +469,7 @@ export default function CharDhamCompleteGuide() {
                 note:'No rituals are compulsory. Observe, absorb, and take what resonates with you.'
               },
             ].map(item => (
-              <div key={item.group} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, overflow:'hidden' }}>
+              <div key={item.group} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, overflow:'hidden' }}>
                 <div style={{ background:'var(--navy)', padding:'10px 16px', display:'flex', alignItems:'center', gap:10 }}>
                   <span style={{ fontSize:20 }}>{item.icon}</span>
                   <strong style={{ color:'#fff', fontSize:14.5 }}>{item.group}</strong>
@@ -499,12 +499,12 @@ export default function CharDhamCompleteGuide() {
               <h3 style={{ ...h3Style, marginTop:28, fontSize:'1rem', textTransform:'uppercase', letterSpacing:'0.08em', color:'var(--teal)' }}>{cat}</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
                 {FAQS.filter(f => f.cat === cat).map((faq, i) => (
-                  <details key={i} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, overflow:'hidden' }}>
+                  <details key={i} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, overflow:'hidden' }}>
                     <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between', alignItems:'center', gap:10 }}>
                       <span>{faq.q}</span>
                       <span style={{ flexShrink:0, fontSize:18, color:'var(--text-muted)' }}>＋</span>
                     </summary>
-                    <div style={{ padding:'12px 16px 16px', fontSize:14.5, color:'#334155', lineHeight:1.85, borderTop:'1px solid var(--border)' }}>
+                    <div style={{ padding:'12px 16px 16px', fontSize:14.5, color:'#334155', lineHeight:1.85, borderTop:'1px solid hsl(var(--border))' }}>
                       {faq.a}
                     </div>
                   </details>
@@ -515,7 +515,7 @@ export default function CharDhamCompleteGuide() {
         </section>
 
         {/* Experience box */}
-        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:14, padding:'20px 22px', margin:'32px 0' }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px 22px', margin:'32px 0' }}>
           <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1.15rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>
             A Word from Our Team
           </h3>
@@ -529,7 +529,7 @@ export default function CharDhamCompleteGuide() {
         </div>
 
         {/* Related guides */}
-        <div style={{ marginTop:36, paddingTop:20, borderTop:'1px solid var(--border)' }}>
+        <div style={{ marginTop:36, paddingTop:20, borderTop:'1px solid hsl(var(--border))' }}>
           <h3 style={{ fontFamily:'var(--font-display)', fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:12 }}>Continue Reading</h3>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[
@@ -542,7 +542,7 @@ export default function CharDhamCompleteGuide() {
               ['2026 New Rules', '/blog/char-dham-yatra-2026-new-rules'],
               ['First-Timer Guide', '/blog/char-dham-yatra-first-timer-guide'],
             ].map(([label, href]) => (
-              <Link key={href} href={href} style={{ background:'#fff', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>
+              <Link key={href} href={href} style={{ background:'#fff', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {label} →
               </Link>
             ))}

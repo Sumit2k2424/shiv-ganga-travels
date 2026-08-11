@@ -116,7 +116,7 @@ export default function HeroSearch() {
       <style dangerouslySetInnerHTML={{ __html:`
         /* Resting border, moved off the inline style so it is overridable.
            hsl(), not a bare var(): --border is stored as an HSL triplet
-           ("214 32% 91%") in the shadcn convention, so "solid var(--border)"
+           ("214 32% 91%") in the shadcn convention, so the bare unwrapped form
            is invalid CSS and the browser drops the whole shorthand — which is
            why these fields have never had a visible border. Tailwind wraps it
            as hsl(var(--border)); hand-written CSS has to do the same.

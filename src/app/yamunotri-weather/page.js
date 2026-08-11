@@ -60,7 +60,7 @@ export default function YamunotriWeather() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Yamunotri Yatra<span>›</span>
@@ -73,7 +73,7 @@ export default function YamunotriWeather() {
           Yamunotri, the westernmost shrine of the Char Dham circuit and the source of the Yamuna River, sits at 3,291 metres in the Uttarkashi district of Uttarakhand. The final stretch of the pilgrimage involves a 6km trek from Janki Chatti — and weather plays a huge role in how comfortable (or challenging) that trek is. Rain, snow, or sudden cloud cover can make the rocky mountain trail slippery and exhausting. Knowing what to expect each month is the difference between a comfortable darshan and a stressful one.
         </p>
 
-        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderRadius:12, padding:'14px 18px', marginBottom:18 }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'14px 18px', marginBottom:18 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🌡️ Yamunotri temperature right now (July)</div>
           <p style={{ margin:0, fontSize:13.5, color:'var(--text-mid)' }}>
             In July, Yamunotri runs roughly <strong>10–15°C in the day and 6–9°C at night</strong>, with heavy monsoon rain most afternoons. Annual range: summer (May–June) 7–20°C, post-monsoon (Sept–Oct) 4–15°C, and well below freezing from December to March when the shrine is closed. At 3,291 m it stays 15–20 degrees colder than Haridwar year-round — carry a warm layer even in June.
@@ -88,7 +88,7 @@ export default function YamunotriWeather() {
         </div>
 
         <h2 style={h2}>Month-by-Month Weather at Yamunotri</h2>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead>
               <tr style={{ background:'var(--navy-light)' }}>
@@ -99,7 +99,7 @@ export default function YamunotriWeather() {
             </thead>
             <tbody>
               {weather.map((w, i) => (
-                <tr key={w.month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={w.month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{w.month}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{w.temp}</td>
                   <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{w.snow}</td>
@@ -129,7 +129,7 @@ export default function YamunotriWeather() {
             { season:'September–October', icon:'🍂', items:'Heavy fleece, warm jacket, thermal inner, woollen cap, gloves, trekking poles for rocky path' },
             { season:'July–August', icon:'🌧️', items:'Full waterproof rain suit, waterproof backpack cover, dry bag for phone/documents, extra pair of shoes' },
           ].map(s => (
-            <div key={s.season} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px' }}>
+            <div key={s.season} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px' }}>
               <div style={{ fontWeight:700, color:'var(--navy)', fontSize:13.5, marginBottom:8 }}>{s.icon} {s.season}</div>
               <p style={{ margin:0, fontSize:13, color:'#475569', lineHeight:1.65 }}>{s.items}</p>
             </div>
@@ -147,11 +147,11 @@ export default function YamunotriWeather() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Gangotri Weather','/gangotri-weather'],['Kedarnath Weather','/kedarnath-weather'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Yamunotri Yatra','/yamunotri-yatra']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

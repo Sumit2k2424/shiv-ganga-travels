@@ -46,7 +46,7 @@ export default function FAQAccordion({ faqs }) {
     <div style={{
       background: '#fff',
       borderRadius: 'var(--radius-lg)',
-      border: '1px solid var(--border)',
+      border: '1px solid hsl(var(--border))',
       boxShadow: 'var(--shadow)',
       overflow: 'hidden',
     }}>

@@ -52,7 +52,7 @@ export default function GroupPackage() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -100,7 +100,7 @@ export default function GroupPackage() {
                 ['30 people','3× vehicles (mixed)','₹4,50,000–5,00,000','₹15,000–16,600','₹7,000–9,000 vs solo'],
                 ['40–50 people','Call for custom quote','Custom pricing','₹13,500–15,000','₹8,000–10,000 vs solo'],
               ].map(([g,v,t,pp,s],i)=>(
-                <tr key={g} style={{ borderBottom:'1px solid var(--border)', background:i===2||i===3?'#F0FDF4':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={g} style={{ borderBottom:'1px solid hsl(var(--border))', background:i===2||i===3?'#F0FDF4':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{g}</td>
                   <td style={{ padding:'10px 14px', color:'#475569', fontSize:13 }}>{v}</td>
                   <td style={{ padding:'10px 14px', color:'#334155', fontSize:13.5 }}>{t}</td>
@@ -124,7 +124,7 @@ export default function GroupPackage() {
           { months:'September departure', book:'June 15 – July 31', why:'Post-monsoon — ideal season. 6–8 weeks adequate for most groups.', urgency:'medium' },
           { months:'October departure', book:'August 1 – September 15', why:'Low season. Best flexibility. Even 4 weeks is often possible.', urgency:'low' },
         ].map(item => (
-          <div key={item.months} style={{ display:'flex', gap:0, borderRadius:10, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+          <div key={item.months} style={{ display:'flex', gap:0, borderRadius:10, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
             <div style={{ background:item.urgency==='high'?'#DC2626':item.urgency==='medium'?'#D97706':'#15803D', minWidth:6, flexShrink:0 }}/>
             <div style={{ padding:'12px 16px', flex:1, background:'#fff' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:8, marginBottom:5 }}>
@@ -150,7 +150,7 @@ export default function GroupPackage() {
           ['Medical preparedness', 'Oxygen cylinder in every vehicle. Basic first-aid kit. Emergency contact list for all group members shared with group coordinator.'],
           ['Daily communication', 'WhatsApp group created for all members with daily updates, next day schedule, and emergency contacts.'],
         ].map(([title, desc]) => (
-          <div key={title} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid var(--border)' }}>
+          <div key={title} style={{ display:'flex', gap:12, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))' }}>
             <span style={{ color:'var(--teal)', fontWeight:800, fontSize:16, flexShrink:0, marginTop:1 }}>✓</span>
             <div>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:3 }}>{title}</div>
@@ -169,11 +169,11 @@ export default function GroupPackage() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -83,7 +83,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -118,7 +118,7 @@ export default function Page() {
             { icon:'🏨', title:'Hotels cost 25–40% less', desc:'Off-season rates in Guptkashi, Barkot and Badrinath are genuinely lower, and we pass that straight into the package instead of pocketing the gap.' },
             { icon:'🛣️', title:'Roads at their calmest', desc:'Monsoon repairs are done, slide activity drops sharply after the rain withdraws, and traffic is a fraction of June. Driving days that take 10 hours in peak season take 7–8.' },
           ].map(c=>(
-            <div key={c.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={c.title} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontSize:24, marginBottom:8 }}>{c.icon}</div>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{c.title}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.65 }}>{c.desc}</div>
@@ -139,7 +139,7 @@ export default function Page() {
                 ['Sept 21–30','Withdrawn monsoon, washed air, fresh snow above 4,500m','Excellent — our favourite ten days of the whole calendar'],
                 ['Oct 1–15','Crisp, clear, cold nights setting in at Kedarnath','Excellent — covered in detail in our October guide'],
               ].map(([w,wx,v],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{w}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{wx}</td>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--gold-dark)', fontSize:12.5 }}>{v}</td>
@@ -165,7 +165,7 @@ export default function Page() {
                 ['Kedarnath','3N / 4D','₹6,999','Short focused darshan trip'],
                 ['Badrinath','2N / 3D','₹5,999','Easiest dham — no trek, drive right up'],
               ].map(([pkg,dur,price,fit],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{pkg}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{dur}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--gold-dark)', fontSize:13 }}>{price}</td>
@@ -186,7 +186,7 @@ export default function Page() {
 
         <h2 id="faq" style={h2}>September Yatra FAQs</h2>
         {FAQS.map((f,i)=>(
-          <div key={i} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
+          <div key={i} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginBottom:12 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>
             <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{f.a}</div>
           </div>
@@ -206,7 +206,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Char Dham in October',h:'/blog/char-dham-yatra-in-october'},{l:'Monsoon Safety Guide',h:'/blog/char-dham-monsoon-safety'},{l:'Best Time for Char Dham',h:'/blog/best-time-char-dham'},{l:'Closing Dates 2026',h:'/blog/char-dham-yatra-closing-dates-2026'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

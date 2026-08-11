@@ -90,7 +90,7 @@ export default function BookingSitesCompared() {
 
         <H2>What Each One Is Actually Good At</H2>
 
-        <div style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
+        <div style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
           <div style={{ fontWeight:700, fontSize:15.5, color:'var(--navy)', marginBottom:8 }}>Online travel agencies</div>
           <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8, marginBottom:8 }}>
             <strong>Good at:</strong> flights and hotels, which is what they are built for. Payment
@@ -103,7 +103,7 @@ export default function BookingSitesCompared() {
           </p>
         </div>
 
-        <div style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
+        <div style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
           <div style={{ fontWeight:700, fontSize:15.5, color:'var(--navy)', marginBottom:8 }}>Experience marketplaces</div>
           <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8, marginBottom:8 }}>
             <strong>Good at:</strong> discovery and review volume. Seeing twenty itineraries side by side
@@ -134,7 +134,7 @@ export default function BookingSitesCompared() {
           </p>
         </div>
 
-        <div style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
+        <div style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
           <div style={{ fontWeight:700, fontSize:15.5, color:'var(--navy)', marginBottom:8 }}>Doing it yourself</div>
           <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8, marginBottom:8 }}>
             <strong>Good at:</strong> total control, and a genuinely better trip for the right person —

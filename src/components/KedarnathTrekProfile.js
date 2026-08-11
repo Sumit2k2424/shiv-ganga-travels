@@ -30,7 +30,7 @@ export default function KedarnathTrekProfile() {
   const area = `${line} L${x(maxKm)},${H - PADY} L${x(0)},${H - PADY} Z`;
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 14, padding: '18px 16px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 24 }}>
+    <div style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 14, padding: '18px 16px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 24 }}>
       <div style={{ fontWeight: 800, color: 'var(--navy)', fontSize: 15.5, marginBottom: 2 }}>Interactive trek profile — Gaurikund to Kedarnath</div>
       <p style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 12, lineHeight: 1.6 }}>16 km · 1,601 m of climb. Tap any checkpoint for distance, altitude, timing and what's there.</p>
 
@@ -44,7 +44,7 @@ export default function KedarnathTrekProfile() {
           </defs>
           {[2000, 2500, 3000, 3500].map(a => (
             <g key={a}>
-              <line x1={PADX} y1={y(a)} x2={W - PADX} y2={y(a)} stroke="var(--border)" strokeWidth="1" strokeDasharray="3 4" />
+              <line x1={PADX} y1={y(a)} x2={W - PADX} y2={y(a)} stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="3 4" />
               <text x={4} y={y(a) + 3} fontSize="9" fill="#94a3b8">{a}m</text>
             </g>
           ))}
@@ -63,7 +63,7 @@ export default function KedarnathTrekProfile() {
         {PTS.map((p, i) => (
           <button key={p.name} type="button" onClick={() => setSel(i)} style={{
             padding: '6px 11px', borderRadius: 7, border: '1.5px solid',
-            borderColor: sel === i ? 'var(--navy)' : 'var(--border)',
+            borderColor: sel === i ? 'var(--navy)' : 'hsl(var(--border))',
             background: sel === i ? 'var(--navy)' : '#fff', color: sel === i ? '#fff' : 'var(--navy)',
             fontWeight: 700, fontSize: 12, cursor: 'pointer',
           }}>{p.name}</button>

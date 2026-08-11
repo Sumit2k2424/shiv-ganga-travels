@@ -24,7 +24,7 @@ function Schema() {
 }
 
 const ROW = ({ days, pct, color, note }) => (
-  <tr style={{ borderBottom: '1px solid var(--border)' }}>
+  <tr style={{ borderBottom: '1px solid hsl(var(--border))' }}>
     <td style={{ padding:'14px 16px', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{days}</td>
     <td style={{ padding:'14px 16px', textAlign:'center' }}>
       <span style={{ background: color + '22', color, fontWeight:800, fontSize:18, padding:'4px 16px', borderRadius:8, display:'inline-block' }}>{pct}</span>
@@ -54,7 +54,7 @@ export default function CancellationPolicy() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home
           <span>›</span>
@@ -101,7 +101,7 @@ export default function CancellationPolicy() {
           'Our team will confirm receipt within 24 hours and provide the refund amount',
           'Refund is processed to your original payment method within 7 working days of confirmation',
         ].map((s,i) => (
-          <div key={i} style={{ display:'flex', gap:12, padding:'10px 0', borderBottom:'1px solid var(--border)', fontSize:14.5, color:'var(--text-mid)' }}>
+          <div key={i} style={{ display:'flex', gap:12, padding:'10px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:14.5, color:'var(--text-mid)' }}>
             <span style={{ background:'var(--navy)', color:'#fff', width:24, height:24, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:700, flexShrink:0, marginTop:1 }}>{i+1}</span>
             {s}
           </div>

@@ -264,7 +264,7 @@ button { font-family: var(--font); }
   background: var(--card-bg);
   border-radius: var(--r-lg);
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   box-shadow: var(--shadow);
   transition: transform var(--t-out), box-shadow var(--t-out), border-color var(--t);
   will-change: transform;
@@ -307,7 +307,7 @@ button { font-family: var(--font); }
   font-weight: 500;
   color: var(--text-mid);
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   border-radius: 100px;
   padding: 4px 10px;
 }
@@ -347,7 +347,7 @@ button { font-family: var(--font); }
   height: 76px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--border);
+  border: 2px solid hsl(var(--border));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +472,7 @@ button { font-family: var(--font); }
 /* ═══════════════════════════════════════════════════════════════
    FAQ ACCORDION
 ═══════════════════════════════════════════════════════════════ */
-.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid hsl(var(--border)); }
 .faq-question {
   width: 100%;
   padding: 18px 20px;
@@ -515,7 +515,7 @@ button { font-family: var(--font); }
   background: var(--card-bg);
   border-radius: var(--r-xl);
   padding: 28px 24px;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   box-shadow: var(--shadow);
   min-width: 320px;
   max-width: 370px;
@@ -589,7 +589,7 @@ button { font-family: var(--font); }
     position: fixed;
     bottom: 0; left: 0; right: 0;
     background: #fff;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid hsl(var(--border));
     padding: 10px 14px;
     gap: 10px;
     z-index: 80;
@@ -778,8 +778,8 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
   .zero-comm-label  { width: 100% !important; justify-content: center !important; padding: 14px 20px !important; }
   .zero-comm-arrow  { display: none !important; }
   .zero-comm-chips  { width: 100% !important; display: grid !important; grid-template-columns: 1fr 1fr !important; overflow: visible !important; padding: 8px 0 !important; }
-  .zero-comm-chip   { border-right: none !important; border-bottom: 1px solid var(--border) !important; padding: 12px 14px !important; }
-  .zero-comm-phone  { width: 100% !important; border-left: none !important; border-top: 1px solid var(--border) !important; padding: 12px 20px !important; justify-content: center !important; flex-direction: row !important; gap: 10px !important; }
+  .zero-comm-chip   { border-right: none !important; border-bottom: 1px solid hsl(var(--border)) !important; padding: 12px 14px !important; }
+  .zero-comm-phone  { width: 100% !important; border-left: none !important; border-top: 1px solid hsl(var(--border)) !important; padding: 12px 20px !important; justify-content: center !important; flex-direction: row !important; gap: 10px !important; }
 }
 
 /* ─── 8. CONTENT FUNNEL ─────────────────────────────────────── */
@@ -890,7 +890,7 @@ a.btn-primary, a.btn-navy, a.btn-outline { text-decoration: none; }
     position: fixed !important;
     bottom: 0; left: 0; right: 0;
     background: #fff;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid hsl(var(--border));
     padding: 10px 12px;
     gap: 8px;
     z-index: 80;
@@ -1653,8 +1653,8 @@ body:has(.blog-progress) .lux-progress { display: none; }
 .blog-facts {
   max-width: 1040px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+  gap: 1px; background: hsl(var(--border));
+  border: 1px solid hsl(var(--border)); border-radius: 14px; overflow: hidden;
   box-shadow: var(--shadow-md);
 }
 .blog-facts__item { background: #fff; padding: 14px 16px; text-align: center; min-width: 0; }
@@ -1681,7 +1681,7 @@ body:has(.blog-progress) .lux-progress { display: none; }
 /* ── Key takeaways / "quick answer" box ── */
 .blog-keytakeaways {
   background: linear-gradient(180deg, var(--gold-light), #fff);
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   border-left: 4px solid var(--gold);
   border-radius: 14px;
   padding: 20px 22px;
@@ -1707,7 +1707,7 @@ body:has(.blog-progress) .lux-progress { display: none; }
 /* ── Table of contents — inline premium card ── */
 .blog-toc2 {
   background: var(--navy-light);
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   border-radius: 14px;
   padding: 18px 20px 16px;
   margin: 28px 0;
@@ -1744,7 +1744,7 @@ body:has(.blog-progress) .lux-progress { display: none; }
   --accent: var(--teal);
   position: relative;
   background: #fff;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   border-left: 4px solid var(--accent);
   border-radius: 12px;
   padding: 15px 18px 15px 20px;
@@ -1971,7 +1971,7 @@ body:has(.blog-progress) .lux-progress { display: none; }
 @media (max-width: 640px) {
   .trust-badge-strip > div {
     border-right: none !important;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid hsl(var(--border));
     width: 50% !important;
   }
 }
@@ -2091,7 +2091,7 @@ a:focus-visible, button:focus-visible {
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background: #fff;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
 }
 .pkg-card:hover {
   transform: translateY(-3px);
@@ -2101,7 +2101,7 @@ a:focus-visible, button:focus-visible {
 /* Premium section divider */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
   margin: 0;
   border: none;
 }
@@ -2134,7 +2134,7 @@ a:focus-visible, button:focus-visible {
   gap: 0;
   flex-wrap: wrap;
   background: #fff;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsl(var(--border));
   padding: 12px 16px;
 }
 .trust-badge {
@@ -2142,7 +2142,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   gap: 8px;
   padding: 8px 18px;
-  border-right: 1px solid var(--border);
+  border-right: 1px solid hsl(var(--border));
   flex-shrink: 0;
 }
 .trust-badge:last-child { border-right: none; }
@@ -2155,10 +2155,10 @@ a:focus-visible, button:focus-visible {
   .trust-badge {
     padding: 6px 12px;
     border-right: none;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid hsl(var(--border));
     width: 50%;
   }
-  .trust-badge:nth-child(odd)  { border-right: 1px solid var(--border); }
+  .trust-badge:nth-child(odd)  { border-right: 1px solid hsl(var(--border)); }
   .trust-badge:last-child, .trust-badge:nth-last-child(2):nth-child(odd) { border-bottom: none; }
 }
 
@@ -2181,7 +2181,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
-.compact-table tbody tr { border-bottom: 1px solid var(--border); }
+.compact-table tbody tr { border-bottom: 1px solid hsl(var(--border)); }
 .compact-table tbody tr:nth-child(even) { background: var(--bg); }
 .compact-table tbody td { padding: 9px 13px; color: var(--text-mid); vertical-align: middle; }
 .compact-table tbody td:first-child { font-weight: 600; color: var(--navy); }
@@ -2245,7 +2245,7 @@ html {
 
 .breadcrumb {
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsl(var(--border));
   padding: 9px 20px;
   font-size: 12px;
   color: var(--text-muted);
@@ -2256,7 +2256,7 @@ html {
   font-weight: 500;
 }
 .breadcrumb a:hover { text-decoration: underline; }
-.breadcrumb span { margin: 0 5px; color: var(--border); }
+.breadcrumb span { margin: 0 5px; color: hsl(var(--border)); }
 
 /* ═══════════════════════════════════════════════════════════════
    LOADING STATE
@@ -3192,7 +3192,7 @@ select:not(.newsletter-input) {
 /* ── CANONICAL .pkg-card (resolves the two earlier conflicting defs) ── */
 .pkg-card {
   background:var(--card-bg);
-  border:1px solid var(--border);
+  border:1px solid hsl(var(--border));
   border-radius:var(--r-lg);
   overflow:hidden;
   box-shadow:var(--shadow-sm);

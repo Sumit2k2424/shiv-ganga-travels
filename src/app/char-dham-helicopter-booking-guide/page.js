@@ -110,7 +110,7 @@ export default function HelicopterBookingGuide() {
             ['Book in your own name','On irctc.co.in. Not through an intermediary, not via a WhatsApp link, not to a personal account.'],
             ['Build in a spare day','Weather cancellations are routine at Kedarnath. An itinerary with no slack becomes a problem the first time cloud closes the valley.'],
           ].map(([step, detail], i) => (
-            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid hsl(var(--border))' }}>
               <div style={{ background:'var(--navy)', color:'#fff', width:26, height:26, borderRadius:100, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12.5, fontWeight:700, flexShrink:0 }}>{i+1}</div>
               <div>
                 <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:3 }}>{step}</div>

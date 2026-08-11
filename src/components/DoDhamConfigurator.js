@@ -33,14 +33,14 @@ export default function DoDhamConfigurator({ whatsapp }) {
 
   const pill = (active) => ({
     padding: '7px 12px', borderRadius: 8, border: '1.5px solid',
-    borderColor: active ? 'var(--navy)' : 'var(--border)',
+    borderColor: active ? 'var(--navy)' : 'hsl(var(--border))',
     background: active ? 'var(--navy)' : '#fff', color: active ? '#fff' : 'var(--navy)',
     fontWeight: 700, fontSize: 12, cursor: 'pointer',
   });
   const lab = { fontSize: 12.5, fontWeight: 700, color: 'var(--navy)', display: 'block', marginBottom: 6 };
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 16 }}>
+    <div style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 14, padding: '20px 18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', marginBottom: 16 }}>
       <div style={{ fontWeight: 800, color: 'var(--navy)', fontSize: 15.5, marginBottom: 4 }}>Build your Do Dham package &amp; see the price</div>
       <p style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 14, lineHeight: 1.6 }}>Pick your options for an honest per-person estimate — no sign-up, no obligation.</p>
 

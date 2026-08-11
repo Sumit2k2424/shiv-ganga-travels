@@ -41,7 +41,7 @@ export default function PujaBooking() {
           style={{ display:'inline-block', background:'#25D366', color:'#fff', padding:'13px 32px', borderRadius:10, fontWeight:700, fontSize:15, textDecoration:'none', marginTop:20 }}>💬 Book Puja on WhatsApp</a>
       </div>
     </section>
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         Home<span>›</span>
         <span>Online Puja Booking</span>
@@ -52,7 +52,7 @@ export default function PujaBooking() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 How puja booking works</div>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))', gap:12, fontSize:13, color:'var(--text-mid)' }}>
           {['1. WhatsApp us your name, date of travel & chosen puja','2. We confirm availability with temple pandit','3. Pay advance (50%) to secure your slot','4. Pandit conducts puja in your name on the day','5. Video of puja shared on WhatsApp if requested'].map(s=>(
-            <div key={s} style={{ padding:'8px 10px', background:'#fff', borderRadius:8, border:'1px solid var(--border)' }}>{s}</div>
+            <div key={s} style={{ padding:'8px 10px', background:'#fff', borderRadius:8, border:'1px solid hsl(var(--border))' }}>{s}</div>
           ))}
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function PujaBooking() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(250px,100%),1fr))', gap:12 }}>
             {temple.pujas.map(puja => (
-              <div key={puja.name} style={{ background:'#fff', borderRadius:12, border:`${puja.popular ? '2px solid var(--navy)' : '1px solid var(--border)'}`, padding:'16px', position:'relative' }}>
+              <div key={puja.name} style={{ background:'#fff', borderRadius:12, border:`${puja.popular ? '2px solid var(--navy)' : '1px solid hsl(var(--border))'}`, padding:'16px', position:'relative' }}>
                 {puja.popular && <div style={{ position:'absolute', top:-1, right:-1, background:'var(--gold)', color:'#fff', fontSize:10, fontWeight:700, padding:'3px 10px', borderRadius:'0 12px 0 8px' }}>POPULAR</div>}
                 <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{puja.name}</div>
                 <div style={{ fontWeight:800, fontSize:18, color:'var(--gold)', marginBottom:3 }}>{puja.price}</div>
@@ -82,7 +82,7 @@ export default function PujaBooking() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Temple Guide',h:'/kedarnath-temple'},{l:'Badrinath Temple Guide',h:'/badrinath-temple'},{l:'Char Dham Package',h:'/char-dham-yatra'},{l:'Kedarnath Yatra',h:'/kedarnath-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

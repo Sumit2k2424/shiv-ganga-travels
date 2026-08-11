@@ -112,7 +112,7 @@ export default function KedarnathHotels() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Kedarnath Yatra<span>›</span>
@@ -133,7 +133,7 @@ export default function KedarnathHotels() {
         </p>
 
         {stays.map(s => (
-          <div key={s.loc} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'18px 20px', marginBottom:14 }}>
+          <div key={s.loc} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'18px 20px', marginBottom:14 }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:8, marginBottom:10 }}>
               <div>
                 <span style={{ background:'rgba(232,146,10,0.12)', color:'#92640a', fontSize:11, fontWeight:700, padding:'2px 10px', borderRadius:20, marginBottom:6, display:'inline-block' }}>{s.type}</span>
@@ -159,7 +159,7 @@ export default function KedarnathHotels() {
         <h2 style={h2}>FAQ — Hotels Near Kedarnath</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:8 }}>
           {faqs.map(([q, a]) => (
-            <div key={q} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+            <div key={q} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{q}</div>
               <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{a}</div>
             </div>
@@ -179,11 +179,11 @@ export default function KedarnathHotels() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['All Char Dham Hotels','/char-dham-hotels'],['Kedarnath Weather','/kedarnath-weather'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

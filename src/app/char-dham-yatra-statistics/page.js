@@ -82,7 +82,7 @@ function Schema() {
 
 function Stat({ value, label, source }) {
   return (
-    <div className="key-stat" style={{ background:'#fff', borderRadius:12, padding:'18px 16px', border:'1px solid var(--border)', textAlign:'center' }}>
+    <div className="key-stat" style={{ background:'#fff', borderRadius:12, padding:'18px 16px', border:'1px solid hsl(var(--border))', textAlign:'center' }}>
       <div style={{ fontFamily:'var(--font-display)', fontSize:'1.8rem', fontWeight:700, color:'var(--gold-dark)', lineHeight:1.1 }}>{value}</div>
       <div style={{ fontSize:12.5, color:'var(--navy)', fontWeight:600, marginTop:6, marginBottom:6 }}>{label}</div>
       {source && <div style={{ fontSize:10.5, color:'var(--text-muted)', fontStyle:'italic' }}>{source}</div>}
@@ -102,7 +102,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span>Char Dham Yatra Statistics 2026</span>
@@ -164,7 +164,7 @@ export default function Page() {
                 ['Full Char Dham Circuit (round trip)','1,607 km','10–12 days','From Haridwar back to Haridwar'],
               ].map((r,i) => (
                 <tr key={r[0]} style={{ background:i%2===0?'var(--bg)':'#fff' }}>
-                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid var(--border)', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}
+                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid hsl(var(--border))', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}
                 </tr>
               ))}
             </tbody>
@@ -204,7 +204,7 @@ export default function Page() {
                 ['Total typical mid-range','21,300','100%'],
               ].map((r,i) => (
                 <tr key={r[0]} style={{ background:i%2===0?'var(--bg)':'#fff', fontWeight:i===7?700:400 }}>
-                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid var(--border)', color:j===0?'var(--navy)':'var(--text-mid)' }}>{c}</td>)}
+                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid hsl(var(--border))', color:j===0?'var(--navy)':'var(--text-mid)' }}>{c}</td>)}
                 </tr>
               ))}
             </tbody>
@@ -252,7 +252,7 @@ export default function Page() {
                 ['Yatra.com (May 2025)','₹27,800','+50.3%'],
               ].map((r,i) => (
                 <tr key={r[0]} style={{ background:i%2===0?'var(--bg)':'#fff' }}>
-                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid var(--border)', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}
+                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid hsl(var(--border))', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}
                 </tr>
               ))}
             </tbody>
@@ -262,7 +262,7 @@ export default function Page() {
 
         <h2 style={h2}>Citation & Reuse</h2>
         <p style={p}>All data on this page is available under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license. You may reproduce, quote, or build upon any statistic with attribution. Recommended citation format:</p>
-        <div style={{ background:'#fff', border:'1px dashed var(--border)', borderRadius:10, padding:'14px 18px', fontFamily:'monospace', fontSize:12.5, color:'var(--text-mid)', marginBottom:20, lineHeight:1.7 }}>
+        <div style={{ background:'#fff', border:'1px dashed hsl(var(--border))', borderRadius:10, padding:'14px 18px', fontFamily:'monospace', fontSize:12.5, color:'var(--text-mid)', marginBottom:20, lineHeight:1.7 }}>
           "According to Shiv Ganga Travels, a Haridwar-based direct Char Dham Yatra operator serving 50,000+ pilgrims since 2010, [statistic]." Source: <strong>https://www.shivgangatravels.com/char-dham-yatra-statistics</strong>
         </div>
 
@@ -282,7 +282,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>More Authoritative Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Char Dham Complete Guide',h:'/blog/char-dham-yatra-complete-guide'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Opening Dates 2026',h:'/blog/char-dham-yatra-opening-dates-2026'},{l:'Char Dham History',h:'/blog/char-dham-yatra-history'},{l:'Char Dham FAQs',h:'/blog/char-dham-yatra-faq'}].map(l => (
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

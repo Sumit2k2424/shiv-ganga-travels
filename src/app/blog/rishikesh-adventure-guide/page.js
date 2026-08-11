@@ -37,7 +37,7 @@ export default function RishikeshAdventureGuide() {
       ]}
     />
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
         <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -66,7 +66,7 @@ export default function RishikeshAdventureGuide() {
           { route:'Shivpuri to Rishikesh', dist:'16 km', price:'₹500–700/pp', grade:'Grade II-III', note:'Moderate. Good for beginners.' },
           { route:'Brahampuri to Rishikesh', dist:'9 km', price:'₹300–450/pp', grade:'Grade II', note:'Gentle. Perfect for families.' },
         ].map(r => (
-          <div key={r.route} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
+          <div key={r.route} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:4 }}>{r.route}</div>
             <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:4 }}>{r.dist} · {r.grade}</div>
             <div style={{ fontWeight:700, fontSize:16, color:'var(--teal-dark)', marginBottom:4 }}>{r.price}</div>

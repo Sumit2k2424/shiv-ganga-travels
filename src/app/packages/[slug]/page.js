@@ -264,7 +264,7 @@ export default async function PackageDetailPage({ params }) {
         <a href='tel:+917817996730' style={{ flex:1, background:'var(--navy)', color:'#fff', padding:'10px', borderRadius:9, textAlign:'center', fontWeight:700, fontSize:13, textDecoration:'none', display:'block' }}>📞 Call Now</a>
       </div>
       {/* Trust micro-signals below sticky bar */}
-      <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid var(--border)' }}>
+      <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid hsl(var(--border))' }}>
         <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
         <span>✓ Est. 2010 · Retd. Army Officer founder</span>
@@ -282,7 +282,7 @@ export default async function PackageDetailPage({ params }) {
 
       {/* Quick Answer — self-contained, claim-first block for AI Overviews / ChatGPT citation */}
       <div style={{ maxWidth:1100, margin:'14px auto 0', padding:'0 16px' }}>
-        <div style={{ background:'var(--navy-light)', border:'1px solid var(--border)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px' }}>
+        <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px' }}>
           <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
           <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>{quickAnswer}</p>
           <ul style={{ listStyle:'none', display:'flex', flexWrap:'wrap', gap:'6px 18px', margin:'10px 0 0', padding:0, fontSize:12.5, color:'var(--text-mid)' }}>
@@ -370,7 +370,7 @@ export default async function PackageDetailPage({ params }) {
                     ['Tempo Traveller 17-seater','13–17 persons','₹75,000–₹80,000','~₹5,000–₹5,500','Large group'],
                     ['Tempo Traveller 20-seater','15–20 persons','₹85,000–₹90,000','~₹4,500–₹5,000','Very large group'],
                   ].map(([v,cap,fare,pp,best],i)=>(
-                    <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                    <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                       <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
                       <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
                       <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
@@ -395,7 +395,7 @@ export default async function PackageDetailPage({ params }) {
             <h2 style={SH}>Package Highlights</h2>
             <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:8 }}>
               {pkg.highlights.map((h,i)=>(
-                <li key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', padding:'8px 10px', background:'#fff', borderRadius:8, border:'1px solid var(--border)', fontSize:13 }}>
+                <li key={i} style={{ display:'flex', gap:8, alignItems:'flex-start', padding:'8px 10px', background:'#fff', borderRadius:8, border:'1px solid hsl(var(--border))', fontSize:13 }}>
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>
                   <span style={{ color:'var(--text-mid)' }}>{h}</span>
                 </li>
@@ -460,7 +460,7 @@ export default async function PackageDetailPage({ params }) {
               <h2 style={SH}>💡 Travel Tips</h2>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
                 {pkg.travelTips.map((tip,i)=>(
-                  <div key={i} style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                  <div key={i} style={{ display:'flex', gap:10, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid hsl(var(--border))', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
                     <span style={{ color:'var(--gold)', flexShrink:0 }}>💡</span>{tip}
                   </div>
                 ))}
@@ -496,7 +496,7 @@ export default async function PackageDetailPage({ params }) {
               <h2 style={SH}>📖 Related Guides & Resources</h2>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(210px,1fr))', gap:10 }}>
                 {guides.map(g=>(
-                  <Link key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none' }}>
+                  <Link key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
                     <span style={{ fontSize:18 }}>📖</span>
                     <span style={{ fontSize:13, fontWeight:600, color:'var(--navy)', lineHeight:1.3 }}>{g.label} →</span>
                   </Link>
@@ -511,7 +511,7 @@ export default async function PackageDetailPage({ params }) {
               <h2 style={SH}>🔄 You Might Also Like</h2>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:12 }}>
                 {related.map(r=>(
-                  <Link key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)', textDecoration:'none' }}>
+                  <Link key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
                     <div style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4, lineHeight:1.3 }}>{r.name}</div>
                     <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6 }}>{r.duration.nights}N/{r.duration.days}D</div>
                     <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)' }}>₹{r.price.discounted.toLocaleString('en-IN')}</div>
@@ -531,7 +531,7 @@ export default async function PackageDetailPage({ params }) {
                 ['Documents','Aadhaar card / valid ID','Char Dham registration QR','Medical fitness certificate (50+)','Travel insurance document','Emergency contact card (printed)'],
                 ['Practical','Power bank (20,000 mAh)','Cash (₹5,000–10,000 minimum)','Reusable water bottle (1L)','Light torch / headlamp','Walking stick (collapsible)'],
               ].map(([cat, ...items]) => (
-                <div key={cat} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid var(--border)' }}>
+                <div key={cat} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid hsl(var(--border))' }}>
                   <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.05em' }}>{cat}</div>
                   {items.map(item => (
                     <div key={item} style={{ display:'flex', gap:6, fontSize:12, color:'var(--text-mid)', marginBottom:4, lineHeight:1.4 }}>
@@ -565,7 +565,7 @@ export default async function PackageDetailPage({ params }) {
                 'Hire only government-registered pony wallahs and porters at Gaurikund (Kedarnath) and Janki Chatti (Yamunotri) — avoid touts.',
                 'Keep your Char Dham registration QR code (printed AND digital) accessible at all times — it is checked at 8–10 points on the route.',
               ].map((tip, i) => (
-                <div key={i} style={{ display:'flex', gap:12, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid var(--border)', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
+                <div key={i} style={{ display:'flex', gap:12, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid hsl(var(--border))', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
                   <span style={{ background:'var(--navy)', color:'#fff', fontWeight:700, fontSize:11, width:22, height:22, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, marginTop:1 }}>{i+1}</span>
                   {tip}
                 </div>
@@ -585,7 +585,7 @@ export default async function PackageDetailPage({ params }) {
                 { label:'GMVN Enquiry', num:'+91-135-2746817', note:'Accommodation' },
                 { label:'Shiv Ganga Travels', num:'+91-7817996730', note:'24/7 on-ground support' },
               ].map(c => (
-                <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)', textDecoration:'none', display:'block' }}>
+                <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid hsl(var(--border))', textDecoration:'none', display:'block' }}>
                   <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{c.label}</div>
                   <div style={{ fontWeight:800, fontSize:16, color:'var(--teal)', marginBottom:2 }}>{c.num}</div>
                   <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{c.note}</div>
@@ -616,7 +616,7 @@ export default async function PackageDetailPage({ params }) {
                     ['October','Last season','Medium-low','₹17,000–₹18,500','-2 to 10°C','Great value — dhams open till Nov 11'],
                     ['November (1–13)','Closing','Very low','₹14,000–₹18,000','-5 to 5°C','Last chance — temple closes mid-November'],
                   ].map(([month, season, crowd, price, weather, verdict], i)=>(
-                    <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i===3||i===4 ? 'rgba(29,158,117,0.06)' : i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
+                    <tr key={month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3||i===4 ? 'rgba(29,158,117,0.06)' : i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
                       <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>{month}</td>
                       <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{season}</td>
                       <td style={{ padding:'8px 12px', color: crowd.includes('Very high')?'#D85A30': crowd.includes('Low')?'#6B7280':'#15803D', fontWeight:600, fontSize:12.5 }}>{crowd}</td>
@@ -674,7 +674,7 @@ export default async function PackageDetailPage({ params }) {
                 { icon:'🙏', title:'Sacred start — Ganga Aarti', body:'Every Char Dham Yatra begins with the evening Ganga Aarti at Har Ki Pauri, Haridwar — a spiritual ritual that has been performed daily since the 6th century. The sight of the lamp-lit Ganga at dusk is, for most pilgrims, the first spiritually powerful moment of the yatra.' },
                 { icon:'🏢', title:'Our office is here', body:'We are based at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. Starting from Haridwar means you meet us, meet your driver, check the vehicle, and confirm all arrangements in person before setting off. This is not possible if we send a vehicle from Delhi.' },
               ].map(item=>(
-                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid var(--border)' }}>
+                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid hsl(var(--border))' }}>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:5 }}>{item.icon} {item.title}</div>
                   <div style={{ fontSize:13, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
                 </div>
@@ -684,7 +684,7 @@ export default async function PackageDetailPage({ params }) {
 
           {/* Delhi → Haridwar travel options — fills the by-car/train/bus/helicopter intent */}
           {fromDelhi && (
-          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))' }}>
             <h2 style={SH}>🚗 Char Dham Yatra from Delhi — Travel Options Compared</h2>
             <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
               Delhi to Haridwar is about 220–240 km, roughly 5–6 hours on the Delhi–Dehradun Expressway. How you cover that first leg decides your cost and comfort. Here is how the four ways stack up, and what we recommend for each kind of traveller.
@@ -752,7 +752,7 @@ export default async function PackageDetailPage({ params }) {
 
           {/* Optional Add-ons — matches competitor upsell, drives internal links + conversions */}
           {isYatra && (
-          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))' }}>
             <h2 style={SH}>🧭 Optional Add-ons &amp; Extensions</h2>
             <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
               Most pilgrims keep to the four dhams, but if you have a spare day and the legs for it, a few detours are well worth folding in. We add these on request — just tell us when you enquire and we will adjust the route and the quote. Each one needs roughly one extra day and is charged at actuals, no markup.
@@ -764,7 +764,7 @@ export default async function PackageDetailPage({ params }) {
                 { t:'Triyuginarayan Temple', d:'Where Shiva and Parvati married, with its eternal flame. An easy detour from Sonprayag.', href:'/blog/triyuginarayan-temple', add:'half day' },
                 { t:'Valley of Flowers', d:'UNESCO alpine valley in bloom (Jul\u2013Aug), paired with Hemkund Sahib near Govindghat.', href:'/blog/valley-of-flowers-trek', add:'+2 days' },
               ].map(a => (
-                <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid var(--border)', display:'block' }}>
+                <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid hsl(var(--border))', display:'block' }}>
                   <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
                     <span style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{a.t}</span>
                     <span style={{ fontSize:10.5, fontWeight:700, color:'var(--gold-dark)', background:'#FFF8E7', padding:'2px 8px', borderRadius:100, whiteSpace:'nowrap' }}>{a.add}</span>
@@ -776,22 +776,22 @@ export default async function PackageDetailPage({ params }) {
             </div>
           </section>
           )}
-          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:4 }}>
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:4 }}>
             <h2 style={SH}>🏔️ Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🎖️ Founded by a Retired Army Officer</div>
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army. Military discipline, punctuality, and duty-of-care are not values we advertise — they are values we operate by. Every single departure runs on schedule.</div>
               </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📍 Based in Haridwar — Not Delhi</div>
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator, not a broker. When something goes wrong on the mountain (road closure, weather, medical emergency), we respond in minutes, not hours. Delhi-based aggregators call a subcontractor. We call our own driver.</div>
               </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.7/5 · 54 verified Google reviews</div>
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 54 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has held at 4.7/5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
               </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Uttarakhand Tourism Registered</div>
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Registered with the Uttarakhand Tourism Development Board. Member of IATO (Indian Association of Tour Operators). All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. You can verify our registration at the Haridwar Tourism office.</div>
               </div>
@@ -817,7 +817,7 @@ export default async function PackageDetailPage({ params }) {
 
 
           {/* E-E-A-T: Operator credentials */}
-          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid var(--border)' }}>
+          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))' }}>
             <h2 style={SH}>Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
               {[
@@ -826,7 +826,7 @@ export default async function PackageDetailPage({ params }) {
                 { icon:'⭐', title:'4.7/5 · 54 verified Google reviews', body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. Our 4.7/5 rating over 15 years has currently at 4.7/5.' },
                 { icon:'📋', title:'Uttarakhand Tourism Registered', body:'Registered with Uttarakhand Tourism Development Board. Member of IATO. All vehicles hold valid tourism permits and hill-route licences. Registration verifiable at the Haridwar Tourism office.' },
               ].map(item => (
-                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
                   <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
                 </div>

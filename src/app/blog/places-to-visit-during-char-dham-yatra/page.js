@@ -139,7 +139,7 @@ export default function PlacesToVisit() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -171,7 +171,7 @@ export default function PlacesToVisit() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 28 }}>
           {places.map((place, i) => (
-            <div key={place.name} style={{ background: '#fff', borderRadius: 14, padding: '18px 20px', border: '1px solid var(--border)', borderLeft: '4px solid var(--navy)' }}>
+            <div key={place.name} style={{ background: '#fff', borderRadius: 14, padding: '18px 20px', border: '1px solid hsl(var(--border))', borderLeft: '4px solid var(--navy)' }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 10 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ background: 'var(--navy)', color: '#FFD166', fontWeight: 700, fontSize: 12, padding: '3px 9px', borderRadius: 20 }}>#{i + 1}</span>
@@ -217,7 +217,7 @@ export default function PlacesToVisit() {
                 ['Chopta/Tungnath', 'Day between Kedarnath and Badrinath', '4–5 hrs', '✅ If itinerary has a buffer day'],
                 ['Lakhamandal', 'Day 1 (Haridwar to Barkot)', '+2 hrs, detour', '⬜ Only for Mahabharata enthusiasts'],
               ].map(([place, day, adds, worth], i) => (
-                <tr key={place} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={place} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '8px 12px', fontWeight: 600, color: 'var(--navy)' }}>{place}</td>
                   <td style={{ padding: '8px 12px', color: '#475569', fontSize: 12.5 }}>{day}</td>
                   <td style={{ padding: '8px 12px', color: '#1D9E75', fontWeight: 600 }}>{adds}</td>
@@ -241,11 +241,11 @@ export default function PlacesToVisit() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Route Map 2026', '/blog/char-dham-yatra-route-map'], ['Kedarnath Trek', '/blog/kedarnath-trek-guide'], ['Char Dham Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Package', '/char-dham-yatra'], ['Chopta Tungnath Trek', '/packages/chopta-tungnath-chandrashila-trek-2n-3d']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

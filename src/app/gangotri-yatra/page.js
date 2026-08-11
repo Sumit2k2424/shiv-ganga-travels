@@ -62,7 +62,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           <span>Gangotri Yatra 2026 — Sacred Origin of the Ganga</span>
@@ -95,7 +95,7 @@ export default function Page() {
             { name:'Bhairon Ghati', dist:'10km before Gangotri', desc:'A narrow gorge where the Jadhganga river meets the Bhagirathi. The confluence is dramatic — two rivers of completely different colours meeting in a narrow, roaring gorge. There is a small Bhairon temple here. The approach road hugs the cliff edge and is genuinely spectacular.' },
             { name:'Uttarkashi', dist:'100km from Gangotri', desc:'The overnight base for most Gangotri pilgrims. More than just a transit point — Uttarkashi has the ancient Vishwanath Temple (a replica of the Kashi Vishwanath), a thriving bazaar, and a peaceful ghat on the Bhagirathi. Worth an evening walk.' },
           ].map(pl => (
-            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
               <div style={{ fontSize:11.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:8 }}>📍 {pl.dist}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
@@ -116,13 +116,13 @@ export default function Page() {
           <li><strong>Gaumukh Glacier</strong> — 20 km trek from Gangotri — the actual snout of the Gangotri glacier, the source of the Bhagirathi/Ganga. A permit is required. Available as add-on.</li>
         </ul>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Route from Haridwar</h2>
-        <div style={{background:'var(--bg)',borderRadius:'12px',padding:'16px 20px',border:'1px solid var(--border)',fontSize:'14px',lineHeight:2.2,marginBottom:'20px'}}>
+        <div style={{background:'var(--bg)',borderRadius:'12px',padding:'16px 20px',border:'1px solid hsl(var(--border))',fontSize:'14px',lineHeight:2.2,marginBottom:'20px'}}>
           <strong>Haridwar</strong> → Rishikesh → Tehri → <strong>Uttarkashi</strong> (overnight, 185 km) → Harsil Valley → <strong>Gangotri</strong> Temple Darshan → return to Uttarkashi overnight → Haridwar
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href={`/packages/gangotri-yatra-package-2n-3d-haridwar`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid var(--border)',textDecoration:'none',gap:12}}>
+          <Link href={`/packages/gangotri-yatra-package-2n-3d-haridwar`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 2N/3D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
@@ -134,10 +134,10 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
-              <Link key="/gangotri-temple" href="/gangotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Gangotri Temple Guide"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Char Dham Registration Guide"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Char Dham Packing List"}<span> →</span></Link>
+              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
+              <Link key="/gangotri-temple" href="/gangotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Gangotri Temple Guide"}<span> →</span></Link>
+              <Link key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Registration Guide"}<span> →</span></Link>
+              <Link key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Packing List"}<span> →</span></Link>
           </div>
         </div>
 
@@ -154,28 +154,28 @@ export default function Page() {
               ))}
             </tr></thead>
             <tbody>
-              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+              <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'#fff'}}>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Uttarkashi</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Uttarkashi</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,200–2,000/night</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Government guest house. Central location. Good base for Gangotri. Uttarkashi has best amenities on this route.</td>
               </tr>
-              <tr style={{borderBottom:'1px solid var(--border)',background:'var(--bg)'}}>
+              <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'var(--bg)'}}>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel Himalayan Star</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Uttarkashi</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★★</td>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹2,000–3,500/night</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Best hotel in Uttarkashi. Hot water, restaurant, reliable WiFi. 100km from Gangotri.</td>
               </tr>
-              <tr style={{borderBottom:'1px solid var(--border)',background:'#fff'}}>
+              <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'#fff'}}>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Harsil</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Harsil</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,500–2,200/night</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>Beautiful apple-orchard setting. 24km from Gangotri. Serene alternative to Uttarkashi. Cold nights.</td>
               </tr>
-              <tr style={{borderBottom:'1px solid var(--border)',background:'var(--bg)'}}>
+              <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'var(--bg)'}}>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>Hotel New Tourist</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Gangotri town</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★</td>
@@ -200,12 +200,12 @@ export default function Page() {
         </div>
       </article>
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Opening Dates','/blog/char-dham-yatra-opening-dates-2026'],['Weather Guide','/blog/uttarakhand-weather-guide'],['Haridwar to Gangotri Cab','/cabs/haridwar-to-gangotri-cab']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -78,7 +78,7 @@ export default function OpeningDates() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -120,7 +120,7 @@ export default function OpeningDates() {
         </h2>
 
         {DHAMS.map((dham, i) => (
-          <div key={dham.name} style={{ marginBottom:28, borderRadius:14, overflow:'hidden', border:'1px solid var(--border)' }}>
+          <div key={dham.name} style={{ marginBottom:28, borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
             <div style={{ background: i===0?'#1A3E75':i===1?'#0B4F6C':i===2?'var(--navy)':'#1B4332', padding:'16px 20px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
               <div style={{ display:'flex', gap:12, alignItems:'center' }}>
                 <span style={{ fontSize:28 }}>{dham.icon}</span>
@@ -138,7 +138,7 @@ export default function OpeningDates() {
               <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.8, marginBottom:14 }}>{dham.about}</p>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10 }}>
                 {[['📅 Closes',dham.closes],['🚗 Access',dham.access],['☀️ Best Time',dham.bestTime],['👥 Crowds',dham.crowd]].map(([k,v])=>(
-                  <div key={k} style={{ background:'var(--bg)', borderRadius:8, padding:'10px 12px', border:'1px solid var(--border)' }}>
+                  <div key={k} style={{ background:'var(--bg)', borderRadius:8, padding:'10px 12px', border:'1px solid hsl(var(--border))' }}>
                     <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:3 }}>{k}</div>
                     <div style={{ fontSize:13, color:'#475569' }}>{v}</div>
                   </div>
@@ -174,7 +174,7 @@ export default function OpeningDates() {
                 ['October 1–25','2–12°C','Low–moderate','All open','Excellent — golden season'],
                 ['Late October–Nov','−2–8°C','Very low','Watch for early snow','Cold but uncrowded. Closing season.'],
               ].map(([m,t,c,r,v],i)=>(
-                <tr key={m} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={m} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{m}</td>
                   <td style={{ padding:'9px 12px', color:'#334155', fontSize:13 }}>{t}</td>
                   <td style={{ padding:'9px 12px', color:c.includes('Peak')?'#DC2626':c.includes('Very low')?'#15803D':'#475569', fontWeight:c.includes('Peak')?700:400, fontSize:13 }}>{c}</td>
@@ -190,7 +190,7 @@ export default function OpeningDates() {
           Booking Timeline — When to Book for Each Month
         </h2>
         {[['May departure','Book by March 15. Hotels at Guptkashi (Kedarnath base) fill by end of March. Char Dham Yatra registration opens March 6.'],['June departure','Book by April 20. June is slightly less crowded than May — still book 6 weeks ahead.'],['September departure','Book by July 15. September is post-monsoon — book 6–8 weeks ahead. October is the ideal casual booking window.'],['October departure','Book by August 20. October is the sweet spot — great weather, thin crowds, 4–6 weeks booking lead time is sufficient.']].map(([m,d])=>(
-          <div key={m} style={{ display:'flex', gap:14, padding:'12px 0', borderBottom:'1px solid var(--border)' }}>
+          <div key={m} style={{ display:'flex', gap:14, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', minWidth:150, flexShrink:0 }}>{m}</div>
             <div style={{ fontSize:14.5, color:'#475569', lineHeight:1.75 }}>{d}</div>
           </div>        ))}
@@ -229,7 +229,7 @@ export default function OpeningDates() {
                 ['🏔️ Kedarnath','November 11, 2026','Bhai Dooj (Bhai Duj)','Ukhimath — Omkareshwar Temple'],
                 ['🕌 Badrinath','November 13, 2026','~2 weeks post-Diwali','Pandukheshwar / Joshimath'],
               ].map(([dham,date,occasion,abode],i)=>(
-                <tr key={dham} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={dham} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:15 }}>{dham}</td>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'#D85A30' }}>{date}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{occasion}</td>
@@ -246,11 +246,11 @@ export default function OpeningDates() {
           <strong>💡 October visits — last chance with best conditions:</strong> October is arguably the best month to visit Char Dham. Crowds are 70% lighter than peak season, prices are lower, and post-monsoon skies are crystal clear. The dhams are all still open through October. See our October Char Dham guide →
         </div>
 
-<div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+<div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Road Status 2026','/char-dham-road-status'],['Char Dham Cost','/blog/char-dham-yatra-cost'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

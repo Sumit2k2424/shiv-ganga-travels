@@ -339,7 +339,7 @@ export default function LeadPopup() {
                 <div key={i} style={{
                   display: 'flex', alignItems: 'center', gap: 9,
                   padding: '6px 0',
-                  borderBottom: i < 2 ? '1px solid var(--border)' : 'none',
+                  borderBottom: i < 2 ? '1px solid hsl(var(--border))' : 'none',
                 }}>
                   <span style={{ fontSize: 16 }}>{s.icon}</span>
                   <span style={{ fontSize: 12.5, color: 'var(--text-mid)' }}>{s.text}</span>
@@ -375,7 +375,7 @@ export default function LeadPopup() {
 /* ── Shared input styles ── */
 const inputStyle = {
   width: '100%', padding: '8px 11px',
-  border: '1.5px solid var(--border)',
+  border: '1.5px solid hsl(var(--border))',
   borderRadius: 8,
   // Stays 16px: anything smaller makes iOS Safari zoom the page on focus.
   fontSize: 16,
@@ -389,4 +389,4 @@ const labelStyle = {
   textTransform: 'uppercase', letterSpacing: '0.07em',
 };
 const focusIn  = e => { e.target.style.borderColor = 'var(--navy)'; e.target.style.boxShadow = '0 0 0 3px rgba(15,43,91,0.1)'; };
-const focusOut = e => { e.target.style.borderColor = 'var(--border)'; e.target.style.boxShadow = 'none'; };
+const focusOut = e => { e.target.style.borderColor = 'hsl(var(--border))'; e.target.style.boxShadow = 'none'; };

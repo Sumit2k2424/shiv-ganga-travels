@@ -64,7 +64,7 @@ export default function SevenDaysBlog() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -128,7 +128,7 @@ export default function SevenDaysBlog() {
                 ['Cost difference','₹18,500/person','₹18,500/person','₹22,000/person (+₹2,500)'],
                 ['Best for','Fit adults < 60, urgent','Most pilgrims','Families, 60+, first-timers'],
               ].map(([f,...vals],i)=>(
-                <tr key={f} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={f} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{f}</td>
                   <td style={{ padding:'10px 14px', color:'#DC2626', fontSize:13.5 }}>{vals[0]}</td>
                   <td style={{ padding:'10px 14px', color:'#15803D', fontWeight:600, fontSize:13.5 }}>{vals[1]}</td>
@@ -144,7 +144,7 @@ export default function SevenDaysBlog() {
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:14, marginBottom:32 }}>
           {DAY_ITINERARY.map((day,i) => (
-            <div key={day.day} style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+            <div key={day.day} style={{ borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
               <div style={{ background:'var(--navy)', padding:'12px 18px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
                 <div>
                   <span style={{ color:'#FFD166', fontWeight:800, fontSize:16, fontFamily:'var(--font-display)' }}>{day.day}</span>
@@ -171,7 +171,7 @@ export default function SevenDaysBlog() {
           ['Your group is all under 50 and physically active', 'For a group of young, fit pilgrims who are comfortable with long mountain drives, 7 days works. The experience will be intense but achievable.'],
           ['You are doing only 3 dhams (skip Gangotri)', 'A modified 7-day plan skipping Gangotri covers Yamunotri, Kedarnath, and Badrinath with much less driving. Gangotri is accessible by road so it can be done as a separate trip later.'],
         ].map(([title, desc]) => (
-          <div key={title} style={{ display:'flex', gap:14, padding:'14px 0', borderBottom:'1px solid var(--border)' }}>
+          <div key={title} style={{ display:'flex', gap:14, padding:'14px 0', borderBottom:'1px solid hsl(var(--border))' }}>
             <span style={{ color:'var(--teal)', fontWeight:800, fontSize:16, flexShrink:0, marginTop:2 }}>✓</span>
             <div>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:4 }}>{title}</div>
@@ -197,11 +197,11 @@ export default function SevenDaysBlog() {
           ['Is the 7-day itinerary suitable for people with BP or heart conditions?', 'Absolutely not. Pilgrims with high blood pressure, heart conditions, or diabetes should not attempt a 7-day Char Dham Yatra under any circumstances. The rapid altitude gain combined with exhaustion from long drives significantly increases cardiac risk. The minimum recommended package for pilgrims with health conditions is the 12N/13D Senior Citizen package with helicopter at Kedarnath.'],
           ['What if I fall sick during the 7-day itinerary?', 'A buffer day is the most important thing you have no room for in a 7-day plan. If you develop altitude sickness at Kedarnath, you will likely miss Badrinath entirely. In a 10-day plan, you have a rest day that absorbs this. This is the most practical reason to add at least 2–3 days.'],
         ].map(([q,a],i)=>(
-          <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden', marginBottom:10 }}>
+          <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:10 }}>
             <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
               {q}<span style={{ flexShrink:0, fontSize:18 }}>＋</span>
             </summary>
-            <div style={{ padding:'12px 16px', fontSize:14.5, color:'#334155', lineHeight:1.8, borderTop:'1px solid var(--border)' }}>{a}</div>
+            <div style={{ padding:'12px 16px', fontSize:14.5, color:'#334155', lineHeight:1.8, borderTop:'1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
 
@@ -216,11 +216,11 @@ export default function SevenDaysBlog() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Do Dham vs Char Dham','/blog/char-dham-vs-do-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

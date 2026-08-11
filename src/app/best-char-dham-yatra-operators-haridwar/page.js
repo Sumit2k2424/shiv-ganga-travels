@@ -215,7 +215,7 @@ export default function BestOperators() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -238,7 +238,7 @@ export default function BestOperators() {
         <p style={p}>For a comparison page written by one of the operators being compared to have any value, the methodology needs to be transparent. Here is exactly how we ranked:</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(min(100%,260px),1fr))', gap: 10, marginBottom: 28 }}>
           {CRITERIA.map(c => (
-            <div key={c.label} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 14px' }}>
+            <div key={c.label} style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 10, padding: '12px 14px' }}>
               <div style={{ fontSize: 20, marginBottom: 6 }}>{c.icon}</div>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{c.label}</div>
               <p style={{ fontSize: 12.5, color: '#475569', margin: 0, lineHeight: 1.65 }}>{c.detail}</p>
@@ -250,11 +250,11 @@ export default function BestOperators() {
         <h2 style={h2}>The Rankings</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           {OPERATORS.map(op => (
-            <div key={op.rank} style={{ background: '#fff', border: `1.5px solid ${op.rank === 1 ? 'var(--gold)' : 'var(--border)'}`, borderRadius: 16, overflow: 'hidden' }}>
+            <div key={op.rank} style={{ background: '#fff', border: `1.5px solid ${op.rank === 1 ? 'var(--gold)' : 'hsl(var(--border))'}`, borderRadius: 16, overflow: 'hidden' }}>
               {/* Card header */}
               <div style={{ background: op.rank === 1 ? 'var(--navy)' : 'var(--navy-light)', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: '50%', background: op.rank === 1 ? 'var(--gold)' : 'var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: 16, color: op.rank === 1 ? '#fff' : 'var(--navy)', flexShrink: 0 }}>#{op.rank}</div>
+                  <div style={{ width: 36, height: 36, borderRadius: '50%', background: op.rank === 1 ? 'var(--gold)' : 'hsl(var(--border))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: 16, color: op.rank === 1 ? '#fff' : 'var(--navy)', flexShrink: 0 }}>#{op.rank}</div>
                   <div>
                     <div style={{ fontWeight: 800, fontSize: 16, color: op.rank === 1 ? '#fff' : 'var(--navy)' }}>{op.name}</div>
                     <div style={{ fontSize: 12, color: op.rank === 1 ? 'rgba(255,255,255,0.65)' : 'var(--text-muted)' }}>{op.base} · Since {op.since}</div>
@@ -288,7 +288,7 @@ export default function BestOperators() {
                   </div>
                 </div>
 
-                <div style={{ background: op.ourNote ? 'rgba(15,43,91,0.05)' : 'var(--bg)', borderRadius: 10, padding: '10px 14px', border: `1px solid ${op.ourNote ? 'rgba(15,43,91,0.12)' : 'var(--border)'}` }}>
+                <div style={{ background: op.ourNote ? 'rgba(15,43,91,0.05)' : 'var(--bg)', borderRadius: 10, padding: '10px 14px', border: `1px solid ${op.ourNote ? 'rgba(15,43,91,0.12)' : 'hsl(var(--border))'}` }}>
                   <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Our verdict: </span>
                   <span style={{ fontSize: 13.5, color: '#334155', lineHeight: 1.75 }}>{op.verdict}</span>
                 </div>
@@ -299,7 +299,7 @@ export default function BestOperators() {
                       target="_blank" rel="nofollow noopener noreferrer"
                       style={{ background: '#25D366', color: '#fff', padding: '9px 18px', borderRadius: 8, fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>💬 Book with SGT — WhatsApp</a>
                     <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '9px 18px', borderRadius: 8, fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>View Packages →</Link>
-                    <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '9px 18px', borderRadius: 8, fontWeight: 600, fontSize: 13, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
+                    <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '9px 18px', borderRadius: 8, fontWeight: 600, fontSize: 13, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>SGT vs MakeMyTrip →</Link>
                   </div>
                 )}
               </div>
@@ -315,19 +315,19 @@ export default function BestOperators() {
           ['Is Thrillophilia good for Char Dham Yatra?', 'Thrillophilia is an aggregator, not a direct operator. Their listed price of ₹15,500 is attractive but needs careful scrutiny — check what is excluded. Pony charges (₹2,000–6,000), VIP darshan, and porter fees are often excluded from aggregator headline prices. Compare all-inclusive prices, not headline prices.'],
           ['What is the cheapest all-inclusive Char Dham package from Haridwar?', 'Shiv Ganga Travels offers the lowest verified all-inclusive price at ₹18,500 per person (9N/10D) — this includes vehicle, hotels, meals, guide, VIP darshan, pony at Kedarnath, government fees and 24×7 support. No hidden charges.'],
         ].map(([q, a], i) => (
-          <details key={i} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
+          <details key={i} style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
             <summary style={{ padding: '14px 16px', cursor: 'pointer', listStyle: 'none', fontWeight: 600, fontSize: 14.5, color: 'var(--navy)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               {q}<span style={{ fontSize: 18, color: 'var(--text-muted)', flexShrink: 0 }}>＋</span>
             </summary>
-            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>{a}</div>
+            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
 
-        <div style={{ marginTop: 28, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
+        <div style={{ marginTop: 28, paddingTop: 20, borderTop: '1px solid hsl(var(--border))' }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related Comparisons</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
-            <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Direct vs Aggregator Guide →</Link>
+            <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>SGT vs MakeMyTrip →</Link>
+            <Link href="/direct-operator-vs-travel-aggregator-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Direct vs Aggregator Guide →</Link>
             <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book #1 Ranked — ₹18,500 →</Link>
           </div>
         </div>

@@ -64,10 +64,10 @@ const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.7
 const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 22 };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 const wrap = { maxWidth: 820, margin: '0 auto', padding: '0 20px' };
-const tableWrap = { overflowX: 'auto', margin: '14px 0 8px', border: '1px solid var(--border)', borderRadius: 12 };
+const tableWrap = { overflowX: 'auto', margin: '14px 0 8px', border: '1px solid hsl(var(--border))', borderRadius: 12 };
 const table = { width: '100%', borderCollapse: 'collapse', minWidth: 540, fontSize: 14 };
 const th = { textAlign: 'left', padding: '11px 14px', background: 'var(--navy)', color: '#fff', fontWeight: 700, fontSize: 12.5, whiteSpace: 'nowrap' };
-const td = { padding: '11px 14px', borderTop: '1px solid var(--border)', color: '#334155' };
+const td = { padding: '11px 14px', borderTop: '1px solid hsl(var(--border))', color: '#334155' };
 
 const PAA = [
   { q: 'Can I touch the Shivling without VIP darshan?', a: 'No. Sparsh darshan — touching the Shivling — happens only inside the Garbha Griha, which needs a puja or VIP booking, and is allowed only before 3:00 PM. General darshan pilgrims view the Shivling from the outer hall, three or four metres back. If touching the stone matters to you, book any special-darshan puja; sparsh comes bundled with it.' },

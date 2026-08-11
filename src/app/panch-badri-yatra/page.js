@@ -97,7 +97,7 @@ export default function PanchBadriYatra() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Uttarakhand Tours<span>›</span>
@@ -120,7 +120,7 @@ export default function PanchBadriYatra() {
 
         <h2 style={h2}>The Five Badri Shrines</h2>
         {temples.map(t => (
-          <div key={t.name} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:14, padding:'20px', marginBottom:16, position:'relative' }}>
+          <div key={t.name} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px', marginBottom:16, position:'relative' }}>
             <div style={{ position:'absolute', top:16, right:16, width:32, height:32, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:14, color:'#FFD166' }}>{t.num}</div>
             <div style={{ display:'flex', gap:6, flexWrap:'wrap', marginBottom:8 }}>
               <span style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:20 }}>{t.alt}</span>
@@ -147,7 +147,7 @@ export default function PanchBadriYatra() {
             { day:'Day 6', plan:'Badrinath → Joshimath → Rudraprayag → night halt' },
             { day:'Day 7', plan:'Rudraprayag → Haridwar' },
           ].map(({day, plan}) => (
-            <div key={day} style={{ display:'flex', gap:12, alignItems:'flex-start', padding:'10px 14px', background:'#fff', borderRadius:10, border:'1px solid var(--border)' }}>
+            <div key={day} style={{ display:'flex', gap:12, alignItems:'flex-start', padding:'10px 14px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))' }}>
               <span style={{ background:'var(--navy)', color:'#FFD166', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, flexShrink:0, whiteSpace:'nowrap' }}>{day}</span>
               <span style={{ fontSize:14, color:'#334155', lineHeight:1.6 }}>{plan}</span>
             </div>
@@ -170,11 +170,11 @@ export default function PanchBadriYatra() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pilgrimages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Panch Kedar Yatra','/panch-kedar-yatra'],['Badrinath Temple','/badrinath-temple'],['Char Dham Yatra','/char-dham-yatra'],['Badrinath Weather','/badrinath-weather'],['Uttarakhand Tours','/uttarakhand-tour-packages']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

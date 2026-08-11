@@ -97,7 +97,7 @@ export default function RoadConditions() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -127,7 +127,7 @@ export default function RoadConditions() {
         <h2 id="route-status" style={h2}>Route-by-Route Road Condition Status</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 28 }}>
           {routes.map(route => (
-            <div key={route.route} style={{ background: '#fff', borderRadius: 12, padding: '16px 18px', border: '1px solid var(--border)' }}>
+            <div key={route.route} style={{ background: '#fff', borderRadius: 12, padding: '16px 18px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10, flexWrap: 'wrap', gap: 8 }}>
                 <div>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--navy)', margin: 0, marginBottom: 4 }}>{route.route}</h3>
@@ -166,7 +166,7 @@ export default function RoadConditions() {
             { rule: 'No overtaking on narrow sections', detail: 'On single-lane stretches, follow the traffic marshal direction. Aggressive overtaking on mountain bends is the #1 cause of accidents on these routes.' },
             { rule: 'Green Card for non-UK vehicles', detail: 'Vehicles registered outside Uttarakhand need the ₹50 Green Card permit from greencard.uk.gov.in. Checked at entry checkposts.' },
           ].map(item => (
-            <div key={item.rule} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)' }}>
+            <div key={item.rule} style={{ background: '#fff', borderRadius: 9, padding: '12px 14px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--navy)' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{item.rule}</div>
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.65 }}>{item.detail}</div>
             </div>          ))}
@@ -185,7 +185,7 @@ export default function RoadConditions() {
             { source: 'Uttarakhand Police Twitter/X', detail: '@uttarakhandpolice posts real-time road closure updates during landslides and events.' },
             { source: 'WhatsApp our drivers', detail: 'Our Haridwar-based drivers get direct updates from the mountains. WhatsApp us the morning before any stretch — we confirm conditions from our own vehicle network on route.' },
           ].map(item => (
-            <div key={item.source} style={{ background: '#fff', borderRadius: 8, padding: '10px 14px', border: '1px solid var(--border)', display: 'flex', gap: 10, fontSize: 13.5 }}>
+            <div key={item.source} style={{ background: '#fff', borderRadius: 8, padding: '10px 14px', border: '1px solid hsl(var(--border))', display: 'flex', gap: 10, fontSize: 13.5 }}>
               <span style={{ fontWeight: 700, color: 'var(--navy)', whiteSpace: 'nowrap' }}>{item.source}:</span>
               <span style={{ color: '#475569' }}>{item.detail}</span>
             </div>
@@ -202,11 +202,11 @@ export default function RoadConditions() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Route Map 2026', '/blog/char-dham-yatra-route-map'], ['Green Card Guide', '/blog/green-card-char-dham-yatra-2026'], ['New Rules 2026', '/blog/char-dham-yatra-2026-new-rules'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Packing List', '/blog/char-dham-yatra-packing-list']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -79,7 +79,7 @@ export default function CharDhamFromNoida() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromNoida() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Jan Shatabdi (12055)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:45 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`12:10 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`5h 25m`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Best daytime from NCR`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Mussoorie Express (14041)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`20:30`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:00 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`9.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Overnight, arrives fresh`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Jan Shatabdi (12055)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:45 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`12:10 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`5h 25m`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Best daytime from NCR`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Mussoorie Express (14041)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Anand Vihar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`20:30`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`06:00 AM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`9.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Overnight, arrives fresh`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromNoida() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>No flight needed — Noida to Haridwar is 230km. The Delhi–Meerut Expressway is one of the best highways in India. Driving is faster than any flight option.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Noida</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Noida to Haridwar: Delhi–Meerut Expressway to Meerut, NH334 via Muzaffarnagar, Roorkee, Haridwar. Leave Sector 18 before 5:30 AM. Avoid leaving after 7 AM — Ghaziabad traffic adds 45 minutes.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromNoida() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Noida:</strong> ₹22,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromNoida() {
 
         <h2 style={{...h2}}>Pickup Points in Noida</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Noida Sector 18 Metro Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 18 Metro Station`}</span>
-          <span key="Noida Sector 62" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 62`}</span>
-          <span key="Greater Noida (Pari Chowk)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Greater Noida (Pari Chowk)`}</span>
-          <span key="Knowledge Park II/III" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Knowledge Park II/III`}</span>
-          <span key="Ghaziabad (Raj Nagar)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Ghaziabad (Raj Nagar)`}</span>
-          <span key="Anand Vihar ISBT (Delhi)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Anand Vihar ISBT (Delhi)`}</span>
+<span key="Noida Sector 18 Metro Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 18 Metro Station`}</span>
+          <span key="Noida Sector 62" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Noida Sector 62`}</span>
+          <span key="Greater Noida (Pari Chowk)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Greater Noida (Pari Chowk)`}</span>
+          <span key="Knowledge Park II/III" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Knowledge Park II/III`}</span>
+          <span key="Ghaziabad (Raj Nagar)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Ghaziabad (Raj Nagar)`}</span>
+          <span key="Anand Vihar ISBT (Delhi)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Anand Vihar ISBT (Delhi)`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>We run a Noida-NCR batch WhatsApp group every March–April for pilgrims who want to form a group with others from the area and share vehicle costs. Message us to be added. Groups of 6 from Noida can share an Innova Crysta and reduce per-person vehicle cost by ₹1,800–2,200 compared to individual bookings.</p>
 

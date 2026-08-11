@@ -170,7 +170,7 @@ export default function BadrinathYatraPage() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -228,7 +228,7 @@ export default function BadrinathYatraPage() {
               tags: ['Return journey', 'Arrive evening'],
             },
           ].map(item => (
-            <div key={item.day} style={{ background: '#fff', borderRadius: 12, padding: '16px 18px', border: '1px solid var(--border)', borderLeft: '4px solid var(--navy)' }}>
+            <div key={item.day} style={{ background: '#fff', borderRadius: 12, padding: '16px 18px', border: '1px solid hsl(var(--border))', borderLeft: '4px solid var(--navy)' }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 8 }}>
                 <span style={{ background: 'var(--navy)', color: '#FFD166', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20 }}>{item.day}</span>
                 <strong style={{ fontSize: 14, color: 'var(--navy)' }}>{item.title}</strong>
@@ -236,7 +236,7 @@ export default function BadrinathYatraPage() {
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7, margin: '0 0 10px' }}>{item.desc}</p>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                 {item.tags.map(t => (
-                  <span key={t} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', fontSize: 11, fontWeight: 600, padding: '2px 10px', borderRadius: 20 }}>{t}</span>
+                  <span key={t} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', fontSize: 11, fontWeight: 600, padding: '2px 10px', borderRadius: 20 }}>{t}</span>
                 ))}
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function BadrinathYatraPage() {
             { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹18,500', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
-              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
+              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{pkg.desc}</div>
@@ -273,7 +273,7 @@ export default function BadrinathYatraPage() {
             ['✅ Included', ['AC cab (Innova/Ertiga)', 'Hotel accommodation', 'Breakfast + dinner', 'VIP darshan arrangement', 'Experienced driver', 'All toll & parking', 'GST & taxes']],
             ['❌ Not Included', ['Flight/train to Haridwar', 'Tapt Kund entry fee (₹50)', 'Personal expenses', 'Camera fee at temple', 'Tips for driver/guide', 'Personal insurance']],
           ].map(([title, items]) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)' }}>
+            <div key={title} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 10 }}>{title}</div>
               {items.map(item => (
                 <div key={item} style={{ fontSize: 13, color: '#475569', padding: '4px 0', borderBottom: '1px solid var(--bg)' }}>{item}</div>
@@ -295,7 +295,7 @@ export default function BadrinathYatraPage() {
             ['Dress code', 'Traditional attire preferred; no shorts'],
             ['Phone restriction', 'Photography restricted inside sanctum'],
           ].map(([k, v]) => (
-            <div key={k} style={{ background: 'var(--bg)', borderRadius: 8, padding: '12px 14px', border: '1px solid var(--border)' }}>
+            <div key={k} style={{ background: 'var(--bg)', borderRadius: 8, padding: '12px 14px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 3 }}>{k}</div>
               <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--navy)' }}>{v}</div>
             </div>
@@ -311,7 +311,7 @@ export default function BadrinathYatraPage() {
             { place: 'Narad Kund', dist: 'Near temple', desc: 'Where the original Badrivishal idol was found by Adi Shankaracharya. Small but spiritually important.' },
             { place: 'Vasudhara Falls', dist: '9 km trek', desc: '145-metre waterfall on the Saraswati river. The walk from Mana village takes about 3 hours round trip. Only water falls on the pure of heart (legend).' },
           ].map(item => (
-            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)', display: 'flex', gap: 12 }}>
+            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid hsl(var(--border))', display: 'flex', gap: 12 }}>
               <div style={{ minWidth: 80 }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)' }}>{item.place}</div>
                 <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{item.dist}</div>
@@ -350,7 +350,7 @@ export default function BadrinathYatraPage() {
         </div>
 
         {/* Related links */}
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -364,7 +364,7 @@ export default function BadrinathYatraPage() {
               ['Char Dham Helicopter', '/char-dham-helicopter'],
             ].map(([label, href]) => (
               <Link key={href} href={href}
-                style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>
+                style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>
                 {label} →
               </Link>
             ))}

@@ -79,7 +79,7 @@ export default function CharDhamFromKolkata() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromKolkata() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Doon Express (13009)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Howrah`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`19:50`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`23:30 (+1)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~27.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Only direct, very popular`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Kolkata Mail (12312)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Howrah`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`20:00`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~17h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Faster via Delhi`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Doon Express (13009)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Howrah`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`19:50`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`23:30 (+1)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~27.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Only direct, very popular`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Kolkata Mail (12312)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Howrah`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`20:00`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~17h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Faster via Delhi`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromKolkata() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Kolkata (CCU) to Dehradun (DED) — IndiGo direct, ~2h, from ₹2,800. Alternatively fly to Delhi (1h 30m) and take the Mussoorie Express overnight to Haridwar.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Kolkata</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Kolkata to Haridwar is 1,500km — roughly two days via Patna and Allahabad. Some families do this as a gradual entry into the Gangetic spiritual geography. We can provide dharmashala waypoints if you drive.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromKolkata() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Kolkata:</strong> ₹24,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromKolkata() {
 
         <h2 style={{...h2}}>Pickup Points in Kolkata</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Howrah Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Howrah Station`}</span>
-          <span key="Sealdah Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Sealdah Station`}</span>
-          <span key="Kolkata Airport (CCU)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kolkata Airport (CCU)`}</span>
-          <span key="Salt Lake Sector V" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Salt Lake Sector V`}</span>
-          <span key="New Town Rajarhat" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`New Town Rajarhat`}</span>
-          <span key="Esplanade" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Esplanade`}</span>
+<span key="Howrah Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Howrah Station`}</span>
+          <span key="Sealdah Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Sealdah Station`}</span>
+          <span key="Kolkata Airport (CCU)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kolkata Airport (CCU)`}</span>
+          <span key="Salt Lake Sector V" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Salt Lake Sector V`}</span>
+          <span key="New Town Rajarhat" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`New Town Rajarhat`}</span>
+          <span key="Esplanade" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Esplanade`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>Our Haridwar team has staff comfortable with Bengali. Pre-trip coordination can happen in Bengali if that is more comfortable for elderly family members. We brief all Kolkata pilgrims about the Kedarnath cold — the contrast with Bengal humidity makes it a surprise for first-timers.</p>
 

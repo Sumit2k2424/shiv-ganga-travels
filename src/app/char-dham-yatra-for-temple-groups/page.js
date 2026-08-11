@@ -145,7 +145,7 @@ export default function TempleGroups() {
             ['The samiti pays us in instalments','25% to confirm and block the hotels, balance before departure, to the business account on your confirmation.'],
             ['One invoice, one point of contact','You get a named person here. Not a call centre and not a different reply each time.'],
           ].map(([step, detail], i) => (
-            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid hsl(var(--border))' }}>
               <div style={{ background:'var(--navy)', color:'#fff', width:26, height:26, borderRadius:100, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12.5, fontWeight:700, flexShrink:0 }}>{i+1}</div>
               <div>
                 <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:3 }}>{step}</div>

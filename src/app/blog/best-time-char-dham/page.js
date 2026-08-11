@@ -114,7 +114,7 @@ export default function BestTimeCharDham() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -203,7 +203,7 @@ export default function BestTimeCharDham() {
         </p>
 
         <h2 id="opening-dates" style={h2}>Char Dham Yatra 2026 — Official Opening Dates</h2>
-        <div style={{ overflowX:'auto', borderRadius:12, border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ overflowX:'auto', borderRadius:12, border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14, minWidth:460 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
               {['Dham','Opening Date 2026','Altitude','Nearest Base'].map(h => (
@@ -217,7 +217,7 @@ export default function BestTimeCharDham() {
                 ['Kedarnath', 'April 22, 2026 (Shiv Puja muhurta)', '3,583m', 'Guptkashi / Sonprayag'],
                 ['Badrinath', 'April 23, 2026 (Brahmamuhurta)', '3,133m', 'Joshimath'],
               ].map(([d,dt,alt,base], i) => (
-                <tr key={d} style={{ borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={d} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:14 }}>{d}</td>
                   <td style={{ padding:'10px 14px', color:'#334155', fontSize:13.5 }}>{dt}</td>
                   <td style={{ padding:'10px 14px', color:'#475569', fontSize:13.5 }}>{alt}</td>
@@ -242,7 +242,7 @@ export default function BestTimeCharDham() {
             { place:'Kedarnath (16km trek)', impact:'The most weather-sensitive of the four. The trek crosses open moorland above treeline. Afternoon clouds build from June onwards. Start by 6 AM. In rain, the stone path becomes a stream.' },
             { place:'Badrinath (motorable)', impact:'Drive to the temple gate. The Joshimath–Badrinath road (45km) runs above the Alaknanda gorge — spectacular and occasionally hit by rockfalls in monsoon. Generally very good in May and October.' },
           ].map(x => (
-            <div key={x.place} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px 16px' }}>
+            <div key={x.place} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{x.place}</div>
               <p style={{ fontSize:13, color:'#475569', lineHeight:1.7, margin:0 }}>{x.impact}</p>
             </div>
@@ -257,7 +257,7 @@ export default function BestTimeCharDham() {
             { window:'September–October departure', rule:'Book 30–45 days before. Less demand means more flexibility, but don\'t leave it to 2 weeks out — the best Guptkashi hotels still fill.' },
             { window:'Last-minute (< 2 weeks)', rule:'Possible for September–October with some flexibility on hotel category. Very difficult for May–June. Call us directly — we sometimes have cancellation slots.' },
           ].map(r => (
-            <div key={r.window} style={{ display:'flex', gap:12, alignItems:'flex-start', padding:'12px 14px', background:'#fff', border:'1px solid var(--border)', borderRadius:10 }}>
+            <div key={r.window} style={{ display:'flex', gap:12, alignItems:'flex-start', padding:'12px 14px', background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10 }}>
               <span style={{ background:'var(--navy)', color:'#FFD166', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, flexShrink:0, whiteSpace:'nowrap' }}>{r.window}</span>
               <p style={{ margin:0, fontSize:14, color:'#334155', lineHeight:1.7 }}>{r.rule}</p>
             </div>
@@ -266,7 +266,7 @@ export default function BestTimeCharDham() {
 
         <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {faqSchema.mainEntity.map((q, i) => (
-          <div key={i} style={{ marginBottom:16, padding:'16px 18px', background:'var(--bg)', borderRadius:12, border:'1px solid var(--border)' }}>
+          <div key={i} style={{ marginBottom:16, padding:'16px 18px', background:'var(--bg)', borderRadius:12, border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:8 }}>Q: {q.name}</div>
             <p style={{ margin:0, fontSize:14, color:'#334155', lineHeight:1.8 }}>{q.acceptedAnswer.text}</p>
           </div>
@@ -288,11 +288,11 @@ export default function BestTimeCharDham() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
             {[['Packing List 2026','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Weather','/kedarnath-weather'],['Senior Citizen Tips','/blog/senior-citizen-char-dham'],['Char Dham Packages','/packages/char-dham']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

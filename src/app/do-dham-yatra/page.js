@@ -115,7 +115,7 @@ export default function DoDhamYatra() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -205,7 +205,7 @@ export default function DoDhamYatra() {
             { day:'Day 5', route:'Badrinath darshan → Joshimath', km:'46km', alt:'1,890m', desc:'Early morning darshan at 6 AM (shorter queue than daytime). Visit Brahma Kapal (Pind Daan ancestral rites on the river bank — significant even if not performing). Mana Village: last Indian village (3km from Badrinath), Vyas Gufa (Mahabharata composed here), Bhim Pul natural rock bridge, Saraswati river source. Drive to Joshimath. Overnight.' },
             { day:'Day 6', route:'Joshimath → Haridwar', km:'280km · 7–8 hrs', alt:'249m', desc:'Return via Rudraprayag, Devprayag (second stop — worth seeing the confluence from the other bank this time). Arrive Haridwar by evening. End of Do Dham Yatra. Trip ends at Haridwar station/hotel.' },
           ].map((item,i)=>(
-            <div key={item.day} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'4px solid var(--navy)' }}>
+            <div key={item.day} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))', borderLeft:'4px solid var(--navy)' }}>
               <div style={{ display:'flex', gap:10, alignItems:'center', marginBottom:8, flexWrap:'wrap' }}>
                 <span style={{ background:'var(--navy)', color:'#FFD166', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:20 }}>{item.day}</span>
                 <strong style={{ fontSize:14, color:'var(--navy)' }}>{item.route}</strong>
@@ -233,7 +233,7 @@ export default function DoDhamYatra() {
                 ['Do Dham + Helicopter','5N/6D','₹22,999','Innova + Kedarnath heli','Seniors, premium'],
                 ['Do Dham Senior Special','6N/7D','₹13,999','Private Innova, slow pace','60+ pilgrims'],
               ].map(([pkg,dur,price,vehicle,best],i)=>(
-                <tr key={pkg} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={pkg} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)' }}>{pkg}</td>
                   <td style={{ padding:'10px 12px', color:'#475569' }}>{dur}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color:'#1D9E75', fontSize:15 }}>{price}</td>
@@ -252,7 +252,7 @@ export default function DoDhamYatra() {
         <p style={p}>
           The Do Dham listings you'll see from the large national operators are real — but you're paying a brand markup and a chain of middlemen. Here is what the same Kedarnath + Badrinath yatra costs across published 2026 rates, so you can judge for yourself.
         </p>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:10 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:10 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:480 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
               {['Operator','Do Dham 2026 from','Booking'].map(h=>(<th key={h} style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>))}
@@ -264,7 +264,7 @@ export default function DoDhamYatra() {
                 ['IRCTC Tourism (ex-Delhi, NDH26)','₹35,000 / person','Govt portal'],
                 ['Large national OTAs (typical)','₹30,000–48,000 / person','Aggregator'],
               ].map((r,i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i===0?'#F0FDF4':(i%2===0?'#fff':'var(--bg)') }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i===0?'#F0FDF4':(i%2===0?'#fff':'var(--bg)') }}>
                   <td style={{ padding:'10px 12px', fontWeight:i===0?800:600, color:'var(--navy)' }}>{r[0]}</td>
                   <td style={{ padding:'10px 12px', fontWeight:800, color:i===0?'#1D9E75':'#475569', fontSize:i===0?15:13.5 }}>{r[1]}</td>
                   <td style={{ padding:'10px 12px', color:'#64748b', fontSize:13 }}>{r[2]}</td>
@@ -288,7 +288,7 @@ export default function DoDhamYatra() {
             { title:'The Kedarnath boulder — something to touch', desc:'Directly behind the main temple stands a large boulder that deflected the 2013 floodwaters that killed over 5,000 people in the valley. The temple was untouched. You can walk up and put your hand on this rock. It is not on the official darshan route — most pilgrims in the rush queue never see it. Staying overnight means you have time.' },
             { title:'Mana Village at sunrise — the India very few see', desc:'Badrinath at 7 AM before the tourist buses arrive, walking through Mana Village (the last Indian village before Tibet) while locals are milking yaks and opening chai shops — this is Himalayan India that does not exist in photographs. The Do Dham schedule, which stays overnight in Joshimath on Day 5, allows this. The Char Dham rush itinerary typically does not.' },
           ].map(item=>(
-            <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+            <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.title}</div>
               <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.75 }}>{item.desc}</div>
             </div>
@@ -306,11 +306,11 @@ export default function DoDhamYatra() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra','/char-dham-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Badrinath Yatra','/badrinath-yatra'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Cost Breakdown','/blog/char-dham-yatra-cost']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

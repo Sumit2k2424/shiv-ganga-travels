@@ -49,7 +49,7 @@ export default function HowToReachGangotri() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Gangotri Yatra<span>›</span>
@@ -75,14 +75,14 @@ export default function HowToReachGangotri() {
           The route follows: <strong>Haridwar → Rishikesh → Devprayag → Tehri → Dharasu → Uttarkashi → Gangotri</strong>. The road is NH94 until Uttarkashi, and then a state highway for the final 100km to Gangotri. The Uttarkashi–Gangotri stretch runs alongside the Bhagirathi River through narrow gorges — it is scenic but requires an experienced hill driver.
         </p>
 
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:24 }}>
           {[
             { from:'Haridwar', to:'Uttarkashi', dist:'165km', time:'5–6 hrs', note:'Via Tehri–Dharasu — good road, some hairpin bends' },
             { from:'Uttarkashi', to:'Harsil', dist:'75km', time:'2.5 hrs', note:'Narrowing road, beautiful pine forest' },
             { from:'Harsil', to:'Gangotri', dist:'25km', time:'45 mins', note:'Final approach — river gorge, spectacular scenery' },
             { from:'Gangotri', to:'Gaumukh Glacier', dist:'18km trek', time:'1 full day', note:'Separate permit required, advance planning needed' },
           ].map((r, i) => (
-            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 80px 80px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
               <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from}</span>
               <span style={{ color:'#475569' }}>→ {r.to}</span>
               <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
@@ -113,11 +113,11 @@ export default function HowToReachGangotri() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['How to Reach Yamunotri','/how-to-reach-yamunotri'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Gangotri Weather','/gangotri-weather'],['Haridwar to Kedarnath Cab','/cabs/haridwar-to-kedarnath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

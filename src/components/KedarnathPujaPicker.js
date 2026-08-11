@@ -42,14 +42,14 @@ export default function KedarnathPujaPicker() {
 
   const pill = (active) => ({
     padding: '8px 13px', borderRadius: 8, border: '1.5px solid',
-    borderColor: active ? 'var(--navy)' : 'var(--border)',
+    borderColor: active ? 'var(--navy)' : 'hsl(var(--border))',
     background: active ? 'var(--navy)' : '#fff',
     color: active ? '#fff' : 'var(--navy)',
     fontWeight: 700, fontSize: 12.5, cursor: 'pointer', transition: 'var(--t, .15s)',
   });
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 18px', boxShadow: 'var(--shadow-sm)' }}>
+    <div style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 14, padding: '20px 18px', boxShadow: 'var(--shadow-sm)' }}>
       <div style={{ fontWeight: 800, color: 'var(--navy)', fontSize: 15.5, marginBottom: 4 }}>Which VIP darshan suits you?</div>
       <p style={{ fontSize: 12.5, color: '#64748b', marginBottom: 14, lineHeight: 1.6 }}>Three taps for a plain recommendation — the same advice we'd give on the phone.</p>
 

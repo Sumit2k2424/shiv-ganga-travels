@@ -64,10 +64,10 @@ const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.7
 const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 22 };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 const wrap = { maxWidth: 820, margin: '0 auto', padding: '0 20px' };
-const tableWrap = { overflowX: 'auto', margin: '14px 0 8px', border: '1px solid var(--border)', borderRadius: 12 };
+const tableWrap = { overflowX: 'auto', margin: '14px 0 8px', border: '1px solid hsl(var(--border))', borderRadius: 12 };
 const table = { width: '100%', borderCollapse: 'collapse', minWidth: 560, fontSize: 14 };
 const th = { textAlign: 'left', padding: '11px 14px', background: 'var(--navy)', color: '#fff', fontWeight: 700, fontSize: 12.5, whiteSpace: 'nowrap' };
-const td = { padding: '11px 14px', borderTop: '1px solid var(--border)', color: '#334155' };
+const td = { padding: '11px 14px', borderTop: '1px solid hsl(var(--border))', color: '#334155' };
 
 const PAA = [
   { q: 'Is pony or palki better for senior citizens at Kedarnath?', a: 'Palki for the frailest, pony for those who can sit upright and hold a saddle. A palki keeps the pilgrim seated and level the whole way, carried by four men, so there is no balance or mounting involved — best for very elderly parents or anyone with knee, hip or heart issues. A pony is faster and cheaper but you must hold on for 3–4 hours over steep, exposed sections. From 2026, pilgrims above 55 should carry a medical fitness certificate either way.' },

@@ -82,7 +82,7 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -116,7 +116,7 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
             </tr></thead>
             <tbody>
               {c.dhams.map((d, i) => (
-                <tr key={d.name} style={{ borderBottom: '1px solid var(--border)', background: i % 2 ? 'var(--bg)' : '#fff' }}>
+                <tr key={d.name} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 ? 'var(--bg)' : '#fff' }}>
                   <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--navy)', fontSize: 13 }}>{d.name}</td>
                   <td style={{ padding: '8px 12px', color: '#475569', fontSize: 12.5 }}>{d.altitude}</td>
                   <td style={{ padding: '8px 12px', color: '#475569', fontSize: 12.5 }}>{d.note}</td>
@@ -138,7 +138,7 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
 
         <h2 style={h2}>{c.inclusionsHeading}</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 8, marginBottom: 16 }}>
-          {c.inclusions.map(item => (<div key={item} style={{ background: '#fff', borderRadius: 8, padding: '9px 12px', border: '1px solid var(--border)', fontSize: 13.5, color: '#334155' }}>✅ {item}</div>))}
+          {c.inclusions.map(item => (<div key={item} style={{ background: '#fff', borderRadius: 8, padding: '9px 12px', border: '1px solid hsl(var(--border))', fontSize: 13.5, color: '#334155' }}>✅ {item}</div>))}
         </div>
         <div style={{ background: 'rgba(29,158,117,0.08)', border: '1px solid #1D9E75', borderRadius: 10, padding: '12px 16px', marginBottom: 24, fontSize: 13.5, color: '#0F5132' }}>
           {c.priceNote}
@@ -148,7 +148,7 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
         <p style={p}>{c.tiersIntro}</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 20 }}>
           {c.tiers.map(t => (
-            <div key={t.tier} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)' }}>
+            <div key={t.tier} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 800, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{t.tier}</div>
               <div style={{ fontWeight: 800, fontSize: 19, color: 'var(--navy)', lineHeight: 1, marginBottom: 6 }}>{t.range}</div>
               <div style={{ fontSize: 12, color: 'var(--text-mid)', marginBottom: 2 }}>{t.vehicle}</div>
@@ -161,7 +161,7 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
         <h2 style={h2}>{c.reachHeading}</h2>
         <p style={p}>{c.reachIntro}</p>
         {c.reachOptions.map(o => (
-          <div key={o.title} style={{ background: '#fff', borderRadius: 10, padding: '12px 16px', border: '1px solid var(--border)', borderLeft: '3px solid var(--teal)', marginBottom: 12 }}>
+          <div key={o.title} style={{ background: '#fff', borderRadius: 10, padding: '12px 16px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--teal)', marginBottom: 12 }}>
             <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 4 }}>{o.icon} {o.title}</div>
             <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75 }}>{o.body}</div>
           </div>

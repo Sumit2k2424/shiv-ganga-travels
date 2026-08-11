@@ -100,9 +100,9 @@ export default function CostCalculator() {
   const fmt = (n) => '₹' + n.toLocaleString('en-IN');
   const range = (lo, hi) => lo === hi ? fmt(lo) : `${fmt(lo)} – ${fmt(hi)}`;
 
-  const input = { width:'100%', padding:'10px 12px', border:'1.5px solid var(--border)', borderRadius:8, fontSize:14, fontFamily:'var(--font)', color:'var(--text)', background:'var(--bg)', outline:'none' };
+  const input = { width:'100%', padding:'10px 12px', border:'1.5px solid hsl(var(--border))', borderRadius:8, fontSize:14, fontFamily:'var(--font)', color:'var(--text)', background:'var(--bg)', outline:'none' };
   const lbl = { display:'block', fontSize:11.5, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:6 };
-  const tog = (a) => ({ display:'flex', alignItems:'center', gap:10, padding:'10px 14px', borderRadius:9, border:`1.5px solid ${a?'var(--navy)':'var(--border)'}`, background:a?'var(--navy-light)':'#fff', cursor:'pointer', fontSize:13.5, color:'var(--text)', fontFamily:'var(--font)', transition:'all .15s', userSelect:'none' });
+  const tog = (a) => ({ display:'flex', alignItems:'center', gap:10, padding:'10px 14px', borderRadius:9, border:`1.5px solid ${a?'var(--navy)':'hsl(var(--border))'}`, background:a?'var(--navy-light)':'#fff', cursor:'pointer', fontSize:13.5, color:'var(--text)', fontFamily:'var(--font)', transition:'all .15s', userSelect:'none' });
 
   const waMsg = encodeURIComponent(`Namaste! I used your cost calculator: ${pilgrims} pilgrim(s), ${TIERS[tier].label} tier, from ${CITY[city].label}, ${SEASON[season].label}. Estimate ${range(r.totLo, r.totHi)} total. Please confirm an exact price.`);
 
@@ -163,7 +163,7 @@ export default function CostCalculator() {
                   <div style={{ fontWeight:600 }}>{a.label}</div>
                   <div style={{ fontSize:11.5, color:'var(--text-muted)', marginTop:1 }}>+{range(a.lo,a.hi)}</div>
                 </div>
-                <div style={{ width:18, height:18, borderRadius:'50%', border:`2px solid ${addons[k]?'var(--navy)':'var(--border)'}`, background:addons[k]?'var(--navy)':'transparent', flexShrink:0, display:'flex', alignItems:'center', justifyContent:'center' }}>
+                <div style={{ width:18, height:18, borderRadius:'50%', border:`2px solid ${addons[k]?'var(--navy)':'hsl(var(--border))'}`, background:addons[k]?'var(--navy)':'transparent', flexShrink:0, display:'flex', alignItems:'center', justifyContent:'center' }}>
                   {addons[k] && <svg width="9" height="7" fill="none" stroke="#fff" strokeWidth="2"><path d="M1 3.5l2.5 2.5 5-5"/></svg>}
                 </div>
               </button>
@@ -216,7 +216,7 @@ export default function CostCalculator() {
         <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Char Dham Yatra Cost — FAQs</h2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <div key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:10, padding:'14px 16px' }}>
+            <div key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'14px 16px' }}>
               <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:6 }}>{f.q}</div>
               <div style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.75 }}>{f.a}</div>
             </div>
@@ -235,7 +235,7 @@ export default function CostCalculator() {
           {label:'Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking'},
           {label:'Packing List →', href:'/blog/char-dham-yatra-packing-list'},
         ].map(l=>(
-          <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label}</Link>
+          <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
         ))}
       </div>
     </div>

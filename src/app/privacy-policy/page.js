@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Privacy Policy</span>
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
                 ['Hotels, transport and helicopter operators','Traveller names, ages, contact','Making your actual bookings'],
                 ['Uttarakhand government portal','Aadhaar and traveller details','Mandatory yatra registration'],
               ].map(([a,b,c])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{c}</td>
@@ -226,7 +226,7 @@ export default function PrivacyPolicy() {
           If you are unhappy with how we have handled your data, raise it with our grievance officer
           before going further:
         </P>
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:11, padding:'15px 18px', marginBottom:14 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'15px 18px', marginBottom:14 }}>
           <div style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.85 }}>
             <strong style={{ color:'var(--navy)' }}>Dhanesh Chandra Mishra</strong><br/>
             Founder &amp; Director, Shiv Ganga Travels<br/>
@@ -264,14 +264,14 @@ export default function PrivacyPolicy() {
           top. Material changes affecting people who have already booked will be told to them directly.
         </P>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:22, marginTop:30, display:'flex', gap:10, flexWrap:'wrap' }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:22, marginTop:30, display:'flex', gap:10, flexWrap:'wrap' }}>
           {[
             ['Terms & Conditions','/terms-and-conditions'],
             ['Cancellation Policy','/cancellation-policy'],
             ['Contact Us','/contact'],
             ['About Shiv Ganga Travels','/about'],
           ].map(([label,href])=>(
-            <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+            <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
               {label} →
             </Link>
           ))}

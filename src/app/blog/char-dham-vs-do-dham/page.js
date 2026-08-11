@@ -66,7 +66,7 @@ export default function ComparisonPage() {
         ]}
       />
 
-      <div style={{ background:'#fff', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer)</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated}</span>
@@ -111,7 +111,7 @@ export default function ComparisonPage() {
             </thead>
             <tbody>
               {ROWS.map(([feature, cd, dd], i) => (
-                <tr key={feature} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={feature} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'11px 16px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{feature}</td>
                   <td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-mid)', fontSize:13 }}>{cd}</td>
                   <td style={{ padding:'11px 16px', textAlign:'center', color:'var(--text-mid)', fontSize:13 }}>{dd}</td>
@@ -123,12 +123,12 @@ export default function ComparisonPage() {
 
         <h2 id="choose-char" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12 }}>Choose Char Dham if...</h2>
         {['You have 10+ days available and no serious health conditions at altitude','You are completing the yatra for the first time and want the full spiritual circuit','You are aged 40–65 and in reasonable fitness','Family reunion or group pilgrimage where all members want the complete experience','You want to honour a vow (mannat) that requires all four dhams'].map(r => (
-          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
+          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
         <h2 id="choose-do" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12, marginTop:28 }}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
         {['You have only 5–7 days available','You are above 65 or have health conditions','You are a first-time yatri wanting to experience mountain pilgrimage before committing to the full circuit','You have previously done Yamunotri and Gangotri and want to complete Kedarnath + Badrinath','Budget is a key consideration — Do Dham costs approximately 40% less than Char Dham'].map(r => (
-          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid var(--border)', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
+          <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
 
@@ -151,11 +151,11 @@ export default function ComparisonPage() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

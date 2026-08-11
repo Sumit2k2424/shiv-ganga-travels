@@ -63,7 +63,7 @@ function Bubble({ msg }) {
         fontSize: 13,
         lineHeight: 1.6,
         boxShadow: isBot ? 'var(--shadow)' : 'none',
-        border: isBot ? '1px solid var(--border)' : 'none',
+        border: isBot ? '1px solid hsl(var(--border))' : 'none',
         wordBreak: 'break-word',
       }}>
         {msg.typing ? (
@@ -289,7 +289,7 @@ export default function ChatBot() {
           flexDirection: 'column',
           boxShadow: '0 24px 64px rgba(15,43,91,0.22), 0 4px 16px rgba(15,43,91,0.1)',
           animation: 'chatSlideUp .3s var(--t-out)',
-          border: '1px solid var(--border)',
+          border: '1px solid hsl(var(--border))',
         }}>
 
           {/* Header */}
@@ -351,14 +351,14 @@ export default function ChatBot() {
                       style={{
                         padding: '6px 13px', fontSize: 12, fontWeight: 500,
                         background: '#fff', color: 'var(--navy)',
-                        border: '1.5px solid var(--border)',
+                        border: '1.5px solid hsl(var(--border))',
                         borderRadius: 100, cursor: 'pointer',
                         fontFamily: 'var(--font)',
                         transition: 'all .15s',
                         lineHeight: 1.4,
                       }}
                       onMouseEnter={e => { e.currentTarget.style.background = 'var(--navy)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'var(--navy)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--navy)'; e.currentTarget.style.borderColor = 'var(--border)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--navy)'; e.currentTarget.style.borderColor = 'hsl(var(--border))'; }}
                     >
                       {q}
                     </button>
@@ -374,7 +374,7 @@ export default function ChatBot() {
           <div style={{
             padding: '10px 12px',
             background: '#fff',
-            borderTop: '1px solid var(--border)',
+            borderTop: '1px solid hsl(var(--border))',
             display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0,
           }}>
             <input
@@ -388,7 +388,7 @@ export default function ChatBot() {
               style={{
                 flex: 1, minWidth: 0,
                 padding: '9px 13px',
-                border: '1.5px solid var(--border)',
+                border: '1.5px solid hsl(var(--border))',
                 borderRadius: 100,
                 fontSize: 16, fontFamily: 'var(--font)',
                 background: 'var(--bg)', color: 'var(--text)',
@@ -396,7 +396,7 @@ export default function ChatBot() {
                 transition: 'border-color .15s',
               }}
               onFocus={e => e.target.style.borderColor = 'var(--navy)'}
-              onBlur={e => e.target.style.borderColor = 'var(--border)'}
+              onBlur={e => e.target.style.borderColor = 'hsl(var(--border))'}
             />
             <button
               onClick={() => sendMessage(input)}
@@ -422,7 +422,7 @@ export default function ChatBot() {
           <div style={{
             padding: '5px', textAlign: 'center',
             fontSize: 10, color: 'var(--text-muted)',
-            background: '#fff', borderTop: '1px solid var(--border)',
+            background: '#fff', borderTop: '1px solid hsl(var(--border))',
             flexShrink: 0,
           }}>
             Powered by AI · For bookings use the WhatsApp button above

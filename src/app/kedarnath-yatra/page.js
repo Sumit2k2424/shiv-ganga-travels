@@ -77,7 +77,7 @@ export default function KedarnathYatra() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '10px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -108,7 +108,7 @@ export default function KedarnathYatra() {
             </AnswerBox>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 10, marginBottom: 28 }}>
               {kedarnathPkgs.map(pkg => (
-                <Link key={pkg.slug} href={`/packages/${pkg.slug}`} style={{ background: '#fff', padding: '14px 16px', borderRadius: 10, border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Link key={pkg.slug} href={`/packages/${pkg.slug}`} style={{ background: '#fff', padding: '14px 16px', borderRadius: 10, border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
                     <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--navy)', lineHeight: 1.3 }}>{pkg.name}</div>
                     <div style={{ fontSize: 11.5, color: 'var(--text-muted)', marginTop: 2 }}>{pkg.duration?.nights}N/{pkg.duration?.days}D · {pkg.startCity}</div>
@@ -123,7 +123,7 @@ export default function KedarnathYatra() {
         <h2 style={h2}>Kedarnath Trek — All 6 Stages, Exact Distances & What You'll See</h2>
         <p style={p}>The trek begins at <strong>Gaurikund</strong> (1,982m) — the roadhead 228km from Haridwar where private vehicles stop. Shared jeeps run Sonprayag to Gaurikund (₹40/person). The trail is stone-paved for most of its 16km length. In peak season, start before 6 AM — this is the single most important piece of timing advice we give every Kedarnath pilgrim. The queue at the temple grows sharply from 8 AM and peaks between 11 AM–2 PM with waits of 3–5 hours. Pilgrims leaving Gaurikund by 5:30 AM typically reach Kedarnath by 11–12 PM, attend the 1 PM aarti, and descend to Gaurikund the same evening before dark.</p>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 28, border: '1px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 28, border: '1px solid hsl(var(--border))', borderRadius: 12, overflow: 'hidden' }}>
           <div style={{ background: 'var(--navy)', display: 'grid', gridTemplateColumns: '2fr 80px 80px 3fr', padding: '10px 16px', gap: 10 }}>
             {['Stage','From start','Altitude','What to know'].map(h => (<div key={h} style={{ fontSize: 12, fontWeight: 700, color: '#fff' }}>{h}</div>))}
           </div>
@@ -135,7 +135,7 @@ export default function KedarnathYatra() {
             ['Base Camp', '13 km', '3,550m', 'Temporary huts and shelters. Last food and water. Trail is virtually flat from here to the temple. The tented accommodation here is the option if you want to stay overnight at Kedarnath.'],
             ['Kedarnath Temple', '16 km', '3,583m', 'One of 12 Jyotirlingas. Bag check at gate — no photography inside the garbhagriha. VIP queue is separate from general. Queue early morning or after 5 PM for shortest waits.'],
           ].map(([stage,dist,alt,note],i) => (
-            <div key={stage} style={{ display: 'grid', gridTemplateColumns: '2fr 80px 80px 3fr', padding: '11px 16px', gap: 10, background: i%2===0?'#fff':'var(--bg)', borderTop:'1px solid var(--border)' }}>
+            <div key={stage} style={{ display: 'grid', gridTemplateColumns: '2fr 80px 80px 3fr', padding: '11px 16px', gap: 10, background: i%2===0?'#fff':'var(--bg)', borderTop:'1px solid hsl(var(--border))' }}>
               <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--navy)' }}>{stage}</div>
               <div style={{ fontSize: 13, color: '#475569' }}>{dist}</div>
               <div style={{ fontSize: 13, color: '#475569' }}>{alt}</div>
@@ -152,7 +152,7 @@ export default function KedarnathYatra() {
             { mode:'🛕 Palki / Doli', cost:'₹8,000–12,000 round', time:'5–7 hrs (carried)', for:'Elderly, physically limited', pros:'Zero effort. 4–6 bearers rotate. Best non-air option for 70+ pilgrims.', cons:'Uncomfortable on steep sections. Negotiate price with registered porter cooperative before starting.' },
             { mode:'🚁 Helicopter', cost:'₹7,500–9,500 round', time:'7 min each way', for:'All ages. Mandatory 70+', pros:'No altitude stress. VIP darshan included. Views of Kedarnath valley from above are extraordinary. Weather delays possible.', cons:'Weather-dependent. Book via heli.irctc.co.in — May slots sell out by February. Early booking essential.' },
           ].map(item => (
-            <div key={item.mode} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)' }}>
+            <div key={item.mode} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)', marginBottom: 3 }}>{item.mode}</div>
               <div style={{ fontWeight: 800, fontSize: 16, color: '#1D9E75', marginBottom: 2 }}>{item.cost}</div>
               <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>⏱ {item.time} · {item.for}</div>
@@ -164,7 +164,7 @@ export default function KedarnathYatra() {
 
         <h2 style={h2}>Temple Timings, Pujas & Darshan 2026</h2>
         <p style={p}>The Kedarnath temple schedule is set by the Badrinath-Kedarnath Temple Committee (BKTC). The <strong>Mahabhishek</strong> at 4:30 AM — where the Shivling is bathed with milk, curd, honey, and ghee by the head priest — is the most sacred ritual of the day. You can pre-book participation through your operator or directly at the BKTC desk. The <strong>evening aarti at 7 PM</strong> is the most visually dramatic: lamps, incense, conch shells, and drums in complete darkness at 3,583m. Every pilgrim who stays overnight rates it as the defining moment of their yatra.</p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 24, border: '1px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 24, border: '1px solid hsl(var(--border))', borderRadius: 12, overflow: 'hidden' }}>
           {[
             ['4:30 AM', 'Mahabhishek', 'Milk, curd, honey, ghee poured on Shivling by head priest. Can be booked ₹500–2,000. Most sacred time.'],
             ['6:00 AM', 'Abhishek & early darshan', 'For pilgrims who stayed overnight or arrived very early. Short queue.'],
@@ -176,7 +176,7 @@ export default function KedarnathYatra() {
             ['8:30 PM', 'Shayan Aarti', 'Final ritual — deity "put to sleep". Short but deeply moving. Last chance for darshan.'],
             ['9:00 PM', 'Temple closes', 'For the night.'],
           ].map(([time,puja,notes],i) => (
-            <div key={time} style={{ display: 'grid', gridTemplateColumns: '130px 1fr 2fr', padding: '10px 16px', gap: 12, background: i%2===0?'#fff':'var(--bg)', borderTop: i>0?'1px solid var(--border)':'none' }}>
+            <div key={time} style={{ display: 'grid', gridTemplateColumns: '130px 1fr 2fr', padding: '10px 16px', gap: 12, background: i%2===0?'#fff':'var(--bg)', borderTop: i>0?'1px solid hsl(var(--border))':'none' }}>
               <div style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--navy)' }}>{time}</div>
               <div style={{ fontSize: 13, fontWeight: 600, color: '#334155' }}>{puja}</div>
               <div style={{ fontSize: 12.5, color: '#64748b' }}>{notes}</div>
@@ -193,7 +193,7 @@ export default function KedarnathYatra() {
             { rule:'🧑‍🤝‍🧑 Daily pilgrim cap enforced at Gaurikund', detail:'When the daily Kedarnath cap is reached, new arrivals are stopped at Gaurikund. In peak May–June, this happens by 9–10 AM. Pilgrims with overnight bookings at Kedarnath camps get priority. This is why we always recommend 5:30 AM departures from Gaurikund.' },
             { rule:'🌱 No plastic above Sonprayag', detail:'Single-use plastic bottles and bags are banned above Sonprayag. Carry a refillable bottle. Reusable bags only. Fines ₹500–1,000. Water refill stations at Jungle Chatti and Bheembali.' },
           ].map(({ rule, detail }) => (
-            <div key={rule} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)', borderLeft: '3px solid var(--navy)' }}>
+            <div key={rule} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))', borderLeft: '3px solid var(--navy)' }}>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 6 }}>{rule}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{detail}</div>
             </div>
@@ -209,7 +209,7 @@ export default function KedarnathYatra() {
             ['Step 4','Pay ₹150 per person','UPI, net banking, or card. You receive SMS and email confirmation immediately.'],
             ['Step 5','Download and PRINT your certificate','A QR-code document. Police checkpoints scan the physical printout. Do not rely only on a phone screenshot.'],
           ].map(([step,title,desc]) => (
-            <div key={step} style={{ display: 'flex', gap: 12, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid var(--border)' }}>
+            <div key={step} style={{ display: 'flex', gap: 12, background: '#fff', borderRadius: 10, padding: '13px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ background: 'var(--navy)', color: '#FFD166', fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 20, alignSelf: 'flex-start', whiteSpace: 'nowrap' }}>{step}</div>
               <div><div style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--navy)', marginBottom: 3 }}>{title}</div><div style={{ fontSize: 13, color: '#475569', lineHeight: 1.65 }}>{desc}</div></div>
             </div>
@@ -233,7 +233,7 @@ export default function KedarnathYatra() {
                 ['September','8–16°C','0–4°C','Post-monsoon. Best visibility. Crisp and clear.','✅ Excellent'],
                 ['October','2–10°C','-4 to 0°C','Cold. Snowy slopes. Closing approaches.','✅ Good (warm layers essential)'],
               ].map(([month,day,night,cond,suit],i) => (
-                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)' }}>{month}</td>
                   <td style={{ padding:'9px 12px', color:'#334155' }}>{day}</td>
                   <td style={{ padding:'9px 12px', color:'#334155' }}>{night}</td>
@@ -253,7 +253,7 @@ export default function KedarnathYatra() {
             { cat:'📄 Documents (originals)', items:['Registration printout (QR code — PRINTED not just phone)','Original ID: Aadhaar / PAN / Passport','Medical certificate if age 55+','Hotel booking confirmation','Emergency contacts written on paper'] },
             { cat:'💊 Health', items:['Diamox 250mg (altitude prevention — consult your doctor)','Sorbitrate (cardiac emergency tablet — 55+ carry on person)','Personal medicines + 2 extra days supply','Knee support bands (descent harder than ascent)','Pulse oximeter if available (check SpO2 at each rest stop)'] },
           ].map(({ cat, items }) => (
-            <div key={cat} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={cat} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>{cat}</div>
               {items.map(item => (<div key={item} style={{ fontSize: 12.5, color: '#475569', padding: '4px 0', borderBottom: '1px solid var(--bg)', display: 'flex', gap: 6, alignItems: 'flex-start' }}><span style={{ color: '#1D9E75', flexShrink: 0 }}>✓</span><span>{item}</span></div>))}
             </div>
@@ -269,7 +269,7 @@ export default function KedarnathYatra() {
             { name:'Ukhimath (winter Kedarnath)', dist:'Near Guptkashi', desc:'Lord Kedarnath "resides" here every winter after the November closing ceremony. The temple is small, intimate, and almost never crowded — even in summer. Pilgrims who visit Ukhimath often say the darshan here feels more personal than at the main temple.' },
             { name:'Gaurikund', dist:'228km', desc:'Named after Goddess Gauri (Parvati), who bathed here while awaiting Shiva. The natural hot spring kund (48°C year-round) is right at the trek start. Pilgrims take a ritual dip before climbing. The masala chai at the trail-mouth shops, at 2,000m, is genuinely excellent.' },
           ].map(pl => (
-            <div key={pl.name} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)' }}>
+            <div key={pl.name} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 2 }}>{pl.name}</div>
               <div style={{ fontSize: 11.5, color: '#E8920A', fontWeight: 600, marginBottom: 8 }}>📍 {pl.dist} from Haridwar</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{pl.desc}</div>
@@ -288,11 +288,11 @@ export default function KedarnathYatra() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Deep-dive guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['3N/4D Tour Package ₹6,999','/kedarnath-tour-package'],['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Weather','/kedarnath-weather'],['Haridwar to Kedarnath','/cabs/haridwar-to-kedarnath-cab']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

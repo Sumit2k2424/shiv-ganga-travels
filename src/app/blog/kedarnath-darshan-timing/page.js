@@ -91,7 +91,7 @@ export default function KedarnathTimings() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -177,7 +177,7 @@ export default function KedarnathTimings() {
                 ['Maha Rudra','By appointment','₹15,000+','3 hours','Advance booking, limited slots'],
                 ['General Darshan','6 AM–3 PM, 5–9 PM','Free','5–45 min (queue dependent)','No booking needed'],
               ].map(([name,time,cost,dur,how],i)=>(
-                <tr key={name} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={name} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{name}</td>
                   <td style={{ padding:'10px 14px', color:'#334155', fontSize:13.5 }}>{time}</td>
                   <td style={{ padding:'10px 14px', fontWeight:700, color:'var(--navy)', fontSize:14 }}>{cost}</td>
@@ -222,11 +222,11 @@ export default function KedarnathTimings() {
           ['Can I see the temple open during the Kedarnath trek?', 'No. The Kedarnath trek from Gaurikund (16km) takes 5–7 hours ascending. If you leave Gaurikund at 5 AM, you reach Kedarnath by 11 AM–12 PM — right at the end of the morning session. Timing your trek start is critical. Many pilgrims who leave at 7–8 AM arrive during the 3 PM afternoon closure and miss morning darshan entirely.'],
           ['What is the phone ban rule at Kedarnath temple?', 'Mobile phones are banned inside the inner sanctum (garbhagriha) of Kedarnath temple in 2026. Phone deposit counters are set up at the temple entrance. Photography outside the temple complex remains permitted. This rule is enforced by temple security and Uttarakhand Police.'],
         ].map(([q,a],i)=>(
-          <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid var(--border)', overflow:'hidden', marginBottom:10 }}>
+          <details key={i} style={{ background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:10 }}>
             <summary style={{ padding:'14px 16px', cursor:'pointer', listStyle:'none', fontWeight:600, fontSize:14.5, color:'var(--navy)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
               {q}<span style={{ flexShrink:0, fontSize:18 }}>＋</span>
             </summary>
-            <div style={{ padding:'12px 16px', fontSize:14.5, color:'#334155', lineHeight:1.8, borderTop:'1px solid var(--border)' }}>{a}</div>
+            <div style={{ padding:'12px 16px', fontSize:14.5, color:'#334155', lineHeight:1.8, borderTop:'1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
 
@@ -240,11 +240,11 @@ export default function KedarnathTimings() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

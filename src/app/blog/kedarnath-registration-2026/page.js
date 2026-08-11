@@ -74,7 +74,7 @@ export default function KedarnathRegistration() {
         ]}
       />
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -130,7 +130,7 @@ export default function KedarnathRegistration() {
             { n: '4', title: 'Add pilgrim details', detail: 'Enter: Full name (exactly as per ID), age, gender, address, Aadhaar number. Upload a passport-size photo (JPG/PNG, 10KB–150KB). If registering a group, add each member individually.' },
             { n: '5', title: 'Download your QR-coded e-pass', detail: 'After submission, your Yatra Certificate generates immediately with a unique QR code. Download and save it. Print a physical copy AND keep it on your phone. The QR code is scanned at Sonprayag, at the helipad (if flying), and at the temple entry point.' },
           ].map(item => (
-            <div key={item.n} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid var(--border)', display: 'flex', gap: 12 }}>
+            <div key={item.n} style={{ background: '#fff', borderRadius: 10, padding: '12px 14px', border: '1px solid hsl(var(--border))', display: 'flex', gap: 12 }}>
               <div style={{ width: 28, height: 28, background: 'var(--navy)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFD166', fontWeight: 700, fontSize: 13, flexShrink: 0, marginTop: 2 }}>{item.n}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{item.title}</div>
@@ -161,7 +161,7 @@ export default function KedarnathRegistration() {
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 8, marginBottom: 24 }}>
           {['Haridwar (main centre)', 'Rishikesh', 'Sonprayag', 'Guptkashi', 'Dehradun airport'].map(loc => (
-            <div key={loc} style={{ background: '#fff', borderRadius: 8, padding: '10px 12px', border: '1px solid var(--border)', fontSize: 13, color: 'var(--navy)', fontWeight: 600 }}>
+            <div key={loc} style={{ background: '#fff', borderRadius: 8, padding: '10px 12px', border: '1px solid hsl(var(--border))', fontSize: 13, color: 'var(--navy)', fontWeight: 600 }}>
               📍 {loc}
             </div>
           ))}
@@ -207,7 +207,7 @@ export default function KedarnathRegistration() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
@@ -218,7 +218,7 @@ export default function KedarnathRegistration() {
               ['Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
               ['New Rules 2026', '/blog/char-dham-yatra-2026-new-rules'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

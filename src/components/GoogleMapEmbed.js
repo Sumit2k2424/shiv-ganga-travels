@@ -76,7 +76,7 @@ export default function GoogleMapEmbed({ height = 340 }) {
       style={{
         width: '100%', height,
         borderRadius: 14, overflow: 'hidden',
-        border: '1px solid var(--border)',
+        border: '1px solid hsl(var(--border))',
         background: 'var(--navy-light)',
         '--gmpx-color-primary':    '#0F2B5B',
         '--gmpx-color-surface':    '#ffffff',

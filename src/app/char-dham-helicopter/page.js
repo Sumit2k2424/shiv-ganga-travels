@@ -57,7 +57,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           <span>Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days</span>
@@ -78,19 +78,19 @@ export default function Page() {
           package with IRCTC shuttle tickets bought separately — a different thing entirely.
         </AnswerBox>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px',marginBottom:'20px'}}>
-          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🚁 Helicopter Between All Dhams</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>No road travel between shrines. Each dham by air — 7–20 minute flights.</div>
           </div>
-          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🎫 VIP Darshan Guaranteed</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Pre-arranged priority darshan at all 4 temples. No 3-hour queues.</div>
           </div>
-          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🏨 Luxury Hotels</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Best available hotels at each overnight stop. All meals included.</div>
           </div>
-          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)'}}>
+          <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>💊 Medical Support</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Oxygen equipment, pulse oximeters, medical attendant throughout.</div>
           </div>
@@ -98,7 +98,7 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href={`/packages/char-dham-yatra-helicopter-5n-6d-dehradun`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid var(--border)',textDecoration:'none',gap:12}}>
+          <Link href={`/packages/char-dham-yatra-helicopter-5n-6d-dehradun`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 5N/6D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
@@ -110,10 +110,10 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/blog/kedarnath-helicopter-booking" href="/blog/kedarnath-helicopter-booking" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Kedarnath Helicopter Booking Guide"}<span> →</span></Link>
-              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Char Dham 2026 Complete Guide"}<span> →</span></Link>
-              <Link key="/blog/senior-citizen-char-dham" href="/blog/senior-citizen-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Senior Citizen Char Dham"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-cost" href="/blog/char-dham-yatra-cost" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Char Dham Cost Breakdown"}<span> →</span></Link>
+              <Link key="/blog/kedarnath-helicopter-booking" href="/blog/kedarnath-helicopter-booking" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Kedarnath Helicopter Booking Guide"}<span> →</span></Link>
+              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham 2026 Complete Guide"}<span> →</span></Link>
+              <Link key="/blog/senior-citizen-char-dham" href="/blog/senior-citizen-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Senior Citizen Char Dham"}<span> →</span></Link>
+              <Link key="/blog/char-dham-yatra-cost" href="/blog/char-dham-yatra-cost" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Cost Breakdown"}<span> →</span></Link>
           </div>
         </div>
 
@@ -139,7 +139,7 @@ export default function Page() {
                 ['Kedarnath','Guptkashi Helipad','Near Guptkashi town','Fly to temple helipad — 15 min flight','Third option. IRCTC mandatory. Road base for Kedarnath pilgrims.'],
                 ['Badrinath','No helipad needed','Motor road reaches temple directly','0 — road goes to temple','No helicopter needed. Motor road reaches Badrinath at 3,133m.'],
               ].map(([dh,hp,loc,dist,notes],i)=>(
-                <tr key={hp} style={{borderBottom:'1px solid var(--border)',background:i%2===0?'#fff':'var(--bg)'}}>
+                <tr key={hp} style={{borderBottom:'1px solid hsl(var(--border))',background:i%2===0?'#fff':'var(--bg)'}}>
                   <td style={{padding:'10px 14px',fontWeight:700,color:'var(--navy)',fontSize:14}}>{dh}</td>
                   <td style={{padding:'10px 14px',fontWeight:600,color:'var(--teal)',fontSize:13.5}}>{hp}</td>
                   <td style={{padding:'10px 14px',color:'var(--text-mid)',fontSize:13}}>{loc}</td>
@@ -162,7 +162,7 @@ export default function Page() {
             { icon:'⛅', title:'Weather Buffer Day — Essential', body:'Helicopter operations in the Himalayas are entirely weather-dependent. Morning fog, cloud cover, or winds at altitude can ground all flights for a full day. Every itinerary should include at least one buffer day — we build this into our 5N/6D structure. Book return flights one day after the scheduled end of the package.' },
             { icon:'💰', title:'Price Transparency — No Surprise Extras', body:'Full Char Dham helicopter packages in 2026 run ₹2.09 lakh to ₹2.5 lakh per person across established operators (helicopter charter + hotels + meals + VIP darshan). Ours is ₹2,30,000, inside that band. If you see a "helicopter package" advertised near ₹85,000, it is a road package with IRCTC shuttle tickets bought separately — check what the number actually covers before comparing it with ours. Helicopter charter is a hard cost nobody discounts by 60%.' },
           ].map(item => (
-            <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--navy)' }}>
+            <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--navy)' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
               <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
             </div>
@@ -181,7 +181,7 @@ export default function Page() {
             ['5','Pay online','Official fare per helipad: Sersi ₹3,043, Phata ₹4,840, Guptkashi ₹6,077 one-way (+ fee & GST).'],
             ['6','Download ticket','Print or save digital ticket. Carry to helipad — QR code is scanned.'],
           ].map(([n,t,d])=>(
-            <div key={n} style={{display:'flex',gap:0,borderRadius:10,overflow:'hidden',border:'1px solid var(--border)'}}>
+            <div key={n} style={{display:'flex',gap:0,borderRadius:10,overflow:'hidden',border:'1px solid hsl(var(--border))'}}>
               <div style={{background:'var(--navy)',minWidth:44,display:'flex',alignItems:'center',justifyContent:'center',padding:'12px 8px'}}>
                 <span style={{color:'#FFD166',fontWeight:800,fontSize:16}}>{n}</span>
               </div>
@@ -214,12 +214,12 @@ export default function Page() {
         </div>
       </article>
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Helicopter Booking Guide','/blog/kedarnath-helicopter-booking'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

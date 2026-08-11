@@ -37,7 +37,7 @@ export default function ValleyOfFlowersTrek() {
       ]}
     />
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
         <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -68,7 +68,7 @@ export default function ValleyOfFlowersTrek() {
           { month:'September', bloom:'Good – thinning', note:'Clear weather, fewer crowds.' },
           { month:'Oct–May', bloom:'Closed', note:'Snow-covered. Not accessible.' },
         ].map(m => (
-          <div key={m.month} style={{ background: m.bloom.includes('PEAK') ? '#dcfce7' : '#fff', borderRadius:10, padding:'11px', border:`1px solid ${m.bloom.includes('PEAK') ? '#86efac' : 'var(--border)'}`, textAlign:'center' }}>
+          <div key={m.month} style={{ background: m.bloom.includes('PEAK') ? '#dcfce7' : '#fff', borderRadius:10, padding:'11px', border:`1px solid ${m.bloom.includes('PEAK') ? '#86efac' : 'hsl(var(--border))'}`, textAlign:'center' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{m.month}</div>
             <div style={{ fontSize:11.5, fontWeight:600, color: m.bloom.includes('PEAK') ? '#15803D' : 'var(--text-mid)', marginBottom:3 }}>{m.bloom}</div>
             <div style={{ fontSize:11, color:'var(--text-muted)' }}>{m.note}</div>
@@ -77,7 +77,7 @@ export default function ValleyOfFlowersTrek() {
       </div>
 
       <h2 id="route" style={h2}>Trek Route & Distance</h2>
-      <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
+      <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid hsl(var(--border))', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
         <strong>Haridwar</strong> → Joshimath (300km, overnight) → Govindghat → <strong>Ghangaria base camp</strong> (13km trek) → <strong>Valley of Flowers</strong> (4km day trek) → <strong>Hemkund Sahib</strong> (6km day trek) → Govindghat → <strong>Badrinath</strong> → Haridwar
       </div>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The core trek from Govindghat to Ghangaria (base camp) is <strong>13km</strong> and takes 4–6 hours. From Ghangaria, the Valley of Flowers is a 4km one-way day trek, and Hemkund Sahib is a steep 6km one-way day trek. Most people do both on separate days.</p>

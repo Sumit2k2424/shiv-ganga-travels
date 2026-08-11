@@ -109,7 +109,7 @@ export default function KedarnathTrekGuide() {
       />
 
       {/* BREADCRUMB */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -158,7 +158,7 @@ export default function KedarnathTrekGuide() {
 
         <KedarnathTrekProfile/>
 
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:12 }}>📍 Trail Waypoints</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))', gap:8 }}>
             {[
@@ -169,7 +169,7 @@ export default function KedarnathTrekGuide() {
               { place:'Base Camp', alt:'3,400m', dist:'13 km', note:'Last major stop before the temple.' },
               { place:'Kedarnath', alt:'3,583m', dist:'16 km', note:'Temple, GMVN, camps and guesthouses.' },
             ].map(w => (
-              <div key={w.place} style={{ background:'#fff', borderRadius:8, padding:'10px 12px', border:'1px solid var(--border)', textAlign:'center' }}>
+              <div key={w.place} style={{ background:'#fff', borderRadius:8, padding:'10px 12px', border:'1px solid hsl(var(--border))', textAlign:'center' }}>
                 <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{w.place}</div>
                 <div style={{ fontSize:11.5, color:'var(--teal)', fontWeight:600 }}>{w.alt}</div>
                 <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:4 }}>{w.dist}</div>
@@ -195,7 +195,7 @@ export default function KedarnathTrekGuide() {
             { s:'Linchauli → Base Camp (4km)', t:'The path opens up. Snow peaks come into view. Most people find their second wind here.' },
             { s:'Base Camp → Kedarnath (3km)', t:'Final stretch. You can see the temple. Emotional. This part almost walks itself.' },
           ].map(s => (
-            <li key={s.s} style={{ padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid var(--border)' }}>
+            <li key={s.s} style={{ padding:'12px 16px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>{s.s}</div>
               <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.5 }}>{s.t}</div>
             </li>
@@ -217,7 +217,7 @@ export default function KedarnathTrekGuide() {
             { month:'September', rating:'⭐⭐⭐⭐⭐', temp:'5–13°C', crowd:'Moderate', verdict:'Best month overall — clear skies, fewer crowds, stunning views.', bg:'#dcfce7' },
             { month:'October (Closing)', rating:'⭐⭐⭐⭐', temp:'0–8°C', crowd:'Moderate', verdict:'Very cold nights. Bring heavy woolens. Temple closes mid-November.', bg:'#fef9c3' },
           ].map(m => (
-            <div key={m.month} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={m.month} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:4 }}>{m.month}</div>
               <div style={{ fontSize:14, marginBottom:4 }}>{m.rating}</div>
               <div style={{ fontSize:11.5, color:'var(--teal)', fontWeight:600, marginBottom:2 }}>Temp: {m.temp}</div>
@@ -238,7 +238,7 @@ export default function KedarnathTrekGuide() {
             { from:'From Dehradun', how:'2.5 hours to Rishikesh, then follow Haridwar route above. Jolly Grant Airport is the nearest airport — 250km from Sonprayag.', tip:'Book a cab from Jolly Grant directly to Sonprayag for convenience.' },
             { from:'By Air (Helicopter)', how:'Helicopter services from Phata, Sersi, or Guptkashi reach Kedarnath in just 7 minutes — completely bypassing the road journey.', tip:'Best for elderly pilgrims or those on tight schedules. Book at least 4–6 weeks ahead.' },
           ].map(r => (
-            <div key={r.from} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+            <div key={r.from} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{r.from}</div>
               <div style={{ fontSize:14, color:'#334155', lineHeight:1.6, marginBottom:6 }}>{r.how}</div>
               <div style={{ fontSize:12.5, color:'var(--teal)', fontStyle:'italic' }}>💡 {r.tip}</div>
@@ -256,7 +256,7 @@ export default function KedarnathTrekGuide() {
             { type:'Tented Camps', price:'₹300 – ₹600/person', stars:'⭐⭐', pros:'Cheapest option. Fine for young, experienced trekkers comfortable with basic conditions.', cons:'Very cold at night, especially October. Shared facilities, no hot water.', tag:'Backpacker' },
             { type:'Stay at Guptkashi / Sonprayag', price:'₹1,200 – ₹3,500/night', stars:'⭐⭐⭐⭐', pros:'Much better comfort, good restaurants, warm rooms. Trek Kedarnath as a day trip.', cons:'Requires an early 4–5AM start to reach Kedarnath by midday.', tag:'Best for Families' },
           ].map(s => (
-            <div key={s.type} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', position:'relative' }}>
+            <div key={s.type} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))', position:'relative' }}>
               <div style={{ position:'absolute', top:10, right:10, background:'var(--navy-light)', color:'var(--navy)', fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:20, letterSpacing:'0.06em' }}>{s.tag}</div>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4, paddingRight:80 }}>{s.type}</div>
               <div style={{ fontSize:13, color:'var(--gold-dark)', fontWeight:700, marginBottom:4 }}>{s.price}</div>
@@ -281,7 +281,7 @@ export default function KedarnathTrekGuide() {
             { mode:'Palki 🛕', cost:'₹8,000–12,000', time:'5–6 hrs', who:'Elderly, those who cannot walk', note:'4–6 bearers carry you. Physically hard for them — tip generously.' },
             { mode:'Helicopter 🚁', cost:'₹7,500–9,500', time:'7 minutes', who:'Medical conditions, tight schedule', note:'From Phata/Sersi/Guptkashi. Weather dependent. Book 4–6 weeks ahead.' },
           ].map(m => (
-            <div key={m.mode} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={m.mode} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{m.mode}</div>
               <div style={{ fontSize:12.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:4 }}>Cost: {m.cost}</div>
               <div style={{ fontSize:12, color:'var(--text-mid)', marginBottom:4 }}>Time: {m.time}</div>
@@ -300,7 +300,7 @@ export default function KedarnathTrekGuide() {
             { name:'Chaumasi → Kham → Rambara route', dist:'~18–19 km', note:'A longer but gentler, far less crowded alignment via Chaumasi village, with easier gradients. Good for those who want solitude and a softer climb, and it has been used as a backup when the main trail is hit by weather.' },
             { name:'Triyuginarayan route', dist:'~15 km', note:'Starts from Triyuginarayan (the temple where Shiva and Parvati are believed to have married). Scenic and quiet, but with fewer facilities — go with a guide and enough supplies.' },
           ].map(r => (
-            <div key={r.name} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={r.name} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{r.name}</div>
               <div style={{ fontSize:12.5, color:'var(--gold-dark)', fontWeight:600, marginBottom:6 }}>{r.dist}</div>
               <div style={{ fontSize:12, color:'var(--text-mid)', lineHeight:1.7 }}>{r.note}</div>
@@ -324,7 +324,7 @@ export default function KedarnathTrekGuide() {
             { cat:'💊 Medical Essentials', items:['Diamox 125mg (altitude sickness)','Disprin / paracetamol','Bandages and antiseptic cream','ORS sachets for electrolytes','Your regular medicines — carry extra','Lip balm (wind chaps lips badly at altitude)'] },
             { cat:'❌ Leave Behind', items:['Heavy trolley bags','Formal clothes','Laptop or tablet','Jewellery','Unnecessary gadgets','Anything pushing over 7kg total load'] },
           ].map(c => (
-            <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:8 }}>{c.cat}</div>
               <ul style={{ paddingLeft:14, margin:0 }}>
                 {c.items.map(i => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{i}</li>)}
@@ -350,9 +350,9 @@ export default function KedarnathTrekGuide() {
 
         {/* FAQ */}
         <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
-        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden' }}>
+        <div style={{ display:'flex', flexDirection:'column', gap:0, background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden' }}>
           {faqData.map((f, i) => (
-            <div key={i} style={{ padding:'18px 20px', borderBottom: i < faqData.length-1 ? '1px solid var(--border)' : 'none' }}>
+            <div key={i} style={{ padding:'18px 20px', borderBottom: i < faqData.length-1 ? '1px solid hsl(var(--border))' : 'none' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Q: {f.q}</div>
               <div style={{ fontSize:15, color:'#334155', lineHeight:1.7 }}>A: {f.a}</div>
             </div>
@@ -370,7 +370,7 @@ export default function KedarnathTrekGuide() {
               { label:'Pony & Palki Rates 2026 →', href:'/kedarnath-pony-palki-kandi-rates' },
               { label:'View Kedarnath Package →', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar' },
             ].map(l => (
-              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label}</Link>
+              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
             ))}
           </div>
         </div>

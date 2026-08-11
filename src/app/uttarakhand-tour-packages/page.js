@@ -46,7 +46,7 @@ export default function Page() {
       </section>
       {/* SEO Content section */}
       <section style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'0 20px 48px' }}>
-        <div style={{ background:'var(--bg)', borderRadius:14, padding:'24px 28px', border:'1px solid var(--border)' }}>
+        <div style={{ background:'var(--bg)', borderRadius:14, padding:'24px 28px', border:'1px solid hsl(var(--border))' }}>
           <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.2rem', fontWeight:700, color:'var(--navy)', marginBottom:12 }}>
             Uttarakhand — The Land of the Gods
           </h2>
@@ -63,7 +63,7 @@ export default function Page() {
       </section>
 
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           <span>Uttarakhand Tour Packages 2026 — Beyond the Dhams</span>
@@ -76,31 +76,31 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
-          <a href="/mussoorie-tour-packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/mussoorie-tour-packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie Tour Packages</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹8,499 · Kempty Falls, Mall Road, Gun Hill</div>
           </a>
-          <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Dhanaulti</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹9,999 · Hill station + eco park</div>
           </a>
-          <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌊 Nainital + Kausani</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>4N/5D · From ₹9,999 · Lakes + Kumaon views</div>
           </a>
-          <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏄 Rishikesh Adventure</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>2N/3D · From ₹4,999 · Rafting + camping</div>
           </a>
-          <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌸 Valley of Flowers</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,499 · UNESCO Heritage</div>
           </a>
-          <a href="/packages/auli-joshimath-skiing-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/auli-joshimath-skiing-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>⛷️ Auli Skiing</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹12,499 · India’s best ski resort</div>
           </a>
-          <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid var(--border)',textDecoration:'none'}}>
+          <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🐯 Jim Corbett</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,999 · Tiger reserve + Nainital</div>
           </a>
@@ -114,9 +114,9 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
-              <Link key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
-              <Link key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid var(--border)'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
+              <Link key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
+              <Link key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
+              <Link key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
           </div>
         </div>
 

@@ -79,7 +79,7 @@ export default function CharDhamFromBangalore() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromBangalore() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Sampark Kranti (12649)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`08:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`40h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, 50h+ total`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Via Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Various`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`38h+`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Fly instead`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Sampark Kranti (12649)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`08:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`40h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, 50h+ total`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Via Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`KSR Bengaluru`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Various`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`38h+`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Fly instead`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromBangalore() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Bangalore (BLR) to Dehradun (DED) — IndiGo direct, 2h 30m. Book 60+ days ahead for ₹3,200–5,500. Jolly Grant Airport is 35km from Haridwar, cab takes 45 minutes.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Bangalore</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Bangalore to Haridwar is 2,100km — three days minimum. Not recommended before a demanding 10-day yatra circuit.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromBangalore() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Bangalore:</strong> ₹26,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromBangalore() {
 
         <h2 style={{...h2}}>Pickup Points in Bangalore</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Kempegowda International Airport (BLR)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kempegowda International Airport (BLR)`}</span>
-          <span key="Majestic (KSR) Railway Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Majestic (KSR) Railway Station`}</span>
-          <span key="Koramangala" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Koramangala`}</span>
-          <span key="Whitefield" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Whitefield`}</span>
-          <span key="Electronic City" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Electronic City`}</span>
-          <span key="Yeshwanthpur Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Yeshwanthpur Station`}</span>
+<span key="Kempegowda International Airport (BLR)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kempegowda International Airport (BLR)`}</span>
+          <span key="Majestic (KSR) Railway Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Majestic (KSR) Railway Station`}</span>
+          <span key="Koramangala" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Koramangala`}</span>
+          <span key="Whitefield" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Whitefield`}</span>
+          <span key="Electronic City" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Electronic City`}</span>
+          <span key="Yeshwanthpur Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Yeshwanthpur Station`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>South Indian pilgrims doing their first Himalayan Char Dham are sometimes unprepared for Kedarnath cold — 5–10°C even in May. We brief every Bengaluru group specifically: thermal layers and a windproof jacket are not optional. Our vehicles carry oxygen cylinders, which gives first-time high-altitude travellers peace of mind.</p>
 

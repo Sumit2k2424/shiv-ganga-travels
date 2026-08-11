@@ -75,12 +75,12 @@ function Schema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function CharDhamYatra() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home
           <span>›</span>
@@ -157,7 +157,7 @@ export default function CharDhamYatra() {
 
 
         {/* Semantic intro — active voice, skimmable */}
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10, textTransform:'uppercase', letterSpacing:'0.06em' }}>Before you book — what you need to know</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:8 }}>
             {[
@@ -229,7 +229,7 @@ export default function CharDhamYatra() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12 }}>
             {charDhamPkgs.map(p => (
               <Link key={p.slug} href={`/packages/${p.slug}`}
-                style={{ background:'#fff', padding:'14px 16px', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8, transition:'box-shadow .2s' }}>
+                style={{ background:'#fff', padding:'14px 16px', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8, transition:'box-shadow .2s' }}>
                 <div>
                   <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{p.name}</div>
                   <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:3 }}>{p.duration.nights}N/{p.duration.days}D · {p.startCity}</div>
@@ -270,7 +270,7 @@ export default function CharDhamYatra() {
                 ['Day 10','Badrinath Darshan → Mana Village → Return','215 km · 6–7 hrs','3,133m','Brahma Kapal (Pind Daan), Mana Village (last Indian village), Vyas Gufa, Bhim Pul, Saraswati river source','Rudraprayag / Rishikesh'],
                 ['Day 11','Return → Haridwar','160 km · 5 hrs','249m','Devprayag confluence (Alaknanda + Bhagirathi = Ganga), Rishikesh Ram Jhula, Triveni Ghat','Home / Departure'],
               ].map(([day, route, dist, alt, stops, hotel], i) => (
-                <tr key={day} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
+                <tr key={day} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, whiteSpace:'nowrap' }}>{day}</td>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'#334155', fontSize:13 }}>{route}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:12.5, whiteSpace:'nowrap' }}>{dist}</td>
@@ -294,7 +294,7 @@ export default function CharDhamYatra() {
             ['Badrinath','Hotel Patliputa / Snow Crest or similar','Budget · Standard tier'],
             ['Rudraprayag','Shangrila Resort / Hotel Rudra or similar','Transit halt'],
           ].map(([dest, hotel, tier]) => (
-            <div key={dest} style={{ background:'#fff', borderRadius:8, padding:'10px 12px', border:'1px solid var(--border)' }}>
+            <div key={dest} style={{ background:'#fff', borderRadius:8, padding:'10px 12px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:12.5, color:'var(--navy)', marginBottom:2 }}>{dest}</div>
               <div style={{ fontSize:12, color:'#475569', marginBottom:3, lineHeight:1.4 }}>{hotel}</div>
               <div style={{ fontSize:11, color:'var(--text-muted)' }}>{tier}</div>
@@ -325,7 +325,7 @@ export default function CharDhamYatra() {
                 ['Oct 2026',   '2, 5, 8, 12, 15, 18, 22, 25, 28', 'Peak post-monsoon demand',                'Booking fast'],
                 ['Nov 2026',   '1, 3 (last batches)',              'Season closes Nov 10–13',                 'Final season'],
               ].map(([month, dates, seats, status], i) => (
-                <tr key={month} style={{ borderBottom:'1px solid var(--border)', background: i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 14px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{month}</td>
                   <td style={{ padding:'9px 14px', color:'#334155', fontSize:12.5 }}>{dates}</td>
                   <td style={{ padding:'9px 14px', fontWeight:600, color: status==='FILLING FAST'?'#D85A30':'#1D9E75', fontSize:12.5 }}>{seats}</td>
@@ -359,7 +359,7 @@ export default function CharDhamYatra() {
                 ['Double / Twin', 'Couples, pairs', '₹24,500', '₹49,000 per couple'],
                 ['Single occupancy', 'Solo with private room', '₹32,500', '₹32,500 (1 person)'],
               ].map(([type, suits, price, total], i) => (
-                <tr key={type} style={{ borderBottom:'1px solid var(--border)', background: i===0?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={type} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===0?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{type}{i===0&&<span style={{ marginLeft:6, fontSize:10, background:'rgba(29,158,117,0.15)', color:'#1D9E75', padding:'2px 7px', borderRadius:20, fontWeight:700 }}>Most popular</span>}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{suits}</td>
                   <td style={{ padding:'9px 12px', fontWeight:800, color:'#1D9E75', fontSize:15 }}>{price}</td>
@@ -382,7 +382,7 @@ export default function CharDhamYatra() {
             { tier:'Senior Special', range:'Rs.27,999-Rs.32,000', couple:'Rs.56,000-Rs.64,000', duration:'12N/13D', vehicle:'Innova Crysta', hotel:'Ground-floor rooms', best:'60+ pilgrims' },
             { tier:'Helicopter', range:'Rs.2,30,000', couple:'Rs.4,60,000', duration:'5N/6D', vehicle:'Helicopter from Dehradun', hotel:'Best available', best:'Premium, time-saving' },
           ].map(p => (
-            <div key={p.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={p.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:800, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{p.tier}</div>
               <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', lineHeight:1, marginBottom:2 }}>{p.range}</div>
               <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:6 }}>per person - {p.duration}</div>
@@ -412,7 +412,7 @@ export default function CharDhamYatra() {
                 ['Force Urbania 13-17 seater','13-17 persons','Rs.1.0L-1.4L','~Rs.8,000','Comfort groups'],
                 ['27-seater Bus','20-27 persons','Rs.1.6L-2.1L','~Rs.6,500','Society/temple groups'],
               ].map(([v,cap,fare,pp,best],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
                   <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
@@ -466,7 +466,7 @@ export default function CharDhamYatra() {
             { name:'Mana Village', type:'Included Free', detail:'India\'s last village, 3km past Badrinath — Vyas Gufa, Bhim Pul and the Saraswati river. We include it in every Badrinath day at no extra cost. Most operators quietly skip it; ask your driver and he will take you.' },
             { name:'Triyuginarayan Temple', type:'Sacred', detail:'Where Shiva and Parvati were married — the eternal flame from that wedding still burns. 12km detour from Sonprayag on the Kedarnath leg. Adds half a day and roughly ₹1,500 in vehicle cost. Worth it if weddings run in the family.' },
           ].map(item => (
-            <div key={item.name} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)' }}>
+            <div key={item.name} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:6 }}>
                 <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{item.name}</div>
                 <span style={{ fontSize:11, background:'rgba(11,123,139,0.1)', color:'var(--teal)', padding:'2px 8px', borderRadius:20, fontWeight:600 }}>{item.type}</span>
@@ -492,7 +492,7 @@ export default function CharDhamYatra() {
                 ['September','10-18C / 3-6C','Low-moderate','Clear post-monsoon','Best for peaceful darshan'],
                 ['October 1-15','6-15C / -2-4C','Low','Open until closing','Good — early Oct only'],
               ].map(([m,temp,crowd,roads,v],i)=>(
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{m}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{temp}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{crowd}</td>
@@ -516,7 +516,7 @@ export default function CharDhamYatra() {
             { dham:'Kedarnath', feel:'Raw & physically demanding', desc:'The 16km trek across elevation is the hardest physical challenge on the circuit. The boulder behind the temple from the 2013 flood is a tangible thing you can touch. Many pilgrims weep at the first sight of the temple after hours of walking. This dham asks the most of you — and gives the most back.' },
             { dham:'Badrinath', feel:'Grand & accessible', desc:'The only dham you can reach by car. But the scale of the valley — Neelkanth peak soaring above, the Alaknanda rushing past the temple steps — makes it the most visually dramatic of all four. Mana village, 3km beyond, is India\'s last inhabited village. Walking through it at dawn before the crowds arrive is something many of our regulars plan their entire trip around.' },
           ].map(d => (
-            <div key={d.dham} style={{ background:'#fff', borderRadius:12, padding:'18px', border:'1px solid var(--border)' }}>
+            <div key={d.dham} style={{ background:'#fff', borderRadius:12, padding:'18px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:800, fontSize:15, color:'var(--navy)', marginBottom:3 }}>{d.dham}</div>
               <div style={{ fontSize:11, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:8 }}>{d.feel}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{d.desc}</div>
@@ -532,7 +532,7 @@ export default function CharDhamYatra() {
             { name:'Mana Village, Badrinath', when:'Morning, before crowds', desc:'Three kilometres beyond Badrinath, Mana is India\'s last village before the Tibetan border. It has stone houses, a 900-year-old cave where the Mahabharata was dictated, a natural rock bridge over a roaring river, and a handful of women who sell locally woven shawls from their doorways. Walk here before 8 AM. By 10 AM, there are tour groups.' },
             { name:'Tea at a Dhaba on the Trek', when:'Any rest point, Kedarnath trek', desc:'On the Kedarnath trek, there are small tea stalls perched on ledges above the valley. Dal, rice, and chai served at 12,000 feet, with a view of the Mandakini valley below. These dhabas — run year after year by the same families — are one of the most human parts of the entire yatra. Sit down, eat slowly, talk to whoever is there.' },
           ].map(pl => (
-            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))', boxShadow:'0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{pl.name}</div>
               <div style={{ fontSize:11, color:'var(--gold-dark)', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.06em', marginBottom:8 }}>{pl.when}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
@@ -553,7 +553,7 @@ export default function CharDhamYatra() {
             { icon:'🛡️', point:'Uttarakhand Tourism Board registered operator' },
             { icon:'💊', point:'Oxygen cylinder + first aid on every vehicle' },
           ].map(w => (
-            <li key={w.point} style={{ display:'flex', gap:10, alignItems:'flex-start', padding:'12px 14px', background:'var(--bg)', borderRadius:10, border:'1px solid var(--border)' }}>
+            <li key={w.point} style={{ display:'flex', gap:10, alignItems:'flex-start', padding:'12px 14px', background:'var(--bg)', borderRadius:10, border:'1px solid hsl(var(--border))' }}>
               <span style={{ fontSize:20, flexShrink:0 }}>{w.icon}</span>
               <span style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.5 }}>{w.point}</span>
             </li>
@@ -582,7 +582,7 @@ export default function CharDhamYatra() {
               { label:'All Packages →',               href:'/packages' },
             ].map(l => (
               <Link key={l.href} href={l.href}
-                style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>
+                style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {l.label}
               </Link>
             ))}
@@ -590,7 +590,7 @@ export default function CharDhamYatra() {
         </div>
 
         {/* Regional-language versions */}
-        <div style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:14, padding:'20px 22px', marginBottom:24 }}>
+        <div style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px 22px', marginBottom:24 }}>
           <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:4 }}>
             Read This Guide in Your Language
           </h3>
@@ -600,7 +600,7 @@ export default function CharDhamYatra() {
           <div style={{ display:'flex', flexWrap:'wrap', gap:10 }}>
             {LANGUAGE_PAGES.map(l => (
               <Link key={l.slug} href={`/${l.slug}`} lang={l.code}
-                style={{ background:'var(--bg)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>
+                style={{ background:'var(--bg)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {l.native} · {l.label} →
               </Link>
             ))}
@@ -632,24 +632,24 @@ export default function CharDhamYatra() {
         </div>
       </article>
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Char Dham Yatra from Your City</div>
           <p style={{ fontSize:13, color:'#64748b', marginBottom:14, lineHeight:1.6 }}>City-specific routes, distances, train/flight options and pickup details for pilgrims travelling from across India.</p>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
             {[['Delhi','delhi'],['Noida','noida'],['Jaipur','jaipur'],['Lucknow','lucknow'],['Chandigarh','chandigarh'],['Dehradun','dehradun'],['Haridwar','haridwar'],['Rishikesh','rishikesh'],['Varanasi','varanasi'],['Patna','patna'],['Kolkata','kolkata'],['Indore','indore'],['Bhopal','bhopal'],['Nagpur','nagpur'],['Ahmedabad','ahmedabad'],['Surat','surat'],['Pune','pune'],['Mumbai','mumbai'],['Hyderabad','hyderabad'],['Bangalore','bangalore'],['Chennai','chennai']].map(([l,c])=>(
-              <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
+              <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ background:'var(--bg)', borderTop:'1px solid var(--border)', padding:'32px 20px' }}>
+      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

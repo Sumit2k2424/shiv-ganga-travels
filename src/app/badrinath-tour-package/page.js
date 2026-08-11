@@ -139,12 +139,12 @@ function Schema() {
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 12, marginTop: 40 };
 const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 22 };
 const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
-const card = { background: '#fff', borderRadius: 12, padding: 16, border: '1px solid var(--border)' };
-const thtd = { padding: '11px 12px', fontSize: 13.5, textAlign: 'left', borderBottom: '1px solid var(--border)', color: '#334155', lineHeight: 1.6 };
+const card = { background: '#fff', borderRadius: 12, padding: 16, border: '1px solid hsl(var(--border))' };
+const thtd = { padding: '11px 12px', fontSize: 13.5, textAlign: 'left', borderBottom: '1px solid hsl(var(--border))', color: '#334155', lineHeight: 1.6 };
 
 function Table({ head, rows }) {
   return (
-    <div style={{ overflowX: 'auto', margin: '8px 0 20px', border: '1px solid var(--border)', borderRadius: 12 }}>
+    <div style={{ overflowX: 'auto', margin: '8px 0 20px', border: '1px solid hsl(var(--border))', borderRadius: 12 }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 460 }}>
         <thead><tr style={{ background: 'var(--bg)' }}>{head.map((h) => <th key={h} style={{ ...thtd, fontWeight: 700, color: 'var(--navy)' }}>{h}</th>)}</tr></thead>
         <tbody>{rows.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} style={thtd}>{c}</td>)}</tr>)}</tbody>
@@ -322,11 +322,11 @@ export default function BadrinathTourPackage() {
           </div>
         ))}
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Plan the rest of your yatra</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Badrinath Yatra Guide', '/badrinath-yatra'], ['Haridwar → Badrinath Cab', '/cabs/haridwar-to-badrinath-cab'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath Temple', '/badrinath-temple'], ['Badrinath Hotels', '/badrinath-hotels'], ['Badrinath Weather', '/badrinath-weather'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

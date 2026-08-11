@@ -62,7 +62,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 const teal = { color:'var(--teal)', fontWeight:600 };
 
 const FACTS = [
@@ -119,7 +119,7 @@ export default function ChitaiGoluDevtaTemple() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
         <Link href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
@@ -141,7 +141,7 @@ export default function ChitaiGoluDevtaTemple() {
 
       <h2 style={h2}>Chitai Golu Devta Temple at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -196,7 +196,7 @@ export default function ChitaiGoluDevtaTemple() {
       <h2 style={h2}>Chitai vs Ghorakhal vs Champawat &mdash; Which Golu Temple?</h2>
       <p style={p}>Golu Devta has shrines across Kumaon and three that matter. Same deity, very different visits.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:560 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:560 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Temple','Where','What makes it different','Fits with'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -226,7 +226,7 @@ export default function ChitaiGoluDevtaTemple() {
       <h2 style={h2}>Distance &amp; Drive-Time Chart</h2>
       <p style={p}>Kilometres alone are misleading in Kumaon &mdash; 40 km of ridge road is not 40 km of highway. These are realistic driving times, not map estimates.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:420 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:420 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['From / To','Distance','Drive time'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -243,7 +243,7 @@ export default function ChitaiGoluDevtaTemple() {
       </div>
 
       <h2 style={h2}>Where It Is on the Map</h2>
-      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
         <iframe
           title="Chitai Golu Devta Temple location map — Almora, Uttarakhand"
           src="https://www.google.com/maps?q=29.6169,79.7015&hl=en&z=13&output=embed"
@@ -281,7 +281,7 @@ export default function ChitaiGoluDevtaTemple() {
       <h2 style={h2}>Fitting Chitai into a Kumaon Circuit</h2>
       <p style={p}>Almost nobody travels to Almora for Chitai alone, and they shouldn&rsquo;t. The temple is thirty minutes; Kumaon is a week. This is the circuit we run, and Chitai sits on Day 3 because arriving in the afternoon light with the crowd thinning is when the courtyard is at its best.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:520 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:520 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Day','Route','What happens'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -302,7 +302,7 @@ export default function ChitaiGoluDevtaTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Haridwar to Nainital Cab',h:'/cabs/haridwar-to-nainital-cab'},{l:'Haridwar to Mukteshwar Cab',h:'/cabs/haridwar-to-mukteshwar-cab'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

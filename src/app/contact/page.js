@@ -53,7 +53,7 @@ export default function ContactPage() {
               const inner = (
                 <div style={{
                   background:'#fff', padding:'22px 20px',
-                  borderRadius:14, border:'1px solid var(--border)',
+                  borderRadius:14, border:'1px solid hsl(var(--border))',
                   boxShadow:'var(--shadow)',
                   display:'flex', flexDirection:'column', gap:10,
                   cursor: c.href ? 'pointer' : 'default',
@@ -66,13 +66,13 @@ export default function ContactPage() {
                     fontSize:22,
                   }}>{c.icon}</div>
                   <div>
-                    <div style={{ fontSize:11, color:'var(--muted)', fontWeight:500, textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:4 }}>
+                    <div style={{ fontSize:11, color:'var(--text-muted)', fontWeight:500, textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:4 }}>
                       {c.label}
                     </div>
                     <div style={{ fontWeight:700, fontSize:14, color:c.color, lineHeight:1.3, marginBottom:3 }}>
                       {c.value}
                     </div>
-                    <div style={{ fontSize:11.5, color:'var(--muted)' }}>{c.sub}</div>
+                    <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{c.sub}</div>
                   </div>
                 </div>
               );
@@ -100,7 +100,7 @@ export default function ContactPage() {
             {/* LEFT: Enquiry form */}
             <div style={{
               background:'#fff', padding:'28px 26px', borderRadius:16,
-              border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+              border:'1px solid hsl(var(--border))', boxShadow:'var(--shadow)',
             }}>
               <div style={{ marginBottom:20 }}>
                 <span className="section-tag">Send enquiry</span>
@@ -163,7 +163,7 @@ export default function ContactPage() {
                   Send Enquiry →
                 </button>
 
-                <p style={{ fontSize:11.5, color:'var(--muted)', textAlign:'center', marginTop:4 }}>
+                <p style={{ fontSize:11.5, color:'var(--text-muted)', textAlign:'center', marginTop:4 }}>
                   🔒 Your details are safe with us. We reply within 2 hours during working hours. No spam.
                 </p>
               </form>
@@ -210,7 +210,7 @@ export default function ContactPage() {
               {/* Trust block */}
               <div style={{
                 background:'#fff', padding:'22px 20px',
-                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+                borderRadius:16, border:'1px solid hsl(var(--border))', boxShadow:'var(--shadow)',
               }}>
                 <h3 style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:14 }}>
                   Why book with us?
@@ -231,7 +231,7 @@ export default function ContactPage() {
               {/* The People Behind the Yatra — moved from About; named humans (E-E-A-T) */}
               <div style={{
                 background:'#fff', padding:'22px 20px',
-                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+                borderRadius:16, border:'1px solid hsl(var(--border))', boxShadow:'var(--shadow)',
               }}>
                 <h3 style={{ fontWeight:700, fontSize:14, color:'var(--text)', marginBottom:4 }}>The People Behind the Yatra</h3>
                 <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.5, margin:'0 0 16px' }}>
@@ -240,7 +240,7 @@ export default function ContactPage() {
 
                 {/* Dhanesh */}
                 <div itemScope itemType="https://schema.org/Person" itemID="https://www.shivgangatravels.com/#founder"
-                  style={{ borderTop:'1px solid var(--border)', paddingTop:16 }}>
+                  style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:16 }}>
                   <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
                     <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#FFD166', flexShrink:0 }}>DM</div>
                     <div style={{ minWidth:0 }}>
@@ -260,7 +260,7 @@ export default function ContactPage() {
 
                 {/* Sumit */}
                 <div itemScope itemType="https://schema.org/Person" itemID="https://www.shivgangatravels.com/about#sumit-mishra"
-                  style={{ borderTop:'1px solid var(--border)', paddingTop:16, marginTop:16 }}>
+                  style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:16, marginTop:16 }}>
                   <div style={{ display:'flex', gap:13, alignItems:'flex-start' }}>
                     <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#fff', flexShrink:0 }}>SM</div>
                     <div style={{ minWidth:0 }}>
@@ -288,7 +288,7 @@ export default function ContactPage() {
               {/* Grievance & Content — named point of contact (trust / E-E-A-T) */}
               <div style={{
                 background:'#fff', padding:'22px 20px',
-                borderRadius:16, border:'1px solid var(--border)', boxShadow:'var(--shadow)',
+                borderRadius:16, border:'1px solid hsl(var(--border))', boxShadow:'var(--shadow)',
               }}>
                 <div style={{ fontSize:11, color:'var(--text-muted)', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:12 }}>
                   Grievance &amp; Editorial
@@ -319,7 +319,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map */}
-              <div style={{ borderRadius:16, overflow:'hidden', border:'1px solid var(--border)', boxShadow:'var(--shadow)' }}>
+              <div style={{ borderRadius:16, overflow:'hidden', border:'1px solid hsl(var(--border))', boxShadow:'var(--shadow)' }}>
                 {/* Address header strip */}
                 <div style={{ background:'var(--navy)', padding:'14px 18px', display:'flex', alignItems:'center', gap:12 }}>
                   <span style={{ fontSize:22 }}>📍</span>
@@ -359,7 +359,7 @@ export default function ContactPage() {
 const inputStyle = {
   width:'100%',
   padding:'11px 14px',
-  border:'1.5px solid var(--border)',
+  border:'1.5px solid hsl(var(--border))',
   borderRadius:10,
   fontSize:13.5,
   background:'#fff',

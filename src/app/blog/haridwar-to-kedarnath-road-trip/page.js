@@ -66,7 +66,7 @@ export default function HaridwarToKedarnath() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -104,7 +104,7 @@ export default function HaridwarToKedarnath() {
               {/* Connector line */}
               <div style={{ display:'flex', flexDirection:'column', alignItems:'center', width:44, flexShrink:0 }}>
                 <div style={{ width:16, height:16, borderRadius:'50%', background:TYPE_COLOR[stop.type], border:'2px solid #fff', boxShadow:'0 0 0 2px ' + TYPE_COLOR[stop.type], zIndex:1 }}/>
-                {i < ROUTE.length - 1 && <div style={{ width:2, flex:1, background:'var(--border)', minHeight:20 }}/>}
+                {i < ROUTE.length - 1 && <div style={{ width:2, flex:1, background:'hsl(var(--border))', minHeight:20 }}/>}
               </div>
               {/* Content */}
               <div style={{ flex:1, paddingBottom:14, paddingLeft:8 }}>
@@ -145,7 +145,7 @@ export default function HaridwarToKedarnath() {
             { mode:'Pony/Horse', time:'3–4 hrs (ascending)', cost:'₹3,000–5,000 one way (negotiate at Gaurikund)', for:'65+ or knee problems', notes:'Hire at Gaurikund — registered ponywallas only. Return pony adds ₹3,000–5,000.' },
             { mode:'Helicopter', time:'7 minutes', cost:'₹7,000–9,000 one way via IRCTC', for:'Medical conditions, premium', notes:'Book at irctc.co.in — mandatory 2026. Phata/Sersi/Guptkashi helipads. Very popular — book 60+ days ahead.' },
           ].map(opt=>(
-            <div key={opt.mode} style={{ background:'var(--bg)', borderRadius:12, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={opt.mode} style={{ background:'var(--bg)', borderRadius:12, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:8 }}>{opt.mode}</div>
               {[['⏱️ Time',opt.time],['💰 Cost',opt.cost],['👤 Best for',opt.for]].map(([k,v])=>(
                 <div key={k} style={{ fontSize:13, color:'#475569', marginBottom:4, display:'flex', gap:6 }}>
@@ -170,11 +170,11 @@ export default function HaridwarToKedarnath() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Road Status 2026','/char-dham-road-status'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -61,7 +61,7 @@ export default function BudgetVsPremium() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -86,7 +86,7 @@ export default function BudgetVsPremium() {
             { tier:'Standard', price:'₹26,000–32,000', icon:'🏨', for:'Families of 4–6 · Mixed ages · Comfort seekers', highlight:true },
             { tier:'Premium', price:'₹36,000–50,000', icon:'⭐', for:'Couples · Seniors 65+ · NRIs · Health conditions', highlight:false },
           ].map(t => (
-            <div key={t.tier} style={{ borderRadius:12, padding:'16px', textAlign:'center', border:t.highlight?'2px solid var(--gold)':'1px solid var(--border)', background:t.highlight?'#FFFBF3':'var(--bg)' }}>
+            <div key={t.tier} style={{ borderRadius:12, padding:'16px', textAlign:'center', border:t.highlight?'2px solid var(--gold)':'1px solid hsl(var(--border))', background:t.highlight?'#FFFBF3':'var(--bg)' }}>
               <div style={{ fontSize:28, marginBottom:8 }}>{t.icon}</div>
               <div style={{ fontWeight:800, fontSize:16, color:'var(--navy)', marginBottom:4 }}>{t.tier}</div>
               <div style={{ fontWeight:800, fontSize:18, color:t.highlight?'#B45309':'var(--navy)', fontFamily:'var(--font-display)', marginBottom:8 }}>{t.price}</div>
@@ -106,14 +106,14 @@ export default function BudgetVsPremium() {
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:28 }}>
           {COMPARE.map((row,i) => (
-            <div key={row.factor} style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+            <div key={row.factor} style={{ borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
               <div style={{ background:'var(--navy-light)', padding:'10px 16px', fontWeight:700, fontSize:13.5, color:'var(--navy)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
                 <span>{row.factor}</span>
                 <span style={{ fontSize:11.5, color:'var(--text-muted)', fontWeight:400 }}>💡 {row.note}</span>
               </div>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap:0 }}>
                 {[['Budget',row.budget,'#fff'],['Standard',row.standard,'#FFFBF3'],['Premium',row.premium,'#F0FDF4']].map(([tier,val,bg])=>(
-                  <div key={tier} style={{ padding:'10px 14px', background:bg, borderRight:'1px solid var(--border)' }}>
+                  <div key={tier} style={{ padding:'10px 14px', background:bg, borderRight:'1px solid hsl(var(--border))' }}>
                     <div style={{ fontSize:10.5, fontWeight:700, color:'var(--text-muted)', marginBottom:4, textTransform:'uppercase', letterSpacing:'0.05em' }}>{tier}</div>
                     <div style={{ fontSize:13, color:'#334155', lineHeight:1.6 }}>{val}</div>
                   </div>
@@ -150,11 +150,11 @@ export default function BudgetVsPremium() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Breakdown','/blog/char-dham-yatra-cost'],['Package vs Self-Planned','/blog/char-dham-yatra-package-vs-self-planned'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham vs Do Dham','/blog/char-dham-vs-do-dham']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

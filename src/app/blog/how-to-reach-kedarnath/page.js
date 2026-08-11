@@ -60,7 +60,7 @@ export default function HowToReachKedarnath() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -103,7 +103,7 @@ export default function HowToReachKedarnath() {
             { num:'3', stage:'Gaurikund → Kedarnath', options:'Trek (16km, 5–7 hrs), pony, or helicopter', note:'No vehicles beyond Gaurikund' },
             { num:'4', stage:'Kedarnath Darshan', options:'General queue (free), VIP puja (₹1,500–3,100)', note:'Temple open 6 AM–9 PM' },
           ].map(s=>(
-            <div key={s.num} style={{ background:'var(--bg)', borderRadius:12, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={s.num} style={{ background:'var(--bg)', borderRadius:12, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ display:'flex', gap:10, alignItems:'center', marginBottom:8 }}>
                 <div style={{ width:32, height:32, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', color:'#FFD166', fontWeight:800, fontSize:16, flexShrink:0 }}>{s.num}</div>
                 <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)' }}>{s.stage}</div>
@@ -118,7 +118,7 @@ export default function HowToReachKedarnath() {
           City-by-City Route Guide
         </h2>
         {CITY_ROUTES.map(city => (
-          <details key={city.city} style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:10 }}>
+          <details key={city.city} style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:10 }}>
             <summary style={{ padding:'14px 18px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:15, color:'var(--navy)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
               <span>Kedarnath from {city.city}</span>
               <div style={{ display:'flex', gap:8, alignItems:'center' }}>
@@ -126,7 +126,7 @@ export default function HowToReachKedarnath() {
                 <span style={{ fontSize:11.5, fontWeight:700, color:'var(--teal)', background:'var(--navy-light)', padding:'3px 10px', borderRadius:100, flexShrink:0 }}>{city.bestRoute}</span>
               </div>
             </summary>
-            <div style={{ padding:'0 18px 16px', borderTop:'1px solid var(--border)', paddingTop:14 }}>
+            <div style={{ padding:'0 18px 16px', borderTop:'1px solid hsl(var(--border))', paddingTop:14 }}>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
                 {[city.step1, city.step2, city.step3, city.step4].filter(Boolean).map((step, i)=>(
                   <div key={i} style={{ display:'flex', gap:10, fontSize:14, color:'#334155' }}>
@@ -162,7 +162,7 @@ export default function HowToReachKedarnath() {
                 ['Helicopter (Phata)','Direct fly','7 minutes','₹7,000–9,000 one way (IRCTC)','Medical conditions, premium, time-saving'],
                 ['Helicopter (Sersi)','Direct fly','12 minutes','₹7,000–9,000 one way (IRCTC)','Alternative helipad to Phata'],
               ].map(([m,d,t,c,b],i)=>(
-                <tr key={m} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={m} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{m}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{d}</td>
                   <td style={{ padding:'9px 12px', color:'#475569', fontSize:13 }}>{t}</td>
@@ -176,7 +176,7 @@ export default function HowToReachKedarnath() {
 
         <h2 id="distance-chart" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>Kedarnath Distance Chart — From Major Cities &amp; Key Points</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Two numbers do most of the planning work: <strong>Haridwar to Sonprayag is 235 km</strong> (8–9 hours — this is where your vehicle stops), and Gaurikund to the temple is 16 km on foot. Everything else is just getting to Haridwar. Road distances below are along the actual driving route, not straight-line:</p>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflow:'hidden', marginBottom:24 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:24 }}>
           {[
             { from:'Haridwar → Sonprayag', dist:'235 km', time:'8–9 hrs', note:'Vehicles stop here; shuttle to Gaurikund' },
             { from:'Sonprayag → Gaurikund', dist:'5 km', time:'20 min', note:'Shuttle jeep only, ₹50 fixed' },
@@ -188,7 +188,7 @@ export default function HowToReachKedarnath() {
             { from:'Ahmedabad → Kedarnath', dist:'~1,340 km', time:'2–2.5 days', note:'Train to Haridwar, then road' },
             { from:'Kedarnath → Haridwar (return)', dist:'251 km', time:'1.5 days', note:'Trek down + drive; most do it over two days' },
           ].map((r, i) => (
-            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.5fr 90px 100px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid var(--border)', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
+            <div key={r.from} style={{ display:'grid', gridTemplateColumns:'1.5fr 90px 100px auto', gap:8, padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)', alignItems:'center', fontSize:13 }}>
               <span style={{ fontWeight:600, color:'var(--navy)' }}>{r.from}</span>
               <span style={{ color:'var(--teal)', fontWeight:700 }}>{r.dist}</span>
               <span style={{ color:'#475569' }}>{r.time}</span>
@@ -221,11 +221,11 @@ export default function HowToReachKedarnath() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath-road-trip'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

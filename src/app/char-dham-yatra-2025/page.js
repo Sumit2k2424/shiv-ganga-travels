@@ -63,7 +63,7 @@ export default function CharDhamGuide2025() {
       </section>
 
       {/* Breadcrumb */}
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home
           <span>›</span>
@@ -84,7 +84,7 @@ export default function CharDhamGuide2025() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10 }}>
             {charDhamPkgs.map(p => (
               <Link key={p.slug} href={`/packages/${p.slug}`}
-                style={{ background:'#fff', padding:'12px 16px', borderRadius:10, border:'1px solid var(--border)', textDecoration:'none', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8 }}>
+                style={{ background:'#fff', padding:'12px 16px', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8 }}>
                 <div>
                   <div style={{ fontSize:13, fontWeight:600, color:'var(--text)' }}>{p.name}</div>
                   <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{p.duration.nights}N/{p.duration.days}D</div>
@@ -102,7 +102,7 @@ export default function CharDhamGuide2025() {
           { name:'Kedarnath', alt:'3,583m', deity:'Lord Shiva', desc:'One of the 12 Jyotirlingas and the most challenging of the four dhams. The ancient stone temple survives Himalayan winters every year. A 16 km trek from Gaurikund leads to the shrine — pony, palki, and helicopter alternatives are available.' },
           { name:'Badrinath', alt:'3,133m', deity:'Lord Vishnu', desc:'The final and most accessible dham — motor road leads right to the temple. The divine idol of Badrivishal (Lord Vishnu in meditative posture) is believed to be swayambhu (self-manifested). Mana Village, 3 km ahead, is the last Indian village before the Tibet border.' },
         ].map(d => (
-          <div key={d.name} style={{ marginBottom:20, padding:'16px 20px', background:'#fff', borderRadius:12, border:'1px solid var(--border)' }}>
+          <div key={d.name} style={{ marginBottom:20, padding:'16px 20px', background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))' }}>
             <h3 style={{ ...h3, margin:0, marginBottom:6, display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 }}>
               {d.name} — {d.deity}
               <span style={{ fontSize:12, fontWeight:600, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 10px', borderRadius:100 }}>Altitude: {d.alt}</span>
@@ -133,7 +133,7 @@ export default function CharDhamGuide2025() {
 
         <h2 style={h2}>Char Dham Yatra Route Map</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The traditional route follows a clockwise direction:</p>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:13.5, lineHeight:2, marginBottom:20 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', fontSize:13.5, lineHeight:2, marginBottom:20 }}>
           <strong>Haridwar</strong> → Barkot → <strong>Yamunotri</strong> → Uttarkashi → <strong>Gangotri</strong> → Guptkashi → Gaurikund → <strong>Kedarnath</strong> → Rudraprayag → Joshimath → <strong>Badrinath</strong> → Rishikesh → <strong>Haridwar</strong>
         </div>
 

@@ -116,7 +116,7 @@ export default function DehradunAirportToHaridwarTaxi() {
         </div>
       </section>
 
-      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/taxi-service-in-haridwar" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Taxi Service in Haridwar</Link><span>›</span>
@@ -147,7 +147,7 @@ export default function DehradunAirportToHaridwarTaxi() {
             </tr></thead>
             <tbody>
               {transferRows('airport-haridwar').map((r,i)=>(
-                <tr key={r.id} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={r.id} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'10px', fontWeight:600, color:'var(--navy)' }}>{r.name}</td>
                   <td style={{ padding:'10px', color:'var(--text-muted)' }}>{r.seats}</td>
                   <td style={{ padding:'10px', fontWeight:700, color:'var(--teal)' }}>{inr(r.fare)}</td>
@@ -184,7 +184,7 @@ export default function DehradunAirportToHaridwarTaxi() {
                 ['Ola / Uber','₹900–1,400','Off-peak, you are flexible and travelling light','Driver availability at Jolly Grant is thin and cancellations on a 35 km outbound fare are common'],
                 ['Pre-booked transfer', inr(R.fares.dzire) + '–' + inr(R.fares.crysta), 'Late arrival, family, luggage, elderly parents, yatra start','You need a car in the next ten minutes with no notice — book us the day before'],
               ].map(([a,b,c,d])=>(
-                <tr key={a} style={{ borderBottom:'1px solid var(--border)' }}>
+                <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600, color:'var(--navy)' }}>{a}</td>
                   <td style={{ padding:'9px 10px', color:'var(--teal)', fontWeight:700, whiteSpace:'nowrap' }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)', fontSize:13 }}>{c}</td>
@@ -211,7 +211,7 @@ export default function DehradunAirportToHaridwarTaxi() {
             ['The drive','50–70 minutes on NH-7 through Doiwala and Raiwala. Tea stop if you want one; nobody is counting minutes.'],
             ['Drop','Your hotel, ashram, Shantikunj or our office on Saptrishi Road. Pay the driver at the end — cash, UPI or card.'],
           ].map(([step, detail], i)=>(
-            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid var(--border)' }}>
+            <div key={step} style={{ display:'flex', gap:14, padding:'13px 0', borderBottom:'1px solid hsl(var(--border))' }}>
               <div style={{ background:'var(--navy)', color:'#fff', width:26, height:26, borderRadius:100, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12.5, fontWeight:700, flexShrink:0 }}>{i+1}</div>
               <div>
                 <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:3 }}>{step}</div>
@@ -251,7 +251,7 @@ export default function DehradunAirportToHaridwarTaxi() {
             ['Haridwar Local Taxi','Day hire for temples and ghats','/taxi-service-in-haridwar'],
             ['Har Ki Pauri','Aarti timings and what to expect','/har-ki-pauri-guide'],
           ].map(([t,d,href])=>(
-            <Link key={href} href={href} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, padding:'14px 16px', textDecoration:'none', display:'block' }}>
+            <Link key={href} href={href} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px', textDecoration:'none', display:'block' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:5 }}>{t}</div>
               <div style={{ fontSize:13, color:'var(--text-muted)', lineHeight:1.6 }}>{d}</div>
             </Link>
@@ -261,14 +261,14 @@ export default function DehradunAirportToHaridwarTaxi() {
         <H2>Frequently Asked Questions</H2>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
           {FAQS.map(f=>(
-            <details key={f.q} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:11, overflow:'hidden' }}>
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, overflow:'hidden' }}>
               <summary style={{ padding:'14px 17px', cursor:'pointer', listStyle:'none', fontWeight:700, fontSize:14.5, color:'var(--navy)' }}>{f.q}</summary>
               <div style={{ padding:'0 17px 15px', fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>{f.a}</div>
             </details>
           ))}
         </div>
 
-        <div style={{ background:'var(--bg)', border:'1px solid var(--border)', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
+        <div style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'16px 18px', marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:9 }}>Sources</div>
           <ul style={{ paddingLeft:18, margin:0 }}>
             {[
@@ -304,7 +304,7 @@ export default function DehradunAirportToHaridwarTaxi() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
@@ -315,7 +315,7 @@ export default function DehradunAirportToHaridwarTaxi() {
               ['Char Dham from Dehradun','/char-dham-yatra-from-dehradun'],
               ['Char Dham Helicopter','/char-dham-helicopter'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

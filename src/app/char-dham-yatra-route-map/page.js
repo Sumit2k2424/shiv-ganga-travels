@@ -116,7 +116,7 @@ export default function RouteMap() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -170,8 +170,8 @@ export default function RouteMap() {
               <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
                 <div style={{
                   width:36, height:36, borderRadius:'50%', flexShrink:0,
-                  background: stop.type === 'dham' ? stop.color : stop.type === 'base' ? '#0F2B5B' : 'var(--border)',
-                  border: stop.type === 'dham' ? `3px solid ${stop.color}` : '2px solid var(--border)',
+                  background: stop.type === 'dham' ? stop.color : stop.type === 'base' ? '#0F2B5B' : 'hsl(var(--border))',
+                  border: stop.type === 'dham' ? `3px solid ${stop.color}` : '2px solid hsl(var(--border))',
                   display:'flex', alignItems:'center', justifyContent:'center',
                   color:'#fff', fontSize:stop.type === 'dham' ? 16 : 13, fontWeight:700,
                   zIndex:1,
@@ -179,7 +179,7 @@ export default function RouteMap() {
                   {stop.type === 'dham' ? '🙏' : stop.type === 'base' ? '●' : '○'}
                 </div>
                 {idx < stops.length-1 && (
-                  <div style={{ width:2, flex:1, minHeight:40, background: stop.type === 'dham' ? '#0F2B5B' : 'var(--border)', marginTop:2 }}/>
+                  <div style={{ width:2, flex:1, minHeight:40, background: stop.type === 'dham' ? '#0F2B5B' : 'hsl(var(--border))', marginTop:2 }}/>
                 )}
               </div>
 
@@ -189,7 +189,7 @@ export default function RouteMap() {
                 padding:'14px 18px',
                 background: stop.type === 'dham' ? 'var(--navy-light)' : '#fff',
                 borderRadius:12,
-                border: stop.type === 'dham' ? '1.5px solid rgba(15,43,91,0.15)' : '1px solid var(--border)',
+                border: stop.type === 'dham' ? '1.5px solid rgba(15,43,91,0.15)' : '1px solid hsl(var(--border))',
               }}>
                 <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:6, marginBottom:6 }}>
                   <div>
@@ -201,13 +201,13 @@ export default function RouteMap() {
                     )}
                   </div>
                   <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
-                    <span style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
+                    <span style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
                       ⬆️ {stop.alt}
                     </span>
-                    <span style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
+                    <span style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
                       📏 {stop.dist}
                     </span>
-                    <span style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
+                    <span style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--text-muted)', fontSize:11.5, fontWeight:600, padding:'2px 8px', borderRadius:6 }}>
                       ⏱ {stop.time}
                     </span>
                   </div>
@@ -224,7 +224,7 @@ export default function RouteMap() {
 
         {/* Distance table */}
         <h2 style={h2}>Distance Reference Table</h2>
-        <div style={{ background:'#fff', borderRadius:12, border:'1px solid var(--border)', overflowX:'auto', marginBottom:28 }}>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>
               <tr style={{ background:'var(--navy-light)' }}>
@@ -248,7 +248,7 @@ export default function RouteMap() {
                 ['Badrinath → Haridwar (return)', '300 km', '8–9 hrs'],
                 ['Total Circuit', '~860 km + 22km trek', '9–12 days'],
               ].map(([seg, dist, time], i) => (
-                <tr key={i} style={{ borderTop:'1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={i} style={{ borderTop:'1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding:'10px 16px', color:'var(--text)' }}>{seg}</td>
                   <td style={{ padding:'10px 16px', textAlign:'right', fontWeight:600, color:'var(--navy)' }}>{dist}</td>
                   <td style={{ padding:'10px 16px', textAlign:'right', color:'var(--text-muted)' }}>{time}</td>
@@ -273,7 +273,7 @@ export default function RouteMap() {
             {label:'Cost Calculator', href:'/char-dham-yatra-cost-calculator'},
             {label:'Packing List', href:'/blog/char-dham-yatra-packing-list'},
           ].map(l=>(
-            <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.label}</Link>
+            <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
           ))}
         </div>
       </div>

@@ -106,7 +106,7 @@ export default function WinterCharDhamYatra() {
 
         <H2>The Four Seats</H2>
         {seatList().map(s => (
-          <div key={s.slug} style={{ background:'#fff', border:'1px solid var(--border)', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
+          <div key={s.slug} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'17px 19px', marginBottom:14 }}>
             <div style={{ display:'flex', justifyContent:'space-between', gap:12, flexWrap:'wrap', marginBottom:9 }}>
               <Link href={`/${s.slug}`} style={{ fontWeight:700, fontSize:16, color:'var(--navy)', textDecoration:'none' }}>
                 {s.name} →

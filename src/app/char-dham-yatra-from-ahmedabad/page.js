@@ -88,7 +88,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -123,7 +123,7 @@ export default function Page() {
                 ['Yoga Express (19031)','Ahmedabad','04:30 PM','Haridwar','08:00 AM (+1)','15h 30m','Best direct option'],
                 ['Ahmedabad–Dehradun Express (19269)','Ahmedabad','11:50 PM','Haridwar','05:55 PM (+1)','~18h','Good sleeper option'],
               ].map(([train,from_,dep,arr,dur,cost,tip],i)=>(
-                <tr key={train} style={{ borderBottom:'1px solid var(--border)', background:i%2===0?'#fff':'var(--bg)' }}>
+                <tr key={train} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{train}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{from_}</td>
                   <td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{dep}</td>
@@ -141,7 +141,7 @@ export default function Page() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Ahmedabad (AMD) to Dehradun — no direct service. Fly AMD to Delhi (1h 10m, ₹2,500–4,500) and connect by train or taxi. Or take Yoga Express direct — overnight train is comfortable and many Gujarat pilgrims prefer it.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🚗 By Road from Ahmedabad</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Gujarat pilgrims are among the most organised Char Dham yatris — many communities book entire group batches of 20–40 people through temple trusts. If you are travelling individually, the Yoga Express is pleasant and direct.</div>
         </div>
@@ -154,7 +154,7 @@ export default function Page() {
         <h2 style={h2}>What's Included — Ahmedabad Char Dham Package</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:8, marginBottom:24 }}>
           {['✅ AC vehicle (Innova / Tempo Traveller)','✅ Station or airport pickup in Ahmedabad or Haridwar','✅ Hotel accommodation all 9 nights (twin sharing)','✅ Breakfast + dinner every day','✅ VIP darshan — no queue at all 4 dhams','✅ Experienced Garhwali guide throughout','✅ Biometric registration handled — completely free','✅ All tolls, parking, driver allowance included','✅ Oxygen cylinder + first aid kit on vehicle','✅ 24hr WhatsApp support during the entire yatra'].map(item=>(
-            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>
+            <div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>
           ))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
@@ -164,9 +164,9 @@ export default function Page() {
         <h2 style={h2}>Our Pickup Points in Ahmedabad</h2>
         <p style={p}>We pick up from these Ahmedabad locations. If you are at a different address, WhatsApp us — we accommodate almost all requests.</p>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:28 }}>
-          <span key='Ahmedabad Railway Station' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Ahmedabad Railway Station</span>
-          <span key='Sardar Vallabhbhai Patel International Airport' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Sardar Vallabhbhai Patel International Airport</span>
-          <span key='Maninagar Station' style={{ background:'#fff',border:'1px solid var(--border)',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Maninagar Station</span>
+          <span key='Ahmedabad Railway Station' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Ahmedabad Railway Station</span>
+          <span key='Sardar Vallabhbhai Patel International Airport' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Sardar Vallabhbhai Patel International Airport</span>
+          <span key='Maninagar Station' style={{ background:'#fff',border:'1px solid hsl(var(--border))',color:'var(--navy)',padding:'7px 14px',borderRadius:8,fontSize:12.5,fontWeight:600 }}>📍 Maninagar Station</span>
         </div>
 
         <h2 style={h2}>2026 Season — All 4 Dhams Are Open</h2>
@@ -191,11 +191,11 @@ export default function Page() {
           </div>
         </div>
 
-        <div style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:32 }}>
+        <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

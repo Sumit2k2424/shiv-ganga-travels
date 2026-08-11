@@ -127,7 +127,7 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           Home<span>›</span>
           Char Dham Yatra<span>›</span>
@@ -180,7 +180,7 @@ export default function Page() {
             },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
-              style={{ background: '#fff', borderRadius: 14, padding: '20px', border: '1px solid var(--border)', textDecoration: 'none' }}>
+              style={{ background: '#fff', borderRadius: 14, padding: '20px', border: '1px solid hsl(var(--border))', textDecoration: 'none' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                 <span style={{ fontWeight: 700, fontSize: 16, color: 'var(--navy)' }}>{pkg.type}</span>
                 <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20 }}>{pkg.badge}</span>
@@ -203,7 +203,7 @@ export default function Page() {
             ['Bangalore → Dehradun', '2.5 hrs (via Delhi) · ₹5,000+'],
             ['Airport → Haridwar', '24 km · 40 min cab'],
           ].map(([route, detail]) => (
-            <div key={route} style={{ background: 'var(--bg)', borderRadius: 8, padding: '10px 12px', border: '1px solid var(--border)' }}>
+            <div key={route} style={{ background: 'var(--bg)', borderRadius: 8, padding: '10px 12px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 600, fontSize: 12.5, color: 'var(--navy)', marginBottom: 2 }}>{route}</div>
               <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{detail}</div>
             </div>
@@ -224,7 +224,7 @@ export default function Page() {
             { name: 'Kedarnath Yatra', duration: '3N/4D', price: '₹6,999', badge: 'Single Dham', href: '/kedarnath-yatra' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
-              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid var(--border)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
+              style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{pkg.duration}</div>
@@ -249,7 +249,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -259,7 +259,7 @@ export default function Page() {
               ['Route Map 2026', '/char-dham-yatra-route-map'],
               ['Cost Calculator', '/char-dham-yatra-cost-calculator'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

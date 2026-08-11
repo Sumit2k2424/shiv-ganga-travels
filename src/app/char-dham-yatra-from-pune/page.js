@@ -79,7 +79,7 @@ export default function CharDhamFromPune() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromPune() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Pune–Dehradun Express (19029)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Pune Jn`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`13:00`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~30h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Stops at Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Most convenient direct option`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Pune–Mumbai to Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Pune`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Various`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~20h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Mussoorie Express`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, fly instead`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Pune–Dehradun Express (19029)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Pune Jn`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`13:00`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~30h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Stops at Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Most convenient direct option`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Pune–Mumbai to Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Pune`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Various`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~20h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Mussoorie Express`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, fly instead`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromPune() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Pune (PNQ) to Delhi (DEL) — 1h 30m, IndiGo/Air India from ₹2,200 early booking. Delhi to Haridwar: Mussoorie Express overnight (10h, ₹250) or cab (5h, ₹600–800 shared). Total 8–10 hours.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Pune</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Pune to Haridwar is 1,360km — approximately two days via NH48 and NH334. Some Pune families drive in convoy through Nashik, Surat, Baroda, Delhi, Haridwar — treating the road journey as a mini-pilgrimage.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromPune() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Pune:</strong> ₹24,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromPune() {
 
         <h2 style={{...h2}}>Pickup Points in Pune</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Pune Junction Railway Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Pune Junction Railway Station`}</span>
-          <span key="Pune Airport (PNQ)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Pune Airport (PNQ)`}</span>
-          <span key="Shivaji Nagar" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Shivaji Nagar`}</span>
-          <span key="Wakad" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Wakad`}</span>
-          <span key="Hinjewadi" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Hinjewadi`}</span>
-          <span key="Kothrud" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kothrud`}</span>
+<span key="Pune Junction Railway Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Pune Junction Railway Station`}</span>
+          <span key="Pune Airport (PNQ)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Pune Airport (PNQ)`}</span>
+          <span key="Shivaji Nagar" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Shivaji Nagar`}</span>
+          <span key="Wakad" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Wakad`}</span>
+          <span key="Hinjewadi" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Hinjewadi`}</span>
+          <span key="Kothrud" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Kothrud`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>Pune pilgrims often form the backbone of our mixed-city batches with Mumbai. If you are 4–6 people from Pune, we can typically pair you with a Mumbai group to fill an Innova Crysta — reducing per-person vehicle cost by ₹1,500–2,000. Tell us your group size when you WhatsApp.</p>
 

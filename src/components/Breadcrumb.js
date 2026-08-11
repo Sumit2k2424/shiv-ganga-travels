@@ -29,7 +29,7 @@ export default function Breadcrumb({ items = [] }) {
         aria-label="Breadcrumb"
         style={{
           background: 'var(--bg)',
-          borderBottom: '1px solid var(--border)',
+          borderBottom: '1px solid hsl(var(--border))',
           padding: '9px 20px',
         }}
       >

@@ -79,7 +79,7 @@ export default function CharDhamFromHyderabad() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -113,8 +113,8 @@ export default function CharDhamFromHyderabad() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Falaknuma Express (12701)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Hyderabad Kacheguda`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`17:20`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~24h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, 34h total`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Golconda Express (11303)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Hyderabad`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`11:30`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Budget 2-step`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Falaknuma Express (12701)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Hyderabad Kacheguda`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`17:20`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi HNizamuddin`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~24h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`2-step, 34h total`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Golconda Express (11303)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Hyderabad`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`11:30`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Delhi`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Then Haridwar train`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Budget 2-step`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -124,7 +124,7 @@ export default function CharDhamFromHyderabad() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Hyderabad (HYD) to Dehradun (DED) — IndiGo direct, ~2h 15m, from ₹2,800. Alternatively fly to Delhi (1h 45m) and take the Mussoorie Express overnight to Haridwar (10h). Both arrive refreshed.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Hyderabad</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Hyderabad to Haridwar is 1,800km — three days of driving. Only for those who want the NH journey as part of the pilgrimage experience.</div>
         </div>
@@ -149,7 +149,7 @@ export default function CharDhamFromHyderabad() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Hyderabad:</strong> ₹25,999/person · 9N/10D · All-inclusive · Zero commission
@@ -157,12 +157,12 @@ export default function CharDhamFromHyderabad() {
 
         <h2 style={{...h2}}>Pickup Points in Hyderabad</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Rajiv Gandhi International Airport (HYD)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Rajiv Gandhi International Airport (HYD)`}</span>
-          <span key="Secunderabad Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Secunderabad Station`}</span>
-          <span key="Hyderabad Station (Nampally)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Hyderabad Station (Nampally)`}</span>
-          <span key="Banjara Hills" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Banjara Hills`}</span>
-          <span key="Jubilee Hills" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Jubilee Hills`}</span>
-          <span key="Madhapur/HITEC City" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Madhapur/HITEC City`}</span>
+<span key="Rajiv Gandhi International Airport (HYD)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Rajiv Gandhi International Airport (HYD)`}</span>
+          <span key="Secunderabad Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Secunderabad Station`}</span>
+          <span key="Hyderabad Station (Nampally)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Hyderabad Station (Nampally)`}</span>
+          <span key="Banjara Hills" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Banjara Hills`}</span>
+          <span key="Jubilee Hills" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Jubilee Hills`}</span>
+          <span key="Madhapur/HITEC City" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Madhapur/HITEC City`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>Telugu-speaking pilgrims: our office has basic Telugu communication capability for pre-trip coordination. Do not hesitate to WhatsApp in Telugu for logistical questions. We also brief every South Indian first-timer about altitude and cold weather preparation at Kedarnath.</p>
 

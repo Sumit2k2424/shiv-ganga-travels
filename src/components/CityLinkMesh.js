@@ -19,7 +19,7 @@ const LABEL = {
 };
 
 const chip = {
-  background:'#fff', border:'1px solid var(--border)', color:'var(--navy)',
+  background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)',
   padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none',
 };
 const heading = { fontWeight:700, fontSize:13.5, color:'var(--navy)', margin:'0 0 10px' };
@@ -32,7 +32,7 @@ export default function CityLinkMesh({ current = '' }) {
   const siblings = [...others.slice(start), ...others.slice(0, start)].slice(0, 8);
 
   return (
-    <nav aria-label="Related Char Dham pages" style={{ borderTop:'1px solid var(--border)', paddingTop:24, marginTop:36 }}>
+    <nav aria-label="Related Char Dham pages" style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:36 }}>
       <p style={heading}>Char Dham Yatra from other cities</p>
       <div style={row}>
         {siblings.map(c => (

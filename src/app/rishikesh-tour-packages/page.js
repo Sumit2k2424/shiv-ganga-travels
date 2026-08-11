@@ -96,7 +96,7 @@ export default function RishikeshTourPackages() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           Home<span>›</span>
           <span>Rishikesh Tour Packages 2026</span>
@@ -164,7 +164,7 @@ export default function RishikeshTourPackages() {
               href: '/contact',
             },
           ].map(pkg => (
-            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid hsl(var(--border))', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{pkg.duration}</div>
@@ -199,7 +199,7 @@ export default function RishikeshTourPackages() {
             { place: 'White Water Rafting', type: 'Adventure', desc: 'Rishikesh is the rafting capital of India. Three main stretches: Shivpuri to Rishikesh (16km, Grade 3–4, ₹600–800/person), Marine Drive to Rishikesh (24km, Grade 3–4, ₹800–1,000), and Kaudiyala to Rishikesh (36km, Grade 4–5, ₹1,200–1,500). Best season: September–June. Closed during July–August monsoon.' },
             { place: 'Parmarth Niketan Ashram', type: 'Ashram', desc: 'The largest ashram in Rishikesh with over 1,000 rooms. Famous for its evening Ganga Aarti on the ashram\'s private ghat. Yoga and meditation classes daily. Overnight ashram stays available from ₹800/night. Popular with international visitors and spiritual seekers.' },
           ].map(item => (
-            <div key={item.place} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={item.place} style={{ background: '#fff', borderRadius: 12, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>{item.place}</div>
                 <span style={{ fontSize: 10.5, background: 'rgba(11,123,139,0.1)', color: 'var(--teal)', padding: '2px 8px', borderRadius: 20, fontWeight: 600, whiteSpace: 'nowrap' }}>{item.type}</span>
@@ -228,7 +228,7 @@ export default function RishikeshTourPackages() {
                 ['Mumbai', 'Flight to Dehradun + road', 'Fly IndiGo/Air India to DED', '40 min + 1 hr', '₹7,999'],
                 ['Jaipur', '570 km', 'Via Delhi → Haridwar', '9–10 hrs', '₹7,999'],
               ].map(([city, dist, route, time, price], i) => (
-                <tr key={city} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={city} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: 'var(--navy)' }}>{city}</td>
                   <td style={{ padding: '9px 12px', color: '#475569' }}>{dist}</td>
                   <td style={{ padding: '9px 12px', color: '#475569', fontSize: 12 }}>{route}</td>
@@ -260,7 +260,7 @@ export default function RishikeshTourPackages() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -272,7 +272,7 @@ export default function RishikeshTourPackages() {
               ['How to Reach Haridwar', '/how-to-reach-haridwar'],
               ['Cost Calculator', '/char-dham-yatra-cost-calculator'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

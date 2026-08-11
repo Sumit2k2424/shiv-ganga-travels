@@ -63,7 +63,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 const teal = { color:'var(--teal)', fontWeight:600 };
 
 const FACTS = [
@@ -114,7 +114,7 @@ export default function AdiKailashYatra() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
         <Link href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
@@ -135,7 +135,7 @@ export default function AdiKailashYatra() {
 
       <h2 style={h2}>Adi Kailash at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -164,7 +164,7 @@ export default function AdiKailashYatra() {
       <h2 style={h2}>How to Reach Adi Kailash from Haridwar</h2>
       <p style={p}>Every published route guide for this yatra benchmarks distances from Delhi. Since we're a Haridwar-based operator, here's the leg that actually matters if that's where your trip starts.</p>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:560 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:560 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Leg','Distance','Time','Notes'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -186,7 +186,7 @@ export default function AdiKailashYatra() {
       <h2 style={h2}>Cost of the Adi Kailash Yatra — Reconciling the Numbers</h2>
       <p style={p}>Search around and you'll find quoted prices anywhere from ₹21,000 to over ₹1,50,000 for what looks like the same trip, with almost nobody explaining why the range is so wide. It isn't a typo &mdash; it's four genuinely different products wearing the same name.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Package type','Typical cost','What you get'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -205,7 +205,7 @@ export default function AdiKailashYatra() {
 
       <h2 style={h2}>Best Time to Visit, Month by Month</h2>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:480 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:480 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Window','Temperature','What to know'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -236,7 +236,7 @@ export default function AdiKailashYatra() {
 
       <h2 style={h2}>Sample 8-Day Itinerary from Kathgodam</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {[
               ['Day 1', 'Kathgodam → Pithoragarh (~196 km, via Jageshwar Dham)'],
@@ -270,7 +270,7 @@ export default function AdiKailashYatra() {
       </ul>
 
       <h2 style={h2}>Where It Is on the Map</h2>
-      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
         <iframe
           title="Adi Kailash region location map — Pithoragarh, Uttarakhand"
           src="https://www.google.com/maps?q=30.3194,80.6328&hl=en&z=9&output=embed"
@@ -286,7 +286,7 @@ export default function AdiKailashYatra() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Adi Kailash + Om Parvat Yatra Package',h:'/packages/adi-kailash-om-parvat-yatra-7n-8d'},{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

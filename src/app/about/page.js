@@ -275,7 +275,7 @@ export default function AboutPage() {
                 color: '#9f1239', bg: '#fff1f2',
               },
             ].map(card => (
-              <div key={card.title} style={{ background: '#fff', borderRadius: 14, padding: '20px', border: '1px solid var(--border)' }}>
+              <div key={card.title} style={{ background: '#fff', borderRadius: 14, padding: '20px', border: '1px solid hsl(var(--border))' }}>
                 <div style={{
                   width: 44, height: 44, borderRadius: 10, background: card.bg,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -334,7 +334,7 @@ export default function AboutPage() {
                 icon: '🙏',
               },
             ].map(e => (
-              <div key={e.num} style={{ display: 'flex', gap: 20, padding: '22px', background: 'var(--bg)', borderRadius: 14, border: '1px solid var(--border)', alignItems: 'flex-start' }}>
+              <div key={e.num} style={{ display: 'flex', gap: 20, padding: '22px', background: 'var(--bg)', borderRadius: 14, border: '1px solid hsl(var(--border))', alignItems: 'flex-start' }}>
                 <div style={{ flexShrink: 0, textAlign: 'center' }}>
                   <div style={{ fontSize: 28, marginBottom: 4 }}>{e.icon}</div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.06em' }}>{e.num}</div>
@@ -435,7 +435,7 @@ export default function AboutPage() {
             {/* Address card */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
               {/* Address */}
-              <div style={{ background: 'var(--bg)', borderRadius: 16, border: '1px solid var(--border)', padding: '22px 20px' }}>
+              <div style={{ background: 'var(--bg)', borderRadius: 16, border: '1px solid hsl(var(--border))', padding: '22px 20px' }}>
                 <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 16 }}>
                   <div style={{ width: 40, height: 40, background: 'var(--navy)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD166" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -458,7 +458,7 @@ export default function AboutPage() {
                     { icon: '✉️', label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
                     { icon: '⏰', label: 'Office Hours', value: 'Mon–Sun: 7 AM – 9 PM', href: null },
                   ].map(item => (
-                    <div key={item.label} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 13, borderTop: '1px solid var(--border)', paddingTop: 8 }}>
+                    <div key={item.label} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 13, borderTop: '1px solid hsl(var(--border))', paddingTop: 8 }}>
                       <span style={{ fontSize: 16 }}>{item.icon}</span>
                       <div>
                         <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{item.label}</div>
@@ -496,7 +496,7 @@ export default function AboutPage() {
             </div>
 
             {/* Google Maps iframe — lightweight, no JS required */}
-            <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid var(--border)', minHeight: 380, position: 'relative' }}>
+            <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid hsl(var(--border))', minHeight: 380, position: 'relative' }}>
               <iframe
                 title="Shiv Ganga Travels Office Location — Saptrishi Road, Bhupatwala, Haridwar"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.32!2d78.1927454!3d29.9896838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909474da469b49b%3A0xd812999c1ada1db2!2sShiv%20Ganga%20Travels!5e0!3m2!1sen!2sin!4v1714203600000!5m2!1sen!2sin"

@@ -107,7 +107,7 @@ export default function MussoorieTourPackages() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
           <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <span>Mussoorie Tour Packages 2026</span>
@@ -176,7 +176,7 @@ export default function MussoorieTourPackages() {
               href: null,
             },
           ].map(pkg => (
-            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div key={pkg.name} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid hsl(var(--border))', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>{pkg.name}</div>
               <div style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{pkg.duration}</div>
@@ -193,7 +193,7 @@ export default function MussoorieTourPackages() {
                 ))}
               </div>
               {pkg.href && (
-                <Link href={pkg.href} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '8px', borderRadius: 8, fontWeight: 700, fontSize: 12.5, textDecoration: 'none', textAlign: 'center' }}>
+                <Link href={pkg.href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px', borderRadius: 8, fontWeight: 700, fontSize: 12.5, textDecoration: 'none', textAlign: 'center' }}>
                   View Full Itinerary →
                 </Link>
               )}
@@ -216,7 +216,7 @@ export default function MussoorieTourPackages() {
             { place: 'Lal Tibba', note: 'Highest point, in Landour', desc: "Mussoorie's highest viewpoint at roughly 2,275 m, with a coin-operated telescope for closer views of Bandarpunch, Kedarnath, and Badrinath on a clear day. Quieter than Gun Hill and the better pick if you want an actual mountain panorama rather than a crowd." },
             { place: 'Company Garden', note: '3 km from Mall Road', desc: 'A landscaped municipal garden with a small lake, flower beds, and a low-key amusement area — an easy, unhurried couple of hours, popular with families travelling with kids or grandparents.' },
           ].map(item => (
-            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)', display: 'grid', gridTemplateColumns: '190px 1fr', gap: 16 }}>
+            <div key={item.place} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))', display: 'grid', gridTemplateColumns: '190px 1fr', gap: 16 }}>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)' }}>{item.place}</div>
                 <div style={{ fontSize: 11.5, color: '#E8920A', fontWeight: 600, marginTop: 2 }}>{item.note}</div>
@@ -243,7 +243,7 @@ export default function MussoorieTourPackages() {
                 ['Rishikesh', '77 km', 'Rishikesh → Dehradun → Rajpur Road', '2.5 hrs', '₹8,499'],
                 ['Dehradun', '35 km', 'Direct via Rajpur Road', '1-1.5 hrs', '₹8,499'],
               ].map(([city, dist, route, time, price], i) => (
-                <tr key={city} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={city} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: 'var(--navy)' }}>{city}</td>
                   <td style={{ padding: '9px 12px', color: '#475569' }}>{dist}</td>
                   <td style={{ padding: '9px 12px', color: '#475569', fontSize: 12 }}>{route}</td>
@@ -272,7 +272,7 @@ export default function MussoorieTourPackages() {
             { area: 'Landour', desc: 'Above Mussoorie proper, a short drive or walk up. Quieter, better views, and better cafés — our pick for anyone who wants mountain air without the Mall Road crowds.' },
             { area: 'Barlowganj & Jharipani', desc: 'On the way up from Dehradun, cheaper and calmer than the town centre. A good base if you are driving yourself and do not mind a short commute into Mall Road.' },
           ].map(item => (
-            <div key={item.area} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={item.area} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{item.area}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{item.desc}</div>
             </div>
@@ -295,7 +295,7 @@ export default function MussoorieTourPackages() {
             ['Can the cab drive on Mall Road in Mussoorie?', 'Only outside restricted hours — Mall Road has timed vehicle entry rules. Your driver drops you at the permitted parking; from there it is a short walk to any hotel or the main market.'],
             ['What is the best Mussoorie package from Delhi?', 'The 4N/5D Haridwar + Rishikesh + Mussoorie combo (₹10,999/person) is the best first-visit value — it pairs the hill station with the two holy cities en route. For a Mussoorie-only trip from Delhi, tell us your dates for a direct quote.'],
           ].map(([q, a]) => (
-            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid var(--border)' }}>
+            <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>{q}</div>
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
@@ -318,7 +318,7 @@ export default function MussoorieTourPackages() {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, marginTop: 32 }}>
+        <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
@@ -332,7 +332,7 @@ export default function MussoorieTourPackages() {
               ['Rishikesh to Mussoorie Cab', '/cabs/rishikesh-to-mussoorie-cab'],
               ['Char Dham Yatra 2026', '/char-dham-yatra'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

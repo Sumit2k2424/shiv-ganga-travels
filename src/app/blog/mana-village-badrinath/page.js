@@ -66,7 +66,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -100,7 +100,7 @@ export default function Page() {
             { name:'Local Shawl Weavers', desc:'The women of Mana weave pashmina and wool shawls in their doorways using traditional hand looms. These are not tourist-facing trinket stalls — they are working weavers who sell directly from home. The shawls are genuine and considerably cheaper than what you will find in Haridwar bazaars. Take time to talk to them.' },
             { name:'Last Tea Stall in India', desc:'There is literally a sign outside one of the dhabas in Mana reading "Last dhaba before Tibet." The rajma-chawal here costs ₹80 and tastes disproportionately good. Sit down, eat slowly, look at the mountains. This is the point where many pilgrims feel the journey has come full circle.' },
           ].map(pl=>(
-            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid var(--border)' }}>
+            <div key={pl.name} style={{ background:'#fff', borderRadius:12, padding:'16px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>{pl.name}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>{pl.desc}</div>
             </div>
@@ -111,7 +111,7 @@ export default function Page() {
         <p style={p}>Mana sits on what is believed to be the route the Pandavas took to heaven (Swargarohini) after the Kurukshetra war. The entire stretch from Badrinath through Mana and up toward the high passes carries Mahabharata mythology so thickly that it is impossible to separate the landscape from the story. Bhim Pul, Vyas Gufa, Ganesh Gufa, the Saraswati river — these are not isolated sights but parts of the same narrative. Walking through the village with this in mind transforms it completely. The stone lanes, the cave entrances, the roaring river — it all becomes a scene from an epic that Indians have been telling for three thousand years.</p>
 
         <h2 id="tips" style={h2}>Practical Tips for Visiting Mana</h2>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           {[
             ['Best time to visit', 'Early morning — before 8 AM — when the tour buses have not arrived. The village has a completely different quality in the first light.'],
             ['How to get there', '3km road from Badrinath temple — walkable in 45 minutes, or take a shared jeep (₹30–50) from Badrinath.'],
@@ -120,7 +120,7 @@ export default function Page() {
             ['Entry fee', 'No entry fee. The caves have a small voluntary donation box.'],
             ['Shops', 'Only local hand-made goods. No plastic trinkets. Bring cash — no UPI at the shawl weavers.'],
           ].map(([k,v],i)=>(
-            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 0' }}>
+            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 0' }}>
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{k}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>          ))}
@@ -147,7 +147,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Articles</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Badrinath Temple Guide',h:'/badrinath-temple'},{l:'Char Dham Yatra 2026',h:'/char-dham-yatra'},{l:'Do Dham Package',h:'/do-dham-yatra'},{l:'Char Dham Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

@@ -86,7 +86,7 @@ export default function DirectVsAggregator() {
         </div>
       </section>
 
-      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '9px 20px' }}>
+      <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color: 'var(--navy)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -124,7 +124,7 @@ export default function DirectVsAggregator() {
         <h3 style={h3}>Via Aggregator (e.g. MakeMyTrip)</h3>
         <div style={{ marginBottom: 20 }}>
           {FLOW.map((item, i) => (
-            <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start', padding: '12px 0', borderBottom: i < FLOW.length - 1 ? '1px dashed var(--border)' : 'none' }}>
+            <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start', padding: '12px 0', borderBottom: i < FLOW.length - 1 ? '1px dashed hsl(var(--border))' : 'none' }}>
               <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: 12, color: '#fff', flexShrink: 0 }}>{item.step}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 2 }}>{item.who}</div>
@@ -149,7 +149,7 @@ export default function DirectVsAggregator() {
 
         <h2 style={h2}>The Hidden Charges Problem</h2>
         <p style={p}>Even after paying the aggregator price, many pilgrims discover additional charges on arrival. The most common ones that are quietly excluded from aggregator packages:</p>
-        <div style={{ overflowX: 'auto', marginBottom: 24, borderRadius: 12, border: '1px solid var(--border)' }}>
+        <div style={{ overflowX: 'auto', marginBottom: 24, borderRadius: 12, border: '1px solid hsl(var(--border))' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
             <thead>
               <tr style={{ background: 'var(--navy)' }}>
@@ -168,7 +168,7 @@ export default function DirectVsAggregator() {
                 ['Porter at Yamunotri', '₹500–1,200', '✅ Included', '⚠️ Extra'],
                 ['Platform service fee', '₹500–2,000', '✅ N/A (direct)', '⚠️ Always charged'],
               ].map(([charge, cost, sgt, agg], i) => (
-                <tr key={charge} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
+                <tr key={charge} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 14px', fontWeight: 600, color: 'var(--navy)', fontSize: 13 }}>{charge}</td>
                   <td style={{ padding: '9px 14px', color: '#475569', fontSize: 13 }}>{cost}</td>
                   <td style={{ padding: '9px 14px', color: '#15803D', fontWeight: 700, fontSize: 13 }}>{sgt}</td>
@@ -189,7 +189,7 @@ export default function DirectVsAggregator() {
             { num: '4', title: 'Ask for a GST-compliant invoice', detail: 'Registered operators issue GST invoices. If an operator says they cannot give a GST invoice, they are either unregistered or trying to run an off-book transaction. Both are red flags.' },
             { num: '5', title: 'Request vehicle registration documents', detail: 'Ask if the vehicles are company-owned or sub-contracted. On a 10-day Himalayan trip, a sub-contracted vehicle from a third party is a significant accountability risk.' },
           ].map(item => (
-            <div key={item.num} style={{ display: 'flex', gap: 14, background: '#fff', border: '1px solid var(--border)', borderRadius: 12, padding: '14px 16px', alignItems: 'flex-start' }}>
+            <div key={item.num} style={{ display: 'flex', gap: 14, background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 12, padding: '14px 16px', alignItems: 'flex-start' }}>
               <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--teal)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: 14, color: '#fff', flexShrink: 0 }}>{item.num}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 4 }}>{item.title}</div>
@@ -211,20 +211,20 @@ export default function DirectVsAggregator() {
           ['How do I know Shiv Ganga Travels is a legitimate direct operator?', 'We are registered with the Uttarakhand Tourism Development Board. Our office is at Saptrishi Road, Bhupatwala, Haridwar — you can visit. We have 54 verified Google reviews. We issue GST-compliant invoices. Our WhatsApp number (+91-7817996730) is answered by the same people running your yatra.'],
           ['Can I cancel if I book directly with Shiv Ganga Travels?', 'Yes. Our cancellation policy is stated on the website and applies directly. 25% is non-refundable (covers pre-booking costs). 60–90 days notice: 75% refund. 30–60 days: 50%. Less than 30 days: no refund. These terms are clearly communicated at booking — no hidden clauses.'],
         ].map(([q, a], i) => (
-          <details key={i} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
+          <details key={i} style={{ background: '#fff', border: '1px solid hsl(var(--border))', borderRadius: 10, overflow: 'hidden', marginBottom: 8 }}>
             <summary style={{ padding: '14px 16px', cursor: 'pointer', listStyle: 'none', fontWeight: 600, fontSize: 14.5, color: 'var(--navy)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               {q}<span style={{ fontSize: 18, color: 'var(--text-muted)', flexShrink: 0 }}>＋</span>
             </summary>
-            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid var(--border)' }}>{a}</div>
+            <div style={{ padding: '12px 16px 16px', fontSize: 14.5, color: '#334155', lineHeight: 1.85, borderTop: '1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
 
-        <div style={{ marginTop: 28, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
+        <div style={{ marginTop: 28, paddingTop: 20, borderTop: '1px solid hsl(var(--border))' }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related Pages</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>SGT vs MakeMyTrip →</Link>
-            <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Best Operators 2026 →</Link>
-            <Link href="/char-dham-yatra-scams" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid var(--border)' }}>Yatra Scams to Avoid →</Link>
+            <Link href="/shiv-ganga-travels-vs-makemytrip-char-dham" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>SGT vs MakeMyTrip →</Link>
+            <Link href="/best-char-dham-yatra-operators-haridwar" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Best Operators 2026 →</Link>
+            <Link href="/char-dham-yatra-scams" style={{ background: '#fff', color: 'var(--navy)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', border: '1px solid hsl(var(--border))' }}>Yatra Scams to Avoid →</Link>
             <Link href="/char-dham-yatra" style={{ background: 'var(--navy)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>Book Direct — ₹18,500 →</Link>
           </div>
         </div>

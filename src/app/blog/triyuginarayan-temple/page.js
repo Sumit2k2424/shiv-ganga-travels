@@ -66,7 +66,7 @@ export default function Page() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
@@ -112,7 +112,7 @@ export default function Page() {
         <p style={p}>In recent years, Triyuginarayan has become a quietly popular destination for Hindu couples — a pilgrimage to seek blessings at the site of the divine marriage. Some couples come here after their wedding, some before. Some come with their parents to seek marital blessings. A small number of real weddings are conducted here each year, officiated by the temple priests. If this interests you, contact the temple trust or let us know — our team can help arrange the puja.</p>
 
         <h2 id="how-to-visit" style={h2}>How to Visit Triyuginarayan</h2>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid var(--border)', marginBottom:24 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:24 }}>
           {[
             ['From Haridwar','220km via Rishikesh–Devprayag–Rudraprayag–Sonprayag, then 12km to Triyuginarayan. About 8–9 hours drive total.'],
             ['From Guptkashi','32km, approximately 1.5 hours drive via Sonprayag. Guptkashi is the standard overnight base for Kedarnath pilgrims.'],
@@ -121,7 +121,7 @@ export default function Page() {
             ['Entry & timing','Open sunrise to sunset. No entry fee. Puja for ₹100–500 available from temple priests.'],
             ['Accommodation','Basic guesthouses in the village for those wanting to stay overnight. Our packages include an optional Triyuginarayan stop on request.'],
           ].map(([k,v],i)=>(
-            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid var(--border)':'none', padding:'10px 0' }}>
+            <div key={i} style={{ display:'grid', gridTemplateColumns:'160px 1fr', gap:12, borderTop:i>0?'1px solid hsl(var(--border))':'none', padding:'10px 0' }}>
               <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)' }}>{k}</div>
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>          ))}
@@ -150,7 +150,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Kedarnath Temple Guide',h:'/kedarnath-temple'},{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Panch Kedar Yatra',h:'/panch-kedar-yatra'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

@@ -52,7 +52,7 @@ function Schema() {
 
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 
 const FACTS = [
   ['Height above sea level', '3,583 m · 11,755 ft · ~3.58 km'],
@@ -85,7 +85,7 @@ export default function KedarnathHeight() {
 
       <h2 style={h2}>Kedarnath at a Glance — Every Number in One Table</h2>
       <div style={{ overflowX:'auto', marginBottom:8 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -122,7 +122,7 @@ export default function KedarnathHeight() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Temple Guide',h:'/kedarnath-temple'},{l:'Kedarnath Tour Package',h:'/kedarnath-tour-package'},{l:'How to Reach Kedarnath',h:'/blog/how-to-reach-kedarnath'},{l:'Kedarnath Weather',h:'/kedarnath-weather'},{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Registration 2026',h:'/blog/kedarnath-registration-2026'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} →</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

@@ -79,7 +79,7 @@ export default function CharDhamFromMumbai() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
           <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
@@ -120,8 +120,8 @@ export default function CharDhamFromMumbai() {
               {['Train','From','Departs','Arrives','Duration','Cost','Tip'].map(h => (<th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>))}
             </tr></thead>
             <tbody>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Dehradun Express (19019)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Mumbai Bandra T`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`02:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`05:30 AM (+2)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Only direct train`}</td></tr>
-              <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Mumbai–LTT (19031)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Lokmanya Tilak T`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`10:10 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`01:05 AM (+2)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Book 3AC early`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'#fff' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Dehradun Express (19019)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Mumbai Bandra T`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`02:00 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`05:30 AM (+2)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Only direct train`}</td></tr>
+              <tr style={{ borderBottom:'1px solid hsl(var(--border))', background:'var(--bg)' }}><td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:12.5 }}>{`Mumbai–LTT (19031)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Lokmanya Tilak T`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`10:10 PM`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Haridwar`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`01:05 AM (+2)`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`~26.5h`}</td><td style={{ padding:'8px 12px', color:'#475569', fontSize:12 }}>{`Book 3AC early`}</td></tr>
             </tbody>
           </table>
         </div>
@@ -131,7 +131,7 @@ export default function CharDhamFromMumbai() {
           <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>Mumbai (BOM) to Dehradun (DED) — IndiGo, Air India, SpiceJet. 1h 45m direct. Fly in the morning and you can do Har Ki Pauri Aarti the same evening. October fares drop to ₹2,800.</div>
         </div>
 
-        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid var(--border)', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
+        <div style={{ background:'#fff', borderRadius:10, padding:'12px 16px', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', marginBottom:20 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:4 }}>🚗 By Road from Mumbai</div>
           <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Mumbai to Haridwar is 1,450km — two long days minimum. NH48 to Delhi, then NH334 to Haridwar. Only practical if driving is part of the pilgrimage experience itself.</div>
         </div>
@@ -156,7 +156,7 @@ export default function CharDhamFromMumbai() {
             '✅ All tolls, parking, driver allowance',
             '✅ Oxygen cylinder + first aid in vehicle',
             '✅ 24×7 WhatsApp support throughout',
-          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid var(--border)', fontSize:13, color:'#334155' }}>{item}</div>))}
+          ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
           <strong>Package from Mumbai:</strong> ₹24,999/person · 9N/10D · All-inclusive · Zero commission
@@ -164,12 +164,12 @@ export default function CharDhamFromMumbai() {
 
         <h2 style={{...h2}}>Pickup Points in Mumbai</h2>
         <div style={{ display:'flex', gap:8, flexWrap:'wrap', marginBottom:16 }}>
-<span key="Chhatrapati Shivaji Terminus (CST)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chhatrapati Shivaji Terminus (CST)`}</span>
-          <span key="Dadar Station East" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Dadar Station East`}</span>
-          <span key="Bandra East" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Bandra East`}</span>
-          <span key="Andheri East" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Andheri East`}</span>
-          <span key="Thane Station" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Thane Station`}</span>
-          <span key="Navi Mumbai (Vashi)" style={{ background:'#fff', border:'1px solid var(--border)', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Navi Mumbai (Vashi)`}</span>
+<span key="Chhatrapati Shivaji Terminus (CST)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Chhatrapati Shivaji Terminus (CST)`}</span>
+          <span key="Dadar Station East" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Dadar Station East`}</span>
+          <span key="Bandra East" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Bandra East`}</span>
+          <span key="Andheri East" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Andheri East`}</span>
+          <span key="Thane Station" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Thane Station`}</span>
+          <span key="Navi Mumbai (Vashi)" style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600 }}>📍 {`Navi Mumbai (Vashi)`}</span>
         </div>
         <p style={{ ...p, fontSize:14 }}>Maharashtrian pilgrims have a strong tradition of both Kedarnath and Pandharpur Wari. We brief all Mumbai pilgrims about Kedarnath cold — a proper down jacket and thermal inners are non-negotiable even in May.</p>
 

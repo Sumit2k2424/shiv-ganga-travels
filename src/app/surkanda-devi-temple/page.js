@@ -67,7 +67,7 @@ function Schema() {
 const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:34 };
 const h3 = { fontFamily:'var(--font-display)', fontSize:'1.1rem', fontWeight:600, color:'var(--navy)', marginBottom:8, marginTop:20 };
 const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
-const td = { padding:'10px 14px', borderBottom:'1px solid var(--border)', fontSize:14 };
+const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 const teal = { color:'var(--teal)', fontWeight:600 };
 
 const FACTS = [
@@ -120,7 +120,7 @@ export default function SurkandaDeviTemple() {
       </div>
     </section>
 
-    <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'9px 20px' }}>
+    <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
         <Link href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
@@ -141,7 +141,7 @@ export default function SurkandaDeviTemple() {
 
       <h2 style={h2}>Surkanda Devi Temple at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <tbody>
             {FACTS.map(([k,v]) => (
               <tr key={k}>
@@ -173,7 +173,7 @@ export default function SurkandaDeviTemple() {
 
       <h2 style={h2}>Best Time to Visit, Month by Month</h2>
       <div style={{ overflowX:'auto', marginBottom:10 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:480 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:480 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Window','Temperature','What to know'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -197,7 +197,7 @@ export default function SurkandaDeviTemple() {
       <h2 style={h2}>Nearby Places &amp; Where to Stay</h2>
       <p style={p}>There is <strong>no accommodation at the temple</strong>, and staying overnight on the ridge isn&rsquo;t permitted &mdash; a fact that only one of the competing guides for this temple bothers to state clearly. Everyone who visits bases themselves down in Dhanaulti, Kanatal or Mussoorie and comes up for the day.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:520 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:520 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['Place','Distance','Time','Why go'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -225,7 +225,7 @@ export default function SurkandaDeviTemple() {
       <h2 style={h2}>How to Reach Surkanda Devi Temple</h2>
       <p style={p}>Every route converges on Kaddukhal via Dhanaulti. Realistic drive times, not just the raw kilometre count, matter more here than on flatter routes — the roads past Mussoorie are winding.</p>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
-        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', minWidth:560 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', background:'#fff', borderRadius:12, overflow:'hidden', border:'1px solid hsl(var(--border))', minWidth:560 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
             {['From','Distance','Time','Route'].map(hd=>(<th key={hd} style={{ padding:'10px 14px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12.5 }}>{hd}</th>))}
           </tr></thead>
@@ -247,7 +247,7 @@ export default function SurkandaDeviTemple() {
       <p style={p}>The nearest railway station is <strong>Dehradun (~63 km)</strong>, well connected to Delhi by the Shatabdi and Jan Shatabdi Express services. From the station it&rsquo;s a further 1.5&ndash;2 hours by road via Mussoorie and Dhanaulti.</p>
 
       <h2 style={h2}>Where It Is on the Map</h2>
-      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid var(--border)', marginBottom:10 }}>
+      <div style={{ borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))', marginBottom:10 }}>
         <iframe
           title="Surkanda Devi Temple location map — Kaddukhal, Tehri Garhwal"
           src="https://www.google.com/maps?q=30.4114,78.2886&hl=en&z=12&output=embed"
@@ -278,7 +278,7 @@ export default function SurkandaDeviTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Haridwar to Mussoorie Cab',h:'/cabs/haridwar-to-mussoorie-cab'},{l:'Rishikesh to Mussoorie Cab',h:'/cabs/rishikesh-to-mussoorie-cab'},{l:'Dehradun to Mussoorie Cab',h:'/cabs/dehradun-to-mussoorie-cab'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>{l.l} &rarr;</Link>
+            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

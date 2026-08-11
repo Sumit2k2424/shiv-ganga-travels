@@ -90,7 +90,7 @@ export default function CharDhamGuide() {
         ]}
       />
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid var(--border)', padding:'10px 20px' }}>
+      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
@@ -128,7 +128,7 @@ export default function CharDhamGuide() {
             { name:'Kedarnath', alt:'3,583m', god:'Lord Shiva', desc:'12th Jyotirlinga. Requires a 16 km trek from Gaurikund.' },
             { name:'Badrinath', alt:'3,133m', god:'Lord Vishnu', desc:'Final dham. Motor road to temple. Mana village nearby.' },
           ].map(d => (
-            <li key={d.name} style={{ background:'var(--bg)', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <li key={d.name} style={{ background:'var(--bg)', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>{d.name} <span style={{ fontSize:11, fontWeight:500, color:'var(--text-muted)' }}>({d.alt})</span></div>
               <div style={{ fontSize:12, color:'var(--gold-dark)', fontWeight:600, marginBottom:4 }}>{d.god}</div>
               <div style={{ fontSize:12.5, color:'var(--text-mid)' }}>{d.desc}</div>
@@ -155,7 +155,7 @@ export default function CharDhamGuide() {
 
         <h2 id="route" style={h2}>Char Dham Yatra Route from Haridwar</h2>
         <p style={p}>The complete route follows a clockwise direction and covers approximately <strong>1,200 km</strong> by road plus trekking:</p>
-        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid var(--border)', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
           <strong>Haridwar</strong> → Rishikesh → Barkot → <strong>Yamunotri</strong> → Uttarkashi → <strong>Gangotri</strong> → Guptkashi → Gaurikund → <strong>Kedarnath</strong> (16km trek) → Rudraprayag → Joshimath → <strong>Badrinath</strong> → Mana Village → Devprayag → Rishikesh → <strong>Haridwar</strong>
         </div>
 
@@ -202,7 +202,7 @@ export default function CharDhamGuide() {
             { cat:'📋 Documents', items:['Aadhaar / Passport (original)', 'Yatra registration card', 'Emergency contact list', 'Cash ₹5,000+ extra'] },
             { cat:'🎒 Essentials', items:['Power bank', 'Reusable water bottle', 'Dry snacks & energy bars', 'Small torch / headlamp'] },
           ].map(c => (
-            <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid var(--border)' }}>
+            <div key={c.cat} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:8 }}>{c.cat}</div>
               <ul style={{ paddingLeft:14, margin:0 }}>
                 {c.items.map(i => <li key={i} style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{i}</li>)}
@@ -230,7 +230,7 @@ export default function CharDhamGuide() {
               { label:'Senior Citizen Package →',         href:'/packages/char-dham-yatra-senior-citizen-12n-13d' },
               { label:'Best Time Blog →',                 href:'/blog/best-time-char-dham' },
             ].map(l => (
-              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid var(--border)' }}>
+              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {l.label}
               </Link>
             ))}

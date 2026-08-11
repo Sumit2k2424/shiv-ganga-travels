@@ -42,7 +42,7 @@ export default function NotFound() {
             href={l.href}
             style={{
               display: 'flex', alignItems: 'center', gap: 8,
-              background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 10,
+              background: 'var(--bg)', border: '1px solid hsl(var(--border))', borderRadius: 10,
               padding: '11px 14px', fontSize: 13.5, fontWeight: 600,
               color: 'var(--navy)', textDecoration: 'none',
             }}
