@@ -15,7 +15,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LuxMotion from '@/components/lux/LuxMotion';
-import LuxCursor from '@/components/lux/LuxCursor';
+// Gate, not the component: LuxCursor is fine-pointer-only, so the gate keeps
+// its chunk off phones entirely rather than shipping it to no-op at runtime.
+import LuxCursorGate from '@/components/lux/LuxCursorGate';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
@@ -440,7 +442,7 @@ export default function RootLayout({ children }) {
             devices), the IntersectionObserver reveal/parallax engine, and the
             scroll-progress rail. A no-op on pages with no data-lux-* markup. */}
         <LuxMotion/>
-        <LuxCursor/>
+        <LuxCursorGate/>
         <div className="lux-progress" data-lux-progress aria-hidden="true"/>
         {/* Cinematic page-entry loader — fades once its own bar fills. */}
         <div className="lux-curtain" data-lux-curtain aria-hidden="true">
