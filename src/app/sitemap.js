@@ -114,6 +114,16 @@ export default function sitemap() {
     { url: `${b}/gaurikund-guide`,                     p: 0.85, cf: 'monthly' },
     { url: `${b}/guptkashi-guide`,                     p: 0.85, cf: 'monthly' },
     { url: `${b}/kedarnath-to-badrinath-distance`,     p: 0.85, cf: 'monthly' },
+    // Distance and on-route logistics. Fixed factual answers — the format AI
+    // engines cite most readily, and the cheapest pages on the site to keep true.
+    { url: `${b}/haridwar-to-badrinath-distance`,      p: 0.85, cf: 'monthly' },
+    { url: `${b}/haridwar-to-gangotri-distance`,       p: 0.84, cf: 'monthly' },
+    { url: `${b}/haridwar-to-yamunotri-distance`,      p: 0.84, cf: 'monthly' },
+    { url: `${b}/delhi-to-kedarnath-distance`,         p: 0.86, cf: 'monthly' },
+    { url: `${b}/gangotri-to-yamunotri-distance`,      p: 0.82, cf: 'monthly' },
+    { url: `${b}/altitude-sickness-char-dham`,         p: 0.86, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-mobile-network`,      p: 0.80, cf: 'monthly' },
+    { url: `${b}/char-dham-yatra-food-guide`,          p: 0.80, cf: 'monthly' },
   ];
 
   const weatherPages = [
@@ -219,6 +229,12 @@ export default function sitemap() {
     { url: `${b}/daksh-mahadev-temple`,                p: 0.82, cf: 'monthly' },
     { url: `${b}/maya-devi-temple`,                    p: 0.80, cf: 'monthly' },
     { url: `${b}/shantikunj-haridwar-guide`,           p: 0.80, cf: 'monthly' },
+    { url: `${b}/kumbh-mela-haridwar`,                 p: 0.92, cf: 'weekly'  },
+    { url: `${b}/haridwar-hotels`,                     p: 0.86, cf: 'monthly' },
+    { url: `${b}/neelkanth-mahadev-temple`,            p: 0.84, cf: 'monthly' },
+    { url: `${b}/triveni-ghat-rishikesh`,              p: 0.82, cf: 'monthly' },
+    { url: `${b}/patanjali-yogpeeth-haridwar`,         p: 0.80, cf: 'monthly' },
+    { url: `${b}/auli-skiing-package`,                 p: 0.85, cf: 'monthly' },
   ];
 
   // ── Winter Char Dham. These carry the off-season, when every Char Dham

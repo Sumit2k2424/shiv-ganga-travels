@@ -75,6 +75,16 @@ export const COLS = [
     {l:'Taxi Service in Haridwar',   h:'/taxi-service-in-haridwar'},
     {l:'Dehradun Airport → Haridwar',h:'/dehradun-airport-to-haridwar-taxi'},
   ]},
+  { heading:'Distances & On-Route', links:[
+    {l:'Haridwar → Badrinath',       h:'/haridwar-to-badrinath-distance'},
+    {l:'Haridwar → Gangotri',        h:'/haridwar-to-gangotri-distance'},
+    {l:'Haridwar → Yamunotri',       h:'/haridwar-to-yamunotri-distance'},
+    {l:'Delhi → Kedarnath',          h:'/delhi-to-kedarnath-distance'},
+    {l:'Gangotri → Yamunotri',       h:'/gangotri-to-yamunotri-distance'},
+    {l:'Altitude Sickness Guide',    h:'/altitude-sickness-char-dham'},
+    {l:'Mobile Network Coverage',    h:'/char-dham-yatra-mobile-network'},
+    {l:'Food on the Yatra',          h:'/char-dham-yatra-food-guide'},
+  ]},
   { heading:'Before You Book', links:[
     {l:'How to Choose an Operator',  h:'/how-to-choose-char-dham-tour-operator'},
     {l:'Where to Book — Compared',   h:'/char-dham-yatra-booking-sites-compared'},
@@ -90,6 +100,7 @@ export const COLS = [
     {l:'Mukhba — Ganga’s Seat', h:'/mukhba-gangotri-winter-seat'},
     {l:'Kharsali — Yamuna’s Seat', h:'/kharsali-yamunotri-winter-seat'},
     {l:'Kedarnath Doli Yatra',       h:'/kedarnath-doli-yatra'},
+    {l:'Auli Skiing',                h:'/auli-skiing-package'},
   ]},
   { heading:'Haridwar Darshan', links:[
     {l:'Places to Visit in Haridwar',h:'/haridwar-sightseeing-places'},
@@ -99,6 +110,11 @@ export const COLS = [
     {l:'Daksh Mahadev, Kankhal',     h:'/daksh-mahadev-temple'},
     {l:'Maya Devi Temple',           h:'/maya-devi-temple'},
     {l:'Shantikunj Ashram',          h:'/shantikunj-haridwar-guide'},
+    {l:'Patanjali Yogpeeth',         h:'/patanjali-yogpeeth-haridwar'},
+    {l:'Kumbh Mela 2027',            h:'/kumbh-mela-haridwar'},
+    {l:'Hotels in Haridwar',         h:'/haridwar-hotels'},
+    {l:'Neelkanth Mahadev',          h:'/neelkanth-mahadev-temple'},
+    {l:'Triveni Ghat, Rishikesh',    h:'/triveni-ghat-rishikesh'},
   ]},
   { heading:'Company', links:[
     {l:'About Us',                   h:'/about'},

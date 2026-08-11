@@ -7,7 +7,12 @@ export const LANGUAGE_PAGES = [
   // Hindi sits first deliberately — it is the primary search language for this
   // pilgrimage, not a regional variant, and carries by far the most volume.
   { slug: 'char-dham-yatra-hindi',    code: 'hi', label: 'Hindi',    native: 'हिन्दी',   region: 'उत्तर भारत / North India' },
+  { slug: 'char-dham-yatra-marathi',  code: 'mr', label: 'Marathi',  native: 'मराठी',    region: 'Maharashtra' },
   { slug: 'char-dham-yatra-bengali',  code: 'bn', label: 'Bengali',  native: 'বাংলা',    region: 'West Bengal & Tripura' },
+  { slug: 'char-dham-yatra-tamil',    code: 'ta', label: 'Tamil',    native: 'தமிழ்',    region: 'Tamil Nadu' },
+  { slug: 'char-dham-yatra-malayalam',code: 'ml', label: 'Malayalam',native: 'മലയാളം',   region: 'Kerala' },
+  { slug: 'char-dham-yatra-punjabi',  code: 'pa', label: 'Punjabi',  native: 'ਪੰਜਾਬੀ',    region: 'Punjab & Haryana' },
+  { slug: 'char-dham-yatra-nepali',   code: 'ne', label: 'Nepali',   native: 'नेपाली',   region: 'Nepal & Darjeeling' },
   { slug: 'char-dham-yatra-gujarati', code: 'gu', label: 'Gujarati', native: 'ગુજરાતી',  region: 'Gujarat' },
   { slug: 'char-dham-yatra-kannada',  code: 'kn', label: 'Kannada',  native: 'ಕನ್ನಡ',    region: 'Karnataka' },
   { slug: 'char-dham-yatra-odia',     code: 'or', label: 'Odia',     native: 'ଓଡ଼ିଆ',    region: 'Odisha' },

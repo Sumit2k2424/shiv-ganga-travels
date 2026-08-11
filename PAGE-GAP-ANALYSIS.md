@@ -3,7 +3,7 @@
 **Audited:** 10 Aug 2026
 **Current inventory:** 97 app routes · 64 blog posts · 38 cab routes · 38 package slugs
 
-## Progress — 26 of 62 built
+## Progress — 45 of 62 built
 
 | # | Page | Status |
 |---|---|---|
@@ -33,6 +33,25 @@
 | 36 | `/char-dham-yatra-for-temple-groups` | ✅ Built |
 | 37 | `/char-dham-yatra-corporate-booking` | ✅ Built |
 | 49 | `/char-dham-yatra-hindi` | ✅ Built — added to `LANGUAGE_PAGES`, propagates everywhere |
+| 50 | `/char-dham-yatra-marathi` | ✅ Built — hook: Nashik is itself a Kumbh city |
+| 51 | `/char-dham-yatra-tamil` | ✅ Built — hook: Rameswaram completes the Bada Char Dham |
+| 52 | `/char-dham-yatra-malayalam` | ✅ Built — hook: Shankaracharya from Kaladi; Badrinath rawal is a Kerala Namboodiri |
+| 53 | `/char-dham-yatra-punjabi` | ✅ Built — hook: Hemkund Sahib is on the Badrinath road |
+| 54 | `/char-dham-yatra-nepali` | ✅ Built — hook: Pashupatinath is the head, Kedarnath the hump |
+| 16 | `/kumbh-mela-haridwar` | ✅ Built — Ardh Kumbh 14 Jan–20 Apr 2027. Shahi Snan dates deliberately NOT published |
+| 8 | `/haridwar-hotels` | ✅ Built — by area, not star rating |
+| 17 | `/neelkanth-mahadev-temple` | ✅ Built |
+| 18 | `/triveni-ghat-rishikesh` | ✅ Built |
+| 15 | `/patanjali-yogpeeth-haridwar` | ✅ Built |
+| 25 | `/auli-skiing-package` | ✅ Built — price bound live from packages.js |
+| 39 | `/haridwar-to-badrinath-distance` | ✅ Built |
+| 41 | `/haridwar-to-gangotri-distance` | ✅ Built |
+| 42 | `/haridwar-to-yamunotri-distance` | ✅ Built |
+| 43 | `/delhi-to-kedarnath-distance` | ✅ Built |
+| 45 | `/gangotri-to-yamunotri-distance` | ✅ Built — distance is derived, ±15 km |
+| 47 | `/altitude-sickness-char-dham` | ✅ Built |
+| 46 | `/char-dham-yatra-mobile-network` | ✅ Built |
+| 48 | `/char-dham-yatra-food-guide` | ✅ Built |
 
 ### Dropped, with reasons
 
@@ -43,6 +62,25 @@
 | 32–33 | `/shiv-ganga-travels-vs-{yatra-com,easemytrip}` | Same argument as the MakeMyTrip page three more times. Consolidated into `/char-dham-yatra-booking-sites-compared`, which also captures "best site to book Char Dham". |
 | 35 | `/char-dham-yatra-group-booking` | `/blog/char-dham-group-package` already targets the exact keyword `char dham yatra group booking`. Upgrade that page instead of splitting the signal. |
 | 38 | `/char-dham-yatra-emi-payment` | We do not offer EMI. Writing the page would mean inventing a financial product. |
+| 40 | `/haridwar-to-kedarnath-distance` | `/blog/haridwar-to-kedarnath` targets `haridwar to kedarnath distance 2026` and `/blog/haridwar-to-kedarnath-road-trip` targets `haridwar to kedarnath distance`. A third page splits the signal three ways. |
+| 44 | `/sonprayag-to-kedarnath` | `/gaurikund-guide` owns `sonprayag to gaurikund`; the road-trip blog owns `haridwar to sonprayag distance`. Already covered. |
+| 10 | `/tempo-traveller-hire-haridwar` | `/taxi-service-in-haridwar` already targets `tempo traveller haridwar` and carries the full 12/17-seater rate chart. A second page duplicates that table. |
+
+### Remaining — 17 pages, and why they are last
+
+| # | Page | Blocker |
+|---|---|---|
+| 26 | `/haridwar-rishikesh-winter-tour` | Buildable now. |
+| 27 | `/char-dham-yatra-2027` | 2027 dates are declared on Vijayadashami/Basant Panchami. Publishing before that means guessing. |
+| 62 | `/how-to-pay` | Buildable now from the documented terms (25% advance, named business account, refund flow). |
+| 57 | `/our-fleet` | Needs real vehicle registration numbers and ages. |
+| 58 | `/our-drivers` | Needs real driver names and years on-route. |
+| 59 | `/uttarakhand-tourism-registration` | Needs the actual licence and GST numbers. |
+| 60 | `/photo-gallery` | Needs real photographs you own. |
+| 61 | `/customer-reviews` | Needs real reviews; only 3 are currently in schema against a stated count of 54. |
+
+Tier 6 is deliberately last: five of its six pages exist to *prove* the claims the
+rest of the site makes, and a proof page built from placeholders proves nothing.
 
 **Three blockers before deploy:** taxi fares in `src/data/localTaxi.js`
 (`RATES_VERIFIED = false`), ropeway fares in `src/data/haridwarPlaces.js`
