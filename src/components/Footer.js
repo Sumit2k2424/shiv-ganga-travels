@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { COLS, LANGUAGE_COL } from '@/components/footerLinks';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
+import LogoBadge from '@/components/lux/LogoBadge';
 
 /* Editorial footer. Ink surface, hairline columns. The entire internal-link
    backbone (COLS + LANGUAGE_COL from footerLinks.js) is preserved verbatim —
@@ -15,7 +16,6 @@ const FOOT_CSS = `
   .eq-foot__list { list-style:none; display:grid; gap:9px; }
   .eq-foot-link { color:rgba(255,255,255,0.6); font-size:0.82rem; text-decoration:none; transition:color .3s var(--ease-lux), padding-left .3s var(--ease-lux); }
   .eq-foot-link:hover { color:#fff; padding-left:4px; }
-  .eq-foot-mark { width:44px; height:44px; border-radius:var(--ds-r-2); flex-shrink:0; background:linear-gradient(135deg,var(--navy-mid),var(--gold)); display:grid; place-items:center; color:#fff; font-size:20px; }
   .eq-foot-social { width:36px; height:36px; border-radius:100px; background:rgba(255,255,255,0.06); border:1px solid var(--rule-light-soft); color:rgba(255,255,255,0.78); display:grid; place-items:center; flex-shrink:0; transition:background .3s var(--ease-lux), color .3s var(--ease-lux); }
   .eq-foot-social:hover { background:var(--gold); color:var(--ink); border-color:var(--gold); }
   .eq-foot-cta { display:inline-flex; align-items:center; gap:7px; padding:9px 14px; border-radius:var(--ds-r-2); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-decoration:none; white-space:nowrap; }
@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Brand column */}
         <div style={{ gridColumn: 'span 1' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-            <div className="eq-foot-mark" aria-hidden="true">ॐ</div>
+            <LogoBadge size={44} />
             <div>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: '#fff' }}>{SITE.name}</div>
               <div style={{ fontSize: 11, color: 'var(--gold)', fontWeight: 500, marginTop: 2 }}>{SITE.tagline}</div>
