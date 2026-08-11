@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Gangotri Temple Guide 2026 | Darshan Timings, History & Aarti' },
@@ -27,7 +28,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 
 const PAA = [
   { q:'Where is Gangotri Temple located?', a:'In Uttarkashi district of Uttarakhand, at 3,415m on the banks of the Bhagirathi river. It is fully motorable — unlike Kedarnath and Yamunotri, you can drive right up to the temple, which makes it the easiest of the four dhams to reach.' },

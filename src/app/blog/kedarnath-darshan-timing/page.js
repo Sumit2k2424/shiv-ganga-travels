@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Darshan Timings 2026 | Aarti & VIP Slots' },
@@ -126,7 +127,7 @@ export default function KedarnathTimings() {
           { id:'faq',          label:'FAQs' },
         ]}/>
 
-        <h2 id="schedule" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="schedule" style={h2}>
           Complete Kedarnath Temple Schedule 2026
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:20 }}>
@@ -156,7 +157,7 @@ export default function KedarnathTimings() {
           })}
         </div>
 
-        <h2 id="puja-booking" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="puja-booking" style={h2}>
           Kedarnath Puja Booking — Prices & Types
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -189,7 +190,7 @@ export default function KedarnathTimings() {
           </table>
         </div>
 
-        <h2 id="shringaar" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="shringaar" style={h2}>
           What to Expect During the Shringaar Aarti (7:30 PM)
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
@@ -215,7 +216,7 @@ export default function KedarnathTimings() {
         </div>
 
         {/* FAQ */}
-        <h2 id="faq" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {[
           ['Can I book Kedarnath Mahabhishek online?', 'Yes. Mahabhishek you can book through the Shri Kedarnath temple website or through your tour operator. Shiv Ganga Travels books Mahabhishek puja for all our Kedarnath packages as standard. The puja is at 4:00 AM, so your vehicle must reach Gaurikund by 2 AM at the latest — which means leaving Guptkashi at 1 AM.'],
           ['Is there a separate darshan line for senior citizens?', 'Yes. A dedicated Divyangjan (disabled) and Senior Citizens queue is maintained at Kedarnath temple. Our guides facilitate access to this queue for pilgrims aged 70+ or those with mobility limitations. Ask your guide to approach the queue management staff at the temple entrance.'],

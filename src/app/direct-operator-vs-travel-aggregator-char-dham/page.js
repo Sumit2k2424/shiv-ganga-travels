@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
+import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Direct Operator vs Aggregator 2026 | Char Dham Booking Guide' },
@@ -46,9 +47,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.5vw,1.55rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 40, letterSpacing: '-0.02em' };
-const h3 = { fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 10, marginTop: 24 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 const FLOW = [
   { step: '1', who: 'You', action: 'Pay ₹32,479 on the aggregator platform' },

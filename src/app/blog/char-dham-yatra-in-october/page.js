@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra in October 2026 | Weather, Crowds & Dates' },
@@ -13,8 +14,6 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p = { fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 function Schema() {
   const article = {

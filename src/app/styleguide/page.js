@@ -103,7 +103,7 @@ export default function StyleGuide() {
         </Reveal>
         <div className="sg-row" style={{ marginTop: 34 }}>
           <Pill tone="light">Navy · Gold · Teal</Pill>
-          <Pill tone="light">Playfair Display + Plus Jakarta Sans</Pill>
+          <Pill tone="light">Inter + Source Serif 4</Pill>
           <Pill tone="light">~4 KB motion runtime</Pill>
           <Pill tone="light">WCAG AA</Pill>
         </div>
@@ -144,7 +144,7 @@ export default function StyleGuide() {
 
       {/* ── Typography ───────────────────────────────────────── */}
       <Section tone="paper" className="sg-block">
-        <SectionHead eyebrow="Tokens" title="Typography" lede="Playfair Display for editorial headlines, Plus Jakarta Sans for everything else. The scale is fluid — it breathes with the viewport using clamp()." />
+        <SectionHead eyebrow="Tokens" title="Typography" lede="Inter for headings, navigation and all UI; Source Serif 4 for long-form article body. The scale is fluid — every step is a clamp() drawn through the mobile and desktop sizes." />
         <div className="lux-grid" style={{ gap: 26 }}>
           <div><span className="sg-tag">display · xl</span><p className="lux-display lux-display--xl">Char Dham Yatra</p></div>
           <Rule />

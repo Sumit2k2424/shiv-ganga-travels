@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'September Char Dham Yatra 2026 | Price Starts at ₹18,500 | Post-Monsoon' },
@@ -13,8 +14,6 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p = { fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const FAQS = [
   { q:'Is September a good month for Char Dham Yatra?', a:'The second half of September is one of the two best windows of the year (the other is early October). The monsoon withdraws, skies clear, peaks carry fresh snow, and the May–June crowds are long gone. The first week of September can still catch the monsoon tail, so we advise starting from around September 15 onwards.' },

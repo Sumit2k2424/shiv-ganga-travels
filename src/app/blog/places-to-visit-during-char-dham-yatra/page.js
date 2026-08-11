@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Top 10 Places to Visit on Char Dham Yatra 2026' },
@@ -37,8 +38,6 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />;
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.15rem,2.5vw,1.4rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 32 };
-const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 const places = [
   {

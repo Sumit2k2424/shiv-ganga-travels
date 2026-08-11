@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Panch Badri Yatra Package 2026 | Price Starts at ₹18,000 | All 5 Badri Shrines' },
@@ -20,8 +21,6 @@ export const metadata = {
   },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const temples = [
   {

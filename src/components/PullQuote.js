@@ -1,5 +1,5 @@
 /**
- * PullQuote — editorial emphasis break in italic Playfair (the one reserved
+ * PullQuote — editorial emphasis break in italic Source Serif 4 (the one reserved
  * use of italic serif per the design-system typography note in globals.css).
  *
  * Props:

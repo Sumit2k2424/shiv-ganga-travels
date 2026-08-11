@@ -1,3 +1,4 @@
+import { h2, h3 } from "@/lib/prose";
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
@@ -181,8 +182,8 @@ function Schema() {
   );
 }
 
-const H2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.55rem)', fontWeight:700, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const H3 = { fontFamily:'var(--font-display)', fontSize:'clamp(1rem,2vw,1.2rem)', fontWeight:700, color:'var(--teal)', marginBottom:8, marginTop:24 };
+const H2 = h2;
+const H3 = h3;
 
 
 export default function RegistrationBlog() {

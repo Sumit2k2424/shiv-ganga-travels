@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import RouteMapInteractive from './RouteMapInteractive';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Route Map 2026 | Distances & Driving Times' },
@@ -93,7 +94,6 @@ const stops = [
   },
 ];
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 
 export default function RouteMap() {
   return (

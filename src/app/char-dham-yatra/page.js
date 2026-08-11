@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
 import GoogleReviews from '@/components/GoogleReviews';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Package 2026 | Price Starts at ₹18,500 | Hotels & Transport Included' },
@@ -91,17 +92,8 @@ function Schema() {
 
 const charDhamPkgs = PACKAGES.filter(p => p.category === 'char-dham');
 
-const h2Style = {
-  fontFamily: 'var(--font-display)',
-  fontSize: 'clamp(1.35rem, 2.5vw, 1.85rem)',
-  fontWeight: 600, color: 'var(--navy)',
-  letterSpacing: '-0.02em',
-  marginBottom: 12, marginTop: 40,
-};
-const pStyle = {
-  fontSize: 15, color: 'var(--text-mid)',
-  lineHeight: 1.85, marginBottom: 16,
-};
+const h2Style = h2;
+const pStyle = p;
 
 export default function CharDhamYatra() {
   return (

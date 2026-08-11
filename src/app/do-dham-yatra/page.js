@@ -3,6 +3,7 @@ import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import DoDhamConfigurator from '@/components/DoDhamConfigurator';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: '2 Dham Yatra Package 2026 | Price Starts at ₹10,999 | Kedarnath & Badrinath' },
@@ -67,8 +68,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
 const PAA = [
   { q:'What is the Do Dham Yatra?', a:'Do Dham means visiting two of the four dhams instead of all four. The two popular combinations are Kedarnath + Badrinath, or Yamunotri + Gangotri. It\'s chosen by pilgrims who can\'t spare 10–12 days for the full Char Dham circuit.' },

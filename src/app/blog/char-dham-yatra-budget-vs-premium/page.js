@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Budget vs Premium 2026 | Price Starts at ₹18,500 | Compared' },
@@ -101,7 +102,7 @@ export default function BudgetVsPremium() {
           { id:'premium-wins', label:'Where premium genuinely wins' },
         ]}/>
 
-        <h2 id="comparison" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="comparison" style={h2}>
           Factor-by-Factor Comparison
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:28 }}>
@@ -123,7 +124,7 @@ export default function BudgetVsPremium() {
           ))}
         </div>
 
-        <h2 id="premium-wins" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="premium-wins" style={h2}>
           The One Area Where Premium Genuinely Wins — Darshan Quality
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

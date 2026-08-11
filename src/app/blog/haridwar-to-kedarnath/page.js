@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2, p } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Haridwar to Kedarnath 2026 | Price Starts at ₹6,999 | Cab, Bus & Heli' },
   description: 'Haridwar to Kedarnath 2026 — 228km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
@@ -25,8 +26,6 @@ function Schema() {
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 export default function HaridwarToKedarnath() {
   return (<>
     <Schema/>

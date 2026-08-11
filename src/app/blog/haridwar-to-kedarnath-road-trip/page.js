@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Haridwar to Kedarnath Road Trip 2026 | Route & Stops' },
@@ -95,7 +96,7 @@ export default function HaridwarToKedarnath() {
           { id:'gaurikund-options', label:'Gaurikund to Kedarnath — 3 options' },
         ]}/>
 
-        <h2 id="turn-by-turn" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="turn-by-turn" style={h2}>
           Turn-by-Turn Route — Haridwar to Gaurikund
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:0, marginBottom:28, position:'relative' }}>
@@ -121,7 +122,7 @@ export default function HaridwarToKedarnath() {
           ))}
         </div>
 
-        <h2 id="sonprayag" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="sonprayag" style={h2}>
           The Sonprayag Checkpoint — What Pilgrims Don't Know
         </h2>
         <div style={{ background:'#FFF1F2', border:'2px solid #FECDD3', borderRadius:12, padding:'16px 20px', marginBottom:20 }}>
@@ -136,7 +137,7 @@ export default function HaridwarToKedarnath() {
           </ul>
         </div>
 
-        <h2 id="gaurikund-options" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="gaurikund-options" style={h2}>
           From Gaurikund to Kedarnath — 3 Options
         </h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:24 }}>

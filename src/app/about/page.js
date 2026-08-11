@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'About Shiv Ganga Travels 2026 | 15+ Years, Founded by Army Officer' },
@@ -117,16 +118,10 @@ function Schema() {
 }
 
 
-const h2 = {
-  fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem,2.8vw,1.9rem)',
-  fontWeight: 600, color: 'var(--navy)', letterSpacing: '-0.03em',
-  marginBottom: 14, marginTop: 0,
-};
-const p = { fontSize: 15.5, color: 'var(--text-mid)', lineHeight: 1.9, marginBottom: 18 };
 const pullQuote = {
   borderLeft: '4px solid var(--gold)', paddingLeft: 22, margin: '28px 0',
-  fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--navy)',
-  fontStyle: 'italic', lineHeight: 1.65,
+  fontFamily: 'var(--font-serif)', fontSize: 'var(--fs-lead)', color: 'var(--navy)',
+  fontStyle: 'italic', lineHeight: 'var(--lh-lead)',
 };
 
 export default function AboutPage() {

@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2, p } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹5,999 | Timings & Route' },
   description: 'Badrinath Yatra 2026 guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
@@ -15,8 +16,6 @@ function Schema() {
   const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Badrinath Yatra Guide 2026 — Darshan Timings, Route, Package & Travel Tips', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-20', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/badrinath-yatra-guide` };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
 }
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 export default function BadrinathYatraGuide() {
   return (<>
     <Schema/>

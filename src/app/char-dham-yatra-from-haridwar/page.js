@@ -6,6 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Haridwar 2026 | Price Starts at ₹20,999 | Direct Operator' },
@@ -85,8 +86,6 @@ function Schema() {
   </>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 const wa = (msg) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 
 export default function Page() {

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Terms & Conditions | Shiv Ganga Travels, Haridwar' },
@@ -43,7 +44,7 @@ function Schema() {
 }
 
 const H2 = ({ children }) => (
-  <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.35rem', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:34 }}>{children}</h2>
+  <h2 style={h2}>{children}</h2>
 );
 const P = ({ children }) => (
   <p style={{ fontSize:15, lineHeight:1.85, color:'var(--text-mid)', marginBottom:14 }}>{children}</p>

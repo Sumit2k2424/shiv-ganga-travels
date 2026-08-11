@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
+import { h2, p } from "@/lib/prose";
 
 const UPDATED = 'August 10, 2026';
 const UPDATED_ISO = '2026-08-10';
@@ -97,8 +98,6 @@ function Schemas() {
   </>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 const STATUS_COLOR = { open:'#15803d', caution:'#b45309' };
 
 export default function CharDhamRoadStatus() {

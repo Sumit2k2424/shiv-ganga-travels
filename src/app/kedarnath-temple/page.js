@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2 } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Kedarnath Temple Guide 2026 | Darshan Timings & History | Trek Guide' },
   description: 'Kedarnath Temple 2026 — darshan timings, history, altitude 3,583m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
@@ -24,8 +25,6 @@ function Schema() {
   ]};
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 const PAA = [
   { q:'Where is Kedarnath Temple located?', a:'In Rudraprayag district of Uttarakhand, near the source of the Mandakini river, at about 3,583 m altitude in the Garhwal Himalayas. It\'s reached by a 16 km trek from Gaurikund or by helicopter.' },
   { q:'Why is Kedarnath Temple famous?', a:'It\'s one of the twelve Jyotirlingas of Shiva and one of the four Char Dham shrines. Believed to be where Shiva appeared as a bull and left his hump, the stone temple has stood for centuries and survived the 2013 floods, deepening its significance.' },

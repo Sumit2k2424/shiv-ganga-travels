@@ -4,6 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathFareCalc from '@/components/KedarnathFareCalc';
+import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony & Palki Rates 2026 | Price Starts at ₹3,000 | Gaurikund' },
@@ -60,9 +61,6 @@ function Schema() {
   </>);
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 12, marginTop: 40 };
-const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 22 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 const wrap = { maxWidth: 820, margin: '0 auto', padding: '0 20px' };
 const tableWrap = { overflowX: 'auto', margin: '14px 0 8px', border: '1px solid hsl(var(--border))', borderRadius: 12 };
 const table = { width: '100%', borderCollapse: 'collapse', minWidth: 560, fontSize: 14 };

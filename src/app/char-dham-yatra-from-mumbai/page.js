@@ -5,6 +5,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Mumbai 2026 | Price Starts at ₹24,999 | Pickup & VIP Darshan' },
@@ -40,8 +41,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.5vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:36, letterSpacing:'-0.02em' };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
 const PAA = [
   { q:'How do I reach Char Dham from Mumbai?', a:'Fly Mumbai to Dehradun (about 2.5 hours, often via Delhi) or to Delhi and continue by train/road to Haridwar. Trains from Mumbai to Haridwar run too but take 24+ hours. From Haridwar or Dehradun, the road yatra begins.' },

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE, TRUST } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999 | Hotels & Transport Included' },
@@ -143,9 +144,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 12, marginTop: 40 };
-const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 22 };
-const p = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 const card = { background: '#fff', borderRadius: 12, padding: 16, border: '1px solid hsl(var(--border))' };
 const thtd = { padding: '11px 12px', fontSize: 13.5, textAlign: 'left', borderBottom: '1px solid hsl(var(--border))', color: '#334155', lineHeight: 1.6 };
 

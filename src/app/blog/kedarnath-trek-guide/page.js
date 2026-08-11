@@ -8,6 +8,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Trek Guide 2026 | 16 km Route & Stays' },
@@ -82,8 +83,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 export default function KedarnathTrekGuide() {
   return (

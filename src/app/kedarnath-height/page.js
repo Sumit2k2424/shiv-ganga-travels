@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Height 2026 | 3,583m Altitude & Location Facts' },
@@ -50,8 +51,6 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 const td = { padding:'10px 14px', borderBottom:'1px solid hsl(var(--border))', fontSize:14 };
 
 const FACTS = [

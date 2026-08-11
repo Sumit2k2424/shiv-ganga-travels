@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham vs Do Dham Yatra 2026 | Price Starts at ₹10,999 | Compare' },
@@ -99,7 +100,7 @@ export default function ComparisonPage() {
         ]}/>
 
         {/* Comparison table */}
-        <h2 id="comparison" style={{ fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:600, color:'var(--navy)', marginBottom:16 }}>Side-by-Side Comparison</h2>
+        <h2 id="comparison" style={h2}>Side-by-Side Comparison</h2>
         <div style={{ overflowX:'auto', marginBottom:36 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>
@@ -121,12 +122,12 @@ export default function ComparisonPage() {
           </table>
         </div>
 
-        <h2 id="choose-char" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12 }}>Choose Char Dham if...</h2>
+        <h2 id="choose-char" style={h2}>Choose Char Dham if...</h2>
         {['You have 10+ days available and no serious health conditions at altitude','You are completing the yatra for the first time and want the full spiritual circuit','You are aged 40–65 and in reasonable fitness','Family reunion or group pilgrimage where all members want the complete experience','You want to honour a vow (mannat) that requires all four dhams'].map(r => (
           <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--navy)', fontWeight:700 }}>✓</span>{r}</div>
         ))}
 
-        <h2 id="choose-do" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', marginBottom:12, marginTop:28 }}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
+        <h2 id="choose-do" style={h2}>Choose Do Dham (Kedarnath + Badrinath) if...</h2>
         {['You have only 5–7 days available','You are above 65 or have health conditions','You are a first-time yatri wanting to experience mountain pilgrimage before committing to the full circuit','You have previously done Yamunotri and Gangotri and want to complete Kedarnath + Badrinath','Budget is a key consideration — Do Dham costs approximately 40% less than Char Dham'].map(r => (
           <div key={r} style={{ display:'flex', gap:10, padding:'8px 0', borderBottom:'1px solid hsl(var(--border))', fontSize:15.5, color:'#2D3748' }}><span style={{ color:'var(--teal)', fontWeight:700 }}>✓</span>{r}</div>
         ))}

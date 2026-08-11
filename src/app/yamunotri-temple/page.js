@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Yamunotri Temple Guide 2026 | Darshan Timings, Trek & History' },
@@ -29,7 +30,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
 
 const PAA = [
   { q:'Where is Yamunotri Temple located?', a:'In Uttarkashi district of Uttarakhand, at 3,291m near the source of the Yamuna river. It is the westernmost of the four Char Dham shrines and traditionally the first one visited on the yatra, reached by a 6km trek from Janki Chatti.' },

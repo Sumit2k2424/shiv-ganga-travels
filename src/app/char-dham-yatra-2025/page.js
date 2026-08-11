@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
+import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: 'Char Dham Yatra 2026 — Registration & Travel',
@@ -41,9 +42,6 @@ function Schema() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>;
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.4rem,3vw,1.9rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:14, marginTop:36 };
-const h3 = { fontSize:'1.1rem', fontWeight:700, color:'var(--text)', marginBottom:10, marginTop:24 };
-const p  = { fontSize:14.5, color:'var(--text-mid)', lineHeight:1.85, marginBottom:14 };
 
 export default function CharDhamGuide2025() {
   return (

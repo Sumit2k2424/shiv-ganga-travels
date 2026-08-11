@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Yatra Guide 2026 | Price Starts at ₹6,999 | Route & Darshan' },
@@ -82,14 +83,14 @@ export default function KedarnathCompleteGuide() {
           { id:'cost',         label:'Complete cost breakdown' },
         ]}/>
 
-        <h2 id="significance" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="significance" style={h2}>
           Significance of Kedarnath
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
           Kedarnath is not merely a temple — it is one of the twelve Jyotirlingas (primordial pillars of light) of Lord Shiva and one of the four dhams in the Char Dham circuit. Situated at 3,583m in the Rudraprayag district, it sits in the shadow of the Kedarnath peak (6,940m) with the Mandakini river originating from the Chorabari glacier above. The temple was built (or rebuilt after earlier construction) by Adi Shankaracharya in the 8th century CE. It survived the catastrophic 2013 floods when a massive boulder deflected the floodwaters, protecting the main temple structure — an event widely considered miraculous.
         </p>
 
-        <h2 id="plan" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="plan" style={h2}>
           Step-by-Step: How to Plan Kedarnath Yatra 2026
         </h2>
         {[
@@ -111,7 +112,7 @@ export default function KedarnathCompleteGuide() {
           </div>
         ))}
 
-        <h2 id="cost" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
+        <h2 id="cost" style={h2}>
           Complete Cost Breakdown — Kedarnath Yatra 2026
         </h2>
         <div style={{ overflowX:'auto', marginBottom:24 }}>

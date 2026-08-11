@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Uttarakhand Weather 2026 | All Char Dham Shrines | Month-wise' },
@@ -97,7 +98,7 @@ export default function WeatherGuide() {
           { id:'what-to-pack',   label:'What to pack by month' },
         ]}/>
 
-        <h2 id="month-by-month" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="month-by-month" style={h2}>
           Month-by-Month Temperature &amp; Conditions
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -125,7 +126,7 @@ export default function WeatherGuide() {
           </table>
         </div>
 
-        <h2 id="what-to-pack" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="what-to-pack" style={h2}>
           What to Pack by Month
         </h2>
         {[

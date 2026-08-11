@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Hotels 2026 | Honest Price Guide | Trusted Local Booking' },
@@ -20,8 +21,6 @@ export const metadata = {
   },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const stops = [
   { stop:'Haridwar (base)', alt:'314m', dham:'Arrival / departure', budget:'₹800–₹2,500', deluxe:'₹3,000–₹6,500', note:'Where every yatra starts. Stay near Har Ki Pauri for the Ganga Aarti. Widest hotel choice on the whole route.' },

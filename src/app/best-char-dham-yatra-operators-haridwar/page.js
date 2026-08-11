@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: '6 Best Char Dham Yatra Operators in Haridwar 2026 | Ranked & Compared' },
@@ -63,8 +64,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.5vw,1.55rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 40, letterSpacing: '-0.02em' };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 const CRITERIA = [
   { icon: '⭐', label: 'Google rating', detail: 'Minimum 4.5★ to qualify. Must have genuine reviews with specific experiences, not generic 5-star text.' },

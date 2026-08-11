@@ -1,3 +1,4 @@
+import { h2, h3, p } from "@/lib/prose";
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogCTA from '@/components/BlogCTA';
@@ -84,10 +85,10 @@ function Schema() {
   );
 }
 
-const h2Style = { fontFamily:'var(--font-display)', fontSize:'clamp(1.25rem,2.8vw,1.65rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:44, letterSpacing:'-0.02em', lineHeight:1.3 };
-const h3Style = { fontFamily:'var(--font-display)', fontSize:'clamp(1.05rem,2vw,1.25rem)', fontWeight:700, color:'var(--navy)', marginBottom:10, marginTop:28 };
-const pStyle  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
-const liStyle = { fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:6 };
+const h2Style = h2;
+const h3Style = h3;
+const pStyle = p;
+const liStyle = p;
 
 const DHAMS = [
   {

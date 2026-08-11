@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Opening Dates 2026 | All 4 Dhams' },
@@ -34,8 +35,6 @@ function Schema() {
 
 
 // Style constants used in closing dates section
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
 const DHAMS = [
   { name:'Yamunotri', deity:'Goddess Yamuna', altitude:'3,291m', opens:'April 19, 2026', openTime:'7:30 AM (Akshaya Tritiya)', closes:'November 7, 2026 (Bhai Dooj – 1)', announcement:'Announced on Basant Panchami by temple priests at Kharsali village', icon:'🏔️',

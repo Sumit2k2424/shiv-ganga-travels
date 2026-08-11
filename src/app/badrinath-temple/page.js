@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2 } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Badrinath Temple Guide 2026 | Darshan Timings, Opening Apr 23' },
   description: 'Badrinath Temple 2026 — darshan timings 4:30 AM–9 PM, Mahabhishek, no trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
@@ -12,8 +13,6 @@ function Schema() {
   const ld = { '@context':'https://schema.org','@type':'TouristAttraction', '@id':`${SITE.baseUrl}/badrinath-temple#attraction`, name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, isPartOf:{ '@id':`${SITE.baseUrl}/#organization` }, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Badrinath_Temple','https://www.wikidata.org/wiki/Q799695'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 const PAA = [
   { q:'Where is Badrinath Temple located?', a:'In Chamoli district of Uttarakhand, on the bank of the Alaknanda river between the Nar and Narayan peaks, at about 3,133 m altitude. It\'s fully motorable — no trek required.' },
   { q:'Why is Badrinath Temple famous?', a:'Dedicated to Lord Vishnu, it\'s the most important of the four Char Dham shrines and one of the 108 Divya Desams. Tradition credits Adi Shankaracharya with establishing the temple in the 8th century.' },

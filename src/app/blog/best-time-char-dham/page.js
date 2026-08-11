@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
+import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Best Time for Char Dham Yatra 2026 | Month-by-Month Guide' },
@@ -26,9 +27,6 @@ export const metadata = {
   },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:700, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const h3 = { fontFamily:'var(--font-display)', fontSize:'1.05rem', fontWeight:700, color:'var(--navy)', marginBottom:8, marginTop:20 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:14 };
 
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',

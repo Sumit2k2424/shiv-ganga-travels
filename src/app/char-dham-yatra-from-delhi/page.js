@@ -3,6 +3,7 @@ import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Delhi 2026 | Price Starts at ₹22,999 | Train & Flight Pickup' },
@@ -43,8 +44,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
 }
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.9, marginBottom:16 };
 
 const PAA = [
   { q:'How far is Char Dham Yatra from Delhi?', a:'Delhi to Haridwar — the gateway — is about 220 km (5–6 hours by road). From there the full circuit covers roughly 1,100–1,400 km. Many pilgrims fly or take a train to Haridwar/Dehradun first and start the yatra from there.' },

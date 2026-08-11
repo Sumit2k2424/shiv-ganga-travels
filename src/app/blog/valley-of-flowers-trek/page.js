@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Valley of Flowers Trek 2026 | Price Starts at ₹150 | Best Time & Route' },
   description: 'Valley of Flowers trek 2026 — UNESCO site, 17km route from Govindghat. Trusted operator, 15+ yrs experience, instant confirmation.',
@@ -15,8 +16,6 @@ function Schema() {
   const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Valley of Flowers Trek Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-25', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/valley-of-flowers-trek` };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
 }
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.5vw,1.75rem)', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 export default function ValleyOfFlowersTrek() {
   return (<>
     <Schema/>

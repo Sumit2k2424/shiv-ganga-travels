@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Group Package 2026 | Price Starts at ₹17,500 | 10+ Pilgrims' },
@@ -76,7 +77,7 @@ export default function GroupPackage() {
           { id:'what-we-handle', label:'What we handle for groups' },
         ]}/>
 
-        <h2 id="pricing" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="pricing" style={h2}>
           Group Size, Vehicle &amp; Per-Person Pricing
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -115,7 +116,7 @@ export default function GroupPackage() {
           <strong>Highlighted rows</strong> (6–9 people) represent the sweet spot for group Char Dham Yatra — best per-person price with comfortable, private vehicle and maximum group bonding.
         </div>
 
-        <h2 id="timeline" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="timeline" style={h2}>
           Advance Booking Timeline for Groups
         </h2>
         {[
@@ -139,7 +140,7 @@ export default function GroupPackage() {
           </div>
         ))}
 
-        <h2 id="what-we-handle" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>
+        <h2 id="what-we-handle" style={h2}>
           What Shiv Ganga Travels Handles for Group Yatras
         </h2>
         {[

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Badrinath Weather 2026 | Month-wise Temperature Guide' },
@@ -30,8 +31,6 @@ const weather = [
   { month:'November', temp:'−5°C to 4°C', snow:'Heavy — road can close', rain:'Very low', visit:'⚠️ Temple closes Nov 2026 — not recommended for pilgrims', wear:'Full winter expedition gear mandatory' },
 ];
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 export default function BadrinathWeather() {
   return (

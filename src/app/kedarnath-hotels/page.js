@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Hotels Near Kedarnath 2026 | Best Stays | Guptkashi, Sonprayag & Phata' },
@@ -20,8 +21,6 @@ export const metadata = {
   },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const faqs = [
   ['Are there hotels right next to the Kedarnath temple?', 'Yes — a cluster of basic guesthouses and ashrams sit within 35–200 metres of the temple. These are simple pilgrim lodgings, not resort-style hotels: expect a clean room, an attached bathroom and hot water, nothing more. If you want a proper mid-range room with better food and comfort, Guptkashi (our recommended halt, 40km away) is the better base.'],

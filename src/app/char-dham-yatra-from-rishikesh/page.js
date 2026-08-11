@@ -2,6 +2,7 @@ import Link from 'next/link';
 import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Rishikesh 2026 | Price Starts at ₹21,000 | Door Pickup' },
@@ -78,8 +79,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.8vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 14, marginTop: 32 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.85, marginBottom: 16 };
 
 const PAA = [
   { q:'How far is Char Dham Yatra from Rishikesh?', a:'Rishikesh to Haridwar — the gateway to the dhams — is roughly 24 km from Haridwar. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },

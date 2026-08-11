@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Kedarnath Yatra Package 2026 | Price Starts at ₹6,999 | Trek, Pony & Heli Guide' },
@@ -42,9 +43,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage','@id':`${SITE.baseUrl}/kedarnath-yatra#webpage`, url:`${SITE.baseUrl}/kedarnath-yatra`, name:'Kedarnath Yatra 2026 Guide & Packages', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/></>);
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-0.02em', marginBottom: 12, marginTop: 36 };
-const h3 = { fontSize: 'clamp(1rem,2vw,1.2rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 8, marginTop: 20 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 const PAA = [
   { q:'How difficult is the Kedarnath trek?', a:'Moderate. It\'s a 16 km uphill walk from Gaurikund to the temple, gaining about 1,550 m to 3,583 m. Most reasonably fit adults complete it in 6–8 hours one way. The challenge is the altitude and the sustained climb, not technical terrain — the path is paved and well-used. Walk 3–5 km daily for 2–3 weeks beforehand, and anyone with heart or BP issues should carry a doctor\'s clearance.' },

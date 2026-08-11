@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra in 7 Days 2026 | Itinerary & Honest Advice' },
@@ -94,7 +95,7 @@ export default function SevenDaysBlog() {
           { id:'faq',             label:'FAQs' },
         ]}/>
 
-        <h2 id="why-10-days" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="why-10-days" style={h2}>
           Why Most Pilgrims Need 10 Days (Not 7)
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
@@ -105,7 +106,7 @@ export default function SevenDaysBlog() {
         </p>
 
         {/* Comparison table */}
-        <h2 id="comparison" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="comparison" style={h2}>
           7 Days vs 10 Days vs 12 Days — What Changes
         </h2>
         <div style={{ overflowX:'auto', marginBottom:28 }}>
@@ -139,7 +140,7 @@ export default function SevenDaysBlog() {
           </table>
         </div>
 
-        <h2 id="itinerary" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:20 }}>
+        <h2 id="itinerary" style={h2}>
           The 7-Day Char Dham Yatra Itinerary — Day by Day
         </h2>
         <div style={{ display:'flex', flexDirection:'column', gap:14, marginBottom:32 }}>
@@ -162,7 +163,7 @@ export default function SevenDaysBlog() {
           ))}
         </div>
 
-        <h2 id="when-makes-sense" style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>
+        <h2 id="when-makes-sense" style={h2}>
           When 7 Days Actually Makes Sense
         </h2>
         {[
@@ -191,7 +192,7 @@ export default function SevenDaysBlog() {
         </div>
 
         {/* FAQ */}
-        <h2 id="faq" style={{ fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:700, color:'var(--navy)', marginBottom:14 }}>Frequently Asked Questions</h2>
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
         {[
           ['Can I do Char Dham Yatra in 7 days from Delhi?', 'You need to add 1 day for Delhi to Haridwar travel (train or road, 5–6 hours). So a 7-day Char Dham circuit from Delhi actually becomes an 8-day trip from home. If you only have 7 days total from Delhi, Do Dham (Kedarnath + Badrinath) in 5N/6D from Haridwar is the right option.'],
           ['Is the 7-day itinerary suitable for people with BP or heart conditions?', 'Absolutely not. Pilgrims with high blood pressure, heart conditions, or diabetes should not attempt a 7-day Char Dham Yatra under any circumstances. The rapid altitude gain combined with exhaustion from long drives significantly increases cardiac risk. The minimum recommended package for pilgrims with health conditions is the 12N/13D Senior Citizen package with helicopter at Kedarnath.'],

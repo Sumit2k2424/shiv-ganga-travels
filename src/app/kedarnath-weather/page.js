@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2 } from "@/lib/prose";
 export const metadata = {
   title: { absolute: 'Kedarnath Weather 2026 | Month-wise Guide | Best Time to Visit' },
   description: 'Kedarnath weather 2026 — month-by-month temperatures & best time to visit. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
@@ -16,8 +17,6 @@ const weather = [
   {month:'October',temp:'2°C to 10°C',snow:'Upper peaks',rain:'Very low',visit:'✅ Best for photography — crystal clear views',wear:'Heavy jacket + thermals + warm hat'},
   {month:'November',temp:'−5°C to 3°C',snow:'Heavy',rain:'Very low',visit:'⚠️ Temple closes Nov 11 — extreme cold',wear:'Full winter gear, expedition quality'},
 ];
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:32 };
-const p  = { fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 };
 export default function KedarnathWeather() {
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify({'@context':'https://schema.org','@type':'WebPage',name:'Kedarnath Weather Guide 2026',description:'Month-by-month Kedarnath weather guide with temperatures, snowfall, and best time to visit.',url:`${SITE.baseUrl}/kedarnath-weather`}) }}/>

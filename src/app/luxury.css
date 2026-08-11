@@ -2289,28 +2289,39 @@ html.lenis, html.lenis body { height: auto; }
 }
 .badge-gold { background: var(--gold-wash); color: var(--gold-dark); border: 1px solid var(--gold-hair); }
 
-/* — Editorial reading measure for long-form pages — */
+/* — Editorial reading measure for long-form pages —
+   These class selectors outrank the `article p / h2 / h3` element rules in
+   globals.css, so they were the blog's real typography: 17px/1.78 body and a
+   1.5–2.1rem H2, competing with the element rules rather than extending them.
+   They now resolve to the same scale tokens, so specificity no longer decides
+   the outcome — whichever rule wins, the computed value is identical.
+   Brand colours (--ink, --ink-soft) are unchanged. */
 .blog-container p,
 .content-narrow p,
 .guide-article p {
-  font-size: 1.0625rem;
-  line-height: 1.78;
+  /* No font-family here on purpose. This selector is (0,1,1) and would beat
+     the position-scoped serif rules in globals.css, putting Source Serif 4
+     back into every card and CTA nested in the article. Size and colour are
+     safe to set broadly — boxed components carry their own inline sizes. */
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
   color: var(--ink-soft);
 }
 .blog-container h2,
 .content-narrow h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   color: var(--ink);
-  letter-spacing: -0.02em;
-  line-height: 1.14;
-  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  letter-spacing: -0.018em;
+  line-height: var(--lh-h2);
+  font-size: var(--fs-h2);
 }
 .blog-container h3,
 .content-narrow h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   color: var(--ink);
-  letter-spacing: -0.014em;
-  font-size: clamp(1.15rem, 1.9vw, 1.45rem);
+  letter-spacing: -0.012em;
+  line-height: var(--lh-h3);
+  font-size: var(--fs-h3);
 }
 
 /* — FAQ + dividers — */

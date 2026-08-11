@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Monsoon Safety 2026 | Local Driver Guide' },
@@ -13,8 +14,6 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-monsoon-safety` },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'1.4rem', fontWeight:600, color:'var(--navy)', letterSpacing:'-0.02em', marginBottom:12, marginTop:36 };
-const p = { fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 const FAQS = [
   { q:'Is Char Dham Yatra safe during monsoon (July–August)?', a:'It is possible but demands respect. All four dhams stay open through the monsoon, and pilgrims travel every day. But landslides do block roads for hours at a time, and afternoon rain is heavy. Safe monsoon travel means an experienced hill driver, sunrise departures, a buffer day, and checking route status the morning you move. If your dates are flexible, mid-September onwards is easier.' },

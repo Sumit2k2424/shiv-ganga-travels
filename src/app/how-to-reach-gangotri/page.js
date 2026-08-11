@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'How to Reach Gangotri 2026 | Road Route & Helicopter Guide' },
@@ -19,8 +20,6 @@ export const metadata = {
   },
 };
 
-const h2 = { fontFamily:'var(--font-display)', fontSize:'clamp(1.2rem,2.8vw,1.5rem)', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:32 };
-const p  = { fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 };
 
 export default function HowToReachGangotri() {
   return (

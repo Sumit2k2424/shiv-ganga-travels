@@ -10,7 +10,7 @@ import './design-system.css';
 // can reconcile the commercial and editorial layers above it. See
 // UI_COMPONENT_GUIDE.md.
 import './ui-system.css';
-import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
+import { Inter, Source_Serif_4 } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -24,21 +24,28 @@ import { SITE } from '@/data/packages';
 import { SOCIAL_SAME_AS } from '@/data/social';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
-const jakarta = Plus_Jakarta_Sans({
+// Two families, both variable: one file per style covers the whole weight
+// axis, so we get H3 at 650 without shipping a separate static cut. Omitting
+// `weight` is what selects the variable font — listing weights would pull
+// several static files instead.
+//
+// Inter: all UI, navigation, headings.
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400','500','600','700','800'],
-  variable: '--font-jakarta',
+  variable: '--font-inter',
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
 });
 
-const playfair = Playfair_Display({
+// Source Serif 4: long-form article body only (see --font-serif in globals.css).
+// Italic is a real cut here, not a synthesised slant — blockquotes need it.
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['600','700'],
-  variable: '--font-playfair',
-  display: 'optional',
-  preload: false,
+  style: ['normal', 'italic'],
+  variable: '--font-source-serif',
+  display: 'swap',
+  preload: true,
   adjustFontFallback: true,
 });
 
@@ -403,7 +410,7 @@ function SiteSchema() {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={`${jakarta.variable} ${playfair.variable}`}>
+    <html lang="en-IN" className={`${inter.variable} ${sourceSerif.variable}`}>
       <head>
         {/* Below-the-fold origins (reviews, maps, images) — dns-prefetch only, no socket cost on first paint */}
         <link rel="dns-prefetch" href="https://lh3.googleusercontent.com"/>

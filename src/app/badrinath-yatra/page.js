@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Badrinath Yatra Package 2026 | Price Starts at ₹5,999 | VIP Darshan Included' },
@@ -111,8 +112,6 @@ function Schema() {
   );
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.8vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 14, marginTop: 32 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.85, marginBottom: 16 };
 
 const PAA = [
   { q:'When does Badrinath open in 2026?', a:'Badrinath Dham opens on April 23, 2026, at 6:15 AM (Brahma Muhurta), and stays open until roughly mid-November. Daily darshan typically runs 4:30 AM–1:00 PM and 4:00 PM–9:00 PM.' },

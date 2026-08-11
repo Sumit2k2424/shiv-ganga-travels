@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: 'Rishikesh Tour Package 2026 | Price Starts at ₹3,999 | Ganga Aarti & Rafting' },
@@ -59,8 +60,6 @@ function Schema() {
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
-const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem,3vw,1.6rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 36 };
-const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.9, marginBottom: 16 };
 
 export default function RishikeshTourPackages() {
   return (

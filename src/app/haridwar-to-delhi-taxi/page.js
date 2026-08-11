@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { TRANSFERS, transferRows, inr } from '@/data/localTaxi';
+import { h2 } from "@/lib/prose";
 
 const R = TRANSFERS['haridwar-delhi'];
 
@@ -102,7 +103,7 @@ function Schema() {
 }
 
 const H2 = ({ children }) => (
-  <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:36 }}>{children}</h2>
+  <h2 style={h2}>{children}</h2>
 );
 
 export default function HaridwarToDelhiTaxi() {
