@@ -118,6 +118,24 @@ module.exports = {
         'shimmer-slide': {
           to: { transform: 'translate(calc(100cqw - 100%), 0)' },
         },
+        // MagicUI — animated-shiny-text (a single sweep across a mask)
+        'shiny-text': {
+          '0%, 90%, 100%': { 'background-position': 'calc(-100% - var(--shiny-width)) 0' },
+          '30%, 60%':      { 'background-position': 'calc(100% + var(--shiny-width)) 0' },
+        },
+        // MagicUI — animated-gradient-text / aurora-text
+        gradient: {
+          to: { 'background-position': 'var(--bg-size, 200%) 0' },
+        },
+        // MagicUI — border-beam (a light travelling one lap of the border)
+        'border-beam': {
+          '100%': { 'offset-distance': '100%' },
+        },
+        // Aceternity — spotlight (a slow settle, not a pulse)
+        spotlight: {
+          '0%':   { opacity: '0', transform: 'translate(-72%, -62%) scale(0.5)' },
+          '100%': { opacity: '1', transform: 'translate(-50%, -40%) scale(1)' },
+        },
       },
 
       animation: {
@@ -127,6 +145,10 @@ module.exports = {
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         'spin-around':      'spin-around calc(var(--speed) * 2) infinite linear',
         'shimmer-slide':    'shimmer-slide var(--speed) ease-in-out infinite alternate',
+        'shiny-text':       'shiny-text var(--shiny-duration, 6s) ease-in-out infinite',
+        gradient:           'gradient 8s linear infinite',
+        'border-beam':      'border-beam calc(var(--duration, 12) * 1s) infinite linear',
+        spotlight:          'spotlight 2.4s var(--ui-ease-out, cubic-bezier(0.16,1,0.30,1)) 0.5s 1 forwards',
       },
     },
   },

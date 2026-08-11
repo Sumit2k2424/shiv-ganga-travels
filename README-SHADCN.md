@@ -1,5 +1,25 @@
 # shadcn/ui + MagicUI — install notes
 
+> **Superseded in parts — see `UI_COMPONENT_GUIDE.md`, which is now the
+> canonical document for how to build UI here.**
+>
+> Two claims below were true at the time and are no longer:
+>
+> 1. **"The registry CDNs were unreachable."** They are reachable now.
+>    `npx shadcn@latest add <component>` works and is the supported path.
+> 2. **"You must hand-pull the v3-era components from commit `2bfc1c82^`."**
+>    Unnecessary. The CLI detects Tailwind v3 from the installed package and
+>    serves the v3 registry, which uses `forwardRef` and is React 18-safe.
+>    Verified on `tooltip`, `alert`, `drawer`, `table` and nine others.
+>
+> The Tailwind v4 → v3 rewrite table further down **is still needed**, but only
+> for Aceternity and React Bits, which are copy-paste rather than CLI. One
+> shadcn component did arrive with v4 syntax — `calendar` — and carries a
+> `LOCAL PATCH` marker where it was fixed.
+>
+> The component list below is also out of date: 25 shadcn components are now
+> installed, plus Aceternity and React Bits. See the guide.
+
 Both libraries are installed and building cleanly against this project's
 existing stack (Next 15 App Router, React 18, Tailwind 3.4, plain JavaScript).
 

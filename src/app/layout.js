@@ -5,6 +5,11 @@ import './globals.css';
 // editorial page can use the system.
 import './luxury.css';
 import './design-system.css';
+// The single token contract every imported registry component resolves
+// through (shadcn/Magic UI/Aceternity/React Bits/Tailark). Loads last so it
+// can reconcile the commercial and editorial layers above it. See
+// UI_COMPONENT_GUIDE.md.
+import './ui-system.css';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';

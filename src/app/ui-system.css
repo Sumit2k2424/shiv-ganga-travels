@@ -1,0 +1,216 @@
+/* ═══════════════════════════════════════════════════════════════════
+   UI SYSTEM — the single token contract
+   ───────────────────────────────────────────────────────────────────
+   Every component imported from an external registry (shadcn/ui,
+   Magic UI, Aceternity, React Bits, Tailark) resolves its geometry,
+   colour, elevation and motion through THIS file. Nothing else.
+
+   That is what stops the site becoming a visual Frankenstein: the
+   registries supply behaviour and markup, this file supplies the
+   look, and there is exactly one of it.
+
+   ── Load order (src/app/layout.js) ──
+     globals.css        brand palette + the live commercial system
+     luxury.css         editorial layer (.lux-*)
+     design-system.css  editorial token scales (--ds-*)
+     ui-system.css      ← this file. Last, so it can reconcile them.
+
+   ── Two density contexts, one system ──
+   The site is mid-migration (DESIGN-SYSTEM.md, phases 2–7). Rather
+   than fork into two design systems, geometry is a *context*:
+
+     :root                  commercial — 12px radius, soft shadow.
+                            What ~190 live routes render in today.
+     [data-ui="editorial"]  editorial — 2px radius, hairline, no
+                            shadow. What redesigned pages render in.
+
+   Same components, same tokens, same palette. Only the geometry
+   moves. Opt a page or section in by putting the attribute on any
+   wrapper; everything inside inherits.
+
+       <section data-ui="editorial">
+         <Card />   ← 2px, hairline
+       </section>
+
+   Adding a third context is NOT allowed. If a component needs a
+   look neither context provides, the look is wrong, not missing.
+═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Spacing ──────────────────────────────────────────────────
+     One 4px rhythm. Aliases onto the --ds-space-* scale already
+     defined in design-system.css; no new values are invented. */
+  --ui-space-1:  var(--ds-space-1);    /*  4px */
+  --ui-space-2:  var(--ds-space-2);    /*  8px */
+  --ui-space-3:  var(--ds-space-3);    /* 12px */
+  --ui-space-4:  var(--ds-space-4);    /* 16px */
+  --ui-space-5:  var(--ds-space-5);    /* 20px */
+  --ui-space-6:  var(--ds-space-6);    /* 24px */
+  --ui-space-8:  var(--ds-space-8);    /* 32px */
+  --ui-space-10: var(--ds-space-10);   /* 40px */
+  --ui-space-12: var(--ds-space-12);   /* 48px */
+  --ui-space-16: var(--ds-space-16);   /* 64px */
+  --ui-space-20: var(--ds-space-20);   /* 80px */
+
+  /* Vertical rhythm between full sections. Fluid, cinematic. */
+  --ui-section-y:  clamp(56px, 7vw, 112px);
+  --ui-gutter:     clamp(20px, 5vw, 64px);
+
+  /* ── Container widths ─────────────────────────────────────────
+     Three, and only three. Anything else is a one-off and wrong. */
+  --ui-max:     1280px;   /* default page container   */
+  --ui-max-wide:1440px;   /* edge-to-edge media       */
+  --ui-narrow:   720px;   /* reading measure, ~68ch   */
+
+  /* ── Border radius ────────────────────────────────────────────
+     --radius is the shadcn-facing token; Tailwind's rounded-lg/md/sm
+     derive from it in tailwind.config.js. Commercial context keeps
+     the 12px the live site already uses. */
+  --ui-r-sharp: 0;
+  --ui-r-tight: 2px;
+  --ui-r-soft:  8px;
+  --ui-r-card:  12px;
+  --ui-r-pill:  100px;
+
+  /* ── Elevation ────────────────────────────────────────────────
+     Navy-tinted, never neutral grey. Shadows are earned: only
+     surfaces that genuinely float get one. */
+  --ui-elev-1:     var(--ds-elev-1);
+  --ui-elev-2:     var(--ds-elev-2);
+  --ui-elev-3:     var(--ds-elev-3);
+  --ui-elev-float: var(--ds-elev-float);
+
+  /* ── Motion ───────────────────────────────────────────────────
+     Three durations, two curves. A component that needs a fourth
+     duration is over-animating. */
+  --ui-dur-fast: 150ms;   /* hover, focus, colour swaps      */
+  --ui-dur-base: 250ms;   /* the default. Most things.       */
+  --ui-dur-slow: 450ms;   /* entrances, layout-scale changes */
+
+  --ui-ease:      cubic-bezier(0.4, 0, 0.2, 1);    /* symmetric  */
+  --ui-ease-out:  cubic-bezier(0.16, 1, 0.30, 1);  /* decelerate */
+
+  /* ── Hover behaviour ──────────────────────────────────────────
+     One vocabulary, so cards from five registries move identically. */
+  --ui-lift:        -3px;    /* translateY on card hover      */
+  --ui-lift-strong: -6px;    /* hero/feature cards only       */
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   EDITORIAL CONTEXT
+   ───────────────────────────────────────────────────────────────────
+   Re-points the shadcn-facing variables at the editorial values from
+   luxury.css / design-system.css. Because Tailwind's colour and radius
+   utilities are all `var()`-backed (see tailwind.config.js), every
+   imported component picks this up with no per-component edits.
+═══════════════════════════════════════════════════════════════════ */
+
+[data-ui="editorial"] {
+  /* Geometry — tight, editorial. */
+  --radius: 0.125rem;               /* 2px, the house default   */
+  --ui-r-card: var(--ui-r-tight);
+
+  /* Paper, not page-grey. */
+  --background:          45 33% 98%;   /* --paper      #FBFAF7 */
+  --foreground:         219 67% 13%;   /* --ink        #0B1B38 */
+  --card:                 0 0% 100%;
+  --card-foreground:    219 67% 13%;
+  --popover:              0 0% 100%;
+  --popover-foreground: 219 67% 13%;
+
+  /* Hairlines, not slate borders. Navy at 12% over paper. */
+  --border: 218 19% 91%;
+  --input:  218 19% 91%;
+
+  /* Editorial focus ring is gold at 2px (DESIGN-SYSTEM.md §12). */
+  --ring: 37 92% 47%;
+
+  /* Quieter meta text. */
+  --muted-foreground: 217 13% 54%;     /* --ink-faint  #7A8699 */
+}
+
+/* Editorial surfaces are defined by their edge, not their shadow.
+   Neutralises the `shadow` / `shadow-sm` baked into shadcn's Card,
+   Button and Popover class strings without forking those files. */
+[data-ui="editorial"] .shadow,
+[data-ui="editorial"] .shadow-sm {
+  box-shadow: none;
+}
+
+/* Floating surfaces still float — they have nothing else to sit on. */
+[data-ui="editorial"] .shadow-md,
+[data-ui="editorial"] .shadow-lg,
+[data-ui="editorial"] .shadow-xl {
+  box-shadow: var(--ui-elev-3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ADAPTER UTILITIES
+   ───────────────────────────────────────────────────────────────────
+   The handful of treatments imported components need but no registry
+   agrees on. Kept deliberately small — this is not a second Tailwind.
+═══════════════════════════════════════════════════════════════════ */
+
+/* The house card hover. Every interactive card, from any registry,
+   uses this so they all move the same way. */
+.ui-lift {
+  transition: transform var(--ui-dur-base) var(--ui-ease-out),
+              box-shadow var(--ui-dur-base) var(--ui-ease-out),
+              border-color var(--ui-dur-base) var(--ui-ease);
+  will-change: transform;
+}
+.ui-lift:hover {
+  transform: translateY(var(--ui-lift));
+  box-shadow: var(--ui-elev-3);
+}
+
+/* Containers. */
+.ui-container        { width: 100%; max-width: var(--ui-max);      margin-inline: auto; padding-inline: var(--ui-gutter); }
+.ui-container--wide  { max-width: var(--ui-max-wide); }
+.ui-container--narrow{ max-width: var(--ui-narrow); }
+
+/* Section rhythm. */
+.ui-section { padding-block: var(--ui-section-y); }
+.ui-section--tight { padding-block: calc(var(--ui-section-y) * 0.55); }
+
+/* Gold is punctuation — one per view, never a default fill. */
+.ui-accent { color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ───────────────────────────────────────────────────────────────────
+   Registry components animate through Tailwind classes, CSS keyframes
+   and (for a few) rAF-driven inline styles. The first two are covered
+   here; the rAF ones carry a LOCAL PATCH in their own source, because
+   no stylesheet can stop an inline style.
+═══════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ui-dur-fast: 1ms;
+    --ui-dur-base: 1ms;
+    --ui-dur-slow: 1ms;
+    --ui-lift: 0px;
+    --ui-lift-strong: 0px;
+  }
+
+  .ui-lift,
+  .ui-lift:hover {
+    transition: none;
+    transform: none;
+  }
+
+  /* Registry decoration: marquees, beams, shimmers, auroras, meteors.
+     These carry meaning nowhere — stopping them costs nothing. */
+  .animate-marquee,
+  .animate-marquee-vertical,
+  .animate-shimmer-slide,
+  .animate-spin-around,
+  .animate-aurora,
+  .animate-shiny-text,
+  .animate-border-beam,
+  .animate-meteor,
+  .animate-gradient {
+    animation: none !important;
+  }
+}

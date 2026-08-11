@@ -1,3 +1,9 @@
+'use client';
+// LOCAL PATCH: the directive above. This file uses React.forwardRef, a
+// client-only API — importing it from a server component throws. It happened to
+// work because its only consumer (/ui-kit) is a client island. Re-running
+// `npx shadcn add` on this component drops the directive again.
+
 import React from "react";
 import { cn } from "@/lib/utils";
 export const ShimmerButton = React.forwardRef(({ shimmerColor = "#ffffff", shimmerSize = "0.05em", shimmerDuration = "3s", borderRadius = "100px", background = "rgba(0, 0, 0, 1)", className, children, ...props }, ref) => {
