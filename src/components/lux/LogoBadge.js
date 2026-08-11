@@ -1,9 +1,11 @@
 /* Brand badge — the circular mark: gold ring, navy field, three gold summits
    with a cream spire, Om below the horizon.
 
-   Distinct from LogoMark.js, which is the animated navbar mark (dotted
-   rotating ring, river tail). This one is the static badge used where the
-   brand needs to read as a single small object — the footer at 44px.
+   This is the site's one brand mark: navbar at 40px, footer at 44px.
+
+   LogoMark.js is the older animated mark (dotted rotating ring, river tail)
+   that the navbar used until this replaced it. It is now unreferenced —
+   kept because it is brand work, not because anything needs it.
 
    Server component on purpose. It carries no <defs> and therefore no ids:
    the mountains are drawn to terminate exactly on the navy disc rather than

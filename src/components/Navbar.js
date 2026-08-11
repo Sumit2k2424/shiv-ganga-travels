@@ -4,7 +4,7 @@ import Link from 'next/link';
 import TrustStrip from '@/components/TrustStrip';
 import { SITE } from '@/data/packages';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
-import LogoMark from '@/components/lux/LogoMark';
+import LogoBadge from '@/components/lux/LogoBadge';
 
 function ChevronDown({ open }) {
   return (
@@ -136,9 +136,12 @@ export default function Navbar() {
         <div style={{ maxWidth:'var(--lux-max, 1320px)', margin:'0 auto', padding:'0 clamp(20px,4vw,40px)', height:70, display:'flex', alignItems:'center', gap:0 }}>
 
           {/* Logo */}
-          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'flex-start', gap:11, textDecoration:'none', flexShrink:0, paddingTop:4 }}>
-            <LogoMark size={36}/>
-            <div style={{ lineHeight:1, paddingTop:3 }}>
+          {/* Centred, with no paddingTop offsets: those existed to compensate
+              for LogoMark's river tail, which hung 14px below the circle. The
+              badge is square, so the lockup centres normally. */}
+          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'center', gap:11, textDecoration:'none', flexShrink:0 }}>
+            <LogoBadge size={40}/>
+            <div style={{ lineHeight:1 }}>
               <div className="eq-wordmark__name">Shiv&nbsp;Ganga <span className="lt">Travels</span></div>
               <div className="eq-wordmark__sub">Haridwar · Est. {SITE.established}</div>
             </div>
