@@ -1201,6 +1201,30 @@ html.lenis, html.lenis body { height: auto; }
 .k-firstlight { animation: kGlow 9s ease-in-out infinite; }
 @keyframes kGlow { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
 
+/* ── Pointer parallax, per depth band ────────────────────────
+   HeroSection writes two unitless numbers in [-1,1] onto .k-scene once per
+   rAF (--mx / --my); everything below just multiplies them. One style write
+   per frame, no per-layer JS, no layout — the whole thing stays a transform.
+
+   The amplitudes are the point: a uniform shift slides the picture, whereas
+   near moving ~4x more than far is what the eye actually reads as depth.
+   Vertical is 0.6x horizontal because a mouse crossing a wide viewport
+   should not lift the mountains as much as it sweeps them.
+
+   These sit on wrapper groups, NOT on .k-layer--*, which own the slow drift
+   keyframes. Two transforms on one element would overwrite; nested groups
+   compose.
+
+   2D translate, not translate3d: these are SVG <g> elements, where 3D
+   transforms have a history of Safari bugs. The drift keyframes on
+   .k-layer--* in this same file already use 2D translateX and are proven
+   here, and there is no compositor benefit to win — these layers are
+   animated regardless. */
+.k-px--haze { transform: translate(calc(var(--mx, 0) *  2.5px), calc(var(--my, 0) *  1.5px)); }
+.k-px--far  { transform: translate(calc(var(--mx, 0) *  4.5px), calc(var(--my, 0) *  2.7px)); }
+.k-px--mid  { transform: translate(calc(var(--mx, 0) *  8px),   calc(var(--my, 0) *  4.8px)); }
+.k-px--near { transform: translate(calc(var(--mx, 0) * 11px),   calc(var(--my, 0) *  6.6px)); }
+
 /* Range parallax — a breath of drift; the far range moves least */
 .k-layer--far { animation: kDriftF 64s ease-in-out infinite; }
 .k-layer--mid { animation: kDriftM 54s ease-in-out infinite; }
@@ -1266,6 +1290,9 @@ html.lenis, html.lenis body { height: auto; }
   .k-kalash, .k-flag, .k-lamp, .k-flake, .k-bird { animation: none !important; }
   .k-flake, .k-bird { display: none; }
   .k-star, .k-firstlight, .k-aarti, .k-door, .k-kalash { opacity: 1; }
+  /* Belt and braces: HeroSection already refuses to attach the listener under
+     reduced motion, but if --mx ever gets set the layers must not act on it. */
+  .k-px--haze, .k-px--far, .k-px--mid, .k-px--near { transform: none !important; }
 }
 
 /* ── Hero scene: sunrise over the Garhwal ────────────────

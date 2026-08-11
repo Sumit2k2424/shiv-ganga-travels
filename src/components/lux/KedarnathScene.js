@@ -80,6 +80,16 @@ export default function KedarnathScene({ className = '' }) {
             <stop offset="100%" stopColor="#E8920A" stopOpacity="0" />
           </radialGradient>
 
+          {/* Aerial perspective. Distance in mountains reads as loss of
+              contrast, not loss of detail — air between you and a ridge
+              scatters light into it. Washed over the far range only, so the
+              three ranges separate tonally instead of by outline alone. */}
+          <linearGradient id="kAerial" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stopColor="#8fb4dd" stopOpacity="0.16" />
+            <stop offset="55%"  stopColor="#8fb4dd" stopOpacity="0.07" />
+            <stop offset="100%" stopColor="#8fb4dd" stopOpacity="0" />
+          </linearGradient>
+
           <linearGradient id="kMist" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%"   stopColor="#ffffff" stopOpacity="0" />
             <stop offset="30%"  stopColor="#cfe0f2" stopOpacity="0.20" />
@@ -117,28 +127,44 @@ export default function KedarnathScene({ className = '' }) {
         <circle cx="880" cy="560" r="300" fill="url(#kSunGlow)" className="k-dawn" />
 
         {/* ── Drifting cloud bands ────────────────────── */}
-        <g className="k-cloud k-cloud--a" opacity="0.20">
-          <ellipse cx="300" cy="330" rx="190" ry="17" fill="#8fb4dd" />
-          <ellipse cx="430" cy="322" rx="120" ry="12" fill="#8fb4dd" />
-        </g>
-        <g className="k-cloud k-cloud--b" opacity="0.14">
-          <ellipse cx="1050" cy="270" rx="230" ry="14" fill="#a8c6e8" />
-          <ellipse cx="900" cy="278" rx="140" ry="10" fill="#a8c6e8" />
+        {/* Each depth band is wrapped in a k-px group that carries ONLY the
+            pointer parallax, so the drift keyframes stay on the inner group
+            and the two transforms compose instead of overwriting each other.
+            Amplitudes live in luxury.css, keyed off --mx/--my. */}
+        <g className="k-px k-px--haze">
+          <g className="k-cloud k-cloud--a" opacity="0.20">
+            <ellipse cx="300" cy="330" rx="190" ry="17" fill="#8fb4dd" />
+            <ellipse cx="430" cy="322" rx="120" ry="12" fill="#8fb4dd" />
+          </g>
+          <g className="k-cloud k-cloud--b" opacity="0.14">
+            <ellipse cx="1050" cy="270" rx="230" ry="14" fill="#a8c6e8" />
+            <ellipse cx="900" cy="278" rx="140" ry="10" fill="#a8c6e8" />
+          </g>
         </g>
 
         {/* ── Far range ───────────────────────────────── */}
-        <g className="k-layer k-layer--far">
-          <path
-            fill="url(#kFarRange)"
-            d="M0,600 L110,470 L190,520 L300,415 L400,500 L500,430 L620,505 L720,395 L830,490 L940,430 L1060,505 L1170,440 L1290,510 L1380,455 L1440,530 L1440,900 L0,900 Z"
-          />
-          <path
-            fill="url(#kSnow)"
-            d="M300,415 L340,455 L322,452 L300,437 L278,455 L260,458 Z M720,395 L768,443 L744,439 L720,418 L696,441 L672,445 Z M500,430 L534,464 L518,461 L500,449 L482,462 L466,465 Z M1170,440 L1202,472 L1187,469 L1170,458 L1153,470 L1138,473 Z"
-          />
+        <g className="k-px k-px--far">
+          <g className="k-layer k-layer--far">
+            <path
+              fill="url(#kFarRange)"
+              d="M0,600 L110,470 L190,520 L300,415 L400,500 L500,430 L620,505 L720,395 L830,490 L940,430 L1060,505 L1170,440 L1290,510 L1380,455 L1440,530 L1440,900 L0,900 Z"
+            />
+            <path
+              fill="url(#kSnow)"
+              d="M300,415 L340,455 L322,452 L300,437 L278,455 L260,458 Z M720,395 L768,443 L744,439 L720,418 L696,441 L672,445 Z M500,430 L534,464 L518,461 L500,449 L482,462 L466,465 Z M1170,440 L1202,472 L1187,469 L1170,458 L1153,470 L1138,473 Z"
+            />
+            {/* Haze sitting IN the far range, clipped to its own silhouette by
+                reusing the same path. Lifts it toward the sky and drops its
+                contrast, which is what actually reads as distance. */}
+            <path
+              fill="url(#kAerial)"
+              d="M0,600 L110,470 L190,520 L300,415 L400,500 L500,430 L620,505 L720,395 L830,490 L940,430 L1060,505 L1170,440 L1290,510 L1380,455 L1440,530 L1440,900 L0,900 Z"
+            />
+          </g>
         </g>
 
         {/* ── Mid range: the Kedarnath massif ─────────── */}
+        <g className="k-px k-px--mid">
         <g className="k-layer k-layer--mid">
           <path
             fill="url(#kMidRange)"
@@ -158,6 +184,7 @@ export default function KedarnathScene({ className = '' }) {
             d="M780,470 L845,535 L818,529 L796,508 L780,496 Z"
           />
         </g>
+        </g>
 
         {/* ── Mist ────────────────────────────────────── */}
         <g>
@@ -167,11 +194,24 @@ export default function KedarnathScene({ className = '' }) {
         </g>
 
         {/* ── Near ridge ──────────────────────────────── */}
-        <g className="k-layer k-layer--near">
-          <path
-            fill="url(#kNearRange)"
-            d="M0,780 L170,700 L300,745 L430,675 L560,730 L700,665 L850,725 L990,680 L1140,740 L1280,690 L1440,750 L1440,900 L0,900 Z"
-          />
+        <g className="k-px k-px--near">
+          <g className="k-layer k-layer--near">
+            <path
+              fill="url(#kNearRange)"
+              d="M0,780 L170,700 L300,745 L430,675 L560,730 L700,665 L850,725 L990,680 L1140,740 L1280,690 L1440,750 L1440,900 L0,900 Z"
+            />
+            {/* Snow on the near summits. Dimmer than the far caps on purpose:
+                this ridge is below the treeline of first light, so it catches
+                far less of it. Without these the near range was the only one
+                reading as a flat cut-out. */}
+            <path
+              fill="#cfe3f5"
+              fillOpacity="0.14"
+              d="M430,675 L462,708 L446,704 L430,693 L414,705 L398,709 Z
+                 M700,665 L734,700 L717,696 L700,684 L683,697 L666,701 Z
+                 M1280,690 L1310,721 L1295,717 L1280,707 L1265,718 L1250,722 Z"
+            />
+          </g>
         </g>
 
         {/* ══ TEMPLE ═════════════════════════════════════

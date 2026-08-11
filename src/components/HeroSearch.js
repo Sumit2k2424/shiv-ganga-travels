@@ -31,11 +31,15 @@ export default function HeroSearch() {
     window.open(`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank');
   }
 
+  // Border, background and transition moved to the .hs-field rule below.
+  // They were declared inline, which meant the :hover/:focus-within states
+  // could never take effect — an inline style beats a stylesheet rule for the
+  // same property, so the transition sat here animating nothing. Dimensions
+  // are unchanged; only the properties that need to be overridable moved.
   const fieldWrap = {
     flex:'1 1 150px', minWidth:130,
-    border:'1px solid var(--border)', borderRadius:10,
-    padding:'10px 32px 8px 14px', background:'#fff',
-    transition:'border-color .15s, box-shadow .15s',
+    borderRadius:10,
+    padding:'10px 32px 8px 14px',
     position:'relative', textAlign:'left',
   };
   const chevron = (
@@ -110,16 +114,65 @@ export default function HeroSearch() {
       </form>
 
       <style dangerouslySetInnerHTML={{ __html:`
+        /* Resting border, moved off the inline style so it is overridable.
+           hsl(), not a bare var(): --border is stored as an HSL triplet
+           ("214 32% 91%") in the shadcn convention, so "solid var(--border)"
+           is invalid CSS and the browser drops the whole shorthand — which is
+           why these fields have never had a visible border. Tailwind wraps it
+           as hsl(var(--border)); hand-written CSS has to do the same.
+           NB: no backticks anywhere in this block — it is a template literal.
+
+           FOCUS IS NOT DEFINED HERE. globals.css already owns
+           .hs-field:focus-within (navy border + navy ring) sitewide. A gold
+           focus state here only half-won — their border-color carries
+           !important, this block loads later so its box-shadow won — leaving
+           a navy border wearing a gold ring. One focus treatment, theirs. */
+        .hs-field {
+          background: #fff;
+          border: 1px solid hsl(var(--border));
+          transition: border-color .18s ease, box-shadow .18s ease;
+        }
+        /* Hover is genuinely new — globals defines focus but not hover. Kept
+           to a warm tint rather than full gold so it reads as "reachable"
+           without competing with the focus state that follows it. */
+        .hs-field:hover { border-color: rgba(232,146,10,0.55); }
+
         @keyframes hsGlow {
           0%, 82%, 100% { box-shadow: 0 0 0 0 rgba(232,146,10,0); }
           90%           { box-shadow: 0 0 22px 2px rgba(232,146,10,0.5); }
         }
-        .hs-cta { animation: hsGlow 9s ease-in-out 3s infinite; }
+        .hs-cta { animation: hsGlow 9s ease-in-out 3s infinite; position: relative; overflow: hidden; }
         .hs-cta:hover { box-shadow: 0 8px 22px rgba(232,146,10,0.45); }
-        @media (prefers-reduced-motion: reduce) { .hs-cta { animation: none; } }
+
+        /* Light sweep on hover only — a one-pass gloss across the CTA, not a
+           loop. It reads as the surface catching light when you reach for it;
+           on a loop it would read as a banner ad. */
+        .hs-cta::after {
+          content: '';
+          position: absolute; top: 0; bottom: 0; left: -60%;
+          width: 45%;
+          background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.34) 50%, rgba(255,255,255,0) 100%);
+          transform: skewX(-18deg);
+          pointer-events: none;
+          opacity: 0;
+        }
+        .hs-cta:hover::after { animation: hsSweep .75s cubic-bezier(0.22,1,0.36,1); }
+        @keyframes hsSweep {
+          from { left: -60%; opacity: 1; }
+          to   { left: 115%; opacity: 0; }
+        }
+
+        /* .hs-field transition is already killed under reduced motion by
+           globals.css; only the CTA needs handling here. */
+        @media (prefers-reduced-motion: reduce) {
+          .hs-cta { animation: none; }
+          .hs-cta:hover::after { animation: none; }
+        }
       `}}/>
 
-      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8, marginTop:12, paddingTop:10, borderTop:'1px solid var(--border)' }}>
+      {/* hsl(var(--border)), see the .hs-field note above — the bare var()
+          form silently dropped this rule too, so this divider never drew. */}
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8, marginTop:12, paddingTop:10, borderTop:'1px solid hsl(var(--border))' }}>
         <span style={{ display:'inline-flex', alignItems:'center', gap:6, fontSize:12, color:'var(--text-muted)' }}>
           <WhatsAppIcon size={13} color="#25D366"/>
           Replies on WhatsApp within 2 hours · No login, no payment to enquire

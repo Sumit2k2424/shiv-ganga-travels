@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import HeroSearch from '@/components/HeroSearch';
 import Icon from '@/components/Icon';
 import KedarnathScene from '@/components/lux/KedarnathScene';
+import CountUp from '@/components/CountUp';
 import { SITE } from '@/data/packages';
 
 /*
@@ -26,20 +27,30 @@ import { SITE } from '@/data/packages';
 /* Proof, shown rather than asserted. Every figure here is backed elsewhere on
    the page (TRUST stats, founder story, fleet section) — the hero just states
    them quietly, once, where an anxious first-time pilgrim scans for them. */
+/* `n` counts up once when the hero is seen; `fig` is rendered as-is.
+   24×7 has no `n` deliberately — it is a pattern, not a quantity, and
+   counting to it would be theatre. CountUp starts at 80% of the target and
+   its SSR output is the REAL figure, so a crawler never sees a false low
+   number, and the digit count never changes mid-animation (40,000→50,000,
+   12→15, 16→20) — which is what keeps this out of CLS. */
 const HERO_TRUST = [
-  { icon: 'medal',   fig: '15+',     label: 'Years · since ' + SITE.established },
-  { icon: 'users',   fig: '50,000+', label: 'Pilgrims served' },
-  { icon: 'car',     fig: '20+',     label: 'Own fleet vehicles' },
-  { icon: 'headset', fig: '24×7',    label: 'On-road support' },
+  { icon: 'medal',   n: 15,    suffix: '+', label: 'Years · since ' + SITE.established },
+  { icon: 'users',   n: 50000, suffix: '+', label: 'Pilgrims served' },
+  { icon: 'car',     n: 20,    suffix: '+', label: 'Own fleet vehicles' },
+  { icon: 'headset', fig: '24×7',           label: 'On-road support' },
 ];
 
 export default function HeroSection() {
-  // Restrained pointer-parallax on the scene — a nod to the reactive heroes
-  // on sites like cuberto.com, kept small (max ~10px) so it reads as the
-  // scene quietly drifting rather than a gimmick. Desktop fine-pointer only;
-  // a full no-op under prefers-reduced-motion. Lives on an inner wrapper so
-  // it composes with (never fights) the CSS `heroPush` scale animation on
-  // the outer `.hero-photo` element.
+  // Restrained pointer-parallax, now per depth band rather than one shift of
+  // the whole picture — near ridge travels ~4x the far range, which is what
+  // actually reads as depth instead of as the scene sliding. This writes two
+  // unitless numbers to CSS custom properties on the scene root; luxury.css
+  // (.k-px--*) multiplies them per layer. One style write per frame on one
+  // element, so cost is flat no matter how many bands the scene grows.
+  //
+  // Desktop fine-pointer only, no-op under prefers-reduced-motion. The values
+  // sit on an inner wrapper so they compose with (never fight) the `heroPush`
+  // scale on the outer `.hero-photo`.
   const parallaxRef = useRef(null);
   useEffect(() => {
     const el = parallaxRef.current;
@@ -48,12 +59,15 @@ export default function HeroSection() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!fine || reduced) return;
 
-    const AMPLITUDE = 10; // px
     let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
     const paint = () => {
+      // Critically damped enough to feel weighted: the scene keeps arriving
+      // after the cursor stops, which is the difference between parallax and
+      // cursor-tracking.
       cx += (tx - cx) * 0.06;
       cy += (ty - cy) * 0.06;
-      el.style.transform = `translate3d(${(cx * AMPLITUDE).toFixed(2)}px, ${(cy * AMPLITUDE * 0.6).toFixed(2)}px, 0)`;
+      el.style.setProperty('--mx', cx.toFixed(4));
+      el.style.setProperty('--my', cy.toFixed(4));
       raf = requestAnimationFrame(paint);
     };
     const onMove = (e) => {
@@ -146,7 +160,9 @@ export default function HeroSection() {
             <span key={t.label} className="hero-trust__item">
               <span className="hero-trust__ico"><Icon name={t.icon} size={17} /></span>
               <span className="hero-trust__txt">
-                <span className="hero-trust__fig">{t.fig}</span>
+                <span className="hero-trust__fig">
+                  {t.n != null ? <><CountUp value={t.n} />{t.suffix}</> : t.fig}
+                </span>
                 <span className="hero-trust__lbl">{t.label}</span>
               </span>
             </span>
