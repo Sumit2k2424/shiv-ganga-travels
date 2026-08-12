@@ -170,12 +170,13 @@ export default function TrekTimings() {
                 <span style={{ fontSize: 11, background: 'var(--bg)', color: item.color, fontWeight: 700, padding: '2px 8px', borderRadius: 20 }}>{item.badge}</span>
               </div>
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="kedarnath" />
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.7 }}>{item.detail}</div>
             </div>
           ))}
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
 
         <h2 id="overnight" style={h2}>Overnight Stay vs Same-Day Return — Which Is Better?</h2>
         <p style={p}>
@@ -192,16 +193,6 @@ export default function TrekTimings() {
               <span style={{ color: 'var(--navy)', fontWeight: 700, flexShrink: 0 }}>→</span>{point}
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Book Kedarnath Package with Overnight Stay</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Our Kedarnath 3N/4D package includes overnight at Kedarnath, 4 AM Maha Abhishek arrangement, and Guptkashi base. From ₹6,999/person.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want Kedarnath package with overnight stay. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book Package</a>
-            <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Kedarnath Package →</Link>
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

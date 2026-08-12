@@ -270,22 +270,6 @@ export default function BestTimeCharDham() {
           </div>
         ))}
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.25rem', marginBottom:8 }}>
-            Plan Your Char Dham Yatra 2026
-          </h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:16 }}>
-            Tell us your preferred month and group size. We send a free custom itinerary within 2 hours.
-          </p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026. Please advise on the best dates.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            
-              <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-          </div>
-        </div>
-
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>

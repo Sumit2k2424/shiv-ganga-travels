@@ -172,15 +172,6 @@ export default function CharDhamRegistrationHindi() {
           <p style={{ ...p, marginBottom: 0, color: '#334155', fontSize: 14 }}>शिव गंगा ट्रेवल्स के साथ जाने वाले सभी यात्रियों का रजिस्ट्रेशन <strong>हम करते हैं</strong> — बस Aadhaar की जानकारी भेजें, बाकी हम संभाल लेते हैं।</p>
         </div>
 
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>रजिस्ट्रेशन में मदद चाहिए?</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>WhatsApp पर "Registration Help" लिखकर भेजें — हम मुफ्त में मदद करते हैं।</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Char Dham Yatra 2026 registration mein help chahiye.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 Registration Help</a>
-            <a href={`tel:${SITE.phone}`} style={{ background: '#E8920A', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>📞 Call करें</a>
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>

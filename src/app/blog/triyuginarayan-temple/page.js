@@ -125,24 +125,15 @@ export default function Page() {
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>          ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
 
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>💡 Our Tip</div>
           <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7 }}>Triyuginarayan is not on most standard Char Dham itineraries because most operators do not bother to include it. We do. If you are booking with us and want this stop added, simply mention it when you WhatsApp — there is no extra charge for the detour when you are already overnighting in Guptkashi.</div>
-        </div>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Add Triyuginarayan to Your Kedarnath Package</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>We include this on request — no extra charge. Mention it when you book.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Triyuginarayan Temple in my Kedarnath/Char Dham itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Kedarnath Package →
-          </div>
         </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>

@@ -147,7 +147,7 @@ export default function HeroSection() {
         }}>
           Yamunotri · Gangotri · Kedarnath · Badrinath — with the operator who has
           carried <span className="hero-highlight">50,000+ pilgrims</span> since {SITE.established}.
-          From <span className="hero-highlight">₹18,500</span> per person, all-inclusive.
+          From <span className="hero-highlight">₹13,900</span> per person, all-inclusive.
         </p>
 
         <div className="hero-in" style={{ '--d':'0.62s' }}>

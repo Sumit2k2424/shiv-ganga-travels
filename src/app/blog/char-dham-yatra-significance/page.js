@@ -141,8 +141,6 @@ export default function Significance() {
                 <span style={{ fontSize: 11, color: '#7C3AED', fontWeight: 600 }}>↑ {dham.alt}</span>
               </div>
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, marginBottom: 10 }}>{dham.myth}</p>
               <div style={{ background: 'rgba(11,123,139,0.06)', borderRadius: 8, padding: '9px 12px', fontSize: 13, color: '#0D5C70' }}>
                 <strong>Shankaracharya connection:</strong> {dham.shankaracharya}
@@ -150,6 +148,9 @@ export default function Significance() {
             </div>
           ))}
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
 
         <h2 id="why-special" style={h2}>Why Completing Char Dham Yatra Is Considered Special</h2>
         <p style={p}>
@@ -163,16 +164,6 @@ export default function Significance() {
         <p style={p}>
           The Uttarakhand circuit (Yamunotri, Gangotri, Kedarnath, Badrinath) is technically called <strong>Chota Char Dham</strong> (the small Char Dham). The larger <strong>Char Dham</strong> established by Adi Shankaracharya to represent all four cardinal directions of India consists of: Badrinath (north), Dwarka in Gujarat (west), Puri in Odisha (east), and Rameswaram in Tamil Nadu (south). In common modern usage, however, "Char Dham Yatra" almost universally refers to the Uttarakhand circuit — the distinction matters mainly in religious scholarship, not in pilgrimage planning.
         </p>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Plan Your Char Dham Yatra 2026</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>From ₹18,500/person. All-inclusive from Haridwar. 15 seasons, 50,000+ pilgrims. Direct operator.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book on WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-          </div>
-        </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>

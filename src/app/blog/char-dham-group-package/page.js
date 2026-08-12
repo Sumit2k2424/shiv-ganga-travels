@@ -135,10 +135,11 @@ export default function GroupPackage() {
               <div style={{ fontSize:13.5, color:'#475569' }}>{item.why}</div>
             </div>
 
+          </div>
+
+        ))}
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-          </div>
-        ))}
 
         <h2 id="what-we-handle" style={h2}>
           What Shiv Ganga Travels Handles for Group Yatras
@@ -159,16 +160,6 @@ export default function GroupPackage() {
             </div>
           </div>
         ))}
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Plan Your Group Yatra</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Tell us your group size, preferred month, and any special requirements (senior citizens, health conditions). We will send a complete quote within 2 hours. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am planning a group Char Dham Yatra 2026. Please share package details and group pricing.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-          </div>
-        </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>

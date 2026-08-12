@@ -212,16 +212,6 @@ export default function HowToReachKedarnath() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Your Kedarnath Journey — Haridwar Direct</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels arranges the complete journey — from your arrival in Haridwar to your Kedarnath darshan. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help planning how to reach Kedarnath 2026. Please guide me.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Kedarnath Packages →
-          </div>
-        </div>
-
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>

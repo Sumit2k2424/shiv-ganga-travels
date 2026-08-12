@@ -32,7 +32,7 @@ export default function ValleyOfFlowersTrek() {
         { label:'Peak bloom', value:'August' },
         { label:'Core trek',  value:'13 km to Ghangaria' },
         { label:'Species',    value:'500+ wildflowers' },
-        { label:'Package',    value:'₹13,499 · 5N/6D' },
+        { label:'Package',    value:'₹10,100 · 5N/6D' },
       ]}
     />
 
@@ -96,17 +96,8 @@ export default function ValleyOfFlowersTrek() {
         <BlogCTA variant="inline" intent="info" />
       <h2 id="hemkund" style={h2}>Hemkund Sahib — Combine for the Perfect 5-Day Trip</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Hemkund Sahib (4,329m) is a Sikh pilgrimage site of extraordinary beauty — a glacial lake surrounded by snow peaks with a pristine gurudwara on its shores. It is said that Guru Gobind Singh meditated here in a previous life. The <strong>Langar</strong> (free kitchen) serves dal, roti and kheer to everyone regardless of faith — one of the most moving expressions of community in any religious place in India.</p>
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹13,499 per person.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹10,100 per person.</p>
 
-      <div style={{ background:'linear-gradient(135deg,#0B7B8B,#15803D)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-        <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Valley of Flowers Package</h3>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹13,499 per person · 5N/6D · Includes Hemkund Sahib + Badrinath darshan</p>
-        <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Valley of Flowers + Hemkund Sahib package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
-          <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Package →</Link>
-        </div>
-      </div>
-    
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

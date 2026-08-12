@@ -7,8 +7,8 @@ const SLUG = 'char-dham-yatra-hindi';
 const noto = Noto_Sans_Devanagari({ subsets: ['devanagari'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: { absolute: 'चार धाम यात्रा 2026 | ₹18,500 से | पूरी जानकारी हिन्दी में' },
-  description: 'चार धाम यात्रा 2026 — हरिद्वार से 9 रात/10 दिन ₹18,500 से। सीधे ऑपरेटर, कोई एजेंट कमीशन नहीं, रजिस्ट्रेशन मुफ़्त। खर्च, तारीखें और रास्ता।',
+  title: { absolute: 'चार धाम यात्रा 2026 | ₹13,900 से | पूरी जानकारी हिन्दी में' },
+  description: 'चार धाम यात्रा 2026 — हरिद्वार से 9 रात/10 दिन ₹13,900 से। सीधे ऑपरेटर, कोई एजेंट कमीशन नहीं, रजिस्ट्रेशन मुफ़्त। खर्च, तारीखें और रास्ता।',
   // Cost queries deliberately excluded — /blog/char-dham-yatra-kitna-kharcha
   // already owns 'चार धाम यात्रा 2026 खर्चा' and the per-person cost terms.
   // This page takes the broad head term; that blog keeps the cost long-tail.
@@ -20,7 +20,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {
     title: 'चार धाम यात्रा 2026 — पूरी जानकारी हिन्दी में | Shiv Ganga Travels',
-    description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ। हरिद्वार से ₹18,500 से शुरू। सीधे ऑपरेटर, रजिस्ट्रेशन मुफ़्त।',
+    description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ। हरिद्वार से ₹13,900 से शुरू। सीधे ऑपरेटर, रजिस्ट्रेशन मुफ़्त।',
     url: `${SITE.baseUrl}/${SLUG}`,
     type: 'website',
     locale: 'hi_IN',
@@ -29,7 +29,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'चार धाम यात्रा 2026 — पूरी जानकारी हिन्दी में',
-    description: 'हरिद्वार से ₹18,500 से। सीधे ऑपरेटर, कोई एजेंट कमीशन नहीं।',
+    description: 'हरिद्वार से ₹13,900 से। सीधे ऑपरेटर, कोई एजेंट कमीशन नहीं।',
     images: [{ url: '/opengraph-image', alt: 'चार धाम यात्रा 2026 | Shiv Ganga Travels' }],
   },
 };

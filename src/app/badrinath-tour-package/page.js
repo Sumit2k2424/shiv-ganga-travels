@@ -5,8 +5,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999 | Hotels & Transport Included' },
-  description: 'Badrinath Tour Package 2026 — 2N/3D from ₹5,999/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
+  title: { absolute: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500 | Hotels & Transport Included' },
+  description: 'Badrinath Tour Package 2026 — 2N/3D from ₹4,500/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
   keywords: [
     'badrinath tour package', 'badrinath yatra package', 'badrinath tour package 2026',
     'badrinath package from haridwar', 'badrinath yatra package from haridwar', 'badrinath ek dham yatra',
@@ -14,7 +14,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-tour-package` },
   openGraph: {
-    title: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999 | Hotels & Transport Included',
+    title: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500 | Hotels & Transport Included',
     description:
       'No trek to the temple. Customizable itinerary, Mana village & Tapt Kund, 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
     url: `${SITE.baseUrl}/badrinath-tour-package`,
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Tour Package 2026 | Price Starts at ₹5,999',
+    title: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500',
     description: 'Badrinath 2N/3D from Haridwar, no trek. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
     images: [{ url: '/opengraph-image', alt: 'Badrinath Tour Package 2026 from Haridwar' }],
   },
@@ -33,8 +33,8 @@ const URL = `${SITE.baseUrl}/badrinath-tour-package`;
 
 // Final price depends on group size, hotel category & season — quote is free.
 const TIERS = [
-  { name: 'Group / Shared', stay: 'Budget hotels & guesthouses', vehicle: 'Tempo Traveller (shared)', price: '₹5,999', note: 'Best value · fixed-group departures' },
-  { name: 'Deluxe', stay: '3★ hotels at Badrinath/Joshimath', vehicle: 'Innova / Ertiga', price: '₹8,499', note: 'Private cab · most-booked family option' },
+  { name: 'Group / Shared', stay: 'Budget hotels & guesthouses', vehicle: 'Tempo Traveller (shared)', price: '₹4,500', note: 'Best value · fixed-group departures' },
+  { name: 'Deluxe', stay: '3★ hotels at Badrinath/Joshimath', vehicle: 'Innova / Ertiga', price: '₹6,350', note: 'Private cab · most-booked family option' },
   { name: 'Private / Premium', stay: 'Premium riverside hotels', vehicle: 'Innova Crysta (private)', price: '₹11,999', note: 'Fully customised · your pace, your route' },
 ];
 
@@ -76,17 +76,17 @@ const COST_DIY = [
 
 const REACH = [
   ['By road (own pace)', 'Rishikesh → Badrinath taxi ₹5,000–7,000 (car) / ₹8,000–12,000 (SUV) one way', 'What most pilgrims do'],
-  ['By package', 'From ₹5,999 per person, 2N/3D, all transport handled', 'Best value, no logistics'],
+  ['By package', 'From ₹4,500 per person, 2N/3D, all transport handled', 'Best value, no logistics'],
   ['By helicopter', 'Dehradun (Sahastradhara) → Badrinath, ~60 min flight, ₹80,000–1,50,000 pp', 'Costly; for very limited time or health needs'],
 ];
 
 const FAQ = [
-  { q: 'What is the cost of a Badrinath tour package from Haridwar in 2026?', a: 'A Badrinath tour package from Haridwar starts at ₹5,999 per person for a 2N/3D trip on shared transport with budget stay. Deluxe with a 3★ hotel and Innova runs around ₹8,499, and a fully private premium package is about ₹11,999. Final price moves with your group size, hotel category and dates — enquiring is free and needs no advance.' },
+  { q: 'What is the cost of a Badrinath tour package from Haridwar in 2026?', a: 'A Badrinath tour package from Haridwar starts at ₹4,500 per person for a 2N/3D trip on shared transport with budget stay. Deluxe with a 3★ hotel and Innova runs around ₹6,350 and a fully private premium package is about ₹11,999. Final price moves with your group size, hotel category and dates — enquiring is free and needs no advance.' },
   { q: 'How many days does the Badrinath yatra take from Haridwar?', a: 'Three days by road is the comfortable standard: drive up to Badrinath (Day 1), darshan plus Mana village (Day 2), and the drive back (Day 3). Badrinath is a long 320 km mountain road from Haridwar, so we do not try to rush it into two days — the extra night gives you the unhurried 4:30 AM darshan and time for Mana.' },
   { q: 'Is there any trek at Badrinath, or can elderly pilgrims reach the temple easily?', a: 'There is no trek to reach Badrinath — the road goes right up to the temple town, and the shrine is a short, flat walk from the parking. That is exactly why it suits senior citizens and families with young children. The only optional walk is the 5 km Vasudhara Falls trek from Mana, which you can skip entirely.' },
   { q: 'When does Badrinath temple open in 2026 and what are the darshan timings?', a: 'Badrinath temple opened on 23 April 2026 at 6:15 AM and stays open until around 13 November (Bhai Dooj). Darshan runs roughly 4:30 AM to 1:00 PM and 4:00 PM to 9:00 PM, with the Maha Abhishek aarti at 4:30 AM; the temple closes 1–4 PM for midday rituals.' },
   { q: 'Is registration mandatory for Badrinath, and how do I do it?', a: 'Yes — Char Dham registration is free and mandatory for every pilgrim. You get a QR-coded e-pass that is checked at Rishikesh, Rudraprayag and Joshimath. Register at registrationandtouristcare.uk.gov.in or the Tourist Care Uttarakhand app, or let us do it for you. Pilgrims aged 70+ upload a medical fitness certificate during registration.' },
-  { q: 'How much does Badrinath cost on your own versus a package, and is Mana village worth it?', a: 'Done solo on a budget, Badrinath from Haridwar works out to roughly ₹6,000–14,000 once transport, two nights stay, food and a weather buffer are added. A package at ₹5,999 covers the same ground with stay, meals, transport and registration locked in. And yes — Mana is absolutely worth it: it is 3 km from the temple, free to enter, and home to the Vyas Gufa, Bhim Pul and the Saraswati origin. Skipping it leaves the story half-told.' },
+  { q: 'How much does Badrinath cost on your own versus a package, and is Mana village worth it?', a: 'Done solo on a budget, Badrinath from Haridwar works out to roughly ₹6,000–14,000 once transport, two nights stay, food and a weather buffer are added. A package at ₹4,500 covers the same ground with stay, meals, transport and registration locked in. And yes — Mana is absolutely worth it: it is 3 km from the temple, free to enter, and home to the Vyas Gufa, Bhim Pul and the Saraswati origin. Skipping it leaves the story half-told.' },
 ];
 
 const PAA = [
@@ -105,7 +105,7 @@ function Schema() {
     description: 'A 2 nights / 3 days Badrinath Dham yatra from Haridwar with stay, meals, transport, registration and Mana village — no trek to the temple.',
     touristType: ['Pilgrims', 'Families', 'Senior citizens'],
     itinerary: ITINERARY.map((d, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'TouristAttraction', name: d.title } })),
-    offers: { '@type': 'Offer', priceCurrency: 'INR', price: '5999', availability: 'https://schema.org/InStock', url: URL, validFrom: '2026-04-23' },
+    offers: { '@type': 'Offer', priceCurrency: 'INR', price: '4500', availability: 'https://schema.org/InStock', url: URL, validFrom: '2026-04-23' },
     provider: { '@type': 'TravelAgency', name: SITE.name, url: SITE.baseUrl },
   };
   const agency = {
@@ -163,7 +163,7 @@ export default function BadrinathTourPackage() {
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 16 }}>Badrinath Tour Package 2026 — from Haridwar</h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>
             A real 2N/3D yatra to Lord Vishnu&apos;s Himalayan abode — no trek, road right to the temple.<br />
-            From <strong style={{ color: '#FFD166' }}>₹5,999</strong>/person · Tapt Kund · Mana village · Direct operator since 2010
+            From <strong style={{ color: '#FFD166' }}>₹4,500</strong>/person · Tapt Kund · Mana village · Direct operator since 2010
           </p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
             <a href={wa('Namaste! Please send me a Badrinath tour package quote for 2026.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Get Free Quote</a>
@@ -179,7 +179,7 @@ export default function BadrinathTourPackage() {
         <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season: Apr 23 – Nov 2026</div>
 
         <AnswerBox>
-          A Badrinath tour package from Haridwar is a 2N/3D yatra to Lord Vishnu&apos;s abode starting at <strong>₹5,999 per person</strong> — covering road transfers, two nights stay, breakfast and dinner, and your mandatory Yatra registration. <strong>There is no trek</strong>: the road runs right to the temple, which is why it suits elders and families. The temple opened on <strong>23 April 2026</strong> and the trip includes Tapt Kund and Mana village. Enquiring is free and needs no advance.
+          A Badrinath tour package from Haridwar is a 2N/3D yatra to Lord Vishnu&apos;s abode starting at <strong>₹4,500 per person</strong> — covering road transfers, two nights stay, breakfast and dinner, and your mandatory Yatra registration. <strong>There is no trek</strong>: the road runs right to the temple, which is why it suits elders and families. The temple opened on <strong>23 April 2026</strong> and the trip includes Tapt Kund and Mana village. Enquiring is free and needs no advance.
         </AnswerBox>
 
         <p style={p}>Here is the honest pitch for a Badrinath package, because most pages bury it under poetry. The single biggest thing to know: there is no climb. Unlike Kedarnath, the road goes all the way to the temple, so anyone who can walk a few flat minutes can have darshan. What you are paying us for is the 320 km mountain drive done safely, a warm room at 3,133 m, the Tapt Kund and Mana logistics, and the registration that gets scanned at three checkpoints on the way up. We have run this route every season since 2010. Prices and all, here is the whole thing.</p>
@@ -242,7 +242,7 @@ export default function BadrinathTourPackage() {
         <h2 style={h2}>DIY vs package: the honest Badrinath trip cost breakdown</h2>
         <p style={p}>People ask whether they should just drive up themselves. Fair. Here is what a budget solo trip from Haridwar actually adds up to.</p>
         <Table head={['Doing it yourself', 'Rough cost']} rows={COST_DIY} />
-        <p style={p}>Totalled up, a careful solo pilgrim lands around <strong>₹6,000–14,000</strong> — and that is before peak-season hotel scarcity at Badrinath bites. Our ₹5,999 package sits at the bottom of that range with stay, meals, transport and registration already locked, plus a number you can call when the highway shuts (and on this route, it does). For most people the package is not pricier than DIY; it just takes the logistics off your plate. If you love planning and have flexible dates, doing it solo is a fine choice — we will still help with registration.</p>
+        <p style={p}>Totalled up, a careful solo pilgrim lands around <strong>₹6,000–14,000</strong> — and that is before peak-season hotel scarcity at Badrinath bites. Our ₹4,500 package sits at the bottom of that range with stay, meals, transport and registration already locked, plus a number you can call when the highway shuts (and on this route, it does). For most people the package is not pricier than DIY; it just takes the logistics off your plate. If you love planning and have flexible dates, doing it solo is a fine choice — we will still help with registration.</p>
 
         <h2 style={h2}>Road or helicopter — and the no-trek advantage</h2>
         <p style={p}>Badrinath&apos;s quiet superpower is accessibility. The road reaches the temple town, the shrine is a flat walk from the parking, and there is no Kedarnath-style climb. That makes it the easiest of the four dhams for senior citizens. Here is how people reach it and what each costs.</p>

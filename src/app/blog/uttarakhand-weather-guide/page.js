@@ -142,22 +142,13 @@ export default function WeatherGuide() {
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>✓</span>{p}
                 </div>              ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
 
             </div>
           </div>
-        ))}
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Plan Your Yatra for the Best Weather</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>We will suggest the ideal travel dates based on weather, crowds, and your group. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need advice on the best dates for Char Dham Yatra 2026.')}`} target="_blank" rel="noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Best Time Guide →
-          </div>
-        </div>
+        ))}
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>

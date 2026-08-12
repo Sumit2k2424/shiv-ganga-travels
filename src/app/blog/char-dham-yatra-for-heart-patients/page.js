@@ -144,25 +144,16 @@ export default function Page() {
                   <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>•</span>{item}
                 </div>              ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
 
             </div>
           ))}
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
+
         <h2 id="senior-package" style={h2}>Our Senior Special Package — Designed for Pilgrims with Medical Conditions</h2>
         <p style={p}>Our Senior Special 12N/13D package was built specifically with medically at-risk pilgrims in mind. It includes 3 extra rest days versus the standard itinerary, ground-floor hotel rooms at all stops, a trained medical attendant on the vehicle with pulse oximeter and oxygen cylinder, and built-in acclimatisation halts. For pilgrims with heart conditions or diabetes, this is the package we recommend — not because it is the most profitable for us, but because it is the safest for you.</p>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Travelling with a Medical Condition? Talk to Our Team</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>We will review your condition, suggest the right itinerary, and tell you honestly if we think the yatra is not advisable right now.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a medical condition and want to discuss whether Char Dham Yatra is safe for me.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Discuss with Us</a>
-            Senior Package →
-          </div>
-        </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>

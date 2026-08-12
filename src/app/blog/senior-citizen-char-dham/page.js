@@ -64,7 +64,7 @@ return (
         readTime="7 min read"
         facts={[
           { label:'Age',      value:'No limit (60–85+)' },
-          { label:'Package',  value:'₹27,999 · 12N/13D' },
+          { label:'Package',  value:'₹21,000 · 12N/13D' },
           { label:'Kedarnath', value:'Pony / Palki / Heli' },
           { label:'Support',  value:'Medical attendant' },
         ]}
@@ -90,7 +90,7 @@ return (
           points={[
             <>There is <strong>no official age limit</strong> — pilgrims aged 70–80+ complete the yatra safely every year.</>,
             <>A doctor's <strong>fitness certificate</strong> is advised (and mandatory at 55+) for anyone with heart, BP or recent-surgery history.</>,
-            <>Our <strong>Senior Special Package — ₹27,999 (12N/13D)</strong> includes pony/palki, a medical attendant, oxygen, pulse oximeters and ground-floor rooms.</>,
+            <>Our <strong>Senior Special Package — ₹21,000 (12N/13D)</strong> includes pony/palki, a medical attendant, oxygen, pulse oximeters and ground-floor rooms.</>,
             <>Only <strong>Kedarnath and Yamunotri</strong> involve a climb — pony, palki or helicopter cover both; Badrinath and Gangotri are road-accessible.</>,
             <>For high-risk conditions, the <strong>helicopter package</strong> removes almost all altitude stress.</>,
           ]}
@@ -111,7 +111,7 @@ return (
           The single biggest factor for elderly pilgrims isn't fitness — it's <strong>pace</strong>. The standard 9-night itinerary tries to do too much too fast for a 75-year-old body. Adding three rest days so altitude builds gradually is what turns "risky" into "comfortable." It's the first thing we change for every senior booking.
         </ExpertNote>
 
-        <h2 id="senior-package" style={h2}>Our Senior Citizen Special Package — ₹27,999 (12N/13D)</h2>
+        <h2 id="senior-package" style={h2}>Our Senior Citizen Special Package — ₹21,000 (12N/13D)</h2>
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:15, color:'var(--navy)', marginBottom:14 }}>What makes it different:</div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:10 }}>
@@ -159,16 +159,6 @@ return (
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Book the Senior Citizen Package</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>₹27,999 per person · 12N/13D · Pony included · Medical attendant · No worries.</p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Senior Citizen Char Dham package for 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 Book on WhatsApp</a>
-            <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
-          </div>
-        </div>
-
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>

@@ -194,17 +194,6 @@ export default function ClosingDates() {
           The single consideration: temperature. Kedarnath in October reaches -2°C at night. Pack accordingly — thermals, a heavy jacket, and gloves. This is the trade-off, and for most pilgrims it is easily worth it.
         </p>
 
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Book October Char Dham — Best Season, Fewer Crowds</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>October batches fill fast. Fixed departures through October with guaranteed hotel availability.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra in October 2026. Please share package details.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book October Package</a>
-            <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>

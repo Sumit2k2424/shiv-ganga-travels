@@ -79,7 +79,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:24000, discounted:18500, currency:'₹', perPerson:true },
+    price    : { original:24000, discounted:13900, currency:'₹', perPerson:true },
     highlights:[
       'All 4 Dhams — Yamunotri, Gangotri, Kedarnath & Badrinath',
       '6 km trek / pony ride to Yamunotri from Janki Chatti',
@@ -107,10 +107,10 @@ export const PACKAGES = [
     badge    : 'Most Popular',
     images   : ['kedarnath','badrinath','gangotri','yamunotri'],
     tags     : ['char dham','chardham','haridwar','9 nights','family','group','2026','ex haridwar','private tour','budget','deluxe','customized'],
-    metaTitle: 'Char Dham Yatra Package 2026 | Price Starts at ₹18,500 | 9N/10D All Inclusive',
-    metaDesc : 'Char Dham Yatra 2026 — 9N/10D from ₹18,500/person, all 4 dhams. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Char Dham Yatra Package 2026 | Price Starts at ₹13,900 | 9N/10D All Inclusive',
+    metaDesc : 'Char Dham Yatra 2026 — 9N/10D from ₹13,900/person, all 4 dhams. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[
-      {q:'How much does the Char Dham Yatra package from Haridwar cost in 2026?', a:'Our 9N/10D Char Dham Yatra from Haridwar starts at ₹18,500 per person on the budget tier (shared Tempo Traveller, clean guesthouses). Deluxe with an Innova Crysta and 2–3 star hotels runs ₹30,000. A private couple package is roughly ₹42,000–₹60,000 depending on tier. These are direct operator rates — no agent margin sits on top. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra.'},
+      {q:'How much does the Char Dham Yatra package from Haridwar cost in 2026?', a:'Our 9N/10D Char Dham Yatra from Haridwar starts at ₹13,900 per person on the budget tier (shared Tempo Traveller, clean guesthouses). Deluxe with an Innova Crysta and 2–3 star hotels runs ₹30,000. A private couple package is roughly ₹42,000–₹60,000 depending on tier. These are direct operator rates — no agent margin sits on top. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra.'},
       {q:'What is included in the package?', a:'AC transport for the full route, twin-sharing hotels, daily breakfast and dinner, an experienced driver-cum-guide, pujari assistance at the temples, an oxygen cylinder in the vehicle, help with the mandatory Char Dham registration, and pickup/drop at Haridwar railway station. Pony, palki and helicopter at Kedarnath are extra.'},
       {q:'Is the Char Dham 2026 registration mandatory, and do you handle it?', a:'Yes. Every pilgrim must register on the Uttarakhand government Tourist Care portal (registrationandtouristcare.uk.gov.in) before darshan, and you cannot enter Kedarnath or Yamunotri without the QR slip. We complete the registration for every guest on the package using your ID and photo — you do not have to fight the portal yourself.'},
       {q:'Is the Kedarnath trek mandatory?', a:'No. The 16 km from Gaurikund can be done on foot, by pony (₹3,500–4,500), palki (₹8,000–12,000) or helicopter (from ₹3,043 one way, official IRCTC fare). We book any of these for you. Most fit pilgrims walk up and ride down; senior travellers usually take the pony both ways.'},
@@ -136,7 +136,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:50000, discounted:45000, currency:'₹', perPerson:true },
+    price    : { original:50000, discounted:33800, currency:'₹', perPerson:true },
     highlights:[
       '3-star deluxe hotels at every stopover',
       'Extra rest day at Uttarkashi with Harsil Valley excursion',
@@ -166,8 +166,8 @@ export const PACKAGES = [
     badge    : 'Best Seller',
     images   : ['kedarnath','badrinath','gangotri','yamunotri'],
     tags     : ['char dham','chardham deluxe','haridwar','kedarnath stay','harsil','luxury','3 star hotels','slow paced','11 nights'],
-    metaTitle: 'Char Dham Yatra Deluxe Package 2026 | Price Starts at ₹45,000 | Kedarnath Night Stay',
-    metaDesc : 'Char Dham Yatra Deluxe 2026 — 11N/12D from ₹45,000/person, 3-star hotels. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+    metaTitle: 'Char Dham Yatra Deluxe Package 2026 | Price Starts at ₹33,800 | Kedarnath Night Stay',
+    metaDesc : 'Char Dham Yatra Deluxe 2026 — 11N/12D from ₹33,800/person, 3-star hotels. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
     faqs:[],
   },
 
@@ -239,7 +239,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:32000, discounted:27999, currency:'₹', perPerson:true },
+    price    : { original:32000, discounted:21000, currency:'₹', perPerson:true },
     highlights:[
       'Designed for pilgrims aged 60+ with extra rest days',
       'Pony/palki at Yamunotri (6 km both ways) — included',
@@ -270,8 +270,8 @@ export const PACKAGES = [
     badge    : 'Senior Special',
     images   : ['kedarnath','badrinath','yamunotri','gangotri'],
     tags     : ['char dham','senior citizen','pony palki','medical','slow paced','60 plus','65 plus','elderly','doctor','oxygen'],
-    metaTitle: 'Senior Citizen Char Dham Yatra 2026 | Price Starts at ₹27,999 | Pony & Palki Included',
-    metaDesc : 'Senior Citizen Char Dham Yatra 2026 — 12N/13D from ₹27,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+    metaTitle: 'Senior Citizen Char Dham Yatra 2026 | Price Starts at ₹21,000 | Pony & Palki Included',
+    metaDesc : 'Senior Citizen Char Dham Yatra 2026 — 12N/13D from ₹21,000/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
     faqs:[],
   },
 
@@ -290,7 +290,7 @@ export const PACKAGES = [
     startCity: 'Delhi',
     endCity  : 'Delhi',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:28000, discounted:22999, currency:'₹', perPerson:true },
+    price    : { original:28000, discounted:17200, currency:'₹', perPerson:true },
     highlights:[
       'Pickup from Delhi (Kashmiri Gate / Majnu Ka Tila)',
       'Volvo Bus Delhi to Haridwar + AC Tempo Traveller for yatra',
@@ -319,10 +319,10 @@ export const PACKAGES = [
     badge    : null,
     images   : ['gangotri','kedarnath','badrinath','yamunotri'],
     tags     : ['char dham','delhi','volvo bus','group tour','affordable','delhi pickup','haridwar via delhi','290km','noida gurugram'],
-    metaTitle: 'Char Dham Yatra from Delhi 2026 | Price Starts at ₹22,999 | 10N/11D Pickup',
-    metaDesc : 'Char Dham Yatra from Delhi 2026 — 10N/11D from ₹22,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Char Dham Yatra from Delhi 2026 | Price Starts at ₹17,200 | 10N/11D Pickup',
+    metaDesc : 'Char Dham Yatra from Delhi 2026 — 10N/11D from ₹17,200/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[
-      {q:'How much is the Char Dham Yatra package from Delhi in 2026?', a:'Our 10N/11D group package from Delhi starts at ₹22,999 per person — that includes the overnight Volvo from Delhi to Haridwar, AC Tempo Traveller for the whole yatra, hotels, daily breakfast and dinner, guide and registration. A private car version (Innova Crysta, your own family only) runs roughly ₹32,000–₹45,000 per person depending on hotel tier. Direct rates, no agent commission.'},
+      {q:'How much is the Char Dham Yatra package from Delhi in 2026?', a:'Our 10N/11D group package from Delhi starts at ₹17,200 per person — that includes the overnight Volvo from Delhi to Haridwar, AC Tempo Traveller for the whole yatra, hotels, daily breakfast and dinner, guide and registration. A private car version (Innova Crysta, your own family only) runs roughly ₹32,000–₹33,800 per person depending on hotel tier. Direct rates, no agent commission.'},
       {q:'How far is Delhi to Haridwar and how long does it take?', a:'Roughly 220–240 km depending on your pickup point, about 5–6 hours by road via the Delhi–Dehradun Expressway. We run it overnight on a Volvo so you sleep through the journey and arrive fresh at 6 AM, saving a full daytime leg.'},
       {q:'Can I do the Char Dham Yatra from Delhi by car instead of bus?', a:'Yes. Tell us and we send a private AC car (Innova Crysta or Ertiga) to your Delhi/Noida/Gurugram address, drive you to Haridwar, and the same vehicle stays with you for the full yatra. It costs more than the Volvo group option but gives you door pickup, your own pace and no co-passengers.'},
       {q:'Is there a Char Dham Yatra from Delhi by train or helicopter?', a:'By train: take any Delhi–Haridwar service (Shatabdi, Jan Shatabdi, Mussoorie Express) and we receive you at Haridwar station — we adjust the package to a 9N/10D ex-Haridwar plan. By helicopter: there is no chopper from Delhi itself; the Char Dham helicopter circuit departs from Dehradun (Sahastradhara helipad), so we drive or fly you to Dehradun and start the 5N/6D heli yatra there.'},
@@ -352,7 +352,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:18000, discounted:10999, currency:'₹', perPerson:true, isRange:true },
+    price    : { original:18000, discounted:8200, currency:'₹', perPerson:true, isRange:true },
     highlights:[
       'Kedarnath Jyotirlinga — sacred hump of Lord Shiva',
       'Gaurikund hot spring ritual dip before the trek',
@@ -396,7 +396,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Gangotri 3,415m / Yamunotri 3,291m',
-    price    : { original:11500, discounted:9499, currency:'₹', perPerson:true },
+    price    : { original:11500, discounted:7100, currency:'₹', perPerson:true },
     highlights:[
       'Yamunotri — source of sacred Yamuna River at 3,291m',
       'Divya Shila puja + Surya Kund (94°C) hot spring',
@@ -419,8 +419,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['yamunotri','gangotri'],
     tags     : ['do dham','yamunotri gangotri','haridwar','easy trek','surya kund','harsil valley','gangotri package','yamunotri package'],
-    metaTitle: 'Yamunotri Gangotri Do Dham Yatra 2026 | Price Starts at ₹9,499 | Harsil Valley',
-    metaDesc : 'Yamunotri Gangotri Do Dham Yatra 2026 — 4N/5D from ₹9,499/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+    metaTitle: 'Yamunotri Gangotri Do Dham Yatra 2026 | Price Starts at ₹7,100 | Harsil Valley',
+    metaDesc : 'Yamunotri Gangotri Do Dham Yatra 2026 — 4N/5D from ₹7,100/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
     faqs:[],
   },
 
@@ -439,7 +439,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m (helipad)',
-    price    : { original:35000, discounted:29999, currency:'₹', perPerson:true },
+    price    : { original:35000, discounted:22500, currency:'₹', perPerson:true },
     highlights:[
       'Helicopter to Kedarnath from Phata/Sersi helipad',
       'No 16 km trek — ideal for elderly and busy pilgrims',
@@ -460,8 +460,8 @@ export const PACKAGES = [
     badge    : 'Premium',
     images   : ['helicopter','kedarnath','badrinath'],
     tags     : ['do dham','helicopter','kedarnath','badrinath','no trek','vip'],
-    metaTitle: 'Kedarnath Heli + Badrinath Do Dham 2026 | Price Starts at ₹29,999 | No Trek',
-    metaDesc : 'Kedarnath Heli + Badrinath Do Dham 2026 — 3N/4D from ₹29,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Kedarnath Heli + Badrinath Do Dham 2026 | Price Starts at ₹22,500 | No Trek',
+    metaDesc : 'Kedarnath Heli + Badrinath Do Dham 2026 — 3N/4D from ₹22,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -480,7 +480,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Gangotri 3,415m',
-    price    : { original:18000, discounted:15499, currency:'₹', perPerson:true },
+    price    : { original:18000, discounted:11600, currency:'₹', perPerson:true },
     highlights:[
       '3 sacred dhams — Yamunotri, Gangotri & Badrinath',
       'No 16 km Kedarnath trek — suitable for all fitness levels',
@@ -506,8 +506,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['yamunotri','gangotri','badrinath'],
     tags     : ['teen dham','3 dham','yamunotri','gangotri','badrinath','no kedarnath trek'],
-    metaTitle: 'Teen Dham Yatra 2026 | Price Starts at ₹15,499 | Yamunotri Gangotri Badrinath',
-    metaDesc : 'Teen Dham Yatra 2026 — 7N/8D from ₹15,499/person, no Kedarnath trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Teen Dham Yatra 2026 | Price Starts at ₹11,600 | Yamunotri Gangotri Badrinath',
+    metaDesc : 'Teen Dham Yatra 2026 — 7N/8D from ₹11,600/person, no Kedarnath trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[],
   },
 
@@ -530,7 +530,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Kedarnath: 3,583m | Gaurikund: 1,982m',
-    price    : { original:8500, discounted:6999, currency:'₹', perPerson:true },
+    price    : { original:8500, discounted:5250, currency:'₹', perPerson:true },
     highlights:[
       'Kedarnath Jyotirlinga — 12th and highest of 12 Shiva shrines',
       '16 km scenic trek from Gaurikund (pony/helicopter optional)',
@@ -552,8 +552,8 @@ export const PACKAGES = [
     badge    : 'Bestseller',
     images   : ['kedarnath'],
     tags     : ['kedarnath','ek dham yatra','single dham','haridwar','jyotirlinga','trek','2026','16km trek','gaurikund','guptkashi','ek dham package'],
-    metaTitle: 'Kedarnath Ek Dham Yatra Package 2026 | Price Starts at ₹6,999 | 16km Trek',
-    metaDesc : 'Kedarnath Ek Dham Yatra 2026 — 3N/4D from ₹6,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Kedarnath Ek Dham Yatra Package 2026 | Price Starts at ₹5,250 | 16km Trek',
+    metaDesc : 'Kedarnath Ek Dham Yatra 2026 — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[
       {q:'What is the Kedarnath trek distance and difficulty?', a:'16 km one way from Gaurikund. Moderate-challenging with ~1,600m elevation gain. Fit pilgrims complete it in 5–6 hrs. Pony, palki and helicopter are available alternatives.'},
       {q:'Can I do overnight stay at Kedarnath?', a:'Yes. We arrange overnight at GMVN guesthouses or pre-booked camps. Highly recommended as Brahma Muhurta (4 AM) darshan is the most spiritually powerful.'},
@@ -576,7 +576,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Badrinath: 3,133m',
-    price    : { original:8000, discounted:5999, currency:'₹', perPerson:true },
+    price    : { original:8000, discounted:4500, currency:'₹', perPerson:true },
     highlights:[
       'Badrinath — one of 108 Vishnu Divya Desams',
       'Tapt Kund natural thermal spring bath (45°C)',
@@ -597,8 +597,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['badrinath'],
     tags     : ['badrinath','single dham','haridwar','vishnu','no trek','easy'],
-    metaTitle: 'Badrinath Ek Dham Yatra Package 2026 | Price Starts at ₹5,999 | Mana Village',
-    metaDesc : 'Badrinath Ek Dham Yatra 2026 — 2N/3D from ₹5,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Badrinath Ek Dham Yatra Package 2026 | Price Starts at ₹4,500 | Mana Village',
+    metaDesc : 'Badrinath Ek Dham Yatra 2026 — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[],
   },
 
@@ -617,7 +617,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Yamunotri: 3,291m',
-    price    : { original:7500, discounted:5999, currency:'₹', perPerson:true },
+    price    : { original:7500, discounted:4500, currency:'₹', perPerson:true },
     highlights:[
       'Yamunotri Dham — source of sacred Yamuna River at 3,291m',
       'Divya Shila worship before entering the inner sanctum',
@@ -638,8 +638,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['yamunotri'],
     tags     : ['yamunotri','single dham','haridwar','yamuna','surya kund'],
-    metaTitle: 'Yamunotri Ek Dham Yatra Package 2026 | Price Starts at ₹5,999 | 6km Trek',
-    metaDesc : 'Yamunotri Ek Dham Yatra 2026 — 2N/3D from ₹5,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Yamunotri Ek Dham Yatra Package 2026 | Price Starts at ₹4,500 | 6km Trek',
+    metaDesc : 'Yamunotri Ek Dham Yatra 2026 — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[],
   },
 
@@ -658,7 +658,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Gangotri: 3,415m',
-    price    : { original:7000, discounted:5699, currency:'₹', perPerson:true },
+    price    : { original:7000, discounted:4250, currency:'₹', perPerson:true },
     highlights:[
       'Gangotri — origin of the Holy Ganga River at 3,415m',
       'Bhagirathi Asthapadhi Snana (holy dip in Ganga)',
@@ -679,8 +679,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['gangotri'],
     tags     : ['gangotri','single dham','haridwar','ganga','uttarkashi','easy','no trek'],
-    metaTitle: 'Gangotri Ek Dham Yatra Package 2026 | Price Starts at ₹5,699 | Harsil Valley',
-    metaDesc : 'Gangotri Ek Dham Yatra 2026 — 2N/3D from ₹5,699/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+    metaTitle: 'Gangotri Ek Dham Yatra Package 2026 | Price Starts at ₹4,250 | Harsil Valley',
+    metaDesc : 'Gangotri Ek Dham Yatra 2026 — 2N/3D from ₹4,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
     faqs:[],
   },
 
@@ -703,7 +703,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Max: Kedarnath 3,566m (helipad)',
-    // Repriced Aug 2026 to ₹1,25,000, confirmed by the owner. The previous
+    // Repriced Aug 2026 to ₹1,25,000 confirmed by the owner. The previous
     // ₹45,000 was stale for a full Dehradun→Kedarnath→Badrinath→Dehradun
     // charter — market for the identical product is ₹1,10,000–₹1,45,000, and
     // /blog/kedarnath-helicopter-booking already quoted ₹1.1–1.5 lakh for a
@@ -746,7 +746,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Hemkund Sahib 4,329m',
-    price    : { original:22000, discounted:18499, currency:'₹', perPerson:true },
+    price    : { original:22000, discounted:13900, currency:'₹', perPerson:true },
     highlights:[
       'Hemkund Sahib Gurudwara at 4,329m — sacred Sikh pilgrimage',
       'Valley of Flowers — UNESCO World Heritage Site',
@@ -771,8 +771,8 @@ export const PACKAGES = [
     badge    : 'Special',
     images   : ['badrinath'],
     tags     : ['hemkund sahib','valley of flowers','badrinath','sikh pilgrimage','unesco','trek'],
-    metaTitle: 'Valley of Flowers & Hemkund Sahib 2026 | Price Starts at ₹18,499 | 6N/7D',
-    metaDesc : 'Valley of Flowers & Hemkund Sahib 2026 — 6N/7D from ₹18,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Valley of Flowers & Hemkund Sahib 2026 | Price Starts at ₹13,900 | 6N/7D',
+    metaDesc : 'Valley of Flowers & Hemkund Sahib 2026 — 6N/7D from ₹13,900/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -795,7 +795,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Rishikesh 356m',
-    price    : { original:9000, discounted:7499, currency:'₹', perPerson:true },
+    price    : { original:9000, discounted:5600, currency:'₹', perPerson:true },
     highlights:[
       'Har Ki Pauri Ganga Aarti — magical evening ritual',
       'White water rafting on the Ganges (Grade III–IV rapids)',
@@ -817,8 +817,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['rishikesh','haridwar'],
     tags     : ['rishikesh','haridwar','ganga darshan','rafting','yoga','spiritual'],
-    metaTitle: 'Rishikesh Haridwar Tour 2026 | Price Starts at ₹7,499 | Ganga Aarti',
-    metaDesc : 'Rishikesh Haridwar Tour 2026 — 3N/4D from ₹7,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Rishikesh Haridwar Tour 2026 | Price Starts at ₹5,600 | Ganga Aarti',
+    metaDesc : 'Rishikesh Haridwar Tour 2026 — 3N/4D from ₹5,600/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -837,7 +837,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Max: Dhanaulti 2,250m',
-    price    : { original:12000, discounted:9999, currency:'₹', perPerson:true },
+    price    : { original:12000, discounted:7500, currency:'₹', perPerson:true },
     highlights:[
       'Mussoorie — Queen of the Hills at 2,000m',
       'Gun Hill ropeway with panoramic Himalayan views',
@@ -859,8 +859,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['mussoorie','dehradun'],
     tags     : ['mussoorie','dehradun','dhanaulti','hill station','kempty falls','uttarakhand'],
-    metaTitle: 'Mussoorie Dehradun Tour 2026 | Price Starts at ₹9,999 | 3N/4D',
-    metaDesc : 'Mussoorie Dehradun Tour 2026 — 3N/4D from ₹9,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Mussoorie Dehradun Tour 2026 | Price Starts at ₹7,500 | 3N/4D',
+    metaDesc : 'Mussoorie Dehradun Tour 2026 — 3N/4D from ₹7,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -879,7 +879,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kausani 1,890m',
-    price    : { original:16000, discounted:13499, currency:'₹', perPerson:true },
+    price    : { original:16000, discounted:10100, currency:'₹', perPerson:true },
     highlights:[
       'Nainital — beautiful lake town with Naini Lake boating',
       'Snow View Point — panoramic Himalayan vista',
@@ -902,8 +902,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['nainital'],
     tags     : ['nainital','kausani','ranikhet','kumaon','lake','hill station'],
-    metaTitle: 'Nainital Kausani Ranikhet Tour 2026 | Price Starts at ₹13,499 | 4N/5D',
-    metaDesc : 'Nainital Kausani Ranikhet Tour 2026 — 4N/5D from ₹13,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Nainital Kausani Ranikhet Tour 2026 | Price Starts at ₹10,100 | 4N/5D',
+    metaDesc : 'Nainital Kausani Ranikhet Tour 2026 — 4N/5D from ₹10,100/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -922,7 +922,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Chandrashila 4,130m',
-    price    : { original:10000, discounted:8499, currency:'₹', perPerson:true },
+    price    : { original:10000, discounted:6350, currency:'₹', perPerson:true },
     highlights:[
       'Chopta — "Mini Switzerland of Uttarakhand" at 2,680m',
       'Tungnath — world\'s highest Shiva temple at 3,680m (Panch Kedar)',
@@ -943,8 +943,8 @@ export const PACKAGES = [
     badge    : 'Adventure',
     images   : ['chopta','tungnath'],
     tags     : ['chopta','tungnath','chandrashila','trek','mini switzerland','panch kedar','adventure'],
-    metaTitle: 'Chopta Tungnath Chandrashila Trek 2026 | Price Starts at ₹8,499 | Highest Shiva Temple',
-    metaDesc : 'Chopta Tungnath Chandrashila Trek 2026 — 2N/3D from ₹8,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Chopta Tungnath Chandrashila Trek 2026 | Price Starts at ₹6,350 | Highest Shiva Temple',
+    metaDesc : 'Chopta Tungnath Chandrashila Trek 2026 — 2N/3D from ₹6,350/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -963,7 +963,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Auli 2,519m–3,049m',
-    price    : { original:15000, discounted:12499, currency:'₹', perPerson:true },
+    price    : { original:15000, discounted:9400, currency:'₹', perPerson:true },
     highlights:[
       'Auli — India\'s premier ski destination with 14 km slopes',
       'Gondola / cable car ride — 4 km, 10-seater (India\'s longest)',
@@ -985,8 +985,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['auli'],
     tags     : ['auli','skiing','joshimath','adventure','winter','gondola','uttarakhand'],
-    metaTitle: 'Auli Skiing Package 2026 | Price Starts at ₹12,499 | 3N/4D',
-    metaDesc : 'Auli Skiing Package 2026 — 3N/4D from ₹12,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Auli Skiing Package 2026 | Price Starts at ₹9,400 | 3N/4D',
+    metaDesc : 'Auli Skiing Package 2026 — 3N/4D from ₹9,400/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1010,7 +1010,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Tungnath 3,680m / Kedarnath 3,583m',
-    price    : { original:25000, discounted:21999, currency:'₹', perPerson:true },
+    price    : { original:25000, discounted:16500, currency:'₹', perPerson:true },
     highlights:[
       'All 5 Panch Kedar Shiva temples in one journey',
       'Kedarnath — most sacred of the 12 Jyotirlingas (3,583m)',
@@ -1037,8 +1037,8 @@ export const PACKAGES = [
     badge    : 'Rare Package',
     images   : ['kedarnath'],
     tags     : ['panch kedar','kedarnath','tungnath','rudranath','madmaheshwar','kalpeshwar','trek','shiva'],
-    metaTitle: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹21,999 | 8N/9D',
-    metaDesc : 'Panch Kedar Yatra Package 2026 — 8N/9D from ₹21,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹16,500 | 8N/9D',
+    metaDesc : 'Panch Kedar Yatra Package 2026 — 8N/9D from ₹16,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'What are the 5 temples of Panch Kedar?', a:'The Panch Kedar are: (1) Kedarnath — hump of Nandi, (2) Tungnath — arms, (3) Rudranath — face, (4) Madmaheshwar — navel, (5) Kalpeshwar — hair. All are in Garhwal Himalayas, Uttarakhand.'},
       {q:'Is Panch Kedar more physically demanding than Char Dham?', a:'Yes. All 5 Panch Kedar temples require trekking — ranging from 2 km (Kalpeshwar) to 22 km (Madmaheshwar). Kedarnath requires a 16 km trek. We recommend moderate physical fitness for this package.'},
@@ -1060,7 +1060,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Rishikesh: 356m',
-    price    : { original:6500, discounted:4999, currency:'₹', perPerson:true },
+    price    : { original:6500, discounted:3750, currency:'₹', perPerson:true },
     highlights:[
       'White water river rafting — 16 km rapids on Ganga (Grade II–IV)',
       'Beach camping under stars on Ganga riverbank',
@@ -1081,8 +1081,8 @@ export const PACKAGES = [
     badge    : 'Adventure Pick',
     images   : ['rishikesh'],
     tags     : ['rishikesh','rafting','camping','bungee','adventure','ganga','yoga'],
-    metaTitle: 'Rishikesh Adventure Package 2026 | Price Starts at ₹4,999 | Rafting & Camping',
-    metaDesc : 'Rishikesh Adventure Package 2026 — 2N/3D from ₹4,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Rishikesh Adventure Package 2026 | Price Starts at ₹3,750 | Rafting & Camping',
+    metaDesc : 'Rishikesh Adventure Package 2026 — 2N/3D from ₹3,750/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1101,7 +1101,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Max: Mussoorie 2,048m / Kanatal 2,590m',
-    price    : { original:10000, discounted:8499, currency:'₹', perPerson:true },
+    price    : { original:10000, discounted:6350, currency:'₹', perPerson:true },
     highlights:[
       'Mussoorie — "Queen of the Hills" at 2,048m elevation',
       'Kempty Falls — Mussoorie\'s most famous waterfall',
@@ -1124,8 +1124,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['mussoorie'],
     tags     : ['mussoorie','rishikesh','kanatal','hill station','uttarakhand','family','kempty falls'],
-    metaTitle: 'Mussoorie Rishikesh Kanatal Tour 2026 | Price Starts at ₹8,499 | 4N/5D',
-    metaDesc : 'Mussoorie Rishikesh Kanatal Tour 2026 — 4N/5D from ₹8,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Mussoorie Rishikesh Kanatal Tour 2026 | Price Starts at ₹6,350 | 4N/5D',
+    metaDesc : 'Mussoorie Rishikesh Kanatal Tour 2026 — 4N/5D from ₹6,350/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1144,7 +1144,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam (Nainital Rail Head)',
     endCity  : 'Kathgodam',
     altitude : 'Nainital: 2,084m | Corbett: 1,100m',
-    price    : { original:17000, discounted:13999, currency:'₹', perPerson:true },
+    price    : { original:17000, discounted:10500, currency:'₹', perPerson:true },
     highlights:[
       'Jim Corbett National Park — India\'s oldest tiger reserve',
       '2 jungle safaris — Dhikala zone (best for tigers)',
@@ -1168,8 +1168,8 @@ export const PACKAGES = [
     badge    : 'Wildlife + Hills',
     images   : ['corbett'],
     tags     : ['jim corbett','nainital','tiger safari','wildlife','kumaon','hill station','kausani'],
-    metaTitle: 'Jim Corbett Nainital Tour 2026 | Price Starts at ₹13,999 | Tiger Safari',
-    metaDesc : 'Jim Corbett Nainital Tour 2026 — 5N/6D from ₹13,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Jim Corbett Nainital Tour 2026 | Price Starts at ₹10,500 | Tiger Safari',
+    metaDesc : 'Jim Corbett Nainital Tour 2026 — 5N/6D from ₹10,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1188,7 +1188,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Haridwar: 314m | Rishikesh: 356m',
-    price    : { original:7500, discounted:5999, currency:'₹', perPerson:true },
+    price    : { original:7500, discounted:4500, currency:'₹', perPerson:true },
     highlights:[
       'Har Ki Pauri — most sacred Ganga ghat, evening aarti',
       'Mansa Devi & Chandi Devi temples via ropeway',
@@ -1211,8 +1211,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['haridwar'],
     tags     : ['haridwar','rishikesh','ganga darshan','spiritual','yoga','temple','aarti'],
-    metaTitle: 'Haridwar Rishikesh Spiritual Tour 2026 | Price Starts at ₹5,999 | 4N/5D',
-    metaDesc : 'Haridwar Rishikesh Spiritual Tour 2026 — 4N/5D from ₹5,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Haridwar Rishikesh Spiritual Tour 2026 | Price Starts at ₹4,500 | 4N/5D',
+    metaDesc : 'Haridwar Rishikesh Spiritual Tour 2026 — 4N/5D from ₹4,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1231,7 +1231,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Badrinath 3,133m',
-    price    : { original:28000, discounted:22999, currency:'₹', perPerson:true },
+    price    : { original:28000, discounted:17200, currency:'₹', perPerson:true },
     highlights:[
       'Haridwar — Har Ki Pauri Ganga aarti & 5 major temples',
       'Rishikesh — Yoga capital, rafting, Parmarth Niketan aarti',
@@ -1260,8 +1260,8 @@ export const PACKAGES = [
     badge    : 'Signature Tour',
     images   : ['uttarakhand'],
     tags     : ['uttarakhand','haridwar','rishikesh','mussoorie','badrinath','nainital','chopta','complete'],
-    metaTitle: 'Grand Uttarakhand Tour 2026 | Price Starts at ₹22,999 | 10N/11D',
-    metaDesc : 'Grand Uttarakhand Tour 2026 — 10N/11D from ₹22,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Grand Uttarakhand Tour 2026 | Price Starts at ₹17,200 | 10N/11D',
+    metaDesc : 'Grand Uttarakhand Tour 2026 — 10N/11D from ₹17,200/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1280,7 +1280,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Hemkund Sahib 4,329m',
-    price    : { original:16000, discounted:13499, currency:'₹', perPerson:true },
+    price    : { original:16000, discounted:10100, currency:'₹', perPerson:true },
     highlights:[
       'Valley of Flowers — UNESCO World Heritage Site, 500+ species of Himalayan wildflowers',
       'Hemkund Sahib — Sikh Gurudwara at 4,329m, one of the highest places of worship',
@@ -1304,8 +1304,8 @@ export const PACKAGES = [
     badge    : 'UNESCO Heritage',
     images   : ['badrinath'],
     tags     : ['valley of flowers','hemkund sahib','badrinath','trek','UNESCO','sikh pilgrimage','uttarakhand'],
-    metaTitle: 'Valley of Flowers Tour 2026 | Price Starts at ₹13,499 | 5N/6D',
-    metaDesc : 'Valley of Flowers Tour 2026 — 5N/6D from ₹13,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Valley of Flowers Tour 2026 | Price Starts at ₹10,100 | 5N/6D',
+    metaDesc : 'Valley of Flowers Tour 2026 — 5N/6D from ₹10,100/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1324,7 +1324,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m / Chandrashila 4,000m',
-    price    : { original:20000, discounted:16999, currency:'₹', perPerson:true },
+    price    : { original:20000, discounted:12700, currency:'₹', perPerson:true },
     highlights:[
       'Kedarnath Jyotirlinga darshan + 16 km trek from Gaurikund',
       'Chopta — Mini Switzerland, base for Tungnath',
@@ -1349,8 +1349,8 @@ export const PACKAGES = [
     badge    : 'Best Combo',
     images   : ['kedarnath','badrinath'],
     tags     : ['kedarnath','chopta','badrinath','tungnath','adventure','spiritual','combo'],
-    metaTitle: 'Kedarnath Chopta Badrinath Tour 2026 | Price Starts at ₹16,999 | 6N/7D',
-    metaDesc : 'Kedarnath Chopta Badrinath Tour 2026 — 6N/7D from ₹16,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Kedarnath Chopta Badrinath Tour 2026 | Price Starts at ₹12,700 | 6N/7D',
+    metaDesc : 'Kedarnath Chopta Badrinath Tour 2026 — 6N/7D from ₹12,700/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1374,7 +1374,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam',
     endCity  : 'Kathgodam',
     altitude : 'Kainchi 1,400m | Nainital 2,084m | Mukteshwar 2,286m',
-    price    : { original:11500, discounted:8999, currency:'₹', perPerson:true },
+    price    : { original:11500, discounted:6750, currency:'₹', perPerson:true },
     highlights:[
       'Kainchi Dham — Neem Karoli Baba\'s ashram on the Nainital–Almora road',
       'We time the Kainchi visit for early morning, before the tour buses arrive',
@@ -1396,8 +1396,8 @@ export const PACKAGES = [
     badge    : 'Trending',
     images   : ['kainchi','nainital'],
     tags     : ['kainchi dham','neem karoli baba','nainital','mukteshwar','kumaon','bhimtal','sattal','ashram','weekend'],
-    metaTitle: 'Kainchi Dham Nainital Tour 2026 | Price Starts at ₹8,999 | 3N/4D',
-    metaDesc : 'Kainchi Dham Nainital Tour 2026 — 3N/4D from ₹8,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Kainchi Dham Nainital Tour 2026 | Price Starts at ₹6,750 | 3N/4D',
+    metaDesc : 'Kainchi Dham Nainital Tour 2026 — 3N/4D from ₹6,750/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'Where is Kainchi Dham and how far is it from Nainital?', a:'Kainchi Dham sits on the Nainital–Almora highway near Bhowali, about 17 km from Nainital and 38 km from Kathgodam. Our vehicle stops there on the way up on day 1, so you do not make a separate trip for it.'},
       {q:'What is the best time to visit Kainchi Dham?', a:'March to June and September to November are comfortable. The ashram is busiest around June 15, the Pratishtha Diwas (foundation day), when the annual bhandara draws huge crowds — plan for long queues if you come that week. On normal days, early morning is calmest, which is how we schedule it.'},
@@ -1420,7 +1420,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Summit: Kedarkantha 3,810m (12,500 ft)',
-    price    : { original:11000, discounted:8500, currency:'₹', perPerson:true },
+    price    : { original:11000, discounted:6400, currency:'₹', perPerson:true },
     highlights:[
       'India\'s most-walked winter summit trek, and a fair one for first-timers',
       'Sankri village base in the Govind Pashu Vihar national park',
@@ -1444,8 +1444,8 @@ export const PACKAGES = [
     badge    : 'Top Winter Trek',
     images   : ['kedarkantha','snow'],
     tags     : ['kedarkantha','winter trek','snow trek','sankri','beginner trek','himalayan trek','december','january','uttarakhand trek'],
-    metaTitle: 'Kedarkantha Trek 2026 | Price Starts at ₹8,500 | Snow Trek',
-    metaDesc : 'Kedarkantha Trek 2026 — 5N/6D from ₹8,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Kedarkantha Trek 2026 | Price Starts at ₹6,400 | Snow Trek',
+    metaDesc : 'Kedarkantha Trek 2026 — 5N/6D from ₹6,400/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'Is Kedarkantha a good trek for beginners?', a:'Yes — it is the trek we most often recommend for a first Himalayan winter summit. The gradients are steady rather than steep, the days are short, and the summit at 3,810m is high enough to feel like an achievement without the altitude risk of the bigger treks. Basic fitness helps: if you can jog 3–4 km or climb stairs without stopping, you will manage.'},
       {q:'When is there the most snow?', a:'January and February give the deepest, most reliable snow, with the summit and Juda ka Talab under a thick layer. December is snowy but can be patchy early in the month. March into April is a lighter, greener version of the trek.'},
@@ -1468,7 +1468,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Summit: Nag Tibba 3,022m (9,915 ft)',
-    price    : { original:4500, discounted:3499, currency:'₹', perPerson:true },
+    price    : { original:4500, discounted:2600, currency:'₹', perPerson:true },
     highlights:[
       'The classic \'leave Friday night, back by Sunday\' Himalayan trek',
       'Summit views of Swargarohini, Bandarpoonch, Kedarnath and Gangotri ranges',
@@ -1488,8 +1488,8 @@ export const PACKAGES = [
     badge    : 'Quick Weekend',
     images   : ['nagtibba'],
     tags     : ['nag tibba','weekend trek','mussoorie trek','beginner trek','delhi weekend','snow trek','short trek'],
-    metaTitle: 'Nag Tibba Trek 2026 | Price Starts at ₹3,499 | Weekend Trek',
-    metaDesc : 'Nag Tibba Trek 2026 — 1N/2D from ₹3,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Nag Tibba Trek 2026 | Price Starts at ₹2,600 | Weekend Trek',
+    metaDesc : 'Nag Tibba Trek 2026 — 1N/2D from ₹2,600/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'Can I do Nag Tibba over a weekend from Delhi?', a:'Yes, that is exactly what it is built for. Take an overnight bus or train to Dehradun on Friday, trek Saturday–Sunday with us, and head back Sunday evening. Many of our weekend groups are working professionals from Delhi and NCR doing precisely this.'},
       {q:'Is there snow on Nag Tibba?', a:'From late December through February the upper section and summit usually hold snow, sometimes enough to need light traction. The rest of the year it is a green forest trek with open summit views.'},
@@ -1511,7 +1511,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Har Ki Dun 3,566m (11,700 ft)',
-    price    : { original:15500, discounted:12500, currency:'₹', perPerson:true },
+    price    : { original:15500, discounted:9400, currency:'₹', perPerson:true },
     highlights:[
       'A cradle-shaped hanging valley below Swargarohini, in the Govind sanctuary',
       'Ancient villages — Osla and Gangad — with wooden temples and old ways of life',
@@ -1536,8 +1536,8 @@ export const PACKAGES = [
     badge    : null,
     images   : ['harkidun'],
     tags     : ['har ki dun','valley of gods','sankri','swargarohini','himalayan trek','govind sanctuary','osla','moderate trek'],
-    metaTitle: 'Har Ki Dun Trek 2026 | Price Starts at ₹12,500 | Valley of Gods',
-    metaDesc : 'Har Ki Dun Trek 2026 — 6N/7D from ₹12,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Har Ki Dun Trek 2026 | Price Starts at ₹9,400 | Valley of Gods',
+    metaDesc : 'Har Ki Dun Trek 2026 — 6N/7D from ₹9,400/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1556,7 +1556,7 @@ export const PACKAGES = [
     startCity: 'Ramnagar',
     endCity  : 'Ramnagar',
     altitude : 'Corbett: ~400–1,100m',
-    price    : { original:12000, discounted:9499, currency:'₹', perPerson:true },
+    price    : { original:12000, discounted:7100, currency:'₹', perPerson:true },
     highlights:[
       'India\'s oldest national park, and still one of the best for tiger sightings',
       'Two jeep safaris with a registered naturalist',
@@ -1577,8 +1577,8 @@ export const PACKAGES = [
     badge    : 'Wildlife Weekend',
     images   : ['corbett'],
     tags     : ['jim corbett','tiger safari','corbett national park','ramnagar','wildlife','weekend','jeep safari','delhi getaway'],
-    metaTitle: 'Jim Corbett Safari Package 2026 | Price Starts at ₹9,499 | 2N/3D',
-    metaDesc : 'Jim Corbett Safari Package 2026 — 2N/3D from ₹9,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Jim Corbett Safari Package 2026 | Price Starts at ₹7,100 | 2N/3D',
+    metaDesc : 'Jim Corbett Safari Package 2026 — 2N/3D from ₹7,100/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'Which is the best zone in Jim Corbett for tigers?', a:'Dhikala is the most famous for sightings and scenery, but it is a limited day-visit or overnight FRH zone that books out far ahead. For a weekend, Bijrani and Jhirna give a strong chance and are easier to secure. We book whatever zone has open permits the moment the booking window opens, and tell you honestly what was available rather than overpromising a Dhikala slot we cannot guarantee.'},
       {q:'When is Jim Corbett open?', a:'The core safari zones generally run from mid-October or November to mid-June. Some buffer zones like Jhirna and Sitabani stay open through the year. The park closes the core zones during the monsoon. February to May is the most reliable stretch for sightings as water sources shrink.'},
@@ -1601,7 +1601,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam',
     endCity  : 'Kathgodam',
     altitude : 'Almora 1,638m | Jageshwar 1,870m | Binsar 2,412m',
-    price    : { original:12500, discounted:9999, currency:'₹', perPerson:true },
+    price    : { original:12500, discounted:7500, currency:'₹', perPerson:true },
     highlights:[
       'Jageshwar Dham — a cluster of 100+ stone temples in a deodar forest',
       'One of the twelve Jyotirlingas is traditionally linked to Jageshwar',
@@ -1623,8 +1623,8 @@ export const PACKAGES = [
     badge    : 'Offbeat Kumaon',
     images   : ['jageshwar','almora'],
     tags     : ['almora','jageshwar','binsar','kumaon','heritage','temples','kasar devi','offbeat','wildlife'],
-    metaTitle: 'Almora Jageshwar Binsar Tour 2026 | Price Starts at ₹9,999 | 3N/4D',
-    metaDesc : 'Almora Jageshwar Binsar Tour 2026 — 3N/4D from ₹9,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Almora Jageshwar Binsar Tour 2026 | Price Starts at ₹7,500 | 3N/4D',
+    metaDesc : 'Almora Jageshwar Binsar Tour 2026 — 3N/4D from ₹7,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1643,7 +1643,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam',
     endCity  : 'Kathgodam',
     altitude : 'Munsiyari 2,200m | Chaukori 2,010m',
-    price    : { original:18500, discounted:14999, currency:'₹', perPerson:true },
+    price    : { original:18500, discounted:11200, currency:'₹', perPerson:true },
     highlights:[
       'Munsiyari — the Panchachuli five-peak wall at close range',
       'Patal Bhuvaneshwar — a limestone cave temple you descend into',
@@ -1667,8 +1667,8 @@ export const PACKAGES = [
     badge    : 'Far Kumaon',
     images   : ['munsiyari','panchachuli'],
     tags     : ['munsiyari','chaukori','patal bhuvaneshwar','panchachuli','kumaon','offbeat','cave temple','johar valley'],
-    metaTitle: 'Munsiyari Chaukori Tour 2026 | Price Starts at ₹14,999 | 5N/6D',
-    metaDesc : 'Munsiyari Chaukori Tour 2026 — 5N/6D from ₹14,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Munsiyari Chaukori Tour 2026 | Price Starts at ₹11,200 | 5N/6D',
+    metaDesc : 'Munsiyari Chaukori Tour 2026 — 5N/6D from ₹11,200/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1687,7 +1687,7 @@ export const PACKAGES = [
     startCity: 'Kotdwar',
     endCity  : 'Kotdwar',
     altitude : 'Lansdowne 1,706m | Khirsu 1,700m',
-    price    : { original:8500, discounted:6499, currency:'₹', perPerson:true },
+    price    : { original:8500, discounted:4850, currency:'₹', perPerson:true },
     highlights:[
       'A cantonment hill town the army has kept quiet and clean since 1887',
       'Bhulla Tal lake, Tip-in-Top viewpoint and St Mary\'s Church',
@@ -1708,8 +1708,8 @@ export const PACKAGES = [
     badge    : 'Quiet Weekend',
     images   : ['lansdowne'],
     tags     : ['lansdowne','khirsu','garhwal','weekend','cantonment','pine forest','delhi getaway','offbeat','quiet'],
-    metaTitle: 'Lansdowne Khirsu Tour 2026 | Price Starts at ₹6,499 | 2N/3D',
-    metaDesc : 'Lansdowne Khirsu Tour 2026 — 2N/3D from ₹6,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Lansdowne Khirsu Tour 2026 | Price Starts at ₹4,850 | 2N/3D',
+    metaDesc : 'Lansdowne Khirsu Tour 2026 — 2N/3D from ₹4,850/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1728,7 +1728,7 @@ export const PACKAGES = [
     startCity: 'Dehradun',
     endCity  : 'Dehradun',
     altitude : 'Tehri Lake 770m | Kanatal 2,590m | Surkanda 2,757m',
-    price    : { original:9500, discounted:7499, currency:'₹', perPerson:true },
+    price    : { original:9500, discounted:5600, currency:'₹', perPerson:true },
     highlights:[
       'Tehri Lake water sports — jet ski, boating, banana ride on India\'s largest reservoir',
       'Kanatal — a pine-forest hill village that stays green and cool',
@@ -1749,8 +1749,8 @@ export const PACKAGES = [
     badge    : 'Lake + Hills',
     images   : ['tehri','kanatal'],
     tags     : ['tehri lake','kanatal','surkanda devi','water sports','garhwal','weekend','camping','shakti peeth','family'],
-    metaTitle: 'Tehri Lake Kanatal Tour 2026 | Price Starts at ₹7,499 | 2N/3D',
-    metaDesc : 'Tehri Lake Kanatal Tour 2026 — 2N/3D from ₹7,499/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Tehri Lake Kanatal Tour 2026 | Price Starts at ₹5,600 | 2N/3D',
+    metaDesc : 'Tehri Lake Kanatal Tour 2026 — 2N/3D from ₹5,600/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1769,7 +1769,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam',
     endCity  : 'Kathgodam',
     altitude : 'Adi Kailash base ~4,500m | Om Parvat ~3,800m',
-    price    : { original:42000, discounted:36000, currency:'₹', perPerson:true },
+    price    : { original:42000, discounted:27000, currency:'₹', perPerson:true },
     highlights:[
       'Adi Kailash (Chhota Kailash) — the peak said to mirror Mount Kailash',
       'Om Parvat, where snow settles in the natural shape of \'Om\'',
@@ -1795,8 +1795,8 @@ export const PACKAGES = [
     badge    : 'New · Premium Yatra',
     images   : ['adikailash','omparvat'],
     tags     : ['adi kailash','om parvat','chhota kailash','kailash yatra','kumaon','pithoragarh','dharchula','inner line permit','high altitude'],
-    metaTitle: 'Adi Kailash Om Parvat Yatra 2026 | Price Starts at ₹36,000 | 7N/8D',
-    metaDesc : 'Adi Kailash Om Parvat Yatra 2026 — 7N/8D from ₹36,000/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Adi Kailash Om Parvat Yatra 2026 | Price Starts at ₹27,000 | 7N/8D',
+    metaDesc : 'Adi Kailash Om Parvat Yatra 2026 — 7N/8D from ₹27,000/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'Do I need a permit for Adi Kailash and Om Parvat?', a:'Yes. The stretch beyond Dharchula towards Gunji, Adi Kailash and Om Parvat is a protected border zone that needs an Inner Line Permit. You must be an Indian citizen and carry original ID, passport-size photos and a medical fitness certificate. We process the permit for the group — you provide the documents and we handle the paperwork and checkposts.'},
       {q:'How much of this is trekking?', a:'Much less than it used to be. After the Border Roads Organisation extended the road, most of the circuit to Jolingkong (Adi Kailash) and Nabhidhang (Om Parvat) is now motorable, with only short walks at the viewpoints. It is still a high-altitude journey above 3,000m for several days, so acclimatisation and basic fitness matter more than trekking skill.'},
@@ -1819,7 +1819,7 @@ export const PACKAGES = [
     startCity: 'Kathgodam',
     endCity  : 'Kathgodam',
     altitude : 'Brahmatal ridge 3,734m (12,250 ft)',
-    price    : { original:12500, discounted:9999, currency:'₹', perPerson:true },
+    price    : { original:12500, discounted:7500, currency:'₹', perPerson:true },
     highlights:[
       'One of the best winter treks for snow and open ridge views',
       'Close, unobstructed views of Mt Trishul and Nanda Ghunti',
@@ -1842,8 +1842,8 @@ export const PACKAGES = [
     badge    : 'Winter Trek',
     images   : ['brahmatal','snow'],
     tags     : ['brahmatal','winter trek','snow trek','lohajung','trishul','nanda ghunti','frozen lake','himalayan trek','uttarakhand'],
-    metaTitle: 'Brahmatal Trek 2026 | Price Starts at ₹9,999 | Winter Snow Trek',
-    metaDesc : 'Brahmatal Trek 2026 — 4N/5D from ₹9,999/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Brahmatal Trek 2026 | Price Starts at ₹7,500 | Winter Snow Trek',
+    metaDesc : 'Brahmatal Trek 2026 — 4N/5D from ₹7,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[],
   },
 
@@ -1886,7 +1886,7 @@ export const GLOBAL_FAQS = [
   { q:'Do I need to register for Char Dham Yatra 2026?',
     a:'Yes — registration is mandatory and enforced at police checkpoints. You register online at the Uttarakhand Tourism portal or in person at biometric centres in Haridwar and Rishikesh. Register before you leave home. Police turn back unregistered pilgrims at Sonprayag (Kedarnath route) and other checkpoints, even if you have driven 6 hours from Haridwar. We handle registration for all pilgrims in our packages.' },
   { q:'What does Char Dham Yatra cost from Haridwar in 2026?',
-    a:'Our Char Dham packages start at ₹18,500 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹2,30,000 — helicopter charter is genuinely expensive and any "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately. All prices are direct — no agent commission, no hidden charges.' },
+    a:'Our Char Dham packages start at ₹13,900 per person for 9N/10D all-inclusive from Haridwar — that covers your vehicle, hotels, guide, meals, pony/palki charges and VIP darshan assistance at all 4 dhams. Note: AC is standard in plains; in hilly areas it can be availed at ₹2,000 extra. Deluxe options (Innova Crysta, 3-star hotels) run ₹30,000. The Char Dham by helicopter package is ₹2,30,000 — helicopter charter is genuinely expensive and any "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately. All prices are direct — no agent commission, no hidden charges.' },
   { q:'What is the Char Dham Yatra route from Haridwar?',
     a:'The circuit follows a clockwise direction: Haridwar → Barkot → Yamunotri (Day 3) → Uttarkashi → Gangotri (Day 5) → Guptkashi → Kedarnath (Day 7) → Rudraprayag → Badrinath (Day 9-10) → return to Haridwar (Day 11). Total road distance: approximately 1,100km. Yamunotri requires a 6km trek from Janki Chatti. Kedarnath requires a 16km trek from Gaurikund. Gangotri and Badrinath are fully motorable.' },
   { q:'Is Char Dham Yatra safe for senior citizens?',

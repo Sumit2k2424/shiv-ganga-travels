@@ -319,21 +319,6 @@ export default function KedarnathPonyRates() {
           </div>
         ))}
 
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Planning Your Kedarnath Yatra?</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Our Kedarnath packages include pony coordination, VIP darshan arrangement, Gaurikund hotel, and 24hr WhatsApp support throughout the trek.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026. Please share package details including pony/palki options.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
-              💬 WhatsApp Us
-            </a>
-            <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
-              📞 {SITE.phone}
-            </a>
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>

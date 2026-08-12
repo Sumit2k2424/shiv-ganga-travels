@@ -158,10 +158,11 @@ export default function CharDhamKabJayen() {
               <div style={{ fontSize: 12, color: '#64748b' }}>{why}</div>
             </div>          ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
 
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
 
         <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
@@ -175,15 +176,6 @@ export default function CharDhamKabJayen() {
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>अभी Seats बुक करें — सितंबर-अक्टूबर</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>सितंबर और अक्टूबर के batch जल्दी भरते हैं। WhatsApp पर अपनी तारीख और ग्रुप का साइज बताएं।</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! September/October 2026 Char Dham Yatra ke liye dates aur package jaanna hai.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 Dates Check करें</a>
-            🏔️ Packages देखें →
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

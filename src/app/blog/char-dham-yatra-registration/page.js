@@ -235,24 +235,6 @@ export default function RegistrationBlog() {
         <BlogAuthor variant="top" author="sumit" />
 
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
-        <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:24, display:'flex', flexWrap:'wrap', gap:16, alignItems:'center', justifyContent:'space-between' }}>
-          <div>
-            <div style={{ fontWeight:700, fontSize:14, color:'#FFD166', marginBottom:4 }}>✅ Don&apos;t want to do this yourself?</div>
-            <div style={{ fontSize:13.5, color:'rgba(255,255,255,0.8)', lineHeight:1.6 }}>Shiv Ganga Travels completes registration for all our pilgrims — free with every package booking.</div>
-          </div>
-          <div style={{ display:'flex', gap:8, flexWrap:'wrap', flexShrink:0 }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Please help me with Char Dham Yatra registration 2026.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'10px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' }}>
-              💬 Register via WhatsApp
-            </a>
-            <a href={`tel:${SITE.phone}`}
-              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'10px 18px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)', whiteSpace:'nowrap' }}>
-              📞 Call Us
-            </a>
-          </div>
-        </div>
-
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>
           <span style={{ fontSize:26, flexShrink:0 }}>⚠️</span>
@@ -464,17 +446,12 @@ export default function RegistrationBlog() {
           </div>
 
           {/* Mid-page CTA — placed at peak intent moment */}
-          <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', margin:'24px 0 36px', display:'flex', gap:20, alignItems:'center', flexWrap:'wrap' }}>
-            <div style={{ flex:1, minWidth:200 }}>
-              <div style={{ fontWeight:700, fontSize:15, color:'#fff', marginBottom:4 }}>Worried about hitting the daily cap?</div>
-              <div style={{ fontSize:13, color:'rgba(255,255,255,0.7)', lineHeight:1.5 }}>Our team monitors daily counts and adjusts departure timing so your group is never turned back. Registration handled free with every package.</div>
-            </div>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 and need help with registration and daily limit planning.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 }}>
-              💬 Ask Us
-            </a>
-          </div>
+          <BlogCTA
+            variant="inline"
+            intent="registration"
+            eyebrow="Worried about the daily cap?"
+            line="We watch the daily counts through the season and shift departure timing so your group is never turned back at the checkpoint. Registration is handled free with every package."
+          />
 
           {/* Helicopter registration dependency */}
           <div id="helicopter" style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
@@ -482,9 +459,6 @@ export default function RegistrationBlog() {
             <p style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7, margin:'0 0 10px' }}>
               From 2026, the IRCTC helicopter portal (<strong>heliyatra.irctc.co.in</strong>) requires your Yatra Registration Number to log in. You cannot book a Kedarnath helicopter slot without first completing Char Dham Yatra registration. The sequence is:
             </p>
-
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="registration" />
             {['1. Complete Char Dham Yatra registration at registrationandtouristcare.uk.gov.in (free, takes 15 min)','2. Note your Yatra Registration Number from the confirmation','3. Go to heliyatra.irctc.co.in and log in using your Registration Number + Aadhaar','4. Book your helicopter slot (May slots sell out by February — book early)'].map((step, i) => (
               <div key={i} style={{ display:'flex', gap:8, fontSize:13.5, color:'#185FA5', padding:'5px 0', borderBottom:'1px solid rgba(21,95,165,0.12)' }}>
                 <span style={{ fontWeight:700, flexShrink:0 }}>→</span> {step}
@@ -651,29 +625,6 @@ export default function RegistrationBlog() {
         </div>
 
         {/* CTA */}
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginBottom:40 }}>
-          <div style={{ fontWeight:700, fontSize:20, color:'#fff', fontFamily:'var(--font-display)', marginBottom:8 }}>
-            Let Us Handle Your Registration
-          </div>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:20 }}>
-            Every Shiv Ganga Travels package includes complete registration assistance — free. Speak directly with Dhanesh ji.
-          </p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with Char Dham Yatra registration 2026. Please guide me.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
-              💬 WhatsApp — Get Help Now
-            </a>
-            <a href='tel:+917817996730'
-              style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
-              📞 {SITE.phone}
-            </a>
-          </div>
-          <p style={{ color:'rgba(255,255,255,0.5)', fontSize:11.5, marginTop:14, marginBottom:0 }}>
-            Shiv Ganga Travels · Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India
-          </p>
-        </div>
-
         {/* Related links */}
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:14 }}>Related Guides</div>

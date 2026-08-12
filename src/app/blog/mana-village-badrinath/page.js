@@ -124,23 +124,14 @@ export default function Page() {
               <div style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.6 }}>{v}</div>
             </div>          ))}
 
+
+        </div>
+
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
-        </div>
-
         <h2 id="open-2026" style={h2}>Is Mana Village Open in 2026?</h2>
         <p style={p}>Mana Village opens with the Badrinath temple in late April and closes when the temple closes in November. In 2026, Badrinath opens on April 23 — so Mana will be accessible from that date. The village is open to all Indian citizens. Foreign nationals require an Inner Line Permit (ILP) issued at Joshimath, as Mana is in a restricted area near the international border.</p>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Include Mana in Your Char Dham Itinerary</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>All our Badrinath and Char Dham packages include time at Mana Village. Just ask us when booking.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Mana Village in my Char Dham itinerary. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            Badrinath Guide →
-          </div>
-        </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Articles</div>

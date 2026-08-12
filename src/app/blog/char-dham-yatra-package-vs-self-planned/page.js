@@ -37,7 +37,7 @@ export default function PkgVsSelf() {
     ['Emergency support', 'Operator on call 24/7', 'On your own'],
     ['Flexibility', 'Fixed itinerary — less spontaneous', 'Change plans freely'],
     ['Cost (2 people, peak)', '₹22,000–28,000 per person', '₹24,000–32,000 per person (peak hotels)'],
-    ['Cost (10 people, peak)', '₹18,500 per person', '₹18,000–22,000 per person (possible saving)'],
+    ['Cost (10 people, peak)', '₹13,900 per person', '₹18,000–22,000 per person (possible saving)'],
     ['Best for', 'First-time, senior, 2–8 person groups', 'Experienced, 10+ people, repeat pilgrims'],
   ];
   return (
@@ -54,7 +54,7 @@ export default function PkgVsSelf() {
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="7 min read"
         facts={[
-          { label:'Package from', value:'₹18,500 pp' },
+          { label:'Package from', value:'₹13,900 pp' },
           { label:'Self-planned', value:'Similar, more effort' },
           { label:'Best for DIY',  value:'Fit, flexible groups' },
           { label:'Direct operator', value:'Zero commission' },
@@ -106,11 +106,13 @@ export default function PkgVsSelf() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>⚠️ The most common self-planning mistake:</div>
           <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>Pilgrims who plan independently often underestimate hotel availability in peak season. Hotels at Guptkashi (Kedarnath base) and Joshimath (Badrinath base) fill up 45–60 days ahead in May–June. Operators like Shiv Ganga Travels pre-block rooms from January each year. A self-planner arriving in Haridwar in late April for a May departure will find most good hotels already gone.</p>
         </div>
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center' }}>
-          <h2 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Free Package Quote</h2>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Compare our package price vs your self-planned estimate · Free advice in 30 minutes</p>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to compare package vs self-planned for Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Dhanesh ji</a>
-        </div>
+        {/* ── Mid-article CTA — right where the hotel-availability point lands ── */}
+        <BlogCTA
+          variant="inline"
+          intent="booking"
+          eyebrow="Rooms are blocked in January"
+          line="Tell us your month and group size — we will tell you honestly whether the dates are still workable and what a package costs."
+        />
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>

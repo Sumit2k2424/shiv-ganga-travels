@@ -31,7 +31,7 @@ const FAQS = [
   { q:'So who actually runs the trip if I book through a marketplace?',
     a:'A local operator, and which one depends on the listing. That is not a criticism — plenty of good operators list on marketplaces, and the platform gives them reach they could not build alone. It just means the company you paid is not the company driving your vehicle. If you want to know who will be, ask before you pay; a straight answer is a good sign either way.' },
   { q:'Does booking direct actually cost less?',
-    a:'Usually, because there is one fewer party taking a margin. Our 9N/10D Char Dham from Haridwar is ₹18,500 per person and that is the operator price with nothing stacked on it. What we will not do is quote you a Thrillophilia figure on this page, because marketplace prices change with the listing, the season and whatever promotion is running, and a stale number here would be worse than no number. Compare our published rate against whatever you are quoted today.' },
+    a:'Usually, because there is one fewer party taking a margin. Our 9N/10D Char Dham from Haridwar is ₹13,900 per person and that is the operator price with nothing stacked on it. What we will not do is quote you a Thrillophilia figure on this page, because marketplace prices change with the listing, the season and whatever promotion is running, and a stale number here would be worse than no number. Compare our published rate against whatever you are quoted today.' },
   { q:'What do marketplaces do better?',
     a:'Three things, genuinely. Discovery — you can see many options in one place, which is hard to replicate. Payment protection and a formal dispute process, which matters if you are booking a company you know nothing about. And review volume large enough to be statistically meaningful. If you are choosing between operators you cannot verify, a marketplace is a reasonable way to reduce risk.' },
   { q:'When should I use a marketplace instead of booking direct?',
@@ -103,7 +103,7 @@ export default function VsThrillophilia() {
         <H2>Our Price, and Why We Are Not Quoting Theirs</H2>
         <P>
           Our 9N/10D Char Dham from Haridwar is{' '}
-          <strong style={{ color:'var(--navy)' }}>₹18,500 per person</strong>, direct, with the
+          <strong style={{ color:'var(--navy)' }}>₹13,900 per person</strong>, direct, with the
           inclusions listed on the{' '}
           <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>package page</Link>.
           That is the operator rate.

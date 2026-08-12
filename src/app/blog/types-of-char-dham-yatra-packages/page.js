@@ -8,20 +8,20 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Package Types 2026 | Price Starts at ₹18,500 | Budget to Heli' },
+  title: { absolute: 'Char Dham Package Types 2026 | Price Starts at ₹13,900 | Budget to Heli' },
   description: 'Char Dham packages compared — Budget, Deluxe, Premium, Helicopter. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['types of char dham yatra packages 2026', 'char dham yatra package types', 'budget char dham package', 'deluxe char dham package', 'char dham package comparison 2026', 'which char dham package to choose', 'char dham budget vs luxury'],
   alternates: { canonical: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages` },
   openGraph: {
     title: 'Char Dham Package Types: Budget to Helicopter',
-    description: 'Budget ₹18,500 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year operator.',
+    description: 'Budget ₹13,900 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year operator.',
     url: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Types of Char Dham Yatra Packages 2026 — Budget, Deluxe, Premium & Hel | Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Types of Char Dham Yatra Packages 2026 — Budget vs Deluxe vs Helicopte',
-    description: 'Budget ₹18,500 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year o',
+    description: 'Budget ₹13,900 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year o',
     images: [{ url: '/opengraph-image', alt: 'Types of Char Dham Yatra Packages 2026 — Budget vs Deluxe vs | Shiv Ganga Travels' }],
   },
 };
@@ -30,7 +30,7 @@ function Schema() {
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What types of Char Dham Yatra packages are available?', acceptedAnswer: { '@type': 'Answer', text: 'There are four main types of Char Dham Yatra packages: (1) Budget packages — ₹18,500–₹28,000/person, shared tempo traveller or sedan, standard guesthouses, all meals included. (2) Deluxe packages — ₹28,000–₹40,000/person, private Innova Crysta, 2-3 star hotels with hot water, buffet meals. (3) Premium packages — ₹40,000–₹65,000/person, premium SUV or Tempo Traveller, best available hotels, VIP darshan, dedicated guide. (4) Helicopter charter — ₹2,09,000–₹2,50,000/person, aerial transfers, luxury hotels, all 4 dhams in 5-6 days.' } },
+      { '@type': 'Question', name: 'What types of Char Dham Yatra packages are available?', acceptedAnswer: { '@type': 'Answer', text: 'There are four main types of Char Dham Yatra packages: (1) Budget packages — ₹13,900–₹28,000/person, shared tempo traveller or sedan, standard guesthouses, all meals included. (2) Deluxe packages — ₹28,000–₹40,000/person, private Innova Crysta, 2-3 star hotels with hot water, buffet meals. (3) Premium packages — ₹40,000–₹65,000/person, premium SUV or Tempo Traveller, best available hotels, VIP darshan, dedicated guide. (4) Helicopter charter — ₹2,09,000–₹2,50,000/person, aerial transfers, luxury hotels, all 4 dhams in 5-6 days.' } },
       { '@type': 'Question', name: 'What is the difference between budget and deluxe Char Dham packages?', acceptedAnswer: { '@type': 'Answer', text: 'The main differences between budget and deluxe Char Dham packages are: Transport (budget uses shared tempo or basic sedan vs deluxe uses private Innova Crysta), Hotels (budget uses standard guesthouses with basic facilities vs deluxe uses 2-3 star hotels with attached bathrooms and hot water), Room sharing (budget rooms may have 3-4 per room vs deluxe guarantees twin sharing), and sometimes Meals (budget is standard dal-roti vs deluxe has proper buffet). The itinerary and dhams covered are identical.' } },
     ],
   };
@@ -50,7 +50,7 @@ function Schema() {
 export default function PackageTypes() {
   const tiers = [
     {
-      type: 'Budget', emoji: '🎒', price: '₹18,500–₹28,000', perPerson: 'per person', duration: '9N/10D',
+      type: 'Budget', emoji: '🎒', price: '₹13,900–₹28,000', perPerson: 'per person', duration: '9N/10D',
       color: '#0F766E', bg: 'rgba(15,118,110,0.06)',
       vehicle: 'Shared Tempo Traveller (10-12 pax) or Swift Dzire', hotel: 'Standard guesthouses, basic rooms, shared bathrooms possible', meals: 'Breakfast + dinner — basic vegetarian, fixed menu', vip: 'Standard darshan queue', guide: 'Shared guide or driver-guide',
       ideal: ['Solo pilgrims on a tight budget', 'Young groups (20s–30s) comfortable with basics', 'Repeat pilgrims who know the route', 'Those prioritizing devotion over comfort'],
@@ -79,7 +79,7 @@ export default function PackageTypes() {
       vehicle: 'Helicopter (IRCTC-booked) + private car for transfers', hotel: 'Best available hotels at each dham (Sahastradhara departure)', meals: 'All meals included — breakfast, lunch, dinner', vip: 'VIP darshan all 4 dhams — no queue ever', guide: 'Personal guide + helicopter ground coordinator',
       ideal: ['Pilgrims 70+ who cannot trek at all', 'Working professionals with only 6-7 days', 'Those with cardiac, pulmonary, or joint conditions', 'Families wanting to complete yatra without physical strain'],
       notFor: ['Those who want the trek experience (helicopter bypasses it entirely)', 'Budget-conscious pilgrims (cost is 4-8x road packages)'],
-      honest: 'Two important things: (1) A "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately — you still do most of the journey by road. A full charter, which is what ours is at ₹2,30,000, includes the flying. Charter hours are a hard cost nobody discounts by 60%, so a very low number always means a different product. (2) The helicopter skips the 16km Kedarnath trek entirely — which is both the point and the limitation. For many seniors, helicopter is the only viable option.',
+      honest: 'Two important things: (1) A "helicopter package" advertised near ₹85,000 is a road package with IRCTC shuttle tickets bought separately — you still do most of the journey by road. A full charter, which is what ours is at ₹2,30,000 includes the flying. Charter hours are a hard cost nobody discounts by 60%, so a very low number always means a different product. (2) The helicopter skips the 16km Kedarnath trek entirely — which is both the point and the limitation. For many seniors, helicopter is the only viable option.',
     },
   ];
 
@@ -96,7 +96,7 @@ export default function PackageTypes() {
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="6 min read"
         facts={[
-          { label:'Budget',     value:'₹18,500' },
+          { label:'Budget',     value:'₹13,900' },
           { label:'Deluxe',     value:'₹35,000' },
           { label:'Premium',    value:'₹55,000' },
           { label:'Helicopter', value:'₹1.8L+' },
@@ -114,13 +114,13 @@ export default function PackageTypes() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹18,500, Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹13,900 Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>
 
         <p id="packages" style={p}>
-          Every Char Dham Yatra package covers the same 4 temples in the same order. What differs between a ₹18,500 budget package and a ₹55,000 premium package is not the spiritual experience — it is the comfort, the vehicle, the hotel standard, and the level of hand-holding. This guide explains exactly what each tier includes, who genuinely needs it, and what the honest difference is (not the marketing version).
+          Every Char Dham Yatra package covers the same 4 temples in the same order. What differs between a ₹13,900 budget package and a ₹55,000 premium package is not the spiritual experience — it is the comfort, the vehicle, the hotel standard, and the level of hand-holding. This guide explains exactly what each tier includes, who genuinely needs it, and what the honest difference is (not the marketing version).
         </p>
 
         <BlogTOC items={[
@@ -172,7 +172,7 @@ export default function PackageTypes() {
             </tr></thead>
             <tbody>
               {[
-                ['Price/person', '₹18,500–28k', '₹28k–40k', '₹40k–65k', '₹85k–2.4L'],
+                ['Price/person', '₹13,900–28k', '₹28k–40k', '₹40k–65k', '₹85k–2.4L'],
                 ['Duration', '9N/10D', '9N/10D', '9N/10D', '5N/6D'],
                 ['Transport', 'Shared tempo', 'Private Innova', 'Private excl.', 'Heli + car'],
                 ['Hotel tier', 'Standard', '2–3 star', 'Best available', 'Best available'],
@@ -210,16 +210,6 @@ export default function PackageTypes() {
               <div style={{ fontSize: 13.5, color: 'var(--navy)', fontWeight: 600 }}>{item.answer}</div>
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Tell Us Your Group — We Recommend the Right Package</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>WhatsApp us your group size, ages, and budget. We suggest the right tier — not the most expensive one.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want advice on which Char Dham package type suits us. Please help.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Get Package Advice</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View All Packages →</Link>
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

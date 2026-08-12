@@ -191,21 +191,6 @@ export default function KedarnathRegistration() {
         <p style={p}>Three official-looking sites confuse almost everyone, so here is the clean split. <strong>registrationandtouristcare.uk.gov.in</strong> is the Uttarakhand Tourism registration portal — the only place your yatra registration happens. <strong>badrinath-kedarnath.gov.in</strong> belongs to the <strong>BKTC</strong> (Badri Kedar Temple Committee), the body that runs both temples — you use it for puja bookings, donation receipts and temple announcements, not for registration. And <strong>heliyatra.irctc.co.in</strong> is IRCTC&apos;s helicopter portal, which only works after you already hold a registration number.</p>
         <p style={p}>If a site asks for a registration "fee", close the tab — the government pass is free. The only money that changes hands officially is for helicopter tickets (IRCTC) and BKTC puja bookings.</p>
 
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Book Kedarnath Yatra — We Handle Registration for You</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>All our Kedarnath packages include free registration assistance. We handle the portal, the e-pass download, and checkpoint preparation.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026. Please help with registration too.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
-              💬 Book on WhatsApp
-            </a>
-            <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
-              📞 {SITE.phone}
-            </a>
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>

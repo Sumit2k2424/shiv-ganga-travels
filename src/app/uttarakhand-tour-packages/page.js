@@ -2,15 +2,15 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Uttarakhand Tour Packages 2026 | Price Starts at ₹4,999 | Hills & Pilgrimage' },
-  description: 'Uttarakhand Tour Packages 2026 from Haridwar, from ₹4,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  title: { absolute: 'Uttarakhand Tour Packages 2026 | Price Starts at ₹3,750 | Hills & Pilgrimage' },
+  description: 'Uttarakhand Tour Packages 2026 from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['uttarakhand tour packages, uttarakhand tour packages 2026, uttarakhand tourism packages, best uttarakhand packages from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
-  openGraph: { title:'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrimage', description:'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.', url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
+  openGraph: { title:'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrimage', description:'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.', url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife & Pilgrimage',
-    description: 'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹4,999.',
+    description: 'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.',
     images: [{ url: '/opengraph-image', alt: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure  | Shiv Ganga Travels' }],
   },
 };
@@ -41,7 +41,7 @@ export default function Page() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Uttarakhand Tour Packages 2026 — Beyond the Dhams</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Mussoorie · Nainital · Rishikesh · Jim Corbett · Valley of Flowers · Auli · From ₹4,999</p>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Mussoorie · Nainital · Rishikesh · Jim Corbett · Valley of Flowers · Auli · From ₹3,750</p>
         </div>
       </section>
       {/* SEO Content section */}
@@ -78,31 +78,31 @@ export default function Page() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
           <a href="/mussoorie-tour-packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie Tour Packages</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹8,499 · Kempty Falls, Mall Road, Gun Hill</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹6,350 · Kempty Falls, Mall Road, Gun Hill</div>
           </a>
           <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Dhanaulti</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹9,999 · Hill station + eco park</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹7,500 · Hill station + eco park</div>
           </a>
           <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌊 Nainital + Kausani</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>4N/5D · From ₹9,999 · Lakes + Kumaon views</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>4N/5D · From ₹7,500 · Lakes + Kumaon views</div>
           </a>
           <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏄 Rishikesh Adventure</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>2N/3D · From ₹4,999 · Rafting + camping</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>2N/3D · From ₹3,750 · Rafting + camping</div>
           </a>
           <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌸 Valley of Flowers</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,499 · UNESCO Heritage</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹10,100 · UNESCO Heritage</div>
           </a>
           <a href="/packages/auli-joshimath-skiing-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>⛷️ Auli Skiing</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹12,499 · India’s best ski resort</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹9,400 · India’s best ski resort</div>
           </a>
           <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🐯 Jim Corbett</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹13,999 · Tiger reserve + Nainital</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹10,500 · Tiger reserve + Nainital</div>
           </a>
         </div>
 

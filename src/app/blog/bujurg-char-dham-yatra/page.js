@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'बुजुर्गों के लिए चार धाम यात्रा 2026 | कीमत ₹27,999 से शुरू | पूरी गाइड' },
+  title: { absolute: 'बुजुर्गों के लिए चार धाम यात्रा 2026 | कीमत ₹21,000 से शुरू | पूरी गाइड' },
   description: '60-80 साल के बुजुर्गों के लिए चार धाम यात्रा 2026। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि। घोड़ा, पालकी, हेलिकॉप्टर विकल्प उपलब्ध।',
   keywords: ['बुजुर्गों के लिए चार धाम यात्रा 2026', 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },
@@ -56,7 +56,7 @@ export default function BujurgCharDham() {
         facts={[
           { label:"उम्र", value:"60–85+ संभव" },
           { label:"केदारनाथ", value:"घोड़ा/पालकी/हेली" },
-          { label:"पैकेज", value:"₹27,999 से" },
+          { label:"पैकेज", value:"₹21,000 से" },
           { label:"सहायता", value:"मेडिकल अटेंडेंट" },
         ]}
       />
@@ -140,7 +140,7 @@ export default function BujurgCharDham() {
 
         <h2 id="package" style={h2}>शिव गंगा ट्रेवल्स — Senior Citizen Special Package</h2>
         <div style={{ background: 'rgba(29,158,117,0.06)', borderRadius: 14, padding: '20px 24px', border: '1px solid #9FE1CB', marginBottom: 28 }}>
-          <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹27,999 प्रति व्यक्ति</div>
+          <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹21,000 प्रति व्यक्ति</div>
           <div style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>12 रात / 13 दिन (अतिरिक्त दिन — थकान के लिए)</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8 }}>
             {['केदारनाथ + यमुनोत्री में घोड़ा शुल्क शामिल','Ground Floor कमरे की प्राथमिकता','पालकी सेवा (जरूरत पड़ने पर)','हर गाड़ी में ऑक्सीजन + First Aid','VIP दर्शन — लाइन में नहीं खड़ा होना','शुद्ध सात्विक भोजन (Jain option)','24/7 WhatsApp support','ऑक्सीजन + First Aid हर वाहन में'].map(f => (
@@ -148,9 +148,10 @@ export default function BujurgCharDham() {
             ))}
           </div>
 
+        </div>
+
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-        </div>
 
         <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>
@@ -164,15 +165,6 @@ export default function BujurgCharDham() {
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>माँ-बाप का सपना पूरा करें</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>"हर श्रद्धालु जो हमारी गाड़ी में बैठता है, वह आस्था, परिवार और जीवन भर का सपना लेकर आता है।" — धनेश चंद्र मिश्रा, संस्थापक (सेवानिवृत्त सेना अधिकारी)</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Senior citizen ke liye Char Dham Yatra 2026 package chahiye. Please guide karein.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 WhatsApp पर पूछें</a>
-            <a href={`tel:${SITE.phone}`} style={{ background: '#E8920A', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>📞 अभी Call करें</a>
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

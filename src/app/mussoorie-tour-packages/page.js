@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Mussoorie Tour Package 2026 | From ₹8,499 | Kempty Falls' },
-  description: 'Mussoorie tour packages 2026 from ₹8,499/person. Direct Haridwar operator, 15+ yrs, zero commission. Kempty Falls, Mall Road, Gun Hill included.',
+  title: { absolute: 'Mussoorie Tour Package 2026 | From ₹6,350 | Kempty Falls' },
+  description: 'Mussoorie tour packages 2026 from ₹6,350/person. Direct Haridwar operator, 15+ yrs, zero commission. Kempty Falls, Mall Road, Gun Hill included.',
   keywords: [
     'mussoorie tour packages','mussoorie tour package','mussoorie packages','mussoorie trip package',
     'mussoorie tour packages from delhi','mussoorie tour package from haridwar',
@@ -14,16 +14,16 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/mussoorie-tour-packages` },
   openGraph: {
-    title: 'Mussoorie Tour Packages 2026 — From ₹8,499 | Kempty Falls & Mall Road',
-    description: 'Mussoorie tour packages from ₹8,499. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010. Zero commission, 50,000+ travellers served.',
+    title: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Kempty Falls & Mall Road',
+    description: 'Mussoorie tour packages from ₹6,350. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010. Zero commission, 50,000+ travellers served.',
     url: `${SITE.baseUrl}/mussoorie-tour-packages`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mussoorie Tour Packages 2026 — From ₹8,499 | Kempty Falls & Mall Road',
-    description: 'Mussoorie tour packages from ₹8,499. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Mussoorie Tour Packages 2026 — From ₹8,499 | Shiv Ganga Travels' }],
+    title: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Kempty Falls & Mall Road',
+    description: 'Mussoorie tour packages from ₹6,350. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010.',
+    images: [{ url: '/opengraph-image', alt: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Shiv Ganga Travels' }],
   },
 };
 
@@ -33,7 +33,7 @@ function Schema() {
     mainEntity: [
       {
         '@type': 'Question', name: 'What is the cost of Mussoorie tour packages in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Mussoorie tour packages from Shiv Ganga Travels start at ₹8,499 per person for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. A 3N/4D Mussoorie + Dehradun + Dhanaulti trip is ₹9,999 per person, and the 4N/5D Haridwar + Rishikesh + Mussoorie combo is ₹10,999 per person. All prices are direct-operator rates with zero commission — tell us your dates for a custom 2N/3D Mussoorie-only quote.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Mussoorie tour packages from Shiv Ganga Travels start at ₹6,350 per person for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. A 3N/4D Mussoorie + Dehradun + Dhanaulti trip is ₹7,500 per person, and the 4N/5D Haridwar + Rishikesh + Mussoorie combo is ₹8,200 per person. All prices are direct-operator rates with zero commission — tell us your dates for a custom 2N/3D Mussoorie-only quote.' },
       },
       {
         '@type': 'Question', name: 'How many days are needed for a Mussoorie trip?',
@@ -57,7 +57,7 @@ function Schema() {
       },
       {
         '@type': 'Question', name: 'What is the best Mussoorie package from Delhi?',
-        acceptedAnswer: { '@type': 'Answer', text: 'For a first visit, the 4N/5D Haridwar + Rishikesh + Mussoorie combo (₹10,999/person) is the best value from Delhi — it pairs the hill station with the two holy cities on the way, so the long drive from Delhi is not spent on Mussoorie alone. If you only want the hills, tell us your dates and we quote a direct Delhi-Mussoorie itinerary.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'For a first visit, the 4N/5D Haridwar + Rishikesh + Mussoorie combo (₹8,200/person) is the best value from Delhi — it pairs the hill station with the two holy cities on the way, so the long drive from Delhi is not spent on Mussoorie alone. If you only want the hills, tell us your dates and we quote a direct Delhi-Mussoorie itinerary.' },
       },
     ],
   };
@@ -86,7 +86,7 @@ export default function MussoorieTourPackages() {
             Mussoorie Tour Packages 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Packages from <strong style={{ color: '#FFD166' }}>₹8,499/person</strong> · Kempty Falls · Mall Road · Gun Hill · Zero commission
+            Packages from <strong style={{ color: '#FFD166' }}>₹6,350/person</strong> · Kempty Falls · Mall Road · Gun Hill · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
             {['🏔️ Queen of the Hills','💦 Kempty Falls','🚡 Gun Hill ropeway','🛍️ Mall Road','⭐ 4.7/5 · 54 reviews'].map(t => (
@@ -123,7 +123,7 @@ export default function MussoorieTourPackages() {
             ['From Haridwar','85 km · 2.5-3 hrs'],
             ['From Rishikesh','77 km · 2.5 hrs'],
             ['From Dehradun','35 km · 1-1.5 hrs'],
-            ['Packages from','₹8,499/person'],
+            ['Packages from','₹6,350/person'],
             ['Altitude','2,005 metres'],
           ].map(([k, v]) => (
             <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13, color: '#FFD166' }}>{v}</div></div>
@@ -131,7 +131,7 @@ export default function MussoorieTourPackages() {
         </div>
 
         <p style={p}>
-          <strong>Mussoorie tour packages from Shiv Ganga Travels start at ₹8,499 per person</strong> for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. It is the fastest hill escape in Uttarakhand — 35 km and about an hour up Rajpur Road from Dehradun, or under three hours from Haridwar and Rishikesh. Sitting at 2,005 metres, Mussoorie earned its "Queen of the Hills" name under the British for the same reason it still works today: you leave the plains in the morning and you are drinking chai in mountain air by lunch.
+          <strong>Mussoorie tour packages from Shiv Ganga Travels start at ₹6,350 per person</strong> for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. It is the fastest hill escape in Uttarakhand — 35 km and about an hour up Rajpur Road from Dehradun, or under three hours from Haridwar and Rishikesh. Sitting at 2,005 metres, Mussoorie earned its "Queen of the Hills" name under the British for the same reason it still works today: you leave the plains in the morning and you are drinking chai in mountain air by lunch.
         </p>
         <p style={p}>
           We are a Haridwar-based direct operator, not a Delhi aggregator subcontracting to local drivers on the ground. Our own vehicles run the Dehradun-Mussoorie climb daily, which means the price you are quoted is the price you pay — no markup, no platform fee, no commission layer.
@@ -143,7 +143,7 @@ export default function MussoorieTourPackages() {
             {
               name: 'Mussoorie + Rishikesh + Kanatal',
               duration: '4N/5D',
-              price: '₹8,499',
+              price: '₹6,350',
               original: '₹10,000',
               badge: 'Best Value',
               includes: ['Kempty Falls & Mall Road', 'Gun Hill ropeway', 'Kanatal & Surkanda Devi', 'Rishikesh Ganga Aarti', 'AC Innova/Tempo throughout'],
@@ -152,7 +152,7 @@ export default function MussoorieTourPackages() {
             {
               name: 'Mussoorie + Dehradun + Dhanaulti',
               duration: '3N/4D',
-              price: '₹9,999',
+              price: '₹7,500',
               original: '₹12,000',
               badge: 'Most Popular',
               includes: ['Mall Road & Kempty Falls', 'Lal Tibba viewpoint', 'Dhanaulti Eco Park', 'Surkanda Devi Temple', 'Hotel + breakfast & dinner'],
@@ -161,7 +161,7 @@ export default function MussoorieTourPackages() {
             {
               name: 'Haridwar + Rishikesh + Mussoorie',
               duration: '4N/5D',
-              price: '₹10,999',
+              price: '₹8,200',
               badge: 'Hills + Holy Combo',
               includes: ['Har Ki Pauri Ganga Aarti', 'Rishikesh ashrams & bridges', 'Mall Road Mussoorie', 'Kempty Falls', 'AC Innova throughout'],
               href: '/haridwar-tour-packages',
@@ -237,10 +237,10 @@ export default function MussoorieTourPackages() {
             </thead>
             <tbody>
               {[
-                ['Delhi', '~290 km', 'Delhi-Dehradun Expressway → Rajpur Road', '6-7 hrs', '₹10,999'],
-                ['Haridwar', '85 km', 'Haridwar → Dehradun → Rajpur Road', '2.5-3 hrs', '₹8,499'],
-                ['Rishikesh', '77 km', 'Rishikesh → Dehradun → Rajpur Road', '2.5 hrs', '₹8,499'],
-                ['Dehradun', '35 km', 'Direct via Rajpur Road', '1-1.5 hrs', '₹8,499'],
+                ['Delhi', '~290 km', 'Delhi-Dehradun Expressway → Rajpur Road', '6-7 hrs', '₹8,200'],
+                ['Haridwar', '85 km', 'Haridwar → Dehradun → Rajpur Road', '2.5-3 hrs', '₹6,350'],
+                ['Rishikesh', '77 km', 'Rishikesh → Dehradun → Rajpur Road', '2.5 hrs', '₹6,350'],
+                ['Dehradun', '35 km', 'Direct via Rajpur Road', '1-1.5 hrs', '₹6,350'],
               ].map(([city, dist, route, time, price], i) => (
                 <tr key={city} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding: '9px 12px', fontWeight: 600, color: 'var(--navy)' }}>{city}</td>
@@ -286,13 +286,13 @@ export default function MussoorieTourPackages() {
         <h2 style={h2}>FAQ — Mussoorie Tour Packages</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 8 }}>
           {[
-            ['What is the cost of Mussoorie tour packages in 2026?', 'Packages start at ₹8,499 per person for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. A 3N/4D Mussoorie + Dehradun + Dhanaulti trip is ₹9,999, and the 4N/5D Haridwar + Rishikesh + Mussoorie combo is ₹10,999. Tell us your dates for a custom 2N/3D Mussoorie-only quote.'],
+            ['What is the cost of Mussoorie tour packages in 2026?', 'Packages start at ₹6,350 per person for the 4N/5D Mussoorie + Rishikesh + Kanatal circuit. A 3N/4D Mussoorie + Dehradun + Dhanaulti trip is ₹7,500 and the 4N/5D Haridwar + Rishikesh + Mussoorie combo is ₹8,200. Tell us your dates for a custom 2N/3D Mussoorie-only quote.'],
             ['How many days are needed for a Mussoorie trip?', "A day trip covers Kempty Falls and Mall Road. For Mussoorie alone, 2 nights/3 days lets you add Gun Hill and Camel's Back Road unhurried. Combining it with Dhanaulti, Kanatal, or Rishikesh needs 4-5 days."],
             ['What is the best time to visit Mussoorie?', 'March-June and September-November are the most pleasant, with clear skies and cool air. Monsoon (July-August) is scenic but carries landslide risk. December-February can bring snow, especially around Christmas and New Year.'],
             ['Is a Mussoorie day trip possible from Haridwar or Rishikesh?', "Yes, comfortably. From Haridwar (85 km) or Rishikesh (77 km), leave by 7 AM, see Kempty Falls and Mall Road, and you're back by evening. An overnight is better for Gun Hill and the Camel's Back Road walk."],
             ['How far is Mussoorie from Delhi, and what is the best route?', 'About 290 km via the Delhi-Dehradun Expressway and Rajpur Road, roughly 6-7 hours by road. Most travellers break the drive with a stop in Haridwar or Dehradun.'],
             ['Can the cab drive on Mall Road in Mussoorie?', 'Only outside restricted hours — Mall Road has timed vehicle entry rules. Your driver drops you at the permitted parking; from there it is a short walk to any hotel or the main market.'],
-            ['What is the best Mussoorie package from Delhi?', 'The 4N/5D Haridwar + Rishikesh + Mussoorie combo (₹10,999/person) is the best first-visit value — it pairs the hill station with the two holy cities en route. For a Mussoorie-only trip from Delhi, tell us your dates for a direct quote.'],
+            ['What is the best Mussoorie package from Delhi?', 'The 4N/5D Haridwar + Rishikesh + Mussoorie combo (₹8,200/person) is the best first-visit value — it pairs the hill station with the two holy cities en route. For a Mussoorie-only trip from Delhi, tell us your dates for a direct quote.'],
           ].map(([q, a]) => (
             <div key={q} style={{ background: '#fff', borderRadius: 10, padding: '14px 16px', border: '1px solid hsl(var(--border))' }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 6 }}>{q}</div>

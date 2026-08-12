@@ -9,7 +9,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham vs Do Dham Yatra 2026 | Price Starts at ₹10,999 | Compare' },
+  title: { absolute: 'Char Dham vs Do Dham Yatra 2026 | Price Starts at ₹8,200 | Compare' },
   description: 'Char Dham vs Do Dham Yatra 2026 — compare time, cost, difficulty. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
@@ -20,8 +20,8 @@ const ROWS = [
   ['Duration', '10–12 days (minimum)', '5–6 days (comfortable)'],
   ['Road distance', '~1,500–1,600 km from Haridwar', '~750–800 km from Haridwar'],
   ['Total trekking', '22 km (6km Yamunotri + 16km Kedarnath)', '16 km (Kedarnath only)'],
-  ['Package cost (road)', 'From ₹18,500 per person', 'From ₹10,999 per person'],
-  ['Package cost (helicopter)', '₹2,30,000 per person', 'From ₹29,999 per person'],
+  ['Package cost (road)', 'From ₹13,900 per person', 'From ₹8,200 per person'],
+  ['Package cost (helicopter)', '₹2,30,000 per person', 'From ₹22,500 per person'],
   ['Difficulty level', 'Moderate — 10+ days of mountain travel', 'Easy to moderate — manageable in 5 days'],
   ['Best for', 'First-time complete pilgrims, those with 12+ days', 'Limited time, first-time yatris, repeat pilgrims'],
   ['Senior-friendly', 'Yes — with 12N/13D senior package', 'Yes — most manageable option for 65+'],
@@ -34,7 +34,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the difference between Char Dham and Do Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra covers all 4 sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers 2 dhams (typically Kedarnath + Badrinath) in 5–6 days. Char Dham costs ₹18,500+ per person; Do Dham costs ₹10,999+ per person.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra covers all 4 sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers 2 dhams (typically Kedarnath + Badrinath) in 5–6 days. Char Dham costs ₹13,900+ per person; Do Dham costs ₹8,200+ per person.' }},
       { '@type': 'Question', name: 'Which is better — Char Dham or Do Dham Yatra?',
         acceptedAnswer: { '@type': 'Answer', text: 'For pilgrims with 10+ days, Char Dham is the complete and most spiritually fulfilling option. For those with limited time (5–7 days), first-time pilgrims wanting to test mountain travel, or senior citizens, Do Dham (Kedarnath + Badrinath) is the better choice — it covers the two most significant shrines and is more manageable.' }},
       { '@type': 'Question', name: 'Can I do Char Dham Yatra in 7 days?',
@@ -62,8 +62,8 @@ export default function ComparisonPage() {
         facts={[
           { label:'Char Dham', value:'10–12 days' },
           { label:'Do Dham',   value:'5–7 days' },
-          { label:'Char Dham from', value:'₹18,500' },
-          { label:'Do Dham from',   value:'₹10,999' },
+          { label:'Char Dham from', value:'₹13,900' },
+          { label:'Do Dham from',   value:'₹8,200' },
         ]}
       />
 
@@ -78,7 +78,7 @@ export default function ComparisonPage() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹18,500 vs ₹10,999), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹13,900 vs ₹8,200), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <p className="blog-lede">
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.
@@ -88,7 +88,7 @@ export default function ComparisonPage() {
           points={[
             <><strong>Char Dham</strong> (all 4) needs ~10–12 days and suits first-timers wanting the complete circuit, reasonable fitness, and a vow to honour.</>,
             <><strong>Do Dham</strong> (Kedarnath + Badrinath) fits 5–7 days, tighter budgets, and pilgrims 65+ or short on time.</>,
-            <>Do Dham costs roughly <strong>40% less</strong> — from ₹10,999 vs ₹18,500.</>,
+            <>Do Dham costs roughly <strong>40% less</strong> — from ₹8,200 vs ₹13,900.</>,
             <>Both include the two hardest/holiest shrines; Do Dham simply skips Yamunotri and Gangotri.</>,
           ]}
         />
@@ -140,16 +140,6 @@ export default function ComparisonPage() {
           <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>
             "In my experience, pilgrims who rush Char Dham in 7–8 days feel unsatisfied — they missed the experience at each dham. I always recommend: if you have less than 10 days, do Do Dham well rather than Char Dham in a rush. The journey matters as much as the destination." — <strong>Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels</strong>
           </p>
-        </div>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Not sure which to choose? Ask Dhanesh ji directly.</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free advice · No obligation · Direct WhatsApp response in 30 minutes</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help deciding between Char Dham and Do Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            View Char Dham →
-            View Do Dham →
-          </div>
         </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>

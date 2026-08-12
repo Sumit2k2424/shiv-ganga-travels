@@ -128,16 +128,6 @@ export default function Page() {
         <p style={p}>The Char Dham Yatra is not just a physical journey — it is a story. Children who understand the stories respond to it completely differently from those who are just being taken along. Before the trip, tell them the stories: why the Pandavas went to Kedarnath, why King Bhagirath performed penance at Gangotri, who Adi Shankaracharya was. The trek to Kedarnath becomes an adventure when a child knows they are following in the footsteps of the Pandavas.</p>
         <p style={p}>The Surya Kund at Yamunotri — where you cook rice in a 94°C natural hot spring — is genuinely magical for children. The Bhim Pul boulder bridge at Mana Village. The marmots that pop out of their burrows along the Kedarnath valley. The Himalayan monals (the jewel-coloured pheasants) that cross the path. A child who comes home from the Char Dham Yatra has experienced things that most adults never will.</p>
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Planning Char Dham with Your Family?</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Tell us the ages of your children and we will design the right itinerary — with pony arrangements, helicopter if needed, and appropriate pacing.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra with my children. Please help me plan a family-friendly itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-          </div>
-        </div>
-
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>

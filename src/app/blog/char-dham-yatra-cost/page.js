@@ -9,7 +9,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Cost 2026 | Price Starts at ₹18,500 | Full Breakdown' },
+  title: { absolute: 'Char Dham Yatra Cost 2026 | Price Starts at ₹13,900 | Full Breakdown' },
   description: 'Char Dham Yatra cost 2026 — full per-person breakdown, no hidden costs. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['char dham yatra cost 2026', 'char dham yatra total cost per person', 'char dham yatra package price 2026', 'char dham yatra budget breakdown', 'kedarnath pony cost 2026', 'char dham helicopter cost 2026'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
@@ -21,8 +21,8 @@ function Schema() {
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What is the total cost of Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person for a budget pilgrim, and ₹30,000–₹40,000 for a comfortable experience. This includes: package cost ₹18,500–₹30,000, Kedarnath pony ₹3,500–₹4,500 (if not trekking), registration FREE (₹0), personal expenses ₹1,500–₹2,000, and train/bus to Haridwar ₹500–₹2,500 depending on your city.' } },
-      { '@type': 'Question', name: 'What is the cost of Char Dham Yatra package from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra packages from Haridwar start at ₹18,500 per person (9N/10D, standard) with Shiv Ganga Travels. This is an all-inclusive direct-operator price with zero commission — it covers AC vehicle, hotels, breakfast and dinner, guide, VIP darshan at all 4 dhams, and all toll/parking charges. Deluxe packages (Innova, 3-star hotels) start at ₹30,000.' } },
+      { '@type': 'Question', name: 'What is the total cost of Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person for a budget pilgrim, and ₹30,000–₹40,000 for a comfortable experience. This includes: package cost ₹13,900–₹30,000, Kedarnath pony ₹3,500–₹4,500 (if not trekking), registration FREE (₹0), personal expenses ₹1,500–₹2,000, and train/bus to Haridwar ₹500–₹2,500 depending on your city.' } },
+      { '@type': 'Question', name: 'What is the cost of Char Dham Yatra package from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra packages from Haridwar start at ₹13,900 per person (9N/10D, standard) with Shiv Ganga Travels. This is an all-inclusive direct-operator price with zero commission — it covers AC vehicle, hotels, breakfast and dinner, guide, VIP darshan at all 4 dhams, and all toll/parking charges. Deluxe packages (Innova, 3-star hotels) start at ₹30,000.' } },
       { '@type': 'Question', name: 'What is the cost of Kedarnath pony in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath pony (horse ride) costs ₹3,500–₹4,500 for one way (Gaurikund to Kedarnath, 16km). For round trip the cost is ₹7,000–₹9,000. These are government-regulated rates displayed at the Gaurikund booking counter. Booking is done on the day at Gaurikund — no advance booking available. In peak May–June, ponies get booked out by 7–8 AM.' } },
       { '@type': 'Question', name: 'Is the Char Dham registration fee included in the package price?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra registration is completely FREE in 2026 — ₹0. The Uttarakhand government removed the previous ₹150 fee for this season. You register at registrationandtouristcare.uk.gov.in at no cost. Shiv Ganga Travels handles the entire registration process for all our package pilgrims — you just provide your Aadhaar details.' } },
     ],
@@ -57,7 +57,7 @@ export default function CharDhamCost() {
           { label:'Budget pilgrim', value:'₹22,000–28,000' },
           { label:'Comfortable',    value:'₹30,000–40,000' },
           { label:'Registration',   value:'FREE (₹0)' },
-          { label:'Package from',   value:'₹18,500' },
+          { label:'Package from',   value:'₹13,900' },
         ]}
       />
 
@@ -79,7 +79,7 @@ export default function CharDhamCost() {
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 10 }}>Quick Answer — Total Char Dham Yatra Cost 2026</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(160px,1fr))', gap: 10 }}>
-            {[['Package (9N/10D)','₹18,500–₹30,000'],['Kedarnath pony (1 way)','₹3,500–₹4,500'],['Kedarnath helicopter (RT)','₹7,500–₹9,500'],['Registration fee','FREE (₹0)'],['Train Delhi–Haridwar','₹200–₹700'],['Personal expenses (10 days)','₹1,500–₹3,000'],['Total (budget pilgrim)','₹22,000–₹28,000'],['Total (comfortable)','₹30,000–₹40,000']].map(([k,v]) => (
+            {[['Package (9N/10D)','₹13,900–₹30,000'],['Kedarnath pony (1 way)','₹3,500–₹4,500'],['Kedarnath helicopter (RT)','₹7,500–₹9,500'],['Registration fee','FREE (₹0)'],['Train Delhi–Haridwar','₹200–₹700'],['Personal expenses (10 days)','₹1,500–₹3,000'],['Total (budget pilgrim)','₹22,000–₹28,000'],['Total (comfortable)','₹30,000–₹40,000']].map(([k,v]) => (
               <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13.5, color: '#FFD166' }}>{v}</div></div>
             ))}
           </div>
@@ -106,9 +106,9 @@ export default function CharDhamCost() {
             <thead><tr style={{ background: 'var(--navy)' }}>{['Package','Price/person','Vehicle','Hotels','Meals'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
             <tbody>
               {[
-                ['Standard 9N/10D','₹18,500','Shared Tempo Traveller','Budget/standard hotels','Breakfast + dinner'],
+                ['Standard 9N/10D','₹13,900','Shared Tempo Traveller','Budget/standard hotels','Breakfast + dinner'],
                 ['Deluxe 11N/12D','₹30,000','Private AC Innova Crysta','3-star hotels, better rooms','Breakfast + dinner'],
-                ['Senior Special 12N/13D','₹27,999','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Kedarnath'],
+                ['Senior Special 12N/13D','₹21,000','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Kedarnath'],
                 ['Helicopter 5N/6D','₹2,30,000','Helicopter charter (Sahastradhara)','Luxury hotels throughout','All meals + VIP darshan all 4 dhams'],
               ].map(([pkg,price,vehicle,hotel,meals],i) => (
                 <tr key={pkg} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
@@ -211,14 +211,14 @@ export default function CharDhamCost() {
               title: '🎒 Budget pilgrim',
               total: '₹22,000–₹25,000',
               color: '#1D9E75',
-              breakdown: ['Package 9N/10D: ₹18,500', 'Trek on foot (no pony)', 'Registration: FREE (₹0)', 'Train from Delhi (SL): ₹350', 'Personal expenses: ₹1,500', 'No optional upgrades'],
+              breakdown: ['Package 9N/10D: ₹13,900', 'Trek on foot (no pony)', 'Registration: FREE (₹0)', 'Train from Delhi (SL): ₹350', 'Personal expenses: ₹1,500', 'No optional upgrades'],
               note: 'For fit pilgrims who can do the 16km trek. Shared vehicle, budget hotels. Fully comfortable and dignified.',
             },
             {
               title: '👨‍👩‍👧 Average family (with pony)',
               total: '₹28,000–₹33,000',
               color: '#BA7517',
-              breakdown: ['Package 9N/10D: ₹18,500', 'Kedarnath pony (1 way): ₹4,000', 'Yamunotri pony (1 way): ₹2,000', 'Registration: FREE (₹0)', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
+              breakdown: ['Package 9N/10D: ₹13,900', 'Kedarnath pony (1 way): ₹4,000', 'Yamunotri pony (1 way): ₹2,000', 'Registration: FREE (₹0)', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
               note: 'Most families with mixed ages. Pony at Kedarnath and Yamunotri. Good hotels.',
             },
             {
@@ -243,14 +243,15 @@ export default function CharDhamCost() {
               <div style={{ fontSize: 12.5, color: '#64748b', marginTop: 8, fontStyle: 'italic' }}>{note}</div>
             </div>          ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="cost" />
 
         </div>
 
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="cost" />
+
         <h2 id="price-drivers" style={h2}>7. What Drives the Price Up — and How to Keep Costs Down</h2>
         <h3 style={h3}>Why prices vary by 40–50% between operators</h3>
-        <p style={p}>When you see a Char Dham package for ₹12,000 and another for ₹18,500, you are usually comparing different things. Budget packages often exclude VIP darshan (₹1,500–₹2,500 value per pilgrim), use non-AC or shared vehicles with overcrowded seats, book hotel rooms that accommodate 4–6 pilgrims (not 2), and omit the guide. The ₹18,500 direct-operator price is genuinely all-inclusive. The ₹12,000 price is a base that grows to ₹18,000 with unavoidable additions.</p>
+        <p style={p}>When you see a Char Dham package for ₹12,000 and another for ₹13,900 you are usually comparing different things. Budget packages often exclude VIP darshan (₹1,500–₹2,500 value per pilgrim), use non-AC or shared vehicles with overcrowded seats, book hotel rooms that accommodate 4–6 pilgrims (not 2), and omit the guide. The ₹13,900 direct-operator price is genuinely all-inclusive. The ₹12,000 price is a base that grows to ₹18,000 with unavoidable additions.</p>
 
         <h3 style={h3}>Five ways to reduce your cost without sacrificing experience</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
@@ -278,7 +279,7 @@ export default function CharDhamCost() {
                 ['MakeMyTrip','₹29,000–₹32,000','15–20%','₹24,000–₹26,000 goes to operator','Platform chat'],
                 ['Thrillophilia','₹24,000–₹27,000','12–18%','₹20,000–₹22,000 goes to operator','Email + chat'],
                 ['Local agent (middleman)','₹22,000–₹25,000','8–15%','₹19,000–₹21,000 goes to operator','Agent WhatsApp'],
-                ['Shiv Ganga Travels (direct)','₹18,500','0%','₹18,500 (full amount goes to operation)','Operator direct'],
+                ['Shiv Ganga Travels (direct)','₹13,900','0%','₹13,900 (full amount goes to operation)','Operator direct'],
               ].map(([channel,price,comm,pays,support],i) => (
                 <tr key={channel} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight: i===3?800:600, color:'var(--navy)' }}>{channel}{i===3 && <span style={{ background:'rgba(29,158,117,0.15)', color:'#1D9E75', fontSize:10, fontWeight:700, padding:'2px 7px', borderRadius:20, marginLeft:8 }}>Best price</span>}</td>
@@ -290,15 +291,6 @@ export default function CharDhamCost() {
               ))}
             </tbody>
           </table>
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>Get Your Personalised Cost Estimate</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>Tell us your group size, city, and dates. We send a complete line-by-line cost breakdown within 2 hours. Zero obligation.</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a complete cost breakdown for Char Dham Yatra 2026. Please share.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 Get Free Quote</a>
-            🧮 Cost Calculator →
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

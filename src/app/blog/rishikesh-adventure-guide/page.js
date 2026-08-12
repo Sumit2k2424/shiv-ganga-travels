@@ -92,15 +92,13 @@ export default function RishikeshAdventureGuide() {
         <li><strong>Morning Triveni Ghat dip:</strong> 5 AM, the Ganga glowing in the dawn light. Priests performing morning aarti. Possibly the most peaceful 30 minutes in India.</li>
       </ul>
 
-      <div style={{ background:'linear-gradient(135deg,var(--navy),var(--teal))', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-        <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Rishikesh Adventure Package</h3>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14, marginBottom:18 }}>₹4,999 per person · 2N/3D · Rafting + Camping + Ganga Aarti from Haridwar</p>
-        <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book the Rishikesh Adventure package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#fff', color:'var(--navy)', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
-          <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Package →</Link>
-        </div>
-      </div>
-    
+      <BlogCTA
+        variant="note"
+        line="We run this as a 2N/3D package from Haridwar at ₹3,750 per person — rafting, camping and the Ganga Aarti evening."
+        href="/rishikesh-tour-packages"
+        linkLabel="See the Rishikesh package"
+      />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

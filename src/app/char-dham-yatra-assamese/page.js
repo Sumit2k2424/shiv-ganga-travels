@@ -10,13 +10,13 @@ const SLUG = 'char-dham-yatra-assamese';
 const noto = Noto_Sans_Bengali({ subsets: ['bengali'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: { absolute: 'চাৰ ধাম যাত্ৰা 2026 | ₹18,500ৰ পৰা আৰম্ভ | অসমীয়াত সম্পূৰ্ণ গাইড' },
-  description: 'চাৰ ধাম যাত্ৰা 2026 অসমীয়াত — হৰিদ্বাৰৰ পৰা ₹18,500ৰ পৰা। বিশ্বাসযোগ্য অপাৰেটৰ, 15+ বছৰৰ অভিজ্ঞতা, তৎক্ষণাৎ নিশ্চিতকৰণ।',
+  title: { absolute: 'চাৰ ধাম যাত্ৰা 2026 | ₹13,900ৰ পৰা আৰম্ভ | অসমীয়াত সম্পূৰ্ণ গাইড' },
+  description: 'চাৰ ধাম যাত্ৰা 2026 অসমীয়াত — হৰিদ্বাৰৰ পৰা ₹13,900ৰ পৰা। বিশ্বাসযোগ্য অপাৰেটৰ, 15+ বছৰৰ অভিজ্ঞতা, তৎক্ষণাৎ নিশ্চিতকৰণ।',
   keywords: ['চাৰ ধাম যাত্ৰা অসমীয়া', 'char dham yatra in assamese', 'char dham yatra assamese guide', 'chardham yatra oxomiya', 'হৰিদ্বাৰৰ পৰা চাৰ ধাম যাত্ৰা'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {
     title: 'চাৰ ধাম যাত্ৰা 2026 — অসমীয়াত সম্পূৰ্ণ তথ্য | Shiv Ganga Travels',
-    description: 'যমুনোত্ৰী, গংগোত্ৰী, কেদাৰনাথ, বদ্ৰীনাথ। হৰিদ্বাৰৰ পৰা ₹18,500ৰ পৰা আৰম্ভ। প্ৰত্যক্ষ অপাৰেটৰ, বিনামূলীয়া পঞ্জীয়ন সহায়।',
+    description: 'যমুনোত্ৰী, গংগোত্ৰী, কেদাৰনাথ, বদ্ৰীনাথ। হৰিদ্বাৰৰ পৰা ₹13,900ৰ পৰা আৰম্ভ। প্ৰত্যক্ষ অপাৰেটৰ, বিনামূলীয়া পঞ্জীয়ন সহায়।',
     url: `${SITE.baseUrl}/${SLUG}`,
     type: 'website',
     locale: 'as_IN',

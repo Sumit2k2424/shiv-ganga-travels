@@ -6,20 +6,20 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: '2 Dham Yatra Package 2026 | Price Starts at ₹10,999 | Kedarnath & Badrinath' },
-  description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar, 5N/6D from ₹10,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: '2 Dham Yatra Package 2026 | Price Starts at ₹8,200 | Kedarnath & Badrinath' },
+  description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar, 5N/6D from ₹8,200/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package','do dham yatra 2026','kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
   openGraph: {
-    title: '2 Dham Yatra 2026 — Kedarnath & Badrinath from ₹10,999 | Do Dham',
-    description: 'Do Dham Yatra (Kedarnath + Badrinath) 2026 from Haridwar. 5N/6D from ₹10,999. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.',
+    title: '2 Dham Yatra 2026 — Kedarnath & Badrinath from ₹8,200 | Do Dham',
+    description: 'Do Dham Yatra (Kedarnath + Badrinath) 2026 from Haridwar. 5N/6D from ₹8,200. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.',
     url: `${SITE.baseUrl}/do-dham-yatra`, type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath from ₹10,999',
-    description: 'Kedarnath + Badrinath from Haridwar. 5N/6D from ₹10,999. VIP darshan, AC vehicle. Zero commission.',
+    title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath from ₹8,200',
+    description: 'Kedarnath + Badrinath from Haridwar. 5N/6D from ₹8,200. VIP darshan, AC vehicle. Zero commission.',
     images: [{ url: '/opengraph-image', alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package' }],
   },
 };
@@ -30,7 +30,7 @@ function Schema() {
     mainEntity:[
       { '@type':'Question', name:'What is Do Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Do Dham Yatra (also called 2 Dham Yatra) covers two of the four Char Dhams — Kedarnath (Lord Shiva, 3,583m) and Badrinath (Lord Vishnu, 3,133m). Both are in Uttarakhand. The circuit takes 5 nights and 6 days from Haridwar, covers approximately 800km of driving, and includes the 16km Kedarnath trek. It is the most popular partial Char Dham option for pilgrims with limited time or who have done Yamunotri and Gangotri previously.' } },
       { '@type':'Question', name:'Should I do Do Dham or Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'If you have 10–11 days available, do Char Dham (all 4 dhams). If you have 6–7 days, or if you have already visited Yamunotri and Gangotri, Do Dham (Kedarnath + Badrinath) is ideal. Kedarnath and Badrinath are considered the two most spiritually significant dhams — Kedarnath for Shaiva devotees and Badrinath for Vaishnavas. Neither is "lesser" — both are Jyotirlinga/Vishnu kshetra of the highest order.' } },
-      { '@type':'Question', name:'What is the Do Dham Yatra package cost from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Do Dham Yatra (Kedarnath + Badrinath) from Haridwar starts at ₹10,999 per person for a 5N/6D all-inclusive package with Shiv Ganga Travels. This includes AC vehicle, hotels, breakfast and dinner, VIP darshan at both dhams, experienced guide, and registration. The Kedarnath pony (₹3,500–4,500 one way) is optional extra. Zero commission.' } },
+      { '@type':'Question', name:'What is the Do Dham Yatra package cost from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Do Dham Yatra (Kedarnath + Badrinath) from Haridwar starts at ₹8,200 per person for a 5N/6D all-inclusive package with Shiv Ganga Travels. This includes AC vehicle, hotels, breakfast and dinner, VIP darshan at both dhams, experienced guide, and registration. The Kedarnath pony (₹3,500–4,500 one way) is optional extra. Zero commission.' } },
       { '@type':'Question', name:'Is the Kedarnath trek mandatory in the Do Dham package?', acceptedAnswer:{ '@type':'Answer', text:'The 16km trek from Gaurikund to Kedarnath is the only way to reach the temple by road access (Gaurikund is the roadhead). You can do this trek on foot (5–7 hrs), by pony (₹3,500–4,500 one way), palki/doli (₹8,000–12,000 round trip), or by helicopter from Phata/Sersi helipad (₹7,500–9,500 round trip). The trek itself is not mandatory — alternatives exist for seniors and those with health concerns.' } },
     ],
   };
@@ -59,10 +59,10 @@ function Schema() {
     ]},
     provider:{ '@type':'TravelAgency', name:SITE.name, telephone:SITE.phone, url:SITE.baseUrl, image:`${SITE.baseUrl}/opengraph-image` },
     offers:[
-      {'@type':'Offer', name:'Do Dham Standard 5N/6D', price:'10999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
-      {'@type':'Offer', name:'Do Dham Private 5N/6D', price:'14999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
-      {'@type':'Offer', name:'Do Dham + Helicopter 5N/6D', price:'22999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
-      {'@type':'Offer', name:'Do Dham Senior Special 6N/7D', price:'13999', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham Standard 5N/6D', price:'8200', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham Private 5N/6D', price:'11200', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham + Helicopter 5N/6D', price:'17200', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
+      {'@type':'Offer', name:'Do Dham Senior Special 6N/7D', price:'10500', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/></>);
@@ -98,7 +98,7 @@ export default function DoDhamYatra() {
             Do Dham Yatra 2026 — Kedarnath & Badrinath
           </h1>
           <p style={{ color:'rgba(255,255,255,0.85)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto 20px' }}>
-            2 Dham Yatra from Haridwar · <strong style={{ color:'#FFD166' }}>₹10,999/person</strong> · 5N/6D · Kedarnath 16km trek · Badrinath darshan · Zero commission
+            2 Dham Yatra from Haridwar · <strong style={{ color:'#FFD166' }}>₹8,200/person</strong> · 5N/6D · Kedarnath 16km trek · Badrinath darshan · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
             {['🏔️ Kedarnath 3,583m','🕌 Badrinath 3,133m','🎖️ 15 yrs · 50k pilgrims','⭐ 4.7/5 · 54 reviews'].map(t=>(
@@ -126,14 +126,14 @@ export default function DoDhamYatra() {
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
-          {[['Duration','5N/6D'],['Kedarnath','3,583m'],['Badrinath','3,133m'],['Trek','16km Kedarnath'],['Package from','₹10,999/person'],['Season','Apr 22 – Nov 2026']].map(([k,v])=>(
+          {[['Duration','5N/6D'],['Kedarnath','3,583m'],['Badrinath','3,133m'],['Trek','16km Kedarnath'],['Package from','₹8,200/person'],['Season','Apr 22 – Nov 2026']].map(([k,v])=>(
             <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div></div>
           ))}
         </div>
 
         {/* Intent-first answer */}
         <p style={p}>
-          <strong>Do Dham Yatra covers Kedarnath and Badrinath</strong> — the two highest and most sacred dhams on the circuit. The 5N/6D package from Haridwar is ₹10,999/person all-inclusive. You get the 16km Kedarnath trek, a night at the temple at 3,583m, early morning Mahabhishek darshan, and then Badrinath with Mana Village and Tapt Kund. This is the package most of our repeat pilgrims choose — those who have done Char Dham and want to go back to the two that moved them most.
+          <strong>Do Dham Yatra covers Kedarnath and Badrinath</strong> — the two highest and most sacred dhams on the circuit. The 5N/6D package from Haridwar is ₹8,200/person all-inclusive. You get the 16km Kedarnath trek, a night at the temple at 3,583m, early morning Mahabhishek darshan, and then Badrinath with Mana Village and Tapt Kund. This is the package most of our repeat pilgrims choose — those who have done Char Dham and want to go back to the two that moved them most.
         </p>
 
         <h2 style={h2}>What Does &quot;Dham Yatra&quot; Actually Mean? — Do, Char and 5 Dham Explained</h2>
@@ -144,8 +144,8 @@ export default function DoDhamYatra() {
         <h2 style={h2}>Do Dham or Char Dham? — Honest Comparison</h2>
         <AnswerBox>
           Do Dham Yatra covers the two Kedarnath–Badrinath shrines in a 5N/6D all-inclusive package
-          from ₹10,999 per person — ideal when time is limited. Char Dham adds Yamunotri and Gangotri
-          (9N/10D, from ₹18,500). Choose Do Dham if you have under a week; choose Char Dham to complete
+          from ₹8,200 per person — ideal when time is limited. Char Dham adds Yamunotri and Gangotri
+          (9N/10D, from ₹13,900). Choose Do Dham if you have under a week; choose Char Dham to complete
           the full circuit. Both run late April to November 2026.
         </AnswerBox>
         <p style={p}>Most people searching for "2 dham yatra" or "do dham yatra" are deciding between two options. Here is the honest answer from 15 years of sending pilgrims to the mountains:</p>
@@ -162,7 +162,7 @@ export default function DoDhamYatra() {
                 'You are primarily a Shiva or Vishnu devotee (Kedarnath + Badrinath)',
                 'Your group has seniors who cannot do 2 treks in one trip',
                 'You want the raw Himalayan experience without the extra 4 days',
-                'Budget is tight and ₹10,999 fits better than ₹18,500',
+                'Budget is tight and ₹8,200 fits better than ₹13,900',
               ],
             },
             {
@@ -227,10 +227,10 @@ export default function DoDhamYatra() {
             </tr></thead>
             <tbody>
               {[
-                ['Do Dham Standard','5N/6D','₹10,999','Shared Tempo Traveller','Solo, groups'],
-                ['Do Dham Private','5N/6D','₹14,999','Private Innova Crysta','Couples, small families'],
-                ['Do Dham + Helicopter','5N/6D','₹22,999','Innova + Kedarnath heli','Seniors, premium'],
-                ['Do Dham Senior Special','6N/7D','₹13,999','Private Innova, slow pace','60+ pilgrims'],
+                ['Do Dham Standard','5N/6D','₹8,200','Shared Tempo Traveller','Solo, groups'],
+                ['Do Dham Private','5N/6D','₹11,200','Private Innova Crysta','Couples, small families'],
+                ['Do Dham + Helicopter','5N/6D','₹17,200','Innova + Kedarnath heli','Seniors, premium'],
+                ['Do Dham Senior Special','6N/7D','₹10,500','Private Innova, slow pace','60+ pilgrims'],
               ].map(([pkg,dur,price,vehicle,best],i)=>(
                 <tr key={pkg} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)' }}>{pkg}</td>
@@ -258,7 +258,7 @@ export default function DoDhamYatra() {
             </tr></thead>
             <tbody>
               {[
-                ['Shiv Ganga Travels (us — direct operator)','₹10,999 / person','Direct, zero commission'],
+                ['Shiv Ganga Travels (us — direct operator)','₹8,200 / person','Direct, zero commission'],
                 ['IRCTC Tourism (ex-Haridwar, NDH27)','₹31,000 / person','Govt portal'],
                 ['IRCTC Tourism (ex-Delhi, NDH26)','₹35,000 / person','Govt portal'],
                 ['Large national OTAs (typical)','₹30,000–48,000 / person','Aggregator'],
@@ -295,7 +295,7 @@ export default function DoDhamYatra() {
         </div>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Book Do Dham Yatra 2026 — ₹10,999/person</h3>
+          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Book Do Dham Yatra 2026 — ₹8,200/person</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free itinerary in 2 hours · Zero commission · Registration handled · 5N/6D all-inclusive</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Do Dham Yatra 2026 — Kedarnath + Badrinath. Please share details.')}`}

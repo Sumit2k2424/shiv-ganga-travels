@@ -14,7 +14,7 @@ export default function Schema() {
     brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
     offers: {
       '@type': 'Offer',
-      price: '18500',
+      price: '13900',
       priceCurrency: 'INR',
       priceValidUntil: '2026-11-30',
       availability: 'https://schema.org/InStock',

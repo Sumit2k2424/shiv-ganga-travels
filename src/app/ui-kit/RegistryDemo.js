@@ -145,7 +145,7 @@ export default function RegistryDemo() {
         >
           <div className="relative max-w-sm overflow-hidden rounded-[var(--radius)] border bg-white p-6">
             <p className="font-semibold">Char Dham 11N / 12D</p>
-            <p className="mt-1 text-sm text-[color:var(--text-muted,#64748B)]">From ₹18,500 per person</p>
+            <p className="mt-1 text-sm text-[color:var(--text-muted,#64748B)]">From ₹13,900 per person</p>
             <BorderBeam />
           </div>
         </SectionShell>

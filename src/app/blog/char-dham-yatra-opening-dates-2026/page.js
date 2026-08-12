@@ -198,16 +198,6 @@ export default function OpeningDates() {
         <BlogCTA variant="inline" intent="info" />
 
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Char Dham Yatra 2026 — Season Still Open</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Packages available May–October 2026. Direct operator from Haridwar. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026. Please share available dates and packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-          </div>
-        </div>
-
         
         {/* Closing dates section — competitors rank for this separately */}
         <h2 style={h2}>Char Dham Closing Dates 2026 — When All 4 Dhams Close</h2>

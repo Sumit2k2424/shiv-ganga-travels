@@ -153,23 +153,14 @@ export default function HaridwarToKedarnath() {
                   <span style={{ flexShrink:0 }}>{k}:</span><span style={{ fontWeight:600, color:'#334155' }}>{v}</span>
                 </div>              ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="route" />
 
               <p style={{ fontSize:12.5, color:'var(--text-muted)', marginTop:8, lineHeight:1.5 }}>{opt.notes}</p>
             </div>
           ))}
         </div>
 
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Yatra from Haridwar</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels handles all Sonprayag permits, vehicle registration, and Kedarnath logistics. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Kedarnath Yatra 2026 from Haridwar. Please share package details.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Kedarnath Packages →
-          </div>
-        </div>
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="route" />
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>

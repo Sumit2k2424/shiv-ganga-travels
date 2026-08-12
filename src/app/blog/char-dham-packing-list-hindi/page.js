@@ -181,15 +181,6 @@ export default function CharDhamPackingListHindi() {
           ))}
         </div>
 
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>हमारे साथ जाएं — सब पहले से तैयार मिलेगा</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>होटल, रजिस्ट्रेशन, VIP दर्शन, ऑक्सीजन — सब हम संभालते हैं। आप बस यात्रा enjoy करें।</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Char Dham Yatra 2026 book karni hai. Please packages bhejein.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 Packages लें</a>
-            🏔️ All Packages →
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>

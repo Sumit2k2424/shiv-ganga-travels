@@ -7,13 +7,13 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Noida 2026 | Price Starts at ₹22,999 | Pickup & VIP Darshan' },
+  title: { absolute: 'Char Dham Yatra from Noida 2026 | Price Starts at ₹17,200 | Pickup & VIP Darshan' },
   description: 'Char Dham Yatra from Noida 2026 — 230km via Delhi–Meerut Expressway. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from noida','char dham yatra noida 2026','char dham package from noida','kedarnath from noida','haridwar from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {
     title: 'Char Dham Yatra from Noida 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹22,999/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registr',
+    description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹17,200/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registr',
     url: `${SITE.baseUrl}/char-dham-yatra-from-noida`,
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Noida 2026 — Shiv Ganga Travels' }],
@@ -34,7 +34,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type':'Question', name:'How to reach Haridwar from Noida for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Noida to Haridwar — 230km via Delhi–Meerut Expressway. Drive in 4 hours (early morning) or take Jan Shatabdi from Anand Vihar (5h 25m). Driving is usually faster and more convenient.' } },
-      { '@type':'Question', name:'What is the cost of Char Dham Yatra from Noida?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Noida with Shiv Ganga Travels starts at ₹22,999/person for a 9N/10D all-inclusive package from Haridwar. This covers AC vehicle, hotels, breakfast and dinner, VIP darshan at all 4 dhams, and 24x7 support. Noida pickup is available.' } },
+      { '@type':'Question', name:'What is the cost of Char Dham Yatra from Noida?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Noida with Shiv Ganga Travels starts at ₹17,200/person for a 9N/10D all-inclusive package from Haridwar. This covers AC vehicle, hotels, breakfast and dinner, VIP darshan at all 4 dhams, and 24x7 support. Noida pickup is available.' } },
     ],
   };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /></>);
@@ -45,7 +45,7 @@ const PAA = [
   { q:'How far is Char Dham Yatra from Noida?', a:'Noida to Haridwar — the gateway to the dhams — is roughly 230 km. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },
   { q:'How do I reach Haridwar from Noida?', a:'From Noida it\'s about 230 km to Haridwar. Best options: 4–4.5h via the Delhi–Meerut Expressway. Jolly Grant Airport, Dehradun is the nearest airport (35 km from Haridwar); Haridwar Junction is the nearest railhead. From there the circuit begins.' },
   { q:'How many days are needed for Char Dham Yatra from Noida?', a:'Plan 9–11 days for the full road circuit including travel from Noida. By helicopter (flying from Dehradun) the on-ground portion drops to 5–6 days. Senior citizens should allow a couple of extra days for acclimatisation.' },
-  { q:'What is the cost of Char Dham Yatra from Noida?', a:'Our all-inclusive road packages start from ₹22,999 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
+  { q:'What is the cost of Char Dham Yatra from Noida?', a:'Our all-inclusive road packages start from ₹17,200 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
   { q:'What is the best time for Char Dham Yatra from Noida?', a:'May–June and September–October, matching the temple season — the 2026 dhams open between April 19 and 23. Book early for these peak windows and avoid the July–August monsoon, when landslides can delay the mountain stretches.' },
   { q:'Is Char Dham Yatra registration mandatory?', a:'Yes. Free biometric registration is compulsory for all four dhams and checked at police barriers like Sonprayag. Register online at registrationandtouristcare.uk.gov.in before travelling — we complete it free for everyone in our packages.' },
 ];
@@ -68,7 +68,7 @@ export default function CharDhamFromNoida() {
             Char Dham Yatra from Noida 2026
           </h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7, maxWidth:700, margin:'0 auto 20px' }}>
-            230 km · 4–4.5h via Delhi–Meerut Expressway · All-inclusive from <strong style={{ color:'#FFD166' }}>₹22,999/person</strong> · Zero commission
+            230 km · 4–4.5h via Delhi–Meerut Expressway · All-inclusive from <strong style={{ color:'#FFD166' }}>₹17,200/person</strong> · Zero commission
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Noida/NCR. Please share packages.')}`} target="_blank" rel="nofollow noopener noreferrer"
@@ -93,7 +93,7 @@ export default function CharDhamFromNoida() {
           <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`230 km`}</div></div>
           <div key="Road time (5 AM)"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Road time (5 AM)`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`~4 hrs DM Expressway`}</div></div>
           <div key="From Anand Vihar"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`From Anand Vihar`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`6–8h by train`}</div></div>
-          <div key="Package from"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Package from`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`₹22,999/person`}</div></div>
+          <div key="Package from"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Package from`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`₹17,200/person`}</div></div>
           <div key="Total trip"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Total trip`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`10–12 days`}</div></div>
           <div key="Registration"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Registration`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`FREE · We handle`}</div></div>
         </div>
@@ -151,7 +151,7 @@ export default function CharDhamFromNoida() {
           ].map(item => (<div key={item} style={{ background:'#fff', borderRadius:8, padding:'9px 12px', border:'1px solid hsl(var(--border))', fontSize:13, color:'#334155' }}>{item}</div>))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
-          <strong>Package from Noida:</strong> ₹22,999/person · 9N/10D · All-inclusive · Zero commission
+          <strong>Package from Noida:</strong> ₹17,200/person · 9N/10D · All-inclusive · Zero commission
         </div>
 
         <h2 style={{...h2}}>Pickup Points in Noida</h2>

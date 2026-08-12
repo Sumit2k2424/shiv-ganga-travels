@@ -1,5 +1,40 @@
 'use client';
+import { useEffect, useRef, useState } from 'react';
 import { SITE } from '@/data/packages';
+
+/* The float is the persistent ask. When one of the page's own conversion
+   surfaces is on screen it is both redundant and physically on top of it —
+   it landed over the "View all packages" button of the end-of-article CTA
+   on mobile. So it tucks away while any in-content WhatsApp/call action is
+   visible, and comes back once you scroll past. Sticky chrome (the header
+   quote button) is excluded, or the float would never show on desktop. */
+function useTuckedNearCTAs(ref) {
+  const [tucked, setTucked] = useState(false);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    const targets = Array.from(
+      document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]')
+    ).filter(el => el !== ref.current && !el.closest('header, nav, .wa-float'));
+
+    if (!targets.length) return;
+
+    const visible = new Set();
+    const io = new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) visible.add(e.target);
+        else visible.delete(e.target);
+      }
+      setTucked(visible.size > 0);
+    }, { threshold: 0 });
+
+    targets.forEach(t => io.observe(t));
+    return () => io.disconnect();
+  }, [ref]);
+
+  return tucked;
+}
 
 function fireEvent(action, label) {
   try {
@@ -14,15 +49,21 @@ function fireEvent(action, label) {
 }
 
 export default function WhatsAppButton() {
+  const ref = useRef(null);
+  const tucked = useTuckedNearCTAs(ref);
+
   const message = encodeURIComponent(
     'Namaste! I would like to enquire about Char Dham Yatra packages for 2026.'
   );
   return (
     <a
+      ref={ref}
       href={`https://wa.me/${SITE.whatsapp}?text=${message}`}
       target="_blank"
       rel="nofollow noopener noreferrer"
-      className="wa-float"
+      className={`wa-float${tucked ? ' wa-float--tucked' : ''}`}
+      aria-hidden={tucked ? 'true' : undefined}
+      tabIndex={tucked ? -1 : undefined}
       aria-label="Chat with us on WhatsApp"
       title="Chat on WhatsApp"
       onClick={() => fireEvent('generate_lead', 'whatsapp_float_button')}

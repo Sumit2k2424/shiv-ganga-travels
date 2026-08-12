@@ -219,8 +219,8 @@ export default function Page() {
           {[
             { name: 'Char Dham Classic (Road)', duration: '9N/10D', price: '₹21,000', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
             { name: 'Char Dham by Helicopter', duration: '5N/6D', price: '₹2,30,000', badge: 'From Dehradun', href: '/packages/char-dham-yatra-helicopter-5n-6d-dehradun' },
-            { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹27,999', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
-            { name: 'Kedarnath Yatra', duration: '3N/4D', price: '₹6,999', badge: 'Single Dham', href: '/kedarnath-yatra' },
+            { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹21,000', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
+            { name: 'Kedarnath Yatra', duration: '3N/4D', price: '₹5,250', badge: 'Single Dham', href: '/kedarnath-yatra' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
               style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>

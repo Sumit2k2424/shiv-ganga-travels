@@ -126,7 +126,7 @@ export default function SevenDaysBlog() {
                 ['Rest stops','Zero','1–2 per day','2–3 per day'],
                 ['Altitude sickness risk','High','Moderate','Low'],
                 ['Senior-friendly','No','With modifications','Yes — recommended'],
-                ['Cost difference','₹18,500/person','₹18,500/person','₹22,000/person (+₹2,500)'],
+                ['Cost difference','₹13,900/person','₹13,900/person','₹22,000/person (+₹2,500)'],
                 ['Best for','Fit adults < 60, urgent','Most pilgrims','Families, 60+, first-timers'],
               ].map(([f,...vals],i)=>(
                 <tr key={f} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
@@ -179,15 +179,16 @@ export default function SevenDaysBlog() {
               <div style={{ fontSize:14.5, color:'#475569', lineHeight:1.75 }}>{desc}</div>
             </div>
 
+          </div>
+
+        ))}
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
-          </div>
-        ))}
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>Our Recommendation</div>
           <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, margin:0 }}>
-            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva’s most powerful Jyotirlinga and Lord Vishnu’s primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our Do Dham Yatra packages from ₹10,999.
+            For most pilgrims with exactly 7 days, the <strong>Do Dham Yatra (Kedarnath + Badrinath) in 5N/6D</strong> is far better than a rushed Char Dham. You spend adequate time at Lord Shiva’s most powerful Jyotirlinga and Lord Vishnu’s primary abode. Many pilgrims who do Do Dham come back for Gangotri and Yamunotri the following year — and that second yatra feels even more special because it is anticipated. See our Do Dham Yatra packages from ₹8,200.
           </p>
         </div>
 
@@ -205,17 +206,6 @@ export default function SevenDaysBlog() {
             <div style={{ padding:'12px 16px', fontSize:14.5, color:'#334155', lineHeight:1.8, borderTop:'1px solid hsl(var(--border))' }}>{a}</div>
           </details>
         ))}
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book the Right Duration for Your Yatra</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>We will suggest the ideal itinerary based on your group, age, and available days. No pressure — honest advice always.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have limited days for Char Dham Yatra 2026. Please suggest the best itinerary.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Char Dham Packages →
-            Do Dham (5N/6D) →
-          </div>
-        </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>

@@ -29,13 +29,13 @@ export const metadata = {
 const FAQS = [
   // COST
   { cat:'Cost & Pricing', q:'How much does Char Dham Yatra cost per person in 2026?',
-    a:'Char Dham Yatra by road costs between ₹18,500 and ₹45,000 per person in 2026 depending on the package type; the helicopter charter is a separate product at ₹2,30,000. A standard all-inclusive 9-night 10-day road package from Haridwar starts at ₹18,500 per person. Premium packages with better hotels cost ₹28,000–40,000. The full helicopter charter covering all 4 dhams is ₹2,30,000. These prices include AC vehicle, accommodation, all meals, guide, and VIP darshan assistance. According to Dhanesh Chandra Mishra, founder of Shiv Ganga Travels and a 15-year Char Dham operator: "The actual package cost rarely changes — what varies is what operators hide in the fine print. A transparent all-inclusive price from a direct operator is always cheaper than an agent price with commissions added."' },
+    a:'Char Dham Yatra by road costs between ₹13,900 and ₹33,800 per person in 2026 depending on the package type; the helicopter charter is a separate product at ₹2,30,000. A standard all-inclusive 9-night 10-day road package from Haridwar starts at ₹13,900 per person. Premium packages with better hotels cost ₹28,000–40,000. The full helicopter charter covering all 4 dhams is ₹2,30,000. These prices include AC vehicle, accommodation, all meals, guide, and VIP darshan assistance. According to Dhanesh Chandra Mishra, founder of Shiv Ganga Travels and a 15-year Char Dham operator: "The actual package cost rarely changes — what varies is what operators hide in the fine print. A transparent all-inclusive price from a direct operator is always cheaper than an agent price with commissions added."' },
   { cat:'Cost & Pricing', q:'What is included in a Char Dham Yatra package?',
     a:'A standard Char Dham Yatra package from Haridwar includes: (1) AC vehicle throughout — Innova Crysta or Tempo Traveller based on group size, (2) accommodation at all stops — Barkot, Uttarkashi, Guptkashi, Badrinath, (3) all meals — breakfast and dinner daily, (4) an experienced Garhwali guide, (5) biometric registration assistance, (6) oxygen cylinder in the vehicle, (7) VIP darshan arrangement where possible. Airfare, personal puja expenses, pony/palki charges, and helicopter upgrades are typically charged separately.' },
   { cat:'Cost & Pricing', q:'Are there hidden charges in Char Dham Yatra packages?',
     a:'Common hidden charges include: pony and palki fees at Kedarnath (₹3,000–6,000 per person one way), entry fees at some temples, personal puja offerings, porter charges for luggage beyond 5kg on the Kedarnath trek, and early check-in or late check-out hotel fees. At Shiv Ganga Travels we publish a complete cost breakdown before booking so pilgrims know exactly what is and is not included. As a rule: if a package price seems unusually low, ask specifically what is excluded.' },
   { cat:'Cost & Pricing', q:'How much does Kedarnath Yatra cost separately in 2026?',
-    a:'A 3-night 4-day Kedarnath Yatra package from Haridwar costs between ₹6,999 and ₹12,000 per person in 2026 depending on hotel category. This includes Haridwar to Gaurikund transport, accommodation at Guptkashi or Sonprayag, meals, guide, and Kedarnath darshan assistance. The trek from Gaurikund to Kedarnath is 16 kilometres (one way). Pony hire costs ₹3,000–5,000 one way and helicopter costs ₹7,000–9,000 one way from Phata helipad, booked through IRCTC.' },
+    a:'A 3-night 4-day Kedarnath Yatra package from Haridwar costs between ₹5,250 and ₹12,000 per person in 2026 depending on hotel category. This includes Haridwar to Gaurikund transport, accommodation at Guptkashi or Sonprayag, meals, guide, and Kedarnath darshan assistance. The trek from Gaurikund to Kedarnath is 16 kilometres (one way). Pony hire costs ₹3,000–5,000 one way and helicopter costs ₹7,000–9,000 one way from Phata helipad, booked through IRCTC.' },
   { cat:'Cost & Pricing', q:'What is the cost of Char Dham Yatra by helicopter in 2026?',
     a:'A complete 4-dham helicopter charter in 5 nights 6 days costs ₹2,09,000–₹2,50,000 per person across the market; ours is ₹2,30,000. This covers flights to Yamunotri, Gangotri, Kedarnath, and Badrinath helipads with luxury hotel stays. Kedarnath-only helicopter (Phata or Sersi helipad) costs ₹7,000–9,000 one way and must be booked through the IRCTC portal (irctc.co.in) as per 2026 rules. Same-day Kedarnath and Badrinath by helicopter from Haridwar costs approximately ₹18,000–22,000 per person.' },
 
@@ -101,7 +101,7 @@ const FAQS = [
   { cat:'Booking & Operator', q:'What is the difference between a direct operator and a travel agent for Char Dham Yatra?',
     a:'A direct operator like Shiv Ganga Travels owns the vehicles, directly employs the drivers and guides, and books hotels without intermediaries. You pay them and they deliver the service. A travel agent acts as a middleman — they collect your payment, take a commission of 10–20%, and outsource the actual service to an operator. This adds cost and creates accountability gaps. When something goes wrong on a mountain road, you want to call the actual operator — not an agent who then calls an operator. Direct booking is always preferable for safety, accountability, and price.' },
   { cat:'Booking & Operator', q:'Can I book Char Dham Yatra for just 2 people?',
-    a:'Yes. Shiv Ganga Travels accepts bookings for groups as small as 2 people. For 2 people, an Ertiga or Innova Crysta is the appropriate vehicle. The per-person cost for small groups (2–4 people) is slightly higher than for large groups (8–12 people) because vehicle costs are shared by fewer people. The price range for 2 people is ₹22,000–28,000 per person for a complete 9N/10D Char Dham package from Haridwar, versus ₹18,500 per person for a group of 8–10.' },
+    a:'Yes. Shiv Ganga Travels accepts bookings for groups as small as 2 people. For 2 people, an Ertiga or Innova Crysta is the appropriate vehicle. The per-person cost for small groups (2–4 people) is slightly higher than for large groups (8–12 people) because vehicle costs are shared by fewer people. The price range for 2 people is ₹22,000–28,000 per person for a complete 9N/10D Char Dham package from Haridwar, versus ₹13,900 per person for a group of 8–10.' },
 
   // SPECIFIC DHAMS
   { cat:'Gangotri & Yamunotri', q:'Is there any trek required for Gangotri Yatra?',
@@ -117,7 +117,7 @@ const FAQS = [
 
   // COMPARISON
   { cat:'Comparison & Choices', q:'What is the difference between Char Dham and Do Dham Yatra?',
-    a:'Char Dham Yatra covers all four sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers two shrines, typically Kedarnath and Badrinath (the most popular combination) in 5–6 days. Cost difference: Char Dham costs ₹18,500–28,000 per person; Do Dham costs ₹10,999–16,000 per person. Do Dham is ideal for pilgrims with limited time or first-time yatris who want to experience the circuit before attempting all four. The Kedarnath–Badrinath Do Dham pair is considered the most spiritually significant combination.' },
+    a:'Char Dham Yatra covers all four sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — in 10–12 days. Do Dham Yatra covers two shrines, typically Kedarnath and Badrinath (the most popular combination) in 5–6 days. Cost difference: Char Dham costs ₹13,900–28,000 per person; Do Dham costs ₹8,200–16,000 per person. Do Dham is ideal for pilgrims with limited time or first-time yatris who want to experience the circuit before attempting all four. The Kedarnath–Badrinath Do Dham pair is considered the most spiritually significant combination.' },
   { cat:'Comparison & Choices', q:'Should I do Char Dham Yatra by road or helicopter?',
     a:'Road yatra is recommended for first-time pilgrims who want the traditional experience, have 10+ days, are under 65, and have no significant health conditions. The mountain road journey through Garhwal Himalaya is itself a profound experience. Helicopter yatra is recommended for senior pilgrims (65+), those with heart conditions or high blood pressure, pilgrims with 6 days or less available, and those who want to prioritise darshan over the journey. Helicopter yatra costs 4–5× more but saves 8–10 days of travel. Both options allow full temple darshan — the helicopter does not provide a spiritual shortcut, only a physical one.' },
   { cat:'Comparison & Choices', q:'Is a package better than booking Char Dham Yatra independently?',
@@ -254,7 +254,7 @@ export default function FAQ() {
           { label:'Questions',  value:'50 answered' },
           { label:'Experience', value:'15 seasons' },
           { label:'Pilgrims',   value:'50,000+' },
-          { label:'Packages from', value:'₹18,500' },
+          { label:'Packages from', value:'₹13,900' },
         ]}
       />
 
@@ -280,25 +280,6 @@ export default function FAQ() {
 
       {/* FAQ content */}
       <div className="blog-container">
-
-        {/* Conversion hook — FAQ visitors are research-mode, help them convert */}
-        <div style={{ background:'linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%)', borderRadius:14, padding:'16px 20px', marginBottom:28, display:'flex', flexWrap:'wrap', gap:14, alignItems:'center', justifyContent:'space-between' }}>
-          <div>
-            <div style={{ fontWeight:700, fontSize:14, color:'#FFD166', marginBottom:3 }}>Ready to book? Get a personalised quote in 2 minutes.</div>
-            <div style={{ fontSize:13, color:'rgba(255,255,255,0.8)' }}>Direct operator · No commission · From ₹18,500 all-inclusive</div>
-          </div>
-          <div style={{ display:'flex', gap:8, flexWrap:'wrap', flexShrink:0 }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I read your Char Dham FAQ page. I want to know about packages and dates for 2026.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'9px 16px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', whiteSpace:'nowrap' }}>
-              💬 WhatsApp Quote
-            </a>
-            <a href="/char-dham-yatra"
-              style={{ background:'rgba(255,255,255,0.15)', color:'#fff', padding:'9px 16px', borderRadius:9, fontWeight:700, fontSize:13, textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)', whiteSpace:'nowrap' }}>
-              <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Packages →</Link>
-            </a>
-          </div>
-        </div>
 
         {/* Table of contents */}
         <div style={{ background: 'var(--navy-light)', borderRadius: 14, padding: '20px 24px', marginBottom: 40 }}>
@@ -344,26 +325,8 @@ export default function FAQ() {
           </div>
         ))}
 
-        {/* Bottom CTA */}
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center' }}>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 8 }}>
-            Still have a question not answered here?
-          </p>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 18 }}>
-            Speak directly with Dhanesh ji — 15-year Char Dham expert
-          </h3>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I have a question about Char Dham Yatra 2026.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>
-              💬 Ask on WhatsApp
-            </a>
-            <a href='tel:+917817996730'
-              style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
-              📞 {SITE.phone}
-            </a>
-          </div>
-        </div>
+        {/* ── End-of-article booking CTA ── */}
+        <BlogCTA variant="footer" intent="info" />
       </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>

@@ -7,7 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Haridwar to Kedarnath 2026 | Price Starts at ₹6,999 | Cab, Bus & Heli' },
+  title: { absolute: 'Haridwar to Kedarnath 2026 | Price Starts at ₹5,250 | Cab, Bus & Heli' },
   description: 'Haridwar to Kedarnath 2026 — 228km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['haridwar to kedarnath distance 2026', 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
@@ -119,10 +119,11 @@ export default function HaridwarToKedarnath() {
             <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.5 }}>{s.why}</div>
           </div>        ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="kedarnath" />
 
       </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
 
       <h2 id="all-options" style={h2}>How to Reach Kedarnath from Haridwar — All Options Compared</h2>
       <p style={p}>There is no single &ldquo;Haridwar to Kedarnath&rdquo; vehicle that drops you at the temple — the last 16 km is a trek no road covers. What changes is how you cover the 228 km to Gaurikund. Here is every option side by side.</p>
@@ -198,15 +199,13 @@ export default function HaridwarToKedarnath() {
         ))}
       </div>
 
-      <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-        <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Kedarnath Package from Haridwar</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹6,999 all-inclusive · Pickup from Haridwar · Expert guide</p>
-        <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra from Haridwar 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
-          <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Package →</Link>
-        </div>
-      </div>
-    
+      <BlogCTA
+        variant="note"
+        line="We run this route as a package from Haridwar — ₹5,250 all-inclusive, pickup, stay and a guide who knows the trek."
+        href="/kedarnath-yatra"
+        linkLabel="See the Kedarnath package"
+      />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="kedarnath" />
 </article>

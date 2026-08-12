@@ -87,7 +87,7 @@ export default function KedarnathToBadrinath() {
         {[
           ['Vehicle','Seats','Sonprayag → Badrinath (approx.)'],
           ['Swift Dzire (sedan)','4','₹7,500–9,000'],
-          ['Ertiga','6','₹8,500–10,500'],
+          ['Ertiga','6','₹6,400–10,500'],
           ['Innova Crysta','6','₹10,000–12,500'],
           ['Tempo Traveller','12','₹14,000–17,000'],
         ].map((row,i)=>(

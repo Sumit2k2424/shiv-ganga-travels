@@ -8,11 +8,11 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'चार धाम यात्रा 2026 खर्चा | कीमत ₹18,500 से शुरू | पूरी जानकारी' },
-  description: 'हरिद्वार से चार धाम यात्रा 2026 का खर्चा ₹18,500 से शुरू। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
+  title: { absolute: 'चार धाम यात्रा 2026 खर्चा | कीमत ₹13,900 से शुरू | पूरी जानकारी' },
+  description: 'हरिद्वार से चार धाम यात्रा 2026 का खर्चा ₹13,900 से शुरू। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
   keywords: ['चार धाम यात्रा 2026 खर्चा', 'char dham yatra kitna kharcha 2026', 'हरिद्वार से चार धाम यात्रा कितने रुपये', 'char dham yatra cost hindi', 'चार धाम यात्रा प्रति व्यक्ति खर्च'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` },
-  openGraph: { title: 'चार धाम यात्रा 2026 में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा', description: 'हरिद्वार से चार धाम यात्रा 2026 में 1 आदमी का खर्चा ₹18,500 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।', url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article' },
+  openGraph: { title: 'चार धाम यात्रा 2026 में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा', description: 'हरिद्वार से चार धाम यात्रा 2026 में 1 आदमी का खर्चा ₹13,900 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।', url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article' },
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'चार धाम यात्रा 2026 में कितना खर्चा आता है? हरिद्वार से पूरा हिसाब | Shiv Ganga Travels' }],
 };
 
@@ -20,7 +20,7 @@ function Schema() {
   const faq = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'चार धाम यात्रा में कितना पैसा लगता है?', acceptedAnswer: { '@type': 'Answer', text: 'हरिद्वार से चार धाम यात्रा 2026 में प्रति व्यक्ति ₹18,500 से ₹28,000 तक खर्चा होता है। इसमें गाड़ी, होटल, खाना, VIP दर्शन और गाइड शामिल हैं। केदारनाथ घोड़ा (₹3,500–4,500) अलग से लग सकता है।' } },
+      { '@type': 'Question', name: 'चार धाम यात्रा में कितना पैसा लगता है?', acceptedAnswer: { '@type': 'Answer', text: 'हरिद्वार से चार धाम यात्रा 2026 में प्रति व्यक्ति ₹13,900 से ₹28,000 तक खर्चा होता है। इसमें गाड़ी, होटल, खाना, VIP दर्शन और गाइड शामिल हैं। केदारनाथ घोड़ा (₹3,500–4,500) अलग से लग सकता है।' } },
       { '@type': 'Question', name: 'क्या चार धाम यात्रा रजिस्ट्रेशन मुफ्त है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ, 2026 में चार धाम यात्रा का पंजीकरण बिल्कुल मुफ्त है। registrationandtouristcare.uk.gov.in पर ऑनलाइन करें — एक भी रुपया नहीं लगता।' } },
       { '@type': 'Question', name: 'क्या सितंबर में चार धाम यात्रा सस्ती होती है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ — सितंबर-अक्टूबर में होटल 30-40% सस्ते, भीड़ कम, घोड़ा आसानी से मिलता है। हम सितंबर-अक्टूबर में जाने की खास सलाह देते हैं।' } },
     ],
@@ -57,7 +57,7 @@ export default function CharDhamKharcha() {
           { label:"बजट यात्री", value:"₹22,000–28,000" },
           { label:"आरामदायक", value:"₹30,000–40,000" },
           { label:"पंजीकरण", value:"मुफ्त (₹0)" },
-          { label:"पैकेज", value:"₹18,500 से" },
+          { label:"पैकेज", value:"₹13,900 से" },
         ]}
       />
 
@@ -79,7 +79,7 @@ export default function CharDhamKharcha() {
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 10 }}>एक नज़र में — चार धाम यात्रा 2026 कुल खर्चा</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(150px,1fr))', gap: 10 }}>
-            {[['पैकेज (9N/10D)','₹18,500–₹30,000'],['केदारनाथ घोड़ा','₹3,500–₹4,500'],['पंजीकरण','मुफ्त (₹0)'],['ट्रेन दिल्ली–हरिद्वार','₹200–₹700'],['10 दिन खाने-पीने का','₹1,500–₹3,000'],['कुल (बजट यात्री)','₹22,000–₹28,000']].map(([k,v]) => (
+            {[['पैकेज (9N/10D)','₹13,900–₹30,000'],['केदारनाथ घोड़ा','₹3,500–₹4,500'],['पंजीकरण','मुफ्त (₹0)'],['ट्रेन दिल्ली–हरिद्वार','₹200–₹700'],['10 दिन खाने-पीने का','₹1,500–₹3,000'],['कुल (बजट यात्री)','₹22,000–₹28,000']].map(([k,v]) => (
               <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13.5, color: '#FFD166' }}>{v}</div></div>
             ))}
           </div>
@@ -101,9 +101,9 @@ export default function CharDhamKharcha() {
             <thead><tr style={{ background: 'var(--navy)' }}>{['यात्रा का प्रकार','खर्चा (प्रति व्यक्ति)','दिन','क्या शामिल'].map(h => (<th key={h} style={{ padding: '10px 12px', textAlign: 'left', color: '#fff', fontWeight: 700, fontSize: 12 }}>{h}</th>))}</tr></thead>
             <tbody>
               {[
-                ['बजट पैकेज','₹18,500','10-11 दिन','साझा टेम्पो, बजट होटल, खाना, VIP दर्शन'],
+                ['बजट पैकेज','₹13,900','10-11 दिन','साझा टेम्पो, बजट होटल, खाना, VIP दर्शन'],
                 ['डीलक्स पैकेज','₹30,000','11-12 दिन','प्राइवेट इनोवा, 3-स्टार होटल, गाइड'],
-                ['सीनियर स्पेशल','₹27,999','12-13 दिन','घोड़ा शुल्क शामिल, ग्राउंड फ्लोर कमरा'],
+                ['सीनियर स्पेशल','₹21,000','12-13 दिन','घोड़ा शुल्क शामिल, ग्राउंड फ्लोर कमरा'],
                 ['हेलिकॉप्टर','₹2,30,000','5-6 दिन','सभी 4 धाम हेलिकॉप्टर चार्टर से, VIP दर्शन'],
               ].map(([type,price,days,inc],i) => (
                 <tr key={type} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
@@ -117,7 +117,7 @@ export default function CharDhamKharcha() {
           </table>
         </div>
         <p style={{ ...p, fontSize: 13.5, background: 'rgba(29,158,117,0.08)', padding: '12px 16px', borderRadius: 8, borderLeft: '3px solid #1D9E75' }}>
-          <strong>शिव गंगा ट्रेवल्स का बेसिक पैकेज ₹18,500 से शुरू होता है</strong> — इसमें गाड़ी, होटल, खाना, गाइड और VIP दर्शन सब शामिल हैं। कोई छुपा खर्चा नहीं।
+          <strong>शिव गंगा ट्रेवल्स का बेसिक पैकेज ₹13,900 से शुरू होता है</strong> — इसमें गाड़ी, होटल, खाना, गाइड और VIP दर्शन सब शामिल हैं। कोई छुपा खर्चा नहीं।
         </p>
 
         <h2 id="breakdown" style={h2}>हर मद का अलग-अलग हिसाब</h2>
@@ -151,7 +151,7 @@ export default function CharDhamKharcha() {
             <tbody>
               {[
                 ['रामपुर से हरिद्वार ट्रेन (4 लोग, return)','₹4,800'],
-                ['शिव गंगा ट्रेवल्स पैकेज (₹18,500 × 4)','₹74,000'],
+                ['शिव गंगा ट्रेवल्स पैकेज (₹13,900 × 4)','₹55,600'],
                 ['प्रसाद और पूजा','₹3,000'],
                 ['माँ के लिए घोड़ा (केदारनाथ + यमुनोत्री)','₹8,000'],
                 ['छोटे-मोटे खर्चे','₹2,500'],
@@ -179,7 +179,7 @@ export default function CharDhamKharcha() {
                 ['MakeMyTrip','₹29,000–₹32,000','15–20%'],
                 ['Thrillophilia','₹24,000–₹27,000','12–18%'],
                 ['लोकल एजेंट (बिचौलिया)','₹22,000–₹25,000','8–15%'],
-                ['शिव गंगा ट्रेवल्स (सीधे)','₹18,500','0% (शून्य)'],
+                ['शिव गंगा ट्रेवल्स (सीधे)','₹13,900','0% (शून्य)'],
               ].map(([ch,price,comm],i) => (
                 <tr key={ch} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3?'rgba(29,158,117,0.06)':i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'10px 12px', fontWeight: i===3?800:600, color:'var(--navy)' }}>{ch}{i===3 && <span style={{ background:'rgba(29,158,117,0.15)', color:'#1D9E75', fontSize:10, fontWeight:700, padding:'2px 7px', borderRadius:20, marginLeft:8 }}>सबसे सस्ता</span>}</td>
@@ -203,15 +203,6 @@ export default function CharDhamKharcha() {
               <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.7 }}>{a}</div>
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>अभी Free Quote लें — 2 घंटे में जवाब</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>अपनी तारीख, शहर और ग्रुप का साइज बताएं — हम पूरा खर्चे का हिसाब भेजते हैं। कोई बाध्यता नहीं।</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Char Dham Yatra 2026 ka kharcha jaanna hai. Please quote karein.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 WhatsApp पर पूछें</a>
-            🧮 खर्चा Calculator →
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

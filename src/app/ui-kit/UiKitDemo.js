@@ -125,7 +125,7 @@ export default function UiKitDemo() {
               </Select>
             </CardContent>
             <CardFooter className="justify-between">
-              <span className="text-2xl font-bold text-navy">₹18,500</span>
+              <span className="text-2xl font-bold text-navy">₹13,900</span>
               <Button variant="secondary">Enquire</Button>
             </CardFooter>
           </Card>

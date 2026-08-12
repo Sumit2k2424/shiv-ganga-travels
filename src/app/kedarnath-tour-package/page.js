@@ -5,8 +5,8 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999 | Hotels & Transport Included' },
-  description: 'Kedarnath Tour Package 2026 — 3N/4D from ₹6,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
+  title: { absolute: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250 | Hotels & Transport Included' },
+  description: 'Kedarnath Tour Package 2026 — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
   keywords: [
     'kedarnath tour package', 'kedarnath yatra package', 'kedarnath tour package 2026',
     'kedarnath package from haridwar', 'kedarnath trip cost', 'kedarnath tour package price',
@@ -14,7 +14,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-tour-package` },
   openGraph: {
-    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999 | Hotels & Transport Included',
+    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250 | Hotels & Transport Included',
     description:
       'Customizable itinerary, pony & helicopter rates, and 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
     url: `${SITE.baseUrl}/kedarnath-tour-package`,
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹6,999',
+    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250',
     description: 'Kedarnath 3N/4D from Haridwar. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
     images: [{ url: '/opengraph-image', alt: 'Kedarnath Tour Package 2026 from Haridwar' }],
   },
@@ -33,8 +33,8 @@ const URL = `${SITE.baseUrl}/kedarnath-tour-package`;
 
 // ── Pricing tiers (final price depends on group size, hotel category & season — quote is free) ──
 const TIERS = [
-  { name: 'Group / Shared', stay: 'Camps & guesthouses', vehicle: 'Tempo Traveller (shared)', price: '₹6,999', note: 'Best value · fixed-group departures' },
-  { name: 'Deluxe', stay: '3★ hotels at Guptkashi', vehicle: 'Innova / Ertiga', price: '₹9,999', note: 'Private cab · most-booked family option' },
+  { name: 'Group / Shared', stay: 'Camps & guesthouses', vehicle: 'Tempo Traveller (shared)', price: '₹5,250', note: 'Best value · fixed-group departures' },
+  { name: 'Deluxe', stay: '3★ hotels at Guptkashi', vehicle: 'Innova / Ertiga', price: '₹7,500', note: 'Private cab · most-booked family option' },
   { name: 'Private / Premium', stay: 'Premium hotels + Kedarnath night stay', vehicle: 'Innova Crysta (private)', price: '₹13,500', note: 'Fully customised · pace of your choosing' },
 ];
 
@@ -85,11 +85,11 @@ const FARES = [
 ];
 
 const FAQ = [
-  { q: 'What is the cost of a Kedarnath tour package from Haridwar in 2026?', a: 'A Kedarnath tour package from Haridwar starts at ₹6,999 per person for a 3N/4D trip on shared transport with camp/guesthouse stay. Deluxe with a 3★ hotel and Innova runs around ₹9,999, and a fully private premium package is about ₹13,500. The exact price moves with your group size, hotel category and travel dates — so enquiring costs you nothing and we send a fixed quote, no advance needed.' },
+  { q: 'What is the cost of a Kedarnath tour package from Haridwar in 2026?', a: 'A Kedarnath tour package from Haridwar starts at ₹5,250 per person for a 3N/4D trip on shared transport with camp/guesthouse stay. Deluxe with a 3★ hotel and Innova runs around ₹7,500 and a fully private premium package is about ₹13,500. The exact price moves with your group size, hotel category and travel dates — so enquiring costs you nothing and we send a fixed quote, no advance needed.' },
   { q: 'How many days does the Kedarnath yatra take from Haridwar?', a: 'Four days by road from Haridwar is the comfortable standard: drive to Guptkashi (Day 1), trek up and stay at Kedarnath (Day 2), darshan and descend (Day 3), drive back (Day 4). With a helicopter from Phata or Guptkashi you can compress it to 2 days, and a same-day darshan is possible if you fly both ways and the weather holds.' },
   { q: 'Is the 16 km Kedarnath trek mandatory, or can I take a pony or helicopter?', a: 'The trek is not mandatory. The temple sits 16 km uphill from Gaurikund and you can cover it on foot, by pony (₹3,500–4,500 one way), by palki (₹8,000–12,000 round trip), or skip the climb entirely with a helicopter from Sirsi, Phata or Guptkashi. We arrange whichever suits your fitness and budget.' },
   { q: 'When does Kedarnath temple open in 2026 and is registration compulsory?', a: 'Kedarnath temple opened on 22 April 2026 at 8:00 AM and stays open until around 23 October (Bhai Dooj). Registration is compulsory for every pilgrim — no pass, no entry past the Sonprayag checkpoint. We complete the registration on the government portal for all package guests and hand you the QR e-pass.' },
-  { q: 'How much does it cost to do Kedarnath on your own versus a package?', a: 'Done solo on a tight budget, Kedarnath from Haridwar works out to roughly ₹6,000–14,000 once you add transport, three nights stay, the Sonprayag shuttle, food and a weather buffer. A package at ₹6,999 covers the same ground with the stay, meals, transport and registration locked in — so for most pilgrims the package costs about the same as DIY but removes the hotel-hunting and last-minute price spikes during peak season.' },
+  { q: 'How much does it cost to do Kedarnath on your own versus a package?', a: 'Done solo on a tight budget, Kedarnath from Haridwar works out to roughly ₹6,000–14,000 once you add transport, three nights stay, the Sonprayag shuttle, food and a weather buffer. A package at ₹5,250 covers the same ground with the stay, meals, transport and registration locked in — so for most pilgrims the package costs about the same as DIY but removes the hotel-hunting and last-minute price spikes during peak season.' },
   { q: 'Is the Kedarnath tour package suitable for senior citizens and families?', a: 'Yes — it is our most-booked family trip. We arrange ground-floor rooms, a slower pace, and pony or palki at the trek so elders never have to walk. For anyone over 55 or with a heart, BP, asthma or diabetes condition, carry a doctor\'s fitness note; the state advises a basic health check for that age group. Tell us in advance and we adjust the plan around your group.' },
 ];
 
@@ -109,7 +109,7 @@ function Schema() {
     description: 'A 3 nights / 4 days Kedarnath Dham yatra from Haridwar with stay, meals, transport, registration and trek or helicopter options.',
     touristType: ['Pilgrims', 'Families', 'Senior citizens'],
     itinerary: ITINERARY.map((d, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'TouristAttraction', name: d.title } })),
-    offers: { '@type': 'Offer', priceCurrency: 'INR', price: '6999', availability: 'https://schema.org/InStock', url: URL, validFrom: '2026-04-22' },
+    offers: { '@type': 'Offer', priceCurrency: 'INR', price: '5250', availability: 'https://schema.org/InStock', url: URL, validFrom: '2026-04-22' },
     provider: { '@type': 'TravelAgency', name: SITE.name, url: SITE.baseUrl },
   };
   const agency = {
@@ -171,7 +171,7 @@ export default function KedarnathTourPackage() {
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.8rem,4.5vw,3rem)', marginBottom: 16 }}>Kedarnath Tour Package 2026 — from Haridwar</h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>
             A real 3N/4D yatra to the 12th Jyotirlinga — stay, meals, transport and registration handled.<br />
-            From <strong style={{ color: '#FFD166' }}>₹6,999</strong>/person · Trek · Pony · Helicopter · Direct operator since 2010
+            From <strong style={{ color: '#FFD166' }}>₹5,250</strong>/person · Trek · Pony · Helicopter · Direct operator since 2010
           </p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
             <a href={wa('Namaste! Please send me a Kedarnath tour package quote for 2026.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Get Free Quote</a>
@@ -187,7 +187,7 @@ export default function KedarnathTourPackage() {
         <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season: Apr 22 – Oct 2026</div>
 
         <AnswerBox>
-          A Kedarnath tour package from Haridwar is a 3N/4D yatra to the 12th Jyotirlinga starting at <strong>₹6,999 per person</strong> — covering road transfers, three nights stay, breakfast and dinner, and your mandatory Yatra registration. The temple opened on <strong>22 April 2026</strong>; the shrine sits 16 km uphill from Gaurikund, reachable on foot, by pony, or by helicopter. Enquiring is free and needs no advance.
+          A Kedarnath tour package from Haridwar is a 3N/4D yatra to the 12th Jyotirlinga starting at <strong>₹5,250 per person</strong> — covering road transfers, three nights stay, breakfast and dinner, and your mandatory Yatra registration. The temple opened on <strong>22 April 2026</strong>; the shrine sits 16 km uphill from Gaurikund, reachable on foot, by pony, or by helicopter. Enquiring is free and needs no advance.
         </AnswerBox>
 
         <p style={p}>Let me be straight with you about what a Kedarnath tour package actually buys, because most pages dodge it. You are paying someone who knows the road to handle the boring, expensive-to-get-wrong parts — the Guptkashi hotel that does not exist on booking sites, the 3:30 AM start that gets you onto the trail before the crowd, the registration that turns pilgrims back at Sonprayag if it is missing. We have run this exact route every season since 2010. Here is everything, prices included.</p>
@@ -239,7 +239,7 @@ export default function KedarnathTourPackage() {
         <h2 style={h2}>DIY vs package: the honest Kedarnath trip cost breakdown</h2>
         <p style={p}>People ask whether they should just do it themselves. Fair question. Here is what a budget solo trip from Haridwar actually adds up to, so you can compare like for like.</p>
         <Table head={['Doing it yourself', 'Rough cost']} rows={COST_DIY} />
-        <p style={p}>Add it up and a careful solo pilgrim lands somewhere around <strong>₹6,000–14,000</strong> — and that is before a single thing goes wrong with hotel availability in peak May. Our ₹6,999 package sits right at the bottom of that range with the stay, meals, transport and registration already locked, plus a number you can call when the road shuts. For most people the package is not more expensive than DIY; it just moves the risk off your shoulders. If you genuinely love planning logistics and have flexible dates, doing it yourself is a perfectly good option — and we will still help you with registration.</p>
+        <p style={p}>Add it up and a careful solo pilgrim lands somewhere around <strong>₹6,000–14,000</strong> — and that is before a single thing goes wrong with hotel availability in peak May. Our ₹5,250 package sits right at the bottom of that range with the stay, meals, transport and registration already locked, plus a number you can call when the road shuts. For most people the package is not more expensive than DIY; it just moves the risk off your shoulders. If you genuinely love planning logistics and have flexible dates, doing it yourself is a perfectly good option — and we will still help you with registration.</p>
         <p style={p}>A word on <strong>GMVN</strong>, since DIY planners always ask: Garhwal Mandal Vikas Nigam is the state tourism corporation, and its guesthouses at Kedarnath, Gaurikund and Sonprayag (booked at gmvnonline.com) are the reliable government option — clean, fixed-rate, and among the few legal beds at Kedarnath itself. The catch is that GMVN rooms for May–June sell out within days of bookings opening, and GMVN sells rooms, not trips: transport, meals down the valley and registration are still on you. Our packages use private hotels at Guptkashi/Sitapur for exactly that reason — inventory we can actually guarantee — and we add the Kedarnath night stay (GMVN or private camp, whichever we can confirm for your date) in the Premium tier.</p>
 
         <h2 style={h2}>The 16 km trek, pony, palki &amp; helicopter — rates and reality</h2>

@@ -264,10 +264,11 @@ export default function KedarnathTrekGuide() {
               <div style={{ fontSize:12.5, color:'#dc2626', lineHeight:1.65 }}>⚠️ {s.cons}</div>
             </div>          ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="kedarnath" />
 
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="kedarnath" />
         <p style={p}><strong>Our honest advice:</strong> If you are travelling with family or elderly parents, stay at <strong>Guptkashi or Sonprayag</strong> and do the trek as a day trip. Start at 4–5AM, reach Kedarnath by noon, complete darshan, and descend by evening. Comfort at the base is dramatically better, and the trek itself is unchanged.</p>
 
         {/* TRANSPORT */}
@@ -375,16 +376,6 @@ export default function KedarnathTrekGuide() {
         </div>
 
         {/* CTA */}
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center' }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Kedarnath Yatra?</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:20 }}>We handle pony/palki/helicopter bookings, biometric registration, and VIP darshan. ₹6,999 all-inclusive.</p>
-          <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            <Link href="/kedarnath-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Package →</Link>
-          </div>
-        </div>
-
       
         {/* Author bio card — E-E-A-T */}
         <BlogAuthor variant="bottom" author="sumit" />

@@ -27,7 +27,7 @@ function Schema() {
       { '@type': 'Question', name: 'Is Char Dham Yatra safe for someone doing it alone?',
         acceptedAnswer: { '@type': 'Answer', text: 'Solo Char Dham Yatra is possible but not recommended for first timers. The mountain roads, Kedarnath trek, altitude effects, and daily pilgrim limits require experience to navigate confidently. Solo pilgrims should travel with an organised group or hire a private guide. Shiv Ganga Travels accepts solo pilgrims and places them in small groups of compatible travellers.' }},
       { '@type': 'Question', name: 'How much should I budget for my first Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹18,500–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'A complete 10-night Char Dham Yatra from Haridwar costs ₹13,900–28,000 per person all-inclusive with Shiv Ganga Travels. Add ₹8,000–12,000 for personal expenses (pony at Kedarnath, personal pujas, tips, snacks). Total realistic budget: ₹27,000–40,000 per person. MakeMyTrip and Thrillophilia charge ₹30,000–35,000 for the same package due to agent commissions. Direct operator booking with us saves 10–20%.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
@@ -52,7 +52,7 @@ export default function FirstTimerGuide() {
         readTime="12 min read"
         facts={[
           { label:'Duration',   value:'10–12 days' },
-          { label:'From',       value:'₹18,500 pp' },
+          { label:'From',       value:'₹13,900 pp' },
           { label:'Best months', value:'May & Sep–Oct' },
           { label:'Register',   value:'Free · mandatory' },
         ]}
@@ -192,7 +192,7 @@ export default function FirstTimerGuide() {
             </tr></thead>
             <tbody>
               {[
-                ['10N/11D Package (Shiv Ganga Travels)','₹18,500','₹24,000','Vehicle, hotel, meals, guide, VIP darshan'],
+                ['10N/11D Package (Shiv Ganga Travels)','₹13,900','₹24,000','Vehicle, hotel, meals, guide, VIP darshan'],
                 ['Pony at Kedarnath (one way)','₹3,000','₹5,000','One way from Gaurikund — optional'],
                 ['Personal pujas at dhams','₹1,000','₹5,000','Prasad, offerings — personal choice'],
                 ['Snacks and personal drinks','₹1,000','₹2,000','Tea stops, packaged food, ORS'],
@@ -245,20 +245,6 @@ export default function FirstTimerGuide() {
           </div>
         ))}
         <p style={{ marginTop:16 }}>Shiv Ganga Travels has been answering all five questions since 2010. We own our fleet of 20+ AC vehicles, employ our drivers directly, pre-block hotels by name from January, and are registered with Uttarakhand Tourism. See our cancellation policy →</p>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Ready for Your First Char Dham Yatra?</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:20 }}>Free custom itinerary · Zero commission · Direct operator since 2010</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I am planning my first Char Dham Yatra 2026. Please share packages and advice.')}`}
-              target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>
-              💬 WhatsApp — Free Advice
-            </a>
-            <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>
-              📞 {SITE.phone}
-            </a>
-          </div>
-        </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides for First Timers</div>

@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'September Char Dham Yatra 2026 | Price Starts at ₹18,500 | Post-Monsoon' },
+  title: { absolute: 'September Char Dham Yatra 2026 | Price Starts at ₹13,900 | Post-Monsoon' },
   description: 'September Char Dham Yatra 2026 — clearest skies of the year. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['september char dham yatra package 2026', 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
@@ -17,7 +17,7 @@ export const metadata = {
 
 const FAQS = [
   { q:'Is September a good month for Char Dham Yatra?', a:'The second half of September is one of the two best windows of the year (the other is early October). The monsoon withdraws, skies clear, peaks carry fresh snow, and the May–June crowds are long gone. The first week of September can still catch the monsoon tail, so we advise starting from around September 15 onwards.' },
-  { q:'What is the price of a September Char Dham package from Haridwar?', a:'Our 9 nights / 10 days Char Dham package starts at ₹18,500 per person (budget) and ₹30,000 per person (deluxe) from Haridwar. September pricing is the same as our published rates — we do not add season surcharges — and off-season hotel savings are already built in.' },
+  { q:'What is the price of a September Char Dham package from Haridwar?', a:'Our 9 nights / 10 days Char Dham package starts at ₹13,900 per person (budget) and ₹30,000 per person (deluxe) from Haridwar. September pricing is the same as our published rates — we do not add season surcharges — and off-season hotel savings are already built in.' },
   { q:'When should I book a September or October Char Dham trip?', a:'By early August, ideally. Everyone who postponed a monsoon trip aims for the same mid-September to mid-October window, so good hotels in Guptkashi, Badrinath and Barkot fill first. Pre-booking costs nothing extra with us and locks your dates, vehicle and hotels.' },
   { q:'How is the weather at Kedarnath in September?', a:'Daytime 10–15°C, nights 3–7°C, occasional light showers in the first half of the month and mostly clear after mid-September. Carry proper warm layers for early mornings — the 4 AM Mahabhishek queue is cold even when the day is pleasant.' },
   { q:'Is the Kedarnath trek open in September?', a:'Yes, the trek, ponies, palkis and helicopter services all operate through September and October until the temple closes in November. Helicopters actually fly more reliably after the monsoon because visibility improves.' },
@@ -70,14 +70,14 @@ export default function Page() {
       <BlogHero
         badge="Beat the Monsoon · Autumn 2026 Pre-Booking Open"
         title="September Char Dham Yatra 2026 — The Window Locals Wait For"
-        dek="Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹18,500 · Book by August"
+        dek="Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹13,900 · Book by August"
         author="Sumit Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="7 min read"
         facts={[
           { label:'Best window', value:'Sep 15 – Oct 15' },
           { label:'Crowds',      value:'A fraction of May' },
-          { label:'Packages from', value:'₹18,500' },
+          { label:'Packages from', value:'₹13,900' },
           { label:'Book by',     value:'August' },
         ]}
       />
@@ -158,11 +158,11 @@ export default function Page() {
             </tr></thead>
             <tbody>
               {[
-                ['Char Dham Budget','9N / 10D','₹18,500','Families and groups who want the full circuit at honest cost'],
+                ['Char Dham Budget','9N / 10D','₹13,900','Families and groups who want the full circuit at honest cost'],
                 ['Char Dham Deluxe','9N / 10D','₹30,000','Better hotels, more comfort on the long driving days'],
-                ['Do Dham (Kedarnath + Badrinath)','5N / 6D','₹10,999','Limited leave — the two most-visited dhams'],
-                ['Kedarnath','3N / 4D','₹6,999','Short focused darshan trip'],
-                ['Badrinath','2N / 3D','₹5,999','Easiest dham — no trek, drive right up'],
+                ['Do Dham (Kedarnath + Badrinath)','5N / 6D','₹8,200','Limited leave — the two most-visited dhams'],
+                ['Kedarnath','3N / 4D','₹5,250','Short focused darshan trip'],
+                ['Badrinath','2N / 3D','₹4,500','Easiest dham — no trek, drive right up'],
               ].map(([pkg,dur,price,fit],i)=>(
                 <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{pkg}</td>
@@ -190,16 +190,6 @@ export default function Page() {
             <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{f.a}</div>
           </div>
         ))}
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Lock Your Post-Monsoon Dates Now</h3>
-          <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>September 15 – October 15 is the best month of the Char Dham year. Token advance, flexible start date, direct-operator pricing from ₹18,500.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to pre-book a September/October 2026 Char Dham package. Please share dates and availability.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Pre-Book on WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'#fff', color:'var(--navy)', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📖 View Autumn Itineraries →</Link>
-          </div>
-        </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>

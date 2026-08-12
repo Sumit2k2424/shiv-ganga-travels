@@ -5,20 +5,20 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹22,999 | Road & Train Options' },
+  title: { absolute: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹17,200 | Road & Train Options' },
   description: 'Char Dham Yatra from Varanasi 2026 — 800km by road (12–13 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra from varanasi','char dham yatra package from varanasi','varanasi to haridwar char dham','char dham tour from varanasi 2026','chardham yatra varanasi','varanasi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-varanasi` },
   openGraph: {
-    title: 'Char Dham Yatra from Varanasi 2026 — Trains, Flights & Packages from ₹22,999',
-    description: '800 km by road (12–13 hrs) or train. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
+    title: 'Char Dham Yatra from Varanasi 2026 — Trains, Flights & Packages from ₹17,200',
+    description: '800 km by road (12–13 hrs) or train. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-varanasi`, type:'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Varanasi — Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹22,999',
-    description: '800 km by road (12–13 hrs) or train. Char Dham packages from ₹22,999/person. Zero commission, direct Haridwar operator.',
+    title: 'Char Dham Yatra from Varanasi 2026 | Price Starts at ₹17,200',
+    description: '800 km by road (12–13 hrs) or train. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Varanasi — Shiv Ganga Travels' }],
   },
 };
@@ -28,7 +28,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'FAQPage',
     mainEntity:[
       { '@type':'Question', name:'How to reach Haridwar from Varanasi for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Varanasi (VNS) to Dehradun — no direct flight. Fly VNS to Delhi (1h 20m, ₹2,500–4,500) and connect by Shatabdi. Total: 9–10 hrs. Flying is faster but the direct overnight train is comfortable and scenic.' } },
-      { '@type':'Question', name:'What is the Char Dham Yatra package cost from Varanasi?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Varanasi starts at ₹22,999/person for a 9N/10D all-inclusive package — AC vehicle, hotels, meals, VIP darshan at all 4 dhams, guide, registration. Zero commission.' } },
+      { '@type':'Question', name:'What is the Char Dham Yatra package cost from Varanasi?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Varanasi starts at ₹17,200/person for a 9N/10D all-inclusive package — AC vehicle, hotels, meals, VIP darshan at all 4 dhams, guide, registration. Zero commission.' } },
       { '@type':'Question', name:'How many days for Char Dham Yatra from Varanasi?', acceptedAnswer:{ '@type':'Answer', text:'Plan 11–13 days from Varanasi: 1 day travel to Haridwar + 9–10 days Char Dham circuit + 1–2 days return.' } },
     ],
   };
@@ -48,7 +48,7 @@ const PAA = [
   { q:'How far is Char Dham Yatra from Varanasi?', a:'Varanasi to Haridwar — the gateway to the dhams — is roughly 800 km. The full Char Dham circuit then covers about 1,100–1,400 km from Haridwar and back.' },
   { q:'How do I reach Haridwar from Varanasi?', a:'From Varanasi it\'s about 800 km to Haridwar. Best options: road (12–13 hrs) or train. Jolly Grant Airport, Dehradun is the nearest airport (35 km from Haridwar); Haridwar Junction is the nearest railhead. From there the circuit begins.' },
   { q:'How many days are needed for Char Dham Yatra from Varanasi?', a:'Plan 10–12 days for the full road circuit including travel from Varanasi. By helicopter (flying from Dehradun) the on-ground portion drops to 5–6 days. Senior citizens should allow a couple of extra days for acclimatisation.' },
-  { q:'What is the cost of Char Dham Yatra from Varanasi?', a:'Our all-inclusive road packages start from ₹22,999 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
+  { q:'What is the cost of Char Dham Yatra from Varanasi?', a:'Our all-inclusive road packages start from ₹17,200 per person, covering vehicle from Haridwar, hotels, meals, guide, VIP darshan and free registration. The helicopter package runs about ₹2.2–2.4 lakh. Train or flight fare to Haridwar/Dehradun is usually separate.' },
   { q:'What is the best time for Char Dham Yatra from Varanasi?', a:'May–June and September–October, matching the temple season — the 2026 dhams open between April 19 and 23. Book early for these peak windows and avoid the July–August monsoon, when landslides can delay the mountain stretches.' },
   { q:'Is Char Dham Yatra registration mandatory?', a:'Yes. Free biometric registration is compulsory for all four dhams and checked at police barriers like Sonprayag. Register online at registrationandtouristcare.uk.gov.in before travelling — we complete it free for everyone in our packages.' },
 ];
@@ -72,7 +72,7 @@ export default function Page() {
             Char Dham Yatra from Varanasi 2026
           </h1>
           <p style={{ color:'rgba(255,255,255,0.85)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto 20px' }}>
-            800 km by road (12–13 hrs) or train · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹22,999' }/person</strong> · Zero commission
+            800 km by road (12–13 hrs) or train · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹17,200' }/person</strong> · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
             {['✈️ Fly via Dehradun','✅ Zero commission','🙏 VIP darshan included','⭐ 4.6/5 · 38 reviews'].map(t=>(
@@ -99,12 +99,12 @@ export default function Page() {
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open: Apr 19 – Nov 2026</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
-          {[['Distance','800 km'],['Best route','Fly to Dehradun/Delhi'],['Total trip','11–13 days'],['Package from','₹22,999/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(
+          {[['Distance','800 km'],['Best route','Fly to Dehradun/Delhi'],['Total trip','11–13 days'],['Package from','₹17,200/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(
             <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{v}</div></div>
           ))}
         </div>
 
-        <p style={p}><strong>Char Dham Yatra from Varanasi 2026:</strong> The distance from Varanasi to Haridwar is approximately 800km. Varanasi (VNS) to Dehradun — no direct flight. Fly VNS to Delhi (1h 20m, ₹2,500–4,500) and connect by Shatabdi. Total: 9–10 hrs. Flying is faster but the direct overnight train is comfortable and scenic. Our all-inclusive 9N/10D package from Varanasi is ₹22,999/person — covers the full circuit with AC vehicle, hotels, meals, VIP darshan, and guide. Everything on this page is specific to Varanasi pilgrims.</p>
+        <p style={p}><strong>Char Dham Yatra from Varanasi 2026:</strong> The distance from Varanasi to Haridwar is approximately 800km. Varanasi (VNS) to Dehradun — no direct flight. Fly VNS to Delhi (1h 20m, ₹2,500–4,500) and connect by Shatabdi. Total: 9–10 hrs. Flying is faster but the direct overnight train is comfortable and scenic. Our all-inclusive 9N/10D package from Varanasi is ₹17,200/person — covers the full circuit with AC vehicle, hotels, meals, VIP darshan, and guide. Everything on this page is specific to Varanasi pilgrims.</p>
 
         <h2 style={h2}>How to Reach Haridwar from Varanasi</h2>
         <p style={p}>All our packages start from Haridwar. Getting there from Varanasi is your first step. Actual train names, timings and costs below:</p>
@@ -157,7 +157,7 @@ export default function Page() {
           ))}
         </div>
         <div style={{ background:'rgba(29,158,117,0.08)', border:'1px solid #1D9E75', borderRadius:10, padding:'12px 16px', marginBottom:24, fontSize:13.5, color:'#0F5132' }}>
-          <strong>Package from Varanasi:</strong> ₹22,999/person · 9N/10D · All-inclusive · 5% GST included · Zero commission — you pay us directly
+          <strong>Package from Varanasi:</strong> ₹17,200/person · 9N/10D · All-inclusive · 5% GST included · Zero commission — you pay us directly
         </div>
 
         <h2 style={h2}>Our Pickup Points in Varanasi</h2>
@@ -182,7 +182,7 @@ export default function Page() {
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:32 }}>
           <div style={{ color:'#FFD166', fontSize:13, fontWeight:700, marginBottom:6 }}>🙏 Varanasi → Haridwar → Char Dham</div>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:8 }}>Book Your Char Dham Yatra from Varanasi</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free itinerary in 2 hrs · ₹22,999/person · Zero commission · Registration handled free</p>
+          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:18 }}>Free itinerary in 2 hrs · ₹17,200/person · Zero commission · Registration handled free</p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Char Dham Yatra 2026 from Varanasi.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp — Book Now</a>

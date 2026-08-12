@@ -170,10 +170,11 @@ export default function RoadConditions() {
               <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.65 }}>{item.detail}</div>
             </div>          ))}
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="route" />
 
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="route" />
 
         <h2 id="live-status" style={h2}>How to Check Live Road Status</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
@@ -189,16 +190,6 @@ export default function RoadConditions() {
               <span style={{ color: '#475569' }}>{item.detail}</span>
             </div>
           ))}
-        </div>
-
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>Our Drivers Know These Roads Better Than Google Maps</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>15 seasons, 50,000+ pilgrims. Our Haridwar-based drivers have daily contact with the BRO, police checkposts, and fellow operators on these routes. Real-time updates are part of every package.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Can you check the current Char Dham road conditions? I am planning travel soon.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Ask Road Status</a>
-            Book Package →
-          </div>
         </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>

@@ -7,13 +7,13 @@ const SLUG = 'char-dham-yatra-marathi';
 const noto = Noto_Sans_Devanagari({ subsets: ['devanagari'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: { absolute: 'चार धाम यात्रा 2026 | ₹18,500 पासून | संपूर्ण माहिती मराठीत' },
-  description: 'चार धाम यात्रा 2026 — हरिद्वारहून 9 रात्री/10 दिवस ₹18,500 पासून. थेट ऑपरेटर, एजंट कमिशन नाही, नोंदणी मोफत.',
+  title: { absolute: 'चार धाम यात्रा 2026 | ₹13,900 पासून | संपूर्ण माहिती मराठीत' },
+  description: 'चार धाम यात्रा 2026 — हरिद्वारहून 9 रात्री/10 दिवस ₹13,900 पासून. थेट ऑपरेटर, एजंट कमिशन नाही, नोंदणी मोफत.',
   keywords: ['चार धाम यात्रा मराठी','char dham yatra in marathi','चार धाम यात्रा माहिती','चार धाम यात्रा खर्च मराठी','मुंबईहून चार धाम यात्रा','chardham yatra marathi guide'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {
     title: 'चार धाम यात्रा 2026 — संपूर्ण माहिती मराठीत | Shiv Ganga Travels',
-    description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ. हरिद्वारहून ₹18,500 पासून. थेट ऑपरेटर, नोंदणी मोफत.',
+    description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ. हरिद्वारहून ₹13,900 पासून. थेट ऑपरेटर, नोंदणी मोफत.',
     url: `${SITE.baseUrl}/${SLUG}`,
     type: 'website',
     locale: 'mr_IN',

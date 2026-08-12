@@ -128,7 +128,7 @@ export default function KedarnathHeight() {
 
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center' }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Kedarnath Package with Acclimatisation Night Built In</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>3N/4D from ₹6,999 · Guptkashi halt before the climb · Direct Haridwar operator since 2010</p>
+        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>3N/4D from ₹5,250 · Guptkashi halt before the climb · Direct Haridwar operator since 2010</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want details for the Kedarnath 3N/4D package.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           <a href="tel:+917817996730" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>

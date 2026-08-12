@@ -7,7 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹5,999 | Timings & Route' },
+  title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹4,500 | Timings & Route' },
   description: 'Badrinath Yatra 2026 guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['badrinath yatra guide 2026', 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', 'badrinath yatra package 2026', 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
@@ -24,7 +24,7 @@ export default function BadrinathYatraGuide() {
     <BlogHero
       badge="Yatra Guide · 2026"
       title="Badrinath Yatra Guide 2026 — Temple, Timings & Travel Tips"
-      dek="3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹5,999"
+      dek="3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹4,500"
       author="Sumit Mishra"
       updated="Updated 2026"
       readTime="6 min read"
@@ -32,7 +32,7 @@ export default function BadrinathYatraGuide() {
         { label:'Altitude', value:'3,133 m' },
         { label:'Deity',    value:'Lord Vishnu' },
         { label:'Access',   value:'Road — no trek' },
-        { label:'Package from', value:'₹5,999' },
+        { label:'Package from', value:'₹4,500' },
       ]}
     />
 
@@ -112,15 +112,13 @@ export default function BadrinathYatraGuide() {
         ))}
       </div>
 
-      <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
-        <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Book Badrinath Yatra Package</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:14, marginBottom:18 }}>₹5,999 per person · 2N/3D from Haridwar · All-inclusive · VIP darshan arranged</p>
-        <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:8, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 Book Now</a>
-          <Link href="/badrinath-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View Package →</Link>
-        </div>
-      </div>
-    
+      <BlogCTA
+        variant="note"
+        line="Our Badrinath package runs 2N/3D from Haridwar at ₹4,500 per person, all-inclusive, with VIP darshan arranged."
+        href="/badrinath-yatra"
+        linkLabel="See the Badrinath package"
+      />
+
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />
 </article>

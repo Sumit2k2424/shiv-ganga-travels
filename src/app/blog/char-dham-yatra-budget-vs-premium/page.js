@@ -8,8 +8,8 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Budget vs Premium 2026 | Price Starts at ₹18,500 | Compared' },
-  description: 'Budget Char Dham (₹18,500) vs Premium (₹38,000+) — honest comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  title: { absolute: 'Char Dham Budget vs Premium 2026 | Price Starts at ₹13,900 | Compared' },
+  description: 'Budget Char Dham (₹13,900) vs Premium (₹38,000+) — honest comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['char dham yatra budget vs premium', 'char dham yatra package comparison 2026', 'is premium char dham package worth it', 'char dham yatra deluxe vs budget', 'char dham luxury package vs budget'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium` },
   openGraph: { title: 'Char Dham Budget vs Premium Package: What Changes?', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article' },
@@ -21,7 +21,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the difference between budget and premium Char Dham Yatra package?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Budget packages (₹18,500–22,000) use 3-star equivalent guesthouses, shared AC vehicle (Innova Crysta for group), and basic veg meals. Premium packages (₹35,000–50,000) use 4-star hotels, private Innova Crysta or Hycross for couples/small groups, and better meal options. The darshan experience and spiritual value are identical in both packages.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Budget packages (₹13,900–22,000) use 3-star equivalent guesthouses, shared AC vehicle (Innova Crysta for group), and basic veg meals. Premium packages (₹35,000–50,000) use 4-star hotels, private Innova Crysta or Hycross for couples/small groups, and better meal options. The darshan experience and spiritual value are identical in both packages.' }},
       { '@type': 'Question', name: 'Is a premium Char Dham Yatra package worth the extra cost?',
         acceptedAnswer: { '@type': 'Answer', text: 'For senior citizens (65+), pilgrims with health conditions, couples, and those who value comfort, a premium package is worth the extra ₹12,000–18,000 per person. Better hotels have hot water, room heaters, and ground-floor options critical for senior comfort. Private vehicles mean flexible timings. For young, fit pilgrims in groups of 6+, a budget package delivers the same spiritual experience at lower cost.' }},
     ],
@@ -50,12 +50,12 @@ export default function BudgetVsPremium() {
       <BlogHero
         badge="Honest Comparison · 2026"
         title="Char Dham Yatra — Budget vs Premium Package 2026"
-        dek="What actually changes between ₹18,500 and ₹50,000 per person · Honest breakdown from a 15-year operator"
+        dek="What actually changes between ₹13,900 and ₹50,000 per person · Honest breakdown from a 15-year operator"
         author="Sumit Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
-          { label:'Budget',  value:'₹18,500 pp' },
+          { label:'Budget',  value:'₹13,900 pp' },
           { label:'Premium', value:'₹50,000 pp' },
           { label:'Same',    value:'Route & darshan' },
           { label:'Differs', value:'Hotels & vehicle' },
@@ -73,19 +73,19 @@ export default function BudgetVsPremium() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹18,500) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹13,900) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
-          Every pilgrim asks the same question: <em>"Is it worth paying ₹35,000 when there’s a ₹18,500 package available?"</em> After 15 years and 50,000+ pilgrims, the honest answer from Shiv Ganga Travels is: <strong>it depends entirely on your age, group size, and priorities.</strong> Here is the complete breakdown of what actually changes.
+          Every pilgrim asks the same question: <em>"Is it worth paying ₹35,000 when there’s a ₹13,900 package available?"</em> After 15 years and 50,000+ pilgrims, the honest answer from Shiv Ganga Travels is: <strong>it depends entirely on your age, group size, and priorities.</strong> Here is the complete breakdown of what actually changes.
         </p>
 
         {/* Three-tier price summary */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:28 }}>
           {[
-            { tier:'Budget', price:'₹18,500–22,000', icon:'💼', for:'Groups of 6–10 · Fit adults · Budget families', highlight:false },
+            { tier:'Budget', price:'₹13,900–22,000', icon:'💼', for:'Groups of 6–10 · Fit adults · Budget families', highlight:false },
             { tier:'Standard', price:'₹26,000–32,000', icon:'🏨', for:'Families of 4–6 · Mixed ages · Comfort seekers', highlight:true },
-            { tier:'Premium', price:'₹36,000–50,000', icon:'⭐', for:'Couples · Seniors 65+ · NRIs · Health conditions', highlight:false },
+            { tier:'Premium', price:'₹27,000–50,000', icon:'⭐', for:'Couples · Seniors 65+ · NRIs · Health conditions', highlight:false },
           ].map(t => (
             <div key={t.tier} style={{ borderRadius:12, padding:'16px', textAlign:'center', border:t.highlight?'2px solid var(--gold)':'1px solid hsl(var(--border))', background:t.highlight?'#FFFBF3':'var(--bg)' }}>
               <div style={{ fontSize:28, marginBottom:8 }}>{t.icon}</div>
@@ -137,18 +137,8 @@ export default function BudgetVsPremium() {
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>Our Recommendation Based on 50,000+ Pilgrims</div>
           <p style={{ fontSize:14.5, color:'#334155', lineHeight:1.75, margin:0 }}>
-            For a group of 8 working adults under 50, the Budget package delivers full value — excellent Char Dham experience at ₹18,500. For a family with grandparents above 65, Standard minimum (₹26,000+) is essential — the hotel quality and private vehicle flexibility are not a luxury, they are a health requirement at altitude. For couples or pilgrims who want the deepest darshan experience, Premium at ₹36,000+ earns its price. Never upgrade based on prestige — upgrade based on what genuinely improves your specific situation.
+            For a group of 8 working adults under 50, the Budget package delivers full value — excellent Char Dham experience at ₹13,900. For a family with grandparents above 65, Standard minimum (₹26,000+) is essential — the hotel quality and private vehicle flexibility are not a luxury, they are a health requirement at altitude. For couples or pilgrims who want the deepest darshan experience, Premium at ₹27,000+ earns its price. Never upgrade based on prestige — upgrade based on what genuinely improves your specific situation.
           </p>
-        </div>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Get a Personalised Package Recommendation</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Tell us your group size, ages, and budget — we will suggest the right tier. No upselling, honest advice always. {SITE.phone}</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help choosing between budget and premium Char Dham Yatra package 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.14)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.28)' }}>View All Packages →</Link>
-          </div>
         </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>

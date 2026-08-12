@@ -137,11 +137,12 @@ export default function MedicalCertificate() {
                 <div style={{ fontSize:13.5, color:item.ok?'#15803D':'#9F1239', marginTop:3 }}>{item.note}</div>
               </div>
 
-        {/* ── Mid-article conversion CTA ── */}
-        <BlogCTA variant="inline" intent="info" />
             </div>
           ))}
         </div>
+
+        {/* ── Mid-article conversion CTA ── */}
+        <BlogCTA variant="inline" intent="info" />
 
         <h2 id="when" style={H2}>When to Get the Certificate</h2>
         <p>Get the certificate <strong>no more than 30 days before your yatra start date</strong> and <strong>at least 7 days before departure</strong>. Do not get it too far in advance — checkpoints may question a certificate dated 60+ days before travel.</p>
@@ -150,16 +151,6 @@ export default function MedicalCertificate() {
         <h2 id="without" style={H2}>What Happens Without the Certificate?</h2>
         <p>Biometric registration checkpoints at Sonprayag (for Kedarnath), Joshimath (for Badrinath), Barkot (for Yamunotri), and Uttarkashi (for Gangotri) check documents. A pilgrim aged 55+ without a valid medical certificate will be denied entry and must return to the nearest town.</p>
         <p>There is <strong>no on-the-spot doctor</strong> at these checkpoints who can issue the certificate. There is no way to "explain your way through." The rule has been strictly enforced since 2023 and is even stricter in 2026 following several high-altitude health incidents in previous seasons.</p>
-
-        <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:28 }}>
-          <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>We Guide All Our Pilgrims on the Certificate Process</h3>
-          <p style={{ color:'rgba(255,255,255,0.7)', fontSize:14, marginBottom:18 }}>Shiv Ganga Travels sends a pre-departure checklist 30 days before your yatra — including the exact certificate format for your doctor.</p>
-          <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I need help with the medical certificate for Char Dham Yatra 2026.')}`}
-              target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            Registration Guide →
-          </div>
-        </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related</div>

@@ -34,7 +34,7 @@ function Schema() {
     mainEntity: [
       {
         '@type': 'Question', name: 'What is the cost of a Rishikesh tour package in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Rishikesh tour packages start at ₹3,999 per person for a 1N/2D trip including hotel, Ganga Aarti visit, and Haridwar sightseeing. A 2N/3D Rishikesh + Haridwar combo costs ₹5,999–₹7,999. Add-ons like white water rafting (₹600–800/person), bungee jumping (₹3,500), and ashram stays are available at extra cost. All prices are from Shiv Ganga Travels, a direct operator with zero commission.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Rishikesh tour packages start at ₹3,999 per person for a 1N/2D trip including hotel, Ganga Aarti visit, and Haridwar sightseeing. A 2N/3D Rishikesh + Haridwar combo costs ₹4,500–₹7,999. Add-ons like white water rafting (₹600–800/person), bungee jumping (₹3,500), and ashram stays are available at extra cost. All prices are from Shiv Ganga Travels, a direct operator with zero commission.' },
       },
       {
         '@type': 'Question', name: 'How many days are enough for a Rishikesh trip?',
@@ -42,7 +42,7 @@ function Schema() {
       },
       {
         '@type': 'Question', name: 'What is the best Rishikesh package from Delhi?',
-        acceptedAnswer: { '@type': 'Answer', text: 'From Delhi (290–335km), a popular package is the Haridwar + Rishikesh 2N/3D tour starting at ₹6,999/person. It covers Delhi to Haridwar, Har Ki Pauri evening Ganga Aarti, next day Rishikesh (Ram Jhula, Laxman Jhula, rafting option, Beatles Ashram), and return. By train: Shatabdi from New Delhi to Haridwar (5.5hrs), then 30 min cab to Rishikesh.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'From Delhi (290–335km), a popular package is the Haridwar + Rishikesh 2N/3D tour starting at ₹5,250/person. It covers Delhi to Haridwar, Har Ki Pauri evening Ganga Aarti, next day Rishikesh (Ram Jhula, Laxman Jhula, rafting option, Beatles Ashram), and return. By train: Shatabdi from New Delhi to Haridwar (5.5hrs), then 30 min cab to Rishikesh.' },
       },
       {
         '@type': 'Question', name: 'Can I combine Rishikesh with Char Dham Yatra?',
@@ -120,7 +120,7 @@ export default function RishikeshTourPackages() {
         </div>
 
         <p style={p}>
-          <strong>Rishikesh tour packages from Shiv Ganga Travels start at ₹3,999/person</strong> for a 1N/2D trip covering Triveni Ghat Ganga Aarti, Ram Jhula, Laxman Jhula, and Haridwar sightseeing. The most popular option is the 2N/3D Haridwar + Rishikesh combo at ₹5,999–₹7,999, which many pilgrims book as a pre-Char Dham spiritual stay. Rishikesh sits at 356 metres on the banks of the Ganga, just 24km from Haridwar — the two cities are easily combined in one itinerary.
+          <strong>Rishikesh tour packages from Shiv Ganga Travels start at ₹3,999/person</strong> for a 1N/2D trip covering Triveni Ghat Ganga Aarti, Ram Jhula, Laxman Jhula, and Haridwar sightseeing. The most popular option is the 2N/3D Haridwar + Rishikesh combo at ₹4,500–₹7,999, which many pilgrims book as a pre-Char Dham spiritual stay. Rishikesh sits at 356 metres on the banks of the Ganga, just 24km from Haridwar — the two cities are easily combined in one itinerary.
         </p>
 
         <h2 style={h2}>Rishikesh Tour Packages 2026 — All Options</h2>
@@ -138,7 +138,7 @@ export default function RishikeshTourPackages() {
             {
               name: 'Haridwar + Rishikesh Combo',
               duration: '2N/3D',
-              price: '₹5,999',
+              price: '₹4,500',
               original: '₹8,000',
               badge: 'Best Value',
               includes: ['Haridwar Ganga Aarti', 'Har Ki Pauri darshan', 'Rishikesh full day', 'Ram Jhula, Beatles Ashram', 'AC cab throughout'],
@@ -147,7 +147,7 @@ export default function RishikeshTourPackages() {
             {
               name: 'Rishikesh Adventure Package',
               duration: '2N/3D',
-              price: '₹7,499',
+              price: '₹5,600',
               original: '₹10,000',
               badge: 'Adventure',
               includes: ['White water rafting (16km)', 'Bungee jumping option', 'Camping on river bank', 'Yoga session', 'Haridwar evening Aarti'],
@@ -220,9 +220,9 @@ export default function RishikeshTourPackages() {
             </thead>
             <tbody>
               {[
-                ['Delhi', '290 km', 'NH58 via Meerut or via Haridwar', '5–6 hrs', '₹5,999'],
-                ['Noida / Gurgaon', '270–320 km', 'NH334 via Muzaffarnagar → Haridwar', '4.5–5 hrs', '₹5,999'],
-                ['Chandigarh', '220 km', 'NH7 via Roorkee → Haridwar', '4 hrs', '₹4,999'],
+                ['Delhi', '290 km', 'NH58 via Meerut or via Haridwar', '5–6 hrs', '₹4,500'],
+                ['Noida / Gurgaon', '270–320 km', 'NH334 via Muzaffarnagar → Haridwar', '4.5–5 hrs', '₹4,500'],
+                ['Chandigarh', '220 km', 'NH7 via Roorkee → Haridwar', '4 hrs', '₹3,750'],
                 ['Dehradun', '43 km', 'NH7 direct', '1 hr', '₹3,999'],
                 ['Mumbai', 'Flight to Dehradun + road', 'Fly IndiGo/Air India to DED', '40 min + 1 hr', '₹7,999'],
                 ['Jaipur', '570 km', 'Via Delhi → Haridwar', '9–10 hrs', '₹7,999'],

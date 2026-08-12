@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Adi Kailash Yatra Package 2026 | Price Starts at ₹36,000 | Permit & Om Parvat' },
-  description: 'Adi Kailash Yatra 2026 — 7N/8D road package from Kathgodam, ₹36,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.',
+  title: { absolute: 'Adi Kailash Yatra Package 2026 | Price Starts at ₹27,000 | Permit & Om Parvat' },
+  description: 'Adi Kailash Yatra 2026 — 7N/8D road package from Kathgodam, ₹27,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.',
   keywords: ['adi kailash yatra','adi kailash permit','how to reach adi kailash','adi kailash cost','adi kailash yatra itinerary','om parvat yatra','adi kailash best time to visit','chhota kailash yatra','adi kailash from haridwar','adi kailash inner line permit'],
   alternates: { canonical: `${SITE.baseUrl}/adi-kailash-yatra` },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata = {
 
 const PAA = [
   { q:'Do I need a permit for the Adi Kailash Yatra, and how do I get it?', a:'Yes — an Inner Line Permit (ILP) is mandatory for every Indian citizen, since the region sits in a restricted border zone near the India-Nepal-Tibet trijunction. It is issued at the SDM office in Dharchula, and can also be applied for online through the official Pithoragarh district portal. You will need a valid ID (Aadhaar plus a second proof like voter ID or passport), 3-4 passport-size photos, a medical fitness certificate from a registered doctor, and increasingly, police verification completed within the last 15 days. Most tour operators, us included, handle the paperwork once you send your documents — but the police verification step is worth starting early, since it is the one piece pilgrims most often leave too late.' },
-  { q:'How much does the Adi Kailash Yatra actually cost?', a:'You will see numbers anywhere from ₹21,000 to over ₹1,50,000 quoted for what sounds like the same trip, and the spread is real, not a typo. A standard 7-9 day road package with shared accommodation and a fixed group departure runs roughly ₹36,000-45,000 per person. A self-drive or small-group adventure format can push past ₹60,000. Helicopter-assisted itineraries that skip several days of road travel start around ₹58,000 for a much shorter 4-day trip and climb well past ₹1,00,000 for full-service premium versions. Our own 7N/8D road package from Kathgodam is priced at ₹36,000 per person, on the value end of that range because we run it as a direct operator rather than through several layers of resellers.' },
+  { q:'How much does the Adi Kailash Yatra actually cost?', a:'You will see numbers anywhere from ₹21,000 to over ₹1,50,000 quoted for what sounds like the same trip, and the spread is real, not a typo. A standard 7-9 day road package with shared accommodation and a fixed group departure runs roughly ₹27,000-45,000 per person. A self-drive or small-group adventure format can push past ₹60,000. Helicopter-assisted itineraries that skip several days of road travel start around ₹58,000 for a much shorter 4-day trip and climb well past ₹1,00,000 for full-service premium versions. Our own 7N/8D road package from Kathgodam is priced at ₹27,000 per person, on the value end of that range because we run it as a direct operator rather than through several layers of resellers.' },
   { q:'Is the Adi Kailash Yatra a trek or a road trip now?', a:'Mostly a road trip today. Before the Border Roads Organisation extended the Gunji-Lampiya Dhura Pass Road, this was a genuine 15-18 day trek covering roughly 75 km on foot. Now the route is largely motorable all the way to Gunji and on to Jolingkong, the base for Adi Kailash, and the whole yatra fits into 7-9 days. What is left on foot is short: a 2-4 km walk from Jolingkong to Parvati Sarovar and on to Gauri Kund, easy to moderate, at altitude. You will still see a wide "8-12 km" range quoted elsewhere — that usually includes the Gunji-Kuti-Jolingkong stretch some operators cover on foot rather than by jeep, depending on road conditions that year.' },
   { q:'What is the best time to visit Adi Kailash and Om Parvat?', a:'May to June, or mid-September to October. Both windows give stable weather and the clearest mountain views — September-October is specifically the best stretch for seeing the Om symbol on Om Parvat clearly, since fresh snow settles cleanly on the rock face. Avoid July-August: the monsoon brings landslide risk on the Pithoragarh-Dharchula-Gunji stretch, and several operators pause departures. The yatra is closed completely from November to April, when snow blocks the roads.' },
   { q:'How do I reach Adi Kailash from Haridwar?', a:'Budget 2-3 days of travel each way. From Haridwar it is roughly 185 km (5-6 hours) to Kathgodam, then a further 196 km (7-8 hours) on to Pithoragarh, 100-110 km (3-4 hours) to Dharchula for permits, and finally 70-71 km (about 4 hours) by 4x4 to Gunji, with the last 34 km to Jolingkong taking another 1.5-2 hours. Almost nobody attempts this in one push — the sane plan, and the one we build into our own itinerary, spreads it over three driving days with overnight stops at Pithoragarh and Dharchula.' },
@@ -75,7 +75,7 @@ const FACTS = [
   ['Permit', 'Inner Line Permit mandatory — Indian citizens only'],
   ['Yatra season', 'Mid-May to October (closed Nov-April)'],
   ['Typical duration', '7-9 days road-based (was 15-18 days trek before the road)'],
-  ['Typical cost', '₹36,000-70,000 per person, road-based packages'],
+  ['Typical cost', '₹27,000-70,000 per person, road-based packages'],
   ['Nearest railhead / airport', 'Kathgodam · Pantnagar (both ~270-310 km from Dharchula)'],
 ];
 
@@ -95,7 +95,7 @@ const ROUTE = [
 ];
 
 const COST = [
-  ['Standard road package (7-9 days)', '₹36,000 – ₹45,000', 'Shared group departure, hotels/homestays, permits and meals included'],
+  ['Standard road package (7-9 days)', '₹27,000 – ₹33,800', 'Shared group departure, hotels/homestays, permits and meals included'],
   ['Self-drive / small-group adventure', '₹55,000 – ₹65,000', 'Own vehicle or small convoy, more flexible schedule'],
   ['Helicopter-assisted (4-5 days)', '₹58,000 – ₹80,000', 'Skips several road days, shorter overall trip'],
   ['Premium / fully customised', '₹80,000 – ₹1,50,000+', 'Deluxe stays, private vehicles, dedicated guide'],
@@ -199,7 +199,7 @@ export default function AdiKailashYatra() {
           </tbody>
         </table>
       </div>
-      <p style={p}>Our own <Link href="/packages/adi-kailash-om-parvat-yatra-7n-8d" style={teal}>Adi Kailash + Om Parvat Yatra, 7N/8D from Kathgodam</Link>, is priced at <strong>₹36,000 per person</strong> &mdash; on the value end of the standard road-package range, because we run it directly rather than through several layers of resellers, and it already includes the Inner Line Permit processing.</p>
+      <p style={p}>Our own <Link href="/packages/adi-kailash-om-parvat-yatra-7n-8d" style={teal}>Adi Kailash + Om Parvat Yatra, 7N/8D from Kathgodam</Link>, is priced at <strong>₹27,000 per person</strong> &mdash; on the value end of the standard road-package range, because we run it directly rather than through several layers of resellers, and it already includes the Inner Line Permit processing.</p>
 
       <h2 style={h2}>Best Time to Visit, Month by Month</h2>
       <div style={{ overflowX:'auto', marginBottom:10 }}>

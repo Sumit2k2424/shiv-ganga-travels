@@ -5,8 +5,8 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Badrinath Yatra Package 2026 | Price Starts at ₹5,999 | VIP Darshan Included' },
-  description: 'Badrinath Yatra Package 2026 from Haridwar — 2N/3D from ₹5,999/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: 'Badrinath Yatra Package 2026 | Price Starts at ₹4,500 | VIP Darshan Included' },
+  description: 'Badrinath Yatra Package 2026 from Haridwar — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar','badrinath yatra 2026',
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',
@@ -14,16 +14,16 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-yatra` },
   openGraph: {
-    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999',
-    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹5,999. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
+    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500',
+    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999',
-    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹5,999. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹5,999 | Shiv Ganga Travels' }],
+    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500',
+    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
+    images: [{ url: '/opengraph-image', alt: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels' }],
   },
 };
 
@@ -45,7 +45,7 @@ function Schema() {
     },
     offers: {
       '@type': 'Offer',
-      price: '5999',
+      price: '4500',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
       validFrom: '2026-04-23',
@@ -69,7 +69,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the cost of Badrinath Yatra from Haridwar in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Badrinath Yatra from Haridwar starts at ₹5,999 per person for a 2N/3D all-inclusive package with Shiv Ganga Travels. This includes AC cab, hotel stay, VIP darshan arrangement, and sattvic meals. No hidden charges, zero commission.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Badrinath Yatra from Haridwar starts at ₹4,500 per person for a 2N/3D all-inclusive package with Shiv Ganga Travels. This includes AC cab, hotel stay, VIP darshan arrangement, and sattvic meals. No hidden charges, zero commission.' },
       },
       {
         '@type': 'Question',
@@ -89,7 +89,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'Can I do Badrinath and Kedarnath together?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — this is called the Do Dham Yatra and is our most popular 2-dham combination. The 5N/6D package from Haridwar covers Kedarnath (with 16km trek) and Badrinath, starting from ₹10,999 per person. It can be extended to include Gangotri and Yamunotri for the full Char Dham experience.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes — this is called the Do Dham Yatra and is our most popular 2-dham combination. The 5N/6D package from Haridwar covers Kedarnath (with 16km trek) and Badrinath, starting from ₹8,200 per person. It can be extended to include Gangotri and Yamunotri for the full Char Dham experience.' },
       },
     ],
   };
@@ -147,7 +147,7 @@ export default function BadrinathYatraPage() {
             Badrinath Yatra Package 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Haridwar to Badrinath — <strong style={{ color: '#FFD166' }}>2N/3D from ₹5,999/person</strong> · No trekking · All-inclusive · Zero commission
+            Haridwar to Badrinath — <strong style={{ color: '#FFD166' }}>2N/3D from ₹4,500/person</strong> · No trekking · All-inclusive · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
             {['🕌 Fully motorable', '✅ VIP darshan', '🚗 AC cab included', '🍱 Sattvic meals', '⭐ 4.7/5 · 54 reviews'].map(t => (
@@ -187,7 +187,7 @@ export default function BadrinathYatraPage() {
             ['Trekking', 'None — motorable'],
             ['Distance from HW', '320 km'],
             ['Drive Time', '8–9 hrs'],
-            ['Package from', '₹5,999/person'],
+            ['Package from', '₹4,500/person'],
             ['Temple opens', 'Apr 23, 2026'],
           ].map(([k, v]) => (
             <div key={k}>
@@ -203,7 +203,7 @@ export default function BadrinathYatraPage() {
 
         <h2 style={h2}>Badrinath Yatra Itinerary — 2N/3D from Haridwar</h2>
         <AnswerBox>
-          Badrinath Yatra from Haridwar is a 2N/3D all-inclusive package from ₹5,999 per person with
+          Badrinath Yatra from Haridwar is a 2N/3D all-inclusive package from ₹4,500 per person with
           Shiv Ganga Travels — AC cab, hotels, meals and darshan assistance. Badrinath is reachable by
           motor road (no trek), at 3,133m in Chamoli district. The 2026 opening date is announced on
           Maha Shivratri; the season runs late April to November.
@@ -246,10 +246,10 @@ export default function BadrinathYatraPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
-            { name: 'Badrinath Yatra', duration: '2N/3D', price: '₹5,999', original: '₹8,000', badge: 'Most Popular', href: '/packages/badrinath-yatra-package-2n-3d-haridwar', desc: 'AC cab + hotel + meals + VIP darshan' },
-            { name: 'Do Dham — Kedarnath + Badrinath', duration: '5N/6D', price: '₹10,999', original: '₹14,000', badge: 'Best Value', href: '/packages/kedarnath-badrinath-do-dham-5n-6d', desc: 'Both sacred dhams in one trip' },
-            { name: 'Badrinath + Hemkund Sahib', duration: '3N/4D', price: '₹8,499', original: '₹11,000', badge: 'Combo', href: '/packages', desc: 'Badrinath + Sikh pilgrimage' },
-            { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹18,500', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
+            { name: 'Badrinath Yatra', duration: '2N/3D', price: '₹4,500', original: '₹8,000', badge: 'Most Popular', href: '/packages/badrinath-yatra-package-2n-3d-haridwar', desc: 'AC cab + hotel + meals + VIP darshan' },
+            { name: 'Do Dham — Kedarnath + Badrinath', duration: '5N/6D', price: '₹8,200', original: '₹14,000', badge: 'Best Value', href: '/packages/kedarnath-badrinath-do-dham-5n-6d', desc: 'Both sacred dhams in one trip' },
+            { name: 'Badrinath + Hemkund Sahib', duration: '3N/4D', price: '₹6,350', original: '₹11,000', badge: 'Combo', href: '/packages', desc: 'Badrinath + Sikh pilgrimage' },
+            { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹13,900', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
           ].map(pkg => (
             <Link key={pkg.href} href={pkg.href}
               style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -353,7 +353,7 @@ export default function BadrinathYatraPage() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
-              ['2N/3D Tour Package ₹5,999', '/badrinath-tour-package'],
+              ['2N/3D Tour Package ₹4,500', '/badrinath-tour-package'],
               ['Char Dham Yatra', '/char-dham-yatra'],
               ['Kedarnath Yatra', '/kedarnath-yatra'],
               ['Do Dham Package', '/do-dham-yatra'],

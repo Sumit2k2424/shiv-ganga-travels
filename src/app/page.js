@@ -24,11 +24,11 @@ import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/componen
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra 2026 | Price Starts at ₹18,500 | Direct Operator, Zero Commission` },
-  description: 'Char Dham Yatra 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹18,500.',
+  title: { absolute: `Char Dham Yatra 2026 | Price Starts at ₹13,900 | Direct Operator, Zero Commission` },
+  description: 'Char Dham Yatra 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹13,900.',
   keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: 'Char Dham Yatra 2026 | Price Starts at ₹18,500',
+    title: 'Char Dham Yatra 2026 | Price Starts at ₹13,900',
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
@@ -57,7 +57,7 @@ function Schema() {
     brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
     offers: {
       '@type': 'Offer',
-      price: '18500',
+      price: '13900',
       priceCurrency: 'INR',
       priceValidUntil: '2026-11-30',
       availability: 'https://schema.org/InStock',
@@ -194,8 +194,8 @@ function LuxPkgCard({ pkg }) {
 
 /* ─── data for editorial-only sections (content preserved from the old page) ─── */
 const INTENTS = [
-  { icon:'temple', title:'Char Dham Yatra', desc:'All four sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath.', tag:'Most chosen', from:'₹18,500', href:'/char-dham-yatra' },
-  { icon:'mountain', title:'Kedarnath Yatra', desc:'Three nights, four days — Lord Shiva’s abode at 3,583 m.', tag:'Shortest trip', from:'₹6,999', href:'/kedarnath-yatra' },
+  { icon:'temple', title:'Char Dham Yatra', desc:'All four sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath.', tag:'Most chosen', from:'₹13,900', href:'/char-dham-yatra' },
+  { icon:'mountain', title:'Kedarnath Yatra', desc:'Three nights, four days — Lord Shiva’s abode at 3,583 m.', tag:'Shortest trip', from:'₹5,250', href:'/kedarnath-yatra' },
   { icon:'helicopter', title:'Helicopter Package', desc:'All four dhams in six days — for seniors and VIP darshan.', tag:'Premium', from:'₹2,30,000', href:'/char-dham-helicopter' },
   { icon:'car', title:'Just the Cab', desc:'Vehicle only — Innova, Ertiga or Tempo from Haridwar.', tag:'Cab only', from:'₹5,500', href:'/char-dham-yatra-cab-booking' },
 ];
@@ -375,7 +375,7 @@ export default function HomePage() {
 
       {/* ═══ 6 · COST TRANSPARENCY ═══ */}
       <Section tone="navy">
-        <SectionHead eyebrow="Full cost transparency" title="Where your ₹18,500 goes" light
+        <SectionHead eyebrow="Full cost transparency" title="Where your ₹13,900 goes" light
           lede="You book with the operator, so there is no commission layer to hide. Every quote we send is itemised line by line — this is what it covers." />
         <div className="lux-grid lux-grid--3" data-lux-stagger="">
           {COST_LINES.map((r) => (

@@ -50,7 +50,7 @@ function Schema() {
     mainEntity: [
       {
         '@type': 'Question', name: 'What is the cost of a Haridwar tour package?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Haridwar tour packages start at ₹2,999 per person for a 1N/2D trip including hotel, Har Ki Pauri Ganga Aarti, Mansa Devi temple by ropeway, and Chandi Devi visit. A 2N/3D Haridwar + Rishikesh combo costs ₹5,999. Three-night packages combining Haridwar, Rishikesh, and Mussoorie start at ₹10,999. All prices are from Shiv Ganga Travels, Haridwar\'s direct operator.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Haridwar tour packages start at ₹2,999 per person for a 1N/2D trip including hotel, Har Ki Pauri Ganga Aarti, Mansa Devi temple by ropeway, and Chandi Devi visit. A 2N/3D Haridwar + Rishikesh combo costs ₹4,500. Three-night packages combining Haridwar, Rishikesh, and Mussoorie start at ₹8,200. All prices are from Shiv Ganga Travels, Haridwar\'s direct operator.' },
       },
       {
         '@type': 'Question', name: 'What is the best travel agency in Haridwar for Char Dham Yatra?',
@@ -124,7 +124,7 @@ export default function HaridwarTourPackages() {
         </div>
 
         <p style={p}>
-          <strong>Haridwar tour packages start at ₹2,999/person</strong> for a 1N/2D visit covering Har Ki Pauri, the evening Ganga Aarti, Mansa Devi temple (ropeway), and Chandi Devi. The most popular option is the Haridwar + Rishikesh 2N/3D combo at ₹5,999 per person, which many pilgrims book as a spiritual pre-trip before their Char Dham Yatra. Haridwar is 210km from Delhi and serves as the traditional starting point for all four Char Dhams — Kedarnath, Badrinath, Gangotri, and Yamunotri.
+          <strong>Haridwar tour packages start at ₹2,999/person</strong> for a 1N/2D visit covering Har Ki Pauri, the evening Ganga Aarti, Mansa Devi temple (ropeway), and Chandi Devi. The most popular option is the Haridwar + Rishikesh 2N/3D combo at ₹4,500 per person, which many pilgrims book as a spiritual pre-trip before their Char Dham Yatra. Haridwar is 210km from Delhi and serves as the traditional starting point for all four Char Dhams — Kedarnath, Badrinath, Gangotri, and Yamunotri.
         </p>
         <p style={p}>
           As a travel agency based in Haridwar since 2010, Shiv Ganga Travels knows every ghat, every temple, and every shortcut in the city. We are not a Delhi-based aggregator subcontracting to local operators — we are the local operator. This means better coordination, honest pricing, and no markup.
@@ -143,14 +143,14 @@ export default function HaridwarTourPackages() {
             {
               name: 'Haridwar + Rishikesh',
               duration: '2N/3D',
-              price: '₹5,999',
+              price: '₹4,500',
               badge: 'Most Popular',
               includes: ['Full Haridwar darshan', 'Ram Jhula & Laxman Jhula', 'Triveni Ghat Aarti', 'Neelkanth Mahadev', 'AC cab + hotels'],
             },
             {
               name: 'Haridwar + Rishikesh + Mussoorie',
               duration: '4N/5D',
-              price: '₹10,999',
+              price: '₹8,200',
               badge: 'Best Value',
               includes: ['Both holy cities', 'Mall Road Mussoorie', 'Kempty Falls', 'Lal Tibba viewpoint', 'AC Innova throughout'],
             },

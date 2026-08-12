@@ -176,16 +176,6 @@ export default function KedarnathPehliBaar() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="kedarnath" />
 
-        <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.4rem', marginBottom: 10 }}>हमारे साथ केदारनाथ जाएं — ₹6,999 से</h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 8 }}>✅ VIP दर्शन शामिल · ✅ अनुभवी पहाड़ी ड्राइवर · ✅ 24/7 WhatsApp support</p>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, marginBottom: 20 }}>3 रात / 4 दिन · रजिस्ट्रेशन हम करते हैं · ऑक्सीजन + First Aid हर गाड़ी में</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! Kedarnath Yatra 2026 book karni hai. Please details bhejein.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>💬 अभी Book करें</a>
-            🏔️ Packages देखें →
-          </div>
-        </div>
-
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>

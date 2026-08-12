@@ -4,15 +4,15 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: 'Yamunotri Yatra Package 2026 | Price Starts at ₹5,999 | Trek & Pony Guide' },
-  description: 'Yamunotri Yatra 2026 from Haridwar — ₹5,999 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.',
+  title: { absolute: 'Yamunotri Yatra Package 2026 | Price Starts at ₹4,500 | Trek & Pony Guide' },
+  description: 'Yamunotri Yatra 2026 from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.',
   keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
-  openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
+  openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide',
-    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹5,999 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
+    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
     images: [{ url: '/opengraph-image', alt: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels' }],
   },
 };
@@ -73,7 +73,7 @@ export default function Page() {
           <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <AnswerBox>
-          Yamunotri Yatra costs ₹5,999 per person from Haridwar. Yamunotri sits at 3,291 m in
+          Yamunotri Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in
           Uttarkashi district and is the source of the Yamuna, the first of the four dhams in the
           traditional circuit. The road ends at Janki Chatti; the temple is a 6 km trek above it,
           with pony, palki and porter available. Open late April to early November.
@@ -122,7 +122,7 @@ export default function Page() {
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 2N/3D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
             </div>
-            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹5,999</div>
+            <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹4,500</div>
           </Link>
         </div>
 

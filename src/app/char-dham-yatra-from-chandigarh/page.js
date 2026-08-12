@@ -130,7 +130,7 @@ export default function CharDhamFromChandigarh() {
 
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Chandigarh pilgrims — 15 seasons of experience</div>
-          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Punjab and Haryana send some of our most regular pilgrims — the Shaivite and Vaishnava traditions in this region are strong, and the proximity to Haridwar means many Chandigarh families have done parts of the circuit multiple times. A common pattern we see: first visit does only Kedarnath–Badrinath (Do Dham), second visit returns to complete Yamunotri–Gangotri. Our Do Dham package at ₹10,999 is one of the most booked products among Chandigarh pilgrims. Groups of 10+ often hire a full Tempo Traveller from Chandigarh and treat the drive as the start of the yatra.</div>
+          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Punjab and Haryana send some of our most regular pilgrims — the Shaivite and Vaishnava traditions in this region are strong, and the proximity to Haridwar means many Chandigarh families have done parts of the circuit multiple times. A common pattern we see: first visit does only Kedarnath–Badrinath (Do Dham), second visit returns to complete Yamunotri–Gangotri. Our Do Dham package at ₹8,200 is one of the most booked products among Chandigarh pilgrims. Groups of 10+ often hire a full Tempo Traveller from Chandigarh and treat the drive as the start of the yatra.</div>
         </div>
 
         <BlogCTA variant="inline" intent="booking" />

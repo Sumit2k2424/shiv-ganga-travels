@@ -497,6 +497,22 @@ button { font-family: var(--font); }
 .wa-float:hover::after {
   animation-play-state: paused;
 }
+/* Tucked while one of the page's own CTAs is on screen — see
+   WhatsAppButton.js. It sat on top of the end-of-article CTA buttons. */
+.wa-float {
+  transition: transform var(--t-out), opacity .28s cubic-bezier(.16,1,.3,1),
+              visibility .28s;
+}
+.wa-float--tucked {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7) translateY(10px);
+  pointer-events: none;
+}
+.wa-float--tucked::after { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .wa-float--tucked { transform: none; }
+}
 @keyframes waPulse {
   to { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
 }
@@ -1148,19 +1164,17 @@ html, body { overflow-x: clip; }
 /* 2. Images always contained */
 img, video, svg { max-width: 100%; height: auto; }
 
-/* 3. Tables scroll horizontally instead of overflowing */
+/* 3. Tables scroll horizontally instead of overflowing.
+   The scroll lives on the wrapper (`.tbl-scroll`, see the TABLES block near
+   the end of this file). This rule used to put `display: block; overflow-x:
+   auto` on the table itself, which both broke column alignment and produced
+   a second scrollbar nested inside the wrapper's. */
 @media (max-width: 640px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-  }
+  table { max-width: 100%; }
   td, th {
-    /* Was 12px. Article tables already scroll horizontally (display:block +
-       overflow-x:auto just above), so there is nothing to win by shrinking the
-       type below the 13–14px metadata floor. Two later rules set 13px and
-       12.5px for the same cells; all three now resolve to --fs-meta. */
+    /* Was 12px. The table scrolls in its wrapper, so there is nothing to win
+       by shrinking the type below the 13–14px metadata floor. Two later rules
+       set 13px and 12.5px for the same cells; all three resolve to --fs-meta. */
     font-size: var(--fs-meta) !important;
     padding: 8px 10px !important;
     white-space: normal;
@@ -1440,8 +1454,10 @@ article table {
   font-family: var(--font-sans);
   font-size: var(--fs-ui);
   margin-bottom: 1.6em;
-  overflow-x: auto;
-  display: block;
+  /* No `display: block` here. It applied at every width and turned the
+     table into a block box whose thead and tbody sized themselves
+     independently — headers stopped sitting over their own columns.
+     Horizontal scroll belongs to the `.tbl-scroll` wrapper. */
 }
 article thead tr { background: #0F2B5B; }
 article thead th {
@@ -2060,138 +2076,282 @@ body:has(.blog-progress) .lux-progress { display: none; }
 }
 @media print { .reveal-ready .reveal { opacity: 1 !important; transform: none !important; } }
 
-/* CTA + button micro-interactions. These only set transform/shadow/filter —
-   properties the inline-styled buttons don't set — so they apply cleanly. */
-.blog-container a[href^="https://wa.me"],
-.blog-container a[href^="tel:"],
-.blog-cta a, .blog-toc2 a, .blog-related-link, .guide-chip {
+/* ═══════════════════════════════════════════════════════════════
+   EDITORIAL CTA SURFACES  ·  BlogCTA.js
+   Three tiers, deliberately unequal in weight:
+     .blog-cta--note    one hairline sentence
+     .blog-cta--inline  a paper card, mid-article
+     .blog-cta--footer  the single dark card at the end
+   An article gets at most two. Nothing here animates on a loop —
+   the previous pass shimmered a gold strip and drifted a gradient
+   border on every CTA, on every post, forever, which is exactly
+   what made three of them in a row unbearable.
+
+   Selectors are compound (.blog-cta .blog-cta__x = 0,2,0) so they
+   beat luxury.css's `.blog-container p` / `h3` prose rules (0,1,1)
+   without inline styles or !important.
+═══════════════════════════════════════════════════════════════ */
+
+/* Prose links keep a restrained lift; the CTA buttons own their hover. */
+.blog-container a[href^="https://wa.me"]:not(.blog-cta__wa):not(.blog-cta__wa-quiet):not(.blog-cta__inlinelink),
+.blog-toc2 a, .blog-related-link, .guide-chip {
   transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s, filter .2s;
 }
-.blog-container a[href^="https://wa.me"]:hover {
-  transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,211,102,.38); filter: brightness(1.04);
+.blog-container a[href^="https://wa.me"]:not(.blog-cta__wa):not(.blog-cta__wa-quiet):not(.blog-cta__inlinelink):hover {
+  transform: translateY(-1px); filter: brightness(1.03);
 }
-.blog-cta a:not([href^="https://wa.me"]):hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.22); }
 .blog-related-link:hover, .guide-chip:hover { transform: translateY(-2px); }
 
 /* Callout & takeaways: a gentle lift so blocks feel alive on hover */
 .blog-callout, .blog-keytakeaways { transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s; }
 .blog-callout:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
-/* Sheen sweep across the footer CTA's primary button on hover */
-.blog-cta--footer a[href^="https://wa.me"] { position: relative; overflow: hidden; }
-.blog-cta--footer a[href^="https://wa.me"]::after {
-  content: ''; position: absolute; top: 0; left: 0; width: 45%; height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
-  transform: translateX(-134%) skewX(-18deg); transition: transform .55s ease; pointer-events: none;
+/* ── Shared ──────────────────────────────────────────────────── */
+.blog-cta .blog-cta__eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
 }
-.blog-cta--footer a[href^="https://wa.me"]:hover::after { transform: translateX(289%) skewX(-18deg); }
+.blog-cta .blog-cta__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-/* Premium polish on the footer CTA — gold strip shimmer, icon pulse,
-   hoverable trust chips, a highlighted price pill. All additive to the
-   card/button styling above; nothing here changes existing selectors. */
-.blog-cta--footer { position: relative; }
-.blog-cta--footer::before {
+/* ── note · a rule and a sentence ────────────────────────────── */
+.blog-cta.blog-cta--note {
+  position: relative;
+  margin: 34px 0;
+  padding-top: 15px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink-faint);
+  max-width: none;
+}
+.blog-cta.blog-cta--note .blog-cta__mark {
+  position: absolute;
+  top: -1px; left: 0;
+  width: 44px; height: 2px;
+  background: var(--gold);
+}
+.blog-cta .blog-cta__inlinelink {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-hair);
+  transition: border-color .2s, color .2s;
+}
+.blog-cta .blog-cta__inlinelink:hover { border-bottom-color: var(--gold); color: var(--ink); }
+.blog-cta .blog-cta__sep { margin: 0 9px; color: var(--rule-strong); }
+
+/* ── inline · paper, hairline, one gold edge ─────────────────── */
+.blog-cta.blog-cta--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 26px;
+  margin: 40px 0;
+  padding: 20px 24px 20px 26px;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--gold);
+  border-radius: 12px;
+}
+.blog-cta .blog-cta__body { flex: 1 1 260px; }
+.blog-cta .blog-cta__lede {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 48ch;
+}
+.blog-cta .blog-cta__wa-quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--rule-strong);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.blog-cta .blog-cta__wa-quiet:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.blog-cta .blog-cta__link {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+.blog-cta .blog-cta__link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+/* ── footer · the one dark card ──────────────────────────────── */
+.blog-cta.blog-cta--footer {
+  position: relative;
+  display: block;
+  margin-top: 52px;
+  padding: 34px 32px 30px;
+  background: var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+}
+/* An inner hairline instead of the old animated gradient border. */
+.blog-cta.blog-cta--footer::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(120deg, rgba(232,146,10,0.5), rgba(37,211,102,0.45) 35%, rgba(11,123,139,0.4) 70%, rgba(232,146,10,0.5));
-  background-size: 220% 220%;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: ctaBorderDrift 7s ease-in-out infinite;
+  border: 1px solid rgba(255,255,255,0.09);
   pointer-events: none;
 }
-@keyframes ctaBorderDrift {
-  0%, 100% { background-position: 0% 50%; }
-  50%      { background-position: 100% 50%; }
+.blog-cta .blog-cta__rule {
+  display: block;
+  width: 44px; height: 2px;
+  background: var(--gold);
+  margin-bottom: 16px;
+}
+.blog-cta .blog-cta__eyebrow--dark {
+  color: rgba(255,255,255,0.48);
+  letter-spacing: 0.19em;
+}
+.blog-cta .blog-cta__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.021em;
+  color: #fff;
+  margin: 0 0 12px;
+  max-width: 24ch;
+}
+.blog-cta .blog-cta__copy {
+  margin: 0 0 26px;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.62);
+  max-width: 62ch;
 }
 
-.blog-cta__top {
-  isolation: isolate;
+/* Proof as a ledger, not as five emoji chips. */
+.blog-cta .blog-cta__ledger {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 26px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-/* Sheen travels via transform, not `left` — animating `left` relayouts the
-   strip every frame, and this loop runs forever on all 60 blog posts. */
-.blog-cta__top::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 40%; height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
-  transform: translateX(-150%) skewX(-18deg);
-  animation: ctaTopSheen 6s ease-in-out infinite;
-  animation-delay: 1.2s;
-  pointer-events: none;
+.blog-cta .blog-cta__ledger-item {
+  flex: 1 1 130px;
+  padding: 0 20px;
+  border-left: 1px solid rgba(255,255,255,0.1);
 }
-@keyframes ctaTopSheen {
-  0%, 15%   { transform: translateX(-150%) skewX(-18deg); }
-  35%, 100% { transform: translateX(325%)  skewX(-18deg); }
+.blog-cta .blog-cta__ledger-item:first-child { padding-left: 0; border-left: 0; }
+.blog-cta .blog-cta__ledger-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--gold);
+  margin: 0 0 3px;
 }
-.blog-cta__top-icon {
-  display: inline-block;
-  animation: ctaIconPulse 2.6s ease-in-out infinite;
-  transform-origin: center;
-}
-@keyframes ctaIconPulse {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50%      { transform: scale(1.18) rotate(-6deg); }
+.blog-cta .blog-cta__ledger-label {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  color: rgba(255,255,255,0.45);
 }
 
-.blog-cta__trust-item {
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  transition: background 0.3s cubic-bezier(.16,1,.3,1), border-color 0.3s cubic-bezier(.16,1,.3,1), transform 0.3s cubic-bezier(.16,1,.3,1);
-}
-.blog-cta__trust-item:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,209,102,0.35);
-  transform: translateY(-3px);
-}
-.blog-cta__trust-ico { display: inline-block; transition: transform 0.35s cubic-bezier(.16,1,.3,1); }
-.blog-cta__trust-item:hover .blog-cta__trust-ico { transform: scale(1.25) rotate(-8deg); }
-
-.blog-cta__price {
+.blog-cta .blog-cta__wa {
   display: inline-flex;
-  padding: 8px 14px;
-  border-radius: 100px;
-  background: rgba(255,209,102,0.08);
-  border: 1px solid rgba(255,209,102,0.22);
+  align-items: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 9px;
+  background: #25D366;
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
 }
+.blog-cta .blog-cta__wa:hover { background: #1FB85A; transform: translateY(-1px); }
+.blog-cta .blog-cta__ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 22px;
+  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,0.24);
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+.blog-cta .blog-cta__ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.45); }
 
-@media (prefers-reduced-motion: reduce) {
-  .blog-cta--footer::before { animation: none; background-position: 0% 50%; }
-  .blog-cta__top::after { animation: none; display: none; }
-  .blog-cta__top-icon { animation: none; }
+.blog-cta .blog-cta__foot {
+  margin: 22px 0 0;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.42);
 }
-/* Phones freeze the ambient loops. ctaBorderDrift animates background-position
-   (a repaint) and the sheen keeps a layer alive — cheap enough on desktop,
-   not worth the battery on mobile where the card sits far below the fold. */
+.blog-cta .blog-cta__foot strong { color: rgba(255,255,255,0.74); font-weight: 700; }
+.blog-cta .blog-cta__foot a {
+  color: rgba(255,255,255,0.74);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.blog-cta .blog-cta__foot a:hover { color: #fff; border-bottom-color: var(--gold); }
+.blog-cta.blog-cta--footer .blog-cta__sep { color: rgba(255,255,255,0.25); }
+
 @media (max-width: 640px) {
-  .blog-cta--footer::before { animation: none; background-position: 0% 50%; }
-  .blog-cta__top::after { animation: none; display: none; }
-  .blog-cta__top-icon { animation: none; }
-}
-
-/* Inline CTA on small screens: stack it so the button row can never overflow
-   the box or overlap the headline text. Buttons go full-width and wrap. */
-@media (max-width: 560px) {
-  .blog-cta:not(.blog-cta--footer) {
+  .blog-cta.blog-cta--inline {
     flex-direction: column;
     align-items: stretch;
-    text-align: center;
+    padding: 18px 18px 18px 20px;
   }
-  .blog-cta:not(.blog-cta--footer) > div:last-child {
-    width: 100%;
-    justify-content: center;
+  /* The column switch turns flex-basis into a height — reset it, or the
+     body reserves 260px of empty space under two lines of text. */
+  .blog-cta.blog-cta--inline .blog-cta__body { flex: 0 0 auto; }
+  .blog-cta.blog-cta--inline .blog-cta__actions { justify-content: space-between; }
+  /* Not `flex: 1` — a grown button pushes the text link onto its own row. */
+  .blog-cta.blog-cta--inline .blog-cta__wa-quiet { flex: 0 1 auto; }
+
+  .blog-cta.blog-cta--footer { padding: 26px 20px 24px; }
+  .blog-cta .blog-cta__ledger-item {
+    flex: 1 1 42%;
+    padding: 9px 16px;
   }
-  .blog-cta:not(.blog-cta--footer) > div:last-child > a {
-    flex: 1 1 140px;
-    justify-content: center;
-    text-align: center;
-  }
+  .blog-cta .blog-cta__ledger-item:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .blog-cta.blog-cta--footer .blog-cta__actions > * { flex: 1 1 100%; justify-content: center; }
 }
 
 @media (max-width: 900px) {
@@ -2683,11 +2843,9 @@ img, video, iframe, embed { max-width: 100%; height: auto; }
 
 /* ─── L. WEATHER TABLE — 6 col overflow ────────────────────── */
 @media (max-width: 600px) {
-  .weather-table-wrap,
-  [class*="weather"] table {
-    overflow-x: auto !important;
-    display: block !important;
-  }
+  /* Scroll on the wrapper; the table stays a table. `.weather-table-wrap`
+     has no markup behind it any more, but `.tbl-scroll` covers this case. */
+  .weather-table-wrap { overflow-x: auto !important; }
 }
 
 /* ─── M. STATS BAR — allow wrapping on small screens ──────── */
@@ -2886,31 +3044,99 @@ img, video, iframe, embed { max-width: 100%; height: auto; }
   .flex-nowrap-mobile { flex-wrap: nowrap !important; }
 }
 
-/* ─── TABLES ─────────────────────────────────────────────── */
+/* ─── TABLES ─────────────────────────────────────────────────
+   A table is a table. The previous mobile rule set `table { display:
+   block }` with `thead, tbody { display: table }`, which makes the head
+   and the body two INDEPENDENTLY sized tables — the header cells stopped
+   lining up with the cells under them (measured 589px of header over
+   420px of body). Scrolling belongs to the wrapper, not the table.
+   TableScroll.js tags each wrapper with `.tbl-scroll` + `data-cols`. */
 @media (max-width: 768px) {
-  /* All tables scroll horizontally — never overflow */
-  table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    max-width: 100%;
-    width: 100%;
-  }
-  thead, tbody, tfoot { display: table; width: 100%; }
+  table { max-width: 100%; }
 
-  /* Reduce table cell padding */
   td, th {
     padding: 8px 10px !important;
     font-size: var(--fs-meta) !important;
     white-space: normal;
     word-break: break-word;
   }
+
+  /* Below four columns a table fits by wrapping. From four up, wrapping
+     crushes columns to ~70px and every cell becomes four ragged lines —
+     so give them a comfortable floor and let the wrapper scroll. */
+  .tbl-scroll[data-cols="4"] > table,
+  .tbl-scroll[data-cols="5"] > table { min-width: 480px; }
+  .tbl-scroll[data-cols="6"] > table { min-width: 560px; }
+  .tbl-scroll[data-cols="7"] > table,
+  .tbl-scroll[data-cols="8"] > table { min-width: 640px; }
 }
 
 @media (max-width: 480px) {
   /* Padding only — the 12.5px size override is gone; cells hold --fs-meta. */
   td, th { padding: 7px 8px !important; }
+}
+
+/* Scroll affordance. The mask lives in the wrapper's own box, so the fade
+   stays pinned at the edge while the table moves under it; `data-scroll`
+   (set in TableScroll.js) means it only fades the side that has more to
+   show, and never on a table that already fits. */
+.tbl-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+.tbl-scroll::-webkit-scrollbar { height: 6px; }
+.tbl-scroll::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 100px; }
+.tbl-scroll::-webkit-scrollbar-track { background: transparent; }
+
+.tbl-scroll[data-scroll="start"] {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 34px), transparent);
+          mask-image: linear-gradient(90deg, #000 calc(100% - 34px), transparent);
+}
+.tbl-scroll[data-scroll="mid"] {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 26px, #000 calc(100% - 34px), transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 26px, #000 calc(100% - 34px), transparent);
+}
+.tbl-scroll[data-scroll="end"] {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 26px);
+          mask-image: linear-gradient(90deg, transparent, #000 26px);
+}
+
+/* One quiet line under a table that has columns off-screen. It removes
+   itself the moment the reader scrolls the table. */
+/* `p.tbl-hint` / `.blog-container p.tbl-hint` — the hint is a <p>, and the
+   prose rules in luxury.css (`.blog-container p`, 0-1-1) would otherwise
+   render it as 17px Source Serif. */
+p.tbl-hint,
+.blog-container p.tbl-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 18px;
+  max-width: none;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--ink-faint);
+  transition: opacity .25s ease;
+}
+p.tbl-hint::after {
+  content: '';
+  flex: none;
+  width: 22px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  animation: tblHintNudge 2.4s ease-in-out infinite;
+}
+p.tbl-hint[hidden] { display: none; }
+@keyframes tblHintNudge {
+  0%, 100% { transform: translateX(0); opacity: .9; }
+  50%      { transform: translateX(5px); opacity: .45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  p.tbl-hint::after { animation: none; }
 }
 
 /* ─── CARDS & PACKAGE CARDS ──────────────────────────────── */
@@ -3601,14 +3827,11 @@ a:focus-visible {
 /* Kill the grey tap flash on mobile — active states already handle feedback */
 a, button { -webkit-tap-highlight-color: transparent; }
 
-/* Data tables scroll sideways on small phones instead of breaking layout */
+/* Data tables scroll sideways on small phones instead of breaking layout.
+   The scroller is the wrapper (`.tbl-scroll`), not the table — see the
+   TABLES block. `.fare-table` no longer exists in any markup. */
 @media (max-width: 768px) {
-  article table, .fare-table {
-    display: block;
-    overflow-x: auto;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
+  article table { max-width: 100%; }
 }
 
 /* Respect reduced motion for the new hover transforms too */

@@ -203,7 +203,7 @@ export default function VIPDarshan() {
 
         <h2 id="heli-combo" style={h2}>Kedarnath VIP Darshan With Helicopter</h2>
         <p style={p}>
-          If you're short on time or travelling with elders, the helicopter route is the real "VIP" experience — and priority darshan is usually built into it. Choppers run from <strong>Phata, Sersi, Guptkashi and Sitapur</strong>, landing about 500 metres from the temple. Round-trip fares run roughly ₹6,000 to ₹9,999 per person depending on the helipad, with Phata typically the cheapest and Guptkashi the priciest.
+          If you're short on time or travelling with elders, the helicopter route is the real "VIP" experience — and priority darshan is usually built into it. Choppers run from <strong>Phata, Sersi, Guptkashi and Sitapur</strong>, landing about 500 metres from the temple. Round-trip fares run roughly ₹6,000 to ₹7,500 per person depending on the helipad, with Phata typically the cheapest and Guptkashi the priciest.
         </p>
         <p style={p}>
           On most heli packages the operator's ground team meets you at the helipad and walks you to the sanctum through the priority lane, so you're in and out in 30–90 minutes instead of standing in the general queue for hours. The catch: not every cheap heli ticket includes it. Get it in writing that <strong>priority/VIP darshan is part of the package</strong> before you pay — and book the chopper only through a registered operator or the official IRCTC/heliservices portal, never a random WhatsApp number.
@@ -314,17 +314,6 @@ export default function VIPDarshan() {
             <div style={{ fontSize: 14, color: '#475569', lineHeight: 1.8 }}>{a}</div>
           </div>
         ))}
-
-        <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '24px 22px', textAlign: 'center', marginTop: 32 }}>
-          <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.2rem', marginBottom: 8 }}>We Arrange VIP Darshan for Our Pilgrims</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Every Shiv Ganga Travels Kedarnath overnight and helicopter package includes VIP/priority darshan coordination and puja arrangement. You pay the official BKTC rate at the counter — we make sure you're there at the right time, in the right queue.</p>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra with VIP darshan / sparsh darshan. Please share details.')}`}
-              target="_blank" rel="nofollow noopener noreferrer"
-              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book With VIP Darshan</a>
-            <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
-          </div>
-        </div>
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
