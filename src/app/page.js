@@ -20,6 +20,7 @@ import HeroSection from '@/components/HeroSection';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import RouteMap from '@/components/lux/RouteMap';
+import ReelsSection from '@/components/ReelsSection';
 import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
@@ -372,6 +373,9 @@ export default function HomePage() {
           aside={<Link href="/packages/single-dham" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{singleDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
+
+      {/* ═══ 5b · REELS — proof the routes are ours ═══ */}
+      <ReelsSection />
 
       {/* ═══ 6 · COST TRANSPARENCY ═══ */}
       <Section tone="navy">

@@ -28,6 +28,10 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'images.pexels.com' },
+      // Reel posters. Serving them through next/image keeps the request
+      // same-origin, so `img-src 'self'` in the CSP still covers it and
+      // YouTube never sees a visitor who has not pressed play.
+      { protocol: 'https', hostname: 'i.ytimg.com' },
     ],
   },
 
@@ -86,7 +90,11 @@ const nextConfig = {
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://lh3.googleusercontent.com https://maps.googleapis.com https://maps.gstatic.com https://streetviewpixels-pa.googleapis.com https://www.google-analytics.com",
               "connect-src 'self' https://maps.googleapis.com https://places.googleapis.com https://www.google-analytics.com",
-              "frame-src https://www.google.com https://maps.google.com",
+              // youtube-nocookie is the only video host allowed, and only
+              // frames — no YouTube script runs on the page. The player is
+              // inserted on click (ReelCard.js), so nothing loads from it
+              // for a visitor who never plays a reel.
+              "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com",
               "worker-src blob: 'self'",
               "base-uri 'self'",
               "form-action 'self'",

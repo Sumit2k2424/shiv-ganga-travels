@@ -2571,3 +2571,178 @@ html.lenis, html.lenis body { height: auto; }
   .lux-btn::before { display: none; }
   .lux-frame--zoom::after { display: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   REELS RAIL  ·  ReelsSection.js / ReelCard.js
+   Vertical 9:16 cards on a snapping horizontal rail. The card is a
+   poster and a button until it is played — the player iframe is
+   only inserted on click, so eight reels cost eight images, not
+   eight embedded YouTube players.
+   ══════════════════════════════════════════════════════════════ */
+
+.lux-reels {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 4px 0 10px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+  -webkit-overflow-scrolling: touch;
+  /* Full-bleed rail: the cards run off the right edge so it reads as
+     scrollable, but the first one still lines up with the headline.
+     scroll-padding is what makes snapping respect that inset — without
+     it the first snap eats the padding and parks the card at x=0. */
+  margin-inline: calc(var(--lux-gutter) * -1);
+  padding-inline: var(--lux-gutter);
+  scroll-padding-inline: var(--lux-gutter);
+}
+.lux-reels::-webkit-scrollbar { height: 6px; }
+.lux-reels::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 100px; }
+.lux-reels::-webkit-scrollbar-track { background: transparent; }
+
+.lux-reel {
+  position: relative;
+  flex: 0 0 auto;
+  width: 240px;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--ink);
+  scroll-snap-align: start;
+  box-shadow: 0 1px 2px rgba(11, 27, 56, 0.06);
+}
+
+.lux-reel__play {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+.lux-reel__poster {
+  object-fit: cover;
+  transition: transform .6s var(--ease-lux);
+}
+.lux-reel__play:hover .lux-reel__poster,
+.lux-reel__play:focus-visible .lux-reel__poster { transform: scale(1.05); }
+
+.lux-reel__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,27,56,0.88) 0%, rgba(11,27,56,0.28) 42%, rgba(11,27,56,0.06) 68%, rgba(11,27,56,0.22) 100%);
+}
+
+.lux-reel__glyph {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 20px rgba(11,27,56,0.28);
+  transition: transform .3s var(--ease-lux), background .3s;
+  padding-left: 3px;   /* optical centring of the triangle */
+}
+.lux-reel__play:hover .lux-reel__glyph,
+.lux-reel__play:focus-visible .lux-reel__glyph {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: #fff;
+}
+
+.lux-reel__meta {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  display: block;
+  padding: 14px 14px 13px;
+}
+.lux-reel__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+}
+.lux-reel__date {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.62);
+}
+
+.lux-reel__frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Tail card — the hand-off to Instagram, which cannot be embedded. */
+.lux-reel--more {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: none;
+}
+.lux-reel__morelink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 14px;
+  height: 100%;
+  padding: 18px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background .3s var(--ease-lux);
+}
+.lux-reel__morelink:hover { background: var(--paper-deep); }
+.lux-reel__moreicon {
+  display: grid;
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+.lux-reel__moretext {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.lux-reel__morehandle {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 640px) {
+  .lux-reel { width: 62vw; max-width: 240px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lux-reel__poster,
+  .lux-reel__glyph { transition: none; }
+  .lux-reel__play:hover .lux-reel__poster { transform: none; }
+}
