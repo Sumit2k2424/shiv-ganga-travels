@@ -5,9 +5,19 @@ import { SITE } from '@/data/packages';
 /* The float is the persistent ask. When one of the page's own conversion
    surfaces is on screen it is both redundant and physically on top of it —
    it landed over the "View all packages" button of the end-of-article CTA
-   on mobile. So it tucks away while any in-content WhatsApp/call action is
-   visible, and comes back once you scroll past. Sticky chrome (the header
-   quote button) is excluded, or the float would never show on desktop. */
+   on mobile, and over the pilgrims field of the hero quote form. So it
+   tucks away while any of them is visible and comes back once you scroll
+   past. Sticky chrome (the header quote button) is excluded, or the float
+   would never show on desktop.
+
+   A quote form counts as a conversion surface as much as a WhatsApp link
+   does — it is the ask, in a different shape. */
+const CONVERSION_SURFACES = [
+  'a[href^="https://wa.me"]',
+  'a[href^="tel:"]',
+  'form',
+].join(', ');
+
 function useTuckedNearCTAs(ref) {
   const [tucked, setTucked] = useState(false);
 
@@ -15,7 +25,7 @@ function useTuckedNearCTAs(ref) {
     if (typeof IntersectionObserver === 'undefined') return;
 
     const targets = Array.from(
-      document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]')
+      document.querySelectorAll(CONVERSION_SURFACES)
     ).filter(el => el !== ref.current && !el.closest('header, nav, .wa-float'));
 
     if (!targets.length) return;
