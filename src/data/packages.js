@@ -136,7 +136,7 @@ export const PACKAGES = [
     startCity: 'Haridwar',
     endCity  : 'Haridwar',
     altitude : 'Max: Kedarnath 3,583m',
-    price    : { original:50000, discounted:33800, currency:'₹', perPerson:true },
+    price    : { original:50000, discounted:30000, currency:'₹', perPerson:true },
     highlights:[
       '3-star deluxe hotels at every stopover',
       'Extra rest day at Uttarkashi with Harsil Valley excursion',
@@ -166,8 +166,8 @@ export const PACKAGES = [
     badge    : 'Best Seller',
     images   : ['kedarnath','badrinath','gangotri','yamunotri'],
     tags     : ['char dham','chardham deluxe','haridwar','kedarnath stay','harsil','luxury','3 star hotels','slow paced','11 nights'],
-    metaTitle: 'Char Dham Yatra Deluxe Package 2026 | Price Starts at ₹33,800 | Kedarnath Night Stay',
-    metaDesc : 'Char Dham Yatra Deluxe 2026 — 11N/12D from ₹33,800/person, 3-star hotels. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+    metaTitle: 'Char Dham Yatra Deluxe Package 2026 | Price Starts at ₹30,000 | Kedarnath Night Stay',
+    metaDesc : 'Char Dham Yatra Deluxe 2026 — 11N/12D from ₹30,000/person, 3-star hotels. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
     faqs:[],
   },
 

@@ -224,7 +224,7 @@ export default function Page() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { name: 'Char Dham Classic', duration: '9N/10D', price: '₹21,000', badge: 'Most Popular', href: '/packages/char-dham-yatra-9n-10d-haridwar' },
-            { name: 'Char Dham Deluxe', duration: '11N/12D', price: '₹33,800', badge: 'Best Value', href: '/packages/char-dham-yatra-11n-12d-haridwar' },
+            { name: 'Char Dham Deluxe', duration: '11N/12D', price: '₹30,000', badge: 'Best Value', href: '/packages/char-dham-yatra-11n-12d-haridwar' },
             { name: 'Senior Citizen Special', duration: '12N/13D', price: '₹21,000', badge: 'With Pony', href: '/packages/char-dham-yatra-senior-citizen-12n-13d' },
             { name: 'Char Dham Helicopter', duration: '5N/6D', price: '₹2,30,000', badge: 'Premium', href: '/char-dham-helicopter' },
           ].map(pkg => (
