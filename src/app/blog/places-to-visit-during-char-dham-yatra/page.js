@@ -127,7 +127,7 @@ export default function PlacesToVisit() {
         badge="Go Beyond the 4 Dhams · Insider Guide"
         title="Top Places to Visit During Char Dham Yatra 2026"
         dek="The 4 dhams are the destination. But the route has 8 places that most pilgrims miss — and several of them are more memorable than the darshan itself."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="8 min read"
         facts={[
@@ -149,7 +149,7 @@ export default function PlacesToVisit() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "places-to-visit-during-char-dham-yatra", "title": "Top 10 Places to Visit on Char Dham Yatra 2026", "description": "Best places to visit during Char Dham Yatra 2026 beyond the temples: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta and Lakhamandal.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "places-to-visit-during-char-dham-yatra", "title": "Top 10 Places to Visit on Char Dham Yatra 2026", "description": "Best places to visit during Char Dham Yatra 2026 beyond the temples: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta and Lakhamandal.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels — 15 seasons on this route
         </div>

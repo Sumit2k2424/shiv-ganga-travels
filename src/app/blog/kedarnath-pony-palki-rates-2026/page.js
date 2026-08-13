@@ -51,7 +51,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: 'Kedarnath Pony, Palki & Horse Rates 2026 — Gaurikund Prices & Time',
-    author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Operations Manager, Shiv Ganga Travels' },
+    author: { '@type': 'Person', name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels' },
     publisher: { '@type': 'Organization', name: 'Shiv Ganga Travels', url: SITE.baseUrl },
     datePublished: '2026-03-05', dateModified: '2026-05-28',
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026`,
@@ -71,7 +71,7 @@ export default function KedarnathPonyRates() {
         badge="Kedarnath 2026 · Horse · Pony · Palki · Kandi"
         title="Kedarnath Pony, Palki & Horse Rates 2026"
         dek="Official Gaurikund rates · Horse ₹3,000–4,500 one way (3–4 hrs) · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000 · Offline booking only · No horse from Sonprayag · No heli from Gaurikund"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="8 min read"
         facts={[
@@ -93,7 +93,7 @@ export default function KedarnathPonyRates() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 28, 2026 · 15 seasons running Kedarnath packages from Haridwar
         </div>

@@ -42,7 +42,7 @@ export default function MedicalCertificate() {
         badge="Health Guide · 2026"
         title="Char Dham Yatra Medical Certificate 2026 — Who Needs It & How to Get It"
         dek="Mandatory for all pilgrims 55+. Without it, you will be turned back at the checkpoint. Here is exactly what you need, in what format, and from which doctor."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="5 min read"
         facts={[
@@ -64,7 +64,7 @@ export default function MedicalCertificate() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-medical-certificate", "title": "Char Dham Medical Certificate 2026: Who Needs It", "description": "Char Dham Yatra 2026 medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-medical-certificate", "title": "Char Dham Medical Certificate 2026: Who Needs It", "description": "Char Dham Yatra 2026 medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>

@@ -44,7 +44,7 @@ export default function PonyVsHelicopter() {
         badge="Kedarnath Guide · 2026"
         title="Kedarnath Pony vs Helicopter 2026 — Complete Comparison Guide"
         dek="Cost, time, availability, booking process, and which option suits which pilgrim. Honest analysis from 15 years of operating Kedarnath Yatra from Haridwar."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="6 min read"
         facts={[
@@ -73,7 +73,7 @@ export default function PonyVsHelicopter() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <BlogTOC items={[
           { id:'at-a-glance', label:'At a glance — all 4 options' },

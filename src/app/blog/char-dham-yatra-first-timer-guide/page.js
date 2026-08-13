@@ -47,7 +47,7 @@ export default function FirstTimerGuide() {
         badge="Beginner's Guide · 2026"
         title="Char Dham Yatra for First Timers 2026 — Complete Step-by-Step Guide"
         dek="Everything a first-time pilgrim needs to know — from registration to packing to what happens on the trek. No fluff. Real advice from 15 years of guiding 50,000+ pilgrims through the circuit."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="12 min read"
         facts={[
@@ -77,7 +77,7 @@ export default function FirstTimerGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-first-timer-guide", "title": "Char Dham Yatra for First Timers: 2026 Guide", "description": "First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-first-timer-guide", "title": "Char Dham Yatra for First Timers: 2026 Guide", "description": "First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <BlogTOC items={[
           { id:'right-for-you', label:'Is it right for you?' },
           { id:'how-many-days', label:'How many days it takes' },
@@ -256,7 +256,7 @@ export default function FirstTimerGuide() {
         </div>
       
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />

@@ -34,11 +34,11 @@ function Schema() {
     dateModified: SITE.lastUpdatedISO,
     author: {
       '@type': 'Person',
-      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      '@id': `${SITE.baseUrl}/#founder`,
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     },
     publisher: {
       '@type': 'Organization',
@@ -71,7 +71,7 @@ export default function Page() {
         badge="Monsoon 2026 · Written by Hill Drivers"
         title="Char Dham Yatra in Monsoon — How We Keep Pilgrims Safe"
         dek="Sunrise departures · Landslide zones · What to pack · Live route checks · The honest version"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="8 min read"
         facts={[
@@ -92,7 +92,7 @@ export default function Page() {
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>

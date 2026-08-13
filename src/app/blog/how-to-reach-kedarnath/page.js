@@ -50,7 +50,7 @@ export default function HowToReachKedarnath() {
         badge="Journey Guide · 2026"
         title="How to Reach Kedarnath 2026"
         dek="Train · Flight · Road · Trek · Helicopter — From Delhi, Mumbai, Bangalore & all major cities to Kedarnath temple"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -72,7 +72,7 @@ export default function HowToReachKedarnath() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "how-to-reach-kedarnath", "title": "How to Reach Kedarnath 2026: Road, Train & Heli", "description": "How to reach Kedarnath in 2026 from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "how-to-reach-kedarnath", "title": "How to Reach Kedarnath 2026: Road, Train & Heli", "description": "How to reach Kedarnath in 2026 from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>

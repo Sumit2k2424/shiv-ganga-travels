@@ -29,11 +29,11 @@ function Schema() {
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: '2024-01-15', dateModified: '2026-05-01', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra Cost 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-cost` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
@@ -50,7 +50,7 @@ export default function CharDhamCost() {
         badge="Pricing Guide · 2026"
         title="Char Dham Yatra Cost 2026 — Every Rupee Explained"
         dek="Package price · Pony & helicopter · Registration · Train fare · Hidden costs · Budget scenarios"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -72,7 +72,7 @@ export default function CharDhamCost() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         {/* Intent-first answer */}
@@ -303,7 +303,7 @@ export default function CharDhamCost() {
         </div>
       
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="cost" />

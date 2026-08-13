@@ -40,11 +40,11 @@ const faqData = [
 function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Kedarnath Helicopter Booking 2026 — Price, Helipads, Tips & How to Book', author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-10', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:faqData.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
@@ -61,7 +61,7 @@ export default function KedarnathHelicopterBooking() {
         badge="Helicopter Guide · 2026"
         title="Kedarnath Helicopter Booking 2026 — Complete Guide"
         dek="Official IRCTC fares ₹6,390–₹12,762 round trip · Sersi · Phata · Guptkashi · How to book"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -85,7 +85,7 @@ export default function KedarnathHelicopterBooking() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 

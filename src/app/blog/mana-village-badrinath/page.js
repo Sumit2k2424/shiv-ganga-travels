@@ -26,11 +26,11 @@ function Schema() {
     dateModified: '2026-05-21',
     author: {
       '@type': 'Person',
-      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      '@id': `${SITE.baseUrl}/#founder`,
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     },
     publisher: {
       '@type': 'Organization',
@@ -54,7 +54,7 @@ export default function Page() {
         badge="Badrinath · Hidden Gem"
         title="Mana Village — India's Last Village Before Tibet"
         dek="3km from Badrinath · Vyas Gufa · Bhim Pul · Saraswati River · Local Shawl Weavers"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="5 min read"
         facts={[
@@ -76,7 +76,7 @@ export default function Page() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={p}>Most Badrinath pilgrims spend their entire time at the temple, do their darshan, and leave without ever knowing that 3km up the same road is one of the most extraordinary places in India. Mana Village — officially the last inhabited village before the China (Tibet) border — sits at 3,200m at the confluence of the Saraswati and Alaknanda rivers, surrounded by peaks above 6,000m, and it has been continuously inhabited for over a thousand years.</p>

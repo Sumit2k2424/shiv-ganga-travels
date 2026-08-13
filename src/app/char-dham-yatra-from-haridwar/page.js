@@ -123,7 +123,7 @@ export default function Page() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'32px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:18, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> May 2026 · Season open: Apr 19 – Nov 2026</div>
 
-        <BlogAuthor variant="top" author="sumit"/>
+        <BlogAuthor variant="top" author="dhanesh"/>
 
         {/* QUICK FACTS */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', margin:'24px 0 28px', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
@@ -283,7 +283,7 @@ export default function Page() {
         </div>
 
         {/* AUTHOR BIO — bottom */}
-        <div style={{ marginTop:32 }}><BlogAuthor variant="bottom" author="sumit"/></div>
+        <div style={{ marginTop:32 }}><BlogAuthor variant="bottom" author="dhanesh"/></div>
 
         {/* SOURCES — citations (E-E-A-T gap) */}
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:18, marginTop:28 }}>

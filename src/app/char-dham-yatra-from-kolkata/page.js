@@ -87,7 +87,7 @@ export default function CharDhamFromKolkata() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`1,500 km`}</div></div>
@@ -172,7 +172,7 @@ export default function CharDhamFromKolkata() {
           ))}
         </div>
 
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
         <BlogCTA variant="footer" intent="booking" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>

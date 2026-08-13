@@ -85,7 +85,7 @@ export default function RoadConditions() {
         badge={`Updated ${ROAD_UPDATED} · Routes Open`}
         title="Char Dham Yatra Road Conditions 2026"
         dek="Current status of all 4 routes, landslide-prone zones, All-Weather Road project update, Joshimath situation, and mountain driving rules."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${ROAD_UPDATED}`}
         readTime="7 min read"
         facts={[
@@ -107,7 +107,7 @@ export default function RoadConditions() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": ROAD_UPDATED_ISO, "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": ROAD_UPDATED_ISO, "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {ROAD_UPDATED} · Monsoon Season — All Routes Open, Travel With Caution</div>
 
         <div style={{ background: '#FFF8ED', border: '1px solid #F5D9A8', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#9A6B1F' }}>
@@ -202,7 +202,7 @@ export default function RoadConditions() {
         </div>
       
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="route" />

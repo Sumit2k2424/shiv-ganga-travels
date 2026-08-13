@@ -87,7 +87,7 @@ export default function CharDhamFromMumbai() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <AnswerBox>
           Char Dham Yatra from Mumbai costs from ₹24,999 per person and takes 11–13 days. Mumbai
@@ -179,7 +179,7 @@ export default function CharDhamFromMumbai() {
           ))}
         </div>
 
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
         <BlogCTA variant="footer" intent="booking" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>

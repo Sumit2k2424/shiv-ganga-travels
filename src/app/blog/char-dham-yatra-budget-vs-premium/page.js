@@ -51,7 +51,7 @@ export default function BudgetVsPremium() {
         badge="Honest Comparison · 2026"
         title="Char Dham Yatra — Budget vs Premium Package 2026"
         dek="What actually changes between ₹13,900 and ₹50,000 per person · Honest breakdown from a 15-year operator"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -73,7 +73,7 @@ export default function BudgetVsPremium() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹13,900) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹13,900) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

@@ -78,7 +78,7 @@ export default function ComparisonPage() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹13,900 vs ₹8,200), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹13,900 vs ₹8,200), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <p className="blog-lede">
           One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.

@@ -50,7 +50,7 @@ export default function Significance() {
         badge="History · Mythology · Significance"
         title="Char Dham Yatra — History & Significance"
         dek="Why Adi Shankaracharya established this circuit in the 8th century, the mythology of all 4 dhams, and why completing Char Dham Yatra is considered one of the most spiritually complete acts a Hindu can perform."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="8 min read"
         facts={[
@@ -72,7 +72,7 @@ export default function Significance() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-significance", "title": "Char Dham Yatra: History & Spiritual Significance", "description": "Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-significance", "title": "Char Dham Yatra: History & Spiritual Significance", "description": "Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <BlogTOC items={[

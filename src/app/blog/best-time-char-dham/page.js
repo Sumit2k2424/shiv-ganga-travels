@@ -53,11 +53,11 @@ function Schema() {
     dateModified: '2026-05-21',
     author: {
       '@type': 'Person',
-      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      '@id': `${SITE.baseUrl}/#founder`,
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     },
     publisher: {
       '@type': 'Organization',
@@ -101,7 +101,7 @@ export default function BestTimeCharDham() {
         badge="Travel Guide · Updated May 2026"
         title="Best Time for Char Dham Yatra 2026"
         dek="Month-by-month weather · Temple opening dates · When to book · Honest advice from 15 years of running Char Dham yatras"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="5 min read"
         facts={[
@@ -123,7 +123,7 @@ export default function BestTimeCharDham() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated} · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}

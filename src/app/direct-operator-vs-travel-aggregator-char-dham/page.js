@@ -24,7 +24,7 @@ function Schema() {
     headline: 'Direct Operator vs Aggregator: Char Dham Booking',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
-    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham`,
   };
@@ -79,7 +79,7 @@ export default function DirectVsAggregator() {
             How the Char Dham booking market actually works, what you pay extra for when using a platform, and how to find and verify a direct operator in Haridwar.
           </p>
           <div style={{ display: 'inline-flex', gap: 6, alignItems: 'center', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 10, padding: '8px 18px', fontSize: 12.5, color: 'rgba(255,255,255,0.75)' }}>
-            ✍️ Written by Sumit Mishra, Co-Founder · Shiv Ganga Travels, Haridwar
+            ✍️ Written by Dhanesh Chandra Mishra, Founder &amp; Director · Shiv Ganga Travels, Haridwar
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function DirectVsAggregator() {
       </div>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <h2 style={h2}>How the Char Dham Yatra Booking Market Works</h2>
         <p style={p}>Before you book anything, it helps to understand the structure of the market. There are essentially three types of entities selling Char Dham packages:</p>
@@ -238,7 +238,7 @@ export default function DirectVsAggregator() {
           </div>
         </div>
 
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
       </article>
     </>
   );

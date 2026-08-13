@@ -19,11 +19,11 @@ export const metadata = {
 function Schema() {
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा पैकिंग लिस्ट 2026', inLanguage: 'hi', author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम पैकिंग लिस्ट', item: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
@@ -80,7 +80,7 @@ export default function CharDhamPackingListHindi() {
       <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'rgba(216,90,48,0.07)', borderRadius: 12, padding: '16px 20px', border: '1px solid #F5C4B3', marginBottom: 24 }}>

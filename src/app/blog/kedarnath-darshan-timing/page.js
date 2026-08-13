@@ -81,7 +81,7 @@ export default function KedarnathTimings() {
         badge="Temple Guide · 2026 Season"
         title="Kedarnath Darshan Timings 2026"
         dek="Complete schedule — General darshan, Mahabhishek, Shringaar Aarti, Shayan Aarti · Puja prices · Best time to visit · VIP darshan booking"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -107,7 +107,7 @@ export default function KedarnathTimings() {
       </div>
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-darshan-timing", "title": "Kedarnath Darshan Timings 2026: Aarti & VIP Slots", "description": "Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-darshan-timing", "title": "Kedarnath Darshan Timings 2026: Aarti & VIP Slots", "description": "Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
 
         {/* Quick summary box */}

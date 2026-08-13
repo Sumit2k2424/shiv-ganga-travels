@@ -127,7 +127,7 @@ export default function SurkandaDeviTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'surkanda-devi-temple', title:'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide', description:'Surkanda Devi Temple near Dhanaulti: real timings, ropeway fare, the Kaddukhal trek, and how to reach from Haridwar, Rishikesh or Mussoorie.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'surkanda-devi-temple', title:'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide', description:'Surkanda Devi Temple near Dhanaulti: real timings, ropeway fare, the Kaddukhal trek, and how to reach from Haridwar, Rishikesh or Mussoorie.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Surkanda Devi Temple sits at <strong>2,756 m on a ridge above Kaddukhal</strong>, 8 km from Dhanaulti in Tehri Garhwal. It is open <strong>5 AM&ndash;7 PM in summer and 7 AM&ndash;5 PM in winter</strong> &mdash; not the 10 PM closing some guides repeat. Reach it by a <strong>1.5&ndash;2 km trek</strong> from Kaddukhal or the <strong>502 m ropeway</strong> running since 2022. There is no accommodation at the temple and no overnight stay allowed on the ridge.

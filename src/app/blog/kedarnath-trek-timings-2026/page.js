@@ -58,7 +58,7 @@ export default function TrekTimings() {
         badge="Official DM Rudraprayag Order · 2026 Season"
         title="Kedarnath Trek Timings 2026"
         dek="Last trek start: 1:30 PM from Gaurikund · Descent deadline: 5:00 PM from Kedarnath · No night trek permitted · Cut-off points at each checkpoint"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="6 min read"
         facts={[
@@ -80,7 +80,7 @@ export default function TrekTimings() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-trek-timings-2026", "title": "Kedarnath Trek Timings 2026: Cut-Offs & Rules", "description": "Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Checkpoint cut-offs, last-entry rules and why 5 AM starts are best.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-trek-timings-2026", "title": "Kedarnath Trek Timings 2026: Cut-Offs & Rules", "description": "Kedarnath trek timings 2026: start before 1:30 PM from Gaurikund to descend safely. Checkpoint cut-offs, last-entry rules and why 5 AM starts are best.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Verified by Shiv Ganga Travels, Haridwar
         </div>

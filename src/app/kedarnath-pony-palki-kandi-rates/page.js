@@ -216,7 +216,7 @@ export default function KedarnathPonyPalkiKandiRates() {
             Related: <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · <Link href="/kedarnath-weather" style={{ color: 'var(--teal)' }}>Kedarnath weather</Link>
           </p>
 
-          <BlogAuthor author="sumit" variant="bottom" />
+          <BlogAuthor author="dhanesh" variant="bottom" />
         </div>
       </article>
     </>

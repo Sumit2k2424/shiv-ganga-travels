@@ -126,7 +126,7 @@ export default function ChitaiGoluDevtaTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'chitai-golu-devta-temple', title:'Chitai Golu Devta Temple 2026 — Timings, Letters & Route', description:'Chitai Golu Devta Temple near Almora — the god of justice, the petition ritual, darshan timings, distances and how to fit it into a Kumaon trip.', datePublished:'2026-07-27', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'chitai-golu-devta-temple', title:'Chitai Golu Devta Temple 2026 — Timings, Letters & Route', description:'Chitai Golu Devta Temple near Almora — the god of justice, the petition ritual, darshan timings, distances and how to fit it into a Kumaon trip.', datePublished:'2026-07-27', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Chitai Golu Devta Temple sits <strong>8&ndash;10 km from Almora</strong> on the Almora&ndash;Pithoragarh road in Kumaon, Uttarakhand. It is dedicated to <strong>Golu Devta, the god of justice</strong>, and devotees do not simply pray here: they <strong>write out their grievance and tie it to the railings</strong>, often on legal stamp paper, then return to hang a <strong>brass bell</strong> once the matter is settled. Darshan is commonly <strong>6 AM to 7 PM</strong>, entry is free, and most people stay an hour or two.

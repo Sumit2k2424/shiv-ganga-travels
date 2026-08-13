@@ -230,7 +230,7 @@ export default function KedarnathVipDarshan() {
             Related: <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
           </p>
 
-          <BlogAuthor author="sumit" variant="bottom" />
+          <BlogAuthor author="dhanesh" variant="bottom" />
         </div>
       </article>
     </>

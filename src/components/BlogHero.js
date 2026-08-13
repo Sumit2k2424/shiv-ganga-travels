@@ -14,7 +14,7 @@ import WhyBookDirect from '@/components/lux/WhyBookDirect';
  *   badge          — eyebrow pill text (e.g. "Travel Guide · 2026")
  *   title          — H1 headline
  *   dek            — one-line subtitle / deck
- *   author         — display name (e.g. "Sumit Mishra")
+ *   author         — display name (e.g. "Dhanesh Chandra Mishra")
  *   authorInitials — 2 letters for the avatar (default: derived from author)
  *   updated        — freshness label (e.g. "Updated Jan 2026")
  *   readTime       — e.g. "8 min read"

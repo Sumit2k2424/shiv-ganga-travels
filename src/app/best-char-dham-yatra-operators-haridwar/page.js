@@ -23,7 +23,7 @@ function Schema() {
     '@type': 'Article',
     headline: '6 Best Char Dham Yatra Operators in Haridwar (2026)',
     datePublished: '2026-05-21', dateModified: '2026-05-21',
-    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra', jobTitle: 'Co-Founder & Operations Manager', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/'] },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar`,
   };
@@ -230,7 +230,7 @@ export default function BestOperators() {
       </div>
 
       <article style={{ maxWidth: 940, margin: '0 auto', padding: '36px 20px 60px' }}>
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         {/* Ranking criteria */}
         <h2 style={h2}>Ranking Criteria — How We Scored Each Operator</h2>
@@ -331,7 +331,7 @@ export default function BestOperators() {
           </div>
         </div>
 
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
       </article>
     </>
   );

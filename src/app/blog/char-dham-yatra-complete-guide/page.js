@@ -266,7 +266,7 @@ export default function CharDhamCompleteGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <meta itemProp="datePublished" content="2026-05-21" />
         <meta itemProp="dateModified" content="2026-05-21" />
         <meta itemProp="author" content="Shiv Ganga Travels" />

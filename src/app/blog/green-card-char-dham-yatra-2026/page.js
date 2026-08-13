@@ -59,7 +59,7 @@ export default function GreenCard() {
         badge="New 2026 Rule · Non-UK Vehicles · ₹50 Permit"
         title="Green Card for Char Dham Yatra 2026"
         dek="All vehicles with non-Uttarakhand registration (DL, HR, UP, RJ, MH, and all others) must obtain this ₹50 vehicle permit before entering Char Dham routes."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="6 min read"
         facts={[
@@ -81,7 +81,7 @@ export default function GreenCard() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#791F1F' }}>

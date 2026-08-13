@@ -66,7 +66,7 @@ export default function OpeningDates() {
         badge="🟢 Season Open · Official Dates 2026"
         title="Char Dham Yatra Opening Dates 2026"
         dek="Official opening and closing dates for all 4 dhams — Yamunotri, Gangotri, Kedarnath, Badrinath — with best season guide and booking timeline"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="5 min read"
         facts={[
@@ -88,7 +88,7 @@ export default function OpeningDates() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-opening-dates-2026", "title": "Char Dham Yatra Opening Dates 2026: All 4 Dhams", "description": "Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-opening-dates-2026", "title": "Char Dham Yatra Opening Dates 2026: All 4 Dhams", "description": "Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Officially verified</div>
 
         <KeyTakeaways title="2026 opening dates at a glance"
@@ -245,7 +245,7 @@ export default function OpeningDates() {
         </div>
       
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />

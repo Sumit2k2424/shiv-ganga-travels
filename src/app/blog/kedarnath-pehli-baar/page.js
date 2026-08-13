@@ -28,11 +28,11 @@ function Schema() {
   };
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'केदारनाथ यात्रा 2026 पहली बार — पूरी जानकारी', inLanguage: 'hi', author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/kedarnath-pehli-baar` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'केदारनाथ पहली बार', item: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
@@ -94,7 +94,7 @@ export default function KedarnathPehliBaar() {
       <article className="blog-container" lang="hi" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

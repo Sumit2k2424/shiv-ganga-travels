@@ -59,11 +59,11 @@ function Schema() {
     description: 'Step-by-step process to complete mandatory Char Dham Yatra biometric registration online at registrationandtouristcare.uk.gov.in or at designated',
     author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       },
     publisher: {
       '@type': 'Organization',
@@ -232,7 +232,7 @@ export default function RegistrationBlog() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
         {/* Alert box */}
@@ -645,7 +645,7 @@ export default function RegistrationBlog() {
         </div>
       
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="registration" />

@@ -25,7 +25,7 @@ export default function BadrinathYatraGuide() {
       badge="Yatra Guide · 2026"
       title="Badrinath Yatra Guide 2026 — Temple, Timings & Travel Tips"
       dek="3,133m · Lord Vishnu · No trek needed · Mana village · Tapt Kund · From ₹4,500"
-      author="Sumit Mishra"
+      author="Dhanesh Chandra Mishra"
       updated="Updated 2026"
       readTime="6 min read"
       facts={[
@@ -46,7 +46,7 @@ export default function BadrinathYatraGuide() {
     <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 

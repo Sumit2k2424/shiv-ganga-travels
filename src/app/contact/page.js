@@ -246,6 +246,10 @@ export default function ContactPage() {
                     <div style={{ minWidth:0 }}>
                       <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)' }} itemProp="name">Dhanesh Chandra Mishra</div>
                       <div style={{ fontSize:12.5, color:'var(--text-muted)' }} itemProp="jobTitle">Founder &amp; Director</div>
+                      <div style={{ display:'flex', gap:8, marginTop:5 }}>
+                        <a href="https://www.linkedin.com/in/dhanesh-chandra-635564429/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
+                          style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>
+                      </div>
                     </div>
                   </div>
                   <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.65, margin:'10px 0 10px' }} itemProp="description">
@@ -265,20 +269,18 @@ export default function ContactPage() {
                     <div style={{ width:46, height:46, borderRadius:'50%', background:'var(--teal)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:15, color:'#fff', flexShrink:0 }}>SM</div>
                     <div style={{ minWidth:0 }}>
                       <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)' }} itemProp="name">Sumit Mishra</div>
-                      <div style={{ fontSize:12.5, color:'var(--text-muted)' }} itemProp="jobTitle">Operations Manager &amp; Content Lead</div>
+                      <div style={{ fontSize:12.5, color:'var(--text-muted)' }} itemProp="jobTitle">Operations Manager</div>
                       <div style={{ display:'flex', gap:8, marginTop:5 }}>
-                        <a href="https://www.linkedin.com/in/sumit-mishra-863734171/" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
-                          style={{ fontSize:11.5, color:'#0A66C2', fontWeight:600, textDecoration:'none' }}>LinkedIn ↗</a>
                         <a href="https://www.facebook.com/sumi2112" target="_blank" rel="noopener noreferrer" itemProp="sameAs"
                           style={{ fontSize:11.5, color:'#1877F2', fontWeight:600, textDecoration:'none' }}>Facebook ↗</a>
                       </div>
                     </div>
                   </div>
                   <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.65, margin:'10px 0 10px' }} itemProp="description">
-                    Manages day-to-day operations and handles all yatra content. Has accompanied pilgrim groups on the full Char Dham circuit since 2015. Coordinates 500+ pilgrim groups annually and writes from direct field experience.
+                    Manages day-to-day operations and on-ground yatra coordination. Has accompanied pilgrim groups on the full Char Dham circuit since 2015. Coordinates 500+ pilgrim groups annually and verifies route details from direct field experience.
                   </p>
                   <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
-                    {['Operations since 2015','500+ Groups/Year','Content Author','Haridwar Based'].map(c => (
+                    {['Operations since 2015','500+ Groups/Year','Route Verification','Haridwar Based'].map(c => (
                       <span key={c} style={{ fontSize:11, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
                     ))}
                   </div>

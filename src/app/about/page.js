@@ -46,12 +46,13 @@ function Schema() {
       addressCountry: 'IN',
     },
     knowsAbout: ['Char Dham Yatra', 'Kedarnath', 'Badrinath', 'Himalayan Travel', 'Pilgrim Safety'],
-    // `url` is the page that describes him. There is deliberately no `sameAs`:
-    // it previously listed the site root and the company's Google Maps listing,
-    // which asserts that this person IS the website and IS the business — a
-    // false identity claim that undermines the entity resolution it was meant
-    // to help. Restore sameAs only with a real personal profile (LinkedIn,
-    // Wikidata, an authored byline elsewhere).
+    // `url` is the page that describes him; `sameAs` carries real personal
+    // profiles only. The site root and the company's Google Maps listing used to
+    // sit here, which asserted that this person IS the website and IS the
+    // business — a false identity claim that undermined the entity resolution it
+    // was meant to help. His LinkedIn is a genuine personal profile, so it
+    // belongs; nothing company-owned goes back in.
+    sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     url: `${SITE.baseUrl}/about`,
   };
 
@@ -60,7 +61,7 @@ function Schema() {
     '@type': 'Person',
     '@id': `${SITE.baseUrl}/about#sumit-mishra`,
     name: 'Sumit Mishra',
-    jobTitle: 'Operations Manager & Content Lead',
+    jobTitle: 'Operations Manager',
     description: 'Manages operations at Shiv Ganga Travels. Has accompanied pilgrim groups on the Char Dham circuit since 2015, coordinating 500+ groups annually.',
     worksFor: {
       '@type': 'Organization',
@@ -69,7 +70,6 @@ function Schema() {
       '@id': `${SITE.baseUrl}/#organization`,
     },
     sameAs: [
-      'https://www.linkedin.com/in/sumit-mishra-863734171/',
       'https://www.facebook.com/sumi2112',
     ],
     knowsAbout: ['Char Dham Yatra', 'Kedarnath Trek', 'Badrinath', 'Yatra Registration', 'Mountain Travel'],
@@ -186,6 +186,12 @@ export default function AboutPage() {
               <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)', marginBottom: 3 }}>Dhanesh Chandra Mishra</div>
               <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director · Retired Indian Army Officer</div>
               <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Retired Indian Army Officer · Roorkee, Uttarakhand · Founded 2010</div>
+              <a href="https://www.linkedin.com/in/dhanesh-chandra-635564429/" target="_blank" rel="noopener noreferrer"
+                aria-label="Dhanesh Chandra Mishra on LinkedIn"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 5, marginTop: 9, fontSize: 12.5, fontWeight: 600, color: '#0A66C2', textDecoration: 'none', background: 'rgba(10,102,194,0.08)', padding: '4px 11px', borderRadius: 20 }}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn ↗
+              </a>
             </div>
           </div>
 

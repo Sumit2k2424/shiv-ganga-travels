@@ -35,7 +35,7 @@ export default function HaridwarToKedarnath() {
       badge="Route Guide · 2026"
       title="Haridwar to Kedarnath — Complete Route Guide 2026"
       dek="228km by road + 16km trek · Journey time · Key stops · Best route"
-      author="Sumit Mishra"
+      author="Dhanesh Chandra Mishra"
       updated="Updated 2026"
       readTime="5 min read"
       facts={[
@@ -56,7 +56,7 @@ export default function HaridwarToKedarnath() {
     <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
       <p className="blog-lede">The road from Haridwar to Kedarnath is not just a journey — it’s a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Here is the complete route guide from <strong>Haridwar to Kedarnath</strong>, including distances, journey times, the best places to stop, and exactly what to expect at each stage.</p>
 

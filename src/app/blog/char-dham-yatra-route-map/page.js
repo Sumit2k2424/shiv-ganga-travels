@@ -72,7 +72,7 @@ export default function RouteMap() {
         badge="Operator-Verified Route Guide · 2026"
         title="Char Dham Yatra Route Map 2026"
         dek="Complete road route from Haridwar — 1,500km total, 10 days, day-wise distances, altitudes, highway numbers, and key stops. Written by operators who drive this route every season."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="7 min read"
         facts={[
@@ -94,7 +94,7 @@ export default function RouteMap() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ <strong>By:</strong> Shiv Ganga Travels, Haridwar (15 seasons on this route)
         </div>

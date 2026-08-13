@@ -92,7 +92,7 @@ export default function PackageTypes() {
         badge="Honest Comparison · 15-Year Haridwar Operator"
         title="Types of Char Dham Yatra Packages 2026"
         dek="Budget · Deluxe · Premium · Helicopter. What each includes, who it is actually for, and the honest difference between them."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="6 min read"
         facts={[
@@ -114,7 +114,7 @@ export default function PackageTypes() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹13,900 Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "types-of-char-dham-yatra-packages", "title": "Char Dham Package Types: Budget to Helicopter", "description": "Char Dham packages compared: Budget ₹13,900 Deluxe ₹35,000, Premium ₹55,000, Helicopter ₹1.8L+. What each includes and which one suits you.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>

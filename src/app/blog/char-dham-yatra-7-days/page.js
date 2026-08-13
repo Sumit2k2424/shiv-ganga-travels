@@ -54,7 +54,7 @@ export default function SevenDaysBlog() {
         badge="Itinerary Guide · 2026"
         title="Char Dham Yatra in 7 Days — Is It Possible?"
         dek="Complete 7-day itinerary with honest warnings · What gets rushed · What gets skipped · When 7 days makes sense"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -76,7 +76,7 @@ export default function SevenDaysBlog() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-7-days", "title": "Char Dham Yatra in 7 Days: Itinerary & Honest Advice", "description": "Can you finish Char Dham Yatra in 7 days? Yes, with the right plan. Day-by-day itinerary, what to skip and honest advice for pilgrims short on time in 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-7-days", "title": "Char Dham Yatra in 7 Days: Itinerary & Honest Advice", "description": "Can you finish Char Dham Yatra in 7 days? Yes, with the right plan. Day-by-day itinerary, what to skip and honest advice for pilgrims short on time in 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Verdict box */}

@@ -56,7 +56,7 @@ export default function HaridwarToKedarnath() {
         badge="Route Guide · 2026"
         title="Haridwar to Kedarnath — Complete Route & Road Trip Guide 2026"
         dek="218km by road via NH7 · 6–7 hours driving · 9 checkpoints explained · Sonprayag one-way rules · What time to leave"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="7 min read"
         facts={[
@@ -78,7 +78,7 @@ export default function HaridwarToKedarnath() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>

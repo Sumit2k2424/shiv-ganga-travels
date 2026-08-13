@@ -57,7 +57,7 @@ export default function WeatherGuide() {
         badge="Climate Guide · 2026 Season"
         title="Uttarakhand Weather Month by Month"
         dek="Complete weather data for Kedarnath, Badrinath, Gangotri & Yamunotri — temperatures, rainfall, snowfall, best months, and what to pack"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="6 min read"
         facts={[
@@ -79,7 +79,7 @@ export default function WeatherGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "uttarakhand-weather-guide", "title": "Uttarakhand Weather 2026: All Char Dham Shrines", "description": "Month-by-month Uttarakhand weather for Char Dham Yatra 2026: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "uttarakhand-weather-guide", "title": "Uttarakhand Weather 2026: All Char Dham Shrines", "description": "Month-by-month Uttarakhand weather for Char Dham Yatra 2026: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Season summary */}

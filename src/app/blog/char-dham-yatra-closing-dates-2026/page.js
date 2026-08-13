@@ -99,7 +99,7 @@ export default function ClosingDates() {
         badge="2026 Season End · Kapat Band Dates"
         title="Char Dham Closing Dates 2026"
         dek="Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath Nov 13. Complete closing ceremony guide, winter abodes, and last-chance visit tips."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="5 min read"
         facts={[
@@ -121,7 +121,7 @@ export default function ClosingDates() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} — dates confirmed for 2026 season
         </div>

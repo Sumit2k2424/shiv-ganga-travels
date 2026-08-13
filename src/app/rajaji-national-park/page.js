@@ -132,7 +132,7 @@ export default function RajajiNationalPark() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'rajaji-national-park', title:'Rajaji National Park Safari 2026 — Zones, Fees & Timings', description:'Rajaji National Park jungle safari: entry fees, Chilla/Motichur/Ranipur zones, booking steps, elephant and tiger sightings, and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'rajaji-national-park', title:'Rajaji National Park Safari 2026 — Zones, Fees & Timings', description:'Rajaji National Park jungle safari: entry fees, Chilla/Motichur/Ranipur zones, booking steps, elephant and tiger sightings, and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Rajaji National Park is an 820 sq km tiger reserve across the Shivalik foothills, with its busiest gate, <strong>Chilla</strong>, just <strong>8 km from Rishikesh</strong>. Entry runs <strong>₹150&ndash;200 for Indians, ₹600&ndash;800 for foreigners</strong>, plus a Gypsy hire of around <strong>₹3,500</strong>. The park is open <strong>15 November&ndash;15 June</strong> with two safari slots a day, and is best known for its large <strong>Asian elephant</strong> population.

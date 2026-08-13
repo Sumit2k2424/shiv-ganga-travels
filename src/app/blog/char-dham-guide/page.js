@@ -39,11 +39,11 @@ function Schema() {
     description: 'Complete guide to planning Char Dham Yatra 2026 from Haridwar.',
     author: {
         '@type': 'Person',
-        '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-        name: 'Sumit Mishra',
-        jobTitle: 'Operations Manager, Shiv Ganga Travels',
+        '@id': `${SITE.baseUrl}/#founder`,
+        name: 'Dhanesh Chandra Mishra',
+        jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
-        sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+        sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
     datePublished: '2025-01-15',
@@ -78,7 +78,7 @@ export default function CharDhamGuide() {
         badge="Travel Guide · 2026"
         title="Char Dham Yatra Complete Guide 2026"
         dek="Route · Itinerary · Cost · Registration · Packing List · Expert Tips — from an operator who runs these roads every season."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated Jan 2026"
         readTime="8 min read"
         facts={[
@@ -102,7 +102,7 @@ export default function CharDhamGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <p className="blog-lede">Planning a <strong>Char Dham Yatra</strong> can feel overwhelming — four high-altitude shrines, 10–12 days of travel, mountain weather, and complex logistics. This complete guide covers everything from the route and cost to registration and what to pack, so you arrive fully prepared for one of Hinduism's most sacred journeys.</p>
 
@@ -237,7 +237,7 @@ export default function CharDhamGuide() {
         </div>
 
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />

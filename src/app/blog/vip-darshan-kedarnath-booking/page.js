@@ -51,7 +51,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan',
-    author: { '@type': 'Person', name: 'Sumit Mishra', jobTitle: 'Operations Manager, Shiv Ganga Travels' },
+    author: { '@type': 'Person', name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels' },
     publisher: { '@type': 'Organization', name: 'Shiv Ganga Travels', url: SITE.baseUrl },
     datePublished: '2026-03-10', dateModified: '2026-05-28',
     mainEntityOfPage: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking`,
@@ -70,7 +70,7 @@ export default function VIPDarshan() {
         badge="Kedarnath 2026 · Official BKTC Booking Only"
         title="Kedarnath VIP Darshan 2026"
         dek="Prices, online booking on the BKTC portal, sparsh darshan, the helicopter combo, and Badrinath rates — plus the one scam that catches first-timers every season."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="8 min read"
         facts={[
@@ -91,7 +91,7 @@ export default function VIPDarshan() {
 
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 28, 2026</div>
 
         {/* Direct answer first — GEO */}

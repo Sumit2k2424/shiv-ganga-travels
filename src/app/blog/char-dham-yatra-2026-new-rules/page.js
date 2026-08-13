@@ -145,7 +145,7 @@ export default function NewRules2026() {
         badge={`🔴 Live — Updated ${SITE.lastUpdated}`}
         title="Char Dham Yatra 2026 New Rules — What Changed"
         dek="Phone ban · Medical certificate for 55+ · IRCTC helicopter · Non-Hindu entry · Real-time tracking"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="6 min read"
         facts={[
@@ -167,7 +167,7 @@ export default function NewRules2026() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <div style={{ background:'#fee2e2', border:'1.5px solid #fca5a5', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Important Notice for 2026 Pilgrims</div>
@@ -237,7 +237,7 @@ export default function NewRules2026() {
         </div>
 
         {/* Author bio card — E-E-A-T */}
-        <BlogAuthor variant="bottom" author="sumit" />
+        <BlogAuthor variant="bottom" author="dhanesh" />
 
         {/* ── End-of-article booking CTA ── */}
         <BlogCTA variant="footer" intent="info" />

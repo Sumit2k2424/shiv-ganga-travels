@@ -102,7 +102,7 @@ export default function DhariDeviTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'dhari-devi-temple', title:'Dhari Devi Temple 2026 — Story, Timings & How to Reach', description:'Guardian goddess of the Char Dham near Srinagar, Pauri Garhwal — story, timings, how to reach and distances.', datePublished:'2026-02-01', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'dhari-devi-temple', title:'Dhari Devi Temple 2026 — Story, Timings & How to Reach', description:'Guardian goddess of the Char Dham near Srinagar, Pauri Garhwal — story, timings, how to reach and distances.', datePublished:'2026-02-01', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Dhari Devi Temple sits on a platform in the middle of the <strong>Alaknanda river at Kalyasaur, Pauri Garhwal</strong>, about 15 km from Srinagar Garhwal on the Badrinath highway. Dedicated to <strong>Maa Dhari Devi, a form of Goddess Kali</strong>, she is revered as the guardian deity of Uttarakhand and the protector of the Char Dham. Darshan is roughly <strong>6 AM to 8 PM</strong>; most pilgrims stop here on the way to Kedarnath and Badrinath to seek her blessing first.

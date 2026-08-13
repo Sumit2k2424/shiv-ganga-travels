@@ -62,7 +62,7 @@ export default function KedarnathRegistration() {
         badge="Registration opens March 6 · 100% free · QR e-pass"
         title="Kedarnath Yatra Registration 2026"
         dek="Step-by-step guide: Online · WhatsApp (8394833833) · Offline counter. Daily limit: 18,000 pilgrims. Without a valid QR pass, you are turned back at Sonprayag."
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="6 min read"
         facts={[
@@ -84,7 +84,7 @@ export default function KedarnathRegistration() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-registration-2026", "title": "Kedarnath Registration 2026: Online & WhatsApp", "description": "Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-registration-2026", "title": "Kedarnath Registration 2026: Online & WhatsApp", "description": "Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 2026
         </div>

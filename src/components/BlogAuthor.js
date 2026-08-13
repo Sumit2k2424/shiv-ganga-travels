@@ -5,28 +5,33 @@ import { SITE } from '@/data/packages';
  * BlogAuthor — E-E-A-T author byline for all blog posts
  * variant: 'top' (compact, above article) | 'bottom' (full bio card, after article)
  */
-export default function BlogAuthor({ variant = 'top', author = 'sumit', article = null }) {
+export default function BlogAuthor({ variant = 'top', author = 'dhanesh', article = null }) {
   // article: { slug, title, description, datePublished, dateModified } — when
   // provided on the 'top' variant, emits BlogPosting JSON-LD so every post gets
   // Article rich-result eligibility + clear freshness signals for AI crawlers.
 
   // `id` is the canonical @id for each author. Without it every post minted a
-  // fresh anonymous Person node, so "Sumit Mishra" existed as ~54 unrelated
-  // entities instead of one author with a LinkedIn behind him — which is
+  // fresh anonymous Person node, so one author existed as ~54 unrelated
+  // entities instead of one person with a LinkedIn behind him — which is
   // exactly the author authority signal AI assistants look for. These ids match
   // the ones already used on /about and in layout.js so the graph converges.
+  //
+  // Bylines site-wide resolve to Dhanesh (`/#founder`), the strongest entity we
+  // have: founder, retired Army officer, 15 seasons on the routes. That node is
+  // also the `founder` of the Organization in layout.js, so every article now
+  // reinforces one authority instead of splitting it across two people.
   const authors = {
     sumit: {
       id: `${SITE.baseUrl}/about#sumit-mishra`,
       name: 'Sumit Mishra',
-      role: 'Operations Manager & Content Lead, Shiv Ganga Travels',
+      role: 'Operations Manager, Shiv Ganga Travels',
       bio: `Sumit Mishra manages day-to-day operations at Shiv Ganga Travels and has personally accompanied pilgrim groups on the Char Dham circuit since 2015. He handles route planning, hotel pre-blocking during peak season, and yatra coordination for 500+ pilgrims annually. Everything published on this site is written from first-hand experience on these routes.`,
       credentials: [
         '10+ years on Char Dham routes',
         '500+ pilgrim groups coordinated',
         'Native Uttarakhand — Haridwar based',
       ],
-      linkedin: 'https://www.linkedin.com/in/sumit-mishra-863734171/',
+      linkedin: null,
       facebook: 'https://www.facebook.com/sumi2112',
       initials: 'SM',
     },
@@ -41,13 +46,13 @@ export default function BlogAuthor({ variant = 'top', author = 'sumit', article 
         '50,000+ pilgrims served',
         '15 seasons on Char Dham routes',
       ],
-      linkedin: null,
+      linkedin: 'https://www.linkedin.com/in/dhanesh-chandra-635564429/',
       facebook: null,
       initials: 'DM',
     },
   };
 
-  const a = authors[author] || authors.sumit;
+  const a = authors[author] || authors.dhanesh;
 
   if (variant === 'top') {
     const posting = article && article.slug && article.title ? {

@@ -42,13 +42,13 @@ export default function GuideArticle({
   toc = [],
   readTime,
   updated = SITE.lastUpdated,
-  author = 'sumit',
+  author = 'dhanesh',
   ctaIntent = 'info',
   faqs = [],
   related = [],
   children,
 }) {
-  const authorName = author === 'dhanesh' ? 'Dhanesh Chandra Mishra' : 'Sumit Mishra';
+  const authorName = author === 'sumit' ? 'Sumit Mishra' : 'Dhanesh Chandra Mishra';
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -58,12 +58,22 @@ export default function GuideArticle({
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-04-01',
     dateModified: SITE.lastUpdatedISO,
-    author: {
+    // Same canonical @ids as BlogAuthor and /about, so a guide byline resolves
+    // to the one existing Person node rather than minting a fresh anonymous one.
+    author: author === 'sumit' ? {
       '@type': 'Person',
-      name: author === 'dhanesh' ? 'Dhanesh Chandra Mishra' : 'Sumit Mishra',
-      jobTitle: author === 'dhanesh' ? 'Founder & Director, Shiv Ganga Travels' : 'Operations Manager, Shiv Ganga Travels',
+      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
+      name: 'Sumit Mishra',
+      jobTitle: 'Operations Manager, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
-      sameAs: author === 'dhanesh' ? [] : ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      sameAs: ['https://www.facebook.com/sumi2112'],
+    } : {
+      '@type': 'Person',
+      '@id': `${SITE.baseUrl}/#founder`,
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director, Shiv Ganga Travels',
+      url: `${SITE.baseUrl}/about`,
+      sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     },
     publisher: {
       '@type': 'Organization',

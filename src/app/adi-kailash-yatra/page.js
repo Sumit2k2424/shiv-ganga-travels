@@ -121,7 +121,7 @@ export default function AdiKailashYatra() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'adi-kailash-yatra', title:'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide', description:'Adi Kailash Yatra: real Inner Line Permit steps, the road-vs-trek route from Kathgodam, Om Parvat, cost, and how to reach from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'adi-kailash-yatra', title:'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide', description:'Adi Kailash Yatra: real Inner Line Permit steps, the road-vs-trek route from Kathgodam, Om Parvat, cost, and how to reach from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Adi Kailash is a sacred peak at <strong>5,945 m</strong> in Pithoragarh district, believed to be the first earthly abode of Shiva and Parvati &mdash; one of the five <strong>Panch Kailash</strong>, and unlike Mount Kailash in Tibet, reachable entirely within India, <strong>no passport needed</strong>. An <strong>Inner Line Permit</strong> is mandatory, issued at Dharchula. The yatra now runs largely by road via Kathgodam and Pithoragarh, taking <strong>7-9 days</strong>, best done <strong>May-June or September-October</strong>.

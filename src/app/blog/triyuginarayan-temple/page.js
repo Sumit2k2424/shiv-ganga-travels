@@ -26,11 +26,11 @@ function Schema() {
     dateModified: '2026-05-21',
     author: {
       '@type': 'Person',
-      '@id': `${SITE.baseUrl}/about#sumit-mishra`,
-      name: 'Sumit Mishra',
-      jobTitle: 'Operations Manager, Shiv Ganga Travels',
+      '@id': `${SITE.baseUrl}/#founder`,
+      name: 'Dhanesh Chandra Mishra',
+      jobTitle: 'Founder & Director, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
-      sameAs: ['https://www.linkedin.com/in/sumit-mishra-863734171/', 'https://www.facebook.com/sumi2112'],
+      sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     },
     publisher: {
       '@type': 'Organization',
@@ -54,7 +54,7 @@ export default function Page() {
         badge="🔥 Eternal Flame · 1,900m"
         title="Triyuginarayan Temple — Shiva and Parvati's Wedding Site"
         dek="Near Kedarnath · Eternal fire burning since the divine wedding · Vishnu as priest · 12km from Sonprayag"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
         readTime="5 min read"
         facts={[
@@ -76,7 +76,7 @@ export default function Page() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10, marginBottom:28 }}>

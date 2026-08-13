@@ -114,7 +114,7 @@ return (
         badge="Preparation Guide · 2026"
         title="Char Dham Yatra Packing List 2026 — What to Carry"
         dek="Clothes · Shoes · Medicines · Documents · Gadgets — from 15 years of guiding pilgrims"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated Apr 2026"
         readTime="7 min read"
         facts={[
@@ -138,7 +138,7 @@ return (
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" />
+        <BlogAuthor variant="top" author="dhanesh" />
 
         <p className="blog-lede">Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 

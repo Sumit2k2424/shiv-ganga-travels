@@ -42,7 +42,7 @@ export default function KedarnathCompleteGuide() {
         badge="Complete A-Z Guide · 2026"
         title="Kedarnath Yatra 2026 — Complete Guide"
         dek="Route · Cost · Registration · Trek · Helicopter · Darshan Timings · Hotels · Packages — Everything in one place"
-        author="Sumit Mishra"
+        author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="8 min read"
         facts={[
@@ -64,7 +64,7 @@ export default function KedarnathCompleteGuide() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="sumit" article={{"slug": "kedarnath-yatra-complete-guide", "title": "Kedarnath Yatra Guide 2026: Route, Cost & Darshan", "description": "Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹5,250.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-yatra-complete-guide", "title": "Kedarnath Yatra Guide 2026: Route, Cost & Darshan", "description": "Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹5,250.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
 
         {/* Quick facts */}

@@ -125,7 +125,7 @@ export default function HarsilValley() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="sumit" article={{ slug:'harsil-valley', title:'Harsil Valley Guide 2026 — Permits, Weather & Route', description:'Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'harsil-valley', title:'Harsil Valley Guide 2026 — Permits, Weather & Route', description:'Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Harsil Valley sits at <strong>2,620 m on the Bhagirathi River</strong> in Uttarkashi district, <strong>25 km before Gangotri</strong> on NH-108. It&rsquo;s known for apple orchards, deodar forest and <strong>Gartang Gali</strong>, a restored 150-year-old wooden cliff walkway. No permit is needed for Harsil itself &mdash; just valid ID &mdash; though the nearby Nelong Valley does require one. Best visited <strong>April&ndash;June or mid-September&ndash;November</strong>.
