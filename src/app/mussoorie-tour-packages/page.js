@@ -3,27 +3,27 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Mussoorie Tour Package 2026 | From ₹6,350 | Kempty Falls' },
-  description: 'Mussoorie tour packages 2026 from ₹6,350/person. Direct Haridwar operator, 15+ yrs, zero commission. Kempty Falls, Mall Road, Gun Hill included.',
+  title: { absolute: `Mussoorie Tour Package ${SITE.season} | From ₹6,350 | Kempty Falls` },
+  description: `Mussoorie tour packages ${SITE.season} from ₹6,350/person. Direct Haridwar operator, 15+ yrs, zero commission. Kempty Falls, Mall Road, Gun Hill included.`,
   keywords: [
     'mussoorie tour packages','mussoorie tour package','mussoorie packages','mussoorie trip package',
     'mussoorie tour packages from delhi','mussoorie tour package from haridwar',
     'dehradun to mussoorie tour packages','mussoorie rishikesh tour package',
-    'mussoorie honeymoon package','mussoorie family package','mussoorie tour packages 2026',
+    'mussoorie honeymoon package','mussoorie family package',`mussoorie tour packages ${SITE.season}`,
     'haridwar rishikesh mussoorie tour package','mussoorie holiday package',
   ],
   alternates: { canonical: `${SITE.baseUrl}/mussoorie-tour-packages` },
   openGraph: {
-    title: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Kempty Falls & Mall Road',
+    title: `Mussoorie Tour Packages ${SITE.season} — From ₹6,350 | Kempty Falls & Mall Road`,
     description: 'Mussoorie tour packages from ₹6,350. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010. Zero commission, 50,000+ travellers served.',
     url: `${SITE.baseUrl}/mussoorie-tour-packages`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Kempty Falls & Mall Road',
+    title: `Mussoorie Tour Packages ${SITE.season} — From ₹6,350 | Kempty Falls & Mall Road`,
     description: 'Mussoorie tour packages from ₹6,350. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Mussoorie Tour Packages 2026 — From ₹6,350 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Mussoorie Tour Packages ${SITE.season} — From ₹6,350 | Shiv Ganga Travels` }],
   },
 };
 

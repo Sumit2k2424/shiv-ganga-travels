@@ -4,12 +4,12 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Helicopter Package 2026 | ₹2,30,000 | DGCA Approved' },
-  description: 'Char Dham by helicopter 2026 — 5N/6D from Dehradun, ₹2,30,000/person all-inclusive. DGCA-approved third-party operators, VIP darshan, luxury hotels.',
-  keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter','char dham helicopter package 2026','DGCA approved char dham helicopter','sahastradhara helipad char dham','char dham helicopter price 2026','char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
+  title: { absolute: `Char Dham Helicopter Package ${SITE.season} | ₹2,30,000 | DGCA Approved` },
+  description: `Char Dham by helicopter ${SITE.season} — 5N/6D from Dehradun, ₹2,30,000/person all-inclusive. DGCA-approved third-party operators, VIP darshan, luxury hotels.`,
+  keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter',`char dham helicopter package ${SITE.season}`,'DGCA approved char dham helicopter','sahastradhara helipad char dham',`char dham helicopter price ${SITE.season}`,'char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
-  openGraph: { title: 'Char Dham Helicopter Package 2026 — DGCA-Approved, Sahastradhara Dehradun', description:'Char Dham Helicopter Package 2026. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.', url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website', images:[{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Helicopter Package 2026 — All 4 Dhams in 6 Days | Shiv Ganga Travels' }] },
-  twitter: { card: 'summary_large_image', title: 'Char Dham by Helicopter 2026 — 5N/6D, ₹2,30,000', description: 'All 4 Char Dhams in 6 days by helicopter. VIP darshan. From Dehradun. Direct booking.', images: [{ url: '/opengraph-image', alt: 'Char Dham Helicopter Package 2026' }] },
+  openGraph: { title: `Char Dham Helicopter Package ${SITE.season} — DGCA-Approved, Sahastradhara Dehradun`, description:`Char Dham Helicopter Package ${SITE.season}. DGCA-approved. 5N/6D from Sahastradhara Dehradun. VIP darshan all 4 dhams. 5 kg luggage. Weather buffer day. Zero commission.`, url:`${SITE.baseUrl}/char-dham-helicopter`, type:'website', images:[{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Helicopter Package ${SITE.season} — All 4 Dhams in 6 Days | Shiv Ganga Travels` }] },
+  twitter: { card: 'summary_large_image', title: `Char Dham by Helicopter ${SITE.season} — 5N/6D, ₹2,30,000`, description: 'All 4 Char Dhams in 6 days by helicopter. VIP darshan. From Dehradun. Direct booking.', images: [{ url: '/opengraph-image', alt: `Char Dham Helicopter Package ${SITE.season}` }] },
 };
 
 function Schema() {

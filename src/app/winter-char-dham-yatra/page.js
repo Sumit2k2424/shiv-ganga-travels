@@ -7,9 +7,9 @@ import {
 } from '@/components/LocalPageKit';
 
 export const metadata = {
-  title: { absolute: 'Winter Char Dham Yatra 2026–27 — The Four Winter Seats' },
+  title: { absolute: `Winter Char Dham Yatra ${SITE.season}–27 — The Four Winter Seats` },
   description: 'The dhams close in November but the deities do not stop. Worship moves to Ukhimath, Joshimath, Mukhba and Kharsali — open roads, no crowds.',
-  keywords: ['winter char dham yatra','char dham in winter','winter char dham 2026','shitkalin char dham','winter abode char dham','char dham winter seats','ukhimath joshimath mukhba kharsali','char dham after closing'],
+  keywords: ['winter char dham yatra','char dham in winter',`winter char dham ${SITE.season}`,'shitkalin char dham','winter abode char dham','char dham winter seats','ukhimath joshimath mukhba kharsali','char dham after closing'],
   alternates: { canonical: `${SITE.baseUrl}/winter-char-dham-yatra` },
   openGraph: {
     title: 'Winter Char Dham Yatra — The Four Winter Seats',

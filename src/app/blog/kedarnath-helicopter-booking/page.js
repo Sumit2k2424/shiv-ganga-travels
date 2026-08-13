@@ -8,22 +8,22 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Helicopter Booking 2026 | Price Starts at ₹6,390 | IRCTC Guide' },
-  description: 'Kedarnath helicopter booking 2026 — IRCTC HeliYatra fares from ₹6,390. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['kedarnath helicopter booking 2026', 'kedarnath helicopter price 2026', 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
+  title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | Price Starts at ₹6,390 | IRCTC Guide` },
+  description: `Kedarnath helicopter booking ${SITE.season} — IRCTC HeliYatra fares from ₹6,390. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`kedarnath helicopter booking ${SITE.season}`, `kedarnath helicopter price ${SITE.season}`, 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
   openGraph: {
-    title: 'Kedarnath Helicopter Booking 2026: Price & IRCTC',
+    title: `Kedarnath Helicopter Booking ${SITE.season}: Price & IRCTC`,
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
     url: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Helicopter Booking 2026 — Price & Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Helicopter Booking ${SITE.season} — Price & Guide | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Helicopter Booking 2026 — Complete Guide',
+    title: `Kedarnath Helicopter Booking ${SITE.season} — Complete Guide`,
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath Helicopter Booking 2026 — Complete Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Kedarnath Helicopter Booking ${SITE.season} — Complete Guide | Shiv Ganga Travels` }],
   },
 };
 

@@ -7,9 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Package vs Self-Planned Trip 2026 | Real Costs' },
-  description: 'Char Dham package vs self-planned 2026 — honest cost comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra package vs self planned', 'char dham yatra self booking', 'is char dham yatra package worth it', 'char dham yatra independent travel', 'char dham package or self arranged 2026'],
+  title: { absolute: `Char Dham Package vs Self-Planned Trip ${SITE.season} | Real Costs` },
+  description: `Char Dham package vs self-planned ${SITE.season} — honest cost comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['char dham yatra package vs self planned', 'char dham yatra self booking', 'is char dham yatra package worth it', 'char dham yatra independent travel', `char dham package or self arranged ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned` },
 };
 

@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'How to Reach Gangotri 2026 | Road Route & Helicopter Guide' },
-  description: 'How to reach Gangotri Dham 2026 — road via Uttarkashi, helicopter option. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['how to reach gangotri','gangotri route from haridwar','haridwar to gangotri distance','uttarkashi to gangotri','gangotri by road','nearest airport gangotri 2026'],
+  title: { absolute: `How to Reach Gangotri ${SITE.season} | Road Route & Helicopter Guide` },
+  description: `How to reach Gangotri Dham ${SITE.season} — road via Uttarkashi, helicopter option. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['how to reach gangotri','gangotri route from haridwar','haridwar to gangotri distance','uttarkashi to gangotri','gangotri by road',`nearest airport gangotri ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-gangotri` },
   openGraph: {
-    title: 'How to Reach Gangotri 2026 — Road Route & Guide',
+    title: `How to Reach Gangotri ${SITE.season} — Road Route & Guide`,
     description: 'Road route, helicopter, train options — complete guide to reach Gangotri Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-gangotri`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Reach Gangotri 2026 — Road Route & Guide',
+    title: `How to Reach Gangotri ${SITE.season} — Road Route & Guide`,
     description: 'Road route, helicopter, train options — complete guide to reach Gangotri Dham from Haridwar, Delhi and Dehradun.',
-    images: [{ url: '/opengraph-image', alt: 'How to Reach Gangotri 2026 — Road Route & Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `How to Reach Gangotri ${SITE.season} — Road Route & Guide | Shiv Ganga Travels` }],
   },
 };
 

@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Haridwar Tour Package 2026 | Price Starts at ₹2,999 | Ganga Aarti Included' },
-  description: 'Haridwar Tour Package 2026 from ₹2,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Har Ki Pauri, Mansa Devi.',
+  title: { absolute: `Haridwar Tour Package ${SITE.season} | Price Starts at ₹2,999 | Ganga Aarti Included` },
+  description: `Haridwar Tour Package ${SITE.season} from ₹2,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Har Ki Pauri, Mansa Devi.`,
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',
     'haridwar trip package','haridwar rishikesh tour package','haridwar tour package from delhi',
@@ -15,16 +15,16 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/haridwar-tour-packages` },
   openGraph: {
-    title: 'Haridwar Tour Package 2026 — Ganga Aarti, Har Ki Pauri | From ₹2,999',
+    title: `Haridwar Tour Package ${SITE.season} — Ganga Aarti, Har Ki Pauri | From ₹2,999`,
     description: 'Haridwar tour packages from ₹2,999. Har Ki Pauri Ganga Aarti, Mansa Devi, Chandi Devi, Rishikesh combo. Shiv Ganga Travels — Haridwar\'s trusted direct operator since 2010.',
     url: `${SITE.baseUrl}/haridwar-tour-packages`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Haridwar Tour Package 2026 — Ganga Aarti, Har Ki Pauri | From ₹2,999',
+    title: `Haridwar Tour Package ${SITE.season} — Ganga Aarti, Har Ki Pauri | From ₹2,999`,
     description: 'Haridwar tour packages from ₹2,999. Har Ki Pauri Ganga Aarti, Mansa Devi, Chandi Devi, Rishikesh combo. Shiv Ganga Travels — Haridwar',
-    images: [{ url: '/opengraph-image', alt: 'Haridwar Tour Package 2026 — Ganga Aarti, Har Ki Pauri | Fro | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Haridwar Tour Package ${SITE.season} — Ganga Aarti, Har Ki Pauri | Fro | Shiv Ganga Travels` }],
   },
 };
 

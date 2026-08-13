@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Noida 2026 | Price Starts at ₹17,200 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Noida 2026 — 230km via Delhi–Meerut Expressway. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from noida','char dham yatra noida 2026','char dham package from noida','kedarnath from noida','haridwar from noida'],
+  title: { absolute: `Char Dham Yatra from Noida ${SITE.season} | Price Starts at ₹17,200 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Noida ${SITE.season} — 230km via Delhi–Meerut Expressway. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from noida',`char dham yatra noida ${SITE.season}`,'char dham package from noida','kedarnath from noida','haridwar from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {
-    title: 'Char Dham Yatra from Noida 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Noida 2026. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹17,200/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registr',
+    title: `Char Dham Yatra from Noida ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Noida ${SITE.season}. 230 km · 4–4.5h via Delhi–Meerut Expressway. All-inclusive packages from ₹17,200/person. Direct Haridwar operator — zero commission. Noida pickup, VIP darshan, registr`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-noida`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Noida 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Noida ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

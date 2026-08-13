@@ -6,20 +6,20 @@ import {
 } from '@/components/LocalPageKit';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Helicopter Booking 2026 — IRCTC HeliYatra Guide' },
-  description: 'Kedarnath shuttle seats are sold only on IRCTC HeliYatra, and DGCA cut flights by about 30% for 2026. How the booking actually works, and what is fake.',
-  keywords: ['char dham helicopter booking','irctc heliyatra','kedarnath helicopter booking online','heliyatra irctc portal','char dham helicopter rules 2026','kedarnath helicopter ticket booking','dgca helicopter char dham','helicopter booking scam kedarnath'],
+  title: { absolute: `Char Dham Helicopter Booking ${SITE.season} — IRCTC HeliYatra Guide` },
+  description: `Kedarnath shuttle seats are sold only on IRCTC HeliYatra, and DGCA cut flights by about 30% for ${SITE.season}. How the booking actually works, and what is fake.`,
+  keywords: ['char dham helicopter booking','irctc heliyatra','kedarnath helicopter booking online','heliyatra irctc portal',`char dham helicopter rules ${SITE.season}`,'kedarnath helicopter ticket booking','dgca helicopter char dham','helicopter booking scam kedarnath'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter-booking-guide` },
   openGraph: {
-    title: 'Char Dham Helicopter Booking 2026 — IRCTC HeliYatra Guide',
-    description: 'Kedarnath shuttle seats sell only on IRCTC HeliYatra. DGCA cut flights ~30% for 2026. How booking works.',
+    title: `Char Dham Helicopter Booking ${SITE.season} — IRCTC HeliYatra Guide`,
+    description: `Kedarnath shuttle seats sell only on IRCTC HeliYatra. DGCA cut flights ~30% for ${SITE.season}. How booking works.`,
     url: `${SITE.baseUrl}/char-dham-helicopter-booking-guide`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham helicopter booking guide — IRCTC HeliYatra' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Helicopter Booking 2026 — IRCTC HeliYatra Guide',
+    title: `Char Dham Helicopter Booking ${SITE.season} — IRCTC HeliYatra Guide`,
     description: 'Kedarnath shuttle seats sell only on IRCTC HeliYatra. How booking works.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Helicopter Booking Guide' }],
   },

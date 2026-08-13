@@ -5,27 +5,27 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Scams 2026 | Spot & Avoid Booking Fraud' },
-  description: 'Char Dham Yatra scams 2026 — fake helicopter & hotel fraud rising. Trusted operator, 15+ yrs experience, verify any operator in 60 seconds.',
+  title: { absolute: `Char Dham Yatra Scams ${SITE.season} | Spot & Avoid Booking Fraud` },
+  description: `Char Dham Yatra scams ${SITE.season} — fake helicopter & hotel fraud rising. Trusted operator, 15+ yrs experience, verify any operator in 60 seconds.`,
   keywords: [
-    'char dham yatra scam', 'char dham yatra booking scam 2026', 'kedarnath helicopter booking scam',
+    'char dham yatra scam', `char dham yatra booking scam ${SITE.season}`, 'kedarnath helicopter booking scam',
     'chardham hotel booking scam', 'char dham fake website', 'char dham fraud agent',
     'how to avoid char dham scam', 'char dham cyber fraud', 'fake helicopter booking char dham',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-scams` },
   openGraph: {
-    title: 'Char Dham Yatra Scams 2026 — How to Spot Fake Bookings & Stay Safe',
+    title: `Char Dham Yatra Scams ${SITE.season} — How to Spot Fake Bookings & Stay Safe`,
     description:
       'Fake helicopter, hotel and registration bookings are looting pilgrims. The red flags, the 60-second operator check, the official portals, and what to do if you have already been cheated.',
     url: `${SITE.baseUrl}/char-dham-yatra-scams`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Scam Awareness 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Scam Awareness ${SITE.season} — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Scams 2026 — Spot & Avoid Booking Fraud',
+    title: `Char Dham Yatra Scams ${SITE.season} — Spot & Avoid Booking Fraud`,
     description: 'Fake heli, hotel & registration scams are rising. Red flags, 60-second operator check, official portals, report steps.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Scam Awareness 2026' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra Scam Awareness ${SITE.season}` }],
   },
 };
 

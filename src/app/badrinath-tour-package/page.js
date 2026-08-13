@@ -5,27 +5,27 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500 | Hotels & Transport Included' },
-  description: 'Badrinath Tour Package 2026 — 2N/3D from ₹4,500/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
+  title: { absolute: `Badrinath Tour Package ${SITE.season} | Price Starts at ₹4,500 | Hotels & Transport Included` },
+  description: `Badrinath Tour Package ${SITE.season} — 2N/3D from ₹4,500/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).`,
   keywords: [
-    'badrinath tour package', 'badrinath yatra package', 'badrinath tour package 2026',
+    'badrinath tour package', 'badrinath yatra package', `badrinath tour package ${SITE.season}`,
     'badrinath package from haridwar', 'badrinath yatra package from haridwar', 'badrinath ek dham yatra',
     'badrinath darshan package', 'badrinath tour package price', 'badrinath 2n 3d itinerary',
   ],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-tour-package` },
   openGraph: {
-    title: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500 | Hotels & Transport Included',
+    title: `Badrinath Tour Package ${SITE.season} | Price Starts at ₹4,500 | Hotels & Transport Included`,
     description:
-      'No trek to the temple. Customizable itinerary, Mana village & Tapt Kund, 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
+      `No trek to the temple. Customizable itinerary, Mana village & Tapt Kund, ${SITE.season} registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.`,
     url: `${SITE.baseUrl}/badrinath-tour-package`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Badrinath Tour Package 2026 from Haridwar — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Badrinath Tour Package ${SITE.season} from Haridwar — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Tour Package 2026 | Price Starts at ₹4,500',
+    title: `Badrinath Tour Package ${SITE.season} | Price Starts at ₹4,500`,
     description: 'Badrinath 2N/3D from Haridwar, no trek. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
-    images: [{ url: '/opengraph-image', alt: 'Badrinath Tour Package 2026 from Haridwar' }],
+    images: [{ url: '/opengraph-image', alt: `Badrinath Tour Package ${SITE.season} from Haridwar` }],
   },
 };
 

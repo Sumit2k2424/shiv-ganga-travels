@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Gaurikund Guide 2026 | Kedarnath Trek Base | How to Reach & Stay' },
+  title: { absolute: `Gaurikund Guide ${SITE.season} | Kedarnath Trek Base | How to Reach & Stay` },
   description: 'Gaurikund (1,982m) — Kedarnath trek starting point. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['gaurikund','gauri kund','gaurikund to kedarnath','gaurikund temple','gaurikund uttarakhand','sonprayag to gaurikund'],
   alternates: { canonical: `${SITE.baseUrl}/gaurikund-guide` },

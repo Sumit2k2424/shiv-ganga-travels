@@ -4,16 +4,16 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: '6 Best Char Dham Yatra Operators in Haridwar 2026 | Ranked & Compared' },
-  description: 'Ranked Char Dham operators in Haridwar 2026 by rating, experience & pricing. Trusted operator, 15+ yrs experience, transparent pricing.',
-  keywords: ['best char dham yatra operators haridwar 2026','best char dham operator haridwar review','top char dham yatra operators 2026','char dham yatra haridwar operator comparison','best char dham package operator'],
+  title: { absolute: `6 Best Char Dham Yatra Operators in Haridwar ${SITE.season} | Ranked & Compared` },
+  description: `Ranked Char Dham operators in Haridwar ${SITE.season} by rating, experience & pricing. Trusted operator, 15+ yrs experience, transparent pricing.`,
+  keywords: [`best char dham yatra operators haridwar ${SITE.season}`,'best char dham operator haridwar review',`top char dham yatra operators ${SITE.season}`,'char dham yatra haridwar operator comparison','best char dham package operator'],
   alternates: { canonical: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar` },
   openGraph: {
-    title: '6 Best Char Dham Yatra Operators from Haridwar 2026 — Ranked & Compared',
+    title: `6 Best Char Dham Yatra Operators from Haridwar ${SITE.season} — Ranked & Compared`,
     description: 'Honest comparison of top Char Dham operators ranked by Google rating, price transparency, experience and senior pilgrim capability.',
     url: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Best Char Dham Yatra Operators Haridwar 2026' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Best Char Dham Yatra Operators Haridwar ${SITE.season}` }],
   },
 };
 

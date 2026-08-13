@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Yatra Guide 2026 | Price Starts at ₹5,250 | Route & Darshan' },
-  description: 'Kedarnath Yatra 2026 guide — 16km trek, registration, darshan timings. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['kedarnath yatra 2026 complete guide', 'kedarnath yatra guide', 'how to do kedarnath yatra', 'kedarnath yatra cost 2026', 'kedarnath yatra package haridwar', 'kedarnath yatra planning guide 2026'],
+  title: { absolute: `Kedarnath Yatra Guide ${SITE.season} | Price Starts at ₹5,250 | Route & Darshan` },
+  description: `Kedarnath Yatra ${SITE.season} guide — 16km trek, registration, darshan timings. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: [`kedarnath yatra ${SITE.season} complete guide`, 'kedarnath yatra guide', 'how to do kedarnath yatra', `kedarnath yatra cost ${SITE.season}`, 'kedarnath yatra package haridwar', `kedarnath yatra planning guide ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
-  openGraph: { title: 'Kedarnath Yatra Guide 2026: Route, Cost & Darshan', url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Yatra 2026 — Complete Planning Guide | Shiv Ganga Travels' }],
+  openGraph: { title: `Kedarnath Yatra Guide ${SITE.season}: Route, Cost & Darshan`, url: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Yatra ${SITE.season} — Complete Planning Guide | Shiv Ganga Travels` }],
 };
 
 function Schema() {

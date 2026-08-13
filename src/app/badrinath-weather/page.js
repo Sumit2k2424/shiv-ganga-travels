@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Badrinath Weather 2026 | Month-wise Temperature Guide' },
-  description: 'Badrinath weather 2026 — temperatures at 3,133m, best time May–June & Sept–Oct. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['badrinath weather','badrinath temperature','badrinath weather may','badrinath best time to visit 2026','badrinath snowfall','badrinath weather in october'],
+  title: { absolute: `Badrinath Weather ${SITE.season} | Month-wise Temperature Guide` },
+  description: `Badrinath weather ${SITE.season} — temperatures at 3,133m, best time May–June & Sept–Oct. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: ['badrinath weather','badrinath temperature','badrinath weather may',`badrinath best time to visit ${SITE.season}`,'badrinath snowfall','badrinath weather in october'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-weather` },
   openGraph: {
-    title: 'Badrinath Weather 2026 — Month-wise Temperature Guide',
+    title: `Badrinath Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.',
     url: `${SITE.baseUrl}/badrinath-weather`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Weather 2026 — Month-wise Temperature Guide',
+    title: `Badrinath Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.',
-    images: [{ url: '/opengraph-image', alt: 'Badrinath Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Badrinath Weather ${SITE.season} — Month-wise Temperature Guide | Shiv Ganga Travels` }],
   },
 };
 

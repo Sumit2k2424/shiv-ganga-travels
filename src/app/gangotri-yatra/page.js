@@ -4,16 +4,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: 'Gangotri Yatra Package 2026 | Price Starts at ₹4,250 | Motor Road, No Trek' },
-  description: 'Gangotri Yatra 2026 from Haridwar — ₹4,250 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.',
-  keywords: ['gangotri yatra, gangotri yatra 2026, gangotri yatra package, haridwar to gangotri, gangotri temple guide'],
+  title: { absolute: `Gangotri Yatra Package ${SITE.season} | Price Starts at ₹4,250 | Motor Road, No Trek` },
+  description: `Gangotri Yatra ${SITE.season} from Haridwar — ₹4,250 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.`,
+  keywords: [`gangotri yatra, gangotri yatra ${SITE.season}, gangotri yatra package, haridwar to gangotri, gangotri temple guide`],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
-  openGraph: { title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide', description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek', url:`${SITE.baseUrl}/gangotri-yatra`, type:'website' },
+  openGraph: { title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`, description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`, url:`${SITE.baseUrl}/gangotri-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gangotri Yatra 2026 — Package, Route, Temple Guide',
-    description: 'Plan Gangotri Yatra 2026 from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek',
-    images: [{ url: '/opengraph-image', alt: 'Gangotri Yatra 2026 — Package, Route, Temple Guide | Shiv Ganga Travels' }],
+    title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`,
+    description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`,
+    images: [{ url: '/opengraph-image', alt: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide | Shiv Ganga Travels` }],
   },
 };
 

@@ -11,22 +11,22 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Trek Guide 2026 | 16 km Route & Stays' },
-  description: 'Kedarnath trek guide 2026 — 16km route from Gaurikund, stays, pony vs heli. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['kedarnath trek guide 2026','kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips','kedarnath yatra 2026'],
+  title: { absolute: `Kedarnath Trek Guide ${SITE.season} | 16 km Route & Stays` },
+  description: `Kedarnath trek guide ${SITE.season} — 16km route from Gaurikund, stays, pony vs heli. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`kedarnath trek guide ${SITE.season}`,'kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips',`kedarnath yatra ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
   openGraph: {
-    title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
+    title: `Kedarnath Trek Guide ${SITE.season}: 16 km Route & Stays`,
     description: 'Complete Kedarnath trek guide — 16km route from Gaurikund, difficulty, stay options, best time to visit, and what to carry.',
     url: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Trek Guide 2026 – 16 KM Route & Stay Options | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Trek Guide ${SITE.season} – 16 KM Route & Stay Options | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Trek Guide 2026: 16 km Route & Stays',
+    title: `Kedarnath Trek Guide ${SITE.season}: 16 km Route & Stays`,
     description: 'Complete Kedarnath trek guide — 16km route, difficulty, stay options, best time to visit, and what to carry.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath Trek Guide 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Kedarnath Trek Guide ${SITE.season} | Shiv Ganga Travels` }],
   },
 };
 

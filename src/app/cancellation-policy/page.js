@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Cancellation & Refund Policy 2026 | Shiv Ganga Travels' },
+  title: { absolute: `Cancellation & Refund Policy ${SITE.season} | Shiv Ganga Travels` },
   description: 'Clear cancellation & refund policy for Char Dham Yatra packages. Trusted operator, 15+ yrs experience, 30-day free cancellation, full transparency.',
   alternates: { canonical: `${SITE.baseUrl}/cancellation-policy` },
 };

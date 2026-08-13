@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Chennai 2026 | Price Starts at ₹26,999 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Chennai 2026 — 2,200km, fly to Delhi + overnight train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from chennai','char dham yatra chennai 2026','char dham package from chennai','kedarnath from chennai','haridwar from chennai'],
+  title: { absolute: `Char Dham Yatra from Chennai ${SITE.season} | Price Starts at ₹26,999 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Chennai ${SITE.season} — 2,200km, fly to Delhi + overnight train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from chennai',`char dham yatra chennai ${SITE.season}`,'char dham package from chennai','kedarnath from chennai','haridwar from chennai'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chennai` },
   openGraph: {
-    title: 'Char Dham Yatra from Chennai 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Chennai 2026. 2,200 km · fly Delhi (1h 5m) + overnight train. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Chennai pickup, VIP darshan, ',
+    title: `Char Dham Yatra from Chennai ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Chennai ${SITE.season}. 2,200 km · fly Delhi (1h 5m) + overnight train. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Chennai pickup, VIP darshan, `,
     url: `${SITE.baseUrl}/char-dham-yatra-from-chennai`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Chennai 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Chennai ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

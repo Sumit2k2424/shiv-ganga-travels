@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Hotels Near Badrinath 2026 | Best Stays | Joshimath & Chamoli' },
-  description: 'Hotels near Badrinath 2026 — Badrinath town, Joshimath, Chamoli & Rudraprayag. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['hotels near badrinath','badrinath hotels 2026','joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
+  title: { absolute: `Hotels Near Badrinath ${SITE.season} | Best Stays | Joshimath & Chamoli` },
+  description: `Hotels near Badrinath ${SITE.season} — Badrinath town, Joshimath, Chamoli & Rudraprayag. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['hotels near badrinath',`badrinath hotels ${SITE.season}`,'joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },
   openGraph: {
-    title: 'Hotels Near Badrinath 2026 — Guide to Best Stays',
+    title: `Hotels Near Badrinath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Badrinath Yatra — hotel guide for Badrinath town, Joshimath, Chamoli and Pipalkoti.',
     url: `${SITE.baseUrl}/badrinath-hotels`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hotels Near Badrinath 2026 — Guide to Best Stays',
+    title: `Hotels Near Badrinath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Badrinath Yatra — hotel guide for Badrinath town, Joshimath, Chamoli and Pipalkoti.',
-    images: [{ url: '/opengraph-image', alt: 'Hotels Near Badrinath 2026 — Guide to Best Stays | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Hotels Near Badrinath ${SITE.season} — Guide to Best Stays | Shiv Ganga Travels` }],
   },
 };
 

@@ -5,16 +5,16 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Yamunotri Temple Guide 2026 | Darshan Timings, Trek & History' },
-  description: 'Yamunotri Temple 2026 — darshan timings, 6km trek, Surya Kund hot spring. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['yamunotri temple','yamunotri temple timings 2026','yamunotri dham','yamunotri trek','yamunotri opening date 2026','surya kund yamunotri','yamunotri temple history'],
+  title: { absolute: `Yamunotri Temple Guide ${SITE.season} | Darshan Timings, Trek & History` },
+  description: `Yamunotri Temple ${SITE.season} — darshan timings, 6km trek, Surya Kund hot spring. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['yamunotri temple',`yamunotri temple timings ${SITE.season}`,'yamunotri dham','yamunotri trek',`yamunotri opening date ${SITE.season}`,'surya kund yamunotri','yamunotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-temple` },
-  openGraph: { title: 'Yamunotri Temple 2026 — Trek, Timings, History & Complete Guide', description: 'The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and 2026 opening dates.', url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website' },
+  openGraph: { title: `Yamunotri Temple ${SITE.season} — Trek, Timings, History & Complete Guide`, description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`, url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yamunotri Temple 2026 — Trek, Timings & Complete Guide',
-    description: 'The first dham of Char Dham. 6km trek, Surya Kund hot spring, history and 2026 opening dates for Yamunotri Dham.',
-    images: [{ url: '/opengraph-image', alt: 'Yamunotri Temple 2026 — Char Dham Yatra | Shiv Ganga Travels' }],
+    title: `Yamunotri Temple ${SITE.season} — Trek, Timings & Complete Guide`,
+    description: `The first dham of Char Dham. 6km trek, Surya Kund hot spring, history and ${SITE.season} opening dates for Yamunotri Dham.`,
+    images: [{ url: '/opengraph-image', alt: `Yamunotri Temple ${SITE.season} — Char Dham Yatra | Shiv Ganga Travels` }],
   },
 };
 

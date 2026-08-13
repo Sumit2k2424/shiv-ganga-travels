@@ -4,9 +4,9 @@ import { AARTI } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Har Ki Pauri Haridwar — Ganga Aarti Timings & Guide 2026' },
+  title: { absolute: `Har Ki Pauri Haridwar — Ganga Aarti Timings & Guide ${SITE.season}` },
   description: 'Har Ki Pauri Ganga Aarti is 6:30 PM in summer, 5:30 PM in winter. Where to sit, when to arrive, what it costs, and the mistakes first-timers make.',
-  keywords: ['har ki pauri','har ki pauri haridwar','ganga aarti haridwar timing','har ki pauri aarti time','brahmakund haridwar','har ki pauri ganga aarti','haridwar aarti timing 2026','har ki pauri history','ganga snan haridwar'],
+  keywords: ['har ki pauri','har ki pauri haridwar','ganga aarti haridwar timing','har ki pauri aarti time','brahmakund haridwar','har ki pauri ganga aarti',`haridwar aarti timing ${SITE.season}`,'har ki pauri history','ganga snan haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/har-ki-pauri-guide` },
   openGraph: {
     title: 'Har Ki Pauri — Ganga Aarti Timings and Visitor Guide',

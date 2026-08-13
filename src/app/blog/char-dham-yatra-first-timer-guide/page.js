@@ -8,9 +8,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra for First Timers 2026 | Complete Guide' },
-  description: 'First Char Dham Yatra 2026? Registration, packing, fitness prep. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra for first timers', 'char dham yatra beginners guide 2026', 'first time char dham yatra tips', 'char dham yatra what to expect', 'char dham yatra complete planning guide'],
+  title: { absolute: `Char Dham Yatra for First Timers ${SITE.season} | Complete Guide` },
+  description: `First Char Dham Yatra ${SITE.season}? Registration, packing, fitness prep. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['char dham yatra for first timers', `char dham yatra beginners guide ${SITE.season}`, 'first time char dham yatra tips', 'char dham yatra what to expect', 'char dham yatra complete planning guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-first-timer-guide` },
 };
 

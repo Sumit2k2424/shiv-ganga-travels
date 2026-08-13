@@ -6,12 +6,12 @@ import {
 } from '@/components/LocalPageKit';
 
 export const metadata = {
-  title: { absolute: 'Shiv Ganga Travels vs Thrillophilia — Char Dham 2026' },
+  title: { absolute: `Shiv Ganga Travels vs Thrillophilia — Char Dham ${SITE.season}` },
   description: 'Thrillophilia is a marketplace that lists local operators. We are one of the operators. What that difference means for your booking, honestly set out.',
   keywords: ['shiv ganga travels vs thrillophilia','thrillophilia char dham review','thrillophilia char dham yatra','book char dham direct or thrillophilia','thrillophilia alternative char dham','char dham marketplace vs operator'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-thrillophilia` },
   openGraph: {
-    title: 'Shiv Ganga Travels vs Thrillophilia — Char Dham 2026',
+    title: `Shiv Ganga Travels vs Thrillophilia — Char Dham ${SITE.season}`,
     description: 'A marketplace lists operators. We are an operator. What that actually changes for your yatra.',
     url: `${SITE.baseUrl}/shiv-ganga-travels-vs-thrillophilia`,
     type: 'article',
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shiv Ganga Travels vs Thrillophilia — Char Dham 2026',
+    title: `Shiv Ganga Travels vs Thrillophilia — Char Dham ${SITE.season}`,
     description: 'A marketplace lists operators. We are an operator. What that changes.',
     images: [{ url: '/opengraph-image', alt: 'Shiv Ganga Travels vs Thrillophilia | Char Dham' }],
   },

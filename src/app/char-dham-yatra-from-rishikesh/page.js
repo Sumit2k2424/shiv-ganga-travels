@@ -5,26 +5,26 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Rishikesh 2026 | Price Starts at ₹21,000 | Door Pickup' },
-  description: 'Char Dham Yatra from Rishikesh 2026 — just 24km from Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. Zero commission.',
+  title: { absolute: `Char Dham Yatra from Rishikesh ${SITE.season} | Price Starts at ₹21,000 | Door Pickup` },
+  description: `Char Dham Yatra from Rishikesh ${SITE.season} — just 24km from Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. Zero commission.`,
   keywords: [
-    'char dham yatra from rishikesh', 'char dham yatra package rishikesh 2026',
+    'char dham yatra from rishikesh', `char dham yatra package rishikesh ${SITE.season}`,
     'rishikesh to char dham yatra', 'char dham tour from rishikesh',
     'rishikesh char dham package', 'chardham yatra rishikesh',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-rishikesh` },
   openGraph: {
-    title: 'Char Dham Yatra from Rishikesh 2026 — Route, Distance & Packages',
-    description: 'Char Dham Yatra from Rishikesh 2026. Just 24km from Haridwar. Packages from ₹21,000. Direct operator, zero commission. Rishikesh door pickup available.',
+    title: `Char Dham Yatra from Rishikesh ${SITE.season} — Route, Distance & Packages`,
+    description: `Char Dham Yatra from Rishikesh ${SITE.season}. Just 24km from Haridwar. Packages from ₹21,000. Direct operator, zero commission. Rishikesh door pickup available.`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-rishikesh`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Rishikesh — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} from Rishikesh — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Rishikesh 2026',
+    title: `Char Dham Yatra from Rishikesh ${SITE.season}`,
     description: 'Char Dham Yatra from Rishikesh. Gateway to Char Dham. Direct operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Rishikesh — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Rishikesh — Shiv Ganga Travels` }],
   },
 };
 

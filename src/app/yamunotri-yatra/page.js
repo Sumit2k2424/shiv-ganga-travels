@@ -4,16 +4,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: 'Yamunotri Yatra Package 2026 | Price Starts at ₹4,500 | Trek & Pony Guide' },
-  description: 'Yamunotri Yatra 2026 from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.',
-  keywords: ['yamunotri yatra, yamunotri yatra 2026, yamunotri trek, haridwar to yamunotri, yamunotri yatra package'],
+  title: { absolute: `Yamunotri Yatra Package ${SITE.season} | Price Starts at ₹4,500 | Trek & Pony Guide` },
+  description: `Yamunotri Yatra ${SITE.season} from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.`,
+  keywords: [`yamunotri yatra, yamunotri yatra ${SITE.season}, yamunotri trek, haridwar to yamunotri, yamunotri yatra package`],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
-  openGraph: { title:'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide', description:'Plan Yamunotri Yatra 2026 from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.', url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
+  openGraph: { title:`Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`, description:`Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`, url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Guide',
-    description: 'Plan Yamunotri Yatra 2026 from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.',
-    images: [{ url: '/opengraph-image', alt: 'Yamunotri Yatra 2026 — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels' }],
+    title: `Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`,
+    description: `Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`,
+    images: [{ url: '/opengraph-image', alt: `Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels` }],
   },
 };
 

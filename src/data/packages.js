@@ -19,6 +19,20 @@ export const SITE = {
   // across all pages. Bump these two values to refresh the whole site.
   lastUpdated   : 'July 30, 2026', // human-readable, shown on-page
   lastUpdatedISO: '2026-07-30',   // schema.org dateModified format
+
+  // The yatra season every evergreen page advertises in its <title> and meta
+  // description. Pilgrims genuinely search "char dham yatra 2026 package", so
+  // the year earns its place in the title — but it used to be hard-coded into
+  // ~180 files, which meant the whole site read as stale the moment the season
+  // turned. Evergreen pages now interpolate this instead.
+  //
+  // BUMP THIS TO 2027 once the 2026 season closes (13 Nov 2026) and forward
+  // bookings open. It is the only edit needed to roll the site over.
+  //
+  // Pages where the year IS the subject — opening/closing dates, that season's
+  // rule changes, road conditions — deliberately keep their year hard-coded and
+  // get a new sibling page each year instead. Don't wire those to this value.
+  season: 2026,
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────

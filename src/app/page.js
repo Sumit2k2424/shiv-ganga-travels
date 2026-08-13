@@ -25,23 +25,23 @@ import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/componen
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra 2026 | Price Starts at ₹13,900 | Direct Operator, Zero Commission` },
-  description: 'Char Dham Yatra 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹13,900.',
-  keywords: ['char dham yatra 2026','char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
+  title: { absolute: `Char Dham Yatra ${SITE.season} | Price Starts at ₹13,900 | Direct Operator, Zero Commission` },
+  description: `Char Dham Yatra ${SITE.season} from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹13,900.`,
+  keywords: [`char dham yatra ${SITE.season}`,'char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: 'Char Dham Yatra 2026 | Price Starts at ₹13,900',
+    title: `Char Dham Yatra ${SITE.season} | Price Starts at ₹13,900`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Temple — Char Dham Yatra 2026 with Shiv Ganga Travels Haridwar' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Temple — Char Dham Yatra ${SITE.season} with Shiv Ganga Travels Haridwar` }],
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shiv Ganga Travels — Char Dham Yatra 2026',
+    title: `Shiv Ganga Travels — Char Dham Yatra ${SITE.season}`,
     description: 'Zero commission Char Dham Yatra from Haridwar. Est. 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Haridwar — Shiv Ganga Travels, Direct Operator since 2010` }],
   },
   alternates: { canonical: 'https://www.shivgangatravels.com' },
 };

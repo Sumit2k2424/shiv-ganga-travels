@@ -8,9 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra in October 2026 | Weather, Crowds & Dates' },
-  description: 'Char Dham Yatra in October 2026 — fewer crowds, clear skies. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra in october 2026', 'kedarnath yatra october', 'char dham yatra october weather', 'char dham october closing dates', 'char dham off season october', 'best time char dham october'],
+  title: { absolute: `Char Dham Yatra in October ${SITE.season} | Weather, Crowds & Dates` },
+  description: `Char Dham Yatra in October ${SITE.season} — fewer crowds, clear skies. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: [`char dham yatra in october ${SITE.season}`, 'kedarnath yatra october', 'char dham yatra october weather', 'char dham october closing dates', 'char dham off season october', 'best time char dham october'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
 };
 

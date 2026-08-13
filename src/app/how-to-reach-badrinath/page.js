@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'How to Reach Badrinath 2026 | Road Route & Helicopter Guide' },
-  description: 'How to reach Badrinath Dham 2026 — road via Joshimath, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath','badrinath by road 2026','nearest airport badrinath'],
+  title: { absolute: `How to Reach Badrinath ${SITE.season} | Road Route & Helicopter Guide` },
+  description: `How to reach Badrinath Dham ${SITE.season} — road via Joshimath, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath',`badrinath by road ${SITE.season}`,'nearest airport badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-badrinath` },
   openGraph: {
-    title: 'How to Reach Badrinath 2026 — Road Route & Complete Guide',
+    title: `How to Reach Badrinath ${SITE.season} — Road Route & Complete Guide`,
     description: 'Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-badrinath`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Reach Badrinath 2026 — Road Route & Complete Guide',
+    title: `How to Reach Badrinath ${SITE.season} — Road Route & Complete Guide`,
     description: 'Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.',
-    images: [{ url: '/opengraph-image', alt: 'How to Reach Badrinath 2026 — Road Route & Complete Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `How to Reach Badrinath ${SITE.season} — Road Route & Complete Guide | Shiv Ganga Travels` }],
   },
 };
 

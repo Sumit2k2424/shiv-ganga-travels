@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Rajaji National Park Safari 2026 | Zones, Fees & Timings' },
+  title: { absolute: `Rajaji National Park Safari ${SITE.season} | Zones, Fees & Timings` },
   description: 'Rajaji National Park jungle safari — entry fees, zones, tiger sightings. Trusted operator, 15+ yrs experience, instant confirmation.',
   keywords: ['rajaji national park','rajaji national park safari','rajaji national park entry fee','rajaji national park timings','rajaji national park zones','chilla range safari','rajaji national park booking','rajaji national park from haridwar','rajaji national park from rishikesh','rajaji tiger reserve','best time to visit rajaji national park'],
   alternates: { canonical: `${SITE.baseUrl}/rajaji-national-park` },
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/rajaji-national-park`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Jeep safari inside Rajaji National Park, Uttarakhand' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Rajaji National Park Safari 2026 — Zones, Fees & Timings', description: 'Real entry fees, zone comparison, booking steps and the route from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Rajaji National Park, Uttarakhand' }] },
+  twitter: { card: 'summary_large_image', title: `Rajaji National Park Safari ${SITE.season} — Zones, Fees & Timings`, description: 'Real entry fees, zone comparison, booking steps and the route from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Rajaji National Park, Uttarakhand' }] },
 };
 
 const PAA = [

@@ -7,9 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Badrinath Yatra Guide 2026 | Price Starts at ₹4,500 | Timings & Route' },
-  description: 'Badrinath Yatra 2026 guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['badrinath yatra guide 2026', 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', 'badrinath yatra package 2026', 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
+  title: { absolute: `Badrinath Yatra Guide ${SITE.season} | Price Starts at ₹4,500 | Timings & Route` },
+  description: `Badrinath Yatra ${SITE.season} guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: [`badrinath yatra guide ${SITE.season}`, 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', `badrinath yatra package ${SITE.season}`, 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
 };
 function Schema() {

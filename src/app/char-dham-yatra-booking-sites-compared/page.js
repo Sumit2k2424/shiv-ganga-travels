@@ -6,12 +6,12 @@ import {
 } from '@/components/LocalPageKit';
 
 export const metadata = {
-  title: { absolute: 'Where to Book Char Dham Yatra — Sites Compared 2026' },
+  title: { absolute: `Where to Book Char Dham Yatra — Sites Compared ${SITE.season}` },
   description: 'OTAs, marketplaces, local operators and doing it yourself. What each type actually is, what the margin looks like, and which one fits your trip.',
   keywords: ['where to book char dham yatra','best site to book char dham','char dham booking sites','char dham yatra online booking','book char dham yatra online','char dham travel agency comparison','char dham yatra booking platform'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-booking-sites-compared` },
   openGraph: {
-    title: 'Where to Book Char Dham Yatra — Sites Compared 2026',
+    title: `Where to Book Char Dham Yatra — Sites Compared ${SITE.season}`,
     description: 'OTAs, marketplaces, local operators, DIY. What each is, what it costs you, and which fits.',
     url: `${SITE.baseUrl}/char-dham-yatra-booking-sites-compared`,
     type: 'article',
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Where to Book Char Dham Yatra — Sites Compared 2026',
+    title: `Where to Book Char Dham Yatra — Sites Compared ${SITE.season}`,
     description: 'OTAs, marketplaces, local operators, DIY. Which one fits your trip.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Booking Sites Compared' }],
   },

@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Surkanda Devi Temple 2026 | Timings, Ropeway & Route | Dhanaulti' },
+  title: { absolute: `Surkanda Devi Temple ${SITE.season} | Timings, Ropeway & Route | Dhanaulti` },
   description: 'Surkanda Devi Temple near Dhanaulti — timings, ropeway fare, trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['surkanda devi temple','surkanda devi temple timings','surkanda devi ropeway price','how to reach surkanda devi temple','surkanda devi temple trek','surkanda devi temple from haridwar','kaddukhal to surkanda devi','surkanda devi temple near dhanaulti','surkanda devi temple near mussoorie','shakti peeth triangle uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/surkanda-devi-temple` },
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/surkanda-devi-temple`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Surkanda Devi Temple ridge near Dhanaulti, Tehri Garhwal, Uttarakhand' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide', description: 'Real timings, ropeway fare, the Kaddukhal trek and how to reach from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Surkanda Devi Temple, Uttarakhand' }] },
+  twitter: { card: 'summary_large_image', title: `Surkanda Devi Temple ${SITE.season} — Timings, Ropeway & Route Guide`, description: 'Real timings, ropeway fare, the Kaddukhal trek and how to reach from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Surkanda Devi Temple, Uttarakhand' }] },
 };
 
 const PAA = [

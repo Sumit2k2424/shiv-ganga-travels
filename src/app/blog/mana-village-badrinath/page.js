@@ -8,9 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Mana Village Near Badrinath 2026 | India\'s Last Village' },
+  title: { absolute: `Mana Village Near Badrinath ${SITE.season} | India\'s Last Village` },
   description: 'Mana Village — India\'s last village before Tibet. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['mana village near badrinath', 'mana village last village india', 'mana village guide 2026', 'mana village vyas gufa', 'bhim pul mana village', 'india last village tibet border', 'mana village distance badrinath'],
+  keywords: ['mana village near badrinath', 'mana village last village india', `mana village guide ${SITE.season}`, 'mana village vyas gufa', 'bhim pul mana village', 'india last village tibet border', 'mana village distance badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/mana-village-badrinath` },
 };
 

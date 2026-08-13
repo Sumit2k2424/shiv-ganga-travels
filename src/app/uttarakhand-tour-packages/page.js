@@ -2,16 +2,16 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Uttarakhand Tour Packages 2026 | Price Starts at ₹3,750 | Hills & Pilgrimage' },
-  description: 'Uttarakhand Tour Packages 2026 from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['uttarakhand tour packages, uttarakhand tour packages 2026, uttarakhand tourism packages, best uttarakhand packages from haridwar'],
+  title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Price Starts at ₹3,750 | Hills & Pilgrimage` },
+  description: `Uttarakhand Tour Packages ${SITE.season} from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`uttarakhand tour packages, uttarakhand tour packages ${SITE.season}, uttarakhand tourism packages, best uttarakhand packages from haridwar`],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
-  openGraph: { title:'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure & Pilgrimage', description:'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.', url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
+  openGraph: { title:`Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure & Pilgrimage`, description:`Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`, url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife & Pilgrimage',
-    description: 'Book Uttarakhand tour packages 2026 from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.',
-    images: [{ url: '/opengraph-image', alt: 'Uttarakhand Tour Packages 2026 — Hills, Wildlife, Adventure  | Shiv Ganga Travels' }],
+    title: `Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife & Pilgrimage`,
+    description: `Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`,
+    images: [{ url: '/opengraph-image', alt: `Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure  | Shiv Ganga Travels` }],
   },
 };
 

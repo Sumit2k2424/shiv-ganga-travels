@@ -8,21 +8,21 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Top 10 Places to Visit on Char Dham Yatra 2026' },
-  description: 'Best places to visit during Char Dham Yatra 2026 beyond the temples. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['places to visit during char dham yatra', 'char dham yatra sightseeing 2026', 'tourist places char dham route', 'attractions near kedarnath', 'places near badrinath', 'harsil valley char dham', 'char dham yatra side trips'],
+  title: { absolute: `Top 10 Places to Visit on Char Dham Yatra ${SITE.season}` },
+  description: `Best places to visit during Char Dham Yatra ${SITE.season} beyond the temples. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['places to visit during char dham yatra', `char dham yatra sightseeing ${SITE.season}`, 'tourist places char dham route', 'attractions near kedarnath', 'places near badrinath', 'harsil valley char dham', 'char dham yatra side trips'],
   alternates: { canonical: `${SITE.baseUrl}/blog/places-to-visit-during-char-dham-yatra` },
   openGraph: {
-    title: 'Top 10 Places to Visit on Char Dham Yatra 2026',
+    title: `Top 10 Places to Visit on Char Dham Yatra ${SITE.season}`,
     description: 'Go beyond the 4 dhams: Harsil Valley, Mana Village (last Indian village), Triyuginarayan, Devprayag Panch Prayag, Dhari Devi. What to see without adding extra days.',
     url: `${SITE.baseUrl}/blog/places-to-visit-during-char-dham-yatra`, type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Top Places to Visit During Char Dham Yatra 2026 — Beyond the 4 Dhams | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Top Places to Visit During Char Dham Yatra ${SITE.season} — Beyond the 4 Dhams | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Places to Visit During Char Dham Yatra 2026 — Insider Guide',
+    title: `Top Places to Visit During Char Dham Yatra ${SITE.season} — Insider Guide`,
     description: 'Go beyond the 4 dhams: Harsil Valley, Mana Village (last Indian village), Triyuginarayan, Devprayag Panch Prayag, Dhari Devi. What to see without adding ex',
-    images: [{ url: '/opengraph-image', alt: 'Top Places to Visit During Char Dham Yatra 2026 — Insider Gu | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Top Places to Visit During Char Dham Yatra ${SITE.season} — Insider Gu | Shiv Ganga Travels` }],
   },
 };
 

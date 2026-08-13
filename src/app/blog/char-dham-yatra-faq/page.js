@@ -6,22 +6,22 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra FAQ 2026 | 50 Questions Answered' },
-  description: 'Char Dham Yatra 2026 — 50 expert-answered questions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra faq 2026', 'char dham yatra questions answers', 'char dham yatra 2026 questions', 'kedarnath yatra faq', 'char dham yatra common questions'],
+  title: { absolute: `Char Dham Yatra FAQ ${SITE.season} | 50 Questions Answered` },
+  description: `Char Dham Yatra ${SITE.season} — 50 expert-answered questions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`char dham yatra faq ${SITE.season}`, 'char dham yatra questions answers', `char dham yatra ${SITE.season} questions`, 'kedarnath yatra faq', 'char dham yatra common questions'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },
   openGraph: {
-    title: 'Char Dham Yatra FAQ: 50 Questions Answered (2026)',
+    title: `Char Dham Yatra FAQ: 50 Questions Answered (${SITE.season})`,
     description: '50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-faq`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered by Experts | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra FAQ ${SITE.season} — 50 Questions Answered by Experts | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered',
+    title: `Char Dham Yatra FAQ ${SITE.season} — 50 Questions Answered`,
     description: '50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra FAQ 2026 — 50 Questions Answered | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra FAQ ${SITE.season} — 50 Questions Answered | Shiv Ganga Travels` }],
   },
 };
 

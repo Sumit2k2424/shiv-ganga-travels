@@ -8,9 +8,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Medical Certificate 2026 | Who Needs It' },
-  description: 'Char Dham Yatra 2026 medical certificate — mandatory for 55+. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['char dham yatra medical certificate 2026', 'char dham yatra fitness certificate', 'medical certificate kedarnath 2026', 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
+  title: { absolute: `Char Dham Medical Certificate ${SITE.season} | Who Needs It` },
+  description: `Char Dham Yatra ${SITE.season} medical certificate — mandatory for 55+. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`char dham yatra medical certificate ${SITE.season}`, 'char dham yatra fitness certificate', `medical certificate kedarnath ${SITE.season}`, 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };
 

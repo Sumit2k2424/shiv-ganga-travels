@@ -6,21 +6,21 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: '2 Dham Yatra Package 2026 | Price Starts at ₹8,200 | Kedarnath & Badrinath' },
-  description: 'Do Dham Yatra 2026 — Kedarnath + Badrinath from Haridwar, 5N/6D from ₹8,200/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package','do dham yatra 2026','kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
+  title: { absolute: `2 Dham Yatra Package ${SITE.season} | Price Starts at ₹8,200 | Kedarnath & Badrinath` },
+  description: `Do Dham Yatra ${SITE.season} — Kedarnath + Badrinath from Haridwar, 5N/6D from ₹8,200/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package',`do dham yatra ${SITE.season}`,'kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
   openGraph: {
-    title: '2 Dham Yatra 2026 — Kedarnath & Badrinath from ₹8,200 | Do Dham',
-    description: 'Do Dham Yatra (Kedarnath + Badrinath) 2026 from Haridwar. 5N/6D from ₹8,200. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.',
+    title: `2 Dham Yatra ${SITE.season} — Kedarnath & Badrinath from ₹8,200 | Do Dham`,
+    description: `Do Dham Yatra (Kedarnath + Badrinath) ${SITE.season} from Haridwar. 5N/6D from ₹8,200. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.`,
     url: `${SITE.baseUrl}/do-dham-yatra`, type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package from Haridwar' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Do Dham Yatra ${SITE.season} — Kedarnath & Badrinath Package from Haridwar` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Do Dham Yatra 2026 — Kedarnath & Badrinath from ₹8,200',
+    title: `Do Dham Yatra ${SITE.season} — Kedarnath & Badrinath from ₹8,200`,
     description: 'Kedarnath + Badrinath from Haridwar. 5N/6D from ₹8,200. VIP darshan, AC vehicle. Zero commission.',
-    images: [{ url: '/opengraph-image', alt: 'Do Dham Yatra 2026 — Kedarnath & Badrinath Package' }],
+    images: [{ url: '/opengraph-image', alt: `Do Dham Yatra ${SITE.season} — Kedarnath & Badrinath Package` }],
   },
 };
 

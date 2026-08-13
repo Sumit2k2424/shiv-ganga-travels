@@ -7,22 +7,22 @@ import KedarnathPujaPicker from '@/components/KedarnathPujaPicker';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath VIP Darshan 2026 | Price Starts at ₹300 | Booking Guide' },
-  description: 'Kedarnath VIP darshan 2026 — priority access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation. Booking steps & scam guide.',
-  keywords: ['kedarnath vip darshan 2026','kedarnath vip darshan booking','kedarnath vip darshan ticket price','kedarnath vip darshan online booking','kedarnath puja booking','kedarnath rudrabhishek price','kedarnath special darshan','kedarnath sparsh darshan','kedarnath mahabhishek booking','bktc puja booking','kedarnath vip darshan cost','kedarnath darshan timing 2026','badrinath vip darshan price'],
+  title: { absolute: `Kedarnath VIP Darshan ${SITE.season} | Price Starts at ₹300 | Booking Guide` },
+  description: `Kedarnath VIP darshan ${SITE.season} — priority access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation. Booking steps & scam guide.`,
+  keywords: [`kedarnath vip darshan ${SITE.season}`,'kedarnath vip darshan booking','kedarnath vip darshan ticket price','kedarnath vip darshan online booking','kedarnath puja booking','kedarnath rudrabhishek price','kedarnath special darshan','kedarnath sparsh darshan','kedarnath mahabhishek booking','bktc puja booking','kedarnath vip darshan cost',`kedarnath darshan timing ${SITE.season}`,'badrinath vip darshan price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-vip-darshan` },
   openGraph: {
-    title: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan',
-    description: 'No flat VIP pass exists. Priority Garbha Griha access comes with BKTC pujas (₹300–₹28,600). Full 2026 price table, booking steps, helicopter combo & fraud warning.',
+    title: `Kedarnath VIP Darshan ${SITE.season} — Price, Online Booking & Sparsh Darshan`,
+    description: `No flat VIP pass exists. Priority Garbha Griha access comes with BKTC pujas (₹300–₹28,600). Full ${SITE.season} price table, booking steps, helicopter combo & fraud warning.`,
     url: `${SITE.baseUrl}/kedarnath-vip-darshan`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath VIP Darshan ${SITE.season} — Price, Booking & Sparsh Darshan | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan',
+    title: `Kedarnath VIP Darshan ${SITE.season} — Price, Booking & Sparsh Darshan`,
     description: 'No flat pass — priority sanctum access is bundled with BKTC pujas (₹300–₹28,600). Booking steps, sparsh darshan, helicopter combo, fraud warning.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath VIP Darshan 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Kedarnath VIP Darshan ${SITE.season} | Shiv Ganga Travels` }],
   },
 };
 

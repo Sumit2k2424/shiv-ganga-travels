@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Chitai Golu Devta Temple 2026 | Timings & Route | Almora' },
+  title: { absolute: `Chitai Golu Devta Temple ${SITE.season} | Timings & Route | Almora` },
   description: 'Chitai Golu Devta Temple, Almora — darshan timings & the letter ritual. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['chitai golu devta temple','golu devta temple almora','chitai golu devta temple almora uttarakhand','chitai temple almora','golu devta god of justice','chitai golu devta temple timings','golu devta ki chitthi','golu devta mandir almora','how to reach chitai golu devta temple','chitai golu devta temple bells','goljyu','chitai vs ghorakhal golu devta'],
   alternates: { canonical: `${SITE.baseUrl}/chitai-golu-devta-temple` },
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/chitai-golu-devta-temple`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Chitai Golu Devta Temple, Almora — bells and petitions, Kumaon, Uttarakhand' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Chitai Golu Devta Temple 2026 — Timings, Letters & Route', description: 'Kumaon’s god of justice. Written petitions, thousands of bells, 8–10 km from Almora. Timings, route and distances.', images: [{ url: '/opengraph-image', alt: 'Chitai Golu Devta Temple, Almora' }] },
+  twitter: { card: 'summary_large_image', title: `Chitai Golu Devta Temple ${SITE.season} — Timings, Letters & Route`, description: 'Kumaon’s god of justice. Written petitions, thousands of bells, 8–10 km from Almora. Timings, route and distances.', images: [{ url: '/opengraph-image', alt: 'Chitai Golu Devta Temple, Almora' }] },
 };
 
 const PAA = [

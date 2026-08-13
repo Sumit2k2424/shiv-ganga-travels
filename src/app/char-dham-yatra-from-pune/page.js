@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Pune 2026 | Price Starts at ₹24,999 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Pune 2026 — 1,360km, Pune–Dehradun train or fly + train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from pune','char dham yatra pune 2026','char dham package from pune','kedarnath from pune','haridwar from pune'],
+  title: { absolute: `Char Dham Yatra from Pune ${SITE.season} | Price Starts at ₹24,999 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Pune ${SITE.season} — 1,360km, Pune–Dehradun train or fly + train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from pune',`char dham yatra pune ${SITE.season}`,'char dham package from pune','kedarnath from pune','haridwar from pune'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
   openGraph: {
-    title: 'Char Dham Yatra from Pune 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Pune 2026. 1,360 km · Pune–Dehradun train (30h) · or fly Delhi + train. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Pune pickup, VIP da',
+    title: `Char Dham Yatra from Pune ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Pune ${SITE.season}. 1,360 km · Pune–Dehradun train (30h) · or fly Delhi + train. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Pune pickup, VIP da`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-pune`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Pune 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Pune ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

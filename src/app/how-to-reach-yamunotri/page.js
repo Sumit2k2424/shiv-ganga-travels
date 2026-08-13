@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'How to Reach Yamunotri 2026 | Road, Trek & Route Guide' },
-  description: 'How to reach Yamunotri Dham 2026 — road route, helicopter, 6km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: `How to Reach Yamunotri ${SITE.season} | Road, Trek & Route Guide` },
+  description: `How to reach Yamunotri Dham ${SITE.season} — road route, helicopter, 6km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['how to reach yamunotri','yamunotri route','haridwar to yamunotri','janki chatti to yamunotri','yamunotri trek','how to reach yamunotri from delhi','nearest railway station to yamunotri'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-yamunotri` },
   openGraph: {
-    title: 'How to Reach Yamunotri 2026 — Road, Trek & Route Guide',
+    title: `How to Reach Yamunotri ${SITE.season} — Road, Trek & Route Guide`,
     description: 'Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-yamunotri`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Reach Yamunotri 2026 — Road, Trek & Route Guide',
+    title: `How to Reach Yamunotri ${SITE.season} — Road, Trek & Route Guide`,
     description: 'Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.',
-    images: [{ url: '/opengraph-image', alt: 'How to Reach Yamunotri 2026 — Road, Trek & Route Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `How to Reach Yamunotri ${SITE.season} — Road, Trek & Route Guide | Shiv Ganga Travels` }],
   },
 };
 

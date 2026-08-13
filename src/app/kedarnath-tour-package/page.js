@@ -5,27 +5,27 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250 | Hotels & Transport Included' },
-  description: 'Kedarnath Tour Package 2026 — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).',
+  title: { absolute: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250 | Hotels & Transport Included` },
+  description: `Kedarnath Tour Package ${SITE.season} — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).`,
   keywords: [
-    'kedarnath tour package', 'kedarnath yatra package', 'kedarnath tour package 2026',
+    'kedarnath tour package', 'kedarnath yatra package', `kedarnath tour package ${SITE.season}`,
     'kedarnath package from haridwar', 'kedarnath trip cost', 'kedarnath tour package price',
     'kedarnath 3n 4d itinerary', 'kedarnath yatra package from haridwar', 'kedarnath dham yatra package',
   ],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-tour-package` },
   openGraph: {
-    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250 | Hotels & Transport Included',
+    title: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250 | Hotels & Transport Included`,
     description:
-      'Customizable itinerary, pony & helicopter rates, and 2026 registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.',
+      `Customizable itinerary, pony & helicopter rates, and ${SITE.season} registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.`,
     url: `${SITE.baseUrl}/kedarnath-tour-package`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Tour Package 2026 from Haridwar — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Tour Package ${SITE.season} from Haridwar — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Tour Package 2026 | Price Starts at ₹5,250',
+    title: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250`,
     description: 'Kedarnath 3N/4D from Haridwar. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath Tour Package 2026 from Haridwar' }],
+    images: [{ url: '/opengraph-image', alt: `Kedarnath Tour Package ${SITE.season} from Haridwar` }],
   },
 };
 

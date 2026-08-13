@@ -5,16 +5,16 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Gangotri Temple Guide 2026 | Darshan Timings, History & Aarti' },
-  description: 'Gangotri Temple 2026 — darshan timings, Ganga aarti, altitude 3,415m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['gangotri temple','gangotri temple timings 2026','gangotri dham','gangotri opening date 2026','gangotri ganga aarti','gangotri temple history'],
+  title: { absolute: `Gangotri Temple Guide ${SITE.season} | Darshan Timings, History & Aarti` },
+  description: `Gangotri Temple ${SITE.season} — darshan timings, Ganga aarti, altitude 3,415m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['gangotri temple',`gangotri temple timings ${SITE.season}`,'gangotri dham',`gangotri opening date ${SITE.season}`,'gangotri ganga aarti','gangotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-temple` },
-  openGraph: { title: 'Gangotri Temple 2026 — Darshan Timings, History & Complete Guide', description: 'Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and 2026 opening dates for Gangotri Dham.', url: `${SITE.baseUrl}/gangotri-temple`, type: 'website' },
+  openGraph: { title: `Gangotri Temple ${SITE.season} — Darshan Timings, History & Complete Guide`, description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`, url: `${SITE.baseUrl}/gangotri-temple`, type: 'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gangotri Temple 2026 — Timings, History & Complete Guide',
-    description: 'Source of the Ganga. Darshan timings, Ganga aarti, history and 2026 opening dates for Gangotri Dham.',
-    images: [{ url: '/opengraph-image', alt: 'Gangotri Temple 2026 — Char Dham Yatra | Shiv Ganga Travels' }],
+    title: `Gangotri Temple ${SITE.season} — Timings, History & Complete Guide`,
+    description: `Source of the Ganga. Darshan timings, Ganga aarti, history and ${SITE.season} opening dates for Gangotri Dham.`,
+    images: [{ url: '/opengraph-image', alt: `Gangotri Temple ${SITE.season} — Char Dham Yatra | Shiv Ganga Travels` }],
   },
 };
 

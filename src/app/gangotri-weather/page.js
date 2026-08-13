@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Gangotri Weather 2026 | Month-wise Temperature Guide' },
-  description: 'Gangotri weather 2026 — temperatures at 3,415m, road conditions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['gangotri weather','gangotri temperature','gangotri weather may','gangotri best time to visit','gangotri weather 2026','gangotri snowfall'],
+  title: { absolute: `Gangotri Weather ${SITE.season} | Month-wise Temperature Guide` },
+  description: `Gangotri weather ${SITE.season} — temperatures at 3,415m, road conditions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['gangotri weather','gangotri temperature','gangotri weather may','gangotri best time to visit',`gangotri weather ${SITE.season}`,'gangotri snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-weather` },
   openGraph: {
-    title: 'Gangotri Weather 2026 — Month-wise Temperature Guide',
+    title: `Gangotri Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.',
     url: `${SITE.baseUrl}/gangotri-weather`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gangotri Weather 2026 — Month-wise Temperature Guide',
+    title: `Gangotri Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.',
-    images: [{ url: '/opengraph-image', alt: 'Gangotri Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Gangotri Weather ${SITE.season} — Month-wise Temperature Guide | Shiv Ganga Travels` }],
   },
 };
 

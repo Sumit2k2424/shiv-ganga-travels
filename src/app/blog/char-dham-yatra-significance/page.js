@@ -8,8 +8,8 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra History & Spiritual Significance 2026' },
-  description: 'Char Dham Yatra 2026 — history & spiritual significance of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.',
+  title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
+  description: `Char Dham Yatra ${SITE.season} — history & spiritual significance of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.`,
   keywords: ['char dham yatra history', 'char dham yatra significance', 'why char dham yatra is important', 'char dham yatra mythology', 'adi shankaracharya char dham', 'char dham yatra spiritual meaning', 'importance of char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
   openGraph: {

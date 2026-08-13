@@ -4,20 +4,20 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Hotels Near Kedarnath 2026 | Best Stays | Guptkashi, Sonprayag & Phata' },
-  description: 'Hotels near Kedarnath 2026 — Guptkashi, Sonprayag, Kedarnath Top & Phata. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['hotels near kedarnath','kedarnath hotels 2026','guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
+  title: { absolute: `Hotels Near Kedarnath ${SITE.season} | Best Stays | Guptkashi, Sonprayag & Phata` },
+  description: `Hotels near Kedarnath ${SITE.season} — Guptkashi, Sonprayag, Kedarnath Top & Phata. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['hotels near kedarnath',`kedarnath hotels ${SITE.season}`,'guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-hotels` },
   openGraph: {
-    title: 'Hotels Near Kedarnath 2026 — Guide to Best Stays',
+    title: `Hotels Near Kedarnath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
     url: `${SITE.baseUrl}/kedarnath-hotels`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hotels Near Kedarnath 2026 — Guide to Best Stays',
+    title: `Hotels Near Kedarnath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
-    images: [{ url: '/opengraph-image', alt: 'Hotels Near Kedarnath 2026 — Guide to Best Stays | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Hotels Near Kedarnath ${SITE.season} — Guide to Best Stays | Shiv Ganga Travels` }],
   },
 };
 

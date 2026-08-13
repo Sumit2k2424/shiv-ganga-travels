@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Chopta Tungnath Trek Guide 2026 | Best Time, Route & Packages' },
-  description: 'Chopta Tungnath Chandrashila trek 2026 — highest Shiva temple at 3,680m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek','chopta best time to visit 2026','chopta from haridwar','chandrashila trek','mini switzerland india'],
+  title: { absolute: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages` },
+  description: `Chopta Tungnath Chandrashila trek ${SITE.season} — highest Shiva temple at 3,680m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek',`chopta best time to visit ${SITE.season}`,'chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
   openGraph: {
-    title: 'Chopta Tungnath Trek Guide 2026 | Best Time, Route & Packages',
+    title: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages`,
     description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple, Chandrashila summit, best time, how to reach, and packages from Haridwar.',
     url: `${SITE.baseUrl}/chopta-tungnath`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chopta Tungnath Trek Guide 2026',
+    title: `Chopta Tungnath Trek Guide ${SITE.season}`,
     description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple. Trusted operator, 15+ yrs experience, fixed departures.',
-    images: [{ url: '/opengraph-image', alt: 'Chopta Tungnath 2026 — Complete Travel Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Chopta Tungnath ${SITE.season} — Complete Travel Guide | Shiv Ganga Travels` }],
   },
 };
 

@@ -10,25 +10,25 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra 2026 | History, Significance & Route Guide' },
-  description: 'Char Dham Yatra 2026 — history, order of visit, expert FAQs. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  title: { absolute: `Char Dham Yatra ${SITE.season} | History, Significance & Route Guide` },
+  description: `Char Dham Yatra ${SITE.season} — history, order of visit, expert FAQs. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [
-    'char dham yatra complete guide','char dham history','char dham significance','char dham yatra 2026',
+    'char dham yatra complete guide','char dham history','char dham significance',`char dham yatra ${SITE.season}`,
     'char dham order of visit','kedarnath history','badrinath significance','gangotri temple history',
     'yamunotri temple','char dham nearby places','who should do char dham yatra','char dham yatra faq',
-    'char dham yatra haridwar','char dham yatra package 2026',
+    'char dham yatra haridwar',`char dham yatra package ${SITE.season}`,
   ],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-complete-guide` },
   openGraph: {
-    title: 'Char Dham Yatra Complete Guide 2026 — History, Significance & Everything You Need to Know',
-    description: 'The most comprehensive guide to Char Dham Yatra 2026 — written by a team that has led pilgrims on these routes since 2010.',
+    title: `Char Dham Yatra Complete Guide ${SITE.season} — History, Significance & Everything You Need to Know`,
+    description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes since 2010.`,
     url: `${SITE.baseUrl}/blog/char-dham-yatra-complete-guide`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Complete Guide 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Complete Guide ${SITE.season} — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Complete Guide 2026',
+    title: `Char Dham Yatra Complete Guide ${SITE.season}`,
     description: 'History, significance, route, order of visit, nearby places & 50 FAQs — everything in one place.',
   },
 };

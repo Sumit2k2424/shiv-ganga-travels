@@ -8,28 +8,28 @@ import GoogleReviews from '@/components/GoogleReviews';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Package 2026 | Price Starts at ₹13,900 | Hotels & Transport Included' },
-  description: 'Char Dham Yatra Package 2026 from Haridwar — 9N/10D from ₹13,900/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: `Char Dham Yatra Package ${SITE.season} | Price Starts at ₹13,900 | Hotels & Transport Included` },
+  description: `Char Dham Yatra Package ${SITE.season} from Haridwar — 9N/10D from ₹13,900/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
-    'char dham yatra package','chardham yatra package','4 dham yatra package','4 dham yatra 2026',
-    'char dham yatra 2026','char dham package from haridwar','chardham package from haridwar',
+    'char dham yatra package','chardham yatra package','4 dham yatra package',`4 dham yatra ${SITE.season}`,
+    `char dham yatra ${SITE.season}`,'char dham package from haridwar','chardham package from haridwar',
     'char dham yatra package price','char dham yatra booking','chardham tour package',
     'char dham yatra from delhi','char dham tour package','uttarakhand tourism','uttarakhand tour packages',
     'char dham yatra package from haridwar','uttarakhand char dham yatra package',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
-    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹13,900 No Hidden Charges | Book Direct',
-    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.',
+    title: `Char Dham Yatra Package ${SITE.season} from Haridwar — ₹13,900 No Hidden Charges | Book Direct`,
+    description: `Book Char Dham Yatra ${SITE.season} from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.`,
     url: `${SITE.baseUrl}/char-dham-yatra`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Package 2026 from Haridwar — Shiv Ganga Travels, Zero Commission Direct Operator' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Package ${SITE.season} from Haridwar — Shiv Ganga Travels, Zero Commission Direct Operator` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Package 2026 from Haridwar — ₹13,900 No Hidden Charge',
-    description: 'Book Char Dham Yatra 2026 from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Package 2026 from Haridwar — ₹13,900 No Hid | Shiv Ganga Travels' }],
+    title: `Char Dham Yatra Package ${SITE.season} from Haridwar — ₹13,900 No Hidden Charge`,
+    description: `Book Char Dham Yatra ${SITE.season} from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.`,
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra Package ${SITE.season} from Haridwar — ₹13,900 No Hid | Shiv Ganga Travels` }],
   },
 };
 

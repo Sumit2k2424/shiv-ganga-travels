@@ -12,22 +12,22 @@ import PullQuote from '@/components/PullQuote';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Guide 2026 | Route, Cost & Registration Tips' },
-  description: 'Char Dham Yatra 2026 planning guide — route, cost, registration. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra complete guide 2026', 'char dham yatra route map', 'char dham yatra cost 2026', 'char dham yatra registration', 'char dham yatra packing list', 'char dham yatra tips 2026'],
+  title: { absolute: `Char Dham Yatra Guide ${SITE.season} | Route, Cost & Registration Tips` },
+  description: `Char Dham Yatra ${SITE.season} planning guide — route, cost, registration. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`char dham yatra complete guide ${SITE.season}`, 'char dham yatra route map', `char dham yatra cost ${SITE.season}`, 'char dham yatra registration', 'char dham yatra packing list', `char dham yatra tips ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-guide` },
   openGraph: {
-    title: 'Char Dham Yatra Guide 2026: Route, Cost & Tips',
+    title: `Char Dham Yatra Guide ${SITE.season}: Route, Cost & Tips`,
     description: 'Everything you need to know before planning your Char Dham Yatra — route, cost, registration, tips.',
     url: `${SITE.baseUrl}/blog/char-dham-guide`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Complete Guide 2026 — Route & Tips | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Complete Guide ${SITE.season} — Route & Tips | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Complete Guide 2026',
+    title: `Char Dham Yatra Complete Guide ${SITE.season}`,
     description: 'Everything you need to know before planning your Char Dham Yatra — route, cost, registration, tips.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Complete Guide 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra Complete Guide ${SITE.season} | Shiv Ganga Travels` }],
   },
 };
 

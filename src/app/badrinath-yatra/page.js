@@ -5,25 +5,25 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Badrinath Yatra Package 2026 | Price Starts at ₹4,500 | VIP Darshan Included' },
-  description: 'Badrinath Yatra Package 2026 from Haridwar — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: `Badrinath Yatra Package ${SITE.season} | Price Starts at ₹4,500 | VIP Darshan Included` },
+  description: `Badrinath Yatra Package ${SITE.season} from Haridwar — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
-    'badrinath yatra package','badrinath yatra from haridwar','badrinath yatra 2026',
+    'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',
-    'badrinath yatra cost','how to reach badrinath','badrinath yatra haridwar 2026',
+    'badrinath yatra cost','how to reach badrinath',`badrinath yatra haridwar ${SITE.season}`,
   ],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-yatra` },
   openGraph: {
-    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500',
-    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
+    title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500',
-    description: 'Book Badrinath Yatra from Haridwar 2026. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.',
-    images: [{ url: '/opengraph-image', alt: 'Badrinath Yatra Package 2026 — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels' }],
+    title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
+    images: [{ url: '/opengraph-image', alt: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels` }],
   },
 };
 

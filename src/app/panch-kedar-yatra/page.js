@@ -3,16 +3,16 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
-  title: { absolute: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹16,500 | All 5 Shiva Temples' },
-  description: 'Panch Kedar Yatra 2026 — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 8N/9D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.',
-  keywords: ['panch kedar yatra, panch kedar yatra 2026, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek'],
+  title: { absolute: `Panch Kedar Yatra Package ${SITE.season} | Price Starts at ₹16,500 | All 5 Shiva Temples` },
+  description: `Panch Kedar Yatra ${SITE.season} — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 8N/9D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.`,
+  keywords: [`panch kedar yatra, panch kedar yatra ${SITE.season}, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek`],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
-  openGraph: { title:'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package', description:'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.', url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
+  openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
-    title: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Package',
-    description: 'Complete Panch Kedar Yatra guide 2026. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.',
-    images: [{ url: '/opengraph-image', alt: 'Panch Kedar Yatra 2026 — All 5 Shiva Temples Trek Guide & Pa | Shiv Ganga Travels' }],
+    title: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`,
+    description: `Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.`,
+    images: [{ url: '/opengraph-image', alt: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Pa | Shiv Ganga Travels` }],
   },
 };
 

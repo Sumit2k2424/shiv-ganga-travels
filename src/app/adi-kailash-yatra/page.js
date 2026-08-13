@@ -6,8 +6,8 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Adi Kailash Yatra Package 2026 | Price Starts at ₹27,000 | Permit & Om Parvat' },
-  description: 'Adi Kailash Yatra 2026 — 7N/8D road package from Kathgodam, ₹27,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.',
+  title: { absolute: `Adi Kailash Yatra Package ${SITE.season} | Price Starts at ₹27,000 | Permit & Om Parvat` },
+  description: `Adi Kailash Yatra ${SITE.season} — 7N/8D road package from Kathgodam, ₹27,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.`,
   keywords: ['adi kailash yatra','adi kailash permit','how to reach adi kailash','adi kailash cost','adi kailash yatra itinerary','om parvat yatra','adi kailash best time to visit','chhota kailash yatra','adi kailash from haridwar','adi kailash inner line permit'],
   alternates: { canonical: `${SITE.baseUrl}/adi-kailash-yatra` },
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/adi-kailash-yatra`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Adi Kailash peak reflected in Parvati Sarovar, Pithoragarh, Uttarakhand' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide', description: 'Real permit steps, road-vs-trek route, cost breakdown and the route from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Adi Kailash, Uttarakhand' }] },
+  twitter: { card: 'summary_large_image', title: `Adi Kailash Yatra ${SITE.season} — Permit, Route & Om Parvat Guide`, description: 'Real permit steps, road-vs-trek route, cost breakdown and the route from Haridwar.', images: [{ url: '/opengraph-image', alt: 'Adi Kailash, Uttarakhand' }] },
 };
 
 const PAA = [

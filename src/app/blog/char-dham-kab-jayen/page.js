@@ -9,12 +9,12 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'चार धाम यात्रा 2026 कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी' },
-  description: 'चार धाम यात्रा 2026 के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।',
-  keywords: ['चार धाम यात्रा कब जाएं 2026', 'char dham yatra best time hindi', 'चार धाम यात्रा का सही समय', 'char dham yatra kab jayen', 'चार धाम यात्रा मौसम 2026'],
+  title: { absolute: `चार धाम यात्रा ${SITE.season} कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी` },
+  description: `चार धाम यात्रा ${SITE.season} के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।`,
+  keywords: [`चार धाम यात्रा कब जाएं ${SITE.season}`, 'char dham yatra best time hindi', 'चार धाम यात्रा का सही समय', 'char dham yatra kab jayen', `चार धाम यात्रा मौसम ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-kab-jayen` },
-  openGraph: { title: 'चार धाम यात्रा 2026 में कब जाएं? — महीने के हिसाब से पूरा गाइड', description: 'मई, जून, सितंबर, अक्टूबर — हर महीने का सच बताया। मौसम, भीड़, खर्चा — सब कुछ हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-kab-jayen`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'चार धाम यात्रा के लिए सबसे अच्छा समय कौन सा है? 2026 Guide हिंदी में | Shiv Ganga Travels' }],
+  openGraph: { title: `चार धाम यात्रा ${SITE.season} में कब जाएं? — महीने के हिसाब से पूरा गाइड`, description: 'मई, जून, सितंबर, अक्टूबर — हर महीने का सच बताया। मौसम, भीड़, खर्चा — सब कुछ हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-kab-jayen`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा के लिए सबसे अच्छा समय कौन सा है? ${SITE.season} Guide हिंदी में | Shiv Ganga Travels` }],
 };
 
 function Schema() {

@@ -13,11 +13,11 @@ import { Section, SectionHead, Reveal, Eyebrow, Pill } from '@/components/lux/pr
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 export const metadata = {
-  title: { absolute: 'Uttarakhand Taxi Service 2026 | Fixed Fares | Instant Enquiry' },
+  title: { absolute: `Uttarakhand Taxi Service ${SITE.season} | Fixed Fares | Instant Enquiry` },
   description: 'Book Uttarakhand cabs from Haridwar, Rishikesh & Dehradun. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. AC vehicles, hill drivers.',
-  keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', 'char dham taxi 2026', 'uttarakhand cab fare'],
+  keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', `char dham taxi ${SITE.season}`, 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },
-  openGraph: { title: 'Uttarakhand Cab & Taxi Service 2026', description: 'Cabs from Haridwar, Rishikesh & Dehradun across Uttarakhand. Fixed fares, hill drivers.', url: `${SITE.baseUrl}/cabs`, type: 'website' },
+  openGraph: { title: `Uttarakhand Cab & Taxi Service ${SITE.season}`, description: 'Cabs from Haridwar, Rishikesh & Dehradun across Uttarakhand. Fixed fares, hill drivers.', url: `${SITE.baseUrl}/cabs`, type: 'website' },
 };
 
 function Schema() {

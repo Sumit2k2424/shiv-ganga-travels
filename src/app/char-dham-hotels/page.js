@@ -3,21 +3,21 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Hotels 2026 | Honest Price Guide | Trusted Local Booking' },
-  description: 'Char Dham Yatra Hotels 2026 — where to stay at Barkot, Uttarkashi, Guptkashi, Badrinath & Haridwar. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['char dham hotels','char dham yatra hotels','where to stay char dham yatra','barkot hotels','uttarkashi hotels','guptkashi hotels','badrinath hotels','char dham accommodation 2026'],
+  title: { absolute: `Char Dham Yatra Hotels ${SITE.season} | Honest Price Guide | Trusted Local Booking` },
+  description: `Char Dham Yatra Hotels ${SITE.season} — where to stay at Barkot, Uttarkashi, Guptkashi, Badrinath & Haridwar. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: ['char dham hotels','char dham yatra hotels','where to stay char dham yatra','barkot hotels','uttarkashi hotels','guptkashi hotels','badrinath hotels',`char dham accommodation ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-hotels` },
   openGraph: {
-    title: 'Char Dham Yatra Hotels 2026 — Where to Stay at Every Stop',
+    title: `Char Dham Yatra Hotels ${SITE.season} — Where to Stay at Every Stop`,
     description: 'Stop-by-stop hotel guide for the Char Dham route — Barkot, Uttarkashi, Guptkashi, Badrinath and Haridwar with real price bands.',
     url: `${SITE.baseUrl}/char-dham-hotels`, type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Hotels 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Hotels ${SITE.season} — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Hotels 2026 — Where to Stay at Every Stop',
+    title: `Char Dham Yatra Hotels ${SITE.season} — Where to Stay at Every Stop`,
     description: 'Stop-by-stop hotel guide for the Char Dham route with real price bands and tips.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra Hotels 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra Hotels ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

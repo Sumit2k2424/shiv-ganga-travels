@@ -4,20 +4,20 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Panch Badri Yatra Package 2026 | Price Starts at ₹18,000 | All 5 Badri Shrines' },
-  description: 'Panch Badri Yatra 2026 — 6N/7D covering all 5 Badri shrines, from ₹18,000/person. Trusted operator, 15+ yrs experience, customizable itinerary & fixed departures.',
-  keywords: ['panch badri yatra','panch badri yatra 2026','panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
+  title: { absolute: `Panch Badri Yatra Package ${SITE.season} | Price Starts at ₹18,000 | All 5 Badri Shrines` },
+  description: `Panch Badri Yatra ${SITE.season} — 6N/7D covering all 5 Badri shrines, from ₹18,000/person. Trusted operator, 15+ yrs experience, customizable itinerary & fixed departures.`,
+  keywords: ['panch badri yatra',`panch badri yatra ${SITE.season}`,'panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },
   openGraph: {
-    title: 'Panch Badri Yatra 2026 — Complete Guide & Packages',
+    title: `Panch Badri Yatra ${SITE.season} — Complete Guide & Packages`,
     description: 'Visit all 5 sacred Badri shrines of Uttarakhand. Route, best time, package details and booking from Haridwar.',
     url: `${SITE.baseUrl}/panch-badri-yatra`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Panch Badri Yatra 2026 — Complete Guide & Packages',
+    title: `Panch Badri Yatra ${SITE.season} — Complete Guide & Packages`,
     description: 'Visit all 5 sacred Badri shrines of Uttarakhand. Route, best time, package details and booking from Haridwar.',
-    images: [{ url: '/opengraph-image', alt: 'Panch Badri Yatra 2026 — Complete Guide & Packages | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Panch Badri Yatra ${SITE.season} — Complete Guide & Packages | Shiv Ganga Travels` }],
   },
 };
 

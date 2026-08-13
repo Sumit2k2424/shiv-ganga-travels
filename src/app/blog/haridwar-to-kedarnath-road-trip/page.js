@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Haridwar to Kedarnath Road Trip 2026 | Route & Stops' },
-  description: 'Haridwar to Kedarnath road trip 2026 — 250km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['haridwar to kedarnath road trip 2026', 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
+  title: { absolute: `Haridwar to Kedarnath Road Trip ${SITE.season} | Route & Stops` },
+  description: `Haridwar to Kedarnath road trip ${SITE.season} — 250km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: [`haridwar to kedarnath road trip ${SITE.season}`, 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
   openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Haridwar to Kedarnath Distance, Route & Road Trip Guide 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Haridwar to Kedarnath Distance, Route & Road Trip Guide ${SITE.season} | Shiv Ganga Travels` }],
 };
 
 function Schema() {

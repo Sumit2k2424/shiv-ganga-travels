@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import BlogHero from '@/components/BlogHero';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Blog 2026 | Guides, Costs & Planning' },
+  title: { absolute: `Char Dham Yatra Blog ${SITE.season} | Guides, Costs & Planning` },
   description: 'Char Dham Yatra guides, trek tips, packing lists & cost breakdowns. Trusted operator, 15+ yrs experience, instant confirmation.',
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };

@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Guptkashi Guide 2026 | Kedarnath Night Halt | Temples & Hotels' },
+  title: { absolute: `Guptkashi Guide ${SITE.season} | Kedarnath Night Halt | Temples & Hotels` },
   description: 'Guptkashi (1,319m) — main night halt on the Kedarnath route. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['guptkashi','guptkashi uttarakhand','guptkashi to kedarnath','guptkashi temple','guptkashi to kedarnath distance','guptkashi helipad'],
   alternates: { canonical: `${SITE.baseUrl}/guptkashi-guide` },

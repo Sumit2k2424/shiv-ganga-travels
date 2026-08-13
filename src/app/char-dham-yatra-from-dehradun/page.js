@@ -5,27 +5,27 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Dehradun 2026 | Price Starts at ₹21,000 | Road & Heli Options' },
-  description: 'Char Dham Yatra from Dehradun 2026 — Jolly Grant Airport gateway, 54km to Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  title: { absolute: `Char Dham Yatra from Dehradun ${SITE.season} | Price Starts at ₹21,000 | Road & Heli Options` },
+  description: `Char Dham Yatra from Dehradun ${SITE.season} — Jolly Grant Airport gateway, 54km to Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
-    'char dham yatra from dehradun', 'char dham yatra package dehradun 2026',
+    'char dham yatra from dehradun', `char dham yatra package dehradun ${SITE.season}`,
     'dehradun to char dham yatra', 'char dham helicopter dehradun',
     'char dham tour from dehradun', 'chardham yatra dehradun',
     'jolly grant airport char dham', 'char dham yatra sahastradhara',
   ],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-dehradun` },
   openGraph: {
-    title: 'Char Dham Yatra from Dehradun 2026 — Road & Helicopter Packages',
-    description: 'Char Dham Yatra from Dehradun 2026. Jolly Grant Airport 54km from Haridwar. Road packages from ₹21,000. Helicopter charter ₹2,30,000. Direct operator.',
+    title: `Char Dham Yatra from Dehradun ${SITE.season} — Road & Helicopter Packages`,
+    description: `Char Dham Yatra from Dehradun ${SITE.season}. Jolly Grant Airport 54km from Haridwar. Road packages from ₹21,000. Helicopter charter ₹2,30,000. Direct operator.`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-dehradun`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} from Dehradun — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Dehradun 2026',
+    title: `Char Dham Yatra from Dehradun ${SITE.season}`,
     description: 'Char Dham Yatra from Dehradun. Closest city to Haridwar. Direct operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Dehradun — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Dehradun — Shiv Ganga Travels` }],
   },
 };
 

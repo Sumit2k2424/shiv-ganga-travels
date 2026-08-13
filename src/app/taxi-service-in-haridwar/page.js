@@ -4,7 +4,7 @@ import { FLEET, CIRCUITS, TRANSFERS, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Taxi Service in Haridwar 2026 — Rates from ₹1,600/Day' },
+  title: { absolute: `Taxi Service in Haridwar ${SITE.season} — Rates from ₹1,600/Day` },
   description: 'Book a Haridwar taxi direct from a local operator running since 2010. Fixed 8hr/80km rates, no commission, no surge pricing. Full fare chart inside.',
   keywords: ['taxi service in haridwar','haridwar taxi booking','car rental haridwar','haridwar cab rates','tempo traveller haridwar','haridwar local sightseeing taxi','innova crysta haridwar','haridwar taxi fare chart','cab service haridwar','haridwar car hire'],
   alternates: { canonical: `${SITE.baseUrl}/taxi-service-in-haridwar` },

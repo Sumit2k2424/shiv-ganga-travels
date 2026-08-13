@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Harsil Valley Guide 2026 | Permits, Weather & Route | Gangotri' },
+  title: { absolute: `Harsil Valley Guide ${SITE.season} | Permits, Weather & Route | Gangotri` },
   description: 'Harsil Valley on the Bhagirathi, 25km before Gangotri. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['harsil valley','harsil valley travel guide','harsil valley best time to visit','how to reach harsil valley','harsil valley permit','gartang gali trek','mukhba village','dharali village harsil','harsil to gangotri distance','harsil valley weather','harsil valley uttarkashi','nelong valley permit'],
   alternates: { canonical: `${SITE.baseUrl}/harsil-valley` },
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/harsil-valley`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Harsil Valley, Uttarkashi — Bhagirathi River and apple orchards, Uttarakhand' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Harsil Valley Guide 2026 — Permits, Weather & Route', description: 'Apple orchards, Gartang Gali, real permit rules and the route from Haridwar — 25 km before Gangotri.', images: [{ url: '/opengraph-image', alt: 'Harsil Valley, Uttarakhand' }] },
+  twitter: { card: 'summary_large_image', title: `Harsil Valley Guide ${SITE.season} — Permits, Weather & Route`, description: 'Apple orchards, Gartang Gali, real permit rules and the route from Haridwar — 25 km before Gangotri.', images: [{ url: '/opengraph-image', alt: 'Harsil Valley, Uttarakhand' }] },
 };
 
 const PAA = [

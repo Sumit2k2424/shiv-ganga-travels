@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Chandigarh 2026 | Price Starts at ₹21,499 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Chandigarh 2026 — 290km, 5h road or 4h train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from chandigarh','char dham yatra chandigarh 2026','char dham package from chandigarh','kedarnath from chandigarh','haridwar from chandigarh'],
+  title: { absolute: `Char Dham Yatra from Chandigarh ${SITE.season} | Price Starts at ₹21,499 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Chandigarh ${SITE.season} — 290km, 5h road or 4h train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from chandigarh',`char dham yatra chandigarh ${SITE.season}`,'char dham package from chandigarh','kedarnath from chandigarh','haridwar from chandigarh'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },
   openGraph: {
-    title: 'Char Dham Yatra from Chandigarh 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Chandigarh 2026. 290 km · 5h road · 4h train · closest major city. All-inclusive packages from ₹21,499/person. Direct Haridwar operator — zero commission. Chandigarh pickup, VIP d',
+    title: `Char Dham Yatra from Chandigarh ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Chandigarh ${SITE.season}. 290 km · 5h road · 4h train · closest major city. All-inclusive packages from ₹21,499/person. Direct Haridwar operator — zero commission. Chandigarh pickup, VIP d`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Chandigarh 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Chandigarh ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

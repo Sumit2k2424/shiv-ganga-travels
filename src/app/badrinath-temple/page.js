@@ -4,9 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Badrinath Temple Guide 2026 | Darshan Timings, Opening Apr 23' },
-  description: 'Badrinath Temple 2026 — darshan timings 4:30 AM–9 PM, Mahabhishek, no trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['badrinath temple','badrinath temple timings 2026','badrinath darshan timings','badrinath temple opening date 2026','badrinath maha abhishek puja'],
+  title: { absolute: `Badrinath Temple Guide ${SITE.season} | Darshan Timings, Opening Apr 23` },
+  description: `Badrinath Temple ${SITE.season} — darshan timings 4:30 AM–9 PM, Mahabhishek, no trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['badrinath temple',`badrinath temple timings ${SITE.season}`,'badrinath darshan timings',`badrinath temple opening date ${SITE.season}`,'badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
 };
 function Schema() {

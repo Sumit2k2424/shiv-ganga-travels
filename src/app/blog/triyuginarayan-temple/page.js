@@ -8,9 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Triyuginarayan Temple 2026 | Where Shiva Wed Parvati | Guide' },
+  title: { absolute: `Triyuginarayan Temple ${SITE.season} | Where Shiva Wed Parvati | Guide` },
   description: 'Triyuginarayan Temple — 12km from Sonprayag, darshan timings. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['triyuginarayan temple 2026', 'triyuginarayan temple kedarnath', 'triyuginarayan shiva parvati wedding', 'triyuginarayan temple guide', 'triyuginarayan yatra', 'sonprayag to triyuginarayan', 'triyuginarayan temple distance'],
+  keywords: [`triyuginarayan temple ${SITE.season}`, 'triyuginarayan temple kedarnath', 'triyuginarayan shiva parvati wedding', 'triyuginarayan temple guide', 'triyuginarayan yatra', 'sonprayag to triyuginarayan', 'triyuginarayan temple distance'],
   alternates: { canonical: `${SITE.baseUrl}/blog/triyuginarayan-temple` },
 };
 

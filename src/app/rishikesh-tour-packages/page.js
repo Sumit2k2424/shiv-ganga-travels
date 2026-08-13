@@ -3,8 +3,8 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Rishikesh Tour Package 2026 | Price Starts at ₹3,999 | Ganga Aarti & Rafting' },
-  description: 'Rishikesh Tour Package 2026 from ₹3,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Haridwar combo, ashram stays.',
+  title: { absolute: `Rishikesh Tour Package ${SITE.season} | Price Starts at ₹3,999 | Ganga Aarti & Rafting` },
+  description: `Rishikesh Tour Package ${SITE.season} from ₹3,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Haridwar combo, ashram stays.`,
   keywords: [
     'rishikesh tour package','rishikesh package','rishikesh trip package','rishikesh travel packages',
     'rishikesh tours','trip to rishikesh','rishikesh tour','rishikesh haridwar tour package',
@@ -15,16 +15,16 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/rishikesh-tour-packages` },
   openGraph: {
-    title: 'Rishikesh Tour Packages 2026 — Trips from ₹3,999 | Haridwar + Rishikesh',
+    title: `Rishikesh Tour Packages ${SITE.season} — Trips from ₹3,999 | Haridwar + Rishikesh`,
     description: 'Rishikesh tour packages from ₹3,999. Ganga Aarti, rafting, ashrams, Haridwar combo. Direct operator from Haridwar. Zero commission. 50,000+ pilgrims served.',
     url: `${SITE.baseUrl}/rishikesh-tour-packages`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rishikesh Tour Packages 2026 — Trips from ₹3,999 | Haridwar + Rishikes',
+    title: `Rishikesh Tour Packages ${SITE.season} — Trips from ₹3,999 | Haridwar + Rishikes`,
     description: 'Rishikesh tour packages from ₹3,999. Ganga Aarti, rafting, ashrams, Haridwar combo. Direct operator from Haridwar. Zero commission. 50,000+ pilgrims served',
-    images: [{ url: '/opengraph-image', alt: 'Rishikesh Tour Packages 2026 — Trips from ₹3,999 | Haridwar  | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Rishikesh Tour Packages ${SITE.season} — Trips from ₹3,999 | Haridwar  | Shiv Ganga Travels` }],
   },
 };
 

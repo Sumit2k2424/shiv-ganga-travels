@@ -7,22 +7,22 @@ import KedarnathFareCalc from '@/components/KedarnathFareCalc';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Pony & Palki Rates 2026 | Price Starts at ₹3,000 | Gaurikund' },
+  title: { absolute: `Kedarnath Pony & Palki Rates ${SITE.season} | Price Starts at ₹3,000 | Gaurikund` },
   description: 'Kedarnath pony ₹3,000–4,500, palki ₹8,000–12,000 from Gaurikund. Trusted operator, 15+ yrs experience, honest pricing, instant confirmation.',
-  keywords: ['kedarnath pony palki kandi rates 2026','kedarnath pony charges 2026','kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
+  keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates` },
   openGraph: {
-    title: 'Kedarnath Pony, Palki & Kandi Rates 2026 — The Honest Gaurikund Price Guide',
+    title: `Kedarnath Pony, Palki & Kandi Rates ${SITE.season} — The Honest Gaurikund Price Guide`,
     description: 'Pony ₹3,000–4,500 one way · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000. Weight slabs, prepaid counters, timings and how not to get overcharged. Written by a Haridwar operator.',
     url: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Pony, Palki & Kandi Rates 2026 — Gaurikund Prices | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Pony, Palki & Kandi Rates ${SITE.season} — Gaurikund Prices | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath Pony, Palki & Kandi Rates 2026 — Gaurikund Prices',
+    title: `Kedarnath Pony, Palki & Kandi Rates ${SITE.season} — Gaurikund Prices`,
     description: 'Pony ₹3,000–4,500 one way · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000. Weight slabs, prepaid counters, timings, scam-proof booking.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath Pony & Palki Rates 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Kedarnath Pony & Palki Rates ${SITE.season} | Shiv Ganga Travels` }],
   },
 };
 

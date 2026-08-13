@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Dhari Devi Temple 2026 | Timings & How to Reach | Guardian Goddess' },
+  title: { absolute: `Dhari Devi Temple ${SITE.season} | Timings & How to Reach | Guardian Goddess` },
   description: 'Dhari Devi Temple near Srinagar — darshan 6 AM–8 PM. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: ['dhari devi temple','dhari devi mandir','dhari devi','dhari devi temple story','dhari devi temple history','dhari devi temple timings','dhari devi temple location','dhari devi temple distance from srinagar','dhari devi kalyasaur','dhari devi temple uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/dhari-devi-temple` },
@@ -16,7 +16,7 @@ export const metadata = {
     url: `${SITE.baseUrl}/dhari-devi-temple`, type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Dhari Devi Temple on the Alaknanda, Pauri Garhwal — Shiv Ganga Travels' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Dhari Devi Temple 2026 — Story, Timings & How to Reach', description: 'Guardian goddess of the Char Dham. Darshan 6 AM–8 PM, the 2013 flood story, distances and route from Srinagar.', images: [{ url: '/opengraph-image', alt: 'Dhari Devi Temple, Uttarakhand' }] },
+  twitter: { card: 'summary_large_image', title: `Dhari Devi Temple ${SITE.season} — Story, Timings & How to Reach`, description: 'Guardian goddess of the Char Dham. Darshan 6 AM–8 PM, the 2013 flood story, distances and route from Srinagar.', images: [{ url: '/opengraph-image', alt: 'Dhari Devi Temple, Uttarakhand' }] },
 };
 
 const PAA = [

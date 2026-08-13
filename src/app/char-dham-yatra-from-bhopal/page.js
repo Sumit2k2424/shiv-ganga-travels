@@ -5,21 +5,21 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Bhopal 2026 | Price Starts at ₹23,999 | Road & Train Options' },
-  description: 'Char Dham Yatra from Bhopal 2026 — 900km by road (14–15 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from bhopal','char dham yatra package from bhopal','bhopal to haridwar char dham','char dham tour from bhopal 2026','chardham yatra bhopal','bhopal char dham yatra package'],
+  title: { absolute: `Char Dham Yatra from Bhopal ${SITE.season} | Price Starts at ₹23,999 | Road & Train Options` },
+  description: `Char Dham Yatra from Bhopal ${SITE.season} — 900km by road (14–15 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from bhopal','char dham yatra package from bhopal','bhopal to haridwar char dham',`char dham tour from bhopal ${SITE.season}`,'chardham yatra bhopal','bhopal char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bhopal` },
   openGraph: {
-    title: 'Char Dham Yatra from Bhopal 2026 — Trains, Flights & Packages from ₹23,999',
+    title: `Char Dham Yatra from Bhopal ${SITE.season} — Trains, Flights & Packages from ₹23,999`,
     description: '900 km by road (14–15 hrs) or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-bhopal`, type:'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Bhopal — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} from Bhopal — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Bhopal 2026 | Price Starts at ₹23,999',
+    title: `Char Dham Yatra from Bhopal ${SITE.season} | Price Starts at ₹23,999`,
     description: '900 km by road (14–15 hrs) or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Bhopal — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Bhopal — Shiv Ganga Travels` }],
   },
 };
 

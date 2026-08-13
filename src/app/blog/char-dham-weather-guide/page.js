@@ -2,11 +2,11 @@ import GuideArticle, { H2, P, UL, Callout } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Weather 2026 | Month-by-Month Guide' },
-  description: 'Char Dham Yatra weather 2026 — temperatures, rain & snow risk. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham weather 2026', 'char dham yatra weather', 'kedarnath temperature', 'badrinath weather month wise', 'char dham best weather month'],
+  title: { absolute: `Char Dham Yatra Weather ${SITE.season} | Month-by-Month Guide` },
+  description: `Char Dham Yatra weather ${SITE.season} — temperatures, rain & snow risk. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`char dham weather ${SITE.season}`, 'char dham yatra weather', 'kedarnath temperature', 'badrinath weather month wise', 'char dham best weather month'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-weather-guide` },
-  openGraph: { title: 'Char Dham Yatra Weather 2026 — Month by Month', url: `${SITE.baseUrl}/blog/char-dham-weather-guide`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Weather 2026' }] },
+  openGraph: { title: `Char Dham Yatra Weather ${SITE.season} — Month by Month`, url: `${SITE.baseUrl}/blog/char-dham-weather-guide`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Weather ${SITE.season}` }] },
 };
 
 export default function Page() {

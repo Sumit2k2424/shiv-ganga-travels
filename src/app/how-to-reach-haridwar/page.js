@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'How to Reach Haridwar 2026 | Train, Flight & Road Guide' },
-  description: 'How to reach Haridwar 2026 — train from Delhi, flight to Dehradun, bus & road routes. Trusted operator, 15+ yrs experience, instant confirmation.',
+  title: { absolute: `How to Reach Haridwar ${SITE.season} | Train, Flight & Road Guide` },
+  description: `How to reach Haridwar ${SITE.season} — train from Delhi, flight to Dehradun, bus & road routes. Trusted operator, 15+ yrs experience, instant confirmation.`,
   // Note: airport-taxi keywords ('jolly grant airport haridwar', 'dehradun
   // airport haridwar') deliberately live on /dehradun-airport-to-haridwar-taxi
   // instead. That page owns the transactional intent; this one owns the
@@ -12,16 +12,16 @@ export const metadata = {
   keywords: ['how to reach haridwar','haridwar train from delhi','nearest airport to haridwar','haridwar bus from delhi','haridwar from mumbai','haridwar from bangalore','haridwar distance from delhi','char dham yatra haridwar how to reach'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-haridwar` },
   openGraph: {
-    title: 'How to Reach Haridwar for Char Dham Yatra 2026',
+    title: `How to Reach Haridwar for Char Dham Yatra ${SITE.season}`,
     description: 'Train, flight, bus, and road options from all major cities to Haridwar — starting point of Char Dham Yatra.',
     url: `${SITE.baseUrl}/how-to-reach-haridwar`,
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Reach Haridwar for Char Dham Yatra 2026',
+    title: `How to Reach Haridwar for Char Dham Yatra ${SITE.season}`,
     description: 'Train, flight, bus, and road options from all major cities to Haridwar — starting point of Char Dham Yatra.',
-    images: [{ url: '/opengraph-image', alt: 'How to Reach Haridwar for Char Dham Yatra 2026 | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `How to Reach Haridwar for Char Dham Yatra ${SITE.season} | Shiv Ganga Travels` }],
   },
 };
 

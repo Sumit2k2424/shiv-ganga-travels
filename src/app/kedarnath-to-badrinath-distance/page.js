@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath to Badrinath Distance 2026 | Route, Time & Taxi Fare' },
+  title: { absolute: `Kedarnath to Badrinath Distance ${SITE.season} | Route, Time & Taxi Fare` },
   description: 'Kedarnath to Badrinath — 218km by road, 8–10 hours. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['kedarnath to badrinath distance','badrinath to kedarnath distance','kedarnath to badrinath','badrinath to kedarnath','kedarnath to badrinath taxi','kedarnath to badrinath route'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-to-badrinath-distance` },

@@ -5,21 +5,21 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Jaipur 2026 | Price Starts at ₹17,200 | Road & Train Options' },
-  description: 'Char Dham Yatra from Jaipur 2026 — 560km by road (8–9 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from jaipur','char dham yatra package from jaipur','jaipur to haridwar char dham','char dham tour from jaipur 2026','chardham yatra jaipur','jaipur char dham yatra package'],
+  title: { absolute: `Char Dham Yatra from Jaipur ${SITE.season} | Price Starts at ₹17,200 | Road & Train Options` },
+  description: `Char Dham Yatra from Jaipur ${SITE.season} — 560km by road (8–9 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from jaipur','char dham yatra package from jaipur','jaipur to haridwar char dham',`char dham tour from jaipur ${SITE.season}`,'chardham yatra jaipur','jaipur char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-jaipur` },
   openGraph: {
-    title: 'Char Dham Yatra from Jaipur 2026 — Trains, Flights & Packages from ₹17,200',
+    title: `Char Dham Yatra from Jaipur ${SITE.season} — Trains, Flights & Packages from ₹17,200`,
     description: '560 km by road (8–9 hrs) or train. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-jaipur`, type:'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Jaipur — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} from Jaipur — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Jaipur 2026 | Price Starts at ₹17,200',
+    title: `Char Dham Yatra from Jaipur ${SITE.season} | Price Starts at ₹17,200`,
     description: '560 km by road (8–9 hrs) or train. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Jaipur — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Jaipur — Shiv Ganga Travels` }],
   },
 };
 

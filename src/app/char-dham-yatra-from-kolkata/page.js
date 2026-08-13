@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Kolkata 2026 | Price Starts at ₹24,999 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Kolkata 2026 — 1,500km, Doon Express 27.5h or 2h flight. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from kolkata','char dham yatra kolkata 2026','char dham package from kolkata','kedarnath from kolkata','haridwar from kolkata'],
+  title: { absolute: `Char Dham Yatra from Kolkata ${SITE.season} | Price Starts at ₹24,999 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Kolkata ${SITE.season} — 1,500km, Doon Express 27.5h or 2h flight. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from kolkata',`char dham yatra kolkata ${SITE.season}`,'char dham package from kolkata','kedarnath from kolkata','haridwar from kolkata'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-kolkata` },
   openGraph: {
-    title: 'Char Dham Yatra from Kolkata 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Kolkata 2026. 1,500 km · Doon Express 27.5h direct · or 2h flight. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Kolkata pickup, VIP dars',
+    title: `Char Dham Yatra from Kolkata ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Kolkata ${SITE.season}. 1,500 km · Doon Express 27.5h direct · or 2h flight. All-inclusive packages from ₹24,999/person. Direct Haridwar operator — zero commission. Kolkata pickup, VIP dars`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-kolkata`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Kolkata 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Kolkata ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

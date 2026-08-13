@@ -5,21 +5,21 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Surat 2026 | Price Starts at ₹23,999 | Train & Flight Options' },
-  description: 'Char Dham Yatra from Surat 2026 — 1,250km, train (18–20 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from surat','char dham yatra package from surat','surat to haridwar char dham','char dham tour from surat 2026','chardham yatra surat','surat char dham yatra package'],
+  title: { absolute: `Char Dham Yatra from Surat ${SITE.season} | Price Starts at ₹23,999 | Train & Flight Options` },
+  description: `Char Dham Yatra from Surat ${SITE.season} — 1,250km, train (18–20 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from surat','char dham yatra package from surat','surat to haridwar char dham',`char dham tour from surat ${SITE.season}`,'chardham yatra surat','surat char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-surat` },
   openGraph: {
-    title: 'Char Dham Yatra from Surat 2026 — Trains, Flights & Packages from ₹23,999',
+    title: `Char Dham Yatra from Surat ${SITE.season} — Trains, Flights & Packages from ₹23,999`,
     description: '1,250 km — train (18–20 hrs) or fly. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     url: `${SITE.baseUrl}/char-dham-yatra-from-surat`, type:'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 from Surat — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} from Surat — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra from Surat 2026 — Trains, Flights & Packages from ₹23,',
+    title: `Char Dham Yatra from Surat ${SITE.season} — Trains, Flights & Packages from ₹23,`,
     description: '1,250 km — train (18–20 hrs) or fly. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Surat — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Surat — Shiv Ganga Travels` }],
   },
 };
 

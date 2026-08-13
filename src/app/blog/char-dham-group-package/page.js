@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Group Package 2026 | Price Starts at ₹17,500 | 10+ Pilgrims' },
-  description: 'Char Dham Yatra group packages 2026 — save 10–15% for 10+ pilgrims. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra group package 2026', 'char dham yatra group booking', 'char dham group package price 2026', 'char dham yatra large group', 'char dham group tour haridwar', 'char dham group discount 2026'],
+  title: { absolute: `Char Dham Group Package ${SITE.season} | Price Starts at ₹17,500 | 10+ Pilgrims` },
+  description: `Char Dham Yatra group packages ${SITE.season} — save 10–15% for 10+ pilgrims. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: [`char dham yatra group package ${SITE.season}`, 'char dham yatra group booking', `char dham group package price ${SITE.season}`, 'char dham yatra large group', 'char dham group tour haridwar', `char dham group discount ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
-  openGraph: { title: 'Char Dham Group Package 2026: Price & Discounts', url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Group Package 2026 — Book for 10+ Pilgrims | Shiv Ganga Travels' }],
+  openGraph: { title: `Char Dham Group Package ${SITE.season}: Price & Discounts`, url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Group Package ${SITE.season} — Book for 10+ Pilgrims | Shiv Ganga Travels` }],
 };
 
 function Schema() {

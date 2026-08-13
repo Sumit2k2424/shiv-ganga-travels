@@ -9,12 +9,12 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'केदारनाथ यात्रा 2026 | पहली बार जाने वालों के लिए गाइड' },
+  title: { absolute: `केदारनाथ यात्रा ${SITE.season} | पहली बार जाने वालों के लिए गाइड` },
   description: 'पहली बार केदारनाथ जा रहे हैं? रजिस्ट्रेशन, ट्रेक, खर्चा — हिंदी में। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
-  keywords: ['केदारनाथ यात्रा 2026 पहली बार', 'kedarnath pehli baar kaise jayen', 'केदारनाथ कैसे जाएं हिंदी', 'kedarnath trek hindi guide', 'केदारनाथ यात्रा गाइड 2026'],
+  keywords: [`केदारनाथ यात्रा ${SITE.season} पहली बार`, 'kedarnath pehli baar kaise jayen', 'केदारनाथ कैसे जाएं हिंदी', 'kedarnath trek hindi guide', `केदारनाथ यात्रा गाइड ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` },
   openGraph: { title: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', description: 'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', url: `${SITE.baseUrl}/blog/kedarnath-pehli-baar`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'केदारनाथ यात्रा 2026 — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी म | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `केदारनाथ यात्रा ${SITE.season} — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी म | Shiv Ganga Travels` }],
 };
 
 function Schema() {

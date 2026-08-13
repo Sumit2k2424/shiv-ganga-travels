@@ -2,8 +2,8 @@ import GuideArticle, { H2, P, UL } from '@/components/GuideArticle';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra History & Significance 2026 | Why 4 Shrines' },
-  description: 'Char Dham Yatra history 2026 — Adi Shankaracharya, meaning of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.',
+  title: { absolute: `Char Dham Yatra History & Significance ${SITE.season} | Why 4 Shrines` },
+  description: `Char Dham Yatra history ${SITE.season} — Adi Shankaracharya, meaning of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.`,
   keywords: ['char dham yatra history', 'char dham significance', 'why char dham yatra', 'adi shankaracharya char dham', 'chota char dham meaning'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-history` },
   openGraph: { title: 'Char Dham Yatra History & Significance', url: `${SITE.baseUrl}/blog/char-dham-yatra-history`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra History' }] },

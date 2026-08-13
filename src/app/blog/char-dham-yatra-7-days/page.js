@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra in 7 Days 2026 | Itinerary & Honest Advice' },
-  description: 'Char Dham Yatra in 7 days 2026 — day-by-day itinerary. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', 'char dham yatra short duration 2026'],
+  title: { absolute: `Char Dham Yatra in 7 Days ${SITE.season} | Itinerary & Honest Advice` },
+  description: `Char Dham Yatra in 7 days ${SITE.season} — day-by-day itinerary. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', `char dham yatra short duration ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra in 7 Days 2026 — Is It Possible? | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra in 7 Days ${SITE.season} — Is It Possible? | Shiv Ganga Travels` }],
 };
 
 function Schema() {

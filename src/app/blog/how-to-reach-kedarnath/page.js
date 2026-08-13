@@ -8,13 +8,13 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'How to Reach Kedarnath 2026 | Road, Train & Helicopter' },
-  description: 'How to reach Kedarnath 2026 from Delhi, Mumbai, Bengaluru. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['how to reach kedarnath 2026', 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', 'kedarnath journey guide 2026'],
+  title: { absolute: `How to Reach Kedarnath ${SITE.season} | Road, Train & Helicopter` },
+  description: `How to reach Kedarnath ${SITE.season} from Delhi, Mumbai, Bengaluru. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: [`how to reach kedarnath ${SITE.season}`, 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', `kedarnath journey guide ${SITE.season}`],
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },
-  openGraph: { title: 'How to Reach Kedarnath 2026: Road, Train & Heli', url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'How to Reach Kedarnath 2026 — All Routes Explained | Shiv Ganga Travels' }],
+  openGraph: { title: `How to Reach Kedarnath ${SITE.season}: Road, Train & Heli`, url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `How to Reach Kedarnath ${SITE.season} — All Routes Explained | Shiv Ganga Travels` }],
 };
 
 function Schema() {

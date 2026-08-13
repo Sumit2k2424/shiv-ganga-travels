@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'चार धाम यात्रा रजिस्ट्रेशन 2026 | मोबाइल से कैसे करें | फ्री गाइड' },
-  description: 'चार धाम यात्रा 2026 रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
-  keywords: ['चार धाम यात्रा रजिस्ट्रेशन 2026', 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', 'चार धाम पंजीकरण 2026'],
+  title: { absolute: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} | मोबाइल से कैसे करें | फ्री गाइड` },
+  description: `चार धाम यात्रा ${SITE.season} रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।`,
+  keywords: [`चार धाम यात्रा रजिस्ट्रेशन ${SITE.season}`, 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', `चार धाम पंजीकरण ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-registration-hindi` },
-  openGraph: { title: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से घर बैठे कैसे करें?', description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'चार धाम यात्रा रजिस्ट्रेशन 2026 — मोबाइल से कैसे करें? Step-by-Step Hi | Shiv Ganga Travels' }],
+  openGraph: { title: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से घर बैठे कैसे करें?`, description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से कैसे करें? Step-by-Step Hi | Shiv Ganga Travels` }],
 };
 
 function Schema() {

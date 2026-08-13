@@ -8,22 +8,22 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath VIP Darshan Booking 2026 | Price Starts at ₹300 | Guide' },
-  description: 'Kedarnath VIP darshan 2026 — priority sanctum access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['VIP darshan kedarnath 2026', 'kedarnath VIP darshan price', 'vip darshan kedarnath online booking', 'kedarnath VIP darshan with helicopter', 'kedarnath sparsh darshan booking', 'VIP darshan pass kedarnath', 'badrinath VIP darshan ticket price', 'badrinath temple VIP darshan booking'],
+  title: { absolute: `Kedarnath VIP Darshan Booking ${SITE.season} | Price Starts at ₹300 | Guide` },
+  description: `Kedarnath VIP darshan ${SITE.season} — priority sanctum access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`VIP darshan kedarnath ${SITE.season}`, 'kedarnath VIP darshan price', 'vip darshan kedarnath online booking', 'kedarnath VIP darshan with helicopter', 'kedarnath sparsh darshan booking', 'VIP darshan pass kedarnath', 'badrinath VIP darshan ticket price', 'badrinath temple VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking` },
   openGraph: {
-    title: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan',
-    description: 'No flat VIP pass exists. Priority Garbha Griha access is bundled with BKTC pujas. Full 2026 price table, online booking steps, helicopter combo, sparsh darshan & the ₹2,000+ tout scam to avoid.',
+    title: `Kedarnath VIP Darshan ${SITE.season} — Price, Online Booking & Sparsh Darshan`,
+    description: `No flat VIP pass exists. Priority Garbha Griha access is bundled with BKTC pujas. Full ${SITE.season} price table, online booking steps, helicopter combo, sparsh darshan & the ₹2,000+ tout scam to avoid.`,
     url: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath VIP Darshan ${SITE.season} — Price, Online Booking & Sparsh Darshan Guide | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan',
-    description: 'No flat VIP pass — priority sanctum access is bundled with BKTC pujas. 2026 prices, online booking steps, helicopter combo & fraud warning.',
-    images: [{ url: '/opengraph-image', alt: 'Kedarnath VIP Darshan 2026 Guide | Shiv Ganga Travels' }],
+    title: `Kedarnath VIP Darshan ${SITE.season} — Price, Booking & Sparsh Darshan`,
+    description: `No flat VIP pass — priority sanctum access is bundled with BKTC pujas. ${SITE.season} prices, online booking steps, helicopter combo & fraud warning.`,
+    images: [{ url: '/opengraph-image', alt: `Kedarnath VIP Darshan ${SITE.season} Guide | Shiv Ganga Travels` }],
   },
 };
 

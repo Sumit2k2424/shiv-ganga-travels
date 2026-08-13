@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Darshan Timings 2026 | Aarti & VIP Slots' },
-  description: 'Kedarnath darshan timings 2026 — morning & evening slots, VIP darshan. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['kedarnath darshan timings 2026', 'kedarnath temple opening time', 'kedarnath darshan time', 'kedarnath mandir timing 2026', 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
+  title: { absolute: `Kedarnath Darshan Timings ${SITE.season} | Aarti & VIP Slots` },
+  description: `Kedarnath darshan timings ${SITE.season} — morning & evening slots, VIP darshan. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`kedarnath darshan timings ${SITE.season}`, 'kedarnath temple opening time', 'kedarnath darshan time', `kedarnath mandir timing ${SITE.season}`, 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
-  openGraph: { title: 'Kedarnath Darshan Timings 2026: Aarti & VIP Slots', description: 'All Kedarnath temple timings 2026 — darshan hours, puja schedule, aarti times, VIP booking.', url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kedarnath Darshan Timings 2026 — Garbha Griha, Touch Shivling, VIP & P | Shiv Ganga Travels' }],
+  openGraph: { title: `Kedarnath Darshan Timings ${SITE.season}: Aarti & VIP Slots`, description: `All Kedarnath temple timings ${SITE.season} — darshan hours, puja schedule, aarti times, VIP booking.`, url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article' },
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Darshan Timings ${SITE.season} — Garbha Griha, Touch Shivling, VIP & P | Shiv Ganga Travels` }],
 };
 
 function Schema() {

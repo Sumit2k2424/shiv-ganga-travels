@@ -7,9 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Valley of Flowers Trek 2026 | Price Starts at ₹150 | Best Time & Route' },
-  description: 'Valley of Flowers trek 2026 — UNESCO site, 17km route from Govindghat. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['valley of flowers trek 2026', 'valley of flowers best time', 'valley of flowers trek guide', 'govindghat to valley of flowers', 'valley of flowers uttarakhand', 'valley of flowers entry fee 2026', 'valley of flowers flowers list'],
+  title: { absolute: `Valley of Flowers Trek ${SITE.season} | Price Starts at ₹150 | Best Time & Route` },
+  description: `Valley of Flowers trek ${SITE.season} — UNESCO site, 17km route from Govindghat. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`valley of flowers trek ${SITE.season}`, 'valley of flowers best time', 'valley of flowers trek guide', 'govindghat to valley of flowers', 'valley of flowers uttarakhand', `valley of flowers entry fee ${SITE.season}`, 'valley of flowers flowers list'],
   alternates: { canonical: `${SITE.baseUrl}/blog/valley-of-flowers-trek` },
 };
 function Schema() {

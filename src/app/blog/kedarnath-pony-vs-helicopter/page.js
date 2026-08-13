@@ -8,9 +8,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Pony vs Helicopter 2026 | Cost & Verdict' },
-  description: 'Kedarnath pony vs helicopter 2026 — cost, time, comfort compared. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['kedarnath pony vs helicopter 2026', 'kedarnath helicopter or pony', 'kedarnath pony cost 2026', 'kedarnath helicopter cost 2026', 'best way to reach kedarnath', 'kedarnath trek alternatives'],
+  title: { absolute: `Kedarnath Pony vs Helicopter ${SITE.season} | Cost & Verdict` },
+  description: `Kedarnath pony vs helicopter ${SITE.season} — cost, time, comfort compared. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`kedarnath pony vs helicopter ${SITE.season}`, 'kedarnath helicopter or pony', `kedarnath pony cost ${SITE.season}`, `kedarnath helicopter cost ${SITE.season}`, 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
 

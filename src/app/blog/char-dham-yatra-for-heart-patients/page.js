@@ -8,9 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra for Heart Patients 2026 | Safe Routes' },
-  description: 'Char Dham Yatra for heart patients 2026 — altitude risk, precautions. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['char dham yatra for heart patients', 'char dham yatra medical conditions 2026', 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', 'char dham medical certificate 2026'],
+  title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
+  description: `Char Dham Yatra for heart patients ${SITE.season} — altitude risk, precautions. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: ['char dham yatra for heart patients', `char dham yatra medical conditions ${SITE.season}`, 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', `char dham medical certificate ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
 };
 

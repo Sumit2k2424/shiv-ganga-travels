@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Kedarnath Weather 2026 | Month-wise Guide | Best Time to Visit' },
-  description: 'Kedarnath weather 2026 — month-by-month temperatures & best time to visit. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['kedarnath weather','kedarnath temperature','kedarnath weather in may','kedarnath weather in june','kedarnath best time to visit 2026','kedarnath snowfall'],
+  title: { absolute: `Kedarnath Weather ${SITE.season} | Month-wise Guide | Best Time to Visit` },
+  description: `Kedarnath weather ${SITE.season} — month-by-month temperatures & best time to visit. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['kedarnath weather','kedarnath temperature','kedarnath weather in may','kedarnath weather in june',`kedarnath best time to visit ${SITE.season}`,'kedarnath snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-weather` },
 };
 const weather = [

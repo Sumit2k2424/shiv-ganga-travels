@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'About Shiv Ganga Travels 2026 | 15+ Years, Founded by Army Officer' },
+  title: { absolute: `About Shiv Ganga Travels ${SITE.season} | 15+ Years, Founded by Army Officer` },
   description: 'Shiv Ganga Travels, Haridwar — trusted operator since 2010, 15+ yrs experience. Zero commission, 50,000+ pilgrims served, instant confirmation.',
   keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
   alternates: { canonical: `${SITE.baseUrl}/about` },

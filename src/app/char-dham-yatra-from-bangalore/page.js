@@ -7,16 +7,16 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra from Bangalore 2026 | Price Starts at ₹26,999 | Pickup & VIP Darshan' },
-  description: 'Char Dham Yatra from Bangalore 2026 — 2,100km, 2h30m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham yatra from bangalore','char dham yatra bangalore 2026','char dham package from bangalore','kedarnath from bangalore','haridwar from bangalore'],
+  title: { absolute: `Char Dham Yatra from Bangalore ${SITE.season} | Price Starts at ₹26,999 | Pickup & VIP Darshan` },
+  description: `Char Dham Yatra from Bangalore ${SITE.season} — 2,100km, 2h30m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham yatra from bangalore',`char dham yatra bangalore ${SITE.season}`,'char dham package from bangalore','kedarnath from bangalore','haridwar from bangalore'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-bangalore` },
   openGraph: {
-    title: 'Char Dham Yatra from Bangalore 2026 — Direct Operator, Zero Commission',
-    description: 'Char Dham Yatra from Bangalore 2026. 2,100 km · 2h 30m direct flight to Dehradun. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Bangalore pickup, VIP darshan,',
+    title: `Char Dham Yatra from Bangalore ${SITE.season} — Direct Operator, Zero Commission`,
+    description: `Char Dham Yatra from Bangalore ${SITE.season}. 2,100 km · 2h 30m direct flight to Dehradun. All-inclusive packages from ₹26,999/person. Direct Haridwar operator — zero commission. Bangalore pickup, VIP darshan,`,
     url: `${SITE.baseUrl}/char-dham-yatra-from-bangalore`,
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra from Bangalore 2026 — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra from Bangalore ${SITE.season} — Shiv Ganga Travels` }],
   },
 };
 

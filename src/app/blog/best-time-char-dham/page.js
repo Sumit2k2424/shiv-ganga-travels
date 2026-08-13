@@ -9,21 +9,21 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Best Time for Char Dham Yatra 2026 | Month-by-Month Guide' },
-  description: 'Best time for Char Dham Yatra 2026 — May & Sept-Oct ideal. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['best time for char dham yatra', 'char dham yatra best month 2026', 'char dham yatra weather month wise', 'char dham opening dates 2026', 'char dham yatra season', 'best month char dham yatra'],
+  title: { absolute: `Best Time for Char Dham Yatra ${SITE.season} | Month-by-Month Guide` },
+  description: `Best time for Char Dham Yatra ${SITE.season} — May & Sept-Oct ideal. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['best time for char dham yatra', `char dham yatra best month ${SITE.season}`, 'char dham yatra weather month wise', `char dham opening dates ${SITE.season}`, 'char dham yatra season', 'best month char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/best-time-char-dham` },
   openGraph: {
-    title: 'Best Time for Char Dham Yatra 2026: Month by Month',
+    title: `Best Time for Char Dham Yatra ${SITE.season}: Month by Month`,
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
     url: `${SITE.baseUrl}/blog/best-time-char-dham`, type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Best Time for Char Dham Yatra 2026: Month by Month | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Best Time for Char Dham Yatra ${SITE.season}: Month by Month | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Time for Char Dham Yatra 2026: Month by Month',
+    title: `Best Time for Char Dham Yatra ${SITE.season}: Month by Month`,
     description: 'Month-by-month guide: weather, crowds, opening dates, honest advice.',
-    images: [{ url: '/opengraph-image', alt: 'Best Time for Char Dham Yatra 2026 — Month-by-Month Weather, | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Best Time for Char Dham Yatra ${SITE.season} — Month-by-Month Weather, | Shiv Ganga Travels` }],
   },
 };
 

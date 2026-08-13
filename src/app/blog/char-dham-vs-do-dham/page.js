@@ -9,9 +9,9 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham vs Do Dham Yatra 2026 | Price Starts at ₹8,200 | Compare' },
-  description: 'Char Dham vs Do Dham Yatra 2026 — compare time, cost, difficulty. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
-  keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', 'do dham yatra 2026', 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
+  title: { absolute: `Char Dham vs Do Dham Yatra ${SITE.season} | Price Starts at ₹8,200 | Compare` },
+  description: `Char Dham vs Do Dham Yatra ${SITE.season} — compare time, cost, difficulty. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', `do dham yatra ${SITE.season}`, 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };
 

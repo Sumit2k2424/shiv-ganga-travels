@@ -4,16 +4,16 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Shiv Ganga vs MakeMyTrip 2026 | Price Starts at ₹13,900 | Char Dham' },
+  title: { absolute: `Shiv Ganga vs MakeMyTrip ${SITE.season} | Price Starts at ₹13,900 | Char Dham` },
   description: 'Shiv Ganga Travels ₹13,900 direct vs MakeMyTrip ₹32,479 with commission. Trusted operator, 15+ yrs experience, zero commission, instant confirmation.',
   keywords: ['shiv ganga travels vs makemytrip char dham','char dham yatra direct booking vs makemytrip','char dham yatra no commission','makemytrip char dham price','char dham yatra hidden charges','book char dham without agent'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham` },
   openGraph: {
-    title: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026 — Price & Honest Comparison',
+    title: `Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra ${SITE.season} — Price & Honest Comparison`,
     description: 'Direct operator at ₹13,900 vs aggregator at ₹32,479. The ₹13,979 gap is the commission layer. Full breakdown.',
     url: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra 2026' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Shiv Ganga Travels vs MakeMyTrip Char Dham Yatra ${SITE.season}` }],
   },
 };
 

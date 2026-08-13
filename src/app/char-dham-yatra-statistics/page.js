@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Statistics 2026 | Pilgrim Data & Trends' },
-  description: 'Char Dham Yatra statistics 2026 — pilgrim numbers, costs, route data. Trusted operator, 15+ yrs experience, free to cite with attribution.',
-  keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', 'char dham statistics 2026', 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
+  title: { absolute: `Char Dham Yatra Statistics ${SITE.season} | Pilgrim Data & Trends` },
+  description: `Char Dham Yatra statistics ${SITE.season} — pilgrim numbers, costs, route data. Trusted operator, 15+ yrs experience, free to cite with attribution.`,
+  keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', `char dham statistics ${SITE.season}`, 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
   openGraph: {
-    title: 'Char Dham Yatra Statistics 2026 — Free Citable Data Hub',
-    description: 'Operator-verified statistics for Char Dham Yatra 2026 — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.',
+    title: `Char Dham Yatra Statistics ${SITE.season} — Free Citable Data Hub`,
+    description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
     url: `${SITE.baseUrl}/char-dham-yatra-statistics`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Statistics 2026 — Shiv Ganga Travels Data Hub' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Statistics ${SITE.season} — Shiv Ganga Travels Data Hub` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Statistics 2026 — Citable Data Hub',
+    title: `Char Dham Yatra Statistics ${SITE.season} — Citable Data Hub`,
     description: 'Operator-verified data on India\'s largest Himalayan pilgrimage. Free to cite with attribution.',
   },
 };

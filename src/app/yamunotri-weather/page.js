@@ -3,20 +3,20 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Yamunotri Weather 2026 | Month-wise Temperature Guide' },
-  description: 'Yamunotri weather 2026 — temperatures at 3,291m, what to pack. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
-  keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit','yamunotri weather 2026','yamunotri trek weather'],
+  title: { absolute: `Yamunotri Weather ${SITE.season} | Month-wise Temperature Guide` },
+  description: `Yamunotri weather ${SITE.season} — temperatures at 3,291m, what to pack. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit',`yamunotri weather ${SITE.season}`,'yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },
   openGraph: {
-    title: 'Yamunotri Weather 2026 — Month-wise Temperature Guide',
+    title: `Yamunotri Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Yamunotri weather guide. Best time to visit, what to pack, temperature ranges.',
     url: `${SITE.baseUrl}/yamunotri-weather`, type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yamunotri Weather 2026 — Month-wise Temperature Guide',
+    title: `Yamunotri Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Yamunotri weather guide. Best time to visit, what to pack, temperature ranges.',
-    images: [{ url: '/opengraph-image', alt: 'Yamunotri Weather 2026 — Month-wise Temperature Guide | Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', alt: `Yamunotri Weather ${SITE.season} — Month-wise Temperature Guide | Shiv Ganga Travels` }],
   },
 };
 

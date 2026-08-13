@@ -7,17 +7,17 @@ const SLUG = 'char-dham-yatra-odia';
 const noto = Noto_Sans_Oriya({ subsets: ['oriya'], weight: ['400', '500', '600', '700'], display: 'swap' });
 
 export const metadata = {
-  title: { absolute: 'ଚାର ଧାମ ଯାତ୍ରା 2026 | ₹13,900ରୁ ଆରମ୍ଭ | ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ଗାଇଡ' },
-  description: 'ଚାର ଧାମ ଯାତ୍ରା 2026 ଓଡ଼ିଆରେ — ହରିଦ୍ୱାରରୁ ₹13,900ରୁ। ବିଶ୍ୱସ୍ତ ଅପରେଟର, 15+ ବର୍ଷର ଅଭିଜ୍ଞତା, ତତକ୍ଷଣାତ ନିଶ୍ଚିତକରଣ।',
+  title: { absolute: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} | ₹13,900ରୁ ଆରମ୍ଭ | ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ଗାଇଡ` },
+  description: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} ଓଡ଼ିଆରେ — ହରିଦ୍ୱାରରୁ ₹13,900ରୁ। ବିଶ୍ୱସ୍ତ ଅପରେଟର, 15+ ବର୍ଷର ଅଭିଜ୍ଞତା, ତତକ୍ଷଣାତ ନିଶ୍ଚିତକରଣ।`,
   keywords: ['ଚାର ଧାମ ଯାତ୍ରା ଓଡ଼ିଆ', 'char dham yatra in odia', 'char dham yatra odia guide', 'chardham yatra odia', 'ପୁରୀ ଧାମ ଓ ଚାର ଧାମ ଯାତ୍ରା'],
   alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
   openGraph: {
-    title: 'ଚାର ଧାମ ଯାତ୍ରା 2026 — ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା | Shiv Ganga Travels',
+    title: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} — ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା | Shiv Ganga Travels`,
     description: 'ଯମୁନୋତ୍ରୀ, ଗଙ୍ଗୋତ୍ରୀ, କେଦାରନାଥ, ବଦ୍ରୀନାଥ। ହରିଦ୍ୱାରରୁ ₹13,900ରୁ ଆରମ୍ଭ। ସିଧାସଳଖ ଅପରେଟର, ମାଗଣା ପଞ୍ଜୀକରଣ ସହାୟତା।',
     url: `${SITE.baseUrl}/${SLUG}`,
     type: 'website',
     locale: 'or_IN',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 in Odia — Shiv Ganga Travels' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra ${SITE.season} in Odia — Shiv Ganga Travels` }],
   },
 };
 

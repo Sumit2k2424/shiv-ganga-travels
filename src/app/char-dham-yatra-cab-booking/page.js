@@ -23,22 +23,22 @@ import { JsonLd, breadcrumb, faqPage } from '@/components/cabs/cabSchema';
 const URL = `${SITE.baseUrl}/char-dham-yatra-cab-booking`;
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Cab Booking 2026 | Full Circuit from ₹18,000 | Fixed Fare' },
+  title: { absolute: `Char Dham Yatra Cab Booking ${SITE.season} | Full Circuit from ₹18,000 | Fixed Fare` },
   description:
-    'Book a cab for the full Char Dham circuit 2026 — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator since 2010.',
+    `Book a cab for the full Char Dham circuit ${SITE.season} — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator since 2010.`,
   keywords: [
-    'char dham yatra cab booking', 'char dham taxi 2026', 'char dham yatra car rental',
+    'char dham yatra cab booking', `char dham taxi ${SITE.season}`, 'char dham yatra car rental',
     'innova crysta char dham', 'tempo traveller char dham', 'char dham cab fare from haridwar',
   ],
   alternates: { canonical: URL },
   openGraph: {
-    title: 'Char Dham Yatra Cab Booking 2026 — All Vehicles from Haridwar',
+    title: `Char Dham Yatra Cab Booking ${SITE.season} — All Vehicles from Haridwar`,
     description: 'Full Char Dham circuit by road. Fixed all-inclusive fares, our own vehicles, hill-experienced drivers.',
     url: URL, type: 'website', siteName: SITE.name, locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Char Dham Yatra Cab Booking 2026',
+    title: `Char Dham Yatra Cab Booking ${SITE.season}`,
     description: 'Full Char Dham circuit by road. Fixed all-inclusive fares from ₹18,000.',
   },
 };

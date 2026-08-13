@@ -7,9 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: 'Rishikesh Adventure Guide 2026 | Price Starts at ₹600 | Rafting & Bungee' },
-  description: 'Rishikesh adventure guide 2026 — rafting, bungee, camping. Trusted operator, 15+ yrs experience, instant confirmation.',
-  keywords: ['rishikesh adventure guide 2026', 'rishikesh river rafting price 2026', 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
+  title: { absolute: `Rishikesh Adventure Guide ${SITE.season} | Price Starts at ₹600 | Rafting & Bungee` },
+  description: `Rishikesh adventure guide ${SITE.season} — rafting, bungee, camping. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  keywords: [`rishikesh adventure guide ${SITE.season}`, `rishikesh river rafting price ${SITE.season}`, 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },
 };
 function Schema() {

@@ -1,7 +1,7 @@
 import { SITE, PACKAGES } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'Contact Shiv Ganga Travels 2026 | Haridwar | Instant Confirmation' },
+  title: { absolute: `Contact Shiv Ganga Travels ${SITE.season} | Haridwar | Instant Confirmation` },
   alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
   description: 'Contact Shiv Ganga Travels, Haridwar for Char Dham Yatra packages. Trusted operator, 15+ yrs experience, call, WhatsApp or email for instant confirmation.',
 };
