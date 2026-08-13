@@ -158,7 +158,7 @@ export default function Page() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
+            {[{l:'Divyang & Wheelchair Guide',h:'/blog/char-dham-yatra-for-divyang'},{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>

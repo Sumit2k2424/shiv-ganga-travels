@@ -95,6 +95,7 @@ export default function ValleyOfFlowersTrek() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
       <h2 id="hemkund" style={h2}>Hemkund Sahib — Combine for the Perfect 5-Day Trip</h2>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Full route, season and altitude detail is in our <Link href="/hemkund-sahib-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Hemkund Sahib yatra guide</Link>.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Hemkund Sahib (4,329m) is a Sikh pilgrimage site of extraordinary beauty — a glacial lake surrounded by snow peaks with a pristine gurudwara on its shores. It is said that Guru Gobind Singh meditated here in a previous life. The <strong>Langar</strong> (free kitchen) serves dal, roti and kheer to everyone regardless of faith — one of the most moving expressions of community in any religious place in India.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹10,100 per person.</p>
 

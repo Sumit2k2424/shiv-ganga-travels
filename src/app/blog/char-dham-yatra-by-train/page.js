@@ -28,7 +28,7 @@ export default function Page() {
       facts={[['Main railhead','Haridwar Jn (HW)'],['Alternatives','Rishikesh, Dehradun'],['Delhi → Haridwar','4.5–6 hrs'],['Booking','IRCTC, 60 days prior'],['Season','Apr–Jun, Sep–Oct'],['Yatra to shrines','By road only']]}
       ctaIntent="char-dham"
       faqs={faqs}
-      related={[['Char Dham from Delhi','/char-dham-yatra-from-delhi'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Delhi to Haridwar Cab','/cabs/delhi-to-haridwar-cab'],['Char Dham Packages','/char-dham-yatra'],['Best Time to Visit','/blog/best-time-char-dham']]}
+      related={[['Char Dham by Bus','/blog/char-dham-yatra-by-bus'],['Char Dham from Delhi','/char-dham-yatra-from-delhi'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Delhi to Haridwar Cab','/cabs/delhi-to-haridwar-cab'],['Char Dham Packages','/char-dham-yatra'],['Best Time to Visit','/blog/best-time-char-dham']]}
     >
       <P>Almost every week someone asks us some version of &quot;can I do the Char Dham Yatra by train?&quot; The short, honest answer is that the train gets you to the doorstep, not into the house. The four shrines sit deep in the Garhwal Himalaya, far above any rail line — so the journey to the temples themselves is always by road, and at Yamunotri and Kedarnath, on foot. What the train does, and does very well, is carry you affordably and comfortably to the point where the yatra actually begins. For most pilgrims, that point is Haridwar.</P>
 

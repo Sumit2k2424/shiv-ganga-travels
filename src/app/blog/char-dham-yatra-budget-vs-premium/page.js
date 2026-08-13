@@ -144,7 +144,7 @@ export default function BudgetVsPremium() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Breakdown','/blog/char-dham-yatra-cost'],['Package vs Self-Planned','/blog/char-dham-yatra-package-vs-self-planned'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham vs Do Dham','/blog/char-dham-vs-do-dham']].map(([l,h])=>(
+            {[['Char Dham by Bus','/blog/char-dham-yatra-by-bus'],['Char Dham Cost Breakdown','/blog/char-dham-yatra-cost'],['Package vs Self-Planned','/blog/char-dham-yatra-package-vs-self-planned'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham vs Do Dham','/blog/char-dham-vs-do-dham']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

@@ -17,17 +17,22 @@ import { WhatsAppIcon } from '@/components/Icon';
  * primary action. Restraint here IS the premium: one ask, in its place.
  *
  * variant: 'note' | 'inline' | 'footer'
- * intent:  'booking' | 'info' | 'cost' | 'route' | 'registration' | 'kedarnath' | 'packing'
+ * intent:  'booking' | 'info' | 'cost' | 'route' | 'registration' | 'kedarnath'
+ *         | 'packing' | 'char-dham' | 'badrinath'
  */
 
 const MESSAGES = {
-  booking:      `Namaste! I want to book Char Dham Yatra 2026. Please share packages and availability.`,
-  info:         `Namaste! I have questions about Char Dham Yatra 2026. Can you help me plan?`,
-  cost:         `Namaste! I want a complete cost breakdown for Char Dham Yatra 2026. Please share.`,
+  booking:      `Namaste! I want to book Char Dham Yatra ${SITE.season}. Please share packages and availability.`,
+  info:         `Namaste! I have questions about Char Dham Yatra ${SITE.season}. Can you help me plan?`,
+  cost:         `Namaste! I want a complete cost breakdown for Char Dham Yatra ${SITE.season}. Please share.`,
   route:        `Namaste! I was reading about the Char Dham route. I want to know about packages.`,
-  registration: `Namaste! I need help with Char Dham Yatra registration and booking 2026.`,
-  kedarnath:    `Namaste! I want to plan Kedarnath Yatra 2026. Please share packages and trek details.`,
-  packing:      `Namaste! I want to book Char Dham Yatra 2026. Please share packages and a packing checklist.`,
+  registration: `Namaste! I need help with Char Dham Yatra registration and booking ${SITE.season}.`,
+  kedarnath:    `Namaste! I want to plan Kedarnath Yatra ${SITE.season}. Please share packages and trek details.`,
+  packing:      `Namaste! I want to book Char Dham Yatra ${SITE.season}. Please share packages and a packing checklist.`,
+  // 'char-dham' and 'badrinath' were in use on 11 pages without ever being
+  // defined here, so both silently fell through to the generic booking copy.
+  'char-dham':  `Namaste! I want to book the full Char Dham Yatra ${SITE.season}. Please share packages and availability.`,
+  badrinath:    `Namaste! I want to plan a Badrinath yatra ${SITE.season}. Please share packages and darshan details.`,
 };
 
 /* Per-intent copy. The ask changes with what the reader was just reading —
@@ -41,6 +46,8 @@ const COPY = {
   registration: { eyebrow: 'Need a hand?',      line: 'We complete registration for every guest we carry — portal, permits and checkpoints.' },
   kedarnath:    { eyebrow: 'Plan Kedarnath',    line: 'Trek, pony, palki or helicopter — we book the leg that suits your group.' },
   packing:      { eyebrow: 'Plan this yatra',   line: 'Send us your dates and we will send back a kit list built for that week.' },
+  'char-dham':  { eyebrow: 'Plan the full circuit', line: 'All four dhams from Haridwar, in our own vehicles. Tell us your month and group size.' },
+  badrinath:    { eyebrow: 'Plan Badrinath',    line: 'The one dham with no trek. We time the itinerary around an early darshan.' },
 };
 
 function waLink(intent, pkg) {
