@@ -233,7 +233,7 @@ export default function PlacesToVisit() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Route Map 2026', '/blog/char-dham-yatra-route-map'], ['Kedarnath Trek', '/blog/kedarnath-trek-guide'], ['Char Dham Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Package', '/char-dham-yatra'], ['Chopta Tungnath Trek', '/packages/chopta-tungnath-chandrashila-trek-2n-3d']].map(([l, h]) => (
+            {[['Route Map 2026', '/char-dham-yatra-route-map'], ['Kedarnath Trek', '/blog/kedarnath-trek-guide'], ['Char Dham Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Package', '/char-dham-yatra'], ['Chopta Tungnath Trek', '/packages/chopta-tungnath-chandrashila-trek-2n-3d']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

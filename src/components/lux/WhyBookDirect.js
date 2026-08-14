@@ -30,7 +30,13 @@ export default function WhyBookDirect() {
           <div key={p.t} className="lux-pillar lux-glass">
             <span className="lux-pillar__glow" aria-hidden="true" />
             <span className="lux-pillar__ico"><Icon name={p.icon} size={22} /></span>
-            <h3 className="lux-display lux-display--sm">{p.t}</h3>
+            {/* Deliberately NOT a heading. This band sits between the page <h1>
+                and its first <h2> (BlogHero mounts it right under the hero), so
+                an <h3> here made the outline jump h1 → h3 on every article and
+                added three duplicate headings to all ~100 of them. It's a trust
+                chip, not a document section — the styling is class-driven, so
+                the tag swap is purely structural. */}
+            <p className="lux-display lux-display--sm" style={{ margin: 0 }}>{p.t}</p>
             <p className="lux-body" style={{ fontSize: '0.875rem', margin: 0 }}>{p.d}</p>
           </div>
         ))}

@@ -168,7 +168,7 @@ export default function MobileNetwork() {
           ['Altitude Sickness Guide','/altitude-sickness-char-dham'],
           ['Food on the Yatra','/char-dham-yatra-food-guide'],
           ['Packing List','/blog/char-dham-yatra-packing-list'],
-          ['Char Dham Yatra Checklist','/char-dham-yatra-checklist'],
+          ['Char Dham Yatra Checklist','/blog/char-dham-yatra-packing-list'],
         ]}/>
       </Article>
     </>

@@ -313,7 +313,7 @@ export default function DehradunAirportToHaridwarTaxi() {
               ['How to Reach Haridwar','/how-to-reach-haridwar'],
               ['Haridwar to Rishikesh Taxi','/haridwar-to-rishikesh-taxi'],
               ['Haridwar to Delhi Taxi','/haridwar-to-delhi-taxi'],
-              ['Char Dham from Dehradun','/char-dham-yatra-from-dehradun'],
+              ['Char Dham from Delhi','/char-dham-yatra-from-delhi'],
               ['Char Dham Helicopter','/char-dham-helicopter'],
             ].map(([label,href])=>(
               <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>

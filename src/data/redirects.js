@@ -83,6 +83,12 @@ const REDIRECTS = [
   { source: '/char-dham-yatra-kitna-kharcha', destination: '/blog/char-dham-yatra-kitna-kharcha', permanent: true },
   { source: '/kedarnath-pehli-baar',          destination: '/blog/kedarnath-pehli-baar',          permanent: true },
   { source: '/char-dham-kab-jayen',           destination: '/blog/char-dham-kab-jayen',           permanent: true },
+  // ── History page merged into the significance page (Aug 2026) ──
+  // The two covered the same ground (Adi Shankaracharya, the mythology of each
+  // dham, Chota vs full Char Dham) and were cannibalising each other. The
+  // significance page kept the URL — it carried ~2.5x the unique content — and
+  // absorbed the history page's unique sections and its FAQ schema.
+  { source: '/blog/char-dham-yatra-history', destination: '/blog/char-dham-yatra-significance', permanent: true },
   // ── Comparison posts: moved /blog/ → root without redirects (live 404s in GSC) ──
   { source: '/blog/direct-operator-vs-travel-aggregator-char-dham', destination: '/direct-operator-vs-travel-aggregator-char-dham', permanent: true },
   { source: '/blog/shiv-ganga-travels-vs-makemytrip-char-dham',     destination: '/shiv-ganga-travels-vs-makemytrip-char-dham',     permanent: true },

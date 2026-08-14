@@ -5,6 +5,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
+import { h2 } from '@/lib/prose';
 
 export const metadata = {
   title: { absolute: `Char Dham Package vs Self-Planned Trip ${SITE.season} | Real Costs` },
@@ -82,6 +83,7 @@ export default function PkgVsSelf() {
             <>A <strong>direct operator</strong> (not an aggregator) gives package convenience without the 15–25% middleman margin.</>,
           ]}
         />
+        <h2 style={h2}>Package vs self-planned, factor by factor</h2>
         <div style={{ overflowX:'auto', marginBottom:36 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5 }}>
             <thead>
@@ -103,7 +105,7 @@ export default function PkgVsSelf() {
           </table>
         </div>
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
-          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>⚠️ The most common self-planning mistake:</div>
+          <h2 style={{ ...h2, fontSize:14, marginTop:0, marginBottom:8 }}>⚠️ The most common self-planning mistake</h2>
           <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>Pilgrims who plan independently often underestimate hotel availability in peak season. Hotels at Guptkashi (Kedarnath base) and Joshimath (Badrinath base) fill up 45–60 days ahead in May–June. Operators like Shiv Ganga Travels pre-block rooms from January each year. A self-planner arriving in Haridwar in late April for a May departure will find most good hotels already gone.</p>
         </div>
         {/* ── Mid-article CTA — right where the hotel-availability point lands ── */}

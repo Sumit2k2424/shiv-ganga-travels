@@ -10,7 +10,10 @@ import { h2, p } from "@/lib/prose";
 export const metadata = {
   title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
   description: `Char Dham Yatra ${SITE.season} — history & spiritual significance of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.`,
-  keywords: ['char dham yatra history', 'char dham yatra significance', 'why char dham yatra is important', 'char dham yatra mythology', 'adi shankaracharya char dham', 'char dham yatra spiritual meaning', 'importance of char dham yatra'],
+  // Absorbed /blog/char-dham-yatra-history (Aug 2026) — its keyword set is
+  // folded in here so the merged page covers both the "history/origins" and
+  // "significance/meaning" intents that used to be split across two URLs.
+  keywords: ['char dham yatra history', 'char dham yatra significance', 'why char dham yatra is important', 'char dham yatra mythology', 'adi shankaracharya char dham', 'char dham yatra spiritual meaning', 'importance of char dham yatra', 'why char dham yatra', 'chota char dham meaning', 'who established char dham', 'char dham yatra origin'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
   openGraph: {
     title: 'Char Dham Yatra: History & Spiritual Significance',
@@ -26,6 +29,16 @@ export const metadata = {
   },
 };
 
+// Carried over from the retired /blog/char-dham-yatra-history, which owned the
+// origin-story questions. Keeping the FAQPage markup means the merge doesn't
+// cost the rich-result eligibility that page already had.
+const FAQS = [
+  { q: 'Who established the Char Dham circuit?', a: 'The four-shrine circuit is traditionally credited to Adi Shankaracharya, the 8th-century philosopher who is said to have revived and organised these temples. The Uttarakhand Char Dham specifically (Yamunotri, Gangotri, Kedarnath, Badrinath) is also called the Chota Char Dham.' },
+  { q: 'What is the difference between Char Dham and Chota Char Dham?', a: 'The original Char Dham spans the whole country — Badrinath (north), Dwarka (west), Puri (east) and Rameswaram (south). The Chota Char Dham is the Himalayan set of four in Uttarakhand. In common usage today, "Char Dham Yatra" almost always means the Uttarakhand circuit.' },
+  { q: 'Why is the yatra done in a fixed order?', a: 'Tradition follows a clockwise route from west to east: Yamunotri first, then Gangotri, Kedarnath and finally Badrinath. It mirrors the parikrama (circumambulation) of a sacred space and also happens to match the most sensible road sequence from Haridwar.' },
+  { q: 'What does each dham represent?', a: 'Yamunotri honours the goddess Yamuna, Gangotri the goddess Ganga, Kedarnath is one of the twelve Jyotirlingas of Shiva, and Badrinath is dedicated to Vishnu. Together they hold the source rivers and two of the great deities of the Himalaya.' },
+];
+
 function Schema() {
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -35,7 +48,19 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra History & Significance', item: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
     ],
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />;
+  const faq = {
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: FAQS.map(f => ({
+      '@type': 'Question', name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+    </>
+  );
 }
 
 
@@ -48,11 +73,11 @@ export default function Significance() {
 
       <BlogHero
         badge="History · Mythology · Significance"
-        title="Char Dham Yatra — History & Significance"
-        dek="Why Adi Shankaracharya established this circuit in the 8th century, the mythology of all 4 dhams, and why completing Char Dham Yatra is considered one of the most spiritually complete acts a Hindu can perform."
+        title="Char Dham Yatra — History, Mythology & Significance"
+        dek="Where the circuit came from, why Adi Shankaracharya established it in the 8th century, the mythology behind all four dhams, why pilgrims have walked them in the same order for centuries, and what makes completing the yatra spiritually significant."
         author="Dhanesh Chandra Mishra"
         updated={`Updated ${SITE.lastUpdated}`}
-        readTime="8 min read"
+        readTime="10 min read"
         facts={[
           { label:'Founder', value:'Adi Shankaracharya' },
           { label:'Era',     value:'8th century CE' },
@@ -79,8 +104,11 @@ export default function Significance() {
           { id:'what-is',       label:'What is Char Dham Yatra?' },
           { id:'shankaracharya', label:'Adi Shankaracharya' },
           { id:'mythology',     label:'Mythology of each dham' },
+          { id:'fixed-order',   label:'Why the order is fixed' },
           { id:'why-special',   label:'Why completing it is special' },
           { id:'chota-vs',      label:'Chota Char Dham vs Char Dham' },
+          { id:'why-it-pulls',  label:'Why it still pulls people' },
+          { id:'faqs',          label:'Frequently asked questions' },
         ]}/>
 
         <h2 id="what-is" style={h2}>What Is Char Dham Yatra?</h2>
@@ -88,7 +116,7 @@ export default function Significance() {
           Char Dham Yatra (literally "pilgrimage to the four abodes") refers to the circuit of four sacred Himalayan shrines in Uttarakhand: Yamunotri (source of the Yamuna), Gangotri (source of the Ganga), Kedarnath (Shiva Jyotirlinga), and Badrinath (Vishnu kshetra). The four shrines sit between 3,048m (Gangotri) and 3,583m (Kedarnath), in the Garhwal Himalaya, and are collectively known as the Chota Char Dham — distinct from the pan-India Char Dham (Badrinath, Dwarka, Puri, Rameswaram) established by the same saint.
         </p>
         <p style={p}>
-          The yatra follows a fixed clockwise sequence — Yamunotri, Gangotri, Kedarnath, Badrinath — which follows the natural geographic progression from west to east and corresponds to the spiritual progression from purification (Yamunotri, water of Yamuna) through sanctification (Gangotri, holy Ganga) to liberation (Kedarnath, Shiva's grace) and final blessing (Badrinath, Vishnu's abode). Completing all four in sequence is considered one of the most complete acts of Hindu devotion.
+          The yatra follows a fixed clockwise sequence — Yamunotri, Gangotri, Kedarnath, Badrinath — running west to east across the Garhwal Himalaya. That order is not arbitrary, and it is worth understanding before you book; there is a section on it below. Completing all four in sequence is considered one of the most complete acts of Hindu devotion.
         </p>
 
         <h2 id="shankaracharya" style={h2}>Adi Shankaracharya — The Architect of Char Dham</h2>
@@ -152,6 +180,14 @@ export default function Significance() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
 
+        <h2 id="fixed-order" style={h2}>Why the Order Is Fixed</h2>
+        <p style={p}>
+          Tradition runs the yatra clockwise from west to east — Yamunotri, then Gangotri, then Kedarnath, finishing at Badrinath. Devotionally it mirrors a parikrama, the circumambulation you would perform around any sacred object. Practically, it is also the cleanest road sequence out of Haridwar, which is why even pilgrims who care nothing for the symbolism end up following it.
+        </p>
+        <p style={p}>
+          The sequence carries its own logic beyond the map. It moves from purification (Yamunotri, the water of the Yamuna) through sanctification (Gangotri, the Ganga) to liberation (Kedarnath, Shiva&apos;s grace) and final blessing (Badrinath, Vishnu&apos;s abode). Finishing at Badrinath, the most accessible of the four by road, is also a gentle way to end a physically hard trip.
+        </p>
+
         <h2 id="why-special" style={h2}>Why Completing Char Dham Yatra Is Considered Special</h2>
         <p style={p}>
           Hindu scripture (specifically the Skanda Purana and Padma Purana) describes the Char Dham circuit as a path to moksha — liberation from the cycle of birth and death. The theological logic is specific rather than general: each dham addresses a different dimension of spiritual purification. Yamunotri cleanses fear of death. Gangotri purifies ancestral karma. Kedarnath grants Shiva's grace for sins of action. Badrinath completes the journey with Vishnu's blessing for final liberation. Together, they are understood as a complete circuit of spiritual completion.
@@ -165,10 +201,28 @@ export default function Significance() {
           The Uttarakhand circuit (Yamunotri, Gangotri, Kedarnath, Badrinath) is technically called <strong>Chota Char Dham</strong> (the small Char Dham). The larger <strong>Char Dham</strong> established by Adi Shankaracharya to represent all four cardinal directions of India consists of: Badrinath (north), Dwarka in Gujarat (west), Puri in Odisha (east), and Rameswaram in Tamil Nadu (south). In common modern usage, however, "Char Dham Yatra" almost universally refers to the Uttarakhand circuit — the distinction matters mainly in religious scholarship, not in pilgrimage planning.
         </p>
 
+        <h2 id="why-it-pulls" style={h2}>Why It Still Pulls People Up the Mountain</h2>
+        <p style={p}>
+          You can read all of this and still not understand the yatra until you are doing it. What I have watched, year after year, is that the history stops being a fact and becomes a feeling somewhere around the Kedarnath trek — when the temple finally appears against the peak after a hard climb, and a busload of strangers who were complaining about the cold an hour earlier go completely quiet. The circuit was designed to be earned, and it still is.
+        </p>
+        <p style={p}>
+          If you want the practical side — dates, costs, fitness, what to pack — our <Link href="/blog/char-dham-guide" style={{ color:'var(--teal)', fontWeight:600, textDecoration:'none' }}>complete Char Dham guide</Link> covers the planning, and we are always happy to talk through your specific trip on WhatsApp.
+        </p>
+
+        <h2 id="faqs" style={h2}>Frequently Asked Questions</h2>
+        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
+          {FAQS.map(f => (
+            <details key={f.q} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'14px 18px' }}>
+              <summary style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', cursor:'pointer' }}>{f.q}</summary>
+              <p style={{ fontSize:13.5, color:'#475569', lineHeight:1.75, margin:'10px 0 0' }}>{f.a}</p>
+            </details>
+          ))}
+        </div>
+
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Char Dham Package 2026', '/char-dham-yatra'], ['Route Map', '/blog/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost']].map(([l, h]) => (
+            {[['Char Dham Package 2026', '/char-dham-yatra'], ['Char Dham Guide', '/blog/char-dham-guide'], ['Route Map', '/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Kedarnath Temple', '/kedarnath-temple'], ['Badrinath Temple', '/badrinath-temple']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

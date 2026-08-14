@@ -178,8 +178,7 @@ const sections = [
     title: 'More Guides',
     links: [
       { label: 'Char Dham Yatra Complete Reference', href: '/blog/char-dham-yatra-complete-guide' },
-      { label: 'History & Spiritual Significance', href: '/blog/char-dham-yatra-significance' },
-      { label: 'Char Dham Yatra History', href: '/blog/char-dham-yatra-history' },
+      { label: 'History, Mythology & Significance', href: '/blog/char-dham-yatra-significance' },
       { label: 'Closing Dates 2026', href: '/blog/char-dham-yatra-closing-dates-2026' },
       { label: 'Road Conditions 2026', href: '/blog/char-dham-yatra-road-conditions-2026' },
       { label: 'Green Card / Trip Card 2026', href: '/blog/green-card-char-dham-yatra-2026' },

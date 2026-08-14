@@ -163,7 +163,7 @@ export default function TriveniGhat() {
           ['Rishikesh Tour Packages','/rishikesh-tour-packages'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Rishikesh Adventure Guide','/blog/rishikesh-adventure-guide'],
-          ['Char Dham from Rishikesh','/char-dham-yatra-from-rishikesh'],
+          ['Char Dham from Delhi','/char-dham-yatra-from-delhi'],
         ]}/>
       </Article>
     </>

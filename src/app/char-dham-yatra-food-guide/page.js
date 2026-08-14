@@ -174,7 +174,7 @@ export default function FoodGuide() {
           ['Altitude Sickness Guide','/altitude-sickness-char-dham'],
           ['Mobile Network Coverage','/char-dham-yatra-mobile-network'],
           ['Packing List','/blog/char-dham-yatra-packing-list'],
-          ['Char Dham Yatra Checklist','/char-dham-yatra-checklist'],
+          ['Char Dham Yatra Checklist','/blog/char-dham-yatra-packing-list'],
           ['Senior Citizen Char Dham','/blog/senior-citizen-char-dham'],
           ['Char Dham Hotels','/char-dham-hotels'],
         ]}/>

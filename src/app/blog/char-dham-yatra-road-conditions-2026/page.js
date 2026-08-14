@@ -195,7 +195,7 @@ export default function RoadConditions() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Route Map 2026', '/blog/char-dham-yatra-route-map'], ['Green Card Guide', '/blog/green-card-char-dham-yatra-2026'], ['New Rules 2026', '/blog/char-dham-yatra-2026-new-rules'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Packing List', '/blog/char-dham-yatra-packing-list']].map(([l, h]) => (
+            {[['Route Map 2026', '/char-dham-yatra-route-map'], ['Green Card Guide', '/blog/green-card-char-dham-yatra-2026'], ['New Rules 2026', '/blog/char-dham-yatra-2026-new-rules'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Packing List', '/blog/char-dham-yatra-packing-list']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

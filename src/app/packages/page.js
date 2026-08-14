@@ -108,6 +108,7 @@ export default function PackagesPage() {
           src={pxAt(HERO_IMG, 1600, 700)}
           srcSet={pxSrcSet(HERO_IMG, [[750, 328], [1200, 525], [1600, 700], [2000, 875]])}
           sizes="100vw"
+          width={1600} height={700}
           alt="" aria-hidden="true" className="pk-hero__img" fetchPriority="high" decoding="async"
         />
         <div className="pk-hero__veil" aria-hidden="true" />

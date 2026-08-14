@@ -356,7 +356,7 @@ export default function CharDham2027() {
             ['Registration guide', '/blog/char-dham-yatra-registration'],
             ['Cost breakdown', '/blog/char-dham-yatra-cost'],
             ['Best time to go', '/blog/best-time-char-dham'],
-            ['Route map & distances', '/blog/char-dham-yatra-route-map'],
+            ['Route map & distances', '/char-dham-yatra-route-map'],
             ['Hemkund Sahib 2027', '/hemkund-sahib-yatra'],
             ['Weather month by month', '/blog/char-dham-weather-guide'],
             ['Do Dham option', '/do-dham-yatra'],

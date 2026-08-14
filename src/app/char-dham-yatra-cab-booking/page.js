@@ -106,8 +106,8 @@ export default function CharDhamCabBooking() {
     { label: 'Single-leg routes from Haridwar', links: haridwarRoutes.slice(0, 6).map((r) => [`${routeFrom(r)} → ${routeTo(r)}`, `/cabs/${r.slug}`]) },
     { label: 'Planning the yatra', links: [
       ['Char Dham Yatra packages', '/char-dham-yatra'],
-      ['Registration 2026', '/char-dham-yatra-registration'],
-      ['Opening dates 2026', '/char-dham-yatra-opening-dates-2026'],
+      ['Registration 2026', '/blog/char-dham-yatra-registration'],
+      ['Opening dates 2026', '/blog/char-dham-yatra-opening-dates-2026'],
       ['Road status', '/char-dham-road-status'],
       ['Route map', '/char-dham-yatra-route-map'],
     ]},

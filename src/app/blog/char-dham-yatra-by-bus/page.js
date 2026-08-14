@@ -57,7 +57,7 @@ export default function Page() {
       ]}
       ctaIntent="char-dham"
       faqs={faqs}
-      related={[['Char Dham by train', '/blog/char-dham-yatra-by-train'], ['Cost breakdown', '/blog/char-dham-yatra-cost'], ['Green Card guide', '/blog/green-card-char-dham-yatra-2026'], ['Route map', '/blog/char-dham-yatra-route-map'], ['Char Dham packages', '/char-dham-yatra'], ['Char Dham 2027', '/char-dham-yatra-2027']]}
+      related={[['Char Dham by train', '/blog/char-dham-yatra-by-train'], ['Cost breakdown', '/blog/char-dham-yatra-cost'], ['Green Card guide', '/blog/green-card-char-dham-yatra-2026'], ['Route map', '/char-dham-yatra-route-map'], ['Char Dham packages', '/char-dham-yatra'], ['Char Dham 2027', '/char-dham-yatra-2027']]}
     >
       <P>Doing Char Dham by bus is the cheapest honest way to complete the circuit, and for a certain kind of pilgrim it is genuinely the right call. It is also the option most misrepresented online, because the pages selling it rarely mention the transfers. So here is the whole picture, including the parts that make people change their minds.</P>
 

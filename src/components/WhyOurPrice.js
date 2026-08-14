@@ -20,7 +20,10 @@ export default function WhyOurPrice({ compact = false }) {
       padding: compact ? '18px 20px' : '24px 26px',
       margin: compact ? '20px 0' : '28px 0',
     }}>
-      <h3 style={{
+      {/* h2, not h3: this is a top-level section in its own right, and on
+          /packages/[slug] it renders between the h1 and the first h2 — as an
+          h3 it made the outline jump h1 → h3 on all 34 package pages. */}
+      <h2 style={{
         fontSize: compact ? '1.05rem' : '1.2rem',
         fontWeight: 800,
         color: 'var(--navy)',
@@ -28,7 +31,7 @@ export default function WhyOurPrice({ compact = false }) {
         fontFamily: 'var(--font-display)',
       }}>
         Before you compare on price alone
-      </h3>
+      </h2>
       <p style={{ fontSize: 14, color: 'var(--text-mid)', lineHeight: 1.75, margin: '0 0 16px' }}>
         For most families the Char Dham is a once-in-a-lifetime journey, often with elders along.
         When a quote lands well below ours, the gap almost always shows up somewhere you will feel

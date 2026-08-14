@@ -239,7 +239,7 @@ export default function CharDhamYatraScams() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Plan your yatra the safe way</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Char Dham Yatra Guide', '/char-dham-yatra'], ['Helicopter Yatra', '/char-dham-helicopter'], ['Best Operators in Haridwar', '/best-char-dham-yatra-operators-haridwar'], ['Direct Operator vs Aggregator', '/direct-operator-vs-travel-aggregator-char-dham'], ['Emergency Contacts', '/char-dham-yatra-emergency-contacts'], ['Yatra Checklist', '/char-dham-yatra-checklist'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi']].map(([l, h]) => (
+            {[['Char Dham Yatra Guide', '/char-dham-yatra'], ['Helicopter Yatra', '/char-dham-helicopter'], ['Best Operators in Haridwar', '/best-char-dham-yatra-operators-haridwar'], ['Direct Operator vs Aggregator', '/direct-operator-vs-travel-aggregator-char-dham'], ['Emergency Contacts', '/char-dham-yatra-emergency-contacts'], ['Yatra Checklist', '/blog/char-dham-yatra-packing-list'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

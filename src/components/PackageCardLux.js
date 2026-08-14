@@ -31,9 +31,12 @@ export default function PackageCardLux({ pkg, priority = false }) {
         <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize: '0.625rem' }}>
           {pkg.startCity} · {pkg.difficulty}
         </span>
-        <h3 className="lux-display lux-display--sm" style={{ lineHeight: 1.2 }}>
+        {/* h2, not h3: these cards are the top-level sections of /packages (the
+            only page this component renders on), so an h3 made the outline jump
+            straight from the page h1 to h3 with no h2 in between. */}
+        <h2 className="lux-display lux-display--sm" style={{ lineHeight: 1.2 }}>
           {pkg.name.replace(' Package', '')}
-        </h3>
+        </h2>
         {pkg.subtitle && <p className="lux-caption" style={{ lineHeight: 1.5 }}>{pkg.subtitle}</p>}
 
         <div className="lux-gcard__foot">

@@ -266,7 +266,10 @@ export default function RouteMapInteractive() {
                 <span style={{ fontSize:30, animation:'floatY 3s ease-in-out infinite' }}>{stop.icon}</span>
                 <div>
                   <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap' }}>
-                    <h2 style={{ margin:0, fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:700 }}>{stop.name}</h2>
+                    {/* Not a heading: this panel sits above the page <h1> and its
+                        text swaps as the user clicks stops, so as an <h2> it made
+                        the outline open at h2 and change on interaction. */}
+                    <p style={{ margin:0, fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:700 }}>{stop.name}</p>
                     <span style={{ background:'rgba(255,255,255,0.2)', fontSize:10.5, fontWeight:700, padding:'3px 9px', borderRadius:100, textTransform:'uppercase', letterSpacing:'0.06em' }}>{ts.label}</span>
                   </div>
                   <div style={{ fontSize:12.5, color:'rgba(255,255,255,0.85)', marginTop:2 }}>{stop.tagline}</div>
