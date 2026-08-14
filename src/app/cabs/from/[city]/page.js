@@ -7,7 +7,9 @@ import {
   getOrigin, getOriginParams, isOriginPublishable,
   getRoutesFromOrigin, getPublishedOrigins, getDestination,
   routeTo, routeLowestFare, getExpert,
+  reviewsForSlug,
 } from '@/data/cabs';
+import { roadRulesFor } from '@/data/cabs/policy';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -216,8 +218,16 @@ export default async function OriginPage({ params }) {
 
       {/* ── Rules of the road ── */}
       <Section tone="paper">
-        <SectionHead eyebrow="Before you book" title="Rules of the road up here" />
-        <RoadRules />
+        <SectionHead
+          eyebrow="Before you book"
+          title={routes.some((x) => x.terrain === 'hills') ? 'Rules of the road up here' : `Booking a run out of ${o.name}`}
+        />
+        {/* An origin serving hill routes needs the hill rules; a plains-only
+            origin does not. Derived from where this city's routes actually go. */}
+        <RoadRules items={roadRulesFor({
+          terrain: routes.some((x) => x.terrain === 'hills') ? 'hills' : 'plains',
+          dham: routes.some((x) => getDestination(x.destination)?.kind === 'dham'),
+        })} />
       </Section>
 
       {/* ── Cancellation ── */}
@@ -237,7 +247,7 @@ export default async function OriginPage({ params }) {
             </a>
           }
         />
-        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+        <Reveal><ReviewsWall reviews={reviewsForSlug(REVIEWS, o.slug)} /></Reveal>
       </Section>
 
       {/* ── FAQ ── */}

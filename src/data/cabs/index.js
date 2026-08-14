@@ -105,6 +105,26 @@ export function isDestinationPublishable(d) {
 export const getPublishedOrigins = () => ORIGINS.filter(isOriginPublishable);
 export const getPublishedDestinations = () => DESTINATIONS.filter(isDestinationPublishable);
 
+/**
+ * A deterministic slice of the review wall for one cab page.
+ *
+ * Every cab page was rendering the same six testimonials — roughly 300 word-for-word
+ * identical words, the single largest block of duplication in the section, on 30
+ * pages that Google had discovered and declined to crawl. Showing a rotating three
+ * keeps the social proof and the aggregate rating while making the block differ from
+ * page to page. Keyed off the slug so a given URL always renders the same three
+ * (stable across builds — important, since a set that shuffled every deploy would
+ * look like churn to a crawler).
+ */
+export function reviewsForSlug(reviews, slug, n = 3) {
+  const items = reviews?.items || [];
+  if (items.length <= n) return reviews;
+  let h = 0;
+  for (let i = 0; i < slug.length; i += 1) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  const start = h % items.length;
+  return { ...reviews, items: Array.from({ length: n }, (_, i) => items[(start + i) % items.length]) };
+}
+
 // ── Static params helpers ─────────────────────────────────────
 
 export const getRouteParams = () => getPublishedRoutes().map((r) => ({ route: r.slug }));

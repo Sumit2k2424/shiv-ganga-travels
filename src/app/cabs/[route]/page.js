@@ -7,7 +7,9 @@ import {
   getRoute, getRouteParams, isPublishable,
   getOrigin, getDestination, getRouteSiblings,
   routeFrom, routeTo, routeFares, routeLowestFare, routeExpert,
+  reviewsForSlug,
 } from '@/data/cabs';
+import { roadRulesFor } from '@/data/cabs/policy';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -63,6 +65,21 @@ export default async function CabRoutePage({ params }) {
   const expert = routeExpert(r);
   const { sameDestination, sameOrigin } = getRouteSiblings(r);
   const url = `/cabs/${r.slug}`;
+
+  // `terrain` describes the drive, not the destination: the runs to Nainital,
+  // Mukteshwar and Mussoorie are marked 'plains' because they are expressway
+  // most of the way, then climb at the end. For road rules that distinction
+  // matters — telling someone booking a Nainital cab that "nothing above the
+  // valleys applies" is wrong. So a hill or dham destination counts as hills
+  // here even when the drive to it is mostly flat.
+  const arrivesInHills = r.terrain === 'hills'
+    || destination?.kind === 'dham'
+    || destination?.kind === 'hill';
+  const ruleCtx = {
+    terrain: arrivesInHills ? 'hills' : 'plains',
+    destination: r.destination,
+    dham: destination?.kind === 'dham',
+  };
 
   const schema = [
     routeService({ route: r, from, to, fares, url, expert }),
@@ -169,10 +186,14 @@ export default async function CabRoutePage({ params }) {
       <Section tone="paper">
         <SectionHead
           eyebrow="Before you book"
-          title="Rules of the road up here"
-          lede="Hill routes in Uttarakhand run on rules that catch first-time visitors out. None of these are ours — they are the administration's, and they shape how the trip has to be planned."
+          title={arrivesInHills ? 'Rules of the road up here' : 'Rules on this run'}
+          lede={arrivesInHills
+            ? "Hill routes in Uttarakhand run on rules that catch first-time visitors out. None of these are ours — they are the administration's, and they shape how the trip has to be planned."
+            : `The ${from}–${to} run stays in the plains, so the hill-route paperwork does not apply. What is worth knowing before you book:`}
         />
-        <RoadRules />
+        {/* Only the rules that govern THIS journey — a plains expressway run
+            and a Kedarnath hill run no longer render the same four cards. */}
+        <RoadRules items={roadRulesFor(ruleCtx)} />
       </Section>
 
       {/* ── Fleet ── */}
@@ -202,7 +223,7 @@ export default async function CabRoutePage({ params }) {
             </a>
           }
         />
-        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+        <Reveal><ReviewsWall reviews={reviewsForSlug(REVIEWS, r.slug)} /></Reveal>
       </Section>
 
       {/* ── FAQ ── */}

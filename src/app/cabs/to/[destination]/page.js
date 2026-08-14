@@ -7,7 +7,9 @@ import {
   getDestination, getDestinationParams, isDestinationPublishable,
   getRoutesToDestination, getPublishedDestinations,
   routeFrom, routeLowestFare, getExpert,
+  reviewsForSlug,
 } from '@/data/cabs';
+import { roadRulesFor } from '@/data/cabs/policy';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -212,8 +214,13 @@ export default async function DestinationPage({ params }) {
 
       {/* ── Rules of the road ── */}
       <Section tone="paper-deep">
-        <SectionHead eyebrow="Before you book" title="Rules of the road up here" />
-        <RoadRules />
+        <SectionHead
+          eyebrow="Before you book"
+          title={d.kind === 'dham' ? 'Rules of the road up here' : `Driving to ${d.name}, in practice`}
+        />
+        {/* Scoped to this destination: a dham gets the biometric rule, only
+            Kedarnath gets the Sonprayag shuttle, and a plains stop gets neither. */}
+        <RoadRules items={roadRulesFor({ terrain: d.kind === 'dham' || d.altitude ? 'hills' : 'plains', destination: d.slug, dham: d.kind === 'dham' })} />
       </Section>
 
       {/* ── Fleet ── */}
@@ -233,7 +240,7 @@ export default async function DestinationPage({ params }) {
             </a>
           }
         />
-        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+        <Reveal><ReviewsWall reviews={reviewsForSlug(REVIEWS, d.slug)} /></Reveal>
       </Section>
 
       {/* ── FAQ ── */}
