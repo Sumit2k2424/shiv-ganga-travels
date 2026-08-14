@@ -41,8 +41,16 @@ export default async function Image() {
         {/* Main content */}
         <div style={{ flex:1, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 60px' }}>
           <div style={{ fontSize:'16px', color:'#E8920A', letterSpacing:'0.1em', marginBottom:'12px', fontWeight:'600' }}>CHAR DHAM YATRA 2026</div>
-          <div style={{ fontSize:'56px', fontWeight:'800', color:'#FFFFFF', lineHeight:'1.1', marginBottom:'16px' }}>
-            Your Sacred Journey<br />
+          {/* Satori (the engine behind ImageResponse) throws on any <div> with
+              more than one child that has no explicit display, and it does not
+              lay out <br />. This block had both problems — three children and a
+              <br /> — which made the whole route throw "failed to pipe response"
+              and serve a 200 with a zero-byte body. Since every page's og:image
+              and twitter:image point here, that meant no link-preview image
+              anywhere. Explicit column flex with two <span>s renders the same
+              two lines without the <br />. */}
+          <div style={{ display:'flex', flexDirection:'column', fontSize:'56px', fontWeight:'800', color:'#FFFFFF', lineHeight:'1.1', marginBottom:'16px' }}>
+            <span>Your Sacred Journey</span>
             <span style={{ color:'#E8920A' }}>Starts in Haridwar</span>
           </div>
           <div style={{ fontSize:'20px', color:'rgba(255,255,255,0.85)', marginBottom:'32px' }}>
@@ -51,11 +59,15 @@ export default async function Image() {
 
           {/* Stats row */}
           <div style={{ display:'flex', gap:'32px' }}>
+            {/* Stick to glyphs the bundled Noto Sans actually carries. The
+                rupee sign (U+20B9) and black star (U+2605) are both missing from
+                it and rendered as tofu boxes — a blank box where the price
+                should be, on the image every WhatsApp share displays. */}
             {[
-              { num:'₹13,900', label:'Starting price' },
+              { num:'Rs 13,900', label:'Starting price' },
               { num:'50,000+', label:'Happy pilgrims' },
               { num:'15 Years', label:'Of trust' },
-              { num:'4.7/5 ★', label:'Google rating' },
+              { num:'4.7/5', label:'Google rating' },
             ].map(s => (
               <div key={s.num} style={{ display:'flex', flexDirection:'column', gap:'4px' }}>
                 <span style={{ fontSize:'22px', fontWeight:'700', color:'#E8920A' }}>{s.num}</span>

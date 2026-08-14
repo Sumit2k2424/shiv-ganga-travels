@@ -103,6 +103,17 @@ const nextConfig = {
         ],
       },
       {
+        // The generated OG image is an asset, not a document. Google was
+        // crawling it (and its ?hash variant) and filing both under "Crawled -
+        // currently not indexed". noindex here — rather than a robots.txt
+        // disallow — because every page's og:image/twitter:image points at this
+        // URL, and the social crawlers that build link previews obey robots.txt.
+        // Disallowing it broke WhatsApp/Facebook previews; this keeps the image
+        // fetchable while keeping it out of the search index.
+        source: '/opengraph-image',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      {
         source: '/_next/static/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },

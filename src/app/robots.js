@@ -6,10 +6,20 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        // /opengraph-image is a generated PNG, not a page. Google was crawling
-        // it (and its ?hash variant) as HTML and filing both under
-        // "Crawled - currently not indexed" — pure wasted crawl budget.
-        disallow: ['/api/', '/_next/', '/static/', '/ui-kit', '/opengraph-image'],
+        // NOTE: /opengraph-image is deliberately NOT disallowed here.
+        // It is a generated PNG, not a page, and Google was filing it (plus its
+        // ?hash variant) under "Crawled - currently not indexed". Blocking it in
+        // robots.txt fixed the wrong layer: every page's og:image and
+        // twitter:image point at /opengraph-image, and the social crawlers that
+        // build link previews — facebookexternalhit (Facebook + WhatsApp),
+        // Twitterbot, LinkedInBot, Slackbot — all match this '*' group and obey
+        // robots.txt, so the disallow silently killed link-preview images.
+        // Googlebot was unaffected: it matches its own group below, which has no
+        // disallow. Since WhatsApp is a primary channel here, the image must stay
+        // fetchable. Keeping it out of the index is now handled by an
+        // `X-Robots-Tag: noindex` response header on that route (next.config.js),
+        // which lets crawlers fetch the bytes while refusing to index them.
+        disallow: ['/api/', '/_next/', '/static/', '/ui-kit'],
       },
       { userAgent: 'Googlebot',       allow: '/' },
       { userAgent: 'GPTBot',          allow: '/' },
