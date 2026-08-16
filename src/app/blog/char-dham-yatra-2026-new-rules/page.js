@@ -167,7 +167,14 @@ export default function NewRules2026() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" />
+        <BlogAuthor variant="top" author="dhanesh" article={{
+          slug: 'char-dham-yatra-2026-new-rules',
+          title: 'Char Dham Yatra New Rules 2026: Phone Ban & Green Card',
+          description: 'Phone ban, medical certificates, IRCTC helicopter booking, non-Hindu entry — all 2026 new rules explained.',
+          datePublished: '2025-08-15',
+          dateModified: SITE.lastUpdatedISO,
+          lang: 'en-IN',
+        }} />
 
         <div style={{ background:'#fee2e2', border:'1.5px solid #fca5a5', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
           <div style={{ fontWeight:700, fontSize:14, color:'#9f1239', marginBottom:6 }}>⚠️ Important Notice for 2026 Pilgrims</div>

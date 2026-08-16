@@ -51,7 +51,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: 'Kedarnath Pony, Palki & Horse Rates 2026 — Gaurikund Prices & Time',
-    author: { '@type': 'Person', name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels' },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about` },
     publisher: { '@type': 'Organization', name: 'Shiv Ganga Travels', url: SITE.baseUrl },
     datePublished: '2026-03-05', dateModified: '2026-05-28',
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-pony-palki-rates-2026`,

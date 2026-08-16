@@ -51,7 +51,7 @@ function Schema() {
   const article = {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: 'Kedarnath VIP Darshan 2026 — Price, Online Booking & Sparsh Darshan',
-    author: { '@type': 'Person', name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels' },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about` },
     publisher: { '@type': 'Organization', name: 'Shiv Ganga Travels', url: SITE.baseUrl },
     datePublished: '2026-03-10', dateModified: '2026-05-28',
     mainEntityOfPage: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking`,

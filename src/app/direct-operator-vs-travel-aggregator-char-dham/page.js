@@ -24,7 +24,7 @@ function Schema() {
     headline: 'Direct Operator vs Aggregator: Char Dham Booking',
     datePublished: '2026-05-21',
     dateModified: '2026-05-21',
-    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham`,
   };

@@ -94,7 +94,14 @@ export default function RouteMap() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" />
+        <BlogAuthor variant="top" author="dhanesh" article={{
+          slug: 'char-dham-yatra-route-map',
+          title: `Char Dham Yatra Route Map ${SITE.season} – Complete Road Guide from Haridwar with Distances`,
+          description: `Complete Char Dham Yatra route from Haridwar. 1,500km total. Day-wise distances, driving times, key stops, altitude at each dham. Operator-verified ${SITE.season} guide.`,
+          datePublished: '2025-08-15',
+          dateModified: SITE.lastUpdatedISO,
+          lang: 'en-IN',
+        }} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ <strong>By:</strong> Shiv Ganga Travels, Haridwar (15 seasons on this route)
         </div>

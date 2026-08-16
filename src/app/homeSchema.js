@@ -21,7 +21,10 @@ export default function Schema() {
       url: `${SITE.baseUrl}/char-dham-yatra`,
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
-    aggregateRating: { '@type':'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating:5 },
+    // No aggregateRating: those 54 Google reviews rate Shiv Ganga Travels, not
+    // this one package, and they are already asserted on the Organization node
+    // in layout.js — which renders on this page too. Repeating them here both
+    // misattributes the reviews and puts two rated nodes on a single URL.
   };
 
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };

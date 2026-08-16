@@ -220,12 +220,14 @@ function SiteSchema() {
 
     description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours. 50,000+ pilgrims served.',
 
-    founder: {
-      '@type': 'Person',
-      name: 'Dhanesh Chandra Mishra',
-      jobTitle: 'Founder & Director',
-      description: 'Retired Indian Army Officer, founded Shiv Ganga Travels in 2010 in Roorkee, Uttarakhand.',
-    },
+    // Reference by @id only — do NOT restate his properties here. The full
+    // Person node is the `founder` const below, emitted on every route, and
+    // /about emits the same @id again. This used to be an inline Person with
+    // no @id, which made it a third anonymous node the parser could not join
+    // to `/#founder` — the exact entity split the bylines were consolidated to
+    // avoid. Restating name/jobTitle here would reintroduce the same problem
+    // in a subtler form: one @id carrying conflicting values.
+    founder: { '@id': `${SITE.baseUrl}/#founder` },
 
     foundingDate: '2010',
     foundingLocation: { '@type': 'Place', name: 'Roorkee, Uttarakhand, India' },
@@ -390,9 +392,18 @@ function SiteSchema() {
     '@type': 'Person',
     '@id': `${SITE.baseUrl}/#founder`,
     name: 'Dhanesh Chandra Mishra',
-    jobTitle: 'Founder & Managing Director',
+    // jobTitle must match every other node sharing this @id — 26 files already
+    // say 'Founder & Director, Shiv Ganga Travels'. This node used to be the
+    // lone 'Founder & Managing Director', which hands a parser two job titles
+    // for one entity.
+    jobTitle: 'Founder & Director, Shiv Ganga Travels',
     description: 'Retired Indian Army Officer who founded Shiv Ganga Travels in 2010. Pioneered the zero-commission model for Char Dham Yatra operators in Haridwar.',
     url: `${SITE.baseUrl}/about`,
+    // The one external profile that corroborates the person. It was present on
+    // the /about node only, so the entity arrived unverifiable on the other
+    // ~200 routes. Personal profiles only here — never the company's Maps
+    // listing or the site root, which would assert he IS the business.
+    sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
     worksFor: { '@id': `${SITE.baseUrl}/#organization` },
     alumniOf: { '@type': 'Organization', name: 'Indian Army' },
     knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Uttarakhand pilgrimage', 'Mountain travel logistics'],

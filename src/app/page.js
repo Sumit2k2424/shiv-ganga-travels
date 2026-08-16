@@ -65,7 +65,9 @@ function Schema() {
       url: `${SITE.baseUrl}/char-dham-yatra`,
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
-    aggregateRating: { '@type':'AggregateRating', ratingValue: 4.7, reviewCount: 54, bestRating:5 },
+    // No aggregateRating — same reasoning as the twin node in homeSchema.js:
+    // the 54 reviews rate the business, and layout.js already asserts them on
+    // the Organization node that renders on this page.
   };
 
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };

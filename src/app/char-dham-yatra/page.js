@@ -53,11 +53,10 @@ function Schema() {
       offerCount: '5',
       seller: { '@type': 'Organization', name: SITE.name },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 4.7,
-      reviewCount: 54,
-    },
+    // No aggregateRating: the 54 Google reviews rate the business, and are
+    // asserted once on the Organization node in layout.js. Restating them here
+    // would claim 54 reviews of the "Char Dham Yatra Package 2026" product
+    // specifically, which is not what those reviews are.
   };
 
   const faqSchema = {

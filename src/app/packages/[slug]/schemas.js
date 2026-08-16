@@ -56,8 +56,21 @@ export default function Schemas({ pkg }) {
     keywords:(pkg.tags||[]).join(', '),
   };
 
-  // Product schema — carries aggregateRating for Review rich result.
-  // Google supports Review snippets on Product type. This is the correct parent.
+  // Product schema for the package itself.
+  //
+  // NO aggregateRating and NO review here, deliberately. This node used to
+  // carry the company's 4.7/54 Google rating plus three fixed review texts,
+  // reproduced identically on all 39 package pages. Those 54 reviews are of
+  // the business, not of "Yamunotri Gangotri Do Dham 4N/5D" — and Google's
+  // structured data policy requires the rating to be about the specific item
+  // under review. Reusing one business rating as 39 different product ratings
+  // is the textbook spammy-structured-markup pattern, and the manual action
+  // for it lands on the whole domain rather than the offending pages.
+  //
+  // The rating is still asserted where it is true: the sitewide Organization
+  // node in layout.js, which is what the 54 reviews actually rate. If per-
+  // package ratings are wanted later, they need per-package reviews we have
+  // genuinely collected — one real review per package beats 54 borrowed ones.
   const product = {
     '@context':'https://schema.org','@type':'Product',
     '@id':`${SITE.baseUrl}/packages/${pkg.slug}#product`,
@@ -75,18 +88,6 @@ export default function Schemas({ pkg }) {
       seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
       url:`${SITE.baseUrl}/packages/${pkg.slug}`,
     },
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue: 4.7,
-      reviewCount: 54,
-      bestRating:5,
-      worstRating:1,
-    },
-    review:[
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Rakesh Sharma'}, reviewBody:'Excellent Char Dham yatra experience. Zero commission as promised. Hotel stays were clean, driver was knowledgeable. Highly recommend Shiv Ganga Travels.' },
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Priya Mehta'}, reviewBody:'Booked Kedarnath package from Haridwar. Everything was well organised. The VIP darshan arrangement saved us 3 hours of queue time. Will book again for Badrinath.' },
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Suresh Gupta'}, reviewBody:'Senior citizen package was perfect for my parents. Slow itinerary, ground floor rooms, pony arranged at Kedarnath. Dhanesh ji personally called to check on them.' },
-    ],
   };
 
   const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
@@ -98,14 +99,23 @@ export default function Schemas({ pkg }) {
   ]};
   const author = {
     '@context':'https://schema.org','@type':'Person',
-    '@id':`${SITE.baseUrl}/#dhanesh-chandra-mishra`,
+    // `/#founder`, NOT `/#dhanesh-chandra-mishra`. These 39 package pages used
+    // their own @id, which forked the founder into a second Person entity —
+    // the largest single block of pages on the site pointing at a man who,
+    // to a parser, was not the man every article byline credits.
+    '@id':`${SITE.baseUrl}/#founder`,
     name:'Dhanesh Chandra Mishra',
-    jobTitle:'Founder & Char Dham Yatra Specialist',
+    jobTitle:'Founder & Director, Shiv Ganga Travels',
     description:'Retired Indian Army officer who founded Shiv Ganga Travels in 2010. 15+ seasons organising Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
+    url:`${SITE.baseUrl}/about`,
     worksFor:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl },
     knowsAbout:['Char Dham Yatra','Kedarnath Yatra','Badrinath','Gangotri','Yamunotri','Uttarakhand pilgrimage travel','Char Dham registration'],
     address:{ '@type':'PostalAddress', addressLocality:'Haridwar', addressRegion:'Uttarakhand', addressCountry:'IN' },
-    sameAs:['https://www.instagram.com/shivgangatravels/','https://www.google.com/maps?cid=16074078434377735602'],
+    // Personal profile only. The company Instagram and the company's Google
+    // Maps listing were here, which asserts this person IS the business — a
+    // false identity claim that undermines the entity resolution it was meant
+    // to help. Same rule as the /about node.
+    sameAs:['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
   };
   // ImageGallery — gives the photography its own crawlable entity and
   // makes the page eligible for image-rich results.

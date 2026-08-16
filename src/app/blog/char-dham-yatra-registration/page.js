@@ -232,7 +232,14 @@ export default function RegistrationBlog() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" />
+        <BlogAuthor variant="top" author="dhanesh" article={{
+          slug: 'char-dham-yatra-registration',
+          title: `Char Dham Yatra Registration ${SITE.season}: Free e-Pass Guide`,
+          description: `Everything about mandatory Char Dham Yatra registration ${SITE.season} — e-Pass download, yatra parchi, OTP troubleshooting, NRI rules, documents, daily limits and what to do when the portal is down.`,
+          datePublished: '2025-08-15',
+          dateModified: SITE.lastUpdatedISO,
+          lang: 'en-IN',
+        }} />
 
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
         {/* Alert box */}

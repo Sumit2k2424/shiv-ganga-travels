@@ -30,7 +30,7 @@ function Schema() {
     // which is the opposite of what we want AI assistants to resolve.
     '@id': `${SITE.baseUrl}/#founder`,
     name: 'Dhanesh Chandra Mishra',
-    jobTitle: 'Founder & Director',
+    jobTitle: 'Founder & Director, Shiv Ganga Travels',
     description: 'Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. Has led Char Dham Yatra operations for 15 seasons, serving 50,000+ pilgrims.',
     worksFor: {
       '@type': 'Organization',

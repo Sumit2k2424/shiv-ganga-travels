@@ -97,8 +97,11 @@ function Schemas({ pkg }) {
     keywords:(pkg.tags||[]).join(', '),
   };
 
-  // Product schema — carries aggregateRating for Review rich result.
-  // Google supports Review snippets on Product type. This is the correct parent.
+  // Product schema for the package itself. NO aggregateRating and NO review —
+  // see the full reasoning on the identical node in ./schemas.js. Short
+  // version: the 54 Google reviews rate the business, not this package, and
+  // restating them as 39 separate product ratings is a domain-level manual
+  // action risk. The rating stays on the Organization node in layout.js.
   const product = {
     '@context':'https://schema.org','@type':'Product',
     '@id':`${SITE.baseUrl}/packages/${pkg.slug}#product`,
@@ -116,18 +119,6 @@ function Schemas({ pkg }) {
       seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
       url:`${SITE.baseUrl}/packages/${pkg.slug}`,
     },
-    aggregateRating:{
-      '@type':'AggregateRating',
-      ratingValue: 4.7,
-      reviewCount: 54,
-      bestRating:5,
-      worstRating:1,
-    },
-    review:[
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Rakesh Sharma'}, reviewBody:'Excellent Char Dham yatra experience. Zero commission as promised. Hotel stays were clean, driver was knowledgeable. Highly recommend Shiv Ganga Travels.' },
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Priya Mehta'}, reviewBody:'Booked Kedarnath package from Haridwar. Everything was well organised. The VIP darshan arrangement saved us 3 hours of queue time. Will book again for Badrinath.' },
-      { '@type':'Review', reviewRating:{'@type':'Rating',ratingValue:5,bestRating:5}, author:{'@type':'Person',name:'Suresh Gupta'}, reviewBody:'Senior citizen package was perfect for my parents. Slow itinerary, ground floor rooms, pony arranged at Kedarnath. Dhanesh ji personally called to check on them.' },
-    ],
   };
 
   const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
@@ -139,14 +130,18 @@ function Schemas({ pkg }) {
   ]};
   const author = {
     '@context':'https://schema.org','@type':'Person',
-    '@id':`${SITE.baseUrl}/#dhanesh-chandra-mishra`,
+    // See the identical node in ./schemas.js — @id is `/#founder` so these 39
+    // pages resolve to the same Person as every article byline, and sameAs
+    // carries his personal profile only, never company-owned URLs.
+    '@id':`${SITE.baseUrl}/#founder`,
     name:'Dhanesh Chandra Mishra',
-    jobTitle:'Founder & Char Dham Yatra Specialist',
+    jobTitle:'Founder & Director, Shiv Ganga Travels',
     description:'Retired Indian Army officer who founded Shiv Ganga Travels in 2010. 15+ seasons organising Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
+    url:`${SITE.baseUrl}/about`,
     worksFor:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl },
     knowsAbout:['Char Dham Yatra','Kedarnath Yatra','Badrinath','Gangotri','Yamunotri','Uttarakhand pilgrimage travel','Char Dham registration'],
     address:{ '@type':'PostalAddress', addressLocality:'Haridwar', addressRegion:'Uttarakhand', addressCountry:'IN' },
-    sameAs:['https://www.instagram.com/shivgangatravels/','https://www.google.com/maps?cid=16074078434377735602'],
+    sameAs:['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>

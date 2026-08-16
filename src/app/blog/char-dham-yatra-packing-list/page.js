@@ -19,7 +19,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', name:'Dhanesh Chandra Mishra', jobTitle:'Founder, Shiv Ganga Travels — Retired Indian Army Officer', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra', jobTitle:'Founder & Director, Shiv Ganga Travels', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
 
     const faq = {
     '@context': 'https://schema.org',

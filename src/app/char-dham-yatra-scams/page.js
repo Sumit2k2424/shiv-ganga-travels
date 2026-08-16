@@ -89,7 +89,7 @@ function Schema() {
     description: metadata.description, url: URL, inLanguage: 'en-IN',
     datePublished: '2026-06-29', dateModified: SITE.lastUpdatedISO,
     image: `${SITE.baseUrl}/opengraph-image`,
-    author: { '@type': 'Person', name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder, Shiv Ganga Travels' },
+    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about` },
     publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/opengraph-image` } },
     about: { '@type': 'Thing', name: 'Char Dham Yatra booking fraud' },
   };
