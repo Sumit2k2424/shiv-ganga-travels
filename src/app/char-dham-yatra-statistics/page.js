@@ -39,7 +39,7 @@ function Schema() {
       '@id': `${SITE.baseUrl}/#organization`,
     },
     keywords: ['Char Dham Yatra', 'Pilgrim Statistics', 'Uttarakhand Tourism', 'Kedarnath', 'Badrinath', 'Gangotri', 'Yamunotri'],
-    dateModified: '2026-07-18',
+    dateModified: '2026-08-16',
     spatialCoverage: {
       '@type': 'Place',
       name: 'Char Dham Circuit, Uttarakhand, India',
@@ -55,7 +55,7 @@ function Schema() {
     description: 'Comprehensive operator-verified statistics on the Char Dham Yatra 2026.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-05-26',
-    dateModified: '2026-07-18',
+    dateModified: '2026-08-16',
     author: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, '@id':`${SITE.baseUrl}/#organization` },
     publisher: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
     mainEntityOfPage: `${SITE.baseUrl}/char-dham-yatra-statistics`,
@@ -112,11 +112,11 @@ export default function Page() {
         {/* Quick Answer Box — built for AI Overviews + featured snippets */}
         <div className="quick-answer" style={{ background:'var(--navy-light)', border:'2px solid var(--teal)', borderRadius:14, padding:'18px 22px', marginBottom:28 }}>
           <div style={{ fontSize:11, color:'var(--teal)', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:8 }}>📊 Quick Answer</div>
-          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>The Char Dham Yatra circuit covers approximately 1,607 km across four Himalayan shrines</strong> — Yamunotri (3,291m), Gangotri (3,415m), Kedarnath (3,583m) and Badrinath (3,133m). The 2026 season runs April 19 to November 13, and it opened as the busiest booking window in five years: over 17.8 lakh pilgrims had completed Char Dham registration by mid-April 2026, before Badrinath&apos;s doors even opened (Uttarakhand Tourism). Annual pilgrim footfall has exceeded 50 lakh (5 million) in recent years, with most pilgrimages completed between May and June or September and October. The yatra continues through the monsoon: on July 6, 2026 alone, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib.</p>
+          <p style={{ margin:0, fontSize:15.5, color:'#1e293b', lineHeight:1.75 }}><strong>The Char Dham Yatra circuit covers approximately 1,607 km across four Himalayan shrines</strong> — Yamunotri (3,291m), Gangotri (3,415m), Kedarnath (3,583m) and Badrinath (3,133m). The 2026 season runs April 19 to November 13, and it opened as the busiest booking window in five years: over 17.8 lakh pilgrims had completed Char Dham registration by mid-April 2026, before Badrinath&apos;s doors even opened (Uttarakhand Tourism). That pace has held. Char Dham registrations for 2026 crossed <strong>50 lakh</strong> by August 13, and Kedarnath and Badrinath alone had recorded <strong>30,62,228 darshans</strong> by August 11 — 16,12,112 at Kedarnath and 14,50,116 at Badrinath — with the two shrines together taking more than ₹74.5 crore in offerings and revenue. Most pilgrimages are completed between May and June or September and October, but the yatra runs straight through the monsoon: on July 6, 2026, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib.</p>
         </div>
 
         <div style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          <strong>Last updated:</strong> July 9, 2026 · <strong>Source:</strong> Shiv Ganga Travels operator data (2010–2026), cross-referenced with Uttarakhand Tourism, Devasthanam Board, and Char Dham Yatra Authority notifications.
+          <strong>Last updated:</strong> August 16, 2026 · <strong>Source:</strong> Shiv Ganga Travels operator data (2010–2026), cross-referenced with Uttarakhand Tourism, Devasthanam Board, and Char Dham Yatra Authority notifications.
         </div>
 
         {/* Headline stats */}
@@ -127,6 +127,8 @@ export default function Page() {
           <Stat value="3,583 m" label="Kedarnath — Highest Dham" source="Survey of India" />
           <Stat value="18,000/day" label="Kedarnath Daily Pilgrim Cap" source="District Administration" />
           <Stat value="₹13,900" label="Median Direct-Operator Package Cost" source="2026 booking data" />
+          <Stat value="30.62 lakh" label="Kedarnath + Badrinath Darshans, 2026 Season" source="As of Aug 11, 2026" />
+          <Stat value="50 lakh+" label="Char Dham Registrations, 2026 Season" source="As of Aug 13, 2026" />
         </div>
 
         <h2 style={h2}>1. Pilgrim Demographics & Patterns</h2>
@@ -173,13 +175,14 @@ export default function Page() {
         <h2 style={h2}>3. Char Dham 2026 — Opening & Closing Dates</h2>
         <p style={p}>The four Char Dham temples follow a centuries-old calendar tied to Hindu festival days. The 2026 opening dates were announced by each temple's administrative committee in early 2026:</p>
         <ul style={{ ...p, paddingLeft:24 }}>
-          <li><strong>Yamunotri</strong>: Opens April 19, 2026 (Akshaya Tritiya) · Closes November 7, 2026 (Yama Dwitiya)</li>
-          <li><strong>Gangotri</strong>: Opens April 19, 2026 (Akshaya Tritiya) · Closes November 7, 2026</li>
+          <li><strong>Yamunotri</strong>: Opens April 19, 2026 (Akshaya Tritiya) · Closes November 11, 2026 (Bhai Dooj / Yama Dwitiya)</li>
+          <li><strong>Gangotri</strong>: Opens April 19, 2026 (Akshaya Tritiya) · Closes November 10, 2026 (Annakut / Govardhan Puja)</li>
           <li><strong>Kedarnath</strong>: Opens April 22, 2026 at 8:00 AM · Closes November 11, 2026 (Bhai Dooj)</li>
           <li><strong>Badrinath</strong>: Opens April 23, 2026 at 4:30 AM · Closes November 13, 2026</li>
         </ul>
         <p style={p}>The season lasts approximately 208 days. During winter closure, the deities are moved to their winter seats — Kharsali for Yamunotri, Mukhba for Gangotri, Ukhimath for Kedarnath, and Joshimath for Badrinath.</p>
-        <div style={attribution}>Source: Uttarakhand Char Dham Devasthanam Management Board, 2026 notifications</div>
+        <p style={p}>One caveat on the closing dates, correct as of August 2026: the opening dates are settled and behind us, but the closing dates are not all formally announced yet. Gangotri and Yamunotri follow the Diwali calendar and are fixed by it. The exact closing dates for <strong>Kedarnath and Badrinath are declared by the Badrinath-Kedarnath Temple Committee on Vijayadashami</strong>, which falls in October — so November 11 and November 13 are calendar-derived and should be treated as firm-but-tentative until that announcement. We update this page when the committee confirms. See our <Link href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)' }}>full 2026 closing dates guide</Link> for the ceremony details and winter-abode darshan.</p>
+        <div style={attribution}>Source: Uttarakhand Char Dham Devasthanam Management Board and Badrinath-Kedarnath Temple Committee, 2026 notifications; closing dates cross-checked against the 2026 Hindu festival calendar</div>
 
         <h2 style={h2}>4. Cost Breakdown (Per Person, 2026)</h2>
         <p style={p}>A typical mid-range Char Dham Yatra package from Haridwar (10 nights, 11 days) costs approximately ₹21,300 per person when broken down by component. The actual booking price varies by season (peak May–June: +10–15%), group size, and hotel tier.</p>

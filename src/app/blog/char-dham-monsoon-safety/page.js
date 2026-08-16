@@ -7,6 +7,11 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
+// This page carries live monsoon-season conditions, so it is re-verified more
+// often than the site-wide SITE.lastUpdated marker moves. Keep it page-local.
+const MONSOON_UPDATED = 'August 16, 2026';
+const MONSOON_UPDATED_ISO = '2026-08-16';
+
 export const metadata = {
   title: { absolute: `Char Dham Yatra Monsoon Safety ${SITE.season} | Local Driver Guide` },
   description: `Char Dham Yatra in monsoon ${SITE.season} — safety tips from local drivers. Trusted operator, 15+ yrs experience, live route checks & instant confirmation.`,
@@ -31,7 +36,7 @@ function Schema() {
     description: 'Monsoon safety guide for Char Dham Yatra — sunrise departures, landslide zones, packing, live route checks. Written from 15 seasons of hill driving.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-07-12',
-    dateModified: SITE.lastUpdatedISO,
+    dateModified: MONSOON_UPDATED_ISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -72,7 +77,7 @@ export default function Page() {
         title="Char Dham Yatra in Monsoon — How We Keep Pilgrims Safe"
         dek="Sunrise departures · Landslide zones · What to pack · Live route checks · The honest version"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${MONSOON_UPDATED}`}
         readTime="8 min read"
         facts={[
           { label:'Dhams open',  value:'Yes, all monsoon' },
@@ -93,7 +98,7 @@ export default function Page() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {MONSOON_UPDATED}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Short answer from our team</div>
@@ -112,7 +117,7 @@ export default function Page() {
         ]}/>
 
         <h2 id="honest-picture" style={h2}>First, the Honest Picture of Monsoon 2026</h2>
-        <p style={p}>The southwest monsoon over Uttarakhand this July has been strong. IMD has been issuing heavy-rain alerts for the hill districts, and stretches of the Kedarnath highway around Sonprayag have seen short closures after slides. None of this is unusual — it happens every monsoon — but it means you should not plan a July yatra the way you would plan a May one.</p>
+        <p style={p}>The southwest monsoon over Uttarakhand has been strong through July and into August. IMD has been issuing heavy-rain alerts for the hill districts in rolling multi-day spells, stretches of the Kedarnath highway around Sonprayag have seen short closures after slides, and on August 6 single points on the Badrinath, Gangotri and Yamunotri highways were all blocked by debris and cleared the same day. The yatra itself has kept running — the only state-wide halt this season was a two-day administrative pause on July 28–29, and the state confirmed on August 11 that the pilgrimage was moving smoothly. One rule worth knowing before you set out: the State Emergency Operations Centre has directed that trekking not be permitted while rain is actually falling, so a Gaurikund start can be held at the barrier during a downpour. None of this is unusual — it happens every monsoon — but it means you should not plan a July or August yatra the way you would plan a May one. Our <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status page</Link> carries the dated bulletins.</p>
         <p style={p}>We will not tell you monsoon travel is risk-free, because it is not, and our own <Link href="/char-dham-yatra-scams" style={{ color:'var(--teal)', fontWeight:600 }}>scams page</Link> exists precisely because operators who oversell get pilgrims into trouble. What we can tell you is what 15 seasons of driving these roads in the rain has taught us, and what we actually do differently between July and mid-September.</p>
 
         <h2 id="6am-rule" style={h2}>The 6 AM Rule — Why Our Monsoon Convoys Leave at Sunrise</h2>

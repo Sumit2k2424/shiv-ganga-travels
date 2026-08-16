@@ -39,8 +39,8 @@ function Schema() {
 }
 
 // Road bulletin is re-verified on its own cadence, ahead of the site-wide SITE.lastUpdated.
-const ROAD_UPDATED = 'August 10, 2026';
-const ROAD_UPDATED_ISO = '2026-08-10';
+const ROAD_UPDATED = 'August 16, 2026';
+const ROAD_UPDATED_ISO = '2026-08-16';
 
 
 
@@ -111,7 +111,7 @@ export default function RoadConditions() {
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {ROAD_UPDATED} · Monsoon Season — All Routes Open, Travel With Caution</div>
 
         <div style={{ background: '#FFF8ED', border: '1px solid #F5D9A8', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#9A6B1F' }}>
-          <strong>Monsoon Status ({ROAD_UPDATED}):</strong> All four routes are open and the yatra has run without a state-wide halt since the two-day pause of July 28–29 — but August has been wet. On August 6, debris blocked the Badrinath highway near Helang (Chamoli), the Gangotri highway (NH-34) near Dharasu Nalu Pani, and the Yamunotri highway (NH-134) near Silai Bend and at Syanachatti; crews cleared all three the same day. An IMD alert covering ten districts, including Uttarkashi, Chamoli and Rudraprayag, runs through August 10. Kedarnath helicopter services have been suspended since July 1 for the monsoon under DGCA guidance, so plan on the trek, pony or palki. Night driving is banned 10 PM–4 AM on all Char Dham routes. Verify conditions the morning you travel — police helpline 112 / 1070, or check our <Link href="/char-dham-road-status" style={{ color:'#9A6B1F', fontWeight:700 }}>live road status page</Link>, and read our <Link href="/blog/char-dham-monsoon-safety" style={{ color:'#9A6B1F', fontWeight:700 }}>monsoon safety guide</Link> for how we plan departures around the rain.
+          <strong>Monsoon Status ({ROAD_UPDATED}):</strong> All four routes are open, and on August 11 the state confirmed the yatra was running smoothly through the rains — no state-wide halt since the two-day pause of July 28–29. August has still been wet. On August 6, debris blocked the Badrinath highway near Helang (Chamoli), the Gangotri highway (NH-34) near Dharasu Nalu Pani, and the Yamunotri highway (NH-134) near Silai Bend and at Syanachatti; crews cleared all three the same day, and those remain the last confirmed blockages. The live warning is an IMD notice issued August 14 running to August 17, with the orange alert sitting on Dehradun, Kumaon and the plains districts while Uttarkashi, Chamoli and Rudraprayag stay on yellow. The State Emergency Operations Centre has directed that trekking not be permitted during active rainfall, so expect a Gaurikund start to be held at the barrier during a downpour. Kedarnath helicopter services have been suspended since July 1 for the monsoon under DGCA guidance with no resumption date announced — the realistic window is post-monsoon September, so plan on the trek, pony or palki. Night driving is banned 10 PM–4 AM on all Char Dham routes. Verify conditions the morning you travel — police helpline 112 / 1070, or check our <Link href="/char-dham-road-status" style={{ color:'#9A6B1F', fontWeight:700 }}>live road status page</Link>, and read our <Link href="/blog/char-dham-monsoon-safety" style={{ color:'#9A6B1F', fontWeight:700 }}>monsoon safety guide</Link> for how we plan departures around the rain.
         </div>
 
         <p style={p}>Mountain roads are fundamentally different from plains highways. Char Dham routes cross geological zones with active seismicity, heavy snowmelt in spring, and monsoon-triggered landslides in July–August. Understanding the current conditions and the specific hazard zones on each route is essential for safe travel. Below is the 2026 status for each route compiled from BRO (Border Roads Organisation) updates, NHAI bulletins, and our own driver reports.</p>
