@@ -190,7 +190,7 @@ const ITINERARY = [
   { day: 'Day 2', route: 'Barkot → Yamunotri → Barkot', km: '36 km drive + 6 km trek each way', alt: '3,293 m', desc: 'Drive to Janki Chatti and start the 6 km walk. It is a steady climb, not a scramble — most people take three hours up. At the top, cook rice in the Surya Kund hot spring and take it back as prasad, offer puja at the Divya Shila slab, then darshan. Ponies and palkis are available the whole way if legs give out. Back to Barkot for the night.' },
   { day: 'Day 3', route: 'Barkot → Uttarkashi', km: '100 km · 4 hrs', alt: '1,158 m', desc: 'A short, easy driving day, deliberately. Visit the Vishwanath temple in Uttarakashi with its enormous iron trident — the town is a mountaineering base, so the shops here are the last decent place to buy warm layers or a walking stick before Gangotri.' },
   { day: 'Day 4', route: 'Uttarkashi → Gangotri → Harsil', km: '100 km · 5 hrs', alt: '3,415 m', desc: 'Leave with packed breakfast. The road follows the Bhagirathi through the gorge at Gangnani, where there is a hot sulphur kund worth twenty minutes. At Gangotri, the temple sits right by the river — the dip is short and shockingly cold. Then down to Harsil, an old deodar village with apple orchards, for the night. This is the prettiest overnight stop on the whole circuit and almost nobody schedules it.' },
-  { day: 'Day 5', route: 'Harsil → Guptkashi (via Tehri)', km: '270 km · 8–9 hrs', alt: '1,319 m', desc: 'The long haul. You cross the Tehri dam reservoir, drop to Devprayag where the Bhagirathi and Alaknanda meet to become the Ganga, then run up the Alaknanda valley through Rudraprayag. Start at first light — this is not a day to leave late.' },
+  { day: 'Day 5', route: 'Harsil → Guptkashi (via Tehri)', km: '270 km · 8–9 hrs', alt: '1,319 m', desc: 'The long haul. You cross the Tehri dam reservoir, drop to Devprayag where the Bhagirathi and Alaknanda meet to become the Ganga, then run up the Alaknanda valley through Rudraprayag. Start at first light — this is not a day to leave late.', link: ['Devprayag confluence guide', '/devprayag'] },
   { day: 'Day 6', route: 'Guptkashi → Joshimath → Badrinath', km: '210 km · 7 hrs', alt: '3,133 m', desc: 'Through Chamoli and Joshimath — stop at the Narsingh temple, where the idol\'s wrist is said to be thinning, and when it breaks the Badrinath route is prophesied to close. Arrive Badrinath by evening. Bathe in Tapt Kund, the 45°C spring below the temple, then evening aarti.' },
   { day: 'Day 7', route: 'Badrinath darshan → Mana → Srinagar', km: '190 km', alt: '—', desc: '4 AM Bal Bhog puja, before the buses. Then Mana village, 3 km on: Vyas Gufa where the Mahabharata was dictated, Bhim Pul, and the point where the Saraswati disappears underground. Afternoon drive back down. Overnight Srinagar or Rudraprayag.' },
   { day: 'Day 8', route: 'Srinagar → Rishikesh → Haridwar', km: '160 km · 5 hrs', alt: '249 m', desc: 'Down the Alaknanda, second look at Devprayag from the other bank, brief stop at Rishikesh. Reach Haridwar by afternoon, in time for the evening Ganga aarti at Har Ki Pauri if you want it. Tour ends.' },
@@ -332,6 +332,11 @@ export default function TeenDhamYatra() {
                 {item.alt !== '—' && <span style={{ fontSize: 12, color: '#1D9E75', fontWeight: 600 }}>↑ {item.alt}</span>}
               </div>
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
+              {item.link && (
+                <Link href={item.link[1]} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
+                  {item.link[0]} →
+                </Link>
+              )}
             </div>
           ))}
         </div>
