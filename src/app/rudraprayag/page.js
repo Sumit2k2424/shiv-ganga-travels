@@ -70,7 +70,7 @@ const FAQS = [
 const PAA = [
   { q: 'Can you bathe at the Rudraprayag sangam?', a: 'Yes, there are steps down to the confluence. The Mandakini comes down fast and cold from the Kedarnath glacier and the current at the meeting point is stronger than it looks. Stay in the shallows near the steps, and do not attempt it at all during or just after the monsoon.' },
   { q: 'Is Rudraprayag safe now?', a: 'Entirely. The leopard has been dead for a century and the town is a busy district headquarters on a national highway. The real hazards here are the same as anywhere in Garhwal — monsoon landslides and the driving, not wildlife.' },
-  { q: 'What is the difference between Rudraprayag and Rudranath?', a: 'Easy to confuse. Rudraprayag is this town and confluence at 610 m on the main highway. Rudranath is one of the Panch Kedar temples, a high-altitude shrine at about 3,600 m reached by a demanding trek from Sagar village near Gopeshwar. Different places, roughly 100 km apart.' },
+  { q: 'What is the difference between Rudraprayag and Rudranath?', a: 'Easy to confuse. Rudraprayag is this town and confluence at 690 m on the main highway. Rudranath is one of the Panch Kedar temples, a high-altitude shrine at about 3,600 m reached by a demanding trek from Sagar village near Gopeshwar. Different places, roughly 100 km apart.' },
   { q: 'How many days do you need at Rudraprayag?', a: 'One evening and one morning covers everything worth seeing. Most people pass through in an afternoon. If you are building an itinerary, treat it as a well-placed overnight rather than a destination in its own right.' },
   { q: 'Is Dhari Devi temple near Rudraprayag?', a: 'Yes, about 20 km downstream towards Srinagar, on the Alaknanda. It is one of the more atmospheric stops on this stretch of road and easy to combine with Rudraprayag on the same day.' },
 ];
@@ -164,7 +164,7 @@ export default function Rudraprayag() {
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
-          {[['Confluence', '610 m'], ['District', 'Rudraprayag'], ['From Haridwar', '165 km'], ['To Gaurikund', '75 km'], ['To Badrinath', '160 km'], ['Best months', 'Apr–Jun, Sep–Nov']].map(([k, v]) => (
+          {[['Elevation', '690 m'], ['District', 'Rudraprayag'], ['From Haridwar', '165 km'], ['To Gaurikund', '75 km'], ['To Badrinath', '160 km'], ['Best months', 'Apr–Jun, Sep–Nov']].map(([k, v]) => (
             <div key={k}>
               <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', marginBottom: 2 }}>{k}</div>
               <div style={{ fontWeight: 700, fontSize: 13.5, color: '#FFD166' }}>{v}</div>
@@ -295,7 +295,7 @@ export default function Rudraprayag() {
           The yatra season, <strong>late April to early November</strong>, is when the town is alive and every hotel is open. <strong>September and October</strong> are the best of it — the rivers have cleared, the crowds have thinned, and the confluence is at its most photogenic. May and June are hot, dusty and busy.
         </p>
         <p style={p}>
-          Avoid <strong>July and August</strong>. Both rivers run high and brown, Koteshwar can be underwater, and this stretch of NH-7 is among the most landslide-prone on the circuit. Winter is quiet and perfectly pleasant at 610 m, but the dhams above are shut, so there is little reason to come. Check our <Link href="/char-dham-road-status">road status page</Link> before any monsoon-season drive.
+          Avoid <strong>July and August</strong>. Both rivers run high and brown, Koteshwar can be underwater, and this stretch of NH-7 is among the most landslide-prone on the circuit. Winter is quiet and perfectly pleasant at 690 m, but the dhams above are shut, so there is little reason to come. Check our <Link href="/char-dham-road-status">road status page</Link> before any monsoon-season drive.
         </p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
@@ -332,7 +332,7 @@ export default function Rudraprayag() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Along the same road</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Devprayag Sangam', '/devprayag'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Guptkashi Guide', '/guptkashi-guide'], ['Gaurikund Guide', '/gaurikund'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Panch Kedar Yatra', '/panch-kedar-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Kedarnath to Badrinath', '/kedarnath-to-badrinath-distance'], ['Road Status', '/char-dham-road-status'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Taxi from Haridwar', '/taxi-service-in-haridwar'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar']].map(([l, href]) => (
+            {[['All Five Panch Prayag', '/panch-prayag'], ['Devprayag Sangam', '/devprayag'], ['Karnaprayag', '/karnaprayag'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Guptkashi Guide', '/guptkashi-guide'], ['Gaurikund Guide', '/gaurikund'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Panch Kedar Yatra', '/panch-kedar-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Kedarnath to Badrinath', '/kedarnath-to-badrinath-distance'], ['Road Status', '/char-dham-road-status'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Taxi from Haridwar', '/taxi-service-in-haridwar'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
