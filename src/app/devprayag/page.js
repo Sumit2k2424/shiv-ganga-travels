@@ -128,7 +128,7 @@ const PRAYAGS = [
   { n: '1', name: 'Vishnuprayag', rivers: 'Alaknanda + Dhauliganga', alt: '1,372 m', near: 'Joshimath, on the Badrinath road' },
   { n: '2', name: 'Nandprayag', rivers: 'Alaknanda + Nandakini', alt: '914 m', near: 'Chamoli district' },
   { n: '3', name: 'Karnaprayag', rivers: 'Alaknanda + Pindar', alt: '788 m', near: 'Junction for the Kumaon road' },
-  { n: '4', name: 'Rudraprayag', rivers: 'Alaknanda + Mandakini', alt: '610 m', near: 'Where the Kedarnath road splits off' },
+  { n: '4', name: 'Rudraprayag', rivers: 'Alaknanda + Mandakini', alt: '610 m', near: 'Where the Kedarnath road splits off', href: '/rudraprayag' },
   { n: '5', name: 'Devprayag', rivers: 'Alaknanda + Bhagirathi', alt: '830 m', near: 'The Ganga begins here' },
 ];
 
@@ -280,7 +280,9 @@ export default function Devprayag() {
               {PRAYAGS.map((p2, i) => (
                 <tr key={p2.name} style={{ borderBottom: '1px solid hsl(var(--border))', background: p2.name === 'Devprayag' ? '#F0FDF4' : (i % 2 === 0 ? '#fff' : 'var(--bg)') }}>
                   <td style={{ ...TD, fontWeight: 700, color: 'var(--teal)' }}>{p2.n}</td>
-                  <td style={{ ...TD, fontWeight: p2.name === 'Devprayag' ? 800 : 600, color: 'var(--navy)' }}>{p2.name}</td>
+                  <td style={{ ...TD, fontWeight: p2.name === 'Devprayag' ? 800 : 600, color: 'var(--navy)' }}>
+                    {p2.href ? <Link href={p2.href} style={{ color: 'var(--teal)' }}>{p2.name}</Link> : p2.name}
+                  </td>
                   <td style={TD}>{p2.rivers}</td>
                   <td style={TD}>{p2.alt}</td>
                   <td style={{ ...TD, color: '#64748b' }}>{p2.near}</td>
@@ -332,7 +334,7 @@ export default function Devprayag() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Along the same road</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Char Dham Yatra', '/char-dham-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Guptkashi Guide', '/guptkashi-guide'], ['Gaurikund Guide', '/gaurikund-guide'], ['Harsil Valley', '/harsil-valley'], ['Hemkund Sahib Yatra', '/hemkund-sahib-yatra'], ['Adi Kailash Yatra', '/adi-kailash-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Surkanda Devi Temple', '/surkanda-devi-temple'], ['Triveni Ghat, Rishikesh', '/triveni-ghat-rishikesh'], ['Neelkanth Mahadev', '/neelkanth-mahadev-temple'], ['Rishikesh Packages', '/rishikesh-tour-packages'], ['Haridwar to Badrinath', '/haridwar-to-badrinath-distance'], ['Road Status', '/char-dham-road-status'], ['Taxi from Haridwar', '/taxi-service-in-haridwar'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi']].map(([l, href]) => (
+            {[['Char Dham Yatra', '/char-dham-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Guptkashi Guide', '/guptkashi-guide'], ['Gaurikund Guide', '/gaurikund-guide'], ['Rudraprayag', '/rudraprayag'], ['Harsil Valley', '/harsil-valley'], ['Hemkund Sahib Yatra', '/hemkund-sahib-yatra'], ['Adi Kailash Yatra', '/adi-kailash-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Surkanda Devi Temple', '/surkanda-devi-temple'], ['Triveni Ghat, Rishikesh', '/triveni-ghat-rishikesh'], ['Neelkanth Mahadev', '/neelkanth-mahadev-temple'], ['Rishikesh Packages', '/rishikesh-tour-packages'], ['Haridwar to Badrinath', '/haridwar-to-badrinath-distance'], ['Road Status', '/char-dham-road-status'], ['Taxi from Haridwar', '/taxi-service-in-haridwar'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -59,6 +59,8 @@ export const COLS = [
     {l:'Yamunotri Temple Guide',     h:'/yamunotri-temple'},
     {l:'Dhari Devi Temple',          h:'/dhari-devi-temple'},
     {l:'Devprayag Sangam',           h:'/devprayag'},
+    {l:'Rudraprayag Sangam',         h:'/rudraprayag'},
+    {l:'Kainchi Dham',               h:'/kainchi-dham'},
     {l:'Kedarnath Height & Facts',   h:'/kedarnath-height'},
     {l:'Kedarnath Weather',          h:'/kedarnath-weather'},
     {l:'Badrinath Weather',          h:'/badrinath-weather'},

@@ -299,7 +299,7 @@ export default function ChitaiGoluDevtaTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Haridwar to Nainital Cab',h:'/cabs/haridwar-to-nainital-cab'},{l:'Haridwar to Mukteshwar Cab',h:'/cabs/haridwar-to-mukteshwar-cab'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
+          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Kainchi Dham',h:'/kainchi-dham'},{l:'Haridwar to Nainital Cab',h:'/cabs/haridwar-to-nainital-cab'},{l:'Haridwar to Mukteshwar Cab',h:'/cabs/haridwar-to-mukteshwar-cab'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
