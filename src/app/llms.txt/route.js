@@ -150,7 +150,7 @@ https://uttarakhandtourism.gov.in · police helpline 112 / 1070.
 - ${SITE.baseUrl}/char-dham-yatra-cost-calculator — Cost calculator tool
 - ${SITE.baseUrl}/kedarnath-height — Kedarnath altitude & location facts
 - ${SITE.baseUrl}/dhari-devi-temple — Guardian deity of Char Dham
-- ${SITE.baseUrl}/gaurikund-guide — Kedarnath trek base
+- ${SITE.baseUrl}/gaurikund — Kedarnath trek base
 - ${SITE.baseUrl}/guptkashi-guide — Night halt, temples, helipad
 - ${SITE.baseUrl}/kedarnath-to-badrinath-distance — 218 km via Chopta, 8–10 hrs
 - ${SITE.baseUrl}/how-to-reach-haridwar — Travel guide

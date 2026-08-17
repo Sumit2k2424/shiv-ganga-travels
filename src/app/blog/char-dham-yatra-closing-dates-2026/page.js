@@ -205,7 +205,7 @@ export default function ClosingDates() {
               ['Registration Guide', '/blog/char-dham-yatra-registration'],
               ['Winter Char Dham Yatra', '/winter-char-dham-yatra'],
               ['Kedarnath Doli Yatra', '/kedarnath-doli-yatra'],
-              ['Omkareshwar, Ukhimath', '/omkareshwar-temple-ukhimath'],
+              ['Omkareshwar, Ukhimath', '/ukhimath'],
               ['Narsingh Temple, Joshimath', '/joshimath-narsingh-temple'],
             ].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>

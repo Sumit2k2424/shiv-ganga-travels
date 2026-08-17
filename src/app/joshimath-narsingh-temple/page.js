@@ -179,7 +179,7 @@ export default function JoshimathNarsinghTemple() {
 
         <Related links={[
           ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
-          ['Omkareshwar Ukhimath','/omkareshwar-temple-ukhimath'],
+          ['Omkareshwar Ukhimath','/ukhimath'],
           ['Badrinath Temple','/badrinath-temple'],
           ['Panch Badri Yatra','/panch-badri-yatra'],
           ['Char Dham Road Status','/char-dham-road-status'],

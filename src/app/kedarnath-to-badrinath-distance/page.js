@@ -104,7 +104,7 @@ export default function KedarnathToBadrinath() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Do Dham Package (Kedar+Badri)',h:'/do-dham-yatra'},{l:'Devprayag Sangam',h:'/devprayag'},{l:'Rudraprayag Sangam',h:'/rudraprayag'},{l:'Guptkashi Guide',h:'/guptkashi-guide'},{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Chopta Tungnath',h:'/chopta-tungnath'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},{l:'Haridwar → Badrinath Distance',h:'/haridwar-to-badrinath-distance'},{l:'Delhi → Kedarnath Distance',h:'/delhi-to-kedarnath-distance'},{l:'Altitude Sickness Guide',h:'/altitude-sickness-char-dham'}].map(l=>(
+          {[{l:'Do Dham Package (Kedar+Badri)',h:'/do-dham-yatra'},{l:'Devprayag Sangam',h:'/devprayag'},{l:'Rudraprayag Sangam',h:'/rudraprayag'},{l:'Guptkashi Guide',h:'/guptkashi-guide'},{l:'Gaurikund Guide',h:'/gaurikund'},{l:'Chopta Tungnath',h:'/chopta-tungnath'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},{l:'Haridwar → Badrinath Distance',h:'/haridwar-to-badrinath-distance'},{l:'Delhi → Kedarnath Distance',h:'/delhi-to-kedarnath-distance'},{l:'Altitude Sickness Guide',h:'/altitude-sickness-char-dham'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>

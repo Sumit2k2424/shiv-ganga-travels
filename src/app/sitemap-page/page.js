@@ -146,7 +146,7 @@ const sections = [
     links: [
       { label: 'Gangotri Temple Guide', href: '/gangotri-temple' },
       { label: 'Yamunotri Temple Guide', href: '/yamunotri-temple' },
-      { label: 'Gaurikund Guide', href: '/gaurikund-guide' },
+      { label: 'Gaurikund Guide', href: '/gaurikund' },
       { label: 'Guptkashi Guide', href: '/guptkashi-guide' },
       { label: 'Kedarnath to Badrinath Distance', href: '/kedarnath-to-badrinath-distance' },
       { label: 'Harsil Valley Guide', href: '/harsil-valley' },

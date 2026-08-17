@@ -183,7 +183,7 @@ export default function WinterCharDhamYatra() {
         />
 
         <Related links={[
-          ['Omkareshwar Ukhimath','/omkareshwar-temple-ukhimath'],
+          ['Omkareshwar Ukhimath','/ukhimath'],
           ['Narsingh Temple Joshimath','/joshimath-narsingh-temple'],
           ['Mukhba, Gangotri Winter Seat','/mukhba-gangotri-winter-seat'],
           ['Kharsali, Yamunotri Winter Seat','/kharsali-yamunotri-winter-seat'],

@@ -91,7 +91,7 @@ export default function GuptkashiGuide() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Kedarnath Hotels',h:'/kedarnath-hotels'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Kedarnath to Badrinath',h:'/kedarnath-to-badrinath-distance'},{l:'Kedarnath Package',h:'/kedarnath-yatra'}].map(l=>(
+          {[{l:'Gaurikund Guide',h:'/gaurikund'},{l:'Kedarnath Hotels',h:'/kedarnath-hotels'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Kedarnath to Badrinath',h:'/kedarnath-to-badrinath-distance'},{l:'Kedarnath Package',h:'/kedarnath-yatra'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>

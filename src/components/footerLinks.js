@@ -99,7 +99,7 @@ export const COLS = [
   ]},
   { heading:'Winter Char Dham', links:[
     {l:'Winter Char Dham Yatra',     h:'/winter-char-dham-yatra'},
-    {l:'Omkareshwar, Ukhimath',      h:'/omkareshwar-temple-ukhimath'},
+    {l:'Omkareshwar, Ukhimath',      h:'/ukhimath'},
     {l:'Narsingh Temple, Joshimath', h:'/joshimath-narsingh-temple'},
     {l:'Mukhba — Ganga’s Seat', h:'/mukhba-gangotri-winter-seat'},
     {l:'Kharsali — Yamuna’s Seat', h:'/kharsali-yamunotri-winter-seat'},

@@ -45,6 +45,13 @@ const REDIRECTS = [
   { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
   // Redirect blog Badrinath guide to new proper landing page
   { source: '/blog/badrinath-yatra-guide',                       destination: '/badrinath-yatra',                                permanent: true },
+  // ── Place pages moved onto the bare place name (Aug 2026) ──
+  // Semrush shows the head terms "gaurikund" (74K/mo) and "ukhimath" (40.5K/mo)
+  // carrying almost all the demand, while these two slugs split it. Same content,
+  // expanded, on the slug people actually search. Redirect consolidates the equity
+  // instead of leaving two pages competing for one query.
+  { source: '/gaurikund-guide',                                  destination: '/gaurikund',                                      permanent: true },
+  { source: '/omkareshwar-temple-ukhimath',                      destination: '/ukhimath',                                       permanent: true },
   { source: '/blog/char-dham-yatra-route-map',                  destination: '/char-dham-yatra-route-map',                    permanent: true },
   // ── Thin/duplicate blog pages consolidated into canonical pages (May 2026 update cleanup) ──
   { source: '/blog/char-dham-yatra-guide',     destination: '/blog/char-dham-guide',     permanent: true },

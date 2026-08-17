@@ -120,7 +120,7 @@ export default function KedarnathHeight() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Kedarnath Temple Guide',h:'/kedarnath-temple'},{l:'Kedarnath Tour Package',h:'/kedarnath-tour-package'},{l:'How to Reach Kedarnath',h:'/blog/how-to-reach-kedarnath'},{l:'Kedarnath Weather',h:'/kedarnath-weather'},{l:'Gaurikund Guide',h:'/gaurikund-guide'},{l:'Registration 2026',h:'/blog/kedarnath-registration-2026'}].map(l=>(
+          {[{l:'Kedarnath Temple Guide',h:'/kedarnath-temple'},{l:'Kedarnath Tour Package',h:'/kedarnath-tour-package'},{l:'How to Reach Kedarnath',h:'/blog/how-to-reach-kedarnath'},{l:'Kedarnath Weather',h:'/kedarnath-weather'},{l:'Gaurikund Guide',h:'/gaurikund'},{l:'Registration 2026',h:'/blog/kedarnath-registration-2026'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>

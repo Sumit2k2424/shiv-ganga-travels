@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════
 //  WINTER CHAR DHAM — the four winter seats (shishkalin gaddi sthal)
 //
-//  Powers: /winter-char-dham-yatra · /omkareshwar-temple-ukhimath ·
+//  Powers: /winter-char-dham-yatra · /ukhimath ·
 //          /joshimath-narsingh-temple · /mukhba-gangotri-winter-seat ·
 //          /kharsali-yamunotri-winter-seat · /kedarnath-doli-yatra
 //
@@ -33,7 +33,7 @@ export const SEASON = {
 
 export const SEATS = {
   ukhimath: {
-    slug: 'omkareshwar-temple-ukhimath',
+    slug: 'ukhimath',
     name: 'Omkareshwar Temple, Ukhimath',
     seatOf: 'Kedarnath',
     alsoSeatOf: 'Madmaheshwar',

@@ -112,7 +112,7 @@ export default function sitemap() {
     { url: `${b}/online-puja-booking`,                 p: 0.82, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-emergency-contacts`,  p: 0.78, cf: 'monthly' },
     { url: `${b}/char-dham-road-status`,               p: 0.80, cf: 'weekly'  },
-    { url: `${b}/gaurikund-guide`,                     p: 0.85, cf: 'monthly' },
+    { url: `${b}/gaurikund`,                     p: 0.85, cf: 'monthly' },
     { url: `${b}/guptkashi-guide`,                     p: 0.85, cf: 'monthly' },
     { url: `${b}/kedarnath-to-badrinath-distance`,     p: 0.85, cf: 'monthly' },
     // Distance and on-route logistics. Fixed factual answers — the format AI
@@ -243,7 +243,7 @@ export default function sitemap() {
   // because the competition for these queries is close to nonexistent.
   const winterSeats = [
     { url: `${b}/winter-char-dham-yatra`,              p: 0.90, cf: 'weekly'  },
-    { url: `${b}/omkareshwar-temple-ukhimath`,         p: 0.86, cf: 'monthly' },
+    { url: `${b}/ukhimath`,         p: 0.86, cf: 'monthly' },
     { url: `${b}/joshimath-narsingh-temple`,           p: 0.85, cf: 'monthly' },
     { url: `${b}/kedarnath-doli-yatra`,                p: 0.84, cf: 'monthly' },
     { url: `${b}/mukhba-gangotri-winter-seat`,         p: 0.83, cf: 'monthly' },
