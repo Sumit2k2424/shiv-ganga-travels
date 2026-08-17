@@ -14,11 +14,30 @@ const FOOT_CSS = `
   .eq-foot__h { color:#fff; font-size:0.625rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--rule-light-soft); display:flex; align-items:center; gap:10px; }
   .eq-foot__h::before { content:''; width:16px; height:1px; background:var(--gold); flex:none; }
   .eq-foot__list { list-style:none; display:grid; gap:9px; }
-  .eq-foot-link { color:rgba(255,255,255,0.6); font-size:0.82rem; text-decoration:none; transition:color .3s var(--ease-lux), padding-left .3s var(--ease-lux); }
-  .eq-foot-link:hover { color:#fff; padding-left:4px; }
-  .eq-foot-social { width:36px; height:36px; border-radius:100px; background:rgba(255,255,255,0.06); border:1px solid var(--rule-light-soft); color:rgba(255,255,255,0.78); display:grid; place-items:center; flex-shrink:0; transition:background .3s var(--ease-lux), color .3s var(--ease-lux); }
-  .eq-foot-social:hover { background:var(--gold); color:var(--ink); border-color:var(--gold); }
-  .eq-foot-cta { display:inline-flex; align-items:center; gap:7px; padding:9px 14px; border-radius:var(--ds-r-2); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-decoration:none; white-space:nowrap; }
+  /* translateX, not padding-left. The old rule animated a layout property on
+     every link in the footer's SEO backbone — each hover forced layout +
+     paint on the largest link set on the page. transform composites instead.
+     inline-block is required: transforms do not apply to inline elements. */
+  .eq-foot-link { display:inline-block; color:rgba(255,255,255,0.6); font-size:0.82rem; text-decoration:none; transition:color .3s var(--ease-lux), transform .3s var(--ease-lux); }
+  .eq-foot-social { width:36px; height:36px; border-radius:100px; background:rgba(255,255,255,0.06); border:1px solid var(--rule-light-soft); color:rgba(255,255,255,0.78); display:grid; place-items:center; flex-shrink:0; transition:background .3s var(--ease-lux), color .3s var(--ease-lux), transform .14s var(--ease-lux); }
+  .eq-foot-cta { display:inline-flex; align-items:center; gap:7px; padding:9px 14px; border-radius:var(--ds-r-2); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-decoration:none; white-space:nowrap; transition:transform .14s var(--ease-lux); }
+
+  /* Press feedback — the footer Call / WhatsApp pair had no pressed state at
+     all, on the surface a pilgrim reaches for last. */
+  .eq-foot-cta:active, .eq-foot-social:active { transform:scale(0.97); }
+
+  @media (hover: hover) and (pointer: fine) {
+    .eq-foot-link:hover { color:#fff; transform:translateX(4px); }
+    .eq-foot-social:hover { background:var(--gold); color:var(--ink); border-color:var(--gold); }
+    .eq-foot-cta:hover { transform:translateY(-1px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .eq-foot-link { transition:color .3s var(--ease-lux); }
+    .eq-foot-link:hover { transform:none; }
+    .eq-foot-cta:hover { transform:none; }
+    .eq-foot-cta:active, .eq-foot-social:active { transform:none; }
+  }
   .eq-foot__bottom { border-top:1px solid var(--rule-light-soft); max-width:var(--lux-max,1320px); margin:0 auto; padding:18px clamp(20px,4vw,40px); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
   .eq-foot__bottom span { font-size:0.72rem; color:rgba(255,255,255,0.4); }
 `;

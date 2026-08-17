@@ -45,32 +45,65 @@ const NAV_CSS = `
   .eq-wordmark__sub { font-size:9px; color:var(--teal-dark); letter-spacing:0.22em; text-transform:uppercase; margin-top:4px; font-weight:600; }
 
   .eq-navlink { font-size:0.72rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); background:none; border:0; cursor:pointer; padding:10px 13px; display:inline-flex; align-items:center; gap:5px; text-decoration:none; position:relative; font-family:var(--font); transition:color .35s var(--ease-lux); }
-  .eq-navlink:hover, .eq-navlink[aria-expanded="true"] { color:var(--ink); }
+  /* Open is a STATE, not a hover — it must resolve on touch too, so it stays
+     outside the (hover: hover) block below. */
+  .eq-navlink[aria-expanded="true"] { color:var(--ink); }
   .eq-navlink::after { content:''; position:absolute; left:13px; right:13px; bottom:4px; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease-lux); }
-  .eq-navlink:hover::after, .eq-navlink[aria-expanded="true"]::after { transform:scaleX(1); }
+  .eq-navlink[aria-expanded="true"]::after { transform:scaleX(1); }
   .eq-navlink:focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:1px; }
 
-  .eq-drop { position:absolute; top:calc(100% + 10px); left:-8px; background:#fff; border:1px solid var(--rule); border-radius:var(--ds-r-2); min-width:308px; box-shadow:var(--ds-elev-3); overflow:hidden; z-index:200; animation:eqDrop .22s var(--ease-lux); }
-  @keyframes eqDrop { from { opacity:0; transform:translateY(-6px);} to { opacity:1; transform:none;} }
+  /* Anchored to its trigger at the top-left, so it scales from there rather
+     than from its own centre. Transition + @starting-style instead of a
+     keyframe: toggling Packages→Cabs retargets mid-flight instead of
+     restarting from zero. 180ms sits in the dropdown band. */
+  .eq-drop { position:absolute; top:calc(100% + 10px); left:-8px; background:#fff; border:1px solid var(--rule); border-radius:var(--ds-r-2); min-width:308px; box-shadow:var(--ds-elev-3); overflow:hidden; z-index:200;
+    transform-origin:top left; opacity:1; transform:none;
+    transition:opacity .18s var(--ease-lux), transform .18s var(--ease-lux); }
+  @starting-style { .eq-drop { opacity:0; transform:translateY(-6px) scale(0.985); } }
   .eq-drop__h { padding:14px 18px 11px; border-bottom:1px solid var(--rule); }
   .eq-drop__i { display:flex; align-items:center; gap:13px; padding:12px 18px; text-decoration:none; border-bottom:1px solid var(--rule); transition:background .3s var(--ease-lux); }
   .eq-drop__i:last-child { border-bottom:0; }
-  .eq-drop__i:hover { background:var(--paper); }
   .eq-drop__t { font-size:0.85rem; font-weight:600; color:var(--ink); line-height:1.3; }
   .eq-drop__s { font-size:0.72rem; color:var(--ink-faint); margin-top:2px; }
 
-  .eq-phone { display:flex; align-items:center; gap:6px; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; color:var(--ink); text-decoration:none; padding:8px 10px; border-radius:1px; transition:color .3s var(--ease-lux); }
-  .eq-phone:hover { color:var(--gold-dark); }
-  .eq-wa { display:flex; align-items:center; gap:8px; background:#25D366; color:#fff; padding:11px 20px; border-radius:100px; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; flex-shrink:0; transition:background .3s var(--ease-lux); }
-  .eq-wa:hover { background:#1DA851; }
+  .eq-phone { display:flex; align-items:center; gap:6px; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; color:var(--ink); text-decoration:none; padding:8px 10px; border-radius:1px; transition:color .3s var(--ease-lux), transform .14s var(--ease-lux); }
+  .eq-wa { display:flex; align-items:center; gap:8px; background:#25D366; color:#fff; padding:11px 20px; border-radius:100px; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; flex-shrink:0; transition:background .3s var(--ease-lux), transform .14s var(--ease-lux); }
 
-  .eq-burger { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:var(--ds-r-2); border:1px solid var(--rule-strong); background:#fff; cursor:pointer; color:var(--ink); margin-left:4px; flex-shrink:0; transition:border-color .3s var(--ease-lux); }
-  .eq-burger:hover { border-color:var(--ink); }
+  .eq-burger { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:var(--ds-r-2); border:1px solid var(--rule-strong); background:#fff; cursor:pointer; color:var(--ink); margin-left:4px; flex-shrink:0; transition:border-color .3s var(--ease-lux), transform .14s var(--ease-lux); }
+
+  /* Press feedback — the system answering the tap. Fast on purpose. */
+  .eq-wa:active, .eq-phone:active, .eq-burger:active { transform:scale(0.97); }
+  /* Full-bleed rows flash instead of scaling — a 3% scale on a bordered
+     edge-to-edge row reads as the layout twitching, not as a press. */
+  .eq-drop__i:active, .eq-mob-link:active, .eq-mob-acc__h:active { background:var(--paper); }
+
+  /* Hover is gated: on touch, :hover latches after a tap and leaves the nav
+     link, CTA or row stuck in its hovered state. Matches the convention
+     luxury.css already uses for .lux-btn / .lux-link / .lux-facts__row. */
+  @media (hover: hover) and (pointer: fine) {
+    .eq-navlink:hover { color:var(--ink); }
+    .eq-navlink:hover::after { transform:scaleX(1); }
+    .eq-drop__i:hover { background:var(--paper); }
+    .eq-phone:hover { color:var(--gold-dark); }
+    .eq-wa:hover { background:#1DA851; }
+    .eq-burger:hover { border-color:var(--ink); }
+  }
 
   .eq-mobile { background:#fff; border-top:1px solid var(--rule); max-height:80vh; overflow-y:auto; }
-  .eq-mob-link { display:block; padding:15px 20px; font-size:0.85rem; letter-spacing:0.04em; color:var(--ink); border-bottom:1px solid var(--rule); text-decoration:none; }
+  .eq-mob-link { display:block; padding:15px 20px; font-size:0.85rem; letter-spacing:0.04em; color:var(--ink); border-bottom:1px solid var(--rule); text-decoration:none; transition:background .2s var(--ease-lux); }
   .eq-mob-acc { border-bottom:1px solid var(--rule); }
-  .eq-mob-acc__h { width:100%; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:none; border:none; cursor:pointer; font-family:var(--font); font-size:0.75rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink); }
+  .eq-mob-acc__h { width:100%; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:none; border:none; cursor:pointer; font-family:var(--font); font-size:0.75rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink); transition:background .2s var(--ease-lux); }
+
+  /* This scoped block never participated in the site's reduced-motion
+     contract (luxury.css §"Reduced-motion / no-JS"). Movement goes; the
+     colour and background feedback that aids comprehension stays. */
+  @media (prefers-reduced-motion: reduce) {
+    .eq-drop { transition:none; }
+    @starting-style { .eq-drop { opacity:1; transform:none; } }
+    .eq-navlink::after { transition:none; }
+    .eq-wa, .eq-phone, .eq-burger { transition:background .3s var(--ease-lux), color .3s var(--ease-lux), border-color .3s var(--ease-lux); }
+    .eq-wa:active, .eq-phone:active, .eq-burger:active { transform:none; }
+  }
 `;
 
 function MobileAccordion({ label, children }) {

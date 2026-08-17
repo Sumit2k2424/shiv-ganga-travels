@@ -188,7 +188,11 @@ export default function HeroSection() {
         /* Cinematic push-in: 100% -> 104.5% over 40s, linear, held. So slow it
            reads as stillness — "quietly standing in the mountains". */
         @keyframes heroPush { from { transform: scale(1); } to { transform: scale(1.045); } }
-        .hero-photo { animation: heroPush 40s linear both; transform-origin: 50% 46%; will-change: transform; }
+        /* No will-change here. A running transform animation is promoted to
+           its own compositor layer automatically; the hint only mattered for
+           the 40s the push-in lasts, and because the animation is both-filled
+           it was pinning the layer in memory for the whole session afterwards. */
+        .hero-photo { animation: heroPush 40s linear both; transform-origin: 50% 46%; }
 
         /* Sequenced reveal: each line composed one after another, not all at once.
            Blur-to-focus, not just fade — the same "coming into clarity" read

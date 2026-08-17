@@ -349,11 +349,16 @@
   cursor: pointer;
   text-decoration: none;
   transition: background 0.4s var(--ease-lux), color 0.4s var(--ease-lux),
-              border-color 0.4s var(--ease-lux);
+              border-color 0.4s var(--ease-lux), transform 0.14s var(--ease-lux);
   line-height: 1;
   min-height: 48px;
   white-space: nowrap;
 }
+/* Press feedback. Deliberately fast (140ms) while hover stays at the slow
+   0.4s editorial register: hover is mood, press is the system answering the
+   user, and the answer has to be immediate. Lives outside the (hover: hover)
+   block below so touch — where most pilgrims book — gets it too. */
+.lux-btn:active { transform: scale(0.97); }
 .lux-btn--gold { background: var(--gold); color: #10203C; border-color: var(--gold); }
 .lux-btn--gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
 .lux-btn--ink { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -2505,7 +2510,7 @@ html.lenis, html.lenis body { height: auto; }
   .lux-btn {
     transition: background 0.4s var(--ease-lux), color 0.4s var(--ease-lux),
                 border-color 0.4s var(--ease-lux), box-shadow 0.55s var(--ease-lux),
-                transform 0.45s var(--ease-glide);
+                transform 0.14s var(--ease-lux);
   }
   .lux-btn:hover { box-shadow: 0 14px 34px -14px rgba(11, 27, 56, 0.38); }
   .lux-btn:hover::before { animation: lux-sheen 0.9s var(--ease-glide); }
@@ -2569,6 +2574,7 @@ html.lenis, html.lenis body { height: auto; }
   [data-lux-reveal] > .lux-display { filter: none !important; }
   [data-lux-reveal] .lux-facts__row { opacity: 1 !important; transform: none !important; }
   .lux-btn::before { display: none; }
+  .lux-btn:active { transform: none; }
   .lux-frame--zoom::after { display: none; }
 }
 
