@@ -61,7 +61,7 @@ const stays = [
     type: 'Helicopter pilgrims'
   },
   {
-    loc: 'Rudraprayag (895m)',
+    loc: 'Rudraprayag (690m)',
     desc: 'Town at the confluence of Alaknanda and Mandakini rivers, 76km from Gaurikund. Much lower altitude — warmer, more comfortable. Good range of hotels including GMVN. Ideal for elderly pilgrims or those with altitude concerns.',
     budget: '₹1,500–₹4,000 per room', comfort: '⭐⭐⭐–⭐⭐⭐⭐', rec: 'Used in our extended Senior Citizen packages as a buffer night.',
     type: 'Senior / Comfort'
