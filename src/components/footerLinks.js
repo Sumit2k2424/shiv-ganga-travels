@@ -24,6 +24,7 @@ export const COLS = [
     {l:'Gangotri Yatra',             h:'/gangotri-yatra'},
     {l:'Yamunotri Yatra',            h:'/yamunotri-yatra'},
     {l:'Do Dham Yatra',              h:'/do-dham-yatra'},
+    {l:'Teen Dham Yatra',            h:'/teen-dham-yatra'},
     {l:'Panch Kedar Yatra',          h:'/panch-kedar-yatra'},
     {l:'Panch Badri Yatra',          h:'/panch-badri-yatra'},
     {l:'Chopta & Tungnath',          h:'/chopta-tungnath'},

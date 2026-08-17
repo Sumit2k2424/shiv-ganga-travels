@@ -145,7 +145,7 @@ export default function ComparisonPage() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h])=>(
+            {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['Teen Dham Packages','/teen-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

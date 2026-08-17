@@ -87,6 +87,7 @@ export default function sitemap() {
     { url: `${b}/packages`,                            p: 0.92, cf: 'weekly'  },
     { url: `${b}/char-dham-helicopter`,                p: 0.90, cf: 'weekly'  },
     { url: `${b}/do-dham-yatra`,                       p: 0.88, cf: 'weekly'  },
+    { url: `${b}/teen-dham-yatra`,                     p: 0.88, cf: 'weekly'  },
     { url: `${b}/gangotri-yatra`,                      p: 0.86, cf: 'monthly' },
     { url: `${b}/yamunotri-yatra`,                     p: 0.86, cf: 'monthly' },
     { url: `${b}/panch-kedar-yatra`,                   p: 0.84, cf: 'monthly' },

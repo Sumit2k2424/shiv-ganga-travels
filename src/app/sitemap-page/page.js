@@ -17,6 +17,7 @@ const sections = [
       { label: 'Char Dham Yatra 2026', href: '/char-dham-yatra' },
       { label: 'Char Dham by Helicopter', href: '/char-dham-helicopter' },
       { label: 'Do Dham Yatra', href: '/do-dham-yatra' },
+      { label: 'Teen Dham Yatra', href: '/teen-dham-yatra' },
       { label: 'Kedarnath Yatra', href: '/kedarnath-yatra' },
       { label: 'Kedarnath Tour Package 3N/4D', href: '/kedarnath-tour-package' },
       { label: 'Badrinath Tour Package 2N/3D', href: '/badrinath-tour-package' },
