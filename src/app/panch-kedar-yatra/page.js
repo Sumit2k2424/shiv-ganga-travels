@@ -81,7 +81,13 @@ export default function Page() {
             <div style={{fontSize:'13px',color:'var(--text-mid)'}}>World's highest Shiva temple. 3.5km trek from Chopta. Stunning 360° Himalayan views.</div>
           </div>
           <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
-            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>3️⃣ Rudranath (2,286m) — Shiva&apos;s Face</div>
+            {/* Rudranath is 3,600 m (Wikipedia, en.wikipedia.org/wiki/Rudranath — 11,800 ft,
+                Chamoli district). This card read 2,286 m until Aug 2026, which is Mukteshwar's
+                altitude in packages.js and almost certainly where it was copied from. It matters:
+                Rudranath is the hardest of the five, and a sub-2,300 m figure invites pilgrims to
+                under-plan fitness and acclimatisation. Same figure also corrected in
+                src/data/botConfig.js and src/data/packages.js — keep all four in step. */}
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>3️⃣ Rudranath (3,600m) — Shiva&apos;s Face</div>
             <div style={{fontSize:'13px',color:'var(--text-mid)'}}>Most remote of the five. 20km forest trek. Ancient temple with dramatic setting.</div>
           </div>
           <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
