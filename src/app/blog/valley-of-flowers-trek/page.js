@@ -79,7 +79,7 @@ export default function ValleyOfFlowersTrek() {
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid hsl(var(--border))', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
         <strong>Haridwar</strong> → Joshimath (300km, overnight) → Govindghat → <strong>Ghangaria base camp</strong> (13km trek) → <strong>Valley of Flowers</strong> (4km day trek) → <strong>Hemkund Sahib</strong> (6km day trek) → Govindghat → <strong>Badrinath</strong> → Haridwar
       </div>
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The core trek from Govindghat to Ghangaria (base camp) is <strong>13km</strong> and takes 4–6 hours. From Ghangaria, the Valley of Flowers is a 4km one-way day trek, and Hemkund Sahib is a steep 6km one-way day trek. Most people do both on separate days.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The core trek from <Link href="/govindghat" style={{ color:'var(--teal)', fontWeight:600 }}>Govindghat</Link> to Ghangaria (base camp) is <strong>13km</strong> and takes 4–6 hours. From Ghangaria, the Valley of Flowers is a 4km one-way day trek, and Hemkund Sahib is a steep 6km one-way day trek. Most people do both on separate days.</p>
 
       <h2 id="flowers" style={h2}>What Flowers Will You See?</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The valley contains over <strong>500 species of wildflowers</strong>, many of them Himalayan endemics found nowhere else in the world. Some highlights:</p>

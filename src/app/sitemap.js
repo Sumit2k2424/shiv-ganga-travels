@@ -114,6 +114,15 @@ export default function sitemap() {
     { url: `${b}/char-dham-road-status`,               p: 0.80, cf: 'weekly'  },
     { url: `${b}/gaurikund`,                     p: 0.85, cf: 'monthly' },
     { url: `${b}/guptkashi-guide`,                     p: 0.85, cf: 'monthly' },
+    // Competitor-gap entity pages (Aug 2026). Each targets a place or rate card
+    // that every page-1 competitor has a dedicated page for and we did not —
+    // these entities were previously only *mentioned* inside other routes.
+    { url: `${b}/gaumukh`,                             p: 0.84, cf: 'monthly' },
+    { url: `${b}/janki-chatti`,                        p: 0.85, cf: 'monthly' },
+    { url: `${b}/govindghat`,                          p: 0.84, cf: 'monthly' },
+    { url: `${b}/phata`,                               p: 0.84, cf: 'monthly' },
+    { url: `${b}/madhyamaheshwar-temple`,              p: 0.82, cf: 'monthly' },
+    { url: `${b}/yamunotri-pony-palki-rates`,          p: 0.86, cf: 'monthly' },
     { url: `${b}/kedarnath-to-badrinath-distance`,     p: 0.85, cf: 'monthly' },
     // Distance and on-route logistics. Fixed factual answers — the format AI
     // engines cite most readily, and the cheapest pages on the site to keep true.

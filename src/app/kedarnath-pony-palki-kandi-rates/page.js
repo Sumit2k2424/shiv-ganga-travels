@@ -213,7 +213,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · <Link href="/kedarnath-weather" style={{ color: 'var(--teal)' }}>Kedarnath weather</Link>
+            Related: <Link href="/yamunotri-pony-palki-rates" style={{ color: 'var(--teal)' }}>Yamunotri pony &amp; palki rates</Link> · <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · <Link href="/kedarnath-weather" style={{ color: 'var(--teal)' }}>Kedarnath weather</Link>
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

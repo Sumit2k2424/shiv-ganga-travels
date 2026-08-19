@@ -85,8 +85,8 @@ export default function Page() {
             <div style={{fontSize:'13px',color:'var(--text-mid)'}}>Most remote of the five. 20km forest trek. Ancient temple with dramatic setting.</div>
           </div>
           <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
-            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>4️⃣ Madmaheshwar (3,497m) — Shiva&apos;s Navel</div>
-            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>22km trek through alpine meadows. Located between Kedarnath and Rudranath valleys.</div>
+            <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>4️⃣ <Link href="/madhyamaheshwar-temple" style={{color:'var(--teal)',textDecoration:'none'}}>Madmaheshwar (3,497m)</Link> — Shiva&apos;s Navel</div>
+            <div style={{fontSize:'13px',color:'var(--text-mid)'}}>Trek through alpine meadows from Ransi. Located between Kedarnath and Rudranath valleys. <Link href="/madhyamaheshwar-temple" style={{color:'var(--teal)'}}>Full trek guide →</Link></div>
           </div>
           <div style={{background:'var(--navy-light)',borderRadius:'10px',padding:'14px 16px',border:'1px solid rgba(15,43,91,0.1)'}}>
             <div style={{fontWeight:700,fontSize:'14px',color:'var(--navy)',marginBottom:'4px'}}>5️⃣ Kalpeshwar (2,134m) — Shiva&apos;s Hair</div>

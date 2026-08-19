@@ -75,7 +75,7 @@ export default function Page() {
         <AnswerBox>
           Yamunotri Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in
           Uttarkashi district and is the source of the Yamuna, the first of the four dhams in the
-          traditional circuit. The road ends at Janki Chatti; the temple is a 6 km trek above it,
+          traditional circuit. The road ends at <Link href="/janki-chatti" style={{ color:'var(--teal)', fontWeight:600 }}>Janki Chatti</Link>; the temple is a 6 km trek above it,
           with pony, palki and porter available. Open late April to early November.
         </AnswerBox>
 

@@ -299,6 +299,7 @@ export default function HemkundSahibYatra() {
         <h2 style={h2} id="related">Related routes</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '0 0 8px' }}>
           {[
+            ['Govindghat base guide', '/govindghat'],
             ['Valley of Flowers trek', '/blog/valley-of-flowers-trek'],
             ['Badrinath yatra', '/badrinath-yatra'],
             ['How to reach Badrinath', '/how-to-reach-badrinath'],
