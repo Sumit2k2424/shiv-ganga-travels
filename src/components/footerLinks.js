@@ -126,6 +126,7 @@ export const COLS = [
   ]},
   { heading:'Company', links:[
     {l:'About Us',                   h:'/about'},
+    {l:'Press & Media',              h:'/press'},
     {l:'Contact Us',                 h:'/contact'},
     {l:'All Packages',               h:'/packages'},
     {l:'Online Puja Booking',        h:'/online-puja-booking'},

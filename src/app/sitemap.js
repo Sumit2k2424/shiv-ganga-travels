@@ -4,6 +4,7 @@ import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations } from '@/data/cabs';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
+import { getPublishedReleases } from '@/data/press';
 
 // ── Blog priority hints. Any blog not listed falls back to DEFAULT_BLOG_P. ──
 const BLOG_PRIORITY = {
@@ -173,6 +174,15 @@ export default function sitemap() {
     ...getPublishedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
   ];
 
+  // Newsroom. Releases come from the same publishability gate that drives
+  // generateStaticParams, so an unapproved draft can never reach the sitemap.
+  const press = [
+    { url: `${b}/press`, p: 0.75, cf: 'monthly' },
+    ...getPublishedReleases().map(r => ({
+      url: `${b}/press/${r.slug}`, p: 0.70, cf: 'yearly',
+    })),
+  ];
+
   const blog = [
     { url: `${b}/blog`, p: 0.82, cf: 'weekly' },
     ...discoverBlogSlugs().map(slug => ({
@@ -261,7 +271,7 @@ export default function sitemap() {
 
   const listed = [
     ...core, ...guides, ...weatherPages, ...howToReach,
-    ...hotels, ...tools, ...cabs, ...blog, ...cities,
+    ...hotels, ...tools, ...cabs, ...blog, ...press, ...cities,
     ...authority, ...categoryPages, ...packagePages, ...languagePages,
     ...localHaridwar, ...winterSeats,
   ];
