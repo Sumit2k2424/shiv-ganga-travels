@@ -1010,13 +1010,18 @@ export const PACKAGES = [
   // ─────────────────────────────────────────────────────────────
 
   {
-    slug     : 'panch-kedar-yatra-8n-9d-haridwar',
+    slug     : 'panch-kedar-yatra-9n-10d-haridwar',
     photo    : 'https://images.pexels.com/photos/34376161/pexels-photo-34376161.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
-    name     : 'Panch Kedar Yatra Package — 8N/9D',
+    name     : 'Panch Kedar Yatra Package — 9N/10D',
     subtitle : 'Ex-Haridwar | All 5 Shiva Temples of Garhwal',
-    seoHeading: 'Panch Kedar Yatra Package 2026 — 8N/9D from Haridwar',
-    duration : { nights:8, days:9 },
+    seoHeading: 'Panch Kedar Yatra Package 2026 — 9N/10D from Haridwar',
+    // Was 8N/9D until Aug 2026. Rudranath is a 20 km trek each way from Sagar,
+    // not the 5 km the old day 2 claimed, so it needs a night camped at the
+    // temple exactly as Madmaheshwar does. Squeezing that into 9 days made day 3
+    // a 20 km descent plus a 70 km drive; the extra night removes that. Old slug
+    // 301s from redirects.js.
+    duration : { nights:9, days:10 },
     groupSize: '8–30 pilgrims',
     difficulty:'Moderate–Challenging',
     season   : 'May – June & Sept – Oct 2026',
@@ -1039,20 +1044,21 @@ export const PACKAGES = [
     itinerary:[
       {day:1, title:'Haridwar → Kalpeshwar (315 km | 9 hrs)', desc:'Early morning departure. Drive via Rishikesh, Devprayag, Srinagar, Rudraprayag, Chamoli to Urgam Valley. Visit Kalpeshwar temple (2,134m) — the only Panch Kedar open all year, dedicated to Shiva\'s hair. Short 2 km forest walk. Overnight Urgam/Helang.'},
       {day:2, title:'Kalpeshwar → Sagar → Rudranath (110 km + 20 km trek)', desc:'Drive to Sagar village near Gopeshwar. Begin the 20 km trek through oak and rhododendron forest and the Panar meadows to Rudranath (3,600m) — Shiva\'s face, and the most remote of the five. This is the hardest walk of the tour. Camp at Rudranath.'},
-      {day:3, title:'Rudranath → Sagar → Chopta (20 km trek + 70 km)', desc:'Dawn puja at Rudranath. Return trek 20 km to Sagar village — allow 6–7 hours on the descent. Drive to Chopta (2,608m), base for Tungnath. A long day, and deliberately so: it buys the extra night at Rudranath rather than pretending the trek is a day trip. Overnight Chopta.'},
-      {day:4, title:'Chopta → Tungnath → Chandrashila', desc:'4 AM start. 4 km trek to Tungnath (3,680m) — highest Shiva temple in the world, third of Panch Kedar. Continue 1.5 km to Chandrashila summit (4,000m) — stunning 360° Himalayan panorama: Nanda Devi, Trishul, Chaukhamba, Kedarnath peak. Descend. Overnight Chopta.'},
-      {day:5, title:'Chopta → Madmaheshwar base → Ukhimath (80 km + 22 km trek over 2 days)', desc:'Drive to Ransi village. Begin 22 km trek via Bantoli, Nananasa Banjir to Madmaheshwar (3,497m) — Shiva\'s navel. Camp at Madmaheshwar.'},
-      {day:6, title:'Madmaheshwar → Ransi → Guptkashi', desc:'Morning puja at Madmaheshwar. Return trek 22 km to Ransi. Drive to Guptkashi. Overnight.'},
-      {day:7, title:'Guptkashi → Gaurikund → Kedarnath (16 km trek)', desc:'3 AM departure. Gaurikund hot spring dip. 16 km trek to Kedarnath (3,583m) — hump of Nandi Shiva, first of Panch Kedar and 12th Jyotirlinga. Evening darshan. Overnight Kedarnath.'},
-      {day:8, title:'Kedarnath → Gaurikund → Haridwar', desc:'4 AM Brahma Muhurta puja at Kedarnath. Trek descent. Drive via Rudraprayag, Devprayag, Rishikesh to Haridwar. Ganga aarti.'},
-      {day:9, title:'Departure from Haridwar', desc:'After breakfast, tour ends. Transfer to railway station.'},
+      {day:3, title:'Rudranath → Sagar → Gopeshwar (20 km trek)', desc:'Dawn puja at Rudranath, which is the reason to have slept up here. Return trek 20 km to Sagar village — allow 6–7 hours on the descent. Short drive to Gopeshwar. Overnight Gopeshwar.'},
+      {day:4, title:'Gopeshwar → Chopta (70 km | 2.5 hrs)', desc:'An easy day on purpose, after two hard ones. Drive through the Mandal valley to Chopta (2,608m) — base for Tungnath. Check in to camp. Evening forest walk in the rhododendron. Overnight Chopta.'},
+      {day:5, title:'Chopta → Tungnath → Chandrashila', desc:'4 AM start. 4 km trek to Tungnath (3,680m) — highest Shiva temple in the world, third of Panch Kedar. Continue 1.5 km to Chandrashila summit (4,000m) — stunning 360° Himalayan panorama: Nanda Devi, Trishul, Chaukhamba, Kedarnath peak. Descend. Overnight Chopta.'},
+      {day:6, title:'Chopta → Ukhimath → Ransi → Madmaheshwar (80 km + 22 km trek)', desc:'Drive via Ukhimath, winter seat of Kedarnath and Madmaheshwar, to Ransi village. Begin the 22 km trek via Bantoli to Madmaheshwar (3,497m) — Shiva\'s navel. Camp at Madmaheshwar.'},
+      {day:7, title:'Madmaheshwar → Ransi → Guptkashi', desc:'Morning puja at Madmaheshwar. Return trek 22 km to Ransi. Drive to Guptkashi. Overnight.'},
+      {day:8, title:'Guptkashi → Gaurikund → Kedarnath (16 km trek)', desc:'3 AM departure. Gaurikund hot spring dip. 16 km trek to Kedarnath (3,583m) — hump of Nandi Shiva, first of Panch Kedar and 12th Jyotirlinga. Evening darshan. Overnight Kedarnath.'},
+      {day:9, title:'Kedarnath → Gaurikund → Haridwar', desc:'4 AM Brahma Muhurta puja at Kedarnath. Trek descent. Drive via Rudraprayag, Devprayag, Rishikesh to Haridwar. Ganga aarti.'},
+      {day:10, title:'Departure from Haridwar', desc:'After breakfast, tour ends. Transfer to railway station.'},
     ],
     featured : true,
     badge    : 'Rare Package',
     images   : ['kedarnath'],
     tags     : ['panch kedar','kedarnath','tungnath','rudranath','madmaheshwar','kalpeshwar','trek','shiva'],
-    metaTitle: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹16,500 | 8N/9D',
-    metaDesc : 'Panch Kedar Yatra Package 2026 — 8N/9D from ₹16,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
+    metaTitle: 'Panch Kedar Yatra Package 2026 | Price Starts at ₹16,500 | 9N/10D',
+    metaDesc : 'Panch Kedar Yatra Package 2026 — 9N/10D from ₹16,500/person. Trusted operator, 15+ yrs experience, instant confirmation.',
     faqs:[
       {q:'What are the 5 temples of Panch Kedar?', a:'The Panch Kedar are: (1) Kedarnath — hump of Nandi, (2) Tungnath — arms, (3) Rudranath — face, (4) Madmaheshwar — navel, (5) Kalpeshwar — hair. All are in Garhwal Himalayas, Uttarakhand.'},
       {q:'Is Panch Kedar more physically demanding than Char Dham?', a:'Considerably. All 5 Panch Kedar temples require trekking — 2 km to Kalpeshwar, 4 km to Tungnath, 16 km to Kedarnath, 20 km each way to Rudranath and 22 km each way to Madmaheshwar. Rudranath and Madmaheshwar are two-day treks with a night camped near the temple; they are not day trips, and any itinerary that shows them as one day is understating the walk. Good fitness and some prior trekking experience are genuinely needed for this package.'},

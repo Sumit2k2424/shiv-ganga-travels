@@ -209,7 +209,7 @@ export const CUSTOM_QA = [
   // ── 29. PANCH KEDAR / SPECIAL TOURS ─────────────────────────
   {
     keywords: ['panch kedar','5 kedar','tungnath','rudranath','madmaheshwar','kalpeshwar','five kedar'],
-    answer: `**Panch Kedar Yatra — All 5 Shiva Temples:**\n\n💰 Package: **₹16,500/person** (8N/9D)\n\n**The 5 Panch Kedar temples:**\n1️⃣ **Kedarnath** (3,583m) — Shiva’s hump\n2️⃣ **Tungnath** (3,680m) — Shiva’s arms · World's highest Shiva temple!\n3️⃣ **Rudranath** (3,600m) — Shiva’s face\n4️⃣ **Madmaheshwar** (3,497m) — Shiva’s navel\n5️⃣ **Kalpeshwar** (2,134m) — Shiva’s hair · Open all year!\n\n🥾 **Trekking required** at all 5 temples (2–22 km)\n⚠️ **Moderate–challenging** fitness level needed\n📅 **Season:** May–June & September–October only\n\nThis is our most adventurous pilgrimage! Recommended for fit pilgrims who love trekking. Legendary 8-day journey. 🙏`,
+    answer: `**Panch Kedar Yatra — All 5 Shiva Temples:**\n\n💰 Package: **₹16,500/person** (9N/10D)\n\n**The 5 Panch Kedar temples:**\n1️⃣ **Kedarnath** (3,583m) — Shiva’s hump\n2️⃣ **Tungnath** (3,680m) — Shiva’s arms · World's highest Shiva temple!\n3️⃣ **Rudranath** (3,600m) — Shiva’s face\n4️⃣ **Madmaheshwar** (3,497m) — Shiva’s navel\n5️⃣ **Kalpeshwar** (2,134m) — Shiva’s hair · Open all year!\n\n🥾 **Trekking required** at all 5 temples (2–22 km)\n⚠️ **Moderate–challenging** fitness level needed\n🏕️ **Rudranath (20 km) and Madmaheshwar (22 km) are two-day treks** — you camp a night near each temple\n📅 **Season:** May–June & September–October only\n\nThis is our most adventurous pilgrimage! Recommended for fit pilgrims who love trekking. Legendary 10-day journey. 🙏`,
   },
 
   // ── 30. DIFFERENCE BETWEEN CHAR DHAM & DO DHAM ──────────────

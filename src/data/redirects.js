@@ -41,6 +41,10 @@ const REDIRECTS = [
   // Fix internal 404s found by Screaming Frog
   { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
   { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },
+  // Panch Kedar went 8N/9D → 9N/10D in Aug 2026 because Rudranath is a 20 km
+  // trek each way, not the 5 km the old itinerary claimed, and needs its own
+  // night camped at the temple. The duration is in the slug, so the URL moved.
+  { source: '/packages/panch-kedar-yatra-8n-9d-haridwar',       destination: '/packages/panch-kedar-yatra-9n-10d-haridwar',      permanent: true },
   { source: '/how-to-reach-kedarnath',                           destination: '/blog/how-to-reach-kedarnath',                    permanent: true },
   { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
   // Redirect blog Badrinath guide to new proper landing page

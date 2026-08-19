@@ -4,14 +4,14 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 
 export const metadata = {
   title: { absolute: `Panch Kedar Yatra Package ${SITE.season} | Price Starts at ₹16,500 | All 5 Shiva Temples` },
-  description: `Panch Kedar Yatra ${SITE.season} — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 8N/9D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.`,
+  description: `Panch Kedar Yatra ${SITE.season} — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 9N/10D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.`,
   keywords: [`panch kedar yatra, panch kedar yatra ${SITE.season}, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek`],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
-  openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
+  openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
   twitter: {
     card: 'summary_large_image',
     title: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`,
-    description: `Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 8N/9D.`,
+    description: `Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`,
     images: [{ url: '/opengraph-image', alt: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Pa | Shiv Ganga Travels` }],
   },
 };
@@ -56,7 +56,7 @@ export default function Page() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Kedarnath · Tungnath · Rudranath · Madmaheshwar · Kalpeshwar · 8N/9D · ₹16,500</p>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Kedarnath · Tungnath · Rudranath · Madmaheshwar · Kalpeshwar · 9N/10D · ₹16,500</p>
         </div>
       </section>
 
@@ -102,9 +102,9 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href={`/packages/panch-kedar-yatra-8n-9d-haridwar`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
+          <Link href={`/packages/panch-kedar-yatra-9n-10d-haridwar`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
-              <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 8N/9D Package →</div>
+              <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 9N/10D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
             </div>
             <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹16,500</div>
