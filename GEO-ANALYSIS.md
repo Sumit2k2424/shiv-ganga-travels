@@ -47,7 +47,10 @@ Present at `/llms.txt`, 13,109 bytes, updated July 2026. Contains legal identity
 
 Per-page inventory shows `Organization`, `Person` (founder), `FAQPage` (109 of 158 pages), `Review`, `Rating`, `Offer`, `Place`, `City`, `BreadcrumbList`, `ImageObject`, `SpeakableSpecification`.
 
-Organization `sameAs` links six external profiles: Google Maps, Instagram, JustDial, TripAdvisor, WhatsApp, and the canonical site.
+Organization `sameAs` links Google Maps (place + short link), TripAdvisor, WhatsApp, the canonical
+site, and every verified account in `src/data/social.js` (Instagram, Facebook, YouTube, LinkedIn).
+JustDial was removed 2026-08-18 — the listing it pointed at is a different Haridwar business of the
+same name, not ours. We have no JustDial listing of our own yet.
 
 ## 5. Brand mention analysis — THE REAL GAP
 
@@ -60,7 +63,8 @@ Ahrefs' Dec 2025 study of 75,000 brands found brand mentions correlate roughly *
 | LinkedIn | **company page live** | Moderate; anchors the business entity |
 | Wikipedia / Wikidata | absent | 47.9% of ChatGPT citations |
 | Instagram / Facebook | present | Weak signal for LLMs |
-| TripAdvisor / JustDial | present | Good local proof, weak for LLMs |
+| TripAdvisor | present (1 review, no contact block) | Good local proof, weak for LLMs |
+| JustDial | **absent** — name held by another Haridwar business | India's most-searched local directory |
 
 The accounts existing is the precondition, not the win. **The signal is mentions
 and content volume, not profile existence** — an empty YouTube channel

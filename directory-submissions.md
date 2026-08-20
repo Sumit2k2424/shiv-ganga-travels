@@ -9,8 +9,8 @@
 **Business Name:** Shiv Ganga Travels
 **Category:** Tour Operator | Travel Agency | Pilgrimage Tour Operator
 **Tagline:** Haridwar's Trusted Char Dham Yatra Specialist Since 2010
-**Phone:** +91-7017082807
-**WhatsApp:** +91-7017082807
+**Phone:** +91-7817996730
+**WhatsApp:** +91-7817996730
 **Email:** support@shivgangatravels.com
 **Website:** https://www.shivgangatravels.com
 **Address:** Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — 249410
@@ -26,13 +26,13 @@ Shiv Ganga Travels is a Uttarakhand Tourism Board registered Char Dham Yatra ope
 **Long Description (200 words):**
 Shiv Ganga Travels is Haridwar's most trusted Char Dham Yatra operator, serving pilgrims since 2010 with over 50,000 successful yatraas. We are a Uttarakhand Tourism Board registered, direct tour operator — not an agent or aggregator. Every package is all-inclusive with zero commission.
 
-We offer: Char Dham Yatra packages (9N/10D from ₹19,500), Do Dham Yatra (Kedarnath-Badrinath, Yamunotri-Gangotri), Single Dham packages for Kedarnath, Badrinath, Yamunotri and Gangotri, Helicopter Char Dham packages (5N/6D from ₹85,000), Senior Citizen Special packages with medical attendant and pony/palki included, and Uttarakhand tour packages covering Mussoorie, Nainital, Rishikesh, Valley of Flowers, Auli skiing, Jim Corbett, and more.
+We offer: Char Dham Yatra packages (9N/10D from ₹13,900), Do Dham Yatra (Kedarnath-Badrinath, Yamunotri-Gangotri), Single Dham packages for Kedarnath, Badrinath, Yamunotri and Gangotri, Helicopter Char Dham packages (5N/6D from ₹2,30,000), Senior Citizen Special packages with medical attendant and pony/palki included, and Uttarakhand tour packages covering Mussoorie, Nainital, Rishikesh, Valley of Flowers, Auli skiing, Jim Corbett, and more.
 
 All packages include: AC private vehicle, hotel accommodation (twin sharing), daily vegetarian meals, experienced Garhwali guide, biometric registration assistance, oxygen cylinder, VIP darshan arrangements, and pickup/drop at Haridwar railway station.
 
 2026 Char Dham season is open: Yamunotri & Gangotri from April 19, Kedarnath from April 22, Badrinath from April 23. Closing November 2026.
 
-Contact: +91-7017082807 (call/WhatsApp) | support@shivgangatravels.com | shivgangatravels.com
+Contact: +91-7817996730 (call/WhatsApp) | support@shivgangatravels.com | shivgangatravels.com
 
 **Services:**
 - Char Dham Yatra Package
@@ -46,6 +46,28 @@ Contact: +91-7017082807 (call/WhatsApp) | support@shivgangatravels.com | shivgan
 - Rishikesh Adventure Tours
 
 **Keywords:** Char Dham Yatra, Kedarnath Yatra, Badrinath Yatra, Char Dham package Haridwar, pilgrimage tour operator Haridwar, Uttarakhand tour packages
+
+**PRICE SOURCE OF TRUTH — read before pasting any figure.**
+Every ₹ figure below is re-derived from `src/data/packages.js` (`price.discounted`)
+as of 2026-08-18, after the August 2026 25% cut. Prices in this file were stale
+until then — it claimed "from ₹19,500" and "helicopter from ₹85,000"; the real
+numbers are ₹13,900 and ₹2,30,000. Never quote from memory or from an older copy
+of this file. Current anchors:
+
+  Char Dham 9N/10D ex-Haridwar ........ ₹13,900   (was ₹24,000)
+  Char Dham 11N/12D deluxe ............ ₹30,000   (was ₹50,000)
+  Char Dham ex-Delhi 10N/11D .......... ₹17,200   (was ₹28,000)
+  Char Dham senior citizen 12N/13D .... ₹21,000   (was ₹32,000)
+  Char Dham helicopter 5N/6D ex-DDN ... ₹2,30,000 (no discount)
+  Do Dham Kedarnath+Badrinath 5N/6D ... ₹8,200    (was ₹18,000)
+  Do Dham Yamunotri+Gangotri 4N/5D .... ₹7,100    (was ₹11,500)
+  Kedarnath 3N/4D ..................... ₹5,250    (was ₹8,500)
+  Badrinath 2N/3D ..................... ₹4,500    (was ₹8,000)
+  Yamunotri 2N/3D ..................... ₹4,500    (was ₹7,500)
+  Gangotri 2N/3D ...................... ₹4,250    (was ₹7,000)
+
+ALSO STALE OFF-SITE: the TripAdvisor listing description currently published
+says "from ₹19,500 per person". Fix it in the same session as the contact block.
 
 ---
 
@@ -78,11 +100,39 @@ Impact: #1 ranking factor for local search "char dham yatra haridwar"
 
 ### TIER 2 — Travel Directories (High Traffic)
 
-**5. TripAdvisor**
-URL: https://www.tripadvisor.in/Owners
-Action: Claim/create business listing
-Category: Tour Operators > Haridwar
-Impact: DA 93 — huge authority backlink
+**5. TripAdvisor** — LISTING EXISTS, CONTACT BLOCK EMPTY (highest-value open item)
+Listing: https://www.tripadvisor.in/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html
+Owner login: https://www.tripadvisor.in/Owners
+Impact: DA 93. Already ranked #39 of 96 Tours & Activities in Haridwar.
+
+State verified 2026-08-18: description is correct and complete; hours show
+7:00 AM - 9:00 PM; 1 review (5.0), owner-replied. But the address renders as
+bare "Haridwar, India" and the Contact block is EMPTY — no phone, no website,
+no email. A DA-93 citation with no NAP is worth almost nothing for local
+ranking, and a bare "Haridwar" actively feeds the name collision (see below).
+
+Action: sign in as owner, open the listing's location/contact fields, and set
+exactly these values. If the owner account is unavailable, the public fallback
+is the "Improve this listing" link on the listing page itself (goes through
+TripAdvisor moderation, slower).
+
+  Business name  : Shiv Ganga Travels
+  Street address : Saptrishi Road, Near Shantikunj Gate No. 1
+  Locality       : Bhupatwala, Haridwar
+  State          : Uttarakhand
+  Postcode       : 249410
+  Country        : India
+  Phone          : +91 7817996730
+  Email          : support@shivgangatravels.com
+  Website        : https://www.shivgangatravels.com
+
+Do NOT enter a bare "Haridwar" address. At least four unrelated Indian
+businesses trade as "Shiv Ganga Travels" — including a Haridwar bus operator on
+JustDial at Niranjani Akhara Road. The street address is what keeps the two
+entities apart in Google's and TripAdvisor's data.
+
+Once the website field is live, this listing becomes a real corroborating
+citation for the `sameAs` entry already pointing at it from src/app/layout.js.
 
 **6. MakeMyTrip**
 URL: https://partners.makemytrip.com
@@ -111,21 +161,128 @@ Action: Register as activity/tour provider
 
 ### TIER 3 — India Business Directories
 
-**11. JustDial**
+**11. JustDial** — NOT LISTED. Name currently held by a different business.
 URL: https://www.justdial.com/info/list-your-business
-Profile Name: Shiv Ganga Travels
-Category: Tour & Travel Agents > Haridwar
-Impact: Most searched local directory in India
+Impact: Most-searched local directory in India. Highest-value gap on this list.
 
-**12. IndiaMART**
+Verified 2026-08-18: searching JustDial Haridwar for our name returns
+"Shiv Ganga Tour & Travels", Near Yogeshwar Ashram, Niranjani Akhara Road,
+Har Ki Pauri, Haridwar-249401 — established 2000, bus segment, 3.9★ / 6 ratings,
+marked "Claimed", no website. That is NOT us. We are Saptrishi Rd, Bhupatwala,
+since 2010. Do not claim, edit, or report that listing; create a separate one.
+Because the names collide, the street address and the 7817996730 number are what
+keep the two apart — never submit a bare "Haridwar" address.
+
+  Business name  : Shiv Ganga Travels
+  Address        : Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala
+  City / Pincode : Haridwar / 249410
+  State          : Uttarakhand
+  Mobile         : 7817996730          (this becomes the OTP-verified number)
+  Alt mobile     : 8859123961
+  Email          : support@shivgangatravels.com
+  Website        : https://www.shivgangatravels.com
+  Year founded   : 2010
+  Hours          : 7:00 AM - 9:00 PM, all 7 days
+  Primary cat    : Tour Operators
+  Also list under : Travel Agents · Domestic Tour Operators · Tourist Taxi ·
+                    Car Rental · Tour Operators For Char Dham
+  Description    : use the MEDIUM (100-word) description above
+  Photos         : upload 10+ — vehicles, group departures, office frontage.
+                   Reuse what is already on the Google Business Profile.
+
+After it goes live, add the JustDial URL to `sameAs` in src/app/layout.js. That
+slot is deliberately empty right now with a comment explaining why — replace the
+comment, do not append a second entry.
+
+---
+
+**11b. Bing Places** — LISTING EXISTS, AUTO-GENERATED, WRONG ADDRESS
+URL: https://www.bingplaces.com
+Action: claim the existing listing, then correct it. Do not create a duplicate.
+
+Verified 2026-08-18 on Bing Maps: "Shiv Ganga Travels", Saptsarover Road,
+Hardwar, 078179 96730, 5/5 (1 review). Phone is right; the street is wrong
+("Saptsarover Road" is a data-provider guess) and there is no website field, so
+it currently produces a citation that neither matches our NAP nor links back.
+Bing feeds Copilot answers, so this is cheap AI-visibility as well as a citation.
+
+  Business name  : Shiv Ganga Travels
+  Address        : Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala
+  City / Pincode : Haridwar / 249410
+  State          : Uttarakhand
+  Country        : India
+  Phone          : +91 7817996730
+  Website        : https://www.shivgangatravels.com
+  Email          : support@shivgangatravels.com
+  Category       : Tour Operator  (secondary: Travel Agency)
+  Hours          : 7:00 AM - 9:00 PM daily
+  Description    : use the MEDIUM (100-word) description above
+  Photos         : same set as Google Business Profile
+
+Verification is by phone or postcard to the Bhupatwala address — make sure
+7817996730 is reachable during the claim, and note that a postcard takes ~2 weeks.
+
+**12. IndiaMART** — NOT LISTED
 URL: https://sell.indiamart.com/signup
 Category: Travel Agents > Char Dham Tour Packages
-Action: List packages with prices
 
-**13. Sulekha**
+IndiaMART is catalogue-shaped, not profile-shaped: the company page matters far
+less than the individual "products". List each package as its own product with a
+price, or the listing generates enquiries with no qualification. Start with these
+eight — they cover every category and price band. Prices are per person.
+
+  Char Dham Yatra Package — 9 Nights 10 Days ............ ₹13,900
+  Char Dham Yatra Package — 11 Nights 12 Days (Deluxe) .. ₹30,000
+  Char Dham Yatra from Delhi — 10 Nights 11 Days ........ ₹17,200
+  Char Dham Senior Citizen Package — 12 Nights 13 Days .. ₹21,000
+  Char Dham Helicopter Package — 5 Nights 6 Days ........ ₹2,30,000
+  Do Dham (Kedarnath + Badrinath) — 5 Nights 6 Days ..... ₹8,200
+  Kedarnath Yatra Package — 3 Nights 4 Days ............. ₹5,250
+  Badrinath Yatra Package — 2 Nights 3 Days ............. ₹4,500
+
+  Company name   : Shiv Ganga Travels
+  Address        : Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala,
+                   Haridwar, Uttarakhand 249410
+  Mobile         : 7817996730
+  Email          : support@shivgangatravels.com
+  Website        : https://www.shivgangatravels.com
+  Nature of biz  : Service Provider
+  Year founded   : 2010
+  Company profile: use the LONG (200-word) description above
+
+Each product description should carry what is included — AC vehicle, hotels on
+twin sharing, daily vegetarian meals, Garhwali guide, biometric registration,
+oxygen cylinder, VIP darshan, Haridwar station pickup/drop — plus the departure
+city. Do not list a package here that is not live on the site; the site is the
+source of truth and a mismatch is worse than an absence.
+
+GST/PAN is required to complete seller registration. If GST is not in place,
+IndiaMART will stall — do JustDial and Bing first in that case.
+
+---
+
+**12b. Sulekha** — NOT LISTED
 URL: https://www.sulekha.com/business/post
 Category: Tour Operators > Haridwar
-Action: Create profile with service list
+
+Sulekha is lead-gen first and pushes enquiries by SMS/call to whichever number
+is registered, so put the number that is actually answered 7 AM - 9 PM on it.
+
+  Business name  : Shiv Ganga Travels
+  Contact person : Dhanesh Chandra Mishra (Founder)
+  Address        : Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala,
+                   Haridwar, Uttarakhand 249410
+  Mobile         : 7817996730
+  Email          : support@shivgangatravels.com
+  Website        : https://www.shivgangatravels.com
+  Year founded   : 2010
+  Services       : Char Dham Yatra · Do Dham Yatra · Kedarnath Yatra ·
+                   Badrinath Yatra · Helicopter Char Dham · Senior Citizen Yatra ·
+                   Uttarakhand Tour Packages · Tempo Traveller Hire
+  Service areas  : Haridwar, Rishikesh, Dehradun, Roorkee, Delhi NCR
+  Description    : use the MEDIUM (100-word) description above
+  Starting price : ₹4,250 (Gangotri 2N/3D) — lowest live package, use as the
+                   "starting from" if a single figure is demanded
 
 **14. Tradeindia**
 URL: https://www.tradeindia.com/register.html
@@ -180,7 +337,7 @@ Alternatively, if you ever need expert input on Char Dham Yatra planning, I'd lo
 Best regards,
 [Your name]
 Shiv Ganga Travels, Haridwar
-+91-7017082807
++91-7817996730
 shivgangatravels.com
 
 ---
@@ -251,11 +408,11 @@ The website also features a complete Char Dham Yatra Route Map with distances, a
 
 "We built this platform to serve pilgrims who are planning their yatra independently and need reliable, up-to-date information," said a spokesperson for Shiv Ganga Travels. "The 2026 season opened April 19 with all four dhams now accessible."
 
-Shiv Ganga Travels offers Char Dham Yatra packages from ₹19,500 per person, all-inclusive with zero commission.
+Shiv Ganga Travels offers Char Dham Yatra packages from ₹13,900 per person, all-inclusive with zero commission.
 
 **Contact:**
 Shiv Ganga Travels
-Phone/WhatsApp: +91-7017082807
+Phone/WhatsApp: +91-7817996730
 Email: support@shivgangatravels.com
 Website: https://www.shivgangatravels.com
 

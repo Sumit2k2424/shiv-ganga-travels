@@ -325,7 +325,13 @@ function SiteSchema() {
     sameAs: [
       'https://www.google.com/maps?cid=16074078434377735602',
       'https://maps.app.goo.gl/Cup8TpduvDW6TaKf6',
-      'https://www.justdial.com/Haridwar/Shiv-Ganga-Tour-Travels/9999P1334-1334-110624154036-E1L3_BZDET',
+      // NO JustDial entry. Verified 2026-08-18: the Haridwar listing under this
+      // name (Shiv-Ganga-Tour-Travels/...E1L3) is a DIFFERENT business — Niranjani
+      // Akhara Road, Har Ki Pauri, established 2000, bus segment, no website. Ours
+      // is Saptrishi Rd, Bhupatwala, since 2010. Asserting it in sameAs told Google
+      // the two are one entity, which is the same false identity claim the About
+      // page's Person schema was cleaned up for. Restore a URL here only after we
+      // create and claim our own JustDial listing.
       'https://www.tripadvisor.com/Attraction_Review-g616028-d34343558-Reviews-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html',
       `https://wa.me/${SITE.whatsapp}`,
       'https://www.shivgangatravels.com',
