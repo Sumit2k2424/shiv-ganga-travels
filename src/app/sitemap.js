@@ -135,6 +135,36 @@ export default function sitemap() {
     { url: `${b}/altitude-sickness-char-dham`,         p: 0.86, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-mobile-network`,      p: 0.80, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-food-guide`,          p: 0.80, cf: 'monthly' },
+    // Authority-cluster entity pages (Aug 2026). Competitor sitemaps (sacredyatra
+    // etc.) hold dedicated pages for every entity below; we only ever mentioned
+    // them inside the Panch Badri / Panch Kedar hubs or route descriptions.
+    { url: `${b}/adi-badri-temple`,                    p: 0.80, cf: 'monthly' },
+    { url: `${b}/yogdhyan-badri-temple`,                p: 0.80, cf: 'monthly' },
+    { url: `${b}/vridh-badri-temple`,                  p: 0.79, cf: 'monthly' },
+    { url: `${b}/bhavishya-badri-temple`,              p: 0.79, cf: 'monthly' },
+    { url: `${b}/rudranath-temple`,                    p: 0.82, cf: 'monthly' },
+    { url: `${b}/kalpeshwar-temple`,                   p: 0.81, cf: 'monthly' },
+    { url: `${b}/tapt-kund`,                           p: 0.80, cf: 'monthly' },
+    { url: `${b}/pipalkoti`,                           p: 0.76, cf: 'monthly' },
+    { url: `${b}/gopeshwar`,                           p: 0.76, cf: 'monthly' },
+    { url: `${b}/chamoli-town`,                        p: 0.75, cf: 'monthly' },
+    { url: `${b}/srinagar-garhwal`,                    p: 0.76, cf: 'monthly' },
+    { url: `${b}/tehri-town`,                          p: 0.76, cf: 'monthly' },
+    { url: `${b}/augustmuni`,                          p: 0.75, cf: 'monthly' },
+    { url: `${b}/kedarnath-history-legends`,           p: 0.81, cf: 'monthly' },
+    { url: `${b}/badrinath-history-legends`,           p: 0.81, cf: 'monthly' },
+    { url: `${b}/gangotri-history-legends`,            p: 0.80, cf: 'monthly' },
+    { url: `${b}/yamunotri-history-legends`,           p: 0.80, cf: 'monthly' },
+    { url: `${b}/kedarnath-festivals`,                 p: 0.82, cf: 'monthly' },
+    { url: `${b}/badrinath-festivals`,                 p: 0.82, cf: 'monthly' },
+    { url: `${b}/gangotri-festivals`,                  p: 0.80, cf: 'monthly' },
+    { url: `${b}/yamunotri-festivals`,                 p: 0.80, cf: 'monthly' },
+    { url: `${b}/kedarnath-dharamshala`,                p: 0.80, cf: 'monthly' },
+    { url: `${b}/badrinath-dharamshala`,                p: 0.80, cf: 'monthly' },
+    { url: `${b}/gangotri-dharamshala`,                p: 0.79, cf: 'monthly' },
+    { url: `${b}/yamunotri-dharamshala`,               p: 0.79, cf: 'monthly' },
+    { url: `${b}/uttarakhand-shiva-temples`,           p: 0.83, cf: 'monthly' },
+    { url: `${b}/uttarakhand-devi-temples`,            p: 0.83, cf: 'monthly' },
   ];
 
   const weatherPages = [
