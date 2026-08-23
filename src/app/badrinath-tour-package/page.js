@@ -75,7 +75,7 @@ const COST_DIY = [
 ];
 
 const REACH = [
-  ['By road (own pace)', 'Rishikesh → Badrinath taxi ₹5,000–7,000 (car) / ₹8,000–12,000 (SUV) one way', 'What most pilgrims do'],
+  ['By road (own pace)', 'Rishikesh → Badrinath taxi from ₹2,900 (sedan) / ₹4,100–₹5,400 (SUV) one way', 'What most pilgrims do'],
   ['By package', 'From ₹4,500 per person, 2N/3D, all transport handled', 'Best value, no logistics'],
   ['By helicopter', 'Dehradun (Sahastradhara) → Badrinath, ~60 min flight, ₹80,000–1,50,000 pp', 'Costly; for very limited time or health needs'],
 ];
