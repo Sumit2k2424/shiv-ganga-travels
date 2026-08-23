@@ -13,7 +13,7 @@ import Image from 'next/image';
  * Playback uses youtube-nocookie.com, which does not write the
  * tracking cookie until the visitor actually plays something.
  */
-export default function ReelCard({ reel, index }) {
+export default function ReelCard({ reel }) {
   const [playing, setPlaying] = useState(false);
   const [src, setSrc] = useState(reel.poster);
 
@@ -45,8 +45,17 @@ export default function ReelCard({ reel, index }) {
             alt=""
             fill
             sizes="(max-width: 640px) 62vw, 240px"
-            /* Only the first card can be near the fold; the rest wait. */
-            loading={index === 0 ? 'eager' : 'lazy'}
+            /* All lazy, including the first card.
+               `loading="eager"` here made Next emit a `<link rel="preload"
+               as="image">` for the first reel poster — and on the only page
+               that renders this rail (the homepage) ReelsSection is the ninth
+               block, eight sections below the fold. That preload was the ONLY
+               image preload in the document, so the browser was told to fetch a
+               YouTube thumbnail at high priority while the actual LCP candidate
+               (the hero) had no hint at all, competing for the same early
+               bandwidth. If this rail is ever placed near the top of a page,
+               reintroduce eager loading for index 0 there — not globally. */
+            loading="lazy"
             onError={() => setSrc(reel.posterFallback)}
           />
           <span className="lux-reel__scrim" aria-hidden="true" />

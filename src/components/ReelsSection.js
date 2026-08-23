@@ -38,8 +38,8 @@ export default async function ReelsSection() {
       />
 
       <ul className="lux-reels" role="list">
-        {reels.map((reel, i) => (
-          <ReelCard key={reel.id} reel={reel} index={i} />
+        {reels.map((reel) => (
+          <ReelCard key={reel.id} reel={reel} />
         ))}
 
         {/* Instagram-only reels, if any are listed by hand. These link
