@@ -5,15 +5,48 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+
+/* Hindi page — FAQ answers stay in Hindi so the FAQPage node matches the page
+   language (inLanguage: 'hi'). A Hindi page carrying English schema answers is
+   the version that does not get quoted back to a Hindi speaker. */
+const faqs = [
+  {
+    q: 'चार धाम यात्रा में क्या-क्या ले जाना चाहिए?',
+    a: 'सबसे जरूरी चार चीजें — गर्म कपड़े (थर्मल, फ्लीस, विंडप्रूफ जैकेट), पकड़ वाले वाटरप्रूफ जूते, अपनी नियमित दवाइयां कम से कम 2 दिन extra, और यात्रा रजिस्ट्रेशन का प्रिंटआउट। बाकी सब बाजार में मिल जाता है, ये चार नहीं। ऊंचाई 3,000 मीटर से ऊपर है, इसलिए मई-जून में भी रात का तापमान 0-5°C तक गिर सकता है।',
+  },
+  {
+    q: 'केदारनाथ ट्रेक पर कितना सामान ले जा सकते हैं?',
+    a: 'जितना आप 16 किलोमीटर खुद उठाकर चल सकें — यानी एक छोटा डेपैक, 5-7 किलो से ज्यादा नहीं। आपकी गाड़ी सोनप्रयाग पर ही रुक जाती है, वहां से गौरीकुंड तक शेयर्ड जीप जाती है और ट्रेक वहीं से शुरू होता है। बड़ा बैग गाड़ी या होटल में ही छूटेगा। इसलिए पैकिंग करते समय पहले से तय कर लें कि पहाड़ पर क्या-क्या ऊपर जाएगा।',
+  },
+  {
+    q: 'चार धाम यात्रा में कौन सी दवाइयां जरूरी हैं?',
+    a: 'अपनी नियमित दवाइयां (BP, शुगर, दिल की) पूरी यात्रा के लिए और 2 दिन extra — पहाड़ में मेडिकल स्टोर हर जगह नहीं मिलते। इसके अलावा बुखार-दर्द की दवा, ORS के पैकेट, उल्टी की दवा, बैंड-एड, और डॉक्टर की पर्ची की एक कॉपी। 55 साल से ऊपर वालों के लिए मेडिकल फिटनेस सर्टिफिकेट रजिस्ट्रेशन में अनिवार्य है।',
+  },
+  {
+    q: 'क्या मंदिर के अंदर मोबाइल और कैमरा ले जा सकते हैं?',
+    a: 'नहीं। केदारनाथ और बद्रीनाथ दोनों के गर्भगृह में मोबाइल फोन और कैमरा प्रतिबंधित हैं — बद्रीनाथ में सिंहद्वार के आगे से ही रोक है। बाहर जमा करने की व्यवस्था होती है, लेकिन लाइन लंबी होती है। बेहतर है फोन साथी के पास छोड़कर दर्शन के लिए जाएं।',
+  },
+  {
+    q: 'मई-जून में भी गर्म कपड़े चाहिए क्या?',
+    a: 'हां, जरूर। दिन में केदारनाथ में 10-15°C रहता है लेकिन रात 2-5°C तक चली जाती है, और अक्टूबर में तो 0°C से नीचे। सुबह 4 बजे ट्रेक शुरू होता है — वही सबसे ठंडा समय होता है। थर्मल इनर, एक फ्लीस और एक विंडप्रूफ जैकेट हर महीने में चाहिए।',
+  },
+  {
+    q: 'क्या-क्या घर पर छोड़ देना चाहिए?',
+    a: 'भारी सूटकेस, ज्यादा गहने, नए जूते (छाले पड़ते हैं), प्लास्टिक की बोतलें (कई जगह प्रतिबंधित हैं), और जरूरत से ज्यादा कपड़े। पहाड़ पर हर अतिरिक्त किलो आपको ही उठाना है। नकद जरूर रखें — ऊपर ATM भरोसेमंद नहीं हैं और नेटवर्क न होने पर कार्ड मशीन नहीं चलती।',
+  },
+];
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} | हिंदी में | प्रिंट करें` },
   description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि के साथ यात्रा बुक करें।`,
   keywords: ['चार धाम यात्रा में क्या ले जाएं', 'char dham yatra packing list hindi', `चार धाम यात्रा सामान ${SITE.season}`, 'char dham yatra kya le jayen', 'चार धाम यात्रा दवाइयां'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },
-  openGraph: { title: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — Print करके बैग में रख लो`, description: 'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले check करें।', url: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — क्या ले जाएं, क्या छोड़ें — पूरी हि | Shiv Ganga Travels` }],
+  openGraph: { title: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — Print करके बैग में रख लो`, description: 'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले check करें।', url: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — Print करके बैग में रख लो` }],
+  },
 };
 
 function Schema() {
@@ -26,7 +59,8 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम पैकिंग लिस्ट', item: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'hi', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/></>);
 }
 
 
@@ -57,8 +91,8 @@ export default function CharDhamPackingListHindi() {
         badge="🎒 पैकिंग गाइड · 2026"
         title="चार धाम यात्रा के लिए क्या-क्या सामान ले जाएं?"
         dek="यह लिस्ट Print करके बैग में रख लो — घर से निकलने से पहले एक बार check करना"
-        author="सुमित मिश्रा"
-        authorInitials="SM"
+        author="धनेश चंद्र मिश्रा"
+        authorInitials="DM"
         updated="अपडेटेड 2026"
         readTime="6 मिनट"
         facts={[
@@ -87,6 +121,14 @@ export default function CharDhamPackingListHindi() {
           <strong style={{ color: '#993C1D' }}>याद रखें:</strong><span style={{ color: '#334155', fontSize: 14 }}> 10-11 दिन की यात्रा। केदारनाथ में 16 km + यमुनोत्री में 6 km पैदल चलना है। <strong>जो उठाने में दर्द हो, वो घर छोड़ दो।</strong></span>
         </div>
 
+        <KeyTakeaways title="एक नजर में" points={[
+          <>सबसे जरूरी चार चीजें — <strong>थर्मल कपड़े, पकड़ वाले वाटरप्रूफ जूते, अपनी दवाइयां (2 दिन extra), और रजिस्ट्रेशन का प्रिंटआउट</strong>।</>,
+          <>केदारनाथ ट्रेक पर सिर्फ <strong>5-7 किलो का डेपैक</strong> ही ले जा पाएंगे — गाड़ी सोनप्रयाग पर ही रुक जाती है।</>,
+          <>मई-जून में भी रात <strong>2-5°C</strong>, अक्टूबर में <strong>0°C से नीचे</strong>। गर्म कपड़े हर महीने चाहिए।</>,
+          <>मंदिर के गर्भगृह में <strong>मोबाइल और कैमरा प्रतिबंधित</strong> हैं।</>,
+          <><strong>नकद जरूर रखें</strong> — ऊपर ATM भरोसेमंद नहीं और नेटवर्क न हो तो कार्ड नहीं चलता।</>,
+        ]}/>
+
         <BlogTOC title="इस गाइड में" items={[
           { id:"part1", label:"कपड़े" },
           { id:"part2", label:"दवाइयां" },
@@ -96,7 +138,31 @@ export default function CharDhamPackingListHindi() {
           { id:"part6", label:"खाने-पीने का सामान" },
           { id:"leave-home", label:"क्या न ले जाएं" },
           { id:"checklist", label:"लास्ट-मिनट चेकलिस्ट" },
+          { id:"faq", label:"अक्सर पूछे जाने वाले सवाल" },
         ]}/>
+
+        <h2 id="bag" style={h2}>🎒 सबसे पहले यह समझें — ऊपर कितना सामान जाएगा</h2>
+        <p style={p}>
+          पैकिंग लिस्ट बनाने से पहले एक बात साफ कर लीजिए, क्योंकि यही सबसे ज्यादा लोगों से छूट जाती है।
+          केदारनाथ के लिए <strong>आपकी गाड़ी सोनप्रयाग पर ही रुक जाती है</strong>। वहां से गौरीकुंड तक
+          पुलिस-नियंत्रित शेयर्ड जीप जाती है और 16 किलोमीटर का ट्रेक वहीं से शुरू होता है। मतलब — बड़ा
+          सूटकेस गाड़ी या गुप्तकाशी के होटल में ही रह जाएगा।
+        </p>
+        <p style={p}>
+          इसलिए सामान को दो हिस्सों में बांटकर पैक करें: एक <strong>बड़ा बैग</strong> जो नीचे होटल में
+          रहेगा, और एक <strong>छोटा डेपैक (5-7 किलो)</strong> जो पहाड़ पर आपके कंधे पर जाएगा। डेपैक में
+          सिर्फ यह — गर्म जैकेट, रेन पोंचो, दवाइयां, पानी की बोतल, टॉर्च, पावर बैंक, नकद और रजिस्ट्रेशन की
+          कॉपी। बाकी सब नीचे। यमुनोत्री में भी यही बात लागू होती है, जहां जानकी चट्टी से 6 किलोमीटर पैदल
+          चलना पड़ता है।
+        </p>
+        <div style={{ background:'#fffbeb', border:'1px solid #fde68a', borderRadius:10, padding:'13px 16px', marginBottom:20 }}>
+          <strong style={{ fontSize:13.5, color:'#92400e' }}>ध्यान दें: </strong>
+          <span style={{ fontSize:13.5, color:'#78350f', lineHeight:1.8 }}>
+            केदारनाथ और बद्रीनाथ के गर्भगृह में मोबाइल फोन और कैमरा ले जाना मना है — बद्रीनाथ में सिंहद्वार
+            के आगे से ही रोक है। बाहर जमा करने की लाइन लंबी लगती है, इसलिए फोन साथी के पास छोड़कर दर्शन के
+            लिए जाना ज्यादा आसान रहता है।
+          </span>
+        </div>
 
         <h2 id="part1" style={{ ...h2, marginTop: 8 }}>🧥 Part 1 — कपड़े</h2>
         <p style={{ ...p, fontSize: 14, marginBottom: 8 }}><strong>गर्म कपड़े (सबसे जरूरी)</strong> — केदारनाथ में रात को 2-5°C होती है, जून में भी</p>
@@ -180,6 +246,9 @@ export default function CharDhamPackingListHindi() {
             </div>
           ))}
         </div>
+
+        <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
+        <FAQAccordion faqs={faqs} />
 
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>

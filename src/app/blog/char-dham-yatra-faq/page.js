@@ -107,7 +107,7 @@ const FAQS = [
   { cat:'Gangotri & Yamunotri', q:'Is there any trek required for Gangotri Yatra?',
     a:'No. Gangotri is unique — motor road reaches all the way to the temple at 3,415m. No trekking is required for temple darshan. The town of Gangotri has the temple, Bhagirathi river bank, Surya Kund, and Bhagirathi Shila all within walking distance. The Gaumukh glacier trek (20km one way) is an optional add-on for adventure seekers and requires a permit. Gangotri temple 2026 opening date is April 19.' },
   { cat:'Gangotri & Yamunotri', q:'How far is Yamunotri from Haridwar?',
-    a:'Yamunotri is approximately 175km from Haridwar by road — about 5–6 hours driving time via Barkot. The motor road ends at Janki Chatti (or Phoolchatti in some conditions). From Janki Chatti, a 6km trek (or pony) leads to Yamunotri temple at 3,291m. The Surya Kund hot spring (90°C) at the temple is used by pilgrims to cook rice as prasad. Yamunotri temple 2026 opening date is April 19.' },
+    a:'Yamunotri is approximately 175km from Haridwar by road — about 5–6 hours driving time via Barkot. The motor road ends at Janki Chatti (or Phoolchatti in some conditions). From Janki Chatti, a 6km trek (or pony) leads to Yamunotri temple at 3,291m. The Surya Kund hot spring (88°C) at the temple is used by pilgrims to cook rice as prasad. Yamunotri temple 2026 opening date is April 19.' },
 
   // HELICOPTER & TRANSPORT
   { cat:'Helicopter & Transport', q:'Which vehicles are best for Char Dham Yatra?',

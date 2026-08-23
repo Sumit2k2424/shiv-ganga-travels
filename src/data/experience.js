@@ -142,13 +142,13 @@ export const TEMPLES = {
       'Yamuna is Surya’s daughter and Yama’s sister in the Puranas. The tradition holds that anyone who bathes in her waters is spared an untimely death — which is why the queue at Surya Kund is never short.',
     rituals: [
       'Divya Shila — the rock pillar outside the temple is worshipped before you enter. Nobody skips this.',
-      'Surya Kund — a 94°C spring where pilgrims lower rice and potatoes tied in muslin. It cooks in minutes and comes back as prasad.',
+      'Surya Kund — a 88°C spring where pilgrims lower rice and potatoes tied in muslin. It cooks in minutes and comes back as prasad.',
       'Yamuna Jal — the cold stream beside the kund is where the ritual dip happens. It is glacier-fed and it feels like it.',
     ],
     photography: 'Allowed in the courtyard and around Surya Kund. Not inside the sanctum.',
     facts: [
       'The 6 km trek climbs roughly 1,000 m. Ponies run ₹1,500–2,500 each way, palki ₹4,000–6,000.',
-      'Surya Kund holds at about 94°C year-round — hot enough that vendors sell muslin bags purely for cooking rice.',
+      'Surya Kund holds at about 88°C year-round — hot enough that vendors sell muslin bags purely for cooking rice.',
       'The actual glacial source, Champasar Glacier at 4,421 m, is another day’s trek above the temple and is not part of the yatra.',
     ],
   },

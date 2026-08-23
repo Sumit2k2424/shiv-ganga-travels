@@ -18,6 +18,8 @@ export const metadata = {
     description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

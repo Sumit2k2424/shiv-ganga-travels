@@ -9,7 +9,9 @@ export const metadata = {
   description: `Yamunotri Temple ${SITE.season} — darshan timings, 6km trek, Surya Kund hot spring. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: ['yamunotri temple',`yamunotri temple timings ${SITE.season}`,'yamunotri dham','yamunotri trek',`yamunotri opening date ${SITE.season}`,'surya kund yamunotri','yamunotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-temple` },
-  openGraph: { title: `Yamunotri Temple ${SITE.season} — Trek, Timings, History & Complete Guide`, description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`, url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website' },
+  openGraph: { title: `Yamunotri Temple ${SITE.season} — Trek, Timings, History & Complete Guide`, description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`, url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Yamunotri Temple ${SITE.season} — Char Dham Yatra | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Yamunotri Temple ${SITE.season} — Trek, Timings & Complete Guide`,

@@ -12,8 +12,9 @@ export const metadata = {
   description: `हरिद्वार से चार धाम यात्रा ${SITE.season} का खर्चा ₹13,900 से शुरू। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा ${SITE.season} खर्चा`, `char dham yatra kitna kharcha ${SITE.season}`, 'हरिद्वार से चार धाम यात्रा कितने रुपये', 'char dham yatra cost hindi', 'चार धाम यात्रा प्रति व्यक्ति खर्च'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` },
-  openGraph: { title: `चार धाम यात्रा ${SITE.season} में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा`, description: `हरिद्वार से चार धाम यात्रा ${SITE.season} में 1 आदमी का खर्चा ₹13,900 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।`, url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा ${SITE.season} में कितना खर्चा आता है? हरिद्वार से पूरा हिसाब | Shiv Ganga Travels` }],
+  openGraph: { title: `चार धाम यात्रा ${SITE.season} में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा`, description: `हरिद्वार से चार धाम यात्रा ${SITE.season} में 1 आदमी का खर्चा ₹13,900 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।`, url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा ${SITE.season} में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा` }],
+  },
 };
 
 function Schema() {
@@ -49,8 +50,8 @@ export default function CharDhamKharcha() {
         badge="💰 खर्चे का पूरा हिसाब · 2026"
         title="चार धाम यात्रा 2026 में कितना पैसा लगता है?"
         dek="गाड़ी · होटल · खाना · पंजीकरण · केदारनाथ घोड़ा · सब कुछ अलग-अलग"
-        author="सुमित मिश्रा"
-        authorInitials="SM"
+        author="धनेश चंद्र मिश्रा"
+        authorInitials="DM"
         updated="अपडेटेड 2026"
         readTime="7 मिनट"
         facts={[

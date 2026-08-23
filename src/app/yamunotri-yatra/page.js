@@ -8,7 +8,9 @@ export const metadata = {
   description: `Yamunotri Yatra ${SITE.season} from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.`,
   keywords: [`yamunotri yatra, yamunotri yatra ${SITE.season}, yamunotri trek, haridwar to yamunotri, yamunotri yatra package`],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
-  openGraph: { title:`Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`, description:`Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`, url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website' },
+  openGraph: { title:`Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`, description:`Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`, url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Gu | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`,
@@ -47,7 +49,12 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
+  // These PAA questions are the only Q&A on the page, so this IS the page's
+  // single FAQPage node. (It used to `return null` on the assumption that a
+  // main FAQ node existed further down — on this page there isn't one, so the
+  // answers were rendering to readers and staying invisible to search and AI
+  // engines. Do not re-add a second FAQPage node here.)
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
 }
 
 export default function Page() {
@@ -58,7 +65,7 @@ export default function Page() {
         <div style={{ maxWidth:820, margin:'0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Yatra Guide · 2026</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Yamunotri Yatra 2026 — First Dham of the Char Dham Circuit</h1>
-          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>6km trek · Surya Kund 94°C hot spring · Pony available · First stop in Char Dham</p>
+          <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>6km trek · Surya Kund 88°C hot spring · Pony available · First stop in Char Dham</p>
         </div>
       </section>
 
@@ -87,7 +94,7 @@ export default function Page() {
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>Places to Visit Around Yamunotri</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
           {[
-            { name:'Surya Kund', dist:'At the temple', desc:'The star attraction of Yamunotri. This natural hot spring bubbles at 94°C — you can cook rice in a cloth bag here, which pilgrims then offer as prasad to the goddess. It is the only place in the four dhams where your offering literally comes from the land itself. A custom that is ancient, tactile, and deeply personal.' },
+            { name:'Surya Kund', dist:'At the temple', desc:'The star attraction of Yamunotri. This natural hot spring bubbles at 88°C — you can cook rice in a cloth bag here, which pilgrims then offer as prasad to the goddess. It is the only place in the four dhams where your offering literally comes from the land itself. A custom that is ancient, tactile, and deeply personal.' },
             { name:'Divya Shila', dist:'Just before the temple', desc:'A sacred rock pillar that pilgrims worship before entering the main temple. The tradition is to circumambulate it and offer water before proceeding to the inner sanctum. It stands alone against the mountain backdrop in a way that makes it impossible to walk past without pausing.' },
             { name:'Janki Chatti', dist:'Trek base — 6km below', desc:'The lively base of the Yamunotri trek. Named after Janki (another name for Sita), who is said to have rested here on her way to the mountains. There are dhabas, pony handlers, and small guesthouses — and a hot spring here too, where trekkers soak their feet after descending. Warmer and more comfortable than the temple area.' },
             { name:'Kharsali Village', dist:'1km from Janki Chatti', desc:'This small Garhwali village is where the Yamunotri goddess is "housed" during the winter months when the temple closes. Every October, in a ceremony called Doli, the idol is brought down from the shrine and carried to Kharsali in a palanquin accompanied by the village priests. The village feels almost unchanged by time — stone houses, terraced fields, a 900-year-old Shani temple.' },
@@ -113,7 +120,7 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The trek starts at <strong>Janki Chatti</strong> (2,650m) and covers <strong>6 km one way</strong> to the temple (3,291m), with an elevation gain of about 640 metres. Most pilgrims take 2–3 hours to ascend and 1.5–2 hours to descend. Compared to the Kedarnath trek, this is considerably shorter and gentler.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Ponies are available at Janki Chatti for those who cannot or prefer not to trek, at approximately ₹1,800–2,500 one way. Palki (palanquin) is also available at ₹4,000–6,000 one way.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Surya Kund — The Boiling Hot Spring</h2>
-        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>One of the most unusual experiences at Yamunotri is the <strong>Surya Kund</strong> — a natural hot spring that remains at approximately 94°C year-round. Pilgrims traditionally cook rice and potatoes wrapped in cloth by submerging them in the Surya Kund, and offer the cooked food as prasad to Goddess Yamuna. It's a ritual you won’t find anywhere else in the four dhams.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>One of the most unusual experiences at Yamunotri is the <strong>Surya Kund</strong> — a natural hot spring that remains at approximately 88°C year-round. Pilgrims traditionally cook rice and potatoes wrapped in cloth by submerging them in the Surya Kund, and offer the cooked food as prasad to Goddess Yamuna. It's a ritual you won’t find anywhere else in the four dhams.</p>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>

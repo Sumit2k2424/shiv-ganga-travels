@@ -5,7 +5,19 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+
+const faqs = [
+  { q: 'What is the minimum age for Char Dham Yatra?', a: 'There is no legal minimum, but altitude is the real limit. We do not recommend the full circuit for children under 5 — Kedarnath at 3,583m and Gangotri at 3,415m are high enough that a small child who becomes unwell cannot easily tell you what is wrong. Children from about 8 upward generally handle the circuit well with a slower itinerary. For younger families, Do Dham or Badrinath alone is the sensible version.' },
+  { q: 'Do children need Char Dham registration?', a: 'Yes, every pilgrim needs their own registration regardless of age, and it is free. Register children on the same portal using their Aadhaar. The medical certificate requirement applies at 55 and over, so it does not apply to children — but if your child has asthma or any respiratory condition, carry a doctor\'s note and their inhaler anyway.' },
+  { q: 'Can children do the Kedarnath trek?', a: 'A fit child of 10 or over can usually walk the 16km, though it takes them longer and the descent is harder on young knees than the climb. Below that age, take a pony or palki — both carry children routinely and the cost is the same as for an adult. What does not work is starting the walk and deciding halfway; arrange the pony at Gaurikund before you set off.' },
+  { q: 'How do you spot altitude sickness in a child?', a: 'It usually presents as unusual behaviour rather than a stated complaint. Watch for a child who goes quiet and refuses food, becomes unusually clingy or irritable, complains of a headache that does not improve, or vomits without any other stomach symptom. Treat any of those at altitude as AMS until proved otherwise — stop climbing, and descend if it does not resolve within a few hours.' },
+  { q: 'Which dham is easiest with children?', a: 'Badrinath. The road runs to the temple, it is the lowest of the four at 3,133m, Mana village 3km away is genuinely interesting to children, and the Tapt Kund hot spring is the part they remember. Gangotri is a close second for the same reason — no trek. Yamunotri and Kedarnath both require walking, which is where families struggle.' },
+  { q: 'What should children eat and drink on the yatra?', a: 'More water than they will ask for — dehydration at altitude looks a lot like altitude sickness and makes it worse. Keep familiar snacks from home in the daypack, because hill food is heavier and spicier than most children are used to and a child who stops eating goes downhill fast. Avoid cut fruit and roadside cold drinks; stick to hot food and sealed bottles.' },
+  { q: 'How long should a family itinerary be?', a: 'Longer than the standard one. Where an adult group runs the circuit in 9 nights, a family with children should plan 11 to 13, using the extra nights as rest days at Guptkashi and Barkot rather than extra sightseeing. The single biggest predictor of a family yatra going badly is a schedule with no slack in it.' },
+];
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra with Kids ${SITE.season} | Age & Altitude Safety` },
@@ -40,7 +52,14 @@ function Schema() {
     },
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids`,
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />;
+  const faq = {
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  };
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+  </>);
 }
 
 
@@ -84,11 +103,20 @@ export default function Page() {
           <div style={{ fontSize:14.5, color:'#334155', lineHeight:1.7 }}>Yes, children can do the Char Dham Yatra — but the experience varies a lot by age, fitness, and which dhams you prioritise. Badrinath and Gangotri are very manageable for children of all ages. Yamunotri involves a 6km trek. Kedarnath involves a 16km trek at altitude — which is genuinely difficult and not appropriate for children under 10. Helicopter is the right option if you want to include Kedarnath with young children.</div>
         </div>
 
+        <KeyTakeaways points={[
+          <>We do not recommend the <strong>full circuit under age 5</strong> — Kedarnath is 3,583m and a small child cannot tell you what is wrong.</>,
+          <><strong>Badrinath is the easiest dham</strong> with children: road to the door, lowest of the four, and Mana village nearby.</>,
+          <>Children need <strong>their own registration</strong>, free, same portal. The 55+ medical certificate rule does not apply to them.</>,
+          <>Plan <strong>11–13 days instead of 9</strong>, using the extra nights as rest days rather than more sightseeing.</>,
+          <>In children, altitude sickness shows as <strong>going quiet, refusing food or unusual clinginess</strong> — not as a stated complaint.</>,
+        ]}/>
+
         <BlogTOC items={[
           { id:'dham-by-dham', label:'Dham-by-dham with children' },
           { id:'altitude',     label:'Altitude sickness in children' },
           { id:'packing',      label:'Packing list for children' },
           { id:'meaningful',   label:'Making it meaningful for kids' },
+          { id:'faq',          label:'Frequently asked questions' },
         ]}/>
 
         <h2 id="dham-by-dham" style={h2}>Dham-by-Dham: What to Expect with Children</h2>
@@ -126,7 +154,10 @@ export default function Page() {
 
         <h2 id="meaningful" style={h2}>Making the Yatra Meaningful for Children</h2>
         <p style={p}>The Char Dham Yatra is not just a physical journey — it is a story. Children who understand the stories respond to it completely differently from those who are just being taken along. Before the trip, tell them the stories: why the Pandavas went to Kedarnath, why King Bhagirath performed penance at Gangotri, who Adi Shankaracharya was. The trek to Kedarnath becomes an adventure when a child knows they are following in the footsteps of the Pandavas.</p>
-        <p style={p}>The Surya Kund at Yamunotri — where you cook rice in a 94°C natural hot spring — is genuinely magical for children. The Bhim Pul boulder bridge at Mana Village. The marmots that pop out of their burrows along the Kedarnath valley. The Himalayan monals (the jewel-coloured pheasants) that cross the path. A child who comes home from the Char Dham Yatra has experienced things that most adults never will.</p>
+        <p style={p}>The Surya Kund at Yamunotri — where you cook rice in a 88°C natural hot spring — is genuinely magical for children. The Bhim Pul boulder bridge at Mana Village. The marmots that pop out of their burrows along the Kedarnath valley. The Himalayan monals (the jewel-coloured pheasants) that cross the path. A child who comes home from the Char Dham Yatra has experienced things that most adults never will.</p>
+
+        <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
+        <FAQAccordion faqs={faqs} />
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>

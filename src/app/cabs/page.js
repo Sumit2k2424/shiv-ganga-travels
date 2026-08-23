@@ -17,7 +17,9 @@ export const metadata = {
   description: 'Book Uttarakhand cabs from Haridwar, Rishikesh & Dehradun. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. AC vehicles, hill drivers.',
   keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', `char dham taxi ${SITE.season}`, 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },
-  openGraph: { title: `Uttarakhand Cab & Taxi Service ${SITE.season}`, description: 'Cabs from Haridwar, Rishikesh & Dehradun across Uttarakhand. Fixed fares, hill drivers.', url: `${SITE.baseUrl}/cabs`, type: 'website' },
+  openGraph: { title: `Uttarakhand Cab & Taxi Service ${SITE.season}`, description: 'Cabs from Haridwar, Rishikesh & Dehradun across Uttarakhand. Fixed fares, hill drivers.', url: `${SITE.baseUrl}/cabs`, type: 'website' ,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Cab & taxi booking in Uttarakhand — Shiv Ganga Travels' }],
+  },
 };
 
 function Schema() {

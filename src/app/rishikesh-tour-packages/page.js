@@ -19,6 +19,8 @@ export const metadata = {
     description: 'Rishikesh tour packages from ₹3,999. Ganga Aarti, rafting, ashrams, Haridwar combo. Direct operator from Haridwar. Zero commission. 50,000+ pilgrims served.',
     url: `${SITE.baseUrl}/rishikesh-tour-packages`,
     type: 'website',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Rishikesh Tour Packages ${SITE.season} — Trips from ₹3,999 | Haridwar  | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

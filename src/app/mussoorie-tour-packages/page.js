@@ -18,6 +18,8 @@ export const metadata = {
     description: 'Mussoorie tour packages from ₹6,350. Kempty Falls, Mall Road, Gun Hill, Landour. Direct operator from Haridwar since 2010. Zero commission, 50,000+ travellers served.',
     url: `${SITE.baseUrl}/mussoorie-tour-packages`,
     type: 'website',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Mussoorie Tour Packages ${SITE.season} — From ₹6,350 | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

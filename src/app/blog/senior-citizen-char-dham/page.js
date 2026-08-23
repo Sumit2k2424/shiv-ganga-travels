@@ -14,8 +14,9 @@ export const metadata = {
   description: `Senior citizens on Char Dham Yatra ${SITE.season} — medical certificate, pony, VIP darshan. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`senior citizen char dham yatra ${SITE.season}`, 'char dham yatra for elderly', `char dham yatra age limit ${SITE.season}`, 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
-  openGraph: { title:`Char Dham Yatra for Senior Citizens ${SITE.season}: Guide`, description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra for Senior Citizens ${SITE.season} — 60+ | Pony, Palki, Helicopt | Shiv Ganga Travels` }],
+  openGraph: { title:`Char Dham Yatra for Senior Citizens ${SITE.season}: Guide`, description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra for Senior Citizens ${SITE.season}: Guide` }],
+  },
 };
 
 function Schema() {

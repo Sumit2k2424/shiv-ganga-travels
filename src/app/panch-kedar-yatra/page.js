@@ -1,13 +1,31 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import AnswerBox from '@/components/AnswerBox';
+import { h2, p } from '@/lib/prose';
+
+/* Altitudes match src/data/packages.js and src/data/botConfig.js — Rudranath in
+   particular is 3,600m (Wikipedia, Chamoli district) and was wrong across four
+   files until Aug 2026. If you change one, change all of them. */
+const EASY = { bg:'#dcfce7', ink:'#15803d' };
+const HARD = { bg:'#fee2e2', ink:'#991b1b' };
+
+const PANCH = [
+  { name:'Kedarnath',       part:'Hump',        alt:'3,583m', base:'Gaurikund',  trek:'16 km',  diff:'Hard',     tone:HARD, open:'22 Apr – 11 Nov' },
+  { name:'Tungnath',        part:'Arms',        alt:'3,680m', base:'Chopta',     trek:'3.5 km', diff:'Easy',     tone:EASY, open:'May – Nov' },
+  { name:'Rudranath',       part:'Face',        alt:'3,600m', base:'Sagar',      trek:'20 km',  diff:'Hardest',  tone:HARD, open:'May – Oct' },
+  { name:'Madhyamaheshwar', part:'Navel',       alt:'3,497m', base:'Ransi',      trek:'16 km',  diff:'Hard',     tone:HARD, open:'May – Nov' },
+  { name:'Kalpeshwar',      part:'Hair/locks',  alt:'2,134m', base:'Urgam',      trek:'2 km',   diff:'Easy',     tone:EASY, open:'Year-round' },
+];
 
 export const metadata = {
   title: { absolute: `Panch Kedar Yatra Package ${SITE.season} | Price Starts at ₹16,500 | All 5 Shiva Temples` },
   description: `Panch Kedar Yatra ${SITE.season} — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 9N/10D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.`,
   keywords: [`panch kedar yatra, panch kedar yatra ${SITE.season}, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek`],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
-  openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website' },
+  openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Pa | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`,
@@ -36,7 +54,7 @@ function Schema() {
 
 const PAA = [
   { q:'What is the Panch Kedar Yatra?', a:'Panch Kedar is a circuit of five Shiva temples in the Garhwal Himalayas: Kedarnath, Tungnath, Rudranath, Madhyamaheshwar and Kalpeshwar. Legend ties them to the Pandavas seeking Shiva, who appeared in five body-parts across these sites.' },
-  { q:'How many days does Panch Kedar take?', a:'It\'s a longer, trek-heavy pilgrimage — usually 12–16 days depending on pace and weather, since several temples (Rudranath, Madhyamaheshwar) need multi-day treks. It\'s far more demanding than Char Dham and suits experienced trekkers.' },
+  { q:'How many days does Panch Kedar take?', a:'Ten days on a guided circuit that keeps the transfers tight, which is how our 9N/10D itinerary is built. Planned independently it usually runs 12–16 days, because Rudranath and Madhyamaheshwar each need a night camped at the temple and public transport between the valleys is slow. Either way it is far more demanding than Char Dham and suits people with trekking experience.' },
   { q:'When are the Panch Kedar temples open?', a:'Four of the five open roughly May to October/November, closing for winter snow. Kalpeshwar is the exception — it stays accessible year-round. Exact opening dates follow the Hindu calendar each season.' },
   { q:'Is Panch Kedar harder than Char Dham?', a:'Yes, considerably. Panch Kedar involves long, remote Himalayan treks to Rudranath and Madhyamaheshwar with basic facilities, whereas Char Dham has motorable access to most shrines and only two treks. Good fitness and trekking experience are essential.' },
   { q:'Which is the most difficult Panch Kedar temple?', a:'Rudranath is generally considered the toughest, requiring a long, steep trek through alpine meadows and forest. Madhyamaheshwar is also a multi-day trek. Kedarnath, Tungnath and Kalpeshwar are comparatively more accessible.' },
@@ -45,7 +63,12 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
+  // These PAA questions are the only Q&A on the page, so this IS the page's
+  // single FAQPage node. (It used to `return null` on the assumption that a
+  // main FAQ node existed further down — on this page there isn't one, so the
+  // answers were rendering to readers and staying invisible to search and AI
+  // engines. Do not re-add a second FAQPage node here.)
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
 }
 
 export default function Page() {
@@ -60,15 +83,23 @@ export default function Page() {
         </div>
       </section>
 
-      <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
+      <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          Home<span>›</span>
+          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span>Panch Kedar Yatra 2026 — Five Sacred Shiva Shrines</span>
         </div>
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+
+        <AnswerBox>
+          <strong>Panch Kedar is a circuit of five Shiva temples in the Garhwal Himalayas</strong> — Kedarnath
+          (3,583m), Tungnath (3,680m), Rudranath (3,600m), Madhyamaheshwar (3,497m) and Kalpeshwar (2,134m) —
+          each said to enshrine a different part of Shiva&apos;s body. Completing all five takes about
+          <strong> 10 days guided</strong> or 12–16 planned independently, and involves roughly 90km of trekking.
+          Four open May to October or November; Kalpeshwar is the only one reachable year-round.
+        </AnswerBox>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The <strong>Panch Kedar</strong> is a circuit of five sacred Shiva temples in the Garhwal Himalayas of Uttarakhand, each believed to enshrine a different part of Lord Shiva’s body that fell here after the Mahabharata. According to legend, the Pandavas sought Shiva’s blessing after the Kurukshetra war, but Shiva evaded them by hiding as a bull. When cornered, he dived into the earth — different body parts emerging at five locations now known as the Panch Kedar.</p>
         <div style={{display:'flex',flexDirection:'column',gap:'8px',marginBottom:'24px'}}>
@@ -99,6 +130,64 @@ export default function Page() {
             <div style={{fontSize:'13px',color:'var(--text-mid)'}}>The only Panch Kedar open all year. 2km trek. Located in Urgam valley near Joshimath.</div>
           </div>
         </div>
+
+        <h2 style={h2}>The five temples compared</h2>
+        <p style={p}>
+          The five are not equally hard, and most people underestimate the gap between them. Tungnath is a
+          3.5km walk that a reasonably fit family manages in a morning. Rudranath is a 20km forest and meadow
+          trek each way that needs a night at the temple. Planning the circuit is mostly a matter of getting
+          that difference right.
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:20 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:740 }}>
+            <caption className="sr-only">Panch Kedar temples compared by altitude, trek base, distance, difficulty and season</caption>
+            <thead>
+              <tr style={{ background:'var(--navy-light)' }}>
+                {['Temple','Body part','Altitude','Trek base','Trek (one way)','Difficulty','Open'].map(x=>(
+                  <th key={x} scope="col" style={{ padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.05em' }}>{x}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {PANCH.map((t,i)=>(
+                <tr key={t.name} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>
+                  <th scope="row" style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13, textAlign:'left' }}>{t.name}</th>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{t.part}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5, fontFamily:'monospace' }}>{t.alt}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{t.base}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{t.trek}</td>
+                  <td style={{ padding:'10px 12px', fontSize:12.5 }}>
+                    <span style={{ background:t.tone.bg, color:t.tone.ink, fontSize:11, fontWeight:700, padding:'3px 9px', borderRadius:100, whiteSpace:'nowrap' }}>{t.diff}</span>
+                  </td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{t.open}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ ...p, fontSize:'0.95em', color:'var(--text-muted)' }}>
+          Trek distances are one way from the road head. Totalled both ways the circuit is roughly 90km on
+          foot, which is why it is a genuinely different proposition from{' '}
+          <Link href="/char-dham-yatra" style={{ color:'var(--teal)' }}>Char Dham</Link>, where only Kedarnath
+          and Yamunotri involve any real walking.
+        </p>
+
+        <h2 style={h2}>How long it actually takes</h2>
+        <p style={p}>
+          Published answers to this range from 8 days to a fortnight, and both are defensible depending on
+          how you travel. Our own circuit runs <strong>9 nights and 10 days</strong> from Haridwar, which
+          works because the vehicle repositions between valleys while the group is trekking, and because
+          Rudranath gets a night camped at the temple rather than being forced into a single brutal day. We
+          ran it as 8N/9D until 2026 and moved it out by a night for exactly that reason — the old day 3 was a
+          20km descent followed by a 70km drive, which nobody enjoyed.
+        </p>
+        <p style={p}>
+          Planned independently, budget <strong>12 to 16 days</strong>. The trekking is the same; the extra
+          time goes on public transport between Guptkashi, Chopta, Sagar, Ransi and the Urgam valley, which
+          are connected by shared jeeps running on their own schedule. Two of the five &mdash;{' '}
+          <Link href="/madhyamaheshwar-temple" style={{ color:'var(--teal)' }}>Madhyamaheshwar</Link> and
+          Rudranath &mdash; are also the two where weather most often costs a day.
+        </p>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>

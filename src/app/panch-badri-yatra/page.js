@@ -12,6 +12,8 @@ export const metadata = {
     title: `Panch Badri Yatra ${SITE.season} — Complete Guide & Packages`,
     description: 'Visit all 5 sacred Badri shrines of Uttarakhand. Route, best time, package details and booking from Haridwar.',
     url: `${SITE.baseUrl}/panch-badri-yatra`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Panch Badri Yatra ${SITE.season} — Complete Guide & Packages | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

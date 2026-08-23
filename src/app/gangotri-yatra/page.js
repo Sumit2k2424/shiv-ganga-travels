@@ -8,7 +8,9 @@ export const metadata = {
   description: `Gangotri Yatra ${SITE.season} from Haridwar — ₹4,250 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.`,
   keywords: [`gangotri yatra, gangotri yatra ${SITE.season}, gangotri yatra package, haridwar to gangotri, gangotri temple guide`],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
-  openGraph: { title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`, description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`, url:`${SITE.baseUrl}/gangotri-yatra`, type:'website' },
+  openGraph: { title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`, description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`, url:`${SITE.baseUrl}/gangotri-yatra`, type:'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`,
@@ -47,7 +49,12 @@ const PAA = [
 function PAASchema() {
   const paa = { '@context':'https://schema.org','@type':'FAQPage',
     mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
-  return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
+  // These PAA questions are the only Q&A on the page, so this IS the page's
+  // single FAQPage node. (It used to `return null` on the assumption that a
+  // main FAQ node existed further down — on this page there isn't one, so the
+  // answers were rendering to readers and staying invisible to search and AI
+  // engines. Do not re-add a second FAQPage node here.)
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
 }
 
 export default function Page() {

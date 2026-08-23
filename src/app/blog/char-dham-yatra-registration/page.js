@@ -119,7 +119,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'What is the daily pilgrim limit for Char Dham Yatra 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Daily pilgrim limits for 2026: Kedarnath — 15,000 to 17,000 pilgrims per day. Badrinath — 20,000 pilgrims per day. Gangotri — 7,000 to 8,000 pilgrims per day. Yamunotri — 7,000 to 8,000 pilgrims per day. These limits are strictly enforced. If the daily limit is reached, pilgrims at checkpoints will be held back — even with a valid registration. This is why booking packages with an experienced operator who monitors daily counts is important.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Daily pilgrim limits for 2026: Kedarnath — up to 18,000 pilgrims per day. Badrinath — 20,000 pilgrims per day. Gangotri — 7,000 to 8,000 pilgrims per day. Yamunotri — 7,000 to 8,000 pilgrims per day. These limits are strictly enforced. If the daily limit is reached, pilgrims at checkpoints will be held back — even with a valid registration. This is why booking packages with an experienced operator who monitors daily counts is important.' },
       },
       {
         '@type': 'Question',
@@ -437,7 +437,7 @@ export default function RegistrationBlog() {
           <p>This is the detail most pilgrims overlook until it is too late. Each dham has a strict daily limit enforced at checkpoints. If the limit is reached, pilgrims at the checkpoint are held back — even with a valid registration permit.</p>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:10, marginBottom:16 }}>
             {[
-              { dham:'Kedarnath', limit:'15,000–17,000', icon:'🏔️', note:'Most sought-after — book packages early' },
+              { dham:'Kedarnath', limit:'up to 18,000', icon:'🏔️', note:'Most sought-after — book packages early' },
               { dham:'Badrinath', limit:'20,000', icon:'🕌', note:'Higher capacity, fewer day-limit issues' },
               { dham:'Gangotri', limit:'7,000–8,000', icon:'🌊', note:'Lower limit — plan dates carefully' },
               { dham:'Yamunotri', limit:'7,000–8,000', icon:'⛩️', note:'Smallest capacity — avoid peak May dates' },

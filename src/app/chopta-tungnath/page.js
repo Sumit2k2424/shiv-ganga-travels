@@ -11,6 +11,8 @@ export const metadata = {
     title: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages`,
     description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple, Chandrashila summit, best time, how to reach, and packages from Haridwar.',
     url: `${SITE.baseUrl}/chopta-tungnath`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Chopta Tungnath ${SITE.season} — Complete Travel Guide | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

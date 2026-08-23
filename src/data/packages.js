@@ -97,7 +97,7 @@ export const PACKAGES = [
     highlights:[
       'All 4 Dhams — Yamunotri, Gangotri, Kedarnath & Badrinath',
       '6 km trek / pony ride to Yamunotri from Janki Chatti',
-      'Divya Shila puja + Surya Kund (94°C) hot spring ritual',
+      'Divya Shila puja + Surya Kund (88°C) hot spring ritual',
       'Gangotri temple darshan + Bhagirathi holy river dip',
       '16 km Kedarnath trek from Gaurikund (pony optional)',
       'Brahma Muhurta rudrabhishek at Kedarnath Jyotirlinga',
@@ -107,7 +107,7 @@ export const PACKAGES = [
     exclusions: EXC_STD,
     itinerary: [
       {day:1,  title:'Haridwar → Barkot (220 km | 7–8 hrs)', desc:'Depart 6 AM via Rishikesh, Chamba, Naugaon to Barkot — gateway to Yamunotri. En route enjoy views of the Yamuna Valley and dense forests. Check in, dinner, overnight Barkot (1,220m).'},
-      {day:2,  title:'Barkot → Yamunotri Darshan → Barkot', desc:'Early morning drive to Janki Chatti (36 km). Begin 6 km trek (pony/palki available). Worship at Divya Shila before entering Yamunotri temple (3,291m). Cook potatoes in Surya Kund (94°C) as prasad. Seek blessings of Goddess Yamuna. Return trek, drive to Barkot. Overnight.'},
+      {day:2,  title:'Barkot → Yamunotri Darshan → Barkot', desc:'Early morning drive to Janki Chatti (36 km). Begin 6 km trek (pony/palki available). Worship at Divya Shila before entering Yamunotri temple (3,291m). Cook potatoes in Surya Kund (88°C) as prasad. Seek blessings of Goddess Yamuna. Return trek, drive to Barkot. Overnight.'},
       {day:3,  title:'Barkot → Uttarkashi (100 km | 4 hrs)', desc:'Scenic drive via Dharali valley to Uttarkashi — "Kashi of the Mountains." Visit the ancient Kashi Vishwanath temple and Shakti Devi temple with its legendary 6-metre trident. Walk on the banks of Bhagirathi river. Overnight Uttarkashi (1,165m).'},
       {day:4,  title:'Uttarkashi → Gangotri → Uttarkashi', desc:'Drive 100 km to Gangotri (3,415m) through Harsil valley. Morning aarti at the riverside Gangotri temple. Perform Asthapadhi Snana (holy dip in Bhagirathi). Visit Suryakund, Brahma Kund and Bhagirath Shila. Evening aarti. Return to Uttarkashi. Overnight.'},
       {day:5,  title:'Uttarkashi → Guptkashi (210 km | 7 hrs)', desc:'Long scenic drive via Tehri Dam, Devprayag (confluence of Bhagirathi & Alaknanda), Srinagar, Rudraprayag to Guptkashi — gateway to Kedarnath. Visit twin temples of Kashi Vishwanath & Ardhanarishwar. Overnight Guptkashi (1,319m).'},
@@ -413,7 +413,7 @@ export const PACKAGES = [
     price    : { original:11500, discounted:7100, currency:'₹', perPerson:true },
     highlights:[
       'Yamunotri — source of sacred Yamuna River at 3,291m',
-      'Divya Shila puja + Surya Kund (94°C) hot spring',
+      'Divya Shila puja + Surya Kund (88°C) hot spring',
       'Gangotri — origin of holy River Ganga at 3,415m',
       'Bhagirathi Asthapadhi Snana (holy dip in Ganga)',
       'Harsil valley — one of India\'s most scenic valleys',
@@ -635,7 +635,7 @@ export const PACKAGES = [
     highlights:[
       'Yamunotri Dham — source of sacred Yamuna River at 3,291m',
       'Divya Shila worship before entering the inner sanctum',
-      'Surya Kund (94°C) — cook rice/potatoes as prasad',
+      'Surya Kund (88°C) — cook rice/potatoes as prasad',
       'Yamuna Glacier visible from the trekking trail',
       '6 km Himalayan forest trek from Janki Chatti',
       'Goddess Yamuna — daughter of Surya (Sun God) & twin of Yama',
@@ -645,7 +645,7 @@ export const PACKAGES = [
     exclusions: EXC_STD,
     itinerary:[
       {day:1, title:'Haridwar → Barkot (220 km | 7 hrs)', desc:'Depart 6 AM. Drive via Rishikesh, Mussoorie bypass, Naugaon, Badi to Barkot. Yamuna valley views. Overnight Barkot (1,220m).'},
-      {day:2, title:'Barkot → Yamunotri Darshan → Barkot', desc:'5 AM drive to Janki Chatti (36 km). 6 km trek via lush Himalayan forest (pony/palki available). Reach Yamunotri (3,291m). Worship Divya Shila. Puja at Goddess Yamuna temple. Cook potatoes in Surya Kund 94°C — take as sacred prasad. Optional upper trail toward Champasar Glacier. Return Barkot. Overnight.'},
+      {day:2, title:'Barkot → Yamunotri Darshan → Barkot', desc:'5 AM drive to Janki Chatti (36 km). 6 km trek via lush Himalayan forest (pony/palki available). Reach Yamunotri (3,291m). Worship Divya Shila. Puja at Goddess Yamuna temple. Cook potatoes in Surya Kund 88°C — take as sacred prasad. Optional upper trail toward Champasar Glacier. Return Barkot. Overnight.'},
       {day:3, title:'Barkot → Rishikesh → Haridwar (245 km)', desc:'Drive via Naugaon, Rishikesh (30 min Laxman Jhula stop). Haridwar Ganga Aarti. Tour ends.'},
     ],
     featured : false,

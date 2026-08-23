@@ -9,7 +9,9 @@ export const metadata = {
   description: `Gangotri Temple ${SITE.season} — darshan timings, Ganga aarti, altitude 3,415m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: ['gangotri temple',`gangotri temple timings ${SITE.season}`,'gangotri dham',`gangotri opening date ${SITE.season}`,'gangotri ganga aarti','gangotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-temple` },
-  openGraph: { title: `Gangotri Temple ${SITE.season} — Darshan Timings, History & Complete Guide`, description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`, url: `${SITE.baseUrl}/gangotri-temple`, type: 'website' },
+  openGraph: { title: `Gangotri Temple ${SITE.season} — Darshan Timings, History & Complete Guide`, description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`, url: `${SITE.baseUrl}/gangotri-temple`, type: 'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Gangotri Temple ${SITE.season} — Char Dham Yatra | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Gangotri Temple ${SITE.season} — Timings, History & Complete Guide`,

@@ -14,8 +14,9 @@ export const metadata = {
   description: `Char Dham Yatra packing list ${SITE.season} — exactly what to carry. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`char dham yatra packing list ${SITE.season}`, 'what to carry for char dham yatra', 'char dham yatra essentials', 'char dham yatra clothes list', 'char dham yatra medicine list', 'char dham yatra documents required'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
-  openGraph: { title:`Char Dham Yatra Packing List ${SITE.season} (Printable)`, description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Packing List ${SITE.season} — What to Pack for Kedarnath Trek &  | Shiv Ganga Travels` }],
+  openGraph: { title:`Char Dham Yatra Packing List ${SITE.season} (Printable)`, description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Packing List ${SITE.season} (Printable)` }],
+  },
 };
 
 function Schema() {

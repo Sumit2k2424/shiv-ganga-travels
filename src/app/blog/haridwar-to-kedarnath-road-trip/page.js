@@ -5,15 +5,17 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
-import { h2 } from "@/lib/prose";
+import KeyTakeaways from "@/components/KeyTakeaways";
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath Road Trip ${SITE.season} | Route & Stops` },
-  description: `Haridwar to Kedarnath road trip ${SITE.season} — 250km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Haridwar to Kedarnath road trip ${SITE.season} — 235km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`haridwar to kedarnath road trip ${SITE.season}`, 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
-  openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Haridwar to Kedarnath Distance, Route & Road Trip Guide ${SITE.season} | Shiv Ganga Travels` }],
+  openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Haridwar to Kedarnath Road Trip: Route & Stops' }],
+  },
 };
 
 function Schema() {
@@ -21,16 +23,25 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the distance from Haridwar to Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Haridwar to Gaurikund (Kedarnath base) is 218km by road via NH7 through Rishikesh, Devprayag, Rudraprayag, and Guptkashi. Driving time: 6–7 hours. From Gaurikund, the 16km Kedarnath trek or helicopter takes 5–7 hours (trek) or 7 minutes (flight). Total door-to-temple distance including trek: approximately 234km.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Haridwar to Gaurikund (Kedarnath base) is 235km by road via NH7 through Rishikesh, Devprayag, Rudraprayag, and Guptkashi. Driving time: 8–9 hours. From Gaurikund, the 16km Kedarnath trek or helicopter takes 5–7 hours (trek) or 7 minutes (flight). Total door-to-temple distance including trek: approximately 251km.' }},
       { '@type': 'Question', name: 'What is the best time to leave Haridwar for Kedarnath?',
         acceptedAnswer: { '@type': 'Answer', text: 'Leave Haridwar at 4:00–5:00 AM for Kedarnath. This gets you to Sonprayag by 9–10 AM before the one-way police checkpoint fills. Arriving at Gaurikund by 8–9 AM allows you to start the Kedarnath trek in cool morning temperatures. Pilgrims who leave after 7 AM often face 1–2 hour waits at the Sonprayag checkpoint.' }},
       { '@type': 'Question', name: 'What are the main stops on the Haridwar to Kedarnath route?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Key stops on Haridwar to Kedarnath route: Rishikesh (24km), Devprayag (70km) — Ganga-Alaknanda confluence, Rudraprayag (140km) — Mandakini river junction, Guptkashi (193km) — Kedarnath base town, Sonprayag (213km) — one-way checkpoint, Gaurikund (218km) — trek/helicopter base.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Key stops on Haridwar to Kedarnath route: Rishikesh (24km), Devprayag (70km) — Ganga-Alaknanda confluence, Rudraprayag (140km) — Mandakini river junction, Guptkashi (193km) — Kedarnath base town, Sonprayag (213km) — one-way checkpoint, Gaurikund (218km direct, ~235km as driven) — trek/helicopter base.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
 }
 
+/* TWO DISTANCES, BOTH CORRECT — do not "fix" one to match the other.
+   The stage table below sums to about 218 km, which is the direct alignment
+   Haridwar → Rishikesh → Devprayag → Rudraprayag → Guptkashi → Sonprayag →
+   Gaurikund measured leg by leg. src/data/cabs/routes.js quotes 235 km for the
+   same booking because that is what the vehicles actually log: the Sonprayag
+   shuttle, the Rishikesh bypass and the standing diversions above Rudraprayag
+   add roughly 17 km over a season's average. The page states 235 km as the
+   headline (it is the figure a customer is quoted) and keeps the honest leg
+   splits underneath, with the gap explained rather than hidden. */
 const ROUTE = [
   { stop:'Haridwar', km:0, time:'Start (4–5 AM recommended)', notes:'Har Ki Pauri Ganga Aarti the evening before. Biometric registration at tourist centre.', type:'start' },
   { stop:'Rishikesh', km:24, time:'+45 min', notes:'Ram Jhula, Laxman Jhula. Minor fuel/snack stop. Avoid peak hour traffic (8–10 AM) through Rishikesh town.', type:'stop' },
@@ -55,13 +66,13 @@ export default function HaridwarToKedarnath() {
       <BlogHero
         badge="Route Guide · 2026"
         title="Haridwar to Kedarnath — Complete Route & Road Trip Guide 2026"
-        dek="218km by road via NH7 · 6–7 hours driving · 9 checkpoints explained · Sonprayag one-way rules · What time to leave"
+        dek="235km by road via NH7 · 8–9 hours driving · 9 checkpoints explained · Sonprayag one-way rules · What time to leave"
         author="Dhanesh Chandra Mishra"
         updated="Updated 2026"
         readTime="7 min read"
         facts={[
-          { label:'Distance',  value:'218 km by road' },
-          { label:'Drive',     value:'6–7 hours' },
+          { label:'Distance',  value:'235 km by road' },
+          { label:'Drive',     value:'8–9 hours' },
           { label:'Then',      value:'16 km trek' },
           { label:'Key stop',  value:'Sonprayag' },
         ]}
@@ -78,11 +89,11 @@ export default function HaridwarToKedarnath() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 250 km via Devprayag, Rudraprayag and Guptkashi in 7–8 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 235 km via Devprayag, Rudraprayag and Guptkashi in 8–9 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
-          {[['Total Distance','218km to Gaurikund'],['Driving Time','6–7 hours'],['Main Route','NH7 via Rishikesh'],['Key Town','Guptkashi (base)'],['Final Checkpoint','Sonprayag'],['Trek from Gaurikund','16km one way']].map(([k,v])=>(
+          {[['Total Distance','235km to Gaurikund'],['Driving Time','8–9 hours'],['Main Route','NH7 via Rishikesh'],['Key Town','Guptkashi (base)'],['Final Checkpoint','Sonprayag'],['Trek from Gaurikund','16km one way']].map(([k,v])=>(
             <div key={k}>
               <div style={{ fontSize:11.5, color:'var(--text-muted)', marginBottom:2 }}>{k}</div>
               <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)' }}>{v}</div>
@@ -90,11 +101,27 @@ export default function HaridwarToKedarnath() {
           ))}
         </div>
 
+        <KeyTakeaways points={[
+          <>Haridwar to Gaurikund is <strong>about 235 km</strong> as driven, <strong>8–9 hours</strong> on the road.</>,
+          <>Leave Haridwar <strong>4–5 AM</strong>. Arriving at Sonprayag after 10 AM routinely costs 1–2 hours at the checkpoint.</>,
+          <>Your vehicle <strong>stops at Sonprayag</strong> — the last 5 km to Gaurikund is a shared shuttle at ₹30–50.</>,
+          <>Last dependable <strong>ATM is Srinagar (Garhwal)</strong>, 110 km in. Draw cash there.</>,
+          <>Most itineraries <strong>overnight at Guptkashi</strong> rather than pushing to the trek the same day.</>,
+        ]}/>
+
         <BlogTOC items={[
           { id:'turn-by-turn',     label:'Turn-by-turn route' },
           { id:'sonprayag',        label:'The Sonprayag checkpoint' },
           { id:'gaurikund-options', label:'Gaurikund to Kedarnath — 3 options' },
         ]}/>
+
+        <p style={{ ...p, fontSize:'0.95em', color:'var(--text-muted)' }}>
+          <strong>A note on the distance.</strong> You will see this road quoted as both 218 km and 235 km,
+          and both are right. Measured leg by leg along the direct alignment below it comes to about 218 km;
+          what a vehicle actually logs over a season — the Rishikesh bypass, the Sonprayag shuttle and the
+          standing diversions above Rudraprayag — runs closer to 235 km, which is the figure a cab booking is
+          quoted on. The stage distances in the table are the direct ones.
+        </p>
 
         <h2 id="turn-by-turn" style={h2}>
           Turn-by-Turn Route — Haridwar to Gaurikund

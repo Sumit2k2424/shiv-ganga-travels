@@ -6,15 +6,16 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
-import { h2 } from "@/lib/prose";
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा ${SITE.season} कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी` },
   description: `चार धाम यात्रा ${SITE.season} के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा कब जाएं ${SITE.season}`, 'char dham yatra best time hindi', 'चार धाम यात्रा का सही समय', 'char dham yatra kab jayen', `चार धाम यात्रा मौसम ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-kab-jayen` },
-  openGraph: { title: `चार धाम यात्रा ${SITE.season} में कब जाएं? — महीने के हिसाब से पूरा गाइड`, description: 'मई, जून, सितंबर, अक्टूबर — हर महीने का सच बताया। मौसम, भीड़, खर्चा — सब कुछ हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-kab-jayen`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा के लिए सबसे अच्छा समय कौन सा है? ${SITE.season} Guide हिंदी में | Shiv Ganga Travels` }],
+  openGraph: { title: `चार धाम यात्रा ${SITE.season} में कब जाएं? — महीने के हिसाब से पूरा गाइड`, description: 'मई, जून, सितंबर, अक्टूबर — हर महीने का सच बताया। मौसम, भीड़, खर्चा — सब कुछ हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-kab-jayen`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा ${SITE.season} में कब जाएं? — महीने के हिसाब से पूरा गाइड` }],
+  },
 };
 
 function Schema() {
@@ -67,8 +68,8 @@ export default function CharDhamKabJayen() {
         badge="📅 यात्रा का सही समय · 2026"
         title="चार धाम यात्रा 2026 में कब जाएं?"
         dek="हर महीने का सच — मौसम, भीड़, खर्चा और आपके लिए सबसे सही समय"
-        author="सुमित मिश्रा"
-        authorInitials="SM"
+        author="धनेश चंद्र मिश्रा"
+        authorInitials="DM"
         updated="अपडेटेड 2026"
         readTime="6 मिनट"
         facts={[
@@ -96,7 +97,7 @@ export default function CharDhamKabJayen() {
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 10 }}>चार धाम 2026 — कपाट खुलने और बंद होने की तारीखें</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 10 }}>
-            {[['यमुनोत्री','19 अप्रैल — 11 नवंबर'],['गंगोत्री','19 अप्रैल — 10 नवंबर'],['केदारनाथ','22 अप्रैल — 11 नवंबर'],['बद्रीनाथ','23 अप्रैल — 23 नवंबर']].map(([k,v]) => (
+            {[['यमुनोत्री','19 अप्रैल — 11 नवंबर'],['गंगोत्री','19 अप्रैल — 10 नवंबर'],['केदारनाथ','22 अप्रैल — 11 नवंबर'],['बद्रीनाथ','23 अप्रैल — 13 नवंबर']].map(([k,v]) => (
               <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13, color: '#FFD166' }}>{v}</div></div>
             ))}
           </div>
@@ -137,9 +138,53 @@ export default function CharDhamKabJayen() {
         />
 
         <BlogTOC title="इस गाइड में" items={[
+          { id:"cost-by-month", label:"खर्च और बुकिंग का समय" },
           { id:"for-everyone", label:"किसके लिए कौन सा महीना" },
           { id:"faq", label:"सवाल-जवाब" },
         ]}/>
+
+        <h2 id="cost-by-month" style={h2}>महीने के हिसाब से खर्च और बुकिंग का समय</h2>
+        <p style={p}>
+          &ldquo;कब जाएं&rdquo; का जवाब सिर्फ मौसम से तय नहीं होता — दाम भी महीने के साथ बदलते हैं, और काफी
+          बदलते हैं। मई-जून में होटल के रेट लगभग दोगुने हो जाते हैं और कमरे पहले से भर जाते हैं। सितंबर-अक्टूबर
+          में वही यात्रा सस्ती भी पड़ती है और आराम से भी होती है।
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:16 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:600 }}>
+            <caption className="sr-only">महीने के हिसाब से भीड़, होटल के दाम और कितने पहले बुकिंग करनी चाहिए</caption>
+            <thead>
+              <tr style={{ background:'var(--navy-light)' }}>
+                {['महीना','भीड़','होटल के दाम','कितना पहले बुक करें'].map(x => (
+                  <th key={x} scope="col" style={{ padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11.5, color:'var(--navy)' }}>{x}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['अप्रैल (कपाट खुलने पर)','कम','सामान्य','2–3 हफ्ते'],
+                ['मई','सबसे ज्यादा','सबसे महंगे — लगभग दोगुने','6–8 हफ्ते'],
+                ['जून (15 तक)','बहुत ज्यादा','महंगे','6–8 हफ्ते'],
+                ['जुलाई–अगस्त','बहुत कम','सबसे सस्ते','1 हफ्ता — पर मानसून में जाना ही ठीक नहीं'],
+                ['सितंबर (15 के बाद)','मध्यम','सामान्य','2–3 हफ्ते'],
+                ['अक्टूबर','मध्यम','सामान्य','2–3 हफ्ते'],
+                ['नवंबर (कपाट बंद होने तक)','कम','सस्ते','1–2 हफ्ते'],
+              ].map(([a,b,c,d], i) => (
+                <tr key={a} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                  <th scope="row" style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:13, textAlign:'left' }}>{a}</th>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{b}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{c}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{d}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={p}>
+          एक बात और जो आमतौर पर नहीं बताई जाती — <strong>केदारनाथ में रोज़ाना यात्रियों की तय सीमा</strong>{' '}
+          होती है (हाल के सीज़न में 18,000 तक), और मई-जून में यह सीमा सच में भर जाती है। कोटा पूरा होने पर
+          सोनप्रयाग का बैरियर बंद हो जाता है, चाहे आपके पास वैध रजिस्ट्रेशन हो। सितंबर-अक्टूबर में यह
+          दिक्कत लगभग नहीं आती।
+        </p>
 
         <h2 id="for-everyone" style={h2}>अलग-अलग लोगों के लिए अलग सुझाव</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 28 }}>

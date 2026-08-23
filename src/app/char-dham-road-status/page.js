@@ -17,6 +17,8 @@ export const metadata = {
     description: 'Route-by-route road conditions, highway completion %, landslide zones and the official links to verify live status before you travel.',
     url: `${SITE.baseUrl}/char-dham-road-status`,
     type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham road status — live highway conditions' }],
   },
 };
 

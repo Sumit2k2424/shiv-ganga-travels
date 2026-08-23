@@ -12,8 +12,9 @@ export const metadata = {
   description: `चार धाम यात्रा ${SITE.season} रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा रजिस्ट्रेशन ${SITE.season}`, 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', `चार धाम पंजीकरण ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-registration-hindi` },
-  openGraph: { title: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से घर बैठे कैसे करें?`, description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से कैसे करें? Step-by-Step Hi | Shiv Ganga Travels` }],
+  openGraph: { title: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से घर बैठे कैसे करें?`, description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से घर बैठे कैसे करें?` }],
+  },
 };
 
 function Schema() {
@@ -55,8 +56,8 @@ export default function CharDhamRegistrationHindi() {
         badge="📋 रजिस्ट्रेशन गाइड · 2026"
         title="चार धाम यात्रा रजिस्ट्रेशन 2026"
         dek="मोबाइल से घर बैठे करें — मुफ्त · 9 आसान स्टेप · हिंदी में"
-        author="सुमित मिश्रा"
-        authorInitials="SM"
+        author="धनेश चंद्र मिश्रा"
+        authorInitials="DM"
         updated="अपडेटेड 2026"
         readTime="5 मिनट"
         facts={[
@@ -109,6 +110,9 @@ export default function CharDhamRegistrationHindi() {
         <BlogTOC title="इस गाइड में" items={[
           { id:"website-steps", label:"Website से — 9 Steps" },
           { id:"documents", label:"जरूरी दस्तावेज" },
+          { id:"problems", label:"पोर्टल न चले तो क्या करें" },
+          { id:"offline", label:"ऑफलाइन रजिस्ट्रेशन" },
+          { id:"checkpost", label:"चेकपोस्ट पर क्या होता है" },
           { id:"faq", label:"सवाल-जवाब" },
         ]}/>
 
@@ -151,6 +155,73 @@ export default function CharDhamRegistrationHindi() {
 
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="registration" />
+
+        <h2 id="problems" style={h2}>पोर्टल न चले तो क्या करें</h2>
+        <p style={p}>
+          सीज़न शुरू होते ही रजिस्ट्रेशन पोर्टल पर भारी लोड आ जाता है, और अप्रैल-मई में साइट धीमी चलना या
+          OTP देर से आना आम बात है। ज्यादातर लोग यहीं घबराकर किसी एजेंट को पैसे दे देते हैं — जबकि
+          <strong> रजिस्ट्रेशन पूरी तरह मुफ्त है</strong> और इसके तीन अलग रास्ते हैं।
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:18 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:560 }}>
+            <caption className="sr-only">रजिस्ट्रेशन में आने वाली आम दिक्कतें और उनका हल</caption>
+            <thead>
+              <tr style={{ background:'var(--navy)' }}>
+                {['दिक्कत','क्या करें'].map(h => (
+                  <th key={h} scope="col" style={{ padding:'10px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['OTP नहीं आ रहा', 'वही नंबर इस्तेमाल करें जो आधार से लिंक है। 2-3 मिनट रुककर दोबारा try करें — बार-बार क्लिक करने से नंबर कुछ देर के लिए ब्लॉक हो जाता है।'],
+                ['साइट खुल ही नहीं रही', 'सुबह 6-8 बजे या रात 11 बजे के बाद कोशिश करें, जब लोड कम रहता है। या WhatsApp वाला तरीका अपनाएं।'],
+                ['फोटो अपलोड नहीं हो रही', 'फाइल का साइज कम करें और JPG फॉर्मेट में रखें। मोबाइल से खींची सादी फोटो भी चल जाती है।'],
+                ['नाम की स्पेलिंग गलत हो गई', 'आधार से हूबहू मिलनी चाहिए। लॉगिन करके सुधारें — चेकपोस्ट पर नाम मिलान होता है।'],
+                ['मेडिकल सर्टिफिकेट नहीं है', '55 साल से ऊपर वालों के लिए अनिवार्य है। किसी भी रजिस्टर्ड डॉक्टर से बन जाता है, बड़े अस्पताल की जरूरत नहीं।'],
+                ['e-pass डाउनलोड नहीं हो रहा', 'लॉगिन करके "My Registrations" में जाएं। प्रिंट के साथ मोबाइल में स्क्रीनशॉट भी रख लें — ऊपर नेटवर्क नहीं मिलता।'],
+              ].map(([a, b], i) => (
+                <tr key={a} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                  <th scope="row" style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)', fontSize:13, textAlign:'left' }}>{a}</th>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:13 }}>{b}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="offline" style={h2}>ऑफलाइन और WhatsApp से रजिस्ट्रेशन</h2>
+        <p style={p}>
+          अगर वेबसाइट से नहीं हो रहा तो दो और तरीके हैं, और दोनों उतने ही वैध हैं।{' '}
+          <strong>WhatsApp पर +91-8394833833</strong> नंबर पर सिर्फ &ldquo;Yatra&rdquo; लिखकर भेजें — वहीं से
+          प्रक्रिया शुरू हो जाती है। दूसरा, <strong>हरिद्वार और ऋषिकेश</strong> में सरकारी काउंटर लगते हैं
+          जहां मौके पर बायोमेट्रिक रजिस्ट्रेशन हो जाता है; यात्रा मार्ग पर कुछ और जगहों पर भी काउंटर होते हैं।
+        </p>
+        <p style={p}>
+          ऑफलाइन काउंटर का एक नुकसान है — सीज़न में वहां लंबी लाइन लगती है, और कई बार दिन का कोटा पूरा हो
+          जाता है। इसलिए घर से ही ऑनलाइन कर लेना सबसे आसान रहता है। हमारे पैकेज में आने वाले हर यात्री का
+          रजिस्ट्रेशन हम खुद करते हैं, इसलिए आपको पोर्टल से जूझना नहीं पड़ता।
+        </p>
+
+        <h2 id="checkpost" style={h2}>चेकपोस्ट पर क्या होता है</h2>
+        <p style={p}>
+          रजिस्ट्रेशन सिर्फ कागजी औपचारिकता नहीं है — यह असल में जांचा जाता है। केदारनाथ के रास्ते पर{' '}
+          <strong>सोनप्रयाग</strong> में और बाकी धामों के रास्तों पर भी पुलिस चेकपोस्ट हैं, जहां आपका QR कोड
+          स्कैन होता है। बिना रजिस्ट्रेशन वाले यात्रियों को वहीं से वापस भेज दिया जाता है — हरिद्वार से आठ
+          घंटे गाड़ी चलाने के बाद।
+        </p>
+        <p style={p}>
+          दूसरी बात जो लोगों को नहीं पता — केदारनाथ में रोज़ाना यात्रियों की <strong>तय सीमा</strong> होती है
+          (हाल के सीज़न में 18,000 तक), और खराब मौसम में यह और घटा दी जाती है। कोटा पूरा हो जाने पर सोनप्रयाग
+          का बैरियर बंद कर दिया जाता है, चाहे आपके पास वैध रजिस्ट्रेशन ही क्यों न हो। इसीलिए जल्दी
+          रजिस्टर करना और सुबह जल्दी निकलना दोनों मायने रखते हैं।
+        </p>
+        <p style={p}>
+          एक और चीज साथ रखें — रजिस्ट्रेशन का <strong>प्रिंटआउट</strong>, सिर्फ मोबाइल पर भरोसा न करें।
+          ऊपर के इलाकों में नेटवर्क नहीं मिलता और फोन की बैटरी ठंड में जल्दी खत्म होती है। ज्यादा जानकारी
+          के लिए <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>अंग्रेजी में पूरी रजिस्ट्रेशन गाइड</Link>{' '}
+          और <Link href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)' }}>आपातकालीन नंबरों की सूची</Link> देखें।
+        </p>
 
         <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 28 }}>

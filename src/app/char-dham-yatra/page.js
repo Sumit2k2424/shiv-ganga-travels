@@ -617,7 +617,7 @@ export default function CharDhamYatra() {
               📞 {SITE.phone}
             </a>
             
-              View All Packages →
+              <Link href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View All Packages →</Link>
             
           </div>
         </div>

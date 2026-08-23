@@ -12,8 +12,9 @@ export const metadata = {
   description: 'Char Dham Yatra 2026 opening dates for all 4 dhams. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
   keywords: ['char dham yatra opening dates 2026', 'kedarnath opening date 2026', 'badrinath opening date 2026', 'gangotri opening date 2026', 'yamunotri opening date 2026', 'char dham 2026 start date', 'char dham season 2026 dates'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026` },
-  openGraph: { title: 'Char Dham Yatra Opening Dates 2026: All 4 Dhams', description: 'Official opening and closing dates for all 4 Char Dham shrines in 2026 with booking guide.', url: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Opening Dates 2026 — All 4 Dhams | Shiv Ganga Travels' }],
+  openGraph: { title: 'Char Dham Yatra Opening Dates 2026: All 4 Dhams', description: 'Official opening and closing dates for all 4 Char Dham shrines in 2026 with booking guide.', url: `${SITE.baseUrl}/blog/char-dham-yatra-opening-dates-2026`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra Opening Dates 2026: All 4 Dhams' }],
+  },
 };
 
 function Schema() {
@@ -38,7 +39,7 @@ function Schema() {
 
 const DHAMS = [
   { name:'Yamunotri', deity:'Goddess Yamuna', altitude:'3,291m', opens:'April 19, 2026', openTime:'7:30 AM (Akshaya Tritiya)', closes:'November 7, 2026 (Bhai Dooj – 1)', announcement:'Announced on Basant Panchami by temple priests at Kharsali village', icon:'🏔️',
-    about:'Yamunotri is the westernmost and first shrine in the Char Dham circuit. Motor road ends at Janki Chatti — a 6km trek leads to the temple. The Surya Kund hot spring (90°C) at the temple is used to cook rice as prasad.',
+    about:'Yamunotri is the westernmost and first shrine in the Char Dham circuit. Motor road ends at Janki Chatti — a 6km trek leads to the temple. The Surya Kund hot spring (88°C) at the temple is used to cook rice as prasad.',
     access:'Janki Chatti → 6km trek or pony (₹1,200 one way). Motor road from Haridwar: 175km, 5–6 hours.',
     bestTime:'May–June (flowers, clear trails), October (post-monsoon clarity)', crowd:'Low in April–early May, high May 10–June 20, very low in October' },
   { name:'Gangotri', deity:'Goddess Ganga', altitude:'3,415m', opens:'April 19, 2026', openTime:'8:00 AM (Akshaya Tritiya)', closes:'November 7, 2026 (Bhai Dooj – 1)', announcement:'Announced on Basant Panchami by Gangotri temple committee, Uttarkashi', icon:'🌊',
@@ -48,7 +49,7 @@ const DHAMS = [
   { name:'Kedarnath', deity:'Lord Shiva (Jyotirlinga)', altitude:'3,583m', opens:'April 22, 2026', openTime:'8:00 AM (official Mahabhishek ceremony)', closes:'November 11, 2026 (Bhai Dooj)', announcement:'Announced on Maha Shivratri by Kedarnath temple priests at Omkareshwar Temple, Ukhimath', icon:'⛩️',
     about:'Kedarnath is the highest, most challenging, and most revered of the four dhams. One of the 12 Jyotirlingas. Survived the 2013 floods while most of the town was destroyed. The 16km trek from Gaurikund is the most iconic pilgrim route in India.',
     access:'Gaurikund → 16km trek (5–7 hrs) or pony (₹3,000–5,000 one way) or helicopter from Phata/Sersi helipad (₹7,000–9,000 one way via IRCTC)',
-    bestTime:'May (post-snowmelt), September (clearest skies)', crowd:'Highest of all 4 dhams — arrives at daily limit (15,000–17,000) on peak May days' },
+    bestTime:'May (post-snowmelt), September (clearest skies)', crowd:'Highest of all 4 dhams — arrives at daily limit (up to 18,000) on peak May days' },
   { name:'Badrinath', deity:'Lord Vishnu', altitude:'3,133m', opens:'April 23, 2026', openTime:'6:15 AM', closes:'November 13, 2026 (longest season)', announcement:'Announced on Basant Panchami by Raj Purohit at Joshimath', icon:'🕌',
     about:'Badrinath is the final dham in the clockwise circuit. Motor road reaches the temple directly at 3,133m — the only Char Dham accessible entirely by vehicle. The Tapt Kund hot spring (55°C) just below the temple is used for the traditional pre-darshan bath.',
     access:'Motor road from Haridwar: 320km, 8–9 hours via Joshimath. No trek required.',

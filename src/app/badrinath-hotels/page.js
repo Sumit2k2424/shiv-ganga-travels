@@ -1,6 +1,23 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+
+/* NO PROPERTY NAMES ON THIS PAGE, BY POLICY.
+   Hotel stock on this route turns over yearly, which is exactly why competitor
+   hotel pages read as stale. Bases are compared on altitude, room supply, price
+   band and how early they let you leave in the morning — all of which stay true
+   between seasons. If we ever publish names, they have to be places we actually
+   use and are prepared to re-check every year. */
+
+const faqs = [
+  { q: 'Where should I stay for Badrinath — the town or Joshimath?', a: 'Joshimath for comfort, Badrinath town for darshan. Joshimath is 45km below at 1,875m, has the best hotel quality on this stretch and is far easier to sleep at; it is what our standard packages use. Staying in Badrinath itself at 3,133m is colder and more basic, but it is the only way to attend the 4:30 AM Abhishek and the evening aarti without a 45km drive in the dark at either end.' },
+  { q: 'How much do Badrinath hotels cost?', a: 'Roughly ₹800–4,000 a room in Badrinath town, ₹1,500–6,000 in Joshimath, ₹1,000–3,000 at Chamoli or Pipalkoti and ₹1,500–4,000 at Rudraprayag. Those are season rates and they move sharply — the same room in the first weeks of May and June often costs close to double what it does in late September.' },
+  { q: 'When should I book Badrinath accommodation?', a: 'Six to eight weeks ahead for May and June, one to two weeks for September and October. Badrinath town has the least room supply of any base on this list, so it is the first thing to sell out; Joshimath absorbs the overflow, which is another reason most itineraries are built around it.' },
+  { q: 'Is there GMVN accommodation at Badrinath?', a: 'Yes. Uttarakhand\'s government tourism corporation runs rest houses at Badrinath and Joshimath, bookable on the GMVN portal. They are plain but reliable, and unlike an ashram room a GMVN booking actually holds — which matters in peak weeks. Book them earliest of all; they are the first government option people look for.' },
+  { q: 'Can you stay at Mana village?', a: 'A few local families run basic guesthouses, but it is not a standard option and there is very little of it. Almost everyone visits Mana as a day trip from Badrinath — it is 3km away, so it costs you an hour rather than a night. If you specifically want to sleep in the last village before the border, it needs arranging in advance.' },
+  { q: 'Do Badrinath hotels have heating?', a: 'Mostly not, in the price bands above. You get extra blankets instead, and hot water often comes in a bucket on request rather than from a tap. At 3,133m in April, October and November that is worth planning for — carry thermals for sleeping rather than assuming the room will be warm.' },
+];
 
 export const metadata = {
   title: { absolute: `Hotels Near Badrinath ${SITE.season} | Best Stays | Joshimath & Chamoli` },
@@ -11,6 +28,8 @@ export const metadata = {
     title: `Hotels Near Badrinath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Badrinath Yatra — hotel guide for Badrinath town, Joshimath, Chamoli and Pipalkoti.',
     url: `${SITE.baseUrl}/badrinath-hotels`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Hotels Near Badrinath ${SITE.season} — Guide to Best Stays | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -41,7 +60,7 @@ const stays = [
     type: 'Budget / Extended itinerary'
   },
   {
-    loc: 'Rudraprayag (895m)',
+    loc: 'Rudraprayag (690m)',
     desc: 'Lowest-altitude option — much warmer and very comfortable. 130km from Badrinath. Used as an arrival/departure night for pilgrims coming from or going to Kedarnath. Good hotel range including GMVN and mid-range private hotels.',
     budget: '₹1,500–₹4,000 per room', comfort: '⭐⭐⭐–⭐⭐⭐⭐', rec: 'Ideal as a combination Do Dham (Kedarnath + Badrinath) pivot halt.',
     type: 'Do Dham / Comfort'
@@ -56,6 +75,18 @@ export default function BadrinathHotels() {
         name:'Hotels Near Badrinath 2026 — Complete Guide',
         description:'Where to stay for Badrinath Yatra — hotel guide for Badrinath town, Joshimath, Chamoli and Rudraprayag.',
         url:`${SITE.baseUrl}/badrinath-hotels`,
+      })}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context':'https://schema.org','@type':'FAQPage',
+        mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
+      })}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context':'https://schema.org','@type':'BreadcrumbList',
+        itemListElement:[
+          { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
+          { '@type':'ListItem', position:2, name:'Badrinath Yatra', item:`${SITE.baseUrl}/badrinath-yatra` },
+          { '@type':'ListItem', position:3, name:'Badrinath Hotels', item:`${SITE.baseUrl}/badrinath-hotels` },
+        ],
       })}}/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'52px 20px 40px', textAlign:'center' }}>
@@ -119,12 +150,15 @@ export default function BadrinathHotels() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026. Please share packages with hotel details.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            View Package →
+            <Link href="/badrinath-tour-package" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Package →</Link>
           </div>
         </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
-          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
+          <h2 style={h2}>Frequently asked questions</h2>
+          <FAQAccordion faqs={faqs} />
+
+          <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12, marginTop:32 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['All Char Dham Hotels','/char-dham-hotels'],['Kedarnath Hotels','/kedarnath-hotels'],['Badrinath Weather','/badrinath-weather'],['How to Reach Badrinath','/how-to-reach-badrinath'],['Badrinath Temple','/badrinath-temple'],['Haridwar to Badrinath Cab','/cabs/haridwar-to-badrinath-cab']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>

@@ -68,7 +68,7 @@ export default function ClosingDates() {
       occasion: 'Bhai Dooj (day after Diwali)',
       winterAbode: 'Kharsali village (Syana Chattra), Uttarkashi',
       ceremony: 'The 6km trek from Jankichatti to Yamunotri is done one final time by the officiating priests and a core group of devotees. Goddess Yamuna\'s idol is moved to Kharsali by Doli. The closing ceremony at Yamunotri includes the last Bhog, the last Aarti, and the symbolic sealing of the doors as winter descends on the valley.',
-      tip: 'Yamunotri is the least-visited of the four dhams and the most underrated in October. The Surya Kund hot spring (47°C) near the temple is uniquely atmospheric with morning mist and autumn colours on the surrounding hillsides.',
+      tip: 'Yamunotri is the least-visited of the four dhams and the most underrated in October. The Surya Kund hot spring (88°C) near the temple is uniquely atmospheric with morning mist and autumn colours on the surrounding hillsides.',
     },
     {
       name: 'Kedarnath',

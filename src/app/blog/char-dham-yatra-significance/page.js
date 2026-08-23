@@ -137,7 +137,7 @@ export default function Significance() {
               name: '🌊 Yamunotri — The Source of Yamuna',
               deity: 'Goddess Yamuna',
               alt: '3,291m',
-              myth: 'Yamuna is the daughter of Surya (the sun god) and the twin sister of Yama (the god of death). The belief is that bathing in the Yamuna at its source absolves the devotee of a fearful death — since Yamuna\'s brother Yama cannot claim those who have bathed in his sister\'s sacred waters at the source. The Surya Kund hot spring at Yamunotri (47°C) is believed to be directly heated by Surya, the sun god. Pilgrims traditionally cook rice and potatoes in the hot spring as prasad — an act that connects the mundane (cooking food) with the divine (Surya\'s thermal energy).',
+              myth: 'Yamuna is the daughter of Surya (the sun god) and the twin sister of Yama (the god of death). The belief is that bathing in the Yamuna at its source absolves the devotee of a fearful death — since Yamuna\'s brother Yama cannot claim those who have bathed in his sister\'s sacred waters at the source. The Surya Kund hot spring at Yamunotri (88°C) is believed to be directly heated by Surya, the sun god. Pilgrims traditionally cook rice and potatoes in the hot spring as prasad — an act that connects the mundane (cooking food) with the divine (Surya\'s thermal energy).',
               shankaracharya: 'Shankaracharya established the idol of Goddess Yamuna at this shrine and set up the worship protocols. The current temple was built in the 19th century by Maharani Guleria of Jaipur.',
             },
             {

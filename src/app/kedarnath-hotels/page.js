@@ -12,6 +12,8 @@ export const metadata = {
     title: `Hotels Near Kedarnath ${SITE.season} — Guide to Best Stays`,
     description: 'Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.',
     url: `${SITE.baseUrl}/kedarnath-hotels`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Hotels Near Kedarnath ${SITE.season} — Guide to Best Stays | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -174,7 +176,7 @@ export default function KedarnathHotels() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Kedarnath Yatra 2026 with hotel. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            View Package →
+            <Link href="/kedarnath-tour-package" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Package →</Link>
           </div>
         </div>
 

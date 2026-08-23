@@ -11,6 +11,8 @@ export const metadata = {
     title: `Gangotri Weather ${SITE.season} — Month-wise Temperature Guide`,
     description: 'Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.',
     url: `${SITE.baseUrl}/gangotri-weather`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Gangotri Weather ${SITE.season} — Month-wise Temperature Guide | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -116,7 +118,7 @@ export default function GangotriWeather() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Gangotri Yatra 2026. Please share packages and weather advice.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            View Gangotri Packages →
+            <Link href="/gangotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Gangotri Packages →</Link>
           </div>
         </div>
 

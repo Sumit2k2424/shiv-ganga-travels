@@ -13,8 +13,9 @@ export const metadata = {
   keywords: [`how to reach kedarnath ${SITE.season}`, 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', `kedarnath journey guide ${SITE.season}`],
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },
-  openGraph: { title: `How to Reach Kedarnath ${SITE.season}: Road, Train & Heli`, url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `How to Reach Kedarnath ${SITE.season} — All Routes Explained | Shiv Ganga Travels` }],
+  openGraph: { title: `How to Reach Kedarnath ${SITE.season}: Road, Train & Heli`, url: `${SITE.baseUrl}/blog/how-to-reach-kedarnath`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `How to Reach Kedarnath ${SITE.season}: Road, Train & Heli` }],
+  },
 };
 
 function Schema() {
@@ -22,7 +23,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What is the nearest railway station to Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Rishikesh (216km from Gaurikund) and Haridwar (218km) are the nearest railway stations to Kedarnath. Both are on the Haridwar-Dehradun rail line. From either station, road travel to Gaurikund (Kedarnath base) takes 6–7 hours. Haridwar has more frequent trains from major cities than Rishikesh.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Rishikesh (about 215km from Gaurikund) and Haridwar (about 235km as driven) are the nearest railway stations to Kedarnath. Both are on the Haridwar-Dehradun rail line. From either station, road travel to Gaurikund (Kedarnath base) takes 6–7 hours. Haridwar has more frequent trains from major cities than Rishikesh.' }},
       { '@type': 'Question', name: 'What is the nearest airport to Kedarnath?',
         acceptedAnswer: { '@type': 'Answer', text: 'Jolly Grant Airport (Dehradun) is the nearest airport to Kedarnath — approximately 250km from Gaurikund (7–8 hours by road). It connects to Delhi (1 hour), Mumbai (1.5 hours), Bangalore (2.5 hours), and Hyderabad (2 hours). From Dehradun airport, taxi to Haridwar (35km, 1 hour) then onwards to Gaurikund.' }},
       { '@type': 'Question', name: 'How long does the Kedarnath trek take?',
@@ -100,7 +101,7 @@ export default function HowToReachKedarnath() {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:28 }}>
           {[
             { num:'1', stage:'Your City → Haridwar', options:'Train (best), flight to Dehradun + taxi, road', note:'The gateway to Kedarnath' },
-            { num:'2', stage:'Haridwar → Gaurikund', options:'Road: 218km, 6–7 hours via Guptkashi', note:'NH7 through Rishikesh, Rudraprayag, Guptkashi' },
+            { num:'2', stage:'Haridwar → Gaurikund', options:'Road: ~235km, 8–9 hours via Guptkashi', note:'NH7 through Rishikesh, Rudraprayag, Guptkashi' },
             { num:'3', stage:'Gaurikund → Kedarnath', options:'Trek (16km, 5–7 hrs), pony, or helicopter', note:'No vehicles beyond Gaurikund' },
             { num:'4', stage:'Kedarnath Darshan', options:'General queue (free), VIP puja (₹1,500–3,100)', note:'Temple open 6 AM–9 PM' },
           ].map(s=>(

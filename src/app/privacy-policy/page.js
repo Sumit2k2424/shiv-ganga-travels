@@ -11,6 +11,8 @@ export const metadata = {
     description: 'What we collect, why, who we share it with, and how to have it deleted.',
     url: `${SITE.baseUrl}/privacy-policy`,
     type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Privacy policy — Shiv Ganga Travels' }],
   },
 };
 

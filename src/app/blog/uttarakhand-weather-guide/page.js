@@ -12,8 +12,9 @@ export const metadata = {
   description: `Uttarakhand weather ${SITE.season} — temperatures at all four shrines. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`uttarakhand weather month by month ${SITE.season}`, `kedarnath weather ${SITE.season}`, 'char dham yatra weather guide', 'badrinath temperature month wise', 'uttarakhand climate chart', 'kedarnath temperature june', 'char dham yatra weather september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
-  openGraph: { title: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines`, url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Uttarakhand Weather ${SITE.season} — Month-by-Month Guide | Shiv Ganga Travels` }],
+  openGraph: { title: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines`, url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines` }],
+  },
 };
 
 function Schema() {

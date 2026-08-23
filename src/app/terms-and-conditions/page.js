@@ -11,6 +11,8 @@ export const metadata = {
     description: 'What you agree to when you book a yatra with us, in plain language.',
     url: `${SITE.baseUrl}/terms-and-conditions`,
     type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Terms and conditions — Shiv Ganga Travels' }],
   },
 };
 

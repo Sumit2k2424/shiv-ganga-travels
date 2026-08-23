@@ -5,15 +5,16 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
-import { h2 } from "@/lib/prose";
+import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Group Package ${SITE.season} | Price Starts at ₹17,500 | 10+ Pilgrims` },
   description: `Char Dham Yatra group packages ${SITE.season} — save 10–15% for 10+ pilgrims. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`char dham yatra group package ${SITE.season}`, 'char dham yatra group booking', `char dham group package price ${SITE.season}`, 'char dham yatra large group', 'char dham group tour haridwar', `char dham group discount ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
-  openGraph: { title: `Char Dham Group Package ${SITE.season}: Price & Discounts`, url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Group Package ${SITE.season} — Book for 10+ Pilgrims | Shiv Ganga Travels` }],
+  openGraph: { title: `Char Dham Group Package ${SITE.season}: Price & Discounts`, url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Group Package ${SITE.season}: Price & Discounts` }],
+  },
 };
 
 function Schema() {
@@ -73,6 +74,7 @@ export default function GroupPackage() {
 
         <BlogTOC items={[
           { id:'pricing',        label:'Group size & per-person pricing' },
+          { id:'group-reality',  label:'What actually changes with a group' },
           { id:'timeline',       label:'Advance booking timeline' },
           { id:'what-we-handle', label:'What we handle for groups' },
         ]}/>
@@ -114,6 +116,27 @@ export default function GroupPackage() {
         </div>
         <div style={{ background:'#F0FDF4', borderRadius:10, padding:'12px 16px', marginBottom:28, fontSize:13.5, color:'#15803D' }}>
           <strong>Highlighted rows</strong> (6–9 people) represent the sweet spot for group Char Dham Yatra — best per-person price with comfortable, private vehicle and maximum group bonding.
+        </div>
+
+        <h2 id="group-reality" style={h2}>What Actually Changes With a Group</h2>
+        <p style={p}>
+          The pricing table is the easy part. What decides whether a group yatra goes well is a handful of
+          things nobody asks about until day three, and they are worth settling before you book.
+        </p>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(260px,100%),1fr))', gap:12, marginBottom:24 }}>
+          {[
+            { t:'Pace mismatch', d:'A group of twelve contains a 68-year-old and a 24-year-old, and the Kedarnath trek separates them by four hours. Plan for the group to split on trek days and regroup at Guptkashi — trying to keep everyone together is what produces exhausted seniors.' },
+            { t:'Rooming and odd numbers', d:'Hotels here are twin-share. An odd-numbered group means either a single supplement or someone sharing with a stranger, and it is much easier to decide that at booking than at 9pm in Barkot.' },
+            { t:'One payer, many opinions', d:'Groups almost always nominate one person to hold the booking. Make sure that person also has authority to decide — ponies, an extra night, a helicopter upgrade — because those calls get made on the road with no time to poll everyone.' },
+            { t:'Food', d:'Jain, no-onion-garlic and diabetic requirements are all normal on this route and all need telling us in advance. Hotel kitchens above Rudraprayag are small and cannot improvise for twelve people at short notice.' },
+            { t:'Two vehicles is two convoys', d:'Above about 13 people you are in two vehicles, and they will not arrive together. Agree a meeting point per stop rather than assuming the group stays a single unit.' },
+            { t:'Registration for everyone', d:'Every pilgrim needs their own registration and, at 55 and over, their own medical certificate. One missing person at the Sonprayag checkpoint holds up the whole group.' },
+          ].map(x => (
+            <div key={x.t} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:12, padding:'14px 16px' }}>
+              <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>{x.t}</div>
+              <div style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.7 }}>{x.d}</div>
+            </div>
+          ))}
         </div>
 
         <h2 id="timeline" style={h2}>

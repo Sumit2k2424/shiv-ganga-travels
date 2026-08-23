@@ -14,6 +14,8 @@ export const metadata = {
     description: 'Everything about Char Dham Yatra 2026 — dates, packages, prices, registration, what to carry. Trusted operator since 2010.',
     url: `${SITE.baseUrl}/char-dham-yatra-2025`,
     type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra 2026 — Complete Guide & Packages from Haridw | Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -146,7 +148,7 @@ export default function CharDhamGuide2025() {
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>📞 {SITE.phone}</a>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan Char Dham Yatra 2026.')}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp Us</a>
-            View Packages →
+            <Link href="/char-dham-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Packages →</Link>
           </div>
         </div>
       </article>

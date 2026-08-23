@@ -19,6 +19,8 @@ export const metadata = {
     description: 'Haridwar tour packages from ₹2,999. Har Ki Pauri Ganga Aarti, Mansa Devi, Chandi Devi, Rishikesh combo. Shiv Ganga Travels — Haridwar\'s trusted direct operator since 2010.',
     url: `${SITE.baseUrl}/haridwar-tour-packages`,
     type: 'website',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Haridwar Tour Package ${SITE.season} — Ganga Aarti, Har Ki Pauri | Fro | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

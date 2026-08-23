@@ -16,6 +16,8 @@ export const metadata = {
     description: 'Train, flight, bus, and road options from all major cities to Haridwar — starting point of Char Dham Yatra.',
     url: `${SITE.baseUrl}/how-to-reach-haridwar`,
     type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `How to Reach Haridwar for Char Dham Yatra ${SITE.season} | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',

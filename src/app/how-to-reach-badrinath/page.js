@@ -11,6 +11,8 @@ export const metadata = {
     title: `How to Reach Badrinath ${SITE.season} — Road Route & Complete Guide`,
     description: 'Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.',
     url: `${SITE.baseUrl}/how-to-reach-badrinath`, type: 'article',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `How to Reach Badrinath ${SITE.season} — Road Route & Complete Guide | Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -132,7 +134,7 @@ export default function HowToReachBadrinath() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to visit Badrinath as part of Char Dham Yatra 2026. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            View Badrinath Package →
+            <Link href="/badrinath-tour-package" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Badrinath Package →</Link>
           </div>
         </div>
 

@@ -1,12 +1,25 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import FAQAccordion from '@/components/FAQAccordion';
+import { h2, p } from '@/lib/prose';
+
+const faqs = [
+  { q: 'What is the best time to visit Uttarakhand?', a: 'It depends which Uttarakhand you mean. For the Char Dham and the high Himalayan shrines, May to mid-June and mid-September to October — the season runs 19 April to 13 November 2026 and the temples are shut the rest of the year. For hill stations like Mussoorie and Nainital, March to June and September to November. For the Valley of Flowers, July to September, which is exactly the monsoon window you would avoid everywhere else. For Jim Corbett, November to June, with the core zones closed in the monsoon.' },
+  { q: 'How many days do you need for Uttarakhand?', a: 'Three to four days covers one hill station or Rishikesh. Five to six covers Do Dham, Auli, or Corbett with Nainital. The full Char Dham circuit needs nine to eleven nights by road, or five to six by helicopter. The mistake people make is treating Uttarakhand as one destination — Haridwar to Badrinath alone is 320km and ten hours of mountain driving.' },
+  { q: 'Which Uttarakhand package is best for a first visit?', a: 'If the purpose is pilgrimage, Do Dham — Kedarnath and Badrinath in 5N/6D — gives you the two most significant shrines without committing to the full circuit. If it is a holiday, Rishikesh with Mussoorie or a Nainital and Corbett pairing is far easier on families. Char Dham in full is a demanding trip and is better as a considered choice than a first-time default.' },
+  { q: 'Do you need permits to travel in Uttarakhand?', a: 'Not for general travel. Char Dham yatra registration is mandatory and free, at registrationandtouristcare.uk.gov.in. Separate permits apply only in specific places — Gangotri National Park if you continue to Gaumukh, Valley of Flowers National Park, and Inner Line Permits for foreign nationals near the border, including Mana. Jim Corbett safaris are booked separately with their own zone permits.' },
+  { q: 'Is Uttarakhand safe during the monsoon?', a: 'The hill districts are landslide-prone in July and August, and that is a genuine constraint rather than a disclaimer. The Char Dham routes close repeatedly, helicopters are grounded and multi-day delays are normal. The plains and lower hills — Haridwar, Rishikesh, Dehradun, Nainital — are far less affected. If you must travel in those months, build two spare days into the plan.' },
+  { q: 'What does an Uttarakhand tour package include?', a: 'Ours cover the vehicle with a hill-experienced driver, twin-sharing hotels, daily breakfast and dinner, all tolls, parking and driver allowance, and yatra registration where it applies. Not included: flights or trains to Haridwar, pony and helicopter charges at Kedarnath, lunch on travel days, and temple donations. Every package page lists both, in full.' },
+];
 
 export const metadata = {
   title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Price Starts at ₹3,750 | Hills & Pilgrimage` },
   description: `Uttarakhand Tour Packages ${SITE.season} from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`uttarakhand tour packages, uttarakhand tour packages ${SITE.season}, uttarakhand tourism packages, best uttarakhand packages from haridwar`],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
-  openGraph: { title:`Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure & Pilgrimage`, description:`Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`, url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website' },
+  openGraph: { title:`Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure & Pilgrimage`, description:`Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`, url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure  | Shiv Ganga Travels` }],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife & Pilgrimage`,
@@ -30,7 +43,9 @@ function Schema() {
       {'@type':'ListItem',position:2,name:'Uttarakhand Tour Packages 2026 — Beyond the Dhams',item:`${SITE.baseUrl}/uttarakhand-tour-packages`},
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+  const faq = { '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
 
 export default function Page() {
@@ -106,13 +121,55 @@ export default function Page() {
           </a>
         </div>
 
+        <h2 style={h2}>Choosing between them</h2>
+        <p style={p}>
+          The single most useful thing to know about Uttarakhand is that it is not one destination. Haridwar
+          to Badrinath alone is 320km and ten hours of mountain driving, and the seasons work against each
+          other — the Valley of Flowers is at its best in exactly the monsoon weeks when the Char Dham routes
+          are closing for landslides. Trying to combine the high shrines with a hill-station holiday in one
+          week is the most common way these trips go wrong.
+        </p>
+        <div style={{background:'#fff',borderRadius:12,border:'1px solid hsl(var(--border))',overflowX:'auto',marginBottom:20}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:13,minWidth:640}}>
+            <caption className="sr-only">Uttarakhand destinations compared by season, duration and who they suit</caption>
+            <thead>
+              <tr style={{background:'var(--navy-light)'}}>
+                {['Destination','Best season','Days needed','Suits'].map(x => (
+                  <th key={x} scope="col" style={{padding:'10px 12px',textAlign:'left',fontWeight:700,fontSize:11,color:'var(--navy)',textTransform:'uppercase',letterSpacing:'0.05em'}}>{x}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Char Dham (full circuit)','May–mid Jun, mid Sep–Oct','9–11 nights','Pilgrims committing to the whole circuit'],
+                ['Do Dham (Kedarnath + Badrinath)','May–Jun, Sep–Oct','5 nights','First-time pilgrims, limited leave'],
+                ['Valley of Flowers + Hemkund','Mid Jul–mid Sep','5 nights','Trekkers — the one monsoon-season trip'],
+                ['Auli skiing','Jan–Mar','3 nights','Snow, families, no trekking'],
+                ['Jim Corbett + Nainital','Nov–Jun','5 nights','Wildlife and lakes, easiest with children'],
+                ['Rishikesh + Mussoorie','Mar–Jun, Sep–Nov','3–4 nights','Short breaks, rafting, first visit'],
+              ].map(([a,b,c,d],i) => (
+                <tr key={a} style={{borderTop:'1px solid hsl(var(--border))',background:i%2===0?'#fff':'var(--bg)'}}>
+                  <th scope="row" style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13,textAlign:'left'}}>{a}</th>
+                  <td style={{padding:'10px 12px',color:'var(--text-mid)',fontSize:12.5}}>{b}</td>
+                  <td style={{padding:'10px 12px',color:'var(--teal)',fontWeight:700,whiteSpace:'nowrap'}}>{c}</td>
+                  <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:12.5}}>{d}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={h2}>Frequently asked questions</h2>
+        <FAQAccordion faqs={faqs} />
+
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}>📦 Browse All Packages:</div>
-          View Uttarakhand Packages →
+          <Link href="/packages" style={{ display:'inline-block', background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>View Uttarakhand Packages →</Link>
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
+
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
               <Link key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
               <Link key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>

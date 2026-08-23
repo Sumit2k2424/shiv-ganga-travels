@@ -12,8 +12,9 @@ export const metadata = {
   description: `Char Dham Yatra in 7 days ${SITE.season} — day-by-day itinerary. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', `char dham yatra short duration ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
-  openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra in 7 Days ${SITE.season} — Is It Possible? | Shiv Ganga Travels` }],
+  openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice' }],
+  },
 };
 
 function Schema() {
@@ -99,7 +100,7 @@ export default function SevenDaysBlog() {
           Why Most Pilgrims Need 10 Days (Not 7)
         </h2>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
-          The Char Dham circuit from Haridwar covers approximately 1,500km of mountain roads. The four dhams span altitudes of 2,675m (Yamunotri) to 3,583m (Kedarnath). Between Gangotri and Guptkashi alone, you are driving 265km on narrow Himalayan roads — that is 7–8 hours. Add the 32km Kedarnath trek (round trip) and you have what is genuinely one of the most physically demanding pilgrimage circuits in the world.
+          The Char Dham circuit from Haridwar covers approximately 1,500km of mountain roads. The four dhams span altitudes of 3,133m (Badrinath, the lowest) to 3,583m (Kedarnath, the highest), with Yamunotri at 3,291m and Gangotri at 3,415m. Between Gangotri and Guptkashi alone, you are driving 265km on narrow Himalayan roads — that is 7–8 hours. Add the 32km Kedarnath trek (round trip) and you have what is genuinely one of the most physically demanding pilgrimage circuits in the world.
         </p>
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:24 }}>
           The 10-day minimum exists not because operators want to sell more nights — it exists because the human body at altitude needs time. Rushing creates altitude sickness, missed darshan at overcrowded temples, and the spiritual exhaustion of a yatra that felt like a race rather than a pilgrimage.

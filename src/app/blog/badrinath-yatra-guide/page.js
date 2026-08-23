@@ -5,7 +5,25 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import KeyTakeaways from '@/components/KeyTakeaways';
+import FAQAccordion from '@/components/FAQAccordion';
+import { ROUTES } from '@/data/distances';
 import { h2, p } from "@/lib/prose";
+
+/* Route legs are read from the data layer rather than retyped — the same
+   figures power /haridwar-to-badrinath-distance and the cab pages, and the one
+   thing worse than no route section is two route sections that disagree. */
+const badrinathRoute = ROUTES['haridwar-badrinath'];
+
+const faqs = [
+  { q: 'How far is Badrinath from Haridwar?', a: `${badrinathRoute.kmLabel} by road via Rishikesh, Devprayag, Rudraprayag, Karnaprayag, Chamoli and Joshimath. Allow ${badrinathRoute.time} of driving. It is the longest single leg of the Char Dham circuit and the one pilgrims most often underestimate — on a plains highway 320km is four hours, but this road climbs 2,800 metres following a river gorge.` },
+  { q: 'What are the Badrinath darshan timings in 2026?', a: 'The temple opens at 4:30 AM for Mahabhishek Puja, general morning darshan runs 7:00 AM to 1:00 PM, the temple closes 1:00 to 4:00 PM, and evening darshan runs 4:00 to 9:00 PM with aarti at 8:00 PM. Timings shift slightly around festival days and the temple committee announces changes on the day.' },
+  { q: 'Do you need to trek to Badrinath?', a: 'No. The motor road runs to the temple, and the walk from the car park across the Alaknanda footbridge takes a few minutes. Along with Gangotri it is one of the two dhams with no trek, which makes it the most realistic for elderly pilgrims — the constraint is the altitude at 3,133m, not the walking.' },
+  { q: 'When does Badrinath open and close in 2026?', a: 'Badrinath opens on 23 April 2026 at 6:15 AM and closes on 13 November 2026. It has the longest season of the four dhams and is always the last to close. The opening date is announced by the Raj Purohit at Joshimath on Basant Panchami; after closing, the deity moves to Pandukeshwar for winter worship.' },
+  { q: 'How hot is Tapt Kund at Badrinath?', a: 'Around 45°C — hot but bearable, unlike the Surya Kund at Yamunotri which runs near 88°C and is used for cooking rather than bathing. Tapt Kund sits just below the temple on the bank of the Alaknanda, and pilgrims traditionally bathe there before darshan. It holds that temperature through snow.' },
+  { q: 'Is Mana village worth visiting?', a: 'Yes, and it is 3km from the temple so it costs you an hour, not a day. Mana is the last village on the Indian side of this valley and holds Vyas Gufa, Ganesh Gufa, the Bhim Pul rock bridge over the Saraswati, and the point where the Saraswati disappears underground. Most Badrinath itineraries include it on the morning of departure.' },
+  { q: 'How many days do you need for Badrinath from Haridwar?', a: 'Three days is the realistic minimum — a full day up, a day at the temple and Mana, and a day back. Our 2N/3D package is built on exactly that. Doing it as a two-day round trip means roughly 21 hours of driving inside 48, which is legal only if you plan around the 10 PM to 4 AM night-driving ban, and is not something we run.' },
+];
 export const metadata = {
   title: { absolute: `Badrinath Yatra Guide ${SITE.season} | Price Starts at ₹4,500 | Timings & Route` },
   description: `Badrinath Yatra ${SITE.season} guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
@@ -13,8 +31,37 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },
 };
 function Schema() {
-  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Badrinath Yatra Guide 2026 — Darshan Timings, Route, Package & Travel Tips', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-20', dateModified:'2026-01-01', mainEntityOfPage:`${SITE.baseUrl}/blog/badrinath-yatra-guide` };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
+  // Author is the founder Person entity, not the Organization — every byline on
+  // this site resolves to /#founder so the author graph stays single-sourced.
+  const a = {
+    '@context':'https://schema.org','@type':'BlogPosting',
+    headline:'Badrinath Yatra Guide 2026 — Darshan Timings, Route, Package & Travel Tips',
+    description:'Badrinath darshan timings, the 320km road route from Haridwar stage by stage, Tapt Kund, Mana village and what to plan for at 3,133m.',
+    image:`${SITE.baseUrl}/opengraph-image`,
+    author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra' },
+    publisher:{ '@type':'Organization', '@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
+    datePublished:'2025-03-20', dateModified:'2026-08-22',
+    mainEntityOfPage:`${SITE.baseUrl}/blog/badrinath-yatra-guide`,
+    about:{ '@type':'Place', name:'Badrinath Temple', geo:{ '@type':'GeoCoordinates', latitude:30.7446, longitude:79.4938, elevation:'3133' } },
+    speakable:{ '@type':'SpeakableSpecification', cssSelector:['.blog-keytakeaways'] },
+  };
+  const faq = {
+    '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
+  };
+  const bc = {
+    '@context':'https://schema.org','@type':'BreadcrumbList',
+    itemListElement:[
+      { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
+      { '@type':'ListItem', position:2, name:'Blog', item:`${SITE.baseUrl}/blog` },
+      { '@type':'ListItem', position:3, name:'Badrinath Yatra Guide 2026', item:`${SITE.baseUrl}/blog/badrinath-yatra-guide` },
+    ],
+  };
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
+  </>);
 }
 export default function BadrinathYatraGuide() {
   return (<>
@@ -50,10 +97,20 @@ export default function BadrinathYatraGuide() {
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>If Kedarnath is Shiva in all his fierce and formidable mountain glory, Badrinath is Vishnu at complete peace — meditative, still, and somehow deeply reassuring. The Badrinath Temple, with its colourful facade against the stark Himalayan backdrop, is one of the most photographed temples in India. And unlike Kedarnath, you can drive straight to it.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything you need to know about the <strong>Badrinath Yatra in 2026</strong> — temple darshan timings, the route from Haridwar, what to see beyond the temple, and honest travel tips from people who have guided thousands of pilgrims here.</p>
 
+      <KeyTakeaways points={[
+        <>Badrinath opens <strong>23 April 2026</strong> and closes <strong>13 November</strong> — the longest season of the four dhams, and always the last to close.</>,
+        <>It is <strong>{badrinathRoute.kmLabel} from Haridwar</strong>, {badrinathRoute.time} of driving. The longest single leg of the circuit.</>,
+        <><strong>No trek.</strong> The road runs to the temple; it is a few minutes on foot from the car park.</>,
+        <>Darshan runs <strong>7 AM–1 PM and 4–9 PM</strong>, with Mahabhishek from 4:30 AM and aarti at 8 PM.</>,
+        <>Altitude <strong>3,133m</strong> — the lowest of the four dhams, which is why it is the easiest on elderly pilgrims.</>,
+      ]}/>
+
       <BlogTOC items={[
         { id:'quick-facts', label:'Badrinath quick facts' },
+        { id:'route',       label:'The route from Haridwar' },
         { id:'timings',     label:'Darshan timings 2026' },
         { id:'beyond',      label:'Beyond the temple' },
+        { id:'faq',         label:'Frequently asked questions' },
       ]}/>
 
       <h2 id="quick-facts" style={h2}>Badrinath Temple — Quick Facts</h2>
@@ -64,7 +121,7 @@ export default function BadrinathYatraGuide() {
           { label:'Trek Required', value:'No — motor road to temple' },
           { label:'District', value:'Chamoli, Uttarakhand' },
           { label:'Nearest City', value:'Joshimath (45 km)' },
-          { label:'Season', value:'May to November' },
+          { label:'Season 2026', value:'23 Apr – 13 Nov' },
         ].map(f => (
           <div key={f.label} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px', border:'1px solid rgba(15,43,91,0.1)', textAlign:'center' }}>
             <div style={{ fontSize:11.5, color:'var(--text-muted)', marginBottom:4 }}>{f.label}</div>
@@ -72,6 +129,56 @@ export default function BadrinathYatraGuide() {
           </div>
         ))}
       </div>
+
+      <h2 id="route" style={h2}>The Route from Haridwar</h2>
+      <p style={p}>
+        Badrinath is {badrinathRoute.kmLabel} from Haridwar and takes {badrinathRoute.time} of driving. That
+        ratio is the single most useful fact on this page: it works out under 30km/h, and pilgrims who plan
+        from the distance alone arrive four hours later than they expected, in the dark, at 3,133m. The route
+        runs {badrinathRoute.via.join(' → ')}.
+      </p>
+      <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:14 }}>
+        <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:640 }}>
+          <caption className="sr-only">Haridwar to Badrinath road route, stage by stage</caption>
+          <thead>
+            <tr style={{ background:'var(--navy-light)' }}>
+              {['Stage','Distance','Time','Road notes'].map(x => (
+                <th key={x} scope="col" style={{ padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.05em' }}>{x}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {badrinathRoute.legs.map(([leg, km, time, note], i) => (
+              <tr key={leg} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                <th scope="row" style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)', fontSize:13, textAlign:'left', whiteSpace:'nowrap' }}>{leg}</th>
+                <td style={{ padding:'10px 12px', color:'var(--teal)', fontWeight:700, fontFamily:'monospace' }}>{km}</td>
+                <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{time}</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>{note}</td>
+              </tr>
+            ))}
+            <tr style={{ borderTop:'2px solid var(--navy)', background:'var(--navy-light)' }}>
+              <th scope="row" style={{ padding:'10px 12px', fontWeight:800, color:'var(--navy)', fontSize:13, textAlign:'left' }}>Haridwar → Badrinath</th>
+              <td style={{ padding:'10px 12px', color:'var(--navy)', fontWeight:800, fontFamily:'monospace' }}>{badrinathRoute.kmLabel}</td>
+              <td style={{ padding:'10px 12px', color:'var(--navy)', fontWeight:700 }}>{badrinathRoute.time}</td>
+              <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Most groups break the drive at Rudraprayag or Joshimath.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style={{ ...p, fontSize:'0.96em' }}>
+        {badrinathRoute.whySlow}
+      </p>
+      {badrinathRoute.note && (
+        <div style={{ background:'#fffbeb', border:'1px solid #fde68a', borderRadius:10, padding:'13px 16px', marginBottom:20 }}>
+          <strong style={{ fontSize:13.5, color:'#92400e' }}>Worth knowing: </strong>
+          <span style={{ fontSize:13.5, color:'#78350f', lineHeight:1.75 }}>{badrinathRoute.note}</span>
+        </div>
+      )}
+      <p style={p}>
+        Full stage detail, alternate routes and current conditions are on{' '}
+        <Link href="/haridwar-to-badrinath-distance" style={{ color:'var(--teal)' }}>Haridwar to Badrinath distance</Link>{' '}
+        and <Link href="/how-to-reach-badrinath" style={{ color:'var(--teal)' }}>how to reach Badrinath</Link>.
+      </p>
 
       <h2 id="timings" style={h2}>Badrinath Temple Darshan Timings 2026</h2>
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:20, fontSize:14 }}>
@@ -111,6 +218,9 @@ export default function BadrinathYatraGuide() {
           </div>
         ))}
       </div>
+
+      <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
+      <FAQAccordion faqs={faqs} />
 
       <BlogCTA
         variant="note"

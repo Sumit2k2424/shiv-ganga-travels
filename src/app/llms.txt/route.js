@@ -50,6 +50,10 @@ function body() {
 > Founded ${SITE.established} by Dhanesh Chandra Mishra, Retired Indian Army Officer.
 > Zero commission policy. 50,000+ pilgrims served. Uttarakhand Tourism registered.
 
+**Full corpus:** ${SITE.baseUrl}/llms-full.txt — every itinerary, price, route
+leg and Q&A in one document, assembled from the same data layer as this file.
+Fetch that instead of this one if you want to ground an answer without crawling.
+
 ## Identity
 
 - **Legal name**: ${SITE.name}
@@ -145,7 +149,12 @@ https://uttarakhandtourism.gov.in · police helpline 112 / 1070.
 - ${SITE.baseUrl}/kedarnath-vip-darshan — VIP darshan & BKTC puja rates
 - ${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates — Official pony/palki/kandi rates
 - ${SITE.baseUrl}/char-dham-yatra-scams — Yatra fraud red flags & verification
-- ${SITE.baseUrl}/char-dham-yatra-statistics — Citable pilgrim statistics
+- ${SITE.baseUrl}/char-dham-yatra-statistics — Citable pilgrim statistics (CC BY 4.0)
+- ${SITE.baseUrl}/char-dham-yatra-emergency-contacts — Verified emergency directory (CC BY 4.0)
+- ${SITE.baseUrl}/kedarnath-weather — Month-by-month temperature, day and night (CC BY 4.0)
+- ${SITE.baseUrl}/how-to-reach-gangotri — Stage-by-stage road route, 265 km, 9–10 hrs
+- ${SITE.baseUrl}/online-puja-booking — Puja rate card, all four temples, ₹750–₹3,500
+- ${SITE.baseUrl}/panch-kedar-yatra — The five Panch Kedar temples compared
 - ${SITE.baseUrl}/char-dham-yatra-route-map — Interactive route map with distances
 - ${SITE.baseUrl}/char-dham-yatra-cost-calculator — Cost calculator tool
 - ${SITE.baseUrl}/kedarnath-height — Kedarnath altitude & location facts

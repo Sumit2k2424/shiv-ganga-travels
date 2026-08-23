@@ -12,6 +12,8 @@ export const metadata = {
     description: 'Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
     url: `${SITE.baseUrl}/about`,
     type: 'website',
+  
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'About Shiv Ganga Travels — Our Story, Ethics & Vision | Shiv Ganga Travels' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -407,7 +409,7 @@ export default function AboutPage() {
                 💬 Book on WhatsApp
               </a>
               
-                View Packages →
+                <Link href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Packages →</Link>
               
             </div>
           </div>

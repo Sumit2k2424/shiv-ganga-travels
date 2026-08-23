@@ -13,8 +13,9 @@ export const metadata = {
   description: 'पहली बार केदारनाथ जा रहे हैं? रजिस्ट्रेशन, ट्रेक, खर्चा — हिंदी में। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।',
   keywords: [`केदारनाथ यात्रा ${SITE.season} पहली बार`, 'kedarnath pehli baar kaise jayen', 'केदारनाथ कैसे जाएं हिंदी', 'kedarnath trek hindi guide', `केदारनाथ यात्रा गाइड ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pehli-baar` },
-  openGraph: { title: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', description: 'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', url: `${SITE.baseUrl}/blog/kedarnath-pehli-baar`, type: 'article' },
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `केदारनाथ यात्रा ${SITE.season} — पहली बार जाने वालों के लिए पूरी जानकारी हिंदी म | Shiv Ganga Travels` }],
+  openGraph: { title: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना', description: 'रजिस्ट्रेशन, ट्रेक, खर्चा, कपड़े, मौसम — पहली बार केदारनाथ जाने की पूरी जानकारी हिंदी में।', url: `${SITE.baseUrl}/blog/kedarnath-pehli-baar`, type: 'article', 
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'केदारनाथ पहली बार जा रहे हैं? — ये 18 गलतियाँ मत करना' }],
+  },
 };
 
 function Schema() {
@@ -71,8 +72,8 @@ export default function KedarnathPehliBaar() {
         badge="🏔️ पहली बार केदारनाथ · 2026"
         title="केदारनाथ पहली बार जा रहे हैं?"
         dek="ये 18 गलतियाँ मत करना — वरना यात्रा बर्बाद हो जाएगी"
-        author="सुमित मिश्रा"
-        authorInitials="SM"
+        author="धनेश चंद्र मिश्रा"
+        authorInitials="DM"
         updated="अपडेटेड 2026"
         readTime="9 मिनट"
         facts={[
@@ -131,9 +132,54 @@ export default function KedarnathPehliBaar() {
         />
 
         <BlogTOC title="इस गाइड में" items={[
+          { id:"day-sequence", label:"ट्रेक वाले दिन का क्रम" },
           { id:"trek-hourly", label:"केदारनाथ ट्रेक — घंटे दर घंटे" },
           { id:"when-to-go", label:"कब जाएं" },
         ]}/>
+
+        <h2 id="day-sequence" style={h2}>ट्रेक वाले दिन असल में होता क्या है</h2>
+        <p style={p}>
+          पहली बार जाने वालों को सबसे ज्यादा हैरानी इस बात से होती है कि गाड़ी मंदिर तक नहीं जाती — और यह
+          बात ज्यादातर गाइड में साफ नहीं लिखी होती। दिन का क्रम यह रहता है:
+        </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:16 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:560 }}>
+            <caption className="sr-only">केदारनाथ ट्रेक वाले दिन का क्रम — समय, जगह और क्या होता है</caption>
+            <thead>
+              <tr style={{ background:'var(--navy-light)' }}>
+                {['समय','जगह','क्या होता है'].map(x => (
+                  <th key={x} scope="col" style={{ padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11.5, color:'var(--navy)' }}>{x}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['3:00–4:00 बजे','गुप्तकाशी','होटल से निकलना। नाश्ता साथ बांध लें — रास्ते में सब बंद रहता है।'],
+                ['4:30–5:00 बजे','सोनप्रयाग','गाड़ी यहीं रुक जाती है। पुलिस चेकपोस्ट — रजिस्ट्रेशन का QR स्कैन होता है। बड़ा सामान गाड़ी में ही छोड़ें।'],
+                ['5:00–5:30 बजे','सोनप्रयाग → गौरीकुंड','शेयर्ड जीप, 5 किमी, ₹30–50 प्रति व्यक्ति। अपनी गाड़ी आगे नहीं जा सकती।'],
+                ['5:30 बजे','गौरीकुंड','ट्रेक शुरू। घोड़ा-पालकी यहीं से बुक होती है — पहले से तय कर लें, बीच रास्ते में नहीं मिलती।'],
+                ['11:00–12:30','केदारनाथ','16 किमी, 5–7 घंटे। दर्शन की लाइन खुले में लगती है — गर्म कपड़ा ऊपर पहुंचकर पहनना है।'],
+                ['शाम','वापस या रुकना','उसी दिन उतरें तो कुल 32 किमी। ऊपर रुकें तो सुबह की आरती मिलती है, पर कमरा पहले से बुक चाहिए।'],
+              ].map(([a,b,c], i) => (
+                <tr key={a} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                  <th scope="row" style={{ padding:'10px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, textAlign:'left', whiteSpace:'nowrap' }}>{a}</th>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5, whiteSpace:'nowrap' }}>{b}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5 }}>{c}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={p}>
+          इसका सीधा मतलब यह है कि <strong>पहाड़ पर वही सामान जाएगा जो आप खुद उठाकर चलेंगे</strong> — यानी
+          5–7 किलो का एक छोटा बैग। बाकी सब गुप्तकाशी के होटल या गाड़ी में रहेगा। और <strong>नकद जरूर रखें</strong>:
+          जीप, घोड़ा, चाय-खाना सब कैश पर चलता है, और ऊपर नेटवर्क न होने पर UPI काम नहीं करता।
+        </p>
+        <p style={p}>
+          पूरी पैकिंग लिस्ट <Link href="/blog/char-dham-packing-list-hindi" style={{ color:'var(--teal)' }}>यहां हिंदी में</Link> है,
+          और घोड़ा-पालकी के सरकारी रेट{' '}
+          <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color:'var(--teal)' }}>इस पेज पर</Link> दिए हैं।
+        </p>
 
         <h2 id="trek-hourly" style={h2}>केदारनाथ ट्रेक — घंटे दर घंटे</h2>
         <div style={{ overflowX: 'auto', marginBottom: 24 }}>
