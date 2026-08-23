@@ -8,12 +8,12 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Price Starts at ₹5,250 | Cab, Bus & Heli` },
-  description: `Haridwar to Kedarnath ${SITE.season} — 228km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Haridwar to Kedarnath ${SITE.season} — 235km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`haridwar to kedarnath distance ${SITE.season}`, 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
 };
 const FAQS = [
-  { q:'What is the distance from Haridwar to Kedarnath?', a:'Haridwar to Kedarnath is about 228 km by road up to Gaurikund, then a 16 km trek to the temple — roughly 244 km in total. Driving takes 8–9 hours and the trek another 5–7 hours, so most pilgrims split it across two days with a night at Guptkashi.' },
+  { q:'What is the distance from Haridwar to Kedarnath?', a:'Haridwar to Kedarnath is about 235 km by road up to Gaurikund, then a 16 km trek to the temple — roughly 251 km in total. Driving takes 8–9 hours and the trek another 5–7 hours, so most pilgrims split it across two days with a night at Guptkashi.' },
   { q:'How much is a Haridwar to Kedarnath cab or taxi fare?', a:'A one-way cab from Haridwar to Gaurikund starts at ₹3,000 in a Swift Dzire (4 seats), ₹4,300–₹5,600 in an Ertiga or Innova Crysta (6–7 seats) and ₹6,000–₹7,700 in a Tempo Traveller (12 seats). Round-trip with a 2–3 day halt is usually quoted as a package. Hill-experienced drivers only.' },
   { q:'Is there a bus from Haridwar to Kedarnath?', a:'There is no direct bus to Kedarnath. State and private buses run from Haridwar/Rishikesh to Sonprayag or Guptkashi (₹400–₹700, 9–11 hours); from Sonprayag you take a shared jeep to Gaurikund and trek. Buses are cheapest but slow and seasonal — most pilgrims prefer a cab or package.' },
   { q:'Can I take a helicopter from Haridwar to Kedarnath?', a:'Helicopters do not fly from Haridwar directly. You drive to a helipad — Phata, Sersi or Guptkashi (6–7 hrs from Haridwar) — and fly the last leg to Kedarnath in 8–10 minutes. Round-trip helicopter tickets run ₹7,500–₹9,500 per person and must be booked in advance.' },
@@ -34,15 +34,15 @@ export default function HaridwarToKedarnath() {
     <BlogHero
       badge="Route Guide · 2026"
       title="Haridwar to Kedarnath — Complete Route Guide 2026"
-      dek="228km by road + 16km trek · Journey time · Key stops · Best route"
+      dek="235km by road + 16km trek · Journey time · Key stops · Best route"
       author="Dhanesh Chandra Mishra"
       updated="Updated 2026"
       readTime="5 min read"
       facts={[
-        { label:'By road',  value:'228 km to Gaurikund' },
+        { label:'By road',  value:'235 km to Gaurikund' },
         { label:'Then trek', value:'16 km' },
         { label:'Drive time', value:'8–9 hours' },
-        { label:'Cab from', value:'₹3,500 one-way' },
+        { label:'Cab from', value:'₹3,000 one-way' },
       ]}
     />
 
@@ -63,7 +63,7 @@ export default function HaridwarToKedarnath() {
       {/* Quick Answer — self-contained block for AI Overviews / featured snippet */}
       <div style={{ background:'var(--bg)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
         <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
-        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Haridwar to Kedarnath is <strong>228 km by road</strong> to Gaurikund, then a <strong>16 km trek</strong> (or pony/helicopter) to the temple. By cab it is 8–9 hours of driving (one-way fare from ₹3,500); there is no direct bus or train, and helicopters fly only the final leg from Phata/Guptkashi. Kedarnath is open for 2026 (until 11 November). Most pilgrims take a 2–3 day package with a night at Guptkashi.</p>
+        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Haridwar to Kedarnath is <strong>235 km by road</strong> to Gaurikund, then a <strong>16 km trek</strong> (or pony/helicopter) to the temple. By cab it is 8–9 hours of driving (one-way fare from ₹3,000); there is no direct bus or train, and helicopters fly only the final leg from Phata/Guptkashi. Kedarnath is open for 2026 (until 11 November). Most pilgrims take a 2–3 day package with a night at Guptkashi.</p>
       </div>
 
       <BlogTOC items={[
@@ -78,9 +78,9 @@ export default function HaridwarToKedarnath() {
 
       <h2 id="total-distance" style={h2}>Total Distance: Haridwar to Kedarnath</h2>
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:24, fontSize:14.5, lineHeight:2.2 }}>
-        🚗 <strong>By Road:</strong> Haridwar → Rishikesh → Devprayag → Rudraprayag → Agastyamuni → Guptkashi → Sonprayag → Gaurikund = <strong>228 km (~8–9 hours driving)</strong><br/>
+        🚗 <strong>By Road:</strong> Haridwar → Rishikesh → Devprayag → Rudraprayag → Agastyamuni → Guptkashi → Sonprayag → Gaurikund = <strong>235 km (~8–9 hours driving)</strong><br/>
         🥾 <strong>By Trek:</strong> Gaurikund → Kedarnath = <strong>16 km (5–7 hours)</strong><br/>
-        📏 <strong>Total journey:</strong> 228km + 16km = approximately <strong>244 km and 13–16 hours total</strong>
+        📏 <strong>Total journey:</strong> 235km + 16km = approximately <strong>251 km and 13–16 hours total</strong>
       </div>
 
       <h2 id="day-by-day" style={h2}>Day-by-Day Route Breakdown</h2>
@@ -126,7 +126,7 @@ export default function HaridwarToKedarnath() {
         <BlogCTA variant="inline" intent="kedarnath" />
 
       <h2 id="all-options" style={h2}>How to Reach Kedarnath from Haridwar — All Options Compared</h2>
-      <p style={p}>There is no single &ldquo;Haridwar to Kedarnath&rdquo; vehicle that drops you at the temple — the last 16 km is a trek no road covers. What changes is how you cover the 228 km to Gaurikund. Here is every option side by side.</p>
+      <p style={p}>There is no single &ldquo;Haridwar to Kedarnath&rdquo; vehicle that drops you at the temple — the last 16 km is a trek no road covers. What changes is how you cover the 235 km to Gaurikund. Here is every option side by side.</p>
       <div style={{ overflowX:'auto', marginBottom:8 }}>
         <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:600 }}>
           <thead><tr style={{ background:'var(--navy)' }}>
@@ -136,7 +136,7 @@ export default function HaridwarToKedarnath() {
           </tr></thead>
           <tbody>
             {[
-              { m:'Cab / Taxi', r:'228 km to Gaurikund', t:'8–9 hrs', c:'From ₹3,500 (one way)', n:'Most popular. Door pickup, your own pace, hill-experienced driver. Same cab waits for your trek.' },
+              { m:'Cab / Taxi', r:'235 km to Gaurikund', t:'8–9 hrs', c:'From ₹3,000 (one way)', n:'Most popular. Door pickup, your own pace, hill-experienced driver. Same cab waits for your trek.' },
               { m:'Bus', r:'To Sonprayag/Guptkashi', t:'9–11 hrs', c:'₹400–₹700', n:'No direct bus to Kedarnath. Cheapest but slow and seasonal; jeep + trek from Sonprayag.' },
               { m:'Helicopter', r:'Drive to Phata/Guptkashi, fly last leg', t:'6–7 hrs road + 8–10 min flight', c:'₹7,500–₹9,500 round trip', n:'No chopper from Haridwar itself. Saves the trek. Book early — limited daily slots.' },
               { m:'Train', r:'Haridwar is the railhead', t:'Road + trek beyond', c:'Train fare to Haridwar only', n:'No rail line to Kedarnath. Arrive Haridwar by train, switch to cab or package.' },
@@ -164,10 +164,10 @@ export default function HaridwarToKedarnath() {
           </tr></thead>
           <tbody>
             {[
-              ['Swift Dzire','4','₹3,500–₹4,500','Couples, solo pilgrims'],
-              ['Ertiga / Innova','6–7','₹5,500–₹6,500','Families'],
-              ['Innova Crysta','6','₹6,500–₹8,000','Comfort on hill roads'],
-              ['Tempo Traveller','12','₹9,000–₹12,000','Groups'],
+              ['Swift Dzire','4','₹3,000–₹3,900','Couples, solo pilgrims'],
+              ['Ertiga','6','₹4,300–₹5,100','Families'],
+              ['Innova Crysta','6','₹4,300–₹5,600','Comfort on hill roads'],
+              ['Tempo Traveller','12','₹6,000–₹7,700','Groups'],
             ].map((r,i)=>(
               <tr key={r[0]} style={{ background:i%2?'var(--bg)':'#fff' }}>
                 <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{r[0]}</td>
