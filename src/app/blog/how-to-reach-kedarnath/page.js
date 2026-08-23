@@ -34,7 +34,7 @@ function Schema() {
 }
 
 const CITY_ROUTES = [
-  { city:'Delhi', dist:'350km to Haridwar', bestRoute:'Train (Shatabdi/overnight) or road via NH58', step1:'Delhi → Haridwar by Shatabdi (4.5 hrs) or overnight train', step2:'Haridwar → Guptkashi by road (6 hrs, 190km)', step3:'Guptkashi → Sonprayag → Gaurikund (25km)', step4:'Gaurikund → Kedarnath (16km trek or helicopter)', total:'1.5–2 days total journey' },
+  { city:'Delhi', dist:'350km to Haridwar', bestRoute:'Train (Shatabdi/overnight) or road via NH58', step1:'Delhi → Haridwar by Shatabdi (4.5 hrs) or overnight train', step2:'Haridwar → Guptkashi by road (7–8 hrs, 210km)', step3:'Guptkashi → Sonprayag → Gaurikund (25km)', step4:'Gaurikund → Kedarnath (16km trek or helicopter)', total:'1.5–2 days total journey' },
   { city:'Mumbai', dist:'1,450km to Haridwar', bestRoute:'Fly to Dehradun (1.5 hrs) then road', step1:'Mumbai → Dehradun flight (IndiGo/Air India, 1.5 hrs)', step2:'Dehradun → Haridwar (35km, 1 hr by taxi)', step3:'Haridwar → Guptkashi → Gaurikund (7 hrs)', step4:'Gaurikund → Kedarnath (16km trek or helicopter)', total:'1.5–2 days total journey' },
   { city:'Bangalore', dist:'2,080km to Haridwar', bestRoute:'Fly Bangalore → Dehradun (2.5 hrs)', step1:'Bangalore → Dehradun flight (IndiGo daily, 2.5 hrs)', step2:'Dehradun → Haridwar (35km, 1 hr)', step3:'Haridwar → Guptkashi → Gaurikund (7 hrs)', step4:'Gaurikund → Kedarnath', total:'1.5–2 days total' },
   { city:'Hyderabad', dist:'1,620km to Haridwar', bestRoute:'Fly Hyderabad → Dehradun (2 hrs)', step1:'Hyderabad → Dehradun flight (IndiGo, 2 hrs)', step2:'Dehradun → Haridwar → Guptkashi → Gaurikund (8 hrs total)', step3:'Gaurikund → Kedarnath trek or helicopter', step4:'Total: 1.5–2 days', total:'1.5–2 days total' },

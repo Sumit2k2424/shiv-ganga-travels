@@ -82,7 +82,7 @@ export default function DelhiToKedarnathDistance() {
           head={['Day','Route','Night','Note']}
           rows={[
             ['1', 'Delhi → Haridwar, 210 km', 'Haridwar', 'Arrive by afternoon. Ganga Aarti at 6:30 PM.'],
-            ['2', 'Haridwar → Guptkashi, 205 km', 'Guptkashi', 'The real mountain day. Leave by 6 AM.'],
+            ['2', 'Haridwar → Guptkashi, 210 km', 'Guptkashi', 'The real mountain day. Leave by 6 AM.'],
             ['3', 'Guptkashi → Sonprayag → trek → Kedarnath', 'Kedarnath or Guptkashi', 'Start the trek by 6 AM. Darshan same day.'],
             ['4', 'Descend and return', '—', 'Long day back. Or split it again at Haridwar.'],
           ]}

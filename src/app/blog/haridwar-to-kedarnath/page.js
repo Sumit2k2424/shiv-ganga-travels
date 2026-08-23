@@ -86,7 +86,7 @@ export default function HaridwarToKedarnath() {
       <h2 id="day-by-day" style={h2}>Day-by-Day Route Breakdown</h2>
       <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:24 }}>
         {[
-          { day:'Day 1', route:'Haridwar → Guptkashi (220 km | 7–8 hrs)', desc:'Start early — 5 AM ideally. The drive follows the Ganga through Rishikesh, passes the sacred Devprayag confluence (Bhagirathi + Alaknanda), continues through Srinagar Garhwal, Rudraprayag, and Agastyamuni to Guptkashi. Overnight in Guptkashi — best base for Kedarnath.' },
+          { day:'Day 1', route:'Haridwar → Guptkashi (210 km | 7–8 hrs)', desc:'Start early — 5 AM ideally. The drive follows the Ganga through Rishikesh, passes the sacred Devprayag confluence (Bhagirathi + Alaknanda), continues through Srinagar Garhwal, Rudraprayag, and Agastyamuni to Guptkashi. Overnight in Guptkashi — best base for Kedarnath.' },
           { day:'Day 2', route:'Guptkashi → Gaurikund → Kedarnath (8 km drive + 16 km trek)', desc:'Drive from Guptkashi to Sonprayag (30 min), then shared jeep to Gaurikund (7 km). Hot spring dip at Gauri Kund. Begin the 16km trek by 6–7 AM for a comfortable ascent. Arrive Kedarnath by early afternoon. Evening darshan.' },
           { day:'Day 3', route:'Kedarnath → Gaurikund → Return (16 km descent)', desc:'4:30 AM Brahma Muhurta puja — the most auspicious time. Trek down or take the descent services. Continue journey to the next dham or return base.' },
         ].map(d => (

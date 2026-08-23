@@ -27,21 +27,22 @@ function Schema() {
       { '@type': 'Question', name: 'What is the best time to leave Haridwar for Kedarnath?',
         acceptedAnswer: { '@type': 'Answer', text: 'Leave Haridwar at 4:00–5:00 AM for Kedarnath. This gets you to Sonprayag by 9–10 AM before the one-way police checkpoint fills. Arriving at Gaurikund by 8–9 AM allows you to start the Kedarnath trek in cool morning temperatures. Pilgrims who leave after 7 AM often face 1–2 hour waits at the Sonprayag checkpoint.' }},
       { '@type': 'Question', name: 'What are the main stops on the Haridwar to Kedarnath route?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Key stops on Haridwar to Kedarnath route: Rishikesh (24km), Devprayag (70km) — Ganga-Alaknanda confluence, Rudraprayag (140km) — Mandakini river junction, Guptkashi (193km) — Kedarnath base town, Sonprayag (213km) — one-way checkpoint, Gaurikund (218km direct, ~235km as driven) — trek/helicopter base.' }},
+        acceptedAnswer: { '@type': 'Answer', text: 'Key stops on Haridwar to Kedarnath route: Rishikesh (24km), Devprayag (70km) — Ganga-Alaknanda confluence, Rudraprayag (140km) — Mandakini river junction, Guptkashi (210km) — Kedarnath base town, Sonprayag (230km) — one-way checkpoint, Gaurikund (235km) — trek/helicopter base.' }},
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
 }
 
-/* TWO DISTANCES, BOTH CORRECT — do not "fix" one to match the other.
-   The stage table below sums to about 218 km, which is the direct alignment
-   Haridwar → Rishikesh → Devprayag → Rudraprayag → Guptkashi → Sonprayag →
-   Gaurikund measured leg by leg. src/data/cabs/routes.js quotes 235 km for the
-   same booking because that is what the vehicles actually log: the Sonprayag
-   shuttle, the Rishikesh bypass and the standing diversions above Rudraprayag
-   add roughly 17 km over a season's average. The page states 235 km as the
-   headline (it is the figure a customer is quoted) and keeps the honest leg
-   splits underneath, with the gap explained rather than hidden. */
+/* ONE BASIS, SITE-WIDE: 235 km Haridwar → Gaurikund, matching
+   src/data/cabs/routes.js, which is the authoritative source for anything we
+   also sell as a cab route.
+
+   This ladder briefly ran on a shorter "direct alignment" basis summing to
+   218 km, with the gap to 235 explained on the page. That split is gone —
+   Guptkashi is 210 km, Sonprayag 230, Gaurikund 235, and the legs sum to the
+   headline. Do not reintroduce a second basis: one road quoted two ways is
+   what sent this figure to 193, 205, 218, 220, 228 and 230 across the site in
+   the first place. */
 const ROUTE = [
   { stop:'Haridwar', km:0, time:'Start (4–5 AM recommended)', notes:'Har Ki Pauri Ganga Aarti the evening before. Biometric registration at tourist centre.', type:'start' },
   { stop:'Rishikesh', km:24, time:'+45 min', notes:'Ram Jhula, Laxman Jhula. Minor fuel/snack stop. Avoid peak hour traffic (8–10 AM) through Rishikesh town.', type:'stop' },
@@ -49,9 +50,9 @@ const ROUTE = [
   { stop:'Srinagar (Garhwal)', km:110, time:'+3.5 hrs', notes:'Larger town. Good for fuel, breakfast, ATM. Last major ATM before Sonprayag. Fill up here.', type:'stop' },
   { stop:'Rudraprayag', km:140, time:'+4.5 hrs', notes:'Mandakini-Alaknanda confluence. Route splits: NH7 straight ahead for Kedarnath, NH58 right for Badrinath.', type:'highlight' },
   { stop:'Agastmuni / Kund', km:165, time:'+5 hrs', notes:'Small valley towns. Scenic riverside driving. Kund area has a Shiva temple worth a brief stop.', type:'stop' },
-  { stop:'Guptkashi', km:193, time:'+5.5–6 hrs', notes:'Primary base for Kedarnath. Hotels, restaurants, ATM, medical shop. Vishwanath temple here. Most packages stay overnight at Guptkashi.', type:'stay' },
-  { stop:'Sonprayag', km:213, time:'+6–6.5 hrs', notes:'MANDATORY POLICE CHECKPOINT. Vehicles stopped here — only registered yatris proceed. One-way timings enforced. Jeeps/share autos to Gaurikund from here (5km, ₹30–50 per person).', type:'checkpoint' },
-  { stop:'Gaurikund', km:218, time:'+6.5–7 hrs', notes:'END OF ROAD. Private vehicles not allowed beyond Sonprayag during peak hours. From Gaurikund: 16km trek or pony/palki to Kedarnath. Helicopter from Phata/Sersi helipad (pre-book via IRCTC).', type:'end' },
+  { stop:'Guptkashi', km:210, time:'+7–8 hrs', notes:'Primary base for Kedarnath. Hotels, restaurants, ATM, medical shop. Vishwanath temple here. Most packages stay overnight at Guptkashi.', type:'stay' },
+  { stop:'Sonprayag', km:230, time:'+8–8.5 hrs', notes:'MANDATORY POLICE CHECKPOINT. Vehicles stopped here — only registered yatris proceed. One-way timings enforced. Jeeps/share autos to Gaurikund from here (5km, ₹30–50 per person).', type:'checkpoint' },
+  { stop:'Gaurikund', km:235, time:'+8.5–9 hrs', notes:'END OF ROAD. Private vehicles not allowed beyond Sonprayag during peak hours. From Gaurikund: 16km trek or pony/palki to Kedarnath. Helicopter from Phata/Sersi helipad (pre-book via IRCTC).', type:'end' },
 ];
 
 const TYPE_COLOR = { start:'#15803D', stop:'var(--navy)', highlight:'#D97706', stay:'#0B7B8B', checkpoint:'#DC2626', end:'var(--teal)' };
@@ -116,11 +117,10 @@ export default function HaridwarToKedarnath() {
         ]}/>
 
         <p style={{ ...p, fontSize:'0.95em', color:'var(--text-muted)' }}>
-          <strong>A note on the distance.</strong> You will see this road quoted as both 218 km and 235 km,
-          and both are right. Measured leg by leg along the direct alignment below it comes to about 218 km;
-          what a vehicle actually logs over a season — the Rishikesh bypass, the Sonprayag shuttle and the
-          standing diversions above Rudraprayag — runs closer to 235 km, which is the figure a cab booking is
-          quoted on. The stage distances in the table are the direct ones.
+          <strong>A note on the distance.</strong> Other sites quote this road anywhere from 218 km to 240 km,
+          because the Rishikesh bypass, the Sonprayag shuttle and the standing diversions above Rudraprayag
+          all move the number. The 235 km below is what our vehicles actually log, and every stage distance
+          on this page adds up to it.
         </p>
 
         <h2 id="turn-by-turn" style={h2}>

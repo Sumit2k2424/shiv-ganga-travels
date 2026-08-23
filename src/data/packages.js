@@ -1357,7 +1357,7 @@ export const PACKAGES = [
     inclusions:['6 nights hotel/camp accommodation','Daily breakfast & dinner','Private AC vehicle throughout','Experienced local guide','All toll and parking charges'],
     exclusions:['Pony/helicopter at Kedarnath','Ropeway charges','Personal expenses','Train to Haridwar'],
     itinerary:[
-      {day:1, title:'Haridwar → Guptkashi (230 km)', desc:'Early departure. Drive via Rishikesh, Devprayag, Rudraprayag. Overnight Guptkashi.'},
+      {day:1, title:'Haridwar → Guptkashi (210 km)', desc:'Early departure. Drive via Rishikesh, Devprayag, Rudraprayag. Overnight Guptkashi.'},
       {day:2, title:'Guptkashi → Kedarnath Trek (16 km ascent)', desc:'3 AM start. Gaurikund hot spring dip. 16 km trek to Kedarnath (3,583m). Evening darshan. Overnight Kedarnath.'},
       {day:3, title:'Kedarnath — Brahma Muhurta Puja → Descent', desc:'4 AM rudrabhishek puja. Morning aarti. Shankaracharya Samadhi visit. Trek down. Drive to Chopta. Overnight.'},
       {day:4, title:'Chopta — Tungnath + Chandrashila Trek', desc:'5 AM start. 4 km trek to Tungnath (3,680m). Continue 1.5 km to Chandrashila (4,000m) — Nanda Devi, Trishul, Chaukhamba panorama. Deoriya Tal 3 km evening trek (optional). Overnight Chopta.'},
