@@ -32,3 +32,7 @@ Thumbs.db
 
 # Stray duplicate build copy (do not commit)
 shiv-ganga-travels-build/
+
+# Local tooling and working notes (not part of the site)
+.claude/
+seo/
