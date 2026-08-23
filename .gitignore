@@ -35,4 +35,6 @@ shiv-ganga-travels-build/
 
 # Local tooling and working notes (not part of the site)
 .claude/
+.agents/
 seo/
+skills-lock.json
