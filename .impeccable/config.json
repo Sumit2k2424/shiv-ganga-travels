@@ -1,0 +1,20 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "4px solid var(--teal)",
+        "createdAt": "2026-08-24T19:32:16.036Z",
+        "reason": "user confirmed: established house style, 25 instances across 21 files predating this work"
+      },
+      {
+        "rule": "side-tab",
+        "value": "4px solid #e8920a",
+        "createdAt": "2026-08-24T19:32:16.237Z",
+        "reason": "user confirmed: established house style, 25 instances across 21 files predating this work"
+      }
+    ]
+  }
+}

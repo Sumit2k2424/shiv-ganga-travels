@@ -48,7 +48,14 @@ export default function robots() {
       { userAgent: 'YouBot',          allow: '/' },        // You.com
       { userAgent: 'Bingbot',         allow: '/' },        // Copilot's index
     ],
-    sitemap: `${SITE.baseUrl}/sitemap.xml`,
+    // Both sitemaps are listed. The news sitemap is a different pipeline with a
+    // rolling two-day window (see src/app/news-sitemap.xml/route.js) — it is
+    // usually empty, which is valid and expected, and it must never be merged
+    // into the main sitemap.
+    sitemap: [
+      `${SITE.baseUrl}/sitemap.xml`,
+      `${SITE.baseUrl}/news-sitemap.xml`,
+    ],
     host: SITE.baseUrl,
   };
 }

@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "press:radar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs",
+    "press:snapshot": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs --snapshot",
+    "press:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/validate.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",

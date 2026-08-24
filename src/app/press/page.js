@@ -81,6 +81,9 @@ export default function PressOffice() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp the founder</a>
             <a href={`mailto:${SITE.email}?subject=Press%20enquiry`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>✉️ {SITE.email}</a>
+            {/* The feed is the only thing on this page a journalist can
+                subscribe to. Everything else waits to be found again. */}
+            <a href="/press/feed.xml" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📡 RSS feed</a>
           </div>
         </div>
       </section>
@@ -118,6 +121,12 @@ export default function PressOffice() {
         </div>
 
         <h2 style={h2}>Press Releases</h2>
+        <p style={{ ...p, fontSize: 14 }}>
+          Full text, sourced figures and the boilerplate ride in the{' '}
+          <a href="/press/feed.xml" style={{ color: 'var(--teal)', fontWeight: 600 }}>RSS feed</a>{' '}
+          — so a release can be filed accurately without coming back here. Everything is
+          free to reproduce with attribution.
+        </p>
         {releases.length === 0 ? (
           <p style={p}>
             No releases are currently published. For data requests or comment, contact us directly using the details below.

@@ -1,7 +1,17 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/data/packages';
-import { MEDIA_KIT, getRelease, getReleaseParams, getPublishedReleases } from '@/data/press';
+import {
+  MEDIA_KIT,
+  getRelease,
+  getReleaseParams,
+  getPublishedReleases,
+  releaseTimestamp,
+  releaseModified,
+  releaseKeywords,
+  citationFor,
+} from '@/data/press';
+import PressCitation from '@/components/PressCitation';
 import { h2, p } from '@/lib/prose';
 
 export function generateStaticParams() {
@@ -14,20 +24,32 @@ export function generateMetadata({ params }) {
   return {
     title: { absolute: `${r.headline} | Press Release` },
     description: r.summary.slice(0, 155),
-    alternates: { canonical: `${SITE.baseUrl}/press/${r.slug}` },
+    alternates: {
+      canonical: `${SITE.baseUrl}/press/${r.slug}`,
+      types: { 'application/rss+xml': `${SITE.baseUrl}/press/feed.xml` },
+    },
+    // `news_keywords` is the legacy header news aggregators still read, and it
+    // costs nothing to carry alongside the schema keywords.
+    other: { news_keywords: releaseKeywords(r).join(', ') },
     openGraph: {
       title: r.headline,
       description: r.summary,
       url: `${SITE.baseUrl}/press/${r.slug}`,
       type: 'article',
-      publishedTime: r.dateISO,
-      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: r.headline }],
+      publishedTime: releaseTimestamp(r),
+      modifiedTime: releaseModified(r),
+      authors: [MEDIA_KIT.spokesperson.name],
+      section: r.category,
+      tags: releaseKeywords(r),
+      // No `images` key on purpose. opengraph-image.js in this folder generates
+      // a per-release card, and Next only applies that file convention when
+      // metadata does not set images explicitly — an explicit array here is
+      // what previously pinned every release to the homepage marketing card.
     },
     twitter: {
       card: 'summary_large_image',
       title: r.headline,
       description: r.summary,
-      images: [{ url: '/opengraph-image', alt: r.headline }],
     },
   };
 }
@@ -43,19 +65,65 @@ function Schema({ r }) {
   };
   // NewsArticle rather than Article: this is dated, datelined, single-event copy
   // intended for republication. Google's news surfaces read the type.
+  const url = `${SITE.baseUrl}/press/${r.slug}`;
   const article = {
     '@context': 'https://schema.org', '@type': 'NewsArticle',
+    '@id': `${url}#release`,
     headline: r.headline.slice(0, 110),
     alternativeHeadline: r.subhead,
     description: r.summary,
     articleSection: r.category,
-    mainEntityOfPage: `${SITE.baseUrl}/press/${r.slug}`,
-    image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: r.dateISO,
-    dateModified: r.dateISO,
-    author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: MEDIA_KIT.spokesperson.name },
+    keywords: releaseKeywords(r).join(', '),
+    mainEntityOfPage: url,
+    url,
+    // Per-release card, not the homepage marketing image. News surfaces treat a
+    // shared generic image across every article as a quality signal against us.
+    image: [`${url}/opengraph-image`],
+    datePublished: releaseTimestamp(r),
+    dateModified: releaseModified(r),
+    inLanguage: 'en-IN',
+    author: {
+      '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`,
+      name: MEDIA_KIT.spokesperson.name,
+      jobTitle: MEDIA_KIT.spokesperson.title,
+      worksFor: { '@id': `${SITE.baseUrl}/#organization` },
+    },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
+    copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` },
+    // The reuse grant, stated in machine-readable form. This is the whole offer
+    // of this newsroom — figures free to use with attribution — and leaving it
+    // to prose means only the humans who read to the bottom ever learn it.
     isAccessibleForFree: true,
+    usageInfo: `${SITE.baseUrl}/press`,
+    // The full body, so an answer engine quoting us is quoting the release
+    // rather than a summary of it that it wrote itself.
+    articleBody: r.body.join('\n\n'),
+    // Where a shrine or a place is the subject, say so as an entity rather than
+    // leaving it in the prose to be guessed at.
+    contentLocation: {
+      '@type': 'Place',
+      name: 'Uttarakhand, India',
+      address: { '@type': 'PostalAddress', addressRegion: 'Uttarakhand', addressCountry: 'IN' },
+    },
+    about: [
+      { '@type': 'Thing', name: 'Char Dham Yatra' },
+      ...(r.topics || []).map((t) => ({ '@type': 'Thing', name: t })),
+    ],
+    // The sourced figures, each as a claim with its own attribution. A model
+    // lifting "30,62,228 darshans" can see the source is the Devasthanam Board
+    // and not us — which is the attribution we actually want carried.
+    citation: r.facts.map((f) => ({
+      '@type': 'CreativeWork',
+      name: `${f.fact}: ${f.value}`,
+      creditText: f.source,
+    })),
+    // Voice assistants and AI summarisers read `speakable` to decide what to
+    // read aloud. Headline plus summary is the nut graf — which is exactly what
+    // a wire release is built to make liftable.
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '[data-speakable="summary"]'],
+    },
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -109,8 +177,18 @@ export default function PressRelease({ params }) {
           {' · '}{r.dateHuman}
         </div>
 
+        {/* The first paragraph is the nut graf, and it is the element the
+            `speakable` selector in the schema points at — so the data attribute
+            is load-bearing, not decorative. If this block is ever reordered,
+            move the attribute with it. */}
         {r.body.map((para, i) => (
-          <p key={i} style={{ ...p, ...(i === 0 ? { fontSize: 16, fontWeight: 500, color: '#1e293b' } : null) }}>{para}</p>
+          <p
+            key={i}
+            {...(i === 0 ? { 'data-speakable': 'summary' } : null)}
+            style={{ ...p, ...(i === 0 ? { fontSize: 16, fontWeight: 500, color: '#1e293b' } : null) }}
+          >
+            {para}
+          </p>
         ))}
 
         {r.quotes.map((q, i) => (
@@ -139,6 +217,12 @@ export default function PressRelease({ params }) {
             </tbody>
           </table>
         </div>
+
+        <PressCitation
+          citation={citationFor(r, SITE.baseUrl)}
+          facts={r.facts}
+          permalink={`${SITE.baseUrl}/press/${r.slug}`}
+        />
 
         {r.links?.length ? (
           <>

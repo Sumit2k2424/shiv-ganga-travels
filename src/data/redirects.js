@@ -103,6 +103,14 @@ const REDIRECTS = [
   // ── Comparison posts: moved /blog/ → root without redirects (live 404s in GSC) ──
   { source: '/blog/direct-operator-vs-travel-aggregator-char-dham', destination: '/direct-operator-vs-travel-aggregator-char-dham', permanent: true },
   { source: '/blog/shiv-ganga-travels-vs-makemytrip-char-dham',     destination: '/shiv-ganga-travels-vs-makemytrip-char-dham',     permanent: true },
+  // ── Withdrawn pricing release (Aug 2026) ──
+  // The newsroom no longer publishes pricing news. This release was live and
+  // may be indexed or linked, so it redirects rather than 404s. It points at
+  // /press rather than at the release that replaced it: the replacement is a
+  // different story on a different subject, and 301ing a pricing announcement
+  // to a fraud warning would be a bait-and-switch for anyone following an old
+  // link. The newsroom index is the honest destination.
+  { source: '/press/shiv-ganga-travels-cuts-package-prices-25-percent-2026', destination: '/press', permanent: true },
 ];
 
 // Set of source paths without leading slash (matches sitemap slug form), e.g.

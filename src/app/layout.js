@@ -450,6 +450,13 @@ export default function RootLayout({ children }) {
         <meta name="geo.position" content="29.9896838;78.1927454"/>
         <meta name="ICBM" content="29.9896838, 78.1927454"/>
         <meta name="geo.country" content="IN"/>
+        {/* Newsroom feed autodiscovery. Site-wide rather than only on /press:
+            this is how a journalist's reader, and the aggregators that ingest
+            travel-trade copy, find the releases without being told the URL.
+            Declared here rather than via `alternates` because a root-layout
+            `alternates` block risks cascading a canonical — see the note on the
+            metadata export above. */}
+        <link rel="alternate" type="application/rss+xml" title="Shiv Ganga Travels — Press Office" href="/press/feed.xml"/>
         {/* favicon.ico — Google uses this for search result icons (data: URIs are ignored) */}
         <link rel="icon" href="/favicon.ico" sizes="any"/>
         {/* PNG favicons — for modern browsers and Google Search */}

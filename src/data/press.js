@@ -25,6 +25,15 @@
 //
 // Set `approved: false` on anything that has not been read by a human. It will
 // sit in the file, build clean, and render nowhere.
+//
+// WHAT MAY NOT BE GENERATED
+// Two fields are load-bearing for our credibility and must be written by a
+// person, never drafted and shipped unread: `quotes` and any `facts` row whose
+// `source` is not already published elsewhere on this site or by a named third
+// party. A fabricated figure that a desk repeats is not an SEO problem, it is a
+// correction, and a correction is the end of the relationship with that desk.
+// The generator in scripts/press/ therefore emits quote slots as null and
+// refuses to invent numbers — see PRESS-SYSTEM.md.
 
 export const MEDIA_KIT = {
   // The boilerplate. Wire desks paste this verbatim at the foot of a story, so
@@ -86,6 +95,10 @@ export const RELEASES = [
     dateISO: '2026-08-16',
     dateHuman: '16 August 2026',
     category: 'Data',
+    // Entities, not keywords. These become schema `about` and the RSS
+    // categories, so they should be things a reader could look up — shrines,
+    // bodies, named phenomena — never phrases we would like to rank for.
+    topics: ['Kedarnath', 'Badrinath', 'Uttarakhand Tourism', 'Pilgrimage footfall', 'Monsoon'],
     headline: 'Char Dham registrations cross 50 lakh in 2026, with Kedarnath and Badrinath alone recording over 30 lakh darshans',
     subhead: 'Haridwar operator publishes a sixteen-year dataset covering pilgrim numbers, route distances, costs and safety, and makes it free to use',
     summary:
@@ -128,52 +141,68 @@ export const RELEASES = [
     ],
   },
 
+  // ── Replaced the pricing release, Aug 2026 ───────────────────────────────
+  // The previous release here announced a 25 per cent package price cut. It was
+  // withdrawn on instruction: this newsroom does not publish pricing news. The
+  // old slug (…cuts-package-prices-25-percent-2026) 301s to /press via
+  // src/data/redirects.js — it could not be reused for this story, because the
+  // slug is the most visible line in a search result and that one was itself
+  // the pricing announcement.
+  //
+  // The angle below is the stronger story anyway. It carries government figures
+  // we did not have to generate, it is in the public interest, and consumer
+  // fraud warnings get picked up where a company's own discount never does.
+  //
+  // HELD AS A DRAFT: quotes[] is empty. See the note there.
   {
-    slug: 'shiv-ganga-travels-cuts-package-prices-25-percent-2026',
-    approved: true,
+    slug: 'char-dham-helicopter-booking-fraud-stf-figures-2026',
+    approved: false,
     dateline: 'HARIDWAR, Uttarakhand',
-    dateISO: '2026-08-12',
-    dateHuman: '12 August 2026',
-    category: 'Company',
-    headline: 'Haridwar Char Dham operator cuts all 39 package prices by 25 per cent mid-season',
-    subhead: 'Cut applies to every road package with no group-size condition; helicopter charters held at existing fares',
+    dateISO: '2026-08-25',
+    dateHuman: '25 August 2026',
+    category: 'Safety',
+    topics: ['Kedarnath', 'Helicopter booking', 'Uttarakhand STF', 'Online fraud', 'IRCTC HeliYatra'],
+    headline: 'Uttarakhand STF blocked 51 fake helicopter booking sites in 2025 — and there is still no agent quota',
+    subhead: 'Haridwar operator publishes the official reporting channels and states that no operator, including itself, can sell a Kedarnath helicopter ticket',
     summary:
-      'Shiv Ganga Travels has cut the price of all 39 of its Char Dham road packages by 25 per cent with immediate effect, mid-season and with no minimum group size attached. Its flagship Char Dham package falls from ₹18,500 to ₹13,900 per person. Helicopter charter fares are unchanged.',
+      'The Uttarakhand Special Task Force blocked 51 fake Char Dham helicopter-booking websites in its 2025 crackdown, disabled 111 fraudulent phone numbers and froze 56 bank accounts. A Haridwar operator has published the official reporting channels and the one portal that is genuine.',
     body: [
-      'Shiv Ganga Travels, a Haridwar-based Char Dham Yatra operator founded in 2010, has cut the advertised price of all 39 of its road packages by 25 per cent with immediate effect. The company\'s flagship Char Dham package falls from ₹18,500 to ₹13,900 per person.',
-      'The cut is unconditional. It applies to every road package regardless of group size, season or booking window, and the pre-cut price remains displayed alongside it so the reduction is verifiable rather than asserted.',
-      'The company\'s two helicopter charters are excluded and stay at their existing fares — ₹2,30,000 for the 5N/6D Char Dham charter and ₹1,25,000 for the same-day Do Dham. Charter hours are a fixed external cost that an operator cannot discount without either absorbing a loss or cutting flying standards.',
-      'The move comes in a season of record footfall, with Char Dham registrations passing 50 lakh. The company says the cut is a response to browsing traffic that was not converting to enquiries — a pattern it attributes to price opacity across the sector rather than to demand.',
+      // Nut graf — 38 words.
+      'The Uttarakhand Special Task Force blocked 51 fake Char Dham helicopter-booking websites during its 2025 crackdown, disabled 111 fraudulent phone numbers, froze 56 bank accounts and reported 30 WhatsApp numbers, according to figures published by the force.',
+      'Across its operations the STF has busted more than 76 fake sites, all impersonating the official IRCTC HeliYatra portal. The Indian Cyber Crime Coordination Centre (I4C), under the Union Home Ministry, has issued a national alert about fake Char Dham websites, social pages and paid advertisements. Victims have been reported from across India and among NRI families.',
+      'The mechanism is consistent. Kedarnath helicopter tickets sell out within minutes of release, and the shortage is what the fraud runs on: a "VIP quota" offered on WhatsApp or Facebook, a polished site a search away, a paid advertisement that looks like verification. There is no VIP quota. There is no agent allocation. heliyatra.irctc.co.in is the only genuine booking channel, and anyone selling a Kedarnath helicopter seat through any other website, phone call or messaging app is running a scam.',
+      'Shiv Ganga Travels, a Haridwar operator running the circuit since 2010, has published the reporting routes pilgrims need — the national cybercrime helpline 1930, cybercrime.gov.in, and the Uttarakhand Police takedown address for fraudulent Char Dham content — alongside the verification steps for checking any operator before paying. The company states plainly that it cannot sell these tickets either.',
     ],
-    quotes: [
-      {
-        text: 'People were reading the itineraries and leaving. When that happens the problem is usually the number, so we moved the number. No conditions, no minimum group, no small print — because a price that only some customers can actually get is not a price, it is bait.',
-        by: 'Dhanesh Chandra Mishra',
-        role: 'Founder & Director, Shiv Ganga Travels',
-      },
-      {
-        text: 'We left the helicopter charters alone deliberately. Charter hours cost what they cost. Any operator advertising a heavily discounted charter is either taking a loss they cannot sustain or cutting something you would rather they did not cut.',
-        by: 'Dhanesh Chandra Mishra',
-        role: 'Founder & Director, Shiv Ganga Travels',
-      },
-    ],
+    // ── NOT WRITTEN. DO NOT FILL THIS IN WITHOUT HIM. ──────────────────────
+    // ASK DHANESH, then paste his actual words:
+    //   1. You have watched this fraud from the operator side for years. What
+    //      does a pilgrim who has been taken in usually tell you when they turn
+    //      up in Haridwar? One or two sentences, plain.
+    //   2. You are telling people that no operator — including you — can sell
+    //      them a helicopter ticket. Why say that out loud when competitors
+    //      imply otherwise?
+    // Two quotes, in his voice, and the release is ready for approval.
+    quotes: [],
     facts: [
-      { fact: 'Packages repriced', value: 'All 39 road packages', source: 'Shiv Ganga Travels' },
-      { fact: 'Reduction', value: '25 per cent, unconditional', source: 'Shiv Ganga Travels' },
-      { fact: 'Flagship Char Dham package', value: '₹18,500 → ₹13,900 per person', source: 'Shiv Ganga Travels' },
-      { fact: 'Char Dham helicopter charter', value: 'Unchanged at ₹2,30,000', source: 'Shiv Ganga Travels' },
-      { fact: 'Do Dham same-day charter', value: 'Unchanged at ₹1,25,000', source: 'Shiv Ganga Travels' },
-      { fact: 'Effective', value: '12 August 2026', source: 'Shiv Ganga Travels' },
+      { fact: 'Fake helicopter-booking sites blocked, 2025 crackdown', value: '51', source: 'Uttarakhand STF' },
+      { fact: 'Fraudulent phone numbers disabled', value: '111', source: 'Uttarakhand STF' },
+      { fact: 'Bank accounts frozen', value: '56', source: 'Uttarakhand STF' },
+      { fact: 'WhatsApp numbers reported', value: '30', source: 'Uttarakhand STF' },
+      { fact: 'Fake sites busted across all operations', value: '76+', source: 'Uttarakhand STF' },
+      { fact: 'Genuine helicopter booking channel', value: 'heliyatra.irctc.co.in only — no agent or offline quota', source: 'IRCTC / UCADA' },
+      { fact: 'National alert on fake Char Dham sites', value: 'Issued', source: 'Indian Cyber Crime Coordination Centre (I4C), Union Home Ministry' },
+      { fact: 'Cybercrime reporting helpline', value: '1930 · cybercrime.gov.in', source: 'Government of India' },
     ],
     links: [
-      { label: 'All packages and current prices', href: '/packages' },
-      { label: 'Char Dham Yatra packages', href: '/char-dham-yatra' },
-      { label: 'Helicopter packages', href: '/char-dham-helicopter' },
+      { label: 'Char Dham booking scams — how to verify an operator', href: '/char-dham-yatra-scams' },
+      { label: 'Emergency and reporting contacts', href: '/char-dham-yatra-emergency-contacts' },
+      { label: 'How Kedarnath helicopter booking actually works', href: '/blog/kedarnath-helicopter-booking' },
     ],
     notesToEditors: [
-      'Pre-cut and post-cut prices are both displayed publicly on the site, so the reduction can be verified independently.',
-      'The company declined to attach a minimum-group-size condition to the advertised price, which it says would amount to bait advertising under the CCPA 2022 guidelines.',
-      'Dhanesh Chandra Mishra is available for interview on operator pricing and how small operators compete with online aggregators.',
+      'All enforcement figures in this release are the Uttarakhand STF\'s own and were published by the force. Please attribute them to the STF rather than to us.',
+      'Dhanesh Chandra Mishra is available for interview in Hindi or English on helicopter ticketing, UCADA fares and the fake-booking problem, in person in Haridwar or by phone.',
+      'We can put reporters in touch with pilgrims who have been defrauded, where they consent to speak.',
+      'The company sells road packages and helicopter charters but does not sell individual Kedarnath helicopter seats, and says no operator legitimately can.',
     ],
   },
 ];
@@ -210,3 +239,80 @@ export const getRelease = (slug) =>
 
 export const getReleaseParams = () =>
   getPublishedReleases().map((r) => ({ slug: r.slug }));
+
+// ── Time ───────────────────────────────────────────────────────────────────
+// `dateISO` is a calendar date because that is what a dateline shows. Google
+// News, RSS and schema.org all want a full instant with an offset, and a bare
+// date is read as midnight UTC — which back-dates every release by 5h30m and,
+// for anything published before 05:30 IST, lands it on the previous day. So we
+// resolve to a real IST timestamp here rather than in three separate consumers.
+//
+// Set `publishedAt` on a release when the exact hour matters (an embargo lift,
+// a same-day response to a news event). Otherwise the default stands.
+const IST = '+05:30';
+const DEFAULT_PUBLISH_TIME = `T09:30:00${IST}`;
+
+export const releaseTimestamp = (r) =>
+  r.publishedAt || `${r.dateISO}${DEFAULT_PUBLISH_TIME}`;
+
+/**
+ * dateModified for schema. Falls back to publication — but when a release has
+ * been substantively updated, `dateModifiedISO` should be set and an entry
+ * added to `updates[]`, because a NewsArticle whose dateModified silently
+ * drifts forward with no visible change on the page is exactly the pattern
+ * Google's news systems treat as date manipulation.
+ */
+export const releaseModified = (r) =>
+  r.dateModifiedISO ? `${r.dateModifiedISO}${DEFAULT_PUBLISH_TIME}` : releaseTimestamp(r);
+
+/**
+ * Releases published within `days` of now, newest first.
+ *
+ * Google's news sitemap spec accepts articles from the last two days and
+ * ignores anything older, so the news sitemap is usually empty — that is the
+ * correct steady state for a newsroom that publishes a few times a season, not
+ * a bug. Do not widen the window to keep the file looking populated: submitting
+ * stale URLs in a news sitemap is a documented reason for losing news
+ * eligibility altogether.
+ */
+export function getRecentReleases(days = 2, now = new Date()) {
+  const t = now.getTime();
+  const cutoff = t - days * 86400_000;
+  return getPublishedReleases().filter((r) => {
+    const at = new Date(releaseTimestamp(r)).getTime();
+    // Bounded at BOTH ends. The upper bound is not redundant: a release can be
+    // written and approved ahead of its dateline (a season-opening piece dated
+    // for the day the doors open, say), and it is publishable the moment it
+    // lands in the file. Without this check it would enter the news sitemap
+    // immediately, carrying a <news:publication_date> in the future — which is
+    // invalid, and is the kind of thing that costs news eligibility rather than
+    // merely being ignored.
+    return at >= cutoff && at <= t;
+  });
+}
+
+export const releaseUrl = (r, baseUrl) => `${baseUrl}/press/${r.slug}`;
+
+/**
+ * Keywords for the NewsArticle `keywords` field and the RSS categories.
+ * Derived rather than hand-maintained so they cannot drift from the release.
+ */
+export function releaseKeywords(r) {
+  return [
+    'Char Dham Yatra',
+    r.category,
+    ...(r.topics || []),
+  ].filter(Boolean);
+}
+
+/**
+ * The line we want to see in someone else's copy.
+ *
+ * Journalists and AI answer engines both attribute far more reliably when the
+ * exact string is sitting on the page than when they have to assemble one from
+ * a byline and a URL. This is the single cheapest thing on the page that
+ * changes whether a citation names us or says "one operator".
+ */
+export function citationFor(r, baseUrl) {
+  return `Shiv Ganga Travels, "${r.headline}", ${r.dateHuman}. ${releaseUrl(r, baseUrl)}`;
+}
