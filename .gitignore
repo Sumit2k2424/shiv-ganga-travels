@@ -34,7 +34,18 @@ Thumbs.db
 shiv-ganga-travels-build/
 
 # Local tooling and working notes (not part of the site)
-.claude/
+# Exception: the press-release skill is part of the newsroom system, not local
+# tooling — PRESS-SYSTEM.md documents it and scripts/press/ depends on the same
+# rules, so it has to travel with the repo.
+#
+# The four lines below are all required and the order matters. Git will not
+# descend into an excluded directory, so `!.claude/skills/press-release/` alone
+# does nothing while `.claude/` is excluded — each level has to be reopened
+# before the next can be re-included.
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/press-release/
 .agents/
 seo/
 skills-lock.json
