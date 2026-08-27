@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
@@ -294,6 +295,7 @@ export default function KedarnathYatra() {
             ))}
           </div>
         </div>
+        <TempleLinkMesh groups={MESH.kedarnath} label="Kedarnath deep-dive guides" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>

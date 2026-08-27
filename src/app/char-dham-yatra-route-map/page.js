@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import RouteMapInteractive from './RouteMapInteractive';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
@@ -276,6 +277,7 @@ export default function RouteMap() {
             <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
           ))}
         </div>
+        <TempleLinkMesh groups={MESH.waypoints} label="Towns and halts along the route" />
       </div>
     </>
   );

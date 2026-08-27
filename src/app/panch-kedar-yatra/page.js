@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from '@/lib/prose';
 
@@ -219,6 +220,7 @@ export default function Page() {
             <a href='tel:+917817996730' style={{ background:'#fff', color:'var(--navy)', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 {SITE.phone}</a>
           </div>
         </div>
+        <TempleLinkMesh groups={MESH.panchKedar} label="The five Kedar shrines" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2, p } from '@/lib/prose';
 
 const faqs = [
@@ -176,6 +177,7 @@ export default function Page() {
               <Link key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
           </div>
         </div>
+        <TempleLinkMesh groups={MESH.temples} label="Temple round-ups" />
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'28px 24px', textAlign:'center', marginTop:36 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.4rem', marginBottom:10 }}>Ready to Book Your Yatra?</h3>

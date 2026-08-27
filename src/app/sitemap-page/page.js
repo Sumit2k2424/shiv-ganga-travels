@@ -154,6 +154,67 @@ const sections = [
       { label: 'Chitai Golu Devta Temple', href: '/chitai-golu-devta-temple' },
       { label: 'Rajaji National Park', href: '/rajaji-national-park' },
       { label: 'Adi Kailash Yatra', href: '/adi-kailash-yatra' },
+      { label: 'Every Major Shiva Temple in Uttarakhand', href: '/uttarakhand-shiva-temples' },
+      { label: 'Every Major Devi Temple in Uttarakhand', href: '/uttarakhand-devi-temples' },
+    ],
+  },
+  {
+    title: 'Panch Badri Shrines',
+    links: [
+      { label: 'Badrinath Temple Guide', href: '/badrinath-temple' },
+      { label: 'Adi Badri Temple', href: '/adi-badri-temple' },
+      { label: 'Yogdhyan Badri Temple', href: '/yogdhyan-badri-temple' },
+      { label: 'Vridh Badri Temple', href: '/vridh-badri-temple' },
+      { label: 'Bhavishya Badri Temple', href: '/bhavishya-badri-temple' },
+      { label: 'Tapt Kund Hot Spring', href: '/tapt-kund' },
+    ],
+  },
+  {
+    title: 'Panch Kedar Shrines',
+    links: [
+      { label: 'Kedarnath Temple Guide', href: '/kedarnath-temple' },
+      { label: 'Tungnath & Chopta', href: '/chopta-tungnath' },
+      { label: 'Madhyamaheshwar Temple', href: '/madhyamaheshwar-temple' },
+      { label: 'Rudranath Temple', href: '/rudranath-temple' },
+      { label: 'Kalpeshwar Temple', href: '/kalpeshwar-temple' },
+    ],
+  },
+  {
+    title: 'Temple History & Legends',
+    links: [
+      { label: 'Kedarnath History & Legends', href: '/kedarnath-history-legends' },
+      { label: 'Badrinath History & Legends', href: '/badrinath-history-legends' },
+      { label: 'Gangotri History & Legends', href: '/gangotri-history-legends' },
+      { label: 'Yamunotri History & Legends', href: '/yamunotri-history-legends' },
+    ],
+  },
+  {
+    title: 'Temple Festivals',
+    links: [
+      { label: 'Kedarnath Festivals', href: '/kedarnath-festivals' },
+      { label: 'Badrinath Festivals', href: '/badrinath-festivals' },
+      { label: 'Gangotri Festivals', href: '/gangotri-festivals' },
+      { label: 'Yamunotri Festivals', href: '/yamunotri-festivals' },
+    ],
+  },
+  {
+    title: 'Dharamshalas & Budget Stays',
+    links: [
+      { label: 'Kedarnath Dharamshalas', href: '/kedarnath-dharamshala' },
+      { label: 'Badrinath Dharamshalas', href: '/badrinath-dharamshala' },
+      { label: 'Gangotri Dharamshalas', href: '/gangotri-dharamshala' },
+      { label: 'Yamunotri Dharamshalas', href: '/yamunotri-dharamshala' },
+    ],
+  },
+  {
+    title: 'Towns & Halts on the Route',
+    links: [
+      { label: 'Srinagar Garhwal', href: '/srinagar-garhwal' },
+      { label: 'Augustmuni', href: '/augustmuni' },
+      { label: 'Chamoli Town', href: '/chamoli-town' },
+      { label: 'Pipalkoti', href: '/pipalkoti' },
+      { label: 'Gopeshwar', href: '/gopeshwar' },
+      { label: 'New Tehri', href: '/tehri-town' },
     ],
   },
   {

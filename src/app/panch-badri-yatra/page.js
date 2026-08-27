@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
@@ -179,6 +180,7 @@ export default function PanchBadriYatra() {
             ))}
           </div>
         </div>
+        <TempleLinkMesh groups={MESH.panchBadri} label="The five Badri shrines" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>
