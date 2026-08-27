@@ -323,7 +323,7 @@ export default function BadrinathTourPackage() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Plan the rest of your yatra</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Badrinath Yatra Guide', '/badrinath-yatra'], ['Haridwar → Badrinath Cab', '/cabs/haridwar-to-badrinath-cab'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath Temple', '/badrinath-temple'], ['Badrinath Hotels', '/badrinath-hotels'], ['Badrinath Weather', '/badrinath-weather'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra']].map(([l, h]) => (
+            {[['Badrinath Yatra Guide', '/badrinath-yatra'], ['Haridwar → Badrinath Cab', '/cabs/haridwar-to-badrinath-cab'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath Temple', '/badrinath-temple'], ['Badrinath VIP Darshan', '/badrinath-vip-darshan'], ['Badrinath Hotels', '/badrinath-hotels'], ['Badrinath Weather', '/badrinath-weather'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

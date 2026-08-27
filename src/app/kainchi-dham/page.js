@@ -6,9 +6,9 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Kainchi Dham — Neem Karoli Baba\'s Ashram, Honestly' },
-  description: 'Kainchi Dham near Nainital: what the ashram actually is, the Steve Jobs story people get wrong, the 15 June mela, and how to reach from Delhi or Haridwar.',
-  keywords: ['kainchi dham','neem karoli baba','kainchi dham nainital','kainchi dham temple','neem karoli baba ashram','kainchi dham mela 15 june','kainchi dham steve jobs','how to reach kainchi dham','kainchi dham distance from nainital'],
+  title: { absolute: 'Kainchi Dham — Timings, Distance & Neem Karoli Baba\'s Ashram' },
+  description: 'Kainchi Dham near Nainital — timings (6 AM–6 PM, free entry), distance from Nainital, Kathgodam, Delhi and Haridwar, the nearest railway station, the 15 June mela, and the Steve Jobs story people get wrong.',
+  keywords: ['kainchi dham','neem karoli baba','kainchi dham nainital','kainchi dham temple','neem karoli baba ashram','kainchi dham mela 15 june','kainchi dham steve jobs','how to reach kainchi dham','kainchi dham distance from nainital','kainchi dham timings','kainchi dham tickets','kainchi dham nearest railway station','kathgodam to kainchi dham distance','nainital to kainchi dham distance','delhi to kainchi dham distance','haridwar to kainchi dham distance'],
   alternates: { canonical: `${SITE.baseUrl}/kainchi-dham` },
   openGraph: {
     title: 'Kainchi Dham — Neem Karoli Baba\'s Ashram, Honestly',
@@ -243,12 +243,44 @@ export default function KainchiDham() {
           The practical route from most of India is an overnight train to Kathgodam, then a car for the last ninety minutes. Driving the whole way from Delhi is possible but it is a long day and the last stretch is mountain road.
         </p>
 
+        <h2 style={h2}>Nearest Railway Station and Airport</h2>
+        <AnswerBox>
+          The nearest railway station to Kainchi Dham is <strong>Kathgodam, 38 km away</strong> &mdash; about
+          ninety minutes by road, and the railhead almost everyone uses, because Delhi runs direct overnight
+          trains to it. The nearest airport is <strong>Pantnagar, roughly 70 km out</strong>, about two and a
+          half hours by car. Neither drops you at the ashram: you take a car for the last leg, up the
+          Nainital&ndash;Almora road through Bhowali.
+        </AnswerBox>
+        <p style={p}>
+          If you are travelling by bus rather than car, get down at <strong>Bhowali</strong>. It is 9 km short
+          of the ashram, and because Kainchi sits directly on the Nainital&ndash;Almora road, anything
+          continuing towards Almora goes past the gate. Ask the conductor for Kainchi rather than the ashram
+          by name &mdash; locally it is simply the bend where the road doubles back on itself.
+        </p>
+
+        <h2 style={h2}>Kainchi Dham Timings, Entry and Tickets</h2>
+        <AnswerBox>
+          Kainchi Dham is open <strong>broadly 6 AM to 6 PM</strong>, with a break in the early afternoon, and
+          <strong> entry is free</strong> &mdash; there is no ticket, no paid queue and nothing to book in
+          advance. Hours move with the season and with what the ashram is doing, and winter hours are shorter.
+          Mornings are quieter and better. If you are driving up specially, ring ahead rather than trusting a
+          timing you read online, this page included.
+        </AnswerBox>
+        <p style={p}>
+          The tickets people search for do not exist. Nobody sells entry to Kainchi Dham, and anyone offering
+          a paid darshan slot is selling something the ashram never authorised. The one date worth planning
+          around is <strong>15 June</strong>, when the mela draws tens of thousands and the ordinary timings
+          stop meaning very much.
+        </p>
+
         <h2 style={h2}>Kainchi Dham Is Not Near Char Dham</h2>
         <p style={p}>
           Worth stating plainly, because people ask us this constantly. <strong>Kainchi Dham is in Kumaon; Char Dham is in Garhwal.</strong> They are on opposite sides of Uttarakhand, and joining them means a full transfer day of seven or eight hours through the middle of the state for no scenic reward.
         </p>
         <p style={p}>
-          If you want both, treat them as two trips. What Kainchi <em>does</em> combine with is the rest of Kumaon &mdash; Nainital, Bhimtal, Mukteshwar, Almora, Ranikhet and Jim Corbett all sit within a couple of hours, and a four or five day loop covers them comfortably. If Garhwal is what you are planning, see <Link href="/char-dham-yatra">Char Dham</Link>, <Link href="/do-dham-yatra">Do Dham</Link> or <Link href="/teen-dham-yatra">Teen Dham</Link> instead.
+          If you want both, treat them as two trips. What Kainchi <em>does</em> combine with is the rest of Kumaon &mdash; Nainital, Bhimtal, Mukteshwar, Almora, Ranikhet and Jim Corbett all sit within a couple of hours, and a four or five day loop covers them comfortably — that is exactly what our{' '}
+          <Link href="/packages/kainchi-dham-nainital-mukteshwar-3n-4d" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kainchi Dham, Nainital &amp; Mukteshwar 3N/4D</Link>{' '}
+          covers, from Kathgodam or Delhi. If Garhwal is what you are planning, see <Link href="/char-dham-yatra">Char Dham</Link>, <Link href="/do-dham-yatra">Do Dham</Link> or <Link href="/teen-dham-yatra">Teen Dham</Link> instead.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -256,8 +288,12 @@ export default function KainchiDham() {
             <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 3 }}>Want the Kumaon loop rather than just the temple?</div>
             <div style={{ fontSize: 13, color: '#475569' }}>Nainital, Kainchi, Bhimtal, Mukteshwar, Almora — we run it from Kathgodam or Delhi. Tell us your dates.</div>
           </div>
-          <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
-            style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>💬 Ask us</a>
+          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+            <Link href="/packages/kainchi-dham-nainital-mukteshwar-3n-4d"
+              style={{ background: 'var(--navy)', color: '#fff', padding: '11px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>See the 3N/4D itinerary</Link>
+            <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
+              style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>💬 Ask us</a>
+          </div>
         </div>
 
         <h2 style={h2}>Practical Notes Before You Go</h2>

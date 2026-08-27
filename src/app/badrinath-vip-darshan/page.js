@@ -8,21 +8,21 @@ import BlogCTA from '@/components/BlogCTA';
 import { h2, h3, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: `Badrinath VIP Darshan ${SITE.season} — Special Puja & Timings` },
-  description: 'Badrinath VIP darshan explained — how special darshan actually works, the puja list, booking through the BKTC portal, timings and the best slots to avoid queues.',
-  keywords: ['badrinath vip darshan', 'badrinath special darshan', 'badrinath puja booking', 'badrinath maha abhishek', 'badrinath darshan timings', 'badrinath temple vip pass'],
+  title: { absolute: `Badrinath VIP Darshan ${SITE.season} — Ticket Price & Online Booking` },
+  description: 'Badrinath VIP darshan ticket price and online booking — special darshan from ₹300, puja-linked priority access, the BKTC portal, timings and the free slot that beats most paid shortcuts.',
+  keywords: ['badrinath vip darshan', 'badrinath special darshan', 'badrinath puja booking', 'badrinath maha abhishek', 'badrinath darshan timings', 'badrinath temple vip pass', 'badrinath vip darshan ticket price', 'badrinath vip darshan tickets online booking', 'badrinath special darshan price', 'badrinath vip darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-vip-darshan` },
   openGraph: {
-    title: `Badrinath VIP Darshan ${SITE.season} — Special Puja & Timings`,
-    description: 'What VIP darshan at Badrinath really gets you, which puja to book, and how to time your visit so the queue is short.',
+    title: `Badrinath VIP Darshan ${SITE.season} — Ticket Price, Online Booking & Timings`,
+    description: 'What Badrinath VIP darshan costs, what it actually gets you, which puja to book on the BKTC portal, and how to time your visit so the queue is short.',
     url: `${SITE.baseUrl}/badrinath-vip-darshan`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Badrinath VIP Darshan and Special Puja Guide' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Badrinath VIP Darshan ${SITE.season} — Special Puja & Timings`,
-    description: 'The pujas, the portal, the timings — and the free trick that beats most paid shortcuts.',
+    title: `Badrinath VIP Darshan ${SITE.season} — Ticket Price & Online Booking`,
+    description: 'The price, the pujas, the portal, the timings — and the free trick that beats most paid shortcuts.',
     images: [{ url: '/opengraph-image', alt: 'Badrinath VIP Darshan' }],
   },
 };
@@ -203,6 +203,30 @@ export default function BadrinathVipDarshan() {
 
         <p style={{ ...p, fontSize: 13.5, color: 'var(--text-muted)' }}>
           Puja rates are set by the temple committee and revised each season, which is why you should take the current figure from the official portal rather than from any travel site — including this one. We book at the temple rate for our own pilgrims and add nothing to it.
+        </p>
+
+        <h2 style={h2} id="price">What Badrinath VIP darshan costs</h2>
+        <AnswerBox>
+          There is no single VIP ticket price at Badrinath, because there is no single VIP ticket.
+          Counter-issued <strong>special darshan starts at &#8377;300 per person</strong>. Puja-linked
+          access &mdash; the route most people actually mean by VIP &mdash; starts at roughly
+          <strong> &#8377;151 for the Kapoor Aarti</strong> and climbs steeply towards the pre-dawn
+          abhishek pujas, which are both the most-booked and the most expensive. BKTC revised special-puja
+          charges upward for the current season, so older price lists circulating online are out of date.
+        </AnswerBox>
+        <p style={p}>
+          We are deliberately not printing a full rate card. The committee revises these figures between
+          seasons, the abhishek rates in particular have moved, and a number frozen into a travel page is a
+          number that will be wrong by next April. What we can give you is the shape of it: the recitations
+          &mdash; Ved Path, Geeta Path, Vishnu Sahasranamam &mdash; sit at the cheap end, the evening aartis
+          in the middle, and Maha Abhishek at the top. Take the live figure from the portal at the moment
+          you book.
+        </p>
+        <p style={p}>
+          If you are pricing Kedarnath in the same trip, it is the same committee, the same portal and the
+          same logic &mdash; our{' '}
+          <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath VIP darshan guide</Link>{' '}
+          carries that side.
         </p>
 
         <h2 style={h2} id="booking">Booking it properly</h2>

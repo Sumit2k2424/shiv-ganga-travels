@@ -274,6 +274,12 @@ export default function sitemap() {
     { url: `${b}/haridwar-to-rishikesh-taxi`,          p: 0.85, cf: 'monthly' },
     { url: `${b}/har-ki-pauri-guide`,                  p: 0.84, cf: 'monthly' },
     { url: `${b}/haridwar-sightseeing-places`,         p: 0.86, cf: 'monthly' },
+    // Kainchi Dham is the single largest organic entry point on the site (head term
+    // 165K/mo, ~22% of all organic sessions). Badrinath VIP darshan was being
+    // outranked by /kedarnath-vip-darshan for its own queries. Both were falling
+    // through to the 0.78 folder-discovery default.
+    { url: `${b}/kainchi-dham`,                        p: 0.92, cf: 'weekly'  },
+    { url: `${b}/badrinath-vip-darshan`,               p: 0.88, cf: 'monthly' },
     { url: `${b}/mansa-devi-temple`,                   p: 0.84, cf: 'monthly' },
     { url: `${b}/chandi-devi-temple`,                  p: 0.83, cf: 'monthly' },
     { url: `${b}/daksh-mahadev-temple`,                p: 0.82, cf: 'monthly' },

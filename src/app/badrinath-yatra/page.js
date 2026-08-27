@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
+import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
@@ -360,6 +361,7 @@ export default function BadrinathYatraPage() {
               ['Kedarnath Yatra', '/kedarnath-yatra'],
               ['Do Dham Package', '/do-dham-yatra'],
               ['Badrinath Temple Guide', '/badrinath-temple'],
+              ['Badrinath VIP Darshan & Puja Booking', '/badrinath-vip-darshan'],
               ['How to Reach Badrinath', '/how-to-reach-badrinath'],
               ['Badrinath Hotels', '/badrinath-hotels'],
               ['Char Dham Helicopter', '/char-dham-helicopter'],
@@ -371,6 +373,7 @@ export default function BadrinathYatraPage() {
             ))}
           </div>
         </div>
+        <TempleLinkMesh groups={MESH.badrinath} label="Badrinath deep-dive guides" />
               <div style={{ marginTop:36 }}>
           <PAASchema/>
           <PeopleAlsoAsk items={PAA}/>
