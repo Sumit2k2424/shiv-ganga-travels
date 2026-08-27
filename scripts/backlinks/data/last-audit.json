@@ -1,0 +1,203 @@
+{
+  "ranOn": "2026-08-27",
+  "results": [
+    {
+      "id": "utdb-travel-trade",
+      "domain": "uttarakhandtourism.gov.in",
+      "checked": "https://uttarakhandtourism.gov.in/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 90,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "adtoi",
+      "domain": "adtoi.in",
+      "checked": "https://adtoi.in/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 72,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "incredible-india-approved",
+      "domain": "tourism.gov.in",
+      "checked": "https://tourism.gov.in/",
+      "statusCode": 403,
+      "state": "BLOCKED",
+      "verdict": "PURSUE",
+      "score": 66,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "euttaranchal-agents",
+      "domain": "euttaranchal.com",
+      "checked": "https://euttaranchal.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 72,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "indiamike",
+      "domain": "indiamike.com",
+      "checked": "https://indiamike.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 72,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "tripoto",
+      "domain": "tripoto.com",
+      "checked": "https://tripoto.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 70,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "garhwal-post",
+      "domain": "garhwalpost.in",
+      "checked": "https://garhwalpost.in/",
+      "statusCode": 0,
+      "state": "NO RESPONSE",
+      "verdict": "PURSUE",
+      "score": 68,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "hill-post",
+      "domain": "hillpost.in",
+      "checked": "https://hillpost.in/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 64,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "featured-journalist-queries",
+      "domain": "featured.com",
+      "checked": "https://featured.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "WEAK",
+      "score": 39,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "qwoted",
+      "domain": "qwoted.com",
+      "checked": "https://qwoted.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "WEAK",
+      "score": 37,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "reddit-uttarakhand",
+      "domain": "reddit.com",
+      "checked": "https://reddit.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 68,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "quora-chardham",
+      "domain": "quora.com",
+      "checked": "https://quora.com/",
+      "statusCode": 403,
+      "state": "BLOCKED",
+      "verdict": "PURSUE",
+      "score": 68,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "youtube-channel",
+      "domain": "youtube.com",
+      "checked": "https://youtube.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 72,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "google-business-profile",
+      "domain": "google.com",
+      "checked": "https://google.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 86,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "bing-places",
+      "domain": "bingplaces.com",
+      "checked": "https://bingplaces.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 82,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "tripadvisor",
+      "domain": "tripadvisor.in",
+      "checked": "https://tripadvisor.in/",
+      "statusCode": 403,
+      "state": "BLOCKED",
+      "verdict": "PURSUE",
+      "score": 76,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "justdial",
+      "domain": "justdial.com",
+      "checked": "https://justdial.com/",
+      "statusCode": 403,
+      "state": "BLOCKED",
+      "verdict": "MAYBE",
+      "score": 40,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "openstreetmap",
+      "domain": "openstreetmap.org",
+      "checked": "https://openstreetmap.org/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "MAYBE",
+      "score": 54,
+      "competitorLinks": [],
+      "linksToUs": false
+    }
+  ]
+}

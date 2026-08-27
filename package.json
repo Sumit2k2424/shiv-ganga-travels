@@ -8,7 +8,12 @@
     "start": "next start",
     "press:radar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs",
     "press:snapshot": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs --snapshot",
-    "press:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/validate.mjs"
+    "press:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/validate.mjs",
+    "links:radar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/radar.mjs",
+    "links:audit": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/audit.mjs",
+    "links:gap": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/gap.mjs",
+    "links:draft": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/draft.mjs",
+    "clusters": "node scripts/clusters.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",

@@ -1,0 +1,41 @@
+# Listing copy — OpenStreetMap business node
+# Generated 2026-08-27 from src/data/packages.js and src/data/press.js.
+# Re-generate rather than editing this file, and re-check prices on the day you paste.
+
+BUSINESS NAME
+Shiv Ganga Travels
+
+CATEGORY
+Tour operator · Pilgrimage tour operator · Travel agency
+
+ADDRESS (paste identically everywhere — this exact string)
+Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India
+
+PHONE      +91-7817996730
+WHATSAPP   +91-7817996730
+EMAIL      support@shivgangatravels.com
+WEBSITE    https://www.shivgangatravels.com/
+FOUNDED    2010
+
+SHORT DESCRIPTION (~50 words)
+Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010 and registered with the Uttarakhand Tourism Development Board. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
+
+LONG DESCRIPTION (~200 words)
+Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It is registered with the Uttarakhand Tourism Development Board and operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season since 2010, including the years following the 2013 Kedarnath floods.
+
+PRICE ANCHORS — live from src/data/packages.js on 2026-08-27
+  Char Dham 9N/10D ex-Haridwar ....... from ₹13,900
+  Kedarnath single dham .............. from ₹5,250
+  Packages published ................. 39
+
+  If a listing already published elsewhere shows a different figure, that listing is
+  stale and must be corrected before this one is created. directory-submissions.md
+  records the TripAdvisor description still carrying a price that is ₹5,600 too high.
+
+FAST FACTS
+  Founded             2010
+  Head office         Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand 249410
+  Registration        Uttarakhand Tourism Development Board
+  Operating model     Direct operator — own vehicles, drivers and hotel contracts
+  Circuits operated   Char Dham, Do Dham, Teen Dham, Ek Dham, Panch Kedar, Panch Badri, Adi Kailash
+  Seasons operated    2010 – present, including post-2013 rebuilding years
