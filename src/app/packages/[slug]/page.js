@@ -9,7 +9,7 @@ import CategoryView from './CategoryView';
 import RouteMap from '@/components/lux/RouteMap';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
-import { HOTELS, ROUTE, ROUTE_BY_CATEGORY } from '@/data/experience';
+import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, stayLede, datesLede, datesHeading, datesNote, altitudeLede } from '@/data/packageRoute';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import { Pill } from '@/components/lux/primitives';
 
@@ -194,7 +194,10 @@ export default async function PackageDetailPage({ params }) {
   const SH = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.4vw,1.75rem)', fontWeight:600, color:'var(--ink)', letterSpacing:'-0.018em', lineHeight:1.15, marginBottom:18, paddingBottom:14, borderBottom:'1px solid var(--rule)' };
 
   // Route nodes for the interactive map (yatra packages only).
-  const routeNodes = ROUTE.nodes.filter(n => (ROUTE_BY_CATEGORY[pkg.category] || []).includes(n.id));
+  // Stops this package actually makes. Keyed to the package, not its
+  // category — see src/data/packageRoute.js for why that mattered.
+  const routeNodes = nodesForPackage(pkg);
+  const stays      = hotelsForPackage(pkg);
 
   return (
     <>
@@ -438,14 +441,14 @@ export default async function PackageDetailPage({ params }) {
             </div>
           </section>
 
-          {/* Where you stay — yatra packages */}
-          {isYatra && (
+          {/* Where you stay — yatra packages with at least one night */}
+          {isYatra && stays.length > 0 && (
             <section>
               <h2 style={SH}>Where you stay</h2>
               <p style={{ fontSize:14, color:'var(--ink-soft)', lineHeight:1.7, marginBottom:22 }}>
-                Confirmed hotels near each temple — named before you pay, and honest about what a bed at altitude actually is.
+                {stayLede(pkg)}
               </p>
-              <HotelShowcase hotels={HOTELS} />
+              <HotelShowcase hotels={stays} />
             </section>
           )}
 
@@ -516,6 +519,8 @@ export default async function PackageDetailPage({ params }) {
             </section>
           )}
 
+          {/* Char Dham reference sections. Gated to yatra categories: these six blocks rendered on all 39 package pages, which put Kedarnath weather, dham pricing and pilgrim altitude advice on Corbett safaris and weekend treks. */}
+          {isYatra && (<>
           {/* Packing List */}
           <section>
             <h2 style={SH}>🎒 Packing List for This Yatra</h2>
@@ -592,7 +597,11 @@ export default async function PackageDetailPage({ params }) {
             </p>
           </section>
 
-          {/* Season Pricing — competitors all show peak vs off-peak variation */}
+          {/* Season Pricing — competitors all show peak vs off-peak variation.
+              Char Dham only: the bands below are full-circuit prices and the
+              weather column is Kedarnath's, so on a single-dham package this
+              table misquoted both the price and the shrine. */}
+          {isCharDham && (
           <section style={{ marginBottom:4 }}>
             <h2 style={SH}>📅 Best Season to Book — Price & Crowd Guide</h2>
             <div style={{ overflowX:'auto', marginBottom:16 }}>
@@ -627,6 +636,7 @@ export default async function PackageDetailPage({ params }) {
               💡 September and October are our most consistently rated months across 15 years. Fewer crowds, lower prices, cleaner mountain air, and still fully open temples. Many repeat pilgrims specifically choose October.
             </p>
           </section>
+          )}
 
           {/* AMS Warning — all top competitors have this, builds trust */}
           <section style={{ marginBottom:4 }}>
@@ -635,7 +645,7 @@ export default async function PackageDetailPage({ params }) {
               <div style={{ background:'#FCEBEB', border:'1px solid #F09595', borderRadius:12, padding:'14px 16px' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'#791F1F', marginBottom:6 }}>🩺 Altitude Mountain Sickness (AMS)</div>
                 <div style={{ fontSize:13.5, color:'#7f1d1d', lineHeight:1.7 }}>
-                  Kedarnath (3,583m) and Badrinath (3,133m) are high-altitude shrines. AMS symptoms — headache, nausea, dizziness, breathlessness — can affect anyone regardless of fitness. Our driver carries an oxygen cylinder. Spend one night at Guptkashi (1,319m) before ascending to acclimatize. If symptoms worsen, descend immediately.
+                  {altitudeLede(pkg)}
                 </div>
               </div>
               <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:12, padding:'14px 16px' }}>
@@ -676,6 +686,7 @@ export default async function PackageDetailPage({ params }) {
               ))}
             </div>
           </section>
+          </>)}
 
           {/* Delhi → Haridwar travel options — fills the by-car/train/bus/helicopter intent */}
           {fromDelhi && (
@@ -719,7 +730,8 @@ export default async function PackageDetailPage({ params }) {
             <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
               If you would rather register yourself, it is free and takes about ten minutes on the official government site — <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>registrationandtouristcare.uk.gov.in</a>. Register one ID per traveller, pick your darshan dates, and save the slip to your phone. Avoid the dozens of look-alike sites that charge a fee; the government portal never asks for payment.
             </p>
-            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🗓️ Char Dham 2026 Opening & Closing Dates (Confirmed)</h3>
+            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>🗓️ {datesHeading(pkg)}</h3>
+            <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7, marginBottom:10 }}>{datesLede(pkg)}</p>
             <div style={{ overflowX:'auto', marginBottom:12 }}>
               <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:480 }}>
                 <thead><tr style={{ background:'var(--navy)' }}>
@@ -728,7 +740,7 @@ export default async function PackageDetailPage({ params }) {
                   ))}
                 </tr></thead>
                 <tbody>
-                  {dham2026.map((d,i)=>(
+                  {dhamDatesForPackage(pkg, dham2026).map((d,i)=>(
                     <tr key={d.dham} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
                       <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{d.dham}</td>
                       <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.opens}</td>
@@ -740,7 +752,7 @@ export default async function PackageDetailPage({ params }) {
               </table>
             </div>
             <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
-              Yamunotri and Gangotri open together on Akshaya Tritiya; Kedarnath and Badrinath follow a day or two later. Dates are set by the temple committees each year and are confirmed for 2026. Keep a digital and a printed copy of your registration slip — network drops on the higher stretches and a paper backup saves trouble at the check posts.
+              {datesNote(pkg)}
             </p>
           </section>
           )}
