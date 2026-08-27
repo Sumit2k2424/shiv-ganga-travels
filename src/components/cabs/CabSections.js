@@ -157,7 +157,7 @@ export function OriginFareTable({ rows = [] }) {
    cheapest credibility on the page. It also removes the single
    most common post-booking argument.                             */
 
-export function InclusionsGrid() {
+export function InclusionsGrid({ extras = true }) {
   return (
     <>
       <div className="lux-grid lux-grid--2" data-lux-stagger="">
@@ -179,26 +179,59 @@ export function InclusionsGrid() {
         </div>
       </div>
 
-      <div className="lux-grid lux-grid--2" style={{ marginTop: 18 }} data-lux-stagger="">
-        {EXTRAS.map((e) => (
-          <div key={e.label} className="lux-minifact">
-            <span className="lux-minifact__i">
-              <Icon name="rupee" size={16} />
-            </span>
-            <span>
-              <span className="lux-minifact__k">{e.label}</span>
-              <span className="lux-minifact__v">{e.value}</span>
-            </span>
-          </div>
-        ))}
-      </div>
+      {extras && (
+        <div className="lux-grid lux-grid--2" style={{ marginTop: 18 }} data-lux-stagger="">
+          {EXTRAS.map((e) => (
+            <div key={e.label} className="lux-minifact">
+              <span className="lux-minifact__i">
+                <Icon name="rupee" size={16} />
+              </span>
+              <span>
+                <span className="lux-minifact__k">{e.label}</span>
+                <span className="lux-minifact__v">{e.value}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }
 
 /* ── Cancellation terms ─────────────────────────────────────── */
 
-export function CancellationTerms() {
+/**
+ * `compact` renders a two-line summary and defers the full grid to
+ * /cancellation-policy, which is the canonical page for these terms.
+ *
+ * The route and hub templates pass compact, because the full table was
+ * rendering byte-identically on 53 cab pages and was a measurable share
+ * of why the family read as near-duplicate to Google. The terms are not
+ * being hidden — the headline still states the 48-hour rule up front and
+ * the link is one click. Pages that are ABOUT the terms render the table.
+ */
+export function CancellationTerms({ compact = false, lede }) {
+  if (compact) {
+    return (
+      <div className="lux-card" style={{ padding: 22 }}>
+        <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 12 }}>
+          <span style={{ color: 'var(--teal)', flex: 'none' }}>
+            <Icon name="shieldCheck" size={18} />
+          </span>
+          <strong style={{ fontSize: '0.95rem', color: 'var(--ink)' }}>{CANCELLATION.headline}</strong>
+        </div>
+        {lede && <p className="lux-body" style={{ fontSize: '0.86rem', marginBottom: 10 }}>{lede}</p>}
+        <p className="lux-caption" style={{ margin: 0 }}>
+          {CANCELLATION.note}{' '}
+          <Link href="/cancellation-policy" className="lux-link">
+            Full cancellation terms
+          </Link>
+          .
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="lux-card" style={{ padding: 22 }}>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 14 }}>
@@ -304,7 +337,13 @@ export function LocalTip({ children }) {
    Address, years, permits, a real phone number. Every aggregator
    page we studied omitted all of it.                             */
 
-export function OperatorCard() {
+/**
+ * `lede` is a route- or hub-specific sentence naming the journey this
+ * card is vouching for, so the block is not identical across the 53 cab
+ * pages that render it. `credentials` collapses to a link when the full
+ * list would just repeat what /about already says.
+ */
+export function OperatorCard({ lede, showCredentials = true }) {
   return (
     <div className="lux-card" style={{ padding: 24 }}>
       <Eyebrow plain>Who you are booking with</Eyebrow>
@@ -319,13 +358,23 @@ export function OperatorCard() {
         {OPERATOR.legalName}
       </div>
       <p className="lux-body" style={{ fontSize: '0.86rem' }}>
-        {OPERATOR.role}. Operating from Haridwar since {OPERATOR.since}.
+        {lede || `${OPERATOR.role}. Operating from Haridwar since ${OPERATOR.since}.`}
       </p>
-      <ul className="lux-list lux-list--check" style={{ marginTop: 14 }}>
-        {OPERATOR.credentials.map((c) => (
-          <li key={c}>{c}</li>
-        ))}
-      </ul>
+      {showCredentials ? (
+        <ul className="lux-list lux-list--check" style={{ marginTop: 14 }}>
+          {OPERATOR.credentials.map((c) => (
+            <li key={c}>{c}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="lux-caption" style={{ marginTop: 12 }}>
+          {OPERATOR.role}, operating from Haridwar since {OPERATOR.since}.{' '}
+          <Link href="/about" className="lux-link">
+            Registration, fleet and credentials
+          </Link>
+          .
+        </p>
+      )}
       <div style={{ display: 'grid', gap: 10, marginTop: 18 }}>
         <div className="lux-minifact">
           <span className="lux-minifact__i">

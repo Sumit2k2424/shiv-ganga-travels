@@ -10,6 +10,9 @@ import {
   reviewsForSlug,
 } from '@/data/cabs';
 import { roadRulesFor } from '@/data/cabs/policy';
+import {
+  originFleetLede, originInclusionsLede, originOperatorLede, hubCancellationLede,
+} from '@/data/cabs/showcase';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -206,13 +209,13 @@ export default async function OriginPage({ params }) {
 
       {/* ── What the fare covers ── */}
       <Section tone="paper">
-        <SectionHead eyebrow="No surprises" title="What every fare includes" />
-        <InclusionsGrid />
+        <SectionHead eyebrow="No surprises" title={`What every fare out of ${o.name} includes`} lede={originInclusionsLede(o)} />
+        <InclusionsGrid extras={false} />
       </Section>
 
       {/* ── Fleet ── */}
       <Section tone="paper-deep">
-        <SectionHead eyebrow="The fleet" title="The vehicle you travel in" />
+        <SectionHead eyebrow="The fleet" title={`The vehicle you travel in from ${o.name}`} lede={originFleetLede(o)} />
         <Reveal><VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} /></Reveal>
       </Section>
 
@@ -233,7 +236,7 @@ export default async function OriginPage({ params }) {
       {/* ── Cancellation ── */}
       <Section tone="paper-deep" wrapWidth="narrow">
         <SectionHead eyebrow="If plans change" title="Cancellation, in plain terms" />
-        <Reveal><CancellationTerms /></Reveal>
+        <Reveal><CancellationTerms compact lede={hubCancellationLede(o.name)} /></Reveal>
       </Section>
 
       {/* ── Reviews ── */}
@@ -258,7 +261,7 @@ export default async function OriginPage({ params }) {
 
       {/* ── Operator ── */}
       <Section tone="paper" wrapWidth="narrow">
-        <Reveal><OperatorCard /></Reveal>
+        <Reveal><OperatorCard lede={originOperatorLede(o)} showCredentials={false} /></Reveal>
       </Section>
 
       {/* ── Link mesh ── */}

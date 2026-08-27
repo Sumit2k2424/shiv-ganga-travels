@@ -10,6 +10,9 @@ import {
   reviewsForSlug,
 } from '@/data/cabs';
 import { roadRulesFor } from '@/data/cabs/policy';
+import {
+  showcaseFor, fleetLede, fareLede, fareCaption, answerBoxClose, ctaLede, inclusionsLede, cancellationLede, operatorLede,
+} from '@/data/cabs/showcase';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -149,7 +152,7 @@ export default async function CabRoutePage({ params }) {
         <AnswerBox>
           {from} to {to} is <strong>{r.distance}</strong>, about <strong>{r.time}</strong> by cab, running {r.via}.
           One-way fares start at <strong>{low}</strong> in a sedan and the vehicle reaches <strong>{r.endPoint || to}</strong>.
-          Booked direct with Shiv Ganga Travels, a Haridwar operator since 2010 — one fixed all-inclusive price, tolls and driver included.
+          {answerBoxClose(r, from, to)}
         </AnswerBox>
         <VerifiedStrip expert={expert} lastDrivenOn={r.lastDrivenOn} subject={`the ${from}–${to} road`} />
         <p className="lux-body" style={{ marginTop: 22 }}>{r.intro}</p>
@@ -160,17 +163,17 @@ export default async function CabRoutePage({ params }) {
         <SectionHead
           eyebrow="What it costs"
           title={`${from} to ${to} taxi fare`}
-          lede="One-way bands by vehicle. Every quote we send is a single fixed all-in number — fuel, driver, tolls, state taxes and parking already inside it."
+          lede={fareLede(r, from, to)}
         />
-        <Reveal><FareTable fares={fares} /></Reveal>
+        <Reveal><FareTable fares={fares} caption={fareCaption(r, from, to)} /></Reveal>
       </Section>
 
       {/* ── What the fare covers ── */}
       <Section tone="paper">
         <SectionHead
           eyebrow="No surprises"
-          title="Exactly what the fare covers"
-          lede="Most operators in this market publish a number and leave the rest for the end of the trip. Here is the whole thing, both columns."
+          title={`Exactly what the ${from}–${to} fare covers`}
+          lede={inclusionsLede(r, from, to)}
         />
         <InclusionsGrid />
       </Section>
@@ -200,16 +203,16 @@ export default async function CabRoutePage({ params }) {
       <Section tone="paper-deep">
         <SectionHead
           eyebrow="The fleet"
-          title="The vehicle you travel in"
-          lede="Our own vehicles, not a marketplace of whoever is nearest."
+          title={`The vehicle for the ${from}–${to} run`}
+          lede={fleetLede(r, from, to)}
         />
-        <Reveal><VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} /></Reveal>
+        <Reveal><VehicleShowcase vehicles={showcaseFor(r)} matrix={VEHICLE_MATRIX} /></Reveal>
       </Section>
 
       {/* ── Cancellation ── */}
       <Section tone="paper" wrapWidth="narrow">
         <SectionHead eyebrow="If plans change" title="Cancellation, in plain terms" />
-        <Reveal><CancellationTerms /></Reveal>
+        <Reveal><CancellationTerms compact lede={cancellationLede(r, from, to)} /></Reveal>
       </Section>
 
       {/* ── Reviews ── */}
@@ -234,7 +237,7 @@ export default async function CabRoutePage({ params }) {
 
       {/* ── Who you are booking with ── */}
       <Section tone="paper-deep" wrapWidth="narrow">
-        <Reveal><OperatorCard /></Reveal>
+        <Reveal><OperatorCard lede={operatorLede(r, from, to)} showCredentials={false} /></Reveal>
       </Section>
 
       {/* ── Link mesh ── */}
@@ -247,7 +250,7 @@ export default async function CabRoutePage({ params }) {
       <Section tone="ink">
         <CabCTA
           title={`Book your ${from} → ${to} cab`}
-          lede={`Send us the date and how many of you there are. We reply with one fixed all-in fare — usually within two hours.`}
+          lede={ctaLede(r, from, to)}
           message={`Namaste! I want a cab from ${from} to ${to}. Please share the fixed fare and availability.`}
         />
       </Section>

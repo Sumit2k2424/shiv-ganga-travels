@@ -10,6 +10,10 @@ import {
   reviewsForSlug,
 } from '@/data/cabs';
 import { roadRulesFor } from '@/data/cabs/policy';
+import {
+  showcaseForDestination, destinationFleetLede, destinationInclusionsLede,
+  destinationOperatorLede,
+} from '@/data/cabs/showcase';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -208,8 +212,8 @@ export default async function DestinationPage({ params }) {
 
       {/* ── What the fare covers ── */}
       <Section tone="paper">
-        <SectionHead eyebrow="No surprises" title="What every fare on this page includes" />
-        <InclusionsGrid />
+        <SectionHead eyebrow="No surprises" title={`What every fare to ${d.name} includes`} lede={destinationInclusionsLede(d)} />
+        <InclusionsGrid extras={false} />
       </Section>
 
       {/* ── Rules of the road ── */}
@@ -225,8 +229,8 @@ export default async function DestinationPage({ params }) {
 
       {/* ── Fleet ── */}
       <Section tone="paper">
-        <SectionHead eyebrow="The fleet" title="The vehicle you travel in" />
-        <Reveal><VehicleShowcase vehicles={VEHICLES} matrix={VEHICLE_MATRIX} /></Reveal>
+        <SectionHead eyebrow="The fleet" title={`The vehicle that takes you to ${d.name}`} lede={destinationFleetLede(d)} />
+        <Reveal><VehicleShowcase vehicles={showcaseForDestination(d)} matrix={VEHICLE_MATRIX} /></Reveal>
       </Section>
 
       {/* ── Reviews ── */}
@@ -251,7 +255,7 @@ export default async function DestinationPage({ params }) {
 
       {/* ── Operator ── */}
       <Section tone="paper-deep" wrapWidth="narrow">
-        <Reveal><OperatorCard /></Reveal>
+        <Reveal><OperatorCard lede={destinationOperatorLede(d)} showCredentials={false} /></Reveal>
       </Section>
 
       {/* ── Link mesh ── */}
