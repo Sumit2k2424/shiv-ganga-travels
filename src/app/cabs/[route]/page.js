@@ -49,7 +49,7 @@ export async function generateMetadata({ params }) {
       `${from} to ${to} taxi 2026`, `cab from ${from} to ${to}`, `${to} taxi service`,
     ],
     alternates: { canonical: url },
-    openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN' },
+    openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }] },
     twitter: { card: 'summary_large_image', title, description: desc },
   };
 }
