@@ -4,6 +4,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import LanguageLinkMesh from '@/components/LanguageLinkMesh';
+import AnswerBox from '@/components/AnswerBox';
 
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.5vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 36, letterSpacing: '-0.02em' };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.95, marginBottom: 16 };
@@ -106,8 +107,15 @@ export default function CharDhamLanguagePage({ content: c, slug, fontClassName =
         <h2 style={h2}>{c.whyHeading}</h2>
         <p style={p}>{c.whyBody}</p>
 
+        {/* `whatIsBody` was already the page's answer to "what is Char Dham
+            Yatra", written natively in each of the 12 languages — it just was
+            not marked as such, so it rendered as ordinary body copy with
+            nothing to signal it was the extractable passage. Wrapping it in
+            AnswerBox adds the `.speakable-answer` hook and the visual framing
+            without inventing prose in languages we cannot review. The heading
+            stays above it so the section still reads naturally. */}
         <h2 style={h2}>{c.whatIsHeading}</h2>
-        <p style={p}>{c.whatIsBody}</p>
+        <AnswerBox label={c.whatIsHeading}>{c.whatIsBody}</AnswerBox>
 
         <div style={{ overflowX: 'auto', marginBottom: 20 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>

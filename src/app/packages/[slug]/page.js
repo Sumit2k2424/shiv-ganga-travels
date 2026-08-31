@@ -11,6 +11,7 @@ import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
 import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, stayLede, datesLede, datesHeading, datesNote, altitudeLede } from '@/data/packageRoute';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
+import AnswerBox from '@/components/AnswerBox';
 import { Pill } from '@/components/lux/primitives';
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
@@ -245,6 +246,33 @@ export default async function PackageDetailPage({ params }) {
             ].filter(Boolean).map((v) => <Pill key={v} tone="light">{v}</Pill>)}
           </div>
         </div>
+      </section>
+
+      {/* Direct answer — one self-contained paragraph, assembled from this
+          package's own data rather than written as boilerplate, so each of the
+          44 package pages states its real duration, price, route and what the
+          fare covers. This is the passage an answer engine lifts when someone
+          asks "how much is the 9N/10D Char Dham package from Haridwar"; before
+          it existed, the facts were on the page but scattered across a pill
+          row, a sticky bar and an inclusions list with nothing to quote. */}
+      <section style={{ maxWidth:'var(--container)', margin:'0 auto', padding:'26px 20px 0' }}>
+        <AnswerBox>
+          <strong>{pkg.seoHeading || pkg.name}</strong> runs {pkg.duration.nights} nights and{' '}
+          {pkg.duration.days} days from {pkg.startCity}
+          {pkg.endCity && pkg.endCity !== pkg.startCity ? ` to ${pkg.endCity}` : ', returning to the same city'},
+          {' '}priced {isRange ? 'between ' : 'from '}
+          <strong>
+            ₹{pkg.price.discounted.toLocaleString('en-IN')}
+            {isRange ? `–₹${pkg.price.original.toLocaleString('en-IN')}` : ''}
+          </strong>{' '}
+          per person all-inclusive.
+          {pkg.season ? ` It operates ${pkg.season}.` : ''}
+          {pkg.transport ? ` Transport is by ${pkg.transport.toLowerCase()}.` : ''}
+          {pkg.difficulty ? ` Difficulty is rated ${pkg.difficulty.toLowerCase()}.` : ''}
+          {' '}The price covers accommodation, daily breakfast and dinner, the vehicle with a hill-experienced
+          driver, all tolls, parking and driver allowance, and Char Dham registration. It does not cover
+          travel to {pkg.startCity}, pony or helicopter charges at Kedarnath, or lunch on travel days.
+        </AnswerBox>
       </section>
 
       {/* Why book direct — always immediately below the hero */}
