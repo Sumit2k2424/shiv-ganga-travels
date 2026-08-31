@@ -3,7 +3,11 @@ import { PACKAGES, SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
+import { ROUTES } from '@/data/distances';
 import { h2, p } from "@/lib/prose";
+
+/* Same source as the cab pages and /haridwar-to-badrinath-distance. */
+const badrinathRoute = ROUTES['haridwar-badrinath'];
 
 export const metadata = {
   title: { absolute: `Badrinath Yatra Package ${SITE.season} | VIP Darshan Included` },
@@ -52,7 +56,7 @@ function Schema() {
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
       validFrom: '2026-04-23',
-      validThrough: '2026-11-20',
+      validThrough: '2026-11-13',
       seller: { '@type': 'TravelAgency', name: SITE.name, url: SITE.baseUrl },
     },
     provider: {
@@ -328,10 +332,77 @@ export default function BadrinathYatraPage() {
           The Badrinath temple opens in late April and closes in November. The best months are <strong>May</strong> and <strong>September–October</strong>. May offers clear skies, manageable crowds, and excellent weather (8–14°C). September and October bring post-monsoon visibility and fewer pilgrims. Avoid July–August — the monsoon brings heavy rainfall, frequent landslides on the Joshimath route, and disrupted travel.
         </p>
 
+        {/* Merged in from /blog/badrinath-yatra-guide when that slug was
+            retired — it 308s here, so the stage table, the darshan timings and
+            the takeaways below were live on a URL that never served. Route legs
+            are read from src/data/distances.js, the same source the cab pages
+            and /haridwar-to-badrinath-distance use, so the three cannot drift. */}
+        <h2 style={h2}>Badrinath Temple Darshan Timings 2026</h2>
+        <div style={{ background:'var(--bg)', borderRadius:12, padding:'18px 20px', border:'1px solid hsl(var(--border))', marginBottom:20, fontSize:14 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:10 }}>
+            {[
+              ['Morning opening', '4:30 AM'],
+              ['Maha Abhishek puja', '4:30 – 6:30 AM'],
+              ['Morning darshan', '7:00 AM – 1:00 PM'],
+              ['Afternoon closure', '1:00 – 4:00 PM'],
+              ['Evening darshan', '4:00 – 9:00 PM'],
+              ['Evening aarti', '8:00 PM'],
+            ].map(([session, time]) => (
+              <div key={session} style={{ display:'flex', justifyContent:'space-between', padding:'8px 12px', background:'#fff', borderRadius:8, border:'1px solid hsl(var(--border))' }}>
+                <span style={{ fontWeight:600, color:'var(--text)', fontSize:13 }}>{session}</span>
+                <span style={{ fontWeight:700, color:'var(--navy)', fontSize:13 }}>{time}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <p style={{ ...p, fontSize:13.5 }}>
+          The <strong>Maha Abhishek at 4:30 AM</strong> is the one worth getting up for — the temple at first
+          light with Neelkanth behind it. It needs booking in advance. Timings shift slightly on festival days
+          and are set by the temple committee.
+        </p>
+
         <h2 style={h2}>How to Reach Badrinath from Haridwar</h2>
         <p style={p}>
-          The route from Haridwar to Badrinath is 320km via NH7, passing through Rishikesh, Devprayag (Ganga confluence), Srinagar Garhwal, Rudraprayag, Chamoli, and Joshimath. The drive takes 8–9 hours. There is no direct train or flight to Badrinath. The nearest airport is Jolly Grant Airport, Dehradun (300km). We provide AC cab service from Haridwar, Rishikesh, and Delhi for your yatra.
+          Badrinath is {badrinathRoute.kmLabel} from Haridwar and takes {badrinathRoute.time} of driving. That
+          ratio is the single most useful fact here: it works out under 30km/h, and pilgrims who plan from the
+          distance alone arrive four hours later than they expected, in the dark, at 3,133m. The route runs{' '}
+          {badrinathRoute.via.join(' → ')}.
         </p>
+        <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:14 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:640 }}>
+            <caption className="sr-only">Haridwar to Badrinath road route, stage by stage</caption>
+            <thead>
+              <tr style={{ background:'var(--navy-light)' }}>
+                {['Stage','Distance','Time','Road notes'].map(x => (
+                  <th key={x} scope="col" style={{ padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.05em' }}>{x}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {badrinathRoute.legs.map(([leg, km, time, note], i) => (
+                <tr key={leg} style={{ borderTop:'1px solid hsl(var(--border))', background: i%2===0 ? '#fff' : 'var(--bg)' }}>
+                  <th scope="row" style={{ padding:'10px 12px', fontWeight:600, color:'var(--navy)', fontSize:13, textAlign:'left', whiteSpace:'nowrap' }}>{leg}</th>
+                  <td style={{ padding:'10px 12px', color:'var(--teal)', fontWeight:700, fontFamily:'monospace' }}>{km}</td>
+                  <td style={{ padding:'10px 12px', color:'#475569', fontSize:12.5 }}>{time}</td>
+                  <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>{note}</td>
+                </tr>
+              ))}
+              <tr style={{ borderTop:'2px solid var(--navy)', background:'var(--navy-light)' }}>
+                <th scope="row" style={{ padding:'10px 12px', fontWeight:800, color:'var(--navy)', fontSize:13, textAlign:'left' }}>Haridwar → Badrinath</th>
+                <td style={{ padding:'10px 12px', color:'var(--navy)', fontWeight:800, fontFamily:'monospace' }}>{badrinathRoute.kmLabel}</td>
+                <td style={{ padding:'10px 12px', color:'var(--navy)', fontWeight:700 }}>{badrinathRoute.time}</td>
+                <td style={{ padding:'10px 12px', color:'var(--text-muted)', fontSize:12.5 }}>Most groups break the drive at Rudraprayag or Joshimath.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style={{ ...p, fontSize:'0.96em' }}>{badrinathRoute.whySlow}</p>
+        {badrinathRoute.note && (
+          <div style={{ background:'#fffbeb', border:'1px solid #fde68a', borderRadius:10, padding:'13px 16px', marginBottom:20 }}>
+            <strong style={{ fontSize:13.5, color:'#92400e' }}>Worth knowing: </strong>
+            <span style={{ fontSize:13.5, color:'#78350f', lineHeight:1.75 }}>{badrinathRoute.note}</span>
+          </div>
+        )}
 
         {/* CTA */}
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
