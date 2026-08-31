@@ -63,20 +63,44 @@ function Schema() {
     publicAccess:true,
     touristType:['Pilgrims','Cultural tourists'],
   };
+  // The aarti is a nightly ceremony with no start or end, which is exactly the
+  // case schema.org's Schedule exists for — but Google still requires a literal
+  // `startDate` on the Event itself, and this node had none. That is why Search
+  // Console reported 1 invalid Event against the site's 3 (the other two,
+  // /kedarnath-doli-yatra and /kumbh-mela-haridwar, both carry real dates).
+  //
+  // A perpetual event has no honest single start date, so the Event and the
+  // Schedule are both anchored to the current season and expire with it. Those
+  // bounds come from SITE.season, so the year rolls over with the rest of the
+  // site rather than freezing at whatever year this was written in.
   const event = {
     '@context':'https://schema.org', '@type':'Event',
     name:'Ganga Aarti at Har Ki Pauri',
     description:'Daily evening lamp ceremony on the Ganga at Brahmakund, performed by Shri Ganga Sabha. Approximately 30–40 minutes.',
+    startDate:`${SITE.season}-01-01T18:30:00+05:30`,
+    endDate:`${SITE.season}-12-31T19:10:00+05:30`,
     eventSchedule:{
       '@type':'Schedule',
+      startDate:`${SITE.season}-01-01`,
+      endDate:`${SITE.season}-12-31`,
       repeatFrequency:'P1D',
       startTime:'18:30',
+      endTime:'19:10',
       scheduleTimezone:'Asia/Kolkata',
       description:'Around 6:30 PM April–September; around 5:30 PM October–March. Times follow sunset.',
     },
     eventAttendanceMode:'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus:'https://schema.org/EventScheduled',
     location:{ '@id': `${SITE.baseUrl}/har-ki-pauri-guide#place` },
     isAccessibleForFree:true,
+    offers:{
+      '@type':'Offer',
+      price:'0',
+      priceCurrency:'INR',
+      availability:'https://schema.org/InStock',
+      url:`${SITE.baseUrl}/har-ki-pauri-guide`,
+      validFrom:`${SITE.season}-01-01`,
+    },
     organizer:{ '@type':'Organization', name:'Shri Ganga Sabha, Haridwar' },
   };
   const article = {
