@@ -101,7 +101,14 @@ function Schema() {
       url:`${SITE.baseUrl}/har-ki-pauri-guide`,
       validFrom:`${SITE.season}-01-01`,
     },
-    organizer:{ '@type':'Organization', name:'Shri Ganga Sabha, Haridwar' },
+    image:[`${SITE.baseUrl}/opengraph-image`],
+    organizer:{
+      '@type':'Organization',
+      name:'Shri Ganga Sabha, Haridwar',
+      // Verified Aug 2026 — the Sabha has organised this aarti since 1916 and
+      // shrigangasabha.org is its own site, not a tourism reseller's.
+      url:'https://shrigangasabha.org',
+    },
   };
   const article = {
     '@context':'https://schema.org', '@type':'Article',

@@ -69,7 +69,14 @@ export default function KedarnathDoliYatra() {
       { '@type':'Place', name:'Guptkashi', address:{ '@type':'PostalAddress', addressRegion:'Uttarakhand', addressCountry:'IN' } },
       { '@type':'Place', name:'Omkareshwar Temple, Ukhimath', address:{ '@type':'PostalAddress', addressRegion:'Uttarakhand', addressCountry:'IN' } },
     ],
-    organizer:{ '@type':'Organization', name:'Shri Badarinath Kedarnath Temple Committee' },
+    image:[`${SITE.baseUrl}/opengraph-image`],
+    organizer:{
+      '@type':'Organization',
+      name:'Shri Badarinath Kedarnath Temple Committee',
+      // BKTC's own .gov.in property — the same source the emergency contact
+      // directory's pilgrim helpline numbers were verified against.
+      url:'https://badrinath-kedarnath.gov.in',
+    },
   };
 
   return (

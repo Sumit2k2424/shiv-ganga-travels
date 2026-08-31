@@ -79,6 +79,13 @@ export default function KumbhMelaHaridwar() {
       address:{ '@type':'PostalAddress', addressLocality:'Haridwar', addressRegion:'Uttarakhand', addressCountry:'IN' },
       geo:{ '@type':'GeoCoordinates', latitude:29.95778, longitude:78.17083 },
     },
+    image:[`${SITE.baseUrl}/opengraph-image`],
+    // Deliberately no `url` on the organizer. Each Mela gets its own
+    // administration appointed by the state, and its own site, which goes dead
+    // between Melas — the 2021 one already has. The next Haridwar Kumbh is
+    // around 2033, so there is no standing URL to point at and guessing one
+    // would age worse than omitting it. Same rule as the bathing dates above.
+    organizer:{ '@type':'Organization', name:'Mela Administration, Haridwar' },
   };
 
   return (
