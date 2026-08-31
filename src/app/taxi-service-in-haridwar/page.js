@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { FLEET, CIRCUITS, TRANSFERS, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Taxi Service in Haridwar ${SITE.season} — Rates from ₹1,600/Day` },
@@ -146,6 +147,10 @@ export default function TaxiServiceInHaridwar() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Haridwar taxi fares run from about ₹2,500 for a local day to ₹3,000+ for the hill routes.</strong> Local sightseeing covering Har Ki Pauri, both ropeways and Kankhal is a half or full day; Rishikesh is a short hop; Char Dham legs are full-day mountain drives priced accordingly. What matters more than the rate on a hill route is the vehicle's Green Card and whether the driver runs these roads every season — a plains taxi on the Kedarnath road is a genuine risk.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}

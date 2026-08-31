@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { TRANSFERS, transferRows, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 const R = TRANSFERS['haridwar-delhi'];
 
@@ -134,6 +135,10 @@ export default function HaridwarToDelhiTaxi() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Haridwar to Delhi is about 220km and takes 4 to 5 hours on NH334 via Roorkee and Meerut.</strong> A one-way sedan runs roughly ₹3,500–4,500 and an Innova ₹5,000–6,500, with tolls included in our quotes. The drive is entirely plains, so it is the easy leg of any Char Dham trip. Leave Haridwar before 6am or after 10am to miss the worst of the Delhi approach, and allow an extra hour on Sunday evenings.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}

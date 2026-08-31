@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 /* NO PROPERTY NAMES ON THIS PAGE, BY POLICY.
    Hotel stock on this route turns over yearly, which is exactly why competitor
@@ -107,6 +108,10 @@ export default function BadrinathHotels() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Most Badrinath itineraries sleep at Joshimath, not at the shrine.</strong> Joshimath is 45km below at 1,875m with the best hotel quality on this stretch and rooms from ₹1,500–6,000. Badrinath town itself is colder and more basic at ₹800–4,000, but it is the only way to attend the 4:30 AM Maha Abhishek without a 45km drive in the dark. Chamoli, Pipalkoti and Rudraprayag are the lower, warmer fallbacks.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
 

@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Shiv Ganga Travels vs Thrillophilia — Char Dham ${SITE.season}` },
@@ -67,6 +68,10 @@ export default function VsThrillophilia() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Thrillophilia is a marketplace, not an operator.</strong> The Char Dham trips listed there are run by local operators, with the platform's commission added — typically 15–25%. That is the whole of the price difference. What it also means is that changes on the road go through a support queue rather than the person driving the vehicle. Our 9N/10D from Haridwar is ₹13,900 per person, booked direct with the people running it.
+        </AnswerBox>
         <P>
           The honest version of this comparison is not &quot;we are good and they are bad&quot;. It is
           that these are two different kinds of company. Thrillophilia is a marketplace: it lists tours

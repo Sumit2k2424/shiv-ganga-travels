@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 // Ardh Kumbh dates are well sourced. Shahi Snan dates are NOT yet published by
 // the Mela administration — do not invent them. Add them here when the Mela
@@ -95,6 +96,10 @@ export default function KumbhMelaHaridwar() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>The Haridwar Kumbh Mela is held every 12 years, with an Ardh Kumbh at the 6-year midpoint.</strong> The last full Haridwar Kumbh was in 2021, which places the next around 2033. Dates are set by the position of Jupiter in Aquarius and the Sun in Aries, and the Shahi Snan bathing days at Har Ki Pauri are the ones that draw the crowds. Outside Kumbh years, Somvati Amavasya and Kartik Purnima are the big bathing days.
+        </AnswerBox>
         <P>
           The Ardh Kumbh Mela comes to Haridwar from <strong style={{ color:'var(--navy)' }}>{KUMBH.start}
           to {KUMBH.end}</strong>, opening on Paush Purnima and closing on Mahashivratri. Ardh Kumbh is

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `About Shiv Ganga Travels ${SITE.season} | 15+ Years, Founded by Army Officer` },
@@ -196,6 +197,10 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
+
+        <AnswerBox>
+          <strong>Shiv Ganga Travels is a direct Char Dham operator based in Haridwar, founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer.</strong> We run the vehicles and hold the hotel bookings ourselves rather than reselling another operator's trip, which is why our prices carry no agent commission. Over 50,000 pilgrims since 2010, rated 4.7 from 54 Google reviews. The office is on Saptrishi Road near Shantikunj Gate No. 1, and you are welcome to visit before you book.
+        </AnswerBox>
 
           <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>
 

@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const PKG = PACKAGES.find(p => p.slug === 'auli-joshimath-skiing-3n-4d');
 
@@ -72,6 +73,10 @@ export default function AuliSkiingPackage() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Auli's ski season runs January to March, when the slopes hold reliable snow.</strong> The resort sits at 2,500–3,050m above Joshimath, reached by road or by the 4km cable car — one of Asia's longest. Packages start around ₹9,400 for 3N/4D from Haridwar. Outside winter Auli is a meadow rather than a ski field, and April to June is the better window for the Nanda Devi views and the Gorson Bugyal walk.
+        </AnswerBox>
         <P>
           Auli sits above Joshimath in Chamoli district, between roughly 2,500 and 3,050 metres, and is
           the closest thing India has to an established ski resort. The season runs January to March with

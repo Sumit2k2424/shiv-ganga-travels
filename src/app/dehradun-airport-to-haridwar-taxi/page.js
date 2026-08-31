@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { TRANSFERS, transferRows, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 const R = TRANSFERS['airport-haridwar'];
 
@@ -125,6 +126,10 @@ export default function DehradunAirportToHaridwarTaxi() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Jolly Grant Airport to Haridwar is about 35km and takes 45 minutes to an hour.</strong> A one-way sedan runs roughly ₹1,200–1,800 and an Innova ₹2,000–2,500. It is the standard arrival transfer for pilgrims flying in for Char Dham, and worth pre-booking because airport taxi queues here are thin after the last evening flight. Rishikesh is closer at 20km, so if your yatra starts there the transfer is shorter and cheaper.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}

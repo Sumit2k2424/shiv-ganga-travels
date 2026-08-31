@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { TRANSFERS, transferRows, FLEET, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 const R = TRANSFERS['haridwar-rishikesh'];
 
@@ -122,6 +123,10 @@ export default function HaridwarToRishikeshTaxi() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Haridwar to Rishikesh is 25km and takes about 45 minutes.</strong> A one-way sedan is roughly ₹800–1,200, or ₹1,500–2,000 for a half-day with waiting so you can see Ram Jhula, Laxman Jhula and Triveni Ghat. It is the shortest paid leg on this route and the one most often bundled into a Haridwar sightseeing day. Shared autos and buses also run frequently and cost a fraction of that.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}

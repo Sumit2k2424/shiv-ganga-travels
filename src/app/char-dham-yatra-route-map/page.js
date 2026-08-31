@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import RouteMapInteractive from './RouteMapInteractive';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Route Map ${SITE.season} | Distances & Driving Times` },
@@ -125,6 +126,10 @@ export default function RouteMap() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>The Char Dham circuit from Haridwar runs roughly 1,100km and takes 9 to 11 nights.</strong> The clockwise order is Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Rudraprayag → Badrinath → Haridwar. Only two dhams need walking: 6km from Janki Chatti to Yamunotri and 16km from Gaurikund to Kedarnath. Gangotri and Badrinath have road to the temple door.
+        </AnswerBox>
       <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
 
         {/* Booking nudge — route map visitors are actively planning */}

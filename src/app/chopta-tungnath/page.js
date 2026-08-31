@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages` },
@@ -58,6 +59,10 @@ export default function ChoptaTungnath() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Tungnath is the highest Shiva temple in the world at 3,680m, reached by a 3.5km trek from Chopta.</strong> The walk takes 1.5 to 2 hours on a made path and is the easiest of the Panch Kedar by a distance. Chandrashila summit is another 1.5km above the temple and worth the extra hour for the Nanda Devi view. Chopta is about 200km from Haridwar; the temple opens around May and closes in November, though the trek stays popular in snow.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
 

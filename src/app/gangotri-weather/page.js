@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import CiteThis from '@/components/CiteThis';
 import { citableDataset } from '@/lib/citable';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Gangotri Weather ${SITE.season} | Month-wise Temperature Guide` },
@@ -75,6 +76,10 @@ export default function GangotriWeather() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Gangotri sits at 3,415m and is open 19 April to 10 November 2026.</strong> Daytime temperatures run from about 6°C in April to 20°C in June, with nights from −5°C to 8°C. The comfortable windows are May to mid-June and mid-September to October. Unlike Kedarnath and Yamunotri there is no trek — the road reaches the temple — so the weather question here is what to wear standing still at the shrine, not what to walk in.
+        </AnswerBox>
       <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <p style={p}>
           Gangotri, perched at 3,415 metres in the Uttarkashi district of Uttarakhand, is the most accessible of the four Char Dhams — you can drive all the way to the temple without any trekking. But "accessible" doesn't mean easy. The weather at this altitude is highly variable, and the 100km road from Uttarkashi to Gangotri is one of the most dramatically weather-affected roads in Uttarakhand. A sunny morning can turn into a hailstorm by afternoon, and monsoon rains in July–August close the road for days at a stretch.

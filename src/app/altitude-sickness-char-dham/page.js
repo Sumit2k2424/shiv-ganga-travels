@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Altitude Sickness on Char Dham Yatra — Prevention Guide' },
@@ -66,6 +67,10 @@ export default function AltitudeSickness() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>All four dhams sit above 3,000m, high enough for altitude sickness.</strong> Yamunotri is 3,291m, Badrinath 3,133m, Gangotri 3,415m and Kedarnath 3,583m. Symptoms usually start as a headache painkillers do not shift, nausea, breathlessness at rest or broken sleep. The only reliable treatment is descent — 500 to 1,000m is normally enough. Gain height slowly, drink far more water than feels necessary, and never push through symptoms to keep to a schedule.
+        </AnswerBox>
         <Note tone="alert" title="This is general information, not medical advice">
           We run vehicles and arrange yatras; we are not doctors. Everything below is what sixteen
           seasons on these routes has taught us about how altitude affects pilgrims, and it is meant to

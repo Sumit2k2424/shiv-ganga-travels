@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import CiteThis from '@/components/CiteThis';
 import { citableDataset } from '@/lib/citable';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Badrinath Weather ${SITE.season} | Month-wise Temperature Guide` },
@@ -75,6 +76,10 @@ export default function BadrinathWeather() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Badrinath sits at 3,133m — the lowest of the four dhams — and is open 23 April to 13 November 2026.</strong> Daytime temperatures run from about 7°C in April to 18°C in June and July, with nights from −2°C to 9°C. May, June, September and October are the comfortable months. July and August bring the monsoon and the road up from Joshimath is the one most affected by landslides. Nights are cold in every month; carry a fleece even in June.
+        </AnswerBox>
       <div style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <p style={p}>
           Badrinath is the final — and for many pilgrims, the most spiritually significant — stop on the Char Dham Yatra. Located at 3,133 metres in the Chamoli district of Uttarakhand, it sits between the towering Nar and Narayan mountain ranges with the Nilkantha peak (6,596m) rising dramatically behind the temple. Unlike Kedarnath and Yamunotri, Badrinath is accessible entirely by road — which makes weather on the approach route, especially the Joshimath–Badrinath stretch, the key variable for safe travel.

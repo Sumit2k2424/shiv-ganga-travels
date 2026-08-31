@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Panch Badri Yatra Package ${SITE.season} | All 5 Badri Shrines` },
@@ -107,6 +108,10 @@ export default function PanchBadriYatra() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Panch Badri is a circuit of five Vishnu temples in the Alaknanda valley</strong> — Badrinath itself, Yogdhyan Badri at Pandukeshwar, Bhavishya Badri near Subhain, Vridha Badri at Animath and Adi Badri near Karnaprayag. Unlike Panch Kedar these are largely motorable and can be covered in 3 to 4 days. Adi Badri and Vridha Badri stay open year-round, which makes the circuit one of the few winter options in Garhwal.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
 

@@ -25,6 +25,7 @@ export default function Page() {
       subtitle="The temple is the reason you came, but the ridge above it and the road below hold more than most pilgrims realise. Here is what is worth your time, and what to skip if you are short on it."
       pills={['🛕 Bhairavnath','🏔️ Vasuki Tal','🔥 Triyuginarayan']}
       facts={[['Bhairavnath','30 min climb'],['Shankaracharya Samadhi','behind temple'],['Gandhi Sarovar','3km hike'],['Vasuki Tal','8km, full day'],['Triyuginarayan','road stop'],['Base town','Guptkashi']]}
+      answer={<>Beyond the temple, the things worth the time at Kedarnath are Bhairavnath, the Shankaracharya Samadhi, Gandhi Sarovar and — for fit trekkers — Vasuki Tal. Bhairavnath is a short steep climb with the best view back over the shrine, and Gandhi Sarovar a 3km walk to a glacial lake. Vasuki Tal is a serious 8km day of its own. Triyuginarayan, where Shiva and Parvati are believed to have married, sits on the road below and is easiest to fit in on the way out.</>}
       ctaIntent="kedarnath"
       faqs={faqs}
       related={[['Kedarnath Complete Guide','/blog/kedarnath-yatra-complete-guide'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Temple','/kedarnath-temple'],['Kedarnath Packages','/kedarnath-yatra']]}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Hotels Near Kedarnath ${SITE.season} | Best Stays | Guptkashi, Sonprayag & Phata` },
@@ -169,6 +170,10 @@ export default function KedarnathHotels() {
 
         <BlogAuthor variant="bottom" author="dhanesh"/>
 
+
+        <AnswerBox>
+          <strong>Guptkashi is where most Kedarnath itineraries sleep — 1,319m, warm, and 30km from the road head at Sonprayag.</strong> Rooms run roughly ₹1,500–4,000. Staying at Kedarnath itself, in GMVN rooms, tented camps or a few lodges, is basic and cold and needs booking well ahead, but it is the only way to attend the morning aarti before the day's trekkers arrive. Sonprayag and Sitapur sit in between and buy you an hour in bed.
+        </AnswerBox>
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'24px', textAlign:'center', marginTop:32 }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.2rem', marginBottom:8 }}>Book Kedarnath Yatra — Hotels Included</h3>
           <p style={{ color:'rgba(255,255,255,0.7)', fontSize:13.5, marginBottom:16 }}>Pre-confirmed hotels at every halt. No last-minute scramble.</p>

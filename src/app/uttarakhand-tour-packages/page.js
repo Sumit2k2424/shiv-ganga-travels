@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import FAQAccordion from '@/components/FAQAccordion';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2, p } from '@/lib/prose';
+import AnswerBox from '@/components/AnswerBox';
 
 const faqs = [
   { q: 'What is the best time to visit Uttarakhand?', a: 'It depends which Uttarakhand you mean. For the Char Dham and the high Himalayan shrines, May to mid-June and mid-September to October — the season runs 19 April to 13 November 2026 and the temples are shut the rest of the year. For hill stations like Mussoorie and Nainital, March to June and September to November. For the Valley of Flowers, July to September, which is exactly the monsoon window you would avoid everywhere else. For Jim Corbett, November to June, with the core zones closed in the monsoon.' },
@@ -86,6 +87,10 @@ export default function Page() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Uttarakhand is not one destination, and the seasons work against each other.</strong> The Char Dham shrines are open 19 April to 13 November and best in May–June or mid-September–October. Hill stations suit March–June and September–November. The Valley of Flowers peaks in exactly the monsoon weeks you would avoid everywhere else. Jim Corbett runs November to June. Packages from ₹3,750, and the commonest planning mistake is trying to combine the high shrines with a hill-station holiday in one week.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 

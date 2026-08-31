@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Shiv Ganga vs MakeMyTrip ${SITE.season} | Char Dham` },
@@ -127,6 +128,10 @@ export default function VsMakeMyTrip() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>The difference is not the itinerary, it is who runs it.</strong> MakeMyTrip lists Char Dham packages but does not operate them — a local operator does, and the platform adds its margin on top, typically 15–25%. Booking direct removes that margin and changes who answers when a road closes at 6am. Our 9N/10D runs from ₹13,900 per person. Compare on inclusions and on who picks up the phone, not on the headline number.
+        </AnswerBox>
         {/* Quick answer */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 22px', marginBottom: 28 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: '#FFD166', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.07em' }}>Quick Answer</div>

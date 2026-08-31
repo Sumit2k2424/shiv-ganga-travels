@@ -6,6 +6,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Places to Visit in Haridwar — 1 & 2 Day Itineraries' },
@@ -88,6 +89,10 @@ export default function HaridwarSightseeingPlaces() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>A full day in Haridwar covers Har Ki Pauri, Mansa Devi, Chandi Devi and Daksh Mahadev, and that is the sensible order.</strong> Do the two hill temples in the morning by ropeway, Daksh Mahadev at Kankhal after lunch, and keep the evening for the Ganga Aarti at Har Ki Pauri, which is the thing people remember. Maya Devi, Bharat Mata Mandir and Shantikunj fit in if you have a second day.
+        </AnswerBox>
         <P>
           Haridwar is small enough to see properly in a day, and almost everybody gets the sequence
           wrong. The two hill temples close for bhog around midday and their ropeway queues build through

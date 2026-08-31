@@ -7,6 +7,7 @@
 
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import AnswerBox from '@/components/AnswerBox';
 import {
   Hero, Crumbs, Article, Updated, H2, P, Table, Note,
   FAQBlock, Sources, CTA, Related,
@@ -61,14 +62,18 @@ export default function DistancePage({ route, faqs, crumbTrail, related, sources
       <Article>
         <Updated/>
 
-        {/* Direct answer — the block AI engines lift */}
-        <P>
-          <strong style={{ color:'var(--navy)' }}>{route.from} to {route.to} is {route.kmLabel} by
+        {/* Direct answer — the block AI engines lift.
+            This was already written as the page's answer, but it rendered as a
+            plain <P>, so it carried none of the signals an extractor keys on:
+            no .speakable-answer hook, no visual framing separating it from the
+            body copy. AnswerBox adds both without changing a word of it. */}
+        <AnswerBox>
+          <strong>{route.from} to {route.to} is {route.kmLabel} by
           road and takes {route.time}</strong> in normal conditions.
           {route.trek ? ` Vehicles stop at ${route.endPoint.split('—')[0].trim()}; the final stretch is ${route.trek}.` : ''}{' '}
           The route runs {route.from} → {route.via.join(' → ')} → {route.to}. Below is where the hours
           actually go, leg by leg, from drivers who run this road through the season.
-        </P>
+        </AnswerBox>
 
         <H2>The Route, Leg by Leg</H2>
         <Table

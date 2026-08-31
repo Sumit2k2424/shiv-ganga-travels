@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Hotels in Haridwar — Which Area to Stay In, by Budget' },
@@ -66,6 +67,10 @@ export default function HaridwarHotels() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Haridwar accommodation splits by how close you want to be to Har Ki Pauri.</strong> Rooms near the ghat are convenient for the evening aarti but noisy and hard to reach by car; the Bhupatwala and Jwalapur belts are quieter and better value, and most Char Dham packages use them because vehicles can actually park. Expect ₹800–2,500 for budget and ₹3,000–7,000 for a good 3-star. Book ahead for Kumbh, Kanwar season and the yatra peak in May.
+        </AnswerBox>
         <P>
           Most hotel advice for Haridwar is a list of properties with star ratings, which is close to
           useless because a three-star near Har Ki Pauri and a three-star in Bhupatwala give you
