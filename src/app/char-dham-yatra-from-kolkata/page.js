@@ -5,6 +5,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Kolkata ${SITE.season} | Pickup & VIP Darshan` },
@@ -89,6 +90,10 @@ export default function CharDhamFromKolkata() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>Char Dham Yatra from Kolkata starts at ₹24,999 per person for a 9N/10D all-inclusive package.</strong> Kolkata is about 1,500 km from Haridwar, and the yatra itself runs from Haridwar — so the journey is two parts: reaching Haridwar by train or flight, then the 1,100 km Himalayan circuit by road. The package covers everything from Haridwar onward: vehicle, hotels, meals, guide and Char Dham registration. Travel to Haridwar is arranged separately, and we can advise on the best train or flight for your dates.
+        </AnswerBox>
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`1,500 km`}</div></div>
           <div key="Doon Express"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Doon Express`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`~27.5h direct`}</div></div>

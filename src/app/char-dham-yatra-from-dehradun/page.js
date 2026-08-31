@@ -3,6 +3,7 @@ import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Dehradun ${SITE.season} | Road & Heli Options` },
@@ -134,6 +135,10 @@ export default function Page() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Dehradun is the nearest airport to the Char Dham circuit</strong> — Jolly Grant, about 35km from Rishikesh and 55km from Haridwar — which makes it the usual arrival point for anyone flying in. The road circuit itself still runs through Rishikesh, so a Dehradun start adds a short transfer rather than a different route. Packages from ₹21,000 per person for 9N/10D all-inclusive. Dehradun is also where the Char Dham helicopter charter departs, from Sahastradhara helipad.
+        </AnswerBox>
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 

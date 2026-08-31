@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const S = PLACES['shantikunj'];
 
@@ -70,6 +71,10 @@ export default function ShantikunjGuide() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Shantikunj is the headquarters of the Gayatri Pariwar, on Saptrishi Road about 6km from Har Ki Pauri.</strong> It runs free residential programmes in yoga, Indian philosophy and personal discipline, and accommodation for participants is provided without charge — you register in advance rather than turning up. Day visitors are welcome. Our own office is on the same road, near Gate No. 1.
+        </AnswerBox>
         <P>
           Shantikunj is the headquarters of the All World Gayatri Pariwar, on the Sapt Sarovar road about
           6 km from Har Ki Pauri. Entry is free, the grounds are open roughly {S.darshan}, and

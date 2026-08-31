@@ -5,6 +5,7 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Noida ${SITE.season} | Pickup & VIP Darshan` },
@@ -89,6 +90,10 @@ export default function CharDhamFromNoida() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>Char Dham Yatra from Noida starts at ₹17,200 per person for a 9N/10D all-inclusive package.</strong> Noida is about 230 km from Haridwar, and the yatra itself runs from Haridwar — so the journey is two parts: reaching Haridwar by train or flight, then the 1,100 km Himalayan circuit by road. The package covers everything from Haridwar onward: vehicle, hotels, meals, guide and Char Dham registration. Travel to Haridwar is arranged separately, and we can advise on the best train or flight for your dates.
+        </AnswerBox>
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           <div key="Distance"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Distance`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`230 km`}</div></div>
           <div key="Road time (5 AM)"><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{`Road time (5 AM)`}</div><div style={{ fontWeight:700, fontSize:13.5, color:'#FFD166' }}>{`~4 hrs DM Expressway`}</div></div>

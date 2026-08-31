@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Patanjali Yogpeeth Haridwar — Visiting Guide' },
@@ -69,6 +70,10 @@ export default function PatanjaliYogpeeth() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Patanjali Yogpeeth is about 20km from Haridwar on the Delhi–Haridwar highway at Bahadrabad</strong>, and is one of India's largest yoga and Ayurveda institutions. It runs a hospital, research centre and treatment facilities, and visitors can tour the campus and the herbal gardens. Most Haridwar itineraries fit it in as a half-day, usually paired with the drive in or out rather than as a separate trip.
+        </AnswerBox>
         <P>
           Patanjali Yogpeeth sits at Bahadrabad on the Haridwar–Delhi highway, about 20 km and half an
           hour from Har Ki Pauri. It is a yoga and ayurveda institution founded by Baba Ramdev and

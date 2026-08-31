@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const M = PLACES['maya-devi'];
 
@@ -70,6 +71,10 @@ export default function MayaDeviTemple() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Maya Devi is the oldest surviving temple in Haridwar and the Shakti Peeth the city is named for</strong> — Mayapuri, the abode of Maya. It dates to around the 11th century and marks where Sati's heart and navel are said to have fallen. It sits close to Har Ki Pauri, is open through the day without a ticket, and completes the trio of Siddh Peeths with Mansa Devi and Chandi Devi.
+        </AnswerBox>
         <P>
           Maya Devi is {M.distanceFromHarKiPauri} from Har Ki Pauri, open {M.darshan}, free, and almost
           never busy. It is also a Shakti Peeth, the presiding shrine of the town, and the reason

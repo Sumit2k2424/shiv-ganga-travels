@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const M = PLACES['mansa-devi'];
 
@@ -72,6 +73,10 @@ export default function MansaDeviTemple() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Mansa Devi sits on Bilwa Parvat above Haridwar and is reached either by a 1.5km uphill walk or by the ropeway</strong>, which runs roughly 8am to 7pm and takes a few minutes each way. The temple is one of the Siddh Peeths and is traditionally visited together with Chandi Devi across the river. Most pilgrims combine both with Har Ki Pauri in a single Haridwar day.
+        </AnswerBox>
         <P>
           Mansa Devi sits on Bilwa Parvat, {M.distanceFromHarKiPauri} above Har Ki Pauri, and is the
           temple most visitors to Haridwar climb to. You get there by cable car — the Udan Khatola — for

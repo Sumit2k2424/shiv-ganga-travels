@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Haridwar ${SITE.season} | Train, Flight & Road Guide` },
@@ -126,6 +127,10 @@ export default function HowToReachHaridwar() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Haridwar has its own railway station on the main Delhi–Dehradun line, and that is how most pilgrims arrive.</strong> Trains run direct from Delhi in 4 to 6 hours, with Shatabdi and overnight services from many cities. The nearest airport is Jolly Grant, Dehradun, about 55km away. By road it is roughly 220km from Delhi on NH334, four to five hours in normal traffic. Haridwar is where the Char Dham road circuit begins.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 

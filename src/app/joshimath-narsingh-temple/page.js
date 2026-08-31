@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const S = SEATS.joshimath;
 
@@ -70,6 +71,10 @@ export default function JoshimathNarsinghTemple() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Narsingh Temple at Joshimath is the winter seat of Badrinath</strong> — when the shrine closes each November the deity is carried down and worshipped here until the doors reopen in spring. It is one of the four cardinal maths founded by Adi Shankaracharya. The temple's Narsingh idol is famous for a wrist said to be slowly thinning, which local belief ties to the eventual closing of the Badrinath route.
+        </AnswerBox>
         <P>
           Badrinath closes on {SEASON.closing.badrinath.date}, the last of the four dhams to shut. From
           the following day Badri Vishal is worshipped at the Narsingh Temple in Joshimath, at{' '}

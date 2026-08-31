@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Neelkanth Mahadev Temple — 32 km from Rishikesh' },
@@ -69,6 +70,10 @@ export default function NeelkanthMahadev() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Neelkanth Mahadev sits at 1,330m about 32km from Rishikesh</strong>, on the spot where Shiva is said to have drunk the poison churned from the ocean, turning his throat blue. The road climbs through Rajaji forest and takes roughly an hour and a half. It is open from early morning to late evening, free to enter, and by far its busiest during Shravan when kanwar pilgrims walk up in the tens of thousands.
+        </AnswerBox>
         <P>
           Neelkanth Mahadev sits at about 1,330 m in the hills above Rishikesh, 32 km by road and an hour
           and a half to two hours of continuous bends. It marks the place where Shiva is said to have

@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Triveni Ghat Rishikesh — Ganga Aarti Timings & Guide' },
@@ -68,6 +69,10 @@ export default function TriveniGhat() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Triveni Ghat is Rishikesh's main bathing ghat and the site of its evening Ganga Aarti</strong>, held daily at sunset — roughly 6pm in summer, 5.30pm in winter, and free to attend. The name marks the confluence of the Ganga, Yamuna and the mythical Saraswati. Morning is the quieter time to bathe; the aarti is the crowded one, and worth arriving half an hour early for a seat on the steps.
+        </AnswerBox>
         <P>
           Triveni Ghat is the main bathing ghat in Rishikesh town and the site of its daily Ganga Aarti.
           It is free, it happens twice a day, and it is the one most visitors miss because every

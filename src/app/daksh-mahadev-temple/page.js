@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const D = PLACES['daksh-mahadev'];
 
@@ -70,6 +71,10 @@ export default function DakshMahadevTemple() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Daksh Mahadev at Kankhal, about 4km from Har Ki Pauri, marks the site of Daksha's yagna</strong> — the sacrifice Sati entered and did not leave, and the reason Shiva destroyed the ritual. It is one of Haridwar's most significant Shiva temples and is busiest during Shivratri and the month of Shravan. Open through the day, no ticket, and usually visited alongside Kankhal's other shrines.
+        </AnswerBox>
         <P>
           Daksh Mahadev — also called Daksheshwar Mahadev or the Daksha Prajapati temple — stands at
           Kankhal, {D.distanceFromHarKiPauri} from Har Ki Pauri. It is open {D.darshan}, entry is free,

@@ -7,6 +7,7 @@ import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Haridwar ${SITE.season} | Direct Operator` },
@@ -125,6 +126,10 @@ export default function Page() {
 
         <BlogAuthor variant="top" author="dhanesh"/>
 
+
+        <AnswerBox>
+          <strong>Haridwar is where the Char Dham circuit actually begins</strong> — the motor road into the hills starts here, which is why almost every itinerary is quoted from Haridwar rather than from Delhi or Dehradun. The full circuit is roughly 1,100km and runs 9 to 11 nights: Barkot for Yamunotri, Uttarkashi for Gangotri, Guptkashi for Kedarnath, then Badrinath and back. Packages from ₹20,999 per person all-inclusive, with pickup at Haridwar station.
+        </AnswerBox>
         {/* QUICK FACTS */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', margin:'24px 0 28px', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Start / end','Haridwar'],['Circuit distance','~1,100 km'],['Standard trip','9N / 10D'],['Package from','₹20,999/person'],['Season 2026','Apr 19 – Nov'],['Registration','FREE · We handle']].map(([k,v])=>(

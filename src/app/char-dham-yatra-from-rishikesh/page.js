@@ -3,6 +3,7 @@ import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Rishikesh ${SITE.season} | Door Pickup` },
@@ -138,6 +139,10 @@ export default function Page() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Rishikesh is 25km up the road from Haridwar and starts the same circuit slightly further along it.</strong> Practically the two are interchangeable as a base, and Rishikesh runs marginally cheaper on the road legs for that reason. The full Char Dham circuit is about 1,100km over 9 to 11 nights, from ₹21,000 per person all-inclusive. Haridwar has far more trains, so many pilgrims arrive there and are picked up.
+        </AnswerBox>
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 

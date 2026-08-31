@@ -3,6 +3,7 @@ import CityLinkMesh from '@/components/CityLinkMesh';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Ahmedabad ${SITE.season} | Train & Flight Options` },
@@ -95,6 +96,10 @@ export default function Page() {
         </div>
       </nav>
 
+
+        <AnswerBox>
+          <strong>Char Dham Yatra from Ahmedabad starts at ₹23,999 per person for a 9N/10D all-inclusive package.</strong> Ahmedabad is about 1,100 km from Haridwar, and the yatra itself runs from Haridwar — so the journey is two parts: reaching Haridwar by train or flight, then the 1,100 km Himalayan circuit by road. The package covers everything from Haridwar onward: vehicle, hotels, meals, guide and Char Dham registration. Travel to Haridwar is arranged separately, and we can advise on the best train or flight for your dates.
+        </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open: Apr 19 – Nov 2026</div>
 
