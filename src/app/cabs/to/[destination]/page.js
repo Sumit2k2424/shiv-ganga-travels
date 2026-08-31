@@ -52,7 +52,7 @@ export async function generateMetadata({ params }) {
       `taxi to ${d.name} 2026`, `${d.name} taxi fare`, `how to reach ${d.name} by road`,
     ],
     alternates: { canonical: url },
-    openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN' },
+    openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }] },
     twitter: { card: 'summary_large_image', title, description: desc },
   };
 }
