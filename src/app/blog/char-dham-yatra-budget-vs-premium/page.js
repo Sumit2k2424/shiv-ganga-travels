@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Budget vs Premium ${SITE.season} | Compared` },
@@ -75,6 +76,10 @@ export default function BudgetVsPremium() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-budget-vs-premium", "title": "Char Dham Budget vs Premium Package: What Changes?", "description": "Budget Char Dham package (₹13,900) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>The gap between a budget and a premium Char Dham package is mostly hotel tier and vehicle, not the yatra itself.</strong> Budget runs from ₹13,900 per person for 9N/10D with simple hotels and a shared Tempo Traveller; premium runs to ₹30,000 and up with 3-star rooms and a private Innova Crysta. Darshan, route and registration are identical. What genuinely changes the experience is group size and pace, which is why a slower itinerary often beats a smarter hotel.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

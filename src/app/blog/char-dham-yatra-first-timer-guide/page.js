@@ -6,6 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for First Timers ${SITE.season} | Complete Guide` },
@@ -78,6 +79,10 @@ export default function FirstTimerGuide() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-first-timer-guide", "title": "Char Dham Yatra for First Timers: 2026 Guide", "description": "First Char Dham Yatra in 2026? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>For a first Char Dham, allow 10 to 11 nights by road from Haridwar and expect two real treks.</strong> Yamunotri is 6km from Janki Chatti and Kedarnath 16km from Gaurikund; Gangotri and Badrinath have road to the temple. Registration is free and mandatory. Travel in May–June or mid-September–October, book six to eight weeks ahead for the May peak, and treat the altitude — every shrine is above 3,000m — as the thing most likely to spoil the trip.
+        </AnswerBox>
         <BlogTOC items={[
           { id:'right-for-you', label:'Is it right for you?' },
           { id:'how-many-days', label:'How many days it takes' },

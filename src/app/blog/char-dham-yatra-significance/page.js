@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
@@ -98,6 +99,10 @@ export default function Significance() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-significance", "title": "Char Dham Yatra: History & Spiritual Significance", "description": "Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>The Char Dham circuit was established by Adi Shankaracharya in the 8th century CE</strong> as a route linking four Himalayan shrines: Yamunotri and Gangotri, the sources of the Yamuna and Ganga; Kedarnath, one of the twelve Jyotirlingas of Shiva; and Badrinath, sacred to Vishnu. It is also called Chota Char Dham, to distinguish it from the all-India Char Dham of Badrinath, Dwarka, Puri and Rameswaram.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <BlogTOC items={[

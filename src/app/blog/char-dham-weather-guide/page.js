@@ -25,6 +25,7 @@ export default function Page() {
       subtitle="What the weather actually does at Yamunotri, Gangotri, Kedarnath and Badrinath through the season — and the windows we tell our own pilgrims to book."
       pills={['🌡️ 0–5°C nights at temples', '☔ Avoid Jul–Aug', '🏔️ Best views in October']}
       facts={[['Season opens','late April'],['Season closes','Nov 11–14'],['Best window','May & October'],['Kedarnath night temp','0–5°C'],['Monsoon','Jul–Aug (avoid)'],['Rain gear','always carry']]}
+      answer={<>Across the season the four dhams run roughly 4°C to 22°C by day and −9°C to 13°C at night, every shrine being above 3,000m. May and June are warmest, September and October clearest, and July and August are peak monsoon with heavy rain and landslide closures. The gap that catches people out is day to night rather than month to month — a comfortable afternoon at Kedarnath is close to freezing by 10pm in October.</>}
       ctaIntent="char-dham"
       faqs={faqs}
       related={[['Best Time for Char Dham','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Kedarnath Weather','/kedarnath-weather'],['Road Status','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026']]}

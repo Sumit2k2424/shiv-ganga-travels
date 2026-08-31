@@ -25,6 +25,7 @@ export default function Page() {
       subtitle="An honest, practical guide for women doing the yatra alone — what to expect on the routes, how to set up your trip, and the things we quietly arrange so a solo booking is comfortable."
       pills={['👩 Group or private','🏨 Vetted stays','📞 24×7 support line']}
       facts={[['First-timer pick','group departure'],['Independent pick','private + verified driver'],['Main risks','altitude, weather'],['Rooms','near reception requested'],['Support','24×7 on-trip line'],['Best months','May, Sept–Oct']]}
+      answer={<>Char Dham is one of the more straightforward Indian routes for a woman travelling alone — it is a pilgrimage circuit with constant footfall, police checkposts in every sector and families throughout the trek. The practical risks are altitude, weather and road delays rather than personal safety. Register in your own name, keep the yatra card and a charged power bank on you, avoid arriving somewhere new after dark, and use the women's helpline on 1090 if you need it.</>}
       ctaIntent="char-dham"
       faqs={faqs}
       related={[['Char Dham Guide','/blog/char-dham-guide'],['Group Package','/blog/char-dham-group-package'],['Packing List','/blog/char-dham-yatra-packing-list'],['First-Timer Guide','/blog/char-dham-yatra-first-timer-guide'],['Char Dham Packages','/char-dham-yatra']]}

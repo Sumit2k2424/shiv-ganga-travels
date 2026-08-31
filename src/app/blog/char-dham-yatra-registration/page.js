@@ -7,6 +7,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Registration ${SITE.season} | Free e-Pass Guide` },
@@ -241,6 +242,10 @@ export default function RegistrationBlog() {
           lang: 'en-IN',
         }} />
 
+
+        <AnswerBox>
+          <strong>Char Dham registration is mandatory, free, and checked at police barriers.</strong> Register at registrationandtouristcare.uk.gov.in, on the Tourist Care Uttarakhand app, by WhatsApp on +91-8394833833, or at offline counters in Haridwar and Rishikesh. It takes about fifteen minutes and produces a QR yatra card. Pilgrims aged 55 and over also need a medical fitness certificate. Unregistered pilgrims are turned back at Sonprayag after an eight-hour drive.
+        </AnswerBox>
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
         {/* Alert box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:12, padding:'16px 20px', marginBottom:32, display:'flex', gap:14, alignItems:'flex-start' }}>

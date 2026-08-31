@@ -6,6 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Medical Certificate ${SITE.season} | Who Needs It` },
@@ -65,6 +66,10 @@ export default function MedicalCertificate() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-medical-certificate", "title": "Char Dham Medical Certificate 2026: Who Needs It", "description": "Char Dham Yatra 2026 medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>A medical fitness certificate is mandatory for every pilgrim aged 55 and over</strong>, uploaded during Char Dham registration. Any registered doctor can issue it — you do not need a large hospital — and it should confirm you are fit for altitudes above 3,000m. Below 55 it is not required, but anyone with a cardiac, respiratory or blood-pressure condition should carry a doctor's note and their own medication regardless of what the rules demand.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>

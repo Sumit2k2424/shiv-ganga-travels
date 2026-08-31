@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
@@ -77,6 +78,10 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>Char Dham is possible with a stable heart condition or diabetes, but it is not a trip to attempt without medical clearance.</strong> Every shrine is above 3,000m, where thinner air raises heart rate and blood pressure. Get written clearance from your own cardiologist, carry a full course of medication plus two spare days' worth in your daypack rather than your luggage, take pony or palki rather than walking, and build rest days in. A medical certificate is mandatory from 55 onward.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'#FEF3C7', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid #F59E0B' }}>

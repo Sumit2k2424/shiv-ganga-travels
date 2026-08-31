@@ -26,6 +26,7 @@ export default function Page() {
       subtitle="There's no railway to the shrines themselves — but the train is how most of our pilgrims arrive. Here's the honest, practical guide to the nearest stations, the best trains from your city, and what happens once you step onto the platform at Haridwar."
       pills={['🚂 Nearest railhead: Haridwar','🛕 Yatra starts by road','🎫 Book 60–120 days ahead']}
       facts={[['Main railhead','Haridwar Jn (HW)'],['Alternatives','Rishikesh, Dehradun'],['Delhi → Haridwar','4.5–6 hrs'],['Booking','IRCTC, 60 days prior'],['Season','Apr–Jun, Sep–Oct'],['Yatra to shrines','By road only']]}
+      answer={<>Haridwar is the nearest and most useful railhead for Char Dham, with Rishikesh a smaller alternative closer to the hills but far fewer trains. No railway reaches any of the four shrines, so every journey is train to Haridwar and then road — the circuit is 9 to 11 nights from there. The nearest airport is Jolly Grant, Dehradun. Most pilgrims pick up a cab or a package at Haridwar station.</>}
       ctaIntent="char-dham"
       faqs={faqs}
       related={[['Char Dham by Bus','/blog/char-dham-yatra-by-bus'],['Char Dham from Delhi','/char-dham-yatra-from-delhi'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Delhi to Haridwar Cab','/cabs/delhi-to-haridwar-cab'],['Char Dham Packages','/char-dham-yatra'],['Best Time to Visit','/blog/best-time-char-dham']]}

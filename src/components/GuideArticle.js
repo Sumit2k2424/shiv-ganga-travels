@@ -6,6 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import ScrollReveal from '@/components/ScrollReveal';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
+import AnswerBox from '@/components/AnswerBox';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 
@@ -39,6 +40,11 @@ export default function GuideArticle({
   pills = [],
   facts = [],
   takeaways = [],
+  /* A single self-contained paragraph answering the page's headline question.
+     Rendered above the takeaways so it is the first prose an extractor meets;
+     KeyTakeaways is a bullet summary, which reads well but is not a passage an
+     answer engine can quote as a sentence. */
+  answer = null,
   toc = [],
   readTime,
   updated = SITE.lastUpdated,
@@ -124,6 +130,7 @@ export default function GuideArticle({
         <BlogAuthor variant="top" author={author} />
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {updated} · Verified for current season</div>
 
+        {answer && <AnswerBox>{answer}</AnswerBox>}
         {takeaways.length > 0 && <KeyTakeaways points={takeaways} />}
         {toc.length > 0 && <BlogTOC items={toc} />}
 

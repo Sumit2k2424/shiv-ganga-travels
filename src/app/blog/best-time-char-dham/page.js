@@ -7,6 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Best Time for Char Dham Yatra ${SITE.season} | Month-by-Month Guide` },
@@ -124,6 +125,10 @@ export default function BestTimeCharDham() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>May to mid-June and mid-September to October are the two good windows.</strong> May and early June are warmest and busiest, with the heaviest crowds of the year at Kedarnath. Mid-September to October has the clearest mountain views, fewer people and cheaper rooms, at the cost of freezing nights by late October. July and August are peak monsoon: the temples stay open but landslides close the roads repeatedly and helicopters are grounded for days.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated} · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}

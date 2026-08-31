@@ -7,6 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Route Map ${SITE.season} | Complete Road Guide & Distances` },
@@ -102,6 +103,10 @@ export default function RouteMap() {
           dateModified: SITE.lastUpdatedISO,
           lang: 'en-IN',
         }} />
+
+        <AnswerBox>
+          <strong>The standard Char Dham circuit from Haridwar runs roughly 1,100km and takes 9 to 11 nights by road.</strong> The clockwise order is Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Rudraprayag → Badrinath → Haridwar. Only Yamunotri and Kedarnath need walking — 6km from Janki Chatti and 16km from Gaurikund. Gangotri and Badrinath have road right to the temple.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ <strong>By:</strong> Shiv Ganga Travels, Haridwar (15 seasons on this route)
         </div>

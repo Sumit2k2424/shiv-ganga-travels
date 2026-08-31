@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 // This page carries live monsoon-season conditions, so it is re-verified more
 // often than the site-wide SITE.lastUpdated marker moves. Keep it page-local.
@@ -98,6 +99,10 @@ export default function Page() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>July and August are peak monsoon, and we do not recommend the Char Dham circuit in those weeks.</strong> The temples stay open and the yatra is not formally suspended, but landslides close the Rudraprayag–Sonprayag and Barkot–Janki Chatti roads repeatedly, helicopters are grounded for days at a time, and cloud cover means you often see nothing of the mountains. If your dates are fixed, build two spare days into the plan and check road status the morning you travel.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {MONSOON_UPDATED}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>

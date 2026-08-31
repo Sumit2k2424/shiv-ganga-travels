@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `6 Best Char Dham Yatra Operators in Haridwar ${SITE.season} | Ranked & Compared` },
@@ -232,6 +233,10 @@ export default function BestOperators() {
       <article style={{ maxWidth: 940, margin: '0 auto', padding: '36px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>The honest answer is that no single operator is best for everyone</strong> — it depends on group size, budget and whether you want a fixed departure or a private trip. What separates a good Haridwar operator from a bad one is verifiable: a registered address you can visit, Green Card and trip-card compliance on their vehicles, hill-experienced drivers, written inclusions before you pay, and no pressure to pay the full amount up front. Shiv Ganga Travels has run this circuit direct from Haridwar since 2010.
+        </AnswerBox>
         {/* Ranking criteria */}
         <h2 style={h2}>Ranking Criteria — How We Scored Each Operator</h2>
         <p style={p}>For a comparison page written by one of the operators being compared to have any value, the methodology needs to be transparent. Here is exactly how we ranked:</p>

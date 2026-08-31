@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Char Dham Road Conditions 2026 | Live Route Status' },
@@ -108,6 +109,10 @@ export default function RoadConditions() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-road-conditions-2026", "title": "Char Dham Road Conditions 2026: Live Route Status", "description": "Char Dham Yatra 2026 road conditions: all 4 route statuses, landslide-prone stretches, All-Weather Road progress and the Joshimath situation.", "datePublished": "2026-01-10", "dateModified": ROAD_UPDATED_ISO, "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>The Char Dham highways are open and maintained through the season, but they are mountain roads and they close.</strong> The most delay-prone stretches are Rudraprayag to Sonprayag on the Kedarnath route and Barkot to Janki Chatti for Yamunotri, both of which shut for hours after heavy rain. A night-driving ban runs 10pm to 4am on all Char Dham routes. For current status call the state control room on 1070 or the district on 1077.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {ROAD_UPDATED} · Monsoon Season — All Routes Open, Travel With Caution</div>
 
         <div style={{ background: '#FFF8ED', border: '1px solid #F5D9A8', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#9A6B1F' }}>
