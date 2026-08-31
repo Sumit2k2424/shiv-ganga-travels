@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Helicopter Booking ${SITE.season} — IRCTC HeliYatra Guide` },
@@ -69,6 +70,10 @@ export default function HelicopterBookingGuide() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Two different things get called a Char Dham helicopter booking.</strong> One is a full charter covering all four dhams in 5N/6D from Dehradun's Sahastradhara helipad, at roughly ₹2,30,000 per person. The other is a single Kedarnath shuttle seat from Phata, Sersi or Guptkashi at ₹7,000–9,000 one way, sold only on IRCTC's HeliYatra portal. A package advertised near ₹85,000 is a road trip with shuttle tickets bought separately, not a charter.
+        </AnswerBox>
         <P>
           Helicopter booking for the Char Dham changed substantially for the 2026 season and a great many
           websites have not caught up. Kedarnath shuttle seats now sell through one government portal.

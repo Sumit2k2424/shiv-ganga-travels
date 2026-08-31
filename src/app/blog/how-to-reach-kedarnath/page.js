@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Kedarnath ${SITE.season} | Road, Train & Helicopter` },
@@ -74,6 +75,10 @@ export default function HowToReachKedarnath() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "how-to-reach-kedarnath", "title": "How to Reach Kedarnath 2026: Road, Train & Heli", "description": "How to reach Kedarnath in 2026 from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Kedarnath is 235km from Haridwar by road to Gaurikund, then 16km on foot.</strong> Vehicles stop at Sonprayag and a shared jeep covers the last 5km. Driving is 8 to 9 hours, so nearly everyone breaks the journey at Guptkashi, 210km in. The alternative to walking is a pony, palki or the helicopter from Phata, Sersi or Guptkashi. Haridwar is the nearest railhead and Dehradun the nearest airport.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>

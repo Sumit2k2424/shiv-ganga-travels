@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 const UPDATED = 'August 16, 2026';
 const UPDATED_ISO = '2026-08-16';
@@ -124,6 +125,10 @@ export default function CharDhamRoadStatus() {
       </div>
     </nav>
 
+
+        <AnswerBox>
+          <strong>The Char Dham highways are open through the season but they are mountain roads and they close without notice.</strong> The most delay-prone stretches are Rudraprayag to Sonprayag for Kedarnath and Barkot to Janki Chatti for Yamunotri, both of which shut for hours after heavy rain. A night-driving ban runs 10pm to 4am on all four routes. For live status call the state control room on 1070, the district on 1077, or 112 in an emergency.
+        </AnswerBox>
     <article style={{ maxWidth:900, margin:'0 auto', padding:'34px 20px 60px' }}>
 
       <div style={{ display:'flex', flexWrap:'wrap', gap:10, alignItems:'center', fontSize:12.5, color:'var(--text-muted)', marginBottom:22 }}>

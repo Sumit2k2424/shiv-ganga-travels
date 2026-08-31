@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Where to Book Char Dham Yatra — Sites Compared ${SITE.season}` },
@@ -66,6 +67,10 @@ export default function BookingSitesCompared() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Most Char Dham listings online are aggregators reselling an operator's trip with 15–25% added on top.</strong> The practical test is who answers when something goes wrong at Sonprayag at 6am — the operator running the vehicle, or a call centre. Compare on what is actually included rather than headline price, check for a verifiable registered address, and confirm the vehicles carry current Green Cards. Shiv Ganga Travels has run this circuit direct from Haridwar since 2010.
+        </AnswerBox>
         <P>
           There are four ways to book a Char Dham Yatra, and they are genuinely different products rather
           than the same thing at different prices. Understanding which one you are buying matters more

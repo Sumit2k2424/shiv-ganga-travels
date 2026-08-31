@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Direct Operator vs Aggregator ${SITE.season} | Char Dham Booking Guide` },
@@ -101,6 +102,10 @@ export default function DirectVsAggregator() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>An operator runs the trip; an aggregator resells someone else's trip with commission on top, typically 15–25%.</strong> The difference shows up when plans break — a landslide, a grounded helicopter, a hotel that overbooked. The operator can move vehicles and rooms because they are theirs; the aggregator has to relay the problem. Booking direct also means the price you pay is the price of the trip, not the price plus a margin.
+        </AnswerBox>
         <h2 style={h2}>How the Char Dham Yatra Booking Market Works</h2>
         <p style={p}>Before you book anything, it helps to understand the structure of the market. There are essentially three types of entities selling Char Dham packages:</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>

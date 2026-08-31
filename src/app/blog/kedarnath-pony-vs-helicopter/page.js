@@ -6,6 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath Pony vs Helicopter ${SITE.season} | Cost & Verdict` },
@@ -75,6 +76,10 @@ export default function PonyVsHelicopter() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
+
+        <AnswerBox>
+          <strong>Pony costs ₹3,000–5,000 one way and takes 3 to 4 hours; helicopter costs ₹7,000–9,000 one way and takes 8 to 10 minutes.</strong> The real difference is not speed but reliability — helicopters are grounded by cloud and rain for days at a time, and the flight only runs from Phata, Sersi or Guptkashi. Ponies run in almost any weather. Many pilgrims fly up and ride or walk down, which hedges both.
+        </AnswerBox>
         <BlogTOC items={[
           { id:'at-a-glance', label:'At a glance — all 4 options' },
           { id:'pony',        label:'Kedarnath pony' },

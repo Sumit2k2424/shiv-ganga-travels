@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const S = SEATS.kharsali;
 
@@ -73,6 +74,10 @@ export default function KharsaliWinterSeat() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Kharsali is Yamuna's winter home</strong> — when Yamunotri closes on Bhai Dooj the idol is brought down to this village opposite Janki Chatti, where worship continues through the winter until the shrine reopens on Akshaya Tritiya. Kharsali sits at about 2,675m, is motorable year-round, and also holds one of the oldest Shani temples in the region. It is a short drive from Barkot.
+        </AnswerBox>
         <P>
           Yamunotri closes on {SEASON.closing.yamunotri.date}, Bhai Dooj, and the idol of Goddess Yamuna
           is carried down the 6 km of trek to Kharsali, where she is worshipped until Akshaya Tritiya.

@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `September Char Dham Yatra ${SITE.season} | Post-Monsoon` },
@@ -93,6 +94,10 @@ export default function Page() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>September is one of the two best months for Char Dham, and the better half of it is after the 15th.</strong> The monsoon withdraws through the first fortnight, and from mid-month the air is washed clean, the mountain views are the best of the year and crowds are a fraction of May's. Rooms cost noticeably less. The risk is that an late monsoon pushes closures into the first week, so keep a spare day if you are travelling early in the month.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>

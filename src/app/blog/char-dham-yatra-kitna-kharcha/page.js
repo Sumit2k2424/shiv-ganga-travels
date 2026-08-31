@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा ${SITE.season} खर्चा | कीमत ₹13,900 से शुरू | पूरी जानकारी` },
@@ -74,6 +75,10 @@ export default function CharDhamKharcha() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>चार धाम यात्रा का खर्च हरिद्वार से ₹13,900 प्रति व्यक्ति से शुरू होता है — 9 रात 10 दिन, सब कुछ शामिल।</strong> इसमें गाड़ी, होटल, नाश्ता-खाना, गाइड, टोल-पार्किंग और रजिस्ट्रेशन आता है। डीलक्स पैकेज ₹30,000 तक जाता है और हेलीकॉप्टर चार्टर करीब ₹2,30,000। अलग से रखें — केदारनाथ का घोड़ा (₹3,000–5,000) या हेलीकॉप्टर (₹7,000–9,000 एक तरफ़), और निजी खर्च।
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
 
         {/* Quick answer box */}

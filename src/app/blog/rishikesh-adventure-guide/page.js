@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
   title: { absolute: `Rishikesh Adventure Guide ${SITE.season} | Rafting & Bungee` },
   description: `Rishikesh adventure guide ${SITE.season} — rafting, bungee, camping. Trusted operator, 15+ yrs experience, instant confirmation.`,
@@ -47,6 +48,10 @@ export default function RishikeshAdventureGuide() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>Rishikesh rafting runs roughly September to June, and is closed through the monsoon when the Ganga is too high.</strong> The standard stretches are 9km from Brahmapuri, 16km from Shivpuri and 26km from Marine Drive, priced from about ₹600 to ₹1,800 per person. Bungee jumping, giant swing and flying fox operate year-round at Mohanchatti. Most operators require you to be 12 or over for rafting and to sign a fitness declaration.
+        </AnswerBox>
       <p className="blog-lede">Rishikesh is one of those rare places that genuinely delivers on its hype. The Ganga rushing through a gorge of forested hills. Ancient temples and modern ashrams side by side. Yoga studios next to bungee platforms. The same river that witnesses solemn Ganga aarti at sunset carries shrieking rafters through Grade IV rapids in the morning. It's a contradiction that somehow makes perfect sense.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This guide covers everything for an <strong>Rishikesh adventure trip in 2026</strong> — what activities are actually worth your money, the honest costs (not the inflated tourist prices), the best time to go, and what not to miss beyond the adventure sports.</p>
 

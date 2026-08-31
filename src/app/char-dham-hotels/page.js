@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Hotels ${SITE.season} | Honest Price Guide | Trusted Local Booking` },
@@ -56,6 +57,10 @@ export default function CharDhamHotelsPage() {
       <section style={{ background:'linear-gradient(180deg,rgba(10,25,60,0.7),rgba(10,25,60,0.92)),url(https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=800) center/cover', padding:'48px 20px 40px' }}>
         <div style={{ maxWidth:900, margin:'0 auto' }}>
           <nav style={{ fontSize:11.5, color:'rgba(255,255,255,0.6)', marginBottom:12 }}>Home › Char Dham Yatra › Hotels</nav>
+
+        <AnswerBox>
+          <strong>Char Dham accommodation is booked by halt town, not by shrine.</strong> The standard chain is Barkot for Yamunotri, Uttarkashi for Gangotri, Guptkashi for Kedarnath and Badrinath town or Joshimath for Badrinath. Rooms run roughly ₹800–4,000 at the shrines and ₹1,500–6,000 in the larger towns, roughly doubling in the first weeks of May and June. Book six to eight weeks ahead for peak season and one to two for September and October.
+        </AnswerBox>
           <h1 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'clamp(1.6rem,4vw,2.4rem)', fontWeight:700, lineHeight:1.15, marginBottom:12 }}>Char Dham Yatra Hotels 2026 — Where to Stay at Every Stop</h1>
           <p style={{ color:'rgba(255,255,255,0.8)', fontSize:14.5, lineHeight:1.7 }}>An honest, stop-by-stop guide to accommodation on the Char Dham route — Barkot, Uttarkashi, Guptkashi, Kedarnath, Badrinath and Haridwar — with real price bands and tips.</p>
         </div>

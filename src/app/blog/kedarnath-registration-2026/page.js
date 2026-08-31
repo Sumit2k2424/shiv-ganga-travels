@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Registration 2026 | Online & WhatsApp' },
@@ -85,6 +86,10 @@ export default function KedarnathRegistration() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-registration-2026", "title": "Kedarnath Registration 2026: Online & WhatsApp", "description": "Kedarnath registration 2026: free at registrationandtouristcare.uk.gov.in or WhatsApp 8394833833. Documents, daily limits and 55+ rules explained.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Kedarnath registration is free, mandatory, and scanned at the Sonprayag barrier.</strong> Register at registrationandtouristcare.uk.gov.in, on the Tourist Care Uttarakhand app or by WhatsApp on +91-8394833833, and carry a printout as well as the phone copy — there is no network above Sonprayag. A daily cap of up to 18,000 pilgrims applies, and once it is reached the barrier closes even for people holding a valid registration.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> May 2026
         </div>

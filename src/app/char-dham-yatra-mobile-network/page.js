@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Mobile Network on Char Dham Yatra — Coverage by Dham' },
@@ -83,6 +84,10 @@ export default function MobileNetwork() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>BSNL holds signal furthest up the Char Dham valleys; Jio and Airtel are strong in the towns and drop off above them.</strong> Reliable coverage ends around Sonprayag on the Kedarnath route and Janki Chatti for Yamunotri, with only patchy signal on the treks themselves. Carry at least one BSNL-capable handset in the group, download offline maps before you leave Haridwar, and write emergency numbers on paper — a dead zone is exactly when you need them.
+        </AnswerBox>
         <P>
           Nobody plans a pilgrimage around phone signal, and then spends four days unable to tell their
           family they are safe. Coverage on the Char Dham route is better than it was five years ago and

@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Group Package ${SITE.season} | 10+ Pilgrims` },
@@ -66,6 +67,10 @@ export default function GroupPackage() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-group-package", "title": "Char Dham Group Package 2026: Price & Discounts", "description": "Char Dham Yatra group packages for 10+ pilgrims — save 10–15% with a custom itinerary, dedicated vehicle and group meals. From ₹17,500/person. WhatsApp a quote.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Char Dham group rates fall sharply with size: about ₹22,000–25,000 per person for two, ₹16,000–18,000 for six to twelve, and ₹13,500–15,000 for forty or more.</strong> Only one cost divides across the group — the vehicle — and it is the biggest line, which is why the curve flattens after about eight people. Book 90 days ahead for May departures; September and October need 45 to 60.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>

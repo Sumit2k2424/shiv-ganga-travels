@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
   description: `Haridwar to Kedarnath ${SITE.season} — 235km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
@@ -57,6 +58,10 @@ export default function HaridwarToKedarnath() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>Haridwar to Kedarnath is 235km by road to Gaurikund plus a 16km trek — about 251km door to temple.</strong> The drive takes 8 to 9 hours via Devprayag, Rudraprayag and Guptkashi, and the trek another 5 to 7 hours, so it is realistically a two-day journey with a night at Guptkashi. A one-way cab starts at ₹3,000. There is no direct bus and no railway; helicopters fly only the final leg from Phata or Guptkashi.
+        </AnswerBox>
       <p className="blog-lede">The road from Haridwar to Kedarnath is not just a journey — it’s a preparation. By the time you reach Gaurikund and take your first steps on the 16km trail, the mountains have already begun their work on you. The river gorges, the Devprayag confluence, the narrow mountain roads — they peel away the city before you even reach the temple.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Here is the complete route guide from <strong>Haridwar to Kedarnath</strong>, including distances, journey times, the best places to stop, and exactly what to expect at each stage.</p>
 

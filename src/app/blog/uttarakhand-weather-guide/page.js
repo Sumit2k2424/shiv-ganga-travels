@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Uttarakhand Weather ${SITE.season} | All Char Dham Shrines | Month-wise` },
@@ -81,6 +82,10 @@ export default function WeatherGuide() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "uttarakhand-weather-guide", "title": "Uttarakhand Weather 2026: All Char Dham Shrines", "description": "Month-by-month Uttarakhand weather for Char Dham Yatra 2026: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Uttarakhand runs three distinct weather zones, and treating it as one place is the usual planning mistake.</strong> The plains around Haridwar and Rishikesh reach 38°C in May; the hill stations sit 10 to 15 degrees cooler; the Char Dham shrines above 3,000m are cold year-round and closed from November to April. July and August are monsoon everywhere, heavy enough in the hills to close roads. May–June and September–October work almost everywhere.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Season summary */}

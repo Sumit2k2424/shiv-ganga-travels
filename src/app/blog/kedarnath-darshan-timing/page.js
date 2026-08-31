@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath Darshan Timings ${SITE.season} | Aarti & VIP Slots` },
@@ -109,6 +110,10 @@ export default function KedarnathTimings() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-darshan-timing", "title": "Kedarnath Darshan Timings 2026: Aarti & VIP Slots", "description": "Kedarnath darshan timings 2026: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Kedarnath opens around 4am for Maha Abhishek and closes about 9pm, with a break through the afternoon.</strong> General darshan runs roughly 6am to 3pm and 5pm to 7pm, and the evening Shringar Aarti is around 6.30 to 7.30pm. Queues are shortest between 7am and 9am and longest in the middle of the day when the morning's trekkers arrive. Timings shift slightly on festival days and are set by the temple committee.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
 
         {/* Quick summary box */}

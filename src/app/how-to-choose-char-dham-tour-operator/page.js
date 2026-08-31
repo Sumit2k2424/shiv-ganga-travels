@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'How to Choose a Char Dham Tour Operator — 12 Checks' },
@@ -82,6 +83,10 @@ export default function HowToChooseOperator() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Five things separate a sound Char Dham operator from a risky one</strong> — a registered address you can actually visit, current Green Cards and trip cards on the vehicles, drivers who run these roads every season, written inclusions and exclusions before you pay, and no demand for the full amount up front. Price is the weakest signal of the five. Ask who you call at 6am from Sonprayag, and whether the answer is a person or a call centre.
+        </AnswerBox>
         <P>
           Choosing a Char Dham operator is harder than choosing almost any other kind of travel, because
           the trip is long, the roads are unpredictable, and most pilgrims do it once and have no basis

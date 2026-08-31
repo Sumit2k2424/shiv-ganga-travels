@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra in 7 Days ${SITE.season} | Itinerary & Honest Advice` },
@@ -78,6 +79,10 @@ export default function SevenDaysBlog() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-7-days", "title": "Char Dham Yatra in 7 Days: Itinerary & Honest Advice", "description": "Can you finish Char Dham Yatra in 7 days? Yes, with the right plan. Day-by-day itinerary, what to skip and honest advice for pilgrims short on time in 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>Seven days is enough to see all four dhams, but only just, and not comfortably.</strong> It means 200–265km of mountain driving on several days, a 4am start for the Kedarnath trek and almost no slack for weather. It suits fit adults who have travelled in the hills before. For a first trip, seniors or families with children, 10 to 11 nights is the version that works — or do Do Dham properly in the same week instead.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         {/* Verdict box */}

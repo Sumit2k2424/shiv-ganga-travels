@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Corporate Char Dham Yatra Booking — GST Invoice & MSA' },
@@ -68,6 +69,10 @@ export default function CorporateBooking() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Corporate and incentive groups on the Char Dham circuit book the same route with different logistics</strong> — GST invoicing, a single point of contact, written itineraries ahead of travel, and vehicles held in reserve for schedule slippage. Rates from about ₹15,000–16,600 per person for thirty. The constraint corporates most often underestimate is weather: this is a mountain route where a landslide can cost a day, so a fixed return flight on the final evening is a risk rather than a plan.
+        </AnswerBox>
         <P>
           Companies book the Char Dham for three reasons: as a benefit for employees or their parents, as
           a CSR-funded programme for workers or a supported community, or as an incentive trip. The yatra

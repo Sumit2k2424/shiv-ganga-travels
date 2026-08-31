@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Green Card for Char Dham Yatra 2026 | Rules & Cost' },
@@ -82,6 +83,10 @@ export default function GreenCard() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+
+        <AnswerBox>
+          <strong>A Green Card is the fitness certificate a commercial vehicle needs to run the Char Dham hill routes</strong>, issued by the Uttarakhand transport department after inspection and checked at barriers alongside the driver's trip card. It applies to the operator, not to pilgrims — you do not need one personally. What it does mean for you is that a vehicle without a current Green Card can be turned back at a checkpost with you in it, which is worth confirming before you book.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#791F1F' }}>

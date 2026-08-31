@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Winter Char Dham Yatra ${SITE.season}–27 — The Four Winter Seats` },
@@ -70,6 +71,10 @@ export default function WinterCharDhamYatra() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>The Char Dham shrines are closed in winter — but the deities are not out of reach.</strong> From November to April each one moves to a winter seat where worship continues daily: Ganga at Mukhba, Yamuna at Kharsali, Kedarnath at Ukhimath and Badrinath at Pandukeshwar and Joshimath. All four are motorable, far quieter than the summer circuit, and set against snow. This is the version of the yatra almost nobody does.
+        </AnswerBox>
         <P>
           Most people believe the Char Dham simply shuts for six months. It does not. When Kedarnath,
           Badrinath, Gangotri and Yamunotri close in November, each deity is carried down in procession

@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | IRCTC Guide` },
@@ -87,6 +88,10 @@ export default function KedarnathHelicopterBooking() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
 
+
+        <AnswerBox>
+          <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. Expect ₹7,000–9,000 one way per person. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
+        </AnswerBox>
         <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you’re booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong> — or “Kedarnath chopper booking”, as half of North India searches for it — written honestly from 15 years of arranging these flights for our pilgrims.</p>

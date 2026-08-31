@@ -5,6 +5,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, FactGrid, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 const S = SEATS.mukhba;
 
@@ -70,6 +71,10 @@ export default function MukhbaWinterSeat() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Mukhba is where Goddess Ganga spends the winter</strong> — when Gangotri closes on Diwali, the idol is carried down to this village near Harsil and worshipped there daily until the shrine reopens on Akshaya Tritiya. It sits at about 2,600m, is reachable by road all winter, and receives a fraction of Gangotri's summer crowds. The procession down from Gangotri, and back up in spring, is the thing worth timing a visit around.
+        </AnswerBox>
         <P>
           On {SEASON.closing.gangotri.date}, the day the Gangotri doors close, the idol of Goddess Ganga
           is carried 20 km down the valley to Mukhba and installed in the village temple. She stays until

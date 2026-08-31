@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath VIP Darshan Booking ${SITE.season} | Guide` },
@@ -92,6 +93,10 @@ export default function VIPDarshan() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>There is no official online VIP darshan booking for Kedarnath.</strong> Priority access is arranged on the ground through the temple committee, usually for a donation, and it shortens the queue rather than skipping it. Anyone selling a guaranteed VIP pass online in advance is not selling something the temple issues. What genuinely reduces waiting is arriving between 7am and 9am, or staying overnight and attending the 4am Maha Abhishek.
+        </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> May 28, 2026</div>
 
         {/* Direct answer first — GEO */}

@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Food on Char Dham Yatra — What to Expect & Eat' },
@@ -67,6 +68,10 @@ export default function FoodGuide() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Food on the Char Dham route is simple, vegetarian and almost entirely without onion or garlic near the shrines.</strong> Expect dal, rice, roti, seasonal sabzi and plenty of tea; meat and alcohol are unavailable in the temple towns and prohibited at the shrines. Jain and diabetic requirements are normal here but need telling the operator in advance, because kitchens above Rudraprayag are small. Carry your own snacks for the trek days.
+        </AnswerBox>
         <P>
           Food on the Char Dham route is satvik vegetarian from start to finish — no meat, no eggs in
           most kitchens, no alcohol anywhere near the shrines. That is not a rule for visitors, it is how

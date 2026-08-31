@@ -6,6 +6,7 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Triyuginarayan Temple ${SITE.season} | Where Shiva Wed Parvati | Guide` },
@@ -77,6 +78,10 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
+
+        <AnswerBox>
+          <strong>Triyuginarayan is where Shiva and Parvati are believed to have married, and the fire lit for that wedding is said to have burned ever since.</strong> It sits at 1,980m about 25km from Sonprayag, reachable by road, and is increasingly booked for weddings for that reason. Most pilgrims visit it on the way to or from Kedarnath rather than as a separate trip. The temple is open through the day and there is no ticket.
+        </AnswerBox>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10, marginBottom:28 }}>

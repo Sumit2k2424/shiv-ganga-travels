@@ -4,6 +4,7 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, LI, Table, Note,
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
+import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra for Temple & Mandir Groups — 40–100 Pax' },
@@ -69,6 +70,10 @@ export default function TempleGroups() {
       <Article>
         <Updated/>
 
+
+        <AnswerBox>
+          <strong>Temple and satsang groups get the best per-person rates on this route, from about ₹13,500–15,000 for forty or more.</strong> What matters more than price is planning for the spread: a group of forty contains people who will walk Kedarnath in five hours and people who need a palki, so trek days should split and regroup rather than move as one body. We handle registration for every member, arrange group meals, and can add a pujari for collective puja at each dham.
+        </AnswerBox>
         <P>
           A mandir group is not a large family booking. The differences are structural: forty to a
           hundred people, a committee making decisions rather than one person, members contributing
