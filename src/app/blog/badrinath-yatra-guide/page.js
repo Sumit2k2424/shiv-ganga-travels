@@ -25,7 +25,7 @@ const faqs = [
   { q: 'How many days do you need for Badrinath from Haridwar?', a: 'Three days is the realistic minimum — a full day up, a day at the temple and Mana, and a day back. Our 2N/3D package is built on exactly that. Doing it as a two-day round trip means roughly 21 hours of driving inside 48, which is legal only if you plan around the 10 PM to 4 AM night-driving ban, and is not something we run.' },
 ];
 export const metadata = {
-  title: { absolute: `Badrinath Yatra Guide ${SITE.season} | Price Starts at ₹4,500 | Timings & Route` },
+  title: { absolute: `Badrinath Yatra Guide ${SITE.season} | Timings & Route` },
   description: `Badrinath Yatra ${SITE.season} guide — darshan timings, Tapt Kund, Mana Village. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`badrinath yatra guide ${SITE.season}`, 'badrinath temple darshan timings', 'badrinath yatra route haridwar', 'haridwar to badrinath distance', `badrinath yatra package ${SITE.season}`, 'badrinath best time to visit', 'tapt kund badrinath', 'mana village badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/badrinath-yatra-guide` },

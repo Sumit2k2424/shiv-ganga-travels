@@ -9,7 +9,7 @@ const VERIFIED = 'August 22, 2026';
 const VERIFIED_ISO = '2026-08-22';
 
 export const metadata = {
-  title: { absolute: `Online Puja Booking ${SITE.season} | Price Starts at ₹1,200 | Kedarnath & Badrinath` },
+  title: { absolute: `Online Puja Booking ${SITE.season} | Kedarnath & Badrinath` },
   description: `Book online puja at Kedarnath, Badrinath, Gangotri & Yamunotri ${SITE.season}. Trusted operator, 15+ yrs experience, instant confirmation. Managed from Haridwar.`,
   keywords: ['online puja booking kedarnath','badrinath abhishek booking','kedarnath mahabhishek','rudrabhishek kedarnath',`char dham puja booking ${SITE.season}`,'badrinath online puja'],
   alternates: { canonical: `${SITE.baseUrl}/online-puja-booking` },

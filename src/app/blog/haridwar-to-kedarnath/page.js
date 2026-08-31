@@ -7,7 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Price Starts at ₹5,250 | Cab, Bus & Heli` },
+  title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
   description: `Haridwar to Kedarnath ${SITE.season} — 235km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`haridwar to kedarnath distance ${SITE.season}`, 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },

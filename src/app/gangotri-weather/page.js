@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import CiteThis from '@/components/CiteThis';
+import { citableDataset } from '@/lib/citable';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
@@ -37,6 +39,15 @@ const weather = [
 export default function GangotriWeather() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citableDataset({
+        name: `Gangotri monthly temperature and conditions, ${SITE.season} season`,
+        description: 'Month-by-month temperature, snow, rainfall and best-visit verdicts for Gangotri (3,415m), recorded on the route by Shiv Ganga Travels.',
+        path: '/gangotri-weather',
+        modified: '2026-08-22',
+        measured: ['Temperature', 'Snowfall', 'Rainfall', 'Crowd level'],
+        place: { name: 'Gangotri, Uttarkashi district, Uttarakhand, India', lat: 30.9947, lon: 78.9398 },
+        temporal: '2026-04-19/2026-11-10',
+      })) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context':'https://schema.org','@type':'WebPage',
         name:'Gangotri Weather Guide 2026',
@@ -121,6 +132,9 @@ export default function GangotriWeather() {
             <Link href="/gangotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Gangotri Packages →</Link>
           </div>
         </div>
+
+        <CiteThis verified="August 22, 2026" sources="Shiv Ganga Travels route records, IMD regional data, Uttarakhand Tourism" />
+
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>

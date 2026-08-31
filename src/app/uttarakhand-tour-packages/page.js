@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Price Starts at ₹3,750 | Hills & Pilgrimage` },
+  title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Hills & Pilgrimage` },
   description: `Uttarakhand Tour Packages ${SITE.season} from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`uttarakhand tour packages, uttarakhand tour packages ${SITE.season}, uttarakhand tourism packages, best uttarakhand packages from haridwar`],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },

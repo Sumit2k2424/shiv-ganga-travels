@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Rishikesh ${SITE.season} | Price Starts at ₹21,000 | Door Pickup` },
+  title: { absolute: `Char Dham Yatra from Rishikesh ${SITE.season} | Door Pickup` },
   description: `Char Dham Yatra from Rishikesh ${SITE.season} — just 24km from Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. Zero commission.`,
   keywords: [
     'char dham yatra from rishikesh', `char dham yatra package rishikesh ${SITE.season}`,

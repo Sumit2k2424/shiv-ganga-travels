@@ -9,7 +9,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Haridwar ${SITE.season} | Price Starts at ₹20,999 | Direct Operator` },
+  title: { absolute: `Char Dham Yatra from Haridwar ${SITE.season} | Direct Operator` },
   description: `Char Dham Yatra from Haridwar ${SITE.season} — itinerary, cost, registration & route map. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from haridwar','char dham yatra package from haridwar',`char dham package haridwar ${SITE.season}`,'haridwar char dham yatra','char dham yatra cost from haridwar','char dham itinerary from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-haridwar` },

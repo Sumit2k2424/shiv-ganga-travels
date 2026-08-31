@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Kedarnath Yatra Package ${SITE.season} | Price Starts at ₹5,250 | Trek, Pony & Heli Guide` },
+  title: { absolute: `Kedarnath Yatra Package ${SITE.season} | Trek, Pony & Heli Guide` },
   description: `Kedarnath Yatra ${SITE.season} — Ek Dham package from ₹5,250/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. 16km trek guide.`,
   keywords: [`Kedarnath Yatra ${SITE.season}`,'ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide',`Kedarnath helicopter booking ${SITE.season}`,'kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },

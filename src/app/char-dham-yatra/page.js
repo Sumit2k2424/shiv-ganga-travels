@@ -8,7 +8,7 @@ import GoogleReviews from '@/components/GoogleReviews';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Package ${SITE.season} | Price Starts at ₹13,900 | Hotels & Transport Included` },
+  title: { absolute: `Char Dham Yatra Package ${SITE.season} | Hotels & Transport Included` },
   description: `Char Dham Yatra Package ${SITE.season} from Haridwar — 9N/10D from ₹13,900/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package',`4 dham yatra ${SITE.season}`,

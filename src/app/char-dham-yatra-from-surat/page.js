@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Surat ${SITE.season} | Price Starts at ₹23,999 | Train & Flight Options` },
+  title: { absolute: `Char Dham Yatra from Surat ${SITE.season} | Train & Flight Options` },
   description: `Char Dham Yatra from Surat ${SITE.season} — 1,250km, train (18–20 hrs) or fly. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from surat','char dham yatra package from surat','surat to haridwar char dham',`char dham tour from surat ${SITE.season}`,'chardham yatra surat','surat char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-surat` },

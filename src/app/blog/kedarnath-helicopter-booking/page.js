@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | Price Starts at ₹6,390 | IRCTC Guide` },
+  title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | IRCTC Guide` },
   description: `Kedarnath helicopter booking ${SITE.season} — IRCTC HeliYatra fares from ₹6,390. Trusted operator, 15+ yrs experience, instant confirmation.`,
   keywords: [`kedarnath helicopter booking ${SITE.season}`, `kedarnath helicopter price ${SITE.season}`, 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },

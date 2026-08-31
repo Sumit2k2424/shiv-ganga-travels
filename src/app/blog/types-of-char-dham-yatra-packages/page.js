@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Package Types ${SITE.season} | Price Starts at ₹13,900 | Budget to Heli` },
+  title: { absolute: `Char Dham Package Types ${SITE.season} | Budget to Heli` },
   description: 'Char Dham packages compared — Budget, Deluxe, Premium, Helicopter. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
   keywords: [`types of char dham yatra packages ${SITE.season}`, 'char dham yatra package types', 'budget char dham package', 'deluxe char dham package', `char dham package comparison ${SITE.season}`, 'which char dham package to choose', 'char dham budget vs luxury'],
   alternates: { canonical: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages` },

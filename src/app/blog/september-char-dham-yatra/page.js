@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `September Char Dham Yatra ${SITE.season} | Price Starts at ₹13,900 | Post-Monsoon` },
+  title: { absolute: `September Char Dham Yatra ${SITE.season} | Post-Monsoon` },
   description: `September Char Dham Yatra ${SITE.season} — clearest skies of the year. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`september char dham yatra package ${SITE.season}`, 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },

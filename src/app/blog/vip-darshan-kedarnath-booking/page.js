@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Kedarnath VIP Darshan Booking ${SITE.season} | Price Starts at ₹300 | Guide` },
+  title: { absolute: `Kedarnath VIP Darshan Booking ${SITE.season} | Guide` },
   description: `Kedarnath VIP darshan ${SITE.season} — priority sanctum access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation.`,
   keywords: [`VIP darshan kedarnath ${SITE.season}`, 'kedarnath VIP darshan price', 'vip darshan kedarnath online booking', 'kedarnath VIP darshan with helicopter', 'kedarnath sparsh darshan booking', 'VIP darshan pass kedarnath', 'badrinath VIP darshan ticket price', 'badrinath temple VIP darshan booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/vip-darshan-kedarnath-booking` },
@@ -321,7 +321,7 @@ export default function VIPDarshan() {
             {[
               ['Kedarnath Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
               ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing'],
-              ['Pony & Palki Rates 2026', '/blog/kedarnath-pony-palki-rates-2026'],
+              ['Pony & Palki Rates 2026', '/kedarnath-pony-palki-kandi-rates'],
               ['Kedarnath Complete Guide', '/blog/kedarnath-yatra-complete-guide'],
               ['Kedarnath Package', '/kedarnath-yatra'],
             ].map(([l, h]) => (

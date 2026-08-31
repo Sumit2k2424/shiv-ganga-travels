@@ -9,7 +9,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Cost ${SITE.season} | Price Starts at ₹13,900 | Full Breakdown` },
+  title: { absolute: `Char Dham Yatra Cost ${SITE.season} | Full Breakdown` },
   description: `Char Dham Yatra cost ${SITE.season} — full per-person breakdown, no hidden costs. Trusted operator, 15+ yrs experience, instant confirmation.`,
   keywords: [`char dham yatra cost ${SITE.season}`, 'char dham yatra total cost per person', `char dham yatra package price ${SITE.season}`, 'char dham yatra budget breakdown', `kedarnath pony cost ${SITE.season}`, `char dham helicopter cost ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },

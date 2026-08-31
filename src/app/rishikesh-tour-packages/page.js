@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Rishikesh Tour Package ${SITE.season} | Price Starts at ₹3,999 | Ganga Aarti & Rafting` },
+  title: { absolute: `Rishikesh Tour Package ${SITE.season} | Ganga Aarti & Rafting` },
   description: `Rishikesh Tour Package ${SITE.season} from ₹3,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Haridwar combo, ashram stays.`,
   keywords: [
     'rishikesh tour package','rishikesh package','rishikesh trip package','rishikesh travel packages',

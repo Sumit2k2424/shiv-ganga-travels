@@ -5,7 +5,7 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Yamunotri Yatra Package ${SITE.season} | Price Starts at ₹4,500 | Trek & Pony Guide` },
+  title: { absolute: `Yamunotri Yatra Package ${SITE.season} | Trek & Pony Guide` },
   description: `Yamunotri Yatra ${SITE.season} from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.`,
   keywords: [`yamunotri yatra, yamunotri yatra ${SITE.season}, yamunotri trek, haridwar to yamunotri, yamunotri yatra package`],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },

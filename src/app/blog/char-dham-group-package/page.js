@@ -8,7 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Group Package ${SITE.season} | Price Starts at ₹17,500 | 10+ Pilgrims` },
+  title: { absolute: `Char Dham Group Package ${SITE.season} | 10+ Pilgrims` },
   description: `Char Dham Yatra group packages ${SITE.season} — save 10–15% for 10+ pilgrims. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
   keywords: [`char dham yatra group package ${SITE.season}`, 'char dham yatra group booking', `char dham group package price ${SITE.season}`, 'char dham yatra large group', 'char dham group tour haridwar', `char dham group discount ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },

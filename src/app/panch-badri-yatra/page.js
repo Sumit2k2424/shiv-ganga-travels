@@ -5,7 +5,7 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Panch Badri Yatra Package ${SITE.season} | Price Starts at ₹18,000 | All 5 Badri Shrines` },
+  title: { absolute: `Panch Badri Yatra Package ${SITE.season} | All 5 Badri Shrines` },
   description: `Panch Badri Yatra ${SITE.season} — 6N/7D covering all 5 Badri shrines, from ₹18,000/person. Trusted operator, 15+ yrs experience, customizable itinerary & fixed departures.`,
   keywords: ['panch badri yatra',`panch badri yatra ${SITE.season}`,'panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },

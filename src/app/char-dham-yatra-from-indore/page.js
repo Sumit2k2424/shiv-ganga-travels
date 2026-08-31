@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Indore ${SITE.season} | Price Starts at ₹23,999 | Train & Flight Options` },
+  title: { absolute: `Char Dham Yatra from Indore ${SITE.season} | Train & Flight Options` },
   description: `Char Dham Yatra from Indore ${SITE.season} — 1,050km, fly via Delhi or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from indore','char dham yatra package from indore','indore to haridwar char dham',`char dham tour from indore ${SITE.season}`,'chardham yatra indore','indore char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-indore` },
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Char Dham Yatra from Indore ${SITE.season} | Price Starts at ₹23,999`,
+    title: `Char Dham Yatra from Indore ${SITE.season}`,
     description: '1,050 km — fly via Delhi or train. Char Dham packages from ₹23,999/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Indore — Shiv Ganga Travels` }],
   },

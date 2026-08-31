@@ -7,7 +7,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Chandigarh ${SITE.season} | Price Starts at ₹21,499 | Pickup & VIP Darshan` },
+  title: { absolute: `Char Dham Yatra from Chandigarh ${SITE.season} | Pickup & VIP Darshan` },
   description: `Char Dham Yatra from Chandigarh ${SITE.season} — 290km, 5h road or 4h train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from chandigarh',`char dham yatra chandigarh ${SITE.season}`,'char dham package from chandigarh','kedarnath from chandigarh','haridwar from chandigarh'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },

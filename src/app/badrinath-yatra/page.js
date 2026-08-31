@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Badrinath Yatra Package ${SITE.season} | Price Starts at ₹4,500 | VIP Darshan Included` },
+  title: { absolute: `Badrinath Yatra Package ${SITE.season} | VIP Darshan Included` },
   description: `Badrinath Yatra Package ${SITE.season} from Haridwar — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,

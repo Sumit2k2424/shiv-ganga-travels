@@ -7,7 +7,7 @@ import KedarnathFareCalc from '@/components/KedarnathFareCalc';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Kedarnath Pony & Palki Rates ${SITE.season} | Price Starts at ₹3,000 | Gaurikund` },
+  title: { absolute: `Kedarnath Pony & Palki Rates ${SITE.season} | Gaurikund` },
   description: 'Kedarnath pony ₹3,000–4,500, palki ₹8,000–12,000 from Gaurikund. Trusted operator, 15+ yrs experience, honest pricing, instant confirmation.',
   keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates` },
@@ -182,6 +182,28 @@ export default function KedarnathPonyPalkiKandiRates() {
               <li>Never pay the full fare upfront on the trail, and never book "online pony/palki" — it doesn't exist officially.</li>
             </ul>
           </div>
+
+          {/* Merged in from /blog/kedarnath-pony-palki-rates-2026 when that slug
+              was consolidated here — these two misconceptions are high-volume
+              searches in their own right and the answer to both is "that is not
+              where the ride starts". */}
+          <h2 style={h2}>Two things people search for that do not exist</h2>
+          <h3 style={h3}>&ldquo;Sonprayag to Kedarnath by horse&rdquo;</h3>
+          <p style={p}>
+            A lot of people search for a Sonprayag-to-Kedarnath horse price, and there is no such thing.
+            Private vehicles stop at Sonprayag, and the shared jeep covers the last 5 km to Gaurikund at
+            ₹30–50 a head. <strong>Every horse, palki and kandi starts at Gaurikund</strong>, not Sonprayag.
+            So the real cost of &ldquo;Sonprayag to Kedarnath by horse&rdquo; is the jeep fare plus the
+            ₹3,000–4,500 ride from Gaurikund. Budget for both.
+          </p>
+          <h3 style={h3}>&ldquo;Gaurikund to Kedarnath by helicopter&rdquo;</h3>
+          <p style={p}>
+            Also does not exist. There is no helipad at Gaurikund. Helicopters fly from{' '}
+            <strong>Phata, Sersi and Guptkashi</strong>, all of which are below Gaurikund on the road, and
+            they land at the Kedarnath helipad above the temple. If you are already at Gaurikund, your
+            options are on foot, by pony, by palki or by kandi — the helicopter decision has to be made
+            before you leave the road head.
+          </p>
 
           <h2 style={h2}>Three things competitors get wrong</h2>
           <p style={p}>

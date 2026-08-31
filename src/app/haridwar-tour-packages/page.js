@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Haridwar Tour Package ${SITE.season} | Price Starts at ₹2,999 | Ganga Aarti Included` },
+  title: { absolute: `Haridwar Tour Package ${SITE.season} | Ganga Aarti Included` },
   description: `Haridwar Tour Package ${SITE.season} from ₹2,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Har Ki Pauri, Mansa Devi.`,
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',

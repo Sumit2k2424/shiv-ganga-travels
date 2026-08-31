@@ -6,7 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Adi Kailash Yatra Package ${SITE.season} | Price Starts at ₹27,000 | Permit & Om Parvat` },
+  title: { absolute: `Adi Kailash Yatra Package ${SITE.season} | Permit & Om Parvat` },
   description: `Adi Kailash Yatra ${SITE.season} — 7N/8D road package from Kathgodam, ₹27,000/person. Trusted operator, 15+ yrs experience, permit assistance & fixed departures.`,
   keywords: ['adi kailash yatra','adi kailash permit','how to reach adi kailash','adi kailash cost','adi kailash yatra itinerary','om parvat yatra','adi kailash best time to visit','chhota kailash yatra','adi kailash from haridwar','adi kailash inner line permit'],
   alternates: { canonical: `${SITE.baseUrl}/adi-kailash-yatra` },

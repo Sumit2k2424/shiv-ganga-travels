@@ -7,7 +7,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Hyderabad ${SITE.season} | Price Starts at ₹25,999 | Pickup & VIP Darshan` },
+  title: { absolute: `Char Dham Yatra from Hyderabad ${SITE.season} | Pickup & VIP Darshan` },
   description: `Char Dham Yatra from Hyderabad ${SITE.season} — 1,800km, 2h15m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from hyderabad',`char dham yatra hyderabad ${SITE.season}`,'char dham package from hyderabad','kedarnath from hyderabad','haridwar from hyderabad'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad` },

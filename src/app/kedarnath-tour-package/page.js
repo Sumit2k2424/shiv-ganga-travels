@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250 | Hotels & Transport Included` },
+  title: { absolute: `Kedarnath Tour Package ${SITE.season} | Hotels & Transport Included` },
   description: `Kedarnath Tour Package ${SITE.season} — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).`,
   keywords: [
     'kedarnath tour package', 'kedarnath yatra package', `kedarnath tour package ${SITE.season}`,
@@ -14,7 +14,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-tour-package` },
   openGraph: {
-    title: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250 | Hotels & Transport Included`,
+    title: `Kedarnath Tour Package ${SITE.season} | Hotels & Transport Included`,
     description:
       `Customizable itinerary, pony & helicopter rates, and ${SITE.season} registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.`,
     url: `${SITE.baseUrl}/kedarnath-tour-package`,
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Kedarnath Tour Package ${SITE.season} | Price Starts at ₹5,250`,
+    title: `Kedarnath Tour Package ${SITE.season}`,
     description: 'Kedarnath 3N/4D from Haridwar. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.',
     images: [{ url: '/opengraph-image', alt: `Kedarnath Tour Package ${SITE.season} from Haridwar` }],
   },

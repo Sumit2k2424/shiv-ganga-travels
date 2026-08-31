@@ -25,11 +25,11 @@ import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/componen
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra ${SITE.season} | Price Starts at ₹13,900 | Direct Operator, Zero Commission` },
+  title: { absolute: `Char Dham Yatra ${SITE.season} | Direct Operator, Zero Commission` },
   description: `Char Dham Yatra ${SITE.season} from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary, fixed departures & instant confirmation. From ₹13,900.`,
   keywords: [`char dham yatra ${SITE.season}`,'char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
-    title: `Char Dham Yatra ${SITE.season} | Price Starts at ₹13,900`,
+    title: `Char Dham Yatra ${SITE.season}`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',

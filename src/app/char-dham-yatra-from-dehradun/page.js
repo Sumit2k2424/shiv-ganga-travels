@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Dehradun ${SITE.season} | Price Starts at ₹21,000 | Road & Heli Options` },
+  title: { absolute: `Char Dham Yatra from Dehradun ${SITE.season} | Road & Heli Options` },
   description: `Char Dham Yatra from Dehradun ${SITE.season} — Jolly Grant Airport gateway, 54km to Haridwar. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [
     'char dham yatra from dehradun', `char dham yatra package dehradun ${SITE.season}`,

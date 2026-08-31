@@ -5,7 +5,7 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Gangotri Yatra Package ${SITE.season} | Price Starts at ₹4,250 | Motor Road, No Trek` },
+  title: { absolute: `Gangotri Yatra Package ${SITE.season} | Motor Road, No Trek` },
   description: `Gangotri Yatra ${SITE.season} from Haridwar — ₹4,250 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.`,
   keywords: [`gangotri yatra, gangotri yatra ${SITE.season}, gangotri yatra package, haridwar to gangotri, gangotri temple guide`],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },

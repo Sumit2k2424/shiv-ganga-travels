@@ -5,7 +5,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Jaipur ${SITE.season} | Price Starts at ₹17,200 | Road & Train Options` },
+  title: { absolute: `Char Dham Yatra from Jaipur ${SITE.season} | Road & Train Options` },
   description: `Char Dham Yatra from Jaipur ${SITE.season} — 560km by road (8–9 hrs) or train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: ['char dham yatra from jaipur','char dham yatra package from jaipur','jaipur to haridwar char dham',`char dham tour from jaipur ${SITE.season}`,'chardham yatra jaipur','jaipur char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-jaipur` },
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Char Dham Yatra from Jaipur ${SITE.season} | Price Starts at ₹17,200`,
+    title: `Char Dham Yatra from Jaipur ${SITE.season}`,
     description: '560 km by road (8–9 hrs) or train. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.',
     images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Jaipur — Shiv Ganga Travels` }],
   },

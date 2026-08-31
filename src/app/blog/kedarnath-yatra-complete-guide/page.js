@@ -33,7 +33,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `Kedarnath Yatra Guide ${SITE.season} | Price Starts at ₹5,250 | Route & Darshan` },
+  title: { absolute: `Kedarnath Yatra Guide ${SITE.season} | Route & Darshan` },
   description: `Kedarnath Yatra ${SITE.season} guide — 16km trek, registration, darshan timings. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
   keywords: [`kedarnath yatra ${SITE.season} complete guide`, 'kedarnath yatra guide', 'how to do kedarnath yatra', `kedarnath yatra cost ${SITE.season}`, 'kedarnath yatra package haridwar', `kedarnath yatra planning guide ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide` },
