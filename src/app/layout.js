@@ -168,11 +168,11 @@ function SiteSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '07:00',
-        closes: '21:00',
+        opens: SITE.hours.opens,
+        closes: SITE.hours.closes,
       },
     ],
-    openingHours: ['Mo-Su 07:00-21:00'],
+    openingHours: [`Mo-Su ${SITE.hours.opens}-${SITE.hours.closes}`],
 
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -364,8 +364,8 @@ function SiteSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '08:00',
-        closes: '20:00',
+        opens: SITE.hours.opens,
+        closes: SITE.hours.closes,
       },
     ],
     // Links this branch back to the parent Haridwar location

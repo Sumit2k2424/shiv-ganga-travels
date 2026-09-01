@@ -184,12 +184,8 @@ export default function ContactPage() {
                 </h3>
                 <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:6 }}>
                   <li style={{ display:'flex', justifyContent:'space-between', fontSize:13 }}>
-                    <span style={{ color:'rgba(255,255,255,0.7)' }}>Monday – Saturday</span>
-                    <span style={{ fontWeight:600 }}>7 AM – 9 PM</span>
-                  </li>
-                  <li style={{ display:'flex', justifyContent:'space-between', fontSize:13 }}>
-                    <span style={{ color:'rgba(255,255,255,0.7)' }}>Sunday</span>
-                    <span style={{ fontWeight:600 }}>8 AM – 8 PM</span>
+                    <span style={{ color:'rgba(255,255,255,0.7)' }}>Monday – Sunday</span>
+                    <span style={{ fontWeight:600 }}>{SITE.hoursHuman}</span>
                   </li>
                   <li style={{ display:'flex', justifyContent:'space-between', fontSize:13, paddingTop:6, marginTop:2, borderTop:'1px solid rgba(255,255,255,0.1)' }}>
                     <span style={{ color:'rgba(255,255,255,0.7)' }}>WhatsApp Support</span>

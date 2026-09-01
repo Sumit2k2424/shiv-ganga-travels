@@ -283,6 +283,7 @@ function listing(p) {
     'EMAIL      ' + SITE.email,
     'WEBSITE    https://www.' + OUR_DOMAIN + p.target,
     'FOUNDED    ' + SITE.established,
+    'HOURS      ' + SITE.hoursHuman + ' daily (WhatsApp answered outside these hours)',
     '',
     'SHORT DESCRIPTION (~50 words)',
     MEDIA_KIT.boilerplateShort,

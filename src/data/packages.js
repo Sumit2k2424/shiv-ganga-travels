@@ -32,6 +32,17 @@ export const SITE = {
   // Pages where the year IS the subject — opening/closing dates, that season's
   // rule changes, road conditions — deliberately keep their year hard-coded and
   // get a new sibling page each year instead. Don't wire those to this value.
+  // Working hours. Single source of truth for the contact page, both schema
+  // blocks in layout.js, and the HOURS line in every listing packet.
+  //
+  // Before this existed the site asserted three different answers at once:
+  // the Organization schema said 07:00-21:00, the branch schema 08:00-20:00,
+  // and the contact page 7 AM-9 PM on weekdays with 8 AM-8 PM on Sunday.
+  // Citations built from any one of them would have contradicted the others,
+  // which is the precise thing NAP consistency is meant to prevent.
+  hours      : { opens: '09:00', closes: '20:00' },  // daily
+  hoursHuman : '9 AM - 8 PM',
+
   season: 2026,
 };
 
