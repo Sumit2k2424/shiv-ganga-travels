@@ -66,8 +66,33 @@ of this file. Current anchors:
   Yamunotri 2N/3D ..................... ₹4,500    (was ₹7,500)
   Gangotri 2N/3D ...................... ₹4,250    (was ₹7,000)
 
-ALSO STALE OFF-SITE: the TripAdvisor listing description currently published
-says "from ₹19,500 per person". Fix it in the same session as the contact block.
+---
+
+## WHERE WE ARE ACTUALLY LISTED — check before submitting anything
+
+This file was generated in April 2026 quoting ₹19,500 and ₹85,000. The prices
+were cut 25% in August and this file was corrected on 18 Aug. **Anything
+submitted between April and 18 Aug was seeded from the old figures**, and until
+this table existed there was no record of what that was — six tiers of
+directories were listed and not one of them recorded as done.
+
+Two stale prices have already been found in the wild by checking. Assume there
+are more. Add a row every time you submit, claim or check anything — the cost
+of not having done so is that the only way to answer "where else is the old
+price live" is to open all eighteen directories again.
+
+| Directory | Status | Checked | What is wrong | Action |
+|---|---|---|---|---|
+| TripAdvisor | Listed, unclaimed edits | 2026-08-18 | Description says "from ₹19,500" — the pre-cut price | Correct to ₹13,900. Bot-blocked to crawlers, so needs a manual login |
+| Google Business Profile | Listed, we own it | 2026-09-01 | Booking module shows ₹21,000 for the 9N/10D package (that is the 12N/13D senior price on the wrong label; real is ₹13,900). Hours 07:00–21:00, should be 09:00–20:00. Address spells "Bhoopatwala". Opening date says 2017 while its own description says since 2010 | Fix by hand — the edit dialog does not accept automated input reliably. Price is in Edit products, not Business information |
+| Bing Places | **Listing exists, not claimed** | 2026-09-01 | Address reads "Saptsarover Road, Hardwar, UK" — a different road from Saptrishi Road, no Bhupatwala, no 249410. Hours 07:00–21:00 | Claim it first, then correct. Not a new submission — do not create a second listing |
+
+Both Google and Bing carry the identical 07:00–21:00, so they were seeded from
+one source that stayed stale in three places, this site included until 1 Sep
+2026. The same is likely true of the prices.
+
+**Not yet checked:** every other directory in the six tiers below. A listing may
+already exist without anyone here knowing — Bing did.
 
 ---
 
@@ -281,8 +306,11 @@ is registered, so put the number that is actually answered 7 AM - 9 PM on it.
                    Uttarakhand Tour Packages · Tempo Traveller Hire
   Service areas  : Haridwar, Rishikesh, Dehradun, Roorkee, Delhi NCR
   Description    : use the MEDIUM (100-word) description above
-  Starting price : ₹4,250 (Gangotri 2N/3D) — lowest live package, use as the
-                   "starting from" if a single figure is demanded
+  Starting price : ₹4,250 (Gangotri 2N/3D) — the lowest *pilgrimage* package,
+                   and the right anchor if a single figure is demanded. Note it
+                   is not the lowest package overall: Nag Tibba Weekend Trek is
+                   ₹2,600. Do not quote that one — anchoring a Char Dham
+                   operator on a two-day trek misreads the business.
 
 **14. Tradeindia**
 URL: https://www.tradeindia.com/register.html
