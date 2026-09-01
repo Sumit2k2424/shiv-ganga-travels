@@ -37,6 +37,24 @@ function send(payload) {
   const now = Date.now();
   if (RECENT.get(key) > now - 5000) return; // same tap within 5s
   RECENT.set(key, now);
+
+  // Mirror the lead into GA4. Until now generate_lead fired from only two
+  // floating widgets, so Analytics credited /contact for leads actually
+  // earned on package, cab and guide pages. Every WhatsApp, Call, Enquire
+  // and form lead already funnels through here, so this is the one place
+  // that can attribute a conversion to the page and CTA that produced it.
+  try {
+    if (window.gtag) {
+      window.gtag('event', 'generate_lead', {
+        event_category: 'engagement',
+        event_label   : payload.type,
+        lead_type     : payload.type,
+        lead_page     : payload.page,
+        lead_package  : payload.package || '(none)',
+        value         : 1,
+      });
+    }
+  } catch { /* never break the UI for tracking */ }
   try {
     const body = JSON.stringify(payload);
     if (navigator.sendBeacon) {
