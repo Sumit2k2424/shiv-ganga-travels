@@ -26,6 +26,17 @@ import { PROSPECTS, COMPETITORS } from './prospects.mjs';
 import { assess } from './quality.mjs';
 import { SITE } from '../../src/data/packages.js';
 
+// "wants a article" and "wants a answer" both read wrong, and a descriptive
+// value like "identity verification, then four corrections" should take no
+// article at all. Single words get a/an by vowel; anything longer is assumed
+// to carry its own article if it needs one.
+const wantsPhrase = (w) => {
+  const v = String(w || '').trim();
+  if (!v) return 'wants something';
+  if (/\s/.test(v)) return 'wants ' + v;
+  return 'wants ' + (/^[aeiou]/i.test(v) ? 'an ' : 'a ') + v;
+};
+
 const TODAY = new Date();
 const days = (a, b) => Math.round((b - a) / 86_400_000);
 const since = (iso) => (iso ? days(new Date(iso + 'T00:00:00+05:30'), TODAY) : null);
@@ -65,7 +76,7 @@ const open = PROSPECTS
   .sort((a, b) => b.v.score - a.v.score);
 
 for (const { p, v } of open.slice(0, 6)) {
-  add('DO', p.name + '  [' + v.score + '/100 · wants a ' + p.wants + ']',
+  add('DO', p.name + '  [' + v.score + '/100 · ' + wantsPhrase(p.wants) + ']',
     p.why + '\n    Point it at: ' + p.target +
     (p.submitUrl ? '\n    Submit: ' + p.submitUrl : '\n    No open form — this one needs a pitch to a person.') +
     '\n    Draft the packet: npm run links:draft -- ' + p.id +

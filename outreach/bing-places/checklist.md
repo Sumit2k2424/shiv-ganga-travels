@@ -1,6 +1,6 @@
 # Bing Places for Business
 
-**Prospect:** `bing-places`  ·  **Wants:** claim on the existing listing  ·  **Route in:** open
+**Prospect:** `bing-places`  ·  **Wants:** a claim on the existing listing  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/
 **Packet written:** 2026-09-01
 

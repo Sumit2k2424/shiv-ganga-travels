@@ -303,7 +303,7 @@ export const PROSPECTS = [
     url: 'https://www.bingplaces.com/',
     submitUrl: 'https://www.bingplaces.com/',
     category: 'citation',
-    wants: 'claim on the existing listing',
+    wants: 'a claim on the existing listing',
     topical: 0.8, institutional: true, obtainable: 'open',
     target: '/',
     why: 'Feeds Bing, and through Bing a share of Copilot and ChatGPT web results. A wrong street name here propagates into AI answers, which is why the existing listing matters more than a new one would.',
