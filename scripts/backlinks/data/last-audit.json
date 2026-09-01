@@ -1,10 +1,10 @@
 {
-  "ranOn": "2026-08-27",
+  "ranOn": "2026-09-01",
   "results": [
     {
       "id": "utdb-travel-trade",
-      "domain": "uttarakhandtourism.gov.in",
-      "checked": "https://uttarakhandtourism.gov.in/",
+      "domain": "traveltrade.uttarakhandtourism.gov.in",
+      "checked": "https://traveltrade.uttarakhandtourism.gov.in/",
       "statusCode": 200,
       "state": "HTTP 200",
       "verdict": "PURSUE",
@@ -71,8 +71,8 @@
       "id": "garhwal-post",
       "domain": "garhwalpost.in",
       "checked": "https://garhwalpost.in/",
-      "statusCode": 0,
-      "state": "NO RESPONSE",
+      "statusCode": 200,
+      "state": "HTTP 200",
       "verdict": "PURSUE",
       "score": 68,
       "competitorLinks": [],
@@ -107,7 +107,7 @@
       "statusCode": 200,
       "state": "HTTP 200",
       "verdict": "WEAK",
-      "score": 37,
+      "score": 34,
       "competitorLinks": [],
       "linksToUs": false
     },
@@ -196,6 +196,132 @@
       "state": "HTTP 200",
       "verdict": "MAYBE",
       "score": 54,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "chardhamyatra-org",
+      "domain": "chardhamyatra.org",
+      "checked": "https://chardhamyatra.org/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 77,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "chardhamcentral",
+      "domain": "chardhamcentral.com",
+      "checked": "https://chardhamcentral.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 68,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "travelwithmonk",
+      "domain": "travelwithmonk.com",
+      "checked": "https://travelwithmonk.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 64,
+      "competitorLinks": [
+        "discover-uttarakhand.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "sacredyatra",
+      "domain": "sacredyatra.com",
+      "checked": "https://sacredyatra.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 65,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "chopta-in",
+      "domain": "chopta.in",
+      "checked": "https://chopta.in/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 61,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "kartikswami",
+      "domain": "kartikswami.com",
+      "checked": "https://kartikswami.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "MAYBE",
+      "score": 59,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "aroraholidays",
+      "domain": "aroraholidays.in",
+      "checked": "https://aroraholidays.in/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 61,
+      "competitorLinks": [
+        "discover-uttarakhand.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "merakitriangle",
+      "domain": "merakitriangle.com",
+      "checked": "https://merakitriangle.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "MAYBE",
+      "score": 54,
+      "competitorLinks": [
+        "euttaranchal.com"
+      ],
+      "linksToUs": false
+    },
+    {
+      "id": "rome2rio",
+      "domain": "rome2rio.com",
+      "checked": "https://rome2rio.com/",
+      "statusCode": 403,
+      "state": "BLOCKED",
+      "verdict": "MAYBE",
+      "score": 54,
+      "competitorLinks": [],
+      "linksToUs": false
+    },
+    {
+      "id": "grokipedia",
+      "domain": "grokipedia.com",
+      "checked": "https://grokipedia.com/",
+      "statusCode": 200,
+      "state": "HTTP 200",
+      "verdict": "PURSUE",
+      "score": 68,
       "competitorLinks": [],
       "linksToUs": false
     }
