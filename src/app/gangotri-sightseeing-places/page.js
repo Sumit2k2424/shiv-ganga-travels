@@ -84,7 +84,7 @@ const SIGHTS = [
     dist: '25 km back down',
     time: 'Half a day',
     href: '/harsil-valley',
-    what: 'Apple orchards and deodar on the Bhagirathi at 2,620 m, about forty-five minutes below Gangotri. Almost every pilgrim drives through it twice and stops neither time. It is the best halt on this arm of the circuit.',
+    what: 'Apple orchards and deodar on the Bhagirathi at 2,620 m, about forty-five minutes below Gangotri. A flash flood tore through Dharali in August 2025, destroying much of the village and striking the army camp at Harsil, and the valley has been rebuilt over the year since — roads and services are restored and the orchards are bearing again. Almost every pilgrim drives through twice and stops neither time.',
   },
   {
     name: 'Mukhba',
@@ -103,7 +103,7 @@ const FAQS = [
   { q: 'Do you need a permit for the Gaumukh trek?',
     a: 'Yes. Gaumukh sits inside the Gangotri National Park and entry is capped at 150 trekkers a day, issued through the forest office at Gangotri or online in advance. Peak-season dates go early, so do not arrive expecting to walk in the same morning.' },
   { q: 'Is Harsil worth stopping at?',
-    a: 'Yes, and it is the most-skipped stop on the whole Char Dham circuit. It is 25 km below Gangotri on the road you are already driving, so it costs you no detour — only the decision to stop. Apple season in September and October is the best of it.' },
+    a: 'Yes, and it is the most-skipped stop on the whole Char Dham circuit. It is 25 km below Gangotri on the road you are already driving, so it costs you no detour — only the decision to stop. Apple season in September and October is the best of it. Worth knowing before you go: the August 2025 flash flood destroyed a large part of neighbouring Dharali and the highway was breached in several places. Reconstruction has run through the year since, the Gangotri highway is open and the valley is receiving visitors again, but do not expect it to look the way older photographs show it.' },
   { q: 'What is the altitude of Gangotri?',
     a: 'The temple stands at about 3,415 m. That is high enough that pilgrims arriving the same day from Uttarkashi at 1,158 m sometimes feel it, so take the first evening slowly rather than walking straight up to Pandav Gufa.' },
   { q: 'How far is Gangotri from Uttarkashi?',

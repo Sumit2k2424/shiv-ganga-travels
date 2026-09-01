@@ -5,6 +5,11 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 
+// Page-local freshness stamp. Harsil carries a dated claim about the state of
+// reconstruction after the August 2025 Dharali flood, so it is re-verified on
+// its own cadence rather than inheriting the site-wide SITE.lastUpdated.
+const HARSIL_UPDATED_ISO = '2026-09-01';
+
 export const metadata = {
   title: { absolute: `Harsil Valley Guide ${SITE.season} | Permits, Weather & Route | Gangotri` },
   description: `Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.`,
@@ -20,6 +25,7 @@ export const metadata = {
 };
 
 const PAA = [
+  { q:'Is Harsil Valley safe to visit after the 2025 Dharali flood?', a:'Yes. The flash flood of 5 August 2025 destroyed much of Dharali and breached the Gangotri highway, but the road was reopened within weeks, the Gangotri pilgrimage resumed that September, and a year of reconstruction has restored roads and essential services across Dharali, Harsil and Bhatwari. The valley is open and receiving visitors. Two practical caveats: room stock is thinner than it was, so book through someone who has actually spoken to the property this season, and give monsoon forecasts on this stretch more weight than you would elsewhere.' },
   { q:'Do I need a permit to visit Harsil Valley?', a:'No — not for Harsil itself. You will read on some sites that Harsil is an Army base camp requiring a permit; that was true before 2021, but the Ministry of Home Affairs lifted the Inner Line Permit requirement for Indian and foreign tourists visiting Harsil and Gangotri that year. Today a valid ID — Aadhaar, voter ID or passport — is all you need at the checkposts. The permit rule that still applies is for Nelong Valley, a separate cold-desert area 40–45 km beyond Harsil, which needs an actual Inner Line Permit from the Uttarkashi SDM office, for Indian nationals only, applied for a day or two in advance. Don’t confuse the two.' },
   { q:'What is the best time to visit Harsil Valley?', a:'April to June for apple blossom and open roads, or mid-September to November for harvest season and the clearest mountain views. Both are reliable windows. Avoid July to early September — the Uttarkashi–Harsil stretch of NH-108 takes landslides in the monsoon and the drive stops being enjoyable. December to March brings real snow and a hard quiet that some travellers love, but the road closes without warning after heavy snowfall, so build in slack.' },
   { q:'How far is Harsil from Gangotri, and how do I reach Harsil from Haridwar?', a:'Gangotri is 25 km beyond Harsil, about 45 minutes on the same road. From Haridwar, Harsil is roughly 250 km via Rishikesh, Tehri, Chamba and Uttarkashi — a 8–9 hour drive that most people break overnight at Uttarkashi (about 73 km short of Harsil) rather than push through in one day.' },
@@ -125,15 +131,20 @@ export default function HarsilValley() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'harsil-valley', title:'Harsil Valley Guide 2026 — Permits, Weather & Route', description:'Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'harsil-valley', title:'Harsil Valley Guide 2026 — Permits, Weather & Route', description:'Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.', datePublished:'2026-07-28', dateModified: HARSIL_UPDATED_ISO, lang:'en-IN' }} />
 
       <AnswerBox>
-        Harsil Valley sits at <strong>2,620 m on the Bhagirathi River</strong> in Uttarkashi district, <strong>25 km before Gangotri</strong> on NH-108. It&rsquo;s known for apple orchards, deodar forest and <strong>Gartang Gali</strong>, a restored 150-year-old wooden cliff walkway. No permit is needed for Harsil itself &mdash; just valid ID &mdash; though the nearby Nelong Valley does require one. Best visited <strong>April&ndash;June or mid-September&ndash;November</strong>.
+        Harsil Valley sits at <strong>2,620 m on the Bhagirathi River</strong> in Uttarkashi district, <strong>25 km before Gangotri</strong> on NH-108. It&rsquo;s known for apple orchards, deodar forest and <strong>Gartang Gali</strong>, a restored 150-year-old wooden cliff walkway. No permit is needed for Harsil itself &mdash; just valid ID &mdash; though the nearby Nelong Valley does require one. Best visited <strong>April&ndash;June or mid-September&ndash;November</strong>. A flash flood destroyed much of neighbouring Dharali in August 2025; the highway and services have since been rebuilt and the valley is open to visitors again.
       </AnswerBox>
 
       <h2 style={h2}>The Valley Everyone Drives Past</h2>
       <p style={p}>Most people doing the Gangotri leg of the Char Dham see Harsil for about four minutes, through a windscreen, on the way to somewhere holier. That is a mistake, and it is an easy one to fix.</p>
       <p style={p}>The valley opens up after the long, winding climb from Uttarkashi: apple trees in neat terraces, deodar forest coming down to the water, and the Bhagirathi running fast and green under it all. It was Raj Kapoor&rsquo;s location for <em>Ram Teri Ganga Maili</em>, and once you see the light on the river here, you understand why. Stop for a night. It costs you almost nothing on the itinerary and it changes the whole trip.</p>
+
+      <h2 style={h2}>The August 2025 Flood &mdash; What Happened, and Where It Stands</h2>
+      <p style={p}>On 5 August 2025 a flash flood came down the Kheer Ganga into Dharali, a few kilometres from Harsil. It destroyed a large part of the village and struck the army camp at Harsil; lives were lost and many people were missing for weeks afterwards. The trigger was reported at the time as a cloudburst, though a glacial lake outburst, a slope collapse or some combination of these has been investigated since &mdash; the cause is not settled, and anyone telling you it is has decided in advance.</p>
+      <p style={p}>The Gangotri National Highway was breached at several points and the valley was reachable only by air for a period. A Bailey bridge went in within days, the Border Roads Organisation reopened the damaged stretches, and the Gangotri pilgrimage resumed in September 2025. Through the year since, the state has put more than &#8377;33 crore into rehabilitation across Dharali, Harsil and Bhatwari, and by the anniversary in August 2026 roads and essential services were restored, the orchards were producing and tourism had begun to return.</p>
+      <p style={p}>What this means for a visit in {SITE.season}: the road is open, the valley is receiving guests, and going is a help rather than an intrusion. What it does not mean is that the place is unchanged. Room stock is thinner than it was and some of what you will have seen in older photographs is gone. Book accommodation through someone who has spoken to the property this season rather than from a listing, and treat any monsoon forecast on this stretch with more respect than you would have in 2024.</p>
 
       <h2 style={h2}>Harsil Valley at a Glance</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>
@@ -179,7 +190,7 @@ export default function HarsilValley() {
       <h3 style={h3}>Mukhba &mdash; the winter home of Ganga</h3>
       <p style={p}>About 6 km from Harsil, Mukhba holds real spiritual weight: when Gangotri Temple closes for winter (around Diwali), the idol of Goddess Ganga is carried down and worshipped at the Mukhimath Temple here until the dham reopens in spring. If you are travelling outside the main yatra season, this is where the goddess actually is.</p>
       <h3 style={h3}>Dharali</h3>
-      <p style={p}>A few kilometres on, known for its apple orchards and traditional wooden houses. Come in autumn and the whole village turns orange and gold with the harvest.</p>
+      <p style={p}>A few kilometres on, and the village that took the worst of the August 2025 flood. It was known before that for its apple orchards and traditional wooden houses, and the orchards are bearing again, but a large part of the built village was destroyed and what you drive through now is substantially rebuilt. Go, and buy the apples &mdash; the local economy is the thing that takes longest to come back. Just do not expect it to match photographs taken before 2025.</p>
       <h3 style={h3}>Bagori</h3>
       <p style={p}>Home to the Jadh Bhotiya community, with Hindu and Buddhist shrines sitting side by side and wooden architecture unlike anything else on the Char Dham route. Worth an hour if you have it.</p>
 
