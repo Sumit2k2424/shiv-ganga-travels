@@ -183,6 +183,7 @@ export default function JoshimathNarsinghTemple() {
         />
 
         <Related links={[
+          ['Places to Visit in Joshimath','/joshimath-sightseeing-places'],
           ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
           ['Omkareshwar Ukhimath','/ukhimath'],
           ['Badrinath Temple','/badrinath-temple'],

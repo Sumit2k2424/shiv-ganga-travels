@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Rishikesh Tour Package ${SITE.season} | Ganga Aarti & Rafting` },
-  description: `Rishikesh Tour Package ${SITE.season} from ₹3,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Haridwar combo, ashram stays.`,
+  description: `Rishikesh tour packages from ₹3,999. Ganga Aarti, rafting, ashrams, Haridwar combo. Direct operator from Haridwar. Zero commission. 50,000+ pilgrims served.`,
   keywords: [
     'rishikesh tour package','rishikesh package','rishikesh trip package','rishikesh travel packages',
     'rishikesh tours','trip to rishikesh','rishikesh tour','rishikesh haridwar tour package',
@@ -270,6 +270,7 @@ export default function RishikeshTourPackages() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
+              ['Places to Visit in Rishikesh', '/rishikesh-sightseeing-places'],
               ['Char Dham from Rishikesh', '/char-dham-yatra-from-delhi'],
               ['Haridwar Tour Packages', '/haridwar-tour-packages'],
               ['Mussoorie Tour Packages', '/mussoorie-tour-packages'],

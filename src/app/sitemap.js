@@ -274,6 +274,16 @@ export default function sitemap() {
     { url: `${b}/haridwar-to-rishikesh-taxi`,          p: 0.85, cf: 'monthly' },
     { url: `${b}/har-ki-pauri-guide`,                  p: 0.84, cf: 'monthly' },
     { url: `${b}/haridwar-sightseeing-places`,         p: 0.86, cf: 'monthly' },
+    // Sightseeing cluster (Sep 2026). Competitors hold a dedicated
+    // "places to visit in <place>" page for each of these; we held only
+    // Haridwar. Each new page is a hub that links down into the entity
+    // pages we already own rather than repeating them.
+    { url: `${b}/badrinath-sightseeing-places`,        p: 0.84, cf: 'monthly' },
+    { url: `${b}/gangotri-sightseeing-places`,         p: 0.84, cf: 'monthly' },
+    { url: `${b}/yamunotri-sightseeing-places`,        p: 0.84, cf: 'monthly' },
+    { url: `${b}/rishikesh-sightseeing-places`,        p: 0.83, cf: 'monthly' },
+    { url: `${b}/joshimath-sightseeing-places`,        p: 0.82, cf: 'monthly' },
+    { url: `${b}/chopta-sightseeing-places`,           p: 0.82, cf: 'monthly' },
     // Kainchi Dham is the single largest organic entry point on the site (head term
     // 165K/mo, ~22% of all organic sessions). Badrinath VIP darshan was being
     // outranked by /kedarnath-vip-darshan for its own queries. Both were falling

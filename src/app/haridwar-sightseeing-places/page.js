@@ -200,6 +200,7 @@ export default function HaridwarSightseeingPlaces() {
         />
 
         <Related links={[
+          ['Places to Visit in Rishikesh','/rishikesh-sightseeing-places'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Mansa Devi Temple','/mansa-devi-temple'],
           ['Chandi Devi Temple','/chandi-devi-temple'],

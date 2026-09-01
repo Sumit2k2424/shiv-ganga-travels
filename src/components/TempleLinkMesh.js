@@ -28,10 +28,13 @@ const heading = { fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', margin:
 const row = { display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 18 };
 
 // Per-dham deep-dive pages. Each dham's yatra page renders its own group.
-const dham = (name, slug) => [
+// `sightseeing` is passed per dham rather than derived from the slug because
+// Kedarnath's equivalent page predates the cluster and lives under /blog.
+const dham = (name, slug, sightseeing) => [
   {
     title: `${name} in depth`,
     links: [
+      ...(sightseeing ? [[`Places to Visit in ${name}`, sightseeing]] : []),
       [`${name} History & Legends`, `/${slug}-history-legends`],
       [`${name} Festivals & Rituals`, `/${slug}-festivals`],
       [`${name} Dharamshalas & Budget Stays`, `/${slug}-dharamshala`],
@@ -40,13 +43,13 @@ const dham = (name, slug) => [
 ];
 
 export const MESH = {
-  kedarnath: dham('Kedarnath', 'kedarnath'),
-  gangotri: dham('Gangotri', 'gangotri'),
-  yamunotri: dham('Yamunotri', 'yamunotri'),
+  kedarnath: dham('Kedarnath', 'kedarnath', '/blog/kedarnath-places-to-see'),
+  gangotri: dham('Gangotri', 'gangotri', '/gangotri-sightseeing-places'),
+  yamunotri: dham('Yamunotri', 'yamunotri', '/yamunotri-sightseeing-places'),
 
   // Badrinath additionally owns Tapt Kund, the hot spring at the temple steps.
   badrinath: [
-    ...dham('Badrinath', 'badrinath'),
+    ...dham('Badrinath', 'badrinath', '/badrinath-sightseeing-places'),
     {
       title: 'At the temple',
       links: [['Tapt Kund — the spring that never runs cold', '/tapt-kund']],

@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages` },
-  description: `Chopta Tungnath Chandrashila trek ${SITE.season} — highest Shiva temple at 3,680m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Chopta is 235 km from Haridwar, 7 to 8 hours. Tungnath at 3,680m is 3.5 km up, Chandrashila 4,000m another 1.5 km. Best months, route and packages.`,
   keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek',`chopta best time to visit ${SITE.season}`,'chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
   openGraph: {
@@ -130,7 +130,7 @@ export default function ChoptaTungnath() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Panch Kedar Yatra','/panch-kedar-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Valley of Flowers','/blog/valley-of-flowers-trek'],['Uttarakhand Tours','/uttarakhand-tour-packages'],['Kedarnath Weather','/kedarnath-weather']].map(([l,h]) => (
+            {[['Places to Visit in Chopta','/chopta-sightseeing-places'],['Panch Kedar Yatra','/panch-kedar-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Valley of Flowers','/blog/valley-of-flowers-trek'],['Uttarakhand Tours','/uttarakhand-tour-packages'],['Kedarnath Weather','/kedarnath-weather']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
