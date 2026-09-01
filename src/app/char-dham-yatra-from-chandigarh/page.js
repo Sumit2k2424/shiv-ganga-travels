@@ -9,7 +9,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Chandigarh ${SITE.season} | Pickup & VIP Darshan` },
-  description: `Char Dham Yatra from Chandigarh ${SITE.season} — 290km, 5h road or 4h train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra from Chandigarh ${SITE.season} — 290 km, 5h by road or 4h by train, the closest major city. All-inclusive from ₹21,499 per person, zero commission.`,
   keywords: ['char dham yatra from chandigarh',`char dham yatra chandigarh ${SITE.season}`,'char dham package from chandigarh','kedarnath from chandigarh','haridwar from chandigarh'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-chandigarh` },
   openGraph: {

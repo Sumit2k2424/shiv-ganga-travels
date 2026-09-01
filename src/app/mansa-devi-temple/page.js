@@ -10,8 +10,8 @@ import AnswerBox from '@/components/AnswerBox';
 const M = PLACES['mansa-devi'];
 
 export const metadata = {
-  title: { absolute: 'Mansa Devi Temple Haridwar — Ropeway, Timings & Guide' },
-  description: 'Mansa Devi ropeway is about ₹165 return, running 7 AM–6 PM with a midday break. Or walk up in 45 minutes free. Queues, thread ritual and what to skip.',
+  title: { absolute: `Mansa Devi Temple Haridwar ${SITE.season} — Ropeway Ticket Price & Timings` },
+  description: `Mansa Devi ropeway is about ₹165 return, or walk the 1.5 km stepped path from Har Ki Pauri free in 45–60 minutes. Timings, queues and the wish-thread ritual.`,
   keywords: ['mansa devi temple','mansa devi temple haridwar','mansa devi ropeway ticket price','mansa devi udan khatola','mansa devi temple timing','mansa devi haridwar trek','bilwa parvat mansa devi','mansa devi ropeway booking'],
   alternates: { canonical: `${SITE.baseUrl}/mansa-devi-temple` },
   openGraph: {

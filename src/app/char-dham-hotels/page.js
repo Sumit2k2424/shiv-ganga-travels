@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Hotels ${SITE.season} | Honest Price Guide | Trusted Local Booking` },
-  description: `Char Dham Yatra Hotels ${SITE.season} — where to stay at Barkot, Uttarkashi, Guptkashi, Badrinath & Haridwar. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Stop-by-stop hotel guide for the Char Dham route — Barkot, Uttarkashi, Guptkashi, Badrinath and Haridwar with real price bands.`,
   keywords: ['char dham hotels','char dham yatra hotels','where to stay char dham yatra','barkot hotels','uttarkashi hotels','guptkashi hotels','badrinath hotels',`char dham accommodation ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-hotels` },
   openGraph: {

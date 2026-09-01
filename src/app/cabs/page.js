@@ -14,7 +14,7 @@ import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 export const metadata = {
   title: { absolute: `Uttarakhand Taxi Service ${SITE.season} | Fixed Fares | Instant Enquiry` },
-  description: 'Book Uttarakhand cabs from Haridwar, Rishikesh & Dehradun. Trusted operator, 15+ yrs experience, fixed fares & instant confirmation. AC vehicles, hill drivers.',
+  description: `Cabs from Haridwar, Rishikesh and Dehradun across Uttarakhand — one fixed all-in fare per run, doorstep pickup, no station surcharge, hill-trained drivers.`,
   keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', `char dham taxi ${SITE.season}`, 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },
   openGraph: { title: `Uttarakhand Cab & Taxi Service ${SITE.season}`, description: 'Cabs from Haridwar, Rishikesh & Dehradun across Uttarakhand. Fixed fares, hill drivers.', url: `${SITE.baseUrl}/cabs`, type: 'website' ,

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Medical Certificate ${SITE.season} | Who Needs It` },
-  description: `Char Dham Yatra ${SITE.season} medical certificate — mandatory for 55+. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Char Dham Yatra ${SITE.season} medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.`,
   keywords: [`char dham yatra medical certificate ${SITE.season}`, 'char dham yatra fitness certificate', `medical certificate kedarnath ${SITE.season}`, 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };

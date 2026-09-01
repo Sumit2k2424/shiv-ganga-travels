@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Closing Dates 2026 | All 4 Temples' },
-  description: 'Char Dham Yatra 2026 closing dates for all 4 temples. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony guide.`,
   keywords: ['char dham closing dates 2026', 'kedarnath closing date 2026', 'badrinath closing date 2026', 'gangotri closing date 2026', 'yamunotri closing date 2026', 'char dham yatra last date 2026', 'when does char dham close'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026` },
   openGraph: {

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath Darshan Timings ${SITE.season} | Aarti & VIP Slots` },
-  description: `Kedarnath darshan timings ${SITE.season} — morning & evening slots, VIP darshan. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Kedarnath darshan timings ${SITE.season}: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.`,
   keywords: [`kedarnath darshan timings ${SITE.season}`, 'kedarnath temple opening time', 'kedarnath darshan time', `kedarnath mandir timing ${SITE.season}`, 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
   openGraph: { title: `Kedarnath Darshan Timings ${SITE.season}: Aarti & VIP Slots`, description: `All Kedarnath temple timings ${SITE.season} — darshan hours, puja schedule, aarti times, VIP booking.`, url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article', 

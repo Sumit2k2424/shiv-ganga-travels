@@ -4,7 +4,7 @@ import BlogHero from '@/components/BlogHero';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Blog ${SITE.season} | Guides, Costs & Planning` },
-  description: 'Char Dham Yatra guides, trek tips, packing lists & cost breakdowns. Trusted operator, 15+ yrs experience, instant confirmation.',
+  description: `Char Dham and Kedarnath guides written by a working Haridwar operator — real costs, trek timings, packing lists, registration rules and live road conditions.`,
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };
 

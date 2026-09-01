@@ -15,7 +15,7 @@ const MONSOON_UPDATED_ISO = '2026-08-16';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Monsoon Safety ${SITE.season} | Local Driver Guide` },
-  description: `Char Dham Yatra in monsoon ${SITE.season} — safety tips from local drivers. Trusted operator, 15+ yrs experience, live route checks & instant confirmation.`,
+  description: `Monsoon safety guide for Char Dham Yatra — sunrise departures, landslide zones, packing, live route checks. Written from 15 seasons of hill driving.`,
   keywords: ['char dham monsoon travel safety', 'kedarnath route live updates', 'safe mountain drivers uttarakhand', 'monsoon pilgrimage taxi haridwar', 'best time of day to travel char dham', 'kedarnath weather advisory', 'char dham yatra in rain', 'himalayan road trip safety july'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-monsoon-safety` },
 };

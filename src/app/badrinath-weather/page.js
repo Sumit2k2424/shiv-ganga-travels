@@ -7,7 +7,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Badrinath Weather ${SITE.season} | Month-wise Temperature Guide` },
-  description: `Badrinath weather ${SITE.season} — temperatures at 3,133m, best time May–June & Sept–Oct. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.`,
   keywords: ['badrinath weather','badrinath temperature','badrinath weather may',`badrinath best time to visit ${SITE.season}`,'badrinath snowfall','badrinath weather in october'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-weather` },
   openGraph: {

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Group Package ${SITE.season} | 10+ Pilgrims` },
-  description: `Char Dham Yatra group packages ${SITE.season} — save 10–15% for 10+ pilgrims. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Char Dham Yatra group packages for 10+ pilgrims — save 10–15% with a custom itinerary, dedicated vehicle and group meals. From ₹17,500/person. WhatsApp a quote.`,
   keywords: [`char dham yatra group package ${SITE.season}`, 'char dham yatra group booking', `char dham group package price ${SITE.season}`, 'char dham yatra large group', 'char dham group tour haridwar', `char dham group discount ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-group-package` },
   openGraph: { title: `Char Dham Group Package ${SITE.season}: Price & Discounts`, url: `${SITE.baseUrl}/blog/char-dham-group-package`, type: 'article', 

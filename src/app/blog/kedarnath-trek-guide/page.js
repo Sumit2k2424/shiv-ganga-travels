@@ -12,7 +12,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath Trek Guide ${SITE.season} | 16 km Route & Stays` },
-  description: `Kedarnath trek guide ${SITE.season} — 16km route from Gaurikund, stays, pony vs heli. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Complete Kedarnath trek guide — 16km route from Gaurikund, difficulty, stay options, best time to visit, and what to carry.`,
   keywords: [`kedarnath trek guide ${SITE.season}`,'kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips',`kedarnath yatra ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
   openGraph: {

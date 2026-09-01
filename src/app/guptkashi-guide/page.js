@@ -6,7 +6,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Guptkashi Guide ${SITE.season} | Kedarnath Night Halt | Temples & Hotels` },
-  description: 'Guptkashi (1,319m) — main night halt on the Kedarnath route. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Guptkashi at 1,319m, 31 km before Sonprayag, is the main night halt on the Kedarnath road. Vishwanath temple, Manikarnika Kund, helipad, hotels and distances.`,
   keywords: ['guptkashi','guptkashi uttarakhand','guptkashi to kedarnath','guptkashi temple','guptkashi to kedarnath distance','guptkashi helipad'],
   alternates: { canonical: `${SITE.baseUrl}/guptkashi-guide` },
 };

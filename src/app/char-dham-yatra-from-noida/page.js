@@ -9,7 +9,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Noida ${SITE.season} | Pickup & VIP Darshan` },
-  description: `Char Dham Yatra from Noida ${SITE.season} — 230km via Delhi–Meerut Expressway. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra from Noida ${SITE.season} — 230 km, 4 to 4.5 hours via the Delhi–Meerut Expressway. All-inclusive from ₹17,200 per person, zero commission.`,
   keywords: ['char dham yatra from noida',`char dham yatra noida ${SITE.season}`,'char dham package from noida','kedarnath from noida','haridwar from noida'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-noida` },
   openGraph: {

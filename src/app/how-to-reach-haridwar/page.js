@@ -4,7 +4,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Haridwar ${SITE.season} | Train, Flight & Road Guide` },
-  description: `How to reach Haridwar ${SITE.season} — train from Delhi, flight to Dehradun, bus & road routes. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Train, flight, bus, and road options from all major cities to Haridwar — starting point of Char Dham Yatra.`,
   // Note: airport-taxi keywords ('jolly grant airport haridwar', 'dehradun
   // airport haridwar') deliberately live on /dehradun-airport-to-haridwar-taxi
   // instead. That page owns the transactional intent; this one owns the

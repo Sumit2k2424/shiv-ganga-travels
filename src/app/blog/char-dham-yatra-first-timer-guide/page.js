@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for First Timers ${SITE.season} | Complete Guide` },
-  description: `First Char Dham Yatra ${SITE.season}? Registration, packing, fitness prep. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `First Char Dham Yatra in ${SITE.season}? Registration, packing, fitness prep, total cost and route order — written by a 15-year Haridwar yatra operator.`,
   keywords: ['char dham yatra for first timers', `char dham yatra beginners guide ${SITE.season}`, 'first time char dham yatra tips', 'char dham yatra what to expect', 'char dham yatra complete planning guide'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-first-timer-guide` },
 };

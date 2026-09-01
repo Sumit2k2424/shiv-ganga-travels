@@ -9,7 +9,7 @@ import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Top 10 Places to Visit on Char Dham Yatra ${SITE.season}` },
-  description: `Best places to visit during Char Dham Yatra ${SITE.season} beyond the temples. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Go beyond the 4 dhams: Harsil Valley, Mana Village (last Indian village), Triyuginarayan, Devprayag Panch Prayag, Dhari Devi. What to see without adding extra days.`,
   keywords: ['places to visit during char dham yatra', `char dham yatra sightseeing ${SITE.season}`, 'tourist places char dham route', 'attractions near kedarnath', 'places near badrinath', 'harsil valley char dham', 'char dham yatra side trips'],
   alternates: { canonical: `${SITE.baseUrl}/blog/places-to-visit-during-char-dham-yatra` },
   openGraph: {

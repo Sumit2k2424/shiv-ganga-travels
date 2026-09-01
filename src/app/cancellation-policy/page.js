@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: { absolute: `Cancellation & Refund Policy ${SITE.season} | Shiv Ganga Travels` },
-  description: 'Clear cancellation & refund policy for Char Dham Yatra packages. Trusted operator, 15+ yrs experience, 30-day free cancellation, full transparency.',
+  description: `How cancellation and refunds work on Char Dham packages — the recommended 30-day window, what each slab returns, and refunds processed within 7 working days.`,
   alternates: { canonical: `${SITE.baseUrl}/cancellation-policy` },
 };
 

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Green Card for Char Dham Yatra 2026 | Rules & Cost' },
-  description: 'Green Card (Trip Card) mandatory for non-Uttarakhand vehicles 2026. Trusted operator, 15+ yrs experience, instant confirmation.',
+  description: `All vehicles registered outside Uttarakhand need a Green Card to drive on Char Dham routes in 2026. Apply at greencard.uk.gov.in. ₹50 fee. Step-by-step guide.`,
   keywords: ['green card char dham yatra 2026', 'green card uttarakhand vehicle permit 2026', 'char dham trip card 2026', 'char dham vehicle permit', 'uttarakhand green card apply online', 'char dham yatra car permit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/green-card-char-dham-yatra-2026` },
   openGraph: {

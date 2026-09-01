@@ -7,7 +7,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Chitai Golu Devta Temple ${SITE.season} | Timings & Route | Almora` },
-  description: 'Chitai Golu Devta Temple, Almora — darshan timings & the letter ritual. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `The Kumaon shrine where people file written petitions to a god and hang a bell when the verdict comes. Timings, the letter ritual, distances and route.`,
   keywords: ['chitai golu devta temple','golu devta temple almora','chitai golu devta temple almora uttarakhand','chitai temple almora','golu devta god of justice','chitai golu devta temple timings','golu devta ki chitthi','golu devta mandir almora','how to reach chitai golu devta temple','chitai golu devta temple bells','goljyu','chitai vs ghorakhal golu devta'],
   alternates: { canonical: `${SITE.baseUrl}/chitai-golu-devta-temple` },
   openGraph: {

@@ -6,7 +6,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath Height ${SITE.season} | 3,583m Altitude & Location Facts` },
-  description: 'Kedarnath sits at 3,583m in Rudraprayag district. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `How high is Kedarnath, where exactly is it, and what does the altitude do to your body? Every number a pilgrim actually needs, from an operator who runs the route.`,
   keywords: ['kedarnath height','kedarnath altitude','kedarnath height in km','kedarnath sea level height','kedarnath which state','kedarnath location','kedarnath district','kedarnath uttarakhand 246445','elevation of kedarnath'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-height` },
   openGraph: {

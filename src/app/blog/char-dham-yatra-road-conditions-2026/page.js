@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Char Dham Road Conditions 2026 | Live Route Status' },
-  description: 'Char Dham Yatra 2026 road conditions — all 4 routes, landslide stretches. Trusted operator, 15+ yrs experience, instant confirmation.',
+  description: `Current road conditions for all 4 Char Dham routes 2026. Landslide zones, All-Weather Road project status, Joshimath update, and mountain driving tips.`,
   keywords: ['char dham yatra road condition 2026', 'char dham road status 2026', 'char dham yatra route condition', 'kedarnath route road condition 2026', 'badrinath road condition 2026', 'char dham all weather road update'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-road-conditions-2026` },
   openGraph: {

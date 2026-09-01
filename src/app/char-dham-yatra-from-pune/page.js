@@ -9,7 +9,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Pune ${SITE.season} | Pickup & VIP Darshan` },
-  description: `Char Dham Yatra from Pune ${SITE.season} — 1,360km, Pune–Dehradun train or fly + train. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra from Pune ${SITE.season} — 1,360 km, Pune–Dehradun train in 30h or fly to Delhi and train. All-inclusive from ₹24,999 per person, zero commission.`,
   keywords: ['char dham yatra from pune',`char dham yatra pune ${SITE.season}`,'char dham package from pune','kedarnath from pune','haridwar from pune'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-pune` },
   openGraph: {

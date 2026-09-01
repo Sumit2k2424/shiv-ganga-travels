@@ -7,7 +7,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `2 Dham Yatra Package ${SITE.season} | Kedarnath & Badrinath` },
-  description: `Do Dham Yatra ${SITE.season} — Kedarnath + Badrinath from Haridwar, 5N/6D from ₹8,200/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Do Dham Yatra (Kedarnath + Badrinath) ${SITE.season} from Haridwar. 5N/6D from ₹8,200. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.`,
   keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package',`do dham yatra ${SITE.season}`,'kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
   openGraph: {

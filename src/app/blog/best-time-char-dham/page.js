@@ -11,7 +11,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Best Time for Char Dham Yatra ${SITE.season} | Month-by-Month Guide` },
-  description: `Best time for Char Dham Yatra ${SITE.season} — May & Sept-Oct ideal. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Best time for Char Dham Yatra ${SITE.season} — May has the clearest mornings and the biggest crowds, October the coldest nights and cleanest views. Month by month.`,
   keywords: ['best time for char dham yatra', `char dham yatra best month ${SITE.season}`, 'char dham yatra weather month wise', `char dham opening dates ${SITE.season}`, 'char dham yatra season', 'best month char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/best-time-char-dham` },
   openGraph: {

@@ -6,7 +6,7 @@ import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Gangotri Temple Guide ${SITE.season} | Darshan Timings, History & Aarti` },
-  description: `Gangotri Temple ${SITE.season} — darshan timings, Ganga aarti, altitude 3,415m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`,
   keywords: ['gangotri temple',`gangotri temple timings ${SITE.season}`,'gangotri dham',`gangotri opening date ${SITE.season}`,'gangotri ganga aarti','gangotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-temple` },
   openGraph: { title: `Gangotri Temple ${SITE.season} — Darshan Timings, History & Complete Guide`, description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`, url: `${SITE.baseUrl}/gangotri-temple`, type: 'website', 

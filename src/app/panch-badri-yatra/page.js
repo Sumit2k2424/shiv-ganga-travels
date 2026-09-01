@@ -7,7 +7,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Panch Badri Yatra Package ${SITE.season} | All 5 Badri Shrines` },
-  description: `Panch Badri Yatra ${SITE.season} — 6N/7D covering all 5 Badri shrines, from ₹18,000/person. Trusted operator, 15+ yrs experience, customizable itinerary & fixed departures.`,
+  description: `Visit all 5 sacred Badri shrines of Uttarakhand. Route, best time, package details and booking from Haridwar.`,
   keywords: ['panch badri yatra',`panch badri yatra ${SITE.season}`,'panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },
   openGraph: {

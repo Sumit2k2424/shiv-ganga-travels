@@ -11,7 +11,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Cost ${SITE.season} | Full Breakdown` },
-  description: `Char Dham Yatra cost ${SITE.season} — full per-person breakdown, no hidden costs. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Char Dham Yatra cost ${SITE.season} per person — budget ₹18,500–28,000, deluxe ₹28,000–40,000, luxury ₹45,000–65,000. Pony, helicopter and registration explained.`,
   keywords: [`char dham yatra cost ${SITE.season}`, 'char dham yatra total cost per person', `char dham yatra package price ${SITE.season}`, 'char dham yatra budget breakdown', `kedarnath pony cost ${SITE.season}`, `char dham helicopter cost ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title: `Char Dham Yatra Cost ${SITE.season}: Full Per-Person Breakdown`, description: `Char Dham Yatra cost ${SITE.season} per person: budget ₹18,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter charter ₹2.09L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.`, url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article', 

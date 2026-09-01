@@ -9,7 +9,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Package ${SITE.season} | Hotels & Transport Included` },
-  description: `Char Dham Yatra Package ${SITE.season} from Haridwar — 9N/10D from ₹13,900/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra package ${SITE.season} from Haridwar — 9N/10D from ₹13,900 per person with hotels, meals and transport included. Booked direct, no agent commission.`,
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package',`4 dham yatra ${SITE.season}`,
     `char dham yatra ${SITE.season}`,'char dham package from haridwar','chardham package from haridwar',

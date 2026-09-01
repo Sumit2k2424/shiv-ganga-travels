@@ -21,7 +21,7 @@ const PANCH = [
 
 export const metadata = {
   title: { absolute: `Panch Kedar Yatra Package ${SITE.season} | All 5 Shiva Temples` },
-  description: `Panch Kedar Yatra ${SITE.season} — Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar, 9N/10D from ₹16,500/person. Trusted operator, 15+ yrs experience, fixed departures.`,
+  description: `Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`,
   keywords: [`panch kedar yatra, panch kedar yatra ${SITE.season}, panch kedar trek, 5 kedar yatra, tungnath yatra, rudranath trek`],
   alternates: { canonical: `${SITE.baseUrl}/panch-kedar-yatra` },
   openGraph: { title:`Panch Kedar Yatra ${SITE.season} — All 5 Shiva Temples Trek Guide & Package`, description:`Complete Panch Kedar Yatra guide ${SITE.season}. Kedarnath, Tungnath, Rudranath, Madmaheshwar & Kalpeshwar — all 5 Shiva temples. Package ₹16,500. 9N/10D.`, url:`${SITE.baseUrl}/panch-kedar-yatra`, type:'website', 

@@ -7,7 +7,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Dhari Devi Temple ${SITE.season} | Timings & How to Reach | Guardian Goddess` },
-  description: 'Dhari Devi Temple near Srinagar — darshan 6 AM–8 PM. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Dhari Devi near Srinagar — guardian goddess of the Char Dham, her idol said to change face three times a day. Darshan 6 AM to 8 PM, route and distances.`,
   keywords: ['dhari devi temple','dhari devi mandir','dhari devi','dhari devi temple story','dhari devi temple history','dhari devi temple timings','dhari devi temple location','dhari devi temple distance from srinagar','dhari devi kalyasaur','dhari devi temple uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/dhari-devi-temple` },
   openGraph: {

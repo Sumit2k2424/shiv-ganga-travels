@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 export const metadata = {
   title: { absolute: `Kedarnath Temple Guide ${SITE.season} | Darshan Timings & History | Trek Guide` },
-  description: `Kedarnath Temple ${SITE.season} — darshan timings, history, altitude 3,583m. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & ${SITE.season} opening dates.`,
   keywords: ['kedarnath temple',`kedarnath temple timings ${SITE.season}`,'kedarnath temple history',`kedarnath darshan ${SITE.season}`,`kedarnath temple opening date ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
   openGraph: { title: `Kedarnath Temple ${SITE.season} — Darshan Timings, History & Complete Guide`, description: `Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & ${SITE.season} opening dates.`, url: `${SITE.baseUrl}/kedarnath-temple`, type: 'website', 

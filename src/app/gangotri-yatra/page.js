@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Gangotri Yatra Package ${SITE.season} | Motor Road, No Trek` },
-  description: `Gangotri Yatra ${SITE.season} from Haridwar — ₹4,250 per person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. No trek required.`,
+  description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`,
   keywords: [`gangotri yatra, gangotri yatra ${SITE.season}, gangotri yatra package, haridwar to gangotri, gangotri temple guide`],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
   openGraph: { title: `Gangotri Yatra ${SITE.season} — Package, Route, Temple Guide`, description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`, url:`${SITE.baseUrl}/gangotri-yatra`, type:'website', 

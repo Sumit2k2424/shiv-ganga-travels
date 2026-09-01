@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Uttarakhand Weather ${SITE.season} | All Char Dham Shrines | Month-wise` },
-  description: `Uttarakhand weather ${SITE.season} — temperatures at all four shrines. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Month-by-month Uttarakhand weather for Char Dham Yatra ${SITE.season}: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.`,
   keywords: [`uttarakhand weather month by month ${SITE.season}`, `kedarnath weather ${SITE.season}`, 'char dham yatra weather guide', 'badrinath temperature month wise', 'uttarakhand climate chart', 'kedarnath temperature june', 'char dham yatra weather september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
   openGraph: { title: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines`, url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article', 

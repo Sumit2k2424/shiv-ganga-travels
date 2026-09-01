@@ -6,7 +6,7 @@ import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Yamunotri Temple Guide ${SITE.season} | Darshan Timings, Trek & History` },
-  description: `Yamunotri Temple ${SITE.season} — darshan timings, 6km trek, Surya Kund hot spring. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`,
   keywords: ['yamunotri temple',`yamunotri temple timings ${SITE.season}`,'yamunotri dham','yamunotri trek',`yamunotri opening date ${SITE.season}`,'surya kund yamunotri','yamunotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-temple` },
   openGraph: { title: `Yamunotri Temple ${SITE.season} — Trek, Timings, History & Complete Guide`, description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`, url: `${SITE.baseUrl}/yamunotri-temple`, type: 'website', 

@@ -11,7 +11,7 @@ const badrinathRoute = ROUTES['haridwar-badrinath'];
 
 export const metadata = {
   title: { absolute: `Badrinath Yatra Package ${SITE.season} | VIP Darshan Included` },
-  description: `Badrinath Yatra Package ${SITE.season} from Haridwar — 2N/3D from ₹4,500/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',

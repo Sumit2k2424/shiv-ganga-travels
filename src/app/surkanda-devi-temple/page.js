@@ -7,7 +7,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Surkanda Devi Temple ${SITE.season} | Timings, Ropeway & Route | Dhanaulti` },
-  description: 'Surkanda Devi Temple near Dhanaulti — timings, ropeway fare, trek. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `A Shakti Peeth on a fogbound ridge above Dhanaulti. Real temple timings, ropeway fare, the trek from Kaddukhal, and how to reach from Haridwar.`,
   keywords: ['surkanda devi temple','surkanda devi temple timings','surkanda devi ropeway price','how to reach surkanda devi temple','surkanda devi temple trek','surkanda devi temple from haridwar','kaddukhal to surkanda devi','surkanda devi temple near dhanaulti','surkanda devi temple near mussoorie','shakti peeth triangle uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/surkanda-devi-temple` },
   openGraph: {

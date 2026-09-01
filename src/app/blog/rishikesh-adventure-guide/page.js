@@ -9,7 +9,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
   title: { absolute: `Rishikesh Adventure Guide ${SITE.season} | Rafting & Bungee` },
-  description: `Rishikesh adventure guide ${SITE.season} — rafting, bungee, camping. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Rishikesh adventure guide ${SITE.season} — white water rafting, the 83 m bungee, beach camping and yoga. Honest costs rather than the inflated tourist prices.`,
   keywords: [`rishikesh adventure guide ${SITE.season}`, `rishikesh river rafting price ${SITE.season}`, 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },
 };

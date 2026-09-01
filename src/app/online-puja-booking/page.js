@@ -10,7 +10,7 @@ const VERIFIED_ISO = '2026-08-22';
 
 export const metadata = {
   title: { absolute: `Online Puja Booking ${SITE.season} | Kedarnath & Badrinath` },
-  description: `Book online puja at Kedarnath, Badrinath, Gangotri & Yamunotri ${SITE.season}. Trusted operator, 15+ yrs experience, instant confirmation. Managed from Haridwar.`,
+  description: `Advance puja booking at Kedarnath, Badrinath, Gangotri and Yamunotri temples for Char Dham Yatra ${SITE.season}, performed by temple-registered pandits.`,
   keywords: ['online puja booking kedarnath','badrinath abhishek booking','kedarnath mahabhishek','rudrabhishek kedarnath',`char dham puja booking ${SITE.season}`,'badrinath online puja'],
   alternates: { canonical: `${SITE.baseUrl}/online-puja-booking` },
 };

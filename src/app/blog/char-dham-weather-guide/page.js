@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Weather ${SITE.season} | Month-by-Month Guide` },
-  description: `Char Dham Yatra weather ${SITE.season} — temperatures, rain & snow risk. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Char Dham weather month by month — Kedarnath drops to 0–5°C after dark even in June. The best windows are late April to mid-June and late September to October.`,
   keywords: [`char dham weather ${SITE.season}`, 'char dham yatra weather', 'kedarnath temperature', 'badrinath weather month wise', 'char dham best weather month'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-weather-guide` },
   openGraph: { title: `Char Dham Yatra Weather ${SITE.season} — Month by Month`, url: `${SITE.baseUrl}/blog/char-dham-weather-guide`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Weather ${SITE.season}` }] },

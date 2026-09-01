@@ -4,7 +4,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Statistics ${SITE.season} | Pilgrim Data & Trends` },
-  description: `Char Dham Yatra statistics ${SITE.season} — pilgrim numbers, costs, route data. Trusted operator, 15+ yrs experience, free to cite with attribution.`,
+  description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', `char dham statistics ${SITE.season}`, 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
   openGraph: {

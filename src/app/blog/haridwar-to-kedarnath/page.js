@@ -9,7 +9,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
-  description: `Haridwar to Kedarnath ${SITE.season} — 235km road + 16km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Haridwar to Kedarnath ${SITE.season} — 235 km by road via Devprayag to Guptkashi, then Gaurikund and a 16 km trek. Cab, bus and helicopter options compared.`,
   keywords: [`haridwar to kedarnath distance ${SITE.season}`, 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
 };

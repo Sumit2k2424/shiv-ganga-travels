@@ -7,7 +7,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Gangotri Weather ${SITE.season} | Month-wise Temperature Guide` },
-  description: `Gangotri weather ${SITE.season} — temperatures at 3,415m, road conditions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.`,
   keywords: ['gangotri weather','gangotri temperature','gangotri weather may','gangotri best time to visit',`gangotri weather ${SITE.season}`,'gangotri snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-weather` },
   openGraph: {

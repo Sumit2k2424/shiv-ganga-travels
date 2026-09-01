@@ -21,7 +21,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra with Kids ${SITE.season} | Age & Altitude Safety` },
-  description: `Char Dham Yatra with children ${SITE.season} — altitude safety, child-friendly dhams. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Char Dham with children — doable for fit kids from about 8, ponies from ₹1,800 if they cannot walk. Gangotri needs no trek at all; altitude rules by age.`,
   keywords: [`char dham yatra with kids ${SITE.season}`, 'char dham yatra with children', 'kedarnath yatra with family', 'char dham yatra family package', 'char dham with small children', 'kids char dham yatra altitude safety'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
 };

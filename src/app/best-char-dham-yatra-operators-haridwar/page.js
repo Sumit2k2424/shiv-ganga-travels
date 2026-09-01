@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `6 Best Char Dham Yatra Operators in Haridwar ${SITE.season} | Ranked & Compared` },
-  description: `Ranked Char Dham operators in Haridwar ${SITE.season} by rating, experience & pricing. Trusted operator, 15+ yrs experience, transparent pricing.`,
+  description: `Honest comparison of top Char Dham operators ranked by Google rating, price transparency, experience and senior pilgrim capability.`,
   keywords: [`best char dham yatra operators haridwar ${SITE.season}`,'best char dham operator haridwar review',`top char dham yatra operators ${SITE.season}`,'char dham yatra haridwar operator comparison','best char dham package operator'],
   alternates: { canonical: `${SITE.baseUrl}/best-char-dham-yatra-operators-haridwar` },
   openGraph: {

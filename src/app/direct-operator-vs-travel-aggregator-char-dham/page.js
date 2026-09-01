@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Direct Operator vs Aggregator ${SITE.season} | Char Dham Booking Guide` },
-  description: 'Book Char Dham Yatra without an agent. Trusted operator, 15+ yrs experience, zero commission, instant confirmation. Verify any local operator.',
+  description: `What you pay extra for when booking through an aggregator vs a local operator. How the Char Dham booking market works.`,
   keywords: ['char dham yatra direct operator vs aggregator','how to book char dham yatra without agent','char dham yatra hidden charges','direct booking char dham haridwar','char dham yatra no commission','char dham local operator vs online portal'],
   alternates: { canonical: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham` },
   openGraph: {

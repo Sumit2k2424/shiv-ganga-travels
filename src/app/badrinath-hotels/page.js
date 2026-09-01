@@ -22,7 +22,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: `Hotels Near Badrinath ${SITE.season} | Best Stays | Joshimath & Chamoli` },
-  description: `Hotels near Badrinath ${SITE.season} — Badrinath town, Joshimath, Chamoli & Rudraprayag. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Where to stay for Badrinath Yatra — hotel guide for Badrinath town, Joshimath, Chamoli and Pipalkoti.`,
   keywords: ['hotels near badrinath',`badrinath hotels ${SITE.season}`,'joshimath hotels','badrinath accommodation','where to stay badrinath yatra'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-hotels` },
   openGraph: {

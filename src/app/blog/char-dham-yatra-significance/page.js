@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
-  description: `Char Dham Yatra ${SITE.season} — history & spiritual significance of the 4 dhams. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.`,
   // Absorbed /blog/char-dham-yatra-history (Aug 2026) — its keyword set is
   // folded in here so the merged page covers both the "history/origins" and
   // "significance/meaning" intents that used to be split across two URLs.

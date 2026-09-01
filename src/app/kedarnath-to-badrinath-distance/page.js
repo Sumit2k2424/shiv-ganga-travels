@@ -6,7 +6,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath to Badrinath Distance ${SITE.season} | Route, Time & Taxi Fare` },
-  description: 'Kedarnath to Badrinath — 218km by road, 8–10 hours. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.',
+  description: `Kedarnath to Badrinath is 218 km from Gaurikund, 9 to 10 hours driving — plus the 16 km trek down from the temple first. Taxi fares and the night-driving ban.`,
   keywords: ['kedarnath to badrinath distance','badrinath to kedarnath distance','kedarnath to badrinath','badrinath to kedarnath','kedarnath to badrinath taxi','kedarnath to badrinath route'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-to-badrinath-distance` },
 };

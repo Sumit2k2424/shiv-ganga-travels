@@ -6,7 +6,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Badrinath Tour Package ${SITE.season} | Hotels & Transport Included` },
-  description: `Badrinath Tour Package ${SITE.season} — 2N/3D from ₹4,500/person, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).`,
+  description: `Badrinath 2N/3D from Haridwar, no trek. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.`,
   keywords: [
     'badrinath tour package', 'badrinath yatra package', `badrinath tour package ${SITE.season}`,
     'badrinath package from haridwar', 'badrinath yatra package from haridwar', 'badrinath ek dham yatra',

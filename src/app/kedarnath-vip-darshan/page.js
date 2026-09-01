@@ -8,7 +8,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath VIP Darshan ${SITE.season} | Booking Guide` },
-  description: `Kedarnath VIP darshan ${SITE.season} — priority access via BKTC pujas. Trusted operator, 15+ yrs experience, instant confirmation. Booking steps & scam guide.`,
+  description: `No flat VIP pass at Kedarnath — priority sanctum access comes bundled with BKTC pujas, ₹300 to ₹28,600. Full ${SITE.season} price list, booking steps and sparsh darshan.`,
   keywords: [`kedarnath vip darshan ${SITE.season}`,'kedarnath vip darshan booking','kedarnath vip darshan ticket price','kedarnath vip darshan online booking','kedarnath puja booking','kedarnath rudrabhishek price','kedarnath special darshan','kedarnath sparsh darshan','kedarnath mahabhishek booking','bktc puja booking','kedarnath vip darshan cost',`kedarnath darshan timing ${SITE.season}`,'badrinath vip darshan price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-vip-darshan` },
   openGraph: {

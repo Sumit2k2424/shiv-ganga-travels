@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Badrinath ${SITE.season} | Road Route & Helicopter Guide` },
-  description: `How to reach Badrinath Dham ${SITE.season} — road via Joshimath, no trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.`,
   keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath',`badrinath by road ${SITE.season}`,'nearest airport badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-badrinath` },
   openGraph: {

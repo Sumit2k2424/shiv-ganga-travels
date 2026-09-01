@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Registration 2026 | Online & WhatsApp' },
-  description: 'Kedarnath registration 2026 is free — documents, daily limits, 55+ rules. Trusted operator, 15+ yrs experience, instant confirmation.',
+  description: `Mandatory registration for Kedarnath 2026. Step-by-step online guide, WhatsApp option, daily 18,000 pilgrim cap. Free e-pass with QR code. Portal opened March 6.`,
   keywords: ['kedarnath yatra registration 2026', 'kedarnath registration 2026', 'kedarnath yatra registration online', 'kedarnath registration process', 'kedarnath yatra biometric', 'kedarnath registration documents'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-registration-2026` },
   openGraph: {

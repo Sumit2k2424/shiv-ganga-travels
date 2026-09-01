@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra in 7 Days ${SITE.season} | Itinerary & Honest Advice` },
-  description: `Char Dham Yatra in 7 days ${SITE.season} — day-by-day itinerary. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.`,
   keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', `char dham yatra short duration ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article', 

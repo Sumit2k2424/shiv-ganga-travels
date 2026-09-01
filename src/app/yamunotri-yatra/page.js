@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Yamunotri Yatra Package ${SITE.season} | Trek & Pony Guide` },
-  description: `Yamunotri Yatra ${SITE.season} from Haridwar — ₹4,500 per person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 6km trek from Janki Chatti.`,
+  description: `Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`,
   keywords: [`yamunotri yatra, yamunotri yatra ${SITE.season}, yamunotri trek, haridwar to yamunotri, yamunotri yatra package`],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
   openGraph: { title:`Yamunotri Yatra ${SITE.season} — Trek, Package, Surya Kund & Temple Guide`, description:`Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`, url:`${SITE.baseUrl}/yamunotri-yatra`, type:'website', 

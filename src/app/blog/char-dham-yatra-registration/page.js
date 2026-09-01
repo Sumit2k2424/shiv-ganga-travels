@@ -11,7 +11,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Registration ${SITE.season} | Free e-Pass Guide` },
-  description: `Char Dham Yatra ${SITE.season} registration is free — step-by-step guide. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Char Dham registration ${SITE.season} is free and mandatory — Sonprayag and Gaurikund checkpoints turn back unregistered pilgrims. e-Pass steps, OTP fixes, NRI rules.`,
   keywords: [
     `char dham yatra registration ${SITE.season}`,
     'char dham yatra registration online',

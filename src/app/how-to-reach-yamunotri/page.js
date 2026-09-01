@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Yamunotri ${SITE.season} | Road, Trek & Route Guide` },
-  description: `How to reach Yamunotri Dham ${SITE.season} — road route, helicopter, 6km trek. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.`,
   keywords: ['how to reach yamunotri','yamunotri route','haridwar to yamunotri','janki chatti to yamunotri','yamunotri trek','how to reach yamunotri from delhi','nearest railway station to yamunotri'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-yamunotri` },
   openGraph: {

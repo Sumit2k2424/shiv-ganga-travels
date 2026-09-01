@@ -16,7 +16,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Hills & Pilgrimage` },
-  description: `Uttarakhand Tour Packages ${SITE.season} from Haridwar, from ₹3,750/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`,
   keywords: [`uttarakhand tour packages, uttarakhand tour packages ${SITE.season}, uttarakhand tourism packages, best uttarakhand packages from haridwar`],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
   openGraph: { title:`Uttarakhand Tour Packages ${SITE.season} — Hills, Wildlife, Adventure & Pilgrimage`, description:`Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`, url:`${SITE.baseUrl}/uttarakhand-tour-packages`, type:'website', 

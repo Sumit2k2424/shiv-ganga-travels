@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Hotels Near Kedarnath ${SITE.season} | Best Stays | Guptkashi, Sonprayag & Phata` },
-  description: `Hotels near Kedarnath ${SITE.season} — Guptkashi, Sonprayag, Kedarnath Top & Phata. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Where to stay for Kedarnath Yatra — complete hotel guide for Guptkashi, Sonprayag, Kedarnath Top and Phata.`,
   keywords: ['hotels near kedarnath',`kedarnath hotels ${SITE.season}`,'guptkashi hotels','sonprayag hotels','kedarnath top stay','kedarnath accommodation'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-hotels` },
   openGraph: {

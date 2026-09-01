@@ -13,7 +13,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Guide ${SITE.season} | Route, Cost & Registration Tips` },
-  description: `Char Dham Yatra ${SITE.season} planning guide — route, cost, registration. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Char Dham Yatra ${SITE.season} — four shrines, 10 to 12 days, roughly 1,200 km by road. Route order, cost, registration and packing from a working Haridwar operator.`,
   keywords: [`char dham yatra complete guide ${SITE.season}`, 'char dham yatra route map', `char dham yatra cost ${SITE.season}`, 'char dham yatra registration', 'char dham yatra packing list', `char dham yatra tips ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-guide` },
   openGraph: {

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Budget vs Premium ${SITE.season} | Compared` },
-  description: 'Budget Char Dham (₹13,900) vs Premium (₹38,000+) — honest comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Budget Char Dham package (₹13,900) vs Premium (₹38,000+) — what really changes in hotels, vehicles, meals and darshan. Honest comparison from Haridwar.`,
   keywords: ['char dham yatra budget vs premium', `char dham yatra package comparison ${SITE.season}`, 'is premium char dham package worth it', 'char dham yatra deluxe vs budget', 'char dham luxury package vs budget'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium` },
   openGraph: { title: 'Char Dham Budget vs Premium Package: What Changes?', url: `${SITE.baseUrl}/blog/char-dham-yatra-budget-vs-premium`, type: 'article', 

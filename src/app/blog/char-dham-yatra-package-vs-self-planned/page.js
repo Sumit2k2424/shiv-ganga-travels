@@ -24,7 +24,7 @@ const selfPlannedCosts = [
 
 export const metadata = {
   title: { absolute: `Char Dham Package vs Self-Planned Trip ${SITE.season} | Real Costs` },
-  description: `Char Dham package vs self-planned ${SITE.season} — honest cost comparison. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Char Dham package vs going independent in ${SITE.season} — honest cost comparison, what you gain and lose, and which option suits which type of pilgrim.`,
   keywords: ['char dham yatra package vs self planned', 'char dham yatra self booking', 'is char dham yatra package worth it', 'char dham yatra independent travel', `char dham package or self arranged ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-package-vs-self-planned` },
 };

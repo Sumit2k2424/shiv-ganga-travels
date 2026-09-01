@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Shiv Ganga vs MakeMyTrip ${SITE.season} | Char Dham` },
-  description: 'Shiv Ganga Travels ₹13,900 direct vs MakeMyTrip ₹32,479 with commission. Trusted operator, 15+ yrs experience, zero commission, instant confirmation.',
+  description: `Direct operator at ₹13,900 vs aggregator at ₹32,479. The ₹13,979 gap is the commission layer. Full breakdown.`,
   keywords: ['shiv ganga travels vs makemytrip char dham','char dham yatra direct booking vs makemytrip','char dham yatra no commission','makemytrip char dham price','char dham yatra hidden charges','book char dham without agent'],
   alternates: { canonical: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham` },
   openGraph: {

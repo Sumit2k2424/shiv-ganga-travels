@@ -9,7 +9,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Hyderabad ${SITE.season} | Pickup & VIP Darshan` },
-  description: `Char Dham Yatra from Hyderabad ${SITE.season} — 1,800km, 2h15m direct flight to Dehradun. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra from Hyderabad ${SITE.season} — 1,800 km, 2h 15m direct flight to Dehradun. All-inclusive from ₹25,999 per person, booked direct, zero commission.`,
   keywords: ['char dham yatra from hyderabad',`char dham yatra hyderabad ${SITE.season}`,'char dham package from hyderabad','kedarnath from hyderabad','haridwar from hyderabad'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-hyderabad` },
   openGraph: {

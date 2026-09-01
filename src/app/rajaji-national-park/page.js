@@ -7,7 +7,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Rajaji National Park Safari ${SITE.season} | Zones, Fees & Timings` },
-  description: 'Rajaji National Park jungle safari — entry fees, zones, tiger sightings. Trusted operator, 15+ yrs experience, instant confirmation.',
+  description: `A tiger reserve and elephant corridor 8 km from Rishikesh. Real entry fees, zone comparison, booking steps and how to reach from Haridwar.`,
   keywords: ['rajaji national park','rajaji national park safari','rajaji national park entry fee','rajaji national park timings','rajaji national park zones','chilla range safari','rajaji national park booking','rajaji national park from haridwar','rajaji national park from rishikesh','rajaji tiger reserve','best time to visit rajaji national park'],
   alternates: { canonical: `${SITE.baseUrl}/rajaji-national-park` },
   openGraph: {

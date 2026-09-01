@@ -33,7 +33,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: `How to Reach Gangotri ${SITE.season} | Road Route & Helicopter Guide` },
-  description: `How to reach Gangotri Dham ${SITE.season} — road via Uttarkashi, helicopter option. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Road route, helicopter, train options — complete guide to reach Gangotri Dham from Haridwar, Delhi and Dehradun.`,
   keywords: ['how to reach gangotri','gangotri route from haridwar','haridwar to gangotri distance','uttarkashi to gangotri','gangotri by road',`nearest airport gangotri ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-gangotri` },
   openGraph: {

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `September Char Dham Yatra ${SITE.season} | Post-Monsoon` },
-  description: `September Char Dham Yatra ${SITE.season} — clearest skies of the year. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Why mid-September to mid-October is the best window of the year for Char Dham, weather week by week, and how post-monsoon pre-booking works.`,
   keywords: [`september char dham yatra package ${SITE.season}`, 'post monsoon char dham yatra', 'char dham yatra in september', 'pre-book char dham autumn packages', 'char dham yatra september weather', 'post monsoon uttarakhand tour'],
   alternates: { canonical: `${SITE.baseUrl}/blog/september-char-dham-yatra` },
 };

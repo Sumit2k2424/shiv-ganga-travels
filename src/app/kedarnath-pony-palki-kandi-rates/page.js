@@ -8,7 +8,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath Pony & Palki Rates ${SITE.season} | Gaurikund` },
-  description: 'Kedarnath pony ₹3,000–4,500, palki ₹8,000–12,000 from Gaurikund. Trusted operator, 15+ yrs experience, honest pricing, instant confirmation.',
+  description: `Pony or ghoda ₹3,000–4,500 one way, kandi (pitthu) ₹3,500–5,000, palki ₹8,000–12,000 from Gaurikund. ${SITE.season} prepaid-counter rates, weight slabs and timings.`,
   keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates` },
   openGraph: {

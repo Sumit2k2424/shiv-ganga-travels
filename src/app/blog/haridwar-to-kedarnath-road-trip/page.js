@@ -10,7 +10,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath Road Trip ${SITE.season} | Route & Stops` },
-  description: `Haridwar to Kedarnath road trip ${SITE.season} — 235km via Devprayag & Rudraprayag. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Haridwar to Kedarnath road trip ${SITE.season}: 235 km via Devprayag, Rudraprayag and Guptkashi in 8–9 hours. Road tips, fuel stops and best overnight halts.`,
   keywords: [`haridwar to kedarnath road trip ${SITE.season}`, 'haridwar to kedarnath distance', 'haridwar to kedarnath route', 'haridwar to gaurikund distance', 'haridwar to sonprayag distance', 'kedarnath road trip from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip` },
   openGraph: { title: 'Haridwar to Kedarnath Road Trip: Route & Stops', url: `${SITE.baseUrl}/blog/haridwar-to-kedarnath-road-trip`, type: 'article', 

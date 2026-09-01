@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
-  description: `Char Dham Yatra for heart patients ${SITE.season} — altitude risk, precautions. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Char Dham with a heart condition — altitude risk, the certificate mandatory from 55, and why pony or palki beats walking. Written by operators, not doctors.`,
   keywords: ['char dham yatra for heart patients', `char dham yatra medical conditions ${SITE.season}`, 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', `char dham medical certificate ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
 };

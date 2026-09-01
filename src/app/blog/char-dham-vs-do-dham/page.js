@@ -10,7 +10,7 @@ import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham vs Do Dham Yatra ${SITE.season} | Compare` },
-  description: `Char Dham vs Do Dham Yatra ${SITE.season} — compare time, cost, difficulty. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹13,900 vs ₹8,200), difficulty and significance to pick the right pilgrimage for ${SITE.season}.`,
   keywords: ['char dham vs do dham yatra', 'difference between char dham and do dham', `do dham yatra ${SITE.season}`, 'which is better char dham or do dham', 'char dham vs do dham cost', 'do dham yatra from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-vs-do-dham` },
 };

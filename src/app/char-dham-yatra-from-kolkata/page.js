@@ -9,7 +9,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Kolkata ${SITE.season} | Pickup & VIP Darshan` },
-  description: `Char Dham Yatra from Kolkata ${SITE.season} — 1,500km, Doon Express 27.5h or 2h flight. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `Char Dham Yatra from Kolkata ${SITE.season} — 1,500 km, Doon Express 27.5h direct or a 2h flight. All-inclusive from ₹24,999 per person, zero commission.`,
   keywords: ['char dham yatra from kolkata',`char dham yatra kolkata ${SITE.season}`,'char dham package from kolkata','kedarnath from kolkata','haridwar from kolkata'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-kolkata` },
   openGraph: {

@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra in October ${SITE.season} | Weather, Crowds & Dates` },
-  description: `Char Dham Yatra in October ${SITE.season} — fewer crowds, clear skies. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `October Char Dham — monsoon gone, crowds gone, rooms cheaper, but Kedarnath nights hit −2°C and the temples close 10–13 November. Go in the first two weeks.`,
   keywords: [`char dham yatra in october ${SITE.season}`, 'kedarnath yatra october', 'char dham yatra october weather', 'char dham october closing dates', 'char dham off season october', 'best time char dham october'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
 };

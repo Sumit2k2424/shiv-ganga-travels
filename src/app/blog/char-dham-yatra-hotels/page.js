@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Hotels ${SITE.season} | Where Pilgrims Actually Stay` },
-  description: `Char Dham Yatra hotels ${SITE.season} — Barkot, Uttarkashi, Guptkashi, Badrinath. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `You rarely sleep at the temples themselves — pilgrims stay at Barkot, Uttarkashi, Guptkashi or Sersi, and Joshimath. Kedarnath itself has only huts and tents.`,
   keywords: ['char dham yatra hotels', `char dham hotels ${SITE.season}`, 'where to stay char dham', 'kedarnath accommodation', 'badrinath hotels booking'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-hotels` },
   openGraph: { title: `Char Dham Yatra Hotels ${SITE.season} — Where Pilgrims Stay`, url: `${SITE.baseUrl}/blog/char-dham-yatra-hotels`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Hotels ${SITE.season}` }] },

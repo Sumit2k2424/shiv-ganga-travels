@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Char Dham Package Types ${SITE.season} | Budget to Heli` },
-  description: 'Char Dham packages compared — Budget, Deluxe, Premium, Helicopter. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Budget ₹13,900 · Deluxe ₹35,000 · Premium ₹55,000 · Helicopter ₹2.4L. What each type includes, who it suits, and how to choose. Honest guide from 15-year operator.`,
   keywords: [`types of char dham yatra packages ${SITE.season}`, 'char dham yatra package types', 'budget char dham package', 'deluxe char dham package', `char dham package comparison ${SITE.season}`, 'which char dham package to choose', 'char dham budget vs luxury'],
   alternates: { canonical: `${SITE.baseUrl}/blog/types-of-char-dham-yatra-packages` },
   openGraph: {

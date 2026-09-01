@@ -7,7 +7,7 @@ import { h2, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Delhi ${SITE.season} | Train & Flight Pickup` },
-  description: `Char Dham Yatra from Delhi ${SITE.season} — 250–335 km, trains & flights explained. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `250–335 km depending on pickup point. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.`,
   keywords: ['char dham yatra from delhi','char dham yatra package from delhi','delhi to haridwar char dham',`char dham tour from delhi ${SITE.season}`,'chardham yatra delhi','delhi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-delhi` },
   openGraph: {

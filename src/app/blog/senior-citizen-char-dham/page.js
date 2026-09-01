@@ -11,7 +11,7 @@ import { h2 } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for Senior Citizens ${SITE.season} | Complete Guide` },
-  description: `Senior citizens on Char Dham Yatra ${SITE.season} — medical certificate, pony, VIP darshan. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `There is no official age limit for Char Dham. Our Senior Special is ₹21,000 for 12N/13D with pony or palki, a medical attendant, oxygen and pulse oximeters.`,
   keywords: [`senior citizen char dham yatra ${SITE.season}`, 'char dham yatra for elderly', `char dham yatra age limit ${SITE.season}`, 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
   openGraph: { title:`Char Dham Yatra for Senior Citizens ${SITE.season}: Guide`, description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article', 

@@ -11,7 +11,7 @@ import ExpertNote from '@/components/ExpertNote';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra ${SITE.season} | History, Significance & Route Guide` },
-  description: `Char Dham Yatra ${SITE.season} — history, order of visit, expert FAQs. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes since 2010.`,
   keywords: [
     'char dham yatra complete guide','char dham history','char dham significance',`char dham yatra ${SITE.season}`,
     'char dham order of visit','kedarnath history','badrinath significance','gangotri temple history',

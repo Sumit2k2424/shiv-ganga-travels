@@ -7,7 +7,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra FAQ ${SITE.season} | 50 Questions Answered` },
-  description: `Char Dham Yatra ${SITE.season} — 50 expert-answered questions. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `50 expert answers to the most asked Char Dham Yatra questions. Cost, registration, safety, packing, helicopter, senior citizens and more.`,
   keywords: [`char dham yatra faq ${SITE.season}`, 'char dham yatra questions answers', `char dham yatra ${SITE.season} questions`, 'kedarnath yatra faq', 'char dham yatra common questions'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-faq` },
   openGraph: {

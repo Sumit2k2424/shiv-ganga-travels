@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Haridwar Tour Package ${SITE.season} | Ganga Aarti Included` },
-  description: `Haridwar Tour Package ${SITE.season} from ₹2,999/person. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation. Har Ki Pauri, Mansa Devi.`,
+  description: `Haridwar tour packages from ₹2,999 — Har Ki Pauri Ganga Aarti, Mansa Devi and Chandi Devi ropeways, Rishikesh combo. Direct operator in Haridwar since 2010.`,
   keywords: [
     'haridwar tour package','haridwar tour and travels','haridwar tour','haridwar package',
     'haridwar trip package','haridwar rishikesh tour package','haridwar tour package from delhi',

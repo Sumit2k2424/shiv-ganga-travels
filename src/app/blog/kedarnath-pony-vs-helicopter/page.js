@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `Kedarnath Pony vs Helicopter ${SITE.season} | Cost & Verdict` },
-  description: `Kedarnath pony vs helicopter ${SITE.season} — cost, time, comfort compared. Trusted operator, 15+ yrs experience, instant confirmation.`,
+  description: `Kedarnath pony vs helicopter ${SITE.season}: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.`,
   keywords: [`kedarnath pony vs helicopter ${SITE.season}`, 'kedarnath helicopter or pony', `kedarnath pony cost ${SITE.season}`, `kedarnath helicopter cost ${SITE.season}`, 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };

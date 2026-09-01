@@ -6,7 +6,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Kedarnath Tour Package ${SITE.season} | Hotels & Transport Included` },
-  description: `Kedarnath Tour Package ${SITE.season} — 3N/4D from ₹5,250/person. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation. 4.7★ (54 reviews).`,
+  description: `Kedarnath 3N/4D from Haridwar. Trusted operator, fixed departures, instant confirmation. ₹0 to enquire.`,
   keywords: [
     'kedarnath tour package', 'kedarnath yatra package', `kedarnath tour package ${SITE.season}`,
     'kedarnath package from haridwar', 'kedarnath trip cost', 'kedarnath tour package price',

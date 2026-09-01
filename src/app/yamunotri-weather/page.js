@@ -105,7 +105,7 @@ const td = { padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5, vertic
 
 export const metadata = {
   title: { absolute: `Yamunotri Weather ${SITE.season} | Month-wise Temperature Guide` },
-  description: `Yamunotri weather ${SITE.season} — temperatures at 3,291m, what to pack. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+  description: `Yamunotri weather month by month at 3,291m — what to pack each season, from fleece and rain ponchos to thermals and gloves. Best windows and monsoon risk.`,
   keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit',`yamunotri weather ${SITE.season}`,'yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },
   openGraph: {

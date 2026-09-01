@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 
 export const metadata = {
   title: { absolute: `Places to See Around Kedarnath ${SITE.season} | Beyond the Temple` },
-  description: 'What to see at Kedarnath besides the temple — Vasuki Tal, Triyuginarayan. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Beyond the temple — Bhairavnath on the ridge, the Adi Shankaracharya Samadhi, Gandhi Sarovar and Vasuki Tal at 4,150m. Lower down, Triyuginarayan and Guptkashi.`,
   keywords: ['kedarnath places to see', 'places to visit kedarnath', 'kedarnath sightseeing', 'vasuki tal kedarnath', 'triyuginarayan temple'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-places-to-see` },
   openGraph: { title: `Places to See in & Around Kedarnath ${SITE.season}`, url: `${SITE.baseUrl}/blog/kedarnath-places-to-see`, type: 'article', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Places to See Around Kedarnath' }] },

@@ -6,7 +6,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Scams ${SITE.season} | Spot & Avoid Booking Fraud` },
-  description: `Char Dham Yatra scams ${SITE.season} — fake helicopter & hotel fraud rising. Trusted operator, 15+ yrs experience, verify any operator in 60 seconds.`,
+  description: `Fake heli, hotel & registration scams are rising. Red flags, 60-second operator check, official portals, report steps.`,
   keywords: [
     'char dham yatra scam', `char dham yatra booking scam ${SITE.season}`, 'kedarnath helicopter booking scam',
     'chardham hotel booking scam', 'char dham fake website', 'char dham fraud agent',

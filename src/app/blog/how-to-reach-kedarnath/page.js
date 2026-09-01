@@ -10,7 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
   title: { absolute: `How to Reach Kedarnath ${SITE.season} | Road, Train & Helicopter` },
-  description: `How to reach Kedarnath ${SITE.season} from Delhi, Mumbai, Bengaluru. Trusted operator, 15+ yrs experience, fixed departures & instant confirmation.`,
+  description: `How to reach Kedarnath in ${SITE.season} from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.`,
   keywords: [`how to reach kedarnath ${SITE.season}`, 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', `kedarnath journey guide ${SITE.season}`],
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE.baseUrl}/blog/how-to-reach-kedarnath` },

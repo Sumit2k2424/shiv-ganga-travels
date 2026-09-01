@@ -7,7 +7,7 @@ import { h2, h3, p } from "@/lib/prose";
 
 export const metadata = {
   title: { absolute: `Harsil Valley Guide ${SITE.season} | Permits, Weather & Route | Gangotri` },
-  description: 'Harsil Valley on the Bhagirathi, 25km before Gangotri. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.',
+  description: `Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.`,
   keywords: ['harsil valley','harsil valley travel guide','harsil valley best time to visit','how to reach harsil valley','harsil valley permit','gartang gali trek','mukhba village','dharali village harsil','harsil to gangotri distance','harsil valley weather','harsil valley uttarkashi','nelong valley permit'],
   alternates: { canonical: `${SITE.baseUrl}/harsil-valley` },
   openGraph: {
