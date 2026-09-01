@@ -2,7 +2,7 @@
 
 **Prospect:** `garhwal-post`  ·  **Wants:** quote  ·  **Route in:** pitch
 **Link should point at:** https://www.shivgangatravels.com/press
-**Packet written:** 2026-08-27
+**Packet written:** 2026-09-01
 
 ## Why this one
 
@@ -14,7 +14,7 @@ A real regional newspaper covering the yatra every season. An operator who has r
 
 ## What we have actually confirmed
 
-**Nothing.** This entry was identified from search results and its submission mechanics have never been checked. Open the site and confirm the form or the contact exists before writing anything.
+2026-08-27: DNS resolves (185.38.109.205 and neighbours) and plain HTTP returns a 301, but the HTTPS endpoint does not answer from here — a browser user agent times out too, so this is not bot protection. Could be a certificate problem, a slow host or geo-blocking. Open it in a browser before pitching; if it is genuinely down, the pitch has nowhere to land.
 
 Evidence on file: Established Dehradun daily. Contact desk and email NOT verified.
 
@@ -25,7 +25,7 @@ Evidence on file: Established Dehradun daily. Contact desk and email NOT verifie
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-08-27'` on `garhwal-post` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `garhwal-post` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

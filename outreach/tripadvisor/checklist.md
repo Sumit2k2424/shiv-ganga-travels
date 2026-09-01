@@ -1,22 +1,22 @@
 # TripAdvisor — operator listing
 
-**Prospect:** `tripadvisor`  ·  **Wants:** profile  ·  **Route in:** open
+**Prospect:** `tripadvisor`  ·  **Wants:** claim, then three corrections  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/
-**Packet written:** 2026-08-27
+**Packet written:** 2026-09-01
 
 ## Why this one
 
-Already listed. High-trust profile that NRI and foreign pilgrims check before booking.
+Already listed, and the highest-trust profile NRI and foreign pilgrims check before booking. Ranked #41 of 96 Tours & Activities in Haridwar on one review, so there is room to move on volume alone.
 
 ## Before you touch it
 
-> URGENT AND ALREADY KNOWN: directory-submissions.md records that the live TripAdvisor description still says "from ₹19,500 per person". The real anchor is ₹13,900. A wrong price on a third-party profile is worse than no profile — fix this before any new submission is made anywhere, because the same stale figure is probably sitting on other listings too.
+> Read live on 2026-09-01, and it is worse than the August note said. The listing is UNCLAIMED — the page shows “Get verified to manage this listing”, so nothing can be edited until it is claimed, and that gates everything below. Three things are then wrong. (1) The About text still says “packages from ₹19,500 per person”, the pre-cut price, against ₹13,900. (2) Hours read 7:00 AM – 9:00 PM, the identical stale figure Google and Bing carry — this is the third listing with it. (3) The contact block is empty, so a profile with a wrong price offers no way to ring and correct it. The address in the description is right (Saptrishi Road, Bhupatwala). Bot-blocked to crawlers, so all of this needs a manual login.
 
 ## What we have actually confirmed
 
-**Nothing.** This entry was identified from search results and its submission mechanics have never been checked. Open the site and confirm the form or the contact exists before writing anything.
+2026-09-01: confirmed live and unclaimed. Stale price and stale hours both still published.
 
-Evidence on file: Listing exists; stale price recorded in directory-submissions.md.
+Evidence on file: Listing live at tripadvisor.com/Attraction_Review-g616028-d34343558. Read 2026-09-01: 5.0 from a single review, #41 of 96, ₹19,500 in the About text, 7:00 AM – 9:00 PM hours, empty contact block, “Booking unavailable on Tripadvisor”.
 
 ## Steps
 
@@ -25,7 +25,7 @@ Evidence on file: Listing exists; stale price recorded in directory-submissions.
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-08-27'` on `tripadvisor` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `tripadvisor` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

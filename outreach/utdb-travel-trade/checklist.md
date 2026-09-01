@@ -2,7 +2,7 @@
 
 **Prospect:** `utdb-travel-trade`  ·  **Wants:** listing  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/
-**Packet written:** 2026-08-27
+**Packet written:** 2026-09-01
 
 ## Why this one
 
@@ -25,7 +25,7 @@ Evidence on file: Portal loaded in a browser 2026-08-27 and its official guideli
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-08-27'` on `utdb-travel-trade` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `utdb-travel-trade` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

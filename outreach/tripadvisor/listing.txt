@@ -1,5 +1,5 @@
 # Listing copy — TripAdvisor — operator listing
-# Generated 2026-08-27 from src/data/packages.js and src/data/press.js.
+# Generated 2026-09-01 from src/data/packages.js and src/data/press.js.
 # Re-generate rather than editing this file, and re-check prices on the day you paste.
 
 BUSINESS NAME
@@ -16,6 +16,7 @@ WHATSAPP   +91-7817996730
 EMAIL      support@shivgangatravels.com
 WEBSITE    https://www.shivgangatravels.com/
 FOUNDED    2010
+HOURS      9 AM - 8 PM daily (WhatsApp answered outside these hours)
 
 SHORT DESCRIPTION (~50 words)
 Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010 and registered with the Uttarakhand Tourism Development Board. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
@@ -23,7 +24,7 @@ Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarak
 LONG DESCRIPTION (~200 words)
 Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It is registered with the Uttarakhand Tourism Development Board and operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season since 2010, including the years following the 2013 Kedarnath floods.
 
-PRICE ANCHORS — live from src/data/packages.js on 2026-08-27
+PRICE ANCHORS — live from src/data/packages.js on 2026-09-01
   Char Dham 9N/10D ex-Haridwar ....... from ₹13,900
   Kedarnath single dham .............. from ₹5,250
   Packages published ................. 39
@@ -31,6 +32,65 @@ PRICE ANCHORS — live from src/data/packages.js on 2026-08-27
   If a listing already published elsewhere shows a different figure, that listing is
   stale and must be corrected before this one is created. directory-submissions.md
   records the TripAdvisor description still carrying a price that is ₹5,600 too high.
+
+SERVICES — 39 packages, priced live on 2026-09-01
+  Char Dham pilgrimage
+    Char Dham Yatra Package — 9 Nights 10 Days (from ₹13,900 per person)
+    Char Dham Yatra — 11 Nights 12 Days Deluxe (from ₹30,000 per person)
+    Char Dham Yatra by Helicopter — 5N/6D (from ₹2,30,000 per person)
+    Char Dham Yatra — Senior Citizen Special 12N/13D (from ₹21,000 per person)
+    Char Dham Yatra Package from Delhi — 10N/11D (from ₹17,200 per person)
+
+  Do Dham & Teen Dham
+    Kedarnath Badrinath Do Dham Yatra — 5N/6D (from ₹8,200 per person)
+    Yamunotri Gangotri Do Dham Yatra — 4N/5D (from ₹7,100 per person)
+    Kedarnath Badrinath by Helicopter — 3N/4D (from ₹22,500 per person)
+    Teen Dham Yatra — Yamunotri Gangotri Badrinath 7N/8D (from ₹11,600 per person)
+
+  Single shrine
+    Kedarnath Yatra Package from Haridwar — 3N/4D (from ₹5,250 per person)
+    Badrinath Yatra Package from Haridwar — 2N/3D (from ₹4,500 per person)
+    Yamunotri Yatra Package from Haridwar — 2N/3D (from ₹4,500 per person)
+    Gangotri Yatra Package from Haridwar — 2N/3D (from ₹4,250 per person)
+
+  Helicopter
+    Do Dham Same-Day Helicopter Tour — Kedarnath & Badrinath (same day, from ₹1,25,000 per person)
+    Hemkund Sahib + Valley of Flowers + Badrinath — 6N/7D (from ₹13,900 per person)
+
+  Uttarakhand tours & treks
+    Rishikesh Haridwar Ganga Darshan Tour — 3N/4D (from ₹5,600 per person)
+    Mussoorie Dehradun Dhanaulti Tour — 3N/4D (from ₹7,500 per person)
+    Nainital Kausani Ranikhet Tour — 4N/5D (from ₹10,100 per person)
+    Chopta Tungnath Chandrashila Trek — 2N/3D (from ₹6,350 per person)
+    Auli Joshimath Skiing & Adventure Tour — 3N/4D (from ₹9,400 per person)
+    Panch Kedar Yatra Package — 9N/10D (from ₹16,500 per person)
+    Rishikesh Adventure — Rafting, Camping & Bungee (2N/3D, from ₹3,750 per person)
+    Mussoorie + Rishikesh + Kanatal Tour — 4N/5D (from ₹6,350 per person)
+    Jim Corbett + Nainital Wildlife & Hills — 5N/6D (from ₹10,500 per person)
+    Haridwar + Rishikesh Spiritual Tour — 4N/5D (from ₹4,500 per person)
+    Grand Uttarakhand Tour — 10N/11D (from ₹17,200 per person)
+    Valley of Flowers + Hemkund Sahib — 5N/6D (from ₹10,100 per person)
+    Kedarnath + Chopta + Badrinath Adventure — 6N/7D (from ₹12,700 per person)
+    Kainchi Dham + Nainital + Mukteshwar — 3N/4D (from ₹6,750 per person)
+    Kedarkantha Winter Trek — 5N/6D (from ₹6,400 per person)
+    Nag Tibba Weekend Trek — 1N/2D (from ₹2,600 per person)
+    Har Ki Dun Valley Trek — 6N/7D (from ₹9,400 per person)
+    Jim Corbett Jungle Safari Weekend — 2N/3D (from ₹7,100 per person)
+    Almora + Jageshwar + Binsar — 3N/4D (from ₹7,500 per person)
+    Munsiyari + Chaukori + Patal Bhuvaneshwar — 5N/6D (from ₹11,200 per person)
+    Lansdowne + Khirsu Quiet Getaway — 2N/3D (from ₹4,850 per person)
+    Tehri Lake + Kanatal + Surkanda Devi — 2N/3D (from ₹5,600 per person)
+    Adi Kailash + Om Parvat Yatra — 7N/8D (from ₹27,000 per person)
+    Brahmatal Winter Trek — 4N/5D (from ₹7,500 per person)
+
+  Transport & support
+    Char Dham cab and taxi booking — fixed fares, hill-trained drivers
+    Airport and railway station transfers — Dehradun, Haridwar, Rishikesh
+    Tempo Traveller, Innova Crysta, Ertiga, Dzire, Scorpio and bus hire
+    Char Dham Yatra registration and Green Card assistance
+    Hotel booking on the Char Dham route
+    VIP darshan and BKTC puja booking
+    Group and corporate pilgrimage bookings
 
 FAST FACTS
   Founded             2010

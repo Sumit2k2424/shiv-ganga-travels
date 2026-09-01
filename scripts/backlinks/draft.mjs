@@ -412,10 +412,13 @@ function build(p) {
 
   const files = { 'checklist.md': checklist(p) };
 
-  if (p.wants === 'listing' || p.wants === 'profile') files['listing.txt'] = listing(p);
-  if (p.wants === 'article' || p.wants === 'travelogue') files['article.md'] = article(p);
-  if (p.wants === 'answer') files['answer.md'] = answer(p);
-  if (p.obtainable === 'pitch' || p.wants === 'quote' || p.wants === 'article') files['pitch.md'] = pitch(p);
+  const wants = String(p.wants || {}).toLowerCase();
+  const wantsAny = (...keys) => keys.some((k) => wants.includes(k));
+
+  if (wantsAny('listing', 'profile', 'claim')) files['listing.txt'] = listing(p);
+  if (wantsAny('article', 'travelogue')) files['article.md'] = article(p);
+  if (wantsAny('answer')) files['answer.md'] = answer(p);
+  if (p.obtainable === 'pitch' || wantsAny('quote', 'article')) files['pitch.md'] = pitch(p);
 
   // Never overwrite work. Once someone has filled the [[ WRITE THIS ]] slots
   // in a packet, that file is the only copy of a person's writing, and a second

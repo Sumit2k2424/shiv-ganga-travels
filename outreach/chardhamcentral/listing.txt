@@ -1,4 +1,4 @@
-# Listing copy — OpenStreetMap business node
+# Listing copy — chardhamcentral.com
 # Generated 2026-09-01 from src/data/packages.js and src/data/press.js.
 # Re-generate rather than editing this file, and re-check prices on the day you paste.
 
@@ -14,7 +14,7 @@ Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 24
 PHONE      +91-7817996730
 WHATSAPP   +91-7817996730
 EMAIL      support@shivgangatravels.com
-WEBSITE    https://www.shivgangatravels.com/
+WEBSITE    https://www.shivgangatravels.com/char-dham-yatra
 FOUNDED    2010
 HOURS      9 AM - 8 PM daily (WhatsApp answered outside these hours)
 
