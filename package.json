@@ -13,7 +13,8 @@
     "links:audit": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/audit.mjs",
     "links:gap": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/gap.mjs",
     "links:draft": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/draft.mjs",
-    "clusters": "node scripts/clusters.mjs"
+    "clusters": "node scripts/clusters.mjs",
+    "links:corrections": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backlinks/corrections.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",
