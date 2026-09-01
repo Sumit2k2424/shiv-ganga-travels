@@ -91,6 +91,42 @@ Both Google and Bing carry the identical 07:00–21:00, so they were seeded from
 one source that stayed stale in three places, this site included until 1 Sep
 2026. The same is likely true of the prices.
 
+### Tier 1–4 sweep, 2026-09-01
+
+| # | Directory | Found? | Note |
+|---|---|---|---|
+| 1 | Uttarakhand Tourism Board | **unresolved** | Not on the 30-row operator PDF the site publishes — but that list is plainly not the full state register, so it proves nothing either way. The claim still needs confirming on the travel-trade portal, which needs a login |
+| 2 | Incredible India / NIDHI+ | not found | Ministry of Tourism directory searched, no match |
+| 3 | IATO | not found | Associate membership is ₹5,000 and unclaimed |
+| 4 | Google Business Profile | **listed, ours** | Four wrong fields — see table above |
+| 5 | TripAdvisor | **listed** | Stale ₹19,500 — see table above |
+| 6 | MakeMyTrip | **name taken** | /bus-tickets/shiv-ganga-travels-bus-booking.html is the unrelated bus operator, not us |
+| 7 | Thrillophilia | not found | |
+| 8 | Holidify | not found | Destination content only, no operator listing |
+| 9 | Yatra.com | **name taken** | Two listings, /bus-operators-india/shiv-ganga-travels and /shiv-ganga-travel — both the bus operator |
+| 10 | Cleartrip | not found | |
+| 11 | JustDial | **name taken** | Shiv Ganga Tour & Travels, Niranjani Akhara Rd, est. 2000, 3.9 from 6 reviews. Different business — already why it is out of sameAs |
+| 12 | IndiaMART | not found | Haridwar travel directory shows competitors only |
+| 13 | Sulekha | not found | |
+| 14 | TradeIndia | not found | |
+| 15 | ExportersIndia | not found | |
+| 16 | chardhamyatra.org | not found | Good — it is an open prospect, scored PURSUE 77 in the backlink register |
+| 17 | uttarakhand.org | not found | |
+| 18 | kedarnath.org | not found | |
+| 19 | HinduJagruti | not found | |
+| — | Bing Places | **listing exists** | Unclaimed, wrong address — see table above |
+
+**Read "not found" as weak evidence, not proof.** These were checked by search,
+and the search tool resolves US results rather than Indian ones, so an Indian
+directory listing can exist without surfacing. Treat every "not found" as
+"probably clear, verify when you get there" rather than a settled answer.
+
+**The finding that changes things: on MakeMyTrip, Yatra and JustDial the name is
+already occupied by other companies.** A Dhanbad/Delhi bus operator holds it on
+the two OTAs and a Haridwar agency established in 2000 holds it on JustDial.
+Submitting there is not a blank-form exercise — it risks being merged with, or
+mistaken for, a business that is not this one. Always submit with the full
+Bhupatwala address, never bare "Haridwar".
 **Not yet checked:** every other directory in the six tiers below. A listing may
 already exist without anyone here knowing — Bing did.
 
