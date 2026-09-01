@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Devi Temples in Uttarakhand — The Complete List, Mansa Devi to Surkanda Devi' },
+  title: { absolute: `Devi Temples in Uttarakhand — The Complete List` },
   description: 'Every major Devi (goddess) temple in Uttarakhand in one place: Mansa Devi, Chandi Devi, Maya Devi (a Shakti Peeth), Dhari Devi and Surkanda Devi — legends, access and significance.',
   keywords: ['devi temples uttarakhand','shakti peeth uttarakhand','mansa devi temple haridwar','chandi devi temple','maya devi temple haridwar','dhari devi temple','surkanda devi temple'],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-devi-temples` },

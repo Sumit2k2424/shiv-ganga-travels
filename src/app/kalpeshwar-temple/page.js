@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Kalpeshwar Temple — Urgam Valley, the Only Year-Round Panch Kedar | Guide' },
+  title: { absolute: `Kalpeshwar Temple — The Year-Round Panch Kedar, Urgam` },
   description: 'Kalpeshwar, in Urgam valley near Joshimath, is where Shiva\'s matted hair (jata) is worshipped in a natural rock cave — the only one of the five Panch Kedar open all year.',
   keywords: ['kalpeshwar temple','kalpeshwar urgam valley','panch kedar kalpeshwar','jateshwar mahadev','kalpeshwar trek joshimath','shiva jata temple'],
   alternates: { canonical: `${SITE.baseUrl}/kalpeshwar-temple` },

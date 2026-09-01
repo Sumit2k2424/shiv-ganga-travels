@@ -10,7 +10,7 @@ import SightseeingLinkMesh from '@/components/SightseeingLinkMesh';
 import { h2, h3, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: `Places to Visit in Gangotri ${SITE.season} — Gaumukh, Harsil & Submerged Shivling` },
+  title: { absolute: `Places to Visit in Gangotri ${SITE.season} — Gaumukh & Harsil` },
   description: 'What to see at Gangotri beyond the temple — the submerged Shivling in the riverbed, Bhagirath Shila, the 18 km Gaumukh trail and Harsil valley 25 km back down.',
   keywords: ['places to visit in gangotri','gangotri sightseeing','gangotri tourist places','things to do in gangotri','gaumukh trek gangotri','harsil valley','submerged shivling gangotri','gangotri nearby places'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-sightseeing-places` },

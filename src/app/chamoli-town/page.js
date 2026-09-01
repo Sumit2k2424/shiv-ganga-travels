@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Chamoli Town — On the Alaknanda, Between Karnaprayag and Joshimath | Guide' },
+  title: { absolute: `Chamoli Town — On the Alaknanda, Below Joshimath` },
   description: 'Chamoli town, 1,300m on the Alaknanda, lends its name to the district that holds Badrinath, the Panch Kedar and the Valley of Flowers. What it is, and how it fits a Char Dham road route.',
   keywords: ['chamoli town','chamoli uttarakhand','chamoli district','chamoli to badrinath distance','chamoli alaknanda'],
   alternates: { canonical: `${SITE.baseUrl}/chamoli-town` },

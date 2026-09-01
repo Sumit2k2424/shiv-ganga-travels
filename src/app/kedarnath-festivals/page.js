@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: `Kedarnath Festivals ${SITE.season} — Opening, Closing, Badri-Kedar Utsav Calendar` },
+  title: { absolute: `Kedarnath Festivals ${SITE.season} — Opening & Closing Dates` },
   description: `Every festival at Kedarnath temple: the ${SITE.season} opening (Apr 22) and closing (Bhai Dooj, Nov 11) ceremonies, the Bhairav puja and doli to Ukhimath, Badri-Kedar Utsav, and Shravan Somvar.`,
   keywords: ['kedarnath festivals','kedarnath opening date 2026','kedarnath closing date 2026','badri kedar utsav','kedarnath bhairav puja','kedarnath doli ukhimath'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-festivals` },

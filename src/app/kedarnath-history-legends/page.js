@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Kedarnath Temple History & Legends — Pandavas, Shankaracharya, the 2013 Flood' },
+  title: { absolute: `Kedarnath Temple History & Legends — Pandavas to 2013` },
   description: 'The full story behind Kedarnath temple: the Pandava legend, Adi Shankaracharya\'s 8th-century revival and samadhi, dynastic patronage, and how the shrine survived the 2013 Himalayan floods.',
   keywords: ['kedarnath temple history','kedarnath legend','kedarnath pandava story','adi shankaracharya kedarnath samadhi','kedarnath temple 2013 flood survival','kedarnath origin story'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-history-legends` },

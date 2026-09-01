@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Vridh Badri Temple — Animath, the Easiest Panch Badri Shrine | Full Guide' },
+  title: { absolute: `Vridh Badri Temple, Animath — The Easiest Panch Badri` },
   description: 'Vridh Badri at Animath, 7 km from Joshimath, is where Vishnu appeared to Narada in aged form — the closest and easiest of the five Panch Badri shrines to visit.',
   keywords: ['vridh badri temple','vriddha badri','animath temple','panch badri vridh badri','vridh badri joshimath','narada vishnu darshan animath'],
   alternates: { canonical: `${SITE.baseUrl}/vridh-badri-temple` },

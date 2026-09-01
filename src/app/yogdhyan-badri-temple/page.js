@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Yogdhyan Badri Temple — Pandukeshwar, Winter Seat of Badrinath | Full Guide' },
+  title: { absolute: `Yogdhyan Badri, Pandukeshwar — Badrinath's Winter Seat` },
   description: 'Yogdhyan Badri at Pandukeshwar is where the Badrinath deity moves each winter, and where the Pandavas are said to have meditated after the Mahabharata. Legend, history and how to reach.',
   keywords: ['yogdhyan badri temple','yogadhyan badri','pandukeshwar temple','badrinath winter seat','panch badri yogdhyan badri','pandukeshwar badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/yogdhyan-badri-temple` },

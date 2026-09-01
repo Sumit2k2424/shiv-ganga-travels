@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Tapt Kund — The Hot Spring Every Pilgrim Bathes In Before Badrinath | Guide' },
+  title: { absolute: `Tapt Kund Badrinath — The Hot Spring Before Darshan` },
   description: 'Tapt Kund is the natural hot spring at the base of Badrinath temple, 45–55°C year-round, where Agni is said to reside. Legend, temperature, bathing rules, and why every pilgrim stops here first.',
   keywords: ['tapt kund','tapt kund badrinath','badrinath hot spring','tapt kund temperature','tapt kund legend agni','narad kund badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/tapt-kund` },

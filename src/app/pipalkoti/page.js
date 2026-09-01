@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Pipalkoti — The Overnight Halt Between Rudraprayag and Badrinath | Guide' },
+  title: { absolute: `Pipalkoti — Overnight Halt on the Badrinath Road` },
   description: 'Pipalkoti, 1,260m on NH-58, sits between Chamoli and Joshimath on the Badrinath road. Why it works as a break-of-journey halt, what\'s nearby, and how it fits a Char Dham itinerary.',
   keywords: ['pipalkoti','pipalkoti uttarakhand','pipalkoti to badrinath','pipalkoti to joshimath distance','pipalkoti chamoli','pipalkoti char dham route'],
   alternates: { canonical: `${SITE.baseUrl}/pipalkoti` },

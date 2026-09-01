@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Shiva Temples in Uttarakhand — The Complete List, Panch Kedar to Neelkanth' },
+  title: { absolute: `Shiva Temples in Uttarakhand — The Complete List` },
   description: 'Every major Shiva temple in Uttarakhand in one place: Kedarnath and the five Panch Kedar, Neelkanth Mahadev, Daksh Mahadev, Tapt Kund and Vishnu-adjacent sites — altitude, access and significance.',
   keywords: ['shiva temples uttarakhand','uttarakhand shiva temple list','panch kedar temples list','neelkanth mahadev rishikesh','daksh mahadev haridwar','shiva temples garhwal'],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-shiva-temples` },

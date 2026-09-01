@@ -23,7 +23,7 @@ import { JsonLd, breadcrumb, faqPage } from '@/components/cabs/cabSchema';
 const URL = `${SITE.baseUrl}/char-dham-yatra-cab-booking`;
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Cab Booking ${SITE.season} | Full Circuit from ₹18,000 | Fixed Fare` },
+  title: { absolute: `Char Dham Cab Booking ${SITE.season} — Full Circuit from ₹18,000` },
   description:
     `Book a cab for the full Char Dham circuit ${SITE.season} — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator since 2010.`,
   keywords: [

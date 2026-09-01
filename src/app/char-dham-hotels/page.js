@@ -4,7 +4,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Hotels ${SITE.season} | Honest Price Guide | Trusted Local Booking` },
+  title: { absolute: `Char Dham Yatra Hotels ${SITE.season} — Honest Price Guide` },
   description: `Stop-by-stop hotel guide for the Char Dham route — Barkot, Uttarkashi, Guptkashi, Badrinath and Haridwar with real price bands.`,
   keywords: ['char dham hotels','char dham yatra hotels','where to stay char dham yatra','barkot hotels','uttarkashi hotels','guptkashi hotels','badrinath hotels',`char dham accommodation ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-hotels` },

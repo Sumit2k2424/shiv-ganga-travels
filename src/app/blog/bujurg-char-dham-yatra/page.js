@@ -9,7 +9,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `बुजुर्गों के लिए चार धाम यात्रा ${SITE.season} | कीमत ₹21,000 से शुरू | पूरी गाइड` },
+  title: { absolute: `बुजुर्गों के लिए चार धाम यात्रा ${SITE.season} | ₹21,000 से शुरू` },
   description: `60-80 साल के बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि। घोड़ा, पालकी, हेलिकॉप्टर विकल्प उपलब्ध।`,
   keywords: [`बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}`, 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },

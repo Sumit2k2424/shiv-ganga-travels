@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Bhavishya Badri Temple — Subhain Trek, the Future Badrinath | Full Guide' },
+  title: { absolute: `Bhavishya Badri Temple — The Future Badrinath, Subhain` },
   description: 'Bhavishya Badri at Subhain, a 6 km trek from Tapovan, is prophesied to become the main Badri shrine when the mountains close Badrinath in the Kali Yuga — the most remote of the five Panch Badri.',
   keywords: ['bhavishya badri temple','bhavishya badri trek','subhain temple tapovan','panch badri bhavishya badri','future badrinath prophecy','bhavishya badri joshimath'],
   alternates: { canonical: `${SITE.baseUrl}/bhavishya-badri-temple` },

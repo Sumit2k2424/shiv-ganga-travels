@@ -10,7 +10,7 @@ import SightseeingLinkMesh from '@/components/SightseeingLinkMesh';
 import { h2, h3, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: `Places to Visit in Joshimath ${SITE.season} — Auli, Narsingh Temple & Kalpavriksha` },
+  title: { absolute: `Places to Visit in Joshimath ${SITE.season} — Auli & Narsingh` },
   description: 'What to see in Joshimath at 1,875 m — the Narsingh temple that holds Badrinath through winter, the Auli ropeway, Kalpavriksha and Vishnuprayag below the town.',
   keywords: ['places to visit in joshimath','joshimath sightseeing','joshimath tourist places','things to do in joshimath','auli ropeway joshimath','narsingh temple joshimath','kalpavriksha joshimath','vishnuprayag'],
   alternates: { canonical: `${SITE.baseUrl}/joshimath-sightseeing-places` },

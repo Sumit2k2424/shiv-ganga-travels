@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Gangotri Temple History & Legends — King Bhagirath\'s Penance, Shiva\'s Locks' },
+  title: { absolute: `Gangotri Temple History & Legends — Bhagirath's Penance` },
   description: 'The full story behind Gangotri: King Bhagirath\'s penance to bring Ganga to earth, Shiva catching the river in his matted hair, and the temple built by Gorkha general Amar Singh Thapa.',
   keywords: ['gangotri temple history','gangotri legend','bhagirath ganga story','shiva jata ganga descent','gangotri temple amar singh thapa','gangotri origin story'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-history-legends` },

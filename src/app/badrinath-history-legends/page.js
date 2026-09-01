@@ -6,7 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 
 export const metadata = {
-  title: { absolute: 'Badrinath Temple History & Legends — Vishnu\'s Penance, Narad Kund, Adi Shankaracharya' },
+  title: { absolute: `Badrinath Temple History & Legends — Vishnu's Penance` },
   description: 'The full story behind Badrinath temple: Vishnu\'s penance under the badri tree, the Narad Kund idol recovery, Adi Shankaracharya\'s 8th-century establishment, and the debated Buddhist-era history.',
   keywords: ['badrinath temple history','badrinath legend','narad kund idol recovery','badrinath vishnu penance story','adi shankaracharya badrinath','badrinath temple origin'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-history-legends` },
