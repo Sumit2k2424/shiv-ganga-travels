@@ -64,6 +64,10 @@ const REDIRECTS = [
   { source: '/blog/kedarnath-yatra-guide',     destination: '/blog/kedarnath-yatra-complete-guide', permanent: true },
   { source: '/blog/kedarnath-pony-palki-rates-2026', destination: '/kedarnath-pony-palki-kandi-rates', permanent: true },
   { source: '/blog/vip-darshan-kedarnath-booking', destination: '/kedarnath-vip-darshan', permanent: true },
+  // Cannibalised /char-dham-road-status: identical target queries, and from
+  // 12 Aug 2026 Google served this one instead — at 0.8% CTR against the hub's
+  // 2.1%. The hub is the stronger page and the one carrying the live bulletins.
+  { source: '/blog/char-dham-yatra-road-conditions-2026', destination: '/char-dham-road-status', permanent: true },
   { source: '/blog/badrinath-temple-guide',    destination: '/badrinath-temple',         permanent: true },
   { source: '/blog/yamunotri-yatra-guide',     destination: '/yamunotri-yatra',          permanent: true },
   { source: '/blog/gangotri-yatra-guide',      destination: '/gangotri-yatra',           permanent: true },

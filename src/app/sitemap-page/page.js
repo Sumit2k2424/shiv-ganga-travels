@@ -242,7 +242,6 @@ const sections = [
       { label: 'Char Dham Yatra Complete Reference', href: '/blog/char-dham-yatra-complete-guide' },
       { label: 'History, Mythology & Significance', href: '/blog/char-dham-yatra-significance' },
       { label: 'Closing Dates 2026', href: '/blog/char-dham-yatra-closing-dates-2026' },
-      { label: 'Road Conditions 2026', href: '/blog/char-dham-yatra-road-conditions-2026' },
       { label: 'Green Card / Trip Card 2026', href: '/blog/green-card-char-dham-yatra-2026' },
       { label: 'Kedarnath Registration 2026', href: '/blog/kedarnath-registration-2026' },
       { label: 'Kedarnath Trek Timings 2026', href: '/blog/kedarnath-trek-timings-2026' },

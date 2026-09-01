@@ -538,7 +538,7 @@ export default function CharDhamCompleteGuide() {
               ['Char Dham Yatra Cost 2026', '/blog/char-dham-yatra-cost'],
               ['Registration Guide 2026', '/blog/char-dham-yatra-registration'],
               ['Packing List', '/blog/char-dham-yatra-packing-list'],
-              ['Road Conditions 2026', '/blog/char-dham-yatra-road-conditions-2026'],
+              ['Char Dham Road Status', '/char-dham-road-status'],
               ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'],
               ['Opening Dates 2026', '/blog/char-dham-yatra-opening-dates-2026'],
               ['2026 New Rules', '/blog/char-dham-yatra-2026-new-rules'],

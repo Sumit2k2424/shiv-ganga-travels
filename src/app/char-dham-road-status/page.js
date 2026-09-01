@@ -225,6 +225,23 @@ export default function CharDhamRoadStatus() {
         <li style={{ marginBottom:6 }}><strong>Alternative 2:</strong> Delhi → Rishikesh → Gaja → Devprayag — a parallel line back onto NH-7.</li>
       </ul>
 
+      <h2 style={h2}>Mountain driving rules on the Char Dham routes</h2>
+      <p style={p}>These are enforced at checkposts, not advisory. The night ban in particular catches out drivers who plan to make up time after dark.</p>
+      <div style={{ display:'grid', gap:10, marginBottom:24 }}>
+        {[
+          { rule:'10 PM–4 AM vehicle ban', detail:'All vehicles, private and commercial, are banned from every Char Dham route between 10 PM and 4 AM. Plan to reach your overnight stop by 9 PM at the latest.' },
+          { rule:'Heavy vehicle restrictions', detail:'Commercial trucks over 7.5 tonnes are restricted on several sections, and large tourist buses are often directed via alternate routes in peak season.' },
+          { rule:'Vehicle fitness and permits', detail:'Commercial vehicles need valid Uttarakhand Tourism permits. Private vehicles need a valid PUC certificate and should carry a spare tyre.' },
+          { rule:'No stopping in rockfall zones', detail:'Yellow and red marked stretches mean active rockfall risk. Do not stop, photograph or walk there. Keep moving.' },
+          { rule:'No overtaking on narrow sections', detail:'On single-lane stretches follow the traffic marshal. Overtaking on mountain bends is the single biggest cause of accidents on these roads.' },
+          { rule:'Green Card for non-Uttarakhand vehicles', detail:'Vehicles registered outside Uttarakhand need the ₹50 Green Card from greencard.uk.gov.in. It is checked at entry checkposts.' },
+        ].map(item => (
+          <div key={item.rule} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderLeft:'3px solid var(--teal)', borderRadius:10, padding:'12px 16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>{item.rule}</div>
+            <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.detail}</div>
+          </div>
+        ))}
+      </div>
       <h2 id="live" style={h2}>How to check live road status today</h2>
       <p style={p}>Don't plan around a forwarded WhatsApp clip. Check the sources that actually carry verified advisories, and call a local control room for anything happening right now:</p>
       <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', padding:'14px 18px', marginBottom:14 }}>

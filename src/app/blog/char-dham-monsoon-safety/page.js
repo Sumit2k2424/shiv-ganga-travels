@@ -196,7 +196,7 @@ export default function Page() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Live Road Status',h:'/char-dham-road-status'},{l:'Road Conditions 2026',h:'/blog/char-dham-yatra-road-conditions-2026'},{l:'September Yatra Guide',h:'/blog/september-char-dham-yatra'},{l:'Weather Month by Month',h:'/blog/char-dham-weather-guide'},{l:'Emergency Contacts',h:'/char-dham-yatra-emergency-contacts'}].map(l=>(
+            {[{l:'Live Road Status',h:'/char-dham-road-status'},{l:'September Yatra Guide',h:'/blog/september-char-dham-yatra'},{l:'Weather Month by Month',h:'/blog/char-dham-weather-guide'},{l:'Emergency Contacts',h:'/char-dham-yatra-emergency-contacts'}].map(l=>(
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
