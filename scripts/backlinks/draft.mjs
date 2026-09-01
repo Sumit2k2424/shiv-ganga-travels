@@ -69,6 +69,62 @@ const facts = {
 
 const inr = (n) => (typeof n === 'number' ? '₹' + n.toLocaleString('en-IN') : SLOT);
 
+// ── Services, grouped and priced from PACKAGES ─────────────────────────
+// Derived rather than written down, because the prices are the part that goes
+// stale. The Aug 2026 cut moved all 39 at once, and a listing still quoting the
+// old figure is the exact problem sitting on the TripAdvisor profile today.
+const CATEGORY_LABEL = {
+  'char-dham'  : 'Char Dham pilgrimage',
+  'do-dham'    : 'Do Dham & Teen Dham',
+  'single-dham': 'Single shrine',
+  'helicopter' : 'Helicopter',
+  'uttarakhand': 'Uttarakhand tours & treks',
+};
+const CATEGORY_ORDER = ['char-dham', 'do-dham', 'single-dham', 'helicopter', 'uttarakhand'];
+
+// Real services that carry no package price, so they cannot be derived. Listed
+// here so the block covers the whole offering rather than only what is priced.
+const SERVICES_UNPRICED = [
+  'Char Dham cab and taxi booking — fixed fares, hill-trained drivers',
+  'Airport and railway station transfers — Dehradun, Haridwar, Rishikesh',
+  'Tempo Traveller, Innova Crysta, Ertiga, Dzire, Scorpio and bus hire',
+  'Char Dham Yatra registration and Green Card assistance',
+  'Hotel booking on the Char Dham route',
+  'VIP darshan and BKTC puja booking',
+  'Group and corporate pilgrimage bookings',
+];
+
+// Duration is only worth printing when the package name does not already carry
+// it, which most of them do.
+function durationPhrase(p) {
+  const d = p.duration;
+  if (!d) return '';
+  const nights = Number(d.nights) || 0;
+  const days = Number(d.days) || 0;
+  const short = nights + 'N/' + days + 'D';
+  const name = String(p.name || '');
+  if (name.includes(short)) return '';
+  if (/[0-9]+\s*Nights?\s+[0-9]+\s*Days?/i.test(name)) return '';
+  if (nights === 0) return 'same day, ';
+  return short + ', ';
+}
+
+function serviceLines() {
+  const out = [];
+  for (const cat of CATEGORY_ORDER) {
+    const list = PACKAGES.filter((p) => p.category === cat && p.slug);
+    if (!list.length) continue;
+    out.push('  ' + (CATEGORY_LABEL[cat] || cat));
+    for (const p of list) {
+      out.push('    ' + p.name + ' (' + durationPhrase(p) + 'from ' + inr(p.price && p.price.discounted) + ' per person)');
+    }
+    out.push('');
+  }
+  out.push('  Transport & support');
+  for (const x of SERVICES_UNPRICED) out.push('    ' + x);
+  return out;
+}
+
 // A guest article that repeats a page we already publish is a duplicate-content
 // own goal — we would be handing a stronger domain our own copy to outrank us
 // with. So the packet checks whether we already cover the angle and says so.
@@ -242,6 +298,9 @@ function listing(p) {
     '  If a listing already published elsewhere shows a different figure, that listing is',
     '  stale and must be corrected before this one is created. directory-submissions.md',
     '  records the TripAdvisor description still carrying a price that is ₹5,600 too high.',
+    '',
+    'SERVICES — ' + facts.packageCount + ' packages, priced live on ' + today,
+    ...serviceLines(),
     '',
     'FAST FACTS',
     ...MEDIA_KIT.fastFacts.map(([k, v]) => '  ' + k.padEnd(20) + v),
