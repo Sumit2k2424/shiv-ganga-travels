@@ -1,6 +1,6 @@
 # TripAdvisor — operator listing
 
-**Prospect:** `tripadvisor`  ·  **Wants:** claim, then three corrections  ·  **Route in:** open
+**Prospect:** `tripadvisor`  ·  **Wants:** identity verification, then four corrections  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/
 **Packet written:** 2026-09-01
 
@@ -10,18 +10,18 @@ Already listed, and the highest-trust profile NRI and foreign pilgrims check bef
 
 ## Before you touch it
 
-> Read live on 2026-09-01, and it is worse than the August note said. The listing is UNCLAIMED — the page shows “Get verified to manage this listing”, so nothing can be edited until it is claimed, and that gates everything below. Three things are then wrong. (1) The About text still says “packages from ₹19,500 per person”, the pre-cut price, against ₹13,900. (2) Hours read 7:00 AM – 9:00 PM, the identical stale figure Google and Bing carry — this is the third listing with it. (3) The contact block is empty, so a profile with a wrong price offers no way to ring and correct it. The address in the description is right (Saptrishi Road, Bhupatwala). Bot-blocked to crawlers, so all of this needs a manual login.
+> The listing is ALREADY CLAIMED — the public page says “Get verified to manage this listing”, which reads as unclaimed and is not. The owner portal says “You’ve claimed this business” and offers a Verify identity button. Identity verification is the only blocker, and only the owner can complete it. Four things then need correcting. (1) About text says “from ₹19,500 per person”, the pre-cut price, against ₹13,900. (2) Hours 7:00 AM – 9:00 PM against 9 AM – 8 PM — the same stale figure Google and Bing carry. (3) Contact block is empty. (4) Address on file reads “Bhoopatwala”, the identical misspelling GBP has, so both came from one source. Bot-blocked to crawlers; all of this needs a manual login.
 
 ## What we have actually confirmed
 
-2026-09-01: confirmed live and unclaimed. Stale price and stale hours both still published.
+2026-09-01: claimed but NOT identity-verified. Four corrections queued behind that one step.
 
-Evidence on file: Listing live at tripadvisor.com/Attraction_Review-g616028-d34343558. Read 2026-09-01: 5.0 from a single review, #41 of 96, ₹19,500 in the About text, 7:00 AM – 9:00 PM hours, empty contact block, “Booking unavailable on Tripadvisor”.
+Evidence on file: Owner portal read 2026-09-01: claimed, unverified, Verify identity pending. Public listing 5.0 from one review, #41 of 96 Tours & Activities in Haridwar, ₹19,500 in About, 7:00 AM – 9:00 PM hours, empty contact block, address on file spells Bhoopatwala.
 
 ## Steps
 
 1. `npm run links:audit -- tripadvisor.in` — confirm it is alive, on-topic, and not already linking to us.
-2. Open https://www.tripadvisor.in/ and read what they actually ask for. This packet is a starting point, not a form filling.
+2. Open https://www.tripadvisor.com/Owners-g616028-d34343558-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html and read what they actually ask for. This packet is a starting point, not a form filling.
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.

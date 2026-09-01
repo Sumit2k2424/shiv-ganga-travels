@@ -83,13 +83,15 @@ price live" is to open all eighteen directories again.
 
 | Directory | Status | Checked | What is wrong | Action |
 |---|---|---|---|---|
-| TripAdvisor | Listed, unclaimed edits | 2026-08-18 | Description says "from ₹19,500" — the pre-cut price | Correct to ₹13,900. Bot-blocked to crawlers, so needs a manual login |
+| TripAdvisor | **Claimed, NOT identity-verified** | 2026-09-01 | Four things wrong, all gated behind verification. About text says "from ₹19,500" (pre-cut, real is ₹13,900). Hours 7:00 AM–9:00 PM, should be 9 AM–8 PM. Contact block empty. Address on file spells "Bhoopatwala" — the same misspelling GBP has | Press **Verify identity** on the owner page, then fix all four. Only the owner can verify. Bot-blocked, so manual login. Owner page: /Owners-g616028-d34343558-Shiv_Ganga_Travels-Haridwar_Haridwar_District_Uttarakhand.html |
 | Google Business Profile | Listed, we own it | 2026-09-01 | Booking module shows ₹21,000 for the 9N/10D package (that is the 12N/13D senior price on the wrong label; real is ₹13,900). Hours 07:00–21:00, should be 09:00–20:00. Address spells "Bhoopatwala". Opening date says 2017 while its own description says since 2010 | Fix by hand — the edit dialog does not accept automated input reliably. Price is in Edit products, not Business information |
 | Bing Places | **Listing exists, not claimed** | 2026-09-01 | Address reads "Saptsarover Road, Hardwar, UK" — a different road from Saptrishi Road, no Bhupatwala, no 249410. Hours 07:00–21:00 | Claim it first, then correct. Not a new submission — do not create a second listing |
 
-Both Google and Bing carry the identical 07:00–21:00, so they were seeded from
-one source that stayed stale in three places, this site included until 1 Sep
-2026. The same is likely true of the prices.
+Google, Bing **and TripAdvisor** all carry the identical 07:00–21:00, and both
+Google and TripAdvisor spell the address "Bhoopatwala". Two independent facts
+wrong the same way across three platforms means one seeding source, not three
+mistakes. Assume the prices spread the same way, and check the spelling on
+every listing, not just the price.
 
 ### Tier 1–4 sweep, 2026-09-01
 
