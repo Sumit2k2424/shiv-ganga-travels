@@ -124,20 +124,44 @@ const REDIRECTS = [
   // link. The newsroom index is the honest destination.
   { source: '/press/shiv-ganga-travels-cuts-package-prices-25-percent-2026', destination: '/press', permanent: true },
 
-  // ── /blog prefix mismatches reported as 404 in Search Console (Aug 2026) ──
-  // A page that lives under /blog/ linked without the prefix, or a top-level
-  // page linked with it. Google had been crawling them since May and getting a
-  // 404, so whatever links to them — old internal links, other sites, or shared
-  // WhatsApp messages — was sending people nowhere.
-  //
-  // This sweep originally re-listed seven sources that the Hindi-cluster and
-  // comparison-post blocks above already covered, with byte-identical
-  // destinations. Next takes the first match and ignores the rest, so the
-  // duplicates changed no behaviour — they were dead config, and the risk was
-  // that a future edit would change one copy and not the other. Removed; only
-  // the entry this sweep actually added is left.
-  { source: '/blog/how-to-reach-badrinath',     destination: '/how-to-reach-badrinath',               permanent: true },
+  // ── The Aug 2026 "/blog prefix mismatches" sweep lived here, and every one
+  // of its eight entries was already covered above — five by the Hindi cluster,
+  // two by the comparison posts, and /blog/how-to-reach-badrinath by the
+  // /blog → root block. Byte-identical destinations, same permanence, so it
+  // changed no behaviour; it just made the file look like it held more rules
+  // than it did. Removed in full. The guard below now makes the same mistake
+  // a build failure rather than something you find months later.
 ];
+
+// ── Guard: every source must appear exactly once ──────────────────────────
+// Next takes the FIRST match for a source and silently ignores every later
+// one, so a duplicate is not an error you ever see — it is a second copy that
+// looks live, drifts when someone edits one and not the other, and leaves the
+// next person guessing which is in force. Seven of these accumulated by
+// Aug 2026, added by a sweep working from a Search Console 404 export without
+// checking what the file already covered.
+//
+// Throwing is the point. This module is required by next.config.js, so the
+// build fails on the machine that introduced the duplicate rather than
+// shipping config nobody can reason about. Every offender is reported at once
+// so the fix is one pass, not one rebuild per duplicate.
+const duplicateSources = Object.entries(
+  REDIRECTS.reduce((acc, r) => {
+    (acc[r.source] = acc[r.source] || []).push(r.destination);
+    return acc;
+  }, {})
+).filter(([, destinations]) => destinations.length > 1);
+
+if (duplicateSources.length > 0) {
+  throw new Error(
+    `src/data/redirects.js: ${duplicateSources.length} source path(s) declared more than once. ` +
+      'Next uses the first match and ignores the rest, so the extra entries are dead config. ' +
+      'Delete the later copies, keeping whichever destination is correct:\n' +
+      duplicateSources
+        .map(([source, destinations]) => `  ${source}\n${destinations.map(d => `    -> ${d}`).join('\n')}`)
+        .join('\n')
+  );
+}
 
 // Set of source paths without leading slash (matches sitemap slug form), e.g.
 // "blog/badrinath-yatra-guide", "char-dham-yatra-2025".
