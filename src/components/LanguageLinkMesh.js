@@ -16,18 +16,18 @@ export default function LanguageLinkMesh({ current = '' }) {
       <p style={heading}>Read this in another language</p>
       <div style={row}>
         {others.map(l => (
-          <Link key={l.slug} href={`/${l.slug}`} style={chip} lang={l.code}>{l.native} · {l.label} →</Link>
+          <Link prefetch={false} key={l.slug} href={`/${l.slug}`} style={chip} lang={l.code}>{l.native} · {l.label} →</Link>
         ))}
-        <Link href="/char-dham-yatra" style={chip}>English / हिन्दी →</Link>
+        <Link prefetch={false} href="/char-dham-yatra" style={chip}>English / हिन्दी →</Link>
       </div>
 
       <p style={heading}>Plan &amp; book your yatra</p>
       <div style={row}>
-        <Link href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D Package — ₹13,900 →</Link>
-        <Link href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
-        <Link href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
-        <Link href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>
-        <Link href="/blog/char-dham-yatra-registration" style={chip}>2026 Registration →</Link>
+        <Link prefetch={false} href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D Package — ₹13,900 →</Link>
+        <Link prefetch={false} href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
+        <Link prefetch={false} href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
+        <Link prefetch={false} href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>
+        <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={chip}>2026 Registration →</Link>
       </div>
     </nav>
   );

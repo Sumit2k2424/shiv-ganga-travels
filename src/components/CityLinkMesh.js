@@ -37,28 +37,28 @@ export default function CityLinkMesh({ current = '' }) {
       <p style={heading}>Char Dham Yatra from other cities</p>
       <div style={row}>
         {siblings.map(c => (
-          <Link key={c} href={`/char-dham-yatra-from-${c}`} style={chip}>From {LABEL[c]} →</Link>
+          <Link prefetch={false} key={c} href={`/char-dham-yatra-from-${c}`} style={chip}>From {LABEL[c]} →</Link>
         ))}
       </div>
 
       <p style={heading}>Plan &amp; book your yatra</p>
       <div style={row}>
-        <Link href="/packages/char-dham" style={chip}>Char Dham Packages →</Link>
-        <Link href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D from Haridwar →</Link>
-        <Link href="/packages/char-dham-yatra-from-delhi-10n-11d" style={chip}>10N/11D from Delhi →</Link>
-        <Link href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
-        <Link href="/do-dham-yatra" style={chip}>Do Dham Yatra →</Link>
-        <Link href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
+        <Link prefetch={false} href="/packages/char-dham" style={chip}>Char Dham Packages →</Link>
+        <Link prefetch={false} href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D from Haridwar →</Link>
+        <Link prefetch={false} href="/packages/char-dham-yatra-from-delhi-10n-11d" style={chip}>10N/11D from Delhi →</Link>
+        <Link prefetch={false} href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
+        <Link prefetch={false} href="/do-dham-yatra" style={chip}>Do Dham Yatra →</Link>
+        <Link prefetch={false} href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
       </div>
 
       <p style={heading}>Stay, route &amp; logistics</p>
       <div style={row}>
-        <Link href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>
-        <Link href="/char-dham-yatra-route-map" style={chip}>Route Map →</Link>
-        <Link href="/blog/char-dham-yatra-registration" style={chip}>2026 Registration →</Link>
-        <Link href="/blog/best-time-char-dham" style={chip}>Best Time to Go →</Link>
-        <Link href="/blog/char-dham-yatra-packing-list" style={chip}>Packing List →</Link>
-        <Link href="/blog/char-dham-yatra-cost" style={chip}>Cost Breakdown →</Link>
+        <Link prefetch={false} href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>
+        <Link prefetch={false} href="/char-dham-yatra-route-map" style={chip}>Route Map →</Link>
+        <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={chip}>2026 Registration →</Link>
+        <Link prefetch={false} href="/blog/best-time-char-dham" style={chip}>Best Time to Go →</Link>
+        <Link prefetch={false} href="/blog/char-dham-yatra-packing-list" style={chip}>Packing List →</Link>
+        <Link prefetch={false} href="/blog/char-dham-yatra-cost" style={chip}>Cost Breakdown →</Link>
       </div>
     </nav>
   );

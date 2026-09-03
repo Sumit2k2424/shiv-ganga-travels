@@ -95,7 +95,7 @@ export default function Footer() {
             <h3 className="eq-foot__h">{col.heading}</h3>
             <ul className="eq-foot__list">
               {col.links.map(l => (
-                <li key={l.h}><Link href={l.h} className="eq-foot-link">{l.l}</Link></li>
+                <li key={l.h}><Link prefetch={false} href={l.h} className="eq-foot-link">{l.l}</Link></li>
               ))}
             </ul>
           </nav>

@@ -16,12 +16,13 @@ import {
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
-import { Section, SectionHead, Reveal, Pill } from '@/components/lux/primitives';
+import { Section, SectionHead, Reveal } from '@/components/lux/primitives';
 import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import {
-  FactPills, VerifiedStrip, FareTable, InclusionsGrid, CancellationTerms,
+  VerifiedStrip, FareTable, FareQuoteBar, InclusionsGrid, CancellationTerms,
   RouteStops, RoadRules, LocalTip, OperatorCard, CabLinkMesh, CabCTA,
 } from '@/components/cabs/CabSections';
+import CabHero from '@/components/cabs/CabHero';
 import { JsonLd, breadcrumb, faqPage, routeService } from '@/components/cabs/cabSchema';
 
 export function generateStaticParams() {
@@ -116,36 +117,20 @@ export default async function CabRoutePage({ params }) {
       <JsonLd items={schema} />
 
       {/* ── Hero ── */}
-      <Section tone="ink">
-        <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
-          <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
-            <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
-              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
-              <li aria-hidden="true">›</li>
-              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
-              <li aria-hidden="true">›</li>
-              <li aria-current="page">{from} to {to}</li>
-            </ol>
-          </nav>
-          <Reveal variant="fade"><Pill tone="gold">Fixed fare · no surge · zero commission</Pill></Reveal>
-          <Reveal>
-            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
-              {from} to {to} cab
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
-              Fare, distance and the road itself — written by the people who drive it.
-            </p>
-          </Reveal>
-          <FactPills items={[
-            ['route', r.distance],
-            ['calendar', r.time],
-            ['rupee', `from ${low}`],
-            ['map', r.endPoint || to],
-          ]} />
-        </div>
-      </Section>
+      <CabHero
+        crumbs={[['Home', '/'], ['Cabs', '/cabs'], [`${from} to ${to}`, null]]}
+        from={from}
+        to={to}
+        eyebrow="Fixed fare · no surge · zero commission"
+        title={`${from} to ${to} cab`}
+        lede="Fare, distance and the road itself — written by the people who drive it."
+        specs={[
+          { k: 'Distance', v: r.distance },
+          { k: 'Drive time', v: r.time },
+          { k: 'One way from', v: low, gold: true },
+          { k: 'Drops you at', v: r.endPoint || to },
+        ]}
+      />
 
       {/* ── Quick answer + who wrote this ── */}
       <Section tone="paper" wrapWidth="narrow" tight>
@@ -166,6 +151,11 @@ export default async function CabRoutePage({ params }) {
           lede={fareLede(r, from, to)}
         />
         <Reveal><FareTable fares={fares} caption={fareCaption(r, from, to)} /></Reveal>
+        <FareQuoteBar
+          vehicles={fares.map(([name]) => name)}
+          message={`Namaste! I want a cab from ${from} to ${to}.`}
+          note={`Send us your travel date and we come back with one fixed all-in figure for the ${from}–${to} run — tolls, driver and parking already in it.`}
+        />
       </Section>
 
       {/* ── What the fare covers ── */}

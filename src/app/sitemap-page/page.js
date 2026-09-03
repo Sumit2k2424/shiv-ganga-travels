@@ -298,7 +298,7 @@ export default function SitemapPage() {
               <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
                 {sec.links.map(l => (
                   <li key={l.href}>
-                    <Link href={l.href} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6, padding:'3px 0' }}>
+                    <Link prefetch={false} href={l.href} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6, padding:'3px 0' }}>
                       <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                       {l.label}
                     </Link>
@@ -316,7 +316,7 @@ export default function SitemapPage() {
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
               {catEntries.map(([slug, cat]) => (
                 <li key={slug}>
-                  <Link href={`/packages/${slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={`/packages/${slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     {cat.name}
                   </Link>
@@ -332,14 +332,14 @@ export default function SitemapPage() {
             </h2>
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
               <li>
-                <Link href="/cabs" style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                <Link prefetch={false} href="/cabs" style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                   <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                   All Cab Routes
                 </Link>
               </li>
               {getPublishedDestinations().map(d => (
                 <li key={`to-${d.slug}`}>
-                  <Link href={`/cabs/to/${d.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={`/cabs/to/${d.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     {d.name} Taxi Service
                   </Link>
@@ -347,7 +347,7 @@ export default function SitemapPage() {
               ))}
               {getPublishedOrigins().map(o => (
                 <li key={`from-${o.slug}`}>
-                  <Link href={`/cabs/from/${o.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={`/cabs/from/${o.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     Cab Service in {o.name}
                   </Link>
@@ -355,7 +355,7 @@ export default function SitemapPage() {
               ))}
               {getPublishedRoutes().map(r => (
                 <li key={r.slug}>
-                  <Link href={`/cabs/${r.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={`/cabs/${r.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     {routeFrom(r)} to {routeTo(r)} Cab
                   </Link>
@@ -372,7 +372,7 @@ export default function SitemapPage() {
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
               {LANGUAGE_PAGES.map(l => (
                 <li key={l.slug}>
-                  <Link href={`/${l.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={`/${l.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     Char Dham Yatra in {l.label}
                   </Link>
@@ -388,7 +388,7 @@ export default function SitemapPage() {
             </h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:4 }}>
               {PACKAGES.map(pkg => (
-                <Link key={pkg.slug} href={`/packages/${pkg.slug}`}
+                <Link prefetch={false} key={pkg.slug} href={`/packages/${pkg.slug}`}
                   style={{ fontSize:13, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6, padding:'3px 0' }}>
                   <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                   {pkg.name}

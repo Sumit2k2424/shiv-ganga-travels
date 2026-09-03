@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations } from '@/data/cabs';
+import { getPublishedHire } from '@/data/cabs/hire';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { getPublishedReleases } from '@/data/press';
@@ -201,6 +202,10 @@ export default function sitemap() {
     ...getPublishedDestinations().map(d => ({ url: `${b}/cabs/to/${d.slug}`,   p: 0.84, cf: 'monthly' })),
     ...getPublishedOrigins().map(o      => ({ url: `${b}/cabs/from/${o.slug}`, p: 0.83, cf: 'monthly' })),
     ...getPublishedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
+    // Vehicle-hire tier — answers the "which vehicle, what per km" query class
+    // rather than a journey question. Priced above the individual routes
+    // because the rate card is transactional and there are only four of them.
+    ...getPublishedHire().map(h         => ({ url: `${b}/cabs/hire/${h.slug}`, p: 0.84, cf: 'monthly' })),
   ];
 
   // Newsroom. Releases come from the same publishability gate that drives

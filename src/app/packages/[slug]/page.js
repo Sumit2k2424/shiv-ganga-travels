@@ -6,6 +6,7 @@ import FloatingBookCTA from '@/components/FloatingBookCTA';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import { BlurFade } from '@/components/magicui/blur-fade';
 import CategoryView from './CategoryView';
+import SpecRail from '@/components/lux/SpecRail';
 import RouteMap from '@/components/lux/RouteMap';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
@@ -220,6 +221,9 @@ export default async function PackageDetailPage({ params }) {
           </div>
         )}
         <div className="lux-hero__veil" aria-hidden="true"/>
+        <div className="lux-hero__dawn" aria-hidden="true"/>
+        <div className="lux-hero__scrim" aria-hidden="true"/>
+        <div className="lux-hero__grain" aria-hidden="true"/>
         <div className="lux-hero__body lux-wrap">
           {/* Breadcrumb — every level a real link */}
           <nav aria-label="Breadcrumb" style={{ marginBottom:22 }}>
@@ -238,13 +242,18 @@ export default async function PackageDetailPage({ params }) {
 
           <h1 className="lux-display lux-display--xl" style={{ maxWidth:'20ch' }}>{pkg.seoHeading || pkg.name}</h1>
 
-          <div style={{ display:'flex', flexWrap:'wrap', gap:9, marginTop:26 }}>
-            {[
-              `${pkg.duration.nights}N / ${pkg.duration.days}D`,
-              `${pkg.startCity} → ${pkg.endCity || pkg.startCity}`,
-              pkg.difficulty, pkg.transport, pkg.season,
-            ].filter(Boolean).map((v) => <Pill key={v} tone="light">{v}</Pill>)}
-          </div>
+          {/* Five identical light pills used to sit here — duration, route,
+              difficulty, transport, season, all the same weight, and the price
+              nowhere in the hero at all. On a booking page the price is the
+              number people came for, so it now leads the rail in gold and the
+              rest fall in behind it. `season` moved out: it is a sentence, not
+              a spec, and it already reads better in the answer box below. */}
+          <SpecRail items={[
+            { k: 'Price from', v: `₹${pkg.price.discounted.toLocaleString('en-IN')}`, gold: true },
+            { k: 'Duration', v: `${pkg.duration.nights}N / ${pkg.duration.days}D` },
+            { k: 'Route', v: `${pkg.startCity} → ${pkg.endCity || pkg.startCity}` },
+            { k: 'Transport', v: pkg.transport },
+          ]} />
         </div>
       </section>
 

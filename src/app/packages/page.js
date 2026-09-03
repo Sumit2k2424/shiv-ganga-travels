@@ -12,6 +12,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { PACKAGES, CATEGORIES, SITE } from '@/data/packages';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
+import SpecRail from '@/components/lux/SpecRail';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import PackageCardLux from '@/components/PackageCardLux';
 
@@ -32,12 +33,14 @@ const wa = (msg) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(ms
 
 const PKG_CSS = `
   .pk-hero { position:relative; overflow:hidden; background:var(--ink); color:#fff; padding:clamp(64px,9vw,120px) var(--lux-gutter) clamp(48px,6vw,80px); }
-  .pk-hero__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%; opacity:0.32; }
-  .pk-hero__veil { position:absolute; inset:0; background:linear-gradient(180deg,rgba(11,27,56,0.5),rgba(11,27,56,0.86)); }
+  .pk-hero__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%; opacity:0.55; }
+  .pk-hero__veil { position:absolute; inset:0; background:linear-gradient(103deg,rgba(11,27,56,0.90) 0%,rgba(11,27,56,0.66) 44%,rgba(11,27,56,0.30) 100%),linear-gradient(180deg,rgba(11,27,56,0.42) 0%,transparent 34%,rgba(11,27,56,0.62) 100%); }
+  .pk-hero__dawn { position:absolute; inset:0; pointer-events:none; background:
+    radial-gradient(30% 16% at 72% 74%, rgba(255,209,130,0.34) 0%, transparent 72%),
+    radial-gradient(66% 30% at 76% 84%, rgba(232,146,10,0.20) 0%, transparent 74%),
+    radial-gradient(58% 32% at 12% 90%, rgba(11,123,139,0.20) 0%, transparent 70%); }
+  .pk-hero__grain { position:absolute; inset:0; pointer-events:none; opacity:0.3; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E"); }
   .pk-hero__in { position:relative; z-index:2; max-width:var(--lux-max,1320px); margin:0 auto; }
-  .pk-stats { display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); margin-top:38px; }
-  .pk-stat__n { font-family:var(--font-display); font-size:clamp(1.9rem,3.2vw,2.6rem); color:#fff; line-height:1; letter-spacing:-0.02em; }
-  .pk-stat__l { font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-top:8px; }
 
   .pk-filter { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--rule); }
   .pk-filter__in { max-width:var(--lux-max,1320px); margin:0 auto; padding:14px var(--lux-gutter) 12px; }
@@ -112,6 +115,8 @@ export default function PackagesPage() {
           alt="" aria-hidden="true" className="pk-hero__img" fetchPriority="high" decoding="async"
         />
         <div className="pk-hero__veil" aria-hidden="true" />
+        <div className="pk-hero__dawn" aria-hidden="true" />
+        <div className="pk-hero__grain" aria-hidden="true" />
         <div className="pk-hero__in">
           <span className="lux-eyebrow lux-eyebrow--light">Complete catalogue · 2026 season</span>
           <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '20px 0 0', maxWidth: '18ch' }}>
@@ -121,18 +126,16 @@ export default function PackagesPage() {
             Char Dham, Do Dham, Single Dham, helicopter yatras and Uttarakhand tours — departing from
             Haridwar or Dehradun. All-inclusive, zero commission.
           </p>
-          <dl className="pk-stats">
-            {[
-              { n: PACKAGES.length, l: 'Packages' },
-              { n: `₹${lowestPrice.toLocaleString('en-IN')}`, l: 'Starting from' },
-              { n: '50,000+', l: 'Pilgrims since 2010' },
-            ].map((s) => (
-              <div key={s.l}>
-                <dd className="pk-stat__n">{s.n}</dd>
-                <dt className="pk-stat__l">{s.l}</dt>
-              </div>
-            ))}
-          </dl>
+          {/* The bare flex row this replaces had no dividers and no emphasis,
+              so the starting price read the same as the pilgrim count. Same
+              rail as the cab and package-detail heroes now, with the price
+              carrying the one gold value. */}
+          <SpecRail items={[
+            { k: 'Starting from', v: `₹${lowestPrice.toLocaleString('en-IN')}`, gold: true },
+            { k: 'Packages', v: String(PACKAGES.length) },
+            { k: 'Categories', v: String(Object.keys(CATEGORIES).length) },
+            { k: 'Pilgrims since 2010', v: '50,000+' },
+          ]} />
         </div>
       </section>
 

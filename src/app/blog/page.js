@@ -22,6 +22,14 @@ const POSTS = [
   { slug:'places-to-visit-during-char-dham-yatra', title:'Top 10 Places to Visit on Char Dham Yatra', excerpt:'Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta, Lakhamandal — the stops worth the detour between dhams.', tag:'Travel Tips', readTime:'8 min', icon:'📍' },
   { slug:'char-dham-yatra-significance', title:'Char Dham Yatra — History, Mythology & Significance', excerpt:'Where the circuit came from, why Adi Shankaracharya set it up in the 8th century, the mythology behind each dham, why the order is fixed, and what moksha means here.', tag:'Complete Guide', readTime:'10 min', icon:'🕉️' },
 
+  { slug:'char-dham-yatra-first-timer-guide', title:'Char Dham Yatra for First Timers — Complete Guide', excerpt:'Registration, packing, fitness prep, total cost and the route order that actually works. Written for anyone doing this for the first time.', tag:'Complete Guide', readTime:'8 min', icon:'🧭' },
+  { slug:'char-dham-yatra-with-kids', title:'Char Dham Yatra with Kids — Age & Altitude Safety', excerpt:'Doable for fit children from about eight, ponies from ₹1,800 if they cannot walk. Gangotri needs no trek at all; altitude rules by age.', tag:'Travel Tips', readTime:'6 min', icon:'👧' },
+  { slug:'char-dham-yatra-for-heart-patients', title:'Char Dham Yatra for Heart Patients — Safe Routes', excerpt:'Altitude risk, the medical certificate mandatory from 55, and why pony or palki beats walking. Written by operators, not doctors.', tag:'Senior Travel', readTime:'7 min', icon:'❤️' },
+  { slug:'char-dham-yatra-for-divyang', title:'Char Dham Yatra for Divyang & Wheelchair Pilgrims', excerpt:'An honest accessibility guide — which dhams a wheelchair user can genuinely reach, what palki and kandi carriage involve, and where the helicopter changes everything.', tag:'Accessibility', readTime:'7 min', icon:'♿' },
+  { slug:'char-dham-yatra-in-october', title:'Char Dham Yatra in October — Weather, Crowds & Dates', excerpt:'Monsoon gone, crowds gone, rooms cheaper — but Kedarnath nights hit −2°C and the temples close 10–13 November. Go in the first two weeks.', tag:'Autumn 2026', readTime:'6 min', icon:'🍁' },
+  { slug:'char-dham-yatra-by-bus', title:'Char Dham Yatra by Bus — Fares & Honest Advice', excerpt:'GMOU and GMVN fares from Haridwar, where big buses genuinely cannot go, and when the cheapest option stops being the best one.', tag:'Route Guide', readTime:'6 min', icon:'🚌' },
+  { slug:'triyuginarayan-temple', title:'Triyuginarayan Temple — Where Shiva Wed Parvati', excerpt:'Twelve km from Sonprayag, beside a fire said to have burned since the wedding. Timings, route, and how to fold it into a Kedarnath trip.', tag:'Temple Guide', readTime:'5 min', icon:'🔥' },
+  { slug:'mana-village-badrinath', title:'Mana Village Near Badrinath — India\'s First Village', excerpt:'Three km beyond Badrinath: Vyas Gufa, Bhim Pul, the last tea shop before Tibet, and whether the detour earns its half day.', tag:'Travel Tips', readTime:'5 min', icon:'🏘️' },
   { slug:'char-dham-monsoon-safety', title:'Char Dham Yatra in Monsoon 2026 — Safety Guide by Local Drivers', excerpt:'Sunrise departures, landslide zones by name, monsoon packing, live route checks. What 15 rainy seasons on these roads taught us.', tag:'Monsoon 2026', readTime:'8 min', icon:'🌧️' },
   { slug:'september-char-dham-yatra', title:'September Char Dham Yatra 2026 — Post-Monsoon Pre-Booking', excerpt:'Clearest skies of the year, thin crowds, hotels 25–40% cheaper. Week-by-week September weather and why autumn seats fill by August.', tag:'Autumn 2026', readTime:'7 min', icon:'🍂' },
   { slug:'char-dham-yatra-2026-new-rules', title:'Char Dham Yatra 2026 New Rules — Phone Ban, Age 55+, IRCTC Helicopter', excerpt:'All 2026 rule changes: mobile phone ban, medical certificate for 55+, IRCTC helicopter booking, non-Hindu entry, GPS tracking. Must-read before you travel.', tag:'2026 Update', readTime:'6 min', icon:'📢' },
@@ -73,6 +81,11 @@ const TAG_COLORS = {
   'Yatra Guide': { bg:'#fff1f2', color:'#9f1239' },
   'Nature Trek': { bg:'#f0fdf4', color:'#14532d' },
   'Adventure': { bg:'#ecfeff', color:'#164e63' },
+  '2026 Update': { bg:'#fef2f2', color:'#b91c1c' },
+  'Itinerary': { bg:'#eef2ff', color:'#3730a3' },
+  'Group Travel': { bg:'#f5f3ff', color:'#5b21b6' },
+  'Accessibility': { bg:'#f0f9ff', color:'#075985' },
+  'Temple Guide': { bg:'#fffbeb', color:'#854d0e' },
   'हिंदी गाइड': { bg:'#FFF3CC', color:'#7C4A00' },
   'Monsoon 2026': { bg:'#e0f2fe', color:'#075985' },
   'Autumn 2026': { bg:'#ffedd5', color:'#9a3412' },
@@ -81,15 +94,27 @@ const TAG_COLORS = {
 export default function Blog() {
   return (
     <>
+      {/* The index hero carried no data at all — the only figure on it was
+          buried inside the dek sentence, and the dek was doing the job a facts
+          strip does better. It is a catalogue page, so it now gets the same
+          strip the article heroes use, with every number derived from the data
+          rather than typed. That is what let "12 expert guides" sit stale on
+          this page while the count was really in the fifties. */}
       <BlogHero
         badge="Yatra Knowledge Hub"
         title="Char Dham Yatra Travel Blog"
-        dek={`${POSTS.length}+ expert guides written by people who have guided 50,000+ pilgrims through the Himalayas`}
+        dek="Written by the people who drive these roads and walk these treks every season — not researched from other blogs."
+        facts={[
+          { label: 'Guides', value: String(POSTS.length) },
+          { label: 'Topics', value: String(new Set(POSTS.map((p) => p.tag)).size) },
+          { label: 'Languages', value: 'English & हिंदी' },
+          { label: 'Pilgrims guided', value: '50,000+' },
+        ]}
       />
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
           <span>Blog</span>
         </div>
@@ -101,7 +126,7 @@ export default function Blog() {
             {POSTS.map(post => {
               const tc = TAG_COLORS[post.tag] || { bg:'var(--navy-light)', color:'var(--navy)' };
               return (
-                <Link key={post.slug} href={post.href || `/blog/${post.slug}`}
+                <Link prefetch={false} key={post.slug} href={post.href || `/blog/${post.slug}`}
                   style={{ textDecoration:'none', color:'inherit', display:'block' }}>
                   <article className="pkg-card" style={{
                     background:'#fff', borderRadius:16, overflow:'hidden',
@@ -142,7 +167,7 @@ export default function Blog() {
             { href:'/blog/mana-village-badrinath',            label:'Mana Village — Last Indian Village' },
             { href:'/blog/triyuginarayan-temple',             label:'Triyuginarayan Temple Guide' },
           ].map(l => (
-            <Link key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
+            <Link prefetch={false} key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
               {l.label} →
             </Link>
           ))}

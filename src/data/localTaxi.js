@@ -38,6 +38,20 @@ export const FLEET = [
   { id:'tt17',   name:'Tempo Traveller 17-seat', type:'Tempo',  seats:17,
     local8:5500, extraKm:30, extraHr:350, outstationKm:28,
     note:'Extended families and temple groups.' },
+  // Added Sep 2026. The vehicle was already being sold on /char-dham-yatra
+  // but had no row on the rate card, so there was nothing to quote per km.
+  // Priced by the same method as the rest of this file — a survey of the
+  // operators currently ranking (₹32–35/km outstation, ~₹7,000 for a local
+  // day around Haridwar), positioned just under them.
+  //
+  // ⚠️ NOTE THE CONFLICT: the vehicle table on /char-dham-yatra puts the
+  // Urbania BELOW the 17-seat Tempo for a full circuit (Rs.1.0L–1.4L against
+  // Rs.1.1L–1.5L), which is the opposite of how the market prices it and the
+  // opposite of the card below. One of the two is wrong. Resolve before
+  // clearing RATES_VERIFIED.
+  { id:'urbania', name:'Force Urbania',  type:'Luxury van',      seats:17,
+    local8:6500, extraKm:34, extraHr:400, outstationKm:32,
+    note:'Monocoque body, so it rides like a car rather than a truck. The comfort option above a tempo.' },
 ];
 
 // ── Fixed-price transfers (one-way drop, all-inclusive) ────────

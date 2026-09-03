@@ -11,7 +11,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/taxi-service-in-haridwar` },
   openGraph: {
     title: 'Taxi Service in Haridwar — Real Rates, Direct Operator',
-    description: 'Haridwar taxi rates from ₹1,600 for 8hr/80km. Own fleet, no aggregator markup. Sedan to 17-seat tempo traveller.',
+    description: 'Haridwar taxi rates from ₹1,600 for 8hr/80km. Own fleet, no aggregator markup. Sedan to Force Urbania.',
     url: `${SITE.baseUrl}/taxi-service-in-haridwar`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Taxi Service in Haridwar — Shiv Ganga Travels, direct operator rates' }],
@@ -127,7 +127,7 @@ export default function TaxiServiceInHaridwar() {
           </h1>
           <p style={{ color:'rgba(255,255,255,0.82)', fontSize:15.5, lineHeight:1.75, maxWidth:700, margin:'0 auto 20px' }}>
             A taxi in Haridwar costs <strong style={{ color:'#FFD166' }}>₹1,600 for 8 hours and 80 km</strong> in a Swift Dzire,
-            up to ₹5,500 for a 17-seat tempo traveller. Those are our rates, from our own fleet,
+            up to ₹6,500 for a Force Urbania. Those are our rates, from our own fleet,
             with nobody's commission sitting on top.
           </p>
           <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>

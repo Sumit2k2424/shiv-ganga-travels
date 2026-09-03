@@ -16,12 +16,13 @@ import {
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
-import { Section, SectionHead, Reveal, Pill, Eyebrow } from '@/components/lux/primitives';
+import { Section, SectionHead, Reveal, Eyebrow } from '@/components/lux/primitives';
 import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import {
-  FactPills, VerifiedStrip, InclusionsGrid, CancellationTerms,
+  VerifiedStrip, FareQuoteBar, InclusionsGrid, CancellationTerms,
   RoadRules, OperatorCard, CabLinkMesh, CabCTA,
 } from '@/components/cabs/CabSections';
+import CabHero from '@/components/cabs/CabHero';
 import { JsonLd, breadcrumb, faqPage, originService, routeItemList } from '@/components/cabs/cabSchema';
 
 export function generateStaticParams() {
@@ -36,7 +37,12 @@ export async function generateMetadata({ params }) {
   const routes = getRoutesFromOrigin(o.slug);
   const url = `${SITE.baseUrl}/cabs/from/${o.slug}`;
 
-  const title = `Cab Service in ${o.name} 2026 | Outstation Taxi Fares | ${routes.length} ${routes.length === 1 ? 'Route' : 'Routes'}`;
+  // Keep the title under 60 characters — the sitewide trim from the September
+  // CTR work. The route count is the first thing to go, since it is the least
+  // useful half of the title to a searcher.
+  const base = `Cab Service in ${o.name} ${SITE.season} | Outstation Taxi Fares`;
+  const withCount = `${base} | ${routes.length} ${routes.length === 1 ? 'Route' : 'Routes'}`;
+  const title = withCount.length <= 60 ? withCount : base;
   const desc = `Book an outstation cab from ${o.name} — ${routes.map(routeTo).slice(0, 4).join(', ')} and more. Fixed all-inclusive fares, doorstep pickup, hill-experienced drivers. Operator since 2010.`;
 
   return {
@@ -98,38 +104,22 @@ export default async function OriginPage({ params }) {
     <div className="lux-noscroll-x">
       <JsonLd items={schema} />
 
-      {/* ── Hero ── */}
-      <Section tone="ink">
-        <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
-          <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
-            <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
-              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
-              <li aria-hidden="true">›</li>
-              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
-              <li aria-hidden="true">›</li>
-              <li aria-current="page">Cabs from {o.name}</li>
-            </ol>
-          </nav>
-          <Reveal variant="fade">
-            <Pill tone="gold">{o.isBase ? 'One of our home bases' : 'Doorstep pickup'} · fixed fares</Pill>
-          </Reveal>
-          <Reveal>
-            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
-              Cab service in {o.name}
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
-              Outstation taxi hire from {o.name} — where we pick up, what each route costs, and who is driving.
-            </p>
-          </Reveal>
-          <FactPills items={[
-            ['route', `${routes.length} ${routes.length === 1 ? 'route' : 'routes'}`],
-            ['rupee', `from ${cheapest}`],
-            ['car', 'Doorstep pickup'],
-          ]} />
-        </div>
-      </Section>
+      {/* ── Hero ──
+          "Doorstep pickup" is false at a shuttle barrier at 1,829 m and in
+          the foot-only lanes above a dham, so the return-leg origins
+          override the eyebrow with something true. */}
+      <CabHero
+        crumbs={[['Home', '/'], ['Cabs', '/cabs'], [`Cabs from ${o.name}`, null]]}
+        eyebrow={`${o.pickupLabel || (o.isBase ? 'One of our home bases' : 'Doorstep pickup')} · fixed fares`}
+        title={`Cab service in ${o.name}`}
+        lede={`Outstation taxi hire from ${o.name} — where we pick up, what each route costs, and who is driving.`}
+        specs={[
+          { k: 'Routes from here', v: String(routes.length) },
+          { k: 'Fares from', v: cheapest, gold: true },
+          { k: 'Pickup', v: o.pickupLabel || 'Anywhere in the city' },
+          { k: 'State', v: o.state },
+        ]}
+      />
 
       {/* ── Quick answer ── */}
       <Section tone="paper" wrapWidth="narrow" tight>
@@ -183,6 +173,11 @@ export default async function OriginPage({ params }) {
             </Link>
           ))}
         </div>
+        <FareQuoteBar
+          vehicles={['Swift Dzire', 'Ertiga', 'Innova Crysta', 'Tempo Traveller']}
+          message={`Namaste! I want to book a cab from ${o.name}.`}
+          note={`Not sure which route or which vehicle? Send us where you are going and how many of you there are — we answer with one fixed all-in fare out of ${o.name}.`}
+        />
       </Section>
 
       {/* ── Local runs ── */}

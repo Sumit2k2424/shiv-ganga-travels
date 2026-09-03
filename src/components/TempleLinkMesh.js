@@ -119,7 +119,7 @@ export default function TempleLinkMesh({ groups, label = 'Related guides' }) {
           <p style={heading}>{g.title}</p>
           <div style={row}>
             {g.links.map(([l, h]) => (
-              <Link key={h} href={h} style={chip}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={chip}>{l} →</Link>
             ))}
           </div>
         </div>
