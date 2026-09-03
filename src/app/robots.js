@@ -47,6 +47,27 @@ export default function robots() {
       { userAgent: 'MistralAI-User',  allow: '/' },
       { userAgent: 'YouBot',          allow: '/' },        // You.com
       { userAgent: 'Bingbot',         allow: '/' },        // Copilot's index
+
+      // ── Denied: crawlers that cost origin transfer and return nothing ──
+      // Every page pull here is ~240 KB out of Vercel Compute, against a 10 GB
+      // Fast Origin Transfer cap on Hobby. These three send no customers: the
+      // audience is Char Dham yatris booking from India, and none of these
+      // feeds a search or answer surface those people use.
+      //
+      // PetalBot   — Huawei Petal Search. No meaningful Indian search share.
+      // Baiduspider— Baidu. Chinese-market index; not a source of yatra bookings.
+      // AhrefsBot  — third-party SEO backlink index. Crawls the whole site to
+      //              sell the data; nothing about it helps this site rank.
+      //
+      // AhrefsSiteAudit is deliberately NOT blocked — that is the crawler our
+      // own Ahrefs site audits use, and it only runs when we trigger it.
+      //
+      // robots.txt is voluntary. All three publicly honour it, but if the
+      // Observability bot table still shows them in a week, the next step is a
+      // Vercel Firewall rule, which actually enforces.
+      { userAgent: 'PetalBot',    disallow: '/' },
+      { userAgent: 'Baiduspider', disallow: '/' },
+      { userAgent: 'AhrefsBot',   disallow: '/' },
     ],
     // Both sitemaps are listed. The news sitemap is a different pipeline with a
     // rolling two-day window (see src/app/news-sitemap.xml/route.js) — it is
