@@ -125,22 +125,17 @@ const REDIRECTS = [
   { source: '/press/shiv-ganga-travels-cuts-package-prices-25-percent-2026', destination: '/press', permanent: true },
 
   // ── /blog prefix mismatches reported as 404 in Search Console (Aug 2026) ──
-  // Every one of these is the same mistake in one direction or the other: a
-  // page that lives under /blog/ linked without the prefix, or a top-level page
-  // linked with it. Google has been crawling them since May and getting a 404,
-  // so whatever links to them — old internal links, other sites, or shared
-  // WhatsApp messages — has been sending people nowhere.
+  // A page that lives under /blog/ linked without the prefix, or a top-level
+  // page linked with it. Google had been crawling them since May and getting a
+  // 404, so whatever links to them — old internal links, other sites, or shared
+  // WhatsApp messages — was sending people nowhere.
   //
-  // Hindi and long-form guides that live under /blog/:
-  { source: '/char-dham-packing-list-hindi',    destination: '/blog/char-dham-packing-list-hindi',    permanent: true },
-  { source: '/char-dham-registration-hindi',    destination: '/blog/char-dham-registration-hindi',    permanent: true },
-  { source: '/bujurg-char-dham-yatra',          destination: '/blog/bujurg-char-dham-yatra',          permanent: true },
-  { source: '/char-dham-yatra-kitna-kharcha',   destination: '/blog/char-dham-yatra-kitna-kharcha',   permanent: true },
-  { source: '/kedarnath-pehli-baar',            destination: '/blog/kedarnath-pehli-baar',            permanent: true },
-  //
-  // Top-level pages that were linked as if they were blog posts:
-  { source: '/blog/direct-operator-vs-travel-aggregator-char-dham', destination: '/direct-operator-vs-travel-aggregator-char-dham', permanent: true },
-  { source: '/blog/shiv-ganga-travels-vs-makemytrip-char-dham',     destination: '/shiv-ganga-travels-vs-makemytrip-char-dham',     permanent: true },
+  // This sweep originally re-listed seven sources that the Hindi-cluster and
+  // comparison-post blocks above already covered, with byte-identical
+  // destinations. Next takes the first match and ignores the rest, so the
+  // duplicates changed no behaviour — they were dead config, and the risk was
+  // that a future edit would change one copy and not the other. Removed; only
+  // the entry this sweep actually added is left.
   { source: '/blog/how-to-reach-badrinath',     destination: '/how-to-reach-badrinath',               permanent: true },
 ];
 
