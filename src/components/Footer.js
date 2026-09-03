@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { COLS, LANGUAGE_COL } from '@/components/footerLinks';

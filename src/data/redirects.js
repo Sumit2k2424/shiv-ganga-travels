@@ -74,6 +74,14 @@ const REDIRECTS = [
   { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
   { source: '/blog/kedarnath-weather-guide',   destination: '/kedarnath-weather',        permanent: true },
   { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
+
+  // ── /index — a second URL serving the whole homepage ──
+  // Next resolves /index to the same route as / (x-matched-path: /) and returns
+  // 200, so the CDN keeps a SECOND cache entry for the full ~500 KB homepage
+  // and every fill of it is another origin pull. Vercel Observability showed
+  // 168 requests in 12 hours. It is also a duplicate-content signal: two
+  // indexable URLs, identical body, self-referencing canonicals.
+  { source: '/index', destination: '/', permanent: true },
   { source: '/char-dham-yatra-checklist',      destination: '/blog/char-dham-yatra-packing-list', permanent: true },
   // ── Duplicate city pages (92% identical content) → main Char Dham page ──
   // Keeps: Delhi, Noida, Mumbai, Bangalore, Chennai, Kolkata, Pune, Hyderabad, Chandigarh
