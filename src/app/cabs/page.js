@@ -4,7 +4,10 @@ import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import {
   getOriginsByRegion, getDestinationsByKind, getRoutesFromOrigin,
   getRoutesToDestination, routeTo, routeLowestFare,
+  getPublishedRoutes, getPublishedOrigins, getPublishedDestinations,
 } from '@/data/cabs';
+import { getPublishedHire, hirePerKm, hireDayRate } from '@/data/cabs/hire';
+import CabHero from '@/components/cabs/CabHero';
 import CabBookingWizard from '@/components/CabBookingWizard';
 import RouteMap from '@/components/lux/RouteMap';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
@@ -52,22 +55,22 @@ export default function CabsPage() {
     <div className="lux-noscroll-x">
       <Schema />
 
-      {/* ── Hero ── */}
-      <Section tone="ink">
-        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <Reveal variant="fade"><Pill tone="gold">Fixed fares · zero commission</Pill></Reveal>
-          <Reveal>
-            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
-              Uttarakhand cabs, <span className="lux-accent">booked in a minute</span>
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
-              Haridwar, Rishikesh and Dehradun to every dham and hill station — sedans, SUVs, Innova Crysta and Tempo Travellers, driven by people who know these mountain roads.
-            </p>
-          </Reveal>
-        </div>
-      </Section>
+      {/* ── Hero ──
+          The hub counts itself: the spec rail is generated from the data
+          layer, so the figures move on their own as routes are added and
+          can never go stale the way a hand-typed "40+ routes" would. */}
+      <CabHero
+        crumbs={[['Home', '/'], ['Cabs', null]]}
+        eyebrow="Fixed fares · zero commission"
+        title="Uttarakhand cabs, booked in a minute"
+        lede="Haridwar, Rishikesh and Dehradun to every dham and hill station — sedans, SUVs, Innova Crysta and Tempo Travellers, driven by people who know these mountain roads."
+        specs={[
+          { k: 'Routes', v: String(getPublishedRoutes().length) },
+          { k: 'Pickup cities', v: String(getPublishedOrigins().length) },
+          { k: 'Destinations', v: String(getPublishedDestinations().length) },
+          { k: 'Local day from', v: `₹${Math.min(...getPublishedHire().map(hireDayRate)).toLocaleString('en-IN')}`, gold: true },
+        ]}
+      />
 
       {/* Why book direct — always immediately below the hero */}
       <WhyBookDirect />
@@ -122,7 +125,7 @@ export default function CabsPage() {
               {group.destinations.map((d) => {
                 const routes = getRoutesToDestination(d.slug);
                 return (
-                  <Link key={d.slug} href={`/cabs/to/${d.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+                  <Link prefetch={false} key={d.slug} href={`/cabs/to/${d.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Cabs to {d.name}</div>
                     <div className="lux-caption" style={{ marginTop: 6 }}>{d.altitude} · {routes.length} {routes.length === 1 ? 'route' : 'routes'}</div>
                     <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>Road ends at {d.lastMotorable}</div>
@@ -148,7 +151,7 @@ export default function CabsPage() {
               {region.origins.map((o) => {
                 const routes = getRoutesFromOrigin(o.slug);
                 return (
-                  <Link key={o.slug} href={`/cabs/from/${o.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+                  <Link prefetch={false} key={o.slug} href={`/cabs/from/${o.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
                     <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Cabs from {o.name}</div>
                     <div className="lux-caption" style={{ marginTop: 6 }}>{routes.length} {routes.length === 1 ? 'route' : 'routes'} · {o.state}</div>
                     <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>
@@ -160,6 +163,31 @@ export default function CabsPage() {
             </div>
           </div>
         ))}
+      </Section>
+
+      {/* ── Hire by vehicle — the fourth tier ──
+          A large share of enquiries start from the vehicle rather than the
+          journey: an organiser who knows there are fourteen of them and wants
+          a per-km number before an itinerary exists. These pages answer that
+          question directly, off the same published rate card. */}
+      <Section tone="paper">
+        <SectionHead
+          eyebrow="Or start from the vehicle"
+          title="Hire by vehicle, with the rate card published"
+          lede="Day rate, extra kilometre, extra hour and outstation per-km — all four numbers on the page, before you call anyone."
+        />
+        <div className="lux-grid lux-grid--4" data-lux-stagger="">
+          {getPublishedHire().map((h) => (
+            <Link prefetch={false} key={h.slug} href={`/cabs/hire/${h.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+              <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>{h.name} on rent</div>
+              <div className="lux-caption" style={{ marginTop: 6 }}>{h.seatsLabel}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--gold-dark)', marginTop: 10 }}>
+                from ₹{hirePerKm(h)}/km
+              </div>
+              <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>{h.idealFor}</div>
+            </Link>
+          ))}
+        </div>
       </Section>
 
       {/* ── Every route, flat ── */}
@@ -174,7 +202,7 @@ export default function CabsPage() {
                 <Eyebrow plain>Cabs from {o.name}</Eyebrow>
                 <div className="lux-grid lux-grid--4" style={{ marginTop: 16 }} data-lux-stagger="">
                   {routes.map((r) => (
-                    <Link key={r.slug} href={`/cabs/${r.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+                    <Link prefetch={false} key={r.slug} href={`/cabs/${r.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
                       <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>{o.name} → {routeTo(r)}</div>
                       <div className="lux-caption" style={{ marginTop: 6 }}>{r.distance} · {r.time}</div>
                       <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--gold-dark)', marginTop: 10 }}>
@@ -188,13 +216,13 @@ export default function CabsPage() {
           })
         )}
         <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-          <Link href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
+          <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
             Full Char Dham circuit cab<Icon name="arrowRight" size={13} />
           </Link>
-          <Link href="/taxi-service-in-haridwar" className="lux-funnel-link">
+          <Link prefetch={false} href="/taxi-service-in-haridwar" className="lux-funnel-link">
             Local taxi service in Haridwar<Icon name="arrowRight" size={13} />
           </Link>
-          <Link href="/dehradun-airport-to-haridwar-taxi" className="lux-funnel-link">
+          <Link prefetch={false} href="/dehradun-airport-to-haridwar-taxi" className="lux-funnel-link">
             Dehradun airport to Haridwar<Icon name="arrowRight" size={13} />
           </Link>
         </div>

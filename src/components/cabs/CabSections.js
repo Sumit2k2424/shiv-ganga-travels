@@ -67,7 +67,7 @@ export function VerifiedStrip({ expert, lastDrivenOn, subject }) {
           </div>
           <p className="lux-body" style={{ fontSize: '0.84rem', marginTop: 8 }}>
             {expert.bio}{' '}
-            <Link href={expert.url || '/about'} className="lux-link">
+            <Link prefetch={false} href={expert.url || '/about'} className="lux-link">
               About us <Icon name="arrowRight" size={12} />
             </Link>
           </p>
@@ -116,6 +116,68 @@ export function FareTable({ fares = [], caption }) {
   );
 }
 
+/* ── Inline quote surface, sits directly under a fare table ────
+   Every cab page used to carry exactly one conversion surface: the
+   dark CabCTA after ten sections. GA says under 10% of visitors ever
+   reach a 90% scroll, so on nine pages in ten the fare table was the
+   last thing anyone saw before leaving.
+
+   This is the second, deliberately lighter surface — the `inline` to
+   CabCTA's `footer`, per the two-unequal-surfaces rule the editorial
+   pages already follow. It goes where intent actually peaks: the
+   moment someone has read the bands and picked a row. Each chip
+   carries the vehicle into the WhatsApp message, so the first reply
+   can be a price rather than a question.
+
+   Server component, no ambient animation, no second dark card. */
+
+export function FareQuoteBar({ vehicles = [], message, note }) {
+  const wa = (m) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(m)}`;
+  // "a Ertiga" / "a Innova Crysta" is the kind of thing a real operator
+  // would never type, and this message is the first line of a conversation.
+  const article = (name) => (/^[aeiou]/i.test(name) ? 'an' : 'a');
+
+  return (
+    <Reveal>
+      <div
+        className="lux-card"
+        style={{ marginTop: 20, padding: '18px 20px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'space-between' }}
+      >
+        <div style={{ minWidth: 220, flex: '1 1 260px' }}>
+          <div style={{ fontWeight: 600, fontSize: '0.92rem', color: 'var(--ink)' }}>
+            Want the exact figure, not a band?
+          </div>
+          <p className="lux-body" style={{ fontSize: '0.82rem', marginTop: 4 }}>
+            {note || 'Tell us the vehicle and your dates and we send back one fixed all-in price. No account, no card, no callback queue.'}
+          </p>
+        </div>
+
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+          {vehicles.slice(0, 4).map((v) => (
+            <a
+              key={v}
+              href={wa(`${message} Please quote me for ${article(v)} ${v}.`)}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="lux-btn lux-btn--sm lux-btn--ghost"
+              style={{ whiteSpace: 'nowrap' }}
+            >
+              {v}
+            </a>
+          ))}
+          <a
+            href={`tel:${SITE.phone}`}
+            className="lux-btn lux-btn--sm"
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            <Icon name="phone" size={14} /> Call instead
+          </a>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 /* ── Fare comparison across origins (destination pages) ──────── */
 
 export function OriginFareTable({ rows = [] }) {
@@ -140,7 +202,7 @@ export function OriginFareTable({ rows = [] }) {
               <td style={{ whiteSpace: 'nowrap' }}>{r.time}</td>
               <td style={{ whiteSpace: 'nowrap', color: 'var(--gold-dark)', fontWeight: 600 }}>{r.fare}</td>
               <td>
-                <Link href={r.href} className="lux-link">
+                <Link prefetch={false} href={r.href} className="lux-link">
                   Fares &amp; route <Icon name="arrowRight" size={12} />
                 </Link>
               </td>
@@ -223,7 +285,7 @@ export function CancellationTerms({ compact = false, lede }) {
         {lede && <p className="lux-body" style={{ fontSize: '0.86rem', marginBottom: 10 }}>{lede}</p>}
         <p className="lux-caption" style={{ margin: 0 }}>
           {CANCELLATION.note}{' '}
-          <Link href="/cancellation-policy" className="lux-link">
+          <Link prefetch={false} href="/cancellation-policy" className="lux-link">
             Full cancellation terms
           </Link>
           .
@@ -369,7 +431,7 @@ export function OperatorCard({ lede, showCredentials = true }) {
       ) : (
         <p className="lux-caption" style={{ marginTop: 12 }}>
           {OPERATOR.role}, operating from Haridwar since {OPERATOR.since}.{' '}
-          <Link href="/about" className="lux-link">
+          <Link prefetch={false} href="/about" className="lux-link">
             Registration, fleet and credentials
           </Link>
           .
@@ -420,7 +482,7 @@ function LinkRow({ label, links }) {
       <Eyebrow plain>{label}</Eyebrow>
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 12 }}>
         {links.map(([text, href]) => (
-          <Link key={href} href={href} className="lux-funnel-link">
+          <Link prefetch={false} key={href} href={href} className="lux-funnel-link">
             {text}
             <Icon name="arrowRight" size={13} />
           </Link>

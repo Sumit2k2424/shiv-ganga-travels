@@ -38,7 +38,7 @@ export default function SightseeingLinkMesh({ current = '' }) {
       </p>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         {others.map(([key, label, href]) => (
-          <Link key={key} href={href} style={chip}>Places to Visit in {label} →</Link>
+          <Link prefetch={false} key={key} href={href} style={chip}>Places to Visit in {label} →</Link>
         ))}
       </div>
     </nav>

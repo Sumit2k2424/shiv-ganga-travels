@@ -17,12 +17,13 @@ import {
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
-import { Section, SectionHead, Reveal, Pill, Eyebrow, Facts } from '@/components/lux/primitives';
+import { Section, SectionHead, Reveal, Eyebrow, Facts } from '@/components/lux/primitives';
 import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
 import {
-  FactPills, VerifiedStrip, OriginFareTable, InclusionsGrid,
+  VerifiedStrip, OriginFareTable, FareQuoteBar, InclusionsGrid,
   RoadRules, OperatorCard, CabLinkMesh, CabCTA,
 } from '@/components/cabs/CabSections';
+import CabHero from '@/components/cabs/CabHero';
 import { JsonLd, breadcrumb, faqPage, destinationSchema, routeItemList } from '@/components/cabs/cabSchema';
 
 export function generateStaticParams() {
@@ -107,35 +108,18 @@ export default async function DestinationPage({ params }) {
       <JsonLd items={schema} />
 
       {/* ── Hero ── */}
-      <Section tone="ink">
-        <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
-          <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
-            <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
-              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
-              <li aria-hidden="true">›</li>
-              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
-              <li aria-hidden="true">›</li>
-              <li aria-current="page">Cabs to {d.name}</li>
-            </ol>
-          </nav>
-          <Reveal variant="fade"><Pill tone="gold">{routes.length} pickup {routes.length === 1 ? 'city' : 'cities'} · fixed fares</Pill></Reveal>
-          <Reveal>
-            <h1 className="lux-display lux-display--xl" style={{ color: '#fff', margin: '22px 0 16px' }}>
-              {d.name} taxi service
-            </h1>
-          </Reveal>
-          <Reveal>
-            <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.74)', margin: '0 auto' }}>
-              Every road to {d.name}, what each one costs, and where the tarmac actually runs out.
-            </p>
-          </Reveal>
-          <FactPills items={[
-            ['mountain', d.altitude],
-            ['car', `Road ends: ${d.lastMotorable}`],
-            ['rupee', `from ${cheapest.fare}`],
-          ]} />
-        </div>
-      </Section>
+      <CabHero
+        crumbs={[['Home', '/'], ['Cabs', '/cabs'], [`Cabs to ${d.name}`, null]]}
+        eyebrow={`${routes.length} pickup ${routes.length === 1 ? 'city' : 'cities'} · fixed fares`}
+        title={`${d.name} taxi service`}
+        lede={`Every road to ${d.name}, what each one costs, and where the tarmac actually runs out.`}
+        specs={[
+          { k: 'Altitude', v: d.altitude },
+          { k: 'Road ends at', v: d.lastMotorable },
+          { k: 'Cheapest from', v: cheapest.fare, gold: true },
+          { k: 'Pickup cities', v: String(routes.length) },
+        ]}
+      />
 
       {/* ── Quick answer ── */}
       <Section tone="paper" wrapWidth="narrow" tight>
@@ -160,6 +144,11 @@ export default async function DestinationPage({ params }) {
           Fares shown are indicative 2026 one-way bands for a Swift Dzire. Larger vehicles, round trips and
           multi-day packages are quoted on the individual route pages.
         </p>
+        <FareQuoteBar
+          vehicles={['Swift Dzire', 'Ertiga', 'Innova Crysta', 'Tempo Traveller']}
+          message={`Namaste! I want a cab to ${d.name}.`}
+          note={`Tell us which city you are starting from and your travel date — we come back with one fixed all-in price to ${d.name} rather than a band.`}
+        />
       </Section>
 
       {/* ── The practical facts ── */}
