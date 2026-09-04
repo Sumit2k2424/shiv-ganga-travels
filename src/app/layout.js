@@ -23,6 +23,7 @@ import LuxCursorGate from '@/components/lux/LuxCursorGate';
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
 import { SITE } from '@/data/packages';
 import { SOCIAL_SAME_AS } from '@/data/social';
+import { Analytics } from '@vercel/analytics/next';
 
 // ── next/font — zero render-blocking, self-hosted at build time ──
 // Two families, both variable: one file per style covers the whole weight
@@ -512,6 +513,7 @@ export default function RootLayout({ children }) {
             },2000);
           });
         `}}/>
+        <Analytics />
       </body>
     </html>
   );
