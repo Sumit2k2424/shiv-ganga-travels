@@ -1,11 +1,22 @@
 /* ══════════════════════════════════════════════════════════════
    SOCIAL ACCOUNTS — single source of truth.
 
-   Editing this file updates all four places at once:
-     · the footer social icon row
-     · the footer legal links
-     · the mobile menu
+   Editing this file updates every place at once:
+     · the footer social icon row (src/components/Footer.js)
      · schema.org `sameAs` in src/app/layout.js
+     · the profile list in /llms.txt (src/app/llms.txt/route.js)
+     · the YouTube/Instagram rail links in ReelsSection.js
+
+   (This list once also claimed the footer legal links and the mobile
+   menu. Neither renders a social link, and the footer row hardcoded
+   its five urls rather than reading them from here — so the promise
+   above was false for the one surface people actually check. It is
+   true now; keep it true by adding consumers to this list.)
+
+   Adding an account: add it below, then draw its glyph in the
+   SOCIAL_GLYPHS map in src/components/Icon.js, keyed by the same
+   `id`. Without a glyph the footer skips it rather than rendering
+   an empty circle.
 
    Anything set `verified:false` is hidden from the site AND left
    out of sameAs — a 404 in sameAs damages Google knowledge-panel

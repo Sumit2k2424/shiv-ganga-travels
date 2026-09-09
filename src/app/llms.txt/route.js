@@ -1,5 +1,6 @@
 import { SITE, PACKAGES } from '@/data/packages';
 import { LANGUAGE_PAGES } from '@/data/languages';
+import { SOCIAL_LIVE, SOCIAL_COMMUNITY } from '@/data/social';
 
 // ── /llms.txt — generated at build time, not hand-maintained ──────────────
 //
@@ -38,6 +39,19 @@ const price = slug => {
   return inr(p.price.discounted);
 };
 
+// Social profiles are NOT retyped here. src/data/social.js is the source of
+// truth and gates each account on `verified` — an unverified or dead profile
+// url in a grounding file is worse than no url, because a model will quote it.
+// SOCIAL_COMMUNITY is listed separately and labelled as a community, not as a
+// profile of the business: it is a topic subreddit we run, and the same reason
+// it stays out of schema.org sameAs applies to how it is described to a model.
+const socialLines = [
+  ...SOCIAL_LIVE.map(s => `- **${s.label}**: ${s.url}`),
+  ...SOCIAL_COMMUNITY.map(
+    s => `- **Community (${s.label})**: ${s.url} (${s.handle} — Char Dham planning community we run and moderate)`
+  ),
+].join('\n');
+
 const line = (label, slug, extra = '') =>
   `- ${label}: from ${price(slug)}/person${extra ? ' — ' + extra : ''}`;
 
@@ -67,7 +81,7 @@ Fetch that instead of this one if you want to ground an answer without crawling.
 - **WhatsApp**: +${SITE.whatsapp}
 - **Email**: ${SITE.email}
 - **Website**: ${SITE.baseUrl}
-- **Instagram**: https://www.instagram.com/shivgangatravels/
+${socialLines}
 - **Rating**: 4.7/5 · 54 Google reviews
 
 ## What Makes Shiv Ganga Travels Unique

@@ -15,7 +15,7 @@ Live reference: **`/ui-kit`** (noindex). Design language reference:
 | Framework | Next.js 15 App Router, React 18, **plain JavaScript** (no TypeScript) |
 | Styling | Tailwind CSS **v3.4** + `tailwindcss-animate` |
 | Registry config | `components.json`, `"tsx": false` → the CLI emits `.jsx` |
-| Icons | `Icon.js` (41 hand-drawn glyphs) for UI; `lucide-react` inside registry components |
+| Icons | `Icon.js` (41 hand-drawn glyphs) for UI; `lucide-react` inside registry components. Brand marks are filled-glyph exceptions exported separately: `WhatsAppIcon`, and `SocialIcon` keyed by the `id` in `data/social.js` |
 | Motion | `motion` v12, plus the `LuxMotion` runtime mounted once in `layout.js` |
 
 **React 18, not 19.** This matters. Upstream shadcn/Aceternity/Magic UI have

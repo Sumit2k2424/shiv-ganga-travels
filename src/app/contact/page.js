@@ -48,6 +48,7 @@ export default function ContactPage() {
               { icon:'💬', label:'WhatsApp', value:'+91-7817996730', href:`https://wa.me/${SITE.whatsapp}?text=${whatsappMsg}`, sub:'Fastest response', color:'#25D366', external:true },
               { icon:'✉️', label:'Email', value:SITE.email, href:`mailto:${SITE.email}`, sub:'We reply within 2 hrs', color:'var(--navy)' },
               { icon:'📸', label:'Instagram', value:'@shivgangatravels', href:'https://www.instagram.com/shivgangatravels/', sub:'Follow for yatra updates', color:'#C13584', external:true },
+              { icon:'👥', label:'Reddit', value:'r/CharDham_Guide', href:'https://www.reddit.com/r/CharDham_Guide/', sub:'Ask the yatra community', color:'#FF4500', external:true },
               { icon:'📍', label:'Office', value:'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar', sub:'Uttarakhand 249410, India', color:'var(--gold-dark)' },
             ].map(c => {
               const inner = (
