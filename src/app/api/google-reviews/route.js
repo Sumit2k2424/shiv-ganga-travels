@@ -1,6 +1,13 @@
 // GET /api/google-reviews
-// Auto-discovers Place ID via text search, then fetches real reviews.
-// Cached 24 hrs. Requires GOOGLE_MAPS_API_KEY (or legacy GOOGLE_PLACES_API_KEY) in Vercel env vars.
+// Resolves the GBP listing via Places API (New) text search, verified by
+// coordinates so a same-named operator elsewhere can never be picked up,
+// then fetches the real reviews. Successful results are cached 24 hrs;
+// failures are never cached, so a bad key or quota blip recovers on the
+// next request instead of a day later.
+// Requires GOOGLE_MAPS_API_KEY (or legacy GOOGLE_PLACES_API_KEY) in Vercel env vars,
+// with "Places API (New)" enabled on the GCP project.
+
+import { unstable_cache } from 'next/cache';
 
 const BUSINESS_NAME = 'Shiv Ganga Travels';
 const BUSINESS_LAT  = 29.9896838;
@@ -9,74 +16,72 @@ const CID           = '16074078434377735602';          // from GBP URL
 const MAPS_URL      = 'https://www.google.com/maps?cid=16074078434377735602';
 const REVIEW_URL    = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 const CACHE_SECS    = 86400;
+const MAX_DIST_M    = 150; // a text-search hit further than this is not our office
 
-export const revalidate = 86400; // 24 hours — must be a static literal in Next.js 15
+// Once the first successful call reports the resolved id, paste it here to
+// skip the text search entirely (one API call per refresh instead of two).
+const KNOWN_PLACE_ID = process.env.GOOGLE_PLACE_ID || '';
 
-// Step 1: Find Place ID via text search
+export const dynamic = 'force-dynamic';
+
+function distanceMetres(lat1, lng1, lat2, lng2) {
+  const R = 6371000, toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+// Step 1: Find Place ID via Text Search (New), accepting only a hit at our coordinates
 async function findPlaceId(apiKey) {
-  const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json`
-    + `?input=${encodeURIComponent(BUSINESS_NAME + ' Haridwar')}`
-    + `&inputtype=textquery`
-    + `&locationbias=point:${BUSINESS_LAT},${BUSINESS_LNG}`
-    + `&fields=place_id,name`
-    + `&key=${apiKey}`;
+  if (KNOWN_PLACE_ID) return KNOWN_PLACE_ID;
 
-  const res = await fetch(url, { next: { revalidate: CACHE_SECS } });
-  if (!res.ok) throw new Error(`Find Place HTTP ${res.status}`);
+  const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Goog-Api-Key': apiKey,
+      'X-Goog-FieldMask': 'places.id,places.displayName,places.location',
+    },
+    body: JSON.stringify({
+      textQuery: `${BUSINESS_NAME} Haridwar`,
+      locationBias: { circle: { center: { latitude: BUSINESS_LAT, longitude: BUSINESS_LNG }, radius: 500 } },
+      maxResultCount: 5,
+    }),
+    cache: 'no-store',
+  });
   const data = await res.json();
-  if (data.status !== 'OK' || !data.candidates?.length) {
-    throw new Error(`Find Place: ${data.status}`);
+  if (!res.ok || data.error) {
+    throw new Error(`Text Search: ${data.error?.status || res.status} — ${data.error?.message || ''}`);
   }
-  return data.candidates[0].place_id;
+
+  const match = (data.places || []).find(p =>
+    p.location
+    && distanceMetres(BUSINESS_LAT, BUSINESS_LNG, p.location.latitude, p.location.longitude) <= MAX_DIST_M
+  );
+  if (!match) {
+    const seen = (data.places || []).map(p => p.displayName?.text).join(', ') || 'none';
+    throw new Error(`Text Search: no result at our coordinates (got: ${seen})`);
+  }
+  return match.id;
 }
 
-// Step 2: Fetch reviews using Place ID (legacy API)
+// Step 2: Fetch reviews via Place Details (New)
 async function fetchReviews(apiKey, placeId) {
-  const url = `https://maps.googleapis.com/maps/api/place/details/json`
-    + `?place_id=${placeId}`
-    + `&fields=reviews,rating,user_ratings_total`
-    + `&reviews_sort=newest`
-    + `&language=en`
-    + `&key=${apiKey}`;
-
-  const res = await fetch(url, { next: { revalidate: CACHE_SECS } });
-  if (!res.ok) throw new Error(`Place Details HTTP ${res.status}`);
-  const data = await res.json();
-  if (data.status !== 'OK') throw new Error(`Place Details: ${data.status} — ${data.error_message || ''}`);
-
-  const r = data.result;
-  return {
-    rating: r.rating,
-    total:  r.user_ratings_total,
-    reviews: (r.reviews || [])
-      .filter(rv => rv.rating >= 4)
-      .slice(0, 6)
-      .map(rv => ({
-        author: rv.author_name,
-        photo:  rv.profile_photo_url || null,
-        rating: rv.rating,
-        text:   rv.text,
-        time:   rv.relative_time_description,
-        url:    rv.author_url || null,
-      })),
-  };
-}
-
-// Step 2 alt: new Places API (v1) — tried if legacy fails
-async function fetchReviewsNew(apiKey, placeId) {
-  const url = `https://places.googleapis.com/v1/places/${placeId}`;
-  const res = await fetch(url, {
+  const res = await fetch(`https://places.googleapis.com/v1/places/${placeId}`, {
     headers: {
       'X-Goog-Api-Key': apiKey,
       'X-Goog-FieldMask': 'reviews,rating,userRatingCount',
     },
-    next: { revalidate: CACHE_SECS },
+    cache: 'no-store',
   });
-  if (!res.ok) throw new Error(`Places v1 HTTP ${res.status}`);
   const data = await res.json();
-  if (data.error) throw new Error(data.error.message);
+  if (!res.ok || data.error) {
+    throw new Error(`Place Details: ${data.error?.status || res.status} — ${data.error?.message || ''}`);
+  }
 
   return {
+    placeId,
     rating: data.rating,
     total:  data.userRatingCount,
     reviews: (data.reviews || [])
@@ -93,6 +98,18 @@ async function fetchReviewsNew(apiKey, placeId) {
   };
 }
 
+// Only a successful result is stored; a thrown error leaves the cache empty.
+const getCachedReviews = unstable_cache(
+  async (apiKey) => {
+    const placeId = await findPlaceId(apiKey);
+    const result  = await fetchReviews(apiKey, placeId);
+    if (!result.reviews?.length) throw new Error('No reviews returned from Places API');
+    return result;
+  },
+  ['google-reviews', CID],
+  { revalidate: CACHE_SECS },
+);
+
 export async function GET() {
   const apiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.GOOGLE_PLACES_API_KEY;
 
@@ -105,31 +122,20 @@ export async function GET() {
   }
 
   try {
-    // Auto-discover the correct Place ID
-    const placeId = await findPlaceId(apiKey);
-
-    // Try legacy API first, fall back to new API
-    let result;
-    try {
-      result = await fetchReviews(apiKey, placeId);
-    } catch {
-      result = await fetchReviewsNew(apiKey, placeId);
-    }
-
-    if (!result.reviews?.length) {
-      throw new Error('No reviews returned from Places API');
-    }
-
+    const result = await getCachedReviews(apiKey);
     return Response.json(
       { ...result, mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL },
       { headers: { 'Cache-Control': `public, s-maxage=${CACHE_SECS}, stale-while-revalidate=3600` } }
     );
   } catch (err) {
     console.error('Google Reviews error:', err.message);
-    return Response.json({
-      error: err.message,
-      reviews: [], rating: null, total: null,
-      mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL,
-    });
+    return Response.json(
+      {
+        error: err.message,
+        reviews: [], rating: null, total: null,
+        mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL,
+      },
+      { headers: { 'Cache-Control': 'no-store' } }
+    );
   }
 }
