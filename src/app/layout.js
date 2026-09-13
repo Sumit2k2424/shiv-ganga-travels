@@ -31,10 +31,21 @@ import { SOCIAL_SAME_AS } from '@/data/social';
 // several static files instead.
 //
 // Inter: all UI, navigation, headings.
+//
+// display:'optional' (13 Sep 2026), was 'swap'. Chrome does not count text
+// painted in a fallback font as the LCP paint while the web font is still
+// swapping in, so with 'swap' the hero paragraph's LCP was stamped when Inter
+// finished downloading — 2.3 s after first paint on PageSpeed's throttled
+// mobile, for a 4.8 s lab LCP against a 2.4 s FCP. With 'optional' the
+// browser gives Inter a ~100 ms window: if it is there (preloaded, cached, or
+// a normal connection) it is used; if not, that page view stays on the
+// metrics-matched fallback ("Inter Fallback", adjustFontFallback) with no
+// swap and no shift, and Inter is cached for the next page. Field LCP was
+// already 2.2 s p75, i.e. real users mostly get Inter in time either way.
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap',
+  display: 'optional',
   preload: true,
   adjustFontFallback: true,
 });
