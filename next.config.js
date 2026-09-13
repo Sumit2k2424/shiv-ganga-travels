@@ -45,6 +45,20 @@ const nextConfig = {
     optimizePackageImports: [
       'lucide-react',
     ],
+    // Inline the page's CSS into the HTML instead of three render-blocking
+    // <link rel=stylesheet> requests (13 Sep 2026). On PageSpeed's throttled
+    // mobile those three files cost ~1.7 s before first paint — the largest
+    // remaining item after the content-visibility fix.
+    //
+    // Measured cost, not estimated: Next inlines the CSS TWICE — once as a
+    // <style> in <head> and again inside the RSC flight payload — so the
+    // homepage HTML went 486 KB -> 946 KB raw, 84 KB -> 179 KB gzip. That is
+    // ~+95 KB per page view and ~+33 MB of edge-cache fill per deploy across
+    // 346 pages. Sumit chose it knowingly against the origin-transfer cap
+    // ([[vercel-origin-transfer]] in memory), so batch deploys rather than
+    // pushing single-line changes. `optimizeCss` (critters) was tried first
+    // and does nothing for App Router pages.
+    inlineCss: true,
   },
 
   // NOTE: Do NOT override webpack `optimization.splitChunks` here. The Next.js
