@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { SITE } from '@/data/packages';
 import { VEHICLES, VEHICLE_MATRIX, REVIEWS } from '@/data/experience';
 import {
-  getDestination, getDestinationParams, isDestinationPublishable,
+  getDestination, getDestinationParams, isDestinationPublishable, robotsFor,
   getRoutesToDestination, getPublishedDestinations,
   routeFrom, routeLowestFare, getExpert,
   reviewsForSlug,
@@ -53,6 +53,7 @@ export async function generateMetadata({ params }) {
       `taxi to ${d.name} 2026`, `${d.name} taxi fare`, `how to reach ${d.name} by road`,
     ],
     alternates: { canonical: url },
+    ...robotsFor(d),
     openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }] },
     twitter: { card: 'summary_large_image', title, description: desc },
   };

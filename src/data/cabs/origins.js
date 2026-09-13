@@ -240,6 +240,7 @@ export const ORIGINS = [
   //  round-trip one.
   {
     slug: 'badrinath',
+    noindex: true,
     name: 'Badrinath',
     region: 'uttarakhand-hills',
     state: 'Uttarakhand',
@@ -260,6 +261,7 @@ export const ORIGINS = [
   },
   {
     slug: 'sonprayag',
+    noindex: true,
     name: 'Sonprayag',
     region: 'uttarakhand-hills',
     state: 'Uttarakhand',
@@ -280,6 +282,7 @@ export const ORIGINS = [
   },
   {
     slug: 'joshimath',
+    noindex: true,
     name: 'Joshimath',
     region: 'uttarakhand-hills',
     state: 'Uttarakhand',
@@ -299,6 +302,7 @@ export const ORIGINS = [
   },
   {
     slug: 'mussoorie',
+    noindex: true,
     name: 'Mussoorie',
     region: 'uttarakhand-hills',
     state: 'Uttarakhand',
@@ -319,6 +323,7 @@ export const ORIGINS = [
   },
   {
     slug: 'nainital',
+    noindex: true,
     name: 'Nainital',
     region: 'uttarakhand-hills',
     state: 'Uttarakhand',

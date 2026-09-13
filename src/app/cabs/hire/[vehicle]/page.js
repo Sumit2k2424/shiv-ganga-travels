@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { SITE } from '@/data/packages';
 import { VEHICLES, VEHICLE_MATRIX, REVIEWS } from '@/data/experience';
 import { inr } from '@/data/localTaxi';
-import { getRoute, isPublishable, routeFrom, routeTo, routeLowestFare, reviewsForSlug } from '@/data/cabs';
+import { getRoute, isPublishable, routeFrom, routeTo, routeLowestFare, reviewsForSlug, robotsFor } from '@/data/cabs';
 import { getExpert, DEFAULT_EXPERT } from '@/data/cabs/experts';
 import {
   getHire, getHireParams, isHirePublishable,
@@ -49,6 +49,7 @@ export async function generateMetadata({ params }) {
       `haridwar ${h.name.toLowerCase()} booking ${SITE.season}`,
     ],
     alternates: { canonical: url },
+    ...robotsFor(h),
     openGraph: { title, description: desc, url, type: 'website', siteName: SITE.name, locale: 'en_IN', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }] },
     twitter: { card: 'summary_large_image', title, description: desc },
   };

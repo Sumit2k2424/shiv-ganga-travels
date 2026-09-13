@@ -817,6 +817,7 @@ export const ROUTES = [
   //  a drive to Sonprayag while implying something else.
   {
     slug: 'haridwar-to-sonprayag-cab',
+    noindex: true,
     origin: 'haridwar', destination: 'sonprayag', terrain: 'hills',
     distance: '235 km', time: '8–9 hrs', endPoint: 'Sonprayag shuttle barrier',
     via: 'Haridwar → Rishikesh → Devprayag → Srinagar → Rudraprayag → Guptkashi → Sitapur → Sonprayag',
@@ -841,6 +842,7 @@ export const ROUTES = [
   },
   {
     slug: 'rishikesh-to-sonprayag-cab',
+    noindex: true,
     origin: 'rishikesh', destination: 'sonprayag', terrain: 'hills',
     distance: '210 km', time: '7–8 hrs', endPoint: 'Sonprayag shuttle barrier',
     via: 'Rishikesh → Devprayag → Srinagar → Rudraprayag → Guptkashi → Sonprayag',
@@ -863,6 +865,7 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-sonprayag-cab',
+    noindex: true,
     origin: 'dehradun', destination: 'sonprayag', terrain: 'hills',
     distance: '250 km', time: '9–10 hrs', endPoint: 'Sonprayag shuttle barrier',
     via: 'Dehradun → Rishikesh → Devprayag → Srinagar → Rudraprayag → Guptkashi → Sonprayag',
@@ -886,6 +889,7 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-sonprayag-cab',
+    noindex: true,
     origin: 'delhi', destination: 'sonprayag', terrain: 'hills',
     distance: '460 km', time: '13–14 hrs', endPoint: 'Sonprayag shuttle barrier',
     via: 'Delhi → Meerut → Muzaffarnagar → Haridwar → Rishikesh → Devprayag → Rudraprayag → Guptkashi → Sonprayag',
@@ -913,6 +917,7 @@ export const ROUTES = [
   //  and all four pass through here.
   {
     slug: 'haridwar-to-joshimath-cab',
+    noindex: true,
     origin: 'haridwar', destination: 'joshimath', terrain: 'hills',
     distance: '275 km', time: '9–10 hrs', endPoint: 'Joshimath town',
     via: 'Haridwar → Rishikesh → Devprayag → Rudraprayag → Karnaprayag → Chamoli → Pipalkoti → Joshimath',
@@ -936,6 +941,7 @@ export const ROUTES = [
   },
   {
     slug: 'rishikesh-to-joshimath-cab',
+    noindex: true,
     origin: 'rishikesh', destination: 'joshimath', terrain: 'hills',
     distance: '250 km', time: '8–9 hrs', endPoint: 'Joshimath town',
     via: 'Rishikesh → Devprayag → Srinagar → Rudraprayag → Karnaprayag → Chamoli → Joshimath',
@@ -958,6 +964,7 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-joshimath-cab',
+    noindex: true,
     origin: 'dehradun', destination: 'joshimath', terrain: 'hills',
     distance: '290 km', time: '10–11 hrs', endPoint: 'Joshimath town',
     via: 'Dehradun → Rishikesh → Devprayag → Rudraprayag → Karnaprayag → Chamoli → Joshimath',
@@ -982,6 +989,7 @@ export const ROUTES = [
   // ═══════════════ INTO THE GATEWAY CITIES ═══════════════
   {
     slug: 'delhi-to-rishikesh-cab',
+    noindex: true,
     origin: 'delhi', destination: 'rishikesh', terrain: 'plains',
     distance: '240 km', time: '5–6 hrs', endPoint: 'Anywhere in Rishikesh, either bank',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Haridwar → Rishikesh',
@@ -1003,6 +1011,7 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-dehradun-cab',
+    noindex: true,
     origin: 'delhi', destination: 'dehradun', terrain: 'plains',
     distance: '250 km', time: '5–6 hrs', endPoint: 'Anywhere in Dehradun, including Jolly Grant',
     via: 'Delhi → Akshardham → Baghpat → Shamli → Saharanpur → Dehradun',
@@ -1024,6 +1033,7 @@ export const ROUTES = [
   },
   {
     slug: 'haridwar-to-dehradun-cab',
+    noindex: true,
     origin: 'haridwar', destination: 'dehradun', terrain: 'plains',
     distance: '55 km', time: '1.5 hrs', endPoint: 'Anywhere in Dehradun, including Jolly Grant',
     via: 'Haridwar → Bahadrabad → Doiwala → Dehradun',
@@ -1044,6 +1054,7 @@ export const ROUTES = [
   },
   {
     slug: 'jaipur-to-rishikesh-cab',
+    noindex: true,
     origin: 'jaipur', destination: 'rishikesh', terrain: 'plains',
     distance: '540 km', time: '9–10 hrs', endPoint: 'Anywhere in Rishikesh, either bank',
     via: 'Jaipur → Alwar → Bhiwadi → Gurugram → Delhi → Meerut → Muzaffarnagar → Haridwar → Rishikesh',
@@ -1255,6 +1266,7 @@ export const ROUTES = [
   //  `fares:` line per route.
   {
     slug: 'badrinath-to-haridwar-cab',
+    noindex: true,
     origin: 'badrinath', destination: 'haridwar', terrain: 'hills',
     distance: '320 km', time: '10–11 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Badrinath → Joshimath → Pipalkoti → Chamoli → Karnaprayag → Rudraprayag → Devprayag → Rishikesh → Haridwar',
@@ -1278,6 +1290,7 @@ export const ROUTES = [
   },
   {
     slug: 'badrinath-to-rishikesh-cab',
+    noindex: true,
     origin: 'badrinath', destination: 'rishikesh', terrain: 'hills',
     distance: '295 km', time: '9–10 hrs', endPoint: 'Anywhere in Rishikesh, either bank',
     via: 'Badrinath → Joshimath → Chamoli → Karnaprayag → Rudraprayag → Srinagar → Devprayag → Rishikesh',
@@ -1300,6 +1313,7 @@ export const ROUTES = [
   },
   {
     slug: 'badrinath-to-delhi-cab',
+    noindex: true,
     origin: 'badrinath', destination: 'delhi', terrain: 'hills',
     distance: '530 km', time: '15–16 hrs',
     endPoint: 'Anywhere in Delhi NCR, including all three IGI terminals',
@@ -1322,6 +1336,7 @@ export const ROUTES = [
   },
   {
     slug: 'sonprayag-to-haridwar-cab',
+    noindex: true,
     origin: 'sonprayag', destination: 'haridwar', terrain: 'hills',
     distance: '235 km', time: '8–9 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Sonprayag → Guptkashi → Ukhimath → Rudraprayag → Srinagar → Devprayag → Rishikesh → Haridwar',
@@ -1345,6 +1360,7 @@ export const ROUTES = [
   },
   {
     slug: 'sonprayag-to-rishikesh-cab',
+    noindex: true,
     origin: 'sonprayag', destination: 'rishikesh', terrain: 'hills',
     distance: '210 km', time: '7–8 hrs', endPoint: 'Anywhere in Rishikesh, either bank',
     via: 'Sonprayag → Guptkashi → Rudraprayag → Srinagar → Devprayag → Rishikesh',
@@ -1366,6 +1382,7 @@ export const ROUTES = [
   },
   {
     slug: 'sonprayag-to-delhi-cab',
+    noindex: true,
     origin: 'sonprayag', destination: 'delhi', terrain: 'hills',
     distance: '445 km', time: '13–14 hrs',
     endPoint: 'Anywhere in Delhi NCR, including all three IGI terminals',
@@ -1388,6 +1405,7 @@ export const ROUTES = [
   },
   {
     slug: 'joshimath-to-haridwar-cab',
+    noindex: true,
     origin: 'joshimath', destination: 'haridwar', terrain: 'hills',
     distance: '275 km', time: '9–10 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Joshimath → Pipalkoti → Chamoli → Karnaprayag → Rudraprayag → Srinagar → Devprayag → Rishikesh → Haridwar',
@@ -1410,6 +1428,7 @@ export const ROUTES = [
   },
   {
     slug: 'mussoorie-to-haridwar-cab',
+    noindex: true,
     origin: 'mussoorie', destination: 'haridwar', terrain: 'plains',
     distance: '85 km', time: '2.5 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Mussoorie → Dehradun → Doiwala → Bahadrabad → Haridwar',
@@ -1431,6 +1450,7 @@ export const ROUTES = [
   },
   {
     slug: 'mussoorie-to-dehradun-cab',
+    noindex: true,
     origin: 'mussoorie', destination: 'dehradun', terrain: 'plains',
     distance: '35 km', time: '1.5 hrs', endPoint: 'Anywhere in Dehradun, including Jolly Grant',
     via: 'Mussoorie → Kempty turn → Galway Road → Dehradun',
@@ -1451,6 +1471,7 @@ export const ROUTES = [
   },
   {
     slug: 'mussoorie-to-delhi-cab',
+    noindex: true,
     origin: 'mussoorie', destination: 'delhi', terrain: 'plains',
     distance: '290 km', time: '7–8 hrs',
     endPoint: 'Anywhere in Delhi NCR, including all three IGI terminals',
@@ -1473,6 +1494,7 @@ export const ROUTES = [
   },
   {
     slug: 'nainital-to-haridwar-cab',
+    noindex: true,
     origin: 'nainital', destination: 'haridwar', terrain: 'plains',
     distance: '265 km', time: '7–8 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Nainital → Bhimtal → Haldwani → Rampur → Moradabad → Najibabad → Haridwar',
@@ -1494,6 +1516,7 @@ export const ROUTES = [
   },
   {
     slug: 'nainital-to-delhi-cab',
+    noindex: true,
     origin: 'nainital', destination: 'delhi', terrain: 'plains',
     distance: '300 km', time: '6–7 hrs',
     endPoint: 'Anywhere in Delhi NCR, including all three IGI terminals',
@@ -1515,6 +1538,7 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-haridwar-cab',
+    noindex: true,
     origin: 'dehradun', destination: 'haridwar', terrain: 'plains',
     distance: '55 km', time: '1.5 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Dehradun → Doiwala → Raiwala → Bahadrabad → Haridwar',
@@ -1535,6 +1559,7 @@ export const ROUTES = [
   },
   {
     slug: 'rishikesh-to-haridwar-cab',
+    noindex: true,
     origin: 'rishikesh', destination: 'haridwar', terrain: 'plains',
     distance: '25 km', time: '40–55 min', endPoint: 'Anywhere in Haridwar',
     via: 'Rishikesh → Shyampur → Raiwala → Haridwar',
@@ -1563,6 +1588,7 @@ export const ROUTES = [
   //  one-way drop is a normal booking.
   {
     slug: 'jodhpur-to-haridwar-cab',
+    noindex: true,
     origin: 'jodhpur', destination: 'haridwar', terrain: 'plains',
     distance: '880 km', time: '2 days', endPoint: 'Anywhere in Haridwar',
     via: 'Jodhpur → Ajmer → Jaipur → Alwar → Gurugram → Delhi → Meerut → Muzaffarnagar → Roorkee → Haridwar',
@@ -1584,6 +1610,7 @@ export const ROUTES = [
   },
   {
     slug: 'udaipur-to-haridwar-cab',
+    noindex: true,
     origin: 'udaipur', destination: 'haridwar', terrain: 'plains',
     distance: '900 km', time: '2 days', endPoint: 'Anywhere in Haridwar',
     via: 'Udaipur → Chittorgarh → Ajmer → Jaipur → Alwar → Gurugram → Delhi → Meerut → Roorkee → Haridwar',

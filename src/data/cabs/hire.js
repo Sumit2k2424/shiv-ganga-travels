@@ -29,6 +29,7 @@ import { FLEET as LOCAL_FLEET, fleetById } from '@/data/localTaxi';
 export const HIRE = [
   {
     slug: 'tempo-traveller-haridwar',
+    noindex: true,
     showcaseId: 'tempo',          // matching entry in experience.js VEHICLES
     name: 'Tempo Traveller',
     h1: 'Tempo Traveller on rent in Haridwar',
@@ -62,6 +63,7 @@ export const HIRE = [
   },
   {
     slug: 'innova-crysta-haridwar',
+    noindex: true,
     showcaseId: 'innova',          // matching entry in experience.js VEHICLES
     name: 'Innova Crysta',
     h1: 'Innova Crysta on rent in Haridwar',
@@ -93,6 +95,7 @@ export const HIRE = [
   },
   {
     slug: 'swift-dzire-haridwar',
+    noindex: true,
     showcaseId: 'ertiga',          // matching entry in experience.js VEHICLES
     name: 'Swift Dzire',
     h1: 'Swift Dzire taxi on rent in Haridwar',
@@ -124,6 +127,7 @@ export const HIRE = [
   },
   {
     slug: 'ertiga-haridwar',
+    noindex: true,
     showcaseId: 'ertiga',          // matching entry in experience.js VEHICLES
     name: 'Maruti Ertiga',
     h1: 'Maruti Ertiga on rent in Haridwar',
@@ -154,6 +158,7 @@ export const HIRE = [
     ],
   },  {
     slug: 'force-urbania-haridwar',
+    noindex: true,
     showcaseId: 'tempo',          // matching entry in experience.js VEHICLES
     name: 'Force Urbania',
     h1: 'Force Urbania on rent in Haridwar',
@@ -211,6 +216,9 @@ export function isHirePublishable(h) {
 }
 
 export const getPublishedHire = () => HIRE.filter(isHirePublishable);
+
+/** Published AND not flagged `noindex` — the sitemap's view. See the index gate in ./index.js. */
+export const getIndexedHire = () => getPublishedHire().filter((h) => !h.noindex);
 
 export const getHireParams = () => getPublishedHire().map((h) => ({ vehicle: h.slug }));
 

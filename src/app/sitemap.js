@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
-import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations } from '@/data/cabs';
-import { getPublishedHire } from '@/data/cabs/hire';
+import { getIndexedRoutes, getIndexedOrigins, getIndexedDestinations } from '@/data/cabs';
+import { getIndexedHire } from '@/data/cabs/hire';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { getPublishedReleases } from '@/data/press';
@@ -194,18 +194,20 @@ export default function sitemap() {
 
   // Every cab URL is generated from the data layer, and only from entries that
   // pass the publishability gate in @/data/cabs — so a half-written route can
-  // never reach the sitemap. Destination and origin hubs outrank the individual
+  // never reach the sitemap — AND are not flagged `noindex` (the index gate in
+  // the same file; a noindexed page in a sitemap is a contradiction Google
+  // reports as an error). Destination and origin hubs outrank the individual
   // routes because they carry the comparison tables people actually land on.
   const cabs = [
     { url: `${b}/cabs`,                        p: 0.88, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-cab-booking`, p: 0.85, cf: 'monthly' },
-    ...getPublishedDestinations().map(d => ({ url: `${b}/cabs/to/${d.slug}`,   p: 0.84, cf: 'monthly' })),
-    ...getPublishedOrigins().map(o      => ({ url: `${b}/cabs/from/${o.slug}`, p: 0.83, cf: 'monthly' })),
-    ...getPublishedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
+    ...getIndexedDestinations().map(d => ({ url: `${b}/cabs/to/${d.slug}`,   p: 0.84, cf: 'monthly' })),
+    ...getIndexedOrigins().map(o      => ({ url: `${b}/cabs/from/${o.slug}`, p: 0.83, cf: 'monthly' })),
+    ...getIndexedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
     // Vehicle-hire tier — answers the "which vehicle, what per km" query class
     // rather than a journey question. Priced above the individual routes
     // because the rate card is transactional and there are only four of them.
-    ...getPublishedHire().map(h         => ({ url: `${b}/cabs/hire/${h.slug}`, p: 0.84, cf: 'monthly' })),
+    ...getIndexedHire().map(h         => ({ url: `${b}/cabs/hire/${h.slug}`, p: 0.84, cf: 'monthly' })),
   ];
 
   // Newsroom. Releases come from the same publishability gate that drives

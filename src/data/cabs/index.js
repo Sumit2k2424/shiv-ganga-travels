@@ -105,6 +105,31 @@ export function isDestinationPublishable(d) {
 export const getPublishedOrigins = () => ORIGINS.filter(isOriginPublishable);
 export const getPublishedDestinations = () => DESTINATIONS.filter(isDestinationPublishable);
 
+// ── Index gate ────────────────────────────────────────────────
+//
+// Publishable is not the same as indexable. A `noindex: true` flag on any
+// route, origin, destination or hire object keeps the page live — it still
+// builds, still serves, still sits in the link meshes for people who need
+// it — but tells Google not to index it and keeps it out of sitemap.xml.
+//
+// Why this exists (13 Sep 2026): the 38 cab pages shipped on 3 Sep were
+// indexed on 6 Sep and the whole site lost ~96% of impressions on 11 Sep.
+// The section as a whole earned 7 clicks in 28 days and 85 of its 105 pages
+// earned zero impressions. The flag is the reversible half of the fix —
+// delete the line and the page is indexable again on the next deploy.
+//
+// Do NOT weaken isPublishable() to achieve the same thing: that would 404
+// the page and break every internal link into it.
+
+export const isIndexable = (x) => Boolean(x) && !x.noindex;
+
+/** Metadata `robots` for a data object. Spread into generateMetadata's return. */
+export const robotsFor = (x) => (isIndexable(x) ? {} : { robots: { index: false, follow: true } });
+
+export const getIndexedRoutes = () => getPublishedRoutes().filter(isIndexable);
+export const getIndexedOrigins = () => getPublishedOrigins().filter(isIndexable);
+export const getIndexedDestinations = () => getPublishedDestinations().filter(isIndexable);
+
 /**
  * A deterministic slice of the review wall for one cab page.
  *

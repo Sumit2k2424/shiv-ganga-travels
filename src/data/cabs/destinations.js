@@ -436,6 +436,7 @@ export const DESTINATIONS = [
   // recommending Delhi hotels would be filler, and the template guards it.
   {
     slug: 'delhi',
+    noindex: true,
     name: 'Delhi',
     kind: 'city',
     state: 'Delhi',
