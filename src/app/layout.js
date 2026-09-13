@@ -194,37 +194,13 @@ function SiteSchema() {
     ],
     openingHours: [`Mo-Su ${SITE.hours.opens}-${SITE.hours.closes}`],
 
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: SITE.reviews.rating,
-      reviewCount: SITE.reviews.count,
-      bestRating: 5,
-      worstRating: 1,
-    },
-
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Rajesh Kumar' },
-        datePublished: '2026-05-10',
-        reviewBody: 'Best Char Dham operator in Haridwar. Everything was perfectly arranged — hotels, vehicles, darshan slots. The Kedarnath trek support was outstanding. Will do Do Dham next year with them.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Sunita Sharma' },
-        datePublished: '2026-04-28',
-        reviewBody: 'We are a family of 8 including two senior citizens aged 72 and 69. Shiv Ganga arranged palki for both at Kedarnath. The driver Ramesh bhai was exceptional — calm, experienced, and deeply knowledgeable about the route. Highly recommended.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Priya Mehta' },
-        datePublished: '2026-05-15',
-        reviewBody: 'Direct operator — no middleman, no commission. Price was exactly as quoted. VIP darshan at Badrinath was a blessing. Will recommend to everyone planning Char Dham Yatra.',
-      },
-    ],
+    // No aggregateRating and no review nodes here, deliberately. Google treats
+    // ratings and reviews an organisation publishes about itself as
+    // self-serving and ineligible for review snippets, and hard-coded 5-star
+    // Review objects on every route are spam-shaped markup. The real Google
+    // rating (SITE.reviews) still appears as visible text across the site;
+    // the reviews themselves live on the Google Business Profile, which
+    // `hasMap` already points at.
 
     logo: {
       '@type': 'ImageObject',
