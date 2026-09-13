@@ -115,11 +115,15 @@ export const getPublishedDestinations = () => DESTINATIONS.filter(isDestinationP
 // Why this exists (13 Sep 2026): the 38 cab pages shipped on 3 Sep were
 // indexed on 6 Sep and the whole site lost ~96% of impressions on 11 Sep.
 // The section as a whole earned 7 clicks in 28 days and 85 of its 105 pages
-// earned zero impressions. The flag is the reversible half of the fix —
-// delete the line and the page is indexable again on the next deploy.
+// earned zero impressions. Those 38 were first noindexed with this flag,
+// then deleted outright the same day (their URLs 308 from
+// src/data/redirects.js). Nothing carries the flag right now; the gate stays
+// because the next cut, if one is needed, is the 49 older cab pages that have
+// never earned an impression, and this is the one-line way to test it.
 //
 // Do NOT weaken isPublishable() to achieve the same thing: that would 404
-// the page and break every internal link into it.
+// the page and break every internal link into it. Deleting a page for real
+// means removing its object AND adding a redirect for its URL.
 
 export const isIndexable = (x) => Boolean(x) && !x.noindex;
 

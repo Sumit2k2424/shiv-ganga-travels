@@ -6,7 +6,7 @@ import {
   getRoutesToDestination, routeTo, routeLowestFare,
   getPublishedRoutes, getPublishedOrigins, getPublishedDestinations,
 } from '@/data/cabs';
-import { getPublishedHire, hirePerKm, hireDayRate } from '@/data/cabs/hire';
+import { FLEET as LOCAL_FLEET } from '@/data/localTaxi';
 import CabHero from '@/components/cabs/CabHero';
 import CabBookingWizard from '@/components/CabBookingWizard';
 import RouteMap from '@/components/lux/RouteMap';
@@ -68,7 +68,7 @@ export default function CabsPage() {
           { k: 'Routes', v: String(getPublishedRoutes().length) },
           { k: 'Pickup cities', v: String(getPublishedOrigins().length) },
           { k: 'Destinations', v: String(getPublishedDestinations().length) },
-          { k: 'Local day from', v: `₹${Math.min(...getPublishedHire().map(hireDayRate)).toLocaleString('en-IN')}`, gold: true },
+          { k: 'Local day from', v: `₹${Math.min(...LOCAL_FLEET.map((v) => v.local8)).toLocaleString('en-IN')}`, gold: true },
         ]}
       />
 
@@ -163,31 +163,6 @@ export default function CabsPage() {
             </div>
           </div>
         ))}
-      </Section>
-
-      {/* ── Hire by vehicle — the fourth tier ──
-          A large share of enquiries start from the vehicle rather than the
-          journey: an organiser who knows there are fourteen of them and wants
-          a per-km number before an itinerary exists. These pages answer that
-          question directly, off the same published rate card. */}
-      <Section tone="paper">
-        <SectionHead
-          eyebrow="Or start from the vehicle"
-          title="Hire by vehicle, with the rate card published"
-          lede="Day rate, extra kilometre, extra hour and outstation per-km — all four numbers on the page, before you call anyone."
-        />
-        <div className="lux-grid lux-grid--4" data-lux-stagger="">
-          {getPublishedHire().map((h) => (
-            <Link prefetch={false} key={h.slug} href={`/cabs/hire/${h.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
-              <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>{h.name} on rent</div>
-              <div className="lux-caption" style={{ marginTop: 6 }}>{h.seatsLabel}</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--gold-dark)', marginTop: 10 }}>
-                from ₹{hirePerKm(h)}/km
-              </div>
-              <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>{h.idealFor}</div>
-            </Link>
-          ))}
-        </div>
       </Section>
 
       {/* ── Every route, flat ── */}

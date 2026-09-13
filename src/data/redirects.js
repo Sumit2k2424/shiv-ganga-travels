@@ -34,6 +34,65 @@ const REDIRECTS = [
   { source: '/haridwar-to-badrinath-cab',  destination: '/cabs/haridwar-to-badrinath-cab',  permanent: true },
   { source: '/haridwar-to-gangotri-cab',   destination: '/cabs/haridwar-to-gangotri-cab',   permanent: true },
   { source: '/delhi-to-haridwar-cab',      destination: '/cabs/delhi-to-haridwar-cab',      permanent: true },
+  // ── The 3 Sep 2026 cab expansion, deleted 13 Sep 2026 ──
+  // 38 pages (27 routes, 7 origin hubs, 5 destination hubs, 5 vehicle-hire
+  // pages) went live on 3 Sep, were indexed on 6 Sep, and the site lost ~96% of
+  // Google impressions on 11 Sep. In 28 days the batch earned zero impressions.
+  // Sumit's call was to remove them outright rather than noindex. Every URL
+  // below was indexed, so each one 308s to the page that answers the same
+  // question: a return leg to its outbound twin, a road-head leg to the dham
+  // page describing the same drive, a hub to its nearest live hub. The vehicle
+  // rate card they read from still lives on /taxi-service-in-haridwar.
+  // Return legs → the outbound twin (same road, same fare table, one page).
+  { source: '/cabs/badrinath-to-haridwar-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
+  { source: '/cabs/badrinath-to-rishikesh-cab',   destination: '/cabs/rishikesh-to-badrinath-cab',    permanent: true },
+  { source: '/cabs/badrinath-to-delhi-cab',       destination: '/cabs/delhi-to-badrinath-cab',        permanent: true },
+  { source: '/cabs/joshimath-to-haridwar-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
+  { source: '/cabs/sonprayag-to-haridwar-cab',    destination: '/cabs/haridwar-to-kedarnath-cab',     permanent: true },
+  { source: '/cabs/sonprayag-to-rishikesh-cab',   destination: '/cabs/rishikesh-to-kedarnath-cab',    permanent: true },
+  { source: '/cabs/sonprayag-to-delhi-cab',       destination: '/cabs/delhi-to-kedarnath-cab',        permanent: true },
+  { source: '/cabs/mussoorie-to-haridwar-cab',    destination: '/cabs/haridwar-to-mussoorie-cab',     permanent: true },
+  { source: '/cabs/mussoorie-to-dehradun-cab',    destination: '/cabs/dehradun-to-mussoorie-cab',     permanent: true },
+  { source: '/cabs/mussoorie-to-delhi-cab',       destination: '/cabs/delhi-to-mussoorie-cab',        permanent: true },
+  { source: '/cabs/nainital-to-haridwar-cab',     destination: '/cabs/haridwar-to-nainital-cab',      permanent: true },
+  { source: '/cabs/nainital-to-delhi-cab',        destination: '/cabs/delhi-to-nainital-cab',         permanent: true },
+  // Road-head legs → the dham page that already describes the same drive
+  { source: '/cabs/haridwar-to-sonprayag-cab',    destination: '/cabs/haridwar-to-kedarnath-cab',     permanent: true },
+  { source: '/cabs/rishikesh-to-sonprayag-cab',   destination: '/cabs/rishikesh-to-kedarnath-cab',    permanent: true },
+  { source: '/cabs/dehradun-to-sonprayag-cab',    destination: '/cabs/dehradun-to-kedarnath-cab',     permanent: true },
+  { source: '/cabs/delhi-to-sonprayag-cab',       destination: '/cabs/delhi-to-kedarnath-cab',        permanent: true },
+  { source: '/cabs/haridwar-to-joshimath-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
+  { source: '/cabs/rishikesh-to-joshimath-cab',   destination: '/cabs/rishikesh-to-badrinath-cab',    permanent: true },
+  { source: '/cabs/dehradun-to-joshimath-cab',    destination: '/cabs/dehradun-to-badrinath-cab',     permanent: true },
+  // Short hops between the gateway cities → the origin hub or the nearest kept route.
+  { source: '/cabs/delhi-to-rishikesh-cab',       destination: '/cabs/delhi-to-haridwar-cab',         permanent: true },
+  { source: '/cabs/delhi-to-dehradun-cab',        destination: '/cabs/delhi-to-haridwar-cab',         permanent: true },
+  { source: '/cabs/haridwar-to-dehradun-cab',     destination: '/cabs/from/haridwar',                 permanent: true },
+  { source: '/cabs/rishikesh-to-haridwar-cab',    destination: '/cabs/from/rishikesh',                permanent: true },
+  { source: '/cabs/dehradun-to-haridwar-cab',     destination: '/cabs/from/dehradun',                 permanent: true },
+  // Rajasthan long hauls → the Jaipur page, the one Rajasthan route with demand.
+  { source: '/cabs/jaipur-to-rishikesh-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
+  { source: '/cabs/jodhpur-to-haridwar-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
+  { source: '/cabs/udaipur-to-haridwar-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
+  // Hubs that only existed to serve the routes above.
+  { source: '/cabs/from/badrinath',               destination: '/cabs',                               permanent: true },
+  { source: '/cabs/from/sonprayag',               destination: '/cabs',                               permanent: true },
+  { source: '/cabs/from/joshimath',               destination: '/cabs',                               permanent: true },
+  { source: '/cabs/from/mussoorie',               destination: '/cabs',                               permanent: true },
+  { source: '/cabs/from/nainital',                destination: '/cabs',                               permanent: true },
+  { source: '/cabs/from/jodhpur',                 destination: '/cabs/from/jaipur',                   permanent: true },
+  { source: '/cabs/from/udaipur',                 destination: '/cabs/from/jaipur',                   permanent: true },
+  { source: '/cabs/to/delhi',                     destination: '/cabs',                               permanent: true },
+  { source: '/cabs/to/rishikesh',                 destination: '/cabs',                               permanent: true },
+  { source: '/cabs/to/dehradun',                  destination: '/cabs',                               permanent: true },
+  { source: '/cabs/to/sonprayag',                 destination: '/cabs/to/kedarnath',                  permanent: true },
+  { source: '/cabs/to/joshimath',                 destination: '/cabs/to/badrinath',                  permanent: true },
+  // Vehicle hire → the rate card those pages were generated from.
+  { source: '/cabs/hire/tempo-traveller-haridwar',destination: '/taxi-service-in-haridwar',           permanent: true },
+  { source: '/cabs/hire/innova-crysta-haridwar',  destination: '/taxi-service-in-haridwar',           permanent: true },
+  { source: '/cabs/hire/swift-dzire-haridwar',    destination: '/taxi-service-in-haridwar',           permanent: true },
+  { source: '/cabs/hire/ertiga-haridwar',         destination: '/taxi-service-in-haridwar',           permanent: true },
+  { source: '/cabs/hire/force-urbania-haridwar',  destination: '/taxi-service-in-haridwar',           permanent: true },
   // ── Retired /blog/[slug] JSON route: send its old slugs to the real pages ──
   { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
   // Redirect stale 2025 guide URL → main char dham page (2026 content)
