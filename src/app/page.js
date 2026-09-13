@@ -15,13 +15,14 @@
 import Link from 'next/link';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
-import { HOTELS, VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
+import { HOTELS, VEHICLES, VEHICLE_MATRIX, ROUTE } from '@/data/experience';
 import HeroSection from '@/components/HeroSection';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import RouteMap from '@/components/lux/RouteMap';
 import ReelsSection from '@/components/ReelsSection';
-import { HotelShowcase, VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
+import { HotelShowcase, VehicleShowcase, FaqList } from '@/components/lux/PackageSections';
+import { GoogleReviews } from '@/components/PageClientWidgets';
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
 export const metadata = {
@@ -558,12 +559,11 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ═══ 12 · PREMIUM TESTIMONIALS ═══ */}
+      {/* ═══ 12 · LIVE GOOGLE REVIEWS ═══ */}
       <Section tone="paper-deep">
         <SectionHead eyebrow="Real stories" title="What our pilgrims say"
-          lede="Verified reviews from pilgrims who trusted us with their sacred journey."
-          aside={<a href={REVIEWS.url} target="_blank" rel="nofollow noopener noreferrer" className="lux-link">All {REVIEWS.count} on Google <Icon name="external" size={13} /></a>} />
-        <Reveal><ReviewsWall reviews={REVIEWS} /></Reveal>
+          lede="Pulled live from our Google Business Profile — the full set, including the critical ones, is one click away." />
+        <Reveal><GoogleReviews /></Reveal>
       </Section>
 
       {/* ═══ 13 · CONTENT FUNNEL ═══ */}

@@ -14,7 +14,7 @@ export const HeroSearch = dynamic(() => import('@/components/HeroSearch'), {
 export const GoogleReviews = dynamic(() => import('@/components/GoogleReviews'), {
   ssr: false,
   loading: () => (
-    <div style={{ height:300, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,0.4)', fontSize:14 }}>
+    <div style={{ height:300, display:'flex', alignItems:'center', justifyContent:'center', color:'#8898a6', fontSize:14 }}>
       Loading reviews…
     </div>
   ),
