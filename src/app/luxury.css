@@ -131,6 +131,23 @@
 .lux-section--ink { background: var(--ink); color: #fff; }
 .lux-section--navy { background: var(--navy); color: #fff; }
 
+/* Homepage: lay out below-the-fold sections only when they come near the
+   viewport. Measured 13 Sep 2026 on the live page at 375px: the initial
+   layout was ONE 439 ms task (≈1.75 s at Lighthouse's 4x CPU throttle) for
+   3,344 boxes — 24 sections, 2,248 elements, 100 paragraphs, 165 inline SVGs,
+   all shaped and laid out before the first frame. That single task was the
+   whole "element render delay" on the hero paragraph (lab LCP 4.8 s against a
+   2.4 s FCP). With this rule, 18 of the 19 sections are skipped at scroll 0
+   and the same full relayout measured 12 ms instead of 65 ms. The hero is a
+   plain <section> without .lux-section, so it is laid out normally.
+   `auto 600px` = use the last rendered size once known, else assume 600px,
+   which keeps the scrollbar stable. Anchor links and find-in-page still
+   work — the browser renders a skipped section on demand. */
+.lux-home > section.lux-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
 .lux-wrap {
   width: 100%;
   max-width: var(--lux-max);
