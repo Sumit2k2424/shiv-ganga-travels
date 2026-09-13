@@ -89,26 +89,17 @@ function ReviewCard({ review }) {
   );
 }
 
-// Fallback static reviews — shown while API loads or if key not set
-const STATIC = [
-  { author:'Rakesh & Sunita Sharma', photo:null, rating:5, time:'October 2025',
-    text:'Our entire family of 12 went for Char Dham with Shiv Ganga. The VIP darshan at Kedarnath saved us 4 hours of queuing. My 78-year-old mother completed the yatra comfortably because of the palki arrangements they handled for us.' },
-  { author:'Dr. Priya Menon', photo:null, rating:5, time:'September 2025',
-    text:'As a solo woman traveller I was nervous about the Kedarnath trek. The team assigned me a group of other solo pilgrims and a female guide. The hotel at Guptkashi was clean and the food was pure sattvic. Will book again for Badrinath.' },
-  { author:'Vivek Agarwal', photo:null, rating:5, time:'May 2025',
-    text:'The helicopter package was worth every rupee. 6 days, all 4 dhams, VIP darshan at every stop. Even though one flight got delayed by 2 hours due to clouds, the team kept us informed and we made up time the next day.' },
-  { author:'Ganesh Iyer Family', photo:null, rating:5, time:'June 2025',
-    text:'Three generations travelled together — my parents in 70s, us, and our teenagers. Oxygen cylinder was readily available when my father felt breathless at Kedarnath. Pure Tamil vegetarian food was arranged at 2 hotels on request.' },
-  { author:'Arjun & Neha Kapoor', photo:null, rating:5, time:'February 2025',
-    text:'Auli skiing with Shiv Ganga was a perfect winter holiday. The skiing instructor was patient with beginners. Gondola views were breathtaking — Nanda Devi at sunrise is something I will never forget.' },
-];
+// No static fallback reviews. The five that used to sit here were written
+// in-house and rendered under a Google "G" whenever the Places API was not
+// configured — which on production it is not (REQUEST_DENIED). With no live
+// reviews the component shows the real aggregate rating and the links to the
+// Business Profile, and nothing that pretends to be a quoted review.
 
 const MAPS_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602#reviews';
 const WRITE_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 
 export default function GoogleReviews() {
-  const [data, setData]       = useState({ reviews: STATIC, rating: SITE.reviews.rating, total: SITE.reviews.count, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
-  const [loading, setLoading] = useState(true);
+  const [data, setData]       = useState({ reviews: [], rating: SITE.reviews.rating, total: SITE.reviews.count, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
   const scrollRef = useRef(null);
   const [canL, setCanL] = useState(false);
   const [canR, setCanR] = useState(true);
@@ -120,9 +111,8 @@ export default function GoogleReviews() {
         if (d.reviews && d.reviews.length > 0) {
           setData({ ...d, source: 'live' });
         }
-        setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {});
   }, []);
 
   const updateArrows = () => {
@@ -146,7 +136,8 @@ export default function GoogleReviews() {
     if (el) el.scrollBy({ left: dir * 320, behavior: 'smooth' });
   };
 
-  const reviews = data.reviews || STATIC;
+  const reviews = data.reviews || [];
+  const hasReviews = reviews.length > 0;
 
   return (
     <div>
@@ -179,6 +170,7 @@ export default function GoogleReviews() {
         </div>
 
         <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+          {hasReviews && (<>
           {/* Nav arrows */}
           {[{ dir:-1, can:canL }, { dir:1, can:canR }].map(({ dir, can }) => (
             <button key={dir} onClick={() => scroll(dir)} disabled={!can}
@@ -191,6 +183,7 @@ export default function GoogleReviews() {
               </svg>
             </button>
           ))}
+          </>)}
           <a href={data.mapsUrl || MAPS_REVIEW_URL} target="_blank" rel="noopener noreferrer"
             style={{ fontSize:13, fontWeight:600, color:'#0f2b5b', textDecoration:'none',
               padding:'7px 14px', borderRadius:8, border:'1px solid #e8ecf2',
@@ -203,14 +196,16 @@ export default function GoogleReviews() {
         </div>
       </div>
 
-      {/* Cards scroll */}
+      {/* Cards scroll — live Google reviews only */}
+      {hasReviews && (
       <div ref={scrollRef}
         className="google-reviews-scroll" style={{ display:'flex', gap:14, overflowX:'auto', scrollSnapType:'x mandatory',
           paddingBottom:8, scrollbarWidth:'none', msOverflowStyle:'none' }}>
-        {(loading ? STATIC : reviews).map((r, i) => (
+        {reviews.map((r, i) => (
           <ReviewCard key={i} review={r}/>
         ))}
       </div>
+      )}
 
       {/* Write a review CTA */}
       <div style={{ marginTop:16, textAlign:'center' }}>
