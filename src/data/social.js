@@ -60,6 +60,13 @@ export const SOCIAL = [
     url: 'https://www.linkedin.com/company/shiv-ganga-travels',
     verified: true,   // fetched 2026-08-09: 200, title "Shiv Ganga Travels | LinkedIn"
   },
+  {
+    id: 'threads',
+    label: 'Threads',
+    handle: '@shivgangatravels',
+    url: 'https://www.threads.com/@shivgangatravels',
+    verified: true,   // fetched 2026-09-13: 200, title "Shiv Ganga Travels (@shivgangatravels) • Threads" — same handle as Instagram, threads.net redirects here
+  },
 ];
 
 /**
