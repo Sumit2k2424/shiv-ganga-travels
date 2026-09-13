@@ -31,7 +31,7 @@ export default function ContactPage() {
             Plan Your <em style={{ fontStyle:'italic', color:'var(--teal)', fontWeight:700 }}>Sacred Journey</em>
           </h1>
           <p style={{ color:'rgba(255,255,255,0.75)', fontSize:15, lineHeight:1.7 }}>
-            Our yatra experts are available 7 days a week, 7 AM – 9 PM IST.<br/>
+            Our yatra experts are available 7 days a week, {SITE.hoursHuman} IST.<br/>
             We reply within 2 hours during working hours.
           </p>
         </div>
