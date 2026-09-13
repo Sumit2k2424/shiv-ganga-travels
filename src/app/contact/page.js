@@ -1,4 +1,5 @@
 import { SITE, PACKAGES } from '@/data/packages';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: { absolute: `Contact Shiv Ganga Travels ${SITE.season} | Haridwar | Instant Confirmation` },
@@ -110,64 +111,9 @@ export default function ContactPage() {
                 </h2>
               </div>
 
-              {/* Form — Formspree ready */}
-              <form
-                action="https://formspree.io/f/YOUR_FORM_ID"
-                method="POST"
-                style={{ display:'flex', flexDirection:'column', gap:14 }}
-              >
-                <FormRow>
-                  <FormField label="Full Name" required>
-                    <input type="text" name="name" required placeholder="Ramesh Kumar Sharma" style={inputStyle}/>
-                  </FormField>
-                  <FormField label="Phone / WhatsApp" required>
-                    <input type="tel" name="phone" required placeholder="+91-98765-43210" style={inputStyle}/>
-                  </FormField>
-                </FormRow>
-
-                <FormField label="Email Address">
-                  <input type="email" name="email" placeholder="you@example.com" style={inputStyle}/>
-                </FormField>
-
-                <FormField label="Package Interested In">
-                  <select name="package" style={inputStyle} defaultValue="">
-                    <option value="" disabled>— Select a package —</option>
-                    {PACKAGES.map(p => (
-                      <option key={p.slug} value={p.name}>{p.name} ({p.duration.nights}N/{p.duration.days}D)</option>
-                    ))}
-                    <option value="custom">Custom / Not decided yet</option>
-                  </select>
-                </FormField>
-
-                <FormRow>
-                  <FormField label="Travel Month">
-                    <select name="month" style={inputStyle} defaultValue="">
-                      <option value="" disabled>— Select month —</option>
-                      {['May 2026','June 2026','July 2026','August 2026','September 2026','October 2026','Not sure yet'].map(m => (
-                        <option key={m}>{m}</option>
-                      ))}
-                    </select>
-                  </FormField>
-                  <FormField label="Number of Pilgrims">
-                    <input type="number" name="pilgrims" min="1" max="50" placeholder="e.g. 4" style={inputStyle}/>
-                  </FormField>
-                </FormRow>
-
-                <FormField label="Message (optional)">
-                  <textarea name="message" rows={4}
-                    placeholder="Any specific requirements — senior pilgrims, dietary needs, preferred starting city..."
-                    style={{ ...inputStyle, resize:'vertical', minHeight:90, fontFamily:'var(--font)' }}/>
-                </FormField>
-
-                <button type="submit" className="btn-primary"
-                  style={{ padding:'14px', fontSize:14, marginTop:4, fontWeight:700 }}>
-                  Send Enquiry →
-                </button>
-
-                <p style={{ fontSize:11.5, color:'var(--text-muted)', textAlign:'center', marginTop:4 }}>
-                  🔒 Your details are safe with us. We reply within 2 hours during working hours. No spam.
-                </p>
-              </form>
+              {/* Posts to /api/lead and waits for the sheet to confirm — see ContactForm.js.
+                  Only the fields the <select> needs cross to the client; PACKAGES stays server-side. */}
+              <ContactForm packages={PACKAGES.map(p => ({ slug: p.slug, name: p.name, nights: p.duration.nights, days: p.duration.days }))} />
             </div>
 
             {/* RIGHT: Side info panel */}
@@ -351,42 +297,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
-}
-
-/* ─── Form helpers ─── */
-const inputStyle = {
-  width:'100%',
-  padding:'11px 14px',
-  border:'1.5px solid hsl(var(--border))',
-  borderRadius:10,
-  fontSize:13.5,
-  background:'#fff',
-  color:'var(--text)',
-  outline:'none',
-  fontFamily:'var(--font)',
-  transition:'border-color .15s, box-shadow .15s',
-};
-
-function FormField({ label, required, children }) {
-  return (
-    <div>
-      <label style={{
-        display:'block', fontSize:11.5, fontWeight:600,
-        color:'var(--mid)', marginBottom:6,
-        textTransform:'uppercase', letterSpacing:'0.06em',
-      }}>
-        {label} {required && <span style={{ color:'var(--saffron)' }}>*</span>}
-      </label>
-      {children}
-    </div>
-  );
-}
-
-function FormRow({ children }) {
-  return (
-    <div className="contact-form-row" style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:12 }}>
-      {children}
-    </div>
   );
 }

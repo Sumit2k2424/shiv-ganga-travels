@@ -78,6 +78,10 @@ export async function POST(req) {
   let b = {};
   try { b = await req.json(); } catch {}
 
+  // Honeypot from the contact form: a filled "company" field is a bot.
+  // Say nothing useful back — a 204 looks like success to the script.
+  if (b.company) return new NextResponse(null, { status: 204 });
+
   const { date, time } = istNow();
   const row = {
     date,
@@ -87,11 +91,39 @@ export async function POST(req) {
     package: clean(b.package, 80),
     number : clean(b.number, 20),
     name   : clean(b.name, 60),
-    detail : clean(b.detail, 200),
+    // 600, not 200: the contact form packs email, month, party size and the
+    // message into this one cell. Beacons stay well under it.
+    detail : clean(b.detail, 600),
   };
 
   // Drop obvious junk (no type = not a real CTA event)
-  if (hook && row.type) {
+  if (!row.type) return new NextResponse(null, { status: 204 });
+
+  // `ack: true` is the contact form asking for a real answer: did the row
+  // reach the sheet? Beacons never set it and keep the fire-and-forget 204.
+  if (b.ack === true) {
+    if (!hook) {
+      return NextResponse.json({ ok: false, reason: 'lead store not configured' }, { status: 503 });
+    }
+    if (!row.name || !row.number) {
+      return NextResponse.json({ ok: false, reason: 'name and number are required' }, { status: 400 });
+    }
+    try {
+      const r = await fetch(hook, {
+        method  : 'POST',
+        headers : { 'Content-Type': 'application/json' },
+        redirect: 'follow',
+        body    : JSON.stringify(row),
+      });
+      const said = (await r.text()).trim();
+      if (r.ok && said === 'ok') return NextResponse.json({ ok: true });
+      return NextResponse.json({ ok: false, reason: 'lead store rejected the row' }, { status: 502 });
+    } catch {
+      return NextResponse.json({ ok: false, reason: 'lead store unreachable' }, { status: 502 });
+    }
+  }
+
+  if (hook) {
     try {
       await fetch(hook, {
         method  : 'POST',
