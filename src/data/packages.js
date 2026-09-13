@@ -1942,17 +1942,6 @@ export function getAllSlugs() {
 }
 
 // ================================================================
-// TESTIMONIALS
-// ================================================================
-export const TESTIMONIALS = [
-  { id:'t1', name:'Rakesh & Sunita Sharma', location:'New Delhi', package:'Char Dham Yatra 9N/10D', rating:5, date:'October 2025', text:'Our entire family of 12 went for Char Dham with Shiv Ganga. From the moment our driver Bhanu ji picked us up at Haridwar until the day we returned, everything was perfect. The VIP darshan at Kedarnath saved us 4 hours of queuing. My 78-year-old mother completed the yatra comfortably because of the palki arrangements they handled for us.', avatar:'RS' },
-  { id:'t2', name:'Dr. Priya Menon', location:'Bangalore', package:'Kedarnath Yatra 3N/4D', rating:5, date:'September 2025', text:'As a solo woman traveller, I was nervous about the Kedarnath trek. The team assigned me to a group of other solo pilgrims and a female guide for parts of the journey. The hotel at Guptkashi was clean and the food was pure sattvic. Completed my darshan peacefully. Will book again for Badrinath.', avatar:'PM' },
-  { id:'t3', name:'Vivek Agarwal', location:'Mumbai', package:'Char Dham by Helicopter', rating:5, date:'May 2025', text:'Being a busy professional I could not spare 12 days. The helicopter package was worth every rupee. 6 days, all 4 dhams, VIP darshan at every stop. The weather briefing at Dehradun was thorough. Even though one flight got delayed by 2 hours due to clouds, the team kept us informed and we made up time the next day.', avatar:'VA' },
-  { id:'t4', name:'Ganesh Iyer Family', location:'Chennai', package:'Do Dham (Kedarnath + Badrinath)', rating:5, date:'June 2025', text:'Three generations travelled together — my parents in 70s, us, and our teenagers. The itinerary was beautifully paced with enough rest days. Oxygen cylinder was readily available when my father felt breathless at Kedarnath. The driver knew every chai stop on the route. Pure Tamil vegetarian food was arranged at 2 hotels on my request.', avatar:'GI' },
-  { id:'t5', name:'Arjun & Neha Kapoor', location:'Lucknow', package:'Auli Skiing Tour 3N/4D', rating:5, date:'February 2025', text:'Auli skiing with Shiv Ganga was a perfect winter holiday. The skiing instructor was patient with us beginners. Gondola views were breathtaking — Nanda Devi at sunrise is something I will never forget. The hotel at Joshimath was warm and comfortable. Highly recommended for families.', avatar:'AK' },
-];
-
-// ================================================================
 // GLOBAL FAQs
 // ================================================================
 export const GLOBAL_FAQS = [

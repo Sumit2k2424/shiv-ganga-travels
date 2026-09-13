@@ -1,5 +1,6 @@
 import { Noto_Sans_Oriya } from 'next/font/google';
 import { SITE } from '@/data/packages';
+import { languageAlternates } from '@/data/languages';
 import { odia } from '@/data/langContent/odia';
 import CharDhamLanguagePage from '@/components/CharDhamLanguagePage';
 
@@ -10,7 +11,7 @@ export const metadata = {
   title: { absolute: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} | ₹13,900ରୁ ଆରମ୍ଭ | ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ଗାଇଡ` },
   description: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} ଓଡ଼ିଆରେ — ହରିଦ୍ୱାରରୁ ₹13,900ରୁ। ବିଶ୍ୱସ୍ତ ଅପରେଟର, 15+ ବର୍ଷର ଅଭିଜ୍ଞତା, ତତକ୍ଷଣାତ ନିଶ୍ଚିତକରଣ।`,
   keywords: ['ଚାର ଧାମ ଯାତ୍ରା ଓଡ଼ିଆ', 'char dham yatra in odia', 'char dham yatra odia guide', 'chardham yatra odia', 'ପୁରୀ ଧାମ ଓ ଚାର ଧାମ ଯାତ୍ରା'],
-  alternates: { canonical: `${SITE.baseUrl}/${SLUG}` },
+  alternates: languageAlternates(SLUG, SITE.baseUrl),
   openGraph: {
     title: `ଚାର ଧାମ ଯାତ୍ରା ${SITE.season} — ଓଡ଼ିଆରେ ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା | Shiv Ganga Travels`,
     description: 'ଯମୁନୋତ୍ରୀ, ଗଙ୍ଗୋତ୍ରୀ, କେଦାରନାଥ, ବଦ୍ରୀନାଥ। ହରିଦ୍ୱାରରୁ ₹13,900ରୁ ଆରମ୍ଭ। ସିଧାସଳଖ ଅପରେଟର, ମାଗଣା ପଞ୍ଜୀକରଣ ସହାୟତା।',

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
-import { LANGUAGE_PAGES } from '@/data/languages';
+import { LANGUAGE_PAGES, LANGUAGE_HUB_SLUG, languageAlternates } from '@/data/languages';
 import FAQAccordion from '@/components/FAQAccordion';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
@@ -17,7 +17,7 @@ export const metadata = {
     'char dham yatra from delhi','char dham tour package','uttarakhand tourism','uttarakhand tour packages',
     'char dham yatra package from haridwar','uttarakhand char dham yatra package',
   ],
-  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
+  alternates: languageAlternates(LANGUAGE_HUB_SLUG, SITE.baseUrl),
   openGraph: {
     title: `Char Dham Yatra Package ${SITE.season} from Haridwar — ₹13,900 No Hidden Charges | Book Direct`,
     description: `Book Char Dham Yatra ${SITE.season} from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.`,
