@@ -65,11 +65,8 @@ function discoverCitySlugs() {
 }
 
 const CITY_PRIORITY = {
-  'char-dham-yatra-from-delhi': 0.88, 'char-dham-yatra-from-noida': 0.85,
-  'char-dham-yatra-from-mumbai': 0.85, 'char-dham-yatra-from-bangalore': 0.85,
-  'char-dham-yatra-from-hyderabad': 0.83, 'char-dham-yatra-from-chennai': 0.83,
-  'char-dham-yatra-from-kolkata': 0.83, 'char-dham-yatra-from-chandigarh': 0.82,
-  'char-dham-yatra-from-pune': 0.82, 'char-dham-yatra-from-haridwar': 0.82,
+  'char-dham-yatra-from-delhi': 0.88, 'char-dham-yatra-from-mumbai': 0.85,
+  'char-dham-yatra-from-haridwar': 0.82,
 };
 const DEFAULT_CITY_P = 0.80;
 
@@ -233,7 +230,8 @@ export default function sitemap() {
     url: `${b}/packages/${slug}`, p: 0.90, cf: 'weekly',
   }));
 
-  const packagePages = PACKAGES.map(pkg => ({
+  // Packages flagged noindex in packages.js are live but not listed here.
+  const packagePages = PACKAGES.filter(pkg => !pkg.noindex).map(pkg => ({
     url: `${b}/packages/${pkg.slug}`, p: pkg.featured ? 0.88 : 0.80, cf: 'weekly',
   }));
 

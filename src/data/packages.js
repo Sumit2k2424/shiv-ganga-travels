@@ -95,6 +95,14 @@ export const CATEGORIES = {
 // ================================================================
 // ALL PACKAGES — 31 packages across 5 categories
 // ================================================================
+// `noindex: true` on a package keeps it live and bookable (it still renders,
+// still sits in the /packages hub and category pages) but sets robots
+// noindex,follow and drops it from sitemap.xml. Set 14 Sep 2026 on the 24
+// Uttarakhand tour/trek packages: each has ~270-390 words of its own against
+// a 50-60% shared template and earned 0-10 impressions in 28 days — the same
+// footprint as the cab pages cut the day before. The 13 Char Dham / Do Dham /
+// single-dham packages are hand-written (1,000-1,400 own words) and stay.
+// Reverse by deleting the line; re-index a package only once it has real copy.
 export const PACKAGES = [
 
   // ─────────────────────────────────────────────────────────────
@@ -819,6 +827,7 @@ export const PACKAGES = [
 
   {
     slug     : 'rishikesh-haridwar-ganga-darshan-3n-4d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/32111239/pexels-photo-32111239.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Rishikesh Haridwar Ganga Darshan Tour — 3N/4D',
@@ -861,6 +870,7 @@ export const PACKAGES = [
 
   {
     slug     : 'mussoorie-dehradun-dhanaulti-3n-4d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/37665761/pexels-photo-37665761.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Mussoorie Dehradun Dhanaulti Tour — 3N/4D',
@@ -903,6 +913,7 @@ export const PACKAGES = [
 
   {
     slug     : 'nainital-kausani-ranikhet-4n-5d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/34792746/pexels-photo-34792746.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Nainital Kausani Ranikhet Tour — 4N/5D',
@@ -946,6 +957,7 @@ export const PACKAGES = [
 
   {
     slug     : 'chopta-tungnath-chandrashila-trek-2n-3d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/7846659/pexels-photo-7846659.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Chopta Tungnath Chandrashila Trek — 2N/3D',
@@ -987,6 +999,7 @@ export const PACKAGES = [
 
   {
     slug     : 'auli-joshimath-skiing-3n-4d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/36746869/pexels-photo-36746869.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Auli Joshimath Skiing & Adventure Tour — 3N/4D',
@@ -1034,6 +1047,7 @@ export const PACKAGES = [
 
   {
     slug     : 'panch-kedar-yatra-9n-10d-haridwar',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/34376161/pexels-photo-34376161.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Panch Kedar Yatra Package — 9N/10D',
@@ -1090,6 +1104,7 @@ export const PACKAGES = [
 
   {
     slug     : 'rishikesh-adventure-rafting-camping-2n-3d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/25037184/pexels-photo-25037184.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Rishikesh Adventure — Rafting, Camping & Bungee',
@@ -1131,6 +1146,7 @@ export const PACKAGES = [
 
   {
     slug     : 'mussoorie-rishikesh-kanatal-4n-5d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/32862096/pexels-photo-32862096.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Mussoorie + Rishikesh + Kanatal Tour — 4N/5D',
@@ -1174,6 +1190,7 @@ export const PACKAGES = [
 
   {
     slug     : 'jim-corbett-nainital-wildlife-5n-6d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/30889521/pexels-photo-30889521.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Jim Corbett + Nainital Wildlife & Hills — 5N/6D',
@@ -1218,6 +1235,7 @@ export const PACKAGES = [
 
   {
     slug     : 'haridwar-rishikesh-spiritual-4n-5d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/8171698/pexels-photo-8171698.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Haridwar + Rishikesh Spiritual Tour — 4N/5D',
@@ -1261,6 +1279,7 @@ export const PACKAGES = [
 
   {
     slug     : 'uttarakhand-grand-tour-10n-11d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/34715505/pexels-photo-34715505.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Grand Uttarakhand Tour — 10N/11D',
@@ -1310,6 +1329,7 @@ export const PACKAGES = [
 
   {
     slug     : 'valley-of-flowers-hemkund-sahib-5n-6d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/14835363/pexels-photo-14835363.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Valley of Flowers + Hemkund Sahib — 5N/6D',
@@ -1354,6 +1374,7 @@ export const PACKAGES = [
 
   {
     slug     : 'kedarnath-chopta-badrinath-adventure-6n-7d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/32619517/pexels-photo-32619517.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Kedarnath + Chopta + Badrinath Adventure — 6N/7D',
@@ -1404,6 +1425,7 @@ export const PACKAGES = [
 
   {
     slug     : 'kainchi-dham-nainital-mukteshwar-3n-4d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/35536243/pexels-photo-35536243.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Kainchi Dham + Nainital + Mukteshwar — 3N/4D',
@@ -1450,6 +1472,7 @@ export const PACKAGES = [
 
   {
     slug     : 'kedarkantha-trek-5n-6d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/7846656/pexels-photo-7846656.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Kedarkantha Winter Trek — 5N/6D',
@@ -1498,6 +1521,7 @@ export const PACKAGES = [
 
   {
     slug     : 'nag-tibba-weekend-trek-1n-2d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/7846665/pexels-photo-7846665.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Nag Tibba Weekend Trek — 1N/2D',
@@ -1541,6 +1565,7 @@ export const PACKAGES = [
 
   {
     slug     : 'har-ki-dun-valley-trek-6n-7d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/18750765/pexels-photo-18750765.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Har Ki Dun Valley Trek — 6N/7D',
@@ -1586,6 +1611,7 @@ export const PACKAGES = [
 
   {
     slug     : 'jim-corbett-jungle-safari-2n-3d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/36852048/pexels-photo-36852048.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Jim Corbett Jungle Safari Weekend — 2N/3D',
@@ -1631,6 +1657,7 @@ export const PACKAGES = [
 
   {
     slug     : 'almora-jageshwar-binsar-3n-4d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/33395832/pexels-photo-33395832.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Almora + Jageshwar + Binsar — 3N/4D',
@@ -1673,6 +1700,7 @@ export const PACKAGES = [
 
   {
     slug     : 'munsiyari-chaukori-patal-bhuvaneshwar-5n-6d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/37898751/pexels-photo-37898751.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Munsiyari + Chaukori + Patal Bhuvaneshwar — 5N/6D',
@@ -1717,6 +1745,7 @@ export const PACKAGES = [
 
   {
     slug     : 'lansdowne-khirsu-getaway-2n-3d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/30695323/pexels-photo-30695323.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Lansdowne + Khirsu Quiet Getaway — 2N/3D',
@@ -1758,6 +1787,7 @@ export const PACKAGES = [
 
   {
     slug     : 'tehri-lake-kanatal-surkanda-devi-2n-3d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/32456291/pexels-photo-32456291.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Tehri Lake + Kanatal + Surkanda Devi — 2N/3D',
@@ -1799,6 +1829,7 @@ export const PACKAGES = [
 
   {
     slug     : 'adi-kailash-om-parvat-yatra-7n-8d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/37049391/pexels-photo-37049391.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Adi Kailash + Om Parvat Yatra — 7N/8D',
@@ -1849,6 +1880,7 @@ export const PACKAGES = [
 
   {
     slug     : 'brahmatal-winter-trek-4n-5d',
+    noindex  : true,
     photo    : 'https://images.pexels.com/photos/13001325/pexels-photo-13001325.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
     category : 'uttarakhand',
     name     : 'Brahmatal Winter Trek — 4N/5D',

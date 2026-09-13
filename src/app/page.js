@@ -257,10 +257,11 @@ const TOOLS = [
   { icon:'backpack',   title:'Packing List',          desc:'Exactly what to carry — and what to leave behind.',           href:'/blog/char-dham-yatra-packing-list' },
 ];
 
+// Two real city pages. The seven templated ones (Bangalore, Hyderabad, Chennai,
+// Pune, Noida, Chandigarh, Kolkata) were folded into these on 14 Sep 2026 and
+// 308 there — see src/data/redirects.js.
 const CITY_LINKS = [
-  ['Delhi','/char-dham-yatra-from-delhi'],['Mumbai','/char-dham-yatra-from-mumbai'],['Bangalore','/char-dham-yatra-from-bangalore'],
-  ['Hyderabad','/char-dham-yatra-from-hyderabad'],['Chennai','/char-dham-yatra-from-chennai'],['Pune','/char-dham-yatra-from-pune'],
-  ['Noida','/char-dham-yatra-from-noida'],['Chandigarh','/char-dham-yatra-from-chandigarh'],['Kolkata','/char-dham-yatra-from-kolkata'],
+  ['Delhi & North India','/char-dham-yatra-from-delhi'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],['Haridwar','/char-dham-yatra-from-haridwar'],
 ];
 const GUIDE_LINKS = [
   ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Online Puja Booking','/online-puja-booking'],

@@ -156,6 +156,17 @@ const REDIRECTS = [
   { source: '/char-dham-yatra-from-patna',       destination: '/char-dham-yatra-from-delhi', permanent: true },
   { source: '/char-dham-yatra-from-rishikesh',   destination: '/char-dham-yatra-from-delhi', permanent: true },
   { source: '/char-dham-yatra-from-dehradun',    destination: '/char-dham-yatra-from-delhi', permanent: true },
+  // Second pass, 14 Sep 2026: the seven remaining templated city pages (twin
+  // similarity 0.42-0.44, 261-276 own words, 610 impressions and 6 clicks
+  // between them in 28 days). Same split as above — north and east to Delhi,
+  // west and south to Mumbai. Delhi, Mumbai and Haridwar are hand-written and stay.
+  { source: '/char-dham-yatra-from-noida',       destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-chandigarh',  destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-kolkata',     destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-pune',        destination: '/char-dham-yatra-from-mumbai', permanent: true },
+  { source: '/char-dham-yatra-from-hyderabad',   destination: '/char-dham-yatra-from-mumbai', permanent: true },
+  { source: '/char-dham-yatra-from-bangalore',   destination: '/char-dham-yatra-from-mumbai', permanent: true },
+  { source: '/char-dham-yatra-from-chennai',     destination: '/char-dham-yatra-from-mumbai', permanent: true },
   // ── Hindi cluster: moved root → /blog/ without redirects (live 404s in GSC) ──
   // Google still crawls the root-level URLs (last hit Jul 25, 2026) and gets a
   // 404 each time, so none of the original URLs' history carries over.

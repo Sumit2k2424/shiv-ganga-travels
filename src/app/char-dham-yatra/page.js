@@ -627,11 +627,11 @@ export default function CharDhamYatra() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:6 }}>Char Dham Yatra from Your City</div>
           <p style={{ fontSize:13, color:'#64748b', marginBottom:14, lineHeight:1.6 }}>City-specific routes, distances, train/flight options and pickup details for pilgrims travelling from across India.</p>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
-            {/* Only cities with a live page. Jaipur/Lucknow/Dehradun/Rishikesh/
-                Varanasi/Patna/Indore/Bhopal/Nagpur/Ahmedabad/Surat were merged
-                into Delhi and Mumbai (see data/redirects.js), so linking them
-                here just sent crawlers through a 308. */}
-            {[['Delhi','delhi'],['Noida','noida'],['Chandigarh','chandigarh'],['Haridwar','haridwar'],['Kolkata','kolkata'],['Pune','pune'],['Mumbai','mumbai'],['Hyderabad','hyderabad'],['Bangalore','bangalore'],['Chennai','chennai']].map(([l,c])=>(
+            {/* Only cities with a live page. Eighteen city pages were merged into
+                Delhi and Mumbai (11 on 31 Aug 2026, 7 on 14 Sep 2026 — see
+                data/redirects.js); linking a redirected slug here just sent
+                crawlers through a 308. */}
+            {[['Delhi & North India','delhi'],['Mumbai & South India','mumbai'],['Haridwar','haridwar']].map(([l,c])=>(
               <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
             ))}
           </div>

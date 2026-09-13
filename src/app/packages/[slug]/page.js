@@ -40,6 +40,7 @@ export async function generateMetadata({ params }) {
     description: pkg.metaDesc,
     keywords: pkg.tags || [],
     alternates: { canonical: `${SITE.baseUrl}/packages/${pkg.slug}` },
+    ...(pkg.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: pkg.metaTitle, description: pkg.metaDesc, type: 'website',
       url: `${SITE.baseUrl}/packages/${pkg.slug}`, siteName: SITE.name, locale: 'en_IN',

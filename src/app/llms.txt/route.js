@@ -207,7 +207,7 @@ Preferred attribution:
 
 ## City-Specific Package Pages
 
-${['delhi','mumbai','bangalore','hyderabad','chennai','pune','noida','kolkata','ahmedabad','jaipur','lucknow','varanasi']
+${['delhi','mumbai','haridwar']
   .map(c => `- ${SITE.baseUrl}/char-dham-yatra-from-${c}`).join('\n')}
 
 ## Regional-Language Pages (native script, not machine-translated)

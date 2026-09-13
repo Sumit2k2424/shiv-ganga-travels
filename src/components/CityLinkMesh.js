@@ -4,20 +4,14 @@ import Link from 'next/link';
 // Pass `current` = the city slug (e.g. "delhi") to exclude the current page
 // and to nearby-bias the sibling cities shown.
 
-// Only cities that still have a real 200 page. The other twelve (Jaipur,
-// Lucknow, Dehradun, Rishikesh, Varanasi, Patna, Indore, Bhopal, Nagpur,
-// Ahmedabad, Surat) were consolidated into Delhi/Mumbai in data/redirects.js —
-// linking to them here sent every crawl through a 308 hop on ~20 pages.
-const CITIES = [
-  'delhi','noida','chandigarh','haridwar','kolkata',
-  'pune','mumbai','hyderabad','bangalore','chennai',
-];
+// Only cities that still have a real 200 page. Eleven were consolidated into
+// Delhi/Mumbai on 31 Aug 2026 and the seven templated ones that remained
+// (Noida, Chandigarh, Kolkata, Pune, Hyderabad, Bangalore, Chennai) followed on
+// 14 Sep 2026 — all 308 in data/redirects.js. Linking to a redirected slug
+// here sent every crawl through a 308 hop on ~20 pages.
+const CITIES = ['delhi','mumbai','haridwar'];
 
-const LABEL = {
-  delhi:'Delhi', noida:'Noida', chandigarh:'Chandigarh', haridwar:'Haridwar',
-  kolkata:'Kolkata', pune:'Pune', mumbai:'Mumbai', hyderabad:'Hyderabad',
-  bangalore:'Bangalore', chennai:'Chennai',
-};
+const LABEL = { delhi:'Delhi & North India', mumbai:'Mumbai & South India', haridwar:'Haridwar' };
 
 const chip = {
   background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)',

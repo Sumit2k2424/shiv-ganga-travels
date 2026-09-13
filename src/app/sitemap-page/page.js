@@ -93,14 +93,8 @@ const sections = [
     title: 'Book from Your City',
     links: [
       { label: 'Char Dham Yatra from Delhi', href: '/char-dham-yatra-from-delhi' },
-      { label: 'Char Dham Yatra from Noida', href: '/char-dham-yatra-from-noida' },
       { label: 'Char Dham Yatra from Mumbai', href: '/char-dham-yatra-from-mumbai' },
-      { label: 'Char Dham Yatra from Bangalore', href: '/char-dham-yatra-from-bangalore' },
-      { label: 'Char Dham Yatra from Hyderabad', href: '/char-dham-yatra-from-hyderabad' },
-      { label: 'Char Dham Yatra from Chennai', href: '/char-dham-yatra-from-chennai' },
-      { label: 'Char Dham Yatra from Pune', href: '/char-dham-yatra-from-pune' },
-      { label: 'Char Dham Yatra from Kolkata', href: '/char-dham-yatra-from-kolkata' },
-      { label: 'Char Dham Yatra from Chandigarh', href: '/char-dham-yatra-from-chandigarh' },
+      { label: 'Char Dham Yatra from Haridwar', href: '/char-dham-yatra-from-haridwar' },
     ],
   },
   {
