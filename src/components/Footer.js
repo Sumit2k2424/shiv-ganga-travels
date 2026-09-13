@@ -104,7 +104,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="eq-foot__bottom">
         <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved. Made with ❤️ in Haridwar.</span>
-        <span>{SITE.address}</span>
+        <span>{SITE.address} · GSTIN {SITE.gstin}</span>
       </div>
     </footer>
   );

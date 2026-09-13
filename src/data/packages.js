@@ -19,6 +19,13 @@ export const SITE = {
   // llms.txt line interpolates from here (they used to be typed into ~35
   // files and drifted). Update both when the profile moves; note the date.
   reviews: { rating: 4.6, count: 67, checked: '2026-09-13' },
+  // GST registration. The one identity number we publish, because anyone can
+  // verify it at gst.gov.in in seconds — unlike the UTDB/IATO badges that were
+  // removed 13 Sep 2026 for having no number behind them. Rendered in the
+  // footer, contact page, package trust block, llms.txt, press fast-facts and
+  // as schema.org taxID on the TravelAgency node. GST rules also require it
+  // to be displayed at the place of business, so it is public by design.
+  gstin: '05ALBPC4708P1Z5',
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.

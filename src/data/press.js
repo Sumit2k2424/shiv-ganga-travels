@@ -35,6 +35,8 @@
 // The generator in scripts/press/ therefore emits quote slots as null and
 // refuses to invent numbers — see PRESS-SYSTEM.md.
 
+import { SITE } from './packages';
+
 export const MEDIA_KIT = {
   // The boilerplate. Wire desks paste this verbatim at the foot of a story, so
   // it must be accurate, dull, and free of adjectives they would have to strip.
@@ -63,6 +65,7 @@ export const MEDIA_KIT = {
   fastFacts: [
     ['Founded', '2010'],
     ['Head office', 'Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand 249410'],
+    ['GSTIN', SITE.gstin],
     ['Operating model', 'Direct operator — own vehicles, drivers and hotel contracts'],
     ['Circuits operated', 'Char Dham, Do Dham, Teen Dham, Ek Dham, Panch Kedar, Panch Badri, Adi Kailash'],
     ['Seasons operated', '2010 – present, including post-2013 rebuilding years'],

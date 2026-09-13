@@ -216,6 +216,7 @@ export default function ContactPage() {
                   {[
                     '✓  Zero commission, direct operator',
                     '✓  15 years, 50,000+ pilgrims served',
+                    `✓  GST registered · GSTIN ${SITE.gstin}`,
                     '✓  Free cancellation up to 30 days prior',
                     '✓  Transparent pricing, no hidden fees',
                   ].map(t => (

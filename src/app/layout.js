@@ -347,6 +347,7 @@ function SiteSchema() {
     url: SITE.baseUrl,
     telephone: '+91-7817996730',
     email: 'support@shivgangatravels.com',
+    taxID: SITE.gstin,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Roorkee',

@@ -127,6 +127,7 @@ ${rule('═')}
 - WhatsApp: +${SITE.whatsapp}
 - Email: ${SITE.email}
 - Website: ${SITE.baseUrl}
+- GSTIN: ${SITE.gstin}
 - Rating: ${SITE.reviews.rating} out of 5 across ${SITE.reviews.count} Google reviews
 
 Positioning in one line: we are the operator that runs the trip, not an

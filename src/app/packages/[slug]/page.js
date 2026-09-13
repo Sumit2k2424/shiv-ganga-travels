@@ -837,7 +837,7 @@ export default async function PackageDetailPage({ params }) {
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Permits & licences</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. Ask us for the vehicle and driver documents before you travel — we send them on WhatsApp.</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. Ask us for the vehicle and driver documents before you travel — we send them on WhatsApp. GST registered — GSTIN {SITE.gstin}, verifiable at gst.gov.in.</div>
               </div>
             </div>
 
@@ -868,7 +868,7 @@ export default async function PackageDetailPage({ params }) {
                 { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
                 { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
                 { icon:'⭐', title:`${SITE.reviews.rating}/5 · ${SITE.reviews.count} verified Google reviews`, body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. The rating has stayed above 4.5 over 15 seasons.' },
-                { icon:'📋', title:'Permits & licences', body:'All vehicles hold valid tourism permits, insurance and hill-route licences. Vehicle and driver documents are sent on WhatsApp on request before you travel.' },
+                { icon:'📋', title:'Permits & licences', body:`All vehicles hold valid tourism permits, insurance and hill-route licences. Vehicle and driver documents are sent on WhatsApp on request before you travel. GST registered — GSTIN ${SITE.gstin}, verifiable at gst.gov.in.` },
               ].map(item => (
                 <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
