@@ -842,22 +842,7 @@ export default async function PackageDetailPage({ params }) {
               </div>
             </div>
 
-            {/* Real review quotes */}
-            <div style={{ marginBottom:8 }}>
-              <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10 }}>What our pilgrims say (from verified Google reviews):</div>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[
-                  { name:'Rakesh Sharma, Delhi', stars:'★★★★★', text:'"Zero commission as promised. Hotel stays were clean, driver was respectful and knowledgeable about every temple on the route. The VIP darshan at Kedarnath saved us 4 hours of queue. Will do Char Dham again next year with Shiv Ganga."' },
-                  { name:'Priya Mehta, Mumbai', stars:'★★★★★', text:'"My 72-year-old mother did Char Dham with them. They arranged pony at Kedarnath, ground-floor rooms everywhere, slower walking pace. Dhanesh ji personally called twice to check on her. This is not what you get from an online aggregator."' },
-                  { name:'Suresh & Kamla Gupta, Jaipur', stars:'★★★★★', text:'"We did the senior citizen package. The driver Ramesh ji was with us for 12 days like family. When my wife had mild altitude sickness near Gangotri, they had oxygen ready and adjusted the schedule immediately. No panic, complete professionalism."' },
-                ].map(r => (
-                  <div key={r.name} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px 14px', borderLeft:'3px solid var(--gold)' }}>
-                    <div style={{ fontSize:13, color:'#E8920A', fontWeight:700, marginBottom:4 }}>{r.stars} {r.name}</div>
-                    <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7, fontStyle:'italic' }}>{r.text}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="nofollow noopener noreferrer" className="lux-link" style={{ display:'inline-block', marginBottom:8 }}>Read what pilgrims say on Google Maps →</a>
           </section>
 
 
@@ -877,19 +862,7 @@ export default async function PackageDetailPage({ params }) {
                 </div>
               ))}
             </div>
-            <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:10 }}>What pilgrims say (verified Google reviews):</div>
-            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-              {[
-                { name:'Rakesh Sharma, Delhi', text:'"Zero commission as promised. Hotel stays were clean, driver knowledgeable. VIP darshan at Kedarnath saved us 4 hours of queue. Will return next year."' },
-                { name:'Priya Mehta, Mumbai', text:'"My 72-year-old mother did Char Dham with them. Pony at Kedarnath, ground-floor rooms, slower pace arranged. Dhanesh ji personally called twice to check on her. This is not what you get from an online aggregator."' },
-                { name:'Suresh & Kamla Gupta, Jaipur', text:'"When my wife had mild altitude sickness near Gangotri, they had oxygen ready and adjusted the schedule immediately. No panic, complete professionalism. 12 days felt like travelling with family."' },
-              ].map(r => (
-                <div key={r.name} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px 14px', borderLeft:'3px solid var(--gold)' }}>
-                  <div style={{ fontSize:13, color:'#E8920A', fontWeight:700, marginBottom:4 }}>★★★★★ {r.name}</div>
-                  <div style={{ fontSize:13.5, color:'#334155', lineHeight:1.7, fontStyle:'italic' }}>{r.text}</div>
-                </div>
-              ))}
-            </div>
+            <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="nofollow noopener noreferrer" className="lux-link">Read what pilgrims say on Google Maps →</a>
           </section>
 
           {/* Bottom CTA */}

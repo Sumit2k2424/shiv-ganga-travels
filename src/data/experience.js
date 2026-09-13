@@ -577,45 +577,13 @@ export const REVIEWS = {
   count: SITE.reviews.count,
   source: 'Google Business Profile',
   url: 'https://www.google.com/maps?cid=16074078434377735602',
-  breakdown: [
-    { stars: 5, pct: 82 },
-    { stars: 4, pct: 13 },
-    { stars: 3, pct: 3 },
-    { stars: 2, pct: 1 },
-    { stars: 1, pct: 1 },
-  ],
-  items: [
-    {
-      name: 'Rajesh Kumar', where: 'Ghaziabad', when: 'May 2026', stars: 5, verified: true,
-      trip: 'Char Dham 9N/10D',
-      text: 'Booked after comparing four operators. What sold me was that the person who answered the phone was the person who ran the trip. Hotels, vehicle and darshan slots were exactly as quoted. The Kedarnath trek support was the strongest part — our guide walked at my father’s pace the whole way and never once made it feel like a problem.',
-    },
-    {
-      name: 'Sunita Sharma', where: 'Jaipur', when: 'April 2026', stars: 5, verified: true,
-      trip: 'Senior Citizen Char Dham 12N/13D',
-      text: 'Eight of us, including my parents at 72 and 69. Palki was arranged for both at Kedarnath without any fuss. Ramesh bhai, our driver, was calm on roads that frightened me and knew every tea stop worth stopping at. Ground-floor rooms at every hotel, as promised.',
-    },
-    {
-      name: 'Priya Mehta', where: 'Pune', when: 'May 2026', stars: 5, verified: true,
-      trip: 'Do Dham 6N/7D',
-      text: 'The price I was quoted in February was the price I paid in May. After what I read about agent markups, that alone was worth it. Badrinath darshan was handled well and Tapt Kund before the 4:30 AM slot was something I will remember for a long time.',
-    },
-    {
-      name: 'Dr. Ganesh Iyer', where: 'Chennai', when: 'June 2026', stars: 5, verified: true,
-      trip: 'Char Dham 11N/12D',
-      text: 'Three generations travelling together, and the pacing was right for all of us. Oxygen was on the vehicle and we needed it once, at Kedarnath, and it was there in under a minute. They arranged proper Tamil vegetarian food at two hotels on request, which I did not expect this far north.',
-    },
-    {
-      name: 'Vivek Agarwal', where: 'Mumbai', when: 'May 2026', stars: 4, verified: true,
-      trip: 'Char Dham by Helicopter',
-      text: 'Six days, all four dhams. One flight was held two hours for cloud at Kedarnath, which is nobody’s fault, and the team kept us updated and rebuilt the next day’s schedule to make it up. Four stars only because the Dehradun hotel on night one was the weakest link.',
-    },
-    {
-      name: 'Neha Kapoor', where: 'Lucknow', when: 'October 2025', stars: 5, verified: true,
-      trip: 'Kedarnath 3N/4D',
-      text: 'Solo woman traveller and I was honestly nervous. They put me with a small group of other solo pilgrims and a guide who checked in without hovering. Guptkashi hotel was clean and warm, food was simple and good. Going back for Badrinath next season.',
-    },
-  ],
+  // No star breakdown and no quoted testimonials, deliberately. The ones that
+  // used to live here (and the 82/13/3/1/1 distribution) were written in-house,
+  // not pulled from Google, and were shown on every page under a "Verified
+  // traveller" badge. Only the aggregate number above is real. The reviews
+  // themselves are on the Business Profile at `url`; ReviewsWall links there.
+  breakdown: [],
+  items: [],
 };
 
 /* ══════════════════════════════════════════════════════════════

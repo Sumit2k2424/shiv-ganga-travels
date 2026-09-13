@@ -573,6 +573,7 @@ export function ReviewsWall({ reviews }) {
             </span>
           </div>
 
+          {reviews.breakdown?.length > 0 && (
           <div style={{ minWidth: 210, flex: 1, maxWidth: 320 }}>
             {reviews.breakdown.map((b) => (
               <div key={b.stars} style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 7 }}>
@@ -582,11 +583,19 @@ export function ReviewsWall({ reviews }) {
               </div>
             ))}
           </div>
+          )}
+
+          {!(reviews.items?.length > 0) && reviews.url && (
+            <a href={reviews.url} target="_blank" rel="nofollow noopener noreferrer" className="lux-link" style={{ alignSelf: 'flex-end' }}>
+              Read the reviews on Google
+            </a>
+          )}
         </div>
 
-        <CarouselNav {...c} label="Traveller reviews" />
+        {reviews.items?.length > 0 && <CarouselNav {...c} label="Traveller reviews" />}
       </div>
 
+      {reviews.items?.length > 0 && (
       <div className="lux-embla" ref={c.ref} style={{ marginTop: 42 }}>
         <div className="lux-embla__track">
           {reviews.items.map((r, i) => (
@@ -612,6 +621,7 @@ export function ReviewsWall({ reviews }) {
           ))}
         </div>
       </div>
+      )}
     </>
   );
 }
