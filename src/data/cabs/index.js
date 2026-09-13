@@ -117,9 +117,11 @@ export const getPublishedDestinations = () => DESTINATIONS.filter(isDestinationP
 // The section as a whole earned 7 clicks in 28 days and 85 of its 105 pages
 // earned zero impressions. Those 38 were first noindexed with this flag,
 // then deleted outright the same day (their URLs 308 from
-// src/data/redirects.js). Nothing carries the flag right now; the gate stays
-// because the next cut, if one is needed, is the 49 older cab pages that have
-// never earned an impression, and this is the one-line way to test it.
+// src/data/redirects.js). The second cut landed 14 Sep 2026: every remaining
+// cab page that had earned zero impressions in the 28 days to 10 Sep carries
+// the flag — 24 routes, all 9 origin hubs, all 10 destination hubs, 43 pages.
+// The 18 routes with any demand stay indexed. Reverse any of them by deleting
+// its `noindex: true` line.
 //
 // Do NOT weaken isPublishable() to achieve the same thing: that would 404
 // the page and break every internal link into it. Deleting a page for real

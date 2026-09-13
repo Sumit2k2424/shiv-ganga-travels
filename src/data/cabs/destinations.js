@@ -21,6 +21,7 @@ export const DESTINATIONS = [
   // ───────────────── THE FOUR DHAMS ─────────────────
   {
     slug: 'kedarnath',
+    noindex: true,
     name: 'Kedarnath',
     kind: 'dham',
     state: 'Uttarakhand',
@@ -51,6 +52,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'badrinath',
+    noindex: true,
     name: 'Badrinath',
     kind: 'dham',
     state: 'Uttarakhand',
@@ -79,6 +81,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'gangotri',
+    noindex: true,
     name: 'Gangotri',
     kind: 'dham',
     state: 'Uttarakhand',
@@ -107,6 +110,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'yamunotri',
+    noindex: true,
     name: 'Yamunotri',
     kind: 'dham',
     state: 'Uttarakhand',
@@ -137,6 +141,7 @@ export const DESTINATIONS = [
   // ───────────────── HILL STATIONS ─────────────────
   {
     slug: 'auli',
+    noindex: true,
     name: 'Auli',
     kind: 'hill',
     state: 'Uttarakhand',
@@ -164,6 +169,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'chopta',
+    noindex: true,
     name: 'Chopta',
     kind: 'hill',
     state: 'Uttarakhand',
@@ -191,6 +197,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'mussoorie',
+    noindex: true,
     name: 'Mussoorie',
     kind: 'hill',
     state: 'Uttarakhand',
@@ -219,6 +226,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'nainital',
+    noindex: true,
     name: 'Nainital',
     kind: 'hill',
     state: 'Uttarakhand',
@@ -248,6 +256,7 @@ export const DESTINATIONS = [
   },
   {
     slug: 'mukteshwar',
+    noindex: true,
     name: 'Mukteshwar',
     kind: 'hill',
     state: 'Uttarakhand',
@@ -277,6 +286,7 @@ export const DESTINATIONS = [
   // ───────────────── GATEWAY CITIES (as destinations) ─────────────────
   {
     slug: 'haridwar',
+    noindex: true,
     name: 'Haridwar',
     kind: 'city',
     state: 'Uttarakhand',

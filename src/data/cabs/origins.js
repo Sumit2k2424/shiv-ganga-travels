@@ -20,6 +20,7 @@ export const ORIGINS = [
   // ───────────────── UTTARAKHAND ─────────────────
   {
     slug: 'haridwar',
+    noindex: true,
     name: 'Haridwar',
     region: 'uttarakhand',
     state: 'Uttarakhand',
@@ -45,6 +46,7 @@ export const ORIGINS = [
   },
   {
     slug: 'rishikesh',
+    noindex: true,
     name: 'Rishikesh',
     region: 'uttarakhand',
     state: 'Uttarakhand',
@@ -69,6 +71,7 @@ export const ORIGINS = [
   },
   {
     slug: 'dehradun',
+    noindex: true,
     name: 'Dehradun',
     region: 'uttarakhand',
     state: 'Uttarakhand',
@@ -94,6 +97,7 @@ export const ORIGINS = [
   // ───────────────── DELHI NCR ─────────────────
   {
     slug: 'delhi',
+    noindex: true,
     name: 'Delhi',
     region: 'delhi-ncr',
     state: 'Delhi',
@@ -111,6 +115,7 @@ export const ORIGINS = [
   },
   {
     slug: 'noida',
+    noindex: true,
     name: 'Noida',
     region: 'delhi-ncr',
     state: 'Uttar Pradesh',
@@ -127,6 +132,7 @@ export const ORIGINS = [
   },
   {
     slug: 'gurugram',
+    noindex: true,
     name: 'Gurugram',
     region: 'delhi-ncr',
     state: 'Haryana',
@@ -143,6 +149,7 @@ export const ORIGINS = [
   },
   {
     slug: 'ghaziabad',
+    noindex: true,
     name: 'Ghaziabad',
     region: 'delhi-ncr',
     state: 'Uttar Pradesh',
@@ -160,6 +167,7 @@ export const ORIGINS = [
   // ───────────────── RAJASTHAN ─────────────────
   {
     slug: 'jaipur',
+    noindex: true,
     name: 'Jaipur',
     region: 'rajasthan',
     state: 'Rajasthan',
@@ -177,6 +185,7 @@ export const ORIGINS = [
   },
   {
     slug: 'ajmer',
+    noindex: true,
     name: 'Ajmer',
     region: 'rajasthan',
     state: 'Rajasthan',
