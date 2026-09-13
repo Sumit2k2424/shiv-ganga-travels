@@ -41,12 +41,21 @@ const inter = Inter({
 
 // Source Serif 4: long-form article body only (see --font-serif in globals.css).
 // Italic is a real cut here, not a synthesised slant — blockquotes need it.
+//
+// preload:false (13 Sep 2026). With preload on, every page shipped two ~50 KB
+// serif files as high-priority <link rel=preload> ahead of the CSS — 100 KB on
+// the critical path of the homepage, which never renders a serif glyph. On
+// PageSpeed's throttled mobile that showed up as a 2.3 s render delay on the
+// hero paragraph (Chrome does not count text toward LCP until its web font has
+// painted). Without preload the files are still self-hosted and still
+// font-display:swap; they are simply fetched when a page's CSS first needs
+// them, which only the long-form articles do.
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   variable: '--font-source-serif',
   display: 'swap',
-  preload: true,
+  preload: false,
   adjustFontFallback: true,
 });
 

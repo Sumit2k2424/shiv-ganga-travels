@@ -247,18 +247,22 @@ export function VehicleShowcase({ vehicles = [], matrix }) {
 
   return (
     <>
-      <div className="lux-tabs" role="tablist" aria-label="Vehicles">
-        {vehicles.map((x, i) => (
-          <button
-            key={x.id}
-            role="tab"
-            aria-selected={sel === i}
-            className={`lux-tab${sel === i ? ' is-on' : ''}`}
-            onClick={() => { setSel(i); setCompare(false); }}
-          >
-            {x.name}
-          </button>
-        ))}
+      {/* The tablist holds only tabs — "Compare all" is a toggle, not a tab, so it
+          sits beside the list (display:contents keeps the flex row intact). */}
+      <div className="lux-tabs">
+        <div role="tablist" aria-label="Vehicles" style={{ display: 'contents' }}>
+          {vehicles.map((x, i) => (
+            <button
+              key={x.id}
+              role="tab"
+              aria-selected={sel === i}
+              className={`lux-tab${sel === i ? ' is-on' : ''}`}
+              onClick={() => { setSel(i); setCompare(false); }}
+            >
+              {x.name}
+            </button>
+          ))}
+        </div>
         <button
           className={`lux-tab${compare ? ' is-on' : ''}`}
           onClick={() => setCompare((c) => !c)}
@@ -559,7 +563,7 @@ export function ReviewsWall({ reviews }) {
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 28, flexWrap: 'wrap' }}>
           <div>
             <span className="lux-figure" style={{ fontSize: 'clamp(3rem,6vw,4.4rem)' }}>{reviews.rating}</span>
-            <span style={{ display: 'flex', gap: 3, marginTop: 12 }} aria-label={`${reviews.rating} out of 5`}>
+            <span role="img" style={{ display: 'flex', gap: 3, marginTop: 12 }} aria-label={`${reviews.rating} out of 5`}>
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star key={i} size={14} fill={i < Math.round(reviews.rating) ? 'var(--gold)' : 'none'} stroke="var(--gold)" strokeWidth={1.3} />
               ))}
@@ -587,7 +591,7 @@ export function ReviewsWall({ reviews }) {
         <div className="lux-embla__track">
           {reviews.items.map((r, i) => (
             <blockquote key={i} className="lux-embla__slide lux-embla__slide--review lux-card">
-              <span style={{ display: 'flex', gap: 3 }} aria-label={`${r.stars} out of 5`}>
+              <span role="img" style={{ display: 'flex', gap: 3 }} aria-label={`${r.stars} out of 5`}>
                 {[0, 1, 2, 3, 4].map((s) => (
                   <Star key={s} size={12} fill={s < r.stars ? 'var(--gold)' : 'none'} stroke="var(--gold)" strokeWidth={1.4} />
                 ))}

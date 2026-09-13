@@ -97,8 +97,10 @@ const singleDham = PACKAGES.filter(p => p.category === 'single-dham');
 /* ─── homepage-scoped styling (kept out of the system files) ─── */
 const HOME_CSS = `
   .lux-home { background: var(--paper); }
-  .lux-wa { display:inline-flex; align-items:center; gap:9px; background:#25D366; color:#fff; padding:14px 26px; border-radius:1px; font-weight:600; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; transition:background .3s var(--ease-lux); }
-  .lux-wa:hover { background:#1DA851; }
+  /* #0F7F72 is WhatsApp's teal at 4.9:1 against white text (AA). The brand's
+     bright #25D366 is 2.0:1 — it failed every contrast audit on the page. */
+  .lux-wa { display:inline-flex; align-items:center; gap:9px; background:#0F7F72; color:#fff; padding:14px 26px; border-radius:1px; font-weight:600; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; transition:background .3s var(--ease-lux); }
+  .lux-wa:hover { background:#0E6F64; }
   .lux-wa--sm { padding:11px 20px; font-size:0.6875rem; }
 
   /* Intent cards */
@@ -325,7 +327,7 @@ export default function HomePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pxAt(dn.photo, 800, 1000)}
-                  srcSet={pxSrcSet(dn.photo, [[420, 525], [600, 750], [800, 1000]])}
+                  srcSet={pxSrcSet(dn.photo, [[420, 525], [650, 813], [800, 1000]])}
                   sizes="(max-width: 620px) 94vw, (max-width: 980px) 46vw, 300px"
                   alt={dn.alt2} loading="lazy" decoding="async" width={800} height={1000} data-lux-parallax="0.06"
                 />

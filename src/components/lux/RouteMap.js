@@ -228,7 +228,7 @@ export default function RouteMap({ nodes, title = 'The route', category }) {
 
           {/* Live caption */}
           <div className="lux-map__caption" aria-live="polite">
-            <span className="lux-eyebrow lux-eyebrow--plain" style={{ color: 'var(--gold-dark)' }}>
+            <span className="lux-eyebrow lux-eyebrow--plain" style={{ color: 'var(--gold-text)' }}>
               {shown?.day || 'On route'}
             </span>
             <strong className="lux-display lux-display--sm" style={{ display: 'block', marginTop: 8 }}>

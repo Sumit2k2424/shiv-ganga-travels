@@ -15,6 +15,7 @@
   --navy-light  : #E8F0FB;   /* tinted backgrounds */
   --gold        : #E8920A;   /* Sacred Gold — CTAs, badges, accents */
   --gold-dark   : #C67A08;   /* pressed/hover gold */
+  --gold-text   : #9C5F05;   /* gold as TEXT on white/paper — 5.2:1 (AA). --gold is 2.5:1, --gold-dark 3.4:1; neither may carry small text */
   --gold-light  : #FEF3E2;   /* gold tinted bg */
   --teal        : #0B7B8B;   /* Himalayan Teal — secondary accent */
   --teal-light  : #E3F5F7;   /* teal tinted bg */

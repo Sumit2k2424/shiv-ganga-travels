@@ -37,6 +37,7 @@ export default function TestimonialWall({ items = [], className }) {
           {typeof item.rating === "number" ? (
             <div
               className="flex gap-0.5 text-[color:var(--gold,#E8920A)]"
+              role="img"
               aria-label={`${item.rating} out of 5`}
             >
               {Array.from({ length: 5 }, (_, s) => (
