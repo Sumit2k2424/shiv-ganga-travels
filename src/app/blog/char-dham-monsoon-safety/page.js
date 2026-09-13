@@ -7,9 +7,12 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-monsoon-safety');
 
 // This page carries live monsoon-season conditions, so it is re-verified more
-// often than the site-wide SITE.lastUpdated marker moves. Keep it page-local.
+// often than the site-wide PAGE_DATES.modifiedHuman marker moves. Keep it page-local.
 const MONSOON_UPDATED = 'September 1, 2026';
 const MONSOON_UPDATED_ISO = '2026-09-01';
 

@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2 } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/privacy-policy');
 
 export const metadata = {
   title: { absolute: 'Privacy Policy | Shiv Ganga Travels, Haridwar' },
@@ -28,7 +31,7 @@ function Schema() {
     publisher:{ '@id': `${SITE.baseUrl}/#organization` },
     inLanguage:'en-IN',
     datePublished:'2026-08-10',
-    dateModified:'2026-08-10',
+    dateModified:PAGE_DATES.modifiedISO,
   };
   const crumbs = {
     '@context':'https://schema.org', '@type':'BreadcrumbList',

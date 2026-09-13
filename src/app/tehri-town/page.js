@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/tehri-town');
 
 export const metadata = {
   title: { absolute: 'Tehri Town — New Tehri, the Lake and India\'s Tallest Dam | Full Guide' },
@@ -36,7 +39,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Tehri Town', item: `${SITE.baseUrl}/tehri-town` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'City', name: 'New Tehri', description: 'The district headquarters of Tehri Garhwal, Uttarakhand, overlooking Tehri Lake and the Tehri Dam, on the road toward Yamunotri and Gangotri.', url: `${SITE.baseUrl}/tehri-town`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'New Tehri', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.3667, longitude: 78.4833, elevation: '1,550–1,950 m' } };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Tehri Town — New Tehri, the Lake and India\'s Tallest Dam', description: 'A guide to New Tehri: the dam, the lake, what happened to Old Tehri, and its place on the Char Dham route.', mainEntityOfPage: `${SITE.baseUrl}/tehri-town`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Tehri Town — New Tehri, the Lake and India\'s Tallest Dam', description: 'A guide to New Tehri: the dam, the lake, what happened to Old Tehri, and its place on the Char Dham route.', mainEntityOfPage: `${SITE.baseUrl}/tehri-town`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -77,7 +80,7 @@ export default function TehriTown() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,550–1,950 m'], ['District', 'Tehri Garhwal'], ['Dam height', '260 m'], ['From Dehradun', '~75–80 km'], ['From Rishikesh', '~90 km'], ['To Old Tehri', '24 km, now submerged']].map(([k, v]) => (

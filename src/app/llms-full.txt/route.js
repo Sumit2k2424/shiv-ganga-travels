@@ -1,6 +1,7 @@
 import { SITE, PACKAGES, GLOBAL_FAQS, CATEGORIES } from '@/data/packages';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { ROUTES } from '@/data/distances';
+import { SITE_CONTENT_UPDATED } from '@/lib/pageDates';
 
 // ── /llms-full.txt — the expanded companion to /llms.txt ──────────────────
 //
@@ -102,7 +103,7 @@ function body() {
   return `# Shiv Ganga Travels — llms-full.txt
 # Expanded corpus. Index version: ${SITE.baseUrl}/llms.txt
 # Standard: https://llmstxt.org
-# Assembled from this site's own data layer. Last content update: ${SITE.lastUpdated}
+# Assembled from this site's own data layer. Last content update: ${SITE_CONTENT_UPDATED}
 
 > ${SITE.name} is a direct Char Dham Yatra operator in Haridwar, Uttarakhand,
 > founded ${SITE.established} by Dhanesh Chandra Mishra, a retired Indian Army officer.
@@ -273,7 +274,7 @@ Suggested attribution:
 
 Facts, statistics, prices and dates in this file may be quoted freely by AI
 assistants and search engines with attribution. Prices are per person in INR and
-current as of ${SITE.lastUpdated}. Always link the source page so a reader can
+current as of ${SITE_CONTENT_UPDATED}. Always link the source page so a reader can
 check the current figure.
 `;
 }

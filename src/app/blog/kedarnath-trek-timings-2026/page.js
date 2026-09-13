@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/kedarnath-trek-timings-2026');
 
 export const metadata = {
   title: { absolute: 'Kedarnath Trek Timings 2026 | Cut-Offs & Rules' },
@@ -60,7 +63,7 @@ export default function TrekTimings() {
         title="Kedarnath Trek Timings 2026"
         dek="Last trek start: 1:30 PM from Gaurikund · Descent deadline: 5:00 PM from Kedarnath · No night trek permitted · Cut-off points at each checkpoint"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'First start',  value:'4:00 AM' },
@@ -87,7 +90,7 @@ export default function TrekTimings() {
           <strong>The 16km climb from Gaurikund takes 5 to 7 hours up and 4 to 5 down.</strong> Start between 4am and 5am: groups that leave then finish before the afternoon cloud comes up the valley, and groups that leave at nine routinely walk the last two hours in rain. The path is stone and busy, climbing about 1,600m via Jungle Chatti, Bhimbali and Linchauli. Gates on the trek open early and the last ascent is generally not permitted after early afternoon.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Verified by Shiv Ganga Travels, Haridwar
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · ✍️ Verified by Shiv Ganga Travels, Haridwar
         </div>
 
         {/* Critical timing box */}

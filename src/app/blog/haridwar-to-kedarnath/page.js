@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/haridwar-to-kedarnath');
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
   description: `Haridwar to Kedarnath ${SITE.season} — 235 km by road via Devprayag to Guptkashi, then Gaurikund and a 16 km trek. Cab, bus and helicopter options compared.`,
@@ -23,7 +26,7 @@ const FAQS = [
   { q:'When does Kedarnath open in 2026?', a:'Kedarnath temple opens on 22 April 2026 at 8:00 AM and closes around 11 November 2026 (Bhai Dooj). May–June and September–October are the most comfortable months to travel from Haridwar.' },
 ];
 function Schema() {
-  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Haridwar to Kedarnath Distance, Route & Travel Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:'2025-03-10', dateModified:'2026-05-30', mainEntityOfPage:`${SITE.baseUrl}/blog/haridwar-to-kedarnath` };
+  const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Haridwar to Kedarnath Distance, Route & Travel Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/haridwar-to-kedarnath` };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }

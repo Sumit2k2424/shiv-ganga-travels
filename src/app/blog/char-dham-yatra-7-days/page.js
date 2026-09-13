@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-7-days');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra in 7 Days ${SITE.season} | Itinerary & Honest Advice` },
@@ -83,7 +86,7 @@ export default function SevenDaysBlog() {
         <AnswerBox>
           <strong>Seven days is enough to see all four dhams, but only just, and not comfortably.</strong> It means 200–265km of mountain driving on several days, a 4am start for the Kedarnath trek and almost no slack for weather. It suits fit adults who have travelled in the hills before. For a first trip, seniors or families with children, 10 to 11 nights is the version that works — or do Do Dham properly in the same week instead.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Verdict box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>

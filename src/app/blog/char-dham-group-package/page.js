@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-group-package');
 
 export const metadata = {
   title: { absolute: `Char Dham Group Package ${SITE.season} | 10+ Pilgrims` },
@@ -71,7 +74,7 @@ export default function GroupPackage() {
         <AnswerBox>
           <strong>Char Dham group rates fall sharply with size: about ₹22,000–25,000 per person for two, ₹16,000–18,000 for six to twelve, and ₹13,500–15,000 for forty or more.</strong> Only one cost divides across the group — the vehicle — and it is the biggest line, which is why the curve flattens after about eight people. Book 90 days ahead for May departures; September and October need 45 to 60.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
           Family reunions, office pilgrimages, temple committee tours, retirement groups — we run all of them, and groups get something solo pilgrims miss. You share the Kedarnath trek, hold hands at Gangotri's river bank, and see each other's darshan. This guide covers everything about group Char Dham Yatra from Haridwar.

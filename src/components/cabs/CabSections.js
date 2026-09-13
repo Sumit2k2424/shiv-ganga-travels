@@ -18,6 +18,7 @@ import { Reveal, Eyebrow, Pill } from '@/components/lux/primitives';
 import { SITE } from '@/data/packages';
 import { FARE_INCLUDES, FARE_EXCLUDES, EXTRAS, CANCELLATION, ROAD_RULES, OPERATOR } from '@/data/cabs/policy';
 import { yearsOnRoad } from '@/data/cabs/experts';
+import { CAB_DATES } from '@/lib/pageDates';
 
 /* ── Hero fact pills ───────────────────────────────────────── */
 
@@ -38,7 +39,7 @@ export function FactPills({ items = [] }) {
    at: none of them put a human or a date on the content. We only
    claim what is true — if no individual is credited on the route,
    this attributes to the house team and stamps the review date
-   from SITE.lastUpdated rather than inventing a drive date.      */
+   from the cab data layer's last change (CAB_DATES) rather than inventing a drive date.      */
 
 export function VerifiedStrip({ expert, lastDrivenOn, subject }) {
   const years = yearsOnRoad(expert);
@@ -72,7 +73,7 @@ export function VerifiedStrip({ expert, lastDrivenOn, subject }) {
             </Link>
           </p>
           <p className="lux-caption" style={{ marginTop: 8 }}>
-            Fares and road notes on this page reviewed {SITE.lastUpdated}.
+            Fares and road notes on this page reviewed {CAB_DATES.modifiedHuman}.
           </p>
         </div>
       </div>

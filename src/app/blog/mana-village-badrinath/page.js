@@ -8,6 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/mana-village-badrinath');
 
 /* "First" vs "last" village: the signboard was officially changed in 2022 and
    most travel pages still have not caught up. Both terms stay on this page on
@@ -41,8 +44,8 @@ function Schema() {
     headline: 'Mana Village Near Badrinath: India\'s First (and Last) Village',
     description: 'Mana village, 3km from Badrinath — renamed India\'s first village in 2022 after decades as its last. Vyas Gufa, Ganesh Gufa, Bhim Pul, the Saraswati, permits and timing.',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-08-22',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     about: { '@type': 'Place', name: 'Mana, Chamoli district, Uttarakhand', geo: { '@type': 'GeoCoordinates', latitude: 30.7714, longitude: 79.4936, elevation: '3200' } },
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.blog-keytakeaways'] },
     author: {
@@ -92,7 +95,7 @@ export default function Page() {
         title="Mana Village — India's Last Village Before Tibet"
         dek="3km from Badrinath · Vyas Gufa · Bhim Pul · Saraswati River · Local Shawl Weavers"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
         facts={[
           { label:'Distance', value:'3 km from Badrinath' },
@@ -114,7 +117,7 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Most Badrinath pilgrims spend their entire time at the temple, do their darshan, and leave without ever knowing that 3km up the same road is one of the most extraordinary places in India. Mana Village — officially the last inhabited village before the China (Tibet) border — sits at 3,200m at the confluence of the Saraswati and Alaknanda rivers, surrounded by peaks above 6,000m, and it has been continuously inhabited for over a thousand years.</p>
         <p style={p}>The village is small — maybe 70–80 stone houses — and for eight months of the year it is completely buried under snow. The Bhotia community who live here migrate to the lower valleys every winter and return in April when the Badrinath temple reopens. Beyond Mana the road continues to the Mana Pass and into Tibet; there is nothing else on the Indian side.</p>

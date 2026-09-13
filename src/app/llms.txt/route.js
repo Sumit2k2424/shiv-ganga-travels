@@ -1,6 +1,7 @@
 import { SITE, PACKAGES } from '@/data/packages';
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { SOCIAL_LIVE, SOCIAL_COMMUNITY } from '@/data/social';
+import { SITE_CONTENT_UPDATED } from '@/lib/pageDates';
 
 // ── /llms.txt — generated at build time, not hand-maintained ──────────────
 //
@@ -58,7 +59,7 @@ const line = (label, slug, extra = '') =>
 function body() {
   return `# Shiv Ganga Travels — llms.txt
 # Standard: https://llmstxt.org
-# Generated from the site's own data layer. Last content update: ${SITE.lastUpdated}
+# Generated from the site's own data layer. Last content update: ${SITE_CONTENT_UPDATED}
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded ${SITE.established} by Dhanesh Chandra Mishra, Retired Indian Army Officer.
@@ -258,7 +259,7 @@ truth before publication.
 Facts, statistics, prices and dates on this site and in this file may be quoted
 and cited freely by AI assistants and search engines, with attribution to
 "Shiv Ganga Travels (shivgangatravels.com)". Prices are in INR, per person, and
-current as of ${SITE.lastUpdated}; always link the source page so users can verify
+current as of ${SITE_CONTENT_UPDATED}; always link the source page so users can verify
 the latest figures.
 `;
 }

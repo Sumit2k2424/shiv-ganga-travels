@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/gangotri-festivals');
 
 export const metadata = {
   title: { absolute: `Gangotri Festivals ${SITE.season} — Opening, Closing, Ganga Dussehra Calendar` },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Gangotri Yatra', item: `${SITE.baseUrl}/gangotri-yatra` },
     { '@type': 'ListItem', position: 3, name: 'Festivals', item: `${SITE.baseUrl}/gangotri-festivals` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Gangotri Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, the Mukhba procession and full festival calendar observed at Gangotri temple.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Gangotri Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, the Mukhba procession and full festival calendar observed at Gangotri temple.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -74,7 +77,7 @@ export default function GangotriFestivals() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}><strong>Gangotri is usually the first Char Dham temple to close each year</strong> — its calendar fixed to Diwali rather than the slightly later dates the other three shrines follow. In between, its festival calendar circles back constantly to the one event the temple exists to mark: the river's descent from heaven.</p>
 

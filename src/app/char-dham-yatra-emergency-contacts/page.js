@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra-emergency-contacts');
 
 /**
  * Char Dham emergency contacts.
@@ -308,7 +311,7 @@ function Schema() {
     headline: `Char Dham Yatra Emergency Contacts ${SITE.season}`,
     description: 'Verified emergency numbers for the Char Dham Yatra route, with guidance on what to do in an altitude, landslide, missing-person or no-signal emergency.',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-04-02',
+    datePublished: PAGE_DATES.createdISO,
     dateModified: VERIFIED_ISO,
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, '@id': `${SITE.baseUrl}/#organization` },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },

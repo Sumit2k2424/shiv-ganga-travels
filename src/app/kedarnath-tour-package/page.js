@@ -3,6 +3,9 @@ import { SITE, TRUST } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-tour-package');
 
 export const metadata = {
   title: { absolute: `Kedarnath Tour Package ${SITE.season} | Hotels & Transport Included` },
@@ -139,7 +142,7 @@ function Schema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agency) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: SITE.lastUpdatedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
     </>
   );
 }
@@ -184,7 +187,7 @@ export default function KedarnathTourPackage() {
       </section>
 
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '8px 20px 56px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season: Apr 22 – Oct 2026</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season: Apr 22 – Oct 2026</div>
 
         <AnswerBox>
           A Kedarnath tour package from Haridwar is a 3N/4D yatra to the 12th Jyotirlinga starting at <strong>₹5,250 per person</strong> — covering road transfers, three nights stay, breakfast and dinner, and your mandatory Yatra registration. The temple opened on <strong>22 April 2026</strong>; the shrine sits 16 km uphill from Gaurikund, reachable on foot, by pony, or by helicopter. Enquiring is free and needs no advance.

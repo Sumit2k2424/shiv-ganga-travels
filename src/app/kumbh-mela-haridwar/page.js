@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kumbh-mela-haridwar');
 
 // Ardh Kumbh dates are well sourced. Shahi Snan dates are NOT yet published by
 // the Mela administration — do not invent them. Add them here when the Mela
@@ -101,7 +104,7 @@ export default function KumbhMelaHaridwar() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Kumbh Mela', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

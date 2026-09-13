@@ -4,6 +4,9 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra-from-delhi');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra from Delhi ${SITE.season} | Train & Flight Pickup` },
@@ -96,7 +99,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open: Apr 19 – Nov 2026</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open: Apr 19 – Nov 2026</div>
 
         <AnswerBox>
           Char Dham Yatra from Delhi costs from ₹17,200 per person and takes 11–13 days door to

@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/barkot');
 
 export const metadata = {
   title: { absolute: 'Barkot — Night One of Every Char Dham Yatra' },
@@ -104,8 +107,8 @@ function Schema() {
     description: 'A guide to Barkot, the Yamunotri base: distances to Janki Chatti and the temple, where to stay, why the early start matters, and how to reach from Haridwar.',
     mainEntityOfPage: `${SITE.baseUrl}/barkot`,
     image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -158,7 +161,7 @@ export default function Barkot() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

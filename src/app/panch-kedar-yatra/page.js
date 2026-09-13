@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/panch-kedar-yatra');
 
 /* Altitudes match src/data/packages.js and src/data/botConfig.js — Rudranath in
    particular is 3,600m (Wikipedia, Chamoli district) and was wrong across four
@@ -92,7 +95,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <AnswerBox>
           <strong>Panch Kedar is a circuit of five Shiva temples in the Garhwal Himalayas</strong> — Kedarnath

@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/shiv-ganga-travels-vs-makemytrip-char-dham');
 
 export const metadata = {
   title: { absolute: `Shiv Ganga vs MakeMyTrip ${SITE.season} | Char Dham` },
@@ -23,8 +26,8 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Shiv Ganga vs MakeMyTrip: Char Dham Compared',
-    datePublished: '2026-05-21',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/shiv-ganga-travels-vs-makemytrip-char-dham`,

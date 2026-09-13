@@ -8,6 +8,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-registration');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Registration ${SITE.season} | Free e-Pass Guide` },
@@ -72,8 +75,8 @@ function Schema() {
       url: SITE.baseUrl,
       logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' },
     },
-    datePublished: '2026-01-01',
-    dateModified: '2026-05-09',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-registration`,
     totalTime: 'PT20M',
     supply: [
@@ -196,12 +199,12 @@ export default function RegistrationBlog() {
 
       {/* Hero */}
       <BlogHero
-        badge={`Step-by-Step Guide · Updated ${SITE.lastUpdated}`}
+        badge={`Step-by-Step Guide · Updated ${PAGE_DATES.modifiedHuman}`}
         title="Char Dham Yatra Registration 2026 — Step-by-Step Guide"
         dek="Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Here is the complete step-by-step process from operators who've helped 50,000+ pilgrims register successfully."
         author="Dhanesh Chandra Mishra"
         authorInitials="DM"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="9 min read"
         facts={[
           { label:'Time',     value:'~20 minutes' },
@@ -237,8 +240,8 @@ export default function RegistrationBlog() {
           slug: 'char-dham-yatra-registration',
           title: `Char Dham Yatra Registration ${SITE.season}: Free e-Pass Guide`,
           description: `Everything about mandatory Char Dham Yatra registration ${SITE.season} — e-Pass download, yatra parchi, OTP troubleshooting, NRI rules, documents, daily limits and what to do when the portal is down.`,
-          datePublished: '2025-08-15',
-          dateModified: SITE.lastUpdatedISO,
+          datePublished: PAGE_DATES.createdISO,
+          dateModified: PAGE_DATES.modifiedISO,
           lang: 'en-IN',
         }} />
 

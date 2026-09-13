@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-hotels');
 
 export const metadata = {
   title: { absolute: `Hotels Near Kedarnath ${SITE.season} | Best Stays | Guptkashi, Sonprayag & Phata` },
@@ -123,7 +126,7 @@ export default function KedarnathHotels() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#fffbeb', border:'1px solid #fcd34d', borderRadius:12, padding:'14px 18px', marginBottom:24 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#92400e', marginBottom:6 }}>⚠️ Book early for peak season (May–June, October)</div>

@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/adi-kailash-yatra');
 
 export const metadata = {
   title: { absolute: `Adi Kailash Yatra Package ${SITE.season} | Permit & Om Parvat` },
@@ -108,7 +111,7 @@ export default function AdiKailashYatra() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🏔️ Panch Kailash · Inside India — No Passport Needed</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Adi Kailash Yatra — Permit, Route, Cost &amp; Om Parvat</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The primordial Kailash, entirely within Indian territory — updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The primordial Kailash, entirely within Indian territory — updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 
@@ -121,7 +124,7 @@ export default function AdiKailashYatra() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'adi-kailash-yatra', title:'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide', description:'Adi Kailash Yatra: real Inner Line Permit steps, the road-vs-trek route from Kathgodam, Om Parvat, cost, and how to reach from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'adi-kailash-yatra', title:'Adi Kailash Yatra 2026 — Permit, Route & Om Parvat Guide', description:'Adi Kailash Yatra: real Inner Line Permit steps, the road-vs-trek route from Kathgodam, Om Parvat, cost, and how to reach from Haridwar.', datePublished:'2026-07-28', dateModified: PAGE_DATES.modifiedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Adi Kailash is a sacred peak at <strong>5,945 m</strong> in Pithoragarh district, believed to be the first earthly abode of Shiva and Parvati &mdash; one of the five <strong>Panch Kailash</strong>, and unlike Mount Kailash in Tibet, reachable entirely within India, <strong>no passport needed</strong>. An <strong>Inner Line Permit</strong> is mandatory, issued at Dharchula. The yatra now runs largely by road via Kathgodam and Pithoragarh, taking <strong>7-9 days</strong>, best done <strong>May-June or September-October</strong>.

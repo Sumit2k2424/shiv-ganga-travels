@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/gangotri-dharamshala');
 
 export const metadata = {
   title: { absolute: `Gangotri Dharamshala & Budget Stays ${SITE.season} — GMVN, Ashram Guest Houses` },
@@ -70,7 +73,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Gangotri Yatra', item: `${SITE.baseUrl}/gangotri-yatra` },
     { '@type': 'ListItem', position: 3, name: 'Dharamshala & Budget Stays', item: `${SITE.baseUrl}/gangotri-dharamshala` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Gangotri Dharamshala & Budget Stays ${SITE.season}`, description: 'A guide to budget accommodation at Gangotri: GMVN, ashrams, and nearby bases.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-dharamshala`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Gangotri Dharamshala & Budget Stays ${SITE.season}`, description: 'A guide to budget accommodation at Gangotri: GMVN, ashrams, and nearby bases.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-dharamshala`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -105,7 +108,7 @@ export default function GangotriDharamshala() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <AnswerBox>
           <strong>Budget accommodation at Gangotri runs roughly ₹400 to ₹1,500 a night</strong>, and there is

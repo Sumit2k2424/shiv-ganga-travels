@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/how-to-choose-char-dham-tour-operator');
 
 export const metadata = {
   title: { absolute: 'How to Choose a Char Dham Tour Operator — 12 Checks' },
@@ -81,7 +84,7 @@ export default function HowToChooseOperator() {
       <Crumbs trail={[['Char Dham Yatra','/char-dham-yatra'],['How to Choose an Operator', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

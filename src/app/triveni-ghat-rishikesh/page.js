@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/triveni-ghat-rishikesh');
 
 export const metadata = {
   title: { absolute: 'Triveni Ghat Rishikesh — Ganga Aarti Timings & Guide' },
@@ -67,7 +70,7 @@ export default function TriveniGhat() {
       <Crumbs trail={[['Rishikesh','/rishikesh-tour-packages'],['Triveni Ghat', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

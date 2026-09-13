@@ -6,6 +6,9 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-opening-dates-2026');
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Opening Dates 2026 | All 4 Dhams' },
@@ -68,7 +71,7 @@ export default function OpeningDates() {
         title="Char Dham Yatra Opening Dates 2026"
         dek="Official opening and closing dates for all 4 dhams — Yamunotri, Gangotri, Kedarnath, Badrinath — with best season guide and booking timeline"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
         facts={[
           { label:'Yamunotri', value:'April 19, 2026' },
@@ -90,7 +93,7 @@ export default function OpeningDates() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-opening-dates-2026", "title": "Char Dham Yatra Opening Dates 2026: All 4 Dhams", "description": "Char Dham Yatra 2026 opening dates: Yamunotri and Gangotri April 19, Kedarnath April 22, Badrinath April 23. Puja timings and registration info.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Officially verified</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Officially verified</div>
 
         <KeyTakeaways title="2026 opening dates at a glance"
           points={[

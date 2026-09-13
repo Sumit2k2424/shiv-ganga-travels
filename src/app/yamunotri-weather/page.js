@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/yamunotri-weather');
 
 const PAGE = '/yamunotri-weather';
 const VERIFIED = 'August 22, 2026';
@@ -61,7 +64,7 @@ function Schema() {
     headline:`Yamunotri Weather ${SITE.season}: Month-by-Month Temperature Guide`,
     description:'Month-by-month day and night temperatures, snow, rainfall and crowd levels for Yamunotri at 3,291m, with temperature along the Janki Chatti trek.',
     image:`${SITE.baseUrl}/opengraph-image`,
-    datePublished:'2026-02-18', dateModified:VERIFIED_ISO,
+    datePublished:PAGE_DATES.createdISO, dateModified:VERIFIED_ISO,
     author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, '@id':`${SITE.baseUrl}/#organization` },
     publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
     mainEntityOfPage:`${SITE.baseUrl}${PAGE}`,

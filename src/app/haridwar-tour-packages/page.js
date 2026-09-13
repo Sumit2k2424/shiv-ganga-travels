@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/haridwar-tour-packages');
 
 export const metadata = {
   title: { absolute: `Haridwar Tour Package ${SITE.season} | Ganga Aarti Included` },
@@ -122,7 +125,7 @@ export default function HaridwarTourPackages() {
           <strong>Haridwar works as a 2 to 3 night trip and is where the Char Dham road circuit begins.</strong> Packages start around ₹2,999. The core is Har Ki Pauri and its evening Ganga Aarti, the Mansa Devi and Chandi Devi ropeways, and Daksh Mahadev at Kankhal — a comfortable two days. Add Rishikesh, 25km up the road, if you have a third. Haridwar is on the main Delhi–Dehradun rail line, so arriving is easy from most of north India.
         </AnswerBox>
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['From Delhi','210 km · 4–5 hrs'],['From Dehradun','54 km · 1.5 hrs'],['Packages from','₹2,999/person'],['Ganga Aarti','6:30–7:00 PM daily'],['Altitude','249 metres'],['Best combo','+ Rishikesh 24km']].map(([k, v]) => (

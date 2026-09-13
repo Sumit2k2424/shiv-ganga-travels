@@ -6,6 +6,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/auli-skiing-package');
 
 const PKG = PACKAGES.find(p => p.slug === 'auli-joshimath-skiing-3n-4d');
 
@@ -71,7 +74,7 @@ export default function AuliSkiingPackage() {
       <Crumbs trail={[['Uttarakhand Tours','/uttarakhand-tour-packages'],['Auli Skiing', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

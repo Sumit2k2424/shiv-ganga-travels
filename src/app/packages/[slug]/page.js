@@ -14,6 +14,9 @@ import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, stayLede, dates
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
 import { Pill } from '@/components/lux/primitives';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/packages/[slug]');
 
 const CATEGORY_SLUGS = Object.keys(CATEGORIES);
 
@@ -312,7 +315,7 @@ export default async function PackageDetailPage({ params }) {
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
-        <span>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open Apr 19 – Nov 2026</span>
+        <span>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open Apr 19 – Nov 2026</span>
         <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · 15 seasons)</span>
       </div>
 

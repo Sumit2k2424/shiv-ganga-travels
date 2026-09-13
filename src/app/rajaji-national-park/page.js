@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/rajaji-national-park');
 
 export const metadata = {
   title: { absolute: `Rajaji National Park Safari ${SITE.season} | Zones, Fees & Timings` },
@@ -119,7 +122,7 @@ export default function RajajiNationalPark() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🐘 Tiger Reserve · 8km from Rishikesh</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Rajaji National Park — Safari Zones, Fees, Timings &amp; How to Book</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>An elephant corridor and tiger reserve right on the Rishikesh doorstep — updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>An elephant corridor and tiger reserve right on the Rishikesh doorstep — updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 
@@ -132,7 +135,7 @@ export default function RajajiNationalPark() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'rajaji-national-park', title:'Rajaji National Park Safari 2026 — Zones, Fees & Timings', description:'Rajaji National Park jungle safari: entry fees, Chilla/Motichur/Ranipur zones, booking steps, elephant and tiger sightings, and the route from Haridwar.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'rajaji-national-park', title:'Rajaji National Park Safari 2026 — Zones, Fees & Timings', description:'Rajaji National Park jungle safari: entry fees, Chilla/Motichur/Ranipur zones, booking steps, elephant and tiger sightings, and the route from Haridwar.', datePublished:'2026-07-28', dateModified: PAGE_DATES.modifiedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Rajaji National Park is an 820 sq km tiger reserve across the Shivalik foothills, with its busiest gate, <strong>Chilla</strong>, just <strong>8 km from Rishikesh</strong>. Entry runs <strong>₹150&ndash;200 for Indians, ₹600&ndash;800 for foreigners</strong>, plus a Gypsy hire of around <strong>₹3,500</strong>. The park is open <strong>15 November&ndash;15 June</strong> with two safari slots a day, and is best known for its large <strong>Asian elephant</strong> population.

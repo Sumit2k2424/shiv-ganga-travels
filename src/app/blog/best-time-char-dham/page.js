@@ -8,6 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/best-time-char-dham');
 
 export const metadata = {
   title: { absolute: `Best Time for Char Dham Yatra ${SITE.season} | Month-by-Month Guide` },
@@ -50,8 +53,8 @@ function Schema() {
     headline: 'Best Time for Char Dham Yatra 2026: Month by Month',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -129,7 +132,7 @@ export default function BestTimeCharDham() {
         <AnswerBox>
           <strong>May to mid-June and mid-September to October are the two good windows.</strong> May and early June are warmest and busiest, with the heaviest crowds of the year at Kedarnath. Mid-September to October has the clearest mountain views, fewer people and cheaper rooms, at the cost of freezing nights by late October. July and August are peak monsoon: the temples stay open but landslides close the roads repeatedly and helicopters are grounded for days.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated} · Author: Shiv Ganga Travels team, Haridwar</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman} · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', marginBottom:28 }}>

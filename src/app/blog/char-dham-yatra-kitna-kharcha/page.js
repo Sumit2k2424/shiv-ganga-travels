@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-kitna-kharcha');
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा ${SITE.season} खर्चा | कीमत ₹13,900 से शुरू | पूरी जानकारी` },
@@ -34,7 +37,7 @@ function Schema() {
         jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
-      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` } };
+      }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम यात्रा खर्चा 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -79,7 +82,7 @@ export default function CharDhamKharcha() {
         <AnswerBox>
           <strong>चार धाम यात्रा का खर्च हरिद्वार से ₹13,900 प्रति व्यक्ति से शुरू होता है — 9 रात 10 दिन, सब कुछ शामिल।</strong> इसमें गाड़ी, होटल, नाश्ता-खाना, गाइड, टोल-पार्किंग और रजिस्ट्रेशन आता है। डीलक्स पैकेज ₹30,000 तक जाता है और हेलीकॉप्टर चार्टर करीब ₹2,30,000। अलग से रखें — केदारनाथ का घोड़ा (₹3,000–5,000) या हेलीकॉप्टर (₹7,000–9,000 एक तरफ़), और निजी खर्च।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         {/* Quick answer box */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

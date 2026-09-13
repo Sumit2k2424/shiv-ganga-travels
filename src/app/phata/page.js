@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/phata');
 
 export const metadata = {
   title: { absolute: 'Phata — The Kedarnath Helicopter Base | Village & Helipad Guide' },
@@ -106,8 +109,8 @@ function Schema() {
     description: 'A guide to Phata: the helipad, why most operators fly from here, fares against Sersi and Guptkashi, where to stay, and what happens when the weather closes in.',
     mainEntityOfPage: `${SITE.baseUrl}/phata`,
     image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -166,7 +169,7 @@ export default function Phata() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

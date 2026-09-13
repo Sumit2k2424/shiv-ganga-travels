@@ -10,6 +10,9 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import PullQuote from '@/components/PullQuote';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-guide');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Guide ${SITE.season} | Route, Cost & Registration Tips` },
@@ -46,8 +49,8 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
-    datePublished: '2025-01-15',
-    dateModified: '2026-01-01',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-guide`,
     image: '/opengraph-image',
     keywords: 'Char Dham Yatra 2026, char dham guide, char dham route, char dham cost',

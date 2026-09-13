@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/uttarakhand-devi-temples');
 
 export const metadata = {
   title: { absolute: `Devi Temples in Uttarakhand — The Complete List` },
@@ -43,7 +46,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Devi Temples', item: `${SITE.baseUrl}/uttarakhand-devi-temples` },
   ]};
   const list = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Devi Temples in Uttarakhand', itemListElement: TEMPLES.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `${SITE.baseUrl}${t.href}` })) };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Devi Temples in Uttarakhand — The Complete List', description: 'Every major goddess temple in Uttarakhand: Mansa Devi, Chandi Devi, Maya Devi, Dhari Devi and Surkanda Devi.', mainEntityOfPage: `${SITE.baseUrl}/uttarakhand-devi-temples`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Devi Temples in Uttarakhand — The Complete List', description: 'Every major goddess temple in Uttarakhand: Mansa Devi, Chandi Devi, Maya Devi, Dhari Devi and Surkanda Devi.', mainEntityOfPage: `${SITE.baseUrl}/uttarakhand-devi-temples`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -79,7 +82,7 @@ export default function UttarakhandDeviTemples() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}><strong>Uttarakhand's goddess temples span the full range of Shakti tradition</strong> — twin hilltop shrines watching over Haridwar, two genuine Shakti Peeths marking where the goddess Sati's body is said to have fallen, and a river-guardian deity whose relocation for a hydro project became a genuine controversy. This page brings the major ones together in one place.</p>
 

@@ -9,6 +9,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import AnswerBox from '@/components/AnswerBox';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
+import { pageDates } from '@/lib/pageDates';
 
 export const H2 = ({ id, children }) => (
   <h2 id={id} style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:28 }}>{children}</h2>
@@ -47,7 +48,7 @@ export default function GuideArticle({
   answer = null,
   toc = [],
   readTime,
-  updated = SITE.lastUpdated,
+  updated,
   author = 'dhanesh',
   ctaIntent = 'info',
   faqs = [],
@@ -55,6 +56,8 @@ export default function GuideArticle({
   children,
 }) {
   const authorName = author === 'sumit' ? 'Sumit Mishra' : 'Dhanesh Chandra Mishra';
+  const dates = pageDates(`/blog/${slug}`);
+  updated = updated || `Updated ${dates.modifiedHuman}`;
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -62,8 +65,8 @@ export default function GuideArticle({
     headline: title,
     description: subtitle,
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-04-01',
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: dates.createdISO,
+    dateModified: dates.modifiedISO,
     // Same canonical @ids as BlogAuthor and /about, so a guide byline resolves
     // to the one existing Person node rather than minting a fresh anonymous one.
     author: author === 'sumit' ? {

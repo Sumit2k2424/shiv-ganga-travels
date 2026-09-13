@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/badrinath-festivals');
 
 export const metadata = {
   title: { absolute: `Badrinath Festivals ${SITE.season} — Opening & Closing Dates` },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Badrinath Yatra', item: `${SITE.baseUrl}/badrinath-yatra` },
     { '@type': 'ListItem', position: 3, name: 'Festivals', item: `${SITE.baseUrl}/badrinath-festivals` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Badrinath Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, the Pandukeshwar procession and full festival calendar observed at Badrinath temple.', mainEntityOfPage: `${SITE.baseUrl}/badrinath-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Badrinath Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, the Pandukeshwar procession and full festival calendar observed at Badrinath temple.', mainEntityOfPage: `${SITE.baseUrl}/badrinath-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -74,7 +77,7 @@ export default function BadrinathFestivals() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}><strong>Badrinath's calendar is built around a single deity that lives in two places a year.</strong> Six months at the main shrine, five-plus months at a village called Pandukeshwar — the temple's opening and closing ceremonies exist to move that deity, formally, between the two.</p>
 

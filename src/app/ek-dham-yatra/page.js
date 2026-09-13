@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/ek-dham-yatra');
 
 export const metadata = {
   title: { absolute: `Ek Dham Yatra ${SITE.season} | From ₹4,250 | Pick One Dham` },
@@ -128,8 +131,8 @@ function Schema() {
     url: `${SITE.baseUrl}/ek-dham-yatra`,
     image: [`${SITE.baseUrl}/opengraph-image`],
     touristType: ['Pilgrims', 'Families', 'Senior citizens', 'First-time visitors'],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     provider: {
       '@type': 'TravelAgency', '@id': `${SITE.baseUrl}/#organization`,
@@ -195,7 +198,7 @@ export default function EkDhamYatra() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

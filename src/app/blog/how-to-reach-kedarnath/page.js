@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/how-to-reach-kedarnath');
 
 export const metadata = {
   title: { absolute: `How to Reach Kedarnath ${SITE.season} | Road, Train & Helicopter` },
@@ -79,7 +82,7 @@ export default function HowToReachKedarnath() {
         <AnswerBox>
           <strong>Kedarnath is 235km from Haridwar by road to Gaurikund, then 16km on foot.</strong> Vehicles stop at Sonprayag and a shared jeep covers the last 5km. Driving is 8 to 9 hours, so nearly everyone breaks the journey at Guptkashi, 210km in. The alternative to walking is a pony, palki or the helicopter from Phata, Sersi or Guptkashi. Haridwar is the nearest railhead and Dehradun the nearest airport.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
           {[['Nearest Railway Station','Haridwar / Rishikesh'],['Nearest Airport','Jolly Grant (Dehradun, 250km)'],['Road Base','Gaurikund (218km from HW)'],['Trek Distance','16km one way'],['Helicopter','Phata/Sersi helipads'],['Total Journey (from Delhi)','1.5–2 days']].map(([k,v])=>(

@@ -5,6 +5,9 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathPujaPicker from '@/components/KedarnathPujaPicker';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-vip-darshan');
 
 export const metadata = {
   title: { absolute: `Kedarnath VIP Darshan Ticket Price ${SITE.season} | Booking Guide` },
@@ -52,7 +55,7 @@ function Schema() {
     description: 'Guidance and assistance for Kedarnath VIP darshan, special pujas, sparsh darshan and BKTC online booking, as part of Kedarnath yatra packages.' };
   const wp = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${SITE.baseUrl}/kedarnath-vip-darshan#webpage`,
     url: `${SITE.baseUrl}/kedarnath-vip-darshan`, name: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan', inLanguage: 'en-IN',
-    dateModified: '2026-06-29', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } };
+    dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />

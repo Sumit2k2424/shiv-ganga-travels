@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-yatra');
 
 export const metadata = {
   title: { absolute: `Kedarnath Yatra Package ${SITE.season} | Trek, Pony & Heli Guide` },
@@ -85,7 +88,7 @@ export default function KedarnathYatra() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season Open — Trek Active</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season Open — Trek Active</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '16px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹5,250/person'],['Pony one-way','₹3,500–4,500']].map(([k,v]) => (

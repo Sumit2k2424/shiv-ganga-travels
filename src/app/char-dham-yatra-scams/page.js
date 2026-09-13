@@ -3,6 +3,9 @@ import { SITE, TRUST } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra-scams');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Scams ${SITE.season} | Spot & Avoid Booking Fraud` },
@@ -87,7 +90,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: 'Char Dham Yatra Scams 2026 — How to Spot Fake Bookings & Stay Safe',
     description: metadata.description, url: URL, inLanguage: 'en-IN',
-    datePublished: '2026-06-29', dateModified: SITE.lastUpdatedISO,
+    datePublished: '2026-06-29', dateModified: PAGE_DATES.modifiedISO,
     image: `${SITE.baseUrl}/opengraph-image`,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about` },
     publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/opengraph-image` } },
@@ -107,7 +110,7 @@ function Schema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: SITE.lastUpdatedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
     </>
   );
 }
@@ -143,7 +146,7 @@ export default function CharDhamYatraScams() {
       </section>
 
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '8px 20px 56px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Written to protect pilgrims, not to sell</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Written to protect pilgrims, not to sell</div>
 
         <AnswerBox>
           The safest rule for Char Dham Yatra 2026: <strong>book Kedarnath helicopter tickets only at heliyatra.irctc.co.in</strong>, do your <strong>free</strong> registration only at registrationandtouristcare.uk.gov.in, and <strong>never pay a personal UPI or individual bank account</strong>. Before paying any operator, verify the domain age, the GSTIN, and the Google reviews. If you&apos;ve already been cheated, call <strong>1930</strong> and file at cybercrime.gov.in immediately.

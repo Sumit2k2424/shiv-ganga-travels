@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-history-legends');
 
 export const metadata = {
   title: { absolute: `Kedarnath Temple History & Legends — Pandavas to 2013` },
@@ -35,7 +38,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Kedarnath Yatra', item: `${SITE.baseUrl}/kedarnath-yatra` },
     { '@type': 'ListItem', position: 3, name: 'History & Legends', item: `${SITE.baseUrl}/kedarnath-history-legends` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Kedarnath Temple History & Legends', description: 'The Pandava legend, Adi Shankaracharya\'s revival and samadhi, dynastic history, and the 2013 flood at Kedarnath.', mainEntityOfPage: `${SITE.baseUrl}/kedarnath-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Kedarnath Temple History & Legends', description: 'The Pandava legend, Adi Shankaracharya\'s revival and samadhi, dynastic history, and the 2013 flood at Kedarnath.', mainEntityOfPage: `${SITE.baseUrl}/kedarnath-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -70,7 +73,7 @@ export default function KedarnathHistoryLegends() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Most pilgrims arrive at Kedarnath already knowing the shape of the story — Shiva, a bull, the Pandavas. Fewer know how the temple actually survived to the present day: nearly destroyed by centuries of Himalayan winters, rebuilt by kings whose names are barely remembered, and — improbably — spared almost untouched by a flood that killed thousands around it in 2013. This page goes past the summary on our <Link href="/kedarnath-temple">Kedarnath Temple guide</Link> into the full history.</p>
 

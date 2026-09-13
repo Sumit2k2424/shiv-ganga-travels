@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/augustmuni');
 
 export const metadata = {
   title: { absolute: 'Augustmuni — Sage Agastya\'s Town on the Kedarnath Road | Full Guide' },
@@ -35,7 +38,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Augustmuni', item: `${SITE.baseUrl}/augustmuni` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'City', name: 'Augustmuni', alternateName: ['Agastyamuni'], description: 'A town on the Mandakini river in Rudraprayag district, Uttarakhand, named for the sage Agastya, home to the Agasteshwar Mahadev temple, on the road to Kedarnath.', url: `${SITE.baseUrl}/augustmuni`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Augustmuni', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.4333, longitude: 79.0000, elevation: '900 m' } };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Augustmuni — Sage Agastya\'s Town on the Kedarnath Road', description: 'A guide to Augustmuni: the Agastya legend, the Agasteshwar Mahadev temple, and its place on the road to Kedarnath.', mainEntityOfPage: `${SITE.baseUrl}/augustmuni`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Augustmuni — Sage Agastya\'s Town on the Kedarnath Road', description: 'A guide to Augustmuni: the Agastya legend, the Agasteshwar Mahadev temple, and its place on the road to Kedarnath.', mainEntityOfPage: `${SITE.baseUrl}/augustmuni`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -76,7 +79,7 @@ export default function Augustmuni() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['District', 'Rudraprayag'], ['River', 'Mandakini'], ['From Rudraprayag', '~18 km'], ['To Gaurikund', '~55–60 km'], ['Key site', 'Agasteshwar Mahadev'], ['Named for', 'Sage Agastya']].map(([k, v]) => (

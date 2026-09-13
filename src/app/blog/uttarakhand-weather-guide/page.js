@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/uttarakhand-weather-guide');
 
 export const metadata = {
   title: { absolute: `Uttarakhand Weather ${SITE.season} | All Char Dham Shrines | Month-wise` },
@@ -86,7 +89,7 @@ export default function WeatherGuide() {
         <AnswerBox>
           <strong>Uttarakhand runs three distinct weather zones, and treating it as one place is the usual planning mistake.</strong> The plains around Haridwar and Rishikesh reach 38°C in May; the hill stations sit 10 to 15 degrees cooler; the Char Dham shrines above 3,000m are cold year-round and closed from November to April. July and August are monsoon everywhere, heavy enough in the hills to close roads. May–June and September–October work almost everywhere.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Season summary */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10, marginBottom:28 }}>

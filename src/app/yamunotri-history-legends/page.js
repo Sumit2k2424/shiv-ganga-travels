@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/yamunotri-history-legends');
 
 export const metadata = {
   title: { absolute: 'Yamunotri Temple History & Legends — Sage Asit Muni, Yamuna and Yama' },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Yamunotri Yatra', item: `${SITE.baseUrl}/yamunotri-yatra` },
     { '@type': 'ListItem', position: 3, name: 'History & Legends', item: `${SITE.baseUrl}/yamunotri-history-legends` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Yamunotri Temple History & Legends', description: 'Sage Asit Muni\'s ashram, Yamuna as sister of Yama, Surya Kund, and the temple\'s founding by Tehri\'s royal family.', mainEntityOfPage: `${SITE.baseUrl}/yamunotri-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Yamunotri Temple History & Legends', description: 'Sage Asit Muni\'s ashram, Yamuna as sister of Yama, Surya Kund, and the temple\'s founding by Tehri\'s royal family.', mainEntityOfPage: `${SITE.baseUrl}/yamunotri-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -69,7 +72,7 @@ export default function YamunotriHistoryLegends() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Yamunotri is the quietest legend of the four dhams — no epic war, no cosmic descent, just an old sage who could no longer travel, and a river who came to him. This page goes past the practical guide on our <Link href="/yamunotri-temple">Yamunotri Temple page</Link> into the full story and the temple's documented history.</p>
 

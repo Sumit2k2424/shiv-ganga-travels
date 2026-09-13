@@ -3,6 +3,9 @@ import { SITE, TRUST } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/badrinath-tour-package');
 
 export const metadata = {
   title: { absolute: `Badrinath Tour Package ${SITE.season} | Hotels & Transport Included` },
@@ -132,7 +135,7 @@ function Schema() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agency) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: SITE.lastUpdatedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${URL}#webpage`, url: URL, name: metadata.title, inLanguage: 'en-IN', dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } }) }} />
     </>
   );
 }
@@ -176,7 +179,7 @@ export default function BadrinathTourPackage() {
       </section>
 
       <article style={{ maxWidth: 860, margin: '0 auto', padding: '8px 20px 56px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season: Apr 23 – Nov 2026</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted, #64748b)', margin: '18px 0 6px', textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season: Apr 23 – Nov 2026</div>
 
         <AnswerBox>
           A Badrinath tour package from Haridwar is a 2N/3D yatra to Lord Vishnu&apos;s abode starting at <strong>₹4,500 per person</strong> — covering road transfers, two nights stay, breakfast and dinner, and your mandatory Yatra registration. <strong>There is no trek</strong>: the road runs right to the temple, which is why it suits elders and families. The temple opened on <strong>23 April 2026</strong> and the trip includes Tapt Kund and Mana village. Enquiring is free and needs no advance.

@@ -6,6 +6,9 @@ import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
 import GoogleReviews from '@/components/GoogleReviews';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Package ${SITE.season} | Hotels & Transport Included` },
@@ -144,7 +147,7 @@ export default function CharDhamYatra() {
 
       {/* Main content */}
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
 
         {/* Semantic intro — active voice, skimmable */}

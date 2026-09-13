@@ -9,6 +9,9 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/kedarnath-trek-guide');
 
 export const metadata = {
   title: { absolute: `Kedarnath Trek Guide ${SITE.season} | 16 km Route & Stays` },
@@ -54,7 +57,7 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
-    datePublished: '2025-02-01', dateModified: '2026-04-27',
+    datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     image: '/opengraph-image',
   };

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/how-to-reach-badrinath');
 
 export const metadata = {
   title: { absolute: `How to Reach Badrinath ${SITE.season} | Road Route & Helicopter Guide` },
@@ -64,7 +67,7 @@ export default function HowToReachBadrinath() {
           <strong>Badrinath is 320km from Haridwar and takes 10 to 11 hours of mountain driving</strong> via Rishikesh, Devprayag, Rudraprayag, Chamoli and Joshimath. It is the longest single leg of the Char Dham circuit and the one pilgrims most often underestimate. There is no trek — the road runs to the temple. The nearest airport is Dehradun and the nearest railhead Haridwar. Most groups break the drive at Rudraprayag or Joshimath rather than pushing through.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
           {[['Altitude','3,133m'],['From Haridwar','~320km by road'],['Drive Time','9–10 hrs'],['Trek Required','None (motorable)'],['Nearest Town','Joshimath (45km)'],['Temple Opens','Apr 23, 2026']].map(([k,v]) => (

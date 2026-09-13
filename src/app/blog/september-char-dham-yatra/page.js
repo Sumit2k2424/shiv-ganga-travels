@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/september-char-dham-yatra');
 
 export const metadata = {
   title: { absolute: `September Char Dham Yatra ${SITE.season} | Post-Monsoon` },
@@ -32,7 +35,7 @@ function Schema() {
     description: 'Why mid-September to mid-October is the best window of the year for Char Dham, weather week by week, and how post-monsoon pre-booking works.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-07-12',
-    dateModified: SITE.lastUpdatedISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -73,7 +76,7 @@ export default function Page() {
         title="September Char Dham Yatra 2026 — The Window Locals Wait For"
         dek="Clear skies · Fresh snow on the peaks · Thin crowds · Packages from ₹13,900 · Book by August"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="7 min read"
         facts={[
           { label:'Best window', value:'Sep 15 – Oct 15' },
@@ -98,7 +101,7 @@ export default function Page() {
         <AnswerBox>
           <strong>September is one of the two best months for Char Dham, and the better half of it is after the 15th.</strong> The monsoon withdraws through the first fortnight, and from mid-month the air is washed clean, the mountain views are the best of the year and crowds are a fraction of May's. Rooms cost noticeably less. The risk is that an late monsoon pushes closures into the first week, so keep a spare day if you are travelling early in the month.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Short answer from our team</div>

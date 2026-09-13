@@ -11,6 +11,7 @@
    ══════════════════════════════════════════════════════════════ */
 
 import { SITE } from '@/data/packages';
+import { CAB_DATES } from '@/lib/pageDates';
 
 const ORG_ID = `${SITE.baseUrl}/#organization`;
 const abs = (path) => `${SITE.baseUrl}${path}`;
@@ -78,7 +79,7 @@ export function routeService({ route, from, to, fares, url, expert }) {
     description: `${from} to ${to} cab — ${route.distance}, ${route.time}. Fixed all-inclusive fares, hill-experienced drivers, pickup anywhere in ${from}.`,
     url: abs(url),
     provider,
-    ...(expert && { author: authorRef(expert), dateModified: SITE.lastUpdatedISO }),
+    ...(expert && { author: authorRef(expert), dateModified: CAB_DATES.modifiedISO }),
     areaServed: [from, to, 'Uttarakhand'].filter(Boolean).map((n) => ({ '@type': 'Place', name: n })),
     ...(low && {
       offers: {

@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/gangotri-yatra');
 
 export const metadata = {
   title: { absolute: `Gangotri Yatra Package ${SITE.season} | Motor Road, No Trek` },
@@ -78,7 +81,7 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <AnswerBox>
           Gangotri Yatra costs ₹4,250 per person from Haridwar. Gangotri sits at 3,415 m in

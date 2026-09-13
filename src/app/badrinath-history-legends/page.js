@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/badrinath-history-legends');
 
 export const metadata = {
   title: { absolute: `Badrinath Temple History & Legends — Vishnu's Penance` },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Badrinath Yatra', item: `${SITE.baseUrl}/badrinath-yatra` },
     { '@type': 'ListItem', position: 3, name: 'History & Legends', item: `${SITE.baseUrl}/badrinath-history-legends` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Badrinath Temple History & Legends', description: 'Vishnu\'s penance under the badri tree, the Narad Kund idol recovery, and Adi Shankaracharya\'s establishment of Badrinath.', mainEntityOfPage: `${SITE.baseUrl}/badrinath-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Badrinath Temple History & Legends', description: 'Vishnu\'s penance under the badri tree, the Narad Kund idol recovery, and Adi Shankaracharya\'s establishment of Badrinath.', mainEntityOfPage: `${SITE.baseUrl}/badrinath-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -69,7 +72,7 @@ export default function BadrinathHistoryLegends() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Badrinath's name carries its own origin story in plain sight — <em>Badri-nath</em>, lord of the badri tree — but the fuller history behind the shrine spans a Vishnu legend, a submerged idol, an 8th-century philosopher, and a historical question scholars still argue about. This page goes past the practical guide on our <Link href="/badrinath-temple">Badrinath Temple page</Link> into the full story.</p>
 

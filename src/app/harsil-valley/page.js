@@ -4,10 +4,13 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/harsil-valley');
 
 // Page-local freshness stamp. Harsil carries a dated claim about the state of
 // reconstruction after the August 2025 Dharali flood, so it is re-verified on
-// its own cadence rather than inheriting the site-wide SITE.lastUpdated.
+// its own cadence rather than inheriting the site-wide PAGE_DATES.modifiedHuman.
 const HARSIL_UPDATED_ISO = '2026-09-01';
 
 export const metadata = {
@@ -118,7 +121,7 @@ export default function HarsilValley() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🍎 25 km Before Gangotri</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Harsil Valley &mdash; Apple Orchards, Gartang Gali &amp; the Road to Gangotri</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The valley most pilgrims drive straight through &mdash; updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The valley most pilgrims drive straight through &mdash; updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 

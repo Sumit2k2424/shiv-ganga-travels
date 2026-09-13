@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/kedarnath-helicopter-booking');
 
 export const metadata = {
   title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | IRCTC Guide` },
@@ -46,7 +49,7 @@ function Schema() {
         jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
-      }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-10', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
+      }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:faqData.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }

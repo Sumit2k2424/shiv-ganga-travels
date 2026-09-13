@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/how-to-reach-gangotri');
 
 const PAGE = '/how-to-reach-gangotri';
 const VERIFIED_ISO = '2026-08-22';
@@ -78,7 +81,7 @@ export default function HowToReachGangotri() {
         headline:`How to Reach Gangotri Dham ${SITE.season}`,
         description:'Road, helicopter, bus and train routes to Gangotri, with a stage-by-stage drive table and where to break the journey.',
         image:`${SITE.baseUrl}/opengraph-image`,
-        datePublished:'2026-01-28', dateModified:VERIFIED_ISO,
+        datePublished:PAGE_DATES.createdISO, dateModified:VERIFIED_ISO,
         author:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, '@id':`${SITE.baseUrl}/#organization` },
         publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
         mainEntityOfPage:`${SITE.baseUrl}${PAGE}`,
@@ -115,7 +118,7 @@ export default function HowToReachGangotri() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
           {[['Altitude','3,415m'],['From Haridwar','265km by road'],['Drive Time','9–10 hrs'],['Trek Required','None (motor road)'],['Nearest City','Uttarkashi (100km)'],['Temple Opens','Apr 19, 2026']].map(([k,v]) => (

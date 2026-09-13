@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/how-to-reach-yamunotri');
 
 export const metadata = {
   title: { absolute: `How to Reach Yamunotri ${SITE.season} | Road, Trek & Route Guide` },
@@ -64,7 +67,7 @@ export default function HowToReachYamunotri() {
           <strong>Yamunotri is reached by road to Janki Chatti, then a 6km trek to the temple.</strong> Janki Chatti is about 210km from Haridwar via Barkot, roughly 7 to 8 hours of driving, and the road ends there. The final 6km climbs 641m and takes two and a half to three hours on foot, or you can take a pony or palki from the road head. There is no motorable road and no helipad at the shrine itself.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         {/* Quick distance card */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>

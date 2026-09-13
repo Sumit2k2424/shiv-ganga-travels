@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kalpeshwar-temple');
 
 export const metadata = {
   title: { absolute: `Kalpeshwar Temple — The Year-Round Panch Kedar, Urgam` },
@@ -37,7 +40,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Kalpeshwar', item: `${SITE.baseUrl}/kalpeshwar-temple` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'HinduTemple', name: 'Kalpeshwar Temple', alternateName: ['Jateshwar Mahadev'], description: 'A Panch Kedar shrine in a natural rock cave in Urgam valley, Chamoli district, Uttarakhand, enshrining Shiva\'s matted hair. The only Panch Kedar temple open year-round.', url: `${SITE.baseUrl}/kalpeshwar-temple`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Urgam Valley, Chamoli', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.5833, longitude: 79.6167, elevation: '2,134 m' }, isAccessibleForFree: true, touristType: ['Pilgrims'] };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Kalpeshwar Temple — Urgam Valley, the Only Year-Round Panch Kedar', description: 'A guide to Kalpeshwar: the jata legend, why it stays open all year, and how to reach Urgam valley.', mainEntityOfPage: `${SITE.baseUrl}/kalpeshwar-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Kalpeshwar Temple — Urgam Valley, the Only Year-Round Panch Kedar', description: 'A guide to Kalpeshwar: the jata legend, why it stays open all year, and how to reach Urgam valley.', mainEntityOfPage: `${SITE.baseUrl}/kalpeshwar-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -73,7 +76,7 @@ export default function Kalpeshwar() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '2,134 m'], ['Location', 'Urgam Valley'], ['Trek', '~2 km, easy'], ['From Joshimath', '~13 km + trek'], ['Open', 'Year-round'], ['Deity form', 'Jata (matted hair)']].map(([k, v]) => (

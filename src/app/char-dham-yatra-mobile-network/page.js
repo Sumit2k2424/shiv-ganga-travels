@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra-mobile-network');
 
 export const metadata = {
   title: { absolute: 'Mobile Network on Char Dham Yatra — Coverage by Dham' },
@@ -82,7 +85,7 @@ export default function MobileNetwork() {
       <Crumbs trail={[['Char Dham Yatra','/char-dham-yatra'],['Mobile Network', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

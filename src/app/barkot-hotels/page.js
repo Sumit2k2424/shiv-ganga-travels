@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/barkot-hotels');
 
 export const metadata = {
   title: { absolute: `Barkot Hotels ${SITE.season} | Where to Stay for Yamunotri` },
@@ -132,8 +135,8 @@ function Schema() {
     description: 'Barkot, Janki Chatti, Hanuman Chatti and Purola compared on altitude, room availability, price band and how early you have to leave for the Yamunotri trek.',
     mainEntityOfPage: `${SITE.baseUrl}/barkot-hotels`,
     image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -185,7 +188,7 @@ export default function BarkotHotels() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <p style={p}>

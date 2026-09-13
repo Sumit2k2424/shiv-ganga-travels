@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-for-heart-patients');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
@@ -23,8 +26,8 @@ function Schema() {
     headline: 'Char Dham Yatra for Heart Patients: Safe Routes',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -56,7 +59,7 @@ export default function Page() {
         title="Char Dham Yatra with Heart Conditions & Diabetes — Honest Guide"
         dek="Medical certificate requirements · Altitude effects · What specialists advise · Helicopter option · Our experience on the ground"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="7 min read"
         facts={[
           { label:'Medical cert', value:'Mandatory 55+' },
@@ -82,7 +85,7 @@ export default function Page() {
         <AnswerBox>
           <strong>Char Dham is possible with a stable heart condition or diabetes, but it is not a trip to attempt without medical clearance.</strong> Every shrine is above 3,000m, where thinner air raises heart rate and blood pressure. Get written clearance from your own cardiologist, carry a full course of medication plus two spare days' worth in your daypack rather than your luggage, take pony or palki rather than walking, and build rest days in. A medical certificate is mandatory from 55 onward.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#FEF3C7', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid #F59E0B' }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:4 }}>⚠️ Important Disclaimer</div>

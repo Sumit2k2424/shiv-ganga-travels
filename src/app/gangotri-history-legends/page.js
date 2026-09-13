@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/gangotri-history-legends');
 
 export const metadata = {
   title: { absolute: `Gangotri Temple History & Legends — Bhagirath's Penance` },
@@ -35,7 +38,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Gangotri Yatra', item: `${SITE.baseUrl}/gangotri-yatra` },
     { '@type': 'ListItem', position: 3, name: 'History & Legends', item: `${SITE.baseUrl}/gangotri-history-legends` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Gangotri Temple History & Legends', description: 'King Bhagirath\'s penance, Shiva catching the Ganga in his matted hair, and the temple\'s founding by Amar Singh Thapa.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Gangotri Temple History & Legends', description: 'King Bhagirath\'s penance, Shiva catching the Ganga in his matted hair, and the temple\'s founding by Amar Singh Thapa.', mainEntityOfPage: `${SITE.baseUrl}/gangotri-history-legends`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -70,7 +73,7 @@ export default function GangotriHistoryLegends() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Every other Char Dham shrine marks a god's presence. Gangotri marks an arrival — the moment a river came down from heaven to earth, and the mountain who agreed to break its fall. This page goes past the practical guide on our <Link href="/gangotri-temple">Gangotri Temple page</Link> into the full legend and the temple's documented history.</p>
 

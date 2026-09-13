@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/mussoorie-tour-packages');
 
 export const metadata = {
   title: { absolute: `Mussoorie Tour Package ${SITE.season} | From ₹6,350 | Kempty Falls` },
@@ -121,7 +124,7 @@ export default function MussoorieTourPackages() {
           <strong>Mussoorie is 35km above Dehradun at 2,000m and works as a 3 to 4 night trip.</strong> Packages start around ₹2,500 from Haridwar. March to June and September to November are the comfortable months; the monsoon is heavy and the views disappear. The standard circuit is Kempty Falls, Gun Hill, Lal Tibba and Camel's Back Road, with Landour the quieter alternative if you want the hill station without the Mall Road crowds.
         </AnswerBox>
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ <strong>By Dhanesh Chandra Mishra</strong>, Founder</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · ✍️ <strong>By Dhanesh Chandra Mishra</strong>, Founder</div>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

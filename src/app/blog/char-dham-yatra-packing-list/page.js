@@ -8,6 +8,9 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2 } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-packing-list');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra Packing List ${SITE.season} | Printable Checklist` },
@@ -20,7 +23,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra', jobTitle:'Founder & Director, Shiv Ganga Travels', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:'2025-02-15', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
+  const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra', jobTitle:'Founder & Director, Shiv Ganga Travels', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
 
     const faq = {
     '@context': 'https://schema.org',

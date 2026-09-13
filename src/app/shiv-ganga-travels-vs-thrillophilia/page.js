@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/shiv-ganga-travels-vs-thrillophilia');
 
 export const metadata = {
   title: { absolute: `Shiv Ganga Travels vs Thrillophilia — Char Dham ${SITE.season}` },
@@ -66,7 +69,7 @@ export default function VsThrillophilia() {
       <Crumbs trail={[['Char Dham Yatra','/char-dham-yatra'],['vs Thrillophilia', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

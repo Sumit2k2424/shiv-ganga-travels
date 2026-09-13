@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/direct-operator-vs-travel-aggregator-char-dham');
 
 export const metadata = {
   title: { absolute: `Direct Operator vs Aggregator ${SITE.season} | Char Dham Booking Guide` },
@@ -23,8 +26,8 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Direct Operator vs Aggregator: Char Dham Booking',
-    datePublished: '2026-05-21',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra', jobTitle: 'Founder & Director, Shiv Ganga Travels', url: `${SITE.baseUrl}/about`, sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'] },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: `${SITE.baseUrl}/direct-operator-vs-travel-aggregator-char-dham`,

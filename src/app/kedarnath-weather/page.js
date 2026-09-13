@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-weather');
 
 /**
  * Kedarnath weather, month by month.
@@ -107,7 +110,7 @@ function Schema() {
     headline: `Kedarnath Weather ${SITE.season}: Month-by-Month Temperature Guide`,
     description: 'Month-by-month day and night temperatures, snow, rainfall and crowd levels for Kedarnath at 3,583m, with temperature by altitude along the route.',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-02-14',
+    datePublished: PAGE_DATES.createdISO,
     dateModified: VERIFIED_ISO,
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, '@id': `${SITE.baseUrl}/#organization` },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },

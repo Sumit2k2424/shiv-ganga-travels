@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/gopeshwar');
 
 export const metadata = {
   title: { absolute: 'Gopeshwar — Chamoli District HQ and Gateway to Rudranath | Full Guide' },
@@ -35,7 +38,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Gopeshwar', item: `${SITE.baseUrl}/gopeshwar` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'City', name: 'Gopeshwar', description: 'The district headquarters of Chamoli, Uttarakhand, home to the ancient Gopinath temple and the last major town before the Rudranath trek base.', url: `${SITE.baseUrl}/gopeshwar`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Gopeshwar', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.3833, longitude: 79.3333, elevation: '1,300 m' } };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Gopeshwar — Chamoli District HQ and Gateway to Rudranath', description: 'A guide to Gopeshwar: the Gopinath temple, Vaitarni Kund, and its role as the base town for the Rudranath trek.', mainEntityOfPage: `${SITE.baseUrl}/gopeshwar`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Gopeshwar — Chamoli District HQ and Gateway to Rudranath', description: 'A guide to Gopeshwar: the Gopinath temple, Vaitarni Kund, and its role as the base town for the Rudranath trek.', mainEntityOfPage: `${SITE.baseUrl}/gopeshwar`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -76,7 +79,7 @@ export default function Gopeshwar() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,300 m'], ['Role', 'Chamoli district HQ'], ['From Pipalkoti', '~16 km'], ['To Sagar village', '~15 km'], ['Key site', 'Gopinath Temple'], ['Trek from here', 'Rudranath']].map(([k, v]) => (

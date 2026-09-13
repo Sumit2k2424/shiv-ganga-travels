@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/yogdhyan-badri-temple');
 
 export const metadata = {
   title: { absolute: `Yogdhyan Badri, Pandukeshwar — Badrinath's Winter Seat` },
@@ -38,7 +41,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Yogdhyan Badri', item: `${SITE.baseUrl}/yogdhyan-badri-temple` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'HinduTemple', name: 'Yogdhyan Badri Temple', alternateName: ['Yogadhyan Badri', 'Pandukeshwar Temple'], description: 'The winter seat of the Badrinath deity, at Pandukeshwar on the Joshimath–Badrinath road, Uttarakhand. One of the Panch Badri shrines, tied to the legend of Yudhishthira\'s meditation after the Mahabharata.', url: `${SITE.baseUrl}/yogdhyan-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Pandukeshwar, Chamoli', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.5833, longitude: 79.5333, elevation: '1,920 m' }, isAccessibleForFree: true, touristType: ['Pilgrims', 'Winter yatra pilgrims'] };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Yogdhyan Badri Temple — Pandukeshwar, Winter Seat of Badrinath', description: 'A guide to Yogdhyan Badri: its role as Badrinath\'s winter seat, the Pandava legend, and how to reach Pandukeshwar.', mainEntityOfPage: `${SITE.baseUrl}/yogdhyan-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Yogdhyan Badri Temple — Pandukeshwar, Winter Seat of Badrinath', description: 'A guide to Yogdhyan Badri: its role as Badrinath\'s winter seat, the Pandava legend, and how to reach Pandukeshwar.', mainEntityOfPage: `${SITE.baseUrl}/yogdhyan-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -79,7 +82,7 @@ export default function YogdhyanBadri() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,920 m'], ['Village', 'Pandukeshwar'], ['From Badrinath', '24 km'], ['From Joshimath', '~22 km'], ['On highway', 'NH-7'], ['Open', 'Year-round']].map(([k, v]) => (

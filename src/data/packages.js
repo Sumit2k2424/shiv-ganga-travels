@@ -29,8 +29,10 @@ export const SITE = {
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
-  lastUpdated   : 'July 30, 2026', // human-readable, shown on-page
-  lastUpdatedISO: '2026-07-30',   // schema.org dateModified format
+  // No site-wide lastUpdated any more. Every page reads its own git-derived
+  // date from src/lib/pageDates.js (regenerate with `npm run dates`). One
+  // constant stamped ~150 pages with the same date regardless of when each
+  // changed, which is the false-freshness signal Google discounts.
 
   // The yatra season every evergreen page advertises in its <title> and meta
   // description. Pilgrims genuinely search "char dham yatra 2026 package", so

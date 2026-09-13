@@ -5,12 +5,14 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import LanguageLinkMesh from '@/components/LanguageLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
 
 const h2 = { fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem,2.5vw,1.5rem)', fontWeight: 700, color: 'var(--navy)', marginBottom: 12, marginTop: 36, letterSpacing: '-0.02em' };
 const p  = { fontSize: 15.5, color: '#334155', lineHeight: 1.95, marginBottom: 16 };
 
 function Schema({ c, slug }) {
   const url = `${SITE.baseUrl}/${slug}`;
+  const dates = pageDates(`/${slug}`);
   const org = {
     '@context': 'https://schema.org', '@type': 'TravelAgency',
     name: SITE.name, url: SITE.baseUrl, telephone: SITE.phone,
@@ -38,7 +40,7 @@ function Schema({ c, slug }) {
   const article = {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: c.h1, inLanguage: c.code, url,
-    datePublished: '2026-07-12', dateModified: SITE.lastUpdatedISO,
+    datePublished: dates.createdISO, dateModified: dates.modifiedISO,
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     mainEntityOfPage: url,

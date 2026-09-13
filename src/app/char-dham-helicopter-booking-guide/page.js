@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-helicopter-booking-guide');
 
 export const metadata = {
   title: { absolute: `Char Dham Helicopter Booking ${SITE.season} — IRCTC HeliYatra Guide` },
@@ -68,7 +71,7 @@ export default function HelicopterBookingGuide() {
       <Crumbs trail={[['Char Dham Helicopter','/char-dham-helicopter'],['Booking Guide', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

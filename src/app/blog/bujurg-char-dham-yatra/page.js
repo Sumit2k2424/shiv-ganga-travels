@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/bujurg-char-dham-yatra');
 
 export const metadata = {
   title: { absolute: `बुजुर्गों के लिए चार धाम यात्रा ${SITE.season} | ₹21,000 से शुरू` },
@@ -34,7 +37,7 @@ function Schema() {
         jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
-      }, datePublished: '2026-05-01', dateModified: '2026-05-14', publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` } };
+      }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'बुजुर्गों के लिए चार धाम यात्रा', item: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` }] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
@@ -79,7 +82,7 @@ export default function BujurgCharDham() {
         <AnswerBox>
           <strong>70 और 80 साल के बुजुर्ग भी चार धाम यात्रा कर सकते हैं — शर्त यह है कि यात्रा धीमी रखी जाए।</strong> चारों धाम 3,000 मीटर से ऊपर हैं, इसलिए 55 साल से ऊपर वालों के लिए मेडिकल सर्टिफिकेट अनिवार्य है। केदारनाथ और यमुनोत्री में घोड़ा या पालकी लें, बद्रीनाथ और गंगोत्री तक गाड़ी मंदिर तक जाती है। 9 रात की जगह 12–13 रात का इटिनरेरी लें, बीच में आराम के दिन रखें, और अपनी दवाइयाँ 2 दिन ज़्यादा साथ रखें।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <p style={{ ...p, fontStyle: 'italic', background: 'rgba(15,43,91,0.05)', padding: '16px 20px', borderRadius: 10, borderLeft: '3px solid var(--navy)' }}>रमेश जी, उम्र 72 साल, बरेली से आए थे। बेटे ने कहा था "उम्र हो गई है, पहाड़ पर मत जाओ।" लेकिन वे नहीं माने। मई 2024 में हमारे साथ चार धाम गए — केदारनाथ में घोड़े पर बैठकर पहुँचे, आँखों में आँसू थे। लौटकर उन्होंने फोन किया — <strong>"बेटा, जिंदगी की सबसे बड़ी खुशी मिली।"</strong></p>
 

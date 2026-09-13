@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/online-puja-booking');
 
 const PAGE = '/online-puja-booking';
 const VERIFIED = 'August 22, 2026';
@@ -102,7 +105,7 @@ function Schema() {
     headline: `Char Dham Online Puja Booking ${SITE.season} — Rates and Rituals`,
     description: 'Full puja rate card for Kedarnath, Badrinath, Gangotri and Yamunotri, what each ritual involves, and how advance booking works.',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-03-05', dateModified: VERIFIED_ISO,
+    datePublished: PAGE_DATES.createdISO, dateModified: VERIFIED_ISO,
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, '@id': `${SITE.baseUrl}/#organization` },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },
     mainEntityOfPage: `${SITE.baseUrl}${PAGE}`,

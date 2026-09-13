@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/dhari-devi-temple');
 
 export const metadata = {
   title: { absolute: `Dhari Devi Temple ${SITE.season} | Timings & How to Reach | Guardian Goddess` },
@@ -89,7 +92,7 @@ export default function DhariDeviTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🛕 Guardian of the Char Dham</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Dhari Devi Temple — Story, Timings &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams — updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams — updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 
@@ -102,7 +105,7 @@ export default function DhariDeviTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'dhari-devi-temple', title:'Dhari Devi Temple 2026 — Story, Timings & How to Reach', description:'Guardian goddess of the Char Dham near Srinagar, Pauri Garhwal — story, timings, how to reach and distances.', datePublished:'2026-02-01', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'dhari-devi-temple', title:'Dhari Devi Temple 2026 — Story, Timings & How to Reach', description:'Guardian goddess of the Char Dham near Srinagar, Pauri Garhwal — story, timings, how to reach and distances.', datePublished:PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Dhari Devi Temple sits on a platform in the middle of the <strong>Alaknanda river at Kalyasaur, Pauri Garhwal</strong>, about 15 km from Srinagar Garhwal on the Badrinath highway. Dedicated to <strong>Maa Dhari Devi, a form of Goddess Kali</strong>, she is revered as the guardian deity of Uttarakhand and the protector of the Char Dham. Darshan is roughly <strong>6 AM to 8 PM</strong>; most pilgrims stop here on the way to Kedarnath and Badrinath to seek her blessing first.

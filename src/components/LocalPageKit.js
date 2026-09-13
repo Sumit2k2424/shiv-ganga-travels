@@ -5,6 +5,7 @@
 
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { pageDates } from '@/lib/pageDates';
 
 export const H2 = ({ children }) => (
   <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.45rem', fontWeight:700, color:'var(--navy)', marginBottom:14, marginTop:36 }}>
@@ -58,9 +59,9 @@ export function Crumbs({ trail }) {
   );
 }
 
-export const Updated = () => (
+export const Updated = ({ date }) => (
   <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
-    🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+    🗓️ <strong>Last updated:</strong> {date}
   </div>
 );
 
@@ -186,7 +187,9 @@ export const Article = ({ children }) => (
 );
 
 // Schema builders — every local page gets the same four blocks.
-export function buildSchema({ slug, name, description, geo, faqs, crumbs, published = '2026-08-10', types }) {
+export function buildSchema({ slug, name, description, geo, faqs, crumbs, published, types }) {
+  const dates = pageDates(`/${slug}`);
+  published = published || dates.createdISO;
   const out = [];
   if (faqs?.length) {
     out.push({
@@ -211,7 +214,7 @@ export function buildSchema({ slug, name, description, geo, faqs, crumbs, publis
     headline:name, description,
     author:{ '@id': `${SITE.baseUrl}/#founder` },
     publisher:{ '@id': `${SITE.baseUrl}/#organization` },
-    datePublished:published, dateModified:SITE.lastUpdatedISO,
+    datePublished:published, dateModified:dates.modifiedISO,
     mainEntityOfPage:`${SITE.baseUrl}/${slug}`,
   });
   out.push({

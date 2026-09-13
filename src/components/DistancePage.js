@@ -12,9 +12,11 @@ import {
   Hero, Crumbs, Article, Updated, H2, P, Table, Note,
   FAQBlock, Sources, CTA, Related,
 } from '@/components/LocalPageKit';
+import { pageDates } from '@/lib/pageDates';
 
 export function distanceSchema({ route, faqs, crumbs }) {
   const url = `${SITE.baseUrl}/${route.slug}`;
+  const dates = pageDates(`/${route.slug}`);
   return [
     {
       '@context':'https://schema.org', '@type':'FAQPage',
@@ -36,7 +38,7 @@ export function distanceSchema({ route, faqs, crumbs }) {
       headline: `${route.from} to ${route.to} Distance — Route, Time and Halts`,
       author: { '@id': `${SITE.baseUrl}/#founder` },
       publisher: { '@id': `${SITE.baseUrl}/#organization` },
-      datePublished: '2026-08-11', dateModified: SITE.lastUpdatedISO,
+      datePublished: dates.createdISO, dateModified: dates.modifiedISO,
       mainEntityOfPage: url,
     },
     {

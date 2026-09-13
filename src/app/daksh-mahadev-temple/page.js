@@ -6,6 +6,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/daksh-mahadev-temple');
 
 const D = PLACES['daksh-mahadev'];
 
@@ -69,7 +72,7 @@ export default function DakshMahadevTemple() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Daksh Mahadev Temple', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

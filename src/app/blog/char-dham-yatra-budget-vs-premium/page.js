@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-budget-vs-premium');
 
 export const metadata = {
   title: { absolute: `Char Dham Budget vs Premium ${SITE.season} | Compared` },
@@ -80,7 +83,7 @@ export default function BudgetVsPremium() {
         <AnswerBox>
           <strong>The gap between a budget and a premium Char Dham package is mostly hotel tier and vehicle, not the yatra itself.</strong> Budget runs from ₹13,900 per person for 9N/10D with simple hotels and a shared Tempo Traveller; premium runs to ₹30,000 and up with 3-star rooms and a private Innova Crysta. Darshan, route and registration are identical. What genuinely changes the experience is group size and pace, which is why a slower itinerary often beats a smarter hotel.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={{ fontSize:16, color:'#334155', lineHeight:1.9, marginBottom:16 }}>
           Every pilgrim asks the same question: <em>"Is it worth paying ₹35,000 when there’s a ₹13,900 package available?"</em> After 15 years and 50,000+ pilgrims, the honest answer from Shiv Ganga Travels is: <strong>it depends entirely on your age, group size, and priorities.</strong> Here is the complete breakdown of what actually changes.

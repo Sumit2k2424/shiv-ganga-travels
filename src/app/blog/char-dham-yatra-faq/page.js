@@ -4,6 +4,9 @@ import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-faq');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra FAQ ${SITE.season} | 50 Questions Answered` },
@@ -190,7 +193,7 @@ function FAQSchema() {
       url: SITE.baseUrl,
       logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' },
     },
-    datePublished: '2026-01-01',
+    datePublished: PAGE_DATES.createdISO,
     dateModified: new Date().toISOString().split('T')[0],
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-faq`,
     about: { '@type': 'TouristTrip', name: 'Char Dham Yatra 2026' },
@@ -244,11 +247,11 @@ export default function FAQ() {
 
       {/* Hero */}
       <BlogHero
-        badge={`Expert FAQ · Updated ${SITE.lastUpdated}`}
+        badge={`Expert FAQ · Updated ${PAGE_DATES.modifiedHuman}`}
         title="Char Dham Yatra FAQ 2026 — 50 Questions, Expert Answers"
         dek="Answered by Dhanesh Chandra Mishra, Founder &amp; Director of Shiv Ganga Travels — a retired Indian Army officer who has run Char Dham Yatra operations since 2010. Based on 15 seasons on these routes and 50,000+ pilgrims served."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="14 min read"
         facts={[
           { label:'Questions',  value:'50 answered' },
@@ -262,7 +265,7 @@ export default function FAQ() {
       <div style={{ background: '#fff', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', fontSize: 12.5, color: 'var(--text-muted)' }}>
           <span>✍️ <strong style={{ color: 'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder &amp; Director, Shiv Ganga Travels</span>
-          <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated} — verified for current season</span>
+          <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> {PAGE_DATES.modifiedHuman} — verified for current season</span>
           <span>📊 <strong style={{ color: 'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims, 15 years of operation</span>
         </div>
       </div>

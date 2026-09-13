@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-festivals');
 
 export const metadata = {
   title: { absolute: `Kedarnath Festivals ${SITE.season} — Opening & Closing Dates` },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Kedarnath Yatra', item: `${SITE.baseUrl}/kedarnath-yatra` },
     { '@type': 'ListItem', position: 3, name: 'Festivals', item: `${SITE.baseUrl}/kedarnath-festivals` },
   ]};
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Kedarnath Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, Badri-Kedar Utsav and the full festival calendar observed at Kedarnath temple.', mainEntityOfPage: `${SITE.baseUrl}/kedarnath-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: `Kedarnath Festivals ${SITE.season} — Full Calendar`, description: 'Opening, closing, Badri-Kedar Utsav and the full festival calendar observed at Kedarnath temple.', mainEntityOfPage: `${SITE.baseUrl}/kedarnath-festivals`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -74,7 +77,7 @@ export default function KedarnathFestivals() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}><strong>Kedarnath's calendar has one date that matters more than any other: whether the temple is open at all.</strong> Sitting at 3,583 m, it is buried under snow and completely sealed for roughly five months of the year — so its festival calendar begins and ends with two ceremonies more elaborate than almost any other observance at the shrine.</p>
 

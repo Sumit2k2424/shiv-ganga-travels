@@ -5,6 +5,9 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { ROUTES } from '@/data/distances';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/badrinath-yatra');
 
 /* Same source as the cab pages and /haridwar-to-badrinath-distance. */
 const badrinathRoute = ROUTES['haridwar-badrinath'];
@@ -185,7 +188,7 @@ export default function BadrinathYatraPage() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Season open: Apr 23 – Nov 2026</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open: Apr 23 – Nov 2026</div>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

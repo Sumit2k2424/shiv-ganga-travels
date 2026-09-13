@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/green-card-char-dham-yatra-2026');
 
 export const metadata = {
   title: { absolute: 'Green Card for Char Dham Yatra 2026 | Rules & Cost' },
@@ -61,7 +64,7 @@ export default function GreenCard() {
         title="Green Card for Char Dham Yatra 2026"
         dek="All vehicles with non-Uttarakhand registration (DL, HR, UP, RJ, MH, and all others) must obtain this ₹50 vehicle permit before entering Char Dham routes."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Who',   value:'Non-UK vehicles' },
@@ -87,7 +90,7 @@ export default function GreenCard() {
         <AnswerBox>
           <strong>A Green Card is the fitness certificate a commercial vehicle needs to run the Char Dham hill routes</strong>, issued by the Uttarakhand transport department after inspection and checked at barriers alongside the driver's trip card. It applies to the operator, not to pilgrims — you do not need one personally. What it does mean for you is that a vehicle without a current Green Card can be turned back at a checkpost with you in it, which is worth confirming before you book.
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: '#FCEBEB', border: '1px solid #F09595', borderRadius: 12, padding: '14px 16px', marginBottom: 24, fontSize: 13.5, color: '#791F1F' }}>
           <strong>Important:</strong> If your vehicle is registered outside Uttarakhand and you are driving to Haridwar for Char Dham Yatra, you need this permit. Vehicles checked without it at route checkposts face fines and may be turned back.

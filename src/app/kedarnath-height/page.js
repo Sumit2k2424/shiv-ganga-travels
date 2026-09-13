@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-height');
 
 export const metadata = {
   title: { absolute: `Kedarnath Height ${SITE.season} | 3,583m Altitude & Location Facts` },
@@ -73,7 +76,7 @@ export default function KedarnathHeight() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>⛰️ 3,583 m · 11,755 ft</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Kedarnath Height, Location &amp; the Facts That Matter</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>How high it is, where exactly it sits, and what the altitude does to you — updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>How high it is, where exactly it sits, and what the altitude does to you — updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 

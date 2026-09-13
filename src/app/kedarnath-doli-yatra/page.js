@@ -6,6 +6,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/kedarnath-doli-yatra');
 
 export const metadata = {
   title: { absolute: 'Kedarnath Doli Yatra — The Three-Day Winter Procession' },
@@ -91,7 +94,7 @@ export default function KedarnathDoliYatra() {
       <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Kedarnath Doli Yatra', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

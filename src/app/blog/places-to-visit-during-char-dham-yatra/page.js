@@ -6,6 +6,9 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2 } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/places-to-visit-during-char-dham-yatra');
 
 export const metadata = {
   title: { absolute: `Top 10 Places to Visit on Char Dham Yatra ${SITE.season}` },
@@ -128,7 +131,7 @@ export default function PlacesToVisit() {
         title="Top Places to Visit During Char Dham Yatra 2026"
         dek="The 4 dhams are the destination. But the route has 8 places that most pilgrims miss — and several of them are more memorable than the darshan itself."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="8 min read"
         facts={[
           { label:'Stops',     value:'8 worth the detour' },
@@ -151,7 +154,7 @@ export default function PlacesToVisit() {
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "places-to-visit-during-char-dham-yatra", "title": "Top 10 Places to Visit on Char Dham Yatra 2026", "description": "Best places to visit during Char Dham Yatra 2026 beyond the temples: Harsil Valley, Mana Village, Triyuginarayan, Devprayag, Chopta and Lakhamandal.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels — 15 seasons on this route
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · ✍️ Shiv Ganga Travels — 15 seasons on this route
         </div>
 
         <p className="blog-lede">

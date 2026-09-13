@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/srinagar-garhwal');
 
 export const metadata = {
   title: { absolute: 'Srinagar Garhwal — Former Capital of the Garhwal Kingdom | Full Guide' },
@@ -35,7 +38,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Srinagar Garhwal', item: `${SITE.baseUrl}/srinagar-garhwal` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'City', name: 'Srinagar Garhwal', description: 'A historic town on the Alaknanda river in Pauri Garhwal district, Uttarakhand — former capital of the Garhwal kingdom and site of HNB Garhwal University.', url: `${SITE.baseUrl}/srinagar-garhwal`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Srinagar', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.2167, longitude: 78.7833, elevation: '560 m' } };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Srinagar Garhwal — Former Capital of the Garhwal Kingdom', description: 'A guide to Srinagar Garhwal: its history as the Garhwal capital, the 1894 flood, HNB University, and its place on the Char Dham road.', mainEntityOfPage: `${SITE.baseUrl}/srinagar-garhwal`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Srinagar Garhwal — Former Capital of the Garhwal Kingdom', description: 'A guide to Srinagar Garhwal: its history as the Garhwal capital, the 1894 flood, HNB University, and its place on the Char Dham road.', mainEntityOfPage: `${SITE.baseUrl}/srinagar-garhwal`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -76,7 +79,7 @@ export default function SrinagarGarhwal() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['District', 'Pauri Garhwal'], ['River', 'Alaknanda'], ['From Devprayag', '~35 km'], ['From Rudraprayag', '~70 km'], ['Founded', '16th century'], ['University', 'HNB Garhwal']].map(([k, v]) => (

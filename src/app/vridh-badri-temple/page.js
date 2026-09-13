@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/vridh-badri-temple');
 
 export const metadata = {
   title: { absolute: `Vridh Badri Temple, Animath — The Easiest Panch Badri` },
@@ -37,7 +40,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Vridh Badri', item: `${SITE.baseUrl}/vridh-badri-temple` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'HinduTemple', name: 'Vridh Badri Temple', alternateName: ['Vriddha Badri', 'Animath Temple'], description: 'A Panch Badri shrine at Animath village near Joshimath, Uttarakhand, where Vishnu is worshipped in an aged form tied to the legend of his first darshan to the sage Narada.', url: `${SITE.baseUrl}/vridh-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Animath, Chamoli', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.5333, longitude: 79.5667, elevation: '1,380 m' }, isAccessibleForFree: true, touristType: ['Pilgrims'] };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Vridh Badri Temple — Animath, the Easiest Panch Badri Shrine', description: 'A guide to Vridh Badri: the Narada legend, why Vishnu is shown aged here, and how to reach Animath from Joshimath.', mainEntityOfPage: `${SITE.baseUrl}/vridh-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Vridh Badri Temple — Animath, the Easiest Panch Badri Shrine', description: 'A guide to Vridh Badri: the Narada legend, why Vishnu is shown aged here, and how to reach Animath from Joshimath.', mainEntityOfPage: `${SITE.baseUrl}/vridh-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -78,7 +81,7 @@ export default function VridhBadri() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,380 m'], ['Village', 'Animath'], ['From Joshimath', '7 km'], ['From Badrinath', '~40 km'], ['Trek needed', 'None'], ['Open', 'Year-round']].map(([k, v]) => (

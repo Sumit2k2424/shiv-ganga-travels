@@ -7,6 +7,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/haridwar-sightseeing-places');
 
 export const metadata = {
   title: { absolute: 'Places to Visit in Haridwar — 1 & 2 Day Itineraries' },
@@ -87,7 +90,7 @@ export default function HaridwarSightseeingPlaces() {
       <Crumbs trail={[['Places to Visit in Haridwar', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

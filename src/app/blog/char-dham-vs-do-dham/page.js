@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-vs-do-dham');
 
 export const metadata = {
   title: { absolute: `Char Dham vs Do Dham Yatra ${SITE.season} | Compare` },
@@ -57,7 +60,7 @@ export default function ComparisonPage() {
         dek="Full comparison — duration, cost, difficulty, best for whom · Expert guide by Dhanesh Chandra Mishra, Shiv Ganga Travels"
         author="Dhanesh Chandra Mishra"
         authorInitials="DM"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Char Dham', value:'10–12 days' },
@@ -70,7 +73,7 @@ export default function ComparisonPage() {
       <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer)</span>
-          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated}</span>
+          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {PAGE_DATES.modifiedHuman}</span>
           <span>📊 <strong style={{ color:'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims, 15 years</span>
         </div>
       </div>

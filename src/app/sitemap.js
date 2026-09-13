@@ -5,6 +5,20 @@ import { getIndexedRoutes, getIndexedOrigins, getIndexedDestinations } from '@/d
 import { LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { getPublishedReleases } from '@/data/press';
+import { pageDates, SITE_CONTENT_UPDATED_ISO } from '@/lib/pageDates';
+// Concrete path → the route pageDates knows: itself, or its dynamic pattern.
+function lastModifiedFor(path) {
+  const direct = pageDates(path);
+  if (direct.known) return direct.modifiedISO;
+  const pattern =
+    path.startsWith('/packages/')  ? '/packages/[slug]' :
+    path.startsWith('/blog/')      ? '/blog/[slug]' :
+    path.startsWith('/press/')     ? '/press/[slug]' :
+    path.startsWith('/cabs/from/') ? '/cabs/from/[city]' :
+    path.startsWith('/cabs/to/')   ? '/cabs/to/[destination]' :
+    path.startsWith('/cabs/')      ? '/cabs/[route]' : null;
+  return pattern ? pageDates(pattern).modifiedISO : SITE_CONTENT_UPDATED_ISO;
+}
 
 // ── Blog priority hints. Any blog not listed falls back to DEFAULT_BLOG_P. ──
 const BLOG_PRIORITY = {
@@ -350,11 +364,13 @@ export default function sitemap() {
     return !REDIRECT_SOURCE_PATHS.has(slugPath);
   });
 
-  // No lastModified: stamping every URL with the build time on every deploy
-  // teaches Google the field is noise and it stops trusting it. Omitting it
-  // is the accurate signal until real per-page updated dates exist.
+  // lastModified is the page's real last change from git (src/data/pageDates.json),
+  // never the build time — a build-time stamp on every URL teaches Google the
+  // field is noise. Dynamic routes take the date of their pattern, which is the
+  // newer of the page file and the data module that feeds it.
   return all.map(({ url, p, cf }) => ({
     url,
+    lastModified: lastModifiedFor(url.replace(b, '') || '/'),
     priority: p,
     changeFrequency: cf,
   }));

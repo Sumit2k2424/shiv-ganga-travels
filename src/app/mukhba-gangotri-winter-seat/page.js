@@ -6,6 +6,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/mukhba-gangotri-winter-seat');
 
 const S = SEATS.mukhba;
 
@@ -69,7 +72,7 @@ export default function MukhbaWinterSeat() {
       <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Mukhba', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

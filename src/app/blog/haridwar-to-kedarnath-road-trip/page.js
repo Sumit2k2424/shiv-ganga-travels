@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from "@/components/KeyTakeaways";
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/haridwar-to-kedarnath-road-trip');
 
 export const metadata = {
   title: { absolute: `Haridwar to Kedarnath Road Trip ${SITE.season} | Route & Stops` },
@@ -91,7 +94,7 @@ export default function HaridwarToKedarnath() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "haridwar-to-kedarnath-road-trip", "title": "Haridwar to Kedarnath Road Trip: Route & Stops", "description": "Haridwar to Kedarnath road trip 2026: 235 km via Devprayag, Rudraprayag and Guptkashi in 8–9 hours. Road tips, fuel stops and best overnight halts.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>
           {[['Total Distance','235km to Gaurikund'],['Driving Time','8–9 hours'],['Main Route','NH7 via Rishikesh'],['Key Town','Guptkashi (base)'],['Final Checkpoint','Sonprayag'],['Trek from Gaurikund','16km one way']].map(([k,v])=>(

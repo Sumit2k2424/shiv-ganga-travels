@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-registration-hindi');
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} | मोबाइल से कैसे करें | फ्री गाइड` },
@@ -85,7 +88,7 @@ export default function CharDhamRegistrationHindi() {
         <AnswerBox>
           <strong>चार धाम रजिस्ट्रेशन पूरी तरह मुफ़्त है और हर यात्री के लिए अनिवार्य है।</strong> registrationandtouristcare.uk.gov.in पर, Tourist Care Uttarakhand ऐप से, या WhatsApp पर +91-8394833833 नंबर पर &ldquo;Yatra&rdquo; लिखकर करें। हरिद्वार और ऋषिकेश में ऑफलाइन काउंटर भी हैं। 55 साल से ऊपर वालों को मेडिकल सर्टिफिकेट भी लगेगा। QR वाली पर्ची सोनप्रयाग चेकपोस्ट पर स्कैन होती है — प्रिंटआउट ज़रूर रखें।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · By Shiv Ganga Travels</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 12 }}>⚠️ यह बात पहले जान लें</div>

@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/triyuginarayan-temple');
 
 export const metadata = {
   title: { absolute: `Triyuginarayan Temple ${SITE.season} | Where Shiva Wed Parvati | Guide` },
@@ -23,8 +26,8 @@ function Schema() {
     headline: 'Triyuginarayan Temple: Where Shiva Wed Parvati',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2024-06-01',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -56,7 +59,7 @@ export default function Page() {
         title="Triyuginarayan Temple — Shiva and Parvati's Wedding Site"
         dek="Near Kedarnath · Eternal fire burning since the divine wedding · Vishnu as priest · 12km from Sonprayag"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
         facts={[
           { label:'Altitude',  value:'1,980 m' },
@@ -82,7 +85,7 @@ export default function Page() {
         <AnswerBox>
           <strong>Triyuginarayan is where Shiva and Parvati are believed to have married, and the fire lit for that wedding is said to have burned ever since.</strong> It sits at 1,980m about 25km from Sonprayag, reachable by road, and is increasingly booked for weddings for that reason. Most pilgrims visit it on the way to or from Kedarnath rather than as a separate trip. The temple is open through the day and there is no ticket.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10, marginBottom:28 }}>
           {[{icon:'📍',label:'Location',val:'Triyuginarayan village, Rudraprayag'},{icon:'🏔️',label:'Altitude',val:'1,980m'},{icon:'🚗',label:'Distance',val:'12km from Sonprayag'},{icon:'🔥',label:'Feature',val:'Eternal sacred fire'},{icon:'🙏',label:'Deity',val:'Lord Vishnu (as Narayana)'},{icon:'📅',label:'Best Time',val:'May–June, Sept–Oct'}].map(s=>(

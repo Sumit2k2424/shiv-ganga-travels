@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/surkanda-devi-temple');
 
 export const metadata = {
   title: { absolute: `Surkanda Devi Temple ${SITE.season} | Timings, Ropeway & Route | Dhanaulti` },
@@ -114,7 +117,7 @@ export default function SurkandaDeviTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>⛰️ Shakti Peeth · 2,756m Ridge</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Surkanda Devi Temple — Timings, Ropeway &amp; the Road from Kaddukhal</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>A fogbound ridge shrine above Dhanaulti — updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>A fogbound ridge shrine above Dhanaulti — updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 
@@ -127,7 +130,7 @@ export default function SurkandaDeviTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'surkanda-devi-temple', title:'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide', description:'Surkanda Devi Temple near Dhanaulti: real timings, ropeway fare, the Kaddukhal trek, and how to reach from Haridwar, Rishikesh or Mussoorie.', datePublished:'2026-07-28', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'surkanda-devi-temple', title:'Surkanda Devi Temple 2026 — Timings, Ropeway & Route Guide', description:'Surkanda Devi Temple near Dhanaulti: real timings, ropeway fare, the Kaddukhal trek, and how to reach from Haridwar, Rishikesh or Mussoorie.', datePublished:'2026-07-28', dateModified: PAGE_DATES.modifiedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Surkanda Devi Temple sits at <strong>2,756 m on a ridge above Kaddukhal</strong>, 8 km from Dhanaulti in Tehri Garhwal. It is open <strong>5 AM&ndash;7 PM in summer and 7 AM&ndash;5 PM in winter</strong> &mdash; not the 10 PM closing some guides repeat. Reach it by a <strong>1.5&ndash;2 km trek</strong> from Kaddukhal or the <strong>502 m ropeway</strong> running since 2022. There is no accommodation at the temple and no overnight stay allowed on the ridge.

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { pageDates } from '@/lib/pageDates';
 
 /**
  * BlogAuthor — E-E-A-T author byline for all blog posts
@@ -65,8 +66,8 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
       url: `${SITE.baseUrl}/blog/${article.slug}`,
       image: [`${SITE.baseUrl}/opengraph-image`],
       inLanguage: article.lang || 'en-IN',
-      datePublished: article.datePublished || '2025-08-15',
-      dateModified: article.dateModified || '2026-06-20',
+      datePublished: article.datePublished || pageDates(`/blog/${article.slug}`).createdISO,
+      dateModified: article.dateModified || pageDates(`/blog/${article.slug}`).modifiedISO,
       author: {
         '@type': 'Person',
         '@id': a.id,

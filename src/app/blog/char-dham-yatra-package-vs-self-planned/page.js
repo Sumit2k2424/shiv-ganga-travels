@@ -6,6 +6,9 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2, h3, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-package-vs-self-planned');
 
 /* The comparison table states the two totals; this is the arithmetic behind
    them. Figures are per person for a 9N/10D circuit from Haridwar in peak
@@ -67,7 +70,7 @@ export default function PkgVsSelf() {
         dek="Honest analysis from Dhanesh Chandra Mishra — 15-year Char Dham operator · Shiv Ganga Travels, Haridwar"
         author="Dhanesh Chandra Mishra"
         authorInitials="DM"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="7 min read"
         facts={[
           { label:'Package from', value:'₹13,900 pp' },
@@ -79,7 +82,7 @@ export default function PkgVsSelf() {
       <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra · Founder, Shiv Ganga Travels · Retd. Army Officer</span>
-          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {SITE.lastUpdated}</span>
+          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {PAGE_DATES.modifiedHuman}</span>
         </div>
       </div>
       <article className="blog-container" itemScope itemType="https://schema.org/Article">

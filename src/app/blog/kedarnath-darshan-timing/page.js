@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/kedarnath-darshan-timing');
 
 export const metadata = {
   title: { absolute: `Kedarnath Darshan Timings ${SITE.season} | Aarti & VIP Slots` },
@@ -114,7 +117,7 @@ export default function KedarnathTimings() {
         <AnswerBox>
           <strong>Kedarnath opens around 4am for Maha Abhishek and closes about 9pm, with a break through the afternoon.</strong> General darshan runs roughly 6am to 3pm and 5pm to 7pm, and the evening Shringar Aarti is around 6.30 to 7.30pm. Queues are shortest between 7am and 9am and longest in the middle of the day when the morning's trekkers arrive. Timings shift slightly on festival days and are set by the temple committee.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Verified for current season</div>
 
         {/* Quick summary box */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:12 }}>

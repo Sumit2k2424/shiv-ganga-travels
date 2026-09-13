@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/panch-prayag');
 
 export const metadata = {
   title: { absolute: 'Panch Prayag — The Five Confluences, In Order' },
@@ -148,8 +151,8 @@ function Schema() {
     description: 'A guide to the five sacred confluences of the Alaknanda: which rivers meet where, the correct order, and how to see all five on one drive.',
     mainEntityOfPage: `${SITE.baseUrl}/panch-prayag`,
     image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -202,7 +205,7 @@ export default function PanchPrayag() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <p style={p}>

@@ -8,6 +8,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-complete-guide');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra ${SITE.season} | History, Significance & Route Guide` },
@@ -40,8 +43,8 @@ function Schema() {
     headline: 'Char Dham Yatra 2026: History, Significance & Route',
     description: 'Comprehensive guide to Char Dham Yatra 2026 covering history, significance, order of visit, nearby attractions and expert FAQs.',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2026-05-21',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Organization',
       name: SITE.name,

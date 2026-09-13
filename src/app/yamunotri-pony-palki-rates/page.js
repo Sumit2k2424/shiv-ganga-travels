@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/yamunotri-pony-palki-rates');
 
 export const metadata = {
   title: { absolute: `Yamunotri Pony, Palki & Kandi Rates ${SITE.season} | Janki Chatti Counter` },
@@ -94,8 +97,8 @@ function Schema() {
     description: 'Indicative prepaid-counter rates for pony, palki, dandi and kandi on the Janki Chatti to Yamunotri trek, with weight slabs, booking guidance and complaint channels.',
     mainEntityOfPage: `${SITE.baseUrl}/yamunotri-pony-palki-rates`,
     image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO,
-    dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -154,7 +157,7 @@ export default function YamunotriPonyPalkiRates() {
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <p style={p}>

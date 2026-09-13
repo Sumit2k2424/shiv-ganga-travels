@@ -6,6 +6,9 @@ import BlogAuthor from '@/components/BlogAuthor';
 import FAQAccordion from '@/components/FAQAccordion';
 import BlogCTA from '@/components/BlogCTA';
 import { h2, h3, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/badrinath-vip-darshan');
 
 export const metadata = {
   title: { absolute: `Badrinath VIP Darshan ${SITE.season} — Ticket Price & Online Booking` },
@@ -88,7 +91,7 @@ function Schema() {
     description: 'How VIP and special darshan works at Badrinath, the puja list, official booking channel, timings and the quietest slots.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-08-13',
-    dateModified: SITE.lastUpdatedISO,
+    dateModified: PAGE_DATES.modifiedISO,
     inLanguage: 'en-IN',
     author: {
       '@type': 'Person',
@@ -163,7 +166,7 @@ export default function BadrinathVipDarshan() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '34px 20px 60px' }}>
         <BlogAuthor variant="top" author="dhanesh" />
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 22, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Verified for current season
         </div>
 
         <AnswerBox>

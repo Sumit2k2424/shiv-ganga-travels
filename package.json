@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "dates": "node scripts/page-dates.mjs",
     "start": "next start",
     "press:radar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs",
     "press:snapshot": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/press/story-radar.mjs --snapshot",

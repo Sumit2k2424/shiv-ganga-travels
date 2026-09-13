@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/chitai-golu-devta-temple');
 
 export const metadata = {
   title: { absolute: `Chitai Golu Devta Temple ${SITE.season} | Timings & Route | Almora` },
@@ -113,7 +116,7 @@ export default function ChitaiGoluDevtaTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🔔 Kumaon&rsquo;s Court of Justice</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Chitai Golu Devta Temple, Almora &mdash; Timings, the Letter Ritual &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes &mdash; updated {SITE.lastUpdated}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes &mdash; updated {PAGE_DATES.modifiedHuman}</p>
       </div>
     </section>
 
@@ -126,7 +129,7 @@ export default function ChitaiGoluDevtaTemple() {
     </nav>
 
     <article style={{ maxWidth:820, margin:'0 auto', padding:'32px 20px 60px' }}>
-      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'chitai-golu-devta-temple', title:'Chitai Golu Devta Temple 2026 — Timings, Letters & Route', description:'Chitai Golu Devta Temple near Almora — the god of justice, the petition ritual, darshan timings, distances and how to fit it into a Kumaon trip.', datePublished:'2026-07-27', dateModified: SITE.lastUpdatedISO, lang:'en-IN' }} />
+      <BlogAuthor variant="top" author="dhanesh" article={{ slug:'chitai-golu-devta-temple', title:'Chitai Golu Devta Temple 2026 — Timings, Letters & Route', description:'Chitai Golu Devta Temple near Almora — the god of justice, the petition ritual, darshan timings, distances and how to fit it into a Kumaon trip.', datePublished:PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, lang:'en-IN' }} />
 
       <AnswerBox>
         Chitai Golu Devta Temple sits <strong>8&ndash;10 km from Almora</strong> on the Almora&ndash;Pithoragarh road in Kumaon, Uttarakhand. It is dedicated to <strong>Golu Devta, the god of justice</strong>, and devotees do not simply pray here: they <strong>write out their grievance and tie it to the railings</strong>, often on legal stamp paper, then return to hang a <strong>brass bell</strong> once the matter is settled. Darshan is commonly <strong>6 AM to 7 PM</strong>, entry is free, and most people stay an hour or two.

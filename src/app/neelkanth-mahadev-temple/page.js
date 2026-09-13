@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/neelkanth-mahadev-temple');
 
 export const metadata = {
   title: { absolute: 'Neelkanth Mahadev Temple — 32 km from Rishikesh' },
@@ -68,7 +71,7 @@ export default function NeelkanthMahadev() {
       <Crumbs trail={[['Rishikesh','/rishikesh-tour-packages'],['Neelkanth Mahadev', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

@@ -6,6 +6,9 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2 } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-2026-new-rules');
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra New Rules 2026 | Phone Ban & Green Card' },
@@ -35,7 +38,7 @@ function Schema() {
     { q: 'How to book Kedarnath helicopter in 2026?', a: 'As per new 2026 rules, Kedarnath helicopter bookings must be made exclusively through the IRCTC portal (irctc.co.in). Private operator bookings at helipads on the day of travel are being phased out. Shiv Ganga Travels can assist you with IRCTC helicopter booking as part of our package.' },
     { q: 'What is the real-time tracking system for Char Dham Yatra 2026?', a: 'The Uttarakhand government has introduced a real-time GPS tracking system for all registered yatra vehicles. 177 ambulances are deployed along the Char Dham route, plus a helicopter ambulance operated by AIIMS Rishikesh for emergencies.' },
   ];
-  const article = { '@context':'https://schema.org','@type':'NewsArticle', headline:'Char Dham Yatra 2026 New Rules — Phone Ban, Age Limit, IRCTC Helicopter', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl,logo:{'@type':'ImageObject',url:'https://www.shivgangatravels.com/logo.png'}}, datePublished:'2026-04-19', dateModified:'2026-04-27', mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules` };
+  const article = { '@context':'https://schema.org','@type':'NewsArticle', headline:'Char Dham Yatra 2026 New Rules — Phone Ban, Age Limit, IRCTC Helicopter', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl,logo:{'@type':'ImageObject',url:'https://www.shivgangatravels.com/logo.png'}}, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules` };
   const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:faqData.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
 }
@@ -142,11 +145,11 @@ export default function NewRules2026() {
       <ReadingProgress/>
 
       <BlogHero
-        badge={`🔴 Live — Updated ${SITE.lastUpdated}`}
+        badge={`🔴 Live — Updated ${PAGE_DATES.modifiedHuman}`}
         title="Char Dham Yatra 2026 New Rules — What Changed"
         dek="Phone ban · Medical certificate for 55+ · IRCTC helicopter · Non-Hindu entry · Real-time tracking"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Changes',    value:'7 new rules' },
@@ -171,8 +174,8 @@ export default function NewRules2026() {
           slug: 'char-dham-yatra-2026-new-rules',
           title: 'Char Dham Yatra New Rules 2026: Phone Ban & Green Card',
           description: 'Phone ban, medical certificates, IRCTC helicopter booking, non-Hindu entry — all 2026 new rules explained.',
-          datePublished: '2025-08-15',
-          dateModified: SITE.lastUpdatedISO,
+          datePublished: PAGE_DATES.createdISO,
+          dateModified: PAGE_DATES.modifiedISO,
           lang: 'en-IN',
         }} />
 

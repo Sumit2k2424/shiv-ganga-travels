@@ -8,6 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/kedarnath-yatra-complete-guide');
 
 /* This page is the canonical target of a 301 from /blog/kedarnath-yatra-guide,
    and "kedarnath" is the biggest single term the site chases — so it has to be
@@ -54,7 +57,7 @@ function Schema() {
     image: `${SITE.baseUrl}/opengraph-image`,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` } },
-    datePublished: '2025-08-15', dateModified: '2026-08-22',
+    datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-yatra-complete-guide`,
     about: { '@type': 'Place', name: 'Kedarnath Temple', geo: { '@type': 'GeoCoordinates', latitude: 30.7346, longitude: 79.0669, elevation: '3583' } },
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.blog-keytakeaways'] },
@@ -108,7 +111,7 @@ export default function KedarnathCompleteGuide() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-yatra-complete-guide", "title": "Kedarnath Yatra Guide 2026: Route, Cost & Darshan", "description": "Kedarnath Yatra 2026 guide: 16 km trek from Gaurikund, registration, puja costs, darshan timings, helicopter booking and packages from ₹5,250.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · Verified for current season</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Verified for current season</div>
 
         {/* Quick facts */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10 }}>

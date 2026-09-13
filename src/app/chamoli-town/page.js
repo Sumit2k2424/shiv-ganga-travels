@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/chamoli-town');
 
 export const metadata = {
   title: { absolute: `Chamoli Town — On the Alaknanda, Below Joshimath` },
@@ -34,7 +37,7 @@ function Schema() {
     { '@type': 'ListItem', position: 3, name: 'Chamoli Town', item: `${SITE.baseUrl}/chamoli-town` },
   ]};
   const place = { '@context': 'https://schema.org', '@type': 'City', name: 'Chamoli', description: 'A town on the Alaknanda river in Uttarakhand, on NH-58 between Karnaprayag and Pipalkoti, namesake of Chamoli district.', url: `${SITE.baseUrl}/chamoli-town`, image: [`${SITE.baseUrl}/opengraph-image`], address: { '@type': 'PostalAddress', addressLocality: 'Chamoli', addressRegion: 'Uttarakhand', addressCountry: 'IN' }, geo: { '@type': 'GeoCoordinates', latitude: 30.4000, longitude: 79.3167, elevation: '1,300 m' } };
-  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Chamoli Town — On the Alaknanda, Between Karnaprayag and Joshimath', description: 'A guide to Chamoli town: its relationship to the district, distances, and its place on the Badrinath road route.', mainEntityOfPage: `${SITE.baseUrl}/chamoli-town`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
+  const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Chamoli Town — On the Alaknanda, Between Karnaprayag and Joshimath', description: 'A guide to Chamoli town: its relationship to the district, distances, and its place on the Badrinath road route.', mainEntityOfPage: `${SITE.baseUrl}/chamoli-town`, image: [`${SITE.baseUrl}/opengraph-image`], datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' }, publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl } };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
@@ -75,7 +78,7 @@ export default function ChamoliTown() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,300 m'], ['River', 'Alaknanda'], ['From Karnaprayag', '~30 km'], ['From Pipalkoti', '17 km'], ['From Badrinath', '~110 km'], ['District HQ', 'Gopeshwar (not here)']].map(([k, v]) => (

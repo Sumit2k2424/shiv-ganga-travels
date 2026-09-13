@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/types-of-char-dham-yatra-packages');
 
 export const metadata = {
   title: { absolute: `Char Dham Package Types ${SITE.season} | Budget to Heli` },
@@ -94,7 +97,7 @@ export default function PackageTypes() {
         title="Types of Char Dham Yatra Packages 2026"
         dek="Budget · Deluxe · Premium · Helicopter. What each includes, who it is actually for, and the honest difference between them."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Budget',     value:'₹13,900' },
@@ -121,7 +124,7 @@ export default function PackageTypes() {
           <strong>Char Dham packages come in four shapes: road group, road private, senior-friendly and helicopter.</strong> Road group runs 9N/10D from about ₹13,900 per person in a shared Tempo Traveller. Private road is the same route in your own vehicle at roughly ₹22,000–30,000. Senior itineraries add nights and include pony or palki. Helicopter charter covers all four dhams in 5N/6D from Dehradun at about ₹2,30,000 — genuinely expensive, and anything near ₹85,000 is a road package with shuttle tickets.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · ✍️ Shiv Ganga Travels (15 seasons, 50,000+ pilgrims)
         </div>
 
         <p id="packages" style={p}>

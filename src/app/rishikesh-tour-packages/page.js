@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/rishikesh-tour-packages');
 
 export const metadata = {
   title: { absolute: `Rishikesh Tour Package ${SITE.season} | Ganga Aarti & Rafting` },
@@ -110,7 +113,7 @@ export default function RishikeshTourPackages() {
           <strong>Rishikesh suits a 2 to 3 night trip and splits into two quite different holidays.</strong> One is rafting, bungee and camping — September to June, closed through the monsoon when the Ganga runs too high. The other is the ashram and yoga side around Swarg Ashram and Ram Jhula, which runs year-round. Packages from about ₹3,999. Most Char Dham pilgrims pass through anyway, so a night here on the way back costs very little.
         </AnswerBox>
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>

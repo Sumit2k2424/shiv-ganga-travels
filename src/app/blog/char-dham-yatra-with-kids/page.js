@@ -8,6 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-with-kids');
 
 const faqs = [
   { q: 'What is the minimum age for Char Dham Yatra?', a: 'There is no legal minimum, but altitude is the real limit. We do not recommend the full circuit for children under 5 — Kedarnath at 3,583m and Gangotri at 3,415m are high enough that a small child who becomes unwell cannot easily tell you what is wrong. Children from about 8 upward generally handle the circuit well with a slower itinerary. For younger families, Do Dham or Badrinath alone is the sensible version.' },
@@ -34,8 +37,8 @@ function Schema() {
     headline: 'Char Dham Yatra with Kids: Age & Altitude Safety',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -74,7 +77,7 @@ export default function Page() {
         title="Char Dham Yatra with Kids — What Parents Need to Know"
         dek="Age guidelines · Altitude safety · Which dhams are kid-friendly · Packing for children · Our honest take"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Gangotri & Badrinath', value:'All ages (road)' },
@@ -96,7 +99,7 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Our honest answer</div>

@@ -3,6 +3,9 @@ import { SITE } from '@/data/packages';
 import { TRANSFERS, transferRows, FLEET, inr } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/haridwar-to-rishikesh-taxi');
 
 const R = TRANSFERS['haridwar-rishikesh'];
 
@@ -69,7 +72,7 @@ function Schema() {
     headline:'Haridwar to Rishikesh Taxi — Fare, Distance and Drop Points',
     author:{ '@id': `${SITE.baseUrl}/#founder` },
     publisher:{ '@id': `${SITE.baseUrl}/#organization` },
-    datePublished:'2026-08-10', dateModified:SITE.lastUpdatedISO,
+    datePublished:'2026-08-10', dateModified:PAGE_DATES.modifiedISO,
     mainEntityOfPage:`${SITE.baseUrl}/haridwar-to-rishikesh-taxi`,
   };
   const crumbs = {
@@ -129,7 +132,7 @@ export default function HaridwarToRishikeshTaxi() {
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
         </div>
 
         <p style={{ fontSize:16.5, lineHeight:1.8, color:'var(--text-mid)', marginBottom:22 }}>

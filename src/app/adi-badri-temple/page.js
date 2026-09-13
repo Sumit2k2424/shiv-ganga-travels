@@ -4,6 +4,9 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/adi-badri-temple');
 
 export const metadata = {
   title: { absolute: 'Adi Badri Temple — 16 Gupta-Era Shrines Near Karnaprayag | Full Guide' },
@@ -62,7 +65,7 @@ function Schema() {
     headline: 'Adi Badri Temple — 16 Gupta-Era Shrines Near Karnaprayag',
     description: 'A guide to Adi Badri: the sixteen-temple complex near Karnaprayag, its Gupta-era history, how it fits into the Panch Badri circuit, and how to reach it.',
     mainEntityOfPage: `${SITE.baseUrl}/adi-badri-temple`, image: [`${SITE.baseUrl}/opengraph-image`],
-    datePublished: SITE.lastUpdatedISO, dateModified: SITE.lastUpdatedISO,
+    datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO,
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
@@ -120,7 +123,7 @@ export default function AdiBadri() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,000 m'], ['District', 'Chamoli'], ['From Karnaprayag', '17–18 km'], ['From Haridwar', '~220 km'], ['Era', 'Gupta, 5th–8th c.'], ['Open', 'Year-round']].map(([k, v]) => (

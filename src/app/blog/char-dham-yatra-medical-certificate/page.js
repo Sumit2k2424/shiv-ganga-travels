@@ -7,6 +7,9 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-medical-certificate');
 
 export const metadata = {
   title: { absolute: `Char Dham Medical Certificate ${SITE.season} | Who Needs It` },
@@ -44,7 +47,7 @@ export default function MedicalCertificate() {
         title="Char Dham Yatra Medical Certificate 2026 — Who Needs It & How to Get It"
         dek="Mandatory for all pilgrims 55+. Without it, you will be turned back at the checkpoint. Here is exactly what you need, in what format, and from which doctor."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
         facts={[
           { label:'Mandatory for', value:'Age 55+' },
@@ -70,7 +73,7 @@ export default function MedicalCertificate() {
         <AnswerBox>
           <strong>A medical fitness certificate is mandatory for every pilgrim aged 55 and over</strong>, uploaded during Char Dham registration. Any registered doctor can issue it — you do not need a large hospital — and it should confirm you are fit for altitudes above 3,000m. Below 55 it is not required, but anyone with a cardiac, respiratory or blood-pressure condition should carry a doctor's note and their own medication regardless of what the rules demand.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>
           <span style={{ fontSize:26, flexShrink:0 }}>⚠️</span>

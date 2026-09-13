@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-closing-dates-2026');
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Closing Dates 2026 | All 4 Temples' },
@@ -101,7 +104,7 @@ export default function ClosingDates() {
         title="Char Dham Closing Dates 2026"
         dek="Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath Nov 13. Complete closing ceremony guide, winter abodes, and last-chance visit tips."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
         facts={[
           { label:'Gangotri',  value:'Nov 10, 2026' },
@@ -128,7 +131,7 @@ export default function ClosingDates() {
           <strong>The 2026 Char Dham temples close between 10 and 13 November.</strong> Gangotri closes 10 November on Diwali, Yamunotri and Kedarnath both on 11 November for Bhai Dooj, and Badrinath last on 13 November. Closing dates are confirmed on Vijayadashami each year. After closing, each deity moves to its winter seat — Mukhba for Ganga, Kharsali for Yamuna, Ukhimath for Kedarnath and Pandukeshwar for Badrinath.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {SITE.lastUpdated} — dates confirmed for 2026 season
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} — dates confirmed for 2026 season
         </div>
 
         {/* Quick reference table */}

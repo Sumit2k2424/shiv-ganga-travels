@@ -8,6 +8,9 @@ import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/valley-of-flowers-trek');
 
 /* The old title read "Price Starts at ₹150", which was the national park entry
    fee auto-templated into a package-price slot. On a page whose own package is
@@ -39,7 +42,7 @@ function Schema() {
     image:`${SITE.baseUrl}/opengraph-image`,
     author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra' },
     publisher:{ '@type':'Organization', '@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
-    datePublished:'2025-03-25', dateModified:'2026-08-22',
+    datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO,
     mainEntityOfPage:`${SITE.baseUrl}/blog/valley-of-flowers-trek`,
     about:{ '@type':'Place', name:'Valley of Flowers National Park', geo:{ '@type':'GeoCoordinates', latitude:30.7280, longitude:79.6050, elevation:'3352' } },
     speakable:{ '@type':'SpeakableSpecification', cssSelector:['.blog-keytakeaways'] },

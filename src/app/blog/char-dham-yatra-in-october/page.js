@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-in-october');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra in October ${SITE.season} | Weather, Crowds & Dates` },
@@ -23,8 +26,8 @@ function Schema() {
     headline: 'Char Dham Yatra in October: Weather, Crowds & Dates',
     description: '',
     image: `${SITE.baseUrl}/opengraph-image`,
-    datePublished: '2025-01-01',
-    dateModified: '2026-05-21',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     author: {
       '@type': 'Person',
       '@id': `${SITE.baseUrl}/#founder`,
@@ -56,7 +59,7 @@ export default function Page() {
         title="Char Dham Yatra in October 2026 — Is It Worth It?"
         dek="Less crowd · Cheaper hotels · Early snowfall risk · Closing dates · Our honest assessment"
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Crowds',   value:'70% fewer than May' },
@@ -82,7 +85,7 @@ export default function Page() {
         <AnswerBox>
           <strong>October is one of the two best months for Char Dham, and the best for mountain views.</strong> Post-monsoon air gives visibility that routinely runs to 100km, crowds are a fraction of May's, and rooms cost noticeably less. The trade-off is cold: nights at Kedarnath drop to −2°C and lower by late month. The temples close between 10 and 13 November, so an October trip is also the last comfortable window of the season.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Short answer from our team</div>

@@ -5,6 +5,9 @@ import {
   FAQBlock, Sources, CTA, Related, buildSchema, SchemaBlocks,
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/char-dham-yatra-corporate-booking');
 
 export const metadata = {
   title: { absolute: 'Corporate Char Dham Yatra Booking — GST Invoice & MSA' },
@@ -67,7 +70,7 @@ export default function CorporateBooking() {
       <Crumbs trail={[['Char Dham Yatra','/char-dham-yatra'],['Corporate Booking', null]]}/>
 
       <Article>
-        <Updated/>
+        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/how-to-reach-haridwar');
 
 export const metadata = {
   title: { absolute: `How to Reach Haridwar ${SITE.season} | Train, Flight & Road Guide` },
@@ -53,8 +56,8 @@ function Schema() {
     headline: 'How to Reach Haridwar for Char Dham Yatra 2026 — Complete Guide',
     author: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.baseUrl, logo: { '@type': 'ImageObject', url: 'https://www.shivgangatravels.com/logo.png' } },
-    datePublished: '2026-01-01',
-    dateModified: '2026-05-04',
+    datePublished: PAGE_DATES.createdISO,
+    dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage: `${SITE.baseUrl}/how-to-reach-haridwar`,
   };
   return (
@@ -132,7 +135,7 @@ export default function HowToReachHaridwar() {
           <strong>Haridwar has its own railway station on the main Delhi–Dehradun line, and that is how most pilgrims arrive.</strong> Trains run direct from Delhi in 4 to 6 hours, with Shatabdi and overnight services from many cities. The nearest airport is Jolly Grant, Dehradun, about 55km away. By road it is roughly 220km from Delhi on NH334, four to five hours in normal traffic. Haridwar is where the Char Dham road circuit begins.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Why Haridwar */}
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>

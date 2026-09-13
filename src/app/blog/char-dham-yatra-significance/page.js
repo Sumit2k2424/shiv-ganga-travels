@@ -7,6 +7,9 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import { pageDates } from '@/lib/pageDates';
+
+const PAGE_DATES = pageDates('/blog/char-dham-yatra-significance');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
@@ -77,7 +80,7 @@ export default function Significance() {
         title="Char Dham Yatra — History, Mythology & Significance"
         dek="Where the circuit came from, why Adi Shankaracharya established it in the 8th century, the mythology behind all four dhams, why pilgrims have walked them in the same order for centuries, and what makes completing the yatra spiritually significant."
         author="Dhanesh Chandra Mishra"
-        updated={`Updated ${SITE.lastUpdated}`}
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="10 min read"
         facts={[
           { label:'Founder', value:'Adi Shankaracharya' },
@@ -103,7 +106,7 @@ export default function Significance() {
         <AnswerBox>
           <strong>The Char Dham circuit was established by Adi Shankaracharya in the 8th century CE</strong> as a route linking four Himalayan shrines: Yamunotri and Gangotri, the sources of the Yamuna and Ganga; Kedarnath, one of the twelve Jyotirlingas of Shiva; and Badrinath, sacred to Vishnu. It is also called Chota Char Dham, to distinguish it from the all-India Char Dham of Badrinath, Dwarka, Puri and Rameswaram.
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {SITE.lastUpdated}</div>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <BlogTOC items={[
           { id:'what-is',       label:'What is Char Dham Yatra?' },
