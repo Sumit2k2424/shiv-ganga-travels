@@ -570,9 +570,11 @@ export const PRICING = {
    9 · REVIEWS
    ══════════════════════════════════════════════════════════════ */
 
+import { SITE } from './packages';
+
 export const REVIEWS = {
-  rating: 4.7,
-  count: 54,
+  rating: SITE.reviews.rating,
+  count: SITE.reviews.count,
   source: 'Google Business Profile',
   url: 'https://www.google.com/maps?cid=16074078434377735602',
   breakdown: [

@@ -111,10 +111,10 @@ export default function PackageCard({ pkg }) {
           <div className="shrink-0 text-right">
             <span className="inline-block rounded-lg rounded-bl-none bg-navy px-2 py-1
                              text-[12.5px] font-extrabold text-white">
-              4.7
+              {SITE.reviews.rating}
             </span>
             <div className="mt-1 whitespace-nowrap text-[9.5px] text-slate-500">
-              54 Google reviews
+              {SITE.reviews.count} Google reviews
             </div>
           </div>
         </div>

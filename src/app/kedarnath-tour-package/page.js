@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: `Kedarnath Tour Package ${SITE.season} | Hotels & Transport Included`,
     description:
-      `Customizable itinerary, pony & helicopter rates, and ${SITE.season} registration help. Direct Haridwar operator since 2010 with 15+ years experience · 4.7★ from 54 reviews.`,
+      `Customizable itinerary, pony & helicopter rates, and ${SITE.season} registration help. Direct Haridwar operator since 2010 with 15+ years experience · ${SITE.reviews.rating}★ from ${SITE.reviews.count} reviews.`,
     url: `${SITE.baseUrl}/kedarnath-tour-package`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Tour Package ${SITE.season} from Haridwar — Shiv Ganga Travels` }],
@@ -178,7 +178,7 @@ export default function KedarnathTourPackage() {
             <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>
           <div style={{ display: 'flex', gap: 18, justifyContent: 'center', flexWrap: 'wrap', marginTop: 22, color: 'rgba(255,255,255,0.8)', fontSize: 12.5, fontWeight: 600 }}>
-            <span>⭐ 4.7/5 · 54 Google reviews</span><span>🙏 50,000+ pilgrims served</span><span>🛡️ Zero-incident record</span><span>₹0 advance to enquire</span>
+            <span>⭐ {SITE.reviews.rating}/5 · {SITE.reviews.count} Google reviews</span><span>🙏 50,000+ pilgrims served</span><span>🛡️ Zero-incident record</span><span>₹0 advance to enquire</span>
           </div>
         </div>
       </section>

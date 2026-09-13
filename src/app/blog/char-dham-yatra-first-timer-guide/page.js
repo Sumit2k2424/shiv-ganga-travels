@@ -249,7 +249,7 @@ export default function FirstTimerGuide() {
             <span style={{ color:'var(--teal)', fontWeight:700, flexShrink:0 }}>{i+1}.</span> {q}
           </div>
         ))}
-        <p style={{ marginTop:16 }}>Shiv Ganga Travels has been answering all five questions since 2010. We own our fleet of 20+ AC vehicles, employ our drivers directly, pre-block hotels by name from January, and are registered with Uttarakhand Tourism. See our cancellation policy →</p>
+        <p style={{ marginTop:16 }}>Shiv Ganga Travels has been answering all five questions since 2010. We own our fleet of 20+ AC vehicles, employ our drivers directly, pre-block hotels by name from January. See our cancellation policy →</p>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides for First Timers</div>

@@ -21,7 +21,7 @@ export default function Schema() {
       url: `${SITE.baseUrl}/char-dham-yatra`,
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
-    // No aggregateRating: those 54 Google reviews rate Shiv Ganga Travels, not
+    // No aggregateRating: the Google reviews rate Shiv Ganga Travels, not
     // this one package, and they are already asserted on the Organization node
     // in layout.js — which renders on this page too. Repeating them here both
     // misattributes the reviews and puts two rated nodes on a single URL.

@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { SITE } from '@/data/packages';
 
 function Stars({ n }) {
   return (
@@ -106,7 +107,7 @@ const MAPS_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602#re
 const WRITE_REVIEW_URL = 'https://www.google.com/maps?cid=16074078434377735602&action=writeareview';
 
 export default function GoogleReviews() {
-  const [data, setData]       = useState({ reviews: STATIC, rating: 4.7, total: 54, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
+  const [data, setData]       = useState({ reviews: STATIC, rating: SITE.reviews.rating, total: SITE.reviews.count, mapsUrl: MAPS_REVIEW_URL, source: 'static' });
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef(null);
   const [canL, setCanL] = useState(false);
@@ -163,9 +164,9 @@ export default function GoogleReviews() {
           <div>
             <div style={{ display:'flex', alignItems:'baseline', gap:6 }}>
               <span style={{ fontSize:22, fontWeight:700, color:'#0f2b5b', lineHeight:1 }}>
-                {data.rating || '4.7'}
+                {data.rating || SITE.reviews.rating}
               </span>
-              <Stars n={Math.round(data.rating || 4.7)}/>
+              <Stars n={Math.round(data.rating || SITE.reviews.rating)}/>
             </div>
             <div style={{ fontSize:12, color:'#8898a6', marginTop:2 }}>
               Public reviews on Google — open and read them all

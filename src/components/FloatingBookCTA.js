@@ -6,7 +6,7 @@ import { SITE } from '@/data/packages';
 const SOCIAL_PROOF = [
   'Direct operator · zero commission',
   'Sept–Oct batches booking now',
-  '4.7★ on Google · 54 reviews',
+  `${SITE.reviews.rating}★ on Google · ${SITE.reviews.count} reviews`,
   'Free cancellation up to 30 days',
   'Founder replies personally on WhatsApp',
 ];

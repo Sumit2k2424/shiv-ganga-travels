@@ -130,7 +130,7 @@ function Schema() {
       {
         '@type': 'Question',
         name: 'Can a travel operator register on my behalf for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. A registered tour operator like Shiv Ganga Travels can complete biometric registration on your behalf when provided with your Aadhaar details and required documents. This is included in our packages at no extra charge. However, the physical biometric verification (fingerprint) must be done by the pilgrim themselves at a registration centre — the operator can submit the initial online application.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. A tour operator like Shiv Ganga Travels can complete biometric registration on your behalf when provided with your Aadhaar details and required documents. This is included in our packages at no extra charge. However, the physical biometric verification (fingerprint) must be done by the pilgrim themselves at a registration centre — the operator can submit the initial online application.' },
       },
       {
         '@type': 'Question',

@@ -92,7 +92,7 @@ export default function MussoorieTourPackages() {
             Packages from <strong style={{ color: '#FFD166' }}>₹6,350/person</strong> · Kempty Falls · Mall Road · Gun Hill · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🏔️ Queen of the Hills','💦 Kempty Falls','🚡 Gun Hill ropeway','🛍️ Mall Road','⭐ 4.7/5 · 54 reviews'].map(t => (
+            {['🏔️ Queen of the Hills','💦 Kempty Falls','🚡 Gun Hill ropeway','🛍️ Mall Road',`⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>
@@ -287,7 +287,7 @@ export default function MussoorieTourPackages() {
 
         <h2 style={h2}>Why Book Mussoorie Tour Packages with Shiv Ganga Travels</h2>
         <p style={p}>
-          Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, and is based at Saptrishi Road, Bhupatwala, Haridwar — not in Delhi, not on an app. We have served 50,000+ travellers across 15 seasons and hold a 4.7/5 rating from 54 verified Google reviews. Our own vehicles run the Dehradun-Mussoorie climb regularly, which means real, current knowledge of road conditions, Mall Road entry timings, and which hotels are actually worth booking — not a script read off a database. Every Mussoorie package is quoted and operated directly: no agent, no platform commission, no markup.
+          Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, and is based at Saptrishi Road, Bhupatwala, Haridwar — not in Delhi, not on an app. We have served 50,000+ travellers across 15 seasons and hold a {SITE.reviews.rating}/5 rating from {SITE.reviews.count} public Google reviews. Our own vehicles run the Dehradun-Mussoorie climb regularly, which means real, current knowledge of road conditions, Mall Road entry timings, and which hotels are actually worth booking — not a script read off a database. Every Mussoorie package is quoted and operated directly: no agent, no platform commission, no markup.
         </p>
 
         <h2 style={h2}>FAQ — Mussoorie Tour Packages</h2>

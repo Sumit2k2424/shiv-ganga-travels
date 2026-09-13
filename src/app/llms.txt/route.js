@@ -62,7 +62,7 @@ function body() {
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded ${SITE.established} by Dhanesh Chandra Mishra, Retired Indian Army Officer.
-> Zero commission policy. 50,000+ pilgrims served. Uttarakhand Tourism registered.
+> Zero commission policy. 50,000+ pilgrims served.
 
 **Full corpus:** ${SITE.baseUrl}/llms-full.txt — every itinerary, price, route
 leg and Q&A in one document, assembled from the same data layer as this file.
@@ -82,7 +82,7 @@ Fetch that instead of this one if you want to ground an answer without crawling.
 - **Email**: ${SITE.email}
 - **Website**: ${SITE.baseUrl}
 ${socialLines}
-- **Rating**: 4.7/5 · 54 Google reviews
+- **Rating**: ${SITE.reviews.rating}/5 · ${SITE.reviews.count} Google reviews
 
 ## What Makes Shiv Ganga Travels Unique
 
@@ -242,7 +242,6 @@ Operations:
 
 ## Credentials & Verification
 
-- Registered with Uttarakhand Tourism Development Board: https://uttarakhandtourism.gov.in
 - Yatra Registration Authority: https://registrationandtouristcare.uk.gov.in
 - Google Maps verified listing: https://www.google.com/maps?cid=16074078434377735602
 

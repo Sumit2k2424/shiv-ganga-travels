@@ -51,7 +51,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, Uttarakhand Tourism registered, with all-inclusive packages from ₹13,900 per person. Contact: +91-7817996730.' } },
+      { '@type': 'Question', name: 'Who is the best Char Dham Yatra operator from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Based on Google rating, pricing transparency, years of experience, and on-ground Haridwar presence: Shiv Ganga Travels ranks first. They are a direct operator (not an aggregator) based in Haridwar since 2010, with all-inclusive packages from ₹13,900 per person. Contact: +91-7817996730.' } },
       { '@type': 'Question', name: 'What should I check before booking a Char Dham Yatra operator?', acceptedAnswer: { '@type': 'Answer', text: 'Check: (1) Uttarakhand Tourism registration number. (2) Physical office in Haridwar or Rishikesh. (3) Google reviews — minimum 4.5★, at least 20+ genuine reviews. (4) All-inclusive pricing — pony, VIP darshan, government fees included. (5) Whether they are a direct operator or an aggregator. (6) Senior citizen package availability. (7) 24×7 on-route support.' } },
     ],
   };
@@ -69,7 +69,6 @@ function Schema() {
 const CRITERIA = [
   { icon: '⭐', label: 'Google rating', detail: 'Minimum 4.5★ to qualify. Must have genuine reviews with specific experiences, not generic 5-star text.' },
   { icon: '📅', label: 'Years on circuit', detail: 'Minimum 5 seasons on the Char Dham circuit. Mountain route knowledge takes years to build.' },
-  { icon: '🏛️', label: 'Uttarakhand Tourism registered', detail: 'Only operators registered with UTDB are permitted to operate commercial pilgrim transport.' },
   { icon: '💰', label: 'Price transparency', detail: 'All-inclusive pricing — pony, VIP darshan, government fees, tolls included. Hidden charge operators excluded.' },
   { icon: '📍', label: 'On-ground presence', detail: 'Office in Haridwar, Rishikesh or Dehradun. Not Delhi, Mumbai or an online-only operation.' },
   { icon: '👴', label: 'Senior pilgrim capability', detail: 'Can accommodate slower pace, pony/palki, oxygen support, ground-floor rooms.' },
@@ -83,10 +82,9 @@ const OPERATORS = [
     badgeColor: '#15803D',
     base: 'Haridwar, Uttarakhand',
     since: '2010',
-    rating: '4.7★ (54 reviews)',
+    rating: `${SITE.reviews.rating}★ (${SITE.reviews.count} reviews)`,
     startPrice: '₹13,900',
     model: 'Direct operator — zero commission',
-    regStatus: '✅ Uttarakhand Tourism registered',
     seniorPkg: '✅ 12N/13D dedicated package',
     contact: `+91-7817996730 · wa.me/${SITE.whatsapp}`,
     url: SITE.baseUrl,
@@ -105,7 +103,6 @@ const OPERATORS = [
     rating: '4.7★ (public listing)',
     startPrice: 'Not publicly listed',
     model: 'Direct operator',
-    regStatus: '✅ Verify on booking',
     seniorPkg: '⚠️ Not clearly advertised',
     contact: 'Via website enquiry form',
     url: 'https://travelvaidya.com',
@@ -124,7 +121,6 @@ const OPERATORS = [
     rating: 'Varies by sub-operator',
     startPrice: '₹32,479',
     model: 'Marketplace aggregator — 10–20% commission',
-    regStatus: '⚠️ Sub-operators vary',
     seniorPkg: '⚠️ Not specifically offered',
     contact: 'Customer service centre',
     url: 'https://www.makemytrip.com',
@@ -143,7 +139,6 @@ const OPERATORS = [
     rating: 'Varies by listed operator',
     startPrice: '₹15,500 (verify inclusions)',
     model: 'Aggregator — verify actual operator',
-    regStatus: '⚠️ Platform does not verify operators',
     seniorPkg: '⚠️ Not specifically offered',
     contact: 'Platform customer support',
     url: 'https://www.thrillophilia.com',
@@ -162,7 +157,6 @@ const OPERATORS = [
     rating: '4.5★ (limited reviews)',
     startPrice: '~₹22,000 (estimated)',
     model: 'Direct operator — verify',
-    regStatus: '⚠️ Verify UTDB registration',
     seniorPkg: '⚠️ Not confirmed',
     contact: 'Via website',
     url: '#',
@@ -181,7 +175,6 @@ const OPERATORS = [
     rating: 'Not verified',
     startPrice: '₹15,500 (listed)',
     model: 'Verify: direct operator or aggregator?',
-    regStatus: '⚠️ Not independently verified',
     seniorPkg: '⚠️ Unknown',
     contact: 'Online platform',
     url: '#',
@@ -273,7 +266,7 @@ export default function BestOperators() {
               {/* Card body */}
               <div style={{ padding: '16px 20px' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 10, marginBottom: 14 }}>
-                  {[['Starting price', op.startPrice],['Booking model', op.model],['UTDB registration', op.regStatus],['Senior package', op.seniorPkg]].map(([k,v]) => (
+                  {[['Starting price', op.startPrice],['Booking model', op.model],['Senior package', op.seniorPkg]].map(([k,v]) => (
                     <div key={k} style={{ background: 'var(--bg)', borderRadius: 8, padding: '8px 12px' }}>
                       <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 2 }}>{k}</div>
                       <div style={{ fontSize: 13, color: 'var(--navy)', fontWeight: 600 }}>{v}</div>

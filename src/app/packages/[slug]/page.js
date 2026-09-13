@@ -101,7 +101,7 @@ function Schemas({ pkg }) {
 
   // Product schema for the package itself. NO aggregateRating and NO review —
   // see the full reasoning on the identical node in ./schemas.js. Short
-  // version: the 54 Google reviews rate the business, not this package, and
+  // version: the Google reviews rate the business, not this package, and
   // restating them as 39 separate product ratings is a domain-level manual
   // action risk. The rating stays on the Organization node in layout.js.
   const product = {
@@ -832,12 +832,12 @@ export default async function PackageDetailPage({ params }) {
                 <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator, not a broker. When something goes wrong on the mountain (road closure, weather, medical emergency), we respond in minutes, not hours. Delhi-based aggregators call a subcontractor. We call our own driver.</div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ 4.7/5 · 54 verified Google reviews</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our 54 reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has held at 4.7/5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ {SITE.reviews.rating}/5 · {SITE.reviews.count} verified Google reviews</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our {SITE.reviews.count} reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has stayed above 4.5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Uttarakhand Tourism Registered</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Registered with the Uttarakhand Tourism Development Board. Member of IATO (Indian Association of Tour Operators). All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. You can verify our registration at the Haridwar Tourism office.</div>
+                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Permits & licences</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. Ask us for the vehicle and driver documents before you travel — we send them on WhatsApp.</div>
               </div>
             </div>
 
@@ -867,8 +867,8 @@ export default async function PackageDetailPage({ params }) {
               {[
                 { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
                 { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
-                { icon:'⭐', title:'4.7/5 · 54 verified Google reviews', body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. Our 4.7/5 rating over 15 years has currently at 4.7/5.' },
-                { icon:'📋', title:'Uttarakhand Tourism Registered', body:'Registered with Uttarakhand Tourism Development Board. Member of IATO. All vehicles hold valid tourism permits and hill-route licences. Registration verifiable at the Haridwar Tourism office.' },
+                { icon:'⭐', title:`${SITE.reviews.rating}/5 · ${SITE.reviews.count} verified Google reviews`, body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. The rating has stayed above 4.5 over 15 seasons.' },
+                { icon:'📋', title:'Permits & licences', body:'All vehicles hold valid tourism permits, insurance and hill-route licences. Vehicle and driver documents are sent on WhatsApp on request before you travel.' },
               ].map(item => (
                 <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                   <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>

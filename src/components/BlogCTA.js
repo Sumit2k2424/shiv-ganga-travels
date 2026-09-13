@@ -142,7 +142,7 @@ export default function BlogCTA({
 
       <dl className="blog-cta__ledger">
         {[
-          ['4.7 / 5', '54 Google reviews'],
+          [`${SITE.reviews.rating} / 5`, `${SITE.reviews.count} Google reviews`],
           ['2010', 'Operating since'],
           ['0%', 'Agent commission'],
           ['24×7', 'On-route support'],

@@ -39,10 +39,10 @@ export const MEDIA_KIT = {
   // The boilerplate. Wire desks paste this verbatim at the foot of a story, so
   // it must be accurate, dull, and free of adjectives they would have to strip.
   boilerplateShort:
-    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010 and registered with the Uttarakhand Tourism Development Board. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.',
+    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.',
 
   boilerplateLong:
-    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It is registered with the Uttarakhand Tourism Development Board and operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season since 2010, including the years following the 2013 Kedarnath floods.',
+    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season since 2010, including the years following the 2013 Kedarnath floods.',
 
   // Named, real, on the record. Never invent a spokesperson — the founder is the
   // only Person entity this site asserts, and he resolves to /#founder.
@@ -63,7 +63,6 @@ export const MEDIA_KIT = {
   fastFacts: [
     ['Founded', '2010'],
     ['Head office', 'Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand 249410'],
-    ['Registration', 'Uttarakhand Tourism Development Board'],
     ['Operating model', 'Direct operator — own vehicles, drivers and hotel contracts'],
     ['Circuits operated', 'Char Dham, Do Dham, Teen Dham, Ek Dham, Panch Kedar, Panch Badri, Adi Kailash'],
     ['Seasons operated', '2010 – present, including post-2013 rebuilding years'],

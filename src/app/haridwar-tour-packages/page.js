@@ -57,7 +57,7 @@ function Schema() {
       },
       {
         '@type': 'Question', name: 'What is the best travel agency in Haridwar for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Shiv Ganga Travels is one of Haridwar\'s most trusted Char Dham Yatra operators, founded in 2010 by a retired Indian Army officer. With 50,000+ pilgrims served, a 4.7/5 Google rating from 54 reviews, and Uttarakhand Tourism registration, we are a direct operator with zero commission. Located at Saptrishi Road, Bhupatwala, Haridwar. Contact: +91-7817996730.' },
+        acceptedAnswer: { '@type': 'Answer', text: `Shiv Ganga Travels is one of Haridwar's most trusted Char Dham Yatra operators, founded in 2010 by a retired Indian Army officer. With 50,000+ pilgrims served and a ${SITE.reviews.rating}/5 Google rating from ${SITE.reviews.count} reviews, we are a direct operator with zero commission. Located at Saptrishi Road, Bhupatwala, Haridwar. Contact: +91-7817996730.` },
       },
       {
         '@type': 'Question', name: 'How many days are needed for a Haridwar trip?',
@@ -93,7 +93,7 @@ export default function HaridwarTourPackages() {
             Packages from <strong style={{ color: '#FFD166' }}>₹2,999/person</strong> · Har Ki Pauri · Ganga Aarti · Mansa Devi · Haridwar + Rishikesh combo
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🙏 Har Ki Pauri','🔥 Ganga Aarti','⛡ Mansa Devi ropeway','🌊 Sacred Ganga dip','⭐ 4.7/5 · 54 reviews'].map(t => (
+            {['🙏 Har Ki Pauri','🔥 Ganga Aarti','⛡ Mansa Devi ropeway','🌊 Sacred Ganga dip',`⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>
@@ -215,7 +215,7 @@ export default function HaridwarTourPackages() {
 
         <h2 style={h2}>About Shiv Ganga Travels — Haridwar's Direct Operator</h2>
         <p style={p}>
-          We are based at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, Shiv Ganga Travels has served 50,000+ pilgrims across 15 seasons. We are registered with Uttarakhand Tourism Development Board and hold a 4.7/5 rating from 54 verified Google reviews. For Haridwar tour packages, you call us, we arrange — no middleman, no platform fee, no commission markup.
+          We are based at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, Shiv Ganga Travels has served 50,000+ pilgrims across 15 seasons. We hold a {SITE.reviews.rating}/5 rating from {SITE.reviews.count} public Google reviews. For Haridwar tour packages, you call us, we arrange — no middleman, no platform fee, no commission markup.
         </p>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>

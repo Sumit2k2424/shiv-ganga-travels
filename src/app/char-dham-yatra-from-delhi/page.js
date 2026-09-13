@@ -75,7 +75,7 @@ export default function Page() {
             250–335 km depending on pickup point · All-inclusive from <strong style={{ color:'#FFD166' }}>{ '₹17,200' }/person</strong> · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['🚂 Train / Road','✅ Zero commission','🙏 VIP darshan included','⭐ 4.7/5 · 54 reviews'].map(t=>(
+            {['🚂 Train / Road','✅ Zero commission','🙏 VIP darshan included',`⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t=>(
               <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

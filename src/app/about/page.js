@@ -108,7 +108,6 @@ function Schema() {
     // NO aggregateRating here — this org shares its @id with the sitewide
     // TravelAgency in layout.js, which already carries the rating. A second
     // rated node here triggered Google's "multiple aggregate ratings" error.
-    award: 'Uttarakhand Tourism Registered Tour Operator',
   };
 
   return (
@@ -199,7 +198,7 @@ export default function AboutPage() {
           </div>
 
         <AnswerBox>
-          <strong>Shiv Ganga Travels is a direct Char Dham operator based in Haridwar, founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer.</strong> We run the vehicles and hold the hotel bookings ourselves rather than reselling another operator's trip, which is why our prices carry no agent commission. Over 50,000 pilgrims since 2010, rated 4.7 from 54 Google reviews. The office is on Saptrishi Road near Shantikunj Gate No. 1, and you are welcome to visit before you book.
+          <strong>Shiv Ganga Travels is a direct Char Dham operator based in Haridwar, founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer.</strong> We run the vehicles and hold the hotel bookings ourselves rather than reselling another operator's trip, which is why our prices carry no agent commission. Over 50,000 pilgrims since 2010, rated {SITE.reviews.rating} from {SITE.reviews.count} Google reviews. The office is on Saptrishi Road near Shantikunj Gate No. 1, and you are welcome to visit before you book.
         </AnswerBox>
 
           <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>

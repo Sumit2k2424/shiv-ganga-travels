@@ -66,7 +66,7 @@ function Schema() {
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
     // No aggregateRating — same reasoning as the twin node in homeSchema.js:
-    // the 54 reviews rate the business, and layout.js already asserts them on
+    // the reviews rate the business, and layout.js already asserts them on
     // the Organization node that renders on this page.
   };
 

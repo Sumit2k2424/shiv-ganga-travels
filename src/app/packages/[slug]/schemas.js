@@ -59,8 +59,8 @@ export default function Schemas({ pkg }) {
   // Product schema for the package itself.
   //
   // NO aggregateRating and NO review here, deliberately. This node used to
-  // carry the company's 4.7/54 Google rating plus three fixed review texts,
-  // reproduced identically on all 39 package pages. Those 54 reviews are of
+  // carry the company's Google rating plus three fixed review texts,
+  // reproduced identically on all 39 package pages. Those reviews are of
   // the business, not of "Yamunotri Gangotri Do Dham 4N/5D" — and Google's
   // structured data policy requires the rating to be about the specific item
   // under review. Reusing one business rating as 39 different product ratings
@@ -68,7 +68,7 @@ export default function Schemas({ pkg }) {
   // for it lands on the whole domain rather than the offending pages.
   //
   // The rating is still asserted where it is true: the sitewide Organization
-  // node in layout.js, which is what the 54 reviews actually rate. If per-
+  // node in layout.js, which is what the reviews actually rate. If per-
   // package ratings are wanted later, they need per-package reviews we have
   // genuinely collected — one real review per package beats 54 borrowed ones.
   const product = {

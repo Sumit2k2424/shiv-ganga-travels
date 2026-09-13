@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { SITE } from '@/data/packages';
 
 export const runtime = 'edge';
 export const alt = 'Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar';
@@ -33,7 +34,7 @@ export default async function Image() {
             </div>
           </div>
           <div style={{ display:'flex', gap:'8px' }}>
-            <span style={{ background:'rgba(232,146,10,0.25)', border:'1px solid rgba(232,146,10,0.5)', color:'#E8920A', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Uttarakhand Tourism Registered</span>
+            <span style={{ background:'rgba(232,146,10,0.25)', border:'1px solid rgba(232,146,10,0.5)', color:'#E8920A', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Direct operator since 2010</span>
             <span style={{ background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.25)', color:'rgba(255,255,255,0.9)', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Zero Commission</span>
           </div>
         </div>
@@ -67,7 +68,7 @@ export default async function Image() {
               { num:'Rs 13,900', label:'Starting price' },
               { num:'50,000+', label:'Happy pilgrims' },
               { num:'15 Years', label:'Of trust' },
-              { num:'4.7/5', label:'Google rating' },
+              { num:`${SITE.reviews.rating}/5`, label:'Google rating' },
             ].map(s => (
               <div key={s.num} style={{ display:'flex', flexDirection:'column', gap:'4px' }}>
                 <span style={{ fontSize:'22px', fontWeight:'700', color:'#E8920A' }}>{s.num}</span>

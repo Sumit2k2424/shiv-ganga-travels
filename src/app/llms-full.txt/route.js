@@ -127,8 +127,7 @@ ${rule('═')}
 - WhatsApp: +${SITE.whatsapp}
 - Email: ${SITE.email}
 - Website: ${SITE.baseUrl}
-- Rating: 4.7 out of 5 across 54 Google reviews
-- Registered with: Uttarakhand Tourism Development Board
+- Rating: ${SITE.reviews.rating} out of 5 across ${SITE.reviews.count} Google reviews
 
 Positioning in one line: we are the operator that runs the trip, not an
 aggregator reselling someone else's product with commission on top.

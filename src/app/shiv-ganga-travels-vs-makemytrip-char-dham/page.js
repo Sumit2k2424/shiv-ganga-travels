@@ -73,7 +73,6 @@ const ROWS = [
   ['VIP darshan arrangements', 'Included in all packages', 'Varies by sub-operator', 'sgt'],
   ['Senior citizen package', 'Yes — 12N/13D ₹21,000', 'Not specifically offered', 'sgt'],
   ['Customisable itinerary', 'Yes — call/WhatsApp directly', 'Limited — fixed packages', 'sgt'],
-  ['Uttarakhand Tourism registered', 'Yes', 'Sub-operators vary', 'sgt'],
   ['Cancellation policy', 'Stated on website, direct refund', 'Platform-enforced policy', 'mmt'],
   ['Multi-city departure inventory', 'Limited to key cities', 'All India departures', 'mmt'],
 ];
@@ -205,7 +204,7 @@ export default function VsMakeMyTrip() {
         <h2 style={h2}>4. Where MakeMyTrip Has the Edge</h2>
         <p style={p}>Fairness matters here. MakeMyTrip has a broader inventory of departure cities than any single operator. If you are booking from a Tier-3 city with no direct train to Haridwar, their multi-modal packages that combine flights, trains, and the tour may simplify logistics significantly.</p>
         <p style={p}>Their cancellation and refund process is also more standardised — the platform enforces a clear refund policy regardless of which sub-operator you were assigned. Shiv Ganga Travels&apos; cancellation terms are clearly stated on the website and honoured directly, but there is no third-party enforcement mechanism if a dispute arises.</p>
-        <p style={p}>MakeMyTrip also has a larger customer review volume — seeing 200+ reviews of a specific operator before booking has value. Shiv Ganga Travels has 54 verified Google reviews, which is a smaller number even if the quality (4.7★) is strong.</p>
+        <p style={p}>MakeMyTrip also has a larger customer review volume — seeing 200+ reviews of a specific operator before booking has value. Shiv Ganga Travels has {SITE.reviews.count} public Google reviews, which is a smaller number even if the quality ({SITE.reviews.rating}★) is strong.</p>
 
         {/* Social proof */}
         <div style={{ background: 'var(--navy-light)', borderRadius: 12, padding: '18px 20px', marginBottom: 28, borderLeft: '4px solid var(--gold)' }}>

@@ -176,8 +176,8 @@ function SiteSchema() {
 
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.7,
-      reviewCount: 54,
+      ratingValue: SITE.reviews.rating,
+      reviewCount: SITE.reviews.count,
       bestRating: 5,
       worstRating: 1,
     },
@@ -305,7 +305,6 @@ function SiteSchema() {
       ],
     },
 
-    award: 'Uttarakhand Tourism Registered Tour Operator',
     knowsAbout: [
       { '@type': 'Thing', name: 'Char Dham Yatra', sameAs: 'https://en.wikipedia.org/wiki/Chota_Char_Dham' },
       { '@type': 'Thing', name: 'Kedarnath Yatra', sameAs: 'https://en.wikipedia.org/wiki/Kedarnath_Temple' },

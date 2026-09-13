@@ -128,7 +128,7 @@ export default function HeroSection() {
           padding:'7px 18px', borderRadius:100,
           marginBottom:24,
         }}>
-          Uttarakhand Tourism Registered · Est. {SITE.established}
+          Direct operator · Haridwar · Est. {SITE.established}
         </div>
 
         <h1 className="display-title speakable-answer hero-title" style={{

@@ -53,9 +53,9 @@ function Schema() {
       offerCount: '5',
       seller: { '@type': 'Organization', name: SITE.name },
     },
-    // No aggregateRating: the 54 Google reviews rate the business, and are
+    // No aggregateRating: the Google reviews rate the business, and are
     // asserted once on the Organization node in layout.js. Restating them here
-    // would claim 54 reviews of the "Char Dham Yatra Package 2026" product
+    // would claim them as reviews of the "Char Dham Yatra Package 2026" product
     // specifically, which is not what those reviews are.
   };
 
@@ -540,8 +540,7 @@ export default function CharDhamYatra() {
             { icon:'💰', point:'No middleman pricing — pay us directly' },
             { icon:'🎫', point:'VIP darshan at all 4 dhams — skip queues' },
             { icon:'🚌', point:'Own AC fleet — no rental vehicles' },
-            { icon:'⭐', point:'4.7/5 Google rating — 54 verified reviews' },
-            { icon:'🛡️', point:'Uttarakhand Tourism Board registered operator' },
+            { icon:'⭐', point:`${SITE.reviews.rating}/5 Google rating — ${SITE.reviews.count} verified reviews` },
             { icon:'💊', point:'Oxygen cylinder + first aid on every vehicle' },
           ].map(w => (
             <li key={w.point} style={{ display:'flex', gap:10, alignItems:'flex-start', padding:'12px 14px', background:'var(--bg)', borderRadius:10, border:'1px solid hsl(var(--border))' }}>

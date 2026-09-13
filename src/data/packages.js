@@ -14,6 +14,11 @@ export const SITE = {
   email      : 'support@shivgangatravels.com',
   address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India',
   established: 2010,
+  // Google Business Profile rating and review count — the ONLY place these
+  // numbers live. Every badge, pill, FAQ answer, JSON-LD aggregateRating and
+  // llms.txt line interpolates from here (they used to be typed into ~35
+  // files and drifted). Update both when the profile moves; note the date.
+  reviews: { rating: 4.6, count: 67, checked: '2026-09-13' },
   baseUrl    : 'https://www.shivgangatravels.com',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
@@ -1940,13 +1945,12 @@ export const TRUST = {
   stats: [
     { value:'15+',     label:'Years Operating',  sub:'Direct operator since 2010' },
     { value:'50,000+', label:'Pilgrims Served',  sub:'Across every season since 2010' },
-    { value:'4.7/5',   label:'Google Rating',    sub:'Public, verifiable reviews' },
+    { value:`${SITE.reviews.rating}/5`, label:'Google Rating', sub:'Public, verifiable reviews' },
   ],
   // IATA / IATO / ISO badges removed until accreditation numbers can be
   // shown alongside them — an unverifiable badge costs more trust than it
   // buys. Restore any of these with its registration number when available.
   certifications: [
-    { text:'Registered with Uttarakhand Tourism Development Board', url:'https://uttarakhandtourism.gov.in', linkText:'Verify →' },
     { text:'Yatra Permit Authority: Uttarakhand Tourism', url:'https://registrationandtouristcare.uk.gov.in', linkText:'Registration Portal →' },
     { text:'Government-approved Char Dham Yatra Operator 2026', url:null, linkText:null },
   ],
