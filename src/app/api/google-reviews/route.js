@@ -1,6 +1,6 @@
 // GET /api/google-reviews
 // Auto-discovers Place ID via text search, then fetches real reviews.
-// Cached 24 hrs. Requires GOOGLE_PLACES_API_KEY in Vercel env vars.
+// Cached 24 hrs. Requires GOOGLE_MAPS_API_KEY (or legacy GOOGLE_PLACES_API_KEY) in Vercel env vars.
 
 const BUSINESS_NAME = 'Shiv Ganga Travels';
 const BUSINESS_LAT  = 29.9896838;
@@ -94,11 +94,11 @@ async function fetchReviewsNew(apiKey, placeId) {
 }
 
 export async function GET() {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.GOOGLE_PLACES_API_KEY;
 
   if (!apiKey || apiKey === 'your_api_key_here') {
     return Response.json({
-      error: 'GOOGLE_PLACES_API_KEY not configured',
+      error: 'GOOGLE_MAPS_API_KEY not configured',
       reviews: [], rating: null, total: null,
       mapsUrl: MAPS_URL, reviewUrl: REVIEW_URL,
     });
