@@ -118,7 +118,7 @@ if (stale.length) {
 const WINDOWS = [
   { date: SITE.season + '-10-15', name: 'Closing dates announced', angle: 'Desks run a "what happens to late bookings" piece. An operator on the route is the source they need.' },
   { date: SITE.season + '-11-13', name: 'Season closes',           angle: 'Season-wrap coverage. Offer /char-dham-yatra-statistics as the numbers source before someone else does.' },
-  { date: (SITE.season + 1) + '-02-15', name: 'Registration opens', angle: 'The single most useful thing to be quoted on all year, and the moment the fake-registration-portal story runs. /char-dham-yatra-scams is the asset.' },
+  { date: (SITE.season + 1) + '-02-15', name: 'Registration opens', angle: 'The single most useful thing to be quoted on all year, and the moment the fake-registration-portal story runs. /blog/char-dham-yatra-registration is the asset.' },
   { date: (SITE.season + 1) + '-04-19', name: 'Season opens',       angle: 'Every desk covering Uttarakhand runs something. Pitch two to four weeks ahead, not on the day.' },
 ];
 

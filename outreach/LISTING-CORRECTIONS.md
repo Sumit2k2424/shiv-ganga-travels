@@ -1,6 +1,6 @@
 # Listing corrections — do all three in one sitting
 
-Generated 2026-09-01 from `src/data/packages.js` and `src/data/social.js`.
+Generated 2026-09-14 from `src/data/packages.js` and `src/data/social.js`.
 Regenerate rather than editing by hand.
 
 ## Why together
@@ -21,7 +21,6 @@ Phone     +91-7817996730
 Email     support@shivgangatravels.com
 Website   https://www.shivgangatravels.com
 Hours     9 AM - 8 PM daily (all seven days)
-Founded   2010
 ```
 
 Spelling that matters: **Bhupatwala**, not Bhoopatwala. **Saptrishi Road**, not
@@ -68,7 +67,7 @@ Edit by hand. The dialog does not accept automated input reliably.
 | Business information → Hours | 07:00–21:00, seven days | 09:00–20:00, seven days |
 | Business information → Location | Bhoopatwala, + "Motichur Range" | Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India |
 | **Edit products** (not Business information) | ₹21,000 on the 9N/10D package | ₹13,900 |
-| Business information → About | Opening date 10 Aug 2017 | 2010, to match the description that already says "since 2010" |
+| Business information → About | Description says "since 2010" | Remove it. The founding year could not be verified and came off the site on 14 Sep 2026; leave the opening date alone until Dhanesh confirms one in writing |
 
 The ₹21,000 is the senior 12N/13D price sitting on the 9N/10D label. It shows
 in the Booking options module beside "Instant confirmation", which is the worst

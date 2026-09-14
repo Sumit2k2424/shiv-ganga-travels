@@ -9,7 +9,7 @@ Dear [[ WRITE THIS — never generated, see the note in draft.mjs ]] (a name, if
 
 I would like to enquire about a listing for Shiv Ganga Travels on sacredyatra.com.
 
-Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010 and registered with the Uttarakhand Tourism Development Board. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
+Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
 
 Details are below and in the attached profile. If there is a form or a fee I have missed,
 please point me to it.

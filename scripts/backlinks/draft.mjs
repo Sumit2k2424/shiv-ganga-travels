@@ -183,16 +183,16 @@ function checklist(p) {
 function pitch(p) {
   const isPress = p.category === 'press';
   const subject = isPress
-    ? 'Char Dham ' + SITE.season + ' — operator on the route since 2010, available for comment'
+    ? 'Char Dham ' + SITE.season + ' — Haridwar operator on the route, available for comment'
     : 'Listing enquiry — Shiv Ganga Travels, Char Dham operator, Haridwar';
 
   const body = isPress
     ? [
       'Dear ' + SLOT + ' (find the actual name of the desk editor — a pitch to "Sir/Madam" is a pitch to nobody),',
       '',
-      'I run Shiv Ganga Travels, a Char Dham operator based in Bhupatwala, Haridwar. We have',
-      'taken pilgrims up the Garhwal route every season since 2010, including the years after the',
-      '2013 Kedarnath floods.',
+      'I run Shiv Ganga Travels, a direct Char Dham operator based in Bhupatwala, Haridwar, with',
+      'our own vehicles and drivers. Before that I served in the Indian Army. We have carried more',
+      'than fifty thousand pilgrims on the Garhwal route.',
       '',
       'I am writing because ' + SLOT + ' (the story, in one sentence — what is happening now that',
       'their readers need explained. Not what we sell).',
@@ -282,7 +282,7 @@ function listing(p) {
     'WHATSAPP   ' + SITE.phone,
     'EMAIL      ' + SITE.email,
     'WEBSITE    https://www.' + OUR_DOMAIN + p.target,
-    'FOUNDED    ' + SITE.established,
+    'FOUNDED    (leave blank — no founding year is published; see the note at the top of src/data/press.js)',
     'HOURS      ' + SITE.hoursHuman + ' daily (WhatsApp answered outside these hours)',
     '',
     'SHORT DESCRIPTION (~50 words)',
@@ -344,7 +344,7 @@ function article(p) {
     '',
     '## Facts available without inventing anything',
     '',
-    '  · Operating since ' + SITE.established + ', every season including post-2013 rebuilding.',
+    '  · Direct operator — own vehicles, drivers and hotel contracts; 50,000+ pilgrims carried.',
     '  · ' + facts.packageCount + ' published circuits; Char Dham 9N/10D from ' + inr(facts.charDhamFrom) + ' ex-Haridwar.',
     '  · Season ' + SITE.season + ' dates, road status, distances and pony rates: all published on site.',
     '  · Sourced figures: https://www.' + OUR_DOMAIN + '/char-dham-yatra-statistics',
@@ -386,10 +386,10 @@ function answer(p) {
     '',
     '## What we know better than the people currently answering',
     '',
-    '  · Registration mechanics, and which portals are fake — /char-dham-yatra-scams',
-    '  · Real pony, palki and kandi rates — /kedarnath-pony-palki-kandi-rates, /yamunotri-pony-palki-rates',
+    '  · Registration mechanics and the official portal — /blog/char-dham-yatra-registration',
+    '  · Real pony, palki and kandi rates — /kedarnath-pony-palki-kandi-rates',
     '  · Road timings and distances that match the actual drive — /char-dham-yatra-route-map',
-    '  · Altitude and who should not attempt the trek — /altitude-sickness-char-dham',
+    '  · Altitude and who should not attempt the trek — /blog/char-dham-yatra-for-heart-patients',
     '',
     '## Target',
     '',
