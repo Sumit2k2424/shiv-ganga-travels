@@ -103,29 +103,13 @@ function Schemas({ pkg }) {
     keywords:(pkg.tags||[]).join(', '),
   };
 
-  // Product schema for the package itself. NO aggregateRating and NO review —
-  // see the full reasoning on the identical node in ./schemas.js. Short
-  // version: the Google reviews rate the business, not this package, and
-  // restating them as 39 separate product ratings is a domain-level manual
-  // action risk. The rating stays on the Organization node in layout.js.
-  const product = {
-    '@context':'https://schema.org','@type':'Product',
-    '@id':`${SITE.baseUrl}/packages/${pkg.slug}#product`,
-    name:pkg.name,
-    description:pkg.metaDesc,
-    url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    image:pkg.photo||'https://www.shivgangatravels.com/logo.png',
-    brand:{ '@type':'Brand', name:SITE.name },
-    offers:{
-      '@type':'Offer',
-      price:pkg.price.discounted,
-      priceCurrency:'INR',
-      priceValidUntil:'2026-10-31',
-      availability:'https://schema.org/InStock',
-      seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
-      url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    },
-  };
+  // No Product node. There used to be one alongside the TouristTrip above,
+  // carrying the same name, description and offer. A tour package is a
+  // service, and Google's Product / merchant-listing structured data is for
+  // physical goods on a product page — 39 packages marked up as Products put
+  // the site into Search Console's "Merchant listings" and "Product snippets"
+  // reports for things that are not products. The TouristTrip already carries
+  // the offer; the duplicate node added nothing but a markup/content mismatch.
 
   const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
   const breadcrumb = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
@@ -151,7 +135,6 @@ function Schemas({ pkg }) {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(breadcrumb) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(author) }}/>

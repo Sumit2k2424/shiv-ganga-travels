@@ -3,7 +3,7 @@
 
    Rebuilt in the `lux-` editorial system. Preserved verbatim:
    · metadata (title/description/keywords/OG/Twitter/canonical)
-   · <Schema/> — Product + WebPage(speakable) + FAQPage JSON-LD
+   · <Schema/> — TouristTrip + WebPage(speakable) + FAQPage JSON-LD
    · <HeroSection/> — already cinematic, LCP-tuned, .speakable-answer
    · every link, price, CTA and the full internal-link mesh (SEO)
 
@@ -49,14 +49,22 @@ export const metadata = {
 
 /* ─── Schemas (unchanged) ─── */
 function Schema() {
-  const charDhamProduct = {
+  // TouristTrip, not Product. A tour package is a service, and Google's
+  // Product / merchant-listing structured data is scoped to physical goods
+  // sold on a product page. Marking a yatra up as a Product put the site into
+  // Search Console's "Merchant listings" and "Product snippets" reports —
+  // a mismatch between markup and what the page actually is, which is exactly
+  // the kind of signal the spam and quality systems weigh. TouristTrip carries
+  // the same offer, and is what schema.org defines for a guided tour.
+  const charDhamTrip = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'TouristTrip',
     name: 'Char Dham Yatra Package 2026 from Haridwar',
     image: [`${SITE.baseUrl}/opengraph-image`],
     description: 'All-inclusive Char Dham Yatra package covering Yamunotri, Gangotri, Kedarnath and Badrinath. 9N/10D from Haridwar. Direct operator, no commission.',
     url: `${SITE.baseUrl}/char-dham-yatra`,
-    brand: { '@type': 'Brand', name: 'Shiv Ganga Travels' },
+    touristType: 'Pilgrims',
+    provider: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     offers: {
       '@type': 'Offer',
       price: '13900',
@@ -66,9 +74,8 @@ function Schema() {
       url: `${SITE.baseUrl}/char-dham-yatra`,
       seller: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     },
-    // No aggregateRating — same reasoning as the twin node in homeSchema.js:
-    // the reviews rate the business, and layout.js already asserts them on
-    // the Organization node that renders on this page.
+    // No aggregateRating and no review: the Google reviews rate the business
+    // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
   const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
@@ -83,7 +90,7 @@ function Schema() {
     primaryImageOfPage:{ '@type':'ImageObject', url:`${SITE.baseUrl}/opengraph-image` },
     speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] },
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamProduct) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamTrip) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
 }
 
 /* ─── helpers ─── */
@@ -235,7 +242,8 @@ const CAB_ROUTES = [
   { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500', href:'/cabs/haridwar-to-kedarnath-cab' },
   { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500', href:'/cabs/haridwar-to-badrinath-cab' },
   { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-gangotri-cab' },
-  { from:'Delhi',    to:'Haridwar',  dist:'210 km', time:'4–5 hrs',  fare:'from ₹2,800', href:'/cabs/delhi-to-haridwar-cab' },
+  // Delhi → Haridwar was noindexed on 13 Sep 2026; the homepage links only indexed routes.
+  { from:'Haridwar', to:'Yamunotri', dist:'222 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-yamunotri-cab' },
 ];
 
 const STEPS = [

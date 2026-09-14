@@ -23,16 +23,18 @@ const PKG_LINKS = [
   { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        imgAlt:'Haridwar Ganga Ghats — All Packages', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
 ];
 
+// Every target here must be an indexable page: the nav renders on every route.
+// The cab origin/destination hubs and long-tail routes were noindexed on
+// 13 Sep 2026, so the menu links only the indexed point-to-point routes.
 const CAB_LINKS = [
   { label:'All Cabs & Fares',      href:'/cabs',                        sub:'Book online · fixed fares · all routes', icon:'car' },
   { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'Innova · Ertiga · Tempo · Full circuit',  icon:'car' },
-  { label:'Cabs from Haridwar',    href:'/cabs/from/haridwar',          sub:'9 routes · our home base · lowest fares', icon:'city' },
-  { label:'Cabs to Kedarnath',     href:'/cabs/to/kedarnath',           sub:'Fares from every pickup city',            icon:'temple' },
-  { label:'Cabs to Badrinath',     href:'/cabs/to/badrinath',           sub:'Road reaches the temple · no trek',       icon:'temple' },
+  { label:'Rishikesh → Kedarnath', href:'/cabs/rishikesh-to-kedarnath-cab', sub:'210 km · 8–9 hrs · Gaurikund drop',  icon:'temple' },
+  { label:'Dehradun → Kedarnath',  href:'/cabs/dehradun-to-kedarnath-cab', sub:'250 km · 9–10 hrs · from ₹4,500',       icon:'temple' },
   { label:'Haridwar → Kedarnath',  href:'/cabs/haridwar-to-kedarnath-cab', sub:'235 km · 8–9 hrs · from ₹3,500',      icon:'route' },
   { label:'Haridwar → Badrinath',  href:'/cabs/haridwar-to-badrinath-cab', sub:'320 km · 10–11 hrs · from ₹4,500',    icon:'route' },
   { label:'Haridwar → Gangotri',   href:'/cabs/haridwar-to-gangotri-cab',  sub:'265 km · 8–9 hrs · from ₹4,000',      icon:'route' },
-  { label:'Delhi → Haridwar',      href:'/cabs/delhi-to-haridwar-cab',     sub:'210 km · 4–5 hrs · from ₹2,800',      icon:'car' },
+  { label:'Dehradun Airport → Haridwar', href:'/dehradun-airport-to-haridwar-taxi', sub:'35 km · ~1 hr · ₹1,200 fixed', icon:'car' },
 ];
 
 /* Editorial chrome styling — scoped to the navbar. Uses the site-wide

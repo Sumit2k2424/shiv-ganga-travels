@@ -1,5 +1,10 @@
-/* Footer link architecture — every route preserved verbatim.
-   This is the site's internal-link backbone; do not prune it. */
+/* Footer link architecture.
+   This is the site's internal-link backbone. One rule: every target here must
+   be an indexable, 200 page. The footer renders on every route, so a link to a
+   noindexed or redirected page is repeated ~200 times sitewide — the strongest
+   possible internal signal, pointed at a page we have told Google to drop.
+   The cab origin/destination hubs and the long-tail cab routes were noindexed
+   on 13 Sep 2026; the footer now links only the indexed cab routes. */
 
 import { LANGUAGE_PAGES } from '@/data/languages';
 
@@ -29,16 +34,16 @@ export const COLS = [
     {l:'Panch Badri Yatra',          h:'/panch-badri-yatra'},
     {l:'Chopta & Tungnath',          h:'/chopta-tungnath'},
     {l:'Uttarakhand Tours',          h:'/uttarakhand-tour-packages'},
-    {l:'Valley of Flowers',          h:'/packages/valley-of-flowers-hemkund-sahib-5n-6d'},
+    {l:'Hemkund Sahib Yatra',        h:'/hemkund-sahib-yatra'},
   ]},
   { heading:'Cabs & Transport', links:[
     {l:'All Uttarakhand Cabs',         h:'/cabs'},
     {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
-    {l:'Cabs from Haridwar',          h:'/cabs/from/haridwar'},
-    {l:'Cabs to Kedarnath',           h:'/cabs/to/kedarnath'},
-    {l:'Cabs to Badrinath',           h:'/cabs/to/badrinath'},
+    {l:'Haridwar → Badrinath Cab',    h:'/cabs/haridwar-to-badrinath-cab'},
+    {l:'Rishikesh → Kedarnath Cab',   h:'/cabs/rishikesh-to-kedarnath-cab'},
+    {l:'Dehradun → Kedarnath Cab',    h:'/cabs/dehradun-to-kedarnath-cab'},
     {l:'Haridwar → Kedarnath Cab',    h:'/cabs/haridwar-to-kedarnath-cab'},
-    {l:'Delhi → Haridwar Cab',        h:'/cabs/delhi-to-haridwar-cab'},
+    {l:'Haridwar → Gangotri Cab',     h:'/cabs/haridwar-to-gangotri-cab'},
   ]},
   { heading:'Guides & Tools', links:[
     {l:'2026 New Rules',             h:'/blog/char-dham-yatra-2026-new-rules'},

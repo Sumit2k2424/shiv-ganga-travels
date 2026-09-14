@@ -37,17 +37,22 @@ export const metadata = {
 };
 
 function Schema() {
-  // The full TravelAgency organization node (with its single sitewide
-  // aggregateRating) is emitted once in layout.js. Emitting a second rated
-  // TravelAgency here triggered Google's "multiple aggregate ratings" error,
-  // so this page only carries the Product node below.
-  const product = {
+  // The TravelAgency organization node is emitted once in layout.js. This
+  // page carries a TouristTrip node for the yatra itself — not a Product.
+  // A guided pilgrimage is a service; Google's Product / merchant-listing
+  // structured data is for physical goods on a product page, and marking a
+  // tour up that way had the site showing in Search Console's "Merchant
+  // listings" and "Product snippets" reports. TouristTrip is the schema.org
+  // type for a tour and takes the same AggregateOffer.
+  const trip = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'TouristTrip',
     name: 'Char Dham Yatra Package 2026',
     image: [`${SITE.baseUrl}/opengraph-image`],
     description: 'All-inclusive Char Dham Yatra package from Haridwar covering Yamunotri, Gangotri, Kedarnath and Badrinath.',
-    brand: { '@type': 'Brand', name: SITE.name },
+    url: `${SITE.baseUrl}/char-dham-yatra`,
+    touristType: 'Pilgrims',
+    provider: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '13900',
@@ -56,10 +61,8 @@ function Schema() {
       offerCount: '5',
       seller: { '@type': 'Organization', name: SITE.name },
     },
-    // No aggregateRating: the Google reviews rate the business, and are
-    // asserted once on the Organization node in layout.js. Restating them here
-    // would claim them as reviews of the "Char Dham Yatra Package 2026" product
-    // specifically, which is not what those reviews are.
+    // No aggregateRating and no review: the Google reviews rate the business
+    // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
   const faqSchema = {
@@ -74,7 +77,7 @@ function Schema() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
