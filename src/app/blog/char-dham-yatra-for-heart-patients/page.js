@@ -93,7 +93,7 @@ export default function Page() {
         </div>
 
         <p style={p}>Every year, we receive dozens of WhatsApp messages that read some version of: "My father had a heart bypass two years ago. Can he do Char Dham?" or "I am a diabetic on insulin. Is Kedarnath safe for me?" These are not edge-case questions — they are among the most common things our team discusses with pilgrims planning the yatra.</p>
-        <p style={p}>The answers are nuanced. High altitude is a real physiological stress. But many people with managed conditions complete the yatra safely every year. The key variables are: how well your condition is controlled, which dhams you are doing (road vs. trek), what travel style you choose, and whether your physician has cleared you. Here is what we have learned from fifteen years and thousands of pilgrims.</p>
+        <p style={p}>The answers are nuanced. High altitude is a real physiological stress. But many people with managed conditions complete the yatra safely every year. The key variables are: how well your condition is controlled, which dhams you are doing (road vs. trek), what travel style you choose, and whether your physician has cleared you. Here is what we have learned from years on the route and thousands of pilgrims.</p>
 
         <BlogTOC items={[
           { id:'altitude-effects', label:'How altitude affects heart & sugar' },
@@ -166,7 +166,7 @@ export default function Page() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Divyang & Wheelchair Guide',h:'/blog/char-dham-yatra-for-divyang'},{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
+            {[{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>

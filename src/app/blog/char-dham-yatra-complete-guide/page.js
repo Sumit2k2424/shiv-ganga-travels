@@ -14,7 +14,7 @@ const PAGE_DATES = pageDates('/blog/char-dham-yatra-complete-guide');
 
 export const metadata = {
   title: { absolute: `Char Dham Yatra ${SITE.season} | History, Significance & Route Guide` },
-  description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes since 2010.`,
+  description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes.`,
   keywords: [
     'char dham yatra complete guide','char dham history','char dham significance',`char dham yatra ${SITE.season}`,
     'char dham order of visit','kedarnath history','badrinath significance','gangotri temple history',
@@ -24,7 +24,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-complete-guide` },
   openGraph: {
     title: `Char Dham Yatra Complete Guide ${SITE.season} — History, Significance & Everything You Need to Know`,
-    description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes since 2010.`,
+    description: `The most comprehensive guide to Char Dham Yatra ${SITE.season} — written by a team that has led pilgrims on these routes.`,
     url: `${SITE.baseUrl}/blog/char-dham-yatra-complete-guide`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Complete Guide ${SITE.season} — Shiv Ganga Travels` }],
@@ -250,7 +250,7 @@ export default function CharDhamCompleteGuide() {
         facts={[
           { label:'Shrines', value:'4 Dhams' },
           { label:'Region',  value:'Garhwal Himalaya' },
-          { label:'Since',   value:'2010 · 15 seasons' },
+          { label:'Operator', value:'Direct, Haridwar' },
           { label:'FAQs',    value:'20 answered' },
         ]}
       />
@@ -280,7 +280,7 @@ export default function CharDhamCompleteGuide() {
           <div>
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:3 }}>Written by Shiv Ganga Travels — Haridwar</div>
             <p style={{ fontSize:13, color:'var(--text-muted)', margin:0, lineHeight:1.6 }}>
-              We have operated Char Dham Yatra groups from Haridwar every season since 2010 — over 15 seasons, 8,000+ pilgrims, and hundreds of nights spent at these shrines in all weather. Every fact, route detail and practical tip in this guide comes from first-hand experience on the ground.
+              We have operated Char Dham Yatra groups from Haridwar every season — 8,000+ pilgrims, and hundreds of nights spent at these shrines in all weather. Every fact, route detail and practical tip in this guide comes from first-hand experience on the ground.
             </p>
           </div>
         </div>
@@ -367,7 +367,7 @@ export default function CharDhamCompleteGuide() {
           </p>
 
           <ExpertNote variant="insider">
-            The spiritual order and the <strong>practical</strong> order happen to agree — which is why we've never broken it in 15 seasons. Yamunotri and Gangotri at lower altitude let your body acclimatise before Kedarnath's 3,583 m climb, and ending at road-accessible Badrinath means you finish rested rather than wrecked. Operators who reshuffle the order to save a day usually cost you the acclimatisation.
+            The spiritual order and the <strong>practical</strong> order happen to agree — which is why we've never broken it. Yamunotri and Gangotri at lower altitude let your body acclimatise before Kedarnath's 3,583 m climb, and ending at road-accessible Badrinath means you finish rested rather than wrecked. Operators who reshuffle the order to save a day usually cost you the acclimatisation.
           </ExpertNote>
           <p style={pStyle}>
             From a logistical standpoint, this order also makes geographical sense. Yamunotri is the westernmost shrine, and travelling east from there to Gangotri → Kedarnath → Badrinath follows a natural circuit that minimises backtracking.
@@ -496,7 +496,7 @@ export default function CharDhamCompleteGuide() {
         <section id="faq">
           <h2 style={h2Style}>Frequently Asked Questions — Char Dham Yatra 2026</h2>
           <p style={{ ...pStyle, marginBottom:22 }}>
-            These are the questions most frequently asked on platforms like TripAdvisor, MakeMyTrip, Thrillophilia, Quora and directly to our team over 15 seasons of operation.
+            These are the questions most frequently asked on platforms like TripAdvisor, MakeMyTrip, Thrillophilia, Quora and directly to our team over many seasons of operation.
           </p>
 
           {['Basics','Planning','Health & Fitness','Logistics','Spirituality','Who Should Go'].map(cat => (
@@ -543,10 +543,8 @@ export default function CharDhamCompleteGuide() {
               ['Packing List', '/blog/char-dham-yatra-packing-list'],
               ['Char Dham Road Status', '/char-dham-road-status'],
               ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'],
-              ['Opening Dates 2026', '/blog/char-dham-yatra-opening-dates-2026'],
               ['2026 New Rules', '/blog/char-dham-yatra-2026-new-rules'],
-              ['First-Timer Guide', '/blog/char-dham-yatra-first-timer-guide'],
-            ].map(([label, href]) => (
+              ].map(([label, href]) => (
               <Link key={href} href={href} style={{ background:'#fff', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {label} →
               </Link>

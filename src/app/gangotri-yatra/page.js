@@ -116,7 +116,7 @@ export default function Page() {
 
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>Wildlife & Natural Sightings on the Route</h2>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The drive from Uttarkashi to Gangotri passes through dense deodar and oak forests — a rarity in an era when Himalayan forest cover has sharply declined. <strong>Langurs</strong> (grey monkeys with black faces) are almost guaranteed sightings at lower elevations, often sitting on road-side boulders in the morning sun. As you gain altitude past Harsil, watch the sky for the <strong>Himalayan griffon vulture</strong> — a bird with a 2.5-metre wingspan that rides thermals above the gorge with barely a wingbeat.</p>
-        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The Gangotri National Park, which begins just before the temple town, is the last stronghold of the <strong>snow leopard</strong> in Uttarakhand. You will almost certainly not see one from the road — but knowing you are in their territory changes how you look at every rocky outcrop. Our group that visited in late September 2024 spotted fresh pugmarks on the trail toward <Link href="/gaumukh" style={{ color:'var(--teal)', fontWeight:600 }}>Gaumukh</Link>, which the forest guard confirmed. Brown bears also inhabit these forests and are occasionally spotted in the early morning on the road above Uttarkashi.</p>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>The Gangotri National Park, which begins just before the temple town, is the last stronghold of the <strong>snow leopard</strong> in Uttarakhand. You will almost certainly not see one from the road — but knowing you are in their territory changes how you look at every rocky outcrop. Our group that visited in late September 2024 spotted fresh pugmarks on the trail toward Gaumukh, which the forest guard confirmed. Brown bears also inhabit these forests and are occasionally spotted in the early morning on the road above Uttarkashi.</p>
 
 
         <ul style={{paddingLeft:'20px',color:'var(--text-mid)',fontSize:'14.5px',lineHeight:2.3,marginBottom:'20px'}}>
@@ -216,7 +216,7 @@ export default function Page() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Opening Dates','/blog/char-dham-yatra-opening-dates-2026'],['Weather Guide','/blog/uttarakhand-weather-guide'],['Haridwar to Gangotri Cab','/cabs/haridwar-to-gangotri-cab']].map(([l,h])=>(
+            {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Weather Guide','/blog/uttarakhand-weather-guide'],['Haridwar to Gangotri Cab','/cabs/haridwar-to-gangotri-cab']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

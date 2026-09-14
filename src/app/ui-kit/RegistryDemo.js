@@ -42,7 +42,7 @@ const MILESTONES = [
 ];
 
 const STATS = [
-  { value: '50,000+', label: 'Pilgrims', note: 'Since 2010' },
+  { value: '50,000+', label: 'Pilgrims', note: '' },
   { value: '4.8',     label: 'Google rating', note: 'Across 1,200 reviews' },
   { value: '16',      label: 'Years running' },
   { value: '₹0',      label: 'Commission', note: 'Booked direct' },
@@ -128,7 +128,7 @@ export default function RegistryDemo() {
         >
           <div className="space-y-6">
             <p className="text-lg">
-              <AnimatedShinyText>Direct operator since 2010</AnimatedShinyText>
+              <AnimatedShinyText>Direct operator</AnimatedShinyText>
               <span className="ml-3 text-xs text-[color:var(--text-muted,#64748B)]">AnimatedShinyText — trust chips</span>
             </p>
             <p className="font-[family-name:var(--font-display)] text-3xl">

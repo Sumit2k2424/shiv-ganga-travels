@@ -218,7 +218,7 @@ export default function Ukhimath() {
           </table>
         </div>
         <p style={p}>
-          Visiting the four winter seats instead of the four dhams is a real trip &mdash; no trekking, no altitude, no crowds, open roads. It is a completely different experience from the June yatra and it suits people who cannot manage a 16 km climb or 3,583 m. We run it as <Link href="/winter-char-dham-yatra">Winter Char Dham</Link>.
+          Visiting the four winter seats instead of the four dhams is a real trip &mdash; no trekking, no altitude, no crowds, open roads. It is a completely different experience from the June yatra and it suits people who cannot manage a 16 km climb or 3,583 m. We run it as Winter Char Dham.
         </p>
 
         <ExpertNote variant="insider">
@@ -227,7 +227,7 @@ export default function Ukhimath() {
 
         <h2 style={h2}>Omkareshwar Temple</h2>
         <p style={p}>
-          The temple itself is stone, low and unshowy, and in season it can look like an ordinary hill-town shrine. That is misleading. This is where the <strong>Kedarnath Rawal and the temple priests move for six months</strong>, and the rituals conducted here through winter are the Kedarnath rituals, unbroken. Madhyamaheshwar, fourth of the <Link href="/panch-kedar-yatra">Panch Kedar</Link>, winters here too, which makes Ukhimath the winter home of two significant Shiva shrines at once.
+          The temple itself is stone, low and unshowy, and in season it can look like an ordinary hill-town shrine. That is misleading. This is where the <strong>Kedarnath Rawal and the temple priests move for six months</strong>, and the rituals conducted here through winter are the Kedarnath rituals, unbroken. Madhyamaheshwar, fourth of the Panch Kedar, winters here too, which makes Ukhimath the winter home of two significant Shiva shrines at once.
         </p>
         <p style={p}>
           Timings run broadly 6 AM to 7 PM with a midday break, shorter in deep winter, and they shift around ritual days. If you are driving up specially in January, ring ahead rather than trusting a published timing.
@@ -297,14 +297,14 @@ export default function Ukhimath() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. He has watched the Kedarnath palanquin come down to Ukhimath more than a dozen times and rates it above anything the summer season offers. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. He has watched the Kedarnath palanquin come down to Ukhimath more than a dozen times and rates it above anything the summer season offers. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Winter Char Dham — the four seats, no trekking</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Open roads · no crowds · free routed itinerary in 2 hours · direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Open roads · no crowds · free routed itinerary in 2 hours · direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Plan on WhatsApp</a>
@@ -315,7 +315,7 @@ export default function Ukhimath() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Nearby and related</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Winter Char Dham', '/winter-char-dham-yatra'], ['Madhyamaheshwar Temple', '/madhyamaheshwar-temple'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Guptkashi Guide', '/guptkashi-guide'], ['Gaurikund', '/gaurikund'], ['Rudraprayag', '/rudraprayag'], ['Devprayag', '/devprayag'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Kedar Yatra', '/panch-kedar-yatra'], ['Harsil Valley', '/harsil-valley'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Closing Dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Road Status', '/char-dham-road-status'], ['Uttarakhand Packages', '/uttarakhand-tour-packages']].map(([l, href]) => (
+            {[['Chopta & Tungnath', '/chopta-tungnath'], ['Gaurikund', '/gaurikund'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Harsil Valley', '/harsil-valley'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Closing Dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Road Status', '/char-dham-road-status'], ['Uttarakhand Packages', '/uttarakhand-tour-packages']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -113,10 +113,9 @@ export function roadRulesFor(ctx = {}) {
 // the foot of every cab page. Values mirror SITE in data/packages.js.
 export const OPERATOR = {
   legalName: 'Shiv Ganga Travels',
-  since: 2010,
   role: 'Direct operator — our own vehicles and our own drivers, no broker in between',
   credentials: [
-    'Registered travel operator based in Haridwar since 2010',
+    'Registered travel operator based in Haridwar',
     'Own fleet — Innova Crysta, Ertiga, Tempo Traveller, Scorpio',
     'Every vehicle carries a current Green Card and trip permit',
     'Drivers who run the Garhwal routes year-round, not seasonal hires',

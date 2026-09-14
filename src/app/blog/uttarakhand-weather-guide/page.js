@@ -18,7 +18,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
   openGraph: { title: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines`, url: `${SITE.baseUrl}/blog/uttarakhand-weather-guide`, type: 'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Uttarakhand Weather ${SITE.season}: All Char Dham Shrines` }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -162,7 +163,7 @@ export default function WeatherGuide() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026']].map(([l,h])=>(
+            {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

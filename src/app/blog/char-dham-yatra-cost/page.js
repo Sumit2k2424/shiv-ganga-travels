@@ -19,7 +19,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
   openGraph: { title: `Char Dham Yatra Cost ${SITE.season}: Full Per-Person Breakdown`, description: `Char Dham Yatra cost ${SITE.season} per person: budget ₹18,500–₹28,000, deluxe ₹28,000–₹40,000, luxury ₹45,000–₹65,000, helicopter charter ₹2.09L–₹2.5L. Pony ₹5,500, helicopter ₹8,500. Every rupee explained.`, url: `${SITE.baseUrl}/blog/char-dham-yatra-cost`, type: 'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Cost ${SITE.season}: Full Per-Person Breakdown` }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -305,7 +306,7 @@ export default function CharDhamCost() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Char Dham by Bus','/blog/char-dham-yatra-by-bus'],['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h]) => (
+            {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -30,11 +30,11 @@ export default async function Image() {
             <div style={{ width:'52px', height:'52px', borderRadius:'50%', background:'#E8920A', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'24px', color:'#fff', fontWeight:'700' }}>ॐ</div>
             <div style={{ display:'flex', flexDirection:'column' }}>
               <span style={{ fontSize:'22px', fontWeight:'700', color:'#FFFFFF', letterSpacing:'0.02em' }}>SHIV GANGA TRAVELS</span>
-              <span style={{ fontSize:'13px', color:'rgba(255,255,255,0.7)', letterSpacing:'0.08em' }}>HARIDWAR · EST. 2010</span>
+              <span style={{ fontSize:'13px', color:'rgba(255,255,255,0.7)', letterSpacing:'0.08em' }}>HARIDWAR · DIRECT OPERATOR</span>
             </div>
           </div>
           <div style={{ display:'flex', gap:'8px' }}>
-            <span style={{ background:'rgba(232,146,10,0.25)', border:'1px solid rgba(232,146,10,0.5)', color:'#E8920A', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Direct operator since 2010</span>
+            <span style={{ background:'rgba(232,146,10,0.25)', border:'1px solid rgba(232,146,10,0.5)', color:'#E8920A', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Direct operator</span>
             <span style={{ background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.25)', color:'rgba(255,255,255,0.9)', fontSize:'12px', padding:'4px 12px', borderRadius:'20px' }}>Zero Commission</span>
           </div>
         </div>

@@ -125,7 +125,7 @@ function Schema() {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl },
-      { '@type': 'ListItem', position: 2, name: 'Barkot', item: `${SITE.baseUrl}/barkot` },
+      { '@type': 'ListItem', position: 2, name: 'Yamunotri Yatra', item: `${SITE.baseUrl}/yamunotri-yatra` },
       { '@type': 'ListItem', position: 3, name: 'Barkot Hotels', item: `${SITE.baseUrl}/barkot-hotels` },
     ],
   };
@@ -181,7 +181,7 @@ export default function BarkotHotels() {
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/barkot" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Barkot</Link><span>›</span>
+          Barkot<span>›</span>
           <span>Hotels</span>
         </div>
       </nav>
@@ -305,14 +305,14 @@ export default function BarkotHotels() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. Fifteen seasons of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Yamunotri with the Barkot room pre-blocked</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Guaranteed check-in · pre-dawn breakfast arranged · registration handled · direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Guaranteed check-in · pre-dawn breakfast arranged · registration handled · direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Plan on WhatsApp</a>
@@ -323,7 +323,7 @@ export default function BarkotHotels() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>The Yamunotri leg</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Barkot Guide', '/barkot'], ['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Yamunotri Weather', '/yamunotri-weather'], ['Uttarkashi Hotels', '/uttarkashi-hotels'], ['Char Dham Hotels', '/char-dham-hotels'], ['Haridwar Hotels', '/haridwar-hotels'], ['Char Dham Yatra', '/char-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status'], ['Mussoorie Packages', '/mussoorie-tour-packages'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar']].map(([l, href]) => (
+            {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Yamunotri Weather', '/yamunotri-weather'], ['Char Dham Yatra', '/char-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status'], ].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

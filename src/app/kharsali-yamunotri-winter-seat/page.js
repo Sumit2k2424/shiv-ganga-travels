@@ -59,7 +59,7 @@ export default function KharsaliWinterSeat() {
     geo:[31.0170, 78.4600],
     types:['PlaceOfWorship','HinduTemple','TouristAttraction'],
     faqs:FAQS,
-    crumbs:[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Kharsali, Yamunotri Winter Seat','/kharsali-yamunotri-winter-seat']],
+    crumbs:[['Kharsali, Yamunotri Winter Seat','/kharsali-yamunotri-winter-seat']],
   });
 
   return (
@@ -72,7 +72,7 @@ export default function KharsaliWinterSeat() {
         in India a few steps away.
       </Hero>
 
-      <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Kharsali', null]]}/>
+      <Crumbs trail={[['Kharsali', null]]}/>
 
       <Article>
         <Updated date={PAGE_DATES.modifiedHuman}/>
@@ -170,7 +170,6 @@ export default function KharsaliWinterSeat() {
         />
 
         <Related links={[
-          ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
           ['Mukhba, Gangotri Winter Seat','/mukhba-gangotri-winter-seat'],
           ['Yamunotri Temple','/yamunotri-temple'],
           ['Yamunotri Yatra','/yamunotri-yatra'],

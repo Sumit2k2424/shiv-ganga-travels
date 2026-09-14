@@ -57,7 +57,7 @@ export default function MukhbaWinterSeat() {
     geo:[31.0350, 78.7400],
     types:['PlaceOfWorship','HinduTemple','TouristAttraction'],
     faqs:FAQS,
-    crumbs:[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Mukhba, Gangotri Winter Seat','/mukhba-gangotri-winter-seat']],
+    crumbs:[['Mukhba, Gangotri Winter Seat','/mukhba-gangotri-winter-seat']],
   });
 
   return (
@@ -69,7 +69,7 @@ export default function MukhbaWinterSeat() {
         <strong style={{ color:'#FFD166' }}>one of the most beautiful and least visited places in Garhwal</strong>.
       </Hero>
 
-      <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Mukhba', null]]}/>
+      <Crumbs trail={[['Mukhba', null]]}/>
 
       <Article>
         <Updated date={PAGE_DATES.modifiedHuman}/>
@@ -174,7 +174,6 @@ export default function MukhbaWinterSeat() {
         />
 
         <Related links={[
-          ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
           ['Kharsali, Yamunotri Winter Seat','/kharsali-yamunotri-winter-seat'],
           ['Harsil Valley','/harsil-valley'],
           ['Gangotri Temple','/gangotri-temple'],

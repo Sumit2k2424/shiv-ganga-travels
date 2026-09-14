@@ -52,7 +52,7 @@ export default function CategoryView({ category, packages, guides = [] }) {
             <p className="lux-lede" style={{ color: 'rgba(255,255,255,0.8)', marginTop: 22, maxWidth: '44ch' }}>
               {category.desc}. {packages.length} itinerar{packages.length === 1 ? 'y' : 'ies'},
               {from ? ` from ₹${from.toLocaleString('en-IN')} per person,` : ''} run direct from
-              Haridwar since {SITE.established}.
+              Haridwar.
             </p>
           </Reveal>
 

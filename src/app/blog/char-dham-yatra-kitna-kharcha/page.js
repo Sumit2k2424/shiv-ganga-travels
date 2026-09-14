@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/blog/char-dham-yatra-kitna-kharcha');
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा ${SITE.season} खर्चा | कीमत ₹13,900 से शुरू | पूरी जानकारी` },
-  description: `हरिद्वार से चार धाम यात्रा ${SITE.season} का खर्चा ₹13,900 से शुरू। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।`,
+  description: `हरिद्वार से चार धाम यात्रा ${SITE.season} का खर्चा ₹13,900 से शुरू। विश्वसनीय ऑपरेटर, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा ${SITE.season} खर्चा`, `char dham yatra kitna kharcha ${SITE.season}`, 'हरिद्वार से चार धाम यात्रा कितने रुपये', 'char dham yatra cost hindi', 'चार धाम यात्रा प्रति व्यक्ति खर्च'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` },
   openGraph: { title: `चार धाम यात्रा ${SITE.season} में कितना पैसा लगता है? — हरिद्वार से पूरा खर्चा`, description: `हरिद्वार से चार धाम यात्रा ${SITE.season} में 1 आदमी का खर्चा ₹13,900 से शुरू। गाड़ी, होटल, खाना, पंजीकरण — सब का अलग-अलग हिसाब।`, url: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha`, type: 'article', 
@@ -94,7 +94,7 @@ export default function CharDhamKharcha() {
           </div>
         </div>
 
-        <p style={p}>जब भी घर में चार धाम यात्रा की बात होती है, पहला सवाल यही उठता है — <strong>"कितना पैसा लगेगा?"</strong> और यह सवाल बिल्कुल सही है। इस लेख में हम आपको पूरा सच बताएंगे — हर मद का हिसाब, कोई छुपा खर्चा नहीं। शिव गंगा ट्रेवल्स 2010 से 50,000+ तीर्थयात्रियों को सेवा दे रहा है।</p>
+        <p style={p}>जब भी घर में चार धाम यात्रा की बात होती है, पहला सवाल यही उठता है — <strong>"कितना पैसा लगेगा?"</strong> और यह सवाल बिल्कुल सही है। इस लेख में हम आपको पूरा सच बताएंगे — हर मद का हिसाब, कोई छुपा खर्चा नहीं। शिव गंगा ट्रेवल्स 50,000+ तीर्थयात्रियों को सेवा दे रहा है।</p>
 
         <BlogTOC title="इस गाइड में" items={[
           { id:"types", label:"प्रकार के अनुसार खर्चा" },

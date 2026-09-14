@@ -43,19 +43,19 @@ const PRAYAGS = [
     note: 'The Nandakini comes off the Nanda Devi massif. Associated with King Nanda, and with the Nanda Raj Jat, the twelve-yearly pilgrimage that passes through this valley.',
   },
   {
-    n: 3, name: 'Karnaprayag', href: '/karnaprayag',
+    n: 3, name: 'Karnaprayag', href: null,
     rivers: 'Alaknanda + Pindar', elev: '860 m', fromRishikesh: '172 km',
     near: 'Where the Kumaon road splits off',
     note: 'Named for Karna of the Mahabharata, who did penance here. Also the junction for Gwaldam, Ranikhet and Almora — and the future terminus of the Rishikesh rail line.',
   },
   {
-    n: 4, name: 'Rudraprayag', href: '/rudraprayag',
+    n: 4, name: 'Rudraprayag', href: null,
     rivers: 'Alaknanda + Mandakini', elev: '690 m', fromRishikesh: '140 km',
     near: 'Where the Kedarnath road splits off',
     note: 'The Mandakini comes down from Kedarnath, so this is where Shiva\'s river joins Vishnu\'s. The most consequential fork on the circuit, and the site of Corbett\'s man-eating leopard.',
   },
   {
-    n: 5, name: 'Devprayag', href: '/devprayag',
+    n: 5, name: 'Devprayag', href: null,
     rivers: 'Alaknanda + Bhagirathi', elev: '830 m', fromRishikesh: '70 km',
     near: 'The Ganga begins here',
     note: 'The last and most significant. Below this point the river is called the Ganga. The only one of the five where the combined river changes its name.',
@@ -343,14 +343,14 @@ export default function PanchPrayag() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. He has driven this highway several hundred times over fifteen seasons and builds the sangam halts into every road itinerary we run. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. He has driven this highway several hundred times over the years and builds the sangam halts into every road itinerary we run. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>See all five, properly</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Zero commission · Direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Zero commission · Direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Plan on WhatsApp</a>
@@ -361,7 +361,7 @@ export default function PanchPrayag() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>On and around this road</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Devprayag', '/devprayag'], ['Rudraprayag', '/rudraprayag'], ['Karnaprayag', '/karnaprayag'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Joshimath Narsingh Temple', '/joshimath-narsingh-temple'], ['Ukhimath', '/ukhimath'], ['Gaurikund', '/gaurikund'], ['Guptkashi Guide', '/guptkashi-guide'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Panch Kedar Yatra', '/panch-kedar-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status']].map(([l, href]) => (
+            {[['Dhari Devi Temple', '/dhari-devi-temple'], ['Joshimath Narsingh Temple', '/joshimath-narsingh-temple'], ['Ukhimath', '/ukhimath'], ['Gaurikund', '/gaurikund'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -161,7 +161,7 @@ export default function ContactPage() {
                 <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:10 }}>
                   {[
                     '✓  Zero commission, direct operator',
-                    '✓  15 years, 50,000+ pilgrims served',
+                    '✓  50,000+ pilgrims served',
                     `✓  GST registered · GSTIN ${SITE.gstin}`,
                     '✓  Free cancellation up to 30 days prior',
                     '✓  Transparent pricing, no hidden fees',
@@ -196,10 +196,10 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <p style={{ fontSize:12.5, color:'var(--mid)', lineHeight:1.65, margin:'10px 0 10px' }} itemProp="description">
-                    Retired Indian Army Officer. Founded Shiv Ganga Travels in 2010 after years of military posting across Uttarakhand. Has personally driven the Kedarnath and Badrinath routes hundreds of times.
+                    Retired Indian Army Officer. Founded Shiv Ganga Travels after years of military posting across Uttarakhand. Has personally driven the Kedarnath and Badrinath routes hundreds of times.
                   </p>
                   <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
-                    {['Retired Army Officer','Founded 2010','15 Seasons','50,000+ Pilgrims'].map(c => (
+                    {['Retired Army Officer','50,000+ Pilgrims'].map(c => (
                       <span key={c} style={{ fontSize:11, background:'var(--navy-light)', color:'var(--navy)', padding:'3px 9px', borderRadius:6, fontWeight:600 }}>✓ {c}</span>
                     ))}
                   </div>

@@ -74,7 +74,7 @@ export default function Page() {
             Uttarakhand is home to four of Hinduism's most sacred shrines — the Char Dham — as well as the Panch Kedar, Panch Prayag, and some of India's most dramatic Himalayan landscapes. The state sits between the plains of Uttar Pradesh and the border with Tibet, stretching from the terai forests of Jim Corbett in the south to the glaciers of Kedarnath and Badrinath in the north.
           </p>
           <p style={{ fontSize:15, color:'#334155', lineHeight:1.85, marginBottom:14 }}>
-            As a Haridwar-based operator since 2010, Shiv Ganga Travels covers the entire state — from the spiritual circuits of the Char Dham and Panch Kedar, to the adventure destinations of Rishikesh and Auli, the hill stations of Mussoorie and Nainital, and the wildlife reserves of Jim Corbett. Every package is operated directly — no agents, no commission, no markup.
+            As a Haridwar-based operator, Shiv Ganga Travels covers the entire state — from the spiritual circuits of the Char Dham and Panch Kedar, to the adventure destinations of Rishikesh and Auli, the hill stations of Mussoorie and Nainital, and the wildlife reserves of Jim Corbett. Every package is operated directly — no agents, no commission, no markup.
           </p>
           <p style={{ fontSize:15, color:'#334155', lineHeight:1.85 }}>
             Uttarakhand's yatra season runs from late April to early November. Rishikesh and Haridwar are accessible year-round. Auli's skiing season is December to March. Planning your visit to match the right season makes the difference between a comfortable journey and a challenging one — our team is available to advise on the best timing for any destination in the state.
@@ -100,7 +100,7 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
-          <a href="/mussoorie-tour-packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href="/packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie Tour Packages</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹6,350 · Kempty Falls, Mall Road, Gun Hill</div>
           </a>

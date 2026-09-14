@@ -28,8 +28,7 @@ export const EXPERTS = {
     schemaId: '#founder',
     name: 'Dhanesh Chandra Mishra',
     role: 'Founder & Managing Director, Shiv Ganga Travels',
-    since: 2010,
-    bio: 'A retired Indian Army officer who founded Shiv Ganga Travels in Haridwar in 2010 and pioneered the zero-commission model for Char Dham operators here.',
+    bio: 'A retired Indian Army officer who founded Shiv Ganga Travels in Haridwar and pioneered the zero-commission model for Char Dham operators here.',
     url: '/about',
   },
 
@@ -39,7 +38,6 @@ export const EXPERTS = {
     id: 'house',
     name: 'The Shiv Ganga Travels road team',
     role: 'Our own drivers, based in Haridwar',
-    since: 2010,
     bio: 'Every route on this site is one we run ourselves, in our own vehicles. Road notes come from the drivers who were last on it, not from a map.',
     url: '/about',
   },

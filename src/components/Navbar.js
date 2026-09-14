@@ -178,7 +178,7 @@ export default function Navbar() {
             <LogoBadge size={40}/>
             <div style={{ lineHeight:1 }}>
               <div className="eq-wordmark__name">Shiv&nbsp;Ganga <span className="lt">Travels</span></div>
-              <div className="eq-wordmark__sub">Haridwar · Est. {SITE.established}</div>
+              <div className="eq-wordmark__sub">Haridwar · Direct operator</div>
             </div>
           </Link>
 

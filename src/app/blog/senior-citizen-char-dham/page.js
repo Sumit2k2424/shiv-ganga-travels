@@ -19,7 +19,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
   openGraph: { title:`Char Dham Yatra for Senior Citizens ${SITE.season}: Guide`, description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra for Senior Citizens ${SITE.season}: Guide` }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -166,7 +167,7 @@ return (
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Divyang & Wheelchair Guide','/blog/char-dham-yatra-for-divyang'],['Senior-Friendly Packages','/char-dham-yatra'],['Medical Certificate Guide','/blog/char-dham-yatra-medical-certificate'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Packing List','/blog/char-dham-yatra-packing-list'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Cancellation Policy','/cancellation-policy']].map(([l,h])=>(
+            {[['Senior-Friendly Packages','/char-dham-yatra'],['Medical Certificate Guide','/blog/char-dham-yatra-medical-certificate'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Packing List','/blog/char-dham-yatra-packing-list'],['Cancellation Policy','/cancellation-policy']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

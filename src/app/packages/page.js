@@ -134,7 +134,7 @@ export default function PackagesPage() {
             { k: 'Starting from', v: `₹${lowestPrice.toLocaleString('en-IN')}`, gold: true },
             { k: 'Packages', v: String(PACKAGES.length) },
             { k: 'Categories', v: String(Object.keys(CATEGORIES).length) },
-            { k: 'Pilgrims since 2010', v: '50,000+' },
+            { k: 'Pilgrims', v: '50,000+' },
           ]} />
         </div>
       </section>

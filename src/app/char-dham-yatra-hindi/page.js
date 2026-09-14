@@ -1,6 +1,6 @@
 import { Noto_Sans_Devanagari } from 'next/font/google';
 import { SITE } from '@/data/packages';
-import { languageAlternates } from '@/data/languages';
+import { languageAlternates, languageRobots } from '@/data/languages';
 import { hindi } from '@/data/langContent/hindi';
 import CharDhamLanguagePage from '@/components/CharDhamLanguagePage';
 
@@ -19,6 +19,7 @@ export const metadata = {
     `चार धाम कपाट बंद होने की तारीख ${SITE.season}`, 'char dham yatra in hindi', 'chardham yatra hindi guide',
   ],
   alternates: languageAlternates(SLUG, SITE.baseUrl),
+  ...languageRobots(SLUG),
   openGraph: {
     title: `चार धाम यात्रा ${SITE.season} — पूरी जानकारी हिन्दी में | Shiv Ganga Travels`,
     description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ। हरिद्वार से ₹13,900 से शुरू। सीधे ऑपरेटर, रजिस्ट्रेशन मुफ़्त।',

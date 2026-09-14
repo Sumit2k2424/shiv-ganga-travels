@@ -2,7 +2,7 @@
  * ExpertNote — the signature "USP-in-between" device of the redesign.
  *
  * A short first-person note dropped between body sections. It carries authority
- * (15 seasons on the route, direct operator, zero commission) as lived
+ * (many seasons on the route, direct operator, zero commission) as lived
  * experience rather than a sales box — hook + value + USP in one.
  *
  * Props:

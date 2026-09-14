@@ -142,14 +142,14 @@ export default function HowToReachBadrinath() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to visit Badrinath as part of Char Dham Yatra 2026. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/badrinath-tour-package" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Badrinath Package →</Link>
+            View Badrinath Package →
           </div>
         </div>
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Badrinath Weather','/badrinath-weather'],['Badrinath Temple Guide','/badrinath-temple'],['Badrinath VIP Darshan','/badrinath-vip-darshan'],['Haridwar to Badrinath Cab','/cabs/haridwar-to-badrinath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
+            {[['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Badrinath Weather','/badrinath-weather'],['Badrinath Temple Guide','/badrinath-temple'],['Haridwar to Badrinath Cab','/cabs/haridwar-to-badrinath-cab'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

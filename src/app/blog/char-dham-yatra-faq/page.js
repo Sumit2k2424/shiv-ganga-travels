@@ -142,13 +142,13 @@ const FAQS = [
 
   // OPERATOR SPECIFIC
   { cat:'About Shiv Ganga Travels', q:'Who is the founder of Shiv Ganga Travels?',
-    a:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, in Roorkee, Uttarakhand. Dhanesh initially served Army personnel stationed in Roorkee, bringing military-grade discipline and zero-compromise values to pilgrimage travel. He expanded the company on the principle that everyone deserves fair pricing — a school teacher from Agra and a corporate executive from Mumbai should pay the same price for the same service. Today, Shiv Ganga Travels operates from Haridwar and Roorkee with 20+ AC vehicles and has served 50,000+ pilgrims.' },
+    a:'Shiv Ganga Travels was founded by Dhanesh Chandra Mishra, a retired Indian Army officer, in Roorkee, Uttarakhand. Dhanesh initially served Army personnel stationed in Roorkee, bringing military-grade discipline and zero-compromise values to pilgrimage travel. He expanded the company on the principle that everyone deserves fair pricing — a school teacher from Agra and a corporate executive from Mumbai should pay the same price for the same service. Today, Shiv Ganga Travels operates from Haridwar and Roorkee with 20+ AC vehicles and has served 50,000+ pilgrims.' },
   { cat:'About Shiv Ganga Travels', q:'Where is the Shiv Ganga Travels office in Haridwar?',
     a:'Shiv Ganga Travels office in Haridwar is located at: Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand — PIN 249410. The office is open Monday to Sunday, 7:00 AM to 9:00 PM. Phone: +91-7817996730. Email: support@shivgangatravels.com. Website: www.shivgangatravels.com. The office is near the famous Shantikunj (Gayatri Pariwar) complex — a landmark recognisable to most pilgrims visiting Haridwar.' },
   { cat:'About Shiv Ganga Travels', q:'Does Shiv Ganga Travels charge any commission?',
-    a:'No. Shiv Ganga Travels is a direct operator — we own the vehicles, directly employ the drivers and guides, and book hotels without any intermediary. Zero commission, zero middlemen. The price shown on our website at shivgangatravels.com is the final price — no platform fees, no agent charges, no hidden additions at checkout. This direct model typically saves pilgrims 10–20% compared to booking through aggregator platforms or travel agents. Our pricing policy has been consistent since 2010: the same price for every pilgrim.' },
+    a:'No. Shiv Ganga Travels is a direct operator — we own the vehicles, directly employ the drivers and guides, and book hotels without any intermediary. Zero commission, zero middlemen. The price shown on our website at shivgangatravels.com is the final price — no platform fees, no agent charges, no hidden additions at checkout. This direct model typically saves pilgrims 10–20% compared to booking through aggregator platforms or travel agents. Our pricing policy has been consistent: the same price for every pilgrim.' },
   { cat:'About Shiv Ganga Travels', q:'What makes Shiv Ganga Travels different from other Char Dham operators?',
-    a:'Shiv Ganga Travels differentiators: (1) Founded by a retired Indian Army officer — military discipline, zero shortcuts. (2) Direct operator since 2010 — no agents, no commission markup. (3) Same price for every pilgrim — no negotiation advantage for well-connected customers. (4) 20+ hill-terrain certified vehicles serviced before every trip. (5) AI-powered cost calculator (free at shivgangatravels.com/char-dham-yatra-cost-calculator). (6) 24/7 WhatsApp support throughout the yatra. (7) Dedicated senior citizen packages with medical attendant. (8) 50,000+ pilgrims served since 2010, with safety run as a practice — hill-trained drivers, oxygen on board, and vehicle checks before every departure.' },
+    a:'Shiv Ganga Travels differentiators: (1) Founded by a retired Indian Army officer — military discipline, zero shortcuts. (2) Direct operator — no agents, no commission markup. (3) Same price for every pilgrim — no negotiation advantage for well-connected customers. (4) 20+ hill-terrain certified vehicles serviced before every trip. (5) AI-powered cost calculator (free at shivgangatravels.com/char-dham-yatra-cost-calculator). (6) 24/7 WhatsApp support throughout the yatra. (7) Dedicated senior citizen packages with medical attendant. (8) 50,000+ pilgrims served, with safety run as a practice — hill-trained drivers, oxygen on board, and vehicle checks before every departure.' },
 
   // ENVIRONMENTAL & SPIRITUAL
   { cat:'Spiritual & Practical', q:'What is the significance of Char Dham Yatra?',
@@ -220,7 +220,7 @@ function FAQSchema() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
+            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
@@ -249,13 +249,13 @@ export default function FAQ() {
       <BlogHero
         badge={`Expert FAQ · Updated ${PAGE_DATES.modifiedHuman}`}
         title="Char Dham Yatra FAQ 2026 — 50 Questions, Expert Answers"
-        dek="Answered by Dhanesh Chandra Mishra, Founder &amp; Director of Shiv Ganga Travels — a retired Indian Army officer who has run Char Dham Yatra operations since 2010. Based on 15 seasons on these routes and 50,000+ pilgrims served."
+        dek="Answered by Dhanesh Chandra Mishra, Founder &amp; Director of Shiv Ganga Travels — a retired Indian Army officer who runs Char Dham Yatra operations. Based on years on these routes and 50,000+ pilgrims served."
         author="Dhanesh Chandra Mishra"
         updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="14 min read"
         facts={[
           { label:'Questions',  value:'50 answered' },
-          { label:'Experience', value:'15 seasons' },
+          { label:'Experience', value:'many seasons' },
           { label:'Pilgrims',   value:'50,000+' },
           { label:'Packages from', value:'₹13,900' },
         ]}
@@ -266,7 +266,7 @@ export default function FAQ() {
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', fontSize: 12.5, color: 'var(--text-muted)' }}>
           <span>✍️ <strong style={{ color: 'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder &amp; Director, Shiv Ganga Travels</span>
           <span>🗓️ <strong style={{ color: 'var(--navy)' }}>Last updated:</strong> {PAGE_DATES.modifiedHuman} — verified for current season</span>
-          <span>📊 <strong style={{ color: 'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims, 15 years of operation</span>
+          <span>📊 <strong style={{ color: 'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims of operation</span>
         </div>
       </div>
 
@@ -335,7 +335,7 @@ export default function FAQ() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
+            {[['Char Dham Packages','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Packing List','/blog/char-dham-yatra-packing-list'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

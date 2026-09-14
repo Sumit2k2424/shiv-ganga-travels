@@ -69,9 +69,7 @@ export default function HaridwarSightseeingPlaces() {
       ['Mansa Devi Temple','/mansa-devi-temple','Hill temple on Bilwa Parvat, reached by ropeway or a 45-minute walk'],
       ['Chandi Devi Temple','/chandi-devi-temple','Hill temple on Neel Parvat, quieter, with the better view'],
       ['Daksh Mahadev Temple','/daksh-mahadev-temple','Kankhal — site of Daksha\'s yajna and Sati\'s self-immolation'],
-      ['Maya Devi Temple','/maya-devi-temple','Shakti Peeth and the goddess Haridwar is named for'],
-      ['Shantikunj','/shantikunj-haridwar-guide','Gayatri Pariwar headquarters on the Sapt Sarovar road'],
-    ].map(([name, url, desc], i) => ({
+                ].map(([name, url, desc], i) => ({
       '@type':'ListItem', position:i+1,
       item:{ '@type':'TouristAttraction', name, description:desc, url:`${SITE.baseUrl}${url}` },
     })),
@@ -112,7 +110,7 @@ export default function HaridwarSightseeingPlaces() {
             ['10:00–11:30 AM', <Link key="c" href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>, 'In and out before the midday darshan closure'],
             ['12:00–2:00 PM', 'Lunch', 'Both hill temples are shut anyway'],
             ['2:30–3:30 PM', <Link key="d" href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev, Kankhal</Link>, 'Open all afternoon, and quiet'],
-            ['4:00–4:20 PM', <Link key="my" href="/maya-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Maya Devi</Link>, 'Fifteen minutes, on the way back in'],
+            ['4:00–4:20 PM', 'Maya Devi', 'Fifteen minutes, on the way back in'],
             ['4:45 PM onward', <Link key="h" href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>, 'Take your place well before the aarti'],
           ]}
         />
@@ -130,12 +128,12 @@ export default function HaridwarSightseeingPlaces() {
         <ul style={{ paddingLeft:20, marginBottom:14 }}>
           <LI><strong style={{ color:'var(--navy)' }}>Day 1</strong> — the circuit above, ending at the aarti.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Day 2 morning</strong> — Ganga snan at Brahmakund at first light, then{' '}
-            <Link href="/shantikunj-haridwar-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Shantikunj</Link>{' '}
+            Shantikunj{' '}
             on the Sapt Sarovar road.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Day 2 afternoon</strong> — on to{' '}
-            <Link href="/haridwar-to-rishikesh-taxi" style={{ color:'var(--teal)', fontWeight:600 }}>Rishikesh</Link>{' '}
+            Rishikesh{' '}
             for Ram Jhula, Lakshman Jhula and Triveni Ghat, or{' '}
-            <Link href="/rajaji-national-park" style={{ color:'var(--teal)', fontWeight:600 }}>Rajaji National Park</Link>{' '}
+            Rajaji National Park{' '}
             if you would rather have the forest.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>In winter</strong> — swap in Neel Dhara Pakshi Vihar below Chandighat for the migratory birds. Almost nobody does, and they should.</LI>
         </ul>
@@ -171,7 +169,7 @@ export default function HaridwarSightseeingPlaces() {
         />
         <P>
           Our{' '}
-          <Link href="/taxi-service-in-haridwar" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar temple circuit</Link>{' '}
+          Haridwar temple circuit{' '}
           runs this exact sequence with the car waiting at each base station, and the full local rate card
           is on that page.
         </P>
@@ -203,16 +201,11 @@ export default function HaridwarSightseeingPlaces() {
         />
 
         <Related links={[
-          ['Places to Visit in Rishikesh','/rishikesh-sightseeing-places'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Mansa Devi Temple','/mansa-devi-temple'],
           ['Chandi Devi Temple','/chandi-devi-temple'],
           ['Daksh Mahadev Temple','/daksh-mahadev-temple'],
-          ['Maya Devi Temple','/maya-devi-temple'],
-          ['Shantikunj Guide','/shantikunj-haridwar-guide'],
-          ['Taxi Service in Haridwar','/taxi-service-in-haridwar'],
-          ['Haridwar Tour Packages','/haridwar-tour-packages'],
-        ]}/>
+          ]}/>
       </Article>
     </>
   );

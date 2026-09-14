@@ -103,7 +103,7 @@ export default function RishikeshAdventureGuide() {
       <BlogCTA
         variant="note"
         line="We run this as a 2N/3D package from Haridwar at ₹3,750 per person — rafting, camping and the Ganga Aarti evening."
-        href="/rishikesh-tour-packages"
+        href="/uttarakhand-tour-packages"
         linkLabel="See the Rishikesh package"
       />
 

@@ -320,7 +320,7 @@ export default function KedarnathTrekGuide() {
 
         {/* PACKING */}
         <h2 id="packing" style={h2}>What to Carry for the Kedarnath Trek</h2>
-        <p style={p}>This is where most first-timers go wrong — either carrying too much (your back will hate you) or too little (your body will hate you). Here's the list refined over 15 years of guiding pilgrims on this route:</p>
+        <p style={p}>This is where most first-timers go wrong — either carrying too much (your back will hate you) or too little (your body will hate you). Here's the list refined over years of guiding pilgrims on this route:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { cat:'✅ Must Carry', items:['Walking stick (rent at Gaurikund ₹100)','Rain poncho or jacket','Warm fleece or sweater','Trekking shoes — not sandals','Water bottle (refill at tea stalls)','Dry snacks — nuts, energy bars, biscuits','Plastic bag for phone and documents'] },

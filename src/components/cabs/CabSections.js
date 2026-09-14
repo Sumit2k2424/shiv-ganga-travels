@@ -421,7 +421,7 @@ export function OperatorCard({ lede, showCredentials = true }) {
         {OPERATOR.legalName}
       </div>
       <p className="lux-body" style={{ fontSize: '0.86rem' }}>
-        {lede || `${OPERATOR.role}. Operating from Haridwar since ${OPERATOR.since}.`}
+        {lede || `${OPERATOR.role}. Operating from Haridwar.`}
       </p>
       {showCredentials ? (
         <ul className="lux-list lux-list--check" style={{ marginTop: 14 }}>
@@ -431,7 +431,7 @@ export function OperatorCard({ lede, showCredentials = true }) {
         </ul>
       ) : (
         <p className="lux-caption" style={{ marginTop: 12 }}>
-          {OPERATOR.role}, operating from Haridwar since {OPERATOR.since}.{' '}
+          {OPERATOR.role}, operating from Haridwar.{' '}
           <Link prefetch={false} href="/about" className="lux-link">
             Registration, fleet and credentials
           </Link>

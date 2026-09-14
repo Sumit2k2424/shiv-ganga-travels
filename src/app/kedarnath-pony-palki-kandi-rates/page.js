@@ -229,7 +229,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <div style={{ background: 'linear-gradient(135deg,var(--navy),#1A3E75)', borderRadius: 14, padding: '26px 22px', margin: '34px 0 10px', textAlign: 'center' }}>
             <div style={{ color: '#fff', fontWeight: 800, fontSize: 18, marginBottom: 6 }}>Want this handled for you?</div>
             <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14.5, lineHeight: 1.7, maxWidth: 560, margin: '0 auto 16px' }}>
-              We've run the Gaurikund route since 2010. Tell us who's travelling and we'll plan the trek, pony/palki and registration around them — ₹0 to enquire, no advance to talk.
+              We've run the Gaurikund route. Tell us who's travelling and we'll plan the trek, pony/palki and registration around them — ₹0 to enquire, no advance to talk.
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={wa('Namaste! Please help plan Kedarnath with pony/palki for my group.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp Us</a>
@@ -238,7 +238,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: <Link href="/yamunotri-pony-palki-rates" style={{ color: 'var(--teal)' }}>Yamunotri pony &amp; palki rates</Link> · <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · <Link href="/kedarnath-weather" style={{ color: 'var(--teal)' }}>Kedarnath weather</Link>
+            Related: Yamunotri pony &amp; palki rates · <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · Kedarnath weather
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

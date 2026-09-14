@@ -8,7 +8,11 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog` },
 };
 
-const POSTS = [
+import { GONE_PATHS } from '@/data/gone';
+
+// Posts removed on 14 Sep 2026 (data/gone.js) are filtered out below, so this
+// index never lists a 410.
+const ALL_POSTS = [
   { slug:'char-dham-yatra-complete-guide', title:'Char Dham Yatra 2026 — History, Significance & Full Route', excerpt:'The long-form reference: why these four shrines, the order pilgrims follow, who should attempt it, and the questions we get asked every season.', tag:'Complete Guide', readTime:'12 min', icon:'📖' },
   { slug:'char-dham-yatra-faq', title:'Char Dham Yatra FAQ — 50 Questions Answered', excerpt:'Cost, registration, best time, medical rules, senior citizens, helicopter slots and the 2026 rule changes — answered in plain language.', tag:'Complete Guide', readTime:'14 min', icon:'❓' },
   { slug:'green-card-char-dham-yatra-2026', title:'Green Card for Char Dham Yatra 2026 — Rules & Cost', excerpt:'Non-Uttarakhand vehicles need a Trip Card on yatra routes. How to apply, what it costs, which routes check it, and the penalty if you skip it.', tag:'2026 Update', readTime:'6 min', icon:'🪪' },
@@ -35,7 +39,7 @@ const POSTS = [
   { slug:'char-dham-yatra-2026-new-rules', title:'Char Dham Yatra 2026 New Rules — Phone Ban, Age 55+, IRCTC Helicopter', excerpt:'All 2026 rule changes: mobile phone ban, medical certificate for 55+, IRCTC helicopter booking, non-Hindu entry, GPS tracking. Must-read before you travel.', tag:'2026 Update', readTime:'6 min', icon:'📢' },
   { slug:'char-dham-guide', title:'Char Dham Yatra Complete Guide 2026', excerpt:'Route, itinerary, cost, registration, packing list, and expert tips — everything in one place.', tag:'Complete Guide', readTime:'8 min', icon:'🏔️' },
   { slug:'best-time-char-dham', title:'Best Time for Char Dham Yatra 2026', excerpt:'Month-by-month weather guide, temple opening dates, and honest advice on peak vs off-season.', tag:'Travel Tips', readTime:'5 min', icon:'📅' },
-  { slug:'kedarnath-trek-guide', title:'Kedarnath Trek Guide 2026 — 16km from Gaurikund', excerpt:'Difficulty, waypoints, what to carry, pony vs helicopter, and how to prepare. From 15 years of guiding.', tag:'Trek Guide', readTime:'9 min', icon:'🥾' },
+  { slug:'kedarnath-trek-guide', title:'Kedarnath Trek Guide 2026 — 16km from Gaurikund', excerpt:'Difficulty, waypoints, what to carry, pony vs helicopter, and how to prepare. From years of guiding.', tag:'Trek Guide', readTime:'9 min', icon:'🥾' },
   { slug:'kedarnath-helicopter-booking', title:'Kedarnath Helicopter Booking 2026 — Prices & Tips', excerpt:'Prices ₹7,500–9,500, best helipads, morning slot strategy, and why weather matters more than you think.', tag:'Helicopter', readTime:'6 min', icon:'🚁' },
   { slug:'char-dham-yatra-packing-list', title:'Char Dham Yatra Packing List 2026', excerpt:'Exactly what to carry and what to leave behind — shoes, medicines, documents, gadgets. No fluff.', tag:'Preparation', readTime:'7 min', icon:'🎒' },
   { slug:'char-dham-yatra-cost', title:'Char Dham Yatra Cost 2026 — Honest Budget Breakdown', excerpt:'Complete cost breakdown — package prices, hidden extras, pony & helicopter charges, best value tips.', tag:'Budget Guide', readTime:'6 min', icon:'💰' },
@@ -67,6 +71,7 @@ const POSTS = [
   { slug:'char-dham-yatra-solo-women', title:'Char Dham Yatra for Solo Women Travellers', excerpt:'Is it safe, group vs private, women-friendly stays, and what we arrange for women travelling alone.', tag:'Travel Tips', readTime:'6 min', icon:'👩' },
   { slug:'kedarnath-places-to-see', title:'Places to See in & Around Kedarnath', excerpt:'Beyond the temple — Bhairavnath, Vasuki Tal, Gandhi Sarovar and Triyuginarayan, and whether each is worth it.', tag:'Route Guide', readTime:'6 min', icon:'🏔️' },
 ];
+const POSTS = ALL_POSTS.filter(p => !GONE_PATHS.has(`/blog/${p.slug}`));
 
 const TAG_COLORS = {
   'Complete Guide': { bg:'#dbeafe', color:'#1e40af' },
@@ -162,11 +167,9 @@ export default function Blog() {
           {[
             { href:'/blog/char-dham-yatra-with-kids',         label:'Char Dham with Kids — Family Guide' },
             { href:'/blog/char-dham-yatra-for-heart-patients',label:'Char Dham for Heart Patients' },
-            { href:'/blog/char-dham-yatra-first-timer-guide', label:'First-Timer Complete Guide' },
             { href:'/blog/char-dham-yatra-in-october',        label:'Char Dham in October — Worth It?' },
             { href:'/blog/mana-village-badrinath',            label:'Mana Village — Last Indian Village' },
-            { href:'/blog/triyuginarayan-temple',             label:'Triyuginarayan Temple Guide' },
-          ].map(l => (
+            ].map(l => (
             <Link prefetch={false} key={l.href} href={l.href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', borderRadius:10, padding:'11px 14px', textDecoration:'none', fontSize:13.5, color:'var(--navy)', fontWeight:600, lineHeight:1.5, display:'block' }}>
               {l.label} →
             </Link>

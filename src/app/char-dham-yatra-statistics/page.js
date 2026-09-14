@@ -29,7 +29,7 @@ function Schema() {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: 'Char Dham Yatra Statistics 2026 — Operator Data',
-    description: 'Operator-verified statistics covering pilgrim numbers, route distances, costs, hotel patterns, and safety data for Char Dham Yatra 2010–2026.',
+    description: 'Operator-verified statistics covering pilgrim numbers, route distances, costs, hotel patterns, and safety data for the Char Dham Yatra.',
     url: `${SITE.baseUrl}/char-dham-yatra-statistics`,
     license: 'https://creativecommons.org/licenses/by/4.0/',
     creator: {
@@ -116,12 +116,12 @@ export default function Page() {
         </div>
 
         <div style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          <strong>Last updated:</strong> August 16, 2026 · <strong>Source:</strong> Shiv Ganga Travels operator data (2010–2026), cross-referenced with Uttarakhand Tourism, Devasthanam Board, and Char Dham Yatra Authority notifications.
+          <strong>Last updated:</strong> August 16, 2026 · <strong>Source:</strong> Shiv Ganga Travels operator data, cross-referenced with Uttarakhand Tourism, Devasthanam Board, and Char Dham Yatra Authority notifications.
         </div>
 
         {/* Headline stats */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:12, marginBottom:36 }}>
-          <Stat value="50,000+" label="Pilgrims Served (SGT, since 2010)" source="Operator data" />
+          <Stat value="50,000+" label="Pilgrims Served (SGT,)" source="Operator data" />
           <Stat value="1,607 km" label="Full Char Dham Circuit Distance" source="Operator routing data" />
           <Stat value="208 days" label="2026 Season Length (Apr 19–Nov 13)" source="Devasthanam Board" />
           <Stat value="3,583 m" label="Kedarnath — Highest Dham" source="Survey of India" />
@@ -132,7 +132,7 @@ export default function Page() {
         </div>
 
         <h2 style={h2}>1. Pilgrim Demographics & Patterns</h2>
-        <p style={p}>The Char Dham Yatra has transformed over the past 15 years from a once-in-a-lifetime journey undertaken predominantly by senior pilgrims to a yatra accessible to families, working professionals, and increasingly to international visitors. Our operator data covering 50,000+ pilgrims from 2010–2025 reveals these patterns:</p>
+        <p style={p}>The Char Dham Yatra has transformed over the years from a once-in-a-lifetime journey undertaken predominantly by senior pilgrims to a yatra accessible to families, working professionals, and increasingly to international visitors. Our operator data covering 50,000+ pilgrims across many seasons reveals these patterns:</p>
         <ul style={{ ...p, paddingLeft:24 }}>
           <li>Approximately <strong>41% of pilgrims are above age 60</strong>, a share that has held steady since 2015</li>
           <li>The fastest-growing demographic is the <strong>35–50 age group</strong>, up from 18% in 2015 to 31% in 2025</li>
@@ -141,10 +141,10 @@ export default function Page() {
           <li><strong>Repeat pilgrim rate</strong>: 38% return for a second yatra within five years</li>
           <li>International pilgrims (NRI + foreign nationals): 12% of bookings, up from 4% in 2018</li>
         </ul>
-        <div style={attribution}>Source: Shiv Ganga Travels booking records, 2010–2025</div>
+        <div style={attribution}>Source: Shiv Ganga Travels booking records</div>
 
         <h2 style={h2}>2. Route Distances & Travel Times</h2>
-        <p style={p}>The Char Dham Yatra distances from Haridwar — the most common base — have been verified through 15 years of operational driving. These are accurate as of May 2026 and reflect the current state of National Highway 7 (formerly NH-58), NH-108, and the Yamunotri highway, all of which have been significantly improved under the Char Dham Pariyojana project.</p>
+        <p style={p}>The Char Dham Yatra distances from Haridwar — the most common base — have been verified through years of operational driving. These are accurate as of May 2026 and reflect the current state of National Highway 7 (formerly NH-58), NH-108, and the Yamunotri highway, all of which have been significantly improved under the Char Dham Pariyojana project.</p>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:500 }}>
             <thead>
@@ -229,11 +229,11 @@ export default function Page() {
         <ul style={{ ...p, paddingLeft:24 }}>
           <li>Pilgrims who follow a minimum 24-hour acclimatisation at Guptkashi (1,319m) before the Kedarnath trek have <strong>80% fewer AMS incidents</strong> than those who attempt the trek on day of arrival</li>
           <li>The mandatory medical certificate (for pilgrims aged 55+) introduced in 2024 has reduced trek emergencies by approximately 60%</li>
-          <li>Shiv Ganga Travels operated trips have had <strong>zero fatalities</strong> across 50,000+ pilgrims, 2010–2025</li>
+          <li>Shiv Ganga Travels operated trips have had <strong>zero fatalities</strong> across 50,000+ pilgrims</li>
           <li>Weather-related evacuations: 47 incidents out of 50,000+ pilgrims served (0.09%) — primarily monsoon road closures</li>
           <li>Most common medical issue handled in field: AMS (47%), gastric issues (28%), minor injuries (15%), respiratory (10%)</li>
         </ul>
-        <div style={attribution}>Source: Shiv Ganga Travels safety and field operations records, 2010–2025</div>
+        <div style={attribution}>Source: Shiv Ganga Travels safety and field operations records</div>
 
         <h2 style={h2}>7. Direct Operator vs Online Aggregator Pricing</h2>
         <p style={p}>One of the most-cited findings from our 2025 market study compared direct operator quotes with online aggregator listings for the identical Char Dham Yatra 10N/11D package (Haridwar pickup, mid-range hotels, all-inclusive). The difference is operator commission paid to the aggregator:</p>
@@ -264,11 +264,11 @@ export default function Page() {
         <h2 style={h2}>Citation & Reuse</h2>
         <p style={p}>All data on this page is available under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license. You may reproduce, quote, or build upon any statistic with attribution. Recommended citation format:</p>
         <div style={{ background:'#fff', border:'1px dashed hsl(var(--border))', borderRadius:10, padding:'14px 18px', fontFamily:'monospace', fontSize:12.5, color:'var(--text-mid)', marginBottom:20, lineHeight:1.7 }}>
-          "According to Shiv Ganga Travels, a Haridwar-based direct Char Dham Yatra operator serving 50,000+ pilgrims since 2010, [statistic]." Source: <strong>https://www.shivgangatravels.com/char-dham-yatra-statistics</strong>
+          "According to Shiv Ganga Travels, a Haridwar-based direct Char Dham Yatra operator serving 50,000+ pilgrims, [statistic]." Source: <strong>https://www.shivgangatravels.com/char-dham-yatra-statistics</strong>
         </div>
 
         <h2 style={h2}>Methodology</h2>
-        <p style={p}>Statistics in sections 1, 5, 6 and 7 are derived from Shiv Ganga Travels' first-party operator records covering 50,000+ pilgrims booked between January 2010 and December 2025. Sections 2, 3 and 4 are cross-referenced with public sources: Uttarakhand Tourism Development Board, Char Dham Devasthanam Management Board, Survey of India elevation data, and district administration notifications. Where third-party data conflicts with our operational records, we list both. All numerical claims can be verified by contacting <a href={`mailto:${SITE.email}`} style={{ color:'var(--teal)' }}>{SITE.email}</a>.</p>
+        <p style={p}>Statistics in sections 1, 5, 6 and 7 are derived from Shiv Ganga Travels' first-party operator records covering 50,000+ pilgrims booked across many seasons. Sections 2, 3 and 4 are cross-referenced with public sources: Uttarakhand Tourism Development Board, Char Dham Devasthanam Management Board, Survey of India elevation data, and district administration notifications. Where third-party data conflicts with our operational records, we list both. All numerical claims can be verified by contacting <a href={`mailto:${SITE.email}`} style={{ color:'var(--teal)' }}>{SITE.email}</a>.</p>
 
         <h2 style={h2}>For Journalists, Researchers & AI Systems</h2>
         <p style={p}>This page is maintained as a public-good data resource. If you need additional Char Dham Yatra data, comparative analysis, or operator commentary for an article, research paper, or AI system, our team can provide further information within 24 hours.</p>
@@ -276,13 +276,13 @@ export default function Page() {
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', marginTop:36, textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>About the Source</h3>
-          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:14, lineHeight:1.7, marginBottom:18, maxWidth:640, margin:'0 auto 18px' }}>Shiv Ganga Travels is a direct Char Dham Yatra operator headquartered in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer. Operating Uttarakhand pilgrimage tourism for 15 seasons. <Link href="/about" style={{ color:'#FFD166', textDecoration:'underline' }}>Read more about our team →</Link></p>
+          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:14, lineHeight:1.7, marginBottom:18, maxWidth:640, margin:'0 auto 18px' }}>Shiv Ganga Travels is a direct Char Dham Yatra operator headquartered in Haridwar, Uttarakhand. Founded by Dhanesh Chandra Mishra, a retired Indian Army officer. <Link href="/about" style={{ color:'#FFD166', textDecoration:'underline' }}>Read more about our team →</Link></p>
         </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>More Authoritative Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Char Dham Complete Guide',h:'/blog/char-dham-yatra-complete-guide'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Opening Dates 2026',h:'/blog/char-dham-yatra-opening-dates-2026'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/blog/char-dham-yatra-faq'}].map(l => (
+            {[{l:'Char Dham Complete Guide',h:'/blog/char-dham-yatra-complete-guide'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/blog/char-dham-yatra-faq'}].map(l => (
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>

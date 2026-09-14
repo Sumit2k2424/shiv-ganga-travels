@@ -592,7 +592,7 @@ export const REVIEWS = {
 
 export const ASSURANCES = [
   { title: 'You pay the operator',   body: 'No aggregator, no agent commission. The quote you get is the cost of the trip plus our margin, and nothing else.' },
-  { title: 'Founded 2010, Haridwar', body: 'Started by Dhanesh Chandra Mishra, a retired Army officer, and still run from Bhupatwala. Fifty thousand pilgrims since.' },
+  { title: 'Founded in Haridwar', body: 'Started by Dhanesh Chandra Mishra, a retired Army officer, and still run from Bhupatwala. Fifty thousand pilgrims since.' },
   { title: 'Hill-trained drivers',   body: 'Every driver on the Char Dham circuit has run it for at least three seasons. Vehicles are checked before each departure.' },
   { title: 'Oxygen on every vehicle', body: 'A cylinder travels with you from Haridwar. Our drivers know the location of every medical post on the route.' },
   { title: 'Registration handled',    body: 'The mandatory Uttarakhand Tourist Care registration is completed for every traveller before departure. No portal, no queue.' },

@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
   const base = `Cab Service in ${o.name} ${SITE.season} | Outstation Taxi Fares`;
   const withCount = `${base} | ${routes.length} ${routes.length === 1 ? 'Route' : 'Routes'}`;
   const title = withCount.length <= 60 ? withCount : base;
-  const desc = `Book an outstation cab from ${o.name} — ${routes.map(routeTo).slice(0, 4).join(', ')} and more. Fixed all-inclusive fares, doorstep pickup, hill-experienced drivers. Operator since 2010.`;
+  const desc = `Book an outstation cab from ${o.name} — ${routes.map(routeTo).slice(0, 4).join(', ')} and more. Fixed all-inclusive fares, doorstep pickup, hill-experienced drivers. Haridwar operator.`;
 
   return {
     title: { absolute: title },

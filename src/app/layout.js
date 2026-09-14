@@ -77,7 +77,7 @@ export const metadata = {
     default: `Shiv Ganga Travels — Char Dham Yatra 2026 Haridwar`,
     template: `%s | Shiv Ganga`,
   },
-  description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹13,900. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims since 2010.',
+  description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹13,900. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims.',
   keywords: [
     'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
     'Kedarnath Yatra package 2026', 'Badrinath Yatra package',
@@ -115,8 +115,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra 2026`,
-    description: 'Char Dham Yatra 2026 from Haridwar from ₹13,900. Direct operator since 2010. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
-    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator since 2010' }],
+    description: 'Char Dham Yatra 2026 from Haridwar from ₹13,900. Direct operator. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
+    images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator' }],
   },
 
   // NOTE: no `alternates` here on purpose. A canonical set in the root layout
@@ -162,7 +162,7 @@ function SiteSchema() {
     ],
     url: SITE.baseUrl,
     slogan: 'Direct Char Dham Operator — Zero Commission',
-    disambiguatingDescription: 'Direct Char Dham Yatra tour operator based in Haridwar since 2010. Pilgrims book and pay the operator directly — no agents, no aggregators, no commission or middleman markup.',
+    disambiguatingDescription: 'Direct Char Dham Yatra tour operator based in Haridwar. Pilgrims book and pay the operator directly — no agents, no aggregators, no commission or middleman markup.',
     telephone: ['+91-7817996730', '+91-8859123961'],
     email: 'support@shivgangatravels.com',
 
@@ -214,7 +214,7 @@ function SiteSchema() {
       { '@type': 'ImageObject', url: '/opengraph-image', caption: 'Kedarnath Temple — served by Shiv Ganga Travels' },
     ],
 
-    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours. 50,000+ pilgrims served.',
+    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours. 50,000+ pilgrims served.',
 
     // Reference by @id only — do NOT restate his properties here. The full
     // Person node is the `founder` const below, emitted on every route, and
@@ -225,7 +225,6 @@ function SiteSchema() {
     // in a subtler form: one @id carrying conflicting values.
     founder: { '@id': `${SITE.baseUrl}/#founder` },
 
-    foundingDate: '2010',
     foundingLocation: { '@type': 'Place', name: 'Roorkee, Uttarakhand, India' },
 
     priceRange: '₹₹',
@@ -323,7 +322,7 @@ function SiteSchema() {
       // NO JustDial entry. Verified 2026-08-18: the Haridwar listing under this
       // name (Shiv-Ganga-Tour-Travels/...E1L3) is a DIFFERENT business — Niranjani
       // Akhara Road, Har Ki Pauri, established 2000, bus segment, no website. Ours
-      // is Saptrishi Rd, Bhupatwala, since 2010. Asserting it in sameAs told Google
+      // is Saptrishi Rd, Bhupatwala. Asserting it in sameAs told Google
       // the two are one entity, which is the same false identity claim the About
       // page's Person schema was cleaned up for. Restore a URL here only after we
       // create and claim our own JustDial listing.
@@ -368,7 +367,7 @@ function SiteSchema() {
     branchOf: { '@id': `${SITE.baseUrl}/#organization` },
     parentOrganization: { '@id': `${SITE.baseUrl}/#organization` },
     priceRange: '₹₹',
-    description: 'Roorkee branch of Shiv Ganga Travels — Char Dham Yatra specialist. Founded here in 2010. Serving pilgrims from Roorkee, Muzaffarnagar, Saharanpur and surrounding areas.',
+    description: 'Roorkee branch of Shiv Ganga Travels — Char Dham Yatra specialist. Serving pilgrims from Roorkee, Muzaffarnagar, Saharanpur and surrounding areas.',
   };
 
   // ── WebSite schema with SearchAction ──────────────────────
@@ -378,7 +377,7 @@ function SiteSchema() {
     '@id': `${SITE.baseUrl}/#website`,
     url: SITE.baseUrl,
     name: 'Shiv Ganga Travels',
-    description: 'Char Dham Yatra packages from Haridwar — Kedarnath, Badrinath, Gangotri, Yamunotri. Zero commission. Est. 2010.',
+    description: 'Char Dham Yatra packages from Haridwar — Kedarnath, Badrinath, Gangotri, Yamunotri. Zero commission.',
     publisher: { '@id': `${SITE.baseUrl}/#organization` },
     potentialAction: {
       '@type': 'SearchAction',
@@ -399,7 +398,7 @@ function SiteSchema() {
     // lone 'Founder & Managing Director', which hands a parser two job titles
     // for one entity.
     jobTitle: 'Founder & Director, Shiv Ganga Travels',
-    description: 'Retired Indian Army Officer who founded Shiv Ganga Travels in 2010. Pioneered the zero-commission model for Char Dham Yatra operators in Haridwar.',
+    description: 'Retired Indian Army Officer who founded Shiv Ganga Travels. Pioneered the zero-commission model for Char Dham Yatra operators in Haridwar.',
     url: `${SITE.baseUrl}/about`,
     // The one external profile that corroborates the person. It was present on
     // the /about node only, so the entity arrived unverifiable on the other

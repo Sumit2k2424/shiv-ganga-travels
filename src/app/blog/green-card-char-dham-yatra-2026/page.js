@@ -191,8 +191,7 @@ export default function GreenCard() {
               ['Registration Guide', '/blog/char-dham-yatra-registration'],
               ['Medical Certificate', '/blog/char-dham-yatra-medical-certificate'],
               ['Char Dham Package', '/char-dham-yatra'],
-              ['How to Reach Haridwar', '/how-to-reach-haridwar'],
-            ].map(([l, h]) => (
+              ].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

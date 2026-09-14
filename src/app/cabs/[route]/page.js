@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
   const url = `${SITE.baseUrl}/cabs/${r.slug}`;
 
   const title = `${from} to ${to} Cab 2026 | Fare from ${low} | Fixed Price`;
-  const desc = `${from} to ${to} cab — ${r.distance}, ${r.time}. Fixed all-inclusive fare from ${low}, no hidden tolls. Haridwar operator since 2010, hill-experienced drivers, pickup anywhere in ${from}.`;
+  const desc = `${from} to ${to} cab — ${r.distance}, ${r.time}. Fixed all-inclusive fare from ${low}, no hidden tolls. Haridwar operator, hill-experienced drivers, pickup anywhere in ${from}.`;
 
   return {
     title: { absolute: title },

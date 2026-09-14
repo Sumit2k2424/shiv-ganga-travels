@@ -86,7 +86,7 @@ export default function Page() {
         <AnswerBox>
           Yamunotri Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in
           Uttarkashi district and is the source of the Yamuna, the first of the four dhams in the
-          traditional circuit. The road ends at <Link href="/janki-chatti" style={{ color:'var(--teal)', fontWeight:600 }}>Janki Chatti</Link>; the temple is a 6 km trek above it,
+          traditional circuit. The road ends at Janki Chatti; the temple is a 6 km trek above it,
           with pony, palki and porter available. Open late April to early November.
         </AnswerBox>
 
@@ -204,7 +204,7 @@ export default function Page() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Opening Dates','/blog/char-dham-yatra-opening-dates-2026'],['Weather Guide','/blog/uttarakhand-weather-guide']].map(([l,h])=>(
+            {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Weather Guide','/blog/uttarakhand-weather-guide']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

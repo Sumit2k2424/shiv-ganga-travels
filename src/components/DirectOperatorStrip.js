@@ -15,7 +15,7 @@ export default function DirectOperatorStrip() {
       textAlign: 'center',
     }}>
       <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.92)', fontWeight: 600 }}>
-        <span style={{ color: 'var(--gold)' }}>✓</span> Direct Char Dham Operator in Haridwar since {SITE.established}
+        <span style={{ color: 'var(--gold)' }}>✓</span> Direct Char Dham Operator in Haridwar
         <span style={{ color: 'rgba(255,255,255,0.35)', margin: '0 8px' }}>·</span>
         <span style={{ color: '#FFD166' }}>Zero Commission</span>
         <span style={{ color: 'rgba(255,255,255,0.35)', margin: '0 8px' }}>·</span>

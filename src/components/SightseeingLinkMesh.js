@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { GONE_PATHS } from '@/data/gone';
 
 // Cross-link mesh for the "places to visit in <place>" cluster.
 //
@@ -37,7 +38,7 @@ export default function SightseeingLinkMesh({ current = '' }) {
         Places to visit — the rest of the circuit
       </p>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-        {others.map(([key, label, href]) => (
+        {others.filter(([, , href]) => !GONE_PATHS.has(href)).map(([key, label, href]) => (
           <Link prefetch={false} key={key} href={href} style={chip}>Places to Visit in {label} →</Link>
         ))}
       </div>

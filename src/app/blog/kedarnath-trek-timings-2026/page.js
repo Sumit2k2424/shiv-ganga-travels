@@ -188,7 +188,7 @@ export default function TrekTimings() {
 
         <h2 id="overnight" style={h2}>Overnight Stay vs Same-Day Return — Which Is Better?</h2>
         <p style={p}>
-          This is the single most important decision for your Kedarnath visit. From 15 seasons of sending pilgrims to Kedarnath, our honest advice is this: if you can manage it physically, <strong>stay overnight at Kedarnath</strong>. The reasons are not logistical — they are experiential.
+          This is the single most important decision for your Kedarnath visit. From years of sending pilgrims to Kedarnath, our honest advice is this: if you can manage it physically, <strong>stay overnight at Kedarnath</strong>. The reasons are not logistical — they are experiential.
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 24 }}>
           {[

@@ -18,7 +18,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
   openGraph: { title: `Kedarnath Darshan Timings ${SITE.season}: Aarti & VIP Slots`, description: `All Kedarnath temple timings ${SITE.season} — darshan hours, puja schedule, aarti times, VIP booking.`, url: `${SITE.baseUrl}/blog/kedarnath-darshan-timing`, type: 'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Darshan Timings ${SITE.season}: Aarti & VIP Slots` }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -243,7 +244,7 @@ export default function KedarnathTimings() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
+            {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Char Dham Registration','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

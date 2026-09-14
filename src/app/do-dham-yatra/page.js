@@ -48,7 +48,7 @@ function Schema() {
   const trip = {
     '@context':'https://schema.org','@type':'TouristTrip',
     name:'Do Dham Yatra 2026 — Kedarnath & Badrinath',
-    description:'5N/6D Do Dham Yatra from Haridwar covering Kedarnath (3,583m) and Badrinath (3,133m) — AC vehicle, hotels, meals, VIP darshan and registration. Direct operator since 2010.',
+    description:'5N/6D Do Dham Yatra from Haridwar covering Kedarnath (3,583m) and Badrinath (3,133m) — AC vehicle, hotels, meals, VIP darshan and registration. Direct operator.',
     url:`${SITE.baseUrl}/do-dham-yatra`,
     image:[`${SITE.baseUrl}/opengraph-image`],
     touristType:['Pilgrims','Families','Senior citizens'],
@@ -104,7 +104,7 @@ export default function DoDhamYatra() {
             2 Dham Yatra from Haridwar · <strong style={{ color:'#FFD166' }}>₹8,200/person</strong> · 5N/6D · Kedarnath 16km trek · Badrinath darshan · Zero commission
           </p>
           <div style={{ display:'flex', gap:8, justifyContent:'center', flexWrap:'wrap', marginBottom:22 }}>
-            {['🏔️ Kedarnath 3,583m','🕌 Badrinath 3,133m','🎖️ 15 yrs · 50k pilgrims',`⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t=>(
+            {['🏔️ Kedarnath 3,583m','🕌 Badrinath 3,133m','🎖️ Retd. Army founder · 50k pilgrims',`⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t=>(
               <span key={t} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', fontSize:12.5, fontWeight:600, padding:'6px 14px', borderRadius:100, border:'1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>
@@ -151,7 +151,7 @@ export default function DoDhamYatra() {
           (9N/10D, from ₹13,900). Choose Do Dham if you have under a week; choose Char Dham to complete
           the full circuit. Both run late April to November 2026.
         </AnswerBox>
-        <p style={p}>Most people searching for "2 dham yatra" or "do dham yatra" are deciding between two options. Here is the honest answer from 15 years of sending pilgrims to the mountains:</p>
+        <p style={p}>Most people searching for "2 dham yatra" or "do dham yatra" are deciding between two options. Here is the honest answer from years of sending pilgrims to the mountains:</p>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:12, marginBottom:28 }}>
           {[
@@ -276,13 +276,13 @@ export default function DoDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          Competitor figures are their own published 2026 starting prices. We run this route ourselves from Haridwar since 2010 — same hotels, same temples, same registration handled, without the brand premium. That's the whole difference.
+          Competitor figures are their own published 2026 starting prices. We run this route ourselves from Haridwar — same hotels, same temples, same registration handled, without the brand premium. That's the whole difference.
         </p>
 
         {/* What makes it special */}
         <h2 style={h2}>Why Most Pilgrims Remember Do Dham Longer Than Char Dham</h2>
         <p style={p}>
-          This is something we have heard from hundreds of our repeat pilgrims over 15 years, and it surprises people: many who have done Char Dham multiple times say the Do Dham they did with an overnight at Kedarnath was more powerful than any full circuit. Here is why.
+          This is something we have heard from hundreds of our repeat pilgrims over the years, and it surprises people: many who have done Char Dham multiple times say the Do Dham they did with an overnight at Kedarnath was more powerful than any full circuit. Here is why.
         </p>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
           {[
@@ -311,7 +311,7 @@ export default function DoDhamYatra() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Yatra','/char-dham-yatra'],['Teen Dham Yatra','/teen-dham-yatra'],['Ek Dham Yatra','/ek-dham-yatra'],['Devprayag Sangam','/devprayag'],['Kedarnath Yatra','/kedarnath-yatra'],['Badrinath Yatra','/badrinath-yatra'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Cost Breakdown','/blog/char-dham-yatra-cost']].map(([l,h])=>(
+            {[['Char Dham Yatra','/char-dham-yatra'],['Teen Dham Yatra','/teen-dham-yatra'],['Ek Dham Yatra','/ek-dham-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Badrinath Yatra','/badrinath-yatra'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Cost Breakdown','/blog/char-dham-yatra-cost']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

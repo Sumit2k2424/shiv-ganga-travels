@@ -74,7 +74,7 @@ export default function ComparisonPage() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>Author:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer)</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> {PAGE_DATES.modifiedHuman}</span>
-          <span>📊 <strong style={{ color:'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims, 15 years</span>
+          <span>📊 <strong style={{ color:'var(--navy)' }}>Based on:</strong> 50,000+ pilgrims</span>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ export default function ComparisonPage() {
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-vs-do-dham", "title": "Char Dham vs Do Dham Yatra: Which Suits You?", "description": "Char Dham vs Do Dham Yatra — compare time (10 vs 6 days), cost (₹13,900 vs ₹8,200), difficulty and significance to pick the right pilgrimage for 2026.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <p className="blog-lede">
-          One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims since 2010, the answer depends entirely on your time, health, and what you want from the yatra.
+          One of the most common questions Dhanesh ji receives at Shiv Ganga Travels: <strong>"Should we do Char Dham or Do Dham?"</strong> After guiding 50,000+ pilgrims, the answer depends entirely on your time, health, and what you want from the yatra.
         </p>
 
         <KeyTakeaways title="The short answer"
@@ -139,7 +139,7 @@ export default function ComparisonPage() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', margin:'28px 0' }}>
-          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>💬 From 15 years of experience:</div>
+          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:8 }}>💬 From years of experience:</div>
           <p style={{ fontSize:15.5, color:'#2D3748', lineHeight:1.75, margin:0 }}>
             "In my experience, pilgrims who rush Char Dham in 7–8 days feel unsatisfied — they missed the experience at each dham. I always recommend: if you have less than 10 days, do Do Dham well rather than Char Dham in a rush. The journey matters as much as the destination." — <strong>Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels</strong>
           </p>
@@ -148,7 +148,7 @@ export default function ComparisonPage() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['Teen Dham Packages','/teen-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium']].map(([l,h])=>(
+            {[['Char Dham Packages','char-dham-yatra'],['Do Dham Packages','/do-dham-yatra'],['Teen Dham Packages','/teen-dham-yatra'],['7-Day Itinerary','/blog/char-dham-yatra-7-days'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Registration Guide','/blog/char-dham-yatra-registration'],].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

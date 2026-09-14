@@ -27,11 +27,11 @@ import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/
 
 export const metadata = {
   title: { absolute: `Shiv Ganga Travels — Char Dham Yatra ${SITE.season}, Haridwar` },
-  description: `Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.`,
+  description: `Yamunotri · Gangotri · Kedarnath · Badrinath. Trusted direct operator, zero commission, fixed departures. Book direct.`,
   keywords: [`char dham yatra ${SITE.season}`,'char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
     title: `Char Dham Yatra ${SITE.season}`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. 15+ yrs trusted operator, zero commission, fixed departures. Direct since 2010.',
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. Trusted direct operator, zero commission, fixed departures. Book direct.',
     url: 'https://www.shivgangatravels.com',
     siteName: 'Shiv Ganga Travels',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Temple — Char Dham Yatra ${SITE.season} with Shiv Ganga Travels Haridwar` }],
@@ -41,8 +41,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra ${SITE.season}`,
-    description: 'Zero commission Char Dham Yatra from Haridwar. Est. 2010.',
-    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Haridwar — Shiv Ganga Travels, Direct Operator since 2010` }],
+    description: 'Zero commission Char Dham Yatra from Haridwar.',
+    images: [{ url: '/opengraph-image', alt: `Char Dham Yatra ${SITE.season} from Haridwar — Shiv Ganga Travels, Direct Operator` }],
   },
   alternates: { canonical: 'https://www.shivgangatravels.com' },
 };
@@ -272,11 +272,9 @@ const TOOLS = [
 // Pune, Noida, Chandigarh, Kolkata) were folded into these on 14 Sep 2026 and
 // 308 there — see src/data/redirects.js.
 const CITY_LINKS = [
-  ['Delhi & North India','/char-dham-yatra-from-delhi'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],['Haridwar','/char-dham-yatra-from-haridwar'],
-];
+  ['Delhi & North India','/char-dham-yatra-from-delhi'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],];
 const GUIDE_LINKS = [
-  ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Online Puja Booking','/online-puja-booking'],
-  ['Kedarnath Weather','/kedarnath-weather'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['All Blog Posts','/blog'],
+  ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['All Blog Posts','/blog'],
 ];
 
 const FUNNEL = [
@@ -469,7 +467,7 @@ export default function HomePage() {
         <div className="lux-grid lux-grid--2" style={{ alignItems: 'center', gap: 'clamp(32px,5vw,72px)' }}>
           <div>
             <SectionHead eyebrow="What sets us apart" title="What every yatra with us includes"
-              lede="Fifteen years of running the same circuit teaches you what actually matters at 3,500 metres. These aren’t add-ons — they’re standard." />
+              lede="Running the same circuit season after season teaches you what actually matters at 3,500 metres. These aren’t add-ons — they’re standard." />
             <div className="lux-grid lux-grid--2" data-lux-stagger="">
               {INCLUDES.map((w) => (
                 <div key={w.t} className="lux-feat">
@@ -509,9 +507,9 @@ export default function HomePage() {
           <div>
             <SectionHead eyebrow="The people behind your yatra" title="Founded by a retired Army officer" />
             <div className="lux-body" style={{ display: 'grid', gap: 16 }}>
-              <p style={{ margin: 0 }}>In 2010, Dhanesh Chandra Mishra — a retired officer of the Indian Army — started Shiv Ganga Travels with a single vehicle and one conviction: that pilgrims deserved the same care and discipline the Army demands of every mission.</p>
+              <p style={{ margin: 0 }}>Dhanesh Chandra Mishra — a retired officer of the Indian Army — started Shiv Ganga Travels with a single vehicle and one conviction: that pilgrims deserved the same care and discipline the Army demands of every mission.</p>
               <p style={{ margin: 0 }}>He’d seen what happened when families entrusted their sacred journey to operators who prioritised profit over safety. Overloaded vehicles. Substandard hotels. Missing guides. Stranded pilgrims at 3,500 metres. He decided to do it differently.</p>
-              <p style={{ margin: 0 }}>Fifteen years later, Shiv Ganga Travels has carried over 50,000 pilgrims across every season. Every vehicle is maintained to Army safety standards. Every driver is trained for high-altitude emergencies. Every rupee is accounted for before you pay.</p>
+              <p style={{ margin: 0 }}>Today, Shiv Ganga Travels has carried over 50,000 pilgrims across every season. Every vehicle is maintained to Army safety standards. Every driver is trained for high-altitude emergencies. Every rupee is accounted for before you pay.</p>
             </div>
             <div style={{ display: 'grid', gap: 10, margin: '26px 0' }} data-lux-stagger="">
               {FOUNDER_POINTS.map((f) => (
@@ -535,7 +533,7 @@ export default function HomePage() {
                 “Every pilgrim who boards one of our vehicles carries faith, family, and often a lifelong dream. I treat that responsibility the same way I treated my duty in the Army — with total commitment and zero compromise.”
               </blockquote>
               <div className="lux-grid lux-grid--2" style={{ marginTop: 26, gap: 12 }}>
-                {[['Est. 2010', '15 years running'], ['20+ Vehicles', 'Fleet owned outright']].map(([v, l]) => (
+                {[['Direct', 'No agent, no commission'], ['20+ Vehicles', 'Fleet owned outright']].map(([v, l]) => (
                   <div key={l} style={{ borderTop: '1px solid var(--rule-light-soft)', paddingTop: 12 }}>
                     <div className="lux-figure" style={{ fontSize: '1.6rem', color: '#fff' }}>{v}</div>
                     <div className="lux-caption" style={{ marginTop: 4 }}>{l}</div>
@@ -601,7 +599,7 @@ export default function HomePage() {
               <span className="lux-display lux-display--sm" style={{ color: '#fff' }}>Book with confidence</span>
             </div>
             <p className="lux-body" style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.88rem', marginBottom: 20 }}>
-              Zero commission. Free itinerary in two hours. 50,000+ pilgrims trusted us since 2010.
+              Zero commission. Free itinerary in two hours. 50,000+ pilgrims trusted us.
             </p>
             <div style={{ display: 'grid', gap: 10, marginTop: 'auto' }}>
               <a href={wa('Namaste! I want to plan Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa lux-wa--sm" style={{ justifyContent: 'center' }}>

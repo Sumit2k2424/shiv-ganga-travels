@@ -122,14 +122,14 @@ export default function GangotriTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'Gaumukh Trek Guide',h:'/gaumukh'},{l:'How to Reach Gangotri',h:'/how-to-reach-gangotri'},{l:'Gangotri Weather',h:'/gangotri-weather'},{l:'Haridwar to Gangotri Cab',h:'/cabs/haridwar-to-gangotri-cab'},{l:'Char Dham Yatra Package',h:'/char-dham-yatra'}].map(l=>(
+          {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'Gangotri Weather',h:'/gangotri-weather'},{l:'Haridwar to Gangotri Cab',h:'/cabs/haridwar-to-gangotri-cab'},{l:'Char Dham Yatra Package',h:'/char-dham-yatra'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center' }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Plan Your Gangotri Darshan</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Direct operator since 2010 · Acclimatisation rest day built in · Senior-friendly itineraries · Zero commission</p>
+        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Direct operator · Acclimatisation rest day built in · Senior-friendly itineraries · Zero commission</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to plan a Gangotri / Char Dham Yatra. Please share details.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           <a href='tel:+917817996730' style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>

@@ -266,7 +266,7 @@ export default function YamunotriWeather() {
           There is no observing station at Yamunotri itself. Published temperatures for the shrine are
           interpolated from Barkot and Uttarkashi and adjusted for altitude, which is why sites disagree by
           several degrees for the same month. The bands here are what our drivers and guides have recorded on
-          the route since {SITE.established}, cross-checked against IMD regional data, and are given as ranges
+          the route over many seasons, cross-checked against IMD regional data, and are given as ranges
           rather than single figures for that reason.
         </p>
 
@@ -289,7 +289,7 @@ export default function YamunotriWeather() {
 
         <div style={{ marginTop:30, borderTop:'1px solid hsl(var(--border))', paddingTop:18, fontSize:12.5, color:'var(--text-muted)', lineHeight:1.8 }}>
           <strong>Last verified:</strong> {VERIFIED} · <strong>Season:</strong> 19 April – 11 November 2026 ·{' '}
-          <strong>Sources:</strong> Shiv Ganga Travels route records ({SITE.established}–{SITE.season}), IMD
+          <strong>Sources:</strong> Shiv Ganga Travels route records (multi-season, to {SITE.season}), IMD
           regional data, Uttarakhand Tourism. Published under{' '}
           <a href="https://creativecommons.org/licenses/by/4.0/" rel="nofollow noopener" target="_blank" style={{ color:'var(--teal)' }}>CC BY 4.0</a> — free to cite with attribution.
         </div>
@@ -308,7 +308,7 @@ export default function YamunotriWeather() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Gangotri Weather','/gangotri-weather'],['Kedarnath Weather','/kedarnath-weather'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Yamunotri Yatra','/yamunotri-yatra']].map(([l,h]) => (
+            {[['Gangotri Weather','/gangotri-weather'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Yamunotri Yatra','/yamunotri-yatra']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

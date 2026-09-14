@@ -136,8 +136,8 @@ export default function CharDhamFromMumbai() {
         </div>
 
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Mumbai pilgrims — 15 seasons of experience</div>
-          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Over 15 seasons, we have seen Mumbai pilgrims split almost evenly between May and October. The October Navratri batch from Maharashtra fills within two weeks every year — purely word of mouth. Book October by August if you are from Mumbai. Pune, Nashik and Aurangabad groups often combine with Mumbai for shared Tempo Traveller batches.</div>
+          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Mumbai pilgrims — many seasons of experience</div>
+          <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.75 }}>Over the years, we have seen Mumbai pilgrims split almost evenly between May and October. The October Navratri batch from Maharashtra fills within two weeks every year — purely word of mouth. Book October by August if you are from Mumbai. Pune, Nashik and Aurangabad groups often combine with Mumbai for shared Tempo Traveller batches.</div>
         </div>
 
         <BlogCTA variant="inline" intent="booking" />

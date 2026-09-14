@@ -185,7 +185,7 @@ export default function ValleyOfFlowersTrek() {
       <div style={{ background:'var(--bg)', borderRadius:12, padding:'16px 20px', border:'1px solid hsl(var(--border))', fontSize:14, lineHeight:2.2, marginBottom:20 }}>
         <strong>Haridwar</strong> → Joshimath (300km, overnight) → Govindghat → <strong>Ghangaria base camp</strong> (13km trek) → <strong>Valley of Flowers</strong> (4km day trek) → <strong>Hemkund Sahib</strong> (6km day trek) → Govindghat → <strong>Badrinath</strong> → Haridwar
       </div>
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The core trek from <Link href="/govindghat" style={{ color:'var(--teal)', fontWeight:600 }}>Govindghat</Link> to Ghangaria (base camp) is <strong>13km</strong> and takes 4–6 hours. From Ghangaria, the Valley of Flowers is a 4km one-way day trek, and Hemkund Sahib is a steep 6km one-way day trek. Most people do both on separate days.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The core trek from Govindghat to Ghangaria (base camp) is <strong>13km</strong> and takes 4–6 hours. From Ghangaria, the Valley of Flowers is a 4km one-way day trek, and Hemkund Sahib is a steep 6km one-way day trek. Most people do both on separate days.</p>
       <p style={p}>
         Two things shorten that first day, and neither is widely advertised. Shared jeeps run the first 4km
         from Govindghat to <strong>Pulna</strong>, which cuts the approach trek to about <strong>9km</strong>;
@@ -215,7 +215,7 @@ export default function ValleyOfFlowersTrek() {
         {/* ── Mid-article conversion CTA ── */}
         <BlogCTA variant="inline" intent="info" />
       <h2 id="hemkund" style={h2}>Hemkund Sahib — Combine for the Perfect 5-Day Trip</h2>
-      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Full route, season and altitude detail is in our <Link href="/hemkund-sahib-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Hemkund Sahib yatra guide</Link>.</p>
+      <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Full route, season and altitude detail is in our Hemkund Sahib yatra guide.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Hemkund Sahib (4,329m) is a Sikh pilgrimage site of extraordinary beauty — a glacial lake surrounded by snow peaks with a pristine gurudwara on its shores. It is said that Guru Gobind Singh meditated here in a previous life. The <strong>Langar</strong> (free kitchen) serves dal, roti and kheer to everyone regardless of faith — one of the most moving expressions of community in any religious place in India.</p>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Our <strong>Valley of Flowers + Hemkund Sahib + Badrinath package (5N/6D)</strong> covers all three in one trip from Haridwar for ₹10,100 per person.</p>
 

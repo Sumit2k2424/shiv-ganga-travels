@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
  * A deliberate note on counters: this renders the real figure as static text
  * rather than animating up from zero. `magicui/number-ticker` exists and is
  * the right tool inside a hero, but it renders `0` into the SSR HTML, so a
- * band of trust figures — "50,000+ pilgrims", "since 2010" — would ship as a
+ * band of trust figures — "50,000+ pilgrims", "4.6★" — would ship as a
  * row of zeroes to crawlers and to anyone whose JS has not run. On a page
  * whose whole job is credibility, that trade is not worth 400ms of movement.
  *

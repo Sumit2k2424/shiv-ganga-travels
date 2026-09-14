@@ -44,7 +44,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} | हिंदी में | प्रिंट करें` },
-  description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि के साथ यात्रा बुक करें।`,
+  description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में। विश्वसनीय ऑपरेटर, तुरंत पुष्टि के साथ यात्रा बुक करें।`,
   keywords: ['चार धाम यात्रा में क्या ले जाएं', 'char dham yatra packing list hindi', `चार धाम यात्रा सामान ${SITE.season}`, 'char dham yatra kya le jayen', 'चार धाम यात्रा दवाइयां'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },
   openGraph: { title: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — Print करके बैग में रख लो`, description: 'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले check करें।', url: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi`, type: 'article', 
@@ -256,7 +256,7 @@ export default function CharDhamPackingListHindi() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['केदारनाथ पहली बार','/blog/kedarnath-pehli-baar'],['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['कब जाएं?','/blog/char-dham-kab-jayen'],['Packing List (English)','/blog/char-dham-yatra-packing-list']].map(([l,h]) => (
+            {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['कब जाएं?','/blog/char-dham-kab-jayen'],['Packing List (English)','/blog/char-dham-yatra-packing-list']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

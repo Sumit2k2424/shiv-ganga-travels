@@ -94,7 +94,7 @@ export default function TermsAndConditions() {
         <P>
           &quot;We&quot;, &quot;us&quot; and &quot;Shiv Ganga Travels&quot; mean the travel agency at
           Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, operating
-          since 2010. &quot;You&quot; means the person making the booking, who confirms they have
+          . &quot;You&quot; means the person making the booking, who confirms they have
           authority to accept these terms on behalf of everyone named on it. Paying the booking advance
           means you accept these terms for your whole group.
         </P>

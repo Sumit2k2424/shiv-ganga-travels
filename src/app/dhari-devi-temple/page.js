@@ -186,7 +186,7 @@ export default function DhariDeviTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on the route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Char Dham Yatra',h:'/char-dham-yatra'},{l:'Do Dham Yatra',h:'/do-dham-yatra'},{l:'Devprayag Sangam',h:'/devprayag'},{l:'Rudraprayag Sangam',h:'/rudraprayag'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Badrinath Temple',h:'/badrinath-temple'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},{l:'Places to Visit En Route',h:'/blog/places-to-visit-during-char-dham-yatra'}].map(l=>(
+          {[{l:'Char Dham Yatra',h:'/char-dham-yatra'},{l:'Do Dham Yatra',h:'/do-dham-yatra'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Badrinath Temple',h:'/badrinath-temple'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
@@ -194,7 +194,7 @@ export default function DhariDeviTemple() {
 
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center' }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Add Dhari Devi to Your Yatra — We Plan the Whole Route</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Char Dham, Do Dham or a short Dhari Devi darshan trip · Direct Haridwar operator since 2010</p>
+        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Char Dham, Do Dham or a short Dhari Devi darshan trip · Direct Haridwar operator</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to include Dhari Devi Temple darshan in my Uttarakhand yatra.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           <a href="tel:+917817996730" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>

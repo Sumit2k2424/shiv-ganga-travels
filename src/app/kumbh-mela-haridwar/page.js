@@ -182,7 +182,7 @@ export default function KumbhMelaHaridwar() {
           administration for large Melas. Basic but organised, and worth knowing about as a fallback.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Have a written confirmation with the property
           named.</strong> Kumbh seasons attract the same booking frauds as the yatra — see our{' '}
-          <Link href="/char-dham-yatra-scams" style={{ color:'var(--teal)', fontWeight:600 }}>scams page</Link>.</LI>
+          scams page.</LI>
         </ul>
 
         <H2>How the City Actually Changes</H2>
@@ -215,7 +215,7 @@ export default function KumbhMelaHaridwar() {
           <Link href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>,{' '}
           <Link href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev at Kankhal</Link>{' '}
           and{' '}
-          <Link href="/maya-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Maya Devi</Link>.
+          Maya Devi.
           Our{' '}
           <Link href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>sightseeing itinerary</Link>{' '}
           sequences them around the crowds.
@@ -244,10 +244,6 @@ export default function KumbhMelaHaridwar() {
         <Related links={[
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Places to Visit in Haridwar','/haridwar-sightseeing-places'],
-          ['Haridwar Hotels','/haridwar-hotels'],
-          ['Taxi Service in Haridwar','/taxi-service-in-haridwar'],
-          ['How to Reach Haridwar','/how-to-reach-haridwar'],
-          ['Haridwar Tour Packages','/haridwar-tour-packages'],
           ['Char Dham Yatra','/char-dham-yatra'],
         ]}/>
       </Article>
