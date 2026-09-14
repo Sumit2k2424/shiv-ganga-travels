@@ -19,7 +19,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
   openGraph: { title:`Char Dham Yatra Packing List ${SITE.season} (Printable)`, description:'Exactly what to pack for Char Dham Yatra — clothes, medicines, documents.', url:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list`, type:'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Packing List ${SITE.season} (Printable)` }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -117,7 +118,7 @@ return (
       <BlogHero
         badge="Preparation Guide · 2026"
         title="Char Dham Yatra Packing List 2026 — What to Carry"
-        dek="Clothes · Shoes · Medicines · Documents · Gadgets — from 15 years of guiding pilgrims"
+        dek="Clothes · Shoes · Medicines · Documents · Gadgets — from years of guiding pilgrims"
         author="Dhanesh Chandra Mishra"
         updated="Updated Apr 2026"
         readTime="7 min read"
@@ -146,7 +147,7 @@ return (
 
         <p className="blog-lede">Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This packing list comes from 15 years of guiding over 50,000 pilgrims through the Char Dham. It's not a generic "what to carry" list from the internet. It's what we actually tell our pilgrims the week before departure, after years of watching what people wish they'd brought and what they wish they'd left at home.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This packing list comes from guiding over 50,000 pilgrims through the Char Dham. It's not a generic "what to carry" list from the internet. It's what we actually tell our pilgrims the week before departure, after years of watching what people wish they'd brought and what they wish they'd left at home.</p>
 
         <KeyTakeaways title="Pack this, skip the rest"
           points={[
@@ -194,7 +195,6 @@ return (
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides:</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[
-              { label:'Char Dham Complete Guide →', href:'/blog/char-dham-guide' },
               { label:'Best Time to Visit →', href:'/blog/best-time-char-dham' },
               { label:'Kedarnath Trek Guide →', href:'/blog/kedarnath-trek-guide' },
               { label:'View Char Dham Packages →', href:'/char-dham-yatra' },

@@ -57,7 +57,7 @@ export default function JoshimathNarsinghTemple() {
     geo:[30.5550, 79.5646],
     types:['PlaceOfWorship','HinduTemple','TouristAttraction'],
     faqs:FAQS,
-    crumbs:[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Narsingh Temple Joshimath','/joshimath-narsingh-temple']],
+    crumbs:[['Narsingh Temple Joshimath','/joshimath-narsingh-temple']],
   });
 
   return (
@@ -69,7 +69,7 @@ export default function JoshimathNarsinghTemple() {
         A <strong style={{ color:'#FFD166' }}>Shankaracharya math, not just a winter address</strong>.
       </Hero>
 
-      <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Narsingh Temple Joshimath', null]]}/>
+      <Crumbs trail={[['Narsingh Temple Joshimath', null]]}/>
 
       <Article>
         <Updated date={PAGE_DATES.modifiedHuman}/>
@@ -186,8 +186,6 @@ export default function JoshimathNarsinghTemple() {
         />
 
         <Related links={[
-          ['Places to Visit in Joshimath','/joshimath-sightseeing-places'],
-          ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
           ['Omkareshwar Ukhimath','/ukhimath'],
           ['Badrinath Temple','/badrinath-temple'],
           ['Panch Badri Yatra','/panch-badri-yatra'],

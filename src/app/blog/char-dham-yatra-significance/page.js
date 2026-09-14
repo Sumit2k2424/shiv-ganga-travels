@@ -214,7 +214,7 @@ export default function Significance() {
           You can read all of this and still not understand the yatra until you are doing it. What I have watched, year after year, is that the history stops being a fact and becomes a feeling somewhere around the Kedarnath trek — when the temple finally appears against the peak after a hard climb, and a busload of strangers who were complaining about the cold an hour earlier go completely quiet. The circuit was designed to be earned, and it still is.
         </p>
         <p style={p}>
-          If you want the practical side — dates, costs, fitness, what to pack — our <Link href="/blog/char-dham-guide" style={{ color:'var(--teal)', fontWeight:600, textDecoration:'none' }}>complete Char Dham guide</Link> covers the planning, and we are always happy to talk through your specific trip on WhatsApp.
+          If you want the practical side — dates, costs, fitness, what to pack — our complete Char Dham guide covers the planning, and we are always happy to talk through your specific trip on WhatsApp.
         </p>
 
         <h2 id="faqs" style={h2}>Frequently Asked Questions</h2>
@@ -230,7 +230,7 @@ export default function Significance() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Char Dham Package 2026', '/char-dham-yatra'], ['Char Dham Guide', '/blog/char-dham-guide'], ['Route Map', '/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Kedarnath Temple', '/kedarnath-temple'], ['Badrinath Temple', '/badrinath-temple']].map(([l, h]) => (
+            {[['Char Dham Package 2026', '/char-dham-yatra'], ['Route Map', '/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Kedarnath Temple', '/kedarnath-temple'], ['Badrinath Temple', '/badrinath-temple']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

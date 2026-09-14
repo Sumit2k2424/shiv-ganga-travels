@@ -31,14 +31,14 @@ export const metadata = {
    real single-dham packages, not derived figures. */
 const DHAMS = [
   {
-    name: 'Kedarnath', href: '/kedarnath-yatra', pkg: '/kedarnath-tour-package',
+    name: 'Kedarnath', href: '/kedarnath-yatra', pkg: '/packages/kedarnath-yatra-package-3n-4d-haridwar',
     dur: '3N/4D', price: '₹5,250', alt: '3,583 m', deity: 'Shiva (Jyotirlinga)',
     effort: 'Hard', trek: '16 km from Gaurikund',
     who: 'Shaiva devotees, and anyone for whom the climb is the point',
     note: 'The one most people mean when they say "one dham". It is also by some distance the hardest — 16 km and roughly 1,600 m of ascent, or a pony, palki or helicopter if you cannot walk it. Budget four days rather than three; it is the only single dham that genuinely needs the extra one.',
   },
   {
-    name: 'Badrinath', href: '/badrinath-yatra', pkg: '/badrinath-tour-package',
+    name: 'Badrinath', href: '/badrinath-yatra', pkg: '/packages/badrinath-yatra-package-2n-3d-haridwar',
     dur: '2N/3D', price: '₹4,500', alt: '3,133 m', deity: 'Vishnu',
     effort: 'Easy', trek: 'None — road to the steps',
     who: 'Seniors, families, anyone who cannot trek',
@@ -127,7 +127,7 @@ function Schema() {
   const trip = {
     '@context': 'https://schema.org', '@type': 'TouristTrip',
     name: `Ek Dham Yatra ${SITE.season} — single dham packages from Haridwar`,
-    description: `Single-dham packages to Kedarnath, Badrinath, Gangotri or Yamunotri from Haridwar, 2N/3D to 3N/4D, from ₹4,250 per person all-inclusive. Direct operator since ${SITE.established}.`,
+    description: `Single-dham packages to Kedarnath, Badrinath, Gangotri or Yamunotri from Haridwar, 2N/3D to 3N/4D, from ₹4,250 per person all-inclusive. Direct operator.`,
     url: `${SITE.baseUrl}/ek-dham-yatra`,
     image: [`${SITE.baseUrl}/opengraph-image`],
     touristType: ['Pilgrims', 'Families', 'Senior citizens', 'First-time visitors'],
@@ -176,7 +176,7 @@ export default function EkDhamYatra() {
             One dham from Haridwar · <strong style={{ color: '#FFD166' }}>from ₹4,250/person</strong> · all four compared honestly · zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🕉️ Any one of the four', '🚗 2 of 4 need no trek', '🎖️ 15 yrs · 50k pilgrims', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
+            {['🕉️ Any one of the four', '🚗 2 of 4 need no trek', '🎖️ Retd. Army founder · 50k pilgrims', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>
@@ -337,7 +337,7 @@ export default function EkDhamYatra() {
           <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer">registrationandtouristcare.uk.gov.in</a>, and checked at police barriers on the way up. We complete it for everyone booked with us.
         </p>
         <p style={p}>
-          Outside the season the deities move down to their winter seats and you can visit those instead &mdash; <Link href="/ukhimath">Ukhimath</Link> for Kedarnath, <Link href="/joshimath-narsingh-temple">Joshimath</Link> for Badrinath &mdash; on roads that stay open. See <Link href="/winter-char-dham-yatra">Winter Char Dham</Link> for how that works.
+          Outside the season the deities move down to their winter seats and you can visit those instead &mdash; <Link href="/ukhimath">Ukhimath</Link> for Kedarnath, <Link href="/joshimath-narsingh-temple">Joshimath</Link> for Badrinath &mdash; on roads that stay open. See Winter Char Dham for how that works.
         </p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
@@ -356,14 +356,14 @@ export default function EkDhamYatra() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. Fifteen seasons of talking people out of the wrong dham, which is most of what this page is. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of talking people out of the wrong dham, which is most of what this page is. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Book Ek Dham Yatra {SITE.season} — from ₹4,250/person</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free itinerary in 2 hours · Zero commission · Registration handled · Direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free itinerary in 2 hours · Zero commission · Registration handled · Direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Book on WhatsApp</a>
@@ -374,7 +374,7 @@ export default function EkDhamYatra() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Gangotri Yatra', '/gangotri-yatra'], ['Yamunotri Yatra', '/yamunotri-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['All Packages', '/packages'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Opening Dates 2026', '/blog/char-dham-yatra-opening-dates-2026'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['Kedarnath Helicopter', '/blog/kedarnath-helicopter-booking'], ['Barkot', '/barkot'], ['Gaurikund', '/gaurikund'], ['Winter Char Dham', '/winter-char-dham-yatra']].map(([l, href]) => (
+            {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Gangotri Yatra', '/gangotri-yatra'], ['Yamunotri Yatra', '/yamunotri-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['All Packages', '/packages'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['Kedarnath Helicopter', '/blog/kedarnath-helicopter-booking'], ['Gaurikund', '/gaurikund'], ].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

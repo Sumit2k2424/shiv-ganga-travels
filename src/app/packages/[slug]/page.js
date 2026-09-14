@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
     const cat = CATEGORIES[slug];
     return {
       title: { absolute: `${cat.name} Packages 2026 | Direct Operator | Zero Commission` },
-      description: `${cat.name} Packages 2026 from Haridwar. Trusted operator, 15+ yrs experience, customizable itinerary & instant confirmation.`,
+      description: `${cat.name} Packages 2026 from Haridwar. Direct Haridwar operator, customizable itinerary & instant confirmation.`,
       alternates: { canonical: `${SITE.baseUrl}/packages/${slug}` },
     };
   }
@@ -103,29 +103,13 @@ function Schemas({ pkg }) {
     keywords:(pkg.tags||[]).join(', '),
   };
 
-  // Product schema for the package itself. NO aggregateRating and NO review —
-  // see the full reasoning on the identical node in ./schemas.js. Short
-  // version: the Google reviews rate the business, not this package, and
-  // restating them as 39 separate product ratings is a domain-level manual
-  // action risk. The rating stays on the Organization node in layout.js.
-  const product = {
-    '@context':'https://schema.org','@type':'Product',
-    '@id':`${SITE.baseUrl}/packages/${pkg.slug}#product`,
-    name:pkg.name,
-    description:pkg.metaDesc,
-    url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    image:pkg.photo||'https://www.shivgangatravels.com/logo.png',
-    brand:{ '@type':'Brand', name:SITE.name },
-    offers:{
-      '@type':'Offer',
-      price:pkg.price.discounted,
-      priceCurrency:'INR',
-      priceValidUntil:'2026-10-31',
-      availability:'https://schema.org/InStock',
-      seller:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
-      url:`${SITE.baseUrl}/packages/${pkg.slug}`,
-    },
-  };
+  // No Product node. There used to be one alongside the TouristTrip above,
+  // carrying the same name, description and offer. A tour package is a
+  // service, and Google's Product / merchant-listing structured data is for
+  // physical goods on a product page — 39 packages marked up as Products put
+  // the site into Search Console's "Merchant listings" and "Product snippets"
+  // reports for things that are not products. The TouristTrip already carries
+  // the offer; the duplicate node added nothing but a markup/content mismatch.
 
   const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
   const breadcrumb = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
@@ -142,7 +126,7 @@ function Schemas({ pkg }) {
     '@id':`${SITE.baseUrl}/#founder`,
     name:'Dhanesh Chandra Mishra',
     jobTitle:'Founder & Director, Shiv Ganga Travels',
-    description:'Retired Indian Army officer who founded Shiv Ganga Travels in 2010. 15+ seasons organising Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
+    description:'Retired Indian Army officer who founded Shiv Ganga Travels. Organises Char Dham, Do Dham and Kedarnath pilgrimages from Haridwar.',
     url:`${SITE.baseUrl}/about`,
     worksFor:{ '@type':'TravelAgency','@id':`${SITE.baseUrl}/#organization`, name:SITE.name, url:SITE.baseUrl },
     knowsAbout:['Char Dham Yatra','Kedarnath Yatra','Badrinath','Gangotri','Yamunotri','Uttarakhand pilgrimage travel','Char Dham registration'],
@@ -151,7 +135,6 @@ function Schemas({ pkg }) {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(product) }}/>
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(breadcrumb) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(author) }}/>
@@ -194,7 +177,7 @@ export default async function PackageDetailPage({ params }) {
     { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'₹2,30,000 (5N/6D heli charter)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
-  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator since 2010, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
+  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
 
   // Editorial section header — one change restyles every <h2 style={SH}> below.
   const SH = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.4vw,1.75rem)', fontWeight:600, color:'var(--ink)', letterSpacing:'-0.018em', lineHeight:1.15, marginBottom:18, paddingBottom:14, borderBottom:'1px solid var(--rule)' };
@@ -306,7 +289,7 @@ export default async function PackageDetailPage({ params }) {
       <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid hsl(var(--border))' }}>
         <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
-        <span>✓ Est. 2010 · Retd. Army Officer founder</span>
+        <span>✓ Retd. Army Officer founder</span>
         {/* Was a bare text node reading "Flexible cancellation →" with no link
             attached — restored to the cancellation policy page it points at. */}
         <Link href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>
@@ -316,7 +299,7 @@ export default async function PackageDetailPage({ params }) {
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
         <span>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open Apr 19 – Nov 2026</span>
-        <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · 15 seasons)</span>
+        <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · many seasons)</span>
       </div>
 
       {/* Quick Answer — self-contained, claim-first block for AI Overviews / ChatGPT citation */}
@@ -329,7 +312,7 @@ export default async function PackageDetailPage({ params }) {
             <li><strong>Duration:</strong> {pkg.duration.nights}N/{pkg.duration.days}D</li>
             <li><strong>Start:</strong> {pkg.startCity}</li>
             <li><strong>Season:</strong> {pkg.season || 'Apr–Nov 2026'}</li>
-            <li><strong>Operator:</strong> Shiv Ganga Travels (est. 2010)</li>
+            <li><strong>Operator:</strong> Shiv Ganga Travels</li>
           </ul>
         </div>
       </div>
@@ -674,7 +657,7 @@ export default async function PackageDetailPage({ params }) {
               </table>
             </div>
             <p style={{ fontSize:12.5, color:'var(--text-muted)', fontStyle:'italic' }}>
-              💡 September and October are our most consistently rated months across 15 years. Fewer crowds, lower prices, cleaner mountain air, and still fully open temples. Many repeat pilgrims specifically choose October.
+              💡 September and October are our most consistently rated months. Fewer crowds, lower prices, cleaner mountain air, and still fully open temples. Many repeat pilgrims specifically choose October.
             </p>
           </section>
           )}
@@ -809,7 +792,6 @@ export default async function PackageDetailPage({ params }) {
               {[
                 { t:'Tungnath & Chopta', d:'World\u2019s highest Shiva temple (3,680m) and the meadows of Chopta. A short, rewarding trek near Kedarnath.', href:'/chopta-tungnath', add:'+1 day' },
                 { t:'Mana Village', d:'India\u2019s last village before Tibet — Vyas Gufa, Bhim Pul and the Saraswati\u2019s source, 3 km past Badrinath.', href:'/blog/mana-village-badrinath', add:'half day' },
-                { t:'Triyuginarayan Temple', d:'Where Shiva and Parvati married, with its eternal flame. An easy detour from Sonprayag.', href:'/blog/triyuginarayan-temple', add:'half day' },
                 { t:'Valley of Flowers', d:'UNESCO alpine valley in bloom (Jul\u2013Aug), paired with Hemkund Sahib near Govindghat.', href:'/blog/valley-of-flowers-trek', add:'+2 days' },
               ].map(a => (
                 <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid hsl(var(--border))', display:'block' }}>
@@ -829,7 +811,7 @@ export default async function PackageDetailPage({ params }) {
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🎖️ Founded by a Retired Army Officer</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army. Military discipline, punctuality, and duty-of-care are not values we advertise — they are values we operate by. Every single departure runs on schedule.</div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Shiv Ganga Travels was founded by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army. Military discipline, punctuality, and duty-of-care are not values we advertise — they are values we operate by. Every single departure runs on schedule.</div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📍 Based in Haridwar — Not Delhi</div>
@@ -837,7 +819,7 @@ export default async function PackageDetailPage({ params }) {
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ {SITE.reviews.rating}/5 · {SITE.reviews.count} verified Google reviews</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our {SITE.reviews.count} reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has stayed above 4.5 over 15 seasons. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
+                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our {SITE.reviews.count} reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has stayed above 4.5. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
               </div>
               <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
                 <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Permits & licences</div>
@@ -854,9 +836,9 @@ export default async function PackageDetailPage({ params }) {
             <h2 style={SH}>Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
               {[
-                { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded in 2010 by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
+                { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
                 { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
-                { icon:'⭐', title:`${SITE.reviews.rating}/5 · ${SITE.reviews.count} verified Google reviews`, body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. The rating has stayed above 4.5 over 15 seasons.' },
+                { icon:'⭐', title:`${SITE.reviews.rating}/5 · ${SITE.reviews.count} verified Google reviews`, body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. The rating has stayed above 4.5 over many seasons.' },
                 { icon:'📋', title:'Permits & licences', body:`All vehicles hold valid tourism permits, insurance and hill-route licences. Vehicle and driver documents are sent on WhatsApp on request before you travel. GST registered — GSTIN ${SITE.gstin}, verifiable at gst.gov.in.` },
               ].map(item => (
                 <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>

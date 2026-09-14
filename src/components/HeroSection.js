@@ -34,7 +34,7 @@ import { SITE } from '@/data/packages';
    number, and the digit count never changes mid-animation (40,000→50,000,
    12→15, 16→20) — which is what keeps this out of CLS. */
 const HERO_TRUST = [
-  { icon: 'medal',   n: 15,    suffix: '+', label: 'Years · since ' + SITE.established },
+  { icon: 'medal',   fig: SITE.reviews.rating + '★', label: SITE.reviews.count + ' Google reviews' },
   { icon: 'users',   n: 50000, suffix: '+', label: 'Pilgrims served' },
   { icon: 'car',     n: 20,    suffix: '+', label: 'Own fleet vehicles' },
   { icon: 'headset', fig: '24×7',           label: 'On-road support' },
@@ -128,7 +128,7 @@ export default function HeroSection() {
           padding:'7px 18px', borderRadius:100,
           marginBottom:24,
         }}>
-          Direct operator · Haridwar · Est. {SITE.established}
+          Direct operator · Haridwar · Zero commission
         </div>
 
         <h1 className="display-title speakable-answer hero-title" style={{
@@ -146,7 +146,7 @@ export default function HeroSection() {
           textShadow:'0 1px 12px rgba(0,0,0,0.45)',
         }}>
           Yamunotri · Gangotri · Kedarnath · Badrinath — with the operator who has
-          carried <span className="hero-highlight">50,000+ pilgrims</span> since {SITE.established}.
+          carried <span className="hero-highlight">50,000+ pilgrims</span>.
           From <span className="hero-highlight">₹13,900</span> per person, all-inclusive.
         </p>
 

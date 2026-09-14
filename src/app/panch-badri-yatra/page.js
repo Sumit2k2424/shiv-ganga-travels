@@ -183,7 +183,7 @@ export default function PanchBadriYatra() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pilgrimages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Panch Kedar Yatra','/panch-kedar-yatra'],['Badrinath Temple','/badrinath-temple'],['Char Dham Yatra','/char-dham-yatra'],['Badrinath Weather','/badrinath-weather'],['Uttarakhand Tours','/uttarakhand-tour-packages']].map(([l,h]) => (
+            {[['Badrinath Temple','/badrinath-temple'],['Char Dham Yatra','/char-dham-yatra'],['Badrinath Weather','/badrinath-weather'],['Uttarakhand Tours','/uttarakhand-tour-packages']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

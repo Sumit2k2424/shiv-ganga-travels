@@ -18,7 +18,7 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
   // the ones already used on /about and in layout.js so the graph converges.
   //
   // Bylines site-wide resolve to Dhanesh (`/#founder`), the strongest entity we
-  // have: founder, retired Army officer, 15 seasons on the routes. That node is
+  // have: founder, retired Army officer, many seasons on the routes. That node is
   // also the `founder` of the Organization in layout.js, so every article now
   // reinforces one authority instead of splitting it across two people.
   const authors = {
@@ -40,12 +40,12 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
       id: `${SITE.baseUrl}/#founder`,
       name: 'Dhanesh Chandra Mishra',
       role: 'Founder & Director, Shiv Ganga Travels',
-      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
+      bio: `Dhanesh Chandra Mishra is a retired Indian Army officer who founded Shiv Ganga Travels in Roorkee, Uttarakhand. His military background — precision, accountability, zero tolerance for shortcuts — defines how the company operates. He has personally driven the Kedarnath and Badrinath routes hundreds of times and remains actively involved in every yatra season.`,
       credentials: [
         'Retired Indian Army Officer',
-        'Founded Shiv Ganga Travels 2010',
+        'Founded Shiv Ganga Travels',
         '50,000+ pilgrims served',
-        '15 seasons on Char Dham routes',
+        'many seasons on Char Dham routes',
       ],
       linkedin: 'https://www.linkedin.com/in/dhanesh-chandra-635564429/',
       facebook: null,

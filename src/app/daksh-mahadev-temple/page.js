@@ -107,7 +107,7 @@ export default function DakshMahadevTemple() {
           Sati&apos;s body across the world. To end his wandering, Vishnu cut the body apart, and the
           places where the pieces fell became the Shakti Peethas — the network of goddess shrines that
           runs from Kashmir to Assam to Bengal, including{' '}
-          <Link href="/maya-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Maya Devi here in Haridwar</Link>,
+          Maya Devi here in Haridwar,
           where her heart and navel are said to have landed.
         </P>
         <Note tone="info" title="Why this matters for a Char Dham pilgrim">
@@ -145,7 +145,7 @@ export default function DakshMahadevTemple() {
         <P>
           The point of putting Kankhal in the afternoon is that it is open when the hill temples are not.
           Most itineraries waste the midday closure sitting around. Our{' '}
-          <Link href="/taxi-service-in-haridwar" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar temple circuit</Link>{' '}
+          Haridwar temple circuit{' '}
           is built around exactly this sequence.
         </P>
 
@@ -164,13 +164,11 @@ export default function DakshMahadevTemple() {
         />
 
         <Related links={[
-          ['Maya Devi Temple','/maya-devi-temple'],
           ['Mansa Devi Temple','/mansa-devi-temple'],
           ['Chandi Devi Temple','/chandi-devi-temple'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Haridwar Sightseeing','/haridwar-sightseeing-places'],
-          ['Haridwar Tour Packages','/haridwar-tour-packages'],
-        ]}/>
+          ]}/>
       </Article>
     </>
   );

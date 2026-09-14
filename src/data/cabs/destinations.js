@@ -106,7 +106,7 @@ export const DESTINATIONS = [
       ['What is the best stop on the Haridwar to Gangotri drive?', 'Harsil, 25 km before Gangotri. It sits in the Bhagirathi gorge among apple orchards and deodar, and most people wish they had allowed a night there rather than an hour.'],
       ['Do I need a permit for the Gaumukh trek?', 'Yes — a Gangotri National Park permit, limited to 150 people a day and best arranged a few weeks ahead. It is separate from the Char Dham registration.'],
     ],
-    guides: [['How to Reach Gangotri', '/how-to-reach-gangotri'], ['Gangotri Yatra Guide', '/gangotri-yatra'], ['Harsil Valley', '/harsil-valley']],
+    guides: [['Gangotri Yatra Guide', '/gangotri-yatra'], ['Harsil Valley', '/harsil-valley']],
   },
   {
     slug: 'yamunotri',
@@ -310,7 +310,7 @@ export const DESTINATIONS = [
       ['What time is the Ganga aarti at Har Ki Pauri?', 'Around sunset — roughly 6 PM in summer and 5:30 PM in winter. Arrive forty minutes early for a seat anywhere near the front.'],
       ['Is Haridwar the best place to start the Char Dham Yatra?', 'For most people, yes. It has the rail connections, the registration counters, the yatra infrastructure, and it is where operators like us are actually based, so vehicles start from here rather than being repositioned.'],
     ],
-    guides: [['How to Reach Haridwar', '/how-to-reach-haridwar'], ['Haridwar Tour Packages', '/haridwar-tour-packages']],
+    guides: [],
   },
 ];
 

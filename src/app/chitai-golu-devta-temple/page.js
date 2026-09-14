@@ -297,7 +297,7 @@ export default function ChitaiGoluDevtaTemple() {
           </tbody>
         </table>
       </div>
-      <p style={p}>We have been running Uttarakhand routes out of Haridwar since 2010, mostly on the Garhwal side for <Link href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link href="/cabs/haridwar-to-nainital-cab" style={teal}>Haridwar to Nainital cab</Link> or a <Link href="/cabs/dehradun-to-nainital-cab" style={teal}>Dehradun to Nainital run</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
+      <p style={p}>We have been running Uttarakhand routes out of Haridwar, mostly on the Garhwal side for <Link href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link href="/cabs/haridwar-to-nainital-cab" style={teal}>Haridwar to Nainital cab</Link> or a <Link href="/cabs/dehradun-to-nainital-cab" style={teal}>Dehradun to Nainital run</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
@@ -310,7 +310,7 @@ export default function ChitaiGoluDevtaTemple() {
 
       <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', textAlign:'center' }}>
         <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>Planning a Kumaon Trip? We&rsquo;ll Build the Route Around Chitai</h3>
-        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Nainital &middot; Almora &middot; Jageshwar &middot; Binsar &mdash; 5N/6D or your own dates &middot; Direct Haridwar operator since 2010</p>
+        <p style={{ color:'rgba(255,255,255,0.75)', fontSize:13.5, marginBottom:18 }}>Nainital &middot; Almora &middot; Jageshwar &middot; Binsar &mdash; 5N/6D or your own dates &middot; Direct Haridwar operator</p>
         <div style={{ display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
           <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a Kumaon trip including Chitai Golu Devta Temple, Almora.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{ background:'#25D366', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
           <a href="tel:+917817996730" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>

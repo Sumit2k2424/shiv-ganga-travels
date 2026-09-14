@@ -21,7 +21,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Chopta Tungnath Trek Guide ${SITE.season}`,
-    description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple. Trusted operator, 15+ yrs experience, fixed departures.',
+    description: 'Complete guide to Chopta and Tungnath — India\'s highest Shiva temple. Direct Haridwar operator, fixed departures.',
     images: [{ url: '/opengraph-image', alt: `Chopta Tungnath ${SITE.season} — Complete Travel Guide | Shiv Ganga Travels` }],
   },
 };
@@ -133,7 +133,7 @@ export default function ChoptaTungnath() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Places to Visit in Chopta','/chopta-sightseeing-places'],['Panch Kedar Yatra','/panch-kedar-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Valley of Flowers','/blog/valley-of-flowers-trek'],['Uttarakhand Tours','/uttarakhand-tour-packages'],['Kedarnath Weather','/kedarnath-weather']].map(([l,h]) => (
+            {[['Kedarnath Yatra','/kedarnath-yatra'],['Valley of Flowers','/blog/valley-of-flowers-trek'],['Uttarakhand Tours','/uttarakhand-tour-packages'],].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

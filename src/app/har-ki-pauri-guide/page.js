@@ -125,7 +125,7 @@ function Schema() {
     '@context':'https://schema.org', '@type':'BreadcrumbList',
     itemListElement:[
       { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
-      { '@type':'ListItem', position:2, name:'Haridwar Tour Packages', item:`${SITE.baseUrl}/haridwar-tour-packages` },
+      { '@type':'ListItem', position:2, name:'Places to Visit in Haridwar', item:`${SITE.baseUrl}/haridwar-sightseeing-places` },
       { '@type':'ListItem', position:3, name:'Har Ki Pauri Guide', item:`${SITE.baseUrl}/har-ki-pauri-guide` },
     ],
   };
@@ -167,7 +167,7 @@ export default function HarKiPauriGuide() {
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/haridwar-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Haridwar</Link><span>›</span>
+          Haridwar<span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Har Ki Pauri</span>
         </div>
       </nav>
@@ -325,9 +325,9 @@ export default function HarKiPauriGuide() {
                 ['Mansa Devi Temple','1.5 km','1.5–2 hrs','Ropeway from the base, or a 1.5 km climb.','/mansa-devi-temple'],
                 ['Chandi Devi Temple','4 km','2 hrs','Ropeway or a 3 km trek up Neel Parvat.','/chandi-devi-temple'],
                 ['Daksh Mahadev, Kankhal','4 km','1 hr','Quieter than the ghat. Major Shivratri site.','/daksh-mahadev-temple'],
-                ['Maya Devi Temple','1 km','30 min','One of the Shakti Peethas. Often skipped, worth ten minutes.','/maya-devi-temple'],
-                ['Shantikunj','6 km','1–2 hrs','Gayatri Pariwar headquarters. Our office is at its Gate No. 1.','/shantikunj-haridwar-guide'],
-                ['Rishikesh','25 km','Half day','Ram Jhula, Lakshman Jhula, a second aarti at Parmarth Niketan.','/haridwar-to-rishikesh-taxi'],
+                ['Maya Devi Temple','1 km','30 min','One of the Shakti Peethas. Often skipped, worth ten minutes.','/haridwar-sightseeing-places'],
+                ['Shantikunj','6 km','1–2 hrs','Gayatri Pariwar headquarters. Our office is at its Gate No. 1.','/contact'],
+                ['Rishikesh','25 km','Half day','Ram Jhula, Lakshman Jhula, a second aarti at Parmarth Niketan.','/blog/rishikesh-adventure-guide'],
               ].map(([a,b,c,d,href])=>(
                 <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600 }}>
@@ -345,9 +345,9 @@ export default function HarKiPauriGuide() {
           All of it fits in one day with a car, and the order matters — our{' '}
           <Link href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar sightseeing itinerary</Link>{' '}
           sets out the sequence that avoids the queues and the midday closures. The{' '}
-          <Link href="/taxi-service-in-haridwar" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar temple circuit</Link>{' '}
+          Haridwar temple circuit{' '}
           covers the first four in five to six hours, and the{' '}
-          <Link href="/haridwar-to-rishikesh-taxi" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar–Rishikesh day hire</Link>{' '}
+          Haridwar–Rishikesh day hire{' '}
           adds the ghats at Rishikesh if you want a longer day.
         </p>
 
@@ -401,13 +401,8 @@ export default function HarKiPauriGuide() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
-              ['Haridwar Tour Packages','/haridwar-tour-packages'],
-              ['Taxi Service in Haridwar','/taxi-service-in-haridwar'],
-              ['How to Reach Haridwar','/how-to-reach-haridwar'],
-              ['Haridwar to Rishikesh Taxi','/haridwar-to-rishikesh-taxi'],
               ['Char Dham Yatra','/char-dham-yatra'],
-              ['Online Puja Booking','/online-puja-booking'],
-            ].map(([label,href])=>(
+              ].map(([label,href])=>(
               <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>

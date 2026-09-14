@@ -1,6 +1,6 @@
 import { Noto_Sans_Devanagari } from 'next/font/google';
 import { SITE } from '@/data/packages';
-import { languageAlternates } from '@/data/languages';
+import { languageAlternates, languageRobots } from '@/data/languages';
 import { nepali } from '@/data/langContent/nepali';
 import CharDhamLanguagePage from '@/components/CharDhamLanguagePage';
 
@@ -12,6 +12,7 @@ export const metadata = {
   description: `चार धाम यात्रा ${SITE.season} — हरिद्वारबाट 9 रात/10 दिन ₹13,900 देखि। सिधै सञ्चालक, एजेन्ट कमिसन छैन, दर्ता निःशुल्क।`,
   keywords: ['चार धाम यात्रा नेपाली','char dham yatra in nepali','नेपालबाट चार धाम','केदारनाथ पशुपतिनाथ','chardham yatra nepali guide'],
   alternates: languageAlternates(SLUG, SITE.baseUrl),
+  ...languageRobots(SLUG),
   openGraph: {
     title: `चार धाम यात्रा ${SITE.season} — पूरा जानकारी नेपालीमा | Shiv Ganga Travels`,
     description: 'यमुनोत्री, गंगोत्री, केदारनाथ, बद्रीनाथ। हरिद्वारबाट ₹13,900 देखि।',

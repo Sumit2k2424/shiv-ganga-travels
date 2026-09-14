@@ -227,7 +227,7 @@ export default function KedarnathCompleteGuide() {
           July and August are peak monsoon. The temple stays open and the yatra is not formally suspended,
           but the Rudraprayag–Sonprayag road closes repeatedly, helicopters are grounded for days at a time,
           and you often see nothing of the mountains. Month-by-month temperatures, day and night, are on{' '}
-          <Link href="/kedarnath-weather" style={{ color:'var(--teal)' }}>Kedarnath weather</Link>.
+          Kedarnath weather.
         </p>
 
         <h2 id="stay" style={h2}>Where to Stay</h2>
@@ -296,7 +296,7 @@ export default function KedarnathCompleteGuide() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Kedarnath Packages','/kedarnath-yatra'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],['How to Reach Haridwar','/how-to-reach-haridwar']].map(([l,h])=>(
+            {[['Kedarnath Packages','/kedarnath-yatra'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Haridwar to Kedarnath','/blog/haridwar-to-kedarnath-road-trip'],].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

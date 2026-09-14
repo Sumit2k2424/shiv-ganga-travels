@@ -6,12 +6,12 @@ import { h2, p } from '@/lib/prose';
 
 export const metadata = {
   title: { absolute: 'Press Office & Newsroom | Shiv Ganga Travels' },
-  description: 'Media resources for journalists covering the Char Dham Yatra: press releases, a sixteen-year operator dataset free to use, boilerplate, and a named spokesperson available for comment.',
+  description: 'Media resources for journalists covering the Char Dham Yatra: press releases, an operator dataset free to use, boilerplate, and a named spokesperson available for comment.',
   keywords: ['shiv ganga travels press','char dham yatra press release','char dham data journalists','uttarakhand tourism operator comment','char dham media contact','char dham yatra statistics source','newsroom'],
   alternates: { canonical: `${SITE.baseUrl}/press` },
   openGraph: {
     title: 'Press Office & Newsroom — Shiv Ganga Travels',
-    description: 'Press releases, a sixteen-year Char Dham dataset free for news organisations to use, and a named operator available for comment.',
+    description: 'Press releases, a Char Dham dataset free for news organisations to use, and a named operator available for comment.',
     url: `${SITE.baseUrl}/press`, type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Shiv Ganga Travels press office' }],
   },
@@ -75,7 +75,7 @@ export default function PressOffice() {
             Press Office
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Sixteen years of Char Dham operator data, free to use · a named spokesperson who answers the phone · releases written to be lifted, not rewritten
+            Char Dham operator data, free to use · a named spokesperson who answers the phone · releases written to be lifted, not rewritten
           </p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
@@ -100,7 +100,7 @@ export default function PressOffice() {
         <h2 style={h2}>What We Can Give You</h2>
         <AnswerBox>
           Shiv Ganga Travels is a Char Dham Yatra operator in Haridwar, Uttarakhand, running the
-          circuit since 2010. We hold sixteen years of route, cost, footfall and safety data and
+          circuit. We hold years of route, cost, footfall and safety data and
           make it available to news organisations free of charge, with attribution. Our founder is
           available for comment on yatra logistics, road conditions, pilgrim safety and helicopter
           operations, in Hindi or English.
@@ -108,8 +108,8 @@ export default function PressOffice() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 32 }}>
           {[
-            { t: '📊 Data, free to use', d: 'Sixteen years of operator records — pilgrim volumes, route distances, real cost breakdowns, hotel booking patterns, weather-related closures. Available as a spreadsheet on request. Attribution is all we ask.' },
-            { t: '🗣️ A named person, on the record', d: 'Dhanesh Chandra Mishra, founder, retired Indian Army officer, sixteen seasons on this route. Not a press office. He will give you a straight answer, including when the answer is unhelpful to us.' },
+            { t: '📊 Data, free to use', d: 'Operator records — pilgrim volumes, route distances, real cost breakdowns, hotel booking patterns, weather-related closures. Available as a spreadsheet on request. Attribution is all we ask.' },
+            { t: '🗣️ A named person, on the record', d: 'Dhanesh Chandra Mishra, founder, retired Indian Army officer, many seasons on this route. Not a press office. He will give you a straight answer, including when the answer is unhelpful to us.' },
             { t: '📰 Releases in wire format', d: 'Dateline, nut graf, sourced figures, attributable quote, boilerplate. Written so a sub-editor can lift them without rewriting. No adjectives you would have to strip.' },
             { t: '🏔️ Ground access during season', d: 'April to November we have vehicles and staff on the route daily. If you need a photograph, a condition check or someone at Gaurikund this morning, ask.' },
           ].map(x => (
@@ -196,7 +196,7 @@ export default function PressOffice() {
           These are the pages journalists ask for most often. All are maintained rather than published once and abandoned.
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
-          {[['Char Dham statistics 2010–2026', '/char-dham-yatra-statistics'], ['Live road status', '/char-dham-road-status'], ['Opening dates 2026', '/blog/char-dham-yatra-opening-dates-2026'], ['Closing dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Registration rules', '/blog/char-dham-yatra-registration'], ['Booking scams and fake portals', '/char-dham-yatra-scams'], ['Emergency contacts', '/char-dham-yatra-emergency-contacts'], ['Helicopter fares and booking', '/blog/kedarnath-helicopter-booking'], ['Altitude and medical screening', '/altitude-sickness-char-dham'], ['About the company', '/about']].map(([l, href]) => (
+          {[['Char Dham statistics', '/char-dham-yatra-statistics'], ['Live road status', '/char-dham-road-status'], ['Closing dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Registration rules', '/blog/char-dham-yatra-registration'], ['Emergency contacts', '/char-dham-yatra-emergency-contacts'], ['Helicopter fares and booking', '/blog/kedarnath-helicopter-booking'], ['About the company', '/about']].map(([l, href]) => (
             <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
           ))}
         </div>

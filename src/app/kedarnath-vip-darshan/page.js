@@ -221,7 +221,7 @@ export default function KedarnathVipDarshan() {
           <div style={{ background: 'linear-gradient(135deg,var(--navy),#1A3E75)', borderRadius: 14, padding: '26px 22px', margin: '34px 0 10px', textAlign: 'center' }}>
             <div style={{ color: '#fff', fontWeight: 800, fontSize: 18, marginBottom: 6 }}>Want VIP darshan handled for you?</div>
             <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14.5, lineHeight: 1.7, maxWidth: 560, margin: '0 auto 16px' }}>
-              We've run Kedarnath since 2010 and book pujas for our pilgrims directly through BKTC — no touts, no cash near the temple. Tell us your dates and we'll sort registration, the puja and the trek. ₹0 to enquire, no advance to talk.
+              We've run Kedarnath and book pujas for our pilgrims directly through BKTC — no touts, no cash near the temple. Tell us your dates and we'll sort registration, the puja and the trek. ₹0 to enquire, no advance to talk.
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={wa('Namaste! Please arrange Kedarnath VIP darshan / puja for my group.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp Us</a>
@@ -230,7 +230,7 @@ export default function KedarnathVipDarshan() {
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: <Link href="/badrinath-vip-darshan" style={{ color: 'var(--teal)' }}>Badrinath VIP darshan</Link> · <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
+            Related: Badrinath VIP darshan · <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

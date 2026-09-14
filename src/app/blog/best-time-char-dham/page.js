@@ -104,7 +104,7 @@ export default function BestTimeCharDham() {
       <BlogHero
         badge="Travel Guide · Updated May 2026"
         title="Best Time for Char Dham Yatra 2026"
-        dek="Month-by-month weather · Temple opening dates · When to book · Honest advice from 15 years of running Char Dham yatras"
+        dek="Month-by-month weather · Temple opening dates · When to book · Honest advice from years of running Char Dham yatras"
         author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="5 min read"
@@ -281,7 +281,7 @@ export default function BestTimeCharDham() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
-            {[['Packing List 2026','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Weather','/kedarnath-weather'],['Senior Citizen Tips','/blog/senior-citizen-char-dham'],['Char Dham Packages','/packages/char-dham']].map(([l,h]) => (
+            {[['Packing List 2026','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Tips','/blog/senior-citizen-char-dham'],['Char Dham Packages','/packages/char-dham']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/blog/char-dham-registration-hindi');
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} | मोबाइल से कैसे करें | फ्री गाइड` },
-  description: `चार धाम यात्रा ${SITE.season} रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि।`,
+  description: `चार धाम यात्रा ${SITE.season} रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा रजिस्ट्रेशन ${SITE.season}`, 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', `चार धाम पंजीकरण ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-registration-hindi` },
   openGraph: { title: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} — मोबाइल से घर बैठे कैसे करें?`, description: 'ऑनलाइन रजिस्ट्रेशन मुफ्त। WhatsApp और website से करें। 9 आसान स्टेप हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-registration-hindi`, type: 'article', 
@@ -254,7 +254,7 @@ export default function CharDhamRegistrationHindi() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['केदारनाथ पहली बार','/blog/kedarnath-pehli-baar'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['Registration Guide (English)','/blog/char-dham-yatra-registration']].map(([l,h]) => (
+            {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['Registration Guide (English)','/blog/char-dham-yatra-registration']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

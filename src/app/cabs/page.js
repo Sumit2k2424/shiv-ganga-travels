@@ -194,7 +194,7 @@ export default function CabsPage() {
           <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
             Full Char Dham circuit cab<Icon name="arrowRight" size={13} />
           </Link>
-          <Link prefetch={false} href="/taxi-service-in-haridwar" className="lux-funnel-link">
+          <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
             Local taxi service in Haridwar<Icon name="arrowRight" size={13} />
           </Link>
           <Link prefetch={false} href="/dehradun-airport-to-haridwar-taxi" className="lux-funnel-link">

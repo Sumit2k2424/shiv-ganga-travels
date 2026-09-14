@@ -158,7 +158,7 @@ export default function Page() {
         </div>
 
         <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:10, padding:'14px 16px', marginBottom:28 }}>
-          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Delhi pilgrims (15 years of experience)</div>
+          <div style={{ fontWeight:700, fontSize:13, color:'#7B3F00', marginBottom:4 }}>💡 What we know about Delhi pilgrims (years of experience)</div>
           <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7 }}>Delhi has the most Char Dham Yatra pilgrims of any city — over 40% of our pilgrims board from Delhi, Noida, or Gurugram. This means every May, Delhi-origin batches get priority slots.</div>
         </div>
 

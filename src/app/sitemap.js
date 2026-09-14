@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { getIndexedRoutes, getIndexedOrigins, getIndexedDestinations } from '@/data/cabs';
-import { LANGUAGE_PAGES } from '@/data/languages';
+import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES, LANGUAGE_PAGES as ALL_LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
+import { GONE_PATHS } from '@/data/gone';
 import { getPublishedReleases } from '@/data/press';
 import { pageDates, SITE_CONTENT_UPDATED_ISO } from '@/lib/pageDates';
 // Concrete path → the route pageDates knows: itself, or its dynamic pattern.
@@ -359,9 +360,27 @@ export default function sitemap() {
   // blog posts consolidated via next.config.js), which the folder-discovery
   // above would otherwise treat as live 200 pages. Sitemaps must list only
   // canonical URLs — no redirects.
+  // Second guard (14 Sep 2026): the hand-written lists above still name pages
+  // that were removed in the cleanup, and will again the next time a page is
+  // deleted. So a URL is listed only if (a) it is not a 410 in data/gone.js
+  // and (b) for a static route, its page file actually exists on disk. The
+  // data-driven routes (/packages, /cabs, /press) are already gated by their
+  // own data modules. A sitemap entry that returns 410 is the single fastest
+  // way to make Search Console distrust the whole file.
+  const staticRouteExists = (slugPath) => {
+    if (!slugPath) return true; // homepage
+    if (/^(packages|cabs|press)\//.test(slugPath)) return true;
+    const dir = path.join(process.cwd(), 'src/app', slugPath);
+    try { return fs.readdirSync(dir).some(f => f.startsWith('page.')); } catch { return false; }
+  };
   const all = [...listed, ...discovered].filter(({ url }) => {
     const slugPath = url.replace(b, '').replace(/^\//, '');
-    return !REDIRECT_SOURCE_PATHS.has(slugPath);
+    if (REDIRECT_SOURCE_PATHS.has(slugPath)) return false;
+    if (GONE_PATHS.has('/' + slugPath)) return false;
+    // The seven noindexed language pages have real page files, so folder
+    // discovery would list them; a sitemap must not name a noindex URL.
+    if (ALL_LANGUAGE_PAGES.some(l => l.slug === slugPath && !l.index)) return false;
+    return staticRouteExists(slugPath);
   });
 
   // lastModified is the page's real last change from git (src/data/pageDates.json),

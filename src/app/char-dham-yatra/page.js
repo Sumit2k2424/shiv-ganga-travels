@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
-import { LANGUAGE_PAGES, LANGUAGE_HUB_SLUG, languageAlternates } from '@/data/languages';
+import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES, LANGUAGE_HUB_SLUG, languageAlternates } from '@/data/languages';
 import FAQAccordion from '@/components/FAQAccordion';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
@@ -37,17 +37,22 @@ export const metadata = {
 };
 
 function Schema() {
-  // The full TravelAgency organization node (with its single sitewide
-  // aggregateRating) is emitted once in layout.js. Emitting a second rated
-  // TravelAgency here triggered Google's "multiple aggregate ratings" error,
-  // so this page only carries the Product node below.
-  const product = {
+  // The TravelAgency organization node is emitted once in layout.js. This
+  // page carries a TouristTrip node for the yatra itself — not a Product.
+  // A guided pilgrimage is a service; Google's Product / merchant-listing
+  // structured data is for physical goods on a product page, and marking a
+  // tour up that way had the site showing in Search Console's "Merchant
+  // listings" and "Product snippets" reports. TouristTrip is the schema.org
+  // type for a tour and takes the same AggregateOffer.
+  const trip = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'TouristTrip',
     name: 'Char Dham Yatra Package 2026',
     image: [`${SITE.baseUrl}/opengraph-image`],
     description: 'All-inclusive Char Dham Yatra package from Haridwar covering Yamunotri, Gangotri, Kedarnath and Badrinath.',
-    brand: { '@type': 'Brand', name: SITE.name },
+    url: `${SITE.baseUrl}/char-dham-yatra`,
+    touristType: 'Pilgrims',
+    provider: { '@type': 'Organization', name: SITE.name, '@id': `${SITE.baseUrl}/#organization` },
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '13900',
@@ -56,10 +61,8 @@ function Schema() {
       offerCount: '5',
       seller: { '@type': 'Organization', name: SITE.name },
     },
-    // No aggregateRating: the Google reviews rate the business, and are
-    // asserted once on the Organization node in layout.js. Restating them here
-    // would claim them as reviews of the "Char Dham Yatra Package 2026" product
-    // specifically, which is not what those reviews are.
+    // No aggregateRating and no review: the Google reviews rate the business
+    // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
   const faqSchema = {
@@ -74,7 +77,7 @@ function Schema() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
@@ -82,7 +85,7 @@ function Schema() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Yatra 2027','/char-dham-yatra-2027'],['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
+            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
@@ -109,7 +112,7 @@ export default function CharDhamYatra() {
       }}>
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
           <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>
-            Haridwar's Trusted Operator Since 2010
+            Haridwar's Direct Char Dham Operator
           </span>
 
           {/* H1 — exact target keyword */}
@@ -174,7 +177,7 @@ export default function CharDhamYatra() {
           The <strong>Char Dham Yatra</strong> covers four sacred Himalayan shrines in Garhwal, Uttarakhand — <strong>Yamunotri</strong> (source of the Yamuna), <strong>Gangotri</strong> (source of the Ganges), <strong>Kedarnath</strong> (Shiva's Jyotirlinga at 3,583m) and <strong>Badrinath</strong> (Vishnu's abode on the banks of the Alaknanda). Completing all four in a single circuit is called the Chhota Char Dham Yatra — the northern Hindu pilgrimage circuit established by Adi Shankaracharya in the 8th century.
         </p>
         <p style={pStyle}>
-          We run this circuit from Haridwar every year since 2010. Over 50,000 pilgrims have travelled with us across 15 seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹13,900 that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
+          We run this circuit from Haridwar every year. Over 50,000 pilgrims have travelled with us across many seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹13,900 that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
         </p>
 
         {/* Departure dates + urgency + EMI */}
@@ -445,7 +448,7 @@ export default function CharDhamYatra() {
           </div>
         </div>
         <p style={{ fontSize:13, color:'var(--text-muted)', fontStyle:'italic', marginBottom:28 }}>
-          No service charge. No registration fee. No booking platform fee. The price we quote is the price you pay. We have operated this way since 2010.
+          No service charge. No registration fee. No booking platform fee. The price we quote is the price you pay. We have operated this way.
         </p>
 
         {/* Add-on options — Tungnath/Auli keywords */}
@@ -535,10 +538,10 @@ export default function CharDhamYatra() {
         </div>
 
         <h2 style={h2Style}>Why Choose Shiv Ganga Travels?</h2>
-        <p style={pStyle}>Most Char Dham "operators" you find online are booking desks in Delhi or Lucknow. They take your money, forward your yatra to whichever Haridwar driver has a free vehicle that week, and hope nothing goes wrong. We are the Haridwar driver. Our office is near Shantikunj Gate No. 1 — walk in and check before you pay a rupee. Our drivers have crossed Rudraprayag more times than they can count, our hotel owners in Barkot and Guptkashi hold rooms for us in peak May because we have filled them every season since 2010, and when your father calls at 10 pm from Joshimath because the altitude is bothering him, the phone is answered by someone who knows exactly which chemist is still open there.</p>
+        <p style={pStyle}>Most Char Dham "operators" you find online are booking desks in Delhi or Lucknow. They take your money, forward your yatra to whichever Haridwar driver has a free vehicle that week, and hope nothing goes wrong. We are the Haridwar driver. Our office is near Shantikunj Gate No. 1 — walk in and check before you pay a rupee. Our drivers have crossed Rudraprayag more times than they can count, our hotel owners in Barkot and Guptkashi hold rooms for us in peak May because we have filled them every season, and when your father calls at 10 pm from Joshimath because the altitude is bothering him, the phone is answered by someone who knows exactly which chemist is still open there.</p>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>
           {[
-            { icon:'🙏', point:'50,000+ pilgrims served since 2010' },
+            { icon:'🙏', point:'50,000+ pilgrims served' },
             { icon:'🏡', point:'Local Haridwar expertise — we know every route' },
             { icon:'💰', point:'No middleman pricing — pay us directly' },
             { icon:'🎫', point:'VIP darshan at all 4 dhams — skip queues' },
@@ -634,7 +637,7 @@ export default function CharDhamYatra() {
                 Delhi and Mumbai (11 on 31 Aug 2026, 7 on 14 Sep 2026 — see
                 data/redirects.js); linking a redirected slug here just sent
                 crawlers through a 308. */}
-            {[['Delhi & North India','delhi'],['Mumbai & South India','mumbai'],['Haridwar','haridwar']].map(([l,c])=>(
+            {[['Delhi & North India','delhi'],['Mumbai & South India','mumbai']].map(([l,c])=>(
               <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
             ))}
           </div>
@@ -645,7 +648,7 @@ export default function CharDhamYatra() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Yatra 2027','/char-dham-yatra-2027'],['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Budget vs Premium','/blog/char-dham-yatra-budget-vs-premium'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['How to Reach Haridwar','/how-to-reach-haridwar'],['Road Status 2026','/char-dham-road-status'],['Opening Dates 2026','/blog/char-dham-yatra-opening-dates-2026'],['Group Package Guide','/blog/char-dham-group-package']].map(([l,h])=>(
+            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

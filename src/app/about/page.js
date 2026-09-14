@@ -4,13 +4,13 @@ import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `About Shiv Ganga Travels ${SITE.season} | 15+ Years, Founded by Army Officer` },
-  description: 'Shiv Ganga Travels, Haridwar — trusted operator since 2010, 15+ yrs experience. Zero commission, 50,000+ pilgrims served, instant confirmation.',
-  keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra since 2010'],
+  title: { absolute: `About Shiv Ganga Travels ${SITE.season} | Founded by a Retired Army Officer` },
+  description: 'Shiv Ganga Travels, Haridwar — direct Char Dham operator. Zero commission, 50,000+ pilgrims served, instant confirmation.',
+  keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/about` },
   openGraph: {
     title: 'About Shiv Ganga Travels — Our Story, Ethics & Vision',
-    description: 'Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
+    description: 'founded by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
     url: `${SITE.baseUrl}/about`,
     type: 'website',
   
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Shiv Ganga Travels — Our Story, Ethics & Vision',
-    description: 'Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
+    description: 'founded by Dhanesh Chandra Mishra, a retired Indian Army officer from Roorkee. Military discipline, zero commission, 50,000+ pilgrims served.',
     images: [{ url: '/opengraph-image', alt: 'About Shiv Ganga Travels — Our Story, Ethics & Vision | Shiv Ganga Travels' }],
   },
 };
@@ -34,7 +34,7 @@ function Schema() {
     '@id': `${SITE.baseUrl}/#founder`,
     name: 'Dhanesh Chandra Mishra',
     jobTitle: 'Founder & Director, Shiv Ganga Travels',
-    description: 'Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee, Uttarakhand in 2010. Has led Char Dham Yatra operations for 15 seasons, serving 50,000+ pilgrims.',
+    description: 'Retired Indian Army Officer. Founded Shiv Ganga Travels in Roorkee, Uttarakhand. Has led Char Dham Yatra operations for many seasons, serving 50,000+ pilgrims.',
     worksFor: {
       '@type': 'Organization',
       name: 'Shiv Ganga Travels',
@@ -90,7 +90,6 @@ function Schema() {
     '@id': `${SITE.baseUrl}/#organization`,
     name: SITE.name,
     url: SITE.baseUrl,
-    foundingDate: '2010',
     founder: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     employee: [
       { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra' },
@@ -141,7 +140,7 @@ export default function AboutPage() {
             background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11,
             fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
             padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 18,
-          }}>Our Story · Est. 2010</span>
+          }}>Our Story</span>
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(2rem,5vw,3rem)', lineHeight: 1.12, marginBottom: 16 }}>
             About <em style={{ color: '#FFD166', fontStyle: 'italic' }}>Shiv Ganga Travels</em>
           </h1>
@@ -155,8 +154,7 @@ export default function AboutPage() {
       <div style={{ background: 'var(--navy)', padding: '0' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(120px,1fr))' }}>
           {[
-            { num: '2010', label: 'Year Founded' },
-            { num: '15+', label: 'Years of Service' },
+            { num: 'Direct', label: 'Operator, No Agents' },
             { num: '50,000+', label: 'Pilgrims Served' },
             { num: '20+', label: 'Fleet Vehicles' },
             { num: '2', label: 'Offices (Roorkee & Haridwar)' },
@@ -187,7 +185,7 @@ export default function AboutPage() {
             <div>
               <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)', marginBottom: 3 }}>Dhanesh Chandra Mishra</div>
               <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director · Retired Indian Army Officer</div>
-              <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Retired Indian Army Officer · Roorkee, Uttarakhand · Founded 2010</div>
+              <div style={{ fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>Retired Indian Army Officer · Roorkee, Uttarakhand</div>
               <a href="https://www.linkedin.com/in/dhanesh-chandra-635564429/" target="_blank" rel="noopener noreferrer"
                 aria-label="Dhanesh Chandra Mishra on LinkedIn"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 5, marginTop: 9, fontSize: 12.5, fontWeight: 600, color: '#0A66C2', textDecoration: 'none', background: 'rgba(10,102,194,0.08)', padding: '4px 11px', borderRadius: 20 }}>
@@ -198,13 +196,13 @@ export default function AboutPage() {
           </div>
 
         <AnswerBox>
-          <strong>Shiv Ganga Travels is a direct Char Dham operator based in Haridwar, founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer.</strong> We run the vehicles and hold the hotel bookings ourselves rather than reselling another operator's trip, which is why our prices carry no agent commission. Over 50,000 pilgrims since 2010, rated {SITE.reviews.rating} from {SITE.reviews.count} Google reviews. The office is on Saptrishi Road near Shantikunj Gate No. 1, and you are welcome to visit before you book.
+          <strong>Shiv Ganga Travels is a direct Char Dham operator based in Haridwar, founded by Dhanesh Chandra Mishra, a retired Indian Army officer.</strong> We run the vehicles and hold the hotel bookings ourselves rather than reselling another operator's trip, which is why our prices carry no agent commission. Over 50,000 pilgrims, rated {SITE.reviews.rating} from {SITE.reviews.count} Google reviews. The office is on Saptrishi Road near Shantikunj Gate No. 1, and you are welcome to visit before you book.
         </AnswerBox>
 
-          <h2 style={h2}>Where It All Began — Roorkee, 2010</h2>
+          <h2 style={h2}>Where It All Began — Roorkee</h2>
 
           <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
-            Shiv Ganga Travels was founded in 2010 by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army, in Roorkee, Uttarakhand. Dhanesh served his country in uniform before turning to another form of service — helping pilgrims reach the sacred Himalayan dhams with dignity, honesty, and care. After retirement, he had a vehicle, a deep familiarity with the Uttarakhand mountains earned through years of military posting in the region, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
+            Shiv Ganga Travels was founded by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army, in Roorkee, Uttarakhand. Dhanesh served his country in uniform before turning to another form of service — helping pilgrims reach the sacred Himalayan dhams with dignity, honesty, and care. After retirement, he had a vehicle, a deep familiarity with the Uttarakhand mountains earned through years of military posting in the region, and a personal commitment to doing things with integrity. Army jawans and officers stationed in Roorkee needed reliable transport to the dhams — and they needed it from someone they could trust.
           </p>
 
           <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
@@ -229,7 +227,7 @@ export default function AboutPage() {
           <h2 style={h2}>Growth — From Roorkee to Haridwar</h2>
 
           <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
-            The growth through the 2010s was steady and earned — not driven by advertising but by word of mouth from satisfied pilgrims. A family from Delhi who had a good experience told their neighbours. A WhatsApp group for a Kedarnath pilgrims&apos; batch shared Dhanesh&apos;s number. Repeat bookings became the norm rather than the exception. By the mid-2010s, the fleet had expanded from a single vehicle to several, and the team had grown to include experienced Garhwali guides, a dedicated operations team, and a customer relations desk.
+            The growth over the years was steady and earned — not driven by advertising but by word of mouth from satisfied pilgrims. A family from Delhi who had a good experience told their neighbours. A WhatsApp group for a Kedarnath pilgrims&apos; batch shared Dhanesh&apos;s number. Repeat bookings became the norm rather than the exception. Over time, the fleet expanded from a single vehicle to several, and the team had grown to include experienced Garhwali guides, a dedicated operations team, and a customer relations desk.
           </p>
 
           <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>

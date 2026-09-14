@@ -22,7 +22,7 @@ export default function TrustStrip() {
         <p className="trust-strip-full">
           <span className="trust-strip-item trust-strip-a">
             <span className="trust-strip-icon" aria-hidden="true">🎖️</span>
-            Founded {SITE.established} by a <strong>retired Indian Army officer</strong>
+            Founded by a <strong>retired Indian Army officer</strong>
           </span>
           <span className="trust-strip-sep" aria-hidden="true" />
           <span className="trust-strip-item trust-strip-b">
@@ -34,7 +34,7 @@ export default function TrustStrip() {
         {/* Mobile: the same two facts, alternating on a CSS timer */}
         <p className="trust-strip-rotator" aria-hidden="true">
           <span className="trust-strip-rot trust-strip-rot-1">
-            🎖️ Founded {SITE.established} by a <strong>retired Army officer</strong>
+            🎖️ Founded by a <strong>retired Army officer</strong>
           </span>
           <span className="trust-strip-rot trust-strip-rot-2">
             ₹ <strong className="trust-strip-hi">You pay us directly</strong> — zero commission

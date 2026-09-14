@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/blog/char-dham-kab-jayen');
 
 export const metadata = {
   title: { absolute: `चार धाम यात्रा ${SITE.season} कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी` },
-  description: `चार धाम यात्रा ${SITE.season} के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।`,
+  description: `चार धाम यात्रा ${SITE.season} के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा कब जाएं ${SITE.season}`, 'char dham yatra best time hindi', 'चार धाम यात्रा का सही समय', 'char dham yatra kab jayen', `चार धाम यात्रा मौसम ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-kab-jayen` },
   openGraph: { title: `चार धाम यात्रा ${SITE.season} में कब जाएं? — महीने के हिसाब से पूरा गाइड`, description: 'मई, जून, सितंबर, अक्टूबर — हर महीने का सच बताया। मौसम, भीड़, खर्चा — सब कुछ हिंदी में।', url: `${SITE.baseUrl}/blog/char-dham-kab-jayen`, type: 'article', 

@@ -134,7 +134,7 @@ export default function BadrinathWeather() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Badrinath Yatra 2026. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/badrinath-tour-package" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Badrinath Package →</Link>
+            View Badrinath Package →
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export default function BadrinathWeather() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Kedarnath Weather','/kedarnath-weather'],['Gangotri Weather','/gangotri-weather'],['Yamunotri Weather','/yamunotri-weather'],['Badrinath Temple','/badrinath-temple'],['Best Time to Visit','/blog/best-time-char-dham']].map(([l,h]) => (
+            {[['Gangotri Weather','/gangotri-weather'],['Yamunotri Weather','/yamunotri-weather'],['Badrinath Temple','/badrinath-temple'],['Best Time to Visit','/blog/best-time-char-dham']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

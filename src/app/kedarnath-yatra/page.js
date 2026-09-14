@@ -10,12 +10,12 @@ const PAGE_DATES = pageDates('/kedarnath-yatra');
 
 export const metadata = {
   title: { absolute: `Kedarnath Yatra Package ${SITE.season} | Trek, Pony & Heli Guide` },
-  description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator since 2010.`,
+  description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
   keywords: [`Kedarnath Yatra ${SITE.season}`,'ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide',`Kedarnath helicopter booking ${SITE.season}`,'kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
     title: `Kedarnath Yatra ${SITE.season} — Complete Trek, Packages & Helicopter Guide`,
-    description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator since 2010.`,
+    description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Yatra Package ${SITE.season} from Haridwar — Shiv Ganga Travels` }],
@@ -293,7 +293,7 @@ export default function KedarnathYatra() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Deep-dive guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['3N/4D Tour Package ₹5,250','/kedarnath-tour-package'],['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Weather','/kedarnath-weather'],['Haridwar to Kedarnath','/cabs/haridwar-to-kedarnath-cab']].map(([l,h]) => (
+            {[['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Haridwar to Kedarnath','/cabs/haridwar-to-kedarnath-cab']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -56,7 +56,7 @@ export default function KedarnathDoliYatra() {
     description:'The three-day procession carrying the Panchmukhi Utsav Doli of Lord Kedarnath from the temple to its winter seat at Omkareshwar Temple, Ukhimath, after the shrine closes on Bhai Dooj.',
     types:null,
     faqs:FAQS,
-    crumbs:[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Kedarnath Doli Yatra','/kedarnath-doli-yatra']],
+    crumbs:[['Kedarnath Doli Yatra','/kedarnath-doli-yatra']],
   });
 
   const event = {
@@ -91,7 +91,7 @@ export default function KedarnathDoliYatra() {
         Three days, two night halts, and almost no outside visitor there to see it.
       </Hero>
 
-      <Crumbs trail={[['Winter Char Dham Yatra','/winter-char-dham-yatra'],['Kedarnath Doli Yatra', null]]}/>
+      <Crumbs trail={[['Kedarnath Doli Yatra', null]]}/>
 
       <Article>
         <Updated date={PAGE_DATES.modifiedHuman}/>
@@ -135,7 +135,7 @@ export default function KedarnathDoliYatra() {
           five faces connect to the Panch Kedar — Kedarnath, Madmaheshwar, Tungnath, Rudranath and
           Kalpeshwar — the five shrines where parts of Shiva, having taken the form of a bull to evade
           the Pandavas, are said to have surfaced. Kedarnath is the hump. Our{' '}
-          <Link href="/panch-kedar-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Panch Kedar page</Link>{' '}
+          Panch Kedar page{' '}
           covers the full circuit.
         </P>
         <P>
@@ -180,7 +180,7 @@ export default function KedarnathDoliYatra() {
           is mild; the upper route is not.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Stay on afterwards.</strong> You are already in the
           Kedar valley — Ukhimath, Chopta and Deoria Tal are right there, and the{' '}
-          <Link href="/winter-char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>winter seats circuit</Link>{' '}
+          winter seats circuit{' '}
           starts from here.</LI>
         </ul>
 
@@ -200,9 +200,6 @@ export default function KedarnathDoliYatra() {
 
         <Related links={[
           ['Omkareshwar Ukhimath','/ukhimath'],
-          ['Winter Char Dham Yatra','/winter-char-dham-yatra'],
-          ['Guptkashi Guide','/guptkashi-guide'],
-          ['Panch Kedar Yatra','/panch-kedar-yatra'],
           ['Kedarnath Temple','/kedarnath-temple'],
           ['Char Dham Closing Dates 2026','/blog/char-dham-yatra-closing-dates-2026'],
         ]}/>

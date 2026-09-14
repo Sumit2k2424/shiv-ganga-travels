@@ -268,7 +268,7 @@ export default function RouteMap() {
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 18px', marginBottom:24, border:'1px solid rgba(15,43,91,0.1)' }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Free to use</div>
           <p style={{ fontSize:13, color:'var(--text-muted)', margin:0, lineHeight:1.7 }}>
-            Travel bloggers and yatra guides are welcome to reference or link to this route map page. Credit: <a href={SITE.baseUrl} style={{ color:'var(--navy)', fontWeight:600 }}>Shiv Ganga Travels, Haridwar</a> — Char Dham operator since 2010.
+            Travel bloggers and yatra guides are welcome to reference or link to this route map page. Credit: <a href={SITE.baseUrl} style={{ color:'var(--navy)', fontWeight:600 }}>Shiv Ganga Travels, Haridwar</a> — Char Dham operator.
           </p>
         </div>
 

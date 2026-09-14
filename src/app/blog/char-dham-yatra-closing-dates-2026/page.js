@@ -206,12 +206,10 @@ export default function ClosingDates() {
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
-              ['Opening Dates 2026', '/blog/char-dham-yatra-opening-dates-2026'],
               ['Best Time to Visit', '/blog/best-time-char-dham'],
               ['Char Dham Yatra in October', '/blog/char-dham-yatra-in-october'],
               ['Char Dham Package', '/char-dham-yatra'],
               ['Registration Guide', '/blog/char-dham-yatra-registration'],
-              ['Winter Char Dham Yatra', '/winter-char-dham-yatra'],
               ['Kedarnath Doli Yatra', '/kedarnath-doli-yatra'],
               ['Omkareshwar, Ukhimath', '/ukhimath'],
               ['Narsingh Temple, Joshimath', '/joshimath-narsingh-temple'],

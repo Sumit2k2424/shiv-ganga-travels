@@ -41,17 +41,17 @@ export const MEDIA_KIT = {
   // The boilerplate. Wire desks paste this verbatim at the foot of a story, so
   // it must be accurate, dull, and free of adjectives they would have to strip.
   boilerplateShort:
-    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.',
+    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.',
 
   boilerplateLong:
-    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded in 2010 by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season since 2010, including the years following the 2013 Kedarnath floods.',
+    'Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. Founded by Dhanesh Chandra Mishra, a retired Indian Army officer, the company runs road and helicopter pilgrimages to the four Himalayan shrines of Yamunotri, Gangotri, Kedarnath and Badrinath, along with Do Dham, Teen Dham, Panch Kedar and Panch Badri circuits. It operates as a direct operator rather than an aggregator, handling its own vehicles, drivers and hotel contracts. The company has run pilgrimages through every season, including the years following the 2013 Kedarnath floods.',
 
   // Named, real, on the record. Never invent a spokesperson — the founder is the
   // only Person entity this site asserts, and he resolves to /#founder.
   spokesperson: {
     name: 'Dhanesh Chandra Mishra',
     title: 'Founder & Director',
-    bio: 'Retired Indian Army officer. Founded Shiv Ganga Travels in 2010 and has run Char Dham operations through sixteen seasons, including the rebuilding years after the 2013 Kedarnath disaster. Available for comment on yatra logistics, route and road conditions, pilgrim safety, helicopter operations, and seasonal demand.',
+    bio: 'Retired Indian Army officer. Founded Shiv Ganga Travels and has run Char Dham operations across many seasons, including the rebuilding years after the 2013 Kedarnath disaster. Available for comment on yatra logistics, route and road conditions, pilgrim safety, helicopter operations, and seasonal demand.',
     availableFor: [
       'Route and road-condition briefings during the yatra season',
       'Pilgrim safety, altitude and medical-screening policy',
@@ -63,12 +63,11 @@ export const MEDIA_KIT = {
 
   // Verifiable in one click. Journalists check these before they run anything.
   fastFacts: [
-    ['Founded', '2010'],
     ['Head office', 'Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand 249410'],
     ['GSTIN', SITE.gstin],
     ['Operating model', 'Direct operator — own vehicles, drivers and hotel contracts'],
     ['Circuits operated', 'Char Dham, Do Dham, Teen Dham, Ek Dham, Panch Kedar, Panch Badri, Adi Kailash'],
-    ['Seasons operated', '2010 – present, including post-2013 rebuilding years'],
+    ['Seasons operated', 'Every season, including the post-2013 rebuilding years'],
   ],
 
   // Being explicit about reuse removes a permissions email and makes it likelier
@@ -102,14 +101,14 @@ export const RELEASES = [
     // bodies, named phenomena — never phrases we would like to rank for.
     topics: ['Kedarnath', 'Badrinath', 'Uttarakhand Tourism', 'Pilgrimage footfall', 'Monsoon'],
     headline: 'Char Dham registrations cross 50 lakh in 2026, with Kedarnath and Badrinath alone recording over 30 lakh darshans',
-    subhead: 'Haridwar operator publishes a sixteen-year dataset covering pilgrim numbers, route distances, costs and safety, and makes it free to use',
+    subhead: 'Haridwar operator publishes its operator dataset covering pilgrim numbers, route distances, costs and safety, and makes it free to use',
     summary:
-      'Char Dham Yatra registrations for the 2026 season passed 50 lakh by 13 August, and Kedarnath and Badrinath together had recorded 30,62,228 darshans by 11 August. Shiv Ganga Travels, a Haridwar operator running the circuit since 2010, has published its own sixteen-year dataset alongside the official figures and made it free for news organisations to use.',
+      'Char Dham Yatra registrations for the 2026 season passed 50 lakh by 13 August, and Kedarnath and Badrinath together had recorded 30,62,228 darshans by 11 August. Shiv Ganga Travels, a Haridwar operator running the circuit, has published its own multi-year dataset alongside the official figures and made it free for news organisations to use.',
     body: [
       'Char Dham Yatra registrations for the 2026 season crossed 50 lakh by 13 August, according to Uttarakhand Tourism figures. Kedarnath and Badrinath alone had recorded 30,62,228 darshans by 11 August — 16,12,112 at Kedarnath and 14,50,116 at Badrinath — with the two shrines together taking more than ₹74.5 crore in offerings and revenue.',
       'The pace was set early. More than 17.8 lakh pilgrims had completed registration by mid-April, before the Badrinath doors opened on 23 April, making it the busiest booking window in five years.',
       'What the headline numbers obscure is that the yatra now runs straight through the monsoon rather than pausing for it. On 6 July 2026, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib. The 2026 season runs 208 days, from 19 April to 13 November.',
-      'Shiv Ganga Travels has published a consolidated statistics page covering 2010 to 2026 — pilgrim numbers, route distances, cost breakdowns, hotel booking patterns and safety data — cross-referenced against Uttarakhand Tourism, Devasthanam Board and Char Dham Yatra Authority notifications. The company is making the dataset available to news organisations without charge.',
+      'Shiv Ganga Travels has published a consolidated statistics page — pilgrim numbers, route distances, cost breakdowns, hotel booking patterns and safety data — cross-referenced against Uttarakhand Tourism, Devasthanam Board and Char Dham Yatra Authority notifications. The company is making the dataset available to news organisations without charge.',
     ],
     quotes: [
       {
@@ -118,7 +117,7 @@ export const RELEASES = [
         role: 'Founder & Director, Shiv Ganga Travels',
       },
       {
-        text: 'We have been running this route since 2010, including the years after 2013 when almost nobody came. Operators sit on that data and do nothing with it. It is more useful to a reporter than it is to us.',
+        text: 'We have been running this route, including the years after 2013 when almost nobody came. Operators sit on that data and do nothing with it. It is more useful to a reporter than it is to us.',
         by: 'Dhanesh Chandra Mishra',
         role: 'Founder & Director, Shiv Ganga Travels',
       },
@@ -132,12 +131,12 @@ export const RELEASES = [
       { fact: 'Circuit length', value: '~1,607 km across four shrines', source: 'Shiv Ganga Travels operator data' },
     ],
     links: [
-      { label: 'Full statistics, 2010–2026', href: '/char-dham-yatra-statistics' },
+      { label: 'Full statistics', href: '/char-dham-yatra-statistics' },
       { label: 'Char Dham Yatra guide', href: '/char-dham-yatra' },
       { label: 'Live road status', href: '/char-dham-road-status' },
     ],
     notesToEditors: [
-      'The underlying operator data (2010–2026) is available as a spreadsheet on request.',
+      'The underlying operator data is available as a spreadsheet on request.',
       'Dhanesh Chandra Mishra is available for interview in Hindi or English, in person in Haridwar or by phone.',
       'Where figures are attributed to Uttarakhand Tourism or the Devasthanam Board, please carry that attribution rather than ours.',
     ],
@@ -173,7 +172,7 @@ export const RELEASES = [
       'The Uttarakhand Special Task Force blocked 51 fake Char Dham helicopter-booking websites during its 2025 crackdown, disabled 111 fraudulent phone numbers, froze 56 bank accounts and reported 30 WhatsApp numbers, according to figures published by the force.',
       'Across its operations the STF has busted more than 76 fake sites, all impersonating the official IRCTC HeliYatra portal. The Indian Cyber Crime Coordination Centre (I4C), under the Union Home Ministry, has issued a national alert about fake Char Dham websites, social pages and paid advertisements. Victims have been reported from across India and among NRI families.',
       'The mechanism is consistent. Kedarnath helicopter tickets sell out within minutes of release, and the shortage is what the fraud runs on: a "VIP quota" offered on WhatsApp or Facebook, a polished site a search away, a paid advertisement that looks like verification. There is no VIP quota. There is no agent allocation. heliyatra.irctc.co.in is the only genuine booking channel, and anyone selling a Kedarnath helicopter seat through any other website, phone call or messaging app is running a scam.',
-      'Shiv Ganga Travels, a Haridwar operator running the circuit since 2010, has published the reporting routes pilgrims need — the national cybercrime helpline 1930, cybercrime.gov.in, and the Uttarakhand Police takedown address for fraudulent Char Dham content — alongside the verification steps for checking any operator before paying. The company states plainly that it cannot sell these tickets either.',
+      'Shiv Ganga Travels, a Haridwar operator running the circuit, has published the reporting routes pilgrims need — the national cybercrime helpline 1930, cybercrime.gov.in, and the Uttarakhand Police takedown address for fraudulent Char Dham content — alongside the verification steps for checking any operator before paying. The company states plainly that it cannot sell these tickets either.',
     ],
     // ── NOT WRITTEN. DO NOT FILL THIS IN WITHOUT HIM. ──────────────────────
     // ASK DHANESH, then paste his actual words:
@@ -196,7 +195,6 @@ export const RELEASES = [
       { fact: 'Cybercrime reporting helpline', value: '1930 · cybercrime.gov.in', source: 'Government of India' },
     ],
     links: [
-      { label: 'Char Dham booking scams — how to verify an operator', href: '/char-dham-yatra-scams' },
       { label: 'Emergency and reporting contacts', href: '/char-dham-yatra-emergency-contacts' },
       { label: 'How Kedarnath helicopter booking actually works', href: '/blog/kedarnath-helicopter-booking' },
     ],

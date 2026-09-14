@@ -282,7 +282,7 @@ export default function Gaurikund() {
           </table>
         </div>
         <p style={p}>
-          We put our groups at <strong>Sitapur or Sonprayag</strong> and time the shuttle deliberately. Gaurikund&rsquo;s lodges save you the queue but the rooms are rough and the night before a 1,600 m ascent is not the night to sleep badly. Whichever you choose, book early &mdash; rooms across all four sell out forty-five to sixty days ahead in season, and turning up in May without a confirmed booking is how people end up sleeping in a car at Sonprayag. See the <Link href="/guptkashi-guide">Guptkashi guide</Link> and <Link href="/kedarnath-hotels">Kedarnath hotels</Link> for the wider picture.
+          We put our groups at <strong>Sitapur or Sonprayag</strong> and time the shuttle deliberately. Gaurikund&rsquo;s lodges save you the queue but the rooms are rough and the night before a 1,600 m ascent is not the night to sleep badly. Whichever you choose, book early &mdash; rooms across all four sell out forty-five to sixty days ahead in season, and turning up in May without a confirmed booking is how people end up sleeping in a car at Sonprayag. See the Guptkashi guide and Kedarnath hotels for the wider picture.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -310,14 +310,14 @@ export default function Gaurikund() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. Fifteen seasons of putting groups into the Sonprayag shuttle queue at the right hour, and the 3:30 AM advice on this page is the result of watching what happens to the ones who leave at five. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of putting groups into the Sonprayag shuttle queue at the right hour, and the 3:30 AM advice on this page is the result of watching what happens to the ones who leave at five. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Kedarnath package with hotel and shuttle timing handled</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Registration included · Direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Registration included · Direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Plan on WhatsApp</a>
@@ -328,7 +328,7 @@ export default function Gaurikund() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>On this route</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['Helicopter Booking', '/blog/kedarnath-helicopter-booking'], ['Kedarnath Hotels', '/kedarnath-hotels'], ['Kedarnath Height', '/kedarnath-height'], ['Guptkashi Guide', '/guptkashi-guide'], ['Ukhimath', '/ukhimath'], ['Rudraprayag', '/rudraprayag'], ['Devprayag', '/devprayag'], ['Haridwar to Kedarnath', '/blog/haridwar-to-kedarnath'], ['Registration 2026', '/blog/kedarnath-registration-2026'], ['Altitude Sickness', '/altitude-sickness-char-dham'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra']].map(([l, href]) => (
+            {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['Helicopter Booking', '/blog/kedarnath-helicopter-booking'], ['Ukhimath', '/ukhimath'], ['Haridwar to Kedarnath', '/blog/haridwar-to-kedarnath'], ['Registration 2026', '/blog/kedarnath-registration-2026'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

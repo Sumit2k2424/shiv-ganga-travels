@@ -1,6 +1,6 @@
 import { Noto_Sans_Gujarati } from 'next/font/google';
 import { SITE } from '@/data/packages';
-import { languageAlternates } from '@/data/languages';
+import { languageAlternates, languageRobots } from '@/data/languages';
 import { gujarati } from '@/data/langContent/gujarati';
 import CharDhamLanguagePage from '@/components/CharDhamLanguagePage';
 
@@ -9,9 +9,10 @@ const noto = Noto_Sans_Gujarati({ subsets: ['gujarati'], weight: ['400', '500', 
 
 export const metadata = {
   title: { absolute: `ચાર ધામ યાત્રા ${SITE.season} | ₹13,900થી શરૂ | ગુજરાતીમાં સંપૂર્ણ ગાઇડ` },
-  description: `ચાર ધામ યાત્રા ${SITE.season} ગુજરાતીમાં — હરિદ્વારથી ₹13,900થી. વિશ્વસનીય ઓપરેટર, 15+ વર્ષનો અનુભવ, તાત્કાલિક પુષ્ટિ.`,
+  description: `ચાર ધામ યાત્રા ${SITE.season} ગુજરાતીમાં — હરિદ્વારથી ₹13,900થી. વિશ્વસનીય ઓપરેટર, તાત્કાલિક પુષ્ટિ.`,
   keywords: ['ચાર ધામ યાત્રા ગુજરાતી', 'char dham yatra in gujarati', 'char dham yatra gujarati guide', 'chardham yatra gujarati mahiti', 'હરિદ્વારથી ચાર ધામ યાત્રા'],
   alternates: languageAlternates(SLUG, SITE.baseUrl),
+  ...languageRobots(SLUG),
   openGraph: {
     title: `ચાર ધામ યાત્રા ${SITE.season} — સંપૂર્ણ માહિતી ગુજરાતીમાં | Shiv Ganga Travels`,
     description: 'યમુનોત્રી, ગંગોત્રી, કેદારનાથ, બદ્રીનાથ. હરિદ્વારથી ₹13,900થી શરૂ. સીધા ઓપરેટર, મફત રજિસ્ટ્રેશન સહાય.',

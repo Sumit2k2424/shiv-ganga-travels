@@ -95,7 +95,7 @@ export default async function Image({ params }) {
             <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#E8920A', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '23px', color: '#fff', fontWeight: '700' }}>ॐ</div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '21px', fontWeight: '700', color: '#FFFFFF', letterSpacing: '0.02em' }}>SHIV GANGA TRAVELS</span>
-              <span style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.68)', letterSpacing: '0.08em' }}>HARIDWAR · EST. 2010</span>
+              <span style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.68)', letterSpacing: '0.08em' }}>HARIDWAR · DIRECT OPERATOR</span>
             </div>
           </div>
           <div style={{ display: 'flex', gap: '8px' }}>

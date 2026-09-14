@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { GONE_PATHS } from '@/data/gone';
 
 // Contextual internal-link mesh for the temple, shrine and waypoint guides.
 //
@@ -52,7 +53,7 @@ export const MESH = {
     ...dham('Badrinath', 'badrinath', '/badrinath-sightseeing-places'),
     {
       title: 'At the temple',
-      links: [['Tapt Kund — the spring that never runs cold', '/tapt-kund']],
+      links: [],
     },
   ],
 
@@ -62,12 +63,7 @@ export const MESH = {
     {
       title: 'The five Badri shrines',
       links: [
-        ['Adi Badri — oldest of the Badris', '/adi-badri-temple'],
-        ['Yogdhyan Badri — where Badrinath winters', '/yogdhyan-badri-temple'],
-        ['Vridh Badri — Vishnu’s first darshan to Narada', '/vridh-badri-temple'],
-        ['Bhavishya Badri — the future Badrinath', '/bhavishya-badri-temple'],
-        ['Tapt Kund', '/tapt-kund'],
-      ],
+        ],
     },
   ],
 
@@ -76,10 +72,7 @@ export const MESH = {
     {
       title: 'The remaining Panch Kedar shrines',
       links: [
-        ['Rudranath — Shiva’s face, the toughest Panch Kedar', '/rudranath-temple'],
-        ['Kalpeshwar — Shiva’s hair, open all year', '/kalpeshwar-temple'],
-        ['Gopeshwar — the last town before Rudranath', '/gopeshwar'],
-      ],
+        ],
     },
   ],
 
@@ -89,13 +82,7 @@ export const MESH = {
     {
       title: 'Towns & halts along the route',
       links: [
-        ['Srinagar Garhwal', '/srinagar-garhwal'],
-        ['Augustmuni', '/augustmuni'],
-        ['Chamoli Town', '/chamoli-town'],
-        ['Pipalkoti', '/pipalkoti'],
-        ['Gopeshwar', '/gopeshwar'],
-        ['New Tehri', '/tehri-town'],
-      ],
+        ],
     },
   ],
 
@@ -103,18 +90,21 @@ export const MESH = {
     {
       title: 'Temple round-ups',
       links: [
-        ['Every major Shiva temple in Uttarakhand', '/uttarakhand-shiva-temples'],
-        ['Every major Devi temple in Uttarakhand', '/uttarakhand-devi-temples'],
-      ],
+        ],
     },
   ],
 };
 
 export default function TempleLinkMesh({ groups, label = 'Related guides' }) {
-  if (!groups?.length) return null;
+  // Links to pages removed on 14 Sep 2026 (data/gone.js) are dropped here at
+  // render time, and a group left with nothing to link is not rendered at all.
+  const live = (groups || [])
+    .map(g => ({ ...g, links: g.links.filter(([, h]) => !GONE_PATHS.has(h)) }))
+    .filter(g => g.links.length);
+  if (!live.length) return null;
   return (
     <nav aria-label={label} style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 36 }}>
-      {groups.map(g => (
+      {live.map(g => (
         <div key={g.title}>
           <p style={heading}>{g.title}</p>
           <div style={row}>

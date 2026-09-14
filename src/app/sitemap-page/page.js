@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
 import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations, routeFrom, routeTo } from '@/data/cabs';
-import { LANGUAGE_PAGES } from '@/data/languages';
+import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 
 export const metadata = {
   title: 'Sitemap — All Char Dham Pages',
@@ -19,11 +19,8 @@ const sections = [
       { label: 'Do Dham Yatra', href: '/do-dham-yatra' },
       { label: 'Teen Dham Yatra', href: '/teen-dham-yatra' },
       { label: 'Kedarnath Yatra', href: '/kedarnath-yatra' },
-      { label: 'Kedarnath Tour Package 3N/4D', href: '/kedarnath-tour-package' },
-      { label: 'Badrinath Tour Package 2N/3D', href: '/badrinath-tour-package' },
       { label: 'Gangotri Yatra', href: '/gangotri-yatra' },
       { label: 'Yamunotri Yatra', href: '/yamunotri-yatra' },
-      { label: 'Panch Kedar Yatra', href: '/panch-kedar-yatra' },
       { label: 'Panch Badri Yatra', href: '/panch-badri-yatra' },
       { label: 'Uttarakhand Tour Packages', href: '/uttarakhand-tour-packages' },
       { label: 'Chopta & Tungnath', href: '/chopta-tungnath' },
@@ -34,10 +31,8 @@ const sections = [
     title: 'Temple & Pilgrimage Guides',
     links: [
       { label: 'Kedarnath Temple Guide', href: '/kedarnath-temple' },
-      { label: 'Kedarnath Height & Facts', href: '/kedarnath-height' },
       { label: 'Dhari Devi Temple', href: '/dhari-devi-temple' },
       { label: 'Badrinath Temple Guide', href: '/badrinath-temple' },
-      { label: 'Online Puja Booking', href: '/online-puja-booking' },
       { label: 'Emergency Contacts', href: '/char-dham-yatra-emergency-contacts' },
       { label: 'Char Dham Road Status', href: '/char-dham-road-status' },
     ],
@@ -45,7 +40,6 @@ const sections = [
   {
     title: 'Weather Guides',
     links: [
-      { label: 'Kedarnath Weather 2026', href: '/kedarnath-weather' },
       { label: 'Yamunotri Weather 2026', href: '/yamunotri-weather' },
       { label: 'Gangotri Weather 2026', href: '/gangotri-weather' },
       { label: 'Badrinath Weather 2026', href: '/badrinath-weather' },
@@ -54,19 +48,15 @@ const sections = [
   {
     title: 'How to Reach',
     links: [
-      { label: 'How to Reach Haridwar', href: '/how-to-reach-haridwar' },
       { label: 'How to Reach Kedarnath', href: '/blog/how-to-reach-kedarnath' },
       { label: 'How to Reach Yamunotri', href: '/how-to-reach-yamunotri' },
-      { label: 'How to Reach Gangotri', href: '/how-to-reach-gangotri' },
       { label: 'How to Reach Badrinath', href: '/how-to-reach-badrinath' },
     ],
   },
   {
     title: 'Hotel Guides',
     links: [
-      { label: 'Hotels Near Kedarnath', href: '/kedarnath-hotels' },
-      { label: 'Hotels Near Badrinath', href: '/badrinath-hotels' },
-    ],
+      ],
   },
   {
     title: 'Cab & Transport',
@@ -84,7 +74,6 @@ const sections = [
     links: [
       { label: 'Kedarnath VIP Darshan Guide', href: '/kedarnath-vip-darshan' },
       { label: 'Kedarnath Pony, Palki & Kandi Rates', href: '/kedarnath-pony-palki-kandi-rates' },
-      { label: 'Char Dham Yatra Scams to Avoid', href: '/char-dham-yatra-scams' },
       { label: 'Char Dham Cost Calculator', href: '/char-dham-yatra-cost-calculator' },
       { label: 'Char Dham Route Map 2026', href: '/char-dham-yatra-route-map' },
     ],
@@ -94,13 +83,11 @@ const sections = [
     links: [
       { label: 'Char Dham Yatra from Delhi', href: '/char-dham-yatra-from-delhi' },
       { label: 'Char Dham Yatra from Mumbai', href: '/char-dham-yatra-from-mumbai' },
-      { label: 'Char Dham Yatra from Haridwar', href: '/char-dham-yatra-from-haridwar' },
-    ],
+      ],
   },
   {
     title: 'Blog & Travel Guides',
     links: [
-      { label: 'Char Dham Yatra Complete Guide', href: '/blog/char-dham-guide' },
       { label: 'Best Time for Char Dham 2026', href: '/blog/best-time-char-dham' },
       { label: 'Char Dham Yatra Cost Breakdown', href: '/blog/char-dham-yatra-cost' },
       { label: 'Packing List for Char Dham', href: '/blog/char-dham-yatra-packing-list' },
@@ -117,20 +104,14 @@ const sections = [
       { label: 'Char Dham in October', href: '/blog/char-dham-yatra-in-october' },
       { label: 'Char Dham in 7 Days', href: '/blog/char-dham-yatra-7-days' },
       { label: 'Char Dham with Kids', href: '/blog/char-dham-yatra-with-kids' },
-      { label: 'Char Dham Budget vs Premium', href: '/blog/char-dham-yatra-budget-vs-premium' },
       { label: 'Char Dham vs Do Dham', href: '/blog/char-dham-vs-do-dham' },
-      { label: 'Char Dham Group Package', href: '/blog/char-dham-group-package' },
-      { label: 'Package vs Self-Planned', href: '/blog/char-dham-yatra-package-vs-self-planned' },
-      { label: 'First Timer Guide', href: '/blog/char-dham-yatra-first-timer-guide' },
       { label: 'Char Dham FAQ', href: '/blog/char-dham-yatra-faq' },
       { label: 'Medical Certificate Guide', href: '/blog/char-dham-yatra-medical-certificate' },
-      { label: 'Opening Dates 2026', href: '/blog/char-dham-yatra-opening-dates-2026' },
       { label: 'Haridwar to Kedarnath Guide', href: '/blog/haridwar-to-kedarnath' },
       { label: 'Haridwar to Kedarnath Road Trip', href: '/blog/haridwar-to-kedarnath-road-trip' },
       { label: 'Valley of Flowers Trek', href: '/blog/valley-of-flowers-trek' },
       { label: 'Rishikesh Adventure Guide', href: '/blog/rishikesh-adventure-guide' },
       { label: 'Mana Village Badrinath', href: '/blog/mana-village-badrinath' },
-      { label: 'Triyuginarayan Temple', href: '/blog/triyuginarayan-temple' },
       { label: 'Uttarakhand Weather Guide', href: '/blog/uttarakhand-weather-guide' },
       { label: 'All Blog Posts', href: '/blog' },
     ],
@@ -141,94 +122,55 @@ const sections = [
       { label: 'Gangotri Temple Guide', href: '/gangotri-temple' },
       { label: 'Yamunotri Temple Guide', href: '/yamunotri-temple' },
       { label: 'Gaurikund Guide', href: '/gaurikund' },
-      { label: 'Guptkashi Guide', href: '/guptkashi-guide' },
       { label: 'Kedarnath to Badrinath Distance', href: '/kedarnath-to-badrinath-distance' },
       { label: 'Harsil Valley Guide', href: '/harsil-valley' },
       { label: 'Surkanda Devi Temple', href: '/surkanda-devi-temple' },
       { label: 'Chitai Golu Devta Temple', href: '/chitai-golu-devta-temple' },
-      { label: 'Rajaji National Park', href: '/rajaji-national-park' },
-      { label: 'Adi Kailash Yatra', href: '/adi-kailash-yatra' },
-      { label: 'Every Major Shiva Temple in Uttarakhand', href: '/uttarakhand-shiva-temples' },
-      { label: 'Every Major Devi Temple in Uttarakhand', href: '/uttarakhand-devi-temples' },
-    ],
+      ],
   },
   {
     title: 'Panch Badri Shrines',
     links: [
       { label: 'Badrinath Temple Guide', href: '/badrinath-temple' },
-      { label: 'Adi Badri Temple', href: '/adi-badri-temple' },
-      { label: 'Yogdhyan Badri Temple', href: '/yogdhyan-badri-temple' },
-      { label: 'Vridh Badri Temple', href: '/vridh-badri-temple' },
-      { label: 'Bhavishya Badri Temple', href: '/bhavishya-badri-temple' },
-      { label: 'Tapt Kund Hot Spring', href: '/tapt-kund' },
-    ],
+      ],
   },
   {
     title: 'Panch Kedar Shrines',
     links: [
       { label: 'Kedarnath Temple Guide', href: '/kedarnath-temple' },
       { label: 'Tungnath & Chopta', href: '/chopta-tungnath' },
-      { label: 'Madhyamaheshwar Temple', href: '/madhyamaheshwar-temple' },
-      { label: 'Rudranath Temple', href: '/rudranath-temple' },
-      { label: 'Kalpeshwar Temple', href: '/kalpeshwar-temple' },
-    ],
+      ],
   },
   {
     title: 'Temple History & Legends',
     links: [
-      { label: 'Kedarnath History & Legends', href: '/kedarnath-history-legends' },
-      { label: 'Badrinath History & Legends', href: '/badrinath-history-legends' },
-      { label: 'Gangotri History & Legends', href: '/gangotri-history-legends' },
-      { label: 'Yamunotri History & Legends', href: '/yamunotri-history-legends' },
-    ],
+      ],
   },
   {
     title: 'Temple Festivals',
     links: [
-      { label: 'Kedarnath Festivals', href: '/kedarnath-festivals' },
-      { label: 'Badrinath Festivals', href: '/badrinath-festivals' },
-      { label: 'Gangotri Festivals', href: '/gangotri-festivals' },
-      { label: 'Yamunotri Festivals', href: '/yamunotri-festivals' },
-    ],
+      ],
   },
   {
     title: 'Dharamshalas & Budget Stays',
     links: [
-      { label: 'Kedarnath Dharamshalas', href: '/kedarnath-dharamshala' },
-      { label: 'Badrinath Dharamshalas', href: '/badrinath-dharamshala' },
-      { label: 'Gangotri Dharamshalas', href: '/gangotri-dharamshala' },
-      { label: 'Yamunotri Dharamshalas', href: '/yamunotri-dharamshala' },
-    ],
+      ],
   },
   {
     title: 'Towns & Halts on the Route',
     links: [
-      { label: 'Srinagar Garhwal', href: '/srinagar-garhwal' },
-      { label: 'Augustmuni', href: '/augustmuni' },
-      { label: 'Chamoli Town', href: '/chamoli-town' },
-      { label: 'Pipalkoti', href: '/pipalkoti' },
-      { label: 'Gopeshwar', href: '/gopeshwar' },
-      { label: 'New Tehri', href: '/tehri-town' },
-    ],
+      ],
   },
   {
     title: 'Regional Tour Packages',
     links: [
-      { label: 'Haridwar Tour Packages', href: '/haridwar-tour-packages' },
-      { label: 'Rishikesh Tour Packages', href: '/rishikesh-tour-packages' },
-      { label: 'Char Dham Hotels', href: '/char-dham-hotels' },
-      { label: 'Char Dham Yatra from Haridwar', href: '/char-dham-yatra-from-haridwar' },
-    ],
+      ],
   },
   {
     title: 'Why Book Direct',
     links: [
-      { label: 'Best Char Dham Operators in Haridwar', href: '/best-char-dham-yatra-operators-haridwar' },
-      { label: 'Shiv Ganga Travels vs MakeMyTrip', href: '/shiv-ganga-travels-vs-makemytrip-char-dham' },
-      { label: 'Direct Operator vs Aggregator', href: '/direct-operator-vs-travel-aggregator-char-dham' },
       { label: 'Char Dham Yatra Statistics', href: '/char-dham-yatra-statistics' },
-      { label: 'Char Dham Yatra Scams to Avoid', href: '/char-dham-yatra-scams' },
-    ],
+      ],
   },
   {
     title: 'More Guides',
@@ -239,16 +181,6 @@ const sections = [
       { label: 'Green Card / Trip Card 2026', href: '/blog/green-card-char-dham-yatra-2026' },
       { label: 'Kedarnath Registration 2026', href: '/blog/kedarnath-registration-2026' },
       { label: 'Kedarnath Trek Timings 2026', href: '/blog/kedarnath-trek-timings-2026' },
-      { label: 'Kedarnath Places to See', href: '/blog/kedarnath-places-to-see' },
-      { label: 'Kedarnath Pehli Baar (Hindi)', href: '/blog/kedarnath-pehli-baar' },
-      { label: 'Places to Visit on the Yatra', href: '/blog/places-to-visit-during-char-dham-yatra' },
-      { label: 'Types of Char Dham Packages', href: '/blog/types-of-char-dham-yatra-packages' },
-      { label: 'Char Dham Yatra by Train', href: '/blog/char-dham-yatra-by-train' },
-      { label: 'Char Dham Yatra Hotels', href: '/blog/char-dham-yatra-hotels' },
-      { label: 'Solo Women Travellers', href: '/blog/char-dham-yatra-solo-women' },
-      { label: 'Monsoon Safety Guide', href: '/blog/char-dham-monsoon-safety' },
-      { label: 'September Char Dham Yatra', href: '/blog/september-char-dham-yatra' },
-      { label: 'Char Dham Weather Guide', href: '/blog/char-dham-weather-guide' },
       { label: 'Char Dham Kab Jayen (Hindi)', href: '/blog/char-dham-kab-jayen' },
       { label: 'Kitna Kharcha Aayega (Hindi)', href: '/blog/char-dham-yatra-kitna-kharcha' },
       { label: 'Bujurg Char Dham Yatra (Hindi)', href: '/blog/bujurg-char-dham-yatra' },

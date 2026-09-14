@@ -41,7 +41,7 @@ export const CUSTOM_QA = [
   // ── 1. GREETING ──────────────────────────────────────────────
   {
     keywords: ['hello','hi','namaste','jai','hola','hey','good morning','good afternoon','good evening','greetings'],
-    answer: `Namaste! 🙏 Welcome to **Shiv Ganga Travels** — Haridwar's most trusted Char Dham Yatra specialist since 2010.\n\nI can answer all your questions about packages, prices, treks, bookings, and more.\n\nUse the quick buttons below or type your question — I'm here to help! 😊`,
+    answer: `Namaste! 🙏 Welcome to **Shiv Ganga Travels** — Haridwar's direct Char Dham Yatra operator.\n\nI can answer all your questions about packages, prices, treks, bookings, and more.\n\nUse the quick buttons below or type your question — I'm here to help! 😊`,
   },
 
   // ── 2. PACKAGE PRICES OVERVIEW ───────────────────────────────
@@ -251,7 +251,7 @@ export const CUSTOM_QA = [
 ];
 
 // ── FALLBACK AI SYSTEM PROMPT ────────────────────────────────────
-export const AI_SYSTEM_PROMPT = `You are a helpful and friendly yatra planning assistant for Shiv Ganga Travels, a trusted pilgrimage tour operator based in Haridwar, Uttarakhand, India. You have been serving pilgrims for 15+ years with 50,000+ happy customers.
+export const AI_SYSTEM_PROMPT = `You are a helpful and friendly yatra planning assistant for Shiv Ganga Travels, a trusted pilgrimage tour operator based in Haridwar, Uttarakhand, India. You have been serving 50,000+ pilgrims.
 
 Key facts:
 - Phone/WhatsApp: +91-7817996730

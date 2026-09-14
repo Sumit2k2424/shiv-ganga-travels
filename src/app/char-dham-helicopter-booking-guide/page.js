@@ -167,9 +167,9 @@ export default function HelicopterBookingGuide() {
         />
         <P>
           Our{' '}
-          <Link href="/char-dham-yatra-scams" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham scams page</Link>{' '}
+          Char Dham scams page{' '}
           covers the wider set, and{' '}
-          <Link href="/how-to-choose-char-dham-tour-operator" style={{ color:'var(--teal)', fontWeight:600 }}>how to choose an operator</Link>{' '}
+          how to choose an operator{' '}
           is the verification checklist.
         </P>
 
@@ -194,9 +194,7 @@ export default function HelicopterBookingGuide() {
           ['Kedarnath VIP Darshan','/kedarnath-vip-darshan'],
           ['Pony & Palki Rates','/kedarnath-pony-palki-kandi-rates'],
           ['Kedarnath Helicopter Booking','/blog/kedarnath-helicopter-booking'],
-          ['How to Choose an Operator','/how-to-choose-char-dham-tour-operator'],
-          ['Char Dham Yatra Scams','/char-dham-yatra-scams'],
-        ]}/>
+          ]}/>
       </Article>
     </>
   );

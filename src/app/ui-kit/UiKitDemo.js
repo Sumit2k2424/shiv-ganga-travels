@@ -132,7 +132,7 @@ export default function UiKitDemo() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Pilgrims served since 2010</CardTitle>
+              <CardTitle>Pilgrims served</CardTitle>
               <CardDescription>MagicUI NumberTicker, counts on scroll-in.</CardDescription>
             </CardHeader>
             <CardContent>
@@ -313,7 +313,7 @@ export default function UiKitDemo() {
             name="16 years running"
             className="col-span-3 lg:col-span-1"
             Icon={() => <span className="text-3xl">⛰️</span>}
-            description="Operating the Char Dham circuit since 2010."
+            description="Operating the Char Dham circuit."
             href="/about"
             cta="Our story"
             background={<div className="absolute inset-0 bg-teal-light" />}

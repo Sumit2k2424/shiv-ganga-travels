@@ -25,7 +25,7 @@ const URL = `${SITE.baseUrl}/char-dham-yatra-cab-booking`;
 export const metadata = {
   title: { absolute: `Char Dham Cab Booking ${SITE.season} — Full Circuit from ₹18,000` },
   description:
-    `Book a cab for the full Char Dham circuit ${SITE.season} — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator since 2010.`,
+    `Book a cab for the full Char Dham circuit ${SITE.season} — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator.`,
   keywords: [
     'char dham yatra cab booking', `char dham taxi ${SITE.season}`, 'char dham yatra car rental',
     'innova crysta char dham', 'tempo traveller char dham', 'char dham cab fare from haridwar',
@@ -109,7 +109,6 @@ export default function CharDhamCabBooking() {
     { label: 'Planning the yatra', links: [
       ['Char Dham Yatra packages', '/char-dham-yatra'],
       ['Registration 2026', '/blog/char-dham-yatra-registration'],
-      ['Opening dates 2026', '/blog/char-dham-yatra-opening-dates-2026'],
       ['Road status', '/char-dham-road-status'],
       ['Route map', '/char-dham-yatra-route-map'],
     ]},

@@ -184,10 +184,8 @@ export default function ChandiDeviTemple() {
           ['Mansa Devi Temple','/mansa-devi-temple'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
           ['Daksh Mahadev Temple','/daksh-mahadev-temple'],
-          ['Maya Devi Temple','/maya-devi-temple'],
           ['Haridwar Sightseeing','/haridwar-sightseeing-places'],
-          ['Rajaji National Park','/rajaji-national-park'],
-        ]}/>
+          ]}/>
       </Article>
     </>
   );

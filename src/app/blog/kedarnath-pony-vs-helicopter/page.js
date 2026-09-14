@@ -44,7 +44,7 @@ export default function PonyVsHelicopter() {
       <BlogHero
         badge="Kedarnath Guide · 2026"
         title="Kedarnath Pony vs Helicopter 2026 — Complete Comparison Guide"
-        dek="Cost, time, availability, booking process, and which option suits which pilgrim. Honest analysis from 15 years of operating Kedarnath Yatra from Haridwar."
+        dek="Cost, time, availability, booking process, and which option suits which pilgrim. Honest analysis from years of operating Kedarnath Yatra from Haridwar."
         author="Dhanesh Chandra Mishra"
         updated="Updated May 2026"
         readTime="6 min read"
@@ -58,7 +58,7 @@ export default function PonyVsHelicopter() {
 
       <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12.5, color:'var(--text-muted)', display:'flex', gap:20, flexWrap:'wrap' }}>
-          <span>✍️ <strong style={{ color:'var(--navy)' }}>Shiv Ganga Travels</strong> · Haridwar · 15 years on Kedarnath route</span>
+          <span>✍️ <strong style={{ color:'var(--navy)' }}>Shiv Ganga Travels</strong> · Haridwar · years on Kedarnath route</span>
           <span>🗓️ <strong style={{ color:'var(--navy)' }}>Updated:</strong> May 2026</span>
         </div>
       </div>

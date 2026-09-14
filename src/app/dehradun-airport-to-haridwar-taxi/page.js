@@ -82,7 +82,7 @@ function Schema() {
     '@context':'https://schema.org', '@type':'BreadcrumbList',
     itemListElement:[
       { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
-      { '@type':'ListItem', position:2, name:'Taxi Service in Haridwar', item:`${SITE.baseUrl}/taxi-service-in-haridwar` },
+      { '@type':'ListItem', position:2, name:'Cabs', item:`${SITE.baseUrl}/cabs` },
       { '@type':'ListItem', position:3, name:'Dehradun Airport to Haridwar Taxi', item:`${SITE.baseUrl}/dehradun-airport-to-haridwar-taxi` },
     ],
   };
@@ -124,7 +124,7 @@ export default function DehradunAirportToHaridwarTaxi() {
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
           <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/taxi-service-in-haridwar" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Taxi Service in Haridwar</Link><span>›</span>
+          Taxi Service in Haridwar<span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Dehradun Airport to Haridwar</span>
         </div>
       </nav>
@@ -257,7 +257,7 @@ export default function DehradunAirportToHaridwarTaxi() {
           {[
             ['Char Dham Yatra','All four dhams from Haridwar, 9N/10D','/char-dham-yatra'],
             ['Do Dham Yatra','Kedarnath and Badrinath, 5N/6D','/do-dham-yatra'],
-            ['Haridwar Local Taxi','Day hire for temples and ghats','/taxi-service-in-haridwar'],
+            ['All Uttarakhand Cabs','Fixed fares on every route','/cabs'],
             ['Har Ki Pauri','Aarti timings and what to expect','/har-ki-pauri-guide'],
           ].map(([t,d,href])=>(
             <Link key={href} href={href} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px', textDecoration:'none', display:'block' }}>
@@ -317,10 +317,6 @@ export default function DehradunAirportToHaridwarTaxi() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
-              ['Taxi Service in Haridwar','/taxi-service-in-haridwar'],
-              ['How to Reach Haridwar','/how-to-reach-haridwar'],
-              ['Haridwar to Rishikesh Taxi','/haridwar-to-rishikesh-taxi'],
-              ['Haridwar to Delhi Taxi','/haridwar-to-delhi-taxi'],
               ['Char Dham from Delhi','/char-dham-yatra-from-delhi'],
               ['Char Dham Helicopter','/char-dham-helicopter'],
             ].map(([label,href])=>(

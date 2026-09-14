@@ -102,7 +102,7 @@ function Schema() {
   const trip = {
     '@context': 'https://schema.org', '@type': 'TouristTrip',
     name: `Teen Dham Yatra ${SITE.season} — Yamunotri, Gangotri & Badrinath`,
-    description: `7N/8D Teen Dham Yatra from Haridwar covering three of the four Uttarakhand dhams. No 16 km Kedarnath trek on the standard route. AC vehicle, hotels, meals, darshan assistance and registration included. Direct operator since ${SITE.established}.`,
+    description: `7N/8D Teen Dham Yatra from Haridwar covering three of the four Uttarakhand dhams. No 16 km Kedarnath trek on the standard route. AC vehicle, hotels, meals, darshan assistance and registration included. Direct operator.`,
     url: `${SITE.baseUrl}/teen-dham-yatra`,
     image: [`${SITE.baseUrl}/opengraph-image`],
     touristType: ['Pilgrims', 'Families', 'Senior citizens'],
@@ -193,7 +193,7 @@ const ITINERARY = [
   { day: 'Day 2', route: 'Barkot → Yamunotri → Barkot', km: '36 km drive + 6 km trek each way', alt: '3,293 m', desc: 'Drive to Janki Chatti and start the 6 km walk. It is a steady climb, not a scramble — most people take three hours up. At the top, cook rice in the Surya Kund hot spring and take it back as prasad, offer puja at the Divya Shila slab, then darshan. Ponies and palkis are available the whole way if legs give out. Back to Barkot for the night.' },
   { day: 'Day 3', route: 'Barkot → Uttarkashi', km: '100 km · 4 hrs', alt: '1,158 m', desc: 'A short, easy driving day, deliberately. Visit the Vishwanath temple in Uttarakashi with its enormous iron trident — the town is a mountaineering base, so the shops here are the last decent place to buy warm layers or a walking stick before Gangotri.' },
   { day: 'Day 4', route: 'Uttarkashi → Gangotri → Harsil', km: '100 km · 5 hrs', alt: '3,415 m', desc: 'Leave with packed breakfast. The road follows the Bhagirathi through the gorge at Gangnani, where there is a hot sulphur kund worth twenty minutes. At Gangotri, the temple sits right by the river — the dip is short and shockingly cold. Then down to Harsil, an old deodar village with apple orchards, for the night. This is the prettiest overnight stop on the whole circuit and almost nobody schedules it.' },
-  { day: 'Day 5', route: 'Harsil → Guptkashi (via Tehri)', km: '270 km · 8–9 hrs', alt: '1,319 m', desc: 'The long haul. You cross the Tehri dam reservoir, drop to Devprayag where the Bhagirathi and Alaknanda meet to become the Ganga, then run up the Alaknanda valley through Rudraprayag. Start at first light — this is not a day to leave late.', link: ['Devprayag confluence guide', '/devprayag'] },
+  { day: 'Day 5', route: 'Harsil → Guptkashi (via Tehri)', km: '270 km · 8–9 hrs', alt: '1,319 m', desc: 'The long haul. You cross the Tehri dam reservoir, drop to Devprayag where the Bhagirathi and Alaknanda meet to become the Ganga, then run up the Alaknanda valley through Rudraprayag. Start at first light — this is not a day to leave late.', link: null },
   { day: 'Day 6', route: 'Guptkashi → Joshimath → Badrinath', km: '210 km · 7 hrs', alt: '3,133 m', desc: 'Through Chamoli and Joshimath — stop at the Narsingh temple, where the idol\'s wrist is said to be thinning, and when it breaks the Badrinath route is prophesied to close. Arrive Badrinath by evening. Bathe in Tapt Kund, the 45°C spring below the temple, then evening aarti.' },
   { day: 'Day 7', route: 'Badrinath darshan → Mana → Srinagar', km: '190 km', alt: '—', desc: '4 AM Bal Bhog puja, before the buses. Then Mana village, 3 km on: Vyas Gufa where the Mahabharata was dictated, Bhim Pul, and the point where the Saraswati disappears underground. Afternoon drive back down. Overnight Srinagar or Rudraprayag.' },
   { day: 'Day 8', route: 'Srinagar → Rishikesh → Haridwar', km: '160 km · 5 hrs', alt: '249 m', desc: 'Down the Alaknanda, second look at Devprayag from the other bank, brief stop at Rishikesh. Reach Haridwar by afternoon, in time for the evening Ganga aarti at Har Ki Pauri if you want it. Tour ends.' },
@@ -219,7 +219,7 @@ export default function TeenDhamYatra() {
             3 Dham Yatra from Haridwar · <strong style={{ color: '#FFD166' }}>₹11,600/person</strong> · 7N/8D · all four combinations compared · zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🕉️ 3 of the 4 dhams', '🚶 No Kedarnath trek', '🎖️ 15 yrs · 50k pilgrims', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
+            {['🕉️ 3 of the 4 dhams', '🚶 No Kedarnath trek', '🎖️ Retd. Army founder · 50k pilgrims', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>
@@ -271,7 +271,7 @@ export default function TeenDhamYatra() {
           The four Himalayan dhams sit on one long arc across Garhwal. Yamunotri is the westernmost, then Gangotri, then Kedarnath, and Badrinath at the eastern end near the Tibet border. Visiting all four in the traditional clockwise order is the <Link href="/char-dham-yatra">Char Dham Yatra</Link> — nine to ten days, two treks, roughly 1,600 km of mountain road. <Link href="/do-dham-yatra">Do Dham</Link> is two of them, usually Kedarnath and Badrinath.
         </p>
         <p style={p}>
-          Teen Dham sits between the two, and it is the least well-explained of the three. Search for it and you will find operator after operator listing route permutations with prices attached — but not one of them tells you how to choose. That is the actual question. So here is the honest version, from fifteen seasons of routing these trips ourselves.
+          Teen Dham sits between the two, and it is the least well-explained of the three. Search for it and you will find operator after operator listing route permutations with prices attached — but not one of them tells you how to choose. That is the actual question. So here is the honest version, from many seasons of routing these trips ourselves.
         </p>
 
         {/* ── THE differentiator: which dham to drop ───────────────────── */}
@@ -403,7 +403,7 @@ export default function TeenDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 24 }}>
-          Competitor figures are their own published 2026 starting prices, read from their websites in August 2026. We have run this route from Haridwar since {SITE.established} — same hotels, same temples, same registration handled, without the markup.
+          Competitor figures are their own published 2026 starting prices, read from their websites in August 2026. We have run this route from Haridwar — same hotels, same temples, same registration handled, without the markup.
         </p>
 
         {/* ── Inline conversion surface (the smaller of the two on this page) ── */}
@@ -528,7 +528,7 @@ export default function TeenDhamYatra() {
           ))}
         </div>
         <p style={{ fontSize: 13.5, color: '#64748b', marginBottom: 28 }}>
-          More on the last one in our <Link href="/altitude-sickness-char-dham">altitude sickness guide</Link>, and on what to carry in the <Link href="/char-dham-yatra-checklist">yatra checklist</Link>.
+          More on the last one in our altitude sickness guide, and on what to carry in the <Link href="/blog/char-dham-yatra-packing-list">yatra checklist</Link>.
         </p>
 
         {/* ── Where we operate from (map — no competitor has one) ───────── */}
@@ -561,7 +561,7 @@ export default function TeenDhamYatra() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer. Founded {SITE.name} in {SITE.established} and has routed Char Dham, Teen Dham and Do Dham itineraries for fifteen seasons, personally driving the Gangotri and Badrinath roads hundreds of times. The routing advice on this page — including the Harsil overnight and the case against dropping Gangotri — is his.{' '}
+              Retired Indian Army officer. Founded {SITE.name} and has routed Char Dham, Teen Dham and Do Dham itineraries for years, personally driving the Gangotri and Badrinath roads hundreds of times. The routing advice on this page — including the Harsil overnight and the case against dropping Gangotri — is his.{' '}
               <Link href="/about">More about the team</Link>.
             </p>
           </div>
@@ -582,21 +582,21 @@ export default function TeenDhamYatra() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>The three dhams on this route</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Gangotri Yatra', '/gangotri-yatra'], ['Gangotri Temple', '/gangotri-temple'], ['How to Reach Gangotri', '/how-to-reach-gangotri'], ['Badrinath Yatra', '/badrinath-yatra'], ['Badrinath Temple', '/badrinath-temple'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Badrinath VIP Darshan', '/badrinath-vip-darshan'], ['Harsil Valley', '/harsil-valley'], ['Mana Village', '/blog/mana-village-badrinath']].map(([l, href]) => (
+            {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Gangotri Yatra', '/gangotri-yatra'], ['Gangotri Temple', '/gangotri-temple'], ['Badrinath Yatra', '/badrinath-yatra'], ['Badrinath Temple', '/badrinath-temple'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Harsil Valley', '/harsil-valley'], ['Mana Village', '/blog/mana-village-badrinath']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Other yatra combinations</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Kedar Yatra', '/panch-kedar-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Haridwar', '/char-dham-yatra-from-haridwar'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Winter Char Dham', '/winter-char-dham-yatra'], ['Do Dham vs Char Dham', '/blog/char-dham-vs-do-dham'], ['Types of Packages', '/blog/types-of-char-dham-yatra-packages']].map(([l, href]) => (
+            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/blog/char-dham-vs-do-dham'], ].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Before you book</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Registration Guide', '/blog/char-dham-yatra-registration'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Opening Dates 2026', '/blog/char-dham-yatra-opening-dates-2026'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Best Time to Go', '/blog/best-time-char-dham'], ['Char Dham Road Status', '/char-dham-road-status'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['First-Timer Guide', '/blog/char-dham-yatra-first-timer-guide'], ['Medical Certificate', '/blog/char-dham-yatra-medical-certificate'], ['Yatra Scams', '/char-dham-yatra-scams'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Route Map', '/char-dham-yatra-route-map'], ['Emergency Contacts', '/char-dham-yatra-emergency-contacts'], ['Mobile Network', '/char-dham-yatra-mobile-network'], ['Hotels on Route', '/char-dham-hotels'], ['Haridwar Hotels', '/haridwar-hotels'], ['Cab Booking', '/char-dham-yatra-cab-booking'], ['How to Choose an Operator', '/how-to-choose-char-dham-tour-operator'], ['Contact Us', '/contact'], ['Reviews', '/review']].map(([l, href]) => (
+            {[['Registration Guide', '/blog/char-dham-yatra-registration'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Best Time to Go', '/blog/best-time-char-dham'], ['Char Dham Road Status', '/char-dham-road-status'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['Medical Certificate', '/blog/char-dham-yatra-medical-certificate'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Route Map', '/char-dham-yatra-route-map'], ['Emergency Contacts', '/char-dham-yatra-emergency-contacts'], ['Cab Booking', '/char-dham-yatra-cab-booking'], ['Contact Us', '/contact'], ['Reviews', '/review']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

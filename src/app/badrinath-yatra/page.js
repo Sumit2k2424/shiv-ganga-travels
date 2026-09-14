@@ -14,7 +14,7 @@ const badrinathRoute = ROUTES['haridwar-badrinath'];
 
 export const metadata = {
   title: { absolute: `Badrinath Yatra Package ${SITE.season} | VIP Darshan Included` },
-  description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
+  description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',
@@ -23,7 +23,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/badrinath-yatra` },
   openGraph: {
     title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
-    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
   
@@ -32,7 +32,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
-    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served since 2010.`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
     images: [{ url: '/opengraph-image', alt: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels` }],
   },
 };
@@ -430,14 +430,11 @@ export default function BadrinathYatraPage() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related pages</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[
-              ['2N/3D Tour Package ₹4,500', '/badrinath-tour-package'],
               ['Char Dham Yatra', '/char-dham-yatra'],
               ['Kedarnath Yatra', '/kedarnath-yatra'],
               ['Do Dham Package', '/do-dham-yatra'],
               ['Badrinath Temple Guide', '/badrinath-temple'],
-              ['Badrinath VIP Darshan & Puja Booking', '/badrinath-vip-darshan'],
               ['How to Reach Badrinath', '/how-to-reach-badrinath'],
-              ['Badrinath Hotels', '/badrinath-hotels'],
               ['Char Dham Helicopter', '/char-dham-helicopter'],
             ].map(([label, href]) => (
               <Link key={href} href={href}

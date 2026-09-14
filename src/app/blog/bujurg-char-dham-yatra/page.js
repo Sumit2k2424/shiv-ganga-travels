@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/blog/bujurg-char-dham-yatra');
 
 export const metadata = {
   title: { absolute: `बुजुर्गों के लिए चार धाम यात्रा ${SITE.season} | ₹21,000 से शुरू` },
-  description: `60-80 साल के बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}। विश्वसनीय ऑपरेटर, 15+ वर्षों का अनुभव, तुरंत पुष्टि। घोड़ा, पालकी, हेलिकॉप्टर विकल्प उपलब्ध।`,
+  description: `60-80 साल के बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}। विश्वसनीय ऑपरेटर, तुरंत पुष्टि। घोड़ा, पालकी, हेलिकॉप्टर विकल्प उपलब्ध।`,
   keywords: [`बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}`, 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },
   openGraph: { title: 'बुजुर्ग माँ-बाप को चार धाम यात्रा करानी है? — 12 जरूरी बातें', description: '60-80 साल के बुजुर्ग भी कर सकते हैं चार धाम यात्रा। घोड़ा, पालकी, हेलिकॉप्टर — सब जानकारी।', url: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra`, type: 'article', 

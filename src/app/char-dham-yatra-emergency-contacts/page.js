@@ -225,7 +225,7 @@ const scenarios = [
       'Call 108 for an ambulance, or 112 if you cannot get through.',
       'Red flags needing evacuation: confusion, inability to walk a straight line, breathlessness at rest, or a cough producing froth.',
     ],
-    link: { href: '/altitude-sickness-char-dham', label: 'Full altitude sickness guide' },
+    link: null,
   },
   {
     title: 'Landslide or blocked road',
@@ -255,7 +255,7 @@ const scenarios = [
       'Flag down a pony operator or a Nehru Institute of Mountaineering / SDRF post — both carry radios.',
       'Every medical relief post on the trek can call in a helicopter evacuation. They are at roughly 2km intervals.',
     ],
-    link: { href: '/char-dham-yatra-mobile-network', label: 'Network coverage by sector' },
+    link: null,
   },
 ];
 
@@ -448,7 +448,7 @@ export default function EmergencyContacts() {
             <ol style={{ margin: '0 0 12px', paddingLeft: 20, fontSize: 14.5, lineHeight: 1.85, color: 'var(--text-mid)' }}>
               {s.steps.map((step) => <li key={step} style={{ marginBottom: 6 }}>{step}</li>)}
             </ol>
-            <Link href={s.link.href} style={{ fontSize: 13, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{s.link.label} →</Link>
+            {s.link && <Link href={s.link.href} style={{ fontSize: 13, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{s.link.label} →</Link>}
           </div>
         ))}
 
@@ -477,7 +477,7 @@ export default function EmergencyContacts() {
             Management Authority (usdma.uk.gov.in), Shri Badarinath Kedarnath Temple Committee
             (badrinath-kedarnath.gov.in), Registration &amp; Tourist Care Uttarakhand
             (registrationandtouristcare.uk.gov.in), Uttarkashi / Rudraprayag / Chamoli district portals, and
-            Shiv Ganga Travels operations records from {SITE.established} onward.
+            Shiv Ganga Travels operations records.
           </p>
           <p style={{ margin: '10px 0 0' }}>
             This directory is published under{' '}

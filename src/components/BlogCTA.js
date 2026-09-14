@@ -128,7 +128,7 @@ export default function BlogCTA({
     <aside className="blog-cta blog-cta--footer" aria-label="Book with Shiv Ganga Travels">
       <span className="blog-cta__rule" aria-hidden="true" />
       <span className="blog-cta__eyebrow blog-cta__eyebrow--dark">
-        Shiv Ganga Travels · Haridwar · since 2010
+        Shiv Ganga Travels · Haridwar
       </span>
 
       <h3 className="blog-cta__title">
@@ -143,7 +143,7 @@ export default function BlogCTA({
       <dl className="blog-cta__ledger">
         {[
           [`${SITE.reviews.rating} / 5`, `${SITE.reviews.count} Google reviews`],
-          ['2010', 'Operating since'],
+          ['Direct', 'Operator, Haridwar'],
           ['0%', 'Agent commission'],
           ['24×7', 'On-route support'],
         ].map(([value, label]) => (

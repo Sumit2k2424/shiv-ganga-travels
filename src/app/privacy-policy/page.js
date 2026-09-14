@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
 
         <H2>1. Who we are</H2>
         <P>
-          Shiv Ganga Travels is a travel agency registered in Uttarakhand, operating since 2010 and based
+          Shiv Ganga Travels is a travel agency registered in Uttarakhand, operating and based
           at Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India.
           For the purposes of India&apos;s Digital Personal Data Protection Act 2023, we are the Data
           Fiduciary for the personal data described below. Contact: {SITE.email} · {SITE.phone}.

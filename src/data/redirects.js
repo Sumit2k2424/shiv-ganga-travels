@@ -88,11 +88,6 @@ const REDIRECTS = [
   { source: '/cabs/to/sonprayag',                 destination: '/cabs/to/kedarnath',                  permanent: true },
   { source: '/cabs/to/joshimath',                 destination: '/cabs/to/badrinath',                  permanent: true },
   // Vehicle hire → the rate card those pages were generated from.
-  { source: '/cabs/hire/tempo-traveller-haridwar',destination: '/taxi-service-in-haridwar',           permanent: true },
-  { source: '/cabs/hire/innova-crysta-haridwar',  destination: '/taxi-service-in-haridwar',           permanent: true },
-  { source: '/cabs/hire/swift-dzire-haridwar',    destination: '/taxi-service-in-haridwar',           permanent: true },
-  { source: '/cabs/hire/ertiga-haridwar',         destination: '/taxi-service-in-haridwar',           permanent: true },
-  { source: '/cabs/hire/force-urbania-haridwar',  destination: '/taxi-service-in-haridwar',           permanent: true },
   // ── Retired /blog/[slug] JSON route: send its old slugs to the real pages ──
   { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
   // Redirect stale 2025 guide URL → main char dham page (2026 content)
@@ -117,7 +112,6 @@ const REDIRECTS = [
   { source: '/omkareshwar-temple-ukhimath',                      destination: '/ukhimath',                                       permanent: true },
   { source: '/blog/char-dham-yatra-route-map',                  destination: '/char-dham-yatra-route-map',                    permanent: true },
   // ── Thin/duplicate blog pages consolidated into canonical pages (May 2026 update cleanup) ──
-  { source: '/blog/char-dham-yatra-guide',     destination: '/blog/char-dham-guide',     permanent: true },
   { source: '/blog/char-dham-budget-guide',    destination: '/blog/char-dham-yatra-cost', permanent: true },
   { source: '/blog/kedarnath-yatra-package',   destination: '/kedarnath-yatra',          permanent: true },
   { source: '/blog/kedarnath-yatra-guide',     destination: '/blog/kedarnath-yatra-complete-guide', permanent: true },
@@ -131,7 +125,6 @@ const REDIRECTS = [
   { source: '/blog/yamunotri-yatra-guide',     destination: '/yamunotri-yatra',          permanent: true },
   { source: '/blog/gangotri-yatra-guide',      destination: '/gangotri-yatra',           permanent: true },
   { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
-  { source: '/blog/kedarnath-weather-guide',   destination: '/kedarnath-weather',        permanent: true },
   { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
 
   // ── /index — a second URL serving the whole homepage ──
@@ -174,7 +167,6 @@ const REDIRECTS = [
   { source: '/char-dham-registration-hindi',  destination: '/blog/char-dham-registration-hindi',  permanent: true },
   { source: '/bujurg-char-dham-yatra',        destination: '/blog/bujurg-char-dham-yatra',        permanent: true },
   { source: '/char-dham-yatra-kitna-kharcha', destination: '/blog/char-dham-yatra-kitna-kharcha', permanent: true },
-  { source: '/kedarnath-pehli-baar',          destination: '/blog/kedarnath-pehli-baar',          permanent: true },
   { source: '/char-dham-kab-jayen',           destination: '/blog/char-dham-kab-jayen',           permanent: true },
   // ── History page merged into the significance page (Aug 2026) ──
   // The two covered the same ground (Adi Shankaracharya, the mythology of each
@@ -183,8 +175,6 @@ const REDIRECTS = [
   // absorbed the history page's unique sections and its FAQ schema.
   { source: '/blog/char-dham-yatra-history', destination: '/blog/char-dham-yatra-significance', permanent: true },
   // ── Comparison posts: moved /blog/ → root without redirects (live 404s in GSC) ──
-  { source: '/blog/direct-operator-vs-travel-aggregator-char-dham', destination: '/direct-operator-vs-travel-aggregator-char-dham', permanent: true },
-  { source: '/blog/shiv-ganga-travels-vs-makemytrip-char-dham',     destination: '/shiv-ganga-travels-vs-makemytrip-char-dham',     permanent: true },
   // ── Withdrawn pricing release (Aug 2026) ──
   // The newsroom no longer publishes pricing news. This release was live and
   // may be indexed or linked, so it redirects rather than 404s. It points at

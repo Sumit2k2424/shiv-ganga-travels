@@ -331,14 +331,14 @@ export default function KainchiDham() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name} in {SITE.established}. Garhwal is home ground, but we have run the Kumaon circuit &mdash; Nainital, Kainchi, Almora, Corbett &mdash; for years, and the advice above about which day to go is earned from taking groups there on the wrong ones. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Garhwal is home ground, but we have run the Kumaon circuit &mdash; Nainital, Kainchi, Almora, Corbett &mdash; for years, and the advice above about which day to go is earned from taking groups there on the wrong ones. <Link href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 32 }}>
           <h3 style={{ color: '#fff', fontFamily: 'var(--font-display)', fontSize: '1.3rem', marginBottom: 8 }}>Planning a Kumaon trip?</h3>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Zero commission · Direct operator since {SITE.established}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13.5, marginBottom: 18 }}>Free routed itinerary in 2 hours · Zero commission · Direct operator</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Plan on WhatsApp</a>
@@ -349,7 +349,7 @@ export default function KainchiDham() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Elsewhere in Uttarakhand</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Uttarakhand Packages', '/uttarakhand-tour-packages'], ['Chitai Golu Devta, Almora', '/chitai-golu-devta-temple'], ['Rajaji National Park', '/rajaji-national-park'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Auli Skiing', '/auli-skiing-package'], ['Mussoorie Packages', '/mussoorie-tour-packages'], ['Rishikesh Packages', '/rishikesh-tour-packages'], ['Surkanda Devi Temple', '/surkanda-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Devprayag Sangam', '/devprayag'], ['Rudraprayag', '/rudraprayag'], ['All Packages', '/packages'], ['Cabs in Uttarakhand', '/cabs'], ['Contact Us', '/contact']].map(([l, href]) => (
+            {[['Uttarakhand Packages', '/uttarakhand-tour-packages'], ['Chitai Golu Devta, Almora', '/chitai-golu-devta-temple'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Surkanda Devi Temple', '/surkanda-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['All Packages', '/packages'], ['Cabs in Uttarakhand', '/cabs'], ['Contact Us', '/contact']].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

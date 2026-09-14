@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
   const url = `${SITE.baseUrl}/cabs/to/${d.slug}`;
 
   const title = `${d.name} Taxi Service 2026 | Cab Fares from ${routes.length} ${routes.length === 1 ? 'City' : 'Cities'}`;
-  const desc = `Book a cab to ${d.name} from ${routes.map(routeFrom).join(', ')}. Fares from ${cheapest}, fixed all-inclusive. Road ends at ${d.lastMotorable}. Haridwar operator since 2010.`;
+  const desc = `Book a cab to ${d.name} from ${routes.map(routeFrom).join(', ')}. Fares from ${cheapest}, fixed all-inclusive. Road ends at ${d.lastMotorable}. Haridwar operator.`;
 
   return {
     title: { absolute: title },

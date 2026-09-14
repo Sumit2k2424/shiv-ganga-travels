@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LANGUAGE_PAGES } from '@/data/languages';
+import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 
 const chip = {
   background: '#fff', border: '1px solid hsl(var(--border))', color: 'var(--navy)',
@@ -26,7 +26,7 @@ export default function LanguageLinkMesh({ current = '' }) {
         <Link prefetch={false} href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D Package — ₹13,900 →</Link>
         <Link prefetch={false} href="/char-dham-yatra-cost-calculator" style={chip}>Cost Calculator →</Link>
         <Link prefetch={false} href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>
-        <Link prefetch={false} href="/char-dham-hotels" style={chip}>Char Dham Hotels →</Link>
+        Char Dham Hotels →
         <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={chip}>2026 Registration →</Link>
       </div>
     </nav>

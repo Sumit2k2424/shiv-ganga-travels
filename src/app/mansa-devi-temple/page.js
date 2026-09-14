@@ -141,7 +141,7 @@ export default function MansaDeviTemple() {
         <P>
           The ropeway base station is a short walk from Har Ki Pauri, or a five-minute drive. Vehicles
           cannot go up the hill — the ropeway and the footpath are the only routes. Our{' '}
-          <Link href="/taxi-service-in-haridwar" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar temple circuit</Link>{' '}
+          Haridwar temple circuit{' '}
           drops at the base and waits.
         </P>
         <Note tone="good" title="Do Mansa Devi first, then Chandi Devi">
@@ -181,11 +181,9 @@ export default function MansaDeviTemple() {
         <Related links={[
           ['Chandi Devi Temple','/chandi-devi-temple'],
           ['Har Ki Pauri Guide','/har-ki-pauri-guide'],
-          ['Maya Devi Temple','/maya-devi-temple'],
           ['Daksh Mahadev Temple','/daksh-mahadev-temple'],
           ['Haridwar Sightseeing','/haridwar-sightseeing-places'],
-          ['Taxi Service in Haridwar','/taxi-service-in-haridwar'],
-        ]}/>
+          ]}/>
       </Article>
     </>
   );
