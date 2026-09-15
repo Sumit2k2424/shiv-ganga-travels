@@ -176,7 +176,13 @@ function MiniFact({ icon, k, v }) {
    2 · HOTEL SHOWCASE
    ══════════════════════════════════════════════════════════════ */
 
-export function HotelShowcase({ hotels = [] }) {
+/**
+ * `compact` drops the blurb paragraph and the amenity chips. The package
+ * pages use it: the same six hotels appear on most itineraries, and their
+ * full descriptions repeated on every package page were the largest block
+ * of shared text left on the template. The homepage keeps the full card.
+ */
+export function HotelShowcase({ hotels = [], compact = false }) {
   const c = useCarousel({ align: 'start' });
 
   return (
@@ -209,19 +215,21 @@ export function HotelShowcase({ hotels = [] }) {
                 </div>
 
                 <h3 className="lux-display lux-display--sm" style={{ marginTop: 10 }}>{h.name}</h3>
-                <p className="lux-body" style={{ fontSize: 14.5, marginTop: 12 }}>{h.blurb}</p>
+                {!compact && <p className="lux-body" style={{ fontSize: 14.5, marginTop: 12 }}>{h.blurb}</p>}
 
-                <ul className="lux-chips" style={{ marginTop: 18 }}>
-                  {h.amenities.slice(0, 5).map((a) => (
-                    <li key={a} className="lux-pill">{a}</li>
-                  ))}
-                </ul>
+                {!compact && (
+                  <ul className="lux-chips" style={{ marginTop: 18 }}>
+                    {h.amenities.slice(0, 5).map((a) => (
+                      <li key={a} className="lux-pill">{a}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <dl className="lux-facts" style={{ marginTop: 20 }}>
                   <div className="lux-facts__row"><dt className="lux-facts__k">Altitude</dt><dd className="lux-facts__v">{h.altitude}</dd></div>
                   <div className="lux-facts__row"><dt className="lux-facts__k">Nights</dt><dd className="lux-facts__v">{h.nights}</dd></div>
-                  <div className="lux-facts__row"><dt className="lux-facts__k">Rooms</dt><dd className="lux-facts__v">{h.rooms.join(' · ')}</dd></div>
-                  <div className="lux-facts__row"><dt className="lux-facts__k">Meals</dt><dd className="lux-facts__v">{h.meals}</dd></div>
+                  {!compact && <div className="lux-facts__row"><dt className="lux-facts__k">Rooms</dt><dd className="lux-facts__v">{h.rooms.join(' · ')}</dd></div>}
+                  {!compact && <div className="lux-facts__row"><dt className="lux-facts__k">Meals</dt><dd className="lux-facts__v">{h.meals}</dd></div>}
                 </dl>
 
                 {h.caveat && (

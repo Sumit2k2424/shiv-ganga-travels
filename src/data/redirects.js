@@ -27,6 +27,15 @@ const REDIRECTS = [
   { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
   // Redirect stale 2025 guide URL → main char dham page (2026 content)
   { source: '/char-dham-yatra-2025', destination: '/char-dham-yatra', permanent: true },
+  // ── Package merges, 15 Sep 2026 ──
+  // Four package pages were 71–79% identical to a sibling. The three single-dham
+  // 2N/3D pages fold into the hand-written Ek Dham guide, which already prices
+  // and compares all four; the helicopter Do Dham folds into the road Do Dham
+  // page as a variant. Real merges, so 308 rather than 410.
+  { source: '/packages/badrinath-yatra-package-2n-3d-haridwar',           destination: '/ek-dham-yatra',                              permanent: true },
+  { source: '/packages/gangotri-yatra-package-2n-3d-haridwar',            destination: '/ek-dham-yatra',                              permanent: true },
+  { source: '/packages/yamunotri-yatra-package-2n-3d-haridwar',           destination: '/ek-dham-yatra',                              permanent: true },
+  { source: '/packages/kedarnath-badrinath-helicopter-do-dham-3n-4d',     destination: '/packages/kedarnath-badrinath-do-dham-5n-6d', permanent: true },
   // Fix internal 404s found by Screaming Frog
   { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
   { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },

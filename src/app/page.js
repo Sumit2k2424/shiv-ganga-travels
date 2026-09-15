@@ -214,10 +214,10 @@ const INTENTS = [
 ];
 
 const DESTINATIONS = [
-  { name:'Yamunotri', deity:'Goddess Yamuna', alt:'3,291 m', href:'/packages/yamunotri-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Yamunotri Dham, first shrine of the Char Dham Yatra' },
-  { name:'Gangotri', deity:'Mother Ganga', alt:'3,415 m', href:'/packages/gangotri-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Gangotri Dham on the Bhagirathi, source of the Ganga' },
+  { name:'Yamunotri', deity:'Goddess Yamuna', alt:'3,291 m', href:'/yamunotri-yatra', photo:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Yamunotri Dham, first shrine of the Char Dham Yatra' },
+  { name:'Gangotri', deity:'Mother Ganga', alt:'3,415 m', href:'/gangotri-yatra', photo:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Gangotri Dham on the Bhagirathi, source of the Ganga' },
   { name:'Kedarnath', deity:'Lord Shiva', alt:'3,583 m', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar', photo:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Kedarnath temple against the Himalayan peaks' },
-  { name:'Badrinath', deity:'Lord Vishnu', alt:'3,133 m', href:'/packages/badrinath-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Badrinath temple with Neelkanth peak behind' },
+  { name:'Badrinath', deity:'Lord Vishnu', alt:'3,133 m', href:'/badrinath-yatra', photo:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Badrinath temple with Neelkanth peak behind' },
 ];
 
 const COST_LINES = [
@@ -382,8 +382,8 @@ export default function HomePage() {
 
       <Section tone="paper" tight>
         <SectionHead eyebrow="Focused · affordable" title="Single Dham packages"
-          lede="One sacred shrine. Deeply meaningful. From ₹5,299."
-          aside={<Link href="/packages/single-dham" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          lede="One sacred shrine. Kedarnath as a 3N/4D package; Badrinath, Gangotri and Yamunotri from ₹4,250 in the Ek Dham guide."
+          aside={<Link href="/ek-dham-yatra" className="lux-link">Compare all four <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{singleDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 

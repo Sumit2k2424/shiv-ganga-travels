@@ -256,7 +256,7 @@ export default function BadrinathYatraPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
-            { name: 'Badrinath Yatra', duration: '2N/3D', price: '₹4,500', original: '₹8,000', badge: 'Most Popular', href: '/packages/badrinath-yatra-package-2n-3d-haridwar', desc: 'AC cab + hotel + meals + VIP darshan' },
+            { name: 'Badrinath Yatra', duration: '2N/3D', price: '₹4,500', original: '₹8,000', badge: 'Most Popular', href: '/ek-dham-yatra', desc: 'AC cab + hotel + meals + VIP darshan' },
             { name: 'Do Dham — Kedarnath + Badrinath', duration: '5N/6D', price: '₹8,200', original: '₹14,000', badge: 'Best Value', href: '/packages/kedarnath-badrinath-do-dham-5n-6d', desc: 'Both sacred dhams in one trip' },
             { name: 'Badrinath + Hemkund Sahib', duration: '3N/4D', price: '₹6,350', original: '₹11,000', badge: 'Combo', href: '/packages', desc: 'Badrinath + Sikh pilgrimage' },
             { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹13,900', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },

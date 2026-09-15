@@ -133,9 +133,9 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href={`/packages/gangotri-yatra-package-2n-3d-haridwar`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
+          <Link href="/ek-dham-yatra" style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
-              <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 2N/3D Package →</div>
+              <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>See the 2N/3D Ek Dham package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
             </div>
             <div style={{fontWeight:800,fontSize:22,color:'var(--navy)',whiteSpace:'nowrap'}}>From ₹4,250</div>

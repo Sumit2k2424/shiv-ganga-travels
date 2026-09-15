@@ -61,7 +61,9 @@ export const SITE = {
 };
 
 // ── Shared inclusions / exclusions ─────────────────────────────
-const INC_STD = [
+// Exported so /packages can print the standard terms once instead of every
+// package page repeating them.
+export const INC_STD = [
   'Accommodation on twin/triple sharing basis at hotels/lodges',
   'Daily vegetarian breakfast & dinner (Jain options available)',
   'Private vehicle — Tempo Traveller / Innova Crysta / SUV (AC available in plain areas; optional at ₹2,000 extra in hilly areas)',
@@ -71,7 +73,7 @@ const INC_STD = [
   'Yatra biometric registration assistance',
   'Pickup & drop at Haridwar railway station / bus stand',
 ];
-const EXC_STD = [
+export const EXC_STD = [
   'Train / flight tickets to / from Haridwar or Dehradun',
   'Pony, palki or porter charges at Yamunotri & Kedarnath',
   'Helicopter charges (available at extra cost)',
@@ -424,7 +426,15 @@ export const PACKAGES = [
     tags     : ['do dham','2 dham yatra','kedarnath badrinath','badrinath kedarnath','haridwar','jyotirlinga','overnight kedarnath','mahabhishek'],
     metaTitle: 'Kedarnath Badrinath Do Dham Yatra 2026 | Price Starts at ₹11,000 | Overnight at Kedarnath',
     metaDesc : 'Kedarnath Badrinath Do Dham Yatra 2026 — 5N/6D from ₹11,000/person. Direct Haridwar operator, fixed departures & instant confirmation.',
-    faqs:[],
+    // The separate "by helicopter 3N/4D" package page was merged into this one
+    // on 15 Sep 2026 — same two dhams, same operator, 79% identical page. It is
+    // sold as a variant of this itinerary now.
+    localInsights:[
+      'By helicopter instead of the trek: the same two dhams in 3N/4D — Phata/Guptkashi to Kedarnath by helicopter, Badrinath by road — from ₹22,500 per person including the helicopter ticket, VIP darshan slot and hotels. Ask for the helicopter variant when you enquire.',
+    ],
+    faqs:[
+      { q:'Can I do Kedarnath–Badrinath by helicopter instead of trekking?', a:'Yes. The helicopter variant of this package runs 3N/4D: you fly Phata or Guptkashi to Kedarnath and back the same morning, then drive to Badrinath. It is ₹22,500 per person upwards depending on the helipad and date, against ₹8,200 for the road-and-trek version, and it is the one we recommend for anyone over 65 or with a heart or knee condition. Helicopter tickets are weather-dependent; if the flight is cancelled we reschedule or refund the helicopter portion.' },
+    ],
   },
 
   {
@@ -470,46 +480,6 @@ export const PACKAGES = [
     faqs:[],
   },
 
-  {
-    slug     : 'kedarnath-badrinath-helicopter-do-dham-3n-4d',
-    photo    : 'https://images.pexels.com/photos/30528811/pexels-photo-30528811.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
-    category : 'do-dham',
-    name     : 'Kedarnath Badrinath by Helicopter — 3N/4D',
-    subtitle : 'Ex-Haridwar | Helicopter + Road | VIP Darshan',
-    seoHeading: 'Kedarnath Badrinath Helicopter 2026 — 3N/4D Do Dham',
-    duration : { nights:3, days:4 },
-    groupSize: '2–8 pilgrims',
-    difficulty:'Easy (helicopter to Kedarnath, road to Badrinath)',
-    season   : 'May – June & Sept – Oct 2026',
-    transport:'Helicopter (Kedarnath) + Private Car (Badrinath)',
-    startCity: 'Haridwar',
-    endCity  : 'Haridwar',
-    altitude : 'Max: Kedarnath 3,583m (helipad)',
-    price    : { original:35000, discounted:22500, currency:'₹', perPerson:true },
-    highlights:[
-      'Helicopter to Kedarnath from Phata/Sersi helipad',
-      'No 16 km trek — ideal for elderly and busy pilgrims',
-      'Aerial views of snow-capped Himalayan peaks',
-      'Same-day Kedarnath darshan by helicopter',
-      'Road journey to Badrinath via scenic Joshimath',
-      'Tapt Kund, Mana village and VIP Badrinath darshan',
-    ],
-    inclusions:[...INC_STD, 'Kedarnath helicopter (Phata/Sersi → Kedarnath → Phata)'],
-    exclusions:[...EXC_STD.filter(e => !e.includes('Helicopter'))],
-    itinerary:[
-      {day:1, title:'Haridwar → Phata / Guptkashi', desc:'Depart Haridwar 5 AM. Drive via Rishikesh, Devprayag, Rudraprayag, Guptkashi to Phata or Sersi helipad area. Check in. Briefing. Overnight.'},
-      {day:2, title:'Helicopter Kedarnath Darshan → Badrinath Drive', desc:'Early morning helicopter flight Phata → Kedarnath (9 min). VIP darshan at the Jyotirlinga. Shankaracharya Samadhi. Return helicopter to Phata. Drive to Badrinath (3 hrs via Joshimath). Evening Tapt Kund bath + darshan. Overnight Badrinath.'},
-      {day:3, title:'Badrinath Full Darshan → Mana Village', desc:'4 AM Bal Bhog puja. Mana village: Vyas Gufa, Ganesh Gufa, Bhim Pul, Saraswati river. Brahamakapal, Neelkanth peak. Afternoon drive return. Overnight Rudraprayag/Srinagar.'},
-      {day:4, title:'Return to Haridwar', desc:'Drive via Devprayag, Rishikesh. Haridwar Ganga Aarti. Tour ends.'},
-    ],
-    featured : true,
-    badge    : 'Premium',
-    images   : ['helicopter','kedarnath','badrinath'],
-    tags     : ['do dham','helicopter','kedarnath','badrinath','no trek','vip'],
-    metaTitle: 'Kedarnath Heli + Badrinath Do Dham 2026 | Price Starts at ₹22,500 | No Trek',
-    metaDesc : 'Kedarnath Heli + Badrinath Do Dham 2026 — 3N/4D from ₹22,500/person. Direct Haridwar operator, instant confirmation.',
-    faqs:[],
-  },
 
   {
     slug     : 'teen-dham-yamunotri-gangotri-badrinath-7n-8d',
@@ -607,128 +577,8 @@ export const PACKAGES = [
     ],
   },
 
-  {
-    slug     : 'badrinath-yatra-package-2n-3d-haridwar',
-    photo    : 'https://images.pexels.com/photos/34783867/pexels-photo-34783867.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
-    category : 'single-dham',
-    name     : 'Badrinath Yatra Package from Haridwar — 2N/3D',
-    subtitle : 'Ex-Haridwar | Lord Vishnu | No Trekking',
-    seoHeading: 'Badrinath Yatra 2026 — 2N/3D from Haridwar',
-    duration : { nights:2, days:3 },
-    groupSize: 'Any group size',
-    difficulty:'Easy (no trekking)',
-    season   : 'May – June & Sept – Oct 2026',
-    transport:'Innova / Car',
-    startCity: 'Haridwar',
-    endCity  : 'Haridwar',
-    altitude : 'Badrinath: 3,133m',
-    price    : { original:8000, discounted:4500, currency:'₹', perPerson:true },
-    highlights:[
-      'Badrinath — one of 108 Vishnu Divya Desams',
-      'Tapt Kund natural thermal spring bath (45°C)',
-      'Mana village — last Indian village before Tibet border',
-      'Vyas Gufa where Mahabharata was composed',
-      'Bhim Pul — single rock bridge over Saraswati River',
-      'Brahamakapal — ancestral rites on Alaknanda banks',
-      'Neelkanth Parvat (6,597m) — the majestic snow backdrop',
-    ],
-    inclusions:[...INC_STD],
-    exclusions: EXC_STD,
-    itinerary:[
-      {day:1, title:'Haridwar → Joshimath → Badrinath (315 km)', desc:'Depart Haridwar 4 AM. Drive via Rishikesh, Devprayag (Sangam), Rudraprayag, Chamoli, Pipalkoti, Joshimath (Narsingh Temple — winter seat of Badrinath). Arrive Badrinath (3,133m). Evening Tapt Kund ritual bath. Mahabhishek darshan. Overnight.'},
-      {day:2, title:'Badrinath Full Darshan → Mana Village', desc:'4 AM Bal Bhog darshan. VIP puja. Explore temple complex: Kubera temple, Garuda Shila, Narad Kund, Brahamakapal Ghat. Mana village (3 km by road): Vyas Gufa (Mahabharata composed here), Ganesh Gufa, Bhim Pul, last tea shop in India, Saraswati River origin. Neelkanth peak photo. Overnight Badrinath.'},
-      {day:3, title:'Badrinath → Rishikesh → Haridwar', desc:'Morning final darshan. Drive via Joshimath, Rudraprayag, Rishikesh (Ram Jhula walk). Haridwar Ganga Aarti. Tour ends.'},
-    ],
-    featured : false,
-    badge    : null,
-    images   : ['badrinath'],
-    tags     : ['badrinath','single dham','haridwar','vishnu','no trek','easy'],
-    metaTitle: 'Badrinath Ek Dham Yatra Package 2026 | Price Starts at ₹4,500 | Mana Village',
-    metaDesc : 'Badrinath Ek Dham Yatra 2026 — 2N/3D from ₹4,500/person. Direct Haridwar operator, fixed departures & instant confirmation.',
-    faqs:[],
-  },
 
-  {
-    slug     : 'yamunotri-yatra-package-2n-3d-haridwar',
-    photo    : 'https://images.pexels.com/photos/30924430/pexels-photo-30924430.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
-    category : 'single-dham',
-    name     : 'Yamunotri Yatra Package from Haridwar — 2N/3D',
-    subtitle : 'Ex-Haridwar | Goddess Yamuna | 6 km Trek',
-    seoHeading: 'Yamunotri Yatra 2026 — 2N/3D from Haridwar',
-    duration : { nights:2, days:3 },
-    groupSize: 'Any group size',
-    difficulty:'Moderate (6 km trek or pony)',
-    season   : 'May – June & Sept – Oct 2026',
-    transport:'Car / Innova',
-    startCity: 'Haridwar',
-    endCity  : 'Haridwar',
-    altitude : 'Yamunotri: 3,291m',
-    price    : { original:7500, discounted:4500, currency:'₹', perPerson:true },
-    highlights:[
-      'Yamunotri Dham — source of sacred Yamuna River at 3,291m',
-      'Divya Shila worship before entering the inner sanctum',
-      'Surya Kund (88°C) — cook rice/potatoes as prasad',
-      'Yamuna Glacier visible from the trekking trail',
-      '6 km Himalayan forest trek from Janki Chatti',
-      'Goddess Yamuna — daughter of Surya (Sun God) & twin of Yama',
-      'Kempty Falls en route (optional)',
-    ],
-    inclusions:[...INC_STD],
-    exclusions: EXC_STD,
-    itinerary:[
-      {day:1, title:'Haridwar → Barkot (220 km | 7 hrs)', desc:'Depart 6 AM. Drive via Rishikesh, Mussoorie bypass, Naugaon, Badi to Barkot. Yamuna valley views. Overnight Barkot (1,220m).'},
-      {day:2, title:'Barkot → Yamunotri Darshan → Barkot', desc:'5 AM drive to Janki Chatti (36 km). 6 km trek via lush Himalayan forest (pony/palki available). Reach Yamunotri (3,291m). Worship Divya Shila. Puja at Goddess Yamuna temple. Cook potatoes in Surya Kund 88°C — take as sacred prasad. Optional upper trail toward Champasar Glacier. Return Barkot. Overnight.'},
-      {day:3, title:'Barkot → Rishikesh → Haridwar (245 km)', desc:'Drive via Naugaon, Rishikesh (30 min Laxman Jhula stop). Haridwar Ganga Aarti. Tour ends.'},
-    ],
-    featured : false,
-    badge    : null,
-    images   : ['yamunotri'],
-    tags     : ['yamunotri','single dham','haridwar','yamuna','surya kund'],
-    metaTitle: 'Yamunotri Ek Dham Yatra Package 2026 | Price Starts at ₹4,500 | 6km Trek',
-    metaDesc : 'Yamunotri Ek Dham Yatra 2026 — 2N/3D from ₹4,500/person. Direct Haridwar operator, fixed departures & instant confirmation.',
-    faqs:[],
-  },
 
-  {
-    slug     : 'gangotri-yatra-package-2n-3d-haridwar',
-    photo    : 'https://images.pexels.com/photos/17008126/pexels-photo-17008126.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
-    category : 'single-dham',
-    name     : 'Gangotri Yatra Package from Haridwar — 2N/3D',
-    subtitle : 'Ex-Haridwar | Mother Ganga | Road Accessible',
-    seoHeading: 'Gangotri Yatra 2026 — 2N/3D | Drive to the Temple Gate',
-    duration : { nights:2, days:3 },
-    groupSize: 'Any group size',
-    difficulty:'Easy (road accessible — no trekking)',
-    season   : 'May – June & Sept – Oct 2026',
-    transport:'Car / Innova',
-    startCity: 'Haridwar',
-    endCity  : 'Haridwar',
-    altitude : 'Gangotri: 3,415m',
-    price    : { original:7000, discounted:4250, currency:'₹', perPerson:true },
-    highlights:[
-      'Gangotri — origin of the Holy Ganga River at 3,415m',
-      'Bhagirathi Asthapadhi Snana (holy dip in Ganga)',
-      'Beautiful Harsil Valley en route — cedar forests & apples',
-      'Vishwanath Mandir & Shakti Temple at Uttarkashi',
-      'Suryakund and Brahma Kund at Gangotri',
-      'No trekking — temple directly accessible by road',
-      'Bhagirath Shila — where King Bhagirath meditated',
-    ],
-    inclusions:[...INC_STD],
-    exclusions: EXC_STD,
-    itinerary:[
-      {day:1, title:'Haridwar → Uttarkashi (175 km | 6 hrs)', desc:'Depart 6 AM. Drive via Rishikesh, Tehri Dam (Asia\'s highest earthfill dam at 260m), Chamba, Dharali to Uttarkashi. Visit ancient Vishwanath Temple and Shakti Devi Temple. Bhagirathi river ghat walk. Overnight Uttarkashi.'},
-      {day:2, title:'Uttarkashi → Gangotri → Harsil → Uttarkashi', desc:'5 AM drive 100 km to Gangotri through Harsil valley (silver birch & cedar forests). Reach Gangotri temple (3,415m). Asthapadhi Snana in icy Bhagirathi — where Ganga first touched earth. Gangotri temple puja. Bhagirath Shila, Suryakund, Brahma Kund. Morning and evening aarti. Stop at Harsil for apple/walnut products. Return Uttarkashi. Overnight.'},
-      {day:3, title:'Uttarkashi → Devprayag → Rishikesh → Haridwar', desc:'Drive via Tehri, Devprayag Sangam (photo stop), Rishikesh (brief stop). Haridwar Ganga Aarti. Tour ends.'},
-    ],
-    featured : false,
-    badge    : null,
-    images   : ['gangotri'],
-    tags     : ['gangotri','single dham','haridwar','ganga','uttarkashi','easy','no trek'],
-    metaTitle: 'Gangotri Ek Dham Yatra Package 2026 | Price Starts at ₹4,250 | Harsil Valley',
-    metaDesc : 'Gangotri Ek Dham Yatra 2026 — 2N/3D from ₹4,250/person. Direct Haridwar operator, fixed departures & instant confirmation.',
-    faqs:[],
-  },
 
   // ─────────────────────────────────────────────────────────────
   // CATEGORY 4: HELICOPTER (2 packages)

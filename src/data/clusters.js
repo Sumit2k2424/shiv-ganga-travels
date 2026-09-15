@@ -64,7 +64,7 @@ export const CLUSTERS = [
     id: 'badrinath',
     name: 'Badrinath',
     hub: '/badrinath-yatra',
-    money: '/packages/badrinath-yatra-package-2n-3d-haridwar',
+    money: '/badrinath-yatra',
     spokes: [
       { slug: '/char-dham-road-status', head: 'badrinath road', vol: 1300, pos: 7 },
       { slug: '/badrinath-temple', head: 'badrinath jyotirlinga', vol: 590, pos: 29 },

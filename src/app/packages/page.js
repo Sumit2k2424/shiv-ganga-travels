@@ -10,11 +10,12 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { PACKAGES, CATEGORIES, SITE } from '@/data/packages';
+import { PACKAGES, CATEGORIES, SITE, INC_STD, EXC_STD } from '@/data/packages';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
 import SpecRail from '@/components/lux/SpecRail';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import PackageCardLux from '@/components/PackageCardLux';
+import WhyOurPrice from '@/components/WhyOurPrice';
 
 const ALL_TAB = { slug: 'all', name: 'All Packages', shortName: 'All' };
 
@@ -216,6 +217,71 @@ export default function PackagesPage() {
               {filtered.map((pkg, i) => <PackageCardLux key={pkg.slug} pkg={pkg} priority={i < 3} />)}
             </div>
           )}
+
+          {/* ── What every package includes ──
+              These blocks used to render on every /packages/[slug] page —
+              the same ~1,500 words fifteen times over, which is the
+              template footprint Google's scaled-content systems act on.
+              They live here once now; each package links to #included. */}
+          <section id="included" style={{ marginTop: 64, scrollMarginTop: 96 }}>
+            <span className="lux-eyebrow">The fine print, once</span>
+            <h2 className="lux-display lux-display--md" style={{ margin: '14px 0 10px' }}>What every package includes</h2>
+            <p className="lux-body" style={{ maxWidth: '60ch', marginBottom: 24 }}>
+              Every road itinerary on this page starts from the same standard terms; helicopter packages list their own. Read them here once — each package page lists only what is specific to that trip.
+            </p>
+
+            <div className="lux-grid lux-grid--2" style={{ gap: 18, marginBottom: 28 }}>
+              <div className="lux-card" style={{ padding: 22 }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 10 }}>Included in every standard package</h3>
+                {INC_STD.map(t => (
+                  <div key={t} style={{ display: 'flex', gap: 8, fontSize: 13.5, color: 'var(--text-mid)', lineHeight: 1.6, padding: '5px 0', borderBottom: '1px solid hsl(var(--border))' }}>
+                    <span style={{ color: 'var(--teal)', fontWeight: 700, flexShrink: 0 }}>✓</span>{t}
+                  </div>
+                ))}
+              </div>
+              <div className="lux-card" style={{ padding: 22 }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 10 }}>Not included unless the itinerary says so</h3>
+                {EXC_STD.map(t => (
+                  <div key={t} style={{ display: 'flex', gap: 8, fontSize: 13.5, color: 'var(--text-mid)', lineHeight: 1.6, padding: '5px 0', borderBottom: '1px solid hsl(var(--border))' }}>
+                    <span style={{ color: 'var(--ink-faint)', fontWeight: 700, flexShrink: 0 }}>✕</span>{t}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <WhyOurPrice />
+
+            <div className="lux-grid lux-grid--2" style={{ gap: 14, marginTop: 8 }}>
+              <div className="lux-card" style={{ padding: '16px 18px', background: '#EEF6FF', borderColor: '#B5D4F4' }}>
+                <div style={{ fontWeight: 700, fontSize: 13.5, color: '#0C447C', marginBottom: 6 }}>📱 Network on the road</div>
+                <div style={{ fontSize: 13.5, color: '#185FA5', lineHeight: 1.7 }}>
+                  BSNL works best throughout the Char Dham route and at Kedarnath temple. Jio works at Gaurikund and lower altitudes. Airtel and Vi have little or no signal above Sonprayag. A BSNL SIM bought in Haridwar is the cheap fix.
+                </div>
+              </div>
+              <div className="lux-card" style={{ padding: '16px 18px', background: '#F0FDF4', borderColor: '#86EFAC' }}>
+                <div style={{ fontWeight: 700, fontSize: 13.5, color: '#15803D', marginBottom: 6 }}>💊 Medical preparation</div>
+                <div style={{ fontSize: 13.5, color: '#166534', lineHeight: 1.7 }}>
+                  Carry Diamox (ask your doctor first), Dolo 650, ORS sachets, an antacid and your own prescriptions. Medical camps sit every 3–5 km on the Kedarnath trek; pilgrims over 50 need a fitness certificate.
+                </div>
+              </div>
+              <div className="lux-card" style={{ padding: '16px 18px', background: 'rgba(232,146,10,0.07)', borderColor: 'rgba(232,146,10,0.25)' }}>
+                <div style={{ fontWeight: 700, fontSize: 13.5, color: '#7B3F00', marginBottom: 6 }}>🍽️ Food and hydration</div>
+                <div style={{ fontSize: 13.5, color: '#7B3F00', lineHeight: 1.7 }}>
+                  Light vegetarian meals — dal, rice, sabzi, chapati. Avoid oily food at altitude, drink three to four litres of water a day, and go easy on chai above Sonprayag; it dehydrates.
+                </div>
+              </div>
+              <div className="lux-card" style={{ padding: '16px 18px' }}>
+                <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 6 }}>📖 Before you go</div>
+                <div style={{ fontSize: 13.5, color: 'var(--text-mid)', lineHeight: 1.9 }}>
+                  <Link href="/blog/char-dham-yatra-packing-list" className="lux-link">Packing list</Link> ·{' '}
+                  <Link href="/blog/char-dham-yatra-registration" className="lux-link">Registration 2026</Link> ·{' '}
+                  <Link href="/char-dham-yatra-emergency-contacts" className="lux-link">Emergency contacts</Link> ·{' '}
+                  <Link href="/blog/best-time-char-dham" className="lux-link">Best time to go</Link> ·{' '}
+                  <Link href="/cancellation-policy" className="lux-link">Cancellation policy</Link>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Bottom CTA */}
           {filtered.length > 0 && (
