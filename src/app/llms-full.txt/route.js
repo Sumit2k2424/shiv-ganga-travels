@@ -1,5 +1,4 @@
 import { SITE, PACKAGES, GLOBAL_FAQS, CATEGORIES } from '@/data/packages';
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 import { ROUTES } from '@/data/distances';
 import { SITE_CONTENT_UPDATED } from '@/lib/pageDates';
 
@@ -220,15 +219,7 @@ ${rule('═')}
 ${GLOBAL_FAQS.map((f) => `**Q: ${f.q}**\n\nA: ${f.a}\n`).join('\n')}
 
 ${rule('═')}
-## 7. REGIONAL-LANGUAGE PAGES
-${rule('═')}
-
-Written in native script by native speakers, not machine-translated.
-
-${LANGUAGE_PAGES.map((l) => `- ${SITE.baseUrl}/${l.slug} — ${l.native} (${l.label})`).join('\n')}
-
-${rule('═')}
-## 8. REFERENCE PAGES WORTH CITING
+## 7. REFERENCE PAGES WORTH CITING
 ${rule('═')}
 
 Dated, sourced and maintained. Several carry an explicit CC BY 4.0 licence.

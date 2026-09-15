@@ -2,11 +2,11 @@
 
 **Prospect:** `garhwal-post`  ·  **Wants:** quote  ·  **Route in:** pitch
 **Link should point at:** https://www.shivgangatravels.com/press
-**Packet written:** 2026-09-01
+**Packet written:** 2026-09-14
 
 ## Why this one
 
-A real regional newspaper covering the yatra every season. An operator who has run the route since 2010 and will go on record is exactly the source a desk needs for a season-open or road-status piece.
+A real regional newspaper covering the yatra every season. An operator who runs the route every season and will go on record is exactly the source a desk needs for a season-open or road-status piece.
 
 ## Before you touch it
 
@@ -25,7 +25,7 @@ Evidence on file: Established Dehradun daily. Contact desk and email NOT verifie
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `garhwal-post` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-14'` on `garhwal-post` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

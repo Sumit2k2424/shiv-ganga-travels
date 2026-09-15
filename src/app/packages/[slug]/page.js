@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { pxAt, pxSrcSet } from '@/lib/pximg';
 import { notFound } from 'next/navigation';
-import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES } from '@/data/packages';
+import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES, INC_STD, EXC_STD } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
-import WhyOurPrice from '@/components/WhyOurPrice';
 import { BlurFade } from '@/components/magicui/blur-fade';
 import CategoryView from './CategoryView';
 import SpecRail from '@/components/lux/SpecRail';
@@ -78,11 +77,6 @@ const CATEGORY_GUIDES = {
     { label:'Kedarnath Helicopter Guide', href:'/blog/kedarnath-helicopter-booking' },
     { label:'Char Dham 2026 Overview', href:'/char-dham-yatra' },
     { label:'Senior Citizen Char Dham', href:'/blog/senior-citizen-char-dham' },
-  ],
-  'uttarakhand': [
-    { label:'Valley of Flowers Trek', href:'/blog/valley-of-flowers-trek' },
-    { label:'Rishikesh Adventure Guide', href:'/blog/rishikesh-adventure-guide' },
-    { label:'Best Time to Visit', href:'/blog/best-time-char-dham' },
   ],
 };
 
@@ -161,9 +155,12 @@ export default async function PackageDetailPage({ params }) {
     : `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
-  const isYatra  = pkg.category !== 'uttarakhand';
+  const isYatra  = true; // every remaining package is a pilgrimage itinerary
   const isCharDham = pkg.category === 'char-dham';
   const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
+  // Standard-terms packages spread INC_STD; anything beyond it is this itinerary's own.
+  const stdTerms = INC_STD.every((x) => (pkg.inclusions || []).includes(x)) && EXC_STD.every((x) => (pkg.exclusions || []).includes(x));
+  const extraInc = stdTerms ? (pkg.inclusions || []).filter((x) => !INC_STD.includes(x)) : [];
   const dham2026 = [
     { dham:'Yamunotri', opens:'19 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
     { dham:'Gangotri',  opens:'19 April 2026', closes:'10 Nov 2026', reg:'Mandatory' },
@@ -177,7 +174,7 @@ export default async function PackageDetailPage({ params }) {
     { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'₹2,30,000 (5N/6D heli charter)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
-  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person. Run by Shiv Ganga Travels, a direct Haridwar operator, it is all-inclusive: ${pkg.transport.toLowerCase()}, twin-sharing hotels, daily breakfast and dinner, guide, VIP darshan assistance, and help with the mandatory Char Dham 2026 registration.`;
+  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person, all-inclusive, by ${pkg.transport.toLowerCase()}. ${pkg.subtitle ? pkg.subtitle.replace(/\s*\|\s*/g, ' · ') + '.' : ''}`;
 
   // Editorial section header — one change restyles every <h2 style={SH}> below.
   const SH = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.4vw,1.75rem)', fontWeight:600, color:'var(--ink)', letterSpacing:'-0.018em', lineHeight:1.15, marginBottom:18, paddingBottom:14, borderBottom:'1px solid var(--rule)' };
@@ -350,67 +347,16 @@ export default async function PackageDetailPage({ params }) {
             </div>
           </BlurFade>
 
-          {/* Budget Tiers + Vehicle Fare — Char Dham full-route packages ONLY */}
+          {/* Tier cards, the vehicle fare table and the price explainer used to
+              repeat here. They are the same on every package, so they live once
+              on the pillar and the hub; this page keeps what is its own. */}
           {isCharDham && (
-          <section>
-            <h2 style={SH}>Package Pricing — Budget, Deluxe & Premium</h2>
-            <p style={{ fontSize:14, color:'var(--text-mid)', marginBottom:16, lineHeight:1.7 }}>
-              All packages cover the same temples and itinerary. The difference is the hotel standard and vehicle type. Choose based on your comfort preference and group size.
+            <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
+              Budget, Deluxe and Premium tiers, and the vehicle-wise fare table for the full circuit, are on the{' '}
+              <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham Yatra 2026 guide</Link>; the{' '}
+              <Link href="/char-dham-yatra-cost-calculator" style={{ color:'var(--teal)', fontWeight:600 }}>cost calculator</Link> prices your exact group.
             </p>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
-              {[
-                { tier:'Budget', range:'₹13,900', perCouple:'₹31,500', vehicle:'Swift Dzire / Shared', hotel:'Standard guesthouses', ideal:'Solo pilgrims, young groups', color:'#0F766E' },
-                { tier:'Deluxe', range:'₹22,500', perCouple:'₹45,000', vehicle:'Innova Crysta / Ertiga', hotel:'2–3 star hotels, hot water', ideal:'Families, senior pilgrims', color:'var(--navy)' },
-                { tier:'Premium', range:'₹31,500–₹41,300', perCouple:'₹63,000–₹82,600', vehicle:'Innova Crysta (private)', hotel:'Best available properties', ideal:'Luxury seekers, NRI pilgrims', color:'var(--gold-dark)' },
-              ].map(t => (
-                <div key={t.tier} style={{ background:'#fff', borderRadius:12, padding:'16px', border:`2px solid ${t.color}`, position:'relative', overflow:'hidden' }}>
-                  <div style={{ fontWeight:800, fontSize:15, color:t.color, marginBottom:4 }}>{t.tier}</div>
-                  <div style={{ fontWeight:800, fontSize:20, color:'var(--navy)', marginBottom:2 }}>{t.range}</div>
-                  <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>per person</div>
-                  <div style={{ fontSize:12.5, fontWeight:600, color:t.color, marginBottom:8 }}>Per couple: {t.perCouple}</div>
-                  {[['Vehicle', t.vehicle],['Hotel', t.hotel],['Ideal for', t.ideal]].map(([k,v])=>(
-                    <div key={k} style={{ fontSize:12, color:'var(--text-mid)', marginBottom:3 }}><strong>{k}:</strong> {v}</div>
-                  ))}
-                </div>
-              ))}
-            </div>
-
-            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:10 }}>🚗 Vehicle-wise Private Taxi Fare (Full Char Dham Route)</h3>
-            <div style={{ overflowX:'auto', marginBottom:8 }}>
-              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
-                <thead><tr style={{ background:'var(--navy)' }}>
-                  {['Vehicle','Capacity','Total Fare','Per Person (4–6 pax)','Best For'].map(h=>(
-                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
-                  ))}
-                </tr></thead>
-                <tbody>
-                  {[
-                    ['Swift Dzire','2–3 persons','₹28,000–₹30,000','~₹14,000–₹15,000','Budget couple/solo'],
-                    ['Ertiga','4–5 persons','₹36,000–₹38,000','~₹9,000–₹9,500','Small family'],
-                    ['Innova Crysta','4–7 persons','₹50,000–₹55,000','~₹8,000–₹9,000','Most popular choice'],
-                    ['Tempo Traveller 12-seater','8–12 persons','₹65,000–₹70,000','~₹6,000–₹7,000','Groups & extended family'],
-                    ['Tempo Traveller 17-seater','13–17 persons','₹75,000–₹80,000','~₹5,000–₹5,500','Large group'],
-                    ['Tempo Traveller 20-seater','15–20 persons','₹85,000–₹90,000','~₹4,500–₹5,000','Very large group'],
-                  ].map(([v,cap,fare,pp,best],i)=>(
-                    <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
-                      <td style={{ padding:'8px 12px', fontWeight:600, color:'var(--navy)', fontSize:13 }}>{v}</td>
-                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{cap}</td>
-                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:13 }}>{fare}</td>
-                      <td style={{ padding:'8px 12px', color:'var(--teal)', fontWeight:600, fontSize:13 }}>{pp}</td>
-                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{best}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div style={{ background:'#FFF8E7', border:'1px solid #E8920A', borderRadius:9, padding:'10px 14px', marginBottom:6, fontSize:13, color:'#7B3F00', lineHeight:1.7 }}>
-              <strong>❄️ AC Policy:</strong> Air conditioning is available as standard in plain areas (Haridwar, Rishikesh, Dehradun). In hilly/mountain areas (above Rishikesh), AC can be availed on request at an additional charge of <strong>₹2,000</strong> for the full hill section.
-            </div>
-            <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:4 }}>* Fares include fuel, toll, parking and driver allowance. Prices are indicative for the 2026 season. Contact us for exact quote basis your departure date and group size.</p>
-          </section>
           )}
-
-          <WhyOurPrice />
 
           {/* Highlights */}
           <section>
@@ -450,19 +396,31 @@ export default async function PackageDetailPage({ params }) {
             </section>
           )}
 
-          {/* Inclusions / Exclusions */}
+          {/* Inclusions / Exclusions — the standard terms are printed once on
+              /packages#included; this page lists only what this itinerary adds
+              or changes. A package with its own full list (helicopter) shows it. */}
           <section>
             <h2 style={SH}>✅ What&apos;s Included / Excluded</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(260px,100%),1fr))', gap:12 }}>
-              <div style={{ background:'#f0fdf4', borderRadius:12, padding:'16px' }}>
-                <div style={{ fontWeight:700, fontSize:13, color:'#15803d', marginBottom:10 }}>✅ Included</div>
-                {(pkg.inclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#15803d', flexShrink:0 }}>✓</span>{item}</div>)}
+            {stdTerms && (
+              <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom: extraInc.length ? 12 : 0 }}>
+                Standard package terms apply.{' '}
+                <Link href="/packages#included" style={{ color:'var(--teal)', fontWeight:600 }}>What every package includes and excludes →</Link>
+              </p>
+            )}
+            {(extraInc.length > 0 || !stdTerms) && (
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(260px,100%),1fr))', gap:12 }}>
+                <div style={{ background:'#f0fdf4', borderRadius:12, padding:'16px' }}>
+                  <div style={{ fontWeight:700, fontSize:13, color:'#15803d', marginBottom:10 }}>{stdTerms ? '✅ Also included on this itinerary' : '✅ Included'}</div>
+                  {(stdTerms ? extraInc : (pkg.inclusions||[])).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#15803d', flexShrink:0 }}>✓</span>{item}</div>)}
+                </div>
+                {!stdTerms && (
+                  <div style={{ background:'#fff1f2', borderRadius:12, padding:'16px' }}>
+                    <div style={{ fontWeight:700, fontSize:13, color:'#9f1239', marginBottom:10 }}>❌ Not Included</div>
+                    {(pkg.exclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#9f1239', flexShrink:0 }}>✕</span>{item}</div>)}
+                  </div>
+                )}
               </div>
-              <div style={{ background:'#fff1f2', borderRadius:12, padding:'16px' }}>
-                <div style={{ fontWeight:700, fontSize:13, color:'#9f1239', marginBottom:10 }}>❌ Not Included</div>
-                {(pkg.exclusions||[]).map((item,i)=><div key={i} style={{ fontSize:12.5, color:'var(--text-mid)', padding:'4px 0', borderBottom:'1px solid rgba(0,0,0,0.05)', display:'flex', gap:6 }}><span style={{ color:'#9f1239', flexShrink:0 }}>✗</span>{item}</div>)}
-              </div>
-            </div>
+            )}
           </section>
 
           {/* Where you stay — yatra packages with at least one night */}
@@ -472,7 +430,7 @@ export default async function PackageDetailPage({ params }) {
               <p style={{ fontSize:14, color:'var(--ink-soft)', lineHeight:1.7, marginBottom:22 }}>
                 {stayLede(pkg)}
               </p>
-              <HotelShowcase hotels={stays} />
+              <HotelShowcase hotels={stays} compact />
             </section>
           )}
 
@@ -543,174 +501,30 @@ export default async function PackageDetailPage({ params }) {
             </section>
           )}
 
-          {/* Char Dham reference sections. Gated to yatra categories: these six blocks rendered on all 39 package pages, which put Kedarnath weather, dham pricing and pilgrim altitude advice on Corbett safaris and weekend treks. */}
-          {isYatra && (<>
-          {/* Packing List */}
+          {/* The packing list, fifteen travel tips, emergency helplines, season
+              table and "why Haridwar" blocks that used to sit here were identical
+              on every package page — roughly 1,100 shared words per page. Each
+              now lives on its own page; this strip links them. The altitude
+              note stays because it is written per package. */}
+          <section style={{ background:'#FCEBEB', border:'1px solid #F09595', borderRadius:12, padding:'14px 16px' }}>
+            <div style={{ fontWeight:700, fontSize:13.5, color:'#791F1F', marginBottom:6 }}>🩺 Altitude on this itinerary</div>
+            <div style={{ fontSize:13.5, color:'#7f1d1d', lineHeight:1.7 }}>{altitudeLede(pkg)}</div>
+          </section>
           <section>
-            <h2 style={SH}>🎒 Packing List for This Yatra</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:8, marginBottom:8 }}>
+            <h2 style={SH}>Before you go</h2>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
               {[
-                ['Clothing','Heavy jacket / down vest','Thermal inner layers (2 sets)','Woollen cap, gloves, socks','Waterproof poncho / raincoat','Comfortable trekking shoes'],
-                ['Health','Personal medicines (with extra)','Altitude sickness tablets','ORS sachets & glucose tablets','Pulse oximeter (small, cheap)','Sunscreen SPF 50+'],
-                ['Documents','Aadhaar card / valid ID','Char Dham registration QR','Medical fitness certificate (50+)','Travel insurance document','Emergency contact card (printed)'],
-                ['Practical','Power bank (20,000 mAh)','Cash (₹5,000–10,000 minimum)','Reusable water bottle (1L)','Light torch / headlamp','Walking stick (collapsible)'],
-              ].map(([cat, ...items]) => (
-                <div key={cat} style={{ background:'#fff', borderRadius:10, padding:'12px', border:'1px solid hsl(var(--border))' }}>
-                  <div style={{ fontWeight:700, fontSize:12, color:'var(--navy)', marginBottom:8, textTransform:'uppercase', letterSpacing:'0.05em' }}>{cat}</div>
-                  {items.map(item => (
-                    <div key={item} style={{ display:'flex', gap:6, fontSize:12, color:'var(--text-mid)', marginBottom:4, lineHeight:1.4 }}>
-                      <span style={{ color:'var(--teal)', flexShrink:0, fontWeight:700 }}>✓</span>{item}
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize:12, color:'var(--text-muted)' }}>💡 We share a detailed packing checklist PDF with every confirmed booking. WhatsApp us to receive it in advance.</p>
-          </section>
-
-          {/* Travel Tips — 15 numbered tips for featured snippets */}
-          <section>
-            <h2 style={SH}>💡 15 Essential Travel Tips for This Yatra</h2>
-            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-              {[
-                'Complete Char Dham biometric registration before leaving home — you cannot proceed past Rishikesh/Haridwar checkpoints without it.',
-                'Start driving by 6 AM every day. Night driving is prohibited on Himalayan roads after 9 PM for safety reasons.',
-                'Pack warm clothes even in May–June. Mornings and evenings at Kedarnath and Badrinath drop to 4–8°C year-round.',
-                'Carry at least ₹7,000–10,000 in cash. ATMs are sparse, unreliable, and frequently out of cash in peak season.',
-                'Book hotels in advance at Barkot, Uttarkashi, Guptkashi, and Joshimath — all four fill up by noon in May-June.',
-                'Pre-book Kedarnath helicopter from the IRCTC portal (heliyatra.irctc.co.in) 60+ days in advance for peak season.',
-                'Eat light vegetarian food throughout — heavy meals worsen altitude sickness. Dhabas along the route serve dal-rice and rotis.',
-                'Stay hydrated — drink 3–4 litres of water daily at high altitude. Avoid alcohol entirely; it worsens acclimatisation.',
-                'Jio and Airtel work better than Vi/BSNL on the Char Dham route. Airtel is more reliable near Kedarnath.',
-                'Poncho / raincoat is essential even in May. Afternoon showers are common at all four dhams.',
-                'For Kedarnath trek, start no later than 6 AM. The path gets crowded and unsafe to return after 2 PM.',
-                'Senior citizens and those with BP / heart / diabetes must carry a medical fitness certificate — it is checked at Sonprayag and Pandukeshwar.',
-                'Respect the "no photography inside temple sanctum" rule strictly. Cameras and phones are banned inside Kedarnath temple from 2026.',
-                'Hire only government-registered pony wallahs and porters at Gaurikund (Kedarnath) and Janki Chatti (Yamunotri) — avoid touts.',
-                'Keep your Char Dham registration QR code (printed AND digital) accessible at all times — it is checked at 8–10 points on the route.',
-              ].map((tip, i) => (
-                <div key={i} style={{ display:'flex', gap:12, padding:'10px 14px', background:'#fff', borderRadius:9, border:'1px solid hsl(var(--border))', fontSize:13.5, color:'var(--text-mid)', lineHeight:1.6 }}>
-                  <span style={{ background:'var(--navy)', color:'#fff', fontWeight:700, fontSize:11, width:22, height:22, borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, marginTop:1 }}>{i+1}</span>
-                  {tip}
-                </div>
+                ['Packing list', '/blog/char-dham-yatra-packing-list'],
+                ['Registration 2026', '/blog/char-dham-yatra-registration'],
+                ['Emergency contacts', '/char-dham-yatra-emergency-contacts'],
+                ['Best time to go', '/blog/best-time-char-dham'],
+                ['Medical certificate', '/blog/char-dham-yatra-medical-certificate'],
+                ['What every package includes', '/packages#included'],
+              ].map(([t, href]) => (
+                <Link key={href} href={href} className="lux-pill" style={{ textDecoration:'none' }}>{t}</Link>
               ))}
             </div>
           </section>
-
-          {/* Emergency contacts */}
-          <section>
-            <h2 style={SH}>🚨 Emergency Contacts & Yatra Helplines</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:10, marginBottom:16 }}>
-              {[
-                { label:'Uttarakhand Disaster Helpline', num:'1070', note:'24/7 emergency' },
-                { label:'Police Helpline', num:'100', note:'All districts' },
-                { label:'Ambulance / Medical', num:'108', note:'Free, 24/7' },
-                { label:'Kedarnath Control Room', num:'+91-1364-222-734', note:'During yatra season' },
-                { label:'GMVN Enquiry', num:'+91-135-2746817', note:'Accommodation' },
-                { label:'Shiv Ganga Travels', num:'+91-7817996730', note:'24/7 on-ground support' },
-              ].map(c => (
-                <a key={c.label} href={`tel:${c.num.replace(/[^+\d]/g,'')}`} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid hsl(var(--border))', textDecoration:'none', display:'block' }}>
-                  <div style={{ fontWeight:700, fontSize:13, color:'var(--navy)', marginBottom:2 }}>{c.label}</div>
-                  <div style={{ fontWeight:800, fontSize:16, color:'var(--teal)', marginBottom:2 }}>{c.num}</div>
-                  <div style={{ fontSize:11.5, color:'var(--text-muted)' }}>{c.note}</div>
-                </a>
-              ))}
-            </div>
-            <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7 }}>
-              Save the Uttarakhand Disaster Helpline (1070) and ambulance number (108) in your phone before departing. Mountain networks can be patchy — also note numbers on paper. Our team at Shiv Ganga Travels is on WhatsApp 24/7 during your yatra.
-            </p>
-          </section>
-
-          {/* Season Pricing — competitors all show peak vs off-peak variation.
-              Char Dham only: the bands below are full-circuit prices and the
-              weather column is Kedarnath's, so on a single-dham package this
-              table misquoted both the price and the shrine. */}
-          {isCharDham && (
-          <section style={{ marginBottom:4 }}>
-            <h2 style={SH}>📅 Best Season to Book — Price & Crowd Guide</h2>
-            <div style={{ overflowX:'auto', marginBottom:16 }}>
-              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
-                <thead><tr style={{ background:'var(--navy)' }}>
-                  {['Month','Season','Crowd level','Typical package price','Weather at Kedarnath','Verdict'].map(h=>(
-                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:11.5, whiteSpace:'nowrap' }}>{h}</th>
-                  ))}
-                </tr></thead>
-                <tbody>
-                  {[
-                    ['May','Opening','Very high','₹22,000–₹28,000','5–18°C, clear','High demand — book 3 months early'],
-                    ['June','Peak','Very high','₹22,000–₹28,000','8–18°C, some rain','Peak pilgrim rush — book 2–3 months early'],
-                    ['July–Aug','Monsoon','Low','₹16,000–₹20,000','10–15°C, heavy rain','Landslide risk — not recommended'],
-                    ['September','Post-monsoon','Medium','₹18,000–₹22,000','0–15°C, crisp','Hidden gem — best skies, fewer crowds'],
-                    ['October','Last season','Medium-low','₹12,800–₹13,900','-2 to 10°C','Great value — dhams open till Nov 11'],
-                    ['November (1–13)','Closing','Very low','₹14,000–₹18,000','-5 to 5°C','Last chance — temple closes mid-November'],
-                  ].map(([month, season, crowd, price, weather, verdict], i)=>(
-                    <tr key={month} style={{ borderBottom:'1px solid hsl(var(--border))', background: i===3||i===4 ? 'rgba(29,158,117,0.06)' : i%2===0?'#fff':'var(--bg)', verticalAlign:'top' }}>
-                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', whiteSpace:'nowrap' }}>{month}</td>
-                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12.5 }}>{season}</td>
-                      <td style={{ padding:'8px 12px', color: crowd.includes('Very high')?'#D85A30': crowd.includes('Low')?'#6B7280':'#15803D', fontWeight:600, fontSize:12.5 }}>{crowd}</td>
-                      <td style={{ padding:'8px 12px', fontWeight:700, color:'var(--navy)', fontSize:12.5, whiteSpace:'nowrap' }}>{price}</td>
-                      <td style={{ padding:'8px 12px', color:'#64748b', fontSize:12 }}>{weather}</td>
-                      <td style={{ padding:'8px 12px', color:'#475569', fontSize:12, lineHeight:1.5 }}>{verdict}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p style={{ fontSize:12.5, color:'var(--text-muted)', fontStyle:'italic' }}>
-              💡 September and October are our most consistently rated months. Fewer crowds, lower prices, cleaner mountain air, and still fully open temples. Many repeat pilgrims specifically choose October.
-            </p>
-          </section>
-          )}
-
-          {/* AMS Warning — all top competitors have this, builds trust */}
-          <section style={{ marginBottom:4 }}>
-            <h2 style={SH}>⛰️ Altitude & Health — What Every Pilgrim Must Know</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:12, marginBottom:16 }}>
-              <div style={{ background:'#FCEBEB', border:'1px solid #F09595', borderRadius:12, padding:'14px 16px' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'#791F1F', marginBottom:6 }}>🩺 Altitude Mountain Sickness (AMS)</div>
-                <div style={{ fontSize:13.5, color:'#7f1d1d', lineHeight:1.7 }}>
-                  {altitudeLede(pkg)}
-                </div>
-              </div>
-              <div style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:12, padding:'14px 16px' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'#0C447C', marginBottom:6 }}>📱 Network & Connectivity</div>
-                <div style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7 }}>
-                  BSNL works best throughout the Char Dham route and at Kedarnath temple. Jio works at Gaurikund and lower altitudes. Airtel/Vi have limited to no signal above Sonprayag. Buy a BSNL SIM before departure if you need to stay connected during the trek.
-                </div>
-              </div>
-              <div style={{ background:'#F0FDF4', border:'1px solid #86EFAC', borderRadius:12, padding:'14px 16px' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'#15803D', marginBottom:6 }}>💊 Medical Preparation</div>
-                <div style={{ fontSize:13.5, color:'#166534', lineHeight:1.7 }}>
-                  Carry: Diamox (altitude medication, consult doctor first), Dolo 650 (fever/pain), ORS sachets, antacid, personal prescription medicines. Medical camps are placed every 3–5km on the Kedarnath route. Our vehicle carries a basic first aid kit and oxygen.
-                </div>
-              </div>
-              <div style={{ background:'rgba(232,146,10,0.07)', border:'1px solid rgba(232,146,10,0.25)', borderRadius:12, padding:'14px 16px' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'#7B3F00', marginBottom:6 }}>🍽️ Food & Hydration</div>
-                <div style={{ fontSize:13.5, color:'#7B3F00', lineHeight:1.7 }}>
-                  Eat light vegetarian meals — dal, rice, sabzi, chapati. Avoid oily or heavy food at altitude. Drink 3–4 litres of water daily. Do NOT drink tea/chai at altitude as it dehydrates. Packaged biscuits and dry fruits for energy during the trek.
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Why Haridwar — all top competitors have this section */}
-          <section style={{ marginBottom:4 }}>
-            <h2 style={SH}>📍 Why Start Your Char Dham Yatra from Haridwar?</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:10, marginBottom:12 }}>
-              {[
-                { icon:'🏠', title:'Base city for all 4 dhams', body:'Haridwar is equidistant from all four dhams — Barkot (Yamunotri, 210km), Uttarkashi (Gangotri, 180km), Guptkashi (Kedarnath, 200km), Joshimath (Badrinath, 275km). Rishikesh is only 24km from Haridwar and adds 1 hour. Starting from Delhi adds 250km (4–5 hours) each way.' },
-                { icon:'🚂', title:'Best rail connectivity', body:'Haridwar Railway Station has direct trains from Delhi (Mussoorie Express, Jan Shatabdi), Mumbai (Dehradun Express), Kolkata (Doon Express), Lucknow, Jaipur, Chandigarh and almost every major city. Rishikesh station is 3km further. Dehradun station adds 55km drive.' },
-                { icon:'🙏', title:'Sacred start — Ganga Aarti', body:'Every Char Dham Yatra begins with the evening Ganga Aarti at Har Ki Pauri, Haridwar — a spiritual ritual that has been performed daily since the 6th century. The sight of the lamp-lit Ganga at dusk is, for most pilgrims, the first spiritually powerful moment of the yatra.' },
-                { icon:'🏢', title:'Our office is here', body:'We are based at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. Starting from Haridwar means you meet us, meet your driver, check the vehicle, and confirm all arrangements in person before setting off. This is not possible if we send a vehicle from Delhi.' },
-              ].map(item=>(
-                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'12px 14px', border:'1px solid hsl(var(--border))' }}>
-                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:5 }}>{item.icon} {item.title}</div>
-                  <div style={{ fontSize:13, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-          </>)}
 
           {/* Delhi → Haridwar travel options — fills the by-car/train/bus/helicopter intent */}
           {fromDelhi && (
@@ -747,12 +561,10 @@ export default async function PackageDetailPage({ params }) {
           {/* Char Dham 2026 Registration — high-intent, GEO-citable, fills competitor gap */}
           {isYatra && (
           <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'2px solid var(--gold)' }}>
-            <h2 style={SH}>📋 Char Dham Yatra 2026 Registration — and How We Handle It For You</h2>
-            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:14 }}>
-              Registration is compulsory in 2026. No pilgrim is allowed darshan at any of the four dhams without a valid Tourist Care Uttarakhand registration, and at Kedarnath and Yamunotri the QR slip is checked before you start the trek. The good news: if you book this package, <strong>we do the whole registration for you</strong>. You send us your photo and a government ID, and we hand you the printed QR slips at Haridwar before departure. You never touch the portal.
-            </p>
-            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
-              If you would rather register yourself, it is free and takes about ten minutes on the official government site — <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>registrationandtouristcare.uk.gov.in</a>. Register one ID per traveller, pick your darshan dates, and save the slip to your phone. Avoid the dozens of look-alike sites that charge a fee; the government portal never asks for payment.
+            <h2 style={SH}>📋 Registration and temple dates for this itinerary</h2>
+            <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom:14 }}>
+              Registration is compulsory and free; we do it for every guest on this package, or you can register yourself in ten minutes — see the{' '}
+              <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>2026 registration guide</Link>.
             </p>
             <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>🗓️ {datesHeading(pkg)}</h3>
             <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7, marginBottom:10 }}>{datesLede(pkg)}</p>
@@ -781,74 +593,11 @@ export default async function PackageDetailPage({ params }) {
           </section>
           )}
 
-          {/* Optional Add-ons — matches competitor upsell, drives internal links + conversions */}
-          {isYatra && (
-          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))' }}>
-            <h2 style={SH}>🧭 Optional Add-ons &amp; Extensions</h2>
-            <p style={{ fontSize:14, color:'var(--text-mid)', lineHeight:1.8, marginBottom:16 }}>
-              Most pilgrims keep to the four dhams, but if you have a spare day and the legs for it, a few detours are well worth folding in. We add these on request — just tell us when you enquire and we will adjust the route and the quote. Each one needs roughly one extra day and is charged at actuals, no markup.
-            </p>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))', gap:12 }}>
-              {[
-                { t:'Tungnath & Chopta', d:'World\u2019s highest Shiva temple (3,680m) and the meadows of Chopta. A short, rewarding trek near Kedarnath.', href:'/chopta-tungnath', add:'+1 day' },
-                { t:'Mana Village', d:'India\u2019s last village before Tibet — Vyas Gufa, Bhim Pul and the Saraswati\u2019s source, 3 km past Badrinath.', href:'/blog/mana-village-badrinath', add:'half day' },
-                { t:'Valley of Flowers', d:'UNESCO alpine valley in bloom (Jul\u2013Aug), paired with Hemkund Sahib near Govindghat.', href:'/blog/valley-of-flowers-trek', add:'+2 days' },
-              ].map(a => (
-                <Link key={a.href} href={a.href} style={{ textDecoration:'none', background:'var(--bg)', borderRadius:10, padding:'14px 15px', border:'1px solid hsl(var(--border))', display:'block' }}>
-                  <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
-                    <span style={{ fontWeight:700, color:'var(--navy)', fontSize:14 }}>{a.t}</span>
-                    <span style={{ fontSize:10.5, fontWeight:700, color:'var(--gold-dark)', background:'#FFF8E7', padding:'2px 8px', borderRadius:100, whiteSpace:'nowrap' }}>{a.add}</span>
-                  </div>
-                  <p style={{ fontSize:12.5, color:'var(--text-mid)', lineHeight:1.6, margin:0 }}>{a.d}</p>
-                  <span style={{ fontSize:12, color:'var(--teal)', fontWeight:600, marginTop:8, display:'inline-block' }}>Read more →</span>
-                </Link>
-              ))}
-            </div>
-          </section>
-          )}
-          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))', marginBottom:4 }}>
-            <h2 style={SH}>🏔️ Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>🎖️ Founded by a Retired Army Officer</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Shiv Ganga Travels was founded by <strong>Dhanesh Chandra Mishra</strong>, a retired officer of the Indian Army. Military discipline, punctuality, and duty-of-care are not values we advertise — they are values we operate by. Every single departure runs on schedule.</div>
-              </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📍 Based in Haridwar — Not Delhi</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator, not a broker. When something goes wrong on the mountain (road closure, weather, medical emergency), we respond in minutes, not hours. Delhi-based aggregators call a subcontractor. We call our own driver.</div>
-              </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>⭐ {SITE.reviews.rating}/5 · {SITE.reviews.count} verified Google reviews</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>Every one of our {SITE.reviews.count} reviews is from a real pilgrim — verifiable on Google Maps (Place ID: 16074078434377735602). We do not ask for reviews; pilgrims leave them unprompted, and the rating has stayed above 4.5. <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="noopener noreferrer" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Verify on Google Maps →</a></div>
-              </div>
-              <div style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>📋 Permits & licences</div>
-                <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>All our vehicles have valid tourism permits and are insured. Our drivers hold Uttarakhand hill-route licences. Ask us for the vehicle and driver documents before you travel — we send them on WhatsApp. GST registered — GSTIN {SITE.gstin}, verifiable at gst.gov.in.</div>
-              </div>
-            </div>
-
-            <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="nofollow noopener noreferrer" className="lux-link" style={{ display:'inline-block', marginBottom:8 }}>Read what pilgrims say on Google Maps →</a>
-          </section>
-
-
-          {/* E-E-A-T: Operator credentials */}
-          <section style={{ background:'var(--bg)', borderRadius:14, padding:'20px 22px', border:'1px solid hsl(var(--border))' }}>
-            <h2 style={SH}>Why 50,000+ Pilgrims Choose Shiv Ganga Travels</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:14, marginBottom:16 }}>
-              {[
-                { icon:'🎖️', title:'Founded by a Retired Army Officer', body:'Shiv Ganga Travels was founded by Dhanesh Chandra Mishra, a retired officer of the Indian Army. Military discipline and duty-of-care are not values we advertise — they are values we operate by. Every departure runs on schedule.' },
-                { icon:'📍', title:'Based in Haridwar — Not an Aggregator', body:'Our office is at Saptrishi Road, Bhupatwala, Haridwar — 5 minutes from Har Ki Pauri. We are the operator. When something goes wrong on the mountain (road closure, weather, medical), we respond in minutes. Delhi-based aggregators call a subcontractor. We call our own driver.' },
-                { icon:'⭐', title:`${SITE.reviews.rating}/5 · ${SITE.reviews.count} verified Google reviews`, body:'Every review is from a real pilgrim — verifiable on Google Maps. We do not solicit reviews; pilgrims leave them unprompted. The rating has stayed above 4.5 over many seasons.' },
-                { icon:'📋', title:'Permits & licences', body:`All vehicles hold valid tourism permits, insurance and hill-route licences. Vehicle and driver documents are sent on WhatsApp on request before you travel. GST registered — GSTIN ${SITE.gstin}, verifiable at gst.gov.in.` },
-              ].map(item => (
-                <div key={item.title} style={{ background:'#fff', borderRadius:10, padding:'14px 16px', border:'1px solid hsl(var(--border))' }}>
-                  <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:6 }}>{item.icon} {item.title}</div>
-                  <div style={{ fontSize:13.5, color:'#475569', lineHeight:1.7 }}>{item.body}</div>
-                </div>
-              ))}
-            </div>
-            <a href="https://www.google.com/maps?cid=16074078434377735602" target="_blank" rel="nofollow noopener noreferrer" className="lux-link">Read what pilgrims say on Google Maps →</a>
-          </section>
+          {/* Operator identity is one line here; the full case is on /about and
+              the trust strip under the sticky bar already carries the numbers. */}
+          <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
+            Run directly by <Link href="/about" style={{ color:'var(--teal)', fontWeight:600 }}>Shiv Ganga Travels, Haridwar</Link> — founded by a retired Army officer, {SITE.reviews.rating}/5 from {SITE.reviews.count} Google reviews, no aggregator in between.
+          </p>
 
           {/* Bottom CTA */}
           <section className="lux-card lux-card--dark" style={{ background:'var(--ink)', padding:'clamp(28px,4vw,44px)', textAlign:'center' }}>

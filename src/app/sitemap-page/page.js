@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
-import { getPublishedRoutes, getPublishedOrigins, getPublishedDestinations, routeFrom, routeTo } from '@/data/cabs';
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 
 export const metadata = {
   title: 'Sitemap — All Char Dham Pages',
@@ -63,10 +61,7 @@ const sections = [
     links: [
       { label: 'Char Dham Cab Booking', href: '/char-dham-yatra-cab-booking' },
       { label: 'All Uttarakhand Cabs', href: '/cabs' },
-      { label: 'Cabs from Haridwar', href: '/cabs/from/haridwar' },
-      { label: 'Kedarnath Taxi Service', href: '/cabs/to/kedarnath' },
-      { label: 'Badrinath Taxi Service', href: '/cabs/to/badrinath' },
-      { label: 'Delhi to Haridwar Cab', href: '/cabs/delhi-to-haridwar-cab' },
+      { label: 'Dehradun Airport to Haridwar Taxi', href: '/dehradun-airport-to-haridwar-taxi' },
     ],
   },
   {
@@ -257,50 +252,15 @@ export default function SitemapPage() {
               Cab & Taxi Routes
             </h2>
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
-              <li>
-                <Link prefetch={false} href="/cabs" style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
-                  <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                  All Cab Routes
-                </Link>
-              </li>
-              {getPublishedDestinations().map(d => (
-                <li key={`to-${d.slug}`}>
-                  <Link prefetch={false} href={`/cabs/to/${d.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+              {[
+                ['All Cab Routes & Fares', '/cabs'],
+                ['Char Dham Cab Booking', '/char-dham-yatra-cab-booking'],
+                ['Dehradun Airport to Haridwar Taxi', '/dehradun-airport-to-haridwar-taxi'],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link prefetch={false} href={href} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                    {d.name} Taxi Service
-                  </Link>
-                </li>
-              ))}
-              {getPublishedOrigins().map(o => (
-                <li key={`from-${o.slug}`}>
-                  <Link prefetch={false} href={`/cabs/from/${o.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
-                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                    Cab Service in {o.name}
-                  </Link>
-                </li>
-              ))}
-              {getPublishedRoutes().map(r => (
-                <li key={r.slug}>
-                  <Link prefetch={false} href={`/cabs/${r.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
-                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                    {routeFrom(r)} to {routeTo(r)} Cab
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Language pages */}
-          <div>
-            <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:12, paddingBottom:8, borderBottom:'2px solid var(--gold)' }}>
-              Char Dham in Your Language
-            </h2>
-            <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
-              {LANGUAGE_PAGES.map(l => (
-                <li key={l.slug}>
-                  <Link prefetch={false} href={`/${l.slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
-                    <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
-                    Char Dham Yatra in {l.label}
+                    {label}
                   </Link>
                 </li>
               ))}

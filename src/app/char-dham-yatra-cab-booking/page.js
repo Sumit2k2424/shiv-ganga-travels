@@ -2,10 +2,7 @@ import Link from 'next/link';
 
 import { SITE } from '@/data/packages';
 import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
-import {
-  getPublishedDestinations, getRoutesToDestination, getRoutesFromOrigin,
-  routeFrom, routeTo, routeLowestFare, getExpert,
-} from '@/data/cabs';
+import { getPublishedDestinations, getRoutesToDestination, routeLowestFare, getExpert } from '@/data/cabs';
 
 import Icon from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -73,7 +70,6 @@ const CIRCUIT_FAQS = [
 export default function CharDhamCabBooking() {
   const expert = getExpert();
   const dhams = getPublishedDestinations().filter((d) => d.kind === 'dham');
-  const haridwarRoutes = getRoutesFromOrigin('haridwar');
 
   const schema = [
     {
@@ -104,8 +100,10 @@ export default function CharDhamCabBooking() {
   ];
 
   const linkGroups = [
-    { label: 'The four dhams, one at a time', links: dhams.map((d) => [`Cabs to ${d.name}`, `/cabs/to/${d.slug}`]) },
-    { label: 'Single-leg routes from Haridwar', links: haridwarRoutes.slice(0, 6).map((r) => [`${routeFrom(r)} → ${routeTo(r)}`, `/cabs/${r.slug}`]) },
+    { label: 'Cabs', links: [
+      ['All routes and fares', '/cabs'],
+      ['Dehradun airport to Haridwar', '/dehradun-airport-to-haridwar-taxi'],
+    ]},
     { label: 'Planning the yatra', links: [
       ['Char Dham Yatra packages', '/char-dham-yatra'],
       ['Registration 2026', '/blog/char-dham-yatra-registration'],
@@ -222,7 +220,7 @@ export default function CharDhamCabBooking() {
           {dhams.map((d) => {
             const routes = getRoutesToDestination(d.slug);
             return (
-              <Link key={d.slug} href={`/cabs/to/${d.slug}`} className="lux-card lux-lift" style={{ padding: 20, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
+              <div key={d.slug} className="lux-card" style={{ padding: 20 }}>
                 <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--ink)' }}>{d.name}</div>
                 <div className="lux-caption" style={{ marginTop: 6 }}>{d.altitude}</div>
                 <p className="lux-body" style={{ fontSize: '0.82rem', marginTop: 10 }}>
@@ -233,7 +231,7 @@ export default function CharDhamCabBooking() {
                     from {routeLowestFare(routes[0])} as a single leg
                   </div>
                 )}
-              </Link>
+              </div>
             );
           })}
         </div>

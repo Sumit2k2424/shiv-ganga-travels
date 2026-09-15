@@ -2,11 +2,11 @@
 
 **Prospect:** `featured-journalist-queries`  ·  **Wants:** quote  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/about
-**Packet written:** 2026-09-01
+**Packet written:** 2026-09-14
 
 ## Why this one
 
-Replaces the HARO workflow, which shut down at the end of 2024. Journalists post questions, experts answer, published answers carry a byline and a link. Travel and small-business queries come up regularly and a sixteen-year Himalayan operator is a genuinely qualified source.
+Replaces the HARO workflow, which shut down at the end of 2024. Journalists post questions, experts answer, published answers carry a byline and a link. Travel and small-business queries come up regularly and a Himalayan operator who actually runs the route is a genuinely qualified source.
 
 ## Before you touch it
 
@@ -25,7 +25,7 @@ Evidence on file: Platform live Aug 2026. Free vs paid tier NOT verified.
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `featured-journalist-queries` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-14'` on `featured-journalist-queries` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

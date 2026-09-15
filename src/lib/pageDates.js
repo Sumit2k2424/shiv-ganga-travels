@@ -45,5 +45,5 @@ export function pageDates(route) {
 export const SITE_CONTENT_UPDATED_ISO = DATES.latest;
 export const SITE_CONTENT_UPDATED = humanDate(DATES.latest);
 
-/** Dates for the data-driven cab pages, all of which share the cab data layer. */
-export const CAB_DATES = pageDates('/cabs/[route]');
+/** Dates for the cab pages, which share the cab data layer with the /cabs hub. */
+export const CAB_DATES = pageDates('/cabs');

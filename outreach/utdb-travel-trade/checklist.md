@@ -2,15 +2,15 @@
 
 **Prospect:** `utdb-travel-trade`  ·  **Wants:** listing  ·  **Route in:** open
 **Link should point at:** https://www.shivgangatravels.com/
-**Packet written:** 2026-09-01
+**Packet written:** 2026-09-14
 
 ## Why this one
 
-The state register every Uttarakhand tour operator must hold, and the thing our schema, our media kit and every press pitch already assert. Do it for the certificate and for the truth of the claim. Whether it also yields a crawlable link is now doubtful — see `verified` — so this is no longer scored as a link win.
+The state register every Uttarakhand tour operator must hold. The registered-operator claim came OFF the site, press.js and the Organization schema on 14 Sep 2026 because it could not be verified; it goes back only once the certificate is confirmed here. Do it for the certificate and for the right to make the claim. Whether it also yields a crawlable link is now doubtful — see `verified` — so this is no longer scored as a link win.
 
 ## Before you touch it
 
-> URGENT: UTDB has moved to a NEW portal and is re-verifying and re-registering every existing user "to eliminate duplication". Our certificate may predate that migration. src/data/press.js, MEDIA_KIT.fastFacts and the Organization schema all state we are UTDB-registered — if that is no longer current on the new portal, the claim is wrong in three places a journalist checks. Confirm the certificate before pitching anyone.
+> URGENT: UTDB has moved to a NEW portal and is re-verifying and re-registering every existing user "to eliminate duplication". Our certificate may predate that migration. The site no longer claims UTDB registration anywhere (removed 14 Sep 2026). Do not put the claim in any pitch or listing until the certificate is confirmed on the new portal.
 
 ## What we have actually confirmed
 
@@ -25,7 +25,7 @@ Evidence on file: Portal loaded in a browser 2026-08-27 and its official guideli
 3. Fill every `[[ WRITE THIS ]]` slot. Do not send with one open.
 4. Check the price in the copy against `src/data/packages.js` on the day you send it.
 5. Send it yourself. Nothing here is submitted by a script — see the note at the top of `scripts/backlinks/draft.mjs`.
-6. Set `status: 'submitted'` and `submittedOn: '2026-09-01'` on `utdb-travel-trade` in `scripts/backlinks/prospects.mjs`.
+6. Set `status: 'submitted'` and `submittedOn: '2026-09-14'` on `utdb-travel-trade` in `scripts/backlinks/prospects.mjs`.
 7. When it appears, set `status: 'live'`, record the URL in `liveAt`, and set `verified` to the date you saw it.
 
 ## If they say no

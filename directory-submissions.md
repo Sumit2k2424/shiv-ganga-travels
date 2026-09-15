@@ -6,9 +6,11 @@
 
 ## MASTER BUSINESS PROFILE (use everywhere)
 
+> **Claims policy (14 Sep 2026):** no founding year ("since 2010" could not be verified and is off the site), and no "Uttarakhand Tourism Board registered" until the certificate is confirmed on the new UTDB travel-trade portal. If a form demands a founding year, leave it blank rather than guess.
+
 **Business Name:** Shiv Ganga Travels
 **Category:** Tour Operator | Travel Agency | Pilgrimage Tour Operator
-**Tagline:** Haridwar's Trusted Char Dham Yatra Specialist Since 2010
+**Tagline:** Haridwar's Direct Char Dham Yatra Operator
 **Phone:** +91-7817996730
 **WhatsApp:** +91-7817996730
 **Email:** support@shivgangatravels.com
@@ -18,13 +20,13 @@
 **Coordinates:** 29.9457, 78.1642
 
 **Short Description (50 words):**
-Shiv Ganga Travels is Haridwar's trusted Char Dham Yatra operator since 2010. We offer all-inclusive packages for Yamunotri, Gangotri, Kedarnath and Badrinath with VIP darshan, experienced guides, and zero commission. 50,000+ pilgrims served.
+Shiv Ganga Travels is a direct Char Dham Yatra operator based in Haridwar, founded by a retired Indian Army officer. We offer all-inclusive packages for Yamunotri, Gangotri, Kedarnath and Badrinath with VIP darshan, experienced guides, and zero commission. 50,000+ pilgrims served.
 
 **Medium Description (100 words):**
-Shiv Ganga Travels is a Uttarakhand Tourism Board registered Char Dham Yatra operator based in Haridwar since 2010. We specialise in Char Dham, Do Dham, Single Dham, and Helicopter Yatra packages from Haridwar and Delhi. Every package is all-inclusive — hotel, meals, AC transport, local guide, biometric registration, and VIP darshan at all four dhams. We are a direct operator with zero commission — you pay us, not an agent. Our senior citizen packages include medical attendant and pony/palki. 50,000+ pilgrims have trusted us for their sacred Himalayan journey.
+Shiv Ganga Travels is a direct Char Dham Yatra operator based in Haridwar, founded by retired Indian Army officer Dhanesh Chandra Mishra. We specialise in Char Dham, Do Dham, Single Dham, and Helicopter Yatra packages from Haridwar and Delhi. Every package is all-inclusive — hotel, meals, AC transport, local guide, biometric registration, and VIP darshan at all four dhams. We are a direct operator with zero commission — you pay us, not an agent. Our senior citizen packages include medical attendant and pony/palki. 50,000+ pilgrims have trusted us for their sacred Himalayan journey.
 
 **Long Description (200 words):**
-Shiv Ganga Travels is Haridwar's most trusted Char Dham Yatra operator, serving pilgrims since 2010 with over 50,000 successful yatraas. We are a Uttarakhand Tourism Board registered, direct tour operator — not an agent or aggregator. Every package is all-inclusive with zero commission.
+Shiv Ganga Travels is a direct Char Dham Yatra operator based in Haridwar with over 50,000 pilgrims carried. Founded by retired Indian Army officer Dhanesh Chandra Mishra, we run our own vehicles, drivers and hotel contracts — not an agent or aggregator. Every package is all-inclusive with zero commission.
 
 We offer: Char Dham Yatra packages (9N/10D from ₹13,900), Do Dham Yatra (Kedarnath-Badrinath, Yamunotri-Gangotri), Single Dham packages for Kedarnath, Badrinath, Yamunotri and Gangotri, Helicopter Char Dham packages (5N/6D from ₹2,30,000), Senior Citizen Special packages with medical attendant and pony/palki included, and Uttarakhand tour packages covering Mussoorie, Nainital, Rishikesh, Valley of Flowers, Auli skiing, Jim Corbett, and more.
 
@@ -232,7 +234,7 @@ Verified 2026-08-18: searching JustDial Haridwar for our name returns
 "Shiv Ganga Tour & Travels", Near Yogeshwar Ashram, Niranjani Akhara Road,
 Har Ki Pauri, Haridwar-249401 — established 2000, bus segment, 3.9★ / 6 ratings,
 marked "Claimed", no website. That is NOT us. We are Saptrishi Rd, Bhupatwala,
-since 2010. Do not claim, edit, or report that listing; create a separate one.
+249410, phone 7817996730. Do not claim, edit, or report that listing; create a separate one.
 Because the names collide, the street address and the 7817996730 number are what
 keep the two apart — never submit a bare "Haridwar" address.
 
@@ -244,7 +246,7 @@ keep the two apart — never submit a bare "Haridwar" address.
   Alt mobile     : 8859123961
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
-  Year founded   : 2010
+  Year founded   : (leave blank — no founding year is published)
   Hours          : 7:00 AM - 9:00 PM, all 7 days
   Primary cat    : Tour Operators
   Also list under : Travel Agents · Domestic Tour Operators · Tourist Taxi ·
@@ -310,7 +312,7 @@ eight — they cover every category and price band. Prices are per person.
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
   Nature of biz  : Service Provider
-  Year founded   : 2010
+  Year founded   : (leave blank — no founding year is published)
   Company profile: use the LONG (200-word) description above
 
 Each product description should carry what is included — AC vehicle, hotels on
@@ -338,7 +340,7 @@ is registered, so put the number that is actually answered 7 AM - 9 PM on it.
   Mobile         : 7817996730
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
-  Year founded   : 2010
+  Year founded   : (leave blank — no founding year is published)
   Services       : Char Dham Yatra · Do Dham Yatra · Kedarnath Yatra ·
                    Badrinath Yatra · Helicopter Char Dham · Senior Citizen Yatra ·
                    Uttarakhand Tour Packages · Tempo Traveller Hire
@@ -394,7 +396,7 @@ Hello [Name],
 
 I came across your article about [Char Dham Yatra / Kedarnath / Uttarakhand travel] and found it really helpful — especially the section on [specific section].
 
-I run Shiv Ganga Travels, a registered Char Dham Yatra operator based in Haridwar since 2010. We've just published a free Char Dham Yatra Cost Calculator (shivgangatravels.com/char-dham-yatra-cost-calculator) that gives pilgrims an instant personalised cost estimate. I thought it might be a genuinely useful resource for your readers who are planning their yatra.
+I run Shiv Ganga Travels, a direct Char Dham Yatra operator based in Haridwar. We've just published a free Char Dham Yatra Cost Calculator (shivgangatravels.com/char-dham-yatra-cost-calculator) that gives pilgrims an instant personalised cost estimate. I thought it might be a genuinely useful resource for your readers who are planning their yatra.
 
 Would you be open to mentioning it in your article, or linking to it as a planning tool? Happy to return the favour with a mention of your blog on our site.
 
@@ -466,7 +468,7 @@ Every answer = potential backlink + traffic
 
 *Haridwar-based operator introduces free cost calculator, interactive route map, and real-time 2026 rule updates for pilgrims*
 
-HARIDWAR, Uttarakhand, April 2026 — Shiv Ganga Travels, a registered Char Dham Yatra operator based in Haridwar since 2010, has launched a comprehensive online pilgrimage planning platform at shivgangatravels.com.
+HARIDWAR, Uttarakhand, April 2026 — Shiv Ganga Travels, a direct Char Dham Yatra operator based in Haridwar, has launched a comprehensive online pilgrimage planning platform at shivgangatravels.com.
 
 The platform includes a free Char Dham Yatra Cost Calculator that provides pilgrims with an instant personalised cost estimate based on group size, starting city, and package preferences. The tool is available at shivgangatravels.com/char-dham-yatra-cost-calculator.
 

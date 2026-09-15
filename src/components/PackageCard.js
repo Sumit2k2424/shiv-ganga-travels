@@ -7,7 +7,6 @@ const CAT_FALLBACK = {
   'do-dham':     'linear-gradient(160deg, #0B2C44 0%, #0B7B8B 60%, #16A993 100%)',
   'single-dham': 'linear-gradient(160deg, #1A0E3B 0%, #2D1B6E 50%, #4C3A9E 100%)',
   'helicopter':  'linear-gradient(160deg, #7B1D1D 0%, #B91C1C 60%, #F97316 100%)',
-  'uttarakhand': 'linear-gradient(160deg, #14532D 0%, #15803D 60%, #16A34A 100%)',
 };
 
 /**

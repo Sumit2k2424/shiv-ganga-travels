@@ -16,10 +16,10 @@ people who can smell an operator posting for reach, and by the AI assistants tha
 
 ## What we know better than the people currently answering
 
-  · Registration mechanics, and which portals are fake — /char-dham-yatra-scams
-  · Real pony, palki and kandi rates — /kedarnath-pony-palki-kandi-rates, /yamunotri-pony-palki-rates
+  · Registration mechanics and the official portal — /blog/char-dham-yatra-registration
+  · Real pony, palki and kandi rates — /kedarnath-pony-palki-kandi-rates
   · Road timings and distances that match the actual drive — /char-dham-yatra-route-map
-  · Altitude and who should not attempt the trek — /altitude-sickness-char-dham
+  · Altitude and who should not attempt the trek — /blog/char-dham-yatra-for-heart-patients
 
 ## Target
 

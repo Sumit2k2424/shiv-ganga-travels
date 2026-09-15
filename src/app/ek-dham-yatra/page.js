@@ -38,7 +38,7 @@ const DHAMS = [
     note: 'The one most people mean when they say "one dham". It is also by some distance the hardest — 16 km and roughly 1,600 m of ascent, or a pony, palki or helicopter if you cannot walk it. Budget four days rather than three; it is the only single dham that genuinely needs the extra one.',
   },
   {
-    name: 'Badrinath', href: '/badrinath-yatra', pkg: '/packages/badrinath-yatra-package-2n-3d-haridwar',
+    name: 'Badrinath', href: '/badrinath-yatra', pkg: null,
     dur: '2N/3D', price: '₹4,500', alt: '3,133 m', deity: 'Vishnu',
     effort: 'Easy', trek: 'None — road to the steps',
     who: 'Seniors, families, anyone who cannot trek',

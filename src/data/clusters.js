@@ -37,11 +37,10 @@ export const CLUSTERS = [
     // a 165K/mo head term at position 17 delivering 21.8% of all sessions,
     // sitting in a cluster whose money page almost nothing links to.
     hub: '/kainchi-dham',
-    money: '/packages/kainchi-dham-nainital-mukteshwar-3n-4d',
+    money: '/uttarakhand-tour-packages',
     spokes: [
       { slug: '/kainchi-dham', head: 'kainchi dham', vol: 165000, pos: 17 },
       { slug: '/chitai-golu-devta-temple', head: 'chitai golu devta temple', vol: 33100, pos: 15 },
-      { slug: '/cabs/haridwar-to-nainital-cab', head: 'haridwar to neem karoli baba distance', vol: 1900, pos: 29 },
     ],
   },
   {
@@ -65,7 +64,7 @@ export const CLUSTERS = [
     id: 'badrinath',
     name: 'Badrinath',
     hub: '/badrinath-yatra',
-    money: '/packages/badrinath-yatra-package-2n-3d-haridwar',
+    money: '/badrinath-yatra',
     spokes: [
       { slug: '/char-dham-road-status', head: 'badrinath road', vol: 1300, pos: 7 },
       { slug: '/badrinath-temple', head: 'badrinath jyotirlinga', vol: 590, pos: 29 },
@@ -78,7 +77,7 @@ export const CLUSTERS = [
     id: 'gangotri',
     name: 'Gangotri',
     hub: '/gangotri-yatra',
-    money: '/cabs/haridwar-to-gangotri-cab',
+    money: '/cabs',
     spokes: [
       { slug: '/gangotri-weather', head: 'gangotri temperature', vol: 18100, pos: 21 },
       { slug: '/gangotri-temple' },
@@ -90,7 +89,7 @@ export const CLUSTERS = [
     id: 'yamunotri',
     name: 'Yamunotri',
     hub: '/yamunotri-yatra',
-    money: '/cabs/haridwar-to-yamunotri-cab',
+    money: '/cabs',
     spokes: [
       { slug: '/yamunotri-weather', head: 'yamunotri temperature', vol: 9900, pos: 22 },
       { slug: '/how-to-reach-yamunotri', head: 'janki chatti to yamunotri', vol: 170, pos: 23 },

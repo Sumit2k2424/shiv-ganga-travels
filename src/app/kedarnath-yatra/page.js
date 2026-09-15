@@ -293,7 +293,7 @@ export default function KedarnathYatra() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Deep-dive guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Haridwar to Kedarnath','/cabs/haridwar-to-kedarnath-cab']].map(([l,h]) => (
+            {[['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Haridwar to Kedarnath','/cabs']].map(([l,h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

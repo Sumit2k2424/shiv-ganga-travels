@@ -214,10 +214,10 @@ const INTENTS = [
 ];
 
 const DESTINATIONS = [
-  { name:'Yamunotri', deity:'Goddess Yamuna', alt:'3,291 m', href:'/packages/yamunotri-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Yamunotri Dham, first shrine of the Char Dham Yatra' },
-  { name:'Gangotri', deity:'Mother Ganga', alt:'3,415 m', href:'/packages/gangotri-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Gangotri Dham on the Bhagirathi, source of the Ganga' },
+  { name:'Yamunotri', deity:'Goddess Yamuna', alt:'3,291 m', href:'/yamunotri-yatra', photo:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Yamunotri Dham, first shrine of the Char Dham Yatra' },
+  { name:'Gangotri', deity:'Mother Ganga', alt:'3,415 m', href:'/gangotri-yatra', photo:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Gangotri Dham on the Bhagirathi, source of the Ganga' },
   { name:'Kedarnath', deity:'Lord Shiva', alt:'3,583 m', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar', photo:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Kedarnath temple against the Himalayan peaks' },
-  { name:'Badrinath', deity:'Lord Vishnu', alt:'3,133 m', href:'/packages/badrinath-yatra-package-2n-3d-haridwar', photo:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Badrinath temple with Neelkanth peak behind' },
+  { name:'Badrinath', deity:'Lord Vishnu', alt:'3,133 m', href:'/badrinath-yatra', photo:'https://images.pexels.com/photos/16786632/pexels-photo-16786632.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop', alt2:'Badrinath temple with Neelkanth peak behind' },
 ];
 
 const COST_LINES = [
@@ -238,12 +238,13 @@ const INCLUDES = [
   {icon:'headset',  t:'24/7 Support',     d:'A person, not a bot — WhatsApp and phone.'},
 ];
 
+// Per-route cab pages were deleted on 15 Sep 2026; every row opens the
+// single fares page at /cabs, which prints the full table.
 const CAB_ROUTES = [
-  { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500', href:'/cabs/haridwar-to-kedarnath-cab' },
-  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500', href:'/cabs/haridwar-to-badrinath-cab' },
-  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-gangotri-cab' },
-  // Delhi → Haridwar was noindexed on 13 Sep 2026; the homepage links only indexed routes.
-  { from:'Haridwar', to:'Yamunotri', dist:'222 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-yamunotri-cab' },
+  { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500' },
+  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500' },
+  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000' },
+  { from:'Haridwar', to:'Yamunotri', dist:'222 km', time:'8–9 hrs',  fare:'from ₹4,000' },
 ];
 
 const STEPS = [
@@ -381,8 +382,8 @@ export default function HomePage() {
 
       <Section tone="paper" tight>
         <SectionHead eyebrow="Focused · affordable" title="Single Dham packages"
-          lede="One sacred shrine. Deeply meaningful. From ₹5,299."
-          aside={<Link href="/packages/single-dham" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          lede="One sacred shrine. Kedarnath as a 3N/4D package; Badrinath, Gangotri and Yamunotri from ₹4,250 in the Ek Dham guide."
+          aside={<Link href="/ek-dham-yatra" className="lux-link">Compare all four <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{singleDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 
@@ -437,7 +438,7 @@ export default function HomePage() {
           </div>
           <div>
             {CAB_ROUTES.map((r) => (
-              <Link key={r.href} href={r.href} className="lux-route-row">
+              <Link key={r.to} href="/cabs" className="lux-route-row">
                 <span>
                   <span style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '0.95rem' }}>{r.from} → {r.to}</span>
                   <span className="lux-caption" style={{ display: 'block', marginTop: 3 }}>{r.dist} · {r.time}</span>

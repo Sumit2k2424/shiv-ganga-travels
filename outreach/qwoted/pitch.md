@@ -1,15 +1,15 @@
 # Pitch — Qwoted — journalist source platform
 
 **Send to:** [[ WRITE THIS — never generated, see the note in draft.mjs ]] (a person, at a verified address — not `info@`)
-**Subject:** Char Dham 2026 — operator on the route since 2010, available for comment
+**Subject:** Char Dham 2026 — Haridwar operator on the route, available for comment
 
 ---
 
 Dear [[ WRITE THIS — never generated, see the note in draft.mjs ]] (find the actual name of the desk editor — a pitch to "Sir/Madam" is a pitch to nobody),
 
-I run Shiv Ganga Travels, a Char Dham operator based in Bhupatwala, Haridwar. We have
-taken pilgrims up the Garhwal route every season since 2010, including the years after the
-2013 Kedarnath floods.
+I run Shiv Ganga Travels, a direct Char Dham operator based in Bhupatwala, Haridwar, with
+our own vehicles and drivers. Before that I served in the Indian Army. We have carried more
+than fifty thousand pilgrims on the Garhwal route.
 
 I am writing because [[ WRITE THIS — never generated, see the note in draft.mjs ]] (the story, in one sentence — what is happening now that
 their readers need explained. Not what we sell).
@@ -36,7 +36,7 @@ Founder & Director, Shiv Ganga Travels
 https://www.shivgangatravels.com/press
 
 --
-Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand, founded in 2010 and registered with the Uttarakhand Tourism Development Board. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
+Shiv Ganga Travels is a Char Dham Yatra tour operator based in Haridwar, Uttarakhand. It operates road and helicopter pilgrimages to Yamunotri, Gangotri, Kedarnath and Badrinath.
 
 ---
 

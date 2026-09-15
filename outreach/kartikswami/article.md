@@ -21,11 +21,11 @@ the facts we can stand behind, and the checks it has to pass before it is sent.
 4. **One honest limitation.** The piece that says "do not attempt this in the first week
    of monsoon" is the piece that gets published and quoted.
 5. **A single contextual link**, in the body, where it genuinely helps:
-   https://www.shivgangatravels.com/uttarakhand-shiva-temples
+   https://www.shivgangatravels.com/kedarnath-temple
 
 ## Facts available without inventing anything
 
-  · Operating since 2010, every season including post-2013 rebuilding.
+  · Direct operator — own vehicles, drivers and hotel contracts; 50,000+ pilgrims carried.
   · 39 published circuits; Char Dham 9N/10D from ₹13,900 ex-Haridwar.
   · Season 2026 dates, road status, distances and pony rates: all published on site.
   · Sourced figures: https://www.shivgangatravels.com/char-dham-yatra-statistics

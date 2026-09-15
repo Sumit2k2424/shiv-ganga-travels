@@ -17,23 +17,18 @@ function ChevronDown({ open }) {
 const PKG_LINKS = [
   { label:'Char Dham Yatra',  href:'/packages/char-dham',   sub:'All 4 dhams — 5 to 15 days',             imgAlt:'Kedarnath Temple — Char Dham Yatra', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
   { label:'Do Dham Yatra',    href:'/packages/do-dham',     sub:'Kedarnath–Badrinath · Yamunotri–Gangotri', imgAlt:'Badrinath Temple — Do Dham Yatra', img:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
-  { label:'Single Dham',      href:'/packages/single-dham', sub:'Kedarnath · Badrinath · and more',         imgAlt:'Kedarnath Temple Single Dham Yatra', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
+  { label:'Single Dham',      href:'/ek-dham-yatra', sub:'Pick one dham · from ₹4,250 · all four compared',         imgAlt:'Kedarnath Temple Single Dham Yatra', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
   { label:'Helicopter Tours', href:'/packages/helicopter',  sub:'All 4 dhams in 6 days — VIP experience',  img:'https://images.pexels.com/photos/34912011/pexels-photo-34912011.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
-  { label:'Uttarakhand Tours',href:'/packages/uttarakhand', sub:'Hills, adventure, wildlife & more',        img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
-  { label:'Browse All',       href:'/packages',             sub:'Complete catalogue of 28 packages',        imgAlt:'Haridwar Ganga Ghats — All Packages', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
+  { label:'Uttarakhand Tours',href:'/uttarakhand-tour-packages', sub:'Hills, adventure, wildlife & more',        img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
+  { label:'Browse All',       href:'/packages',             sub:'Every pilgrimage itinerary we run',        imgAlt:'Haridwar Ganga Ghats — All Packages', img:'https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop' },
 ];
 
 // Every target here must be an indexable page: the nav renders on every route.
-// The cab origin/destination hubs and long-tail routes were noindexed on
-// 13 Sep 2026, so the menu links only the indexed point-to-point routes.
+// The per-route cab pages were deleted on 15 Sep 2026; /cabs carries the
+// whole fare table now.
 const CAB_LINKS = [
-  { label:'All Cabs & Fares',      href:'/cabs',                        sub:'Book online · fixed fares · all routes', icon:'car' },
+  { label:'All Cabs & Fares',      href:'/cabs',                        sub:'Every route · fixed fares · book in a minute', icon:'car' },
   { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'Innova · Ertiga · Tempo · Full circuit',  icon:'car' },
-  { label:'Rishikesh → Kedarnath', href:'/cabs/rishikesh-to-kedarnath-cab', sub:'210 km · 8–9 hrs · Gaurikund drop',  icon:'temple' },
-  { label:'Dehradun → Kedarnath',  href:'/cabs/dehradun-to-kedarnath-cab', sub:'250 km · 9–10 hrs · from ₹4,500',       icon:'temple' },
-  { label:'Haridwar → Kedarnath',  href:'/cabs/haridwar-to-kedarnath-cab', sub:'235 km · 8–9 hrs · from ₹3,500',      icon:'route' },
-  { label:'Haridwar → Badrinath',  href:'/cabs/haridwar-to-badrinath-cab', sub:'320 km · 10–11 hrs · from ₹4,500',    icon:'route' },
-  { label:'Haridwar → Gangotri',   href:'/cabs/haridwar-to-gangotri-cab',  sub:'265 km · 8–9 hrs · from ₹4,000',      icon:'route' },
   { label:'Dehradun Airport → Haridwar', href:'/dehradun-airport-to-haridwar-taxi', sub:'35 km · ~1 hr · ₹1,200 fixed', icon:'car' },
 ];
 

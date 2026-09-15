@@ -35,7 +35,7 @@
 // The generator in scripts/press/ therefore emits quote slots as null and
 // refuses to invent numbers — see PRESS-SYSTEM.md.
 
-import { SITE } from './packages';
+import { SITE } from './packages.js';
 
 export const MEDIA_KIT = {
   // The boilerplate. Wire desks paste this verbatim at the foot of a story, so

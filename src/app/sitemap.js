@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
-import { getIndexedRoutes, getIndexedOrigins, getIndexedDestinations } from '@/data/cabs';
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES, LANGUAGE_PAGES as ALL_LANGUAGE_PAGES } from '@/data/languages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { GONE_PATHS } from '@/data/gone';
 import { getPublishedReleases } from '@/data/press';
@@ -14,10 +12,7 @@ function lastModifiedFor(path) {
   const pattern =
     path.startsWith('/packages/')  ? '/packages/[slug]' :
     path.startsWith('/blog/')      ? '/blog/[slug]' :
-    path.startsWith('/press/')     ? '/press/[slug]' :
-    path.startsWith('/cabs/from/') ? '/cabs/from/[city]' :
-    path.startsWith('/cabs/to/')   ? '/cabs/to/[destination]' :
-    path.startsWith('/cabs/')      ? '/cabs/[route]' : null;
+    path.startsWith('/press/')     ? '/press/[slug]' : null;
   return pattern ? pageDates(pattern).modifiedISO : SITE_CONTENT_UPDATED_ISO;
 }
 
@@ -203,18 +198,11 @@ export default function sitemap() {
     { url: `${b}/char-dham-yatra-route-map`,           p: 0.87, cf: 'monthly' },
   ];
 
-  // Every cab URL is generated from the data layer, and only from entries that
-  // pass the publishability gate in @/data/cabs — so a half-written route can
-  // never reach the sitemap — AND are not flagged `noindex` (the index gate in
-  // the same file; a noindexed page in a sitemap is a contradiction Google
-  // reports as an error). Destination and origin hubs outrank the individual
-  // routes because they carry the comparison tables people actually land on.
+  // The cab section is two hand-written pages. The per-route, per-origin and
+  // per-destination pages that used to be generated here are 410 (gone.js).
   const cabs = [
     { url: `${b}/cabs`,                        p: 0.88, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-cab-booking`, p: 0.85, cf: 'monthly' },
-    ...getIndexedDestinations().map(d => ({ url: `${b}/cabs/to/${d.slug}`,   p: 0.84, cf: 'monthly' })),
-    ...getIndexedOrigins().map(o      => ({ url: `${b}/cabs/from/${o.slug}`, p: 0.83, cf: 'monthly' })),
-    ...getIndexedRoutes().map(r       => ({ url: `${b}/cabs/${r.slug}`,      p: 0.82, cf: 'monthly' })),
   ];
 
   // Newsroom. Releases come from the same publishability gate that drives
@@ -270,14 +258,6 @@ export default function sitemap() {
     { url: `${b}/shiv-ganga-travels-vs-thrillophilia`,              p: 0.80, cf: 'monthly' },
   ];
 
-  // Hindi outranks the other language pages because it is the primary search
-  // language for this pilgrimage, not a regional variant.
-  const languagePages = LANGUAGE_PAGES.map(l => ({
-    url: `${b}/${l.slug}`,
-    p: l.code === 'hi' ? 0.94 : 0.84,
-    cf: l.code === 'hi' ? 'weekly' : 'monthly',
-  }));
-
   // ── Local Haridwar service pages. These target our own city, where organic
   // competition is weakest and intent is transactional, so they rank higher
   // than the 0.78 the auto-discovery fallback would otherwise assign them.
@@ -332,7 +312,7 @@ export default function sitemap() {
   const listed = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...press, ...cities,
-    ...authority, ...categoryPages, ...packagePages, ...languagePages,
+    ...authority, ...categoryPages, ...packagePages,
     ...localHaridwar, ...winterSeats,
   ];
 
@@ -377,9 +357,6 @@ export default function sitemap() {
     const slugPath = url.replace(b, '').replace(/^\//, '');
     if (REDIRECT_SOURCE_PATHS.has(slugPath)) return false;
     if (GONE_PATHS.has('/' + slugPath)) return false;
-    // The seven noindexed language pages have real page files, so folder
-    // discovery would list them; a sitemap must not name a noindex URL.
-    if (ALL_LANGUAGE_PAGES.some(l => l.slug === slugPath && !l.index)) return false;
     return staticRouteExists(slugPath);
   });
 
