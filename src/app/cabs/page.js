@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { VEHICLES, VEHICLE_MATRIX, REVIEWS, ROUTE } from '@/data/experience';
 import {
-  getOriginsByRegion, getDestinationsByKind, getRoutesFromOrigin,
-  getRoutesToDestination, routeTo, routeLowestFare,
+  getOriginsByRegion, getRoutesFromOrigin, routeTo, routeLowestFare,
   getPublishedRoutes, getPublishedOrigins, getPublishedDestinations,
 } from '@/data/cabs';
 import { FLEET as LOCAL_FLEET } from '@/data/localTaxi';
@@ -12,7 +11,7 @@ import CabBookingWizard from '@/components/CabBookingWizard';
 import RouteMap from '@/components/lux/RouteMap';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
 import { VehicleShowcase, ReviewsWall, FaqList } from '@/components/lux/PackageSections';
-import { Section, SectionHead, Reveal, Eyebrow, Pill } from '@/components/lux/primitives';
+import { Section, SectionHead, Reveal, Eyebrow } from '@/components/lux/primitives';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 export const metadata = {
@@ -111,63 +110,14 @@ export default function CabsPage() {
         </div>
       </Section>
 
-      {/* ── Where we drive to — destination landing pages ── */}
+      {/* ── Every route, one table ──
+          This used to be three grids of links into per-destination,
+          per-origin and per-route pages — 105 of them at the peak. Those
+          pages are gone (see src/data/gone.js); the fares now live here,
+          grouped by pickup city, and the wizard above quotes any of them. */}
       <Section tone="paper">
-        <SectionHead
-          eyebrow="Where we drive to"
-          title="Pick a destination"
-          lede="Every road to a place, side by side — what each departure city costs, and where the tarmac actually runs out."
-        />
-        {getDestinationsByKind().map((group) => (
-          <div key={group.id} style={{ marginBottom: 36 }}>
-            <Eyebrow plain>{group.label}</Eyebrow>
-            <div className="lux-grid lux-grid--4" style={{ marginTop: 16 }} data-lux-stagger="">
-              {group.destinations.map((d) => {
-                const routes = getRoutesToDestination(d.slug);
-                return (
-                  <Link prefetch={false} key={d.slug} href={`/cabs/to/${d.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
-                    <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Cabs to {d.name}</div>
-                    <div className="lux-caption" style={{ marginTop: 6 }}>{d.altitude} · {routes.length} {routes.length === 1 ? 'route' : 'routes'}</div>
-                    <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>Road ends at {d.lastMotorable}</div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </Section>
-
-      {/* ── Where we pick up from — origin city pages ── */}
-      <Section tone="paper-deep">
-        <SectionHead
-          eyebrow="Where we pick up"
-          title="Or start from your city"
-          lede="Doorstep pickup, no airport or station surcharge, and one fixed all-in fare for the whole run."
-        />
-        {getOriginsByRegion().map((region) => (
-          <div key={region.id} style={{ marginBottom: 36 }}>
-            <Eyebrow plain>{region.label}</Eyebrow>
-            <div className="lux-grid lux-grid--4" style={{ marginTop: 16 }} data-lux-stagger="">
-              {region.origins.map((o) => {
-                const routes = getRoutesFromOrigin(o.slug);
-                return (
-                  <Link prefetch={false} key={o.slug} href={`/cabs/from/${o.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
-                    <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Cabs from {o.name}</div>
-                    <div className="lux-caption" style={{ marginTop: 6 }}>{routes.length} {routes.length === 1 ? 'route' : 'routes'} · {o.state}</div>
-                    <div className="lux-body" style={{ fontSize: '0.8rem', marginTop: 8 }}>
-                      {routes.slice(0, 3).map(routeTo).join(' · ')}
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </Section>
-
-      {/* ── Every route, flat ── */}
-      <Section tone="paper">
-        <SectionHead eyebrow="Popular routes" title="Pick a route for the full fare & road map" />
+        <SectionHead eyebrow="Fixed one-way fares" title="Every route we run, in one place"
+          lede="Grouped by pickup city. The sedan fare is the floor; pick the vehicle in the enquiry form above and we confirm one all-in price — fuel, driver, tolls and state taxes included." />
         {getOriginsByRegion().map((region) =>
           region.origins.map((o) => {
             const routes = getRoutesFromOrigin(o.slug);
@@ -175,27 +125,38 @@ export default function CabsPage() {
             return (
               <div key={o.slug} style={{ marginBottom: 36 }}>
                 <Eyebrow plain>Cabs from {o.name}</Eyebrow>
-                <div className="lux-grid lux-grid--4" style={{ marginTop: 16 }} data-lux-stagger="">
-                  {routes.map((r) => (
-                    <Link prefetch={false} key={r.slug} href={`/cabs/${r.slug}`} className="lux-card lux-lift" style={{ padding: 18, textDecoration: 'none', color: 'inherit' }} data-cursor="View">
-                      <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>{o.name} → {routeTo(r)}</div>
-                      <div className="lux-caption" style={{ marginTop: 6 }}>{r.distance} · {r.time}</div>
-                      <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--gold-dark)', marginTop: 10 }}>
-                        from {routeLowestFare(r)}
-                      </div>
-                    </Link>
-                  ))}
+                <div className="lux-matrix-wrap" style={{ marginTop: 14 }}>
+                  <table className="lux-matrix">
+                    <thead>
+                      <tr>
+                        <th scope="col">To</th>
+                        <th scope="col">Distance</th>
+                        <th scope="col">Drive time</th>
+                        <th scope="col">Sedan from</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {routes.map((r) => (
+                        <tr key={r.slug}>
+                          <th scope="row">{routeTo(r)}</th>
+                          <td>{r.distance}</td>
+                          <td>{r.time}</td>
+                          <td style={{ whiteSpace: 'nowrap', color: 'var(--gold-dark)', fontWeight: 600 }}>{routeLowestFare(r)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             );
           })
         )}
-        <div style={{ marginTop: 12, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+        <p className="lux-caption" style={{ marginTop: 4 }}>
+          Indicative {SITE.season} one-way bands. Round trips with halts, multi-day circuits and airport transfers are quoted as a package on enquiry.
+        </p>
+        <div style={{ marginTop: 18, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
             Full Char Dham circuit cab<Icon name="arrowRight" size={13} />
-          </Link>
-          <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-funnel-link">
-            Local taxi service in Haridwar<Icon name="arrowRight" size={13} />
           </Link>
           <Link prefetch={false} href="/dehradun-airport-to-haridwar-taxi" className="lux-funnel-link">
             Dehradun airport to Haridwar<Icon name="arrowRight" size={13} />

@@ -429,7 +429,6 @@ export const ROUTES = [
   // ═══════════════ FROM DELHI NCR ═══════════════
   {
     slug: 'delhi-to-kedarnath-cab',
-    noindex: true,
     origin: 'delhi', destination: 'kedarnath', terrain: 'hills',
     distance: '445 km (to Gaurikund)', time: '12–14 hrs total driving, always split across 2 days', endPoint: 'Sonprayag / Gaurikund',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Roorkee → Haridwar → Rishikesh → Devprayag → Srinagar → Rudraprayag → Guptkashi → Sonprayag → Gaurikund',
@@ -453,7 +452,6 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-badrinath-cab',
-    noindex: true,
     origin: 'delhi', destination: 'badrinath', terrain: 'hills',
     distance: '530 km', time: '14–16 hrs total driving, always split across 2 days', endPoint: 'Badrinath temple',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Roorkee → Haridwar → Rishikesh → Devprayag → Rudraprayag → Karnaprayag → Chamoli → Joshimath → Badrinath',
@@ -476,7 +474,6 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-gangotri-cab',
-    noindex: true,
     origin: 'delhi', destination: 'gangotri', terrain: 'hills',
     distance: '475 km', time: '12–14 hrs total driving, always split across 2 days', endPoint: 'Gangotri temple',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Roorkee → Haridwar → Rishikesh → Chamba → Tehri → Dharasu → Uttarkashi → Harsil → Gangotri',
@@ -498,7 +495,6 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-yamunotri-cab',
-    noindex: true,
     origin: 'delhi', destination: 'yamunotri', terrain: 'hills',
     distance: '432 km (to Janki Chatti)', time: '12–14 hrs total driving, always split across 2 days', endPoint: 'Janki Chatti',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Roorkee → Haridwar → Rishikesh → Narendra Nagar → Chamba → Brahmakhal → Barkot → Janki Chatti',
@@ -520,7 +516,6 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-haridwar-cab',
-    noindex: true,
     origin: 'delhi', destination: 'haridwar', terrain: 'plains',
     distance: '210 km', time: '4–5 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Delhi → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Haridwar',
@@ -543,7 +538,6 @@ export const ROUTES = [
   },
   {
     slug: 'ghaziabad-to-haridwar-cab',
-    noindex: true,
     origin: 'ghaziabad', destination: 'haridwar', terrain: 'plains',
     distance: '195 km', time: '4–5 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Ghaziabad → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Haridwar',
@@ -565,7 +559,6 @@ export const ROUTES = [
   },
   {
     slug: 'noida-to-haridwar-cab',
-    noindex: true,
     origin: 'noida', destination: 'haridwar', terrain: 'plains',
     distance: '235 km', time: '5–6 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Noida → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Haridwar',
@@ -587,7 +580,6 @@ export const ROUTES = [
   },
   {
     slug: 'gurugram-to-haridwar-cab',
-    noindex: true,
     origin: 'gurugram', destination: 'haridwar', terrain: 'plains',
     distance: '245 km', time: '5–6 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Gurugram → Delhi → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Haridwar',
@@ -611,7 +603,6 @@ export const ROUTES = [
   // ═══════════════ FROM RAJASTHAN ═══════════════
   {
     slug: 'jaipur-to-haridwar-cab',
-    noindex: true,
     origin: 'jaipur', destination: 'haridwar', terrain: 'plains',
     distance: '470 km', time: '8–9 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Jaipur → Shahpura → Alwar → Bhiwadi → Sonipat bypass → Muzaffarnagar → Roorkee → Haridwar',
@@ -635,7 +626,6 @@ export const ROUTES = [
   },
   {
     slug: 'ajmer-to-haridwar-cab',
-    noindex: true,
     origin: 'ajmer', destination: 'haridwar', terrain: 'plains',
     distance: '600 km', time: '10–11 hrs', endPoint: 'Anywhere in Haridwar',
     via: 'Ajmer → Kishangarh → Jaipur → Alwar → Bhiwadi → Muzaffarnagar → Roorkee → Haridwar',
@@ -692,7 +682,6 @@ export const ROUTES = [
   // ── Into Gangotri (hub currently has only haridwar) ──
   {
     slug: 'rishikesh-to-gangotri-cab',
-    noindex: true,
     origin: 'rishikesh', destination: 'gangotri', terrain: 'hills',
     distance: '240 km', time: '7.5–8.5 hrs', endPoint: 'Gangotri temple',
     via: 'Rishikesh → Narendranagar → Chamba → Tehri → Dharasu → Uttarkashi → Harsil → Gangotri',
@@ -714,7 +703,6 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-gangotri-cab',
-    noindex: true,
     origin: 'dehradun', destination: 'gangotri', terrain: 'hills',
     distance: '245 km', time: '8–9 hrs', endPoint: 'Gangotri temple',
     via: 'Dehradun → Mussoorie → Chinyalisaur → Uttarkashi → Harsil → Gangotri',
@@ -738,7 +726,6 @@ export const ROUTES = [
   // ── Into Yamunotri (hub currently has only haridwar) ──
   {
     slug: 'rishikesh-to-yamunotri-cab',
-    noindex: true,
     origin: 'rishikesh', destination: 'yamunotri', terrain: 'hills',
     distance: '197 km (to Janki Chatti)', time: '7.5–8 hrs', endPoint: 'Janki Chatti',
     via: 'Rishikesh → Narendranagar → Chamba → Tehri → Dharasu → Barkot → Janki Chatti',
@@ -759,7 +746,6 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-yamunotri-cab',
-    noindex: true,
     origin: 'dehradun', destination: 'yamunotri', terrain: 'hills',
     distance: '178 km (to Janki Chatti)', time: '6–7 hrs', endPoint: 'Janki Chatti',
     via: 'Dehradun → Vikasnagar → Katapatthar → Naugaon → Barkot → Janki Chatti',
@@ -783,7 +769,6 @@ export const ROUTES = [
   // ── Into Chopta (hub currently has only haridwar) ──
   {
     slug: 'rishikesh-to-chopta-cab',
-    noindex: true,
     origin: 'rishikesh', destination: 'chopta', terrain: 'hills',
     distance: '185 km', time: '7–7.5 hrs', endPoint: 'Chopta',
     via: 'Rishikesh → Devprayag → Srinagar → Rudraprayag → Ukhimath → Chopta',
@@ -804,7 +789,6 @@ export const ROUTES = [
   },
   {
     slug: 'dehradun-to-chopta-cab',
-    noindex: true,
     origin: 'dehradun', destination: 'chopta', terrain: 'hills',
     distance: '225 km', time: '8–9 hrs', endPoint: 'Chopta',
     via: 'Dehradun → Rishikesh → Devprayag → Srinagar → Rudraprayag → Ukhimath → Chopta',
@@ -834,7 +818,6 @@ export const ROUTES = [
   //  through Hapur and Moradabad from all four.
   {
     slug: 'delhi-to-mussoorie-cab',
-    noindex: true,
     origin: 'delhi', destination: 'mussoorie', terrain: 'plains',
     distance: '290 km', time: '7–8 hrs', endPoint: 'Anywhere in Mussoorie',
     via: 'Delhi → Akshardham → Baghpat → Shamli → Saharanpur → Dehradun → Mussoorie',
@@ -857,7 +840,6 @@ export const ROUTES = [
   },
   {
     slug: 'delhi-to-nainital-cab',
-    noindex: true,
     origin: 'delhi', destination: 'nainital', terrain: 'plains',
     distance: '300 km', time: '7–8 hrs', endPoint: 'Anywhere in Nainital',
     via: 'Delhi → Hapur → Gajraula → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
@@ -880,7 +862,6 @@ export const ROUTES = [
   },
   {
     slug: 'noida-to-mussoorie-cab',
-    noindex: true,
     origin: 'noida', destination: 'mussoorie', terrain: 'plains',
     distance: '300 km', time: '7–8 hrs', endPoint: 'Anywhere in Mussoorie',
     via: 'Noida → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
@@ -902,7 +883,6 @@ export const ROUTES = [
   },
   {
     slug: 'noida-to-nainital-cab',
-    noindex: true,
     origin: 'noida', destination: 'nainital', terrain: 'plains',
     distance: '290 km', time: '6–7 hrs', endPoint: 'Anywhere in Nainital',
     via: 'Noida → Hapur → Gajraula → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
@@ -924,7 +904,6 @@ export const ROUTES = [
   },
   {
     slug: 'gurugram-to-mussoorie-cab',
-    noindex: true,
     origin: 'gurugram', destination: 'mussoorie', terrain: 'plains',
     distance: '320 km', time: '8–9 hrs', endPoint: 'Anywhere in Mussoorie',
     via: 'Gurugram → Dhaula Kuan → Akshardham → Baghpat → Shamli → Saharanpur → Dehradun → Mussoorie',
@@ -946,7 +925,6 @@ export const ROUTES = [
   },
   {
     slug: 'gurugram-to-nainital-cab',
-    noindex: true,
     origin: 'gurugram', destination: 'nainital', terrain: 'plains',
     distance: '340 km', time: '8–9 hrs', endPoint: 'Anywhere in Nainital',
     via: 'Gurugram → Dhaula Kuan → Ring Road → Hapur → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',
@@ -968,7 +946,6 @@ export const ROUTES = [
   },
   {
     slug: 'ghaziabad-to-mussoorie-cab',
-    noindex: true,
     origin: 'ghaziabad', destination: 'mussoorie', terrain: 'plains',
     distance: '280 km', time: '6–7 hrs', endPoint: 'Anywhere in Mussoorie',
     via: 'Ghaziabad → Delhi–Meerut Expressway → Meerut → Muzaffarnagar → Roorkee → Dehradun → Mussoorie',
@@ -990,7 +967,6 @@ export const ROUTES = [
   },
   {
     slug: 'ghaziabad-to-nainital-cab',
-    noindex: true,
     origin: 'ghaziabad', destination: 'nainital', terrain: 'plains',
     distance: '285 km', time: '6–7 hrs', endPoint: 'Anywhere in Nainital',
     via: 'Ghaziabad → Hapur → Gajraula → Moradabad → Rampur → Haldwani → Bhimtal → Nainital',

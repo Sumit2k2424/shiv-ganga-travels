@@ -6,7 +6,6 @@
    The cab origin/destination hubs and the long-tail cab routes were noindexed
    on 13 Sep 2026; the footer now links only the indexed cab routes. */
 
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 
 export const COLS = [
   { heading:'Char Dham Packages', links:[
@@ -33,11 +32,7 @@ export const COLS = [
   { heading:'Cabs & Transport', links:[
     {l:'All Uttarakhand Cabs',         h:'/cabs'},
     {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
-    {l:'Haridwar → Badrinath Cab',    h:'/cabs/haridwar-to-badrinath-cab'},
-    {l:'Rishikesh → Kedarnath Cab',   h:'/cabs/rishikesh-to-kedarnath-cab'},
-    {l:'Dehradun → Kedarnath Cab',    h:'/cabs/dehradun-to-kedarnath-cab'},
-    {l:'Haridwar → Kedarnath Cab',    h:'/cabs/haridwar-to-kedarnath-cab'},
-    {l:'Haridwar → Gangotri Cab',     h:'/cabs/haridwar-to-gangotri-cab'},
+    {l:'Dehradun Airport → Haridwar', h:'/dehradun-airport-to-haridwar-taxi'},
   ]},
   { heading:'Guides & Tools', links:[
     {l:'2026 New Rules',             h:'/blog/char-dham-yatra-2026-new-rules'},
@@ -105,8 +100,4 @@ export const COLS = [
   ]},
 ];
 
-export const LANGUAGE_COL = {
-  heading: 'Char Dham in Your Language',
-  links: LANGUAGE_PAGES.map(l => ({ l: `${l.native} · ${l.label}`, h: `/${l.slug}` })),
-};
 

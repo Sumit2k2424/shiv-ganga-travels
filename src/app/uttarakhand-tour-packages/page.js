@@ -98,33 +98,34 @@ export default function Page() {
         <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
-        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand Package Categories</h2>
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand tours — quoted on enquiry</h2>
+        <p style={{fontSize:'14px',color:'var(--text-mid)',lineHeight:1.8,marginBottom:'14px'}}>These circuits are built around your dates and group rather than sold off a fixed itinerary page. Tap one and tell us when you are travelling; you get a day-by-day plan and a fixed quote on WhatsApp.</p>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px',marginBottom:'24px'}}>
-          <a href="/packages" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Mussoorie tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie Tour Packages</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>From ₹6,350 · Kempty Falls, Mall Road, Gun Hill</div>
           </a>
-          <a href="/packages/mussoorie-dehradun-dhanaulti-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Mussoorie + Dhanaulti tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏔️ Mussoorie + Dhanaulti</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹7,500 · Hill station + eco park</div>
           </a>
-          <a href="/packages/nainital-kausani-ranikhet-4n-5d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Nainital + Kausani tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌊 Nainital + Kausani</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>4N/5D · From ₹7,500 · Lakes + Kumaon views</div>
           </a>
-          <a href="/packages/rishikesh-adventure-rafting-camping-2n-3d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Rishikesh Adventure tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🏄 Rishikesh Adventure</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>2N/3D · From ₹3,750 · Rafting + camping</div>
           </a>
-          <a href="/packages/valley-of-flowers-hemkund-sahib-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Valley of Flowers tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🌸 Valley of Flowers</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹10,100 · UNESCO Heritage</div>
           </a>
-          <a href="/packages/auli-joshimath-skiing-3n-4d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Auli Skiing tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>⛷️ Auli Skiing</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>3N/4D · From ₹9,400 · India’s best ski resort</div>
           </a>
-          <a href="/packages/jim-corbett-nainital-wildlife-5n-6d" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
+          <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want a quote for the Jim Corbett tour.')}`} target="_blank" rel="nofollow noopener noreferrer" style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))',textDecoration:'none'}}>
             <div style={{fontWeight:700,fontSize:'13.5px',color:'var(--navy)',marginBottom:'4px'}}>🐯 Jim Corbett</div>
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>5N/6D · From ₹10,500 · Tiger reserve + Nainital</div>
           </a>

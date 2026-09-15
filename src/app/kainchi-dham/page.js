@@ -282,8 +282,8 @@ export default function KainchiDham() {
         </p>
         <p style={p}>
           If you want both, treat them as two trips. What Kainchi <em>does</em> combine with is the rest of Kumaon &mdash; Nainital, Bhimtal, Mukteshwar, Almora, Ranikhet and Jim Corbett all sit within a couple of hours, and a four or five day loop covers them comfortably — that is exactly what our{' '}
-          <Link href="/packages/kainchi-dham-nainital-mukteshwar-3n-4d" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kainchi Dham, Nainital &amp; Mukteshwar 3N/4D</Link>{' '}
-          covers, from Kathgodam or Delhi. If Garhwal is what you are planning, see <Link href="/char-dham-yatra">Char Dham</Link>, <Link href="/do-dham-yatra">Do Dham</Link> or <Link href="/teen-dham-yatra">Teen Dham</Link> instead.
+          <Link href="/uttarakhand-tour-packages" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kumaon circuit</Link>{' '}
+          covers, from Kathgodam or Delhi, quoted on enquiry. If Garhwal is what you are planning, see <Link href="/char-dham-yatra">Char Dham</Link>, <Link href="/do-dham-yatra">Do Dham</Link> or <Link href="/teen-dham-yatra">Teen Dham</Link> instead.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -292,8 +292,8 @@ export default function KainchiDham() {
             <div style={{ fontSize: 13, color: '#475569' }}>Nainital, Kainchi, Bhimtal, Mukteshwar, Almora — we run it from Kathgodam or Delhi. Tell us your dates.</div>
           </div>
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
-            <Link href="/packages/kainchi-dham-nainital-mukteshwar-3n-4d"
-              style={{ background: 'var(--navy)', color: '#fff', padding: '11px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>See the 3N/4D itinerary</Link>
+            <Link href="/uttarakhand-tour-packages"
+              style={{ background: 'var(--navy)', color: '#fff', padding: '11px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>See our Uttarakhand tours</Link>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>💬 Ask us</a>
           </div>

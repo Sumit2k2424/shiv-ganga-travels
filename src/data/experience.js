@@ -117,7 +117,6 @@ export const ROUTE_BY_CATEGORY = {
   'do-dham':     ['haridwar','rishikesh','devprayag','rudraprayag','guptkashi','sonprayag','kedarnath','joshimath','badrinath','mana'],
   'single-dham': ['haridwar','rishikesh','devprayag','rudraprayag','guptkashi','sonprayag','kedarnath'],
   'helicopter':  ['haridwar','yamunotri','gangotri','kedarnath','badrinath'],
-  'uttarakhand': ['haridwar','rishikesh','devprayag','rudraprayag','joshimath'],
 };
 
 /* ══════════════════════════════════════════════════════════════

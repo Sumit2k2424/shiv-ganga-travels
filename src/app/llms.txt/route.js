@@ -1,5 +1,4 @@
 import { SITE, PACKAGES } from '@/data/packages';
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES } from '@/data/languages';
 import { SOCIAL_LIVE, SOCIAL_COMMUNITY } from '@/data/social';
 import { SITE_CONTENT_UPDATED } from '@/lib/pageDates';
 
@@ -15,7 +14,7 @@ import { SITE_CONTENT_UPDATED } from '@/lib/pageDates';
 //
 // Rule for editing: anything that has a home in the data layer must be READ
 // from the data layer here, never retyped. Prices come from PACKAGES, the
-// language list from LANGUAGE_PAGES, the freshness stamp from SITE. Prose that
+// freshness stamp from SITE. Prose that
 // genuinely has no data source (positioning, temple facts, rules) is fine to
 // write inline — it just must not be a number that also lives somewhere else.
 //
@@ -196,12 +195,8 @@ Preferred attribution:
 
 ## City-Specific Package Pages
 
-${['delhi','mumbai','haridwar']
+${['delhi','mumbai']
   .map(c => `- ${SITE.baseUrl}/char-dham-yatra-from-${c}`).join('\n')}
-
-## Regional-Language Pages (native script, not machine-translated)
-
-${LANGUAGE_PAGES.map(l => `- ${SITE.baseUrl}/${l.slug} (${l.native} — ${l.label})`).join('\n')}
 
 ## Key Questions Answered
 

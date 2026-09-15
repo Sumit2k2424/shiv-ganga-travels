@@ -117,104 +117,6 @@ export function FareTable({ fares = [], caption }) {
   );
 }
 
-/* ── Inline quote surface, sits directly under a fare table ────
-   Every cab page used to carry exactly one conversion surface: the
-   dark CabCTA after ten sections. GA says under 10% of visitors ever
-   reach a 90% scroll, so on nine pages in ten the fare table was the
-   last thing anyone saw before leaving.
-
-   This is the second, deliberately lighter surface — the `inline` to
-   CabCTA's `footer`, per the two-unequal-surfaces rule the editorial
-   pages already follow. It goes where intent actually peaks: the
-   moment someone has read the bands and picked a row. Each chip
-   carries the vehicle into the WhatsApp message, so the first reply
-   can be a price rather than a question.
-
-   Server component, no ambient animation, no second dark card. */
-
-export function FareQuoteBar({ vehicles = [], message, note }) {
-  const wa = (m) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(m)}`;
-  // "a Ertiga" / "a Innova Crysta" is the kind of thing a real operator
-  // would never type, and this message is the first line of a conversation.
-  const article = (name) => (/^[aeiou]/i.test(name) ? 'an' : 'a');
-
-  return (
-    <Reveal>
-      <div
-        className="lux-card"
-        style={{ marginTop: 20, padding: '18px 20px', display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'space-between' }}
-      >
-        <div style={{ minWidth: 220, flex: '1 1 260px' }}>
-          <div style={{ fontWeight: 600, fontSize: '0.92rem', color: 'var(--ink)' }}>
-            Want the exact figure, not a band?
-          </div>
-          <p className="lux-body" style={{ fontSize: '0.82rem', marginTop: 4 }}>
-            {note || 'Tell us the vehicle and your dates and we send back one fixed all-in price. No account, no card, no callback queue.'}
-          </p>
-        </div>
-
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-          {vehicles.slice(0, 4).map((v) => (
-            <a
-              key={v}
-              href={wa(`${message} Please quote me for ${article(v)} ${v}.`)}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="lux-btn lux-btn--sm lux-btn--ghost"
-              style={{ whiteSpace: 'nowrap' }}
-            >
-              {v}
-            </a>
-          ))}
-          <a
-            href={`tel:${SITE.phone}`}
-            className="lux-btn lux-btn--sm"
-            style={{ whiteSpace: 'nowrap' }}
-          >
-            <Icon name="phone" size={14} /> Call instead
-          </a>
-        </div>
-      </div>
-    </Reveal>
-  );
-}
-
-/* ── Fare comparison across origins (destination pages) ──────── */
-
-export function OriginFareTable({ rows = [] }) {
-  if (!rows.length) return null;
-  return (
-    <div className="lux-matrix-wrap">
-      <table className="lux-matrix">
-        <thead>
-          <tr>
-            <th scope="col">From</th>
-            <th scope="col">Distance</th>
-            <th scope="col">Drive time</th>
-            <th scope="col">Sedan from</th>
-            <th scope="col" />
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.href}>
-              <th scope="row">{r.from}</th>
-              <td>{r.distance}</td>
-              <td style={{ whiteSpace: 'nowrap' }}>{r.time}</td>
-              <td style={{ whiteSpace: 'nowrap', color: 'var(--gold-dark)', fontWeight: 600 }}>{r.fare}</td>
-              <td>
-                <Link prefetch={false} href={r.href} className="lux-link">
-                  Fares &amp; route <Icon name="arrowRight" size={12} />
-                </Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 /* ── What the fare covers ──────────────────────────────────────
    Publishing exclusions is unusual in this market and it is the
    cheapest credibility on the page. It also removes the single
@@ -322,37 +224,6 @@ export function CancellationTerms({ compact = false, lede }) {
   );
 }
 
-/* ── Route stops ───────────────────────────────────────────── */
-
-export function RouteStops({ via, stops = [] }) {
-  return (
-    <>
-      {via && (
-        <Reveal>
-          <div className="lux-card" style={{ padding: '14px 18px', marginBottom: 18, display: 'flex', gap: 10 }}>
-            <span style={{ color: 'var(--teal)', flex: 'none', marginTop: 2 }}>
-              <Icon name="route" size={16} />
-            </span>
-            <span className="lux-body" style={{ fontSize: '0.88rem' }}>
-              <strong style={{ color: 'var(--ink)' }}>Via:</strong> {via}
-            </span>
-          </div>
-        </Reveal>
-      )}
-      <div className="lux-grid lux-grid--3" data-lux-stagger="">
-        {stops.map(([place, why]) => (
-          <div key={place} className="lux-card" style={{ padding: 18 }}>
-            <div style={{ fontWeight: 600, fontSize: '0.92rem', color: 'var(--ink)' }}>{place}</div>
-            <p className="lux-body" style={{ fontSize: '0.84rem', marginTop: 6 }}>
-              {why}
-            </p>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
-
 /* ── Rules of the road ─────────────────────────────────────── */
 
 export function RoadRules({ items = ROAD_RULES }) {
@@ -372,27 +243,6 @@ export function RoadRules({ items = ROAD_RULES }) {
         </div>
       ))}
     </div>
-  );
-}
-
-/* ── Local tip callout ─────────────────────────────────────── */
-
-export function LocalTip({ children }) {
-  if (!children) return null;
-  return (
-    <Reveal>
-      <div
-        className="lux-card"
-        style={{ padding: '16px 18px', display: 'flex', gap: 12, borderLeft: '3px solid var(--gold)' }}
-      >
-        <span style={{ color: 'var(--gold-dark)', flex: 'none', marginTop: 2 }}>
-          <Icon name="info" size={17} />
-        </span>
-        <span className="lux-body" style={{ fontSize: '0.9rem' }}>
-          <strong style={{ color: 'var(--ink)' }}>From our drivers:</strong> {children}
-        </span>
-      </div>
-    </Reveal>
   );
 }
 

@@ -238,12 +238,13 @@ const INCLUDES = [
   {icon:'headset',  t:'24/7 Support',     d:'A person, not a bot — WhatsApp and phone.'},
 ];
 
+// Per-route cab pages were deleted on 15 Sep 2026; every row opens the
+// single fares page at /cabs, which prints the full table.
 const CAB_ROUTES = [
-  { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500', href:'/cabs/haridwar-to-kedarnath-cab' },
-  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500', href:'/cabs/haridwar-to-badrinath-cab' },
-  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-gangotri-cab' },
-  // Delhi → Haridwar was noindexed on 13 Sep 2026; the homepage links only indexed routes.
-  { from:'Haridwar', to:'Yamunotri', dist:'222 km', time:'8–9 hrs',  fare:'from ₹4,000', href:'/cabs/haridwar-to-yamunotri-cab' },
+  { from:'Haridwar', to:'Kedarnath', dist:'235 km', time:'8–9 hrs',  fare:'from ₹3,500' },
+  { from:'Haridwar', to:'Badrinath', dist:'320 km', time:'10–11 hrs', fare:'from ₹4,500' },
+  { from:'Haridwar', to:'Gangotri',  dist:'265 km', time:'8–9 hrs',  fare:'from ₹4,000' },
+  { from:'Haridwar', to:'Yamunotri', dist:'222 km', time:'8–9 hrs',  fare:'from ₹4,000' },
 ];
 
 const STEPS = [
@@ -437,7 +438,7 @@ export default function HomePage() {
           </div>
           <div>
             {CAB_ROUTES.map((r) => (
-              <Link key={r.href} href={r.href} className="lux-route-row">
+              <Link key={r.to} href="/cabs" className="lux-route-row">
                 <span>
                   <span style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '0.95rem' }}>{r.from} → {r.to}</span>
                   <span className="lux-caption" style={{ display: 'block', marginTop: 3 }}>{r.dist} · {r.time}</span>

@@ -79,11 +79,6 @@ const CATEGORY_GUIDES = {
     { label:'Char Dham 2026 Overview', href:'/char-dham-yatra' },
     { label:'Senior Citizen Char Dham', href:'/blog/senior-citizen-char-dham' },
   ],
-  'uttarakhand': [
-    { label:'Valley of Flowers Trek', href:'/blog/valley-of-flowers-trek' },
-    { label:'Rishikesh Adventure Guide', href:'/blog/rishikesh-adventure-guide' },
-    { label:'Best Time to Visit', href:'/blog/best-time-char-dham' },
-  ],
 };
 
 function Schemas({ pkg }) {
@@ -161,7 +156,7 @@ export default async function PackageDetailPage({ params }) {
     : `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
-  const isYatra  = pkg.category !== 'uttarakhand';
+  const isYatra  = true; // every remaining package is a pilgrimage itinerary
   const isCharDham = pkg.category === 'char-dham';
   const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
   const dham2026 = [

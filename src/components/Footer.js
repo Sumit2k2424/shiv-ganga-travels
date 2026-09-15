@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
-import { COLS, LANGUAGE_COL } from '@/components/footerLinks';
+import { COLS } from '@/components/footerLinks';
 import Icon, { WhatsAppIcon, SocialIcon } from '@/components/Icon';
 import { SOCIAL_LIVE, SOCIAL_COMMUNITY } from '@/data/social';
 import LogoBadge from '@/components/lux/LogoBadge';
 
 /* Editorial footer. Ink surface, hairline columns. The entire internal-link
-   backbone (COLS + LANGUAGE_COL from footerLinks.js) is preserved verbatim —
+   backbone (COLS from footerLinks.js) is preserved verbatim —
    it is the site's SEO link graph and must not be pruned. */
 
 const FOOT_CSS = `
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Link columns — the SEO backbone, verbatim */}
-        {[...COLS, LANGUAGE_COL].map(col => (
+        {COLS.map(col => (
           <nav key={col.heading} aria-label={col.heading}>
             <h3 className="eq-foot__h">{col.heading}</h3>
             <ul className="eq-foot__list">

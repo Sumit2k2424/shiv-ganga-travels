@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { PACKAGES, SITE, GLOBAL_FAQS } from '@/data/packages';
-import { INDEXED_LANGUAGE_PAGES as LANGUAGE_PAGES, LANGUAGE_HUB_SLUG, languageAlternates } from '@/data/languages';
 import FAQAccordion from '@/components/FAQAccordion';
 import WhyOurPrice from '@/components/WhyOurPrice';
 import AnswerBox from '@/components/AnswerBox';
@@ -20,7 +19,7 @@ export const metadata = {
     'char dham yatra from delhi','char dham tour package','uttarakhand tourism','uttarakhand tour packages',
     'char dham yatra package from haridwar','uttarakhand char dham yatra package',
   ],
-  alternates: languageAlternates(LANGUAGE_HUB_SLUG, SITE.baseUrl),
+  alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra` },
   openGraph: {
     title: `Char Dham Yatra Package ${SITE.season} from Haridwar — ₹13,900 No Hidden Charges | Book Direct`,
     description: `Book Char Dham Yatra ${SITE.season} from Haridwar. Kedarnath · Badrinath · Gangotri · Yamunotri. From ₹13,900.`,
@@ -580,24 +579,6 @@ export default function CharDhamYatra() {
               <Link key={l.href} href={l.href}
                 style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {l.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Regional-language versions */}
-        <div style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px 22px', marginBottom:24 }}>
-          <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:4 }}>
-            Read This Guide in Your Language
-          </h3>
-          <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:14 }}>
-            Full Char Dham Yatra 2026 information, written natively — not machine-translated — for pilgrims who read Bengali, Gujarati, Kannada, Odia, Telugu and Assamese.
-          </p>
-          <div style={{ display:'flex', flexWrap:'wrap', gap:10 }}>
-            {LANGUAGE_PAGES.map(l => (
-              <Link key={l.slug} href={`/${l.slug}`} lang={l.code}
-                style={{ background:'var(--bg)', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
-                {l.native} · {l.label} →
               </Link>
             ))}
           </div>

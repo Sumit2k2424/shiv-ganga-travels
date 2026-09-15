@@ -10,84 +10,19 @@
 // `@/data/redirects` alias — Next transpiles the interop.
 
 const REDIRECTS = [
-  // ── Cab routes that were linked without the /cabs prefix (live 404s in GSC) ──
-  { source: '/haridwar-to-mussoorie-cab',  destination: '/cabs/haridwar-to-mussoorie-cab',  permanent: true },
-  { source: '/rishikesh-to-mussoorie-cab', destination: '/cabs/rishikesh-to-mussoorie-cab', permanent: true },
-  { source: '/dehradun-to-mussoorie-cab',  destination: '/cabs/dehradun-to-mussoorie-cab',  permanent: true },
-  { source: '/haridwar-to-yamunotri-cab',  destination: '/cabs/haridwar-to-yamunotri-cab',  permanent: true },
-  { source: '/haridwar-to-auli-cab',       destination: '/cabs/haridwar-to-auli-cab',       permanent: true },
-  { source: '/haridwar-to-chopta-cab',     destination: '/cabs/haridwar-to-chopta-cab',     permanent: true },
-  { source: '/haridwar-to-nainital-cab',   destination: '/cabs/haridwar-to-nainital-cab',   permanent: true },
-  { source: '/haridwar-to-mukteshwar-cab', destination: '/cabs/haridwar-to-mukteshwar-cab', permanent: true },
-  { source: '/rishikesh-to-kedarnath-cab', destination: '/cabs/rishikesh-to-kedarnath-cab', permanent: true },
-  { source: '/rishikesh-to-badrinath-cab', destination: '/cabs/rishikesh-to-badrinath-cab', permanent: true },
-  { source: '/rishikesh-to-auli-cab',      destination: '/cabs/rishikesh-to-auli-cab',      permanent: true },
-  { source: '/dehradun-to-kedarnath-cab',  destination: '/cabs/dehradun-to-kedarnath-cab',  permanent: true },
-  { source: '/dehradun-to-badrinath-cab',  destination: '/cabs/dehradun-to-badrinath-cab',  permanent: true },
-  { source: '/dehradun-to-nainital-cab',   destination: '/cabs/dehradun-to-nainital-cab',   permanent: true },
-  { source: '/dehradun-to-mukteshwar-cab', destination: '/cabs/dehradun-to-mukteshwar-cab', permanent: true },
-  // ── The last four root-level cab pages, consolidated under /cabs/ ──
-  // These were real pages until the cab-section rebuild; every other route
-  // already lived under /cabs/, so these were the odd ones out. Their content
-  // moved verbatim into data/cabs/routes.js and now renders at the /cabs/ URL.
-  { source: '/haridwar-to-kedarnath-cab',  destination: '/cabs/haridwar-to-kedarnath-cab',  permanent: true },
-  { source: '/haridwar-to-badrinath-cab',  destination: '/cabs/haridwar-to-badrinath-cab',  permanent: true },
-  { source: '/haridwar-to-gangotri-cab',   destination: '/cabs/haridwar-to-gangotri-cab',   permanent: true },
-  { source: '/delhi-to-haridwar-cab',      destination: '/cabs/delhi-to-haridwar-cab',      permanent: true },
-  // ── The 3 Sep 2026 cab expansion, deleted 13 Sep 2026 ──
-  // 38 pages (27 routes, 7 origin hubs, 5 destination hubs, 5 vehicle-hire
-  // pages) went live on 3 Sep, were indexed on 6 Sep, and the site lost ~96% of
-  // Google impressions on 11 Sep. In 28 days the batch earned zero impressions.
-  // Sumit's call was to remove them outright rather than noindex. Every URL
-  // below was indexed, so each one 308s to the page that answers the same
-  // question: a return leg to its outbound twin, a road-head leg to the dham
-  // page describing the same drive, a hub to its nearest live hub. The vehicle
-  // rate card they read from still lives on /taxi-service-in-haridwar.
-  // Return legs → the outbound twin (same road, same fare table, one page).
-  { source: '/cabs/badrinath-to-haridwar-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
-  { source: '/cabs/badrinath-to-rishikesh-cab',   destination: '/cabs/rishikesh-to-badrinath-cab',    permanent: true },
-  { source: '/cabs/badrinath-to-delhi-cab',       destination: '/cabs/delhi-to-badrinath-cab',        permanent: true },
-  { source: '/cabs/joshimath-to-haridwar-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
-  { source: '/cabs/sonprayag-to-haridwar-cab',    destination: '/cabs/haridwar-to-kedarnath-cab',     permanent: true },
-  { source: '/cabs/sonprayag-to-rishikesh-cab',   destination: '/cabs/rishikesh-to-kedarnath-cab',    permanent: true },
-  { source: '/cabs/sonprayag-to-delhi-cab',       destination: '/cabs/delhi-to-kedarnath-cab',        permanent: true },
-  { source: '/cabs/mussoorie-to-haridwar-cab',    destination: '/cabs/haridwar-to-mussoorie-cab',     permanent: true },
-  { source: '/cabs/mussoorie-to-dehradun-cab',    destination: '/cabs/dehradun-to-mussoorie-cab',     permanent: true },
-  { source: '/cabs/mussoorie-to-delhi-cab',       destination: '/cabs/delhi-to-mussoorie-cab',        permanent: true },
-  { source: '/cabs/nainital-to-haridwar-cab',     destination: '/cabs/haridwar-to-nainital-cab',      permanent: true },
-  { source: '/cabs/nainital-to-delhi-cab',        destination: '/cabs/delhi-to-nainital-cab',         permanent: true },
-  // Road-head legs → the dham page that already describes the same drive
-  { source: '/cabs/haridwar-to-sonprayag-cab',    destination: '/cabs/haridwar-to-kedarnath-cab',     permanent: true },
-  { source: '/cabs/rishikesh-to-sonprayag-cab',   destination: '/cabs/rishikesh-to-kedarnath-cab',    permanent: true },
-  { source: '/cabs/dehradun-to-sonprayag-cab',    destination: '/cabs/dehradun-to-kedarnath-cab',     permanent: true },
-  { source: '/cabs/delhi-to-sonprayag-cab',       destination: '/cabs/delhi-to-kedarnath-cab',        permanent: true },
-  { source: '/cabs/haridwar-to-joshimath-cab',    destination: '/cabs/haridwar-to-badrinath-cab',     permanent: true },
-  { source: '/cabs/rishikesh-to-joshimath-cab',   destination: '/cabs/rishikesh-to-badrinath-cab',    permanent: true },
-  { source: '/cabs/dehradun-to-joshimath-cab',    destination: '/cabs/dehradun-to-badrinath-cab',     permanent: true },
-  // Short hops between the gateway cities → the origin hub or the nearest kept route.
-  { source: '/cabs/delhi-to-rishikesh-cab',       destination: '/cabs/delhi-to-haridwar-cab',         permanent: true },
-  { source: '/cabs/delhi-to-dehradun-cab',        destination: '/cabs/delhi-to-haridwar-cab',         permanent: true },
-  { source: '/cabs/haridwar-to-dehradun-cab',     destination: '/cabs/from/haridwar',                 permanent: true },
-  { source: '/cabs/rishikesh-to-haridwar-cab',    destination: '/cabs/from/rishikesh',                permanent: true },
-  { source: '/cabs/dehradun-to-haridwar-cab',     destination: '/cabs/from/dehradun',                 permanent: true },
-  // Rajasthan long hauls → the Jaipur page, the one Rajasthan route with demand.
-  { source: '/cabs/jaipur-to-rishikesh-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
-  { source: '/cabs/jodhpur-to-haridwar-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
-  { source: '/cabs/udaipur-to-haridwar-cab',      destination: '/cabs/jaipur-to-haridwar-cab',        permanent: true },
-  // Hubs that only existed to serve the routes above.
+  // ── Cab pages ──
+  // Every per-route, per-origin and per-destination cab URL — including the
+  // old root-level /<from>-to-<to>-cab slugs and the 3 Sep 2026 expansion that
+  // used to 308 here — is 410 Gone in src/data/gone.js as of 15 Sep 2026.
+  // Only the hub-bound redirects survive, because /cabs still exists.
   { source: '/cabs/from/badrinath',               destination: '/cabs',                               permanent: true },
   { source: '/cabs/from/sonprayag',               destination: '/cabs',                               permanent: true },
   { source: '/cabs/from/joshimath',               destination: '/cabs',                               permanent: true },
   { source: '/cabs/from/mussoorie',               destination: '/cabs',                               permanent: true },
   { source: '/cabs/from/nainital',                destination: '/cabs',                               permanent: true },
-  { source: '/cabs/from/jodhpur',                 destination: '/cabs/from/jaipur',                   permanent: true },
-  { source: '/cabs/from/udaipur',                 destination: '/cabs/from/jaipur',                   permanent: true },
   { source: '/cabs/to/delhi',                     destination: '/cabs',                               permanent: true },
   { source: '/cabs/to/rishikesh',                 destination: '/cabs',                               permanent: true },
   { source: '/cabs/to/dehradun',                  destination: '/cabs',                               permanent: true },
-  { source: '/cabs/to/sonprayag',                 destination: '/cabs/to/kedarnath',                  permanent: true },
-  { source: '/cabs/to/joshimath',                 destination: '/cabs/to/badrinath',                  permanent: true },
-  // Vehicle hire → the rate card those pages were generated from.
   // ── Retired /blog/[slug] JSON route: send its old slugs to the real pages ──
   { source: '/blog/kedarnath-trek-guide-old', destination: '/blog/kedarnath-trek-guide',    permanent: true },
   // Redirect stale 2025 guide URL → main char dham page (2026 content)
@@ -95,10 +30,6 @@ const REDIRECTS = [
   // Fix internal 404s found by Screaming Frog
   { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
   { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },
-  // Panch Kedar went 8N/9D → 9N/10D in Aug 2026 because Rudranath is a 20 km
-  // trek each way, not the 5 km the old itinerary claimed, and needs its own
-  // night camped at the temple. The duration is in the slug, so the URL moved.
-  { source: '/packages/panch-kedar-yatra-8n-9d-haridwar',       destination: '/packages/panch-kedar-yatra-9n-10d-haridwar',      permanent: true },
   { source: '/how-to-reach-kedarnath',                           destination: '/blog/how-to-reach-kedarnath',                    permanent: true },
   { source: '/blog/char-dham-yatra',                             destination: '/char-dham-yatra',                                permanent: true },
   // Redirect blog Badrinath guide to new proper landing page

@@ -297,12 +297,12 @@ export default function ChitaiGoluDevtaTemple() {
           </tbody>
         </table>
       </div>
-      <p style={p}>We have been running Uttarakhand routes out of Haridwar, mostly on the Garhwal side for <Link href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link href="/cabs/haridwar-to-nainital-cab" style={teal}>Haridwar to Nainital cab</Link> or a <Link href="/cabs/dehradun-to-nainital-cab" style={teal}>Dehradun to Nainital run</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
+      <p style={p}>We have been running Uttarakhand routes out of Haridwar, mostly on the Garhwal side for <Link href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link href="/cabs" style={teal}>Haridwar or Dehradun to Nainital cab</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Kainchi Dham',h:'/kainchi-dham'},{l:'Haridwar to Nainital Cab',h:'/cabs/haridwar-to-nainital-cab'},{l:'Haridwar to Mukteshwar Cab',h:'/cabs/haridwar-to-mukteshwar-cab'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
+          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Kainchi Dham',h:'/kainchi-dham'},{l:'Kumaon Cab Fares',h:'/cabs'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
             <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>

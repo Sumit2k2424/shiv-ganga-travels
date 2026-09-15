@@ -2,14 +2,11 @@
 //  CABS — selectors
 // ══════════════════════════════════════════════════════════════
 //  The only module pages should import from. Everything below is
-//  pure and synchronous, so it runs fine inside generateStaticParams
-//  and generateMetadata.
+//  pure and synchronous.
 //
-//  The publishability gates are the important part. A route, origin
-//  or destination that has not been written properly yet is invisible
-//  to generateStaticParams and to the sitemap — it does not 404, it
-//  simply does not exist. That is what lets the route list grow
-//  without the thin-page problem that dogs the big aggregators.
+//  The publishability gates decide what the booking wizard and the
+//  /cabs fare table show. A route, origin or destination that has not
+//  been written properly yet is simply invisible.
 
 import { ROUTES, ROUTES_BY_SLUG } from './routes';
 import { ORIGINS, ORIGINS_BY_SLUG, REGIONS } from './origins';
@@ -31,9 +28,6 @@ export const getDestination = (slug) => DESTINATIONS_BY_SLUG[slug] || null;
 export const routeFrom = (r) => getOrigin(r.origin)?.name || r.origin;
 export const routeTo = (r) => getDestination(r.destination)?.name || r.destination;
 export const routeLabel = (r) => `${routeFrom(r)} to ${routeTo(r)}`;
-export const routePath = (r) => `/cabs/${r.slug}`;
-export const originPath = (o) => `/cabs/from/${o.slug || o}`;
-export const destinationPath = (d) => `/cabs/to/${d.slug || d}`;
 
 /** Hand-priced override if present, otherwise derived from the rate card. */
 export function routeFares(r) {
@@ -51,8 +45,7 @@ export const routeExpert = (r) => getExpert(r.verifiedBy || DEFAULT_EXPERT);
 
 /**
  * A route is publishable only once it has been written properly.
- * Anything short of this is excluded from both generateStaticParams
- * and the sitemap, so incomplete entries can never reach the index.
+ * Anything short of this is excluded from the wizard and the fare table.
  */
 export function isPublishable(r) {
   return Boolean(
@@ -105,62 +98,16 @@ export function isDestinationPublishable(d) {
 export const getPublishedOrigins = () => ORIGINS.filter(isOriginPublishable);
 export const getPublishedDestinations = () => DESTINATIONS.filter(isDestinationPublishable);
 
-// ── Index gate ────────────────────────────────────────────────
+// ── No page tiers any more ────────────────────────────────────
 //
-// Publishable is not the same as indexable. A `noindex: true` flag on any
-// route, origin, destination or hire object keeps the page live — it still
-// builds, still serves, still sits in the link meshes for people who need
-// it — but tells Google not to index it and keeps it out of sitemap.xml.
-//
-// Why this exists (13 Sep 2026): the 38 cab pages shipped on 3 Sep were
-// indexed on 6 Sep and the whole site lost ~96% of impressions on 11 Sep.
-// The section as a whole earned 7 clicks in 28 days and 85 of its 105 pages
-// earned zero impressions. Those 38 were first noindexed with this flag,
-// then deleted outright the same day (their URLs 308 from
-// src/data/redirects.js). The second cut landed 14 Sep 2026: every remaining
-// cab page that had earned zero impressions in the 28 days to 10 Sep carries
-// the flag — 24 routes, all 9 origin hubs, all 10 destination hubs, 43 pages.
-// The 18 routes with any demand stay indexed. Reverse any of them by deleting
-// its `noindex: true` line.
-//
-// Do NOT weaken isPublishable() to achieve the same thing: that would 404
-// the page and break every internal link into it. Deleting a page for real
-// means removing its object AND adding a redirect for its URL.
-
-export const isIndexable = (x) => Boolean(x) && !x.noindex;
-
-/** Metadata `robots` for a data object. Spread into generateMetadata's return. */
-export const robotsFor = (x) => (isIndexable(x) ? {} : { robots: { index: false, follow: true } });
-
-export const getIndexedRoutes = () => getPublishedRoutes().filter(isIndexable);
-export const getIndexedOrigins = () => getPublishedOrigins().filter(isIndexable);
-export const getIndexedDestinations = () => getPublishedDestinations().filter(isIndexable);
-
-/**
- * A deterministic slice of the review wall for one cab page.
- *
- * Every cab page was rendering the same six testimonials — roughly 300 word-for-word
- * identical words, the single largest block of duplication in the section, on 30
- * pages that Google had discovered and declined to crawl. Showing a rotating three
- * keeps the social proof and the aggregate rating while making the block differ from
- * page to page. Keyed off the slug so a given URL always renders the same three
- * (stable across builds — important, since a set that shuffled every deploy would
- * look like churn to a crawler).
- */
-export function reviewsForSlug(reviews, slug, n = 3) {
-  const items = reviews?.items || [];
-  if (items.length <= n) return reviews;
-  let h = 0;
-  for (let i = 0; i < slug.length; i += 1) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
-  const start = h % items.length;
-  return { ...reviews, items: Array.from({ length: n }, (_, i) => items[(start + i) % items.length]) };
-}
-
-// ── Static params helpers ─────────────────────────────────────
-
-export const getRouteParams = () => getPublishedRoutes().map((r) => ({ route: r.slug }));
-export const getOriginParams = () => getPublishedOrigins().map((o) => ({ city: o.slug }));
-export const getDestinationParams = () => getPublishedDestinations().map((d) => ({ destination: d.slug }));
+// Until 15 Sep 2026 this data drove three page templates — /cabs/[route],
+// /cabs/from/[city] and /cabs/to/[destination] — 105 pages at their peak.
+// The section earned 7 clicks in the 28 days before the site-wide ranking
+// drop of 11 Sep and was cut in stages (38 deleted 13 Sep, 43 noindexed
+// 14 Sep, the last 18 routes and both hub tiers deleted 15 Sep). Every
+// former URL is a 410 in src/data/gone.js. The data stays because the
+// booking wizard quotes from it and the /cabs hub prints it as one fare
+// table; nothing here generates a page.
 
 // ── Grouping for hub and link-mesh rendering ──────────────────
 
