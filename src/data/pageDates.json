@@ -33,7 +33,7 @@
     },
     "/badrinath-yatra": {
       "created": "2026-05-09",
-      "modified": "2026-09-14",
+      "modified": "2026-09-15",
       "files": [
         "src/app/badrinath-yatra/page.js"
       ]
@@ -350,7 +350,7 @@
     },
     "/char-dham-road-status": {
       "created": "2026-05-04",
-      "modified": "2026-09-14",
+      "modified": "2026-09-15",
       "files": [
         "src/app/char-dham-road-status/page.js"
       ]
@@ -463,7 +463,7 @@
     },
     "/ek-dham-yatra": {
       "created": "2026-08-17",
-      "modified": "2026-09-14",
+      "modified": "2026-09-15",
       "files": [
         "src/app/ek-dham-yatra/page.js"
       ]
@@ -740,7 +740,7 @@
     },
     "/yamunotri-yatra": {
       "created": "2026-04-24",
-      "modified": "2026-09-14",
+      "modified": "2026-09-15",
       "files": [
         "src/app/yamunotri-yatra/page.js"
       ]
