@@ -115,7 +115,7 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
           <div style={{ fontSize:12.5, color:'var(--text-muted)', marginTop:2 }}>{a.role}</div>
         </div>
         <div style={{ fontSize:11.5, color:'var(--text-muted)', textAlign:'right', flexShrink:0 }}>
-          <Link href="/about" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>About us →</Link>
+          <Link prefetch={false} href="/about" style={{ color:'var(--teal)', textDecoration:'none', fontWeight:600 }}>About us →</Link>
         </div>
       </div>
       </>

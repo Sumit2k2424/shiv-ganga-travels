@@ -142,15 +142,15 @@ export default function ChandiDeviTemple() {
         </P>
         <ul style={{ paddingLeft:20, marginBottom:14 }}>
           <LI><strong style={{ color:'var(--navy)' }}>7:30 AM</strong> — at the{' '}
-            <Link href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>{' '}
+            <Link prefetch={false} href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>{' '}
             base station as it opens, before the queue forms.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>9:30 AM</strong> — back down, drive to Chandighat, roughly fifteen minutes.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>10:00 AM</strong> — Chandi Devi ropeway up. Shorter queue at this hour.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>11:30 AM</strong> — down and out before the midday closure.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Afternoon</strong> —{' '}
-            <Link href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev</Link>{' '}
+            <Link prefetch={false} href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev</Link>{' '}
             at Kankhal, then the Ganga Aarti at{' '}
-            <Link href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>.</LI>
+            <Link prefetch={false} href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>.</LI>
         </ul>
         <P>
           That is a full, unhurried Haridwar day and it is the shape our drivers run most often.

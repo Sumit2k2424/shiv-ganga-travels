@@ -175,7 +175,7 @@ export default function BarkotHotels() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
           Barkot<span>›</span>
           <span>Hotels</span>
         </div>
@@ -237,7 +237,7 @@ export default function BarkotHotels() {
 
         <h2 style={h2}>When to Book</h2>
         <p style={p}>
-          Barkot has a fixed and fairly small room stock serving every Char Dham group heading to <Link href="/yamunotri-yatra">Yamunotri</Link>, which is most of them. In <strong>May and June it sells out completely</strong>, and operators block rooms months ahead. Forty-five to sixty days is the realistic lead time for peak weeks; three to four weeks is usually enough in September and October.
+          Barkot has a fixed and fairly small room stock serving every Char Dham group heading to <Link prefetch={false} href="/yamunotri-yatra">Yamunotri</Link>, which is most of them. In <strong>May and June it sells out completely</strong>, and operators block rooms months ahead. Forty-five to sixty days is the realistic lead time for peak weeks; three to four weeks is usually enough in September and October.
         </p>
         <p style={p}>
           If you are arriving without a booking in peak season, understand that you may not find a room at any price, and the fallbacks &mdash; Purola, Naugaon &mdash; add an hour to an already brutal morning. We would rather move your dates than put you there.
@@ -297,7 +297,7 @@ export default function BarkotHotels() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. Years of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function BarkotHotels() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>The Yamunotri leg</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Yamunotri Weather', '/yamunotri-weather'], ['Char Dham Yatra', '/char-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status'], ].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

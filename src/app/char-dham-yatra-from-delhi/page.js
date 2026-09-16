@@ -195,7 +195,7 @@ export default function Page() {
             <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>
           <div style={{ marginTop:14 }}>
-            <Link href="/packages/char-dham-yatra-from-delhi-10n-11d" style={{ color:'#FFD166', fontSize:13, fontWeight:600, textDecoration:'underline' }}>View the full 10N/11D Delhi package, itinerary & pricing →</Link>
+            <Link prefetch={false} href="/packages/char-dham-yatra-from-delhi-10n-11d" style={{ color:'#FFD166', fontSize:13, fontWeight:600, textDecoration:'underline' }}>View the full 10N/11D Delhi package, itinerary & pricing →</Link>
           </div>
         </div>
 
@@ -203,7 +203,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

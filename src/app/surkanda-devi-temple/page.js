@@ -120,8 +120,8 @@ export default function SurkandaDeviTemple() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
-        <Link href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
         <span>Surkanda Devi Temple</span>
       </div>
     </nav>
@@ -270,13 +270,13 @@ export default function SurkandaDeviTemple() {
       </ul>
 
       <h2 style={h2}>Fitting Surkanda Devi into Your Mussoorie or Dhanaulti Trip</h2>
-      <p style={p}>This temple already shows up as a stop in several of our existing Uttarakhand itineraries — the Mussoorie–Rishikesh–Kanatal circuit, the Tehri Lake and Kanatal weekend, and the longer Chopta/Badrinath route all route through Kaddukhal for exactly this darshan. If you&rsquo;re coming up via our <Link href="/cabs" style={teal}>Haridwar, Rishikesh or Dehradun to Mussoorie cab</Link>, adding a Surkanda Devi detour via Dhanaulti costs a couple of hours, not a full extra day.</p>
+      <p style={p}>This temple already shows up as a stop in several of our existing Uttarakhand itineraries — the Mussoorie–Rishikesh–Kanatal circuit, the Tehri Lake and Kanatal weekend, and the longer Chopta/Badrinath route all route through Kaddukhal for exactly this darshan. If you&rsquo;re coming up via our <Link prefetch={false} href="/cabs" style={teal}>Haridwar, Rishikesh or Dehradun to Mussoorie cab</Link>, adding a Surkanda Devi detour via Dhanaulti costs a couple of hours, not a full extra day.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Mussoorie Cab Fares',h:'/cabs'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

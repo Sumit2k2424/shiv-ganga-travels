@@ -61,8 +61,8 @@ export default function CharDhamKharcha() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम यात्रा खर्चा 2026</span>
         </div>
       </nav>
@@ -210,7 +210,7 @@ export default function CharDhamKharcha() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['बुजुर्गों के लिए चार धाम','/blog/bujurg-char-dham-yatra'],['रजिस्ट्रेशन कैसे करें','/blog/char-dham-registration-hindi'],['कब जाएं?','/blog/char-dham-kab-jayen'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['All Packages','/packages']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

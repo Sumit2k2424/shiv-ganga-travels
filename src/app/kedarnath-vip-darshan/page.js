@@ -148,7 +148,7 @@ export default function KedarnathVipDarshan() {
             <li style={{ marginBottom: 0 }}>Carry the printed receipt and a government photo ID. For morning Abhishek, reach the puja counter <strong>15–30 minutes before</strong> your slot.</li>
           </ol>
           <p style={p}>
-            Two honest cautions from experience: there's <strong>no fixed date when online booking opens</strong> each season, so check the portal regularly; and slots — especially Rudrabhishek and Shodashopachar, with only ~120 tickets a night — sell out. If portal timing stresses you, our <Link href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath packages</Link> include puja booking so you're not refreshing a government site at midnight.
+            Two honest cautions from experience: there's <strong>no fixed date when online booking opens</strong> each season, so check the portal regularly; and slots — especially Rudrabhishek and Shodashopachar, with only ~120 tickets a night — sell out. If portal timing stresses you, our <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath packages</Link> include puja booking so you're not refreshing a government site at midnight.
           </p>
 
           <div style={{ background: '#FEF3F2', border: '1px solid #FECACA', borderRadius: 12, padding: '18px 18px', margin: '26px 0' }}>
@@ -170,7 +170,7 @@ export default function KedarnathVipDarshan() {
 
           <h2 style={h2}>VIP darshan with helicopter</h2>
           <p style={p}>
-            If you're flying in, the combination is genuinely the easiest Kedarnath there is — but the two bookings are separate. Helicopter tickets come from the official IRCTC heliyatra portal (flights run from <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link>), and the VIP darshan puja comes from the BKTC portal. A heli ticket does not include sanctum priority on its own; you still book the puja. Many of our heli pilgrims pair a morning flight with a pre-dawn Maha Abhishek for the calmest possible darshan.
+            If you're flying in, the combination is genuinely the easiest Kedarnath there is — but the two bookings are separate. Helicopter tickets come from the official IRCTC heliyatra portal (flights run from <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link>), and the VIP darshan puja comes from the BKTC portal. A heli ticket does not include sanctum priority on its own; you still book the puja. Many of our heli pilgrims pair a morning flight with a pre-dawn Maha Abhishek for the calmest possible darshan.
           </p>
 
           <h2 style={h2}>Is VIP darshan worth it? (honest take)</h2>
@@ -211,12 +211,12 @@ export default function KedarnathVipDarshan() {
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={wa('Namaste! Please arrange Kedarnath VIP darshan / puja for my group.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp Us</a>
-              <Link href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
+              <Link prefetch={false} href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
             </div>
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: Badrinath VIP darshan · <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
+            Related: Badrinath VIP darshan · <Link prefetch={false} href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link prefetch={false} href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

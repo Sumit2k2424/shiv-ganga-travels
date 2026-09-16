@@ -58,8 +58,8 @@ export default function HowToReachKedarnath() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>How to Reach Kedarnath 2026</span>
         </div>
       </nav>
@@ -198,7 +198,7 @@ export default function HowToReachKedarnath() {
 
         <h2 id="flights" style={h2}>Flights to Kedarnath — What You Can and Cannot Book</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There is no airport at Kedarnath and no commercial flight lands there — anyone selling a "Kedarnath flight ticket" is selling either a Dehradun flight or a scam. What exists is a two-part air journey. First, a regular flight to <strong>Jolly Grant Airport, Dehradun (DED)</strong> — IndiGo, Air India and SpiceJet fly in daily from Delhi, Mumbai, Bengaluru and Hyderabad, and fares from Delhi start around ₹3,000. Second, the <strong>helicopter shuttle</strong> from Phata, Sersi or Guptkashi helipads to the Kedarnath helipad, booked only on <strong>heliyatra.irctc.co.in</strong> after your yatra registration is done — roughly ₹7,500–9,500 round trip, weather permitting.</p>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Between the airport and the helipad still sits a 7–8 hour road journey (Dehradun → Rishikesh → Guptkashi), which is why "flying to Kedarnath" in practice means: flight to Dehradun, cab up the valley, helicopter for the final hop. Our <Link href="/blog/kedarnath-helicopter-booking" style={{ color:'var(--teal)', fontWeight:600 }}>helicopter booking guide</Link> walks through the IRCTC slots, and the road leg is exactly what our Kedarnath package covers.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Between the airport and the helipad still sits a 7–8 hour road journey (Dehradun → Rishikesh → Guptkashi), which is why "flying to Kedarnath" in practice means: flight to Dehradun, cab up the valley, helicopter for the final hop. Our <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color:'var(--teal)', fontWeight:600 }}>helicopter booking guide</Link> walks through the IRCTC slots, and the road leg is exactly what our Kedarnath package covers.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>केदारनाथ जाने का रास्ता (हिंदी में):</strong> हरिद्वार या ऋषिकेश से सड़क मार्ग से सोनप्रयाग (लगभग 235 किमी), वहां से शटल जीप में गौरीकुंड (5 किमी), और फिर 16 किमी की पैदल चढ़ाई मंदिर तक। हेलीकॉप्टर से जाना हो तो फाटा या सेरसी हेलीपैड से IRCTC बुकिंग के ज़रिए।</p>
 
         <h2 id="railway" style={h2}>Nearest Railway Station to Kedarnath</h2>
@@ -214,7 +214,7 @@ export default function HowToReachKedarnath() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

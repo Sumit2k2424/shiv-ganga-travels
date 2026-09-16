@@ -97,7 +97,7 @@ export default function KedarnathYatra() {
             </AnswerBox>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 10, marginBottom: 28 }}>
               {kedarnathPkgs.map(pkg => (
-                <Link key={pkg.slug} href={`/packages/${pkg.slug}`} style={{ background: '#fff', padding: '14px 16px', borderRadius: 10, border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Link prefetch={false} key={pkg.slug} href={`/packages/${pkg.slug}`} style={{ background: '#fff', padding: '14px 16px', borderRadius: 10, border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
                     <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--navy)', lineHeight: 1.3 }}>{pkg.name}</div>
                     <div style={{ fontSize: 11.5, color: 'var(--text-muted)', marginTop: 2 }}>{pkg.duration?.nights}N/{pkg.duration?.days}D · {pkg.startCity}</div>
@@ -281,7 +281,7 @@ export default function KedarnathYatra() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Deep-dive guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['VIP Darshan Guide','/kedarnath-vip-darshan'],['Pony, Palki & Kandi Rates','/kedarnath-pony-palki-kandi-rates'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Darshan Timings','/blog/kedarnath-darshan-timing'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Medical Certificate','/blog/char-dham-yatra-medical-certificate'],['Registration Guide','/blog/char-dham-yatra-registration'],['Haridwar to Kedarnath','/cabs']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

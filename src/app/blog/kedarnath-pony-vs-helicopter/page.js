@@ -53,8 +53,8 @@ export default function PonyVsHelicopter() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/kedarnath-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/kedarnath-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Kedarnath Yatra</Link><span>›</span>
           <span>Pony vs Helicopter</span>
         </div>
       </nav>
@@ -180,7 +180,7 @@ export default function PonyVsHelicopter() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Helicopter Booking','/blog/kedarnath-helicopter-booking'],['Kedarnath Darshan Timing','/blog/kedarnath-darshan-timing'],['Kedarnath Yatra Package','/kedarnath-yatra']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

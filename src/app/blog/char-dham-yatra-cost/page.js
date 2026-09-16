@@ -61,8 +61,8 @@ export default function CharDhamCost() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra Cost 2026</span>
         </div>
       </nav>
@@ -298,7 +298,7 @@ export default function CharDhamCost() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

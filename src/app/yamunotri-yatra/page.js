@@ -126,7 +126,7 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href="/ek-dham-yatra" style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
+          <Link prefetch={false} href="/ek-dham-yatra" style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>See the 2N/3D Ek Dham package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
@@ -138,10 +138,10 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
-              <Link key="/yamunotri-temple" href="/yamunotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Yamunotri Temple Guide"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Packing List"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Registration Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
+              <Link prefetch={false} key="/yamunotri-temple" href="/yamunotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Yamunotri Temple Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Packing List"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Registration Guide"}<span> →</span></Link>
           </div>
         </div>
 
@@ -203,7 +203,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Weather Guide','/blog/uttarakhand-weather-guide']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

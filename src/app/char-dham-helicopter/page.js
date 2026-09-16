@@ -105,7 +105,7 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href={`/packages/char-dham-yatra-helicopter-5n-6d-dehradun`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
+          <Link prefetch={false} href={`/packages/char-dham-yatra-helicopter-5n-6d-dehradun`} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>View 5N/6D Package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
@@ -117,10 +117,10 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/blog/kedarnath-helicopter-booking" href="/blog/kedarnath-helicopter-booking" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Kedarnath Helicopter Booking Guide"}<span> →</span></Link>
-              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham 2026 Complete Guide"}<span> →</span></Link>
-              <Link key="/blog/senior-citizen-char-dham" href="/blog/senior-citizen-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Senior Citizen Char Dham"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-cost" href="/blog/char-dham-yatra-cost" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Cost Breakdown"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/kedarnath-helicopter-booking" href="/blog/kedarnath-helicopter-booking" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Kedarnath Helicopter Booking Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham 2026 Complete Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/senior-citizen-char-dham" href="/blog/senior-citizen-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Senior Citizen Char Dham"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/char-dham-yatra-cost" href="/blog/char-dham-yatra-cost" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Cost Breakdown"}<span> →</span></Link>
           </div>
         </div>
 
@@ -226,7 +226,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Helicopter Booking Guide','/blog/kedarnath-helicopter-booking'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

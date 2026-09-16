@@ -52,8 +52,8 @@ export default function HaridwarToKedarnath() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
         <span>Haridwar to Kedarnath Route</span>
       </div>
     </nav>
@@ -160,7 +160,7 @@ export default function HaridwarToKedarnath() {
           </tbody>
         </table>
       </div>
-      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link href="/cabs" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
+      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link prefetch={false} href="/cabs" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
 
       <h2 id="taxi-fare" style={h2}>Haridwar to Kedarnath Taxi Fare (by vehicle)</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>

@@ -145,7 +145,7 @@ export default function BadrinathWeather() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Gangotri Weather','/gangotri-weather'],['Yamunotri Weather','/yamunotri-weather'],['Badrinath Temple','/badrinath-temple'],['Best Time to Visit','/blog/best-time-char-dham']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -147,7 +147,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </p>
           <h3 style={h3}>Helicopter — skip the climb entirely</h3>
           <p style={p}>
-            If trekking and ponies are both off the table, fly. Helicopters run from <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link> to the Kedarnath helipad, roughly ₹7,500–9,500 round trip per person, booked only on the official IRCTC heliyatra portal. Remember: there is <strong>no helicopter from Gaurikund</strong>. See our <Link href="/blog/kedarnath-pony-vs-helicopter" style={{ color: 'var(--teal)', fontWeight: 600 }}>pony vs helicopter comparison</Link> if you're torn.
+            If trekking and ponies are both off the table, fly. Helicopters run from <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link> to the Kedarnath helipad, roughly ₹7,500–9,500 round trip per person, booked only on the official IRCTC heliyatra portal. Remember: there is <strong>no helicopter from Gaurikund</strong>. See our <Link prefetch={false} href="/blog/kedarnath-pony-vs-helicopter" style={{ color: 'var(--teal)', fontWeight: 600 }}>pony vs helicopter comparison</Link> if you're torn.
           </p>
 
           <h2 style={h2}>How to book — step by step</h2>
@@ -206,7 +206,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>Senior citizens &amp; medical fitness (2026)</h2>
           <p style={p}>
-            From the 2026 season, pilgrims above 55 are advised to carry a <strong>medical fitness certificate</strong> — the altitude gain to 3,583 m is no joke, and health screening at the route has tightened after recent seasons. If you're travelling with elderly parents, plan the palki, build in a rest day at Guptkashi or Sonprayag to acclimatise, and don't attempt a same-day round trip. Our <Link href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath yatra packages</Link> arrange the registration, hotel and counter logistics so your family isn't doing this cold at 4 AM.
+            From the 2026 season, pilgrims above 55 are advised to carry a <strong>medical fitness certificate</strong> — the altitude gain to 3,583 m is no joke, and health screening at the route has tightened after recent seasons. If you're travelling with elderly parents, plan the palki, build in a rest day at Guptkashi or Sonprayag to acclimatise, and don't attempt a same-day round trip. Our <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath yatra packages</Link> arrange the registration, hotel and counter logistics so your family isn't doing this cold at 4 AM.
           </p>
 
           <h2 style={h2}>Frequently asked questions</h2>
@@ -219,12 +219,12 @@ export default function KedarnathPonyPalkiKandiRates() {
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={wa('Namaste! Please help plan Kedarnath with pony/palki for my group.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp Us</a>
-              <Link href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
+              <Link prefetch={false} href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
             </div>
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: Yamunotri pony &amp; palki rates · <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · Kedarnath weather
+            Related: Yamunotri pony &amp; palki rates · <Link prefetch={false} href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link prefetch={false} href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link prefetch={false} href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · Kedarnath weather
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

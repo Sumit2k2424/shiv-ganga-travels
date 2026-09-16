@@ -171,7 +171,7 @@ export default function PanchBadriYatra() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pilgrimages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Badrinath Temple','/badrinath-temple'],['Char Dham Yatra','/char-dham-yatra'],['Badrinath Weather','/badrinath-weather'],['Uttarakhand Tours','/uttarakhand-tour-packages']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

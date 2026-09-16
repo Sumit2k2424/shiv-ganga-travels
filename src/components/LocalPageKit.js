@@ -45,12 +45,12 @@ export function Crumbs({ trail }) {
   return (
     <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link>
+        <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link>
         {trail.map(([label, href], i) => (
           <span key={label} style={{ display:'contents' }}>
             <span>›</span>
             {href && i < trail.length - 1
-              ? <Link href={href} style={{ color:'var(--text-muted)', textDecoration:'none' }}>{label}</Link>
+              ? <Link prefetch={false} href={href} style={{ color:'var(--text-muted)', textDecoration:'none' }}>{label}</Link>
               : <span style={{ color:'var(--navy)', fontWeight:600 }}>{label}</span>}
           </span>
         ))}
@@ -173,7 +173,7 @@ export function Related({ links }) {
       <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Pages</div>
       <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
         {links.map(([label, href]) => (
-          <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+          <Link prefetch={false} key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
             {label} →
           </Link>
         ))}

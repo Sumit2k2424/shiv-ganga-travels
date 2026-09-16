@@ -191,7 +191,7 @@ export default function BookPage() {
             <a href={mailUrl} className="lux-btn lux-btn--ink"><Icon name="mail" size={15} /> Send by email</a>
             <a href={`tel:+${SITE.whatsapp}`} className="lux-btn lux-btn--ghost"><Icon name="phone" size={15} /> {SITE.phone}</a>
           </div>
-          <p className="lux-caption" style={{ marginTop: 26 }}><Link href="/packages" className="lux-link">Back to all packages</Link></p>
+          <p className="lux-caption" style={{ marginTop: 26 }}><Link prefetch={false} href="/packages" className="lux-link">Back to all packages</Link></p>
         </div>
       </div>
     );

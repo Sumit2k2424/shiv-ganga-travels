@@ -142,9 +142,9 @@ export default function RegistrationBlog() {
       {/* Breadcrumb */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Yatra Registration 2026</span>
         </div>
@@ -568,7 +568,7 @@ export default function RegistrationBlog() {
               ['Senior Citizen Guide', '/blog/senior-citizen-char-dham'],
               ['Kedarnath Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
             ].map(([label, href]) => (
-              <Link key={href} href={href}
+              <Link prefetch={false} key={href} href={href}
                 style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>

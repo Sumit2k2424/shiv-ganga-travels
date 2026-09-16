@@ -118,7 +118,7 @@ export default function DehradunAirportToHaridwarTaxi() {
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           Taxi Service in Haridwar<span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Dehradun Airport to Haridwar</span>
         </div>
@@ -252,7 +252,7 @@ export default function DehradunAirportToHaridwarTaxi() {
             ['All Uttarakhand Cabs','Fixed fares on every route','/cabs'],
             ['Har Ki Pauri','Aarti timings and what to expect','/har-ki-pauri-guide'],
           ].map(([t,d,href])=>(
-            <Link key={href} href={href} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px', textDecoration:'none', display:'block' }}>
+            <Link prefetch={false} key={href} href={href} style={{ background:'#fff', border:'1px solid hsl(var(--border))', borderRadius:11, padding:'14px 16px', textDecoration:'none', display:'block' }}>
               <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:5 }}>{t}</div>
               <div style={{ fontSize:13, color:'var(--text-muted)', lineHeight:1.6 }}>{d}</div>
             </Link>
@@ -312,7 +312,7 @@ export default function DehradunAirportToHaridwarTaxi() {
               ['Char Dham from Delhi','/char-dham-yatra-from-delhi'],
               ['Char Dham Helicopter','/char-dham-helicopter'],
             ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link prefetch={false} key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

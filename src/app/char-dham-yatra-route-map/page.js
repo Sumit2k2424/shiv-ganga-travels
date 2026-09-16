@@ -279,7 +279,7 @@ export default function RouteMap() {
             {label:'Cost Calculator', href:'/char-dham-yatra-cost-calculator'},
             {label:'Packing List', href:'/blog/char-dham-yatra-packing-list'},
           ].map(l=>(
-            <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
+            <Link prefetch={false} key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
           ))}
         </div>
         <TempleLinkMesh groups={MESH.waypoints} label="Towns and halts along the route" />

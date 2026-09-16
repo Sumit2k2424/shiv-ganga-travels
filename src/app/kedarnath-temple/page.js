@@ -126,7 +126,7 @@ export default function KedarnathTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Haridwar to Kedarnath Cab',h:'/cabs'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

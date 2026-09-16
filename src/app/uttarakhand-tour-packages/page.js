@@ -172,16 +172,16 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}>📦 Browse All Packages:</div>
-          <Link href="/packages" style={{ display:'inline-block', background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>View Uttarakhand Packages →</Link>
+          <Link prefetch={false} href="/packages" style={{ display:'inline-block', background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>View Uttarakhand Packages →</Link>
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
 
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
-              <Link key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
-              <Link key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
           </div>
         </div>
         <TempleLinkMesh groups={MESH.temples} label="Temple round-ups" />

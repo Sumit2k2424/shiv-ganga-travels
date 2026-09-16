@@ -233,7 +233,7 @@ export default function CostCalculator() {
           {label:'Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking'},
           {label:'Packing List →', href:'/blog/char-dham-yatra-packing-list'},
         ].map(l=>(
-          <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
+          <Link prefetch={false} key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
         ))}
       </div>
     </div>

@@ -149,8 +149,8 @@ export default function Gaurikund() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/kedarnath-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Kedarnath Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Kedarnath Yatra</Link><span>›</span>
           <span>Gaurikund</span>
         </div>
       </nav>
@@ -167,7 +167,7 @@ export default function Gaurikund() {
         </div>
 
         <p style={p}>
-          <strong>Gaurikund is where the road ends and the walking starts.</strong> It sits at 1,982 m at the top of the Mandakini valley, and the 16 km trail to <Link href="/kedarnath-temple">Kedarnath</Link> begins at its upper edge. You cannot drive here — private vehicles stop 5 km below at Sonprayag and a shuttle covers the rest. Almost everything that goes wrong on a Kedarnath trip goes wrong in this five-kilometre stretch, and almost all of it is avoidable.
+          <strong>Gaurikund is where the road ends and the walking starts.</strong> It sits at 1,982 m at the top of the Mandakini valley, and the 16 km trail to <Link prefetch={false} href="/kedarnath-temple">Kedarnath</Link> begins at its upper edge. You cannot drive here — private vehicles stop 5 km below at Sonprayag and a shuttle covers the rest. Almost everything that goes wrong on a Kedarnath trip goes wrong in this five-kilometre stretch, and almost all of it is avoidable.
         </p>
 
         <h2 style={h2}>What Is Gaurikund?</h2>
@@ -220,7 +220,7 @@ export default function Gaurikund() {
           Gaurikund was known for its <strong>tapt kund</strong>, a natural hot spring where pilgrims bathed before starting the climb. The 2013 floods destroyed most of the bathing complex and the flow never properly recovered. What operates today is a smaller rebuilt bathing point with warm rather than genuinely hot water, and most people take a symbolic sprinkle rather than a bath.
         </p>
         <p style={p}>
-          Worth knowing before you plan around it, because a lot of pages still describe the old kund as if nothing happened. If a proper hot-spring bath is something you want from this trip, save it for <Link href="/badrinath-temple">Badrinath&rsquo;s Tapt Kund</Link> later in the circuit &mdash; that one runs at around 45&deg;C and is unchanged.
+          Worth knowing before you plan around it, because a lot of pages still describe the old kund as if nothing happened. If a proper hot-spring bath is something you want from this trip, save it for <Link prefetch={false} href="/badrinath-temple">Badrinath&rsquo;s Tapt Kund</Link> later in the circuit &mdash; that one runs at around 45&deg;C and is unchanged.
         </p>
 
         <h2 style={h2}>The Trek in Brief</h2>
@@ -247,7 +247,7 @@ export default function Gaurikund() {
           </table>
         </div>
         <p style={p}>
-          Six to nine hours up, five to seven down. Ponies, palkis, kandis and porters all work from the trailhead at rates fixed by the temple committee &mdash; current figures are on our <Link href="/kedarnath-pony-palki-kandi-rates">pony and palki rate page</Link>, and the full trail description with preparation advice is in the <Link href="/blog/kedarnath-trek-guide">Kedarnath trek guide</Link>. If the climb is not realistic, the <Link href="/blog/kedarnath-helicopter-booking">helicopter from Phata or Sersi</Link> skips it entirely.
+          Six to nine hours up, five to seven down. Ponies, palkis, kandis and porters all work from the trailhead at rates fixed by the temple committee &mdash; current figures are on our <Link prefetch={false} href="/kedarnath-pony-palki-kandi-rates">pony and palki rate page</Link>, and the full trail description with preparation advice is in the <Link prefetch={false} href="/blog/kedarnath-trek-guide">Kedarnath trek guide</Link>. If the climb is not realistic, the <Link prefetch={false} href="/blog/kedarnath-helicopter-booking">helicopter from Phata or Sersi</Link> skips it entirely.
         </p>
 
         <h2 style={h2}>Where to Sleep the Night Before</h2>
@@ -302,7 +302,7 @@ export default function Gaurikund() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. Years of putting groups into the Sonprayag shuttle queue at the right hour, and the 3:30 AM advice on this page is the result of watching what happens to the ones who leave at five. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of putting groups into the Sonprayag shuttle queue at the right hour, and the 3:30 AM advice on this page is the result of watching what happens to the ones who leave at five. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -321,7 +321,7 @@ export default function Gaurikund() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>On this route</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['Helicopter Booking', '/blog/kedarnath-helicopter-booking'], ['Ukhimath', '/ukhimath'], ['Haridwar to Kedarnath', '/blog/haridwar-to-kedarnath'], ['Registration 2026', '/blog/char-dham-yatra-registration'], ['Do Dham Yatra', '/do-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

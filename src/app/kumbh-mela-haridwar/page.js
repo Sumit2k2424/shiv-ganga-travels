@@ -142,7 +142,7 @@ export default function KumbhMelaHaridwar() {
         <H2>Why Haridwar</H2>
         <P>
           Brahmakund, the bathing tank at the centre of{' '}
-          <Link href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>,
+          <Link prefetch={false} href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>,
           is where tradition holds a drop of amrit fell during the churning of the ocean. Four places
           received a drop — Haridwar, Prayagraj, Nashik and Ujjain — and the Kumbh rotates between
           exactly those four for that reason. It is not a festival that happens to be held here. The
@@ -210,13 +210,13 @@ export default function KumbhMelaHaridwar() {
         <P>
           Fourteen weeks is a long window, and most of it is not a peak bathing day. If you are here for
           several days, the town has more than the ghat:{' '}
-          <Link href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>,{' '}
-          <Link href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>,{' '}
-          <Link href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev at Kankhal</Link>{' '}
+          <Link prefetch={false} href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>,{' '}
+          <Link prefetch={false} href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>,{' '}
+          <Link prefetch={false} href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev at Kankhal</Link>{' '}
           and{' '}
           Maya Devi.
           Our{' '}
-          <Link href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>sightseeing itinerary</Link>{' '}
+          <Link prefetch={false} href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>sightseeing itinerary</Link>{' '}
           sequences them around the crowds.
         </P>
         <P>

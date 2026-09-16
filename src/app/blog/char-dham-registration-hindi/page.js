@@ -67,8 +67,8 @@ export default function CharDhamRegistrationHindi() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम रजिस्ट्रेशन 2026</span>
         </div>
       </nav>
@@ -219,8 +219,8 @@ export default function CharDhamRegistrationHindi() {
         <p style={p}>
           एक और चीज साथ रखें — रजिस्ट्रेशन का <strong>प्रिंटआउट</strong>, सिर्फ मोबाइल पर भरोसा न करें।
           ऊपर के इलाकों में नेटवर्क नहीं मिलता और फोन की बैटरी ठंड में जल्दी खत्म होती है। ज्यादा जानकारी
-          के लिए <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>अंग्रेजी में पूरी रजिस्ट्रेशन गाइड</Link>{' '}
-          और <Link href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)' }}>आपातकालीन नंबरों की सूची</Link> देखें।
+          के लिए <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>अंग्रेजी में पूरी रजिस्ट्रेशन गाइड</Link>{' '}
+          और <Link prefetch={false} href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)' }}>आपातकालीन नंबरों की सूची</Link> देखें।
         </p>
 
         <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
@@ -247,7 +247,7 @@ export default function CharDhamRegistrationHindi() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['Registration Guide (English)','/blog/char-dham-yatra-registration']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

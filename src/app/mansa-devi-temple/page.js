@@ -147,7 +147,7 @@ export default function MansaDeviTemple() {
           This is the single most useful piece of sequencing advice for a Haridwar day. Mansa Devi is
           closer, opens earlier, and its queue builds through the morning much faster than Chandi Devi&apos;s.
           Start at Mansa Devi around opening, cross to Chandighat for{' '}
-          <Link href="/chandi-devi-temple" style={{ color:'#15803D', fontWeight:700 }}>Chandi Devi</Link>{' '}
+          <Link prefetch={false} href="/chandi-devi-temple" style={{ color:'#15803D', fontWeight:700 }}>Chandi Devi</Link>{' '}
           by late morning, and both are done before the midday bhog closure. Do it the other way round and
           you will spend an extra hour standing still.
         </Note>

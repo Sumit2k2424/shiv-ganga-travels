@@ -96,7 +96,7 @@ export default function KedarnathToBadrinath() {
           </div>
         ))}
       </div>
-      <p style={{ ...p, fontSize:13.5, color:'var(--text-muted)' }}>Fares are indicative for a dedicated one-way transfer with a night halt, verified {PAGE_DATES.modifiedHuman}. If you are doing the full Char Dham circuit, this leg is already inside our <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>package pricing</Link> — booking it separately almost always costs more.</p>
+      <p style={{ ...p, fontSize:13.5, color:'var(--text-muted)' }}>Fares are indicative for a dedicated one-way transfer with a night halt, verified {PAGE_DATES.modifiedHuman}. If you are doing the full Char Dham circuit, this leg is already inside our <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>package pricing</Link> — booking it separately almost always costs more.</p>
 
       <h2 style={h2}>What You Pass on the Way</h2>
       <p style={p}><strong>Ukhimath</strong> is where the Kedarnath deity spends the winter — the Omkareshwar temple here is worth twenty minutes even mid-journey. <strong>Chopta</strong> is the trailhead for Tungnath, the highest Shiva temple in the world, a 3.5 km walk off the road. And from <strong>Chamoli</strong> onward you are driving beside the Alaknanda through the prayag country — Nandprayag and then the gorge road to Joshimath. Pilgrims doing this drive are, without planning it, seeing more of Garhwal than most tourists ever do.</p>
@@ -105,7 +105,7 @@ export default function KedarnathToBadrinath() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Do Dham Package (Kedar+Badri)',h:'/do-dham-yatra'},{l:'Gaurikund Guide',h:'/gaurikund'},{l:'Chopta Tungnath',h:'/chopta-tungnath'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

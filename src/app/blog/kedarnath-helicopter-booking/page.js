@@ -78,9 +78,9 @@ export default function KedarnathHelicopterBooking() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Kedarnath Helicopter Booking 2026</span>
         </div>
@@ -165,7 +165,7 @@ export default function KedarnathHelicopterBooking() {
         <h2 id="how-to-book" style={h2}>How to Book on the IRCTC HeliYatra Portal (Step by Step)</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since the system moved fully to IRCTC, this is the only official way to buy a Kedarnath helicopter ticket online. Bookings typically open in mid-April for the season, with a 6 PM daily release window — and prime Sersi/Phata slots can vanish within hours.</p>
         <ol style={{ paddingLeft:22, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.1 }}>
-          <li>Complete your <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'underline' }}>Char Dham registration</Link> first — you cannot book a heli ticket without a valid registration ID.</li>
+          <li>Complete your <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'underline' }}>Char Dham registration</Link> first — you cannot book a heli ticket without a valid registration ID.</li>
           <li>Go to the official portal <strong>heliyatra.irctc.co.in</strong> (no other site is authorised) and log in.</li>
           <li>Pick your helipad — Sersi, Phata or Guptkashi — then the date and time slot.</li>
           <li>Enter passenger details linked to the registration. Up to 6 seats per ID (12 for groups).</li>
@@ -200,7 +200,7 @@ export default function KedarnathHelicopterBooking() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Kedarnath Packages','/kedarnath-yatra'],['Char Dham Helicopter','/char-dham-helicopter'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Kedarnath Darshan Timings','/blog/kedarnath-darshan-timing'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

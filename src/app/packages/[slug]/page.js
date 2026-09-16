@@ -199,11 +199,11 @@ export default async function PackageDetailPage({ params }) {
           {/* Breadcrumb — every level a real link */}
           <nav aria-label="Breadcrumb" style={{ marginBottom:22 }}>
             <ol style={{ display:'flex', flexWrap:'wrap', gap:8, listStyle:'none', margin:0, padding:0, fontSize:11, letterSpacing:'0.12em', textTransform:'uppercase', color:'rgba(255,255,255,0.6)' }}>
-              <li><Link href="/" style={{ color:'inherit', textDecoration:'none' }}>Home</Link></li>
+              <li><Link prefetch={false} href="/" style={{ color:'inherit', textDecoration:'none' }}>Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link href="/packages" style={{ color:'inherit', textDecoration:'none' }}>Packages</Link></li>
+              <li><Link prefetch={false} href="/packages" style={{ color:'inherit', textDecoration:'none' }}>Packages</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link href={CATEGORY_HUB[pkg.category] || '/packages'} style={{ color:'inherit', textDecoration:'none' }}>{CATEGORIES[pkg.category]?.name || pkg.category}</Link></li>
+              <li><Link prefetch={false} href={CATEGORY_HUB[pkg.category] || '/packages'} style={{ color:'inherit', textDecoration:'none' }}>{CATEGORIES[pkg.category]?.name || pkg.category}</Link></li>
               <li aria-hidden="true">/</li>
               <li style={{ color:'var(--gold)' }} aria-current="page">{pkg.name}</li>
             </ol>
@@ -276,7 +276,7 @@ export default async function PackageDetailPage({ params }) {
         <span>✓ Retd. Army Officer founder</span>
         {/* Was a bare text node reading "Flexible cancellation →" with no link
             attached — restored to the cancellation policy page it points at. */}
-        <Link href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>
+        <Link prefetch={false} href="/cancellation-policy" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>
           Flexible cancellation →
         </Link>
       </div>
@@ -340,8 +340,8 @@ export default async function PackageDetailPage({ params }) {
           {isCharDham && (
             <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
               Budget, Deluxe and Premium tiers, and the vehicle-wise fare table for the full circuit, are on the{' '}
-              <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham Yatra 2026 guide</Link>; the{' '}
-              <Link href="/char-dham-yatra-cost-calculator" style={{ color:'var(--teal)', fontWeight:600 }}>cost calculator</Link> prices your exact group.
+              <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham Yatra 2026 guide</Link>; the{' '}
+              <Link prefetch={false} href="/char-dham-yatra-cost-calculator" style={{ color:'var(--teal)', fontWeight:600 }}>cost calculator</Link> prices your exact group.
             </p>
           )}
 
@@ -391,7 +391,7 @@ export default async function PackageDetailPage({ params }) {
             {stdTerms && (
               <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom: extraInc.length ? 12 : 0 }}>
                 Standard package terms apply.{' '}
-                <Link href="/packages#included" style={{ color:'var(--teal)', fontWeight:600 }}>What every package includes and excludes →</Link>
+                <Link prefetch={false} href="/packages#included" style={{ color:'var(--teal)', fontWeight:600 }}>What every package includes and excludes →</Link>
               </p>
             )}
             {(extraInc.length > 0 || !stdTerms) && (
@@ -463,7 +463,7 @@ export default async function PackageDetailPage({ params }) {
               <h2 style={SH}>📖 Related Guides & Resources</h2>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(210px,1fr))', gap:10 }}>
                 {guides.map(g=>(
-                  <Link key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
+                  <Link prefetch={false} key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
                     <span style={{ fontSize:18 }}>📖</span>
                     <span style={{ fontSize:13, fontWeight:600, color:'var(--navy)', lineHeight:1.3 }}>{g.label} →</span>
                   </Link>
@@ -478,7 +478,7 @@ export default async function PackageDetailPage({ params }) {
               <h2 style={SH}>🔄 You Might Also Like</h2>
               <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:12 }}>
                 {related.map(r=>(
-                  <Link key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
+                  <Link prefetch={false} key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
                     <div style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4, lineHeight:1.3 }}>{r.name}</div>
                     <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6 }}>{r.duration.nights}N/{r.duration.days}D</div>
                     <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)' }}>₹{r.price.discounted.toLocaleString('en-IN')}</div>
@@ -508,7 +508,7 @@ export default async function PackageDetailPage({ params }) {
                 ['Medical certificate', '/blog/char-dham-yatra-medical-certificate'],
                 ['What every package includes', '/packages#included'],
               ].map(([t, href]) => (
-                <Link key={href} href={href} className="lux-pill" style={{ textDecoration:'none' }}>{t}</Link>
+                <Link prefetch={false} key={href} href={href} className="lux-pill" style={{ textDecoration:'none' }}>{t}</Link>
               ))}
             </div>
           </section>
@@ -551,7 +551,7 @@ export default async function PackageDetailPage({ params }) {
             <h2 style={SH}>📋 Registration and temple dates for this itinerary</h2>
             <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom:14 }}>
               Registration is compulsory and free; we do it for every guest on this package, or you can register yourself in ten minutes — see the{' '}
-              <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>2026 registration guide</Link>.
+              <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>2026 registration guide</Link>.
             </p>
             <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>🗓️ {datesHeading(pkg)}</h3>
             <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7, marginBottom:10 }}>{datesLede(pkg)}</p>
@@ -583,7 +583,7 @@ export default async function PackageDetailPage({ params }) {
           {/* Operator identity is one line here; the full case is on /about and
               the trust strip under the sticky bar already carries the numbers. */}
           <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
-            Run directly by <Link href="/about" style={{ color:'var(--teal)', fontWeight:600 }}>Shiv Ganga Travels, Haridwar</Link> — founded by a retired Army officer, {SITE.reviews.rating}/5 from {SITE.reviews.count} Google reviews, no aggregator in between.
+            Run directly by <Link prefetch={false} href="/about" style={{ color:'var(--teal)', fontWeight:600 }}>Shiv Ganga Travels, Haridwar</Link> — founded by a retired Army officer, {SITE.reviews.rating}/5 from {SITE.reviews.count} Google reviews, no aggregator in between.
           </p>
 
           {/* Bottom CTA */}
@@ -626,7 +626,7 @@ export default async function PackageDetailPage({ params }) {
               <a href="tel:+917817996730" className="lux-btn lux-btn--ink lux-btn--wide">
                 <Icon name="phone" size={14}/> Call to book
               </a>
-              <Link href={`/book?pkg=${pkg.slug}`} className="lux-btn lux-btn--ghost lux-btn--wide">
+              <Link prefetch={false} href={`/book?pkg=${pkg.slug}`} className="lux-btn lux-btn--ghost lux-btn--wide">
                 <Icon name="clipboard" size={14}/> Build your booking
               </Link>
             </div>
@@ -651,7 +651,7 @@ export default async function PackageDetailPage({ params }) {
                 <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Helpful guides</span>
                 <div style={{ marginTop:12, display:'grid', gap:10 }}>
                   {guides.slice(0,3).map(g=>(
-                    <Link key={g.href} href={g.href} className="lux-link" style={{ fontSize:'0.7rem' }}>{g.label}</Link>
+                    <Link prefetch={false} key={g.href} href={g.href} className="lux-link" style={{ fontSize:'0.7rem' }}>{g.label}</Link>
                   ))}
                 </div>
               </div>

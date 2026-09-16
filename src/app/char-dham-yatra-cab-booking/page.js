@@ -121,9 +121,9 @@ export default function CharDhamCabBooking() {
         <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
           <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
             <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
-              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
+              <li><Link prefetch={false} href="/" style={{ color: 'inherit' }}>Home</Link></li>
               <li aria-hidden="true">›</li>
-              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
+              <li><Link prefetch={false} href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
               <li aria-hidden="true">›</li>
               <li aria-current="page">Char Dham Cab Booking</li>
             </ol>

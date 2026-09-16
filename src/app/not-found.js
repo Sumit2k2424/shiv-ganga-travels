@@ -37,7 +37,7 @@ export default function NotFound() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8, textAlign: 'left', marginBottom: 32 }}>
         {POPULAR.map((l) => (
-          <Link
+          <Link prefetch={false}
             key={l.href}
             href={l.href}
             style={{
@@ -53,7 +53,7 @@ export default function NotFound() {
         ))}
       </div>
 
-      <Link
+      <Link prefetch={false}
         href="/"
         style={{
           display: 'inline-block', background: 'var(--navy)', color: '#fff',

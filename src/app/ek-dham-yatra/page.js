@@ -185,8 +185,8 @@ export default function EkDhamYatra() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>Ek Dham Yatra</span>
         </div>
       </nav>
@@ -213,7 +213,7 @@ export default function EkDhamYatra() {
           Haridwar, or 3N/4D for Kedarnath, starting at ₹4,250 per person all-inclusive.
         </AnswerBox>
         <p style={p}>
-          The counting is simple: <strong>Ek Dham</strong> is one, <Link href="/do-dham-yatra">Do Dham</Link> is two, <Link href="/teen-dham-yatra">Teen Dham</Link> is three, <Link href="/char-dham-yatra">Char Dham</Link> is all four. What is not simple, and what nobody explains, is that the four dhams are wildly different trips. Two of them you drive to. One needs a gentle walk. One needs a sixteen-kilometre climb. Picking on vibes rather than on that difference is how people end up not reaching the temple at all.
+          The counting is simple: <strong>Ek Dham</strong> is one, <Link prefetch={false} href="/do-dham-yatra">Do Dham</Link> is two, <Link prefetch={false} href="/teen-dham-yatra">Teen Dham</Link> is three, <Link prefetch={false} href="/char-dham-yatra">Char Dham</Link> is all four. What is not simple, and what nobody explains, is that the four dhams are wildly different trips. Two of them you drive to. One needs a gentle walk. One needs a sixteen-kilometre climb. Picking on vibes rather than on that difference is how people end up not reaching the temple at all.
         </p>
 
         <h2 style={h2}>The Four, Compared Honestly</h2>
@@ -226,7 +226,7 @@ export default function EkDhamYatra() {
               {DHAMS.map((d, i) => (
                 <tr key={d.name} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ ...TD, fontWeight: 700, color: 'var(--navy)' }}>
-                    <Link href={d.href} style={{ color: 'var(--teal)' }}>{d.name}</Link>
+                    <Link prefetch={false} href={d.href} style={{ color: 'var(--teal)' }}>{d.name}</Link>
                   </td>
                   <td style={TD}>{d.deity}</td>
                   <td style={TD}>{d.dur}</td>
@@ -277,8 +277,8 @@ export default function EkDhamYatra() {
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, margin: '0 0 8px' }}>{d.note}</p>
               <div style={{ fontSize: 12.5, color: '#64748b', marginBottom: 8 }}><strong>Best for:</strong> {d.who}</div>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                <Link href={d.href} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{d.name} yatra guide →</Link>
-                {d.pkg && <Link href={d.pkg} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>Package details →</Link>}
+                <Link prefetch={false} href={d.href} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{d.name} yatra guide →</Link>
+                {d.pkg && <Link prefetch={false} href={d.pkg} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>Package details →</Link>}
               </div>
             </div>
           ))}
@@ -308,7 +308,7 @@ export default function EkDhamYatra() {
               ].map((r, i) => (
                 <tr key={r[0]} style={{ borderBottom: '1px solid hsl(var(--border))', background: i === 0 ? '#F0FDF4' : (i % 2 === 0 ? '#fff' : 'var(--bg)') }}>
                   <td style={{ ...TD, fontWeight: i === 0 ? 800 : 600, color: 'var(--navy)' }}>
-                    {i === 0 ? r[0] : <Link href={r[5]} style={{ color: 'var(--teal)' }}>{r[0]}</Link>}
+                    {i === 0 ? r[0] : <Link prefetch={false} href={r[5]} style={{ color: 'var(--teal)' }}>{r[0]}</Link>}
                   </td>
                   <td style={TD}>{r[1]}</td>
                   <td style={TD}>{r[2]}</td>
@@ -329,7 +329,7 @@ export default function EkDhamYatra() {
           <a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener noreferrer">registrationandtouristcare.uk.gov.in</a>, and checked at police barriers on the way up. We complete it for everyone booked with us.
         </p>
         <p style={p}>
-          Outside the season the deities move down to their winter seats and you can visit those instead &mdash; <Link href="/ukhimath">Ukhimath</Link> for Kedarnath, <Link href="/joshimath-narsingh-temple">Joshimath</Link> for Badrinath &mdash; on roads that stay open. See Winter Char Dham for how that works.
+          Outside the season the deities move down to their winter seats and you can visit those instead &mdash; <Link prefetch={false} href="/ukhimath">Ukhimath</Link> for Kedarnath, <Link prefetch={false} href="/joshimath-narsingh-temple">Joshimath</Link> for Badrinath &mdash; on roads that stay open. See Winter Char Dham for how that works.
         </p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
@@ -348,7 +348,7 @@ export default function EkDhamYatra() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. Years of talking people out of the wrong dham, which is most of what this page is. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of talking people out of the wrong dham, which is most of what this page is. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -367,7 +367,7 @@ export default function EkDhamYatra() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Kedarnath Yatra', '/kedarnath-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Gangotri Yatra', '/gangotri-yatra'], ['Yamunotri Yatra', '/yamunotri-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Char Dham Yatra', '/char-dham-yatra'], ['All Packages', '/packages'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['Kedarnath Helicopter', '/blog/kedarnath-helicopter-booking'], ['Gaurikund', '/gaurikund'], ].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

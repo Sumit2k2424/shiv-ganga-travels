@@ -150,8 +150,8 @@ export default function KainchiDham() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/uttarakhand-tour-packages" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Uttarakhand</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/uttarakhand-tour-packages" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Uttarakhand</Link><span>›</span>
           <span>Kainchi Dham</span>
         </div>
       </nav>
@@ -274,8 +274,8 @@ export default function KainchiDham() {
         </p>
         <p style={p}>
           If you want both, treat them as two trips. What Kainchi <em>does</em> combine with is the rest of Kumaon &mdash; Nainital, Bhimtal, Mukteshwar, Almora, Ranikhet and Jim Corbett all sit within a couple of hours, and a four or five day loop covers them comfortably — that is exactly what our{' '}
-          <Link href="/uttarakhand-tour-packages" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kumaon circuit</Link>{' '}
-          covers, from Kathgodam or Delhi, quoted on enquiry. If Garhwal is what you are planning, see <Link href="/char-dham-yatra">Char Dham</Link>, <Link href="/do-dham-yatra">Do Dham</Link> or <Link href="/teen-dham-yatra">Teen Dham</Link> instead.
+          <Link prefetch={false} href="/uttarakhand-tour-packages" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kumaon circuit</Link>{' '}
+          covers, from Kathgodam or Delhi, quoted on enquiry. If Garhwal is what you are planning, see <Link prefetch={false} href="/char-dham-yatra">Char Dham</Link>, <Link prefetch={false} href="/do-dham-yatra">Do Dham</Link> or <Link prefetch={false} href="/teen-dham-yatra">Teen Dham</Link> instead.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -284,7 +284,7 @@ export default function KainchiDham() {
             <div style={{ fontSize: 13, color: '#475569' }}>Nainital, Kainchi, Bhimtal, Mukteshwar, Almora — we run it from Kathgodam or Delhi. Tell us your dates.</div>
           </div>
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
-            <Link href="/uttarakhand-tour-packages"
+            <Link prefetch={false} href="/uttarakhand-tour-packages"
               style={{ background: 'var(--navy)', color: '#fff', padding: '11px 20px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>See our Uttarakhand tours</Link>
             <a href={`https://wa.me/${SITE.whatsapp}?text=${waText}`} target="_blank" rel="nofollow noopener noreferrer"
               style={{ background: '#25D366', color: '#fff', padding: '11px 22px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', whiteSpace: 'nowrap' }}>💬 Ask us</a>
@@ -323,7 +323,7 @@ export default function KainchiDham() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. Garhwal is home ground, but we have run the Kumaon circuit &mdash; Nainital, Kainchi, Almora, Corbett &mdash; for years, and the advice above about which day to go is earned from taking groups there on the wrong ones. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Garhwal is home ground, but we have run the Kumaon circuit &mdash; Nainital, Kainchi, Almora, Corbett &mdash; for years, and the advice above about which day to go is earned from taking groups there on the wrong ones. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function KainchiDham() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Elsewhere in Uttarakhand</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Uttarakhand Packages', '/uttarakhand-tour-packages'], ['Chitai Golu Devta, Almora', '/chitai-golu-devta-temple'], ['Chopta & Tungnath', '/chopta-tungnath'], ['Surkanda Devi Temple', '/surkanda-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['All Packages', '/packages'], ['Cabs in Uttarakhand', '/cabs'], ['Contact Us', '/contact']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -124,8 +124,8 @@ export default function HarsilValley() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
-        <Link href="/gangotri-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Gangotri Yatra</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/gangotri-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Gangotri Yatra</Link><span>&rsaquo;</span>
         <span>Harsil Valley</span>
       </div>
     </nav>
@@ -293,13 +293,13 @@ export default function HarsilValley() {
       <p style={p}>If Harsil has whetted your appetite for something starker, <strong>Nelong Valley</strong> is 40&ndash;45 km further on &mdash; bare rock, wind and a cold-desert terrain people call the &ldquo;Ladakh of Uttarakhand,&rdquo; closed to civilians from 1962 until relatively recently. This is the one place in the area that genuinely needs paperwork: an <strong>Inner Line Permit from the Uttarkashi SDM office</strong>, Indian nationals only, applied for with photocopied IDs a day or two before you go. Build that lead time in if it&rsquo;s on your list &mdash; it is not something you can arrange at the gate.</p>
 
       <h2 style={h2}>Fitting Harsil into Your Gangotri or Char Dham Yatra</h2>
-      <p style={p}>Because it sits directly on the road, adding Harsil costs you a night, not a detour. On our <Link href="/gangotri-yatra" style={teal}>Gangotri Yatra</Link> and <Link href="/char-dham-yatra" style={teal}>Char Dham Yatra</Link> itineraries we build a Harsil overnight into the Uttarkashi&ndash;Gangotri leg &mdash; it also happens to be the smartest place to break the drive, so it costs nothing extra to do it well. If you want the full picture of the route first, our Gangotri route guide and <Link href="/char-dham-road-status" style={teal}>live road status page</Link> cover the rest of the drive in detail.</p>
+      <p style={p}>Because it sits directly on the road, adding Harsil costs you a night, not a detour. On our <Link prefetch={false} href="/gangotri-yatra" style={teal}>Gangotri Yatra</Link> and <Link prefetch={false} href="/char-dham-yatra" style={teal}>Char Dham Yatra</Link> itineraries we build a Harsil overnight into the Uttarkashi&ndash;Gangotri leg &mdash; it also happens to be the smartest place to break the drive, so it costs nothing extra to do it well. If you want the full picture of the route first, our Gangotri route guide and <Link prefetch={false} href="/char-dham-road-status" style={teal}>live road status page</Link> cover the rest of the drive in detail.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'Gangotri Temple Guide',h:'/gangotri-temple'},{l:'Haridwar to Gangotri Cab',h:'/cabs'},{l:'Char Dham Road Status',h:'/char-dham-road-status'},{l:'Do Dham Yatra',h:'/do-dham-yatra'},{l:'Teen Dham Yatra',h:'/teen-dham-yatra'},].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

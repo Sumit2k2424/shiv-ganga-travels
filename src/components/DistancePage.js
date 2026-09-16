@@ -98,7 +98,7 @@ export default function DistancePage({ route, faqs, crumbTrail, related, sources
         {/* Cumulative vs direct — pre-empts the obvious confusion */}
         <Note tone="info" title="Why our route map shows a bigger number">
           Our{' '}
-          <Link href="/char-dham-yatra-route-map" style={{ color:'var(--navy)', fontWeight:700 }}>Char Dham route map</Link>{' '}
+          <Link prefetch={false} href="/char-dham-yatra-route-map" style={{ color:'var(--navy)', fontWeight:700 }}>Char Dham route map</Link>{' '}
           gives running totals along the full circuit — Badrinath reads 560 km there because that is the
           distance covered via all four dhams in order. The figure on this page is direct, {route.from} to{' '}
           {route.to}. Both are right; they answer different questions.

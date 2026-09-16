@@ -68,8 +68,8 @@ export default function TrekTimings() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Kedarnath Trek Timings 2026</span>
         </div>
       </nav>
@@ -200,7 +200,7 @@ export default function TrekTimings() {
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Registration', '/blog/char-dham-yatra-registration'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

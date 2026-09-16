@@ -161,7 +161,7 @@ export default function HarKiPauriGuide() {
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           Haridwar<span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Har Ki Pauri</span>
         </div>
@@ -323,7 +323,7 @@ export default function HarKiPauriGuide() {
               ].map(([a,b,c,d,href])=>(
                 <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600 }}>
-                    <Link href={href} style={{ color:'var(--teal)', textDecoration:'none' }}>{a}</Link>
+                    <Link prefetch={false} href={href} style={{ color:'var(--teal)', textDecoration:'none' }}>{a}</Link>
                   </td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{b}</td>
                   <td style={{ padding:'9px 10px', color:'var(--text-muted)' }}>{c}</td>
@@ -335,7 +335,7 @@ export default function HarKiPauriGuide() {
         </div>
         <p style={{ fontSize:14.5, color:'var(--text-mid)', lineHeight:1.8 }}>
           All of it fits in one day with a car, and the order matters — our{' '}
-          <Link href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar sightseeing itinerary</Link>{' '}
+          <Link prefetch={false} href="/haridwar-sightseeing-places" style={{ color:'var(--teal)', fontWeight:600 }}>Haridwar sightseeing itinerary</Link>{' '}
           sets out the sequence that avoids the queues and the midday closures. The{' '}
           Haridwar temple circuit{' '}
           covers the first four in five to six hours, and the{' '}
@@ -395,7 +395,7 @@ export default function HarKiPauriGuide() {
             {[
               ['Char Dham Yatra','/char-dham-yatra'],
               ].map(([label,href])=>(
-              <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+              <Link prefetch={false} key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>
             ))}

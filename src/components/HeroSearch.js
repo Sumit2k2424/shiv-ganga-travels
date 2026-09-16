@@ -179,9 +179,9 @@ export default function HeroSearch() {
         </span>
         <span style={{ fontSize:12.5, color:'var(--text-mid)' }}>
           Need something else?{' '}
-          <Link href="/char-dham-yatra-cab-booking" style={{ color:'var(--navy)', fontWeight:600 }}>Cab only</Link>
+          <Link prefetch={false} href="/char-dham-yatra-cab-booking" style={{ color:'var(--navy)', fontWeight:600 }}>Cab only</Link>
           {' · '}
-          <Link href="/char-dham-helicopter" style={{ color:'var(--navy)', fontWeight:600 }}>Helicopter yatra</Link>
+          <Link prefetch={false} href="/char-dham-helicopter" style={{ color:'var(--navy)', fontWeight:600 }}>Helicopter yatra</Link>
         </span>
       </div>
     </div>

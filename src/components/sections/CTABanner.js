@@ -98,7 +98,7 @@ function SmartLink({ href = "#", children, ...props }) {
     );
   }
   return (
-    <Link href={href} {...props}>
+    <Link prefetch={false} href={href} {...props}>
       {children}
     </Link>
   );

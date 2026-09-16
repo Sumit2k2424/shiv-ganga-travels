@@ -175,7 +175,7 @@ const HOME_CSS = `
 function LuxPkgCard({ pkg }) {
   const n = pkg.duration?.nights, d = pkg.duration?.days;
   return (
-    <Link href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-pcard" data-lux-reveal="" data-cursor="View">
+    <Link prefetch={false} href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-pcard" data-lux-reveal="" data-cursor="View">
       <div className="lux-frame lux-frame--3x2 lux-frame--zoom" style={{ position: 'relative' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -305,7 +305,7 @@ export default function HomePage() {
           lede="Four ways to travel the Himalaya. Choose the one that fits your time and your pace — each opens to a full itinerary and honest pricing." />
         <div className="lux-intent" data-lux-reveal="">
           {INTENTS.map((c) => (
-            <Link key={c.href} href={c.href} className="lux-intent__card" data-cursor="Explore">
+            <Link prefetch={false} key={c.href} href={c.href} className="lux-intent__card" data-cursor="Explore">
               <div className="lux-intent__top">
                 <span className="lux-ico-chip"><Icon name={c.icon} size={20} /></span>
                 <Pill tone="gold">{c.tag}</Pill>
@@ -330,7 +330,7 @@ export default function HomePage() {
           lede="Four shrines strung across the Garhwal Himalaya — a journey Hindus make once in a lifetime. Each is a world of its own." />
         <div className="lux-grid lux-grid--4" data-lux-stagger="">
           {DESTINATIONS.map((dn) => (
-            <Link key={dn.name} href={dn.href} className="lux-dest lux-scrim lux-zoom-host" data-cursor="View">
+            <Link prefetch={false} key={dn.name} href={dn.href} className="lux-dest lux-scrim lux-zoom-host" data-cursor="View">
               <div className="lux-frame lux-frame--4x5 lux-frame--zoom">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -350,7 +350,7 @@ export default function HomePage() {
         </div>
         <div style={{ marginTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <p className="lux-caption" style={{ maxWidth: '48ch' }}>Short on time? The helicopter circuit covers all four in six days, with VIP darshan at each.</p>
-          <Link href="/packages/char-dham-yatra-helicopter-5n-6d-dehradun" className="lux-link">
+          <Link prefetch={false} href="/packages/char-dham-yatra-helicopter-5n-6d-dehradun" className="lux-link">
             Char Dham by helicopter <Icon name="arrowRight" size={14} />
           </Link>
         </div>
@@ -369,21 +369,21 @@ export default function HomePage() {
       <Section tone="paper">
         <SectionHead eyebrow="Most popular" title="Char Dham Yatra packages"
           lede="All four dhams in one journey — from five days to fifteen."
-          aside={<Link href="/char-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          aside={<Link prefetch={false} href="/char-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{charDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 
       <Section tone="paper" tight>
         <SectionHead eyebrow="Two dhams · one journey" title="Do Dham Yatra packages"
           lede="When time is limited but devotion is full."
-          aside={<Link href="/do-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          aside={<Link prefetch={false} href="/do-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{doDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 
       <Section tone="paper" tight>
         <SectionHead eyebrow="Focused · affordable" title="Single Dham packages"
           lede="One sacred shrine. Kedarnath as a 3N/4D package; Badrinath, Gangotri and Yamunotri from ₹4,250 in the Ek Dham guide."
-          aside={<Link href="/ek-dham-yatra" className="lux-link">Compare all four <Icon name="arrowRight" size={14} /></Link>} />
+          aside={<Link prefetch={false} href="/ek-dham-yatra" className="lux-link">Compare all four <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{singleDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 
@@ -433,12 +433,12 @@ export default function HomePage() {
               <a href={wa('Namaste! I want to book a cab for Char Dham Yatra 2026. Please share rates.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa lux-wa--sm">
                 <WhatsAppIcon size={15} /> Book cab on WhatsApp
               </a>
-              <Link href="/cabs" className="lux-link">All vehicles <Icon name="arrowRight" size={14} /></Link>
+              <Link prefetch={false} href="/cabs" className="lux-link">All vehicles <Icon name="arrowRight" size={14} /></Link>
             </div>
           </div>
           <div>
             {CAB_ROUTES.map((r) => (
-              <Link key={r.to} href="/cabs" className="lux-route-row">
+              <Link prefetch={false} key={r.to} href="/cabs" className="lux-route-row">
                 <span>
                   <span style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '0.95rem' }}>{r.from} → {r.to}</span>
                   <span className="lux-caption" style={{ display: 'block', marginTop: 3 }}>{r.dist} · {r.time}</span>
@@ -449,7 +449,7 @@ export default function HomePage() {
                 </span>
               </Link>
             ))}
-            <Link href="/char-dham-yatra-cab-booking" className="lux-link" style={{ marginTop: 20 }}>
+            <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-link" style={{ marginTop: 20 }}>
               All cab options + group rates <Icon name="arrowRight" size={14} />
             </Link>
           </div>
@@ -481,7 +481,7 @@ export default function HomePage() {
               ))}
             </div>
             <div style={{ marginTop: 30 }}>
-              <Link href="/packages" className="lux-btn lux-btn--ink">See the 2026 packages</Link>
+              <Link prefetch={false} href="/packages" className="lux-btn lux-btn--ink">See the 2026 packages</Link>
             </div>
           </div>
           <Reveal variant="right">
@@ -523,7 +523,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <Link href="/about" className="lux-link">Read our full story <Icon name="arrowRight" size={14} /></Link>
+            <Link prefetch={false} href="/about" className="lux-link">Read our full story <Icon name="arrowRight" size={14} /></Link>
           </div>
           <Reveal variant="right">
             <div className="lux-card lux-card--dark" style={{ background: 'var(--ink)', padding: 'clamp(24px,3vw,34px)' }}>
@@ -586,7 +586,7 @@ export default function HomePage() {
               <p className="lux-body" style={{ fontSize: '0.88rem', marginBottom: 16 }}>{col.body}</p>
               <div style={{ display: 'grid', gap: 8 }}>
                 {col.links.map(([label, href]) => (
-                  <Link key={href} href={href} className="lux-funnel-link">
+                  <Link prefetch={false} key={href} href={href} className="lux-funnel-link">
                     <span>{label}</span><Icon name="arrowRight" size={13} />
                   </Link>
                 ))}
@@ -620,7 +620,7 @@ export default function HomePage() {
           lede="The guides and tools pilgrims use most, before they ever call us." />
         <div className="lux-grid lux-grid--3" data-lux-stagger="">
           {TOOLS.map((l) => (
-            <Link key={l.href} href={l.href} className="lux-card lux-lift" style={{ padding: 20, display: 'flex', gap: 14, alignItems: 'flex-start', textDecoration: 'none', color: 'inherit' }}>
+            <Link prefetch={false} key={l.href} href={l.href} className="lux-card lux-lift" style={{ padding: 20, display: 'flex', gap: 14, alignItems: 'flex-start', textDecoration: 'none', color: 'inherit' }}>
               <span className="lux-ico-chip"><Icon name={l.icon} size={18} /></span>
               <div>
                 <div style={{ fontWeight: 600, fontSize: '0.92rem', color: 'var(--ink)', marginBottom: 4 }}>{l.title}</div>
@@ -634,13 +634,13 @@ export default function HomePage() {
           <p className="lux-body" style={{ fontSize: '0.9rem', margin: 0 }}>
             <strong style={{ color: 'var(--ink)' }}>Starting from your city:</strong>{' '}
             {CITY_LINKS.map(([c, h], i) => (
-              <span key={h}><Link href={h}>{c}</Link>{i < CITY_LINKS.length - 1 ? ' · ' : ''}</span>
+              <span key={h}><Link prefetch={false} href={h}>{c}</Link>{i < CITY_LINKS.length - 1 ? ' · ' : ''}</span>
             ))}
           </p>
           <p className="lux-body" style={{ fontSize: '0.9rem', margin: 0 }}>
             <strong style={{ color: 'var(--ink)' }}>Temple guides &amp; more:</strong>{' '}
             {GUIDE_LINKS.map(([c, h], i) => (
-              <span key={h}><Link href={h}>{c}</Link>{i < GUIDE_LINKS.length - 1 ? ' · ' : ''}</span>
+              <span key={h}><Link prefetch={false} href={h}>{c}</Link>{i < GUIDE_LINKS.length - 1 ? ' · ' : ''}</span>
             ))}
           </p>
         </div>

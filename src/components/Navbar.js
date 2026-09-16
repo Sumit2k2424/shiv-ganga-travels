@@ -169,7 +169,7 @@ export default function Navbar() {
           {/* Centred, with no paddingTop offsets: those existed to compensate
               for LogoMark's river tail, which hung 14px below the circle. The
               badge is square, so the lockup centres normally. */}
-          <Link href="/" className="nav-logo" style={{ display:'flex', alignItems:'center', gap:11, textDecoration:'none', flexShrink:0 }}>
+          <Link prefetch={false} href="/" className="nav-logo" style={{ display:'flex', alignItems:'center', gap:11, textDecoration:'none', flexShrink:0 }}>
             <LogoBadge size={40}/>
             <div style={{ lineHeight:1 }}>
               <div className="eq-wordmark__name">Shiv&nbsp;Ganga <span className="lt">Travels</span></div>
@@ -193,7 +193,7 @@ export default function Navbar() {
                     <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Yatra Packages</span>
                   </div>
                   {PKG_LINKS.map((l) => (
-                    <Link key={l.href} href={l.href} onClick={() => setDropOpen(false)} className="eq-drop__i">
+                    <Link prefetch={false} key={l.href} href={l.href} onClick={() => setDropOpen(false)} className="eq-drop__i">
                       <img src={l.img} alt={l.imgAlt || l.label} width={44} height={44}
                         style={{ width:44, height:44, borderRadius:'var(--ds-r-2)', objectFit:'cover', flexShrink:0 }}
                         loading="lazy" decoding="async"/>
@@ -220,7 +220,7 @@ export default function Navbar() {
                     <span className="lux-eyebrow lux-eyebrow--plain" style={{ fontSize:'0.625rem' }}>Cab &amp; Taxi Service</span>
                   </div>
                   {CAB_LINKS.map((l) => (
-                    <Link key={l.label} href={l.href} onClick={() => setCabOpen(false)} className="eq-drop__i">
+                    <Link prefetch={false} key={l.label} href={l.href} onClick={() => setCabOpen(false)} className="eq-drop__i">
                       <span className="lux-ico-chip" style={{ width:38, height:38 }}><Icon name={l.icon} size={17}/></span>
                       <div>
                         <div className="eq-drop__t">{l.label}</div>
@@ -239,7 +239,7 @@ export default function Navbar() {
               { label:'About',       href:'/about' },
               { label:'Contact',     href:'/contact' },
             ].map(l => (
-              <Link key={l.href} href={l.href} className="eq-navlink">{l.label}</Link>
+              <Link prefetch={false} key={l.href} href={l.href} className="eq-navlink">{l.label}</Link>
             ))}
 
             <div style={{ flex: 1 }}/>
@@ -276,7 +276,7 @@ export default function Navbar() {
           <nav className="eq-mobile md:hidden" aria-label="Mobile">
             <MobileAccordion label="Packages">
               {PKG_LINKS.map(l => (
-                <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
+                <Link prefetch={false} key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
                   style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:'0.82rem', color:'var(--ink-soft)', textDecoration:'none', borderBottom:'1px solid var(--rule)' }}>
                   {l.label}
                 </Link>
@@ -284,7 +284,7 @@ export default function Navbar() {
             </MobileAccordion>
             <MobileAccordion label="Cabs">
               {CAB_LINKS.map(l => (
-                <Link key={l.label} href={l.href} onClick={() => setMobileOpen(false)}
+                <Link prefetch={false} key={l.label} href={l.href} onClick={() => setMobileOpen(false)}
                   style={{ display:'flex', alignItems:'center', gap:10, padding:'11px 24px', fontSize:'0.82rem', color:'var(--ink-soft)', textDecoration:'none', borderBottom:'1px solid var(--rule)' }}>
                   <Icon name={l.icon} size={16} style={{ color:'var(--teal-dark)', flexShrink:0 }}/>
                   <div>
@@ -295,7 +295,7 @@ export default function Navbar() {
               ))}
             </MobileAccordion>
             {[{label:'Char Dham Yatra',href:'/char-dham-yatra'},{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'From Delhi',href:'/char-dham-yatra-from-delhi'},{label:'From Mumbai',href:'/char-dham-yatra-from-mumbai'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
-              <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="eq-mob-link">
+              <Link prefetch={false} key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="eq-mob-link">
                 {l.label}
               </Link>
             ))}
