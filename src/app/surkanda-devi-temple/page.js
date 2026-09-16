@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/surkanda-devi-temple');
 
 export const metadata = {
-  title: { absolute: `Surkanda Devi Temple ${SITE.season} | Timings, Ropeway & Route | Dhanaulti` },
+  title: { absolute: 'Surkanda Devi Temple | Timings, Ropeway & Route' },
   description: `A Shakti Peeth on a fogbound ridge above Dhanaulti. Real temple timings, ropeway fare, the trek from Kaddukhal, and how to reach from Haridwar.`,
   keywords: ['surkanda devi temple','surkanda devi temple timings','surkanda devi ropeway price','how to reach surkanda devi temple','surkanda devi temple trek','surkanda devi temple from haridwar','kaddukhal to surkanda devi','surkanda devi temple near dhanaulti','surkanda devi temple near mussoorie','shakti peeth triangle uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/surkanda-devi-temple` },
@@ -54,9 +54,6 @@ function Schema() {
       { '@type':'OpeningHoursSpecification', dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens:'05:00', closes:'19:00', validFrom:'2026-04-01', validThrough:'2026-10-31' },
       { '@type':'OpeningHoursSpecification', dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens:'07:00', closes:'17:00', validFrom:'2026-11-01', validThrough:'2027-03-31' },
     ],
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -117,7 +114,7 @@ export default function SurkandaDeviTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>⛰️ Shakti Peeth · 2,756m Ridge</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Surkanda Devi Temple — Timings, Ropeway &amp; the Road from Kaddukhal</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>A fogbound ridge shrine above Dhanaulti — updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>A fogbound ridge shrine above Dhanaulti</p>
       </div>
     </section>
 

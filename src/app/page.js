@@ -26,7 +26,7 @@ import { GoogleReviews } from '@/components/PageClientWidgets';
 import { Section, SectionHead, Reveal, Eyebrow, Pill, Rule } from '@/components/lux/primitives';
 
 export const metadata = {
-  title: { absolute: `Shiv Ganga Travels — Char Dham Yatra ${SITE.season}, Haridwar` },
+  title: { absolute: `Shiv Ganga Travels — Char Dham Yatra from Haridwar` },
   description: `Yamunotri · Gangotri · Kedarnath · Badrinath. Trusted direct operator, zero commission, fixed departures. Book direct.`,
   keywords: [`char dham yatra ${SITE.season}`,'char dham yatra haridwar','kedarnath yatra package','char dham yatra package from haridwar','do dham yatra','char dham helicopter package','shiv ganga travels haridwar'],
   openGraph: {
@@ -78,7 +78,7 @@ function Schema() {
     // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
-  const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: GLOBAL_FAQS.map(f => ({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
+  
   const webpage = {
     '@context':'https://schema.org','@type':'WebPage',
     '@id':`${SITE.baseUrl}/#webpage`,
@@ -90,7 +90,7 @@ function Schema() {
     primaryImageOfPage:{ '@type':'ImageObject', url:`${SITE.baseUrl}/opengraph-image` },
     speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] },
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamTrip) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(charDhamTrip) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(webpage) }}/></>);
 }
 
 /* ─── helpers ─── */
@@ -265,7 +265,7 @@ const TOOLS = [
   { icon:'map',        title:'Route Map 2026',        desc:'All distances, altitudes and stops from Haridwar.',            href:'/char-dham-yatra-route-map' },
   { icon:'calendar',   title:'Best Time to Visit',    desc:'Month-by-month weather across all four dhams.',               href:'/blog/best-time-char-dham' },
   { icon:'clipboard',  title:'Registration Guide',    desc:'Biometric yatra registration, step by step.',                 href:'/blog/char-dham-yatra-registration' },
-  { icon:'megaphone',  title:'2026 New Rules',        desc:'Phone ban, age 55+ certificate, IRCTC helicopter.',           href:'/blog/char-dham-yatra-2026-new-rules' },
+  { icon:'megaphone',  title:'2026 New Rules',        desc:'Phone ban, age 55+ certificate, IRCTC helicopter.',           href:'/blog/char-dham-yatra-registration' },
   { icon:'backpack',   title:'Packing List',          desc:'Exactly what to carry — and what to leave behind.',           href:'/blog/char-dham-yatra-packing-list' },
 ];
 
@@ -282,7 +282,7 @@ const FUNNEL = [
   { n:'1', head:'Learn & Plan', body:'New to Char Dham Yatra? Understand the route, best time, costs and what to expect before booking.',
     links:[['Complete Yatra Guide','/char-dham-yatra'],['Best Time to Visit','/blog/best-time-char-dham'],['What Does It Cost?','/blog/char-dham-yatra-cost'],['What to Pack','/blog/char-dham-yatra-packing-list']] },
   { n:'2', head:'Choose Your Yatra', body:'Browse by dham type, duration or budget. A full day-wise itinerary sits on every package page.',
-    links:[['Char Dham (All 4)','/packages/char-dham'],['Do Dham (2 shrines)','/do-dham-yatra'],['Kedarnath Only','/kedarnath-yatra'],['Helicopter Package','/char-dham-helicopter']] },
+    links:[['Char Dham (All 4)','/char-dham-yatra'],['Do Dham (2 shrines)','/do-dham-yatra'],['Kedarnath Only','/kedarnath-yatra'],['Helicopter Package','/char-dham-helicopter']] },
 ];
 
 export default function HomePage() {
@@ -369,14 +369,14 @@ export default function HomePage() {
       <Section tone="paper">
         <SectionHead eyebrow="Most popular" title="Char Dham Yatra packages"
           lede="All four dhams in one journey — from five days to fifteen."
-          aside={<Link href="/packages/char-dham" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          aside={<Link href="/char-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{charDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 
       <Section tone="paper" tight>
         <SectionHead eyebrow="Two dhams · one journey" title="Do Dham Yatra packages"
           lede="When time is limited but devotion is full."
-          aside={<Link href="/packages/do-dham" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
+          aside={<Link href="/do-dham-yatra" className="lux-link">View all <Icon name="arrowRight" size={14} /></Link>} />
         <div className="lux-home-rail">{doDham.map((p) => <LuxPkgCard key={p.slug} pkg={p} />)}</div>
       </Section>
 

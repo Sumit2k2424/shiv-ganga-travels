@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/barkot-hotels');
 
 export const metadata = {
-  title: { absolute: `Barkot Hotels ${SITE.season} | Where to Stay for Yamunotri` },
+  title: { absolute: 'Barkot Hotels | Where to Stay for Yamunotri' },
   description: `Where to stay for Yamunotri ${SITE.season} — Barkot, Janki Chatti, Hanuman Chatti and Purola compared on altitude, rooms and how early you must leave.`,
   keywords: ['barkot hotels','hotels in barkot','barkot accommodation','janki chatti hotels','hanuman chatti hotels','yamunotri hotels','where to stay yamunotri','barkot hotel booking','barkot gmvn'],
   alternates: { canonical: `${SITE.baseUrl}/barkot-hotels` },
@@ -117,10 +117,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -140,9 +137,7 @@ function Schema() {
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
   </>);
 }
@@ -187,9 +182,6 @@ export default function BarkotHotels() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <p style={p}>
           <strong>Stay at Barkot, not at Janki Chatti.</strong> That is the whole answer, and the rest of this page is why. The choice looks like a trade between comfort and proximity, and it is really a trade between sleeping at 1,220 m and sleeping at 2,650 m on the one night when nobody in your group is acclimatised yet. The 36 km you save is not worth what it costs you.

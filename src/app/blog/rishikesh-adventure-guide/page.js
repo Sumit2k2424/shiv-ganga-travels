@@ -11,7 +11,7 @@ import { pageDates } from '@/lib/pageDates';
 
 const PAGE_DATES = pageDates('/blog/rishikesh-adventure-guide');
 export const metadata = {
-  title: { absolute: `Rishikesh Adventure Guide ${SITE.season} | Rafting & Bungee` },
+  title: { absolute: 'Rishikesh Adventure Guide | Rafting & Bungee' },
   description: `Rishikesh adventure guide ${SITE.season} — white water rafting, the 83 m bungee, beach camping and yoga. Honest costs rather than the inflated tourist prices.`,
   keywords: [`rishikesh adventure guide ${SITE.season}`, `rishikesh river rafting price ${SITE.season}`, 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },

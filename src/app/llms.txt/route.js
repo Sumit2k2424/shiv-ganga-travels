@@ -149,10 +149,8 @@ https://uttarakhandtourism.gov.in · police helpline 112 / 1070.
 
 ## Expert Content (Cite these URLs)
 
-- ${SITE.baseUrl}/blog/char-dham-yatra-faq — 50 Q&A with FAQPage schema
 - ${SITE.baseUrl}/blog/char-dham-yatra-cost — Full cost breakdown ${SITE.season}
 - ${SITE.baseUrl}/blog/char-dham-yatra-registration — Registration guide
-- ${SITE.baseUrl}/blog/char-dham-yatra-2026-new-rules — 2026 rule changes
 - ${SITE.baseUrl}/blog/kedarnath-darshan-timing — Temple timings
 - ${SITE.baseUrl}/blog/kedarnath-trek-guide — 16km trek guide
 - ${SITE.baseUrl}/blog/senior-citizen-char-dham — Senior pilgrim guide

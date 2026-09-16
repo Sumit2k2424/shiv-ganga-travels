@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-7-days');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra in 7 Days ${SITE.season} | Itinerary & Honest Advice` },
+  title: { absolute: 'Char Dham Yatra in 7 Days | Itinerary & Honest Advice' },
   description: `Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.`,
   keywords: ['char dham yatra 7 days itinerary', 'char dham yatra in 7 days possible', '7 day char dham yatra plan', 'char dham yatra minimum days', `char dham yatra short duration ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
@@ -22,20 +22,8 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Can Char Dham Yatra be completed in 7 days?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, but it is not recommended for first-time pilgrims. A 7-day Char Dham Yatra involves driving 200–250km daily on narrow mountain roads and allows very limited darshan time at each shrine. The Kedarnath trek alone takes 5–7 hours one way. For pilgrims with only 7 days, Do Dham (Kedarnath + Badrinath, 5N/6D) is a better choice.' }},
-      { '@type': 'Question', name: 'What is the minimum number of days for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The minimum comfortable duration for Char Dham Yatra from Haridwar is 10 nights 11 days for road travel. Helicopter yatra can be done in 5 nights 6 days. Attempting all four dhams by road in fewer than 10 days results in exhaustion, missed darshan, and health risks at altitude.' }},
-      { '@type': 'Question', name: 'What is the 7-day Char Dham Yatra itinerary?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Day 1: Haridwar → Barkot (Yamunotri base, 175km). Day 2: Yamunotri darshan + drive to Uttarkashi. Day 3: Gangotri darshan + drive to Guptkashi. Day 4: Early morning Kedarnath trek + return to Guptkashi. Day 5: Drive Guptkashi → Joshimath (260km via Rudraprayag). Day 6: Badrinath darshan + drive back to Rishikesh/Haridwar. Day 7: Return home. This itinerary has very long driving days and minimal rest.' }},
-      { '@type': 'Question', name: 'Is 7 days enough for Char Dham Yatra for senior citizens?',
-        acceptedAnswer: { '@type': 'Answer', text: 'No. Senior pilgrims should never attempt Char Dham Yatra in 7 days. A minimum of 12 nights 13 days is recommended for pilgrims above 60 years. Rushed travel increases altitude sickness risk and physical exhaustion. Senior-friendly packages include acclimatisation stops and slower driving days.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const DAY_ITINERARY = [
@@ -86,7 +74,6 @@ export default function SevenDaysBlog() {
         <AnswerBox>
           <strong>Seven days is enough to see all four dhams, but only just, and not comfortably.</strong> It means 200–265km of mountain driving on several days, a 4am start for the Kedarnath trek and almost no slack for weather. It suits fit adults who have travelled in the hills before. For a first trip, seniors or families with children, 10 to 11 nights is the version that works — or do Do Dham properly in the same week instead.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Verdict box */}
         <div style={{ background:'#FFF3CD', border:'2px solid #E8920A', borderRadius:14, padding:'18px 20px', marginBottom:28 }}>
@@ -219,7 +206,7 @@ export default function SevenDaysBlog() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Do Dham vs Char Dham','/blog/char-dham-vs-do-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h])=>(
+            {[['Char Dham Cost 2026','/blog/char-dham-yatra-cost'],['Do Dham vs Char Dham','/do-dham-yatra'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Registration Guide','/blog/char-dham-yatra-registration'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

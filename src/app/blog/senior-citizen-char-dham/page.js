@@ -13,7 +13,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/senior-citizen-char-dham');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra for Senior Citizens ${SITE.season} | Complete Guide` },
+  title: { absolute: 'Char Dham Yatra for Senior Citizens | Full Guide' },
   description: `There is no official age limit for Char Dham. Our Senior Special is ₹21,000 for 12N/13D with pony or palki, a medical attendant, oxygen and pulse oximeters.`,
   keywords: [`senior citizen char dham yatra ${SITE.season}`, 'char dham yatra for elderly', `char dham yatra age limit ${SITE.season}`, 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
@@ -33,24 +33,9 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/senior-citizen-char-dham` };
 
-    const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question',
-        name: 'Is Char Dham Yatra safe for senior citizens above 70?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, with proper preparation and a specialised package. Shiv Ganga Travels has completed yatras with pilgrims aged 75–82. Key requirements: helicopter for Kedarnath (avoids 16km trek), medical certificate, ground-floor rooms, slower pace 12N/13D itinerary, medical attendant, and oxygen cylinder. Badrinath and Gangotri are accessible by motor road with no trekking. A medical fitness certificate from a doctor is mandatory for pilgrims 55+.' },
-      },
-      { '@type': 'Question',
-        name: 'What is the special provision for senior citizens at Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Senior citizens at Kedarnath can use: (1) Pony/horse — ₹3,000–5,000 one way from Gaurikund, (2) Palki/doli — ₹8,000–12,000 one way, carried by 4 porters, most comfortable option, (3) Helicopter — ₹7,000–9,000 one way from Phata helipad, book via IRCTC. A dedicated "Divyangjan and Senior Citizen" queue is available for darshan inside the temple — speak to our guide to access this queue.' },
-      }
-    ],
-  };
+    
   return (<>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    </>);
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>    </>);
 }
 
 

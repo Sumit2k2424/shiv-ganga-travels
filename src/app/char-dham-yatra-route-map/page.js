@@ -6,7 +6,7 @@ import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Route Map ${SITE.season} | Distances & Driving Times` },
+  title: { absolute: 'Char Dham Yatra Route Map | Distances & Driving Times' },
   description: `The Char Dham circuit from Haridwar runs roughly 1,100 km over 9 to 11 nights — every leg with distances, driving times, altitudes and the 16 km Kedarnath walk.`,
   keywords: ['char dham yatra route map',`char dham route map ${SITE.season}`,'char dham yatra road map','haridwar to char dham route','char dham yatra distance chart','char dham yatra map','kedarnath route map','haridwar to kedarnath route map','chardham route map'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-route-map` },

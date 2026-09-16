@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-kab-jayen');
 
 export const metadata = {
-  title: { absolute: `चार धाम यात्रा ${SITE.season} कब जाएं | मई, सितंबर या अक्टूबर | पूरी जानकारी` },
+  title: { absolute: 'चार धाम यात्रा कब जाएं | मई, सितंबर या अक्टूबर' },
   description: `चार धाम यात्रा ${SITE.season} के लिए सबसे अच्छा महीना। विश्वसनीय ऑपरेटर, निश्चित प्रस्थान तिथियां व तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा कब जाएं ${SITE.season}`, 'char dham yatra best time hindi', 'चार धाम यात्रा का सही समय', 'char dham yatra kab jayen', `चार धाम यात्रा मौसम ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-kab-jayen` },
@@ -22,14 +22,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'चार धाम यात्रा के लिए सबसे अच्छा महीना कौन सा है?', acceptedAnswer: { '@type': 'Answer', text: 'सितंबर और अक्टूबर — कम भीड़, साफ मौसम, 30-40% सस्ते होटल। मई का अंतिम हफ्ता भी अच्छा है। जुलाई-अगस्त में बिल्कुल मत जाएं।' } },
-      { '@type': 'Question', name: 'क्या जुलाई-अगस्त में चार धाम यात्रा हो सकती है?', acceptedAnswer: { '@type': 'Answer', text: 'नहीं — जुलाई-अगस्त में मानसून होता है। Landslide का खतरा रहता है। 2013 की केदारनाथ त्रासदी मानसून में ही हुई थी।' } },
-      { '@type': 'Question', name: 'बुजुर्गों के लिए कौन सा महीना सबसे अच्छा है?', acceptedAnswer: { '@type': 'Answer', text: 'सितंबर का पहला हफ्ता — कम भीड़, सुहावना मौसम, घोड़ा-पालकी आसानी से मिलती है।' } },
-    ],
-  };
+  
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा 2026 में कब जाएं?', inLanguage: 'hi', author: {
         '@type': 'Person',
         '@id': `${SITE.baseUrl}/#founder`,
@@ -39,7 +32,7 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-kab-jayen` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम यात्रा कब जाएं', item: `${SITE.baseUrl}/blog/char-dham-kab-jayen` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -95,7 +88,6 @@ export default function CharDhamKabJayen() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 10 }}>चार धाम 2026 — कपाट खुलने और बंद होने की तारीखें</div>

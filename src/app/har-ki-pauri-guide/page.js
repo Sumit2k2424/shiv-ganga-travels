@@ -8,7 +8,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/har-ki-pauri-guide');
 
 export const metadata = {
-  title: { absolute: `Har Ki Pauri Haridwar — Ganga Aarti Timings & Guide ${SITE.season}` },
+  title: { absolute: 'Har Ki Pauri Haridwar | Ganga Aarti Timings & Guide' },
   description: 'Har Ki Pauri Ganga Aarti is 6:30 PM in summer, 5:30 PM in winter. Where to sit, when to arrive, what it costs, and the mistakes first-timers make.',
   keywords: ['har ki pauri','har ki pauri haridwar','ganga aarti haridwar timing','har ki pauri aarti time','brahmakund haridwar','har ki pauri ganga aarti',`haridwar aarti timing ${SITE.season}`,'har ki pauri history','ganga snan haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/har-ki-pauri-guide` },
@@ -49,10 +49,7 @@ const FAQS = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context':'https://schema.org', '@type':'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-  };
+  
   const place = {
     '@context':'https://schema.org',
     '@type':['LandmarksOrHistoricalBuildings','PlaceOfWorship','TouristAttraction'],
@@ -130,9 +127,7 @@ function Schema() {
     ],
   };
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(place) }}/>
+    <>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(place) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(event) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}/>
@@ -177,9 +172,6 @@ export default function HarKiPauriGuide() {
           <strong>Har Ki Pauri is the main bathing ghat at Haridwar and the site of the evening Ganga Aarti</strong>, held daily around sunset — roughly 6pm in summer and 5.30pm in winter. It is free, needs no ticket, and is busiest on full-moon days and during Kumbh. The ghat marks the spot where the Ganga leaves the mountains for the plains, and it is where most Char Dham pilgrims begin or end the circuit.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <p style={{ fontSize:16.5, lineHeight:1.8, color:'var(--text-mid)', marginBottom:22 }}>
           Har Ki Pauri is the main bathing ghat on the Ganga at Haridwar and the site of the daily Ganga

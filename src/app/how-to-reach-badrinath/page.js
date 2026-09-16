@@ -7,7 +7,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/how-to-reach-badrinath');
 
 export const metadata = {
-  title: { absolute: `How to Reach Badrinath ${SITE.season} | Road Route & Helicopter Guide` },
+  title: { absolute: 'How to Reach Badrinath | Road Route & Helicopter' },
   description: `Road route, helicopter, train options — complete guide to reach Badrinath Dham from Haridwar, Delhi and Dehradun.`,
   keywords: ['how to reach badrinath','badrinath route from haridwar','haridwar to badrinath distance','joshimath to badrinath',`badrinath by road ${SITE.season}`,'nearest airport badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-badrinath` },
@@ -30,17 +30,6 @@ export const metadata = {
 export default function HowToReachBadrinath() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'FAQPage',
-        mainEntity: [
-          { '@type':'Question', name:'How to reach Badrinath from Haridwar?',
-            acceptedAnswer:{ '@type':'Answer', text:'Haridwar to Badrinath is approximately 320km by road via Rishikesh, Devprayag, Rudraprayag, Joshimath. The drive takes 9–10 hours. Badrinath is fully motorable — no trekking required.' }},
-          { '@type':'Question', name:'What is the nearest airport to Badrinath?',
-            acceptedAnswer:{ '@type':'Answer', text:'Jolly Grant Airport in Dehradun is the nearest airport, approximately 295km from Badrinath. Fly to Dehradun, then take a taxi to Joshimath (255km, ~7 hrs) and then to Badrinath (45km, 1.5 hrs).' }},
-          { '@type':'Question', name:'Is there helicopter service to Badrinath?',
-            acceptedAnswer:{ '@type':'Answer', text:'Yes. Helicopter service to Badrinath lands at Badrinath Helipad (adjacent to the temple). Flights operate from Sahastradhara Helipad in Dehradun. Book via IRCTC heliyatra portal only.' }},
-        ],
-      })}}/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -67,7 +56,6 @@ export default function HowToReachBadrinath() {
           <strong>Badrinath is 320km from Haridwar and takes 10 to 11 hours of mountain driving</strong> via Rishikesh, Devprayag, Rudraprayag, Chamoli and Joshimath. It is the longest single leg of the Char Dham circuit and the one pilgrims most often underestimate. There is no trek — the road runs to the temple. The nearest airport is Dehradun and the nearest railhead Haridwar. Most groups break the drive at Rudraprayag or Joshimath rather than pushing through.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
           {[['Altitude','3,133m'],['From Haridwar','~320km by road'],['Drive Time','9–10 hrs'],['Trek Required','None (motorable)'],['Nearest Town','Joshimath (45km)'],['Temple Opens','Apr 23, 2026']].map(([k,v]) => (

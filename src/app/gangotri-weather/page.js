@@ -6,7 +6,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Gangotri Weather ${SITE.season} | Month-wise Temperature Guide` },
+  title: { absolute: 'Gangotri Weather | Month-wise Temperature Guide' },
   description: `Month-by-month Gangotri weather guide. Best time to visit, what to pack, temperature ranges at 3,415m.`,
   keywords: ['gangotri weather','gangotri temperature','gangotri weather may','gangotri best time to visit',`gangotri weather ${SITE.season}`,'gangotri snowfall'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-weather` },

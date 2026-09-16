@@ -31,14 +31,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the last time to start Kedarnath trek from Gaurikund?', acceptedAnswer: { '@type': 'Answer', text: 'The last permitted time to start the Kedarnath trek from Gaurikund is 1:30 PM. No pilgrim will be allowed to begin the trek after this time. This rule is enforced by the Rudraprayag district administration for safety reasons — to ensure all trekkers reach Kedarnath before dark or return to lower camps safely.' } },
-      { '@type': 'Question', name: 'What time should I start the Kedarnath trek for Maha Abhishek?', acceptedAnswer: { '@type': 'Answer', text: 'To attend the Maha Abhishek (4:30 AM puja) at Kedarnath, you must either already be at Kedarnath (overnight stay) or begin the trek the previous afternoon. The Maha Abhishek is only accessible to pilgrims who have stayed overnight at Kedarnath or in the camps near the temple. Starting the trek at 5–6 AM the same morning will result in arriving around 12–1 PM — too late for Abhishek.' } },
-      { '@type': 'Question', name: 'What time does the Kedarnath temple open and close?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple opens at 4:00 AM for the Maha Abhishek puja. General darshan starts at 6:00 AM. The temple closes at 3:00 PM strictly for afternoon prayers and reopens at 5:00 PM for evening darshan. The evening Aarti is at 7:30–8:00 PM. The temple closes for the night at 9:00 PM.' } },
-    ],
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -47,7 +40,7 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Kedarnath Trek Timings 2026', item: `${SITE.baseUrl}/blog/kedarnath-trek-timings-2026` },
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
 }
 
 
@@ -206,7 +199,7 @@ export default function TrekTimings() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Registration', '/blog/kedarnath-registration-2026'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
+            {[['Kedarnath Trek Guide', '/blog/kedarnath-trek-guide'], ['Pony & Palki Rates', '/kedarnath-pony-palki-kandi-rates'], ['VIP Darshan', '/kedarnath-vip-darshan'], ['Kedarnath Registration', '/blog/char-dham-yatra-registration'], ['Kedarnath Darshan Timings', '/blog/kedarnath-darshan-timing']].map(([l, h]) => (
               <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

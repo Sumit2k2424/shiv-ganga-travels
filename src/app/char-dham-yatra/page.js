@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/char-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Package ${SITE.season} | Hotels & Transport Included` },
+  title: { absolute: 'Char Dham Yatra Package from Haridwar | All-Inclusive' },
   description: `Char Dham Yatra package ${SITE.season} from Haridwar — 9N/10D from ₹13,900 per person with hotels, meals and transport included. Booked direct, no agent commission.`,
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package',`4 dham yatra ${SITE.season}`,
@@ -64,21 +64,11 @@ function Schema() {
     // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: GLOBAL_FAQS.slice(0, 6).map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
       <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
@@ -569,11 +559,11 @@ export default function CharDhamYatra() {
           </h3>
           <div style={{ display:'flex', flexWrap:'wrap', gap:10 }}>
             {[
-              { label:'View Char Dham Packages →',     href:'/packages/char-dham' },
+              { label:'View Char Dham Packages →',     href:'/char-dham-yatra' },
               { label:'Kedarnath Yatra →',             href:'/kedarnath-yatra' },
               { label:'Char Dham Yatra Guide 2026 →',  href:'/char-dham-yatra' },
-              { label:'Do Dham Packages →',            href:'/packages/do-dham' },
-              { label:'Helicopter Char Dham →',        href:'/packages/helicopter' },
+              { label:'Do Dham Packages →',            href:'/do-dham-yatra' },
+              { label:'Helicopter Char Dham →',        href:'/char-dham-helicopter' },
               { label:'All Packages →',               href:'/packages' },
             ].map(l => (
               <Link key={l.href} href={l.href}

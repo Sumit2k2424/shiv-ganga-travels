@@ -74,7 +74,6 @@ export default function ChandiDeviTemple() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Chandi Devi Temple', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

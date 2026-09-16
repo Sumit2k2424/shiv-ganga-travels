@@ -191,12 +191,9 @@ export function buildSchema({ slug, name, description, geo, faqs, crumbs, publis
   const dates = pageDates(`/${slug}`);
   published = published || dates.createdISO;
   const out = [];
-  if (faqs?.length) {
-    out.push({
-      '@context':'https://schema.org', '@type':'FAQPage',
-      mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-    });
-  }
+  // FAQPage JSON-LD is no longer emitted (17 Sep 2026): Google shows FAQ rich results
+  // only for government and health sites, and marking up every page as an FAQ was
+  // pure schema volume. The visible FAQ accordion stays; the markup does not.
   if (types) {
     out.push({
       '@context':'https://schema.org',

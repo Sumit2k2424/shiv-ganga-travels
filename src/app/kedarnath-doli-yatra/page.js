@@ -94,7 +94,6 @@ export default function KedarnathDoliYatra() {
       <Crumbs trail={[['Kedarnath Doli Yatra', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

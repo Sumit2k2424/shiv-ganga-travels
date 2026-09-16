@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/kedarnath-darshan-timing');
 
 export const metadata = {
-  title: { absolute: `Kedarnath Darshan Timings ${SITE.season} | Aarti & VIP Slots` },
+  title: { absolute: 'Kedarnath Darshan Timings | Aarti & VIP Slots' },
   description: `Kedarnath darshan timings ${SITE.season}: morning 6 AM–3 PM, evening 5–9 PM. Mahabhishek 4 AM, Shringaar Aarti 7:30 PM. How to book VIP darshan ₹1,100.`,
   keywords: [`kedarnath darshan timings ${SITE.season}`, 'kedarnath temple opening time', 'kedarnath darshan time', `kedarnath mandir timing ${SITE.season}`, 'kedarnath aarti time', 'kedarnath VIP darshan booking', 'kedarnath temple closing time'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-darshan-timing` },
@@ -23,19 +23,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What time does Kedarnath temple open for darshan in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple opens for general darshan at 6:00 AM daily in 2026. The Mahabhishek puja begins at 4:00 AM (advance booking required, ₹3,100). General darshan runs from 6 AM to 3 PM, then resumes at 5 PM until 9 PM. The temple closes at 9:00 PM.' }},
-      { '@type': 'Question', name: 'What is the Kedarnath Mahabhishek timing and cost?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath Mahabhishek is performed at 4:00 AM daily. It is a special private puja where the Shivalinga is bathed with milk, honey, ghee, and sacred herbs while Vedic mantras are recited. The cost is ₹3,100 per person. Advance booking is required through the Kedarnath temple committee or through your tour operator. Shiv Ganga Travels books Mahabhishek for all our Kedarnath packages.' }},
-      { '@type': 'Question', name: 'What is the best time to visit Kedarnath for darshan?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The best time for Kedarnath darshan is 5:00–8:00 AM. The temple queue is shortest at this time, the mountain light is golden, and the atmosphere is most peaceful. By 10 AM–12 PM, queues can stretch 1–3 hours. Afternoon darshan (5–7 PM) is second-best — the evening aarti at 7:30 PM is particularly moving. Avoid 10 AM–3 PM peak hours if possible.' }},
-      { '@type': 'Question', name: 'What is the Kedarnath temple opening date 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple opened on April 22, 2026 at 8:00 AM with the Mahabhishek ceremony. The 2026 season closes on November 11, 2026 (Bhai Dooj). The opening date is announced on Maha Shivratri each year by the temple priests at Omkareshwar Temple, Ukhimath.' }},
-    ],
-  };
+  
   const event = {
     '@context': 'https://schema.org', '@type': 'TouristAttraction',
     name: 'Kedarnath Temple',
@@ -47,9 +35,7 @@ function Schema() {
     description: 'Kedarnath Temple — one of the 12 Jyotirlingas, dedicated to Lord Shiva. Located at 3,583m in Rudraprayag district, Uttarakhand.',
   };
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(event) }}/>
+    <>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(event) }}/>
     </>
   );
 }
@@ -118,7 +104,6 @@ export default function KedarnathTimings() {
         <AnswerBox>
           <strong>Kedarnath opens around 4am for Maha Abhishek and closes about 9pm, with a break through the afternoon.</strong> General darshan runs roughly 6am to 3pm and 5pm to 7pm, and the evening Shringar Aarti is around 6.30 to 7.30pm. Queues are shortest between 7am and 9am and longest in the middle of the day when the morning's trekkers arrive. Timings shift slightly on festival days and are set by the temple committee.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Verified for current season</div>
 
         {/* Quick summary box */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:12 }}>

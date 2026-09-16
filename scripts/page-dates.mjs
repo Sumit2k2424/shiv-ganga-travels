@@ -49,19 +49,57 @@ const SITE_WIDE_DATA = new Set([
   'haridwarPlaces', 'localTaxi',
 ]);
 
+// ── 0. commits that touched pages without changing what a reader sees ──────
+// A commit that edits every page.js to remove a dead link, rename a constant,
+// rewrite a <title> or add a schema node is not a content update, and a
+// site-wide "modified today" that follows one is exactly the artificial-
+// freshness pattern Google's guidance warns about. On 13–15 Sep 2026 three such
+// commits stamped 99 of 105 routes as modified in the same week.
+//
+// Two ways a commit is skipped here: its hash is listed below, or its subject
+// contains the token `[housekeeping]`. Use the token on every future commit
+// whose purpose is links, metadata, schema, tracking or deletion — anything a
+// reader would not notice on the page. A commit that changes prose, prices,
+// dates, tables or itineraries must NOT carry it.
+const HOUSEKEEPING = new Set([
+  '3f682d7', // 14 Sep 2026 — 410 list, noindex, founding-claim removal across 218 pages
+  '992b378', // 13 Sep 2026 — wired the per-page dates themselves into 169 pages
+  'e02a490', // 15 Sep 2026 — deleted the templated tiers; touched 33 survivors' links
+  'd3bdcb0', // 13 Sep 2026 — reviews constant + UTDB/IATO claim removal
+  'e299149', // 13 Sep 2026 — hreflang wiring
+  'd0a1df3', // 13 Sep 2026 — noindex flags
+  'a4f4999', // 13 Sep 2026 — cab index gate
+  'cd410da', // 14 Sep 2026 — schema type swap
+  '433f32d', // 13 Sep 2026 — GSTIN line
+  'fee480d', // 13 Sep 2026 — cab 308s
+  '91eba5c', //  1 Sep 2026 — 109 meta descriptions
+  'a7a9fed', // 31 Aug 2026 — 65 <title> trims
+  'ea2ae5e', //  1 Sep 2026 — 19 <title> trims
+  '74a43a1', //  1 Sep 2026 — homepage <title>
+  '3aa489c', // 27 Aug 2026 — orphan-link mesh
+  '196d3f4', // 31 Aug 2026 — og:image on cab templates
+  'bf714d5', //  3 Sep 2026 — prefetch attribute sweep
+]);
+
 // ── 1. one pass over history: file → { created, modified } ─────────────────
 const log = execFileSync(
   'git',
-  ['log', '--format=C %cs', '--name-only', '--diff-filter=AMR', '--', 'src/app', 'src/data'],
+  ['log', '--format=C %cs %h %s', '--name-only', '--diff-filter=AMR', '--', 'src/app', 'src/data'],
   { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 },
 );
 const dates = new Map(); // path (posix) → { created, modified }
 let cur = null;
+let skip = false;
 for (const raw of log.split('\n')) {
   const line = raw.trim().replace(/^'|'$/g, '');
   if (!line) continue;
-  if (line.startsWith('C ')) { cur = line.slice(2); continue; }
-  if (!cur) continue;
+  if (line.startsWith('C ')) {
+    const [, date, hash, ...subject] = line.split(' ');
+    cur = date;
+    skip = HOUSEKEEPING.has(hash) || subject.join(' ').includes('[housekeeping]');
+    continue;
+  }
+  if (!cur || skip) continue;
   const e = dates.get(line);
   if (!e) dates.set(line, { modified: cur, created: cur }); // newest first
   else e.created = cur;                                     // keeps walking back

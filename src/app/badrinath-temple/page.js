@@ -4,7 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: `Badrinath Temple Guide ${SITE.season} | Darshan Timings, Opening Apr 23` },
+  title: { absolute: 'Badrinath Temple | Darshan Timings, History & Opening' },
   description: `Badrinath temple ${SITE.season} — darshan 4:30 AM to 9 PM, opens April 23, and no trek at all. Mahabhishek timings, Mana village, Brahma Kapal and how to reach.`,
   keywords: ['badrinath temple',`badrinath temple timings ${SITE.season}`,'badrinath darshan timings',`badrinath temple opening date ${SITE.season}`,'badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
@@ -24,14 +24,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   // These PAA questions are the only Q&A on the page, so this IS the page's
   // single FAQPage node. (It used to `return null` on the assumption that a
   // main FAQ node existed further down — on this page there isn't one, so the
   // answers were rendering to readers and staying invisible to search and AI
   // engines. Do not re-add a second FAQPage node here.)
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
+  return null;
 }
 
 export default function BadrinathTemple() {

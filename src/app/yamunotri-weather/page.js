@@ -83,10 +83,7 @@ function Schema() {
     spatialCoverage:{ '@type':'Place', name:'Yamunotri, Uttarkashi district, Uttarakhand, India', geo:{ '@type':'GeoCoordinates', latitude:31.0139, longitude:78.4600 } },
     temporalCoverage:'2026-04-19/2026-11-11',
   };
-  const faqSchema = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-  };
+  
   const breadcrumb = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -97,9 +94,7 @@ function Schema() {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
   </>);
 }
 
@@ -107,7 +102,7 @@ const th = { padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11,
 const td = { padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5, verticalAlign:'top' };
 
 export const metadata = {
-  title: { absolute: `Yamunotri Weather ${SITE.season} | Month-wise Temperature Guide` },
+  title: { absolute: 'Yamunotri Weather | Month-wise Temperature Guide' },
   description: `Yamunotri weather month by month at 3,291m — what to pack each season, from fleece and rain ponchos to thermals and gloves. Best windows and monsoon risk.`,
   keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit',`yamunotri weather ${SITE.season}`,'yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },

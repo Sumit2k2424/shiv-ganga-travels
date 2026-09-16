@@ -7,7 +7,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/chopta-tungnath');
 
 export const metadata = {
-  title: { absolute: `Chopta Tungnath Trek Guide ${SITE.season} | Best Time, Route & Packages` },
+  title: { absolute: 'Chopta Tungnath Trek | Best Time, Route & Packages' },
   description: `Chopta is 235 km from Haridwar, 7 to 8 hours. Tungnath at 3,680m is 3.5 km up, Chandrashila 4,000m another 1.5 km. Best months, route and packages.`,
   keywords: ['chopta uttarakhand','tungnath temple','chopta tungnath trek',`chopta best time to visit ${SITE.season}`,'chopta from haridwar','chandrashila trek','mini switzerland india'],
   alternates: { canonical: `${SITE.baseUrl}/chopta-tungnath` },
@@ -30,17 +30,6 @@ export const metadata = {
 export default function ChoptaTungnath() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'FAQPage',
-        mainEntity: [
-          { '@type':'Question', name:'What is the best time to visit Chopta?',
-            acceptedAnswer:{ '@type':'Answer', text:'February–April for snowfall and frozen landscapes (trek requires snow gear). May–June for blooming rhododendrons. September–November for clear skies and Himalayan views. Winter (Dec–Jan) is extreme cold but offers the best snow photography.' }},
-          { '@type':'Question', name:'How to reach Chopta from Haridwar?',
-            acceptedAnswer:{ '@type':'Answer', text:'Haridwar to Chopta is approximately 235km via Rishikesh–Rudraprayag–Ukhimath–Chopta. The drive takes 7–8 hours. Chopta is 13km from Ukhimath on a winding mountain road. No public bus service directly to Chopta — taxi is recommended.' }},
-          { '@type':'Question', name:'What is the Tungnath Chandrashila trek?',
-            acceptedAnswer:{ '@type':'Answer', text:'The Tungnath-Chandrashila trek starts from Chopta and covers 3.5km to Tungnath temple (3,680m) and another 1.5km to Chandrashila summit (4,000m). Total one-way trek is 5km (3–4 hours up). The Chandrashila summit offers 360° panoramic views of Nanda Devi, Trishul, Chaukhamba and Kedarnath range.' }},
-        ],
-      })}}/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -67,7 +56,6 @@ export default function ChoptaTungnath() {
           <strong>Tungnath is the highest Shiva temple in the world at 3,680m, reached by a 3.5km trek from Chopta.</strong> The walk takes 1.5 to 2 hours on a made path and is the easiest of the Panch Kedar by a distance. Chandrashila summit is another 1.5km above the temple and worth the extra hour for the Nanda Devi view. Chopta is about 200km from Haridwar; the temple opens around May and closes in November, though the trek stays popular in snow.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Chopta Altitude','2,680m'],['Tungnath','3,680m (temple)'],['Chandrashila','4,000m (summit)'],['Trek Distance','5km one way'],['From Haridwar','235km · 7–8 hrs'],['Best Season','May–June, Oct–Nov']].map(([k,v]) => (

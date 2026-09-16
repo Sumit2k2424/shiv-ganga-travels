@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/kedarnath-vip-darshan');
 
 export const metadata = {
-  title: { absolute: `Kedarnath VIP Darshan Ticket Price ${SITE.season} | Booking Guide` },
+  title: { absolute: 'Kedarnath VIP Darshan Ticket Price | Booking Guide' },
   description: `No flat VIP pass at Kedarnath — priority sanctum access comes bundled with BKTC pujas, ₹300 to ₹28,600. Full ${SITE.season} price list, booking steps and sparsh darshan.`,
   keywords: [`kedarnath vip darshan ${SITE.season}`,'kedarnath vip darshan booking','kedarnath vip darshan ticket price','kedarnath vip darshan online booking','kedarnath puja booking','kedarnath rudrabhishek price','kedarnath special darshan','kedarnath sparsh darshan','kedarnath mahabhishek booking','bktc puja booking','kedarnath vip darshan cost',`kedarnath darshan timing ${SITE.season}`,'badrinath vip darshan price'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-vip-darshan` },
@@ -32,18 +32,7 @@ export const metadata = {
 const UPDATED = 'July 2026';
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the Kedarnath VIP darshan price in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'There is no single fixed VIP ticket at Kedarnath. Priority sanctum access is bundled with a paid puja booked through the BKTC temple committee. The committee-set minimum for special darshan is ₹300 per person; the commonly bought option is the ₹1,100 special darshan parchi. Bigger pujas cost more — Rudrabhishek around ₹1,700, evening Sampoorna Aarti around ₹3,100 per person, Shodashopachar from ₹7,500, Maha Abhishek ₹5,500+, and the full-day puja up to ₹28,600 for a group of five. Confirm the live rate on badrinath-kedarnath.gov.in before paying anyone.' } },
-      { '@type': 'Question', name: 'Is general darshan at Kedarnath free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. General darshan at Kedarnath is completely free — no entry ticket, no darshan fee, no queue-token cost. You complete the free yatra registration, join the general queue, and enter when your turn comes. What costs money are optional puja bookings (Rudrabhishek, Maha Abhishek, Shodashopachar, aarti) that buy priority entry and inner-sanctum time. VIP darshan is an enhancement, not a requirement.' } },
-      { '@type': 'Question', name: 'How do I book Kedarnath VIP darshan online?', acceptedAnswer: { '@type': 'Answer', text: 'Go to badrinath-kedarnath.gov.in, log in or sign up with your mobile number, click Book Puja Online and select Kedarnath Dham, accept the terms, choose your puja and add it to the cart, enter the participants details (name and gotra), confirm the amount, pay online, and download the receipt. Carry a printed receipt and a government photo ID to the puja counter. All bookings are non-refundable and non-transferable.' } },
-      { '@type': 'Question', name: 'What is sparsh darshan at Kedarnath?', acceptedAnswer: { '@type': 'Answer', text: 'Sparsh darshan means physically touching the Shivling inside the Garbha Griha (inner sanctum), as opposed to viewing it from the outer hall. At Kedarnath the Shivling is a natural trapezoidal rock, not a carved idol, which makes the contact especially meaningful. Sparsh darshan is available only to puja/VIP holders and only before 3:00 PM. There is no separate sparsh ticket — it comes with any special-darshan puja booking.' } },
-      { '@type': 'Question', name: 'Can Kedarnath VIP darshan be suspended?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BKTC can suspend or pause VIP darshan and pujas during extremely heavy rush, major festivals, or bad weather to manage crowd flow, and during a solar or lunar eclipse the temple closes and booked pujas are rescheduled. VIP darshan is never fully guaranteed in peak May–June. This is why advance booking on the official portal, plus a flexible plan, is the safest approach.' } },
-      { '@type': 'Question', name: 'Is the Kedarnath VIP darshan tout scam real?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it catches first-timers every season. Touts, some posing as priests or agents, sell fake VIP darshan or Garbha Griha entry for ₹2,000–5,000 in cash near the temple. There is no loose VIP pass — access only comes with an official BKTC puja receipt. Anything sold outside that counter is fraud, and accepting a backdoor entry can get you removed and your yatra registration flagged. Pay only on badrinath-kedarnath.gov.in or at the official BKTC counter.' } },
-      { '@type': 'Question', name: 'What is the Badrinath VIP darshan price in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Badrinath works the same way — same committee, same portal, puja-linked priority. Basic special darshan starts at ₹300 per person. Puja-based access ranges from about ₹151 for the Kapoor Aarti up to ₹5,500 for the pre-dawn Maha Abhishek, the most-booked VIP option. BKTC raised special-puja charges by roughly 10–20% for the 2026 season, so older price lists are out of date. Book only on badrinath-kedarnath.gov.in.' } },
-    ],
-  };
+  
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl },
     { '@type': 'ListItem', position: 2, name: 'Kedarnath Yatra', item: `${SITE.baseUrl}/kedarnath-yatra` },
@@ -56,9 +45,7 @@ function Schema() {
   const wp = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${SITE.baseUrl}/kedarnath-vip-darshan#webpage`,
     url: `${SITE.baseUrl}/kedarnath-vip-darshan`, name: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan', inLanguage: 'en-IN',
     dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wp) }} />
   </>);
@@ -80,8 +67,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type': 'Question', name: x.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -230,7 +216,7 @@ export default function KedarnathVipDarshan() {
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: Badrinath VIP darshan · <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
+            Related: Badrinath VIP darshan · <Link href="/kedarnath-pony-palki-kandi-rates" style={{ color: 'var(--teal)' }}>Pony, palki &amp; kandi rates</Link> · <Link href="/blog/kedarnath-darshan-timing" style={{ color: 'var(--teal)' }}>Kedarnath darshan timings</Link> · <Link href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)' }}>Helicopter booking</Link>
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

@@ -20,7 +20,7 @@ const PAGE_DATES = pageDates('/blog/mana-village-badrinath');
    change is the version of this page that is worth citing. */
 
 export const metadata = {
-  title: { absolute: `Mana Village Near Badrinath ${SITE.season} — India's First (and Last) Village` },
+  title: { absolute: 'Mana Village near Badrinath | India\'s Last Village' },
   description: 'Mana village, 3km from Badrinath — officially renamed India\'s first village in 2022, long known as its last. Vyas Gufa, Bhim Pul, the Saraswati, and what to actually plan for.',
   keywords: ['mana village near badrinath', 'mana village last village india', 'mana village first village india', `mana village guide ${SITE.season}`, 'mana village vyas gufa', 'bhim pul mana village', 'india last village tibet border', 'mana village distance badrinath'],
   alternates: { canonical: `${SITE.baseUrl}/blog/mana-village-badrinath` },
@@ -64,10 +64,7 @@ function Schema() {
     },
     mainEntityOfPage: `${SITE.baseUrl}/blog/mana-village-badrinath`,
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -77,9 +74,7 @@ function Schema() {
     ],
   };
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
   </>);
 }
 
@@ -117,7 +112,6 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>Most Badrinath pilgrims spend their entire time at the temple, do their darshan, and leave without ever knowing that 3km up the same road is one of the most extraordinary places in India. Mana Village — officially the last inhabited village before the China (Tibet) border — sits at 3,200m at the confluence of the Saraswati and Alaknanda rivers, surrounded by peaks above 6,000m, and it has been continuously inhabited for over a thousand years.</p>
         <p style={p}>The village is small — maybe 70–80 stone houses — and for eight months of the year it is completely buried under snow. The Bhotia community who live here migrate to the lower valleys every winter and return in April when the Badrinath temple reopens. Beyond Mana the road continues to the Mana Pass and into Tibet; there is nothing else on the Indian side.</p>

@@ -15,7 +15,7 @@ import { Section, SectionHead, Reveal, Eyebrow } from '@/components/lux/primitiv
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 
 export const metadata = {
-  title: { absolute: `Uttarakhand Taxi Service ${SITE.season} | Fixed Fares | Instant Enquiry` },
+  title: { absolute: 'Uttarakhand Taxi Service from Haridwar | Fixed Fares' },
   description: `Cabs from Haridwar, Rishikesh and Dehradun across Uttarakhand — one fixed all-in fare per run, doorstep pickup, no station surcharge, hill-trained drivers.`,
   keywords: ['uttarakhand taxi service', 'haridwar cab booking', 'rishikesh taxi', 'dehradun cab', `char dham taxi ${SITE.season}`, 'uttarakhand cab fare'],
   alternates: { canonical: `${SITE.baseUrl}/cabs` },

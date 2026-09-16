@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-kitna-kharcha');
 
 export const metadata = {
-  title: { absolute: `चार धाम यात्रा ${SITE.season} खर्चा | कीमत ₹13,900 से शुरू | पूरी जानकारी` },
+  title: { absolute: 'चार धाम यात्रा का खर्चा | पूरी जानकारी' },
   description: `हरिद्वार से चार धाम यात्रा ${SITE.season} का खर्चा ₹13,900 से शुरू। विश्वसनीय ऑपरेटर, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा ${SITE.season} खर्चा`, `char dham yatra kitna kharcha ${SITE.season}`, 'हरिद्वार से चार धाम यात्रा कितने रुपये', 'char dham yatra cost hindi', 'चार धाम यात्रा प्रति व्यक्ति खर्च'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` },
@@ -22,14 +22,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'चार धाम यात्रा में कितना पैसा लगता है?', acceptedAnswer: { '@type': 'Answer', text: 'हरिद्वार से चार धाम यात्रा 2026 में प्रति व्यक्ति ₹13,900 से ₹28,000 तक खर्चा होता है। इसमें गाड़ी, होटल, खाना, VIP दर्शन और गाइड शामिल हैं। केदारनाथ घोड़ा (₹3,500–4,500) अलग से लग सकता है।' } },
-      { '@type': 'Question', name: 'क्या चार धाम यात्रा रजिस्ट्रेशन मुफ्त है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ, 2026 में चार धाम यात्रा का पंजीकरण बिल्कुल मुफ्त है। registrationandtouristcare.uk.gov.in पर ऑनलाइन करें — एक भी रुपया नहीं लगता।' } },
-      { '@type': 'Question', name: 'क्या सितंबर में चार धाम यात्रा सस्ती होती है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ — सितंबर-अक्टूबर में होटल 30-40% सस्ते, भीड़ कम, घोड़ा आसानी से मिलता है। हम सितंबर-अक्टूबर में जाने की खास सलाह देते हैं।' } },
-    ],
-  };
+  
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'चार धाम यात्रा 2026 में कितना खर्चा आता है?', inLanguage: 'hi', author: {
         '@type': 'Person',
         '@id': `${SITE.baseUrl}/#founder`,
@@ -39,7 +32,7 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम यात्रा खर्चा 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-kitna-kharcha` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -82,7 +75,6 @@ export default function CharDhamKharcha() {
         <AnswerBox>
           <strong>चार धाम यात्रा का खर्च हरिद्वार से ₹13,900 प्रति व्यक्ति से शुरू होता है — 9 रात 10 दिन, सब कुछ शामिल।</strong> इसमें गाड़ी, होटल, नाश्ता-खाना, गाइड, टोल-पार्किंग और रजिस्ट्रेशन आता है। डीलक्स पैकेज ₹30,000 तक जाता है और हेलीकॉप्टर चार्टर करीब ₹2,30,000। अलग से रखें — केदारनाथ का घोड़ा (₹3,000–5,000) या हेलीकॉप्टर (₹7,000–9,000 एक तरफ़), और निजी खर्च।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         {/* Quick answer box */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

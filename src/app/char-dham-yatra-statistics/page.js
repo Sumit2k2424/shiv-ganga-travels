@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Statistics ${SITE.season} | Pilgrim Data & Trends` },
+  title: { absolute: 'Char Dham Yatra Statistics | Pilgrim Data & Trends' },
   description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', `char dham statistics ${SITE.season}`, 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
@@ -282,7 +282,7 @@ export default function Page() {
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>More Authoritative Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Char Dham Complete Guide',h:'/blog/char-dham-yatra-complete-guide'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/blog/char-dham-yatra-faq'}].map(l => (
+            {[{l:'Char Dham Complete Guide',h:'/char-dham-yatra'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/char-dham-yatra'}].map(l => (
               <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>

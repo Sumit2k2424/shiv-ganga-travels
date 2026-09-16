@@ -57,7 +57,8 @@ export default function GuideArticle({
 }) {
   const authorName = author === 'sumit' ? 'Sumit Mishra' : 'Dhanesh Chandra Mishra';
   const dates = pageDates(`/blog/${slug}`);
-  updated = updated || `Updated ${dates.modifiedHuman}`;
+  // The hero no longer prints a derived 'Updated …' label: a date a reader
+  // sees must be one a person set. Pass `updated` explicitly when it is.
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -93,20 +94,13 @@ export default function GuideArticle({
     mainEntityOfPage: `${SITE.baseUrl}/blog/${slug}`,
   };
 
-  const faqLd = faqs.length ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.plain || f.a },
-    })),
-  } : null;
+  // FAQPage JSON-LD is no longer emitted (17 Sep 2026): Google shows FAQ rich results
+  // only for government and health sites, and marking up every page as an FAQ was
+  // pure schema volume. The visible FAQ accordion stays; the markup does not.
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <ReadingProgress />
 
@@ -115,7 +109,7 @@ export default function GuideArticle({
         title={title}
         dek={subtitle}
         author={authorName}
-        updated={`Updated ${updated}`}
+        updated={updated}
         readTime={readTime}
         facts={facts.map(([label, value]) => ({ label, value }))}
       />
@@ -131,7 +125,6 @@ export default function GuideArticle({
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author={author} />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {updated} · Verified for current season</div>
 
         {answer && <AnswerBox>{answer}</AnswerBox>}
         {takeaways.length > 0 && <KeyTakeaways points={takeaways} />}

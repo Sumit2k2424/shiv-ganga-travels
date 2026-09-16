@@ -12,25 +12,15 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-medical-certificate');
 
 export const metadata = {
-  title: { absolute: `Char Dham Medical Certificate ${SITE.season} | Who Needs It` },
+  title: { absolute: 'Char Dham Medical Certificate | Who Needs It & Format' },
   description: `Char Dham Yatra ${SITE.season} medical certificate is mandatory for pilgrims 55+. SpO2 under 85% means being turned back. Which tests, which doctors, how to prepare.`,
   keywords: [`char dham yatra medical certificate ${SITE.season}`, 'char dham yatra fitness certificate', `medical certificate kedarnath ${SITE.season}`, 'char dham yatra age limit medical', 'char dham oxygen level requirement', 'char dham yatra doctor certificate'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-medical-certificate` },
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Is medical certificate mandatory for Char Dham Yatra 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. A medical fitness certificate is mandatory for all pilgrims aged 55 years and above for Char Dham Yatra 2026. It must be issued by a registered MBBS doctor and must state the pilgrim is fit for high-altitude travel. Without it, pilgrims aged 55+ will be turned back at biometric registration checkpoints.' }},
-      { '@type': 'Question', name: 'What should the Char Dham Yatra medical certificate say?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The certificate must include: (1) Pilgrim name as per Aadhaar, (2) Age and date of birth, (3) Statement: "The above patient is physically and medically fit for high-altitude travel to Kedarnath/Char Dham Yatra", (4) Any current medications being taken, (5) Doctor name, registration number, clinic address, signature, and date. The date must be within 30 days of the yatra start date.' }},
-      { '@type': 'Question', name: 'Which doctor can issue the Char Dham Yatra medical certificate?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Any registered MBBS doctor can issue the Char Dham Yatra medical certificate — government or private hospital. The doctor should be an allopathic practitioner with a valid registration number. Ayurvedic, homeopathic, or dental doctors cannot issue this certificate. A general physician at any government hospital, private clinic, or family doctor with MBBS qualification is acceptable.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const H2 = h2;
@@ -73,7 +63,6 @@ export default function MedicalCertificate() {
         <AnswerBox>
           <strong>A medical fitness certificate is mandatory for every pilgrim aged 55 and over</strong>, uploaded during Char Dham registration. Any registered doctor can issue it — you do not need a large hospital — and it should confirm you are fit for altitudes above 3,000m. Below 55 it is not required, but anyone with a cardiac, respiratory or blood-pressure condition should carry a doctor's note and their own medication regardless of what the rules demand.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#FFF3CD', border:'2px solid var(--gold)', borderRadius:12, padding:'16px 20px', marginBottom:28, display:'flex', gap:14, alignItems:'flex-start' }}>
           <span style={{ fontSize:26, flexShrink:0 }}>⚠️</span>
@@ -163,7 +152,7 @@ export default function MedicalCertificate() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham FAQ','/blog/char-dham-yatra-faq'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
+            {[['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],['Char Dham FAQ','/char-dham-yatra'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

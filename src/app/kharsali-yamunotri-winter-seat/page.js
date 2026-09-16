@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/kharsali-yamunotri-winter-seat');
 const S = SEATS.kharsali;
 
 export const metadata = {
-  title: { absolute: 'Kharsali — Yamunotri\'s Winter Seat & Shani Dev Temple' },
+  title: { absolute: "Kharsali | Yamunotri's Winter Seat & Shani Temple" },
   description: 'Yamuna winters at Kharsali, opposite Janki Chatti. The village also holds one of India\'s oldest Shani Dev temples — and Shani is her brother.',
   keywords: ['kharsali','kharsali village','yamunotri winter seat','khushimath','yamuna winter abode','kharsali shani dev temple','yamunotri in winter','kharsali how to reach'],
   alternates: { canonical: `${SITE.baseUrl}/kharsali-yamunotri-winter-seat` },
@@ -75,7 +75,6 @@ export default function KharsaliWinterSeat() {
       <Crumbs trail={[['Kharsali', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

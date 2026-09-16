@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/kainchi-dham');
 
 export const metadata = {
-  title: { absolute: 'Kainchi Dham — Timings, Distance & Neem Karoli Baba\'s Ashram' },
+  title: { absolute: 'Kainchi Dham | Timings, Distance & Neem Karoli Ashram' },
   description: 'Kainchi Dham near Nainital — timings (6 AM–6 PM, free entry), distance from Nainital, Kathgodam, Delhi and Haridwar, the nearest railway station, the 15 June mela, and the Steve Jobs story people get wrong.',
   keywords: ['kainchi dham','neem karoli baba','kainchi dham nainital','kainchi dham temple','neem karoli baba ashram','kainchi dham mela 15 june','kainchi dham steve jobs','how to reach kainchi dham','kainchi dham distance from nainital','kainchi dham timings','kainchi dham tickets','kainchi dham nearest railway station','kathgodam to kainchi dham distance','nainital to kainchi dham distance','delhi to kainchi dham distance','haridwar to kainchi dham distance'],
   alternates: { canonical: `${SITE.baseUrl}/kainchi-dham` },
@@ -79,10 +79,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -114,9 +111,7 @@ function Schema() {
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(place) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
   </>);
@@ -162,9 +157,6 @@ export default function KainchiDham() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Founded', '1964'], ['District', 'Nainital'], ['From Nainital', '17 km'], ['From Bhowali', '9 km'], ['Entry', 'Free'], ['Annual mela', '15 June']].map(([k, v]) => (

@@ -14,7 +14,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/kedarnath-trek-guide');
 
 export const metadata = {
-  title: { absolute: `Kedarnath Trek Guide ${SITE.season} | 16 km Route & Stays` },
+  title: { absolute: 'Kedarnath Trek Guide | 16 km Route, Stops & Stays' },
   description: `Complete Kedarnath trek guide — 16km route from Gaurikund, difficulty, stay options, best time to visit, and what to carry.`,
   keywords: [`kedarnath trek guide ${SITE.season}`,'kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips',`kedarnath yatra ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
@@ -61,10 +61,7 @@ function Schema() {
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     image: '/opengraph-image',
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqData.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const howTo = {
     '@context': 'https://schema.org', '@type': 'HowTo',
     name: 'How to Prepare for the Kedarnath Trek',
@@ -79,9 +76,7 @@ function Schema() {
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
     </>
   );
 }
@@ -369,7 +364,7 @@ export default function KedarnathTrekGuide() {
             {[
               { label:'Kedarnath Yatra Package →', href:'/kedarnath-yatra' },
               { label:'Kedarnath Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking' },
-              { label:'Kedarnath Registration 2026 →', href:'/blog/kedarnath-registration-2026' },
+              { label:'Kedarnath Registration 2026 →', href:'/blog/char-dham-yatra-registration' },
               { label:'Pony & Palki Rates 2026 →', href:'/kedarnath-pony-palki-kandi-rates' },
               { label:'View Kedarnath Package →', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar' },
             ].map(l => (

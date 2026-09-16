@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/ek-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `Ek Dham Yatra ${SITE.season} | From ₹4,250 | Pick One Dham` },
+  title: { absolute: 'Ek Dham Yatra | Which Dham to Pick, and Why' },
   description: `Ek Dham Yatra ${SITE.season} — one dham from Haridwar, 2N/3D from ₹4,250. Which of the four to pick, honestly, and what each one actually asks of you.`,
   keywords: ['ek dham yatra','ek dham yatra package','one dham yatra',`ek dham yatra ${SITE.season}`,'single dham package','kedarnath ek dham','badrinath ek dham','ek dham yatra from haridwar','ek dham yatra cost'],
   alternates: { canonical: `${SITE.baseUrl}/ek-dham-yatra` },
@@ -112,10 +112,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -145,9 +142,7 @@ function Schema() {
       { '@type': 'Offer', name: 'Kedarnath Ek Dham 3N/4D', price: '5250', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: `${SITE.baseUrl}/kedarnath-yatra` },
     ],
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }} />
   </>);
 }
@@ -197,9 +192,6 @@ export default function EkDhamYatra() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Duration', '2N/3D – 3N/4D'], ['Dhams', 'Any 1 of 4'], ['From', '₹4,250/person'], ['No-trek options', 'Badrinath, Gangotri'], ['Start', 'Haridwar'], ['Season', 'Apr 19 – Nov 2026']].map(([k, v]) => (

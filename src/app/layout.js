@@ -74,7 +74,7 @@ export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
 
   title: {
-    default: `Shiv Ganga Travels — Char Dham Yatra 2026 Haridwar`,
+    default: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
     template: `%s | Shiv Ganga`,
   },
   description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹13,900. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims.',
@@ -103,7 +103,7 @@ export const metadata = {
     locale: 'en_IN',
     url: SITE.baseUrl,
     siteName: 'Shiv Ganga Travels',
-    title: `Char Dham Yatra 2026 — Shiv Ganga Travels, Haridwar`,
+    title: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
     description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹13,900. Zero commission. Direct operator. 50,000+ pilgrims.',
     images: [{
       url: '/opengraph-image',
@@ -114,7 +114,7 @@ export const metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: `Shiv Ganga Travels — Char Dham Yatra 2026`,
+    title: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
     description: 'Char Dham Yatra 2026 from Haridwar from ₹13,900. Direct operator. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator' }],
   },
@@ -151,7 +151,7 @@ function SiteSchema() {
   // ── Primary organisation / local business — Haridwar ───────
   const org = {
     '@context': 'https://schema.org',
-    '@type': ['TravelAgency', 'LocalBusiness', 'TouristInformationCenter'],
+    '@type': ['TravelAgency', 'LocalBusiness'],
     '@id': `${SITE.baseUrl}/#organization`,
 
     name: 'Shiv Ganga Travels',
@@ -333,42 +333,9 @@ function SiteSchema() {
     ],
   };
 
-  // ── Roorkee branch office — separate LocalBusiness with branchOf ──
-  const roorkee = {
-    '@context': 'https://schema.org',
-    '@type': ['TravelAgency', 'LocalBusiness'],
-    '@id': `${SITE.baseUrl}/#organization-roorkee`,
-    name: 'Shiv Ganga Travels — Roorkee',
-    url: SITE.baseUrl,
-    telephone: '+91-7817996730',
-    email: 'support@shivgangatravels.com',
-    taxID: SITE.gstin,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Roorkee',
-      addressRegion: 'Uttarakhand',
-      postalCode: '247667',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 29.86820,
-      longitude: 77.89490,
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: SITE.hours.opens,
-        closes: SITE.hours.closes,
-      },
-    ],
-    // Links this branch back to the parent Haridwar location
-    branchOf: { '@id': `${SITE.baseUrl}/#organization` },
-    parentOrganization: { '@id': `${SITE.baseUrl}/#organization` },
-    priceRange: '₹₹',
-    description: 'Roorkee branch of Shiv Ganga Travels — Char Dham Yatra specialist. Serving pilgrims from Roorkee, Muzaffarnagar, Saharanpur and surrounding areas.',
-  };
+  // The Roorkee "branch" LocalBusiness node was removed on 17 Sep 2026: there is
+  // no GBP, no listing and no public record for a Roorkee office, so asserting
+  // one on every page was an unverifiable entity claim.
 
   // ── WebSite schema with SearchAction ──────────────────────
   const website = {
@@ -415,7 +382,6 @@ function SiteSchema() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founder) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(roorkee) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}/>
     </>
   );

@@ -13,7 +13,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-packing-list');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Packing List ${SITE.season} | Printable Checklist` },
+  title: { absolute: 'Char Dham Yatra Packing List | Printable Checklist' },
   description: `Char Dham packing list ${SITE.season} — trekking shoes are non-negotiable, wool socks over cotton, thermals even in June when nights drop to 5–10°C. Printable.`,
   keywords: [`char dham yatra packing list ${SITE.season}`, 'what to carry for char dham yatra', 'char dham yatra essentials', 'char dham yatra clothes list', 'char dham yatra medicine list', 'char dham yatra documents required'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-packing-list` },
@@ -26,24 +26,9 @@ export const metadata = {
 function Schema() {
   const article = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Char Dham Yatra Packing List 2026', author:{ '@type':'Person', '@id':`${SITE.baseUrl}/#founder`, name:'Dhanesh Chandra Mishra', jobTitle:'Founder & Director, Shiv Ganga Travels', url:`${SITE.baseUrl}/about` }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/char-dham-yatra-packing-list` };
 
-    const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question',
-        name: 'What should I pack for Kedarnath in summer?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Summer packing for Kedarnath: thermal inners (2 sets — nights drop to 4°C even in June), fleece jacket, windproof outer layer, warm cap and gloves, waterproof trekking boots, wool socks (3–4 pairs), sunscreen SPF 50+, sunglasses, rain poncho, ORS sachets, trekking poles, headtorch, power bank, and enough cash (ATMs available only until Sonprayag). Personal medicines for 2 extra days beyond trip duration.' },
-      },
-      { '@type': 'Question',
-        name: 'Do I need oxygen at Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Supplemental oxygen is not mandatory but is advisable for first-time high-altitude visitors and pilgrims over 60. Oxygen cans are available at Gaurikund and Kedarnath for ₹300–500 each. Symptoms of altitude sickness (headache, nausea, breathlessness) typically appear 6–12 hours after reaching altitude. If symptoms are severe, descend immediately. Shiv Ganga Travels carries oxygen cylinders in all vehicles.' },
-      }
-    ],
-  };
+    
   return (<>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    </>);
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>    </>);
 }
 
 

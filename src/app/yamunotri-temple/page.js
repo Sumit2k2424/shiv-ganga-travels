@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Yamunotri Temple Guide ${SITE.season} | Darshan Timings, Trek & History` },
+  title: { absolute: 'Yamunotri Temple | Darshan Timings, Trek & History' },
   description: `The first dham of Char Dham. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila, history and ${SITE.season} opening dates.`,
   keywords: ['yamunotri temple',`yamunotri temple timings ${SITE.season}`,'yamunotri dham','yamunotri trek',`yamunotri opening date ${SITE.season}`,'surya kund yamunotri','yamunotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-temple` },
@@ -22,14 +22,8 @@ export const metadata = {
 
 function Schema() {
   const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Yamunotri Temple', description:'The source shrine of the river Yamuna, dedicated to Goddess Yamuna, at 3,291m in Uttarkashi district, Uttarakhand. The first of the four Char Dham shrines.', url:`${SITE.baseUrl}/yamunotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Yamunotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'31.0136',longitude:'78.4624'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:00',closes:'20:00'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Yamunotri'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
-    {'@type':'Question',name:'What are the darshan timings at Yamunotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens around 6:00 AM and closes by about 8:00 PM, with a midday break in the afternoon. Because the 6km trek from Janki Chatti takes 3–4 hours up, most pilgrims aim to start early and reach the temple before noon.'}},
-    {'@type':'Question',name:'When does Yamunotri Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Yamunotri Temple opens on April 19, 2026 (Akshaya Tritiya). It closes for winter on November 11, 2026 (Bhai Dooj), after which the idol of Goddess Yamuna is carried to Kharsali (Syana Chattra) village for winter worship.'}},
-    {'@type':'Question',name:'How long is the Yamunotri trek?',acceptedAnswer:{'@type':'Answer',text:'The trek to Yamunotri is about 6km from Janki Chatti, the road-head. It takes most pilgrims 3–4 hours uphill. Pony, palki (palanquin) and pittu (porter) services are available for those who cannot walk the climb.'}},
-    {'@type':'Question',name:'Do I need to register before visiting Yamunotri in 2026?',acceptedAnswer:{'@type':'Answer',text:'Yes. Char Dham Yatra registration is mandatory and free for every pilgrim, including those visiting only Yamunotri. Registration for the 2026 season opened on March 6, 2026 through the official Tourist Care Uttarakhand portal or app. We handle this for anyone travelling with us — just share your ID details in advance.'}},
-    {'@type':'Question',name:'Are mobile phones and cameras allowed inside Yamunotri Temple?',acceptedAnswer:{'@type':'Answer',text:'No. Ahead of the 2026 season, the Uttarakhand administration banned mobile phones and cameras inside the temple premises at all four Char Dham shrines, including Yamunotri, to preserve the sanctity of darshan. Devices must be deposited at lockers near the entrance before you go in and are returned afterward.'}},
-  ]};
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/></>);
 }
 
 
@@ -44,8 +38,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 

@@ -28,6 +28,9 @@ export function breadcrumb(trail) {
 }
 
 export function faqPage(faqs) {
+  // FAQPage JSON-LD retired site-wide on 17 Sep 2026 (see GuideArticle.js).
+  return null;
+  // eslint-disable-next-line no-unreachable
   if (!faqs?.length) return null;
   return {
     '@context': 'https://schema.org',

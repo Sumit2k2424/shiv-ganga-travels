@@ -8,7 +8,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/kedarnath-to-badrinath-distance');
 
 export const metadata = {
-  title: { absolute: `Kedarnath to Badrinath Distance ${SITE.season} | Route, Time & Taxi Fare` },
+  title: { absolute: 'Kedarnath to Badrinath Distance | Route & Time' },
   description: `Kedarnath to Badrinath is 218 km from Gaurikund, 9 to 10 hours driving — plus the 16 km trek down from the temple first. Taxi fares and the night-driving ban.`,
   keywords: ['kedarnath to badrinath distance','badrinath to kedarnath distance','kedarnath to badrinath','badrinath to kedarnath','kedarnath to badrinath taxi','kedarnath to badrinath route'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-to-badrinath-distance` },
@@ -32,9 +32,6 @@ function Schema() {
     image:[`${SITE.baseUrl}/opengraph-image`],
     datePublished:'2026-07-18', dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage:`${SITE.baseUrl}/kedarnath-to-badrinath-distance`,
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   }];
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
@@ -47,7 +44,7 @@ export default function KedarnathToBadrinath() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🚗 218 km · 8–10 hrs</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Kedarnath to Badrinath Distance & Route</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Via Guptkashi · Chopta · Joshimath — updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Via Guptkashi · Chopta · Joshimath</p>
       </div>
     </section>
     <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>

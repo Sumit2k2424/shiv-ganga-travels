@@ -72,7 +72,6 @@ export default function MukhbaWinterSeat() {
       <Crumbs trail={[['Mukhba', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

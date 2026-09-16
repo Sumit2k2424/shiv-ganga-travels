@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { getPackageBySlug, getAllSlugs, SITE, PACKAGES, CATEGORIES, INC_STD, EXC_STD } from '@/data/packages';
 import FloatingBookCTA from '@/components/FloatingBookCTA';
 import { BlurFade } from '@/components/magicui/blur-fade';
-import CategoryView from './CategoryView';
 import SpecRail from '@/components/lux/SpecRail';
 import RouteMap from '@/components/lux/RouteMap';
 import WhyBookDirect from '@/components/lux/WhyBookDirect';
@@ -17,24 +16,21 @@ import { pageDates } from '@/lib/pageDates';
 
 const PAGE_DATES = pageDates('/packages/[slug]');
 
-const CATEGORY_SLUGS = Object.keys(CATEGORIES);
+// The /packages/<category> listing routes were retired on 17 Sep 2026 (301 to the
+// hand-written hubs below). Category is now only a label and a breadcrumb.
+const CATEGORY_HUB = {
+  'char-dham': '/char-dham-yatra',
+  'do-dham': '/do-dham-yatra',
+  'single-dham': '/ek-dham-yatra',
+  'helicopter': '/char-dham-helicopter',
+};
 
 export async function generateStaticParams() {
-  const pkgSlugs = getAllSlugs();
-  const catSlugs = CATEGORY_SLUGS.map(s => ({ slug: s }));
-  return [...pkgSlugs, ...catSlugs];
+  return getAllSlugs();
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  if (CATEGORY_SLUGS.includes(slug)) {
-    const cat = CATEGORIES[slug];
-    return {
-      title: { absolute: `${cat.name} Packages 2026 | Direct Operator | Zero Commission` },
-      description: `${cat.name} Packages 2026 from Haridwar. Direct Haridwar operator, customizable itinerary & instant confirmation.`,
-      alternates: { canonical: `${SITE.baseUrl}/packages/${slug}` },
-    };
-  }
   const pkg = getPackageBySlug(slug);
   if (!pkg) return {};
   return {
@@ -105,11 +101,10 @@ function Schemas({ pkg }) {
   // reports for things that are not products. The TouristTrip already carries
   // the offer; the duplicate node added nothing but a markup/content mismatch.
 
-  const faqSchema = pkg.faqs?.length ? { '@context':'https://schema.org','@type':'FAQPage', mainEntity:pkg.faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) } : null;
   const breadcrumb = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
     {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
     {'@type':'ListItem',position:2,name:'Packages',item:`${SITE.baseUrl}/packages`},
-    {'@type':'ListItem',position:3,name:CATEGORIES[pkg.category]?.name||pkg.category,item:`${SITE.baseUrl}/packages/${pkg.category}`},
+    {'@type':'ListItem',position:3,name:CATEGORIES[pkg.category]?.name||pkg.category,item:`${SITE.baseUrl}${CATEGORY_HUB[pkg.category] || '/packages'}`},
     {'@type':'ListItem',position:4,name:pkg.name,item:`${SITE.baseUrl}/packages/${pkg.slug}`},
   ]};
   const author = {
@@ -129,7 +124,6 @@ function Schemas({ pkg }) {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/>
-    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(breadcrumb) }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(author) }}/>
   </>);
@@ -137,13 +131,6 @@ function Schemas({ pkg }) {
 
 export default async function PackageDetailPage({ params }) {
   const { slug } = await params;
-
-  if (CATEGORY_SLUGS.includes(slug)) {
-    const cat  = CATEGORIES[slug];
-    const pkgs = PACKAGES.filter(p => p.category === slug);
-    const guides = CATEGORY_GUIDES[slug] || [];
-    return <CategoryView category={cat} packages={pkgs} guides={guides} />;
-  }
 
   const pkg = getPackageBySlug(slug);
   if (!pkg) notFound();
@@ -216,7 +203,7 @@ export default async function PackageDetailPage({ params }) {
               <li aria-hidden="true">/</li>
               <li><Link href="/packages" style={{ color:'inherit', textDecoration:'none' }}>Packages</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link href={`/packages/${pkg.category}`} style={{ color:'inherit', textDecoration:'none' }}>{CATEGORIES[pkg.category]?.name || pkg.category}</Link></li>
+              <li><Link href={CATEGORY_HUB[pkg.category] || '/packages'} style={{ color:'inherit', textDecoration:'none' }}>{CATEGORIES[pkg.category]?.name || pkg.category}</Link></li>
               <li aria-hidden="true">/</li>
               <li style={{ color:'var(--gold)' }} aria-current="page">{pkg.name}</li>
             </ol>

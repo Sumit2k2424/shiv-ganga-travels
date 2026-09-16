@@ -7,7 +7,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/char-dham-helicopter');
 
 export const metadata = {
-  title: { absolute: `Char Dham Helicopter Package ${SITE.season} | ₹2,30,000 | DGCA Approved` },
+  title: { absolute: 'Char Dham by Helicopter | Cost, Sectors & How It Works' },
   description: `Char Dham by helicopter ${SITE.season} — 5N/6D from Dehradun, ₹2,30,000/person all-inclusive. DGCA-approved third-party operators, VIP darshan, luxury hotels.`,
   keywords: ['char dham helicopter package','4 dham yatra by helicopter','char dham yatra by helicopter',`char dham helicopter package ${SITE.season}`,'DGCA approved char dham helicopter','sahastradhara helipad char dham',`char dham helicopter price ${SITE.season}`,'char dham heli yatra','kedarnath helicopter package','char dham luxury helicopter tour','charter helicopter char dham','char dham helicopter booking'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-helicopter` },
@@ -43,14 +43,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   // These PAA questions are the only Q&A on the page, so this IS the page's
   // single FAQPage node. (It used to `return null` on the assumption that a
   // main FAQ node existed further down — on this page there isn't one, so the
   // answers were rendering to readers and staying invisible to search and AI
   // engines. Do not re-add a second FAQPage node here.)
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
+  return null;
 }
 
 export default function Page() {

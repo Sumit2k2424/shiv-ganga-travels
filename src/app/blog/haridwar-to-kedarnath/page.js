@@ -11,7 +11,7 @@ import { pageDates } from '@/lib/pageDates';
 
 const PAGE_DATES = pageDates('/blog/haridwar-to-kedarnath');
 export const metadata = {
-  title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
+  title: { absolute: 'Haridwar to Kedarnath | Cab, Bus & Helicopter Routes' },
   description: `Haridwar to Kedarnath ${SITE.season} — 235 km by road via Devprayag to Guptkashi, then Gaurikund and a 16 km trek. Cab, bus and helicopter options compared.`,
   keywords: [`haridwar to kedarnath distance ${SITE.season}`, 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
@@ -27,8 +27,8 @@ const FAQS = [
 ];
 function Schema() {
   const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Haridwar to Kedarnath Distance, Route & Travel Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/haridwar-to-kedarnath` };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/></>);
 }
 export default function HaridwarToKedarnath() {
   return (<>

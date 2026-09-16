@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/teen-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `Teen Dham Yatra ${SITE.season} | From ₹11,600 | 3 Dham Package` },
+  title: { absolute: 'Teen Dham Yatra | 3 Dham Package from Haridwar' },
   description: `Teen Dham Yatra ${SITE.season} from Haridwar — 7N/8D from ₹11,600/person. Pick the right 3 dhams, skip the Kedarnath trek. Direct operator, zero commission.`,
   keywords: ['teen dham yatra','teen dham yatra package','3 dham yatra package',`teen dham yatra ${SITE.season}`,'teen dham yatra from haridwar','teen dham yatra cost','teen dham package price','yamunotri gangotri badrinath package','gangotri kedarnath badrinath yatra','teen dham yatra itinerary'],
   alternates: { canonical: `${SITE.baseUrl}/teen-dham-yatra` },
@@ -87,10 +87,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -133,9 +130,7 @@ function Schema() {
       { '@type': 'Offer', name: 'Teen Dham + Kedarnath Helicopter 7N/8D', price: '19900', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: `${SITE.baseUrl}/teen-dham-yatra` },
     ],
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }} />
   </>);
 }
@@ -241,9 +236,6 @@ export default function TeenDhamYatra() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Duration', '7N/8D'], ['Dhams', '3 of 4'], ['Longest trek', '6 km'], ['Highest point', '3,415 m'], ['Package from', '₹11,600/person'], ['Season', 'Apr 19 – Nov 2026']].map(([k, v]) => (
@@ -589,7 +581,7 @@ export default function TeenDhamYatra() {
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Other yatra combinations</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/blog/char-dham-vs-do-dham'], ].map(([l, href]) => (
+            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/do-dham-yatra'], ].map(([l, href]) => (
               <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

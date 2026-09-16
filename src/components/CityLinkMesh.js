@@ -37,7 +37,7 @@ export default function CityLinkMesh({ current = '' }) {
 
       <p style={heading}>Plan &amp; book your yatra</p>
       <div style={row}>
-        <Link prefetch={false} href="/packages/char-dham" style={chip}>Char Dham Packages →</Link>
+        <Link prefetch={false} href="/char-dham-yatra" style={chip}>Char Dham Packages →</Link>
         <Link prefetch={false} href="/packages/char-dham-yatra-9n-10d-haridwar" style={chip}>9N/10D from Haridwar →</Link>
         <Link prefetch={false} href="/packages/char-dham-yatra-from-delhi-10n-11d" style={chip}>10N/11D from Delhi →</Link>
         <Link prefetch={false} href="/char-dham-helicopter" style={chip}>By Helicopter →</Link>

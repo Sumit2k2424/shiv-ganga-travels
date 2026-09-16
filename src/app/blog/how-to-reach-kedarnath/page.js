@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/how-to-reach-kedarnath');
 
 export const metadata = {
-  title: { absolute: `How to Reach Kedarnath ${SITE.season} | Road, Train & Helicopter` },
+  title: { absolute: 'How to Reach Kedarnath | Road, Train & Helicopter' },
   description: `How to reach Kedarnath in ${SITE.season} from Delhi, Mumbai, Bengaluru and Hyderabad — nearest station, airport, road route to Gaurikund and helicopter options.`,
   keywords: [`how to reach kedarnath ${SITE.season}`, 'kedarnath how to reach', 'how to go to kedarnath', 'kedarnath nearest railway station', 'kedarnath nearest airport', 'how to reach kedarnath from delhi', `kedarnath journey guide ${SITE.season}`],
   robots: { index: true, follow: true },
@@ -23,18 +23,8 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the nearest railway station to Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Rishikesh (about 215km from Gaurikund) and Haridwar (about 235km as driven) are the nearest railway stations to Kedarnath. Both are on the Haridwar-Dehradun rail line. From either station, road travel to Gaurikund (Kedarnath base) takes 6–7 hours. Haridwar has more frequent trains from major cities than Rishikesh.' }},
-      { '@type': 'Question', name: 'What is the nearest airport to Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Jolly Grant Airport (Dehradun) is the nearest airport to Kedarnath — approximately 250km from Gaurikund (7–8 hours by road). It connects to Delhi (1 hour), Mumbai (1.5 hours), Bangalore (2.5 hours), and Hyderabad (2 hours). From Dehradun airport, taxi to Haridwar (35km, 1 hour) then onwards to Gaurikund.' }},
-      { '@type': 'Question', name: 'How long does the Kedarnath trek take?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath trek from Gaurikund is 16km one way. Ascending time: 5–7 hours for first-time pilgrims. Descending: 3–4 hours. The trail is stone-paved and well-marked with rest stops every 1–2km. Start by 5 AM to arrive before peak queue at the temple and to start the return before afternoon cloud cover.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const CITY_ROUTES = [
@@ -82,7 +72,6 @@ export default function HowToReachKedarnath() {
         <AnswerBox>
           <strong>Kedarnath is 235km from Haridwar by road to Gaurikund, then 16km on foot.</strong> Vehicles stop at Sonprayag and a shared jeep covers the last 5km. Driving is 8 to 9 hours, so nearly everyone breaks the journey at Guptkashi, 210km in. The alternative to walking is a pony, palki or the helicopter from Phata, Sersi or Guptkashi. Haridwar is the nearest railhead and Dehradun the nearest airport.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'16px 20px', marginBottom:24, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10 }}>
           {[['Nearest Railway Station','Haridwar / Rishikesh'],['Nearest Airport','Jolly Grant (Dehradun, 250km)'],['Road Base','Gaurikund (218km from HW)'],['Trek Distance','16km one way'],['Helicopter','Phata/Sersi helipads'],['Total Journey (from Delhi)','1.5–2 days']].map(([k,v])=>(
@@ -224,7 +213,7 @@ export default function HowToReachKedarnath() {
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath-road-trip'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(
+            {[['Haridwar to Kedarnath Route','/blog/haridwar-to-kedarnath'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Kedarnath Helicopter','/blog/kedarnath-helicopter-booking'],['Kedarnath Timings','/blog/kedarnath-darshan-timing']].map(([l,h])=>(
               <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>

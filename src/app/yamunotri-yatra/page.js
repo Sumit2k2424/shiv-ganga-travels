@@ -8,7 +8,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/yamunotri-yatra');
 
 export const metadata = {
-  title: { absolute: `Yamunotri Yatra Package ${SITE.season} | Trek & Pony Guide` },
+  title: { absolute: 'Yamunotri Yatra Package from Haridwar | Trek & Pony' },
   description: `Plan Yamunotri Yatra ${SITE.season} from Haridwar. ₹4,500 per person. 6km trek from Janki Chatti, Surya Kund hot spring, Divya Shila. Pony available.`,
   keywords: [`yamunotri yatra, yamunotri yatra ${SITE.season}, yamunotri trek, haridwar to yamunotri, yamunotri yatra package`],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-yatra` },
@@ -51,14 +51,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   // These PAA questions are the only Q&A on the page, so this IS the page's
   // single FAQPage node. (It used to `return null` on the assumption that a
   // main FAQ node existed further down — on this page there isn't one, so the
   // answers were rendering to readers and staying invisible to search and AI
   // engines. Do not re-add a second FAQPage node here.)
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
+  return null;
 }
 
 export default function Page() {
@@ -81,7 +80,6 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <AnswerBox>
           Yamunotri Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in

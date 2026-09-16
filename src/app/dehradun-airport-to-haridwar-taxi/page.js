@@ -10,7 +10,7 @@ const PAGE_DATES = pageDates('/dehradun-airport-to-haridwar-taxi');
 const R = TRANSFERS['airport-haridwar'];
 
 export const metadata = {
-  title: { absolute: 'Dehradun Airport to Haridwar Taxi — ₹1,200 | 35 km' },
+  title: { absolute: 'Dehradun Airport to Haridwar Taxi | Fixed Fare' },
   description: 'Jolly Grant airport to Haridwar taxi from ₹1,200, 35 km in about an hour. Meet-and-greet at arrivals, flight tracked, fixed fare. Direct operator.',
   keywords: ['dehradun airport to haridwar taxi','jolly grant airport to haridwar','dehradun airport to haridwar cab','ded airport haridwar taxi fare','jolly grant to haridwar distance','dehradun airport taxi haridwar','airport pickup haridwar','jolly grant airport prepaid taxi'],
   alternates: { canonical: `${SITE.baseUrl}/dehradun-airport-to-haridwar-taxi` },
@@ -49,10 +49,7 @@ const FAQS = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context':'https://schema.org', '@type':'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-  };
+  
   const service = {
     '@context':'https://schema.org', '@type':'Service',
     '@id': `${SITE.baseUrl}/dehradun-airport-to-haridwar-taxi#service`,
@@ -87,9 +84,7 @@ function Schema() {
     ],
   };
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}/>
+    <>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}/>
     </>
@@ -134,9 +129,6 @@ export default function DehradunAirportToHaridwarTaxi() {
           <strong>Jolly Grant Airport to Haridwar is about 35km and takes 45 minutes to an hour.</strong> A one-way sedan runs roughly ₹1,200–1,800 and an Innova ₹2,000–2,500. It is the standard arrival transfer for pilgrims flying in for Char Dham, and worth pre-booking because airport taxi queues here are thin after the last evening flight. Rishikesh is closer at 20km, so if your yatra starts there the transfer is shorter and cheaper.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <p style={{ fontSize:16.5, lineHeight:1.8, color:'var(--text-mid)', marginBottom:22 }}>
           Jolly Grant Airport (DED) is {R.km} km from Haridwar — about {R.hours} on NH-7 — and a

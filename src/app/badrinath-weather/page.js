@@ -6,7 +6,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Badrinath Weather ${SITE.season} | Month-wise Temperature Guide` },
+  title: { absolute: 'Badrinath Weather | Month-wise Temperature Guide' },
   description: `Month-by-month Badrinath weather guide. Best time to visit, what to pack, temperature ranges at 3,133m.`,
   keywords: ['badrinath weather','badrinath temperature','badrinath weather may',`badrinath best time to visit ${SITE.season}`,'badrinath snowfall','badrinath weather in october'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-weather` },

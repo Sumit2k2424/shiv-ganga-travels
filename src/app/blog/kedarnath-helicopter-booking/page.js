@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/kedarnath-helicopter-booking');
 
 export const metadata = {
-  title: { absolute: `Kedarnath Helicopter Booking ${SITE.season} | IRCTC Guide` },
+  title: { absolute: 'Kedarnath Helicopter Booking | IRCTC HeliYatra Guide' },
   description: `Official ${SITE.season} round-trip fares: ₹6,390 from Sersi, ₹10,164 Phata, ₹12,762 Guptkashi. Sold only on IRCTC HeliYatra — booking steps, slots and scam warnings.`,
   keywords: [`kedarnath helicopter booking ${SITE.season}`, `kedarnath helicopter price ${SITE.season}`, 'kedarnath chopper booking', 'kedarnath helicopter booking online', 'phata to kedarnath helicopter', 'kedarnath helicopter irctc', 'heliyatra kedarnath', 'dehradun to kedarnath helicopter', 'gmvn kedarnath booking', 'kedarnath helicopter ticket price', 'guptkashi kedarnath helicopter'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking` },
@@ -50,8 +50,8 @@ function Schema() {
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:faqData.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}})) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/></>);
 }
 
 

@@ -44,7 +44,7 @@ const VERIFIED = 'August 22, 2026';
 const VERIFIED_ISO = '2026-08-22';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Emergency Numbers ${SITE.season} — 112, SDRF, Hospitals` },
+  title: { absolute: 'Char Dham Emergency Numbers | 112, SDRF, Hospitals' },
   description: `Verified Char Dham Yatra emergency contacts ${SITE.season}. Dial 112 anywhere on the route. Full list of SDRF, district control room, temple committee, hospital and helicopter numbers — checked against Uttarakhand government sources, free to cite.`,
   keywords: [
     'char dham yatra emergency contacts',
@@ -318,15 +318,7 @@ function Schema() {
     mainEntityOfPage: `${SITE.baseUrl}${PAGE}`,
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer', '.primary-number'] },
   };
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -339,9 +331,7 @@ function Schema() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
     </>
   );
 }

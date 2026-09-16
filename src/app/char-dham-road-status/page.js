@@ -9,7 +9,7 @@ const UPDATED = 'September 15, 2026';
 const UPDATED_ISO = '2026-09-15';
 
 export const metadata = {
-  title: { absolute: `Char Dham Road Status ${SITE.season} | Live Route Updates | All 4 Routes` },
+  title: { absolute: 'Char Dham Road Status | Live Updates, All 4 Routes' },
   description: `Which Char Dham stretches are open, closed or slow today across all four routes — landslide zones, diversions and the official links to verify before you drive.`,
   keywords: ['char dham road status','char dham yatra road condition today','char dham highway completion date','kedarnath road condition today live','badrinath road condition today','yamunotri road condition today','gangotri road condition today','char dham road project current status'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-road-status` },
@@ -98,17 +98,14 @@ function Schemas() {
     author:{ '@type':'Organization', name:`${SITE.name} Route Desk`, url:SITE.baseUrl },
     publisher:{ '@id':`${SITE.baseUrl}/#organization` },
   };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   const bc = { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
     {'@type':'ListItem',position:1,name:'Home',item:SITE.baseUrl},
     {'@type':'ListItem',position:2,name:'Char Dham Yatra',item:`${SITE.baseUrl}/char-dham-yatra`},
     {'@type':'ListItem',position:3,name:'Road Status',item:`${SITE.baseUrl}/char-dham-road-status`},
   ]};
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);
 }
 

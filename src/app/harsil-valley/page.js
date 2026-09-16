@@ -14,7 +14,7 @@ const PAGE_DATES = pageDates('/harsil-valley');
 const HARSIL_UPDATED_ISO = '2026-09-01';
 
 export const metadata = {
-  title: { absolute: `Harsil Valley Guide ${SITE.season} | Permits, Weather & Route | Gangotri` },
+  title: { absolute: 'Harsil Valley | Permits, Weather & Route to Gangotri' },
   description: `Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.`,
   keywords: ['harsil valley','harsil valley travel guide','harsil valley best time to visit','how to reach harsil valley','harsil valley permit','gartang gali trek','mukhba village','dharali village harsil','harsil to gangotri distance','harsil valley weather','harsil valley uttarkashi','nelong valley permit'],
   alternates: { canonical: `${SITE.baseUrl}/harsil-valley` },
@@ -56,9 +56,6 @@ function Schema() {
     sameAs:['https://en.wikipedia.org/wiki/Harsil'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Uttarkashi district, Uttarakhand, India' },
     isPartOf:{ '@type':'TouristAttraction', name:'Gangotri Yatra', url:`${SITE.baseUrl}/gangotri-yatra` },
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -121,7 +118,7 @@ export default function HarsilValley() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🍎 25 km Before Gangotri</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Harsil Valley &mdash; Apple Orchards, Gartang Gali &amp; the Road to Gangotri</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The valley most pilgrims drive straight through &mdash; updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The valley most pilgrims drive straight through</p>
       </div>
     </section>
 

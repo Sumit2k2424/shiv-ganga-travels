@@ -88,7 +88,6 @@ export default function HaridwarSightseeingPlaces() {
       <Crumbs trail={[['Places to Visit in Haridwar', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

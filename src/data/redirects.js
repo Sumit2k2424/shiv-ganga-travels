@@ -36,6 +36,24 @@ const REDIRECTS = [
   { source: '/packages/gangotri-yatra-package-2n-3d-haridwar',            destination: '/ek-dham-yatra',                              permanent: true },
   { source: '/packages/yamunotri-yatra-package-2n-3d-haridwar',           destination: '/ek-dham-yatra',                              permanent: true },
   { source: '/packages/kedarnath-badrinath-helicopter-do-dham-3n-4d',     destination: '/packages/kedarnath-badrinath-do-dham-5n-6d', permanent: true },
+  // ── Topic consolidation, 17 Sep 2026 ──
+  // Twelve pages competed with a sibling for the same query and earned 0–3
+  // clicks in 90 days between them (the two largest, at 5,516 and 4,877 words,
+  // earned none). Each folds into the page that already ranks for the intent.
+  // The four /packages/<category> listings were 257–448 words and 44–61%
+  // identical to each other; the hand-written hubs already do that job.
+  { source: '/blog/char-dham-yatra-complete-guide',   destination: '/char-dham-yatra',                    permanent: true },
+  { source: '/blog/char-dham-yatra-faq',              destination: '/char-dham-yatra',                    permanent: true },
+  { source: '/blog/kedarnath-yatra-complete-guide',   destination: '/kedarnath-yatra',                    permanent: true },
+  { source: '/blog/haridwar-to-kedarnath-road-trip',  destination: '/blog/haridwar-to-kedarnath',         permanent: true },
+  { source: '/char-dham-helicopter-booking-guide',    destination: '/blog/kedarnath-helicopter-booking',  permanent: true },
+  { source: '/blog/kedarnath-registration-2026',      destination: '/blog/char-dham-yatra-registration',  permanent: true },
+  { source: '/blog/char-dham-yatra-2026-new-rules',   destination: '/blog/char-dham-yatra-registration',  permanent: true },
+  { source: '/blog/char-dham-vs-do-dham',             destination: '/do-dham-yatra',                      permanent: true },
+  { source: '/packages/char-dham',                    destination: '/char-dham-yatra',                    permanent: true },
+  { source: '/packages/do-dham',                      destination: '/do-dham-yatra',                      permanent: true },
+  { source: '/packages/single-dham',                  destination: '/ek-dham-yatra',                      permanent: true },
+  { source: '/packages/helicopter',                   destination: '/char-dham-helicopter',               permanent: true },
   // Fix internal 404s found by Screaming Frog
   { source: '/packages/char-dham-yatra-senior-citizen-14n-15d', destination: '/packages/char-dham-yatra-senior-citizen-12n-13d', permanent: true },
   { source: '/packages/char-dham-yatra-10n-11d-haridwar',       destination: '/packages/char-dham-yatra-11n-12d-haridwar',       permanent: true },

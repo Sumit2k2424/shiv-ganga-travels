@@ -72,7 +72,6 @@ export default function JoshimathNarsinghTemple() {
       <Crumbs trail={[['Narsingh Temple Joshimath', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

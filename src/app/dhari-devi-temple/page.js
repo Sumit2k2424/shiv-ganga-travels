@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/dhari-devi-temple');
 
 export const metadata = {
-  title: { absolute: `Dhari Devi Temple ${SITE.season} | Timings & How to Reach | Guardian Goddess` },
+  title: { absolute: 'Dhari Devi Temple | Timings & How to Reach' },
   description: `Dhari Devi near Srinagar — guardian goddess of the Char Dham, her idol said to change face three times a day. Darshan 6 AM to 8 PM, route and distances.`,
   keywords: ['dhari devi temple','dhari devi mandir','dhari devi','dhari devi temple story','dhari devi temple history','dhari devi temple timings','dhari devi temple location','dhari devi temple distance from srinagar','dhari devi kalyasaur','dhari devi temple uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/dhari-devi-temple` },
@@ -45,9 +45,6 @@ function Schema() {
     sameAs:['https://en.wikipedia.org/wiki/Dhari_Devi','https://pauri.nic.in/tourist-place/dhari-devi-temple/'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Pauri Garhwal, Uttarakhand, India' },
     isPartOf:{ '@type':'TouristAttraction', name:'Char Dham Yatra', sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham' },
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -92,7 +89,7 @@ export default function DhariDeviTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🛕 Guardian of the Char Dham</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Dhari Devi Temple — Story, Timings &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams — updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams</p>
       </div>
     </section>
 

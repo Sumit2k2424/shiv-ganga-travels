@@ -104,7 +104,6 @@ export default function KumbhMelaHaridwar() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Kumbh Mela', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

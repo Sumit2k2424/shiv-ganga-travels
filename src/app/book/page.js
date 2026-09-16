@@ -104,7 +104,7 @@ export default function BookPage() {
   // Prefill from ?pkg= (client-only; avoids Suspense requirement of useSearchParams)
   useEffect(() => {
     const slug = new URLSearchParams(window.location.search).get('pkg');
-    if (!slug) return;
+    if (!slug) return null;
     const pkg = PACKAGES.find((p) => p.slug === slug);
     if (pkg) setF((s) => ({ ...s, pkgSlug: pkg.slug, category: pkg.category }));
   }, []);
@@ -136,7 +136,7 @@ export default function BookPage() {
   };
 
   const next = () => {
-    if (!stepValid()) { setAttempted(true); return; }
+    if (!stepValid()) { setAttempted(true); return null; }
     setAttempted(false);
     setStep((s) => Math.min(s + 1, STEPS.length - 1));
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -168,7 +168,7 @@ export default function BookPage() {
   const mailUrl = `mailto:${SITE.email}?subject=${encodeURIComponent('Yatra booking enquiry')}&body=${encodeURIComponent(message)}`;
 
   const submit = () => {
-    if (!stepValid(3)) { setAttempted(true); return; }
+    if (!stepValid(3)) { setAttempted(true); return null; }
     if (typeof window !== 'undefined') window.open(waUrl, '_blank', 'noopener');
     setSent(true);
   };

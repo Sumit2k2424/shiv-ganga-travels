@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/chitai-golu-devta-temple');
 
 export const metadata = {
-  title: { absolute: `Chitai Golu Devta Temple ${SITE.season} | Timings & Route | Almora` },
+  title: { absolute: 'Chitai Golu Devta Temple, Almora | Timings & Route' },
   description: `The Kumaon shrine where people file written petitions to a god and hang a bell when the verdict comes. Timings, the letter ritual, distances and route.`,
   keywords: ['chitai golu devta temple','golu devta temple almora','chitai golu devta temple almora uttarakhand','chitai temple almora','golu devta god of justice','chitai golu devta temple timings','golu devta ki chitthi','golu devta mandir almora','how to reach chitai golu devta temple','chitai golu devta temple bells','goljyu','chitai vs ghorakhal golu devta'],
   alternates: { canonical: `${SITE.baseUrl}/chitai-golu-devta-temple` },
@@ -49,9 +49,6 @@ function Schema() {
     hasMap:'https://www.google.com/maps?q=29.6169,79.7015',
     sameAs:['https://en.wikipedia.org/wiki/Golu_Devata','https://almora.nic.in/'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Almora district, Kumaon, Uttarakhand, India' },
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -116,7 +113,7 @@ export default function ChitaiGoluDevtaTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🔔 Kumaon&rsquo;s Court of Justice</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Chitai Golu Devta Temple, Almora &mdash; Timings, the Letter Ritual &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes &mdash; updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes</p>
       </div>
     </section>
 

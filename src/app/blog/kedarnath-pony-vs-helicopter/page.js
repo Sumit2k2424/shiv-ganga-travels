@@ -9,27 +9,15 @@ import BlogTOC from '@/components/BlogTOC';
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `Kedarnath Pony vs Helicopter ${SITE.season} | Cost & Verdict` },
+  title: { absolute: 'Kedarnath Pony vs Helicopter | Cost & Verdict' },
   description: `Kedarnath pony vs helicopter ${SITE.season}: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.`,
   keywords: [`kedarnath pony vs helicopter ${SITE.season}`, 'kedarnath helicopter or pony', `kedarnath pony cost ${SITE.season}`, `kedarnath helicopter cost ${SITE.season}`, 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'How much does a pony cost at Kedarnath in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Pony (horse) at Kedarnath costs ₹3,000–5,000 one way from Gaurikund to Kedarnath in 2026. Return (Kedarnath to Gaurikund) is separately priced at ₹2,500–4,000. The Uttarakhand government sets fixed rates at the start of each season. Palki (palanquin carried by 4 porters) costs ₹8,000–12,000 one way. Book through your operator in advance — pony queues at Gaurikund during peak season are 2–3 hours long.' }},
-      { '@type': 'Question', name: 'How much does Kedarnath helicopter cost in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Official 2026 one-way fares are ₹3,043 (Sersi), ₹4,840 (Phata) and ₹6,077 (Guptkashi) per person; round-trip is ₹6,390, ₹10,164 and ₹12,762 respectively, plus a ₹300 IRCTC fee and 18% GST. Must be booked through the official IRCTC portal (irctc.co.in) — walk-in bookings at helipads are not permitted in 2026. Shiv Ganga Travels assists all pilgrims with IRCTC helicopter booking at no extra charge.' }},
-      { '@type': 'Question', name: 'Is pony or helicopter better for Kedarnath?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Pony is better for: pilgrims who want the full mountain experience, those who are moderately fit, budget-conscious pilgrims (pony ₹3,000–5,000 vs helicopter from ₹3,043 one-way), and those not pressed for time. Helicopter is better for: senior pilgrims (65+), those with knee/heart conditions, anyone doing Kedarnath as a same-day visit, and those who want to save 4–5 hours of trek time.' }},
-      { '@type': 'Question', name: 'Can I book Kedarnath pony in advance?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — and you should. Pony booking for Kedarnath can be done through your tour operator or at the Gaurikund pony stand in person. During peak season (May–June), the pony stand has long queues. Shiv Ganga Travels pre-books pony slots for our pilgrims as part of our package — ask us when booking your yatra.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const H2 = h2;

@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-for-heart-patients');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
+  title: { absolute: 'Char Dham Yatra for Heart Patients | Safe Routes' },
   description: `Char Dham with a heart condition — altitude risk, the certificate mandatory from 55, and why pony or palki beats walking. Written by operators, not doctors.`,
   keywords: ['char dham yatra for heart patients', `char dham yatra medical conditions ${SITE.season}`, 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', `char dham medical certificate ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
@@ -85,7 +85,6 @@ export default function Page() {
         <AnswerBox>
           <strong>Char Dham is possible with a stable heart condition or diabetes, but it is not a trip to attempt without medical clearance.</strong> Every shrine is above 3,000m, where thinner air raises heart rate and blood pressure. Get written clearance from your own cardiologist, carry a full course of medication plus two spare days' worth in your daypack rather than your luggage, take pony or palki rather than walking, and build rest days in. A medical certificate is mandatory from 55 onward.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#FEF3C7', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid #F59E0B' }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:4 }}>⚠️ Important Disclaimer</div>

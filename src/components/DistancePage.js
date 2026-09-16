@@ -18,10 +18,9 @@ export function distanceSchema({ route, faqs, crumbs }) {
   const url = `${SITE.baseUrl}/${route.slug}`;
   const dates = pageDates(`/${route.slug}`);
   return [
-    {
-      '@context':'https://schema.org', '@type':'FAQPage',
-      mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-    },
+    // FAQPage JSON-LD is no longer emitted (17 Sep 2026): Google shows FAQ rich results
+    // only for government and health sites, and marking up every page as an FAQ was
+    // pure schema volume. The visible FAQ accordion stays; the markup does not.
     {
       '@context':'https://schema.org', '@type':'Trip',
       name: `${route.from} to ${route.to} by road`,

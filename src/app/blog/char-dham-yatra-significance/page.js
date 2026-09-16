@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-significance');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
+  title: { absolute: 'Char Dham Yatra History & Spiritual Significance' },
   description: `Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.`,
   // Absorbed /blog/char-dham-yatra-history (Aug 2026) — its keyword set is
   // folded in here so the merged page covers both the "history/origins" and
@@ -52,18 +52,10 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra History & Significance', item: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
     ],
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({
-      '@type': 'Question', name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    </>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />    </>
   );
 }
 
@@ -106,7 +98,6 @@ export default function Significance() {
         <AnswerBox>
           <strong>The Char Dham circuit was established by Adi Shankaracharya in the 8th century CE</strong> as a route linking four Himalayan shrines: Yamunotri and Gangotri, the sources of the Yamuna and Ganga; Kedarnath, one of the twelve Jyotirlingas of Shiva; and Badrinath, sacred to Vishnu. It is also called Chota Char Dham, to distinguish it from the all-India Char Dham of Badrinath, Dwarka, Puri and Rameswaram.
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <BlogTOC items={[
           { id:'what-is',       label:'What is Char Dham Yatra?' },

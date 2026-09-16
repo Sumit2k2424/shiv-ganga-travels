@@ -23,7 +23,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra with Kids ${SITE.season} | Age & Altitude Safety` },
+  title: { absolute: 'Char Dham Yatra with Kids | Age & Altitude Safety' },
   description: `Char Dham with children — doable for fit kids from about 8, ponies from ₹1,800 if they cannot walk. Gangotri needs no trek at all; altitude rules by age.`,
   keywords: [`char dham yatra with kids ${SITE.season}`, 'char dham yatra with children', 'kedarnath yatra with family', 'char dham yatra family package', 'char dham with small children', 'kids char dham yatra altitude safety'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
@@ -55,14 +55,9 @@ function Schema() {
     },
     mainEntityOfPage: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids`,
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-  </>);
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />  </>);
 }
 
 
@@ -99,7 +94,6 @@ export default function Page() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Our honest answer</div>
