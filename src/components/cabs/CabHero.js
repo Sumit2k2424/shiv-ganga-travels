@@ -109,7 +109,7 @@ export default function CabHero({ crumbs = [], eyebrow, title, lede, from, to, s
             <ol>
               {crumbs.map(([label, href], i) => (
                 <li key={label}>
-                  {href ? <Link href={href}>{label}</Link> : <span aria-current="page">{label}</span>}
+                  {href ? <Link prefetch={false} href={href}>{label}</Link> : <span aria-current="page">{label}</span>}
                   {i < crumbs.length - 1 && <i aria-hidden="true">/</i>}
                 </li>
               ))}

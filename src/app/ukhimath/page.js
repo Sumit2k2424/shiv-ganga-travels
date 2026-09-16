@@ -79,10 +79,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -114,9 +111,7 @@ function Schema() {
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(place) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
   </>);
@@ -162,16 +157,13 @@ export default function Ukhimath() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/kedarnath-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Kedarnath Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Kedarnath Yatra</Link><span>›</span>
           <span>Ukhimath</span>
         </div>
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Altitude', '1,311 m'], ['District', 'Rudraprayag'], ['Deity here', 'Nov – Apr'], ['From Rudraprayag', '41 km'], ['To Chopta', '29 km'], ['Road', 'Open all year']].map(([k, v]) => (
@@ -210,7 +202,7 @@ export default function Ukhimath() {
               {WINTER_SEATS.map((w, i) => (
                 <tr key={w.dham} style={{ borderBottom: '1px solid hsl(var(--border))', background: w.dham === 'Kedarnath' ? '#F0FDF4' : (i % 2 === 0 ? '#fff' : 'var(--bg)') }}>
                   <td style={{ ...TD, fontWeight: w.dham === 'Kedarnath' ? 800 : 600, color: 'var(--navy)' }}>{w.dham}</td>
-                  <td style={TD}>{w.href ? <Link href={w.href} style={{ color: 'var(--teal)' }}>{w.seat}</Link> : w.seat}</td>
+                  <td style={TD}>{w.href ? <Link prefetch={false} href={w.href} style={{ color: 'var(--teal)' }}>{w.seat}</Link> : w.seat}</td>
                   <td style={{ ...TD, fontWeight: 700, color: '#1D9E75' }}>{w.alt}</td>
                 </tr>
               ))}
@@ -261,7 +253,7 @@ export default function Ukhimath() {
           </table>
         </div>
         <p style={p}>
-          For <Link href="/chopta-tungnath">Chopta and Tungnath</Link> in particular, staying at Ukhimath rather than at Chopta itself is the better call &mdash; more choice, lower altitude, and an easy pre-dawn drive up for the Chandrashila sunrise.
+          For <Link prefetch={false} href="/chopta-tungnath">Chopta and Tungnath</Link> in particular, staying at Ukhimath rather than at Chopta itself is the better call &mdash; more choice, lower altitude, and an easy pre-dawn drive up for the Chandrashila sunrise.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -278,7 +270,7 @@ export default function Ukhimath() {
           <strong>November to April</strong> is the answer, and it is the opposite of the advice for everywhere else on this site. That is when the deity is here, when the temple carries its full significance, and when you will have it more or less to yourself. December and January are cold &mdash; frost, occasional snow, daytime temperatures in single digits &mdash; but the road stays open and the town keeps working.
         </p>
         <p style={p}>
-          Between May and October the idol is back up at Kedarnath and Ukhimath reverts to being a pleasant hill town and a good base for <Link href="/chopta-tungnath">Chopta</Link>. Still worth a night; just not for the same reason.
+          Between May and October the idol is back up at Kedarnath and Ukhimath reverts to being a pleasant hill town and a good base for <Link prefetch={false} href="/chopta-tungnath">Chopta</Link>. Still worth a night; just not for the same reason.
         </p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
@@ -297,7 +289,7 @@ export default function Ukhimath() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. He has watched the Kedarnath palanquin come down to Ukhimath more than a dozen times and rates it above anything the summer season offers. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. He has watched the Kedarnath palanquin come down to Ukhimath more than a dozen times and rates it above anything the summer season offers. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -316,7 +308,7 @@ export default function Ukhimath() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Nearby and related</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Chopta & Tungnath', '/chopta-tungnath'], ['Gaurikund', '/gaurikund'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Harsil Valley', '/harsil-valley'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Closing Dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Road Status', '/char-dham-road-status'], ['Uttarakhand Packages', '/uttarakhand-tour-packages']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

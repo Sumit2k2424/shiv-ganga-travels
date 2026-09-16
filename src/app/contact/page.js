@@ -2,7 +2,7 @@ import { SITE, PACKAGES } from '@/data/packages';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: { absolute: `Contact Shiv Ganga Travels ${SITE.season} | Haridwar | Instant Confirmation` },
+  title: { absolute: 'Contact Shiv Ganga Travels | Haridwar' },
   alternates: { canonical: 'https://www.shivgangatravels.com/contact' },
   description: `Shiv Ganga Travels, Saptrishi Road near Shantikunj Gate 1, Bhupatwala, Haridwar. Call or WhatsApp +91 7817996730 for packages, cabs and helicopter booking.`,
 };

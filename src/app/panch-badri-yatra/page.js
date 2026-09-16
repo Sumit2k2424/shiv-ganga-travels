@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/panch-badri-yatra');
 
 export const metadata = {
-  title: { absolute: `Panch Badri Yatra Package ${SITE.season} | All 5 Badri Shrines` },
+  title: { absolute: 'Panch Badri Yatra Package | All 5 Badri Shrines' },
   description: `Visit all 5 sacred Badri shrines of Uttarakhand. Route, best time, package details and booking from Haridwar.`,
   keywords: ['panch badri yatra',`panch badri yatra ${SITE.season}`,'panch badri route','panch badri package from haridwar','5 badri temples uttarakhand','badri panchayatan'],
   alternates: { canonical: `${SITE.baseUrl}/panch-badri-yatra` },
@@ -71,25 +71,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
 export default function PanchBadriYatra() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'FAQPage',
-        mainEntity: [
-          { '@type':'Question', name:'What is Panch Badri?',
-            acceptedAnswer:{ '@type':'Answer', text:'Panch Badri refers to the five sacred shrines of Lord Vishnu in the Garhwal Himalayas of Uttarakhand: Badrinath (Vishal Badri), Yogadhyan Badri (Pandukheshwar), Bhavishya Badri (Subhain), Vriddha Badri (Animath), and Adi Badri (Chamoli). Completing all five is considered highly auspicious.' }},
-          { '@type':'Question', name:'How many days are needed for Panch Badri Yatra?',
-            acceptedAnswer:{ '@type':'Answer', text:'Minimum 5–6 days from Haridwar for a comfortable Panch Badri Yatra. This covers Adi Badri (Day 1–2), Joshimath as base (Day 3–4) for Vriddha Badri and Yogadhyan Badri, Badrinath (Day 4–5), and Bhavishya Badri (Day 5, if fit). A relaxed 7N/8D itinerary is recommended.' }},
-          { '@type':'Question', name:'What is the cost of Panch Badri Yatra from Haridwar?',
-            acceptedAnswer:{ '@type':'Answer', text:'Panch Badri Yatra from Haridwar starts from approximately ₹18,000–₹25,000 per person for a 6N/7D package including transport, accommodation, and meals. Contact Shiv Ganga Travels at +91-7817996730 for a customised quote.' }},
-        ],
-      })}}/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -116,7 +104,6 @@ export default function PanchBadriYatra() {
           <strong>Panch Badri is a circuit of five Vishnu temples in the Alaknanda valley</strong> — Badrinath itself, Yogdhyan Badri at Pandukeshwar, Bhavishya Badri near Subhain, Vridha Badri at Animath and Adi Badri near Karnaprayag. Unlike Panch Kedar these are largely motorable and can be covered in 3 to 4 days. Adi Badri and Vridha Badri stay open year-round, which makes the circuit one of the few winter options in Garhwal.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         <p style={p}>
           The Panch Badri — five sacred shrines of Lord Vishnu scattered across the Garhwal Himalayas — is one of the most spiritually comprehensive pilgrimages in Hinduism, yet far less known than the Char Dham or Panch Kedar. Each of the five shrines represents a different form or aspect of Lord Vishnu. Completing all five in sequence is considered to bring moksha and is especially meaningful for Vaishnava devotees.
@@ -184,7 +171,7 @@ export default function PanchBadriYatra() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pilgrimages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Badrinath Temple','/badrinath-temple'],['Char Dham Yatra','/char-dham-yatra'],['Badrinath Weather','/badrinath-weather'],['Uttarakhand Tours','/uttarakhand-tour-packages']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

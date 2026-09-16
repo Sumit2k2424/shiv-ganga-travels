@@ -2,25 +2,14 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: `Cancellation & Refund Policy ${SITE.season} | Shiv Ganga Travels` },
+  title: { absolute: 'Cancellation & Refund Policy | Shiv Ganga Travels' },
   description: `How cancellation and refunds work on Char Dham packages — the recommended 30-day window, what each slab returns, and refunds processed within 7 working days.`,
   alternates: { canonical: `${SITE.baseUrl}/cancellation-policy` },
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Can I cancel Char Dham Yatra package?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Shiv Ganga Travels allows cancellation at any time before departure. Refund percentage depends on how many days before departure you cancel: 30+ days = 80% refund, 15–29 days = 50% refund, 7–14 days = 25% refund, under 7 days = no refund. Cancellations must be made in writing via WhatsApp or email.' }},
-      { '@type': 'Question', name: 'What is the refund policy for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Refunds are processed within 7 working days of the cancellation request being confirmed. Refunds are made to the original payment method. The 25% advance booking fee is non-refundable for cancellations within 7 days of departure.' }},
-      { '@type': 'Question', name: 'Is advance payment refundable for Char Dham package?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, the 25% advance payment is refundable if you cancel 30 or more days before your departure date (80% of total package cost returned). For cancellations 15–29 days before departure, 50% of the total cost is refunded. This includes the advance payment.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const ROW = ({ days, pct, color, note }) => (

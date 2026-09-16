@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-registration-hindi');
 
 export const metadata = {
-  title: { absolute: `चार धाम यात्रा रजिस्ट्रेशन ${SITE.season} | मोबाइल से कैसे करें | फ्री गाइड` },
+  title: { absolute: 'चार धाम यात्रा रजिस्ट्रेशन 2026 | मोबाइल से कैसे करें' },
   description: `चार धाम यात्रा ${SITE.season} रजिस्ट्रेशन मुफ्त — 9 आसान स्टेप। विश्वसनीय ऑपरेटर, तुरंत पुष्टि।`,
   keywords: [`चार धाम यात्रा रजिस्ट्रेशन ${SITE.season}`, 'char dham registration kaise kare', 'चार धाम ऑनलाइन रजिस्ट्रेशन', 'char dham yatra registration hindi', `चार धाम पंजीकरण ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-registration-hindi` },
@@ -22,17 +22,10 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'चार धाम यात्रा रजिस्ट्रेशन कहाँ करें?', acceptedAnswer: { '@type': 'Answer', text: 'registrationandtouristcare.uk.gov.in पर ऑनलाइन करें — बिल्कुल मुफ्त। WhatsApp से भी: 8394833833 पर "Hi" भेजें।' } },
-      { '@type': 'Question', name: 'क्या चार धाम रजिस्ट्रेशन में पैसे लगते हैं?', acceptedAnswer: { '@type': 'Answer', text: 'नहीं — 2026 में चार धाम यात्रा रजिस्ट्रेशन पूरी तरह मुफ्त है। अगर कोई पैसे माँगे तो वह धोखा है।' } },
-      { '@type': 'Question', name: 'बिना रजिस्ट्रेशन के क्या होगा?', acceptedAnswer: { '@type': 'Answer', text: 'सोनप्रयाग (केदारनाथ रूट) और जानकी चट्टी (यमुनोत्री रूट) पर पुलिस रोक देती है। 6 घंटे गाड़ी में बैठकर आए हों — वापस भेज दिए जाते हैं।' } },
-    ],
-  };
+  
   const howTo = { '@context': 'https://schema.org', '@type': 'HowTo', name: 'चार धाम यात्रा रजिस्ट्रेशन कैसे करें', inLanguage: 'hi', step: [{ '@type': 'HowToStep', name: 'Website खोलें', text: 'registrationandtouristcare.uk.gov.in पर जाएं' },{ '@type': 'HowToStep', name: 'Register पर क्लिक करें', text: 'Yatra Registration बटन दबाएं' },{ '@type': 'HowToStep', name: 'Mobile Number दर्ज करें', text: 'OTP verify करें' },{ '@type': 'HowToStep', name: 'Personal Details भरें', text: 'नाम, उम्र, Aadhaar, पता' },{ '@type': 'HowToStep', name: 'E-Pass Download करें', text: 'PDF save करें और print लें' }] };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम रजिस्ट्रेशन हिंदी', item: `${SITE.baseUrl}/blog/char-dham-registration-hindi` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -74,8 +67,8 @@ export default function CharDhamRegistrationHindi() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम रजिस्ट्रेशन 2026</span>
         </div>
       </nav>
@@ -88,7 +81,6 @@ export default function CharDhamRegistrationHindi() {
         <AnswerBox>
           <strong>चार धाम रजिस्ट्रेशन पूरी तरह मुफ़्त है और हर यात्री के लिए अनिवार्य है।</strong> registrationandtouristcare.uk.gov.in पर, Tourist Care Uttarakhand ऐप से, या WhatsApp पर +91-8394833833 नंबर पर &ldquo;Yatra&rdquo; लिखकर करें। हरिद्वार और ऋषिकेश में ऑफलाइन काउंटर भी हैं। 55 साल से ऊपर वालों को मेडिकल सर्टिफिकेट भी लगेगा। QR वाली पर्ची सोनप्रयाग चेकपोस्ट पर स्कैन होती है — प्रिंटआउट ज़रूर रखें।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
           <div style={{ color: '#FFD166', fontSize: 13, fontWeight: 700, marginBottom: 12 }}>⚠️ यह बात पहले जान लें</div>
@@ -227,8 +219,8 @@ export default function CharDhamRegistrationHindi() {
         <p style={p}>
           एक और चीज साथ रखें — रजिस्ट्रेशन का <strong>प्रिंटआउट</strong>, सिर्फ मोबाइल पर भरोसा न करें।
           ऊपर के इलाकों में नेटवर्क नहीं मिलता और फोन की बैटरी ठंड में जल्दी खत्म होती है। ज्यादा जानकारी
-          के लिए <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>अंग्रेजी में पूरी रजिस्ट्रेशन गाइड</Link>{' '}
-          और <Link href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)' }}>आपातकालीन नंबरों की सूची</Link> देखें।
+          के लिए <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>अंग्रेजी में पूरी रजिस्ट्रेशन गाइड</Link>{' '}
+          और <Link prefetch={false} href="/char-dham-yatra-emergency-contacts" style={{ color:'var(--teal)' }}>आपातकालीन नंबरों की सूची</Link> देखें।
         </p>
 
         <h2 id="faq" style={h2}>अक्सर पूछे जाने वाले सवाल</h2>
@@ -255,7 +247,7 @@ export default function CharDhamRegistrationHindi() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['Registration Guide (English)','/blog/char-dham-yatra-registration']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

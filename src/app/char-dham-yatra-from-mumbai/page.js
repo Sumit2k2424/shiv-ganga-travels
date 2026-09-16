@@ -8,7 +8,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Mumbai ${SITE.season} | Pickup & VIP Darshan` },
+  title: { absolute: 'Char Dham Yatra from Mumbai | Pickup & VIP Darshan' },
   description: `Char Dham Yatra from Mumbai ${SITE.season} — 1,450 km, 1h 45m flight or 26h train. All-inclusive from ₹24,999 per person, booked direct with zero commission.`,
   keywords: ['char dham yatra from mumbai',`char dham yatra mumbai ${SITE.season}`,'char dham package from mumbai','kedarnath from mumbai','haridwar from mumbai'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-mumbai` },
@@ -31,14 +31,8 @@ function Schema() {
     // TravelAgency in layout.js, which already carries the rating.
     areaServed: [{ '@type':'City', name:'Mumbai' }, { '@type':'State', name:'Uttarakhand' }],
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type':'Question', name:'How to reach Haridwar from Mumbai for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Mumbai (BOM) to Dehradun (DED) — 1h 45m direct (IndiGo/Air India). Fly in the morning, reach Haridwar by afternoon. Alternatively take the Dehradun Express (26h direct train). Fly is strongly recommended.' } },
-      { '@type':'Question', name:'What is the cost of Char Dham Yatra from Mumbai?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Mumbai with Shiv Ganga Travels starts at ₹24,999/person for a 9N/10D all-inclusive package from Haridwar. This covers AC vehicle, hotels, breakfast and dinner, VIP darshan at all 4 dhams, and 24x7 support. Mumbai pickup is available.' } },
-    ],
-  };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} /></>);
 }
 
 
@@ -51,8 +45,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -80,8 +73,8 @@ export default function CharDhamFromMumbai() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--navy)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--navy)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>From Mumbai</span>
         </div>
       </nav>

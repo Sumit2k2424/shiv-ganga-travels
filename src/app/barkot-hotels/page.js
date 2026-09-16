@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/barkot-hotels');
 
 export const metadata = {
-  title: { absolute: `Barkot Hotels ${SITE.season} | Where to Stay for Yamunotri` },
+  title: { absolute: 'Barkot Hotels | Where to Stay for Yamunotri' },
   description: `Where to stay for Yamunotri ${SITE.season} — Barkot, Janki Chatti, Hanuman Chatti and Purola compared on altitude, rooms and how early you must leave.`,
   keywords: ['barkot hotels','hotels in barkot','barkot accommodation','janki chatti hotels','hanuman chatti hotels','yamunotri hotels','where to stay yamunotri','barkot hotel booking','barkot gmvn'],
   alternates: { canonical: `${SITE.baseUrl}/barkot-hotels` },
@@ -117,10 +117,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -140,9 +137,7 @@ function Schema() {
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
   </>);
 }
@@ -180,16 +175,13 @@ export default function BarkotHotels() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
           Barkot<span>›</span>
           <span>Hotels</span>
         </div>
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <p style={p}>
           <strong>Stay at Barkot, not at Janki Chatti.</strong> That is the whole answer, and the rest of this page is why. The choice looks like a trade between comfort and proximity, and it is really a trade between sleeping at 1,220 m and sleeping at 2,650 m on the one night when nobody in your group is acclimatised yet. The 36 km you save is not worth what it costs you.
@@ -245,7 +237,7 @@ export default function BarkotHotels() {
 
         <h2 style={h2}>When to Book</h2>
         <p style={p}>
-          Barkot has a fixed and fairly small room stock serving every Char Dham group heading to <Link href="/yamunotri-yatra">Yamunotri</Link>, which is most of them. In <strong>May and June it sells out completely</strong>, and operators block rooms months ahead. Forty-five to sixty days is the realistic lead time for peak weeks; three to four weeks is usually enough in September and October.
+          Barkot has a fixed and fairly small room stock serving every Char Dham group heading to <Link prefetch={false} href="/yamunotri-yatra">Yamunotri</Link>, which is most of them. In <strong>May and June it sells out completely</strong>, and operators block rooms months ahead. Forty-five to sixty days is the realistic lead time for peak weeks; three to four weeks is usually enough in September and October.
         </p>
         <p style={p}>
           If you are arriving without a booking in peak season, understand that you may not find a room at any price, and the fallbacks &mdash; Purola, Naugaon &mdash; add an hour to an already brutal morning. We would rather move your dates than put you there.
@@ -305,7 +297,7 @@ export default function BarkotHotels() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. Years of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. Years of blocking Barkot rooms in February for groups travelling in June, which is the only way it works. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -324,7 +316,7 @@ export default function BarkotHotels() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>The Yamunotri leg</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Yamunotri Weather', '/yamunotri-weather'], ['Char Dham Yatra', '/char-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status'], ].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

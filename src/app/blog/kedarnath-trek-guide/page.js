@@ -14,7 +14,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/kedarnath-trek-guide');
 
 export const metadata = {
-  title: { absolute: `Kedarnath Trek Guide ${SITE.season} | 16 km Route & Stays` },
+  title: { absolute: 'Kedarnath Trek Guide | 16 km Route, Stops & Stays' },
   description: `Complete Kedarnath trek guide — 16km route from Gaurikund, difficulty, stay options, best time to visit, and what to carry.`,
   keywords: [`kedarnath trek guide ${SITE.season}`,'kedarnath trek route','kedarnath trek distance','gaurikund to kedarnath','kedarnath stay options','kedarnath best time to visit','kedarnath trek preparation','kedarnath helicopter','kedarnath trek tips',`kedarnath yatra ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-trek-guide` },
@@ -61,10 +61,7 @@ function Schema() {
     mainEntityOfPage: `${SITE.baseUrl}/blog/kedarnath-trek-guide`,
     image: '/opengraph-image',
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqData.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const howTo = {
     '@context': 'https://schema.org', '@type': 'HowTo',
     name: 'How to Prepare for the Kedarnath Trek',
@@ -79,9 +76,7 @@ function Schema() {
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
     </>
   );
 }
@@ -113,9 +108,9 @@ export default function KedarnathTrekGuide() {
       {/* BREADCRUMB */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Kedarnath Trek Guide 2026</span>
         </div>
@@ -315,7 +310,7 @@ export default function KedarnathTrekGuide() {
           <p style={{ ...p, marginBottom:0 }}>A roughly 13 km ropeway from Sonprayag to Kedarnath has been approved, and it is expected to cut the journey to around 40 minutes once operational. It's aimed squarely at elderly and less-mobile pilgrims who can't manage the trek or a long pony ride. It is still under development, so for the 2026 season the trek, pony, palki and helicopter remain your options — but it's worth watching if you're planning a future yatra with senior family members.</p>
         </div>
         <div style={{ background:'#fff', border:'1px solid var(--gold)', borderRadius:12, padding:'14px 16px', marginBottom:24 }}>
-          <p style={{ ...p, marginBottom:0, fontSize:14 }}>⚠️ <strong>Whichever route you pick, register first.</strong> No one is allowed past Sonprayag without a valid Char Dham Yatra registration in 2026. Sort it before you arrive — see our <Link href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>free Char Dham Yatra registration guide</Link> and check the <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</Link> before you drive to Gaurikund.</p>
+          <p style={{ ...p, marginBottom:0, fontSize:14 }}>⚠️ <strong>Whichever route you pick, register first.</strong> No one is allowed past Sonprayag without a valid Char Dham Yatra registration in 2026. Sort it before you arrive — see our <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>free Char Dham Yatra registration guide</Link> and check the <Link prefetch={false} href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</Link> before you drive to Gaurikund.</p>
         </div>
 
         {/* PACKING */}
@@ -369,11 +364,11 @@ export default function KedarnathTrekGuide() {
             {[
               { label:'Kedarnath Yatra Package →', href:'/kedarnath-yatra' },
               { label:'Kedarnath Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking' },
-              { label:'Kedarnath Registration 2026 →', href:'/blog/kedarnath-registration-2026' },
+              { label:'Kedarnath Registration 2026 →', href:'/blog/char-dham-yatra-registration' },
               { label:'Pony & Palki Rates 2026 →', href:'/kedarnath-pony-palki-kandi-rates' },
               { label:'View Kedarnath Package →', href:'/packages/kedarnath-yatra-package-3n-4d-haridwar' },
             ].map(l => (
-              <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
+              <Link prefetch={false} key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
             ))}
           </div>
         </div>

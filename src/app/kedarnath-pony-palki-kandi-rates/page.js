@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/kedarnath-pony-palki-kandi-rates');
 
 export const metadata = {
-  title: { absolute: `Kedarnath Pony, Horse & Palki Price ${SITE.season} — Gaurikund Rates` },
+  title: { absolute: 'Kedarnath Pony, Horse & Palki Rates | Gaurikund' },
   description: `Pony or ghoda ₹3,000–4,500 one way, kandi (pitthu) ₹3,500–5,000, palki ₹8,000–12,000 from Gaurikund. ${SITE.season} prepaid-counter rates, weight slabs and timings.`,
   keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates` },
@@ -32,18 +32,7 @@ export const metadata = {
 const UPDATED = 'July 2026';
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the pony/horse price from Gaurikund to Kedarnath in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The prepaid-counter rate for a pony (ghoda) from Gaurikund to Kedarnath in 2026 is about ₹3,000–4,500 one way for the full 16 km, and roughly ₹6,000–9,000 round trip. A weight surcharge of around ₹200 applies for every 15 kg over 75 kg. The Rudraprayag administration revises these each season, so confirm the figure on the slip at the Gaurikund counter.' } },
-      { '@type': 'Question', name: 'What are Kedarnath palki (dandi) charges in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'A palki (dandi), carried by four men, costs about ₹8,000–12,000 round trip from Gaurikund to Kedarnath in 2026, depending on weight and whether you return the same day or stay overnight. One-way ranges roughly ₹8,000–9,200 for up to 60 kg, rising with weight slabs. It is the most comfortable ground option for anyone who cannot ride a pony.' } },
-      { '@type': 'Question', name: 'What is the kandi or pitthu rate at Kedarnath?', acceptedAnswer: { '@type': 'Answer', text: 'Kandi (pitthu) — a porter carrying a person in a back-mounted basket — costs about ₹3,500–5,000 one way from Gaurikund to Kedarnath in 2026. It is mainly used for small children, very elderly pilgrims, or anyone who cannot sit a pony. A separate pitthu for luggage only is far cheaper, around ₹1,000–1,500.' } },
-      { '@type': 'Question', name: 'Can I book Kedarnath pony or palki online?', acceptedAnswer: { '@type': 'Answer', text: 'No. Pony, palki and kandi cannot be booked online. They are booked only in person at the government prepaid counters in Sonprayag and Gaurikund, where you get a printed slip with a fixed rate. Anyone selling online pony/palki bookings is not official. Reach the counter by 4:00–5:00 AM in peak season, as numbers run out.' } },
-      { '@type': 'Question', name: 'How long does the pony or palki take to reach Kedarnath?', acceptedAnswer: { '@type': 'Answer', text: 'A pony takes about 3–4 hours uphill to Kedarnath and 2.5–3 hours down. A palki takes 5–7 hours up because four men carry it on foot. Kandi is similar to walking pace, 6–7 hours. The pony trail is slightly longer (18–19 km) than the 16 km pedestrian path because of the zig-zag route.' } },
-      { '@type': 'Question', name: 'Is there a horse from Sonprayag to Kedarnath?', acceptedAnswer: { '@type': 'Answer', text: 'No. Ponies start from Gaurikund, not Sonprayag. From Sonprayag you take a 5 km shared jeep (₹50–100) to Gaurikund, then hire the pony there. There is no horse on the Sonprayag–Gaurikund road, and there is no helicopter from Gaurikund — heli flights run from Phata, Sersi and Guptkashi.' } },
-      { '@type': 'Question', name: 'What if a pony or palki operator charges more than the official rate?', acceptedAnswer: { '@type': 'Answer', text: 'Only book at the prepaid counter, where the rate is printed and fixed. If an operator on the trail demands more than the counter rate, note their ID-card number and complain to the SDRF helpline 1070, the Rudraprayag District Control Room (0135-2722002), or the tourist police at Sonprayag/Gaurikund. Never hand luggage or a child to an operator without checking their ID card.' } },
-    ],
-  };
+  
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl },
     { '@type': 'ListItem', position: 2, name: 'Kedarnath Yatra', item: `${SITE.baseUrl}/kedarnath-yatra` },
@@ -56,9 +45,7 @@ function Schema() {
   const wp = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates#webpage`,
     url: `${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates`, name: 'Kedarnath Pony, Palki & Kandi Rates 2026', inLanguage: 'en-IN',
     dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wp) }} />
   </>);
@@ -80,8 +67,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type': 'Question', name: x.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -161,7 +147,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </p>
           <h3 style={h3}>Helicopter — skip the climb entirely</h3>
           <p style={p}>
-            If trekking and ponies are both off the table, fly. Helicopters run from <Link href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link> to the Kedarnath helipad, roughly ₹7,500–9,500 round trip per person, booked only on the official IRCTC heliyatra portal. Remember: there is <strong>no helicopter from Gaurikund</strong>. See our <Link href="/blog/kedarnath-pony-vs-helicopter" style={{ color: 'var(--teal)', fontWeight: 600 }}>pony vs helicopter comparison</Link> if you're torn.
+            If trekking and ponies are both off the table, fly. Helicopters run from <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link> to the Kedarnath helipad, roughly ₹7,500–9,500 round trip per person, booked only on the official IRCTC heliyatra portal. Remember: there is <strong>no helicopter from Gaurikund</strong>. See our <Link prefetch={false} href="/blog/kedarnath-pony-vs-helicopter" style={{ color: 'var(--teal)', fontWeight: 600 }}>pony vs helicopter comparison</Link> if you're torn.
           </p>
 
           <h2 style={h2}>How to book — step by step</h2>
@@ -220,7 +206,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>Senior citizens &amp; medical fitness (2026)</h2>
           <p style={p}>
-            From the 2026 season, pilgrims above 55 are advised to carry a <strong>medical fitness certificate</strong> — the altitude gain to 3,583 m is no joke, and health screening at the route has tightened after recent seasons. If you're travelling with elderly parents, plan the palki, build in a rest day at Guptkashi or Sonprayag to acclimatise, and don't attempt a same-day round trip. Our <Link href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath yatra packages</Link> arrange the registration, hotel and counter logistics so your family isn't doing this cold at 4 AM.
+            From the 2026 season, pilgrims above 55 are advised to carry a <strong>medical fitness certificate</strong> — the altitude gain to 3,583 m is no joke, and health screening at the route has tightened after recent seasons. If you're travelling with elderly parents, plan the palki, build in a rest day at Guptkashi or Sonprayag to acclimatise, and don't attempt a same-day round trip. Our <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath yatra packages</Link> arrange the registration, hotel and counter logistics so your family isn't doing this cold at 4 AM.
           </p>
 
           <h2 style={h2}>Frequently asked questions</h2>
@@ -233,12 +219,12 @@ export default function KedarnathPonyPalkiKandiRates() {
             </p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={wa('Namaste! Please help plan Kedarnath with pony/palki for my group.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 WhatsApp Us</a>
-              <Link href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
+              <Link prefetch={false} href="/kedarnath-yatra" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>View Kedarnath Packages →</Link>
             </div>
           </div>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18 }}>
-            Related: Yamunotri pony &amp; palki rates · <Link href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link href="/blog/kedarnath-registration-2026" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · Kedarnath weather
+            Related: Yamunotri pony &amp; palki rates · <Link prefetch={false} href="/kedarnath-vip-darshan" style={{ color: 'var(--teal)' }}>VIP darshan &amp; puja rates</Link> · <Link prefetch={false} href="/blog/kedarnath-trek-guide" style={{ color: 'var(--teal)' }}>Kedarnath trek guide</Link> · <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>Kedarnath registration 2026</Link> · <Link prefetch={false} href="/blog/how-to-reach-kedarnath" style={{ color: 'var(--teal)' }}>How to reach Kedarnath</Link> · Kedarnath weather
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

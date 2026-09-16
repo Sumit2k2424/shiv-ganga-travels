@@ -20,7 +20,7 @@ import { JsonLd, breadcrumb, faqPage } from '@/components/cabs/cabSchema';
 const URL = `${SITE.baseUrl}/char-dham-yatra-cab-booking`;
 
 export const metadata = {
-  title: { absolute: `Char Dham Cab Booking ${SITE.season} — Full Circuit from ₹18,000` },
+  title: { absolute: 'Char Dham Cab Booking | Full Circuit from Haridwar' },
   description:
     `Book a cab for the full Char Dham circuit ${SITE.season} — Innova Crysta, Ertiga, Tempo Traveller from Haridwar. Fixed all-inclusive rates from ₹18,000, hill-experienced drivers, Green Card vehicles. Operator.`,
   keywords: [
@@ -121,9 +121,9 @@ export default function CharDhamCabBooking() {
         <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
           <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
             <ol style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
-              <li><Link href="/" style={{ color: 'inherit' }}>Home</Link></li>
+              <li><Link prefetch={false} href="/" style={{ color: 'inherit' }}>Home</Link></li>
               <li aria-hidden="true">›</li>
-              <li><Link href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
+              <li><Link prefetch={false} href="/cabs" style={{ color: 'inherit' }}>Cabs</Link></li>
               <li aria-hidden="true">›</li>
               <li aria-current="page">Char Dham Cab Booking</li>
             </ol>

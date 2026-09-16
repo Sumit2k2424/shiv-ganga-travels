@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-significance');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra History & Spiritual Significance ${SITE.season}` },
+  title: { absolute: 'Char Dham Yatra History & Spiritual Significance' },
   description: `Why Adi Shankaracharya established the Char Dham Yatra in the 8th century — the mythology of all 4 dhams and what moksha means for pilgrims.`,
   // Absorbed /blog/char-dham-yatra-history (Aug 2026) — its keyword set is
   // folded in here so the merged page covers both the "history/origins" and
@@ -52,18 +52,10 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra History & Significance', item: `${SITE.baseUrl}/blog/char-dham-yatra-significance` },
     ],
   };
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({
-      '@type': 'Question', name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    </>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />    </>
   );
 }
 
@@ -92,8 +84,8 @@ export default function Significance() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham History & Significance</span>
         </div>
       </nav>
@@ -106,7 +98,6 @@ export default function Significance() {
         <AnswerBox>
           <strong>The Char Dham circuit was established by Adi Shankaracharya in the 8th century CE</strong> as a route linking four Himalayan shrines: Yamunotri and Gangotri, the sources of the Yamuna and Ganga; Kedarnath, one of the twelve Jyotirlingas of Shiva; and Badrinath, sacred to Vishnu. It is also called Chota Char Dham, to distinguish it from the all-India Char Dham of Badrinath, Dwarka, Puri and Rameswaram.
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <BlogTOC items={[
           { id:'what-is',       label:'What is Char Dham Yatra?' },
@@ -231,7 +222,7 @@ export default function Significance() {
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[['Char Dham Package 2026', '/char-dham-yatra'], ['Route Map', '/char-dham-yatra-route-map'], ['Registration Guide', '/blog/char-dham-yatra-registration'], ['Best Time to Visit', '/blog/best-time-char-dham'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Kedarnath Temple', '/kedarnath-temple'], ['Badrinath Temple', '/badrinath-temple']].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

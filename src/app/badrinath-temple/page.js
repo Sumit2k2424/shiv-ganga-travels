@@ -4,7 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: `Badrinath Temple Guide ${SITE.season} | Darshan Timings, Opening Apr 23` },
+  title: { absolute: 'Badrinath Temple | Darshan Timings, History & Opening' },
   description: `Badrinath temple ${SITE.season} — darshan 4:30 AM to 9 PM, opens April 23, and no trek at all. Mahabhishek timings, Mana village, Brahma Kapal and how to reach.`,
   keywords: ['badrinath temple',`badrinath temple timings ${SITE.season}`,'badrinath darshan timings',`badrinath temple opening date ${SITE.season}`,'badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
@@ -24,14 +24,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   // These PAA questions are the only Q&A on the page, so this IS the page's
   // single FAQPage node. (It used to `return null` on the assumption that a
   // main FAQ node existed further down — on this page there isn't one, so the
   // answers were rendering to readers and staying invisible to search and AI
   // engines. Do not re-add a second FAQPage node here.)
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
+  return null;
 }
 
 export default function BadrinathTemple() {
@@ -113,7 +112,7 @@ export default function BadrinathTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Badrinath Yatra Guide',h:'/badrinath-yatra'},{l:'Do Dham Package',h:'/do-dham-yatra'},{l:'Haridwar to Badrinath Cab',h:'/cabs'},{l:'Char Dham Package',h:'/char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

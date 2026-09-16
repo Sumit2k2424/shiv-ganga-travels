@@ -35,14 +35,13 @@ export const COLS = [
     {l:'Dehradun Airport → Haridwar', h:'/dehradun-airport-to-haridwar-taxi'},
   ]},
   { heading:'Guides & Tools', links:[
-    {l:'2026 New Rules',             h:'/blog/char-dham-yatra-2026-new-rules'},
+    {l:'Registration Guide',         h:'/blog/char-dham-yatra-registration'},
     {l:'Cost Calculator',            h:'/char-dham-yatra-cost-calculator'},
     {l:'Route Map',                  h:'/char-dham-yatra-route-map'},
     {l:'Kedarnath Trek Guide',       h:'/blog/kedarnath-trek-guide'},
     {l:'Helicopter Booking',         h:'/blog/kedarnath-helicopter-booking'},
     {l:'Packing List',               h:'/blog/char-dham-yatra-packing-list'},
     {l:'Cost Breakdown',             h:'/blog/char-dham-yatra-cost'},
-    {l:'Registration Guide',         h:'/blog/char-dham-yatra-registration'},
     {l:'Best Time to Visit',         h:'/blog/best-time-char-dham'},
     {l:'All Blog Posts',             h:'/blog'},
   ]},
@@ -64,12 +63,10 @@ export const COLS = [
     {l:'How to Reach Yamunotri',     h:'/how-to-reach-yamunotri'},
     {l:'Barkot Hotels',              h:'/barkot-hotels'},
     {l:'Emergency Contacts',         h:'/char-dham-yatra-emergency-contacts'},
-    {l:'Dehradun Airport → Haridwar',h:'/dehradun-airport-to-haridwar-taxi'},
   ]},
   { heading:'Distances & On-Route', links:[
     ]},
   { heading:'Before You Book', links:[
-    {l:'Helicopter Booking Guide',   h:'/char-dham-helicopter-booking-guide'},
     ]},
   { heading:'Winter Char Dham', links:[
     {l:'Omkareshwar, Ukhimath',      h:'/ukhimath'},

@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/uttarakhand-weather-guide');
 
 export const metadata = {
-  title: { absolute: `Uttarakhand Weather ${SITE.season} | All Char Dham Shrines | Month-wise` },
+  title: { absolute: 'Uttarakhand Weather | All Char Dham Shrines, Month-wise' },
   description: `Month-by-month Uttarakhand weather for Char Dham Yatra ${SITE.season}: temperatures at all four shrines from May to October. When to pack woolens vs raincoats.`,
   keywords: [`uttarakhand weather month by month ${SITE.season}`, `kedarnath weather ${SITE.season}`, 'char dham yatra weather guide', 'badrinath temperature month wise', 'uttarakhand climate chart', 'kedarnath temperature june', 'char dham yatra weather september'],
   alternates: { canonical: `${SITE.baseUrl}/blog/uttarakhand-weather-guide` },
@@ -23,20 +23,8 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the temperature at Kedarnath in June?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temperature in June: daytime 8–14°C, night 0–4°C. June is peak season with the most pleasant trekking weather. Occasional afternoon showers possible. Carry warm layers — temperature drops significantly after sunset.' }},
-      { '@type': 'Question', name: 'What is the temperature at Kedarnath in September?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath in September: daytime 5–12°C, night −2 to 3°C. Post-monsoon clarity makes September ideal — crystal clear skies, dramatically fewer crowds than May–June, and spectacular mountain views. Early snowfall possible after mid-September.' }},
-      { '@type': 'Question', name: 'Is Char Dham Yatra possible in July and August?',
-        acceptedAnswer: { '@type': 'Answer', text: 'July–August is monsoon season in Uttarakhand. The Gangotri highway (NH108) and Kedarnath route face regular landslide risk. While the dhams remain open, the government advises caution. Experienced operators like Shiv Ganga Travels monitor roads daily during this period. We recommend May–June or September–October for safer, more pleasant travel.' }},
-      { '@type': 'Question', name: 'What should I wear for Char Dham Yatra in May?',
-        acceptedAnswer: { '@type': 'Answer', text: 'May packing: thermal inners (mandatory — nights are 2–6°C at dhams), fleece jacket, windproof outer layer, warm cap and gloves, wool socks (3+ pairs), waterproof trekking boots, sunscreen SPF50+, sunglasses. Daytime at lower altitudes can reach 20°C but dham elevations are always cold.' }},
-    ],
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>;
+  
+  return null;
 }
 
 const WEATHER = [
@@ -76,8 +64,8 @@ export default function WeatherGuide() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Uttarakhand Weather Guide</span>
         </div>
       </nav>
@@ -90,7 +78,6 @@ export default function WeatherGuide() {
         <AnswerBox>
           <strong>Uttarakhand runs three distinct weather zones, and treating it as one place is the usual planning mistake.</strong> The plains around Haridwar and Rishikesh reach 38°C in May; the hill stations sit 10 to 15 degrees cooler; the Char Dham shrines above 3,000m are cold year-round and closed from November to April. July and August are monsoon everywhere, heavy enough in the hills to close roads. May–June and September–October work almost everywhere.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         {/* Season summary */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:10, marginBottom:28 }}>
@@ -164,7 +151,7 @@ export default function WeatherGuide() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Best Time for Char Dham','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -4,7 +4,7 @@ import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 
 export const metadata = {
-  title: { absolute: `About Shiv Ganga Travels ${SITE.season} | Founded by a Retired Army Officer` },
+  title: { absolute: 'About Shiv Ganga Travels | Char Dham Operator, Haridwar' },
   description: 'Shiv Ganga Travels, Haridwar — direct Char Dham operator. Zero commission, 50,000+ pilgrims served, instant confirmation.',
   keywords: ['about shiv ganga travels','shiv ganga travels haridwar','char dham yatra operator haridwar','dhanesh chandra mishra','char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/about` },
@@ -411,7 +411,7 @@ export default function AboutPage() {
                 💬 Book on WhatsApp
               </a>
               
-                <Link href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Packages →</Link>
+                <Link prefetch={false} href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Packages →</Link>
               
             </div>
           </div>

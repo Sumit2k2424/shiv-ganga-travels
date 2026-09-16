@@ -43,7 +43,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} | हिंदी में | प्रिंट करें` },
+  title: { absolute: 'चार धाम यात्रा पैकिंग लिस्ट | हिंदी में' },
   description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में। विश्वसनीय ऑपरेटर, तुरंत पुष्टि के साथ यात्रा बुक करें।`,
   keywords: ['चार धाम यात्रा में क्या ले जाएं', 'char dham yatra packing list hindi', `चार धाम यात्रा सामान ${SITE.season}`, 'char dham yatra kya le jayen', 'चार धाम यात्रा दवाइयां'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },
@@ -62,8 +62,8 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'चार धाम पैकिंग लिस्ट', item: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` }] };
-  const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'hi', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -108,8 +108,8 @@ export default function CharDhamPackingListHindi() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>चार धाम पैकिंग लिस्ट 2026</span>
         </div>
       </nav>
@@ -118,7 +118,6 @@ export default function CharDhamPackingListHindi() {
 
         {/* Author byline — E-E-A-T signal */}
         <BlogAuthor variant="top" author="dhanesh" />
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <div style={{ background: 'rgba(216,90,48,0.07)', borderRadius: 12, padding: '16px 20px', border: '1px solid #F5C4B3', marginBottom: 24 }}>
           <strong style={{ color: '#993C1D' }}>याद रखें:</strong><span style={{ color: '#334155', fontSize: 14 }}> 10-11 दिन की यात्रा। केदारनाथ में 16 km + यमुनोत्री में 6 km पैदल चलना है। <strong>जो उठाने में दर्द हो, वो घर छोड़ दो।</strong></span>
@@ -257,7 +256,7 @@ export default function CharDhamPackingListHindi() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['कब जाएं?','/blog/char-dham-kab-jayen'],['Packing List (English)','/blog/char-dham-yatra-packing-list']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -7,7 +7,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/how-to-reach-yamunotri');
 
 export const metadata = {
-  title: { absolute: `How to Reach Yamunotri ${SITE.season} | Road, Trek & Route Guide` },
+  title: { absolute: 'How to Reach Yamunotri | Road, Trek & Route Guide' },
   description: `Road route, helicopter, trekking options — complete guide to reach Yamunotri Dham from Haridwar, Delhi and Dehradun.`,
   keywords: ['how to reach yamunotri','yamunotri route','haridwar to yamunotri','janki chatti to yamunotri','yamunotri trek','how to reach yamunotri from delhi','nearest railway station to yamunotri'],
   alternates: { canonical: `${SITE.baseUrl}/how-to-reach-yamunotri` },
@@ -30,17 +30,6 @@ export const metadata = {
 export default function HowToReachYamunotri() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context':'https://schema.org','@type':'FAQPage',
-        mainEntity: [
-          { '@type':'Question', name:'How to reach Yamunotri from Haridwar?',
-            acceptedAnswer:{ '@type':'Answer', text:'Haridwar to Janki Chatti (base of Yamunotri trek) is approximately 250km by road via NH94, Barkot and Hanuman Chatti. The drive takes 7–8 hours. From Janki Chatti, you trek 6km uphill to the Yamunotri temple (2.5–3 hrs).' }},
-          { '@type':'Question', name:'What is the nearest railway station to Yamunotri?',
-            acceptedAnswer:{ '@type':'Answer', text:'The nearest railway station to Yamunotri is Dehradun Railway Station (175km away) or Haridwar Railway Station (250km away). From either, hire a taxi or join a package vehicle to Janki Chatti.' }},
-          { '@type':'Question', name:'Can I reach Yamunotri by helicopter?',
-            acceptedAnswer:{ '@type':'Answer', text:'Yes. Helicopter service to Kharsali (1km from Yamunotri) operates from Sahastradhara Helipad in Dehradun. Flight time is about 45 minutes. Tickets are sold via official IRCTC heliyatra portal.' }},
-        ],
-      })}}/>
 
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
@@ -67,7 +56,6 @@ export default function HowToReachYamunotri() {
           <strong>Yamunotri is reached by road to Janki Chatti, then a 6km trek to the temple.</strong> Janki Chatti is about 210km from Haridwar via Barkot, roughly 7 to 8 hours of driving, and the road ends there. The final 6km climbs 641m and takes two and a half to three hours on foot, or you can take a pony or palki from the road head. There is no motorable road and no helipad at the shrine itself.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman}</div>
 
         {/* Quick distance card */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
@@ -149,7 +137,7 @@ export default function HowToReachYamunotri() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to visit Yamunotri as part of Char Dham Yatra 2026. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Yamunotri Packages →</Link>
+            <Link prefetch={false} href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Yamunotri Packages →</Link>
           </div>
         </div>
 
@@ -157,7 +145,7 @@ export default function HowToReachYamunotri() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['How to Reach Badrinath','/how-to-reach-badrinath'],['Yamunotri Weather','/yamunotri-weather'],['Packing List','/blog/char-dham-yatra-packing-list'],['Char Dham Route Map','/char-dham-yatra-route-map']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

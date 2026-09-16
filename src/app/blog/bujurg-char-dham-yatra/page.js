@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/bujurg-char-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `बुजुर्गों के लिए चार धाम यात्रा ${SITE.season} | ₹21,000 से शुरू` },
+  title: { absolute: 'बुजुर्गों के लिए चार धाम यात्रा | पूरी गाइड' },
   description: `60-80 साल के बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}। विश्वसनीय ऑपरेटर, तुरंत पुष्टि। घोड़ा, पालकी, हेलिकॉप्टर विकल्प उपलब्ध।`,
   keywords: [`बुजुर्गों के लिए चार धाम यात्रा ${SITE.season}`, 'वरिष्ठ नागरिक चार धाम', 'char dham yatra for senior citizens hindi', 'बड़े उम्र में चार धाम', 'चार धाम पालकी बुजुर्ग', 'senior citizen char dham hindi'],
   alternates: { canonical: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` },
@@ -22,14 +22,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'क्या 70-80 साल के बुजुर्ग चार धाम यात्रा कर सकते हैं?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ — घोड़ा, पालकी और हेलिकॉप्टर की मदद से 80 साल तक के बुजुर्ग भी चार धाम यात्रा कर सकते हैं। डॉक्टर का फिटनेस सर्टिफिकेट जरूरी है (55+ उम्र के लिए)।' } },
-      { '@type': 'Question', name: 'बुजुर्गों के लिए केदारनाथ में क्या विकल्प हैं?', acceptedAnswer: { '@type': 'Answer', text: 'केदारनाथ के 16 km ट्रेक के लिए बुजुर्गों के पास तीन विकल्प हैं: घोड़ा (₹3,500–4,500 एक तरफ), पालकी (₹8,000–12,000 RT), या हेलिकॉप्टर (₹7,500–9,500 एक तरफ)। हेलिकॉप्टर ह्रदय रोगियों के लिए सबसे सुरक्षित है।' } },
-      { '@type': 'Question', name: 'बुजुर्गों के लिए कौन सा महीना सबसे अच्छा है?', acceptedAnswer: { '@type': 'Answer', text: 'सितंबर का पहला हफ्ता सबसे अच्छा है — कम भीड़, सुहावना मौसम, घोड़ा-पालकी आसानी से मिलते हैं।' } },
-    ],
-  };
+  
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'बुजुर्गों के लिए चार धाम यात्रा 2026', inLanguage: 'hi', author: {
         '@type': 'Person',
         '@id': `${SITE.baseUrl}/#founder`,
@@ -39,7 +32,7 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'बुजुर्गों के लिए चार धाम यात्रा', item: `${SITE.baseUrl}/blog/bujurg-char-dham-yatra` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -68,8 +61,8 @@ export default function BujurgCharDham() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>होम</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>ब्लॉग</Link><span>›</span>
           <span>बुजुर्गों के लिए चार धाम यात्रा</span>
         </div>
       </nav>
@@ -82,7 +75,6 @@ export default function BujurgCharDham() {
         <AnswerBox>
           <strong>70 और 80 साल के बुजुर्ग भी चार धाम यात्रा कर सकते हैं — शर्त यह है कि यात्रा धीमी रखी जाए।</strong> चारों धाम 3,000 मीटर से ऊपर हैं, इसलिए 55 साल से ऊपर वालों के लिए मेडिकल सर्टिफिकेट अनिवार्य है। केदारनाथ और यमुनोत्री में घोड़ा या पालकी लें, बद्रीनाथ और गंगोत्री तक गाड़ी मंदिर तक जाती है। 9 रात की जगह 12–13 रात का इटिनरेरी लें, बीच में आराम के दिन रखें, और अपनी दवाइयाँ 2 दिन ज़्यादा साथ रखें।
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         <p style={{ ...p, fontStyle: 'italic', background: 'rgba(15,43,91,0.05)', padding: '16px 20px', borderRadius: 10, borderLeft: '3px solid var(--navy)' }}>रमेश जी, उम्र 72 साल, बरेली से आए थे। बेटे ने कहा था "उम्र हो गई है, पहाड़ पर मत जाओ।" लेकिन वे नहीं माने। मई 2024 में हमारे साथ चार धाम गए — केदारनाथ में घोड़े पर बैठकर पहुँचे, आँखों में आँसू थे। लौटकर उन्होंने फोन किया — <strong>"बेटा, जिंदगी की सबसे बड़ी खुशी मिली।"</strong></p>
 
@@ -180,7 +172,7 @@ export default function BujurgCharDham() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>और पढ़ें</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['चार धाम खर्चा','/blog/char-dham-yatra-kitna-kharcha'],['पैकिंग लिस्ट','/blog/char-dham-packing-list-hindi'],['कब जाएं?','/blog/char-dham-kab-jayen'],['Senior Package','/packages/char-dham-yatra-senior-citizen-12n-13d']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

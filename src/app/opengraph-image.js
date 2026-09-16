@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { SITE } from '@/data/packages';
 
 export const runtime = 'edge';
-export const alt = 'Shiv Ganga Travels — Char Dham Yatra 2026 from Haridwar';
+export const alt = 'Shiv Ganga Travels — Char Dham Yatra from Haridwar';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -41,7 +41,7 @@ export default async function Image() {
 
         {/* Main content */}
         <div style={{ flex:1, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 60px' }}>
-          <div style={{ fontSize:'16px', color:'#E8920A', letterSpacing:'0.1em', marginBottom:'12px', fontWeight:'600' }}>CHAR DHAM YATRA 2026</div>
+          <div style={{ fontSize:'16px', color:'#E8920A', letterSpacing:'0.1em', marginBottom:'12px', fontWeight:'600' }}>CHAR DHAM YATRA FROM HARIDWAR</div>
           {/* Satori (the engine behind ImageResponse) throws on any <div> with
               more than one child that has no explicit display, and it does not
               lay out <br />. This block had both problems — three children and a
@@ -67,7 +67,7 @@ export default async function Image() {
             {[
               { num:'Rs 13,900', label:'Starting price' },
               { num:'50,000+', label:'Happy pilgrims' },
-              { num:'15 Years', label:'Of trust' },
+              { num:'Own fleet', label:'Hill drivers' },
               { num:`${SITE.reviews.rating}/5`, label:'Google rating' },
             ].map(s => (
               <div key={s.num} style={{ display:'flex', flexDirection:'column', gap:'4px' }}>

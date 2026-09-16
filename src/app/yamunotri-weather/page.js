@@ -83,10 +83,7 @@ function Schema() {
     spatialCoverage:{ '@type':'Place', name:'Yamunotri, Uttarkashi district, Uttarakhand, India', geo:{ '@type':'GeoCoordinates', latitude:31.0139, longitude:78.4600 } },
     temporalCoverage:'2026-04-19/2026-11-11',
   };
-  const faqSchema = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-  };
+  
   const breadcrumb = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -97,9 +94,7 @@ function Schema() {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
   </>);
 }
 
@@ -107,7 +102,7 @@ const th = { padding:'10px 12px', textAlign:'left', fontWeight:700, fontSize:11,
 const td = { padding:'10px 12px', color:'var(--text-mid)', fontSize:12.5, verticalAlign:'top' };
 
 export const metadata = {
-  title: { absolute: `Yamunotri Weather ${SITE.season} | Month-wise Temperature Guide` },
+  title: { absolute: 'Yamunotri Weather | Month-wise Temperature Guide' },
   description: `Yamunotri weather month by month at 3,291m — what to pack each season, from fleece and rain ponchos to thermals and gloves. Best windows and monsoon risk.`,
   keywords: ['yamunotri weather','yamunotri temperature','yamunotri weather in may','yamunotri best time to visit',`yamunotri weather ${SITE.season}`,'yamunotri trek weather'],
   alternates: { canonical: `${SITE.baseUrl}/yamunotri-weather` },
@@ -147,8 +142,8 @@ export default function YamunotriWeather() {
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/yamunotri-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Yamunotri Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/yamunotri-yatra" style={{ color:'var(--teal)', textDecoration:'none' }}>Yamunotri Yatra</Link><span>›</span>
           <span>Weather Guide</span>
         </div>
       </nav>
@@ -301,7 +296,7 @@ export default function YamunotriWeather() {
             <a href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent('Namaste! I want to book Yamunotri Yatra 2026. Please share packages.')}`}
               target="_blank" rel="nofollow noopener noreferrer"
               style={{ background:'#25D366', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none' }}>💬 WhatsApp</a>
-            <Link href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Yamunotri Packages →</Link>
+            <Link prefetch={false} href="/yamunotri-yatra" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View Yamunotri Packages →</Link>
           </div>
         </div>
 
@@ -309,7 +304,7 @@ export default function YamunotriWeather() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Gangotri Weather','/gangotri-weather'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list'],['Yamunotri Yatra','/yamunotri-yatra']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

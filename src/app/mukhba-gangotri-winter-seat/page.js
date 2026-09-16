@@ -72,7 +72,6 @@ export default function MukhbaWinterSeat() {
       <Crumbs trail={[['Mukhba', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>
@@ -147,7 +146,7 @@ export default function MukhbaWinterSeat() {
         <H2>Beyond Mukhba</H2>
         <ul style={{ paddingLeft:20, marginBottom:14 }}>
           <LI><strong style={{ color:'var(--navy)' }}>Harsil village</strong> — see our{' '}
-          <Link href="/harsil-valley" style={{ color:'var(--teal)', fontWeight:600 }}>Harsil valley guide</Link>{' '}
+          <Link prefetch={false} href="/harsil-valley" style={{ color:'var(--teal)', fontWeight:600 }}>Harsil valley guide</Link>{' '}
           for the fuller picture of the area.</LI>
           <LI><strong style={{ color:'var(--navy)' }}>Dharali</strong> — a few kilometres on, with an old
           Kalp Kedar temple that is worth the stop.</LI>

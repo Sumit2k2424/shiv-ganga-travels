@@ -29,7 +29,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `Valley of Flowers Trek ${SITE.season} — Best Time, Permit & Route Guide` },
+  title: { absolute: 'Valley of Flowers Trek | Best Time, Permit & Route' },
   description: `Valley of Flowers trek ${SITE.season} — UNESCO site at 3,352m. Peak bloom, permit and entry fee, park timings, the 13km route from Govindghat, and how to combine it with Hemkund Sahib.`,
   keywords: [`valley of flowers trek ${SITE.season}`, 'valley of flowers best time', 'valley of flowers trek guide', 'govindghat to valley of flowers', 'valley of flowers uttarakhand', `valley of flowers entry fee ${SITE.season}`, 'valley of flowers flowers list'],
   alternates: { canonical: `${SITE.baseUrl}/blog/valley-of-flowers-trek` },
@@ -47,10 +47,7 @@ function Schema() {
     about:{ '@type':'Place', name:'Valley of Flowers National Park', geo:{ '@type':'GeoCoordinates', latitude:30.7280, longitude:79.6050, elevation:'3352' } },
     speakable:{ '@type':'SpeakableSpecification', cssSelector:['.blog-keytakeaways'] },
   };
-  const faq = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-  };
+  
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -60,9 +57,7 @@ function Schema() {
     ],
   };
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/>
   </>);
 }
 export default function ValleyOfFlowersTrek() {
@@ -87,8 +82,8 @@ export default function ValleyOfFlowersTrek() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
         <span>Valley of Flowers Trek Guide</span>
       </div>
     </nav>

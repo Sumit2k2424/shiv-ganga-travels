@@ -53,7 +53,7 @@ export default function Breadcrumb({ items = [] }) {
                 </svg>
               )}
               {item.href && i < all.length - 1 ? (
-                <Link
+                <Link prefetch={false}
                   href={item.href}
                   style={{ color: 'var(--navy)', textDecoration: 'none', fontWeight: 500 }}
                 >

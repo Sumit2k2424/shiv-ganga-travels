@@ -72,7 +72,6 @@ export default function JoshimathNarsinghTemple() {
       <Crumbs trail={[['Narsingh Temple Joshimath', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>
@@ -152,7 +151,7 @@ export default function JoshimathNarsinghTemple() {
         <P>
           It is a long day from Haridwar and we break it at Srinagar or Rudraprayag rather than pushing
           through — mountain driving after dark in December is not something we do. Check the{' '}
-          <Link href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>road status page</Link>{' '}
+          <Link prefetch={false} href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>road status page</Link>{' '}
           before you finalise dates.
         </P>
 

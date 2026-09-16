@@ -13,7 +13,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/best-time-char-dham');
 
 export const metadata = {
-  title: { absolute: `Best Time for Char Dham Yatra ${SITE.season} | Month-by-Month Guide` },
+  title: { absolute: 'Best Time for Char Dham Yatra | Month-by-Month' },
   description: `Best time for Char Dham Yatra ${SITE.season} — May has the clearest mornings and the biggest crowds, October the coldest nights and cleanest views. Month by month.`,
   keywords: ['best time for char dham yatra', `char dham yatra best month ${SITE.season}`, 'char dham yatra weather month wise', `char dham opening dates ${SITE.season}`, 'char dham yatra season', 'best month char dham yatra'],
   alternates: { canonical: `${SITE.baseUrl}/blog/best-time-char-dham` },
@@ -32,19 +32,19 @@ export const metadata = {
 };
 
 
-const faqSchema = {
-  '@context': 'https://schema.org', '@type': 'FAQPage',
-  mainEntity: [
-    { '@type':'Question', name:'What is the best month for Char Dham Yatra?',
-      acceptedAnswer:{ '@type':'Answer', text:'May and September–October are the best months. May (8–18°C) has clear skies, blooming rhododendrons and manageable crowds. September–October delivers post-monsoon crystal clarity, cooler temperatures and the fewest queues. Both windows completely avoid the July–August monsoon risk. The 2026 season opens April 19 (Yamunotri/Gangotri), April 22 (Kedarnath) and April 23 (Badrinath).' }},
-    { '@type':'Question', name:'Can I do Char Dham Yatra in August?',
-      acceptedAnswer:{ '@type':'Answer', text:'August is the peak of the Uttarakhand monsoon. Landslides close the Kedarnath and Gangotri routes without warning. Road blockages of 4–12 hours are common. We strongly advise against August for first-time pilgrims and senior citizens. If you must travel in August, add 2–3 buffer days and book an operator who monitors road conditions daily.' }},
-    { '@type':'Question', name:'When does Char Dham Yatra open and close in 2026?',
-      acceptedAnswer:{ '@type':'Answer', text:'2026 opening dates: Yamunotri April 19, Gangotri April 19, Kedarnath April 22, Badrinath April 23. Closing dates follow Diwali–Bhai Dooj (typically late October–early November). Exact closing dates are announced by the temple trusts approximately 3 weeks before closure.' }},
-    { '@type':'Question', name:'Is October good for Char Dham Yatra?',
-      acceptedAnswer:{ '@type':'Answer', text:'October (first two weeks) is excellent — arguably the best month for photography and comfort. Post-monsoon skies are the clearest of the year. The Himalayan peaks behind Kedarnath, Gangotri and Badrinath emerge in sharp relief. Crowds thin out sharply after September. Night temperatures drop to 2–5°C at the dhams by October, so carry warm layers.' }},
-  ],
-};
+
+
+// Visible FAQ list (no FAQPage markup — see GuideArticle.js).
+const FAQS = [
+    { name:'What is the best month for Char Dham Yatra?',
+      text:'May and September–October are the best months. May (8–18°C) has clear skies, blooming rhododendrons and manageable crowds. September–October delivers post-monsoon crystal clarity, cooler temperatures and the fewest queues. Both windows completely avoid the July–August monsoon risk. The 2026 season opens April 19 (Yamunotri/Gangotri), April 22 (Kedarnath) and April 23 (Badrinath).' },
+    { name:'Can I do Char Dham Yatra in August?',
+      text:'August is the peak of the Uttarakhand monsoon. Landslides close the Kedarnath and Gangotri routes without warning. Road blockages of 4–12 hours are common. We strongly advise against August for first-time pilgrims and senior citizens. If you must travel in August, add 2–3 buffer days and book an operator who monitors road conditions daily.' },
+    { name:'When does Char Dham Yatra open and close in 2026?',
+      text:'2026 opening dates: Yamunotri April 19, Gangotri April 19, Kedarnath April 22, Badrinath April 23. Closing dates follow Diwali–Bhai Dooj (typically late October–early November). Exact closing dates are announced by the temple trusts approximately 3 weeks before closure.' },
+    { name:'Is October good for Char Dham Yatra?',
+      text:'October (first two weeks) is excellent — arguably the best month for photography and comfort. Post-monsoon skies are the clearest of the year. The Himalayan peaks behind Kedarnath, Gangotri and Badrinath emerge in sharp relief. Crowds thin out sharply after September. Night temperatures drop to 2–5°C at the dhams by October, so carry warm layers.' },
+];
 
 function Schema() {
   const article = {
@@ -96,10 +96,7 @@ export default function BestTimeCharDham() {
   ];
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-
-      <ReadingProgress/>
+    <>      <ReadingProgress/>
 
       <BlogHero
         badge="Travel Guide · Updated May 2026"
@@ -118,8 +115,8 @@ export default function BestTimeCharDham() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Best Time for Char Dham Yatra 2026</span>
         </div>
       </nav>
@@ -132,7 +129,6 @@ export default function BestTimeCharDham() {
         <AnswerBox>
           <strong>May to mid-June and mid-September to October are the two good windows.</strong> May and early June are warmest and busiest, with the heaviest crowds of the year at Kedarnath. Mid-September to October has the clearest mountain views, fewer people and cheaper rooms, at the cost of freezing nights by late October. July and August are peak monsoon: the temples stay open but landslides close the roads repeatedly and helicopters are grounded for days.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ Last updated: {PAGE_DATES.modifiedHuman} · Author: Shiv Ganga Travels team, Haridwar</div>
 
         {/* Quick answer box — skimmable */}
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'20px 24px', marginBottom:28 }}>
@@ -271,18 +267,18 @@ export default function BestTimeCharDham() {
         </div>
 
         <h2 id="faq" style={h2}>Frequently Asked Questions</h2>
-        {faqSchema.mainEntity.map((q, i) => (
+        {FAQS.map((q, i) => (
           <div key={i} style={{ marginBottom:16, padding:'16px 18px', background:'var(--bg)', borderRadius:12, border:'1px solid hsl(var(--border))' }}>
             <div style={{ fontWeight:700, fontSize:14.5, color:'var(--navy)', marginBottom:8 }}>Q: {q.name}</div>
-            <p style={{ margin:0, fontSize:14, color:'#334155', lineHeight:1.8 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ margin:0, fontSize:14, color:'#334155', lineHeight:1.8 }}>{q.text}</p>
           </div>
         ))}
 
         <div style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:32 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related guides</div>
           <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
-            {[['Packing List 2026','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Tips','/blog/senior-citizen-char-dham'],['Char Dham Packages','/packages/char-dham']].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+            {[['Packing List 2026','/blog/char-dham-yatra-packing-list'],['Registration Guide','/blog/char-dham-yatra-registration'],['Senior Citizen Tips','/blog/senior-citizen-char-dham'],['Char Dham Packages','/char-dham-yatra']].map(([l,h]) => (
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

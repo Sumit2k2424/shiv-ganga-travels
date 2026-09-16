@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/mansa-devi-temple');
 const M = PLACES['mansa-devi'];
 
 export const metadata = {
-  title: { absolute: `Mansa Devi Temple Haridwar ${SITE.season} — Ropeway Ticket Price & Timings` },
+  title: { absolute: 'Mansa Devi Temple Haridwar | Ropeway Price & Timings' },
   description: `Mansa Devi ropeway is about ₹165 return, or walk the 1.5 km stepped path from Har Ki Pauri free in 45–60 minutes. Timings, queues and the wish-thread ritual.`,
   keywords: ['mansa devi temple','mansa devi temple haridwar','mansa devi ropeway ticket price','mansa devi udan khatola','mansa devi temple timing','mansa devi haridwar trek','bilwa parvat mansa devi','mansa devi ropeway booking'],
   alternates: { canonical: `${SITE.baseUrl}/mansa-devi-temple` },
@@ -74,7 +74,6 @@ export default function MansaDeviTemple() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Mansa Devi Temple', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>
@@ -148,7 +147,7 @@ export default function MansaDeviTemple() {
           This is the single most useful piece of sequencing advice for a Haridwar day. Mansa Devi is
           closer, opens earlier, and its queue builds through the morning much faster than Chandi Devi&apos;s.
           Start at Mansa Devi around opening, cross to Chandighat for{' '}
-          <Link href="/chandi-devi-temple" style={{ color:'#15803D', fontWeight:700 }}>Chandi Devi</Link>{' '}
+          <Link prefetch={false} href="/chandi-devi-temple" style={{ color:'#15803D', fontWeight:700 }}>Chandi Devi</Link>{' '}
           by late morning, and both are done before the midday bhog closure. Do it the other way round and
           you will spend an extra hour standing still.
         </Note>

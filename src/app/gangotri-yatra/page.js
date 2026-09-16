@@ -8,7 +8,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/gangotri-yatra');
 
 export const metadata = {
-  title: { absolute: `Gangotri Yatra Package ${SITE.season} | Motor Road, No Trek` },
+  title: { absolute: 'Gangotri Yatra Package from Haridwar | No Trek' },
   description: `Plan Gangotri Yatra ${SITE.season} from Haridwar. ₹4,250 per person. Route via Uttarkashi, Harsil valley, Gaumukh glacier option. Motor road to temple — no trek`,
   keywords: [`gangotri yatra, gangotri yatra ${SITE.season}, gangotri yatra package, haridwar to gangotri, gangotri temple guide`],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-yatra` },
@@ -51,14 +51,13 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   // These PAA questions are the only Q&A on the page, so this IS the page's
   // single FAQPage node. (It used to `return null` on the assumption that a
   // main FAQ node existed further down — on this page there isn't one, so the
   // answers were rendering to readers and staying invisible to search and AI
   // engines. Do not re-add a second FAQPage node here.)
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(paa) }} />;
+  return null;
 }
 
 export default function Page() {
@@ -81,7 +80,6 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-          <div style={{fontSize:12,color:'var(--text-muted)',marginBottom:16,textAlign:'right'}}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <AnswerBox>
           Gangotri Yatra costs ₹4,250 per person from Haridwar. Gangotri sits at 3,415 m in
@@ -133,7 +131,7 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:8}}>📦 Our Featured Package:</div>
-          <Link href="/ek-dham-yatra" style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
+          <Link prefetch={false} href="/ek-dham-yatra" style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:'#fff',padding:'16px 18px',borderRadius:10,border:'1px solid hsl(var(--border))',textDecoration:'none',gap:12}}>
             <div>
               <div style={{fontSize:14,fontWeight:700,color:'var(--text)',marginBottom:3}}>See the 2N/3D Ek Dham package →</div>
               <div style={{fontSize:12.5,color:'var(--text-muted)'}}>Full itinerary · Inclusions · FAQs · Book online</div>
@@ -145,10 +143,10 @@ export default function Page() {
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
-              <Link key="/gangotri-temple" href="/gangotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Gangotri Temple Guide"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Registration Guide"}<span> →</span></Link>
-              <Link key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Packing List"}<span> →</span></Link>
+              <Link prefetch={false} key="/char-dham-yatra" href="/char-dham-yatra" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Yatra 2026"}<span> →</span></Link>
+              <Link prefetch={false} key="/gangotri-temple" href="/gangotri-temple" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Gangotri Temple Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/char-dham-yatra-registration" href="/blog/char-dham-yatra-registration" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Registration Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/char-dham-yatra-packing-list" href="/blog/char-dham-yatra-packing-list" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Char Dham Packing List"}<span> →</span></Link>
           </div>
         </div>
 
@@ -217,7 +215,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Packages','/char-dham-yatra'],['Road Status','/char-dham-road-status'],['Weather Guide','/blog/uttarakhand-weather-guide'],['Haridwar to Gangotri Cab','/cabs']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

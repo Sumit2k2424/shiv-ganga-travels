@@ -11,7 +11,7 @@ import { pageDates } from '@/lib/pageDates';
 
 const PAGE_DATES = pageDates('/blog/rishikesh-adventure-guide');
 export const metadata = {
-  title: { absolute: `Rishikesh Adventure Guide ${SITE.season} | Rafting & Bungee` },
+  title: { absolute: 'Rishikesh Adventure Guide | Rafting & Bungee' },
   description: `Rishikesh adventure guide ${SITE.season} — white water rafting, the 83 m bungee, beach camping and yoga. Honest costs rather than the inflated tourist prices.`,
   keywords: [`rishikesh adventure guide ${SITE.season}`, `rishikesh river rafting price ${SITE.season}`, 'rishikesh bungee jumping price', 'rishikesh camping cost', 'rishikesh adventure package', 'rishikesh rafting booking', 'rishikesh best time to visit'],
   alternates: { canonical: `${SITE.baseUrl}/blog/rishikesh-adventure-guide` },
@@ -42,8 +42,8 @@ export default function RishikeshAdventureGuide() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
         <span>Rishikesh Adventure Guide 2026</span>
       </div>
     </nav>

@@ -32,7 +32,7 @@ export default function PackageCard({ pkg }) {
                  focus-within:border-navy/40 focus-within:shadow-[0_18px_40px_-12px_rgba(15,43,91,0.22)]"
     >
       {/* ── Image ── */}
-      {/* A plain div, not a second <Link> — the title link's ::after overlay
+      {/* A plain div, not a second <Link prefetch={false}> — the title link's ::after overlay
           already makes the whole card clickable, so this avoids emitting two
           duplicate anchors to the same URL. */}
       <div
@@ -96,7 +96,7 @@ export default function PackageCard({ pkg }) {
         {/* Title + rating */}
         <div className="flex items-start justify-between gap-3">
           <h3 className="flex-1 text-[15.5px] font-bold leading-[1.35] tracking-[-0.01em] text-navy">
-            <Link
+            <Link prefetch={false}
               href={`/packages/${pkg.slug}`}
               className="line-clamp-2 rounded-sm transition-colors duration-200
                          after:absolute after:inset-0 after:content-['']
@@ -198,7 +198,7 @@ export default function PackageCard({ pkg }) {
             >
               Get Free Quote
             </a>
-            <Link
+            <Link prefetch={false}
               href={`/packages/${pkg.slug}`}
               className="group/btn inline-flex items-center justify-center gap-1 rounded-lg border
                          border-slate-300 bg-white px-4 py-1.5 text-[12px] font-bold text-navy

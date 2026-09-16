@@ -72,7 +72,6 @@ export default function DakshMahadevTemple() {
       <Crumbs trail={[['Haridwar','/haridwar-sightseeing-places'],['Daksh Mahadev Temple', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>

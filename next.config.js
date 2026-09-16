@@ -58,7 +58,16 @@ const nextConfig = {
     // ([[vercel-origin-transfer]] in memory), so batch deploys rather than
     // pushing single-line changes. `optimizeCss` (critters) was tried first
     // and does nothing for App Router pages.
-    inlineCss: true,
+    //
+    // Turned OFF on 17 Sep 2026. Measured in the build: the CSS bundle is 228 KB,
+    // and inlining it (twice) made the average page 623 KB — 237 KB of <style>
+    // plus its copy in the flight payload — against 187 KB on 3 Sep. Every
+    // production deploy then refilled ~100 MB of HTML+RSC per edge region, and
+    // Fast Origin Transfer reached 11.5 GB of the 10 GB Hobby cap. Three
+    // cacheable <link> stylesheets cost one round-trip on the first page of a
+    // session; inlining cost 40% of every page on every visit and every deploy.
+    // Re-enable only after the CSS bundle is cut to well under 50 KB.
+    inlineCss: false,
   },
 
   // NOTE: Do NOT override webpack `optimization.splitChunks` here. The Next.js

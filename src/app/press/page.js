@@ -90,7 +90,7 @@ export default function PressOffice() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
           <span>Press Office</span>
         </div>
       </nav>
@@ -134,7 +134,7 @@ export default function PressOffice() {
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32 }}>
             {releases.map(r => (
-              <Link key={r.slug} href={`/press/${r.slug}`} style={{ ...CARD, display: 'block', textDecoration: 'none', borderLeft: '4px solid #E8920A' }}>
+              <Link prefetch={false} key={r.slug} href={`/press/${r.slug}`} style={{ ...CARD, display: 'block', textDecoration: 'none', borderLeft: '4px solid #E8920A' }}>
                 <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 8, flexWrap: 'wrap' }}>
                   <span style={{ background: 'var(--navy)', color: '#FFD166', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '3px 10px', borderRadius: 100 }}>{r.category}</span>
                   <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{r.dateHuman}</span>
@@ -197,7 +197,7 @@ export default function PressOffice() {
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
           {[['Char Dham statistics', '/char-dham-yatra-statistics'], ['Live road status', '/char-dham-road-status'], ['Closing dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Registration rules', '/blog/char-dham-yatra-registration'], ['Emergency contacts', '/char-dham-yatra-emergency-contacts'], ['Helicopter fares and booking', '/blog/kedarnath-helicopter-booking'], ['About the company', '/about']].map(([l, href]) => (
-            <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+            <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
           ))}
         </div>
 

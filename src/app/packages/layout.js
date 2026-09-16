@@ -1,7 +1,7 @@
 import { SITE } from '@/data/packages';
 
 export const metadata = {
-  title: { absolute: 'All Char Dham Yatra Packages 2026 | Browse & Filter | Direct Operator' },
+  title: { absolute: 'All Char Dham Yatra Packages | Browse & Compare' },
   description: 'Browse all Char Dham Yatra packages 2026 from Haridwar. Direct Haridwar operator, zero commission, instant confirmation.',
   alternates: { canonical: `${SITE.baseUrl}/packages` },
   openGraph: {

@@ -96,7 +96,6 @@ export default function CostCalculator() {
     };
   }, [pilgrims, tier, city, season, addons]);
 
-  const faqSchema = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
   const fmt = (n) => '₹' + n.toLocaleString('en-IN');
   const range = (lo, hi) => lo === hi ? fmt(lo) : `${fmt(lo)} – ${fmt(hi)}`;
 
@@ -108,7 +107,6 @@ export default function CostCalculator() {
 
   return (
     <div style={{ maxWidth:760, margin:'0 auto', padding:'40px 20px 60px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div style={{ textAlign:'center', marginBottom:32 }}>
         <span style={{ background:'var(--navy-light)', color:'var(--navy)', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:14 }}>Free Tool</span>
@@ -235,7 +233,7 @@ export default function CostCalculator() {
           {label:'Helicopter Booking →', href:'/blog/kedarnath-helicopter-booking'},
           {label:'Packing List →', href:'/blog/char-dham-yatra-packing-list'},
         ].map(l=>(
-          <Link key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
+          <Link prefetch={false} key={l.href} href={l.href} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.label}</Link>
         ))}
       </div>
     </div>

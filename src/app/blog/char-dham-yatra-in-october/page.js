@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-in-october');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra in October ${SITE.season} | Weather, Crowds & Dates` },
+  title: { absolute: 'Char Dham Yatra in October | Weather, Crowds & Dates' },
   description: `October Char Dham — monsoon gone, crowds gone, rooms cheaper, but Kedarnath nights hit −2°C and the temples close 10–13 November. Go in the first two weeks.`,
   keywords: [`char dham yatra in october ${SITE.season}`, 'kedarnath yatra october', 'char dham yatra october weather', 'char dham october closing dates', 'char dham off season october', 'best time char dham october'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-in-october` },
@@ -71,8 +71,8 @@ export default function Page() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham in October</span>
         </div>
       </nav>
@@ -85,7 +85,6 @@ export default function Page() {
         <AnswerBox>
           <strong>October is one of the two best months for Char Dham, and the best for mountain views.</strong> Post-monsoon air gives visibility that routinely runs to 100km, crowds are a fraction of May's, and rooms cost noticeably less. The trade-off is cold: nights at Kedarnath drop to −2°C and lower by late month. The temples close between 10 and 13 November, so an October trip is also the last comfortable window of the season.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid var(--teal)' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:4 }}>Short answer from our team</div>
@@ -170,7 +169,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Best Time for Char Dham',h:'/blog/best-time-char-dham'},{l:'Uttarakhand Weather Guide',h:'/blog/uttarakhand-weather-guide'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+              <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/char-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Package ${SITE.season} | Hotels & Transport Included` },
+  title: { absolute: 'Char Dham Yatra Package from Haridwar | All-Inclusive' },
   description: `Char Dham Yatra package ${SITE.season} from Haridwar — 9N/10D from ₹13,900 per person with hotels, meals and transport included. Booked direct, no agent commission.`,
   keywords: [
     'char dham yatra package','chardham yatra package','4 dham yatra package',`4 dham yatra ${SITE.season}`,
@@ -64,28 +64,18 @@ function Schema() {
     // and are not asserted in markup anywhere on the site (see layout.js).
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: GLOBAL_FAQS.slice(0, 6).map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
 
       <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>
@@ -224,7 +214,7 @@ export default function CharDhamYatra() {
           </AnswerBox>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12 }}>
             {charDhamPkgs.map(p => (
-              <Link key={p.slug} href={`/packages/${p.slug}`}
+              <Link prefetch={false} key={p.slug} href={`/packages/${p.slug}`}
                 style={{ background:'#fff', padding:'14px 16px', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none', display:'flex', justifyContent:'space-between', alignItems:'center', gap:8, transition:'box-shadow .2s' }}>
                 <div>
                   <div style={{ fontSize:13.5, fontWeight:600, color:'var(--text)', lineHeight:1.3 }}>{p.name}</div>
@@ -569,14 +559,14 @@ export default function CharDhamYatra() {
           </h3>
           <div style={{ display:'flex', flexWrap:'wrap', gap:10 }}>
             {[
-              { label:'View Char Dham Packages →',     href:'/packages/char-dham' },
+              { label:'View Char Dham Packages →',     href:'/char-dham-yatra' },
               { label:'Kedarnath Yatra →',             href:'/kedarnath-yatra' },
               { label:'Char Dham Yatra Guide 2026 →',  href:'/char-dham-yatra' },
-              { label:'Do Dham Packages →',            href:'/packages/do-dham' },
-              { label:'Helicopter Char Dham →',        href:'/packages/helicopter' },
+              { label:'Do Dham Packages →',            href:'/do-dham-yatra' },
+              { label:'Helicopter Char Dham →',        href:'/char-dham-helicopter' },
               { label:'All Packages →',               href:'/packages' },
             ].map(l => (
-              <Link key={l.href} href={l.href}
+              <Link prefetch={false} key={l.href} href={l.href}
                 style={{ background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>
                 {l.label}
               </Link>
@@ -603,7 +593,7 @@ export default function CharDhamYatra() {
               📞 {SITE.phone}
             </a>
             
-              <Link href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View All Packages →</Link>
+              <Link prefetch={false} href="/packages" style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'13px 26px', borderRadius:10, fontWeight:700, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.25)' }}>View All Packages →</Link>
             
           </div>
         </div>
@@ -619,7 +609,7 @@ export default function CharDhamYatra() {
                 data/redirects.js); linking a redirected slug here just sent
                 crawlers through a 308. */}
             {[['Delhi & North India','delhi'],['Mumbai & South India','mumbai']].map(([l,c])=>(
-              <Link key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
+              <Link prefetch={false} key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
             ))}
           </div>
         </div>
@@ -630,7 +620,7 @@ export default function CharDhamYatra() {
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

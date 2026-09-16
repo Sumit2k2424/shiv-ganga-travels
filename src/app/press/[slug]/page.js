@@ -150,8 +150,8 @@ export default function PressRelease({ params }) {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/press" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Press Office</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/press" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Press Office</Link><span>›</span>
           <span>Release</span>
         </div>
       </nav>
@@ -229,7 +229,7 @@ export default function PressRelease({ params }) {
             <h2 style={h2}>Referenced pages</h2>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 28 }}>
               {r.links.map(l => (
-                <Link key={l.href} href={l.href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l.label} →</Link>
+                <Link prefetch={false} key={l.href} href={l.href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l.label} →</Link>
               ))}
             </div>
           </>
@@ -270,14 +270,14 @@ export default function PressRelease({ params }) {
             <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Other releases</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {others.map(o => (
-                <Link key={o.slug} href={`/press/${o.slug}`} style={{ ...CARD, display: 'block', textDecoration: 'none' }}>
+                <Link prefetch={false} key={o.slug} href={`/press/${o.slug}`} style={{ ...CARD, display: 'block', textDecoration: 'none' }}>
                   <div style={{ fontSize: 11.5, color: 'var(--text-muted)', marginBottom: 4 }}>{o.dateHuman} · {o.category}</div>
                   <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--navy)', lineHeight: 1.45 }}>{o.headline}</div>
                 </Link>
               ))}
             </div>
             <div style={{ marginTop: 16 }}>
-              <Link href="/press" style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--teal)', textDecoration: 'none' }}>← All press releases and media resources</Link>
+              <Link prefetch={false} href="/press" style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--teal)', textDecoration: 'none' }}>← All press releases and media resources</Link>
             </div>
           </div>
         ) : null}

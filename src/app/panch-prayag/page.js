@@ -114,10 +114,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -156,9 +153,7 @@ function Schema() {
     author: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
     publisher: { '@type': 'Organization', '@id': `${SITE.baseUrl}/#organization`, name: SITE.name, url: SITE.baseUrl },
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(list) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
   </>);
@@ -197,16 +192,13 @@ export default function PanchPrayag() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>Panch Prayag</span>
         </div>
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <p style={p}>
           <strong>The Panch Prayag are five river confluences on one river, strung along one road.</strong> The Alaknanda comes down from Badrinath and takes in a tributary five times before it meets the Bhagirathi and becomes the Ganga. Every one of those meetings has a name, a temple and a set of steps down to the water &mdash; and if you are driving to Badrinath you pass all five whether you notice them or not. Most people do not notice them.
@@ -234,7 +226,7 @@ export default function PanchPrayag() {
                 <tr key={pr.name} style={{ borderBottom: '1px solid hsl(var(--border))', background: pr.n === 5 ? '#F0FDF4' : (i % 2 === 0 ? '#fff' : 'var(--bg)') }}>
                   <td style={{ ...TD, fontWeight: 700, color: 'var(--teal)' }}>{pr.n}</td>
                   <td style={{ ...TD, fontWeight: 700, color: 'var(--navy)' }}>
-                    {pr.href ? <Link href={pr.href} style={{ color: 'var(--teal)' }}>{pr.name}</Link> : pr.name}
+                    {pr.href ? <Link prefetch={false} href={pr.href} style={{ color: 'var(--teal)' }}>{pr.name}</Link> : pr.name}
                   </td>
                   <td style={TD}>{pr.rivers}</td>
                   <td style={{ ...TD, fontWeight: 700, color: '#1D9E75' }}>{pr.elev}</td>
@@ -255,13 +247,13 @@ export default function PanchPrayag() {
               <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 8, flexWrap: 'wrap' }}>
                 <span style={{ background: 'var(--navy)', color: '#FFD166', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20 }}>{pr.n}</span>
                 <strong style={{ fontSize: 14.5, color: 'var(--navy)' }}>
-                  {pr.href ? <Link href={pr.href} style={{ color: 'var(--navy)' }}>{pr.name}</Link> : pr.name}
+                  {pr.href ? <Link prefetch={false} href={pr.href} style={{ color: 'var(--navy)' }}>{pr.name}</Link> : pr.name}
                 </strong>
                 <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{pr.rivers}</span>
               </div>
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, margin: 0 }}>{pr.note}</p>
               {pr.href && (
-                <Link href={pr.href} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
+                <Link prefetch={false} href={pr.href} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
                   Full {pr.name} guide →
                 </Link>
               )}
@@ -283,7 +275,7 @@ export default function PanchPrayag() {
 
         <h2 style={h2}>Seeing All Five on One Drive</h2>
         <p style={p}>
-          You do not need a special trip. Every road route to <Link href="/badrinath-yatra">Badrinath</Link> crosses all five, so the only question is whether you stop. Here is how it falls out from Haridwar.
+          You do not need a special trip. Every road route to <Link prefetch={false} href="/badrinath-yatra">Badrinath</Link> crosses all five, so the only question is whether you stop. Here is how it falls out from Haridwar.
         </p>
         <div style={SCROLL}>
           <table style={{ ...TABLE, minWidth: 560 }}>
@@ -307,7 +299,7 @@ export default function PanchPrayag() {
           </table>
         </div>
         <p style={p}>
-          Three days is comfortable; four lets you walk down to each sangam and sit rather than photographing it from the road. Bolted onto a full <Link href="/char-dham-yatra">Char Dham</Link> itinerary the marginal cost is about twenty minutes at each &mdash; call it two hours across a ten-day trip. In our view those are the best two hours on the whole circuit, and the ones most operators skip.
+          Three days is comfortable; four lets you walk down to each sangam and sit rather than photographing it from the road. Bolted onto a full <Link prefetch={false} href="/char-dham-yatra">Char Dham</Link> itinerary the marginal cost is about twenty minutes at each &mdash; call it two hours across a ten-day trip. In our view those are the best two hours on the whole circuit, and the ones most operators skip.
         </p>
 
         <div style={{ background: 'rgba(29,158,117,0.07)', border: '1px solid #1D9E75', borderRadius: 12, padding: '16px 18px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
@@ -321,10 +313,10 @@ export default function PanchPrayag() {
 
         <h2 style={h2}>When to Go</h2>
         <p style={p}>
-          The useful thing about the Panch Prayag is that none of them is high. The tallest, Vishnuprayag, sits around 1,372 m, which means the whole circuit is open and comfortable for far longer than the dhams above it. <strong>April to June and September to November</strong> are the best windows, but a Panch Prayag drive works in March, and even in winter when <Link href="/kedarnath-temple">Kedarnath</Link> and Badrinath are shut and their deities have moved down to <Link href="/ukhimath">Ukhimath</Link> and Joshimath.
+          The useful thing about the Panch Prayag is that none of them is high. The tallest, Vishnuprayag, sits around 1,372 m, which means the whole circuit is open and comfortable for far longer than the dhams above it. <strong>April to June and September to November</strong> are the best windows, but a Panch Prayag drive works in March, and even in winter when <Link prefetch={false} href="/kedarnath-temple">Kedarnath</Link> and Badrinath are shut and their deities have moved down to <Link prefetch={false} href="/ukhimath">Ukhimath</Link> and Joshimath.
         </p>
         <p style={p}>
-          Avoid <strong>July and August</strong>. The rivers run uniformly brown, so the thing you came to see &mdash; two distinct waters meeting &mdash; disappears entirely, and this highway is among the most landslide-prone in Garhwal. Check the <Link href="/char-dham-road-status">road status page</Link> before any monsoon-season drive.
+          Avoid <strong>July and August</strong>. The rivers run uniformly brown, so the thing you came to see &mdash; two distinct waters meeting &mdash; disappears entirely, and this highway is among the most landslide-prone in Garhwal. Check the <Link prefetch={false} href="/char-dham-road-status">road status page</Link> before any monsoon-season drive.
         </p>
 
         <h2 style={h2}>Frequently Asked Questions</h2>
@@ -343,7 +335,7 @@ export default function PanchPrayag() {
             <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>Dhanesh Chandra Mishra</div>
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
-              Retired Indian Army officer, founded {SITE.name}. He has driven this highway several hundred times over the years and builds the sangam halts into every road itinerary we run. <Link href="/about">More about the team</Link>.
+              Retired Indian Army officer, founded {SITE.name}. He has driven this highway several hundred times over the years and builds the sangam halts into every road itinerary we run. <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -362,7 +354,7 @@ export default function PanchPrayag() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>On and around this road</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['Dhari Devi Temple', '/dhari-devi-temple'], ['Joshimath Narsingh Temple', '/joshimath-narsingh-temple'], ['Ukhimath', '/ukhimath'], ['Gaurikund', '/gaurikund'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Teen Dham Yatra', '/teen-dham-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Badrinath Yatra', '/badrinath-yatra'], ['Char Dham Route Map', '/char-dham-yatra-route-map'], ['Road Status', '/char-dham-road-status']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

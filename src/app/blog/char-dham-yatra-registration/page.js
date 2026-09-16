@@ -13,7 +13,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-registration');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Registration ${SITE.season} | Free e-Pass Guide` },
+  title: { absolute: 'Char Dham Yatra Registration 2026 | Free e-Pass Guide' },
   description: `Char Dham registration ${SITE.season} is free and mandatory — Sonprayag and Gaurikund checkpoints turn back unregistered pilgrims. e-Pass steps, OTP fixes, NRI rules.`,
   keywords: [
     `char dham yatra registration ${SITE.season}`,
@@ -96,93 +96,11 @@ function Schema() {
     ],
   };
 
-  const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Is Char Dham Yatra registration mandatory in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes, biometric registration is mandatory for all four dhams in 2026 — Yamunotri, Gangotri, Kedarnath, and Badrinath. The yatra permit generated after registration is checked at multiple police checkpoints along the route. Without it, you will be turned back. Registration is completely FREE in 2026 (₹0) — no fee of any kind. Takes 15–20 minutes online at registrationandtouristcare.uk.gov.in, or via WhatsApp (type "Yatra" to +91-8394833833), or via the Tourist Care Uttarakhand mobile app.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the official website for Char Dham Yatra registration 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The official and only legitimate website for Char Dham Yatra registration 2026 is registrationandtouristcare.uk.gov.in — run by the Uttarakhand Tourism Department. Do not pay money on any other website claiming to offer Char Dham registration. The official registration is completely free.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What documents are needed for Char Dham Yatra registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Required documents: (1) Aadhaar card — mandatory for all Indian pilgrims, (2) Mobile number linked to Aadhaar for OTP verification, (3) Medical fitness certificate from a registered doctor — mandatory for all pilgrims aged 55 and above, (4) Passport for foreign nationals. Foreign nationals must also register and carry their passport at all checkpoints.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I register for Char Dham Yatra offline?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. Offline registration centres are available at: Haridwar — near Har Ki Pauri (20 counters), Rishikesh — near Ram Jhula (30 counters), Dehradun — near ISBT. You can also register at designated tourist care centres at Barkot (Yamunotri base), Uttarkashi (Gangotri base), Sonprayag (Kedarnath base), and Joshimath (Badrinath base). Bring original Aadhaar card. Registration at all centres is free. You can also register via WhatsApp: type "Yatra" and send to +91-8394833833. Helpline: 0135-1364.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the daily pilgrim limit for Char Dham Yatra 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Daily pilgrim limits for 2026: Kedarnath — up to 18,000 pilgrims per day. Badrinath — 20,000 pilgrims per day. Gangotri — 7,000 to 8,000 pilgrims per day. Yamunotri — 7,000 to 8,000 pilgrims per day. These limits are strictly enforced. If the daily limit is reached, pilgrims at checkpoints will be held back — even with a valid registration. This is why booking packages with an experienced operator who monitors daily counts is important.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What happens if I go to Char Dham without registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'If you attempt to travel to any of the four dhams without a valid yatra permit in 2026, you will be stopped at the checkpoints and turned back. The Uttarakhand Police and Tourism Department enforce this at Sonprayag (Kedarnath), Joshimath (Badrinath), Barkot (Yamunotri), and Uttarkashi (Gangotri). There is no on-the-spot registration at these checkpoints — you must register in advance.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can a travel operator register on my behalf for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. A tour operator like Shiv Ganga Travels can complete biometric registration on your behalf when provided with your Aadhaar details and required documents. This is included in our packages at no extra charge. However, the physical biometric verification (fingerprint) must be done by the pilgrim themselves at a registration centre — the operator can submit the initial online application.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far in advance should I register for Char Dham Yatra?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Register as early as possible — ideally 30–60 days before your planned departure date. During peak season (May–June), registration servers can be slow. Registering in advance also helps if there are any corrections needed to your documents. Shiv Ganga Travels recommends completing registration at least 2 weeks before departure.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is Char Dham Yatra e-Pass / Yatra Parchi?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The Char Dham Yatra e-Pass is the digital registration certificate issued after completing biometric registration at registrationandtouristcare.uk.gov.in. It is also called a Yatra Parchi, Yatra Permit, or Registration Card. It contains a QR code that is scanned at police checkpoints before each of the four dhams. You must carry a printed physical copy as well as a digital backup on your phone.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I use Voter ID or PAN card instead of Aadhaar for Char Dham registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. While Aadhaar is the preferred document, the official portal also accepts Voter ID, PAN card, and Driving Licence for Indian pilgrims. However, Aadhaar is strongly recommended because OTP-based verification with Aadhaar is fastest. Foreign nationals must use their passport. Any valid government-issued photo ID is accepted at offline registration centres.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What should I do if OTP is not received during Char Dham registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'If OTP is not received: (1) Check your network — sometimes the SMS is delayed by 2–3 minutes during peak traffic. (2) Check if your mobile number is correctly entered. (3) Use the Resend OTP option. (4) Try registering via the Tourist Care Uttarakhand mobile app instead of the website. (5) Register via WhatsApp: type Yatra and send to 8394833833. (6) Call the helpline: 0135-1364 for manual assistance. The OTP system often gets congested in the first two weeks of March when registrations open.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What if the Char Dham registration portal (registrationandtouristcare.uk.gov.in) is not working?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Server overload is common in the first two weeks after registration opens in early March. Fixes: (1) Try during late night or early morning (11 PM–5 AM) when traffic is lower. (2) Use the Tourist Care Uttarakhand mobile app — it handles load better than the website. (3) Register via WhatsApp: type Yatra and send to +91-8394833833. (4) Visit an offline counter at Haridwar (20 counters) or Rishikesh (30 counters, open 24/7 for the first 15 days of the season). (5) Clear your browser cache or use incognito mode.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can NRI or overseas Indian register for Char Dham Yatra 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. NRIs and overseas Indians can register for Char Dham Yatra 2026. If you have an Aadhaar card, use it — the process is identical. If you do not have an active Indian Aadhaar, register using your Indian passport or OCI card. A working Indian mobile number is required for OTP verification — if yours is inactive, request a trusted family member in India to register on your behalf using your documents, which is permitted. Some NRIs purchase a local SIM on arrival in India, then register at a Haridwar offline centre.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I add a dham or change travel dates after registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can log back into registrationandtouristcare.uk.gov.in and update your travel dates or add a dham to your registration without re-registering from scratch. However, your name, Aadhaar number, and OTP-linked mobile number cannot be changed after submission. After editing, download the updated permit and carry the new version — not the old one.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the GPS tracking system in Char Dham Yatra registration?',
-        acceptedAnswer: { '@type': 'Answer', text: 'The Uttarakhand government uses a GPS-based monitoring system for all registered Char Dham pilgrims. The system tracks pilgrim movement in real time across the route. In case of a natural disaster, landslide, or emergency, authorities can identify exactly how many pilgrims are at which point on the circuit and mount targeted rescue operations. The system also sends SMS alerts to registered pilgrims about road conditions, temple closures, and weather warnings directly to the mobile number used during registration.' },
-      },
-    ],
-  };
+  
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-    </>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>    </>
   );
 }
 
@@ -218,16 +136,15 @@ export default function RegistrationBlog() {
       <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', display:'flex', gap:20, flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', fontSize:12.5, color:'var(--text-muted)' }}>
           <span>✍️ <strong style={{ color:'var(--navy)' }}>By Dhanesh Chandra Mishra</strong> — Founder, Shiv Ganga Travels · Retd. Indian Army Officer · 50,000+ pilgrims</span>
-          <span>🗓️ <strong style={{ color:'var(--navy)' }}>Last updated:</strong> May 9, 2026 · Verified for current season — fee confirmed FREE</span>
         </div>
       </div>
 
       {/* Breadcrumb */}
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, alignItems:'center' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link>
           <span>›</span>
           <span>Char Dham Yatra Registration 2026</span>
         </div>
@@ -646,12 +563,12 @@ export default function RegistrationBlog() {
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[
               ['Char Dham Yatra Cost 2026', '/blog/char-dham-yatra-cost'],
-              ['2026 New Rules', '/blog/char-dham-yatra-2026-new-rules'],
-              ['Complete FAQ — 50 Questions', '/blog/char-dham-yatra-faq'],
+              ['2026 New Rules', '/blog/char-dham-yatra-registration'],
+              ['Complete FAQ — 50 Questions', '/char-dham-yatra'],
               ['Senior Citizen Guide', '/blog/senior-citizen-char-dham'],
               ['Kedarnath Helicopter Booking', '/blog/kedarnath-helicopter-booking'],
             ].map(([label, href]) => (
-              <Link key={href} href={href}
+              <Link prefetch={false} key={href} href={href}
                 style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
                 {label} →
               </Link>

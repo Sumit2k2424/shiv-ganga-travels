@@ -18,7 +18,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: { absolute: `Uttarakhand Tour Packages ${SITE.season} | Hills & Pilgrimage` },
+  title: { absolute: 'Uttarakhand Tour Packages | Hills & Pilgrimage' },
   description: `Book Uttarakhand tour packages ${SITE.season} from Haridwar. Mussoorie, Nainital, Rishikesh, Corbett, Valley of Flowers, Auli skiing. Packages from ₹3,750.`,
   keywords: [`uttarakhand tour packages, uttarakhand tour packages ${SITE.season}, uttarakhand tourism packages, best uttarakhand packages from haridwar`],
   alternates: { canonical: `${SITE.baseUrl}/uttarakhand-tour-packages` },
@@ -48,9 +48,8 @@ function Schema() {
       {'@type':'ListItem',position:2,name:'Uttarakhand Tour Packages 2026 — Beyond the Dhams',item:`${SITE.baseUrl}/uttarakhand-tour-packages`},
     ],
   };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
 }
 
 export default function Page() {
@@ -95,7 +94,6 @@ export default function Page() {
           <strong>Uttarakhand is not one destination, and the seasons work against each other.</strong> The Char Dham shrines are open 19 April to 13 November and best in May–June or mid-September–October. Hill stations suit March–June and September–November. The Valley of Flowers peaks in exactly the monsoon weeks you would avoid everywhere else. Jim Corbett runs November to June. Packages from ₹3,750, and the commonest planning mistake is trying to combine the high shrines with a hill-station holiday in one week.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:16, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Uttarakhand is vastly more than its four sacred dhams. The state is home to some of India’s most spectacular hill stations, dense wildlife reserves, adrenaline-inducing adventure sports, and UNESCO-designated natural wonders. If you've done the Char Dham Yatra and want to explore more of this incredible state — or if you’re visiting with a family that includes both pilgrims and adventure seekers — our Uttarakhand tour packages cover all of it.</p>
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'28px 0 12px'}}>Our Uttarakhand tours — quoted on enquiry</h2>
@@ -174,16 +172,16 @@ export default function Page() {
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginBottom:28,marginTop:28}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:12}}>📦 Browse All Packages:</div>
-          <Link href="/packages" style={{ display:'inline-block', background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>View Uttarakhand Packages →</Link>
+          <Link prefetch={false} href="/packages" style={{ display:'inline-block', background:'#fff', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>View Uttarakhand Packages →</Link>
         </div>
 
         <div style={{background:'var(--navy-light)',borderRadius:14,padding:'20px 22px',marginTop:28,marginBottom:8}}>
           <div style={{fontWeight:700,fontSize:14,color:'var(--navy)',marginBottom:14}}>📖 Related Guides:</div>
 
           <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-              <Link key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
-              <Link key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
-              <Link key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/valley-of-flowers-trek" href="/blog/valley-of-flowers-trek" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Valley of Flowers Trek Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/rishikesh-adventure-guide" href="/blog/rishikesh-adventure-guide" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Rishikesh Adventure Guide"}<span> →</span></Link>
+              <Link prefetch={false} key="/blog/best-time-char-dham" href="/blog/best-time-char-dham" style={{background:'#fff',color:'var(--navy)',padding:'8px 16px',borderRadius:8,fontSize:13,fontWeight:600,textDecoration:'none',border:'1px solid hsl(var(--border))'}}>{"Best Time to Visit Uttarakhand"}<span> →</span></Link>
           </div>
         </div>
         <TempleLinkMesh groups={MESH.temples} label="Temple round-ups" />

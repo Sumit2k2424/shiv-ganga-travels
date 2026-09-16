@@ -13,7 +13,7 @@ const PAGE_DATES = pageDates('/badrinath-yatra');
 const badrinathRoute = ROUTES['haridwar-badrinath'];
 
 export const metadata = {
-  title: { absolute: `Badrinath Yatra Package ${SITE.season} | VIP Darshan Included` },
+  title: { absolute: 'Badrinath Yatra Package from Haridwar | VIP Darshan' },
   description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,
@@ -72,37 +72,7 @@ function Schema() {
     },
   };
 
-  const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the cost of Badrinath Yatra from Haridwar in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Badrinath Yatra from Haridwar starts at ₹4,500 per person for a 2N/3D all-inclusive package with Shiv Ganga Travels. This includes AC cab, hotel stay, VIP darshan arrangement, and sattvic meals. No hidden charges, zero commission.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'How many days are required for Badrinath Yatra from Haridwar?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Minimum 2 nights / 3 days are required for a comfortable Badrinath Yatra from Haridwar. Day 1: Haridwar to Joshimath (270km, ~8hrs). Day 2: Joshimath to Badrinath — darshan, Tapt Kund, Mana Village. Day 3: Return to Haridwar. Pilgrims with more time often combine this with Kedarnath for a Do Dham Yatra (5N/6D).' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is Badrinath accessible by road?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — Badrinath is fully motorable. The temple is right on the roadside at 3,133m altitude. No trekking is required, making it accessible for senior citizens and pilgrims with physical limitations. The route from Haridwar follows NH7 via Rishikesh, Devprayag, Rudraprayag, Chamoli, and Joshimath.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'When does Badrinath temple open in 2026?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Badrinath temple opens on April 23, 2026 for the summer season and closes in November 2026 (exact closing date announced closer to Diwali). The best time to visit is May, June, September, and October — avoiding the monsoon months of July–August when landslide risk is high.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can I do Badrinath and Kedarnath together?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Yes — this is called the Do Dham Yatra and is our most popular 2-dham combination. The 5N/6D package from Haridwar covers Kedarnath (with 16km trek) and Badrinath, starting from ₹8,200 per person. It can be extended to include Gangotri and Yamunotri for the full Char Dham experience.' },
-      },
-    ],
-  };
+  
 
   const bc = {
     '@context': 'https://schema.org',
@@ -115,9 +85,7 @@ function Schema() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pkg) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pkg) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/>
     </>
   );
 }
@@ -133,8 +101,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -188,7 +155,6 @@ export default function BadrinathYatraPage() {
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '36px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open: Apr 23 – Nov 2026</div>
 
         {/* Quick stats */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
@@ -261,7 +227,7 @@ export default function BadrinathYatraPage() {
             { name: 'Badrinath + Hemkund Sahib', duration: '3N/4D', price: '₹6,350', original: '₹11,000', badge: 'Combo', href: '/packages', desc: 'Badrinath + Sikh pilgrimage' },
             { name: 'Char Dham Yatra', duration: '9N/10D', price: '₹13,900', original: '₹24,000', badge: 'Full Circuit', href: '/char-dham-yatra', desc: 'All 4 dhams including Badrinath' },
           ].map(pkg => (
-            <Link key={pkg.href} href={pkg.href}
+            <Link prefetch={false} key={pkg.href} href={pkg.href}
               style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span style={{ background: 'rgba(232,146,10,0.12)', color: '#92640a', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, width: 'fit-content' }}>{pkg.badge}</span>
               <div style={{ fontWeight: 700, fontSize: 14.5, color: 'var(--navy)' }}>{pkg.name}</div>
@@ -437,7 +403,7 @@ export default function BadrinathYatraPage() {
               ['How to Reach Badrinath', '/how-to-reach-badrinath'],
               ['Char Dham Helicopter', '/char-dham-helicopter'],
             ].map(([label, href]) => (
-              <Link key={href} href={href}
+              <Link prefetch={false} key={href} href={href}
                 style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>
                 {label} →
               </Link>

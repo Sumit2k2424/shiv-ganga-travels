@@ -8,7 +8,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/kedarnath-to-badrinath-distance');
 
 export const metadata = {
-  title: { absolute: `Kedarnath to Badrinath Distance ${SITE.season} | Route, Time & Taxi Fare` },
+  title: { absolute: 'Kedarnath to Badrinath Distance | Route & Time' },
   description: `Kedarnath to Badrinath is 218 km from Gaurikund, 9 to 10 hours driving — plus the 16 km trek down from the temple first. Taxi fares and the night-driving ban.`,
   keywords: ['kedarnath to badrinath distance','badrinath to kedarnath distance','kedarnath to badrinath','badrinath to kedarnath','kedarnath to badrinath taxi','kedarnath to badrinath route'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-to-badrinath-distance` },
@@ -32,9 +32,6 @@ function Schema() {
     image:[`${SITE.baseUrl}/opengraph-image`],
     datePublished:'2026-07-18', dateModified: PAGE_DATES.modifiedISO,
     mainEntityOfPage:`${SITE.baseUrl}/kedarnath-to-badrinath-distance`,
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   }];
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
@@ -47,7 +44,7 @@ export default function KedarnathToBadrinath() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🚗 218 km · 8–10 hrs</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Kedarnath to Badrinath Distance & Route</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Via Guptkashi · Chopta · Joshimath — updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>Via Guptkashi · Chopta · Joshimath</p>
       </div>
     </section>
     <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
@@ -99,7 +96,7 @@ export default function KedarnathToBadrinath() {
           </div>
         ))}
       </div>
-      <p style={{ ...p, fontSize:13.5, color:'var(--text-muted)' }}>Fares are indicative for a dedicated one-way transfer with a night halt, verified {PAGE_DATES.modifiedHuman}. If you are doing the full Char Dham circuit, this leg is already inside our <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>package pricing</Link> — booking it separately almost always costs more.</p>
+      <p style={{ ...p, fontSize:13.5, color:'var(--text-muted)' }}>Fares are indicative for a dedicated one-way transfer with a night halt, verified {PAGE_DATES.modifiedHuman}. If you are doing the full Char Dham circuit, this leg is already inside our <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>package pricing</Link> — booking it separately almost always costs more.</p>
 
       <h2 style={h2}>What You Pass on the Way</h2>
       <p style={p}><strong>Ukhimath</strong> is where the Kedarnath deity spends the winter — the Omkareshwar temple here is worth twenty minutes even mid-journey. <strong>Chopta</strong> is the trailhead for Tungnath, the highest Shiva temple in the world, a 3.5 km walk off the road. And from <strong>Chamoli</strong> onward you are driving beside the Alaknanda through the prayag country — Nandprayag and then the gorge road to Joshimath. Pilgrims doing this drive are, without planning it, seeing more of Garhwal than most tourists ever do.</p>
@@ -108,7 +105,7 @@ export default function KedarnathToBadrinath() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Do Dham Package (Kedar+Badri)',h:'/do-dham-yatra'},{l:'Gaurikund Guide',h:'/gaurikund'},{l:'Chopta Tungnath',h:'/chopta-tungnath'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

@@ -32,15 +32,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'When does Kedarnath close in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath temple is tentatively closing on 11 November 2026 (Bhai Dooj, two days after Diwali). The exact closing date is confirmed on Vijayadashami (Dussehra). After closing, Lord Kedarnath\'s idol is taken in a ceremonial Doli procession to Ukhimath (Omkareshwar Temple) where it rests through the winter.' } },
-      { '@type': 'Question', name: 'When does Badrinath close in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Badrinath temple is tentatively closing on 13 November 2026 — approximately 2 weeks after Diwali. The closing date is announced by the Badrinath-Kedarnath Temple Committee (BKTC) on Vijayadashami. Badrinath typically closes last among the four dhams and stays open the longest. After closing, the deity is moved to Pandukheshwar for winter worship.' } },
-      { '@type': 'Question', name: 'When do Gangotri and Yamunotri close in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Gangotri closes on 10 November 2026 (Diwali day). Yamunotri closes on 11 November 2026 (Bhai Dooj). After Gangotri closes, the Goddess Ganga\'s idol is moved to Mukhba village for winter worship. After Yamunotri closes, Goddess Yamuna\'s idol is moved to Kharsali (Syana Chattra) village.' } },
-      { '@type': 'Question', name: 'What happens to the temples when Char Dham closes?', acceptedAnswer: { '@type': 'Answer', text: 'The temples do not go empty — the deities are moved in ceremonial processions (Doli Yatra) to their winter abodes in lower villages: Kedarnath deity → Ukhimath, Badrinath deity → Pandukheshwar/Joshimath, Gangotri deity → Mukhba, Yamunotri deity → Kharsali. An Akhand Jyot (eternal flame) is lit inside Kedarnath before locking — it burns continuously for 6 months. The temples are buried under 20–30 feet of snow during winter.' } },
-    ],
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -49,7 +41,7 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Char Dham Closing Dates 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026` },
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
 }
 
 
@@ -116,8 +108,8 @@ export default function ClosingDates() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Closing Dates 2026</span>
         </div>
       </nav>
@@ -214,7 +206,7 @@ export default function ClosingDates() {
               ['Omkareshwar, Ukhimath', '/ukhimath'],
               ['Narsingh Temple, Joshimath', '/joshimath-narsingh-temple'],
             ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

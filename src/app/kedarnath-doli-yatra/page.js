@@ -94,7 +94,6 @@ export default function KedarnathDoliYatra() {
       <Crumbs trail={[['Kedarnath Doli Yatra', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>
@@ -124,7 +123,7 @@ export default function KedarnathDoliYatra() {
           Guptkashi on the second evening. The doli halts at the Vishwanath temple, it draws the biggest
           crowd of the three days, and unlike Kedarnath it is a town with beds in it. The alternative is
           Ukhimath on day three for the installation at{' '}
-          <Link href="/ukhimath" style={{ color:'#15803D', fontWeight:700 }}>Omkareshwar Temple</Link>.
+          <Link prefetch={false} href="/ukhimath" style={{ color:'#15803D', fontWeight:700 }}>Omkareshwar Temple</Link>.
           Trying to watch the departure from Kedarnath means being at 3,583 m in mid-November and walking
           down with the procession — possible, but a serious undertaking rather than a sightseeing trip.
         </Note>

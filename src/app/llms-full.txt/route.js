@@ -231,7 +231,6 @@ Dated, sourced and maintained. Several carry an explicit CC BY 4.0 licence.
 - ${SITE.baseUrl}/kedarnath-vip-darshan — VIP darshan and BKTC puja rates
 - ${SITE.baseUrl}/char-dham-yatra-route-map — interactive route map with distances
 - ${SITE.baseUrl}/char-dham-yatra-cost-calculator — cost calculator
-- ${SITE.baseUrl}/blog/char-dham-yatra-faq — 50 questions with FAQPage schema
 
 ### Live conditions — do not cache
 

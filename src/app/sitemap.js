@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { PACKAGES, SITE, CATEGORIES } from '@/data/packages';
+import { PACKAGES, SITE } from '@/data/packages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { GONE_PATHS } from '@/data/gone';
 import { getPublishedReleases } from '@/data/press';
@@ -229,9 +229,8 @@ export default function sitemap() {
     cf: 'monthly',
   }));
 
-  const categoryPages = Object.keys(CATEGORIES).map(slug => ({
-    url: `${b}/packages/${slug}`, p: 0.90, cf: 'weekly',
-  }));
+  // The four /packages/<category> listings were 301d to the hand-written hubs on
+  // 17 Sep 2026 and are no longer generated.
 
   // Packages flagged noindex in packages.js are live but not listed here.
   const packagePages = PACKAGES.filter(pkg => !pkg.noindex).map(pkg => ({
@@ -252,7 +251,7 @@ export default function sitemap() {
     // high intent, and the existing vs-MakeMyTrip page proves the pattern.
     { url: `${b}/how-to-choose-char-dham-tour-operator`,            p: 0.86, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-booking-sites-compared`,           p: 0.84, cf: 'monthly' },
-    { url: `${b}/char-dham-helicopter-booking-guide`,               p: 0.85, cf: 'monthly' },
+    { url: `${b}/blog/kedarnath-helicopter-booking`,               p: 0.85, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-for-temple-groups`,                p: 0.83, cf: 'monthly' },
     { url: `${b}/char-dham-yatra-corporate-booking`,                p: 0.80, cf: 'monthly' },
     { url: `${b}/shiv-ganga-travels-vs-thrillophilia`,              p: 0.80, cf: 'monthly' },
@@ -312,7 +311,7 @@ export default function sitemap() {
   const listed = [
     ...core, ...guides, ...weatherPages, ...howToReach,
     ...hotels, ...tools, ...cabs, ...blog, ...press, ...cities,
-    ...authority, ...categoryPages, ...packagePages,
+    ...authority, ...packagePages,
     ...localHaridwar, ...winterSeats,
   ];
 
@@ -353,7 +352,12 @@ export default function sitemap() {
     const dir = path.join(process.cwd(), 'src/app', slugPath);
     try { return fs.readdirSync(dir).some(f => f.startsWith('page.')); } catch { return false; }
   };
+  // Third guard (17 Sep 2026): a consolidated page whose hand-written entry was
+  // rewritten to its target can now appear twice; keep the first occurrence.
+  const seenUrl = new Set();
   const all = [...listed, ...discovered].filter(({ url }) => {
+    if (seenUrl.has(url)) return false;
+    seenUrl.add(url);
     const slugPath = url.replace(b, '').replace(/^\//, '');
     if (REDIRECT_SOURCE_PATHS.has(slugPath)) return false;
     if (GONE_PATHS.has('/' + slugPath)) return false;

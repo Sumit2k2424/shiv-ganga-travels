@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/chitai-golu-devta-temple');
 
 export const metadata = {
-  title: { absolute: `Chitai Golu Devta Temple ${SITE.season} | Timings & Route | Almora` },
+  title: { absolute: 'Chitai Golu Devta Temple, Almora | Timings & Route' },
   description: `The Kumaon shrine where people file written petitions to a god and hang a bell when the verdict comes. Timings, the letter ritual, distances and route.`,
   keywords: ['chitai golu devta temple','golu devta temple almora','chitai golu devta temple almora uttarakhand','chitai temple almora','golu devta god of justice','chitai golu devta temple timings','golu devta ki chitthi','golu devta mandir almora','how to reach chitai golu devta temple','chitai golu devta temple bells','goljyu','chitai vs ghorakhal golu devta'],
   alternates: { canonical: `${SITE.baseUrl}/chitai-golu-devta-temple` },
@@ -49,9 +49,6 @@ function Schema() {
     hasMap:'https://www.google.com/maps?q=29.6169,79.7015',
     sameAs:['https://en.wikipedia.org/wiki/Golu_Devata','https://almora.nic.in/'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Almora district, Kumaon, Uttarakhand, India' },
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -116,14 +113,14 @@ export default function ChitaiGoluDevtaTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🔔 Kumaon&rsquo;s Court of Justice</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Chitai Golu Devta Temple, Almora &mdash; Timings, the Letter Ritual &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes &mdash; updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The shrine where people file a written petition to a god and hang a bell when the verdict comes</p>
       </div>
     </section>
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
-        <Link href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
         <span>Chitai Golu Devta Temple</span>
       </div>
     </nav>
@@ -297,13 +294,13 @@ export default function ChitaiGoluDevtaTemple() {
           </tbody>
         </table>
       </div>
-      <p style={p}>We have been running Uttarakhand routes out of Haridwar, mostly on the Garhwal side for <Link href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link href="/cabs" style={teal}>Haridwar or Dehradun to Nainital cab</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
+      <p style={p}>We have been running Uttarakhand routes out of Haridwar, mostly on the Garhwal side for <Link prefetch={false} href="/char-dham-yatra" style={teal}>Char Dham</Link>. Kumaon is the other half of the state and a completely different trip: lower, greener, gentler roads, no altitude to worry about, and temples that are old rather than crowded. If you are already booking a <Link prefetch={false} href="/cabs" style={teal}>Haridwar or Dehradun to Nainital cab</Link>, extending it to Almora and Jageshwar adds two days and very little cost. Tell us your dates and we will send the itinerary and a fixed quote &mdash; no aggregator in the middle.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Kainchi Dham',h:'/kainchi-dham'},{l:'Kumaon Cab Fares',h:'/cabs'},{l:'Dhari Devi Temple',h:'/dhari-devi-temple'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Char Dham Yatra',h:'/char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>
       </div>

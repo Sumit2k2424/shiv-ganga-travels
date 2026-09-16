@@ -44,7 +44,7 @@ const VERIFIED = 'August 22, 2026';
 const VERIFIED_ISO = '2026-08-22';
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Emergency Numbers ${SITE.season} — 112, SDRF, Hospitals` },
+  title: { absolute: 'Char Dham Emergency Numbers | 112, SDRF, Hospitals' },
   description: `Verified Char Dham Yatra emergency contacts ${SITE.season}. Dial 112 anywhere on the route. Full list of SDRF, district control room, temple committee, hospital and helicopter numbers — checked against Uttarakhand government sources, free to cite.`,
   keywords: [
     'char dham yatra emergency contacts',
@@ -318,15 +318,7 @@ function Schema() {
     mainEntityOfPage: `${SITE.baseUrl}${PAGE}`,
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer', '.primary-number'] },
   };
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -339,9 +331,7 @@ function Schema() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
     </>
   );
 }
@@ -363,8 +353,8 @@ export default function EmergencyContacts() {
 
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/char-dham-yatra" style={{ color: 'var(--teal)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>Emergency Contacts</span>
         </div>
       </nav>
@@ -448,7 +438,7 @@ export default function EmergencyContacts() {
             <ol style={{ margin: '0 0 12px', paddingLeft: 20, fontSize: 14.5, lineHeight: 1.85, color: 'var(--text-mid)' }}>
               {s.steps.map((step) => <li key={step} style={{ marginBottom: 6 }}>{step}</li>)}
             </ol>
-            {s.link && <Link href={s.link.href} style={{ fontSize: 13, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{s.link.label} →</Link>}
+            {s.link && <Link prefetch={false} href={s.link.href} style={{ fontSize: 13, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none' }}>{s.link.label} →</Link>}
           </div>
         ))}
 
@@ -464,8 +454,8 @@ export default function EmergencyContacts() {
         </p>
         <p style={p}>
           More detail on the process, documents and the medical certificate rules is in our{' '}
-          <Link href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>registration guide</Link>{' '}
-          and the <Link href="/blog/char-dham-yatra-medical-certificate" style={{ color: 'var(--teal)' }}>medical certificate explainer</Link>.
+          <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>registration guide</Link>{' '}
+          and the <Link prefetch={false} href="/blog/char-dham-yatra-medical-certificate" style={{ color: 'var(--teal)' }}>medical certificate explainer</Link>.
         </p>
 
         <h2 id="faq" style={h2}>Frequently asked questions</h2>

@@ -57,7 +57,8 @@ export default function GuideArticle({
 }) {
   const authorName = author === 'sumit' ? 'Sumit Mishra' : 'Dhanesh Chandra Mishra';
   const dates = pageDates(`/blog/${slug}`);
-  updated = updated || `Updated ${dates.modifiedHuman}`;
+  // The hero no longer prints a derived 'Updated …' label: a date a reader
+  // sees must be one a person set. Pass `updated` explicitly when it is.
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -93,20 +94,13 @@ export default function GuideArticle({
     mainEntityOfPage: `${SITE.baseUrl}/blog/${slug}`,
   };
 
-  const faqLd = faqs.length ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.plain || f.a },
-    })),
-  } : null;
+  // FAQPage JSON-LD is no longer emitted (17 Sep 2026): Google shows FAQ rich results
+  // only for government and health sites, and marking up every page as an FAQ was
+  // pure schema volume. The visible FAQ accordion stays; the markup does not.
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <ReadingProgress />
 
@@ -115,15 +109,15 @@ export default function GuideArticle({
         title={title}
         dek={subtitle}
         author={authorName}
-        updated={`Updated ${updated}`}
+        updated={updated}
         readTime={readTime}
         facts={facts.map(([label, value]) => ({ label, value }))}
       />
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div className="guide-breadcrumb" style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>{title}</span>
         </div>
       </nav>
@@ -131,7 +125,6 @@ export default function GuideArticle({
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         <BlogAuthor variant="top" author={author} />
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {updated} · Verified for current season</div>
 
         {answer && <AnswerBox>{answer}</AnswerBox>}
         {takeaways.length > 0 && <KeyTakeaways points={takeaways} />}
@@ -153,7 +146,7 @@ export default function GuideArticle({
             <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related Guides</div>
             <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
               {related.map(([l,h]) => (
-                <Link key={h} href={h} className="guide-chip" style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+                <Link prefetch={false} key={h} href={h} className="guide-chip" style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
               ))}
             </div>
           </div>

@@ -12,7 +12,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-for-heart-patients');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra for Heart Patients ${SITE.season} | Safe Routes` },
+  title: { absolute: 'Char Dham Yatra for Heart Patients | Safe Routes' },
   description: `Char Dham with a heart condition — altitude risk, the certificate mandatory from 55, and why pony or palki beats walking. Written by operators, not doctors.`,
   keywords: ['char dham yatra for heart patients', `char dham yatra medical conditions ${SITE.season}`, 'char dham yatra diabetics blood pressure', 'kedarnath altitude heart patient', 'char dham helicopter heart patients', `char dham medical certificate ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-for-heart-patients` },
@@ -71,8 +71,8 @@ export default function Page() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham for Heart Patients</span>
         </div>
       </nav>
@@ -85,7 +85,6 @@ export default function Page() {
         <AnswerBox>
           <strong>Char Dham is possible with a stable heart condition or diabetes, but it is not a trip to attempt without medical clearance.</strong> Every shrine is above 3,000m, where thinner air raises heart rate and blood pressure. Get written clearance from your own cardiologist, carry a full course of medication plus two spare days' worth in your daypack rather than your luggage, take pony or palki rather than walking, and build rest days in. A medical certificate is mandatory from 55 onward.
         </AnswerBox>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'#FEF3C7', borderRadius:12, padding:'16px 20px', marginBottom:24, border:'2px solid #F59E0B' }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:4 }}>⚠️ Important Disclaimer</div>
@@ -167,7 +166,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
             {[{l:'Senior Citizen Package',h:'/blog/senior-citizen-char-dham'},{l:'Medical Certificate 2026',h:'/blog/char-dham-yatra-medical-certificate'},{l:'Kedarnath Helicopter',h:'/blog/kedarnath-helicopter-booking'},{l:'Packing List',h:'/blog/char-dham-yatra-packing-list'}].map(l=>(
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+              <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/dhari-devi-temple');
 
 export const metadata = {
-  title: { absolute: `Dhari Devi Temple ${SITE.season} | Timings & How to Reach | Guardian Goddess` },
+  title: { absolute: 'Dhari Devi Temple | Timings & How to Reach' },
   description: `Dhari Devi near Srinagar — guardian goddess of the Char Dham, her idol said to change face three times a day. Darshan 6 AM to 8 PM, route and distances.`,
   keywords: ['dhari devi temple','dhari devi mandir','dhari devi','dhari devi temple story','dhari devi temple history','dhari devi temple timings','dhari devi temple location','dhari devi temple distance from srinagar','dhari devi kalyasaur','dhari devi temple uttarakhand'],
   alternates: { canonical: `${SITE.baseUrl}/dhari-devi-temple` },
@@ -45,9 +45,6 @@ function Schema() {
     sameAs:['https://en.wikipedia.org/wiki/Dhari_Devi','https://pauri.nic.in/tourist-place/dhari-devi-temple/'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Pauri Garhwal, Uttarakhand, India' },
     isPartOf:{ '@type':'TouristAttraction', name:'Char Dham Yatra', sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham' },
-  },{
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, acceptedAnswer:{ '@type':'Answer', text:x.a } })),
   },{
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -92,14 +89,14 @@ export default function DhariDeviTemple() {
       <div style={{ maxWidth:820, margin:'0 auto' }}>
         <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>🛕 Guardian of the Char Dham</span>
         <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,3rem)', marginBottom:14 }}>Dhari Devi Temple — Story, Timings &amp; How to Reach</h1>
-        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams — updated {PAGE_DATES.modifiedHuman}</p>
+        <p style={{ color:'rgba(255,255,255,0.8)', fontSize:15, lineHeight:1.7 }}>The goddess in the middle of the Alaknanda who guards the four dhams</p>
       </div>
     </section>
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-        <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/char-dham-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Char Dham Yatra</Link><span>›</span>
         <span>Dhari Devi Temple</span>
       </div>
     </nav>
@@ -178,16 +175,16 @@ export default function DhariDeviTemple() {
       </div>
 
       <h2 style={h2}>What Else to See Nearby</h2>
-      <p style={p}>Dhari Devi pairs naturally with a handful of stops on the same road. <strong>Koteshwar Mahadev</strong>, a Shiva cave temple by the Alaknanda, is about 3 km away. <strong>Srinagar Garhwal</strong> (15 km) has Kamleshwar Mahadev and an old bazaar. <strong>Rudraprayag</strong> (20 km) marks the sacred confluence of the Alaknanda and Mandakini. If you have a spare half-day, the hilltop <strong>Kartik Swami</strong> temple (~16 km, short trek) rewards you with one of the finest Himalayan viewpoints in Garhwal. And of course the road from here runs straight on to <Link href="/kedarnath-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Kedarnath</Link> and <Link href="/badrinath-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Badrinath</Link>.</p>
+      <p style={p}>Dhari Devi pairs naturally with a handful of stops on the same road. <strong>Koteshwar Mahadev</strong>, a Shiva cave temple by the Alaknanda, is about 3 km away. <strong>Srinagar Garhwal</strong> (15 km) has Kamleshwar Mahadev and an old bazaar. <strong>Rudraprayag</strong> (20 km) marks the sacred confluence of the Alaknanda and Mandakini. If you have a spare half-day, the hilltop <strong>Kartik Swami</strong> temple (~16 km, short trek) rewards you with one of the finest Himalayan viewpoints in Garhwal. And of course the road from here runs straight on to <Link prefetch={false} href="/kedarnath-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Kedarnath</Link> and <Link prefetch={false} href="/badrinath-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Badrinath</Link>.</p>
 
       <h2 style={h2}>Visiting Dhari Devi on Your Char Dham or Do Dham Yatra</h2>
-      <p style={p}>Because she guards the four dhams and sits on the road everyone already drives, adding Dhari Devi costs you 30–40 minutes, not a day. On our <Link href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham</Link> and <Link href="/do-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Do Dham</Link> itineraries we build the Dhari Devi stop into the Srinagar–Rudraprayag leg, so you take her blessing before the climb to Kedarnath — the way pilgrims have done it for generations. If you only want the temple itself, a short 3N/4D Srinagar-based darshan trip from Haridwar covers it comfortably; tell us your dates and we will plan around them.</p>
+      <p style={p}>Because she guards the four dhams and sits on the road everyone already drives, adding Dhari Devi costs you 30–40 minutes, not a day. On our <Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Char Dham</Link> and <Link prefetch={false} href="/do-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Do Dham</Link> itineraries we build the Dhari Devi stop into the Srinagar–Rudraprayag leg, so you take her blessing before the climb to Kedarnath — the way pilgrims have done it for generations. If you only want the temple itself, a short 3N/4D Srinagar-based darshan trip from Haridwar covers it comfortably; tell us your dates and we will plan around them.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on the route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Char Dham Yatra',h:'/char-dham-yatra'},{l:'Do Dham Yatra',h:'/do-dham-yatra'},{l:'Kedarnath Temple',h:'/kedarnath-temple'},{l:'Badrinath Temple',h:'/badrinath-temple'},{l:'Char Dham Route Map',h:'/char-dham-yatra-route-map'},].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

@@ -10,7 +10,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/teen-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `Teen Dham Yatra ${SITE.season} | From ₹11,600 | 3 Dham Package` },
+  title: { absolute: 'Teen Dham Yatra | 3 Dham Package from Haridwar' },
   description: `Teen Dham Yatra ${SITE.season} from Haridwar — 7N/8D from ₹11,600/person. Pick the right 3 dhams, skip the Kedarnath trek. Direct operator, zero commission.`,
   keywords: ['teen dham yatra','teen dham yatra package','3 dham yatra package',`teen dham yatra ${SITE.season}`,'teen dham yatra from haridwar','teen dham yatra cost','teen dham package price','yamunotri gangotri badrinath package','gangotri kedarnath badrinath yatra','teen dham yatra itinerary'],
   alternates: { canonical: `${SITE.baseUrl}/teen-dham-yatra` },
@@ -87,10 +87,7 @@ const PAA = [
 ];
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, answerCount: 1, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -133,9 +130,7 @@ function Schema() {
       { '@type': 'Offer', name: 'Teen Dham + Kedarnath Helicopter 7N/8D', price: '19900', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: `${SITE.baseUrl}/teen-dham-yatra` },
     ],
   };
-  return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }} />
   </>);
 }
@@ -234,16 +229,13 @@ export default function TeenDhamYatra() {
       {/* ── Breadcrumb (visible trail matching BreadcrumbList schema) ─── */}
       <nav aria-label="Breadcrumb" style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
-          <Link href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/char-dham-yatra" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Char Dham Yatra</Link><span>›</span>
           <span>Teen Dham Yatra</span>
         </div>
       </nav>
 
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}
-        </div>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '18px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
           {[['Duration', '7N/8D'], ['Dhams', '3 of 4'], ['Longest trek', '6 km'], ['Highest point', '3,415 m'], ['Package from', '₹11,600/person'], ['Season', 'Apr 19 – Nov 2026']].map(([k, v]) => (
@@ -268,7 +260,7 @@ export default function TeenDhamYatra() {
           route, the trekking and the price.
         </AnswerBox>
         <p style={p}>
-          The four Himalayan dhams sit on one long arc across Garhwal. Yamunotri is the westernmost, then Gangotri, then Kedarnath, and Badrinath at the eastern end near the Tibet border. Visiting all four in the traditional clockwise order is the <Link href="/char-dham-yatra">Char Dham Yatra</Link> — nine to ten days, two treks, roughly 1,600 km of mountain road. <Link href="/do-dham-yatra">Do Dham</Link> is two of them, usually Kedarnath and Badrinath.
+          The four Himalayan dhams sit on one long arc across Garhwal. Yamunotri is the westernmost, then Gangotri, then Kedarnath, and Badrinath at the eastern end near the Tibet border. Visiting all four in the traditional clockwise order is the <Link prefetch={false} href="/char-dham-yatra">Char Dham Yatra</Link> — nine to ten days, two treks, roughly 1,600 km of mountain road. <Link prefetch={false} href="/do-dham-yatra">Do Dham</Link> is two of them, usually Kedarnath and Badrinath.
         </p>
         <p style={p}>
           Teen Dham sits between the two, and it is the least well-explained of the three. Search for it and you will find operator after operator listing route permutations with prices attached — but not one of them tells you how to choose. That is the actual question. So here is the honest version, from many seasons of routing these trips ourselves.
@@ -336,7 +328,7 @@ export default function TeenDhamYatra() {
               </div>
               <p style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
               {item.link && (
-                <Link href={item.link[1]} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
+                <Link prefetch={false} href={item.link[1]} style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--teal)', textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
                   {item.link[0]} →
                 </Link>
               )}
@@ -445,7 +437,7 @@ export default function TeenDhamYatra() {
           </table>
         </div>
         <p style={p}>
-          Look at the price column and you will notice the gaps are small — about ₹2,300 between each step. That is because the expensive parts of a yatra are the vehicle, the driver and the permits, and those barely move when you add or remove a shrine. What you are really buying with each step up is days. If you have ten days free, do the <Link href="/char-dham-yatra">full Char Dham</Link>; the marginal cost is trivial. If you have eight, Teen Dham. If your group cannot trek, Teen Dham regardless of how many days you have.
+          Look at the price column and you will notice the gaps are small — about ₹2,300 between each step. That is because the expensive parts of a yatra are the vehicle, the driver and the permits, and those barely move when you add or remove a shrine. What you are really buying with each step up is days. If you have ten days free, do the <Link prefetch={false} href="/char-dham-yatra">full Char Dham</Link>; the marginal cost is trivial. If you have eight, Teen Dham. If your group cannot trek, Teen Dham regardless of how many days you have.
         </p>
 
         {/* ── Dates & registration ─────────────────────────────────────── */}
@@ -480,7 +472,7 @@ export default function TeenDhamYatra() {
           <a href="https://uttarakhandtourism.gov.in/" target="_blank" rel="noopener noreferrer">Uttarakhand Tourism</a>. Those three are the only sources worth trusting on dates — everything else, including this page, is downstream of them.
         </p>
         <p style={p}>
-          On timing: May and early June are peak, which means crowds and full hotels but reliable roads. July and August are monsoon and we advise against them — the Gangotri road in particular closes for landslides most seasons. Late September through October is the window we recommend. The air is clear after the rains, the crowds thin out, and the peaks are visible almost every morning. Detail on all of this is in our <Link href="/blog/best-time-char-dham">best time to visit guide</Link> and the <Link href="/blog/char-dham-yatra-closing-dates-2026">2026 closing dates</Link> page.
+          On timing: May and early June are peak, which means crowds and full hotels but reliable roads. July and August are monsoon and we advise against them — the Gangotri road in particular closes for landslides most seasons. Late September through October is the window we recommend. The air is clear after the rains, the crowds thin out, and the peaks are visible almost every morning. Detail on all of this is in our <Link prefetch={false} href="/blog/best-time-char-dham">best time to visit guide</Link> and the <Link prefetch={false} href="/blog/char-dham-yatra-closing-dates-2026">2026 closing dates</Link> page.
         </p>
 
         {/* ── Inclusions / what goes wrong ─────────────────────────────── */}
@@ -528,7 +520,7 @@ export default function TeenDhamYatra() {
           ))}
         </div>
         <p style={{ fontSize: 13.5, color: '#64748b', marginBottom: 28 }}>
-          More on the last one in our altitude sickness guide, and on what to carry in the <Link href="/blog/char-dham-yatra-packing-list">yatra checklist</Link>.
+          More on the last one in our altitude sickness guide, and on what to carry in the <Link prefetch={false} href="/blog/char-dham-yatra-packing-list">yatra checklist</Link>.
         </p>
 
         {/* ── Where we operate from (map — no competitor has one) ───────── */}
@@ -562,7 +554,7 @@ export default function TeenDhamYatra() {
             <div style={{ fontSize: 12.5, color: 'var(--teal)', fontWeight: 600, marginBottom: 8 }}>Founder &amp; Director, {SITE.name}</div>
             <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.75, margin: 0 }}>
               Retired Indian Army officer. Founded {SITE.name} and has routed Char Dham, Teen Dham and Do Dham itineraries for years, personally driving the Gangotri and Badrinath roads hundreds of times. The routing advice on this page — including the Harsil overnight and the case against dropping Gangotri — is his.{' '}
-              <Link href="/about">More about the team</Link>.
+              <Link prefetch={false} href="/about">More about the team</Link>.
             </p>
           </div>
         </div>
@@ -583,21 +575,21 @@ export default function TeenDhamYatra() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>The three dhams on this route</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
             {[['Yamunotri Yatra', '/yamunotri-yatra'], ['Yamunotri Temple', '/yamunotri-temple'], ['How to Reach Yamunotri', '/how-to-reach-yamunotri'], ['Gangotri Yatra', '/gangotri-yatra'], ['Gangotri Temple', '/gangotri-temple'], ['Badrinath Yatra', '/badrinath-yatra'], ['Badrinath Temple', '/badrinath-temple'], ['How to Reach Badrinath', '/how-to-reach-badrinath'], ['Harsil Valley', '/harsil-valley'], ['Mana Village', '/blog/mana-village-badrinath']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Other yatra combinations</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/blog/char-dham-vs-do-dham'], ].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/do-dham-yatra'], ].map(([l, href]) => (
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Before you book</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
             {[['Registration Guide', '/blog/char-dham-yatra-registration'], ['Cost Breakdown', '/blog/char-dham-yatra-cost'], ['Packing List', '/blog/char-dham-yatra-packing-list'], ['Best Time to Go', '/blog/best-time-char-dham'], ['Char Dham Road Status', '/char-dham-road-status'], ['Senior Citizens', '/blog/senior-citizen-char-dham'], ['Medical Certificate', '/blog/char-dham-yatra-medical-certificate'], ['Cost Calculator', '/char-dham-yatra-cost-calculator'], ['Route Map', '/char-dham-yatra-route-map'], ['Emergency Contacts', '/char-dham-yatra-emergency-contacts'], ['Cab Booking', '/char-dham-yatra-cab-booking'], ['Contact Us', '/contact'], ['Reviews', '/review']].map(([l, href]) => (
-              <Link key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

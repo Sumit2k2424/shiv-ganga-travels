@@ -18,10 +18,9 @@ export function distanceSchema({ route, faqs, crumbs }) {
   const url = `${SITE.baseUrl}/${route.slug}`;
   const dates = pageDates(`/${route.slug}`);
   return [
-    {
-      '@context':'https://schema.org', '@type':'FAQPage',
-      mainEntity: faqs.map(f => ({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })),
-    },
+    // FAQPage JSON-LD is no longer emitted (17 Sep 2026): Google shows FAQ rich results
+    // only for government and health sites, and marking up every page as an FAQ was
+    // pure schema volume. The visible FAQ accordion stays; the markup does not.
     {
       '@context':'https://schema.org', '@type':'Trip',
       name: `${route.from} to ${route.to} by road`,
@@ -99,7 +98,7 @@ export default function DistancePage({ route, faqs, crumbTrail, related, sources
         {/* Cumulative vs direct — pre-empts the obvious confusion */}
         <Note tone="info" title="Why our route map shows a bigger number">
           Our{' '}
-          <Link href="/char-dham-yatra-route-map" style={{ color:'var(--navy)', fontWeight:700 }}>Char Dham route map</Link>{' '}
+          <Link prefetch={false} href="/char-dham-yatra-route-map" style={{ color:'var(--navy)', fontWeight:700 }}>Char Dham route map</Link>{' '}
           gives running totals along the full circuit — Badrinath reads 560 km there because that is the
           distance covered via all four dhams in order. The figure on this page is direct, {route.from} to{' '}
           {route.to}. Both are right; they answer different questions.

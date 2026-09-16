@@ -9,7 +9,7 @@ export default function PackageCardLux({ pkg, priority = false }) {
   const n = pkg.duration?.nights, d = pkg.duration?.days;
   const save = (pkg.price?.original || 0) - (pkg.price?.discounted || 0);
   return (
-    <Link href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-gcard">
+    <Link prefetch={false} href={`/packages/${pkg.slug}`} className="lux-card lux-lift lux-gcard">
       <div className="lux-gcard__media lux-frame lux-frame--3x2 lux-frame--zoom">
         {pkg.photo && (
           /* eslint-disable-next-line @next/next/no-img-element */

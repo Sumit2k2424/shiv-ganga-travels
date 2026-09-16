@@ -88,7 +88,6 @@ export default function HaridwarSightseeingPlaces() {
       <Crumbs trail={[['Places to Visit in Haridwar', null]]}/>
 
       <Article>
-        <Updated date={PAGE_DATES.modifiedHuman}/>
 
 
         <AnswerBox>
@@ -106,12 +105,12 @@ export default function HaridwarSightseeingPlaces() {
         <Table
           head={['Time','Where','Why then']}
           rows={[
-            ['7:30–9:30 AM', <Link key="m" href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>, 'Shortest ropeway queue of the day — 5–15 min instead of 45'],
-            ['10:00–11:30 AM', <Link key="c" href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>, 'In and out before the midday darshan closure'],
+            ['7:30–9:30 AM', <Link prefetch={false} key="m" href="/mansa-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Mansa Devi</Link>, 'Shortest ropeway queue of the day — 5–15 min instead of 45'],
+            ['10:00–11:30 AM', <Link prefetch={false} key="c" href="/chandi-devi-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Chandi Devi</Link>, 'In and out before the midday darshan closure'],
             ['12:00–2:00 PM', 'Lunch', 'Both hill temples are shut anyway'],
-            ['2:30–3:30 PM', <Link key="d" href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev, Kankhal</Link>, 'Open all afternoon, and quiet'],
+            ['2:30–3:30 PM', <Link prefetch={false} key="d" href="/daksh-mahadev-temple" style={{ color:'var(--teal)', fontWeight:600 }}>Daksh Mahadev, Kankhal</Link>, 'Open all afternoon, and quiet'],
             ['4:00–4:20 PM', 'Maya Devi', 'Fifteen minutes, on the way back in'],
-            ['4:45 PM onward', <Link key="h" href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>, 'Take your place well before the aarti'],
+            ['4:45 PM onward', <Link prefetch={false} key="h" href="/har-ki-pauri-guide" style={{ color:'var(--teal)', fontWeight:600 }}>Har Ki Pauri</Link>, 'Take your place well before the aarti'],
           ]}
         />
         <Note tone="good" title="The two decisions that matter">

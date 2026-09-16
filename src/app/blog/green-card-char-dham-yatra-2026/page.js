@@ -32,14 +32,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the Green Card for Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The Green Card (also called Trip Card or Travel Permit) is a mandatory permit for all private and commercial vehicles registered outside Uttarakhand that enter Char Dham Yatra routes in 2026. Vehicles with DL (Delhi), HR (Haryana), UP (Uttar Pradesh), RJ (Rajasthan), MH (Maharashtra), and all other non-UK registration plates must obtain this permit. It costs ₹50 and is applied online at greencard.uk.gov.in.' } },
-      { '@type': 'Question', name: 'How to apply for Green Card for Char Dham Yatra?', acceptedAnswer: { '@type': 'Answer', text: 'Apply online at greencard.uk.gov.in. You need: vehicle registration number, vehicle owner\'s name, vehicle type, driver\'s licence number, entry point (date and checkpost), exit point, and contact mobile number. The Green Card is issued digitally. Fee is ₹50. Print or save the digital copy — it is checked at route checkposts.' } },
-      { '@type': 'Question', name: 'Which vehicles need a Green Card for Char Dham Yatra?', acceptedAnswer: { '@type': 'Answer', text: 'All private cars, jeeps, SUVs, buses, and tempo travellers registered outside Uttarakhand (non-UK plates) need the Green Card for Char Dham routes. This includes vehicles with Delhi (DL), Haryana (HR), Uttar Pradesh (UP), Rajasthan (RJ), Maharashtra (MH), Gujarat (GJ), and all other state plates except Uttarakhand (UK). Vehicles rented from Haridwar-based operators (UK plates) do NOT need the permit — one reason to book a local operator.' } },
-    ],
-  };
+  
   const bc = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -48,7 +41,7 @@ function Schema() {
       { '@type': 'ListItem', position: 3, name: 'Green Card Char Dham 2026', item: `${SITE.baseUrl}/blog/green-card-char-dham-yatra-2026` },
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} /></>);
 }
 
 
@@ -76,8 +69,8 @@ export default function GreenCard() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '9px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6 }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Green Card Char Dham 2026</span>
         </div>
       </nav>
@@ -187,12 +180,12 @@ export default function GreenCard() {
           <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--navy)', marginBottom: 10 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
-              ['2026 New Rules', '/blog/char-dham-yatra-2026-new-rules'],
+              ['2026 New Rules', '/blog/char-dham-yatra-registration'],
               ['Registration Guide', '/blog/char-dham-yatra-registration'],
               ['Medical Certificate', '/blog/char-dham-yatra-medical-certificate'],
               ['Char Dham Package', '/char-dham-yatra'],
               ].map(([l, h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '6px 12px', borderRadius: 7, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

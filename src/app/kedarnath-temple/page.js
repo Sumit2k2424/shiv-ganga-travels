@@ -4,7 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 export const metadata = {
-  title: { absolute: `Kedarnath Temple Guide ${SITE.season} | Darshan Timings & History | Trek Guide` },
+  title: { absolute: 'Kedarnath Temple | Darshan Timings, History & Trek' },
   description: `Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & ${SITE.season} opening dates.`,
   keywords: ['kedarnath temple',`kedarnath temple timings ${SITE.season}`,'kedarnath temple history',`kedarnath darshan ${SITE.season}`,`kedarnath temple opening date ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-temple` },
@@ -20,12 +20,8 @@ export const metadata = {
 };
 function Schema() {
   const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Kedarnath Temple', description:'One of the 12 Jyotirlingas of Lord Shiva, located at 3,583m in the Garhwal Himalayas of Uttarakhand.', url:`${SITE.baseUrl}/kedarnath-temple`, address:{'@type':'PostalAddress',addressLocality:'Kedarnath',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.7352',longitude:'79.0669'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'04:00',closes:'21:00'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Kedarnath_Temple','https://www.wikidata.org/wiki/Q866014'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
-    {'@type':'Question',name:'What time does Kedarnath Temple open?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens at 4:00 AM for the Mahabhishek puja and closes at 9:00 PM. General darshan is from 6 AM to 3 PM and 5 PM to 9 PM. The temple is closed between 3 PM and 5 PM for a break.'}},
-    {'@type':'Question',name:'When does Kedarnath Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Kedarnath Temple opens on April 22, 2026 at 8:00 AM for the 2026 season. The temple closes for winter on November 11, 2026.'}},
-    {'@type':'Question',name:'What is the dress code for Kedarnath Temple?',acceptedAnswer:{'@type':'Answer',text:'Traditional Indian attire is recommended — dhoti/kurta for men, saree or salwar kameez for women. Western shorts and sleeveless clothing are discouraged. Shoes must be removed at the temple entrance.'}},
-  ]};
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/></>);
 }
 const PAA = [
   { q:'Where is Kedarnath Temple located?', a:'In Rudraprayag district of Uttarakhand, near the source of the Mandakini river, at about 3,583 m altitude in the Garhwal Himalayas. It\'s reached by a 16 km trek from Gaurikund or by helicopter.' },
@@ -36,8 +32,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -131,7 +126,7 @@ export default function KedarnathTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Kedarnath Yatra Package',h:'/kedarnath-yatra'},{l:'Kedarnath Trek Guide',h:'/blog/kedarnath-trek-guide'},{l:'Helicopter Booking',h:'/blog/kedarnath-helicopter-booking'},{l:'Haridwar to Kedarnath Cab',h:'/cabs'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

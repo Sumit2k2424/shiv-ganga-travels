@@ -11,7 +11,7 @@ import { pageDates } from '@/lib/pageDates';
 
 const PAGE_DATES = pageDates('/blog/haridwar-to-kedarnath');
 export const metadata = {
-  title: { absolute: `Haridwar to Kedarnath ${SITE.season} | Cab, Bus & Heli` },
+  title: { absolute: 'Haridwar to Kedarnath | Cab, Bus & Helicopter Routes' },
   description: `Haridwar to Kedarnath ${SITE.season} — 235 km by road via Devprayag to Guptkashi, then Gaurikund and a 16 km trek. Cab, bus and helicopter options compared.`,
   keywords: [`haridwar to kedarnath distance ${SITE.season}`, 'haridwar to kedarnath cab', 'haridwar to kedarnath taxi fare', 'haridwar to kedarnath bus', 'haridwar to kedarnath helicopter', 'haridwar to kedarnath train', 'haridwar to kedarnath map'],
   alternates: { canonical: `${SITE.baseUrl}/blog/haridwar-to-kedarnath` },
@@ -27,8 +27,8 @@ const FAQS = [
 ];
 function Schema() {
   const a = { '@context':'https://schema.org','@type':'BlogPosting', headline:'Haridwar to Kedarnath Distance, Route & Travel Guide 2026', author:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, publisher:{'@type':'Organization',name:SITE.name,url:SITE.baseUrl}, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/haridwar-to-kedarnath` };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity: FAQS.map(f=>({ '@type':'Question', name:f.q, acceptedAnswer:{ '@type':'Answer', text:f.a } })) };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(a) }}/></>);
 }
 export default function HaridwarToKedarnath() {
   return (<>
@@ -52,8 +52,8 @@ export default function HaridwarToKedarnath() {
 
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-        <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-        <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+        <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+        <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
         <span>Haridwar to Kedarnath Route</span>
       </div>
     </nav>
@@ -160,7 +160,7 @@ export default function HaridwarToKedarnath() {
           </tbody>
         </table>
       </div>
-      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link href="/cabs" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
+      <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7, marginBottom:8 }}>Need a fixed cab quote? See our <Link prefetch={false} href="/cabs" style={{ color:'var(--teal)', textDecoration:'underline', fontWeight:600 }}>Haridwar to Kedarnath cab fares</Link> page for vehicle-wise rates and booking.</p>
 
       <h2 id="taxi-fare" style={h2}>Haridwar to Kedarnath Taxi Fare (by vehicle)</h2>
       <div style={{ overflowX:'auto', marginBottom:24 }}>

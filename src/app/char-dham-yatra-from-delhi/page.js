@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/char-dham-yatra-from-delhi');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra from Delhi ${SITE.season} | Train & Flight Pickup` },
+  title: { absolute: 'Char Dham Yatra from Delhi | Train & Flight Pickup' },
   description: `250–335 km depending on pickup point. Char Dham packages from ₹17,200/person. Zero commission, direct Haridwar operator.`,
   keywords: ['char dham yatra from delhi','char dham yatra package from delhi','delhi to haridwar char dham',`char dham tour from delhi ${SITE.season}`,'chardham yatra delhi','delhi char dham yatra package'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-from-delhi` },
@@ -28,14 +28,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity:[
-      { '@type':'Question', name:'How to reach Haridwar from Delhi for Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Delhi to Dehradun (DED) — 40 min flight (₹2,500–5,000). Jolly Grant Airport is 35km from Haridwar. Total door-to-door: 2.5 hrs. Fastest if you book early.' } },
-      { '@type':'Question', name:'What is the Char Dham Yatra package cost from Delhi?', acceptedAnswer:{ '@type':'Answer', text:'Char Dham Yatra from Delhi starts at ₹17,200/person for a 9N/10D all-inclusive package — AC vehicle, hotels, meals, VIP darshan at all 4 dhams, guide, registration. Zero commission.' } },
-      { '@type':'Question', name:'How many days for Char Dham Yatra from Delhi?', acceptedAnswer:{ '@type':'Answer', text:'Plan 11–13 days from Delhi: 1 day travel to Haridwar + 9–10 days Char Dham circuit + 1–2 days return.' } },
-    ],
-  };
+  
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -44,7 +37,7 @@ function Schema() {
       { '@type':'ListItem', position:3, name:'From Delhi', item:`${SITE.baseUrl}/char-dham-yatra-from-delhi` },
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/></>);
 }
 
 
@@ -57,8 +50,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -99,7 +91,6 @@ export default function Page() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open: Apr 19 – Nov 2026</div>
 
         <AnswerBox>
           Char Dham Yatra from Delhi costs from ₹17,200 per person and takes 11–13 days door to
@@ -204,7 +195,7 @@ export default function Page() {
             <a href={`tel:${SITE.phone}`} style={{ background:'rgba(255,255,255,0.12)', color:'#fff', padding:'12px 24px', borderRadius:9, fontWeight:700, fontSize:13.5, textDecoration:'none', border:'1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
           </div>
           <div style={{ marginTop:14 }}>
-            <Link href="/packages/char-dham-yatra-from-delhi-10n-11d" style={{ color:'#FFD166', fontSize:13, fontWeight:600, textDecoration:'underline' }}>View the full 10N/11D Delhi package, itinerary & pricing →</Link>
+            <Link prefetch={false} href="/packages/char-dham-yatra-from-delhi-10n-11d" style={{ color:'#FFD166', fontSize:13, fontWeight:600, textDecoration:'underline' }}>View the full 10N/11D Delhi package, itinerary & pricing →</Link>
           </div>
         </div>
 
@@ -212,7 +203,7 @@ export default function Page() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>More guides</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra 2026','/char-dham-yatra'],['Registration Guide','/blog/char-dham-yatra-registration'],['Cost Breakdown','/blog/char-dham-yatra-cost'],['Kedarnath Trek','/blog/kedarnath-trek-guide'],['Best Time to Visit','/blog/best-time-char-dham'],['Packing List','/blog/char-dham-yatra-packing-list']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

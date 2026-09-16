@@ -9,7 +9,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/do-dham-yatra');
 
 export const metadata = {
-  title: { absolute: `2 Dham Yatra Package ${SITE.season} | Kedarnath & Badrinath` },
+  title: { absolute: 'Do Dham Yatra Package | Kedarnath & Badrinath' },
   description: `Do Dham Yatra (Kedarnath + Badrinath) ${SITE.season} from Haridwar. 5N/6D from ₹8,200. Includes 16km Kedarnath trek, VIP darshan, hotels, meals. Zero commission.`,
   keywords: ['do dham yatra','2 dham yatra','2 dham yatra package','kedarnath badrinath package',`do dham yatra ${SITE.season}`,'kedarnath and badrinath tour package','2 dham yatra from haridwar','do dham yatra package from haridwar'],
   alternates: { canonical: `${SITE.baseUrl}/do-dham-yatra` },
@@ -28,15 +28,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity:[
-      { '@type':'Question', name:'What is Do Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'Do Dham Yatra (also called 2 Dham Yatra) covers two of the four Char Dhams — Kedarnath (Lord Shiva, 3,583m) and Badrinath (Lord Vishnu, 3,133m). Both are in Uttarakhand. The circuit takes 5 nights and 6 days from Haridwar, covers approximately 800km of driving, and includes the 16km Kedarnath trek. It is the most popular partial Char Dham option for pilgrims with limited time or who have done Yamunotri and Gangotri previously.' } },
-      { '@type':'Question', name:'Should I do Do Dham or Char Dham Yatra?', acceptedAnswer:{ '@type':'Answer', text:'If you have 10–11 days available, do Char Dham (all 4 dhams). If you have 6–7 days, or if you have already visited Yamunotri and Gangotri, Do Dham (Kedarnath + Badrinath) is ideal. Kedarnath and Badrinath are considered the two most spiritually significant dhams — Kedarnath for Shaiva devotees and Badrinath for Vaishnavas. Neither is "lesser" — both are Jyotirlinga/Vishnu kshetra of the highest order.' } },
-      { '@type':'Question', name:'What is the Do Dham Yatra package cost from Haridwar?', acceptedAnswer:{ '@type':'Answer', text:'Do Dham Yatra (Kedarnath + Badrinath) from Haridwar starts at ₹8,200 per person for a 5N/6D all-inclusive package with Shiv Ganga Travels. This includes AC vehicle, hotels, breakfast and dinner, VIP darshan at both dhams, experienced guide, and registration. The Kedarnath pony (₹3,500–4,500 one way) is optional extra. Zero commission.' } },
-      { '@type':'Question', name:'Is the Kedarnath trek mandatory in the Do Dham package?', acceptedAnswer:{ '@type':'Answer', text:'The 16km trek from Gaurikund to Kedarnath is the only way to reach the temple by road access (Gaurikund is the roadhead). You can do this trek on foot (5–7 hrs), by pony (₹3,500–4,500 one way), palki/doli (₹8,000–12,000 round trip), or by helicopter from Phata/Sersi helipad (₹7,500–9,500 round trip). The trek itself is not mandatory — alternatives exist for seniors and those with health concerns.' } },
-    ],
-  };
+  
   const bc = {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
@@ -68,7 +60,7 @@ function Schema() {
       {'@type':'Offer', name:'Do Dham Senior Special 6N/7D', price:'10500', priceCurrency:'INR', availability:'https://schema.org/InStock', url:`${SITE.baseUrl}/do-dham-yatra`},
     ],
   };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(bc) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(trip) }}/></>);
 }
 
 
@@ -82,8 +74,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -126,7 +117,6 @@ export default function DoDhamYatra() {
       </nav>
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
-        <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:20, textAlign:'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))', gap:10 }}>
           {[['Duration','5N/6D'],['Kedarnath','3,583m'],['Badrinath','3,133m'],['Trek','16km Kedarnath'],['Package from','₹8,200/person'],['Season','Apr 22 – Nov 2026']].map(([k,v])=>(
@@ -140,7 +130,7 @@ export default function DoDhamYatra() {
         </p>
 
         <h2 style={h2}>What Does &quot;Dham Yatra&quot; Actually Mean? — Do, Char and 5 Dham Explained</h2>
-        <p style={p}>A <strong>dham</strong> is a sacred abode — a seat of the divine — and a <strong>dham yatra</strong> is the pilgrimage that connects them. In Uttarakhand the term almost always means the Chota Char Dham circuit: Yamunotri, Gangotri, Kedarnath and Badrinath. From there the numbers are simple counting. <strong>Ek Dham</strong> is a single shrine (usually Kedarnath or Badrinath alone). <strong>Do Dham</strong> — this page — pairs Kedarnath and Badrinath. <strong><Link href="/teen-dham-yatra">Teen Dham</Link></strong> is any three of the four, and which one you drop is a routing decision worth thinking about properly. <strong>Char Dham</strong> is all four. And the <strong>5 Dham Yatra</strong> you may have seen advertised adds <strong>Hemkund Sahib</strong>, the glacial-lake gurudwara at 4,329 m near the Valley of Flowers, to the four dhams — a Sikh-Hindu combined circuit that needs 12–13 days and opens later (late May) because of snow on the Hemkund trail.</p>
+        <p style={p}>A <strong>dham</strong> is a sacred abode — a seat of the divine — and a <strong>dham yatra</strong> is the pilgrimage that connects them. In Uttarakhand the term almost always means the Chota Char Dham circuit: Yamunotri, Gangotri, Kedarnath and Badrinath. From there the numbers are simple counting. <strong>Ek Dham</strong> is a single shrine (usually Kedarnath or Badrinath alone). <strong>Do Dham</strong> — this page — pairs Kedarnath and Badrinath. <strong><Link prefetch={false} href="/teen-dham-yatra">Teen Dham</Link></strong> is any three of the four, and which one you drop is a routing decision worth thinking about properly. <strong>Char Dham</strong> is all four. And the <strong>5 Dham Yatra</strong> you may have seen advertised adds <strong>Hemkund Sahib</strong>, the glacial-lake gurudwara at 4,329 m near the Valley of Flowers, to the four dhams — a Sikh-Hindu combined circuit that needs 12–13 days and opens later (late May) because of snow on the Hemkund trail.</p>
         <p style={p}>Worth knowing before you compare packages: the original <em>Bada</em> Char Dham of Adi Shankaracharya spans all of India — Badrinath, Dwarka, Puri and Rameswaram. When Uttarakhand operators (us included) say Char Dham, we mean the Himalayan circuit. If a quote looks suspiciously cheap for a "char dham", check which four temples it actually covers.</p>
 
         {/* Do Dham vs Char Dham — the decision most searchers are making */}
@@ -312,7 +302,7 @@ export default function DoDhamYatra() {
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:12 }}>Related pages</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
             {[['Char Dham Yatra','/char-dham-yatra'],['Teen Dham Yatra','/teen-dham-yatra'],['Ek Dham Yatra','/ek-dham-yatra'],['Kedarnath Yatra','/kedarnath-yatra'],['Badrinath Yatra','/badrinath-yatra'],['Kedarnath Trek Guide','/blog/kedarnath-trek-guide'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Cost Breakdown','/blog/char-dham-yatra-cost']].map(([l,h])=>(
-              <Link key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

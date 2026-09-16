@@ -273,11 +273,11 @@ export default function PackagesPage() {
               <div className="lux-card" style={{ padding: '16px 18px' }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 6 }}>📖 Before you go</div>
                 <div style={{ fontSize: 13.5, color: 'var(--text-mid)', lineHeight: 1.9 }}>
-                  <Link href="/blog/char-dham-yatra-packing-list" className="lux-link">Packing list</Link> ·{' '}
-                  <Link href="/blog/char-dham-yatra-registration" className="lux-link">Registration 2026</Link> ·{' '}
-                  <Link href="/char-dham-yatra-emergency-contacts" className="lux-link">Emergency contacts</Link> ·{' '}
-                  <Link href="/blog/best-time-char-dham" className="lux-link">Best time to go</Link> ·{' '}
-                  <Link href="/cancellation-policy" className="lux-link">Cancellation policy</Link>
+                  <Link prefetch={false} href="/blog/char-dham-yatra-packing-list" className="lux-link">Packing list</Link> ·{' '}
+                  <Link prefetch={false} href="/blog/char-dham-yatra-registration" className="lux-link">Registration 2026</Link> ·{' '}
+                  <Link prefetch={false} href="/char-dham-yatra-emergency-contacts" className="lux-link">Emergency contacts</Link> ·{' '}
+                  <Link prefetch={false} href="/blog/best-time-char-dham" className="lux-link">Best time to go</Link> ·{' '}
+                  <Link prefetch={false} href="/cancellation-policy" className="lux-link">Cancellation policy</Link>
                 </div>
               </div>
             </div>

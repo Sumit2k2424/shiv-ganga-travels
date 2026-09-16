@@ -81,12 +81,12 @@ export default function BlogCTA({
         <span className="blog-cta__mark" aria-hidden="true" />
         {line || copy.line}{' '}
         {href ? (
-          <Link className="blog-cta__inlinelink" href={href}>{linkLabel}</Link>
+          <Link prefetch={false} className="blog-cta__inlinelink" href={href}>{linkLabel}</Link>
         ) : (
           <>
             <a className="blog-cta__inlinelink" href={waHref} target="_blank" rel="nofollow noopener noreferrer">Ask on WhatsApp</a>
             <span className="blog-cta__sep" aria-hidden="true">·</span>
-            <Link className="blog-cta__inlinelink" href="/char-dham-yatra">See packages</Link>
+            <Link prefetch={false} className="blog-cta__inlinelink" href="/char-dham-yatra">See packages</Link>
           </>
         )}
       </p>
@@ -112,7 +112,7 @@ export default function BlogCTA({
             <WhatsAppIcon size={15} color="currentColor" />
             WhatsApp us
           </a>
-          <Link className="blog-cta__link" href="/char-dham-yatra">
+          <Link prefetch={false} className="blog-cta__link" href="/char-dham-yatra">
             View packages
           </Link>
         </div>
@@ -163,7 +163,7 @@ export default function BlogCTA({
           <WhatsAppIcon size={17} color="currentColor" />
           Book on WhatsApp
         </a>
-        <Link className="blog-cta__ghost" href="/char-dham-yatra">
+        <Link prefetch={false} className="blog-cta__ghost" href="/char-dham-yatra">
           View all packages
         </Link>
       </div>

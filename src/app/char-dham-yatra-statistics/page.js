@@ -3,7 +3,7 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Statistics ${SITE.season} | Pilgrim Data & Trends` },
+  title: { absolute: 'Char Dham Yatra Statistics | Pilgrim Data & Trends' },
   description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', `char dham statistics ${SITE.season}`, 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
@@ -102,7 +102,7 @@ export default function Page() {
 
       <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span>Char Dham Yatra Statistics 2026</span>
         </div>
       </nav>
@@ -181,7 +181,7 @@ export default function Page() {
           <li><strong>Badrinath</strong>: Opens April 23, 2026 at 4:30 AM · Closes November 13, 2026</li>
         </ul>
         <p style={p}>The season lasts approximately 208 days. During winter closure, the deities are moved to their winter seats — Kharsali for Yamunotri, Mukhba for Gangotri, Ukhimath for Kedarnath, and Joshimath for Badrinath.</p>
-        <p style={p}>One caveat on the closing dates, correct as of August 2026: the opening dates are settled and behind us, but the closing dates are not all formally announced yet. Gangotri and Yamunotri follow the Diwali calendar and are fixed by it. The exact closing dates for <strong>Kedarnath and Badrinath are declared by the Badrinath-Kedarnath Temple Committee on Vijayadashami</strong>, which falls in October — so November 11 and November 13 are calendar-derived and should be treated as firm-but-tentative until that announcement. We update this page when the committee confirms. See our <Link href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)' }}>full 2026 closing dates guide</Link> for the ceremony details and winter-abode darshan.</p>
+        <p style={p}>One caveat on the closing dates, correct as of August 2026: the opening dates are settled and behind us, but the closing dates are not all formally announced yet. Gangotri and Yamunotri follow the Diwali calendar and are fixed by it. The exact closing dates for <strong>Kedarnath and Badrinath are declared by the Badrinath-Kedarnath Temple Committee on Vijayadashami</strong>, which falls in October — so November 11 and November 13 are calendar-derived and should be treated as firm-but-tentative until that announcement. We update this page when the committee confirms. See our <Link prefetch={false} href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)' }}>full 2026 closing dates guide</Link> for the ceremony details and winter-abode darshan.</p>
         <div style={attribution}>Source: Uttarakhand Char Dham Devasthanam Management Board and Badrinath-Kedarnath Temple Committee, 2026 notifications; closing dates cross-checked against the 2026 Hindu festival calendar</div>
 
         <h2 style={h2}>4. Cost Breakdown (Per Person, 2026)</h2>
@@ -276,14 +276,14 @@ export default function Page() {
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', marginTop:36, textAlign:'center' }}>
           <h3 style={{ color:'#fff', fontFamily:'var(--font-display)', fontSize:'1.3rem', marginBottom:10 }}>About the Source</h3>
-          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:14, lineHeight:1.7, marginBottom:18, maxWidth:640, margin:'0 auto 18px' }}>Shiv Ganga Travels is a direct Char Dham Yatra operator headquartered in Haridwar, Uttarakhand. Founded by Dhanesh Chandra Mishra, a retired Indian Army officer. <Link href="/about" style={{ color:'#FFD166', textDecoration:'underline' }}>Read more about our team →</Link></p>
+          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:14, lineHeight:1.7, marginBottom:18, maxWidth:640, margin:'0 auto 18px' }}>Shiv Ganga Travels is a direct Char Dham Yatra operator headquartered in Haridwar, Uttarakhand. Founded by Dhanesh Chandra Mishra, a retired Indian Army officer. <Link prefetch={false} href="/about" style={{ color:'#FFD166', textDecoration:'underline' }}>Read more about our team →</Link></p>
         </div>
 
         <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:28 }}>
           <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>More Authoritative Guides</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            {[{l:'Char Dham Complete Guide',h:'/blog/char-dham-yatra-complete-guide'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/blog/char-dham-yatra-faq'}].map(l => (
-              <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            {[{l:'Char Dham Complete Guide',h:'/char-dham-yatra'},{l:'Char Dham Cost Calculator',h:'/char-dham-yatra-cost-calculator'},{l:'Char Dham History & Significance',h:'/blog/char-dham-yatra-significance'},{l:'Char Dham FAQs',h:'/char-dham-yatra'}].map(l => (
+              <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
             ))}
           </div>
         </div>

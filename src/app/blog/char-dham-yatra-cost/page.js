@@ -13,7 +13,7 @@ import { pageDates } from '@/lib/pageDates';
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-cost');
 
 export const metadata = {
-  title: { absolute: `Char Dham Yatra Cost ${SITE.season} | Full Breakdown` },
+  title: { absolute: 'Char Dham Yatra Cost | Full Per-Person Breakdown' },
   description: `Char Dham Yatra cost ${SITE.season} per person — budget ₹18,500–28,000, deluxe ₹28,000–40,000, luxury ₹45,000–65,000. Pony, helicopter and registration explained.`,
   keywords: [`char dham yatra cost ${SITE.season}`, 'char dham yatra total cost per person', `char dham yatra package price ${SITE.season}`, 'char dham yatra budget breakdown', `kedarnath pony cost ${SITE.season}`, `char dham helicopter cost ${SITE.season}`],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-cost` },
@@ -24,15 +24,7 @@ export const metadata = {
 };
 
 function Schema() {
-  const faq = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'What is the total cost of Char Dham Yatra 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The total cost of Char Dham Yatra 2026 from Haridwar is ₹22,000–₹28,000 per person for a budget pilgrim, and ₹30,000–₹40,000 for a comfortable experience. This includes: package cost ₹13,900–₹30,000, Kedarnath pony ₹3,500–₹4,500 (if not trekking), registration FREE (₹0), personal expenses ₹1,500–₹2,000, and train/bus to Haridwar ₹500–₹2,500 depending on your city.' } },
-      { '@type': 'Question', name: 'What is the cost of Char Dham Yatra package from Haridwar?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra packages from Haridwar start at ₹13,900 per person (9N/10D, standard) with Shiv Ganga Travels. This is an all-inclusive direct-operator price with zero commission — it covers AC vehicle, hotels, breakfast and dinner, guide, VIP darshan at all 4 dhams, and all toll/parking charges. Deluxe packages (Innova, 3-star hotels) start at ₹30,000.' } },
-      { '@type': 'Question', name: 'What is the cost of Kedarnath pony in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Kedarnath pony (horse ride) costs ₹3,500–₹4,500 for one way (Gaurikund to Kedarnath, 16km). For round trip the cost is ₹7,000–₹9,000. These are government-regulated rates displayed at the Gaurikund booking counter. Booking is done on the day at Gaurikund — no advance booking available. In peak May–June, ponies get booked out by 7–8 AM.' } },
-      { '@type': 'Question', name: 'Is the Char Dham registration fee included in the package price?', acceptedAnswer: { '@type': 'Answer', text: 'Char Dham Yatra registration is completely FREE in 2026 — ₹0. The Uttarakhand government removed the previous ₹150 fee for this season. You register at registrationandtouristcare.uk.gov.in at no cost. Shiv Ganga Travels handles the entire registration process for all our package pilgrims — you just provide your Aadhaar details.' } },
-    ],
-  };
+  
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: 'Char Dham Yatra Cost 2026 — Complete Price Breakdown', author: {
         '@type': 'Person',
         '@id': `${SITE.baseUrl}/#founder`,
@@ -42,7 +34,7 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, datePublished: PAGE_DATES.createdISO, dateModified: PAGE_DATES.modifiedISO, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.baseUrl}/blog/char-dham-yatra-cost` } };
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.baseUrl }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}/blog` }, { '@type': 'ListItem', position: 3, name: 'Char Dham Yatra Cost 2026', item: `${SITE.baseUrl}/blog/char-dham-yatra-cost` }] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }}/></>);
 }
 
 
@@ -69,8 +61,8 @@ export default function CharDhamCost() {
 
       <nav style={{ background: 'var(--bg)', borderBottom: '1px solid hsl(var(--border))', padding: '10px 20px' }}>
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', fontSize: 12, color: 'var(--text-muted)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
-          <Link href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--teal)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/blog" style={{ color:'var(--teal)', textDecoration:'none' }}>Blog</Link><span>›</span>
           <span>Char Dham Yatra Cost 2026</span>
         </div>
       </nav>
@@ -83,7 +75,6 @@ export default function CharDhamCost() {
         <AnswerBox>
           <strong>A Char Dham Yatra from Haridwar costs from ₹13,900 per person for 9N/10D all-inclusive.</strong> Deluxe with 3-star hotels and a private Innova runs ₹28,000–40,000, and a genuine full helicopter charter about ₹2,30,000. On top of the package, budget for the Kedarnath pony (₹3,000–5,000 one way) or helicopter (₹7,000–9,000), plus puja and personal expenses. Registration is free. Anything advertised as a helicopter package near ₹85,000 is a road trip with shuttle tickets.
         </AnswerBox>
-        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · By Shiv Ganga Travels</div>
 
         {/* Intent-first answer */}
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>
@@ -307,7 +298,7 @@ export default function CharDhamCost() {
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Related guides</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {[['All Packages','/packages'],['Pony vs Helicopter','/blog/kedarnath-pony-vs-helicopter'],['Registration Guide','/blog/char-dham-yatra-registration'],['Best Time to Visit','/blog/best-time-char-dham'],['Senior Citizen Guide','/blog/senior-citizen-char-dham'],].map(([l,h]) => (
-              <Link key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
+              <Link prefetch={false} key={h} href={h} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
         </div>

@@ -104,7 +104,7 @@ export default function BookPage() {
   // Prefill from ?pkg= (client-only; avoids Suspense requirement of useSearchParams)
   useEffect(() => {
     const slug = new URLSearchParams(window.location.search).get('pkg');
-    if (!slug) return;
+    if (!slug) return null;
     const pkg = PACKAGES.find((p) => p.slug === slug);
     if (pkg) setF((s) => ({ ...s, pkgSlug: pkg.slug, category: pkg.category }));
   }, []);
@@ -136,7 +136,7 @@ export default function BookPage() {
   };
 
   const next = () => {
-    if (!stepValid()) { setAttempted(true); return; }
+    if (!stepValid()) { setAttempted(true); return null; }
     setAttempted(false);
     setStep((s) => Math.min(s + 1, STEPS.length - 1));
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -168,7 +168,7 @@ export default function BookPage() {
   const mailUrl = `mailto:${SITE.email}?subject=${encodeURIComponent('Yatra booking enquiry')}&body=${encodeURIComponent(message)}`;
 
   const submit = () => {
-    if (!stepValid(3)) { setAttempted(true); return; }
+    if (!stepValid(3)) { setAttempted(true); return null; }
     if (typeof window !== 'undefined') window.open(waUrl, '_blank', 'noopener');
     setSent(true);
   };
@@ -191,7 +191,7 @@ export default function BookPage() {
             <a href={mailUrl} className="lux-btn lux-btn--ink"><Icon name="mail" size={15} /> Send by email</a>
             <a href={`tel:+${SITE.whatsapp}`} className="lux-btn lux-btn--ghost"><Icon name="phone" size={15} /> {SITE.phone}</a>
           </div>
-          <p className="lux-caption" style={{ marginTop: 26 }}><Link href="/packages" className="lux-link">Back to all packages</Link></p>
+          <p className="lux-caption" style={{ marginTop: 26 }}><Link prefetch={false} href="/packages" className="lux-link">Back to all packages</Link></p>
         </div>
       </div>
     );

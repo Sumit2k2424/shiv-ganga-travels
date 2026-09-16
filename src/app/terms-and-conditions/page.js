@@ -76,7 +76,7 @@ export default function TermsAndConditions() {
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Terms &amp; Conditions</span>
         </div>
       </nav>
@@ -134,7 +134,7 @@ export default function TermsAndConditions() {
         <H2>5. Cancellation and refunds</H2>
         <P>
           Cancellation charges, refund slabs and the processing timeline are set out in full on our{' '}
-          <Link href="/cancellation-policy" style={{ color:'var(--teal)', fontWeight:600 }}>cancellation and refund policy</Link>,
+          <Link prefetch={false} href="/cancellation-policy" style={{ color:'var(--teal)', fontWeight:600 }}>cancellation and refund policy</Link>,
           which forms part of these terms. In summary: cancel 30 or more days before departure and 80% is
           refunded; 15 to 29 days, 50%; and the advance becomes non-refundable within 7 days of
           departure. Refunds are made to the original payment method within 7 working days of the
@@ -264,7 +264,7 @@ export default function TermsAndConditions() {
             ['Contact Us','/contact'],
             ['Char Dham Yatra','/char-dham-yatra'],
           ].map(([label,href])=>(
-            <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+            <Link prefetch={false} key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
               {label} →
             </Link>
           ))}

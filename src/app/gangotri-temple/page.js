@@ -5,7 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: `Gangotri Temple Guide ${SITE.season} | Darshan Timings, History & Aarti` },
+  title: { absolute: 'Gangotri Temple | Darshan Timings, History & Aarti' },
   description: `Source of the Ganga. Darshan timings, Ganga aarti, history, dress code and ${SITE.season} opening dates for Gangotri Dham.`,
   keywords: ['gangotri temple',`gangotri temple timings ${SITE.season}`,'gangotri dham',`gangotri opening date ${SITE.season}`,'gangotri ganga aarti','gangotri temple history'],
   alternates: { canonical: `${SITE.baseUrl}/gangotri-temple` },
@@ -22,12 +22,8 @@ export const metadata = {
 
 function Schema() {
   const ld = { '@context':'https://schema.org','@type':'TouristAttraction', name:'Gangotri Temple', description:'The origin shrine of the river Ganga, dedicated to Goddess Ganga, at 3,415m in Uttarkashi district, Uttarakhand. One of the four Char Dham shrines.', url:`${SITE.baseUrl}/gangotri-temple`, address:{'@type':'PostalAddress',addressLocality:'Gangotri',addressRegion:'Uttarakhand',addressCountry:'IN'}, geo:{'@type':'GeoCoordinates',latitude:'30.9947',longitude:'78.9398'}, openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'06:15',closes:'21:30'}], touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Gangotri_Temple'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
-  const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
-    {'@type':'Question',name:'What are the darshan timings at Gangotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Gangotri Temple opens around 6:15 AM and stays open until about 9:30 PM, with a midday break roughly between 2 PM and 3 PM. The morning and evening Ganga aarti on the riverbank are the most moving times to be there. Timings shift slightly on festival days.'}},
-    {'@type':'Question',name:'When does Gangotri Temple open in 2026?',acceptedAnswer:{'@type':'Answer',text:'Gangotri Temple opens on April 19, 2026 (Akshaya Tritiya). It closes for winter on November 10, 2026 (Diwali/Annakut), after which the idol of Goddess Ganga is carried to Mukhba village for winter worship.'}},
-    {'@type':'Question',name:'What is the dress code for Gangotri Temple?',acceptedAnswer:{'@type':'Answer',text:'Modest traditional clothing is expected — kurta-pyjama or dhoti for men, saree or salwar kameez for women. Carry warm layers; even in summer the temperature at 3,415m drops sharply once the sun is behind the peaks. Footwear is removed before the sanctum.'}},
-  ]};
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faq) }}/></>);
+  
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/></>);
 }
 
 
@@ -40,8 +36,7 @@ const PAA = [
 ];
 
 function PAASchema() {
-  const paa = { '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: PAA.map(x => ({ '@type':'Question', name:x.q, answerCount:1, acceptedAnswer:{ '@type':'Answer', text:x.a } })) };
+  
   return null; // one FAQPage per page — PAA answers stay visible in the accordion, schema lives in the main FAQ node
 }
 
@@ -123,7 +118,7 @@ export default function GangotriTemple() {
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related Guides:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
           {[{l:'Gangotri Yatra Package',h:'/gangotri-yatra'},{l:'Gangotri Weather',h:'/gangotri-weather'},{l:'Haridwar to Gangotri Cab',h:'/cabs'},{l:'Char Dham Yatra Package',h:'/char-dham-yatra'}].map(l=>(
-            <Link key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
+            <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} →</Link>
           ))}
         </div>
       </div>

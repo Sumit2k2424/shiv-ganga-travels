@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
 
       <nav aria-label="Breadcrumb" style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6 }}>
-          <Link href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
+          <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>›</span>
           <span style={{ color:'var(--navy)', fontWeight:600 }}>Privacy Policy</span>
         </div>
       </nav>
@@ -277,7 +277,7 @@ export default function PrivacyPolicy() {
             ['Contact Us','/contact'],
             ['About Shiv Ganga Travels','/about'],
           ].map(([label,href])=>(
-            <Link key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
+            <Link prefetch={false} key={href} href={href} style={{ background:'var(--bg)', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>
               {label} →
             </Link>
           ))}
