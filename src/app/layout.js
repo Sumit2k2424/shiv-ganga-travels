@@ -131,6 +131,12 @@ export const metadata = {
 
   verification: {
     google: 'google2e29cf8ed6b82236',
+    other: {
+      // Pinterest website claim (17 Sep 2026) — business account
+      // pinterest.com/shivgangatravels. Pinterest re-checks this tag
+      // periodically; removing it un-claims the site.
+      'p:domain_verify': '3f0ebfc20eb076376c2cfd413a5e63bc',
+    },
   },
 
   category: 'travel',

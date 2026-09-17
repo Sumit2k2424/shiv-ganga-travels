@@ -67,6 +67,13 @@ export const SOCIAL = [
     url: 'https://www.threads.com/@shivgangatravels',
     verified: true,   // fetched 2026-09-13: 200, title "Shiv Ganga Travels (@shivgangatravels) • Threads" — same handle as Instagram, threads.net redirects here
   },
+  {
+    id: 'pinterest',
+    label: 'Pinterest',
+    handle: '@shivgangatravels',
+    url: 'https://www.pinterest.com/shivgangatravels/',
+    verified: true,   // business account set up 2026-09-17: username claimed, full NAP on the profile, logo uploaded
+  },
 ];
 
 /**
