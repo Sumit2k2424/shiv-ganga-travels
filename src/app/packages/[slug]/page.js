@@ -6,9 +6,9 @@ import FloatingBookCTA from '@/components/FloatingBookCTA';
 import { BlurFade } from '@/components/magicui/blur-fade';
 import SpecRail from '@/components/lux/SpecRail';
 import RouteMap from '@/components/lux/RouteMap';
-import WhyBookDirect from '@/components/lux/WhyBookDirect';
-import { DayTimeline, HotelShowcase, FaqList } from '@/components/lux/PackageSections';
-import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, stayLede, datesLede, datesHeading, datesNote, altitudeLede } from '@/data/packageRoute';
+import { DayTimeline, FaqList } from '@/components/lux/PackageSections';
+import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, altitudeLede } from '@/data/packageRoute';
+import { nightRuns, WHY_THIS } from '@/data/packageChoice';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
 import { Pill } from '@/components/lux/primitives';
@@ -171,6 +171,7 @@ export default async function PackageDetailPage({ params }) {
   // category — see src/data/packageRoute.js for why that mattered.
   const routeNodes = nodesForPackage(pkg);
   const stays      = hotelsForPackage(pkg);
+  const nights     = nightRuns(pkg.slug);
 
   return (
     <>
@@ -249,14 +250,10 @@ export default async function PackageDetailPage({ params }) {
           {pkg.season ? ` It operates ${pkg.season}.` : ''}
           {pkg.transport ? ` Transport is by ${pkg.transport.toLowerCase()}.` : ''}
           {pkg.difficulty ? ` Difficulty is rated ${pkg.difficulty.toLowerCase()}.` : ''}
-          {' '}The price covers accommodation, daily breakfast and dinner, the vehicle with a hill-experienced
-          driver, all tolls, parking and driver allowance, and Char Dham registration. It does not cover
-          travel to {pkg.startCity}, pony or helicopter charges at Kedarnath, or lunch on travel days.
+          {' '}Hotels, breakfast and dinner, the vehicle, tolls and registration are in the fare; travel to {pkg.startCity},
+          pony or helicopter charges and lunch on travel days are not.
         </AnswerBox>
       </section>
-
-      {/* Why book direct — always immediately below the hero */}
-      <WhyBookDirect />
 
       {/* Sticky bar */}
       <div className="sticky-book-bar">
@@ -282,23 +279,8 @@ export default async function PackageDetailPage({ params }) {
       </div>
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
-        <span>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} · Season open Apr 19 – Nov 2026</span>
+        <span>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</span>
         <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · many seasons)</span>
-      </div>
-
-      {/* Quick Answer — self-contained, claim-first block for AI Overviews / ChatGPT citation */}
-      <div style={{ maxWidth:1100, margin:'14px auto 0', padding:'0 16px' }}>
-        <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px' }}>
-          <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
-          <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>{quickAnswer}</p>
-          <ul style={{ listStyle:'none', display:'flex', flexWrap:'wrap', gap:'6px 18px', margin:'10px 0 0', padding:0, fontSize:12.5, color:'var(--text-mid)' }}>
-            <li><strong>Price:</strong> from {priceTxt}/person</li>
-            <li><strong>Duration:</strong> {pkg.duration.nights}N/{pkg.duration.days}D</li>
-            <li><strong>Start:</strong> {pkg.startCity}</li>
-            <li><strong>Season:</strong> {pkg.season || 'Apr–Nov 2026'}</li>
-            <li><strong>Operator:</strong> Shiv Ganga Travels</li>
-          </ul>
-        </div>
       </div>
 
       <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'minmax(0,1fr) min(340px,38%)', gap:28, alignItems:'start' }}>
@@ -358,6 +340,16 @@ export default async function PackageDetailPage({ params }) {
             </ul>
           </section>
 
+          {/* Who it is for — the one paragraph no sibling page can share.
+              Written per package in src/data/packageChoice.js; see the note
+              there on why the tier needed it. */}
+          {WHY_THIS[pkg.slug] && (
+            <section>
+              <h2 style={SH}>Who this itinerary is for</h2>
+              <p className="lux-body" style={{ fontSize:15, lineHeight:1.8, margin:0 }}>{WHY_THIS[pkg.slug]}</p>
+            </section>
+          )}
+
           {/* Day-wise Itinerary */}
           <section>
             <h2 style={SH}>Itinerary at a glance</h2>
@@ -410,14 +402,33 @@ export default async function PackageDetailPage({ params }) {
             )}
           </section>
 
-          {/* Where you stay — yatra packages with at least one night */}
-          {isYatra && stays.length > 0 && (
+          {/* Where you stay — night by night, from src/data/packageChoice.js.
+              The six-card hotel carousel that sat here was the same on every
+              multi-dham page (165 words, 89 % shared across the tier); the
+              night list is the part that is actually this package's own. */}
+          {nights.length > 0 && (
             <section>
               <h2 style={SH}>Where you stay</h2>
-              <p style={{ fontSize:14, color:'var(--ink-soft)', lineHeight:1.7, marginBottom:22 }}>
-                {stayLede(pkg)}
+              <ol style={{ listStyle:'none', margin:0, padding:0, border:'1px solid var(--rule)', borderRadius:'var(--ds-r-2)' }}>
+                {nights.map((r, i) => {
+                  const hotel = stays.find((h) => r.town.toLowerCase().startsWith(h.stop.toLowerCase()));
+                  return (
+                    <li key={r.from} style={{ display:'grid', gridTemplateColumns:'92px 1fr', gap:12, padding:'10px 18px', borderBottom: i < nights.length-1 ? '1px solid var(--rule)' : 'none' }}>
+                      <span style={{ fontSize:11, fontWeight:600, color:'var(--ink-faint)', letterSpacing:'0.1em', textTransform:'uppercase', whiteSpace:'nowrap' }}>
+                        {r.from === r.to ? `Night ${r.from}` : `Nights ${r.from}–${r.to}`}
+                      </span>
+                      <span style={{ fontSize:13.5, color:'var(--ink-soft)', lineHeight:1.5 }}>
+                        <strong style={{ color:'var(--ink)' }}>{r.town}</strong>
+                        {hotel ? ` — ${hotel.name} · ${hotel.tier}` : ''}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ol>
+              <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7, margin:'12px 0 0' }}>
+                Twin-sharing as standard.{' '}
+                {isCharDham && <><Link prefetch={false} href="/char-dham-yatra" style={{ color:'var(--teal)', fontWeight:600 }}>Budget, Deluxe and Premium tiers</Link> are explained on the Char Dham guide.</>}
               </p>
-              <HotelShowcase hotels={stays} compact />
             </section>
           )}
 
@@ -457,34 +468,19 @@ export default async function PackageDetailPage({ params }) {
             </section>
           )}
 
-          {/* Related Guides — FIX 3 */}
-          {guides.length > 0 && (
-            <section>
-              <h2 style={SH}>📖 Related Guides & Resources</h2>
-              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(210px,1fr))', gap:10 }}>
-                {guides.map(g=>(
-                  <Link prefetch={false} key={g.href} href={g.href} style={{ display:'flex', alignItems:'center', gap:10, padding:'12px 14px', background:'#fff', borderRadius:10, border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
-                    <span style={{ fontSize:18 }}>📖</span>
-                    <span style={{ fontSize:13, fontWeight:600, color:'var(--navy)', lineHeight:1.3 }}>{g.label} →</span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
-
           {/* Related Packages */}
           {related.length > 0 && (
             <section>
-              <h2 style={SH}>🔄 You Might Also Like</h2>
-              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:12 }}>
+              <h2 style={SH}>Compare with</h2>
+              <ul style={{ listStyle:'none', margin:0, padding:0, display:'flex', flexWrap:'wrap', gap:8 }}>
                 {related.map(r=>(
-                  <Link prefetch={false} key={r.slug} href={`/packages/${r.slug}`} style={{ display:'block', background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))', textDecoration:'none' }}>
-                    <div style={{ fontWeight:700, fontSize:13, color:'var(--text)', marginBottom:4, lineHeight:1.3 }}>{r.name}</div>
-                    <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6 }}>{r.duration.nights}N/{r.duration.days}D</div>
-                    <div style={{ fontWeight:800, fontSize:17, color:'var(--navy)' }}>₹{r.price.discounted.toLocaleString('en-IN')}</div>
-                  </Link>
+                  <li key={r.slug}>
+                    <Link prefetch={false} href={`/packages/${r.slug}`} className="lux-pill" style={{ textDecoration:'none' }}>
+                      {r.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           )}
 
@@ -502,7 +498,6 @@ export default async function PackageDetailPage({ params }) {
             <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
               {[
                 ['Packing list', '/blog/char-dham-yatra-packing-list'],
-                ['Registration 2026', '/blog/char-dham-yatra-registration'],
                 ['Emergency contacts', '/char-dham-yatra-emergency-contacts'],
                 ['Best time to go', '/blog/best-time-char-dham'],
                 ['Medical certificate', '/blog/char-dham-yatra-medical-certificate'],
@@ -545,40 +540,26 @@ export default async function PackageDetailPage({ params }) {
           </section>
           )}
 
-          {/* Char Dham 2026 Registration — high-intent, GEO-citable, fills competitor gap */}
-          {isYatra && (
-          <section style={{ background:'#fff', borderRadius:14, padding:'20px 22px', border:'2px solid var(--gold)' }}>
-            <h2 style={SH}>📋 Registration and temple dates for this itinerary</h2>
-            <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, marginBottom:14 }}>
-              Registration is compulsory and free; we do it for every guest on this package, or you can register yourself in ten minutes — see the{' '}
-              <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>2026 registration guide</Link>.
-            </p>
-            <h3 style={{ fontSize:'1rem', fontWeight:700, color:'var(--navy)', marginBottom:6 }}>🗓️ {datesHeading(pkg)}</h3>
-            <p style={{ fontSize:13, color:'var(--text-mid)', lineHeight:1.7, marginBottom:10 }}>{datesLede(pkg)}</p>
-            <div style={{ overflowX:'auto', marginBottom:12 }}>
-              <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:480 }}>
-                <thead><tr style={{ background:'var(--navy)' }}>
-                  {['Dham','Opens (Kapat)','Closes','Registration'].map(h=>(
-                    <th key={h} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{h}</th>
-                  ))}
-                </tr></thead>
-                <tbody>
-                  {dhamDatesForPackage(pkg, dham2026).map((d,i)=>(
-                    <tr key={d.dham} style={{ background:i%2?'var(--navy-light)':'#fff' }}>
-                      <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)' }}>{d.dham}</td>
-                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.opens}</td>
-                      <td style={{ padding:'9px 12px', color:'var(--text-mid)' }}>{d.closes}</td>
-                      <td style={{ padding:'9px 12px', color:'#B45309', fontWeight:600 }}>{d.reg}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p style={{ fontSize:12.5, color:'var(--text-muted)', lineHeight:1.7 }}>
-              {datesNote(pkg)}
+          {/* Dates and registration — one paragraph built from this
+              package's dhams. The full table, lede and advice note that sat
+              here were 158 words repeated on all 11 pages; the guide pages
+              they link to carry the detail. */}
+          <section>
+            <h2 style={SH}>Dates and registration</h2>
+            <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
+              {(() => {
+                const rows = dhamDatesForPackage(pkg, dham2026);
+                const names = rows.map((d) => d.dham);
+                const list = names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+                return names.length > 1
+                  ? `${list} are open between ${rows[0].opens} and ${rows[rows.length - 1].closes}; each dham's kapat dates differ by a few days. `
+                  : `${list} is open from ${rows[0].opens} to ${rows[0].closes}. `;
+              })()}
+              Registration is compulsory and free, and we complete it for every guest on this package — see the{' '}
+              <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>registration guide</Link> and the{' '}
+              <Link prefetch={false} href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)', fontWeight:600 }}>closing dates</Link> if you are booking late in the season.
             </p>
           </section>
-          )}
 
           {/* Operator identity is one line here; the full case is on /about and
               the trust strip under the sticky bar already carries the numbers. */}

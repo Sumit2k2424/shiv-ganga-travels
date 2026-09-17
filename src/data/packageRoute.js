@@ -129,31 +129,6 @@ export function dhamDatesForPackage(pkg, rows) {
   return kept.length ? kept : rows;
 }
 
-/** One package-specific sentence introducing the stay list. */
-export function stayLede(pkg) {
-  const nights = (pkg.duration?.nights ?? 0);
-  const names = hotelsForPackage(pkg).map((h) => h.name.replace(/,.*$/, ''));
-  const where = names.length > 1
-    ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
-    : names[0];
-  return `Where you actually sleep on this ${nights}-night trip — ${where}. Twin-sharing as standard, and every property below is one we book on this route ourselves.`;
-}
-
-/**
- * Closing note under the dates table. The old fixed line compared all
- * four kapat dates, which on a single-dham page meant three shrines
- * the traveller is not visiting.
- */
-export function datesNote(pkg) {
-  const d = dhamsForPackage(pkg);
-  const opener = d.length === 1
-    ? `${d[0]} sets its own kapat dates each year, and the 2026 window above is confirmed.`
-    : d.length === 4
-      ? 'Yamunotri and Gangotri open together on Akshaya Tritiya; Kedarnath and Badrinath follow a day or two later.'
-      : `Dates for ${d.slice(0, -1).join(', ')} and ${d[d.length - 1]} are set separately by each temple committee.`;
-  return `${opener} Keep a digital and a printed copy of your registration slip — network drops on the higher stretches and a paper backup saves trouble at the check posts.`;
-}
-
 /**
  * The AMS warning, named to the shrines this package actually climbs.
  * Altitudes come straight off the ROUTE nodes, so nothing is invented:
@@ -177,21 +152,4 @@ export function altitudeLede(pkg) {
       ? `${high[0]} is a high-altitude shrine.`
       : `${high.slice(0, -1).join(', ')} and ${high[high.length - 1]} are high-altitude shrines.`;
   return `${subject} AMS symptoms — headache, nausea, dizziness, breathlessness — can affect anyone regardless of fitness. Our driver carries an oxygen cylinder.${acclim} If symptoms worsen, descend immediately.`;
-}
-
-/** Heading for the dates table — "Char Dham" only when all four are visited. */
-export function datesHeading(pkg) {
-  const d = dhamsForPackage(pkg);
-  const label = d.length === 4 ? 'Char Dham' : d.join(' & ') || 'Char Dham';
-  return `${label} 2026 Opening & Closing Dates (Confirmed)`;
-}
-
-/** One package-specific sentence for the registration/dates block. */
-export function datesLede(pkg) {
-  const d = dhamsForPackage(pkg);
-  if (!d.length) return 'Confirmed 2026 opening and closing dates for the dhams on this itinerary.';
-  const list = d.length > 1 ? `${d.slice(0, -1).join(', ')} and ${d[d.length - 1]}` : d[0];
-  return d.length === 1
-    ? `${list} is the only dham on this itinerary, so this is the window that governs your dates.`
-    : `This trip enters ${list}, so these are the ${d.length} windows that govern your dates.`;
 }
