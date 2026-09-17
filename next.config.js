@@ -145,6 +145,15 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
+        // Own photos (public/photos/). Immutable so the edge fills once per
+        // region and keeps them across deploys — without this, every
+        // production deploy re-pulls the whole set from origin and it counts
+        // against Fast Origin Transfer. Filenames carry a date, so replacing
+        // a photo means a new name, never a stale cache.
+        source: '/photos/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
         source: '/(logo\\.png|logo-square\\.png|llms\\.txt)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=3600' }],
       },
