@@ -91,6 +91,7 @@ function Schema() {
     name: SITE.name,
     url: SITE.baseUrl,
     founder: { '@type': 'Person', '@id': `${SITE.baseUrl}/#founder`, name: 'Dhanesh Chandra Mishra' },
+    foundingDate: SITE.founded,
     employee: [
       { '@type': 'Person', '@id': `${SITE.baseUrl}/about#sumit-mishra`, name: 'Sumit Mishra' },
     ],
@@ -155,6 +156,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 'var(--container)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(120px,1fr))' }}>
           {[
             { num: 'Direct', label: 'Operator, No Agents' },
+            { num: SITE.founded, label: 'Founded' },
             { num: '50,000+', label: 'Pilgrims Served' },
             { num: '20+', label: 'Fleet Vehicles' },
             { num: '2', label: 'Offices (Roorkee & Haridwar)' },

@@ -231,6 +231,7 @@ function SiteSchema() {
     // in a subtler form: one @id carrying conflicting values.
     founder: { '@id': `${SITE.baseUrl}/#founder` },
 
+    foundingDate: SITE.founded,
     foundingLocation: { '@type': 'Place', name: 'Roorkee, Uttarakhand, India' },
 
     priceRange: '₹₹',

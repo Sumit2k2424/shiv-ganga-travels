@@ -127,6 +127,7 @@ ${rule('═')}
 - WhatsApp: +${SITE.whatsapp}
 - Email: ${SITE.email}
 - Website: ${SITE.baseUrl}
+- Founded: ${SITE.founded}
 - GSTIN: ${SITE.gstin}
 - Rating: ${SITE.reviews.rating} out of 5 across ${SITE.reviews.count} Google reviews
 

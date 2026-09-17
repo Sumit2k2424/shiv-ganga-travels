@@ -6,7 +6,7 @@
 
 ## MASTER BUSINESS PROFILE (use everywhere)
 
-> **Claims policy (14 Sep 2026):** no founding year ("since 2010" could not be verified and is off the site), and no "Uttarakhand Tourism Board registered" until the certificate is confirmed on the new UTDB travel-trade portal. If a form demands a founding year, leave it blank rather than guess.
+> **Claims policy (updated 17 Sep 2026):** founding year is **2017** everywhere — matching the Google Business Profile, Bing, the company LinkedIn page and JustDial. Never "2010" / "since 2010" / "15+ years" (the old unverifiable claim). And no "Uttarakhand Tourism Board registered" until the certificate is confirmed on the new UTDB travel-trade portal. If a form demands a founding year, leave it blank rather than guess.
 
 **Business Name:** Shiv Ganga Travels
 **Category:** Tour Operator | Travel Agency | Pilgrimage Tour Operator
@@ -246,7 +246,7 @@ keep the two apart — never submit a bare "Haridwar" address.
   Alt mobile     : 8859123961
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
-  Year founded   : (leave blank — no founding year is published)
+  Year founded   : 2017
   Hours          : 7:00 AM - 9:00 PM, all 7 days
   Primary cat    : Tour Operators
   Also list under : Travel Agents · Domestic Tour Operators · Tourist Taxi ·
@@ -312,7 +312,7 @@ eight — they cover every category and price band. Prices are per person.
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
   Nature of biz  : Service Provider
-  Year founded   : (leave blank — no founding year is published)
+  Year founded   : 2017
   Company profile: use the LONG (200-word) description above
 
 Each product description should carry what is included — AC vehicle, hotels on
@@ -340,7 +340,7 @@ is registered, so put the number that is actually answered 7 AM - 9 PM on it.
   Mobile         : 7817996730
   Email          : support@shivgangatravels.com
   Website        : https://www.shivgangatravels.com
-  Year founded   : (leave blank — no founding year is published)
+  Year founded   : 2017
   Services       : Char Dham Yatra · Do Dham Yatra · Kedarnath Yatra ·
                    Badrinath Yatra · Helicopter Char Dham · Senior Citizen Yatra ·
                    Uttarakhand Tour Packages · Tempo Traveller Hire
