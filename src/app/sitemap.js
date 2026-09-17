@@ -84,7 +84,9 @@ export default function sitemap() {
   const b = SITE.baseUrl;
 
   const core = [
-    { url: b,                                          p: 1.00, cf: 'weekly'  },
+    // Trailing slash on purpose: the homepage canonical is `${b}/`, and GSC
+    // only counts a sitemap as "referring" to a URL on an exact match.
+    { url: `${b}/`,                                    p: 1.00, cf: 'weekly'  },
     { url: `${b}/char-dham-yatra`,                     p: 0.98, cf: 'weekly'  },
     { url: `${b}/rishikesh-tour-packages`,             p: 0.92, cf: 'monthly' },
     { url: `${b}/haridwar-tour-packages`,              p: 0.92, cf: 'monthly' },
