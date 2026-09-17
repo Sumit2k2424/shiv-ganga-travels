@@ -84,6 +84,7 @@ export default function GuideArticle({
       jobTitle: 'Founder & Director, Shiv Ganga Travels',
       url: `${SITE.baseUrl}/about`,
       sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
+      image: `${SITE.baseUrl}${SITE.founderPhoto}`,
     },
     publisher: {
       '@type': 'Organization',

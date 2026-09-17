@@ -378,6 +378,7 @@ function SiteSchema() {
     // ~200 routes. Personal profiles only here — never the company's Maps
     // listing or the site root, which would assert he IS the business.
     sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
+    image: { '@type': 'ImageObject', url: `${SITE.baseUrl}${SITE.founderPhoto}`, width: 400, height: 400, caption: 'Dhanesh Chandra Mishra, founder of Shiv Ganga Travels' },
     worksFor: { '@id': `${SITE.baseUrl}/#organization` },
     alumniOf: { '@type': 'Organization', name: 'Indian Army' },
     knowsAbout: ['Char Dham Yatra', 'Kedarnath Yatra', 'Badrinath Yatra', 'Uttarakhand pilgrimage', 'Mountain travel logistics'],

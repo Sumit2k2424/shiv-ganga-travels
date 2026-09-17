@@ -50,6 +50,7 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
       linkedin: 'https://www.linkedin.com/in/dhanesh-chandra-635564429/',
       facebook: null,
       initials: 'DM',
+      photo: SITE.founderPhoto,
     },
   };
 
@@ -84,6 +85,7 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
           ? [a.linkedin, a.facebook].filter(Boolean)
           : undefined,
         worksFor: { '@id': `${SITE.baseUrl}/#organization` },
+        image: a.photo ? `${SITE.baseUrl}${a.photo}` : undefined,
       },
       publisher: { '@id': `${SITE.baseUrl}/#organization` },
     } : null;
@@ -91,8 +93,10 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
       <>
       {posting && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(posting) }}/>}
       <div style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderBottom:'1px solid hsl(var(--border))', marginBottom:24 }}>
-        <div style={{ width:40, height:40, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:14, color:'#FFD166' }}>
-          {a.initials}
+        <div style={{ width:40, height:40, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:14, color:'#FFD166', overflow:'hidden' }}>
+          {a.photo
+            ? <img src={a.photo} alt={a.name} width={40} height={40} loading="lazy" decoding="async" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }}/>
+            : a.initials}
         </div>
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap' }}>
@@ -127,8 +131,10 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
     <div style={{ background:'var(--navy-light)', border:'1px solid hsl(var(--border))', borderRadius:14, padding:'20px 22px', marginTop:36 }}
       itemScope itemType="https://schema.org/Person">
       <div style={{ display:'flex', gap:16, alignItems:'flex-start', flexWrap:'wrap' }}>
-        <div style={{ width:56, height:56, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:18, color:'#FFD166' }}>
-          {a.initials}
+        <div style={{ width:56, height:56, borderRadius:'50%', background:'var(--navy)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontWeight:800, fontSize:18, color:'#FFD166', overflow:'hidden' }}>
+          {a.photo
+            ? <img src={a.photo} alt={a.name} width={56} height={56} loading="lazy" decoding="async" itemProp="image" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }}/>
+            : a.initials}
         </div>
         <div style={{ flex:'1 1 200px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:10, flexWrap:'wrap', marginBottom:4 }}>

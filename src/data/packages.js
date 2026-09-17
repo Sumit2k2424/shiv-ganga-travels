@@ -27,6 +27,12 @@ export const SITE = {
   // to be displayed at the place of business, so it is public by design.
   gstin: '05ALBPC4708P1Z5',
   baseUrl    : 'https://www.shivgangatravels.com',
+  // The founder's portrait (added 17 Sep 2026 — the first own photo on the
+  // site). Read by the Person node in layout.js, the About page card, the
+  // blog author card and the guide-article author node, so the same file
+  // backs every surface. Filenames under /photos carry a date: replacing
+  // the photo means a new name, never overwriting this one.
+  founderPhoto: '/photos/dhanesh-chandra-mishra-2026-09.jpg',
   // Single source of truth for the "Last updated" freshness stamp shown
   // across all pages. Bump these two values to refresh the whole site.
   // No site-wide lastUpdated any more. Every page reads its own git-derived

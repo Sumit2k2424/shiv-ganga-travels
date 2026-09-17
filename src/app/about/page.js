@@ -56,6 +56,7 @@ function Schema() {
     // was meant to help. His LinkedIn is a genuine personal profile, so it
     // belongs; nothing company-owned goes back in.
     sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
+    image: { '@type': 'ImageObject', url: `${SITE.baseUrl}${SITE.founderPhoto}`, width: 400, height: 400 },
     url: `${SITE.baseUrl}/about`,
   };
 
@@ -178,10 +179,13 @@ export default function AboutPage() {
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: 28, marginBottom: 40, flexWrap: 'wrap' }}>
             <div style={{
               width: 90, height: 90, borderRadius: '50%', flexShrink: 0,
+              border: '3px solid var(--gold)', overflow: 'hidden',
               background: 'linear-gradient(135deg,var(--navy),var(--teal))',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 36, border: '3px solid var(--gold)',
-            }}>🙏</div>
+            }}>
+              <img src={SITE.founderPhoto} alt="Dhanesh Chandra Mishra, founder of Shiv Ganga Travels"
+                width={90} height={90} loading="lazy" decoding="async"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}/>
+            </div>
             <div>
               <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)', marginBottom: 3 }}>Dhanesh Chandra Mishra</div>
               <div style={{ fontSize: 13, color: 'var(--teal)', fontWeight: 600, marginBottom: 6 }}>Founder & Director · Retired Indian Army Officer</div>
