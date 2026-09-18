@@ -21,6 +21,11 @@ import LuxMotion from '@/components/lux/LuxMotion';
 import LuxCursorGate from '@/components/lux/LuxCursorGate';
 // LeadPopup loaded via Client Component wrapper (Next.js 15: ssr:false requires 'use client')
 import { LeadPopup, LeadTracker } from '@/components/LayoutClientWidgets';
+// Vercel Web Analytics (16 Sep 2026) — real-time pageviews next to the
+// deployment. ~1 KB script, same origin (/_vercel/insights), cookieless, no
+// cross-site identifiers, loads after hydration. Nothing here is visible to
+// Googlebot or GSC; GA4 below stays as the historical source.
+import { Analytics } from '@vercel/analytics/next';
 import { SITE } from '@/data/packages';
 import { SOCIAL_SAME_AS } from '@/data/social';
 
@@ -462,6 +467,7 @@ export default function RootLayout({ children }) {
         <TableScroll/>
         <LeadPopup/>
         <LeadTracker/>
+        <Analytics/>
         {/* GA4 — deferred 2s after load so it never competes with LCP/INP */}
         <script dangerouslySetInnerHTML={{ __html:`
           window.dataLayer=window.dataLayer||[];
