@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
@@ -101,6 +102,21 @@ export default function KedarnathPonyPalkiKandiRates() {
           <p style={p}>
             I run yatra groups on this route every season, and the single thing that trips first-timers up is money at Gaurikund. People arrive expecting to pay one figure, hear another on the trail, and end up haggling at 5 AM with a 16 km climb ahead of them. So here are the numbers as they actually stand for 2026, where they come from, and the few rules that keep you from being overcharged.
           </p>
+
+          <figure style={{ margin: '22px 0', borderRadius: 14, overflow: 'hidden', border: '1px solid hsl(var(--border))' }}>
+            <Image
+              src="/images/kedarnath-pony-palki-rates-hero-wide.jpg"
+              alt="Decorated ponies lined up at the Gaurikund prepaid counter for the Kedarnath trek, beaded headbands and bells marking registered animals"
+              width={1200}
+              height={800}
+              sizes="(max-width: 820px) 100vw, 780px"
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+              priority
+            />
+            <figcaption style={{ padding: '10px 14px', fontSize: 12.5, color: '#64748b', background: '#F8FAFC' }}>
+              Registered ponies at the Gaurikund prepaid counter — the beaded headbands and bells mark them as counter-registered, not trail touts.
+            </figcaption>
+          </figure>
 
           <h2 style={h2}>The 2026 rate table — pony, palki, kandi</h2>
           <p style={p}>
