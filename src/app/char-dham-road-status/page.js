@@ -84,7 +84,7 @@ const PAA = [
   { q:'Is the Char Dham highway project complete?', a:'No. The Chardham Mahamarg Vikas Pariyojana covers about 825 km across 53 packages. Roughly 629 km were complete by mid-2025, so most of the network is done but pockets — chiefly the Yamunotri route — are still under construction. The Kedarnath route (Fata–Sitapur) is about 99% complete.' },
   { q:'How do I check live road conditions before travelling?', a:'Use official sources, not random social posts: the UTDB tourism site for advisories, the IMD site for district rain warnings, and the Uttarakhand Police / district control room helplines (112 and 1070) for live closures. We also call our drivers on the ground each morning — that is usually the fastest read on what is actually moving.' },
   { q:'Which stretches are most prone to landslides?', a:'The usual trouble spots are the Dharasu–Janki Chatti section on the Yamunotri route, patches near Gangnani on the Gangotri road, the Rudraprayag–Sonprayag stretch toward Kedarnath, and the gated Joshimath–Badrinath cuttings. These get cleared fast by JCB teams, but they cause the delays you hear about.' },
-  { q:'Is Char Dham Yatra safe by road for senior citizens?', a:'Yes, with planning. Badrinath needs no trek at all and Gangotri is motorable to the temple, so both suit elderly pilgrims. For Kedarnath, a pony or palki avoids the trek — note that the helicopter option is unavailable right now, suspended since July 1 for the monsoon, so do not build an elderly pilgrim\'s itinerary around a chopper until services resume. Build in a rest day to acclimatise, travel by daylight, and keep medication and a charged phone handy. There are 177 ambulances on the routes and an AIIMS Rishikesh helicopter ambulance for emergencies.' },
+  { q:'Is Char Dham Yatra safe by road for senior citizens?', a:'Yes, with planning. Badrinath needs no trek at all and Gangotri is motorable to the temple, so both suit elderly pilgrims. For Kedarnath, a pony or palki avoids the trek, and helicopter services have been running again since September 15 after the monsoon suspension — but sectors are limited and weather cancels flights, so keep the pony or palki as the fallback rather than building an elderly pilgrim\'s day around the chopper alone. Build in a rest day to acclimatise, travel by daylight, and keep medication and a charged phone handy. There are 177 ambulances on the routes and an AIIMS Rishikesh helicopter ambulance for emergencies.' },
 ];
 
 function Schemas() {
@@ -95,7 +95,7 @@ function Schemas() {
     image:[`${SITE.baseUrl}/opengraph-image`],
     mainEntityOfPage:`${SITE.baseUrl}/char-dham-road-status`,
     datePublished: UPDATED_ISO, dateModified: UPDATED_ISO,
-    author:{ '@type':'Organization', name:`${SITE.name} Route Desk`, url:SITE.baseUrl },
+    author:{ '@id':`${SITE.baseUrl}/#founder` },
     publisher:{ '@id':`${SITE.baseUrl}/#organization` },
   };
   
@@ -139,7 +139,7 @@ export default function CharDhamRoadStatus() {
       <div style={{ display:'flex', flexWrap:'wrap', gap:10, alignItems:'center', fontSize:12.5, color:'var(--text-muted)', marginBottom:22 }}>
         <span>📅 Last verified: <strong style={{ color:'var(--navy)' }}>{UPDATED}</strong></span>
         <span>·</span>
-        <span>✍️ By the {SITE.name} Route Desk, Haridwar</span>
+        <span>✍️ By <Link prefetch={false} href="/#founder" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>Dhanesh Chandra Mishra</Link>, from the drivers&rsquo; morning reports</span>
       </div>
 
       <p style={{ ...p, fontSize:16.5, background:'var(--navy-light)', borderRadius:12, padding:'16px 18px' }}>
@@ -260,7 +260,7 @@ export default function CharDhamRoadStatus() {
       <p style={p}>There are also 177 ambulances stationed along the routes and an AIIMS Rishikesh helicopter ambulance for emergencies — useful to know if you're travelling with elderly pilgrims. Honestly, the quickest real-time check we have is calling our own drivers each morning before they roll; if you're booked with us, just ask and we'll tell you exactly what's moving.</p>
 
       <h2 style={h2}>Is the road safe for senior citizens and children?</h2>
-      <p style={p}>For the most part, yes — if you choose the right legs. Badrinath needs no trek and Gangotri is motorable to the temple, so both are comfortable for elderly pilgrims and small kids. Kedarnath is the one to plan: arrange a pony or palki rather than attempting the 16 km trek with seniors. The helicopter shortcut is not an option at the moment — services have been suspended since July 1 for the monsoon and operators have returned to base — so plan the ground route now and treat a chopper as a bonus if it resumes. Give yourself a rest day to adjust to altitude, travel only in daylight on the hill sections, and keep medicines and a power bank within reach.</p>
+      <p style={p}>For the most part, yes — if you choose the right legs. Badrinath needs no trek and Gangotri is motorable to the temple, so both are comfortable for elderly pilgrims and small kids. Kedarnath is the one to plan: arrange a pony or palki rather than attempting the 16 km trek with seniors. The helicopter shortcut is back — services resumed on September 15 after the monsoon suspension and IRCTC is selling sectors again — but flights are weather-dependent and seats are limited, so hold the pony or palki booking as the fallback and treat the chopper as the bonus. Give yourself a rest day to adjust to altitude, travel only in daylight on the hill sections, and keep medicines and a power bank within reach.</p>
 
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginTop:30, marginBottom:24 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Plan the rest of your yatra:</div>

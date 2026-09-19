@@ -66,7 +66,7 @@ export default function KedarnathHelicopterBooking() {
         title="Kedarnath Helicopter Booking 2026 — Complete Guide"
         dek="Official IRCTC fares ₹6,390–₹12,762 round trip · Sersi · Phata · Guptkashi · How to book"
         author="Dhanesh Chandra Mishra"
-        updated="Updated 2026"
+        updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="6 min read"
         facts={[
           { label:'Round trip', value:'₹6,390–₹12,762' },
@@ -93,7 +93,7 @@ export default function KedarnathHelicopterBooking() {
 
 
         <AnswerBox>
-          <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. Expect ₹7,000–9,000 one way per person. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
+          <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. The 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person (one-way ₹3,043 / ₹4,840 / ₹6,077), plus a ₹300 IRCTC fee and 18% GST on top. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
         </AnswerBox>
         <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
@@ -160,10 +160,10 @@ export default function KedarnathHelicopterBooking() {
 
         <h2 id="weather" style={h2}>Weather & When to Book Morning Slots</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is the most important practical tip — and most operators won’t tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But the success rate for morning flights is over 95%. Afternoon flights, especially in May–June, get cancelled frequently. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But in our experience the morning flights almost always go, and it is the afternoon ones — especially in May–June — that get cancelled. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
 
         <h2 id="how-to-book" style={h2}>How to Book on the IRCTC HeliYatra Portal (Step by Step)</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since the system moved fully to IRCTC, this is the only official way to buy a Kedarnath helicopter ticket online. Bookings typically open in mid-April for the season, with a 6 PM daily release window — and prime Sersi/Phata slots can vanish within hours.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since the system moved fully to IRCTC, this is the only official way to buy a Kedarnath helicopter ticket online. Bookings typically open in April for the season, released in batches rather than all at once — and prime Sersi/Phata slots can vanish within hours of a release.</p>
         <ol style={{ paddingLeft:22, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:2.1 }}>
           <li>Complete your <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', textDecoration:'underline' }}>Char Dham registration</Link> first — you cannot book a heli ticket without a valid registration ID.</li>
           <li>Go to the official portal <strong>heliyatra.irctc.co.in</strong> (no other site is authorised) and log in.</li>
