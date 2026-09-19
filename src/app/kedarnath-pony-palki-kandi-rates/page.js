@@ -49,7 +49,11 @@ function Schema() {
     { '@type': 'ListItem', position: 2, name: 'Kedarnath Yatra', item: `${SITE.baseUrl}/kedarnath-yatra` },
     { '@type': 'ListItem', position: 3, name: 'Pony, Palki & Kandi Rates', item: URL },
   ] };
-  const image = { '@type': 'ImageObject', '@id': `${URL}#photo`, url: `${SITE.baseUrl}${PHOTO_WIDE}`, width: 1200, height: 800, caption: PHOTO_ALT, creditText: SITE.name, copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` } };
+  // GSC's Image Metadata report (19 Sep 2026) wants the four licensing fields
+  // on any ImageObject; without them it files a non-critical issue per image.
+  const image = { '@type': 'ImageObject', '@id': `${URL}#photo`, url: `${SITE.baseUrl}${PHOTO_WIDE}`, width: 1200, height: 800, caption: PHOTO_ALT,
+    creditText: SITE.name, creator: { '@id': `${SITE.baseUrl}/#organization` }, copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` },
+    copyrightNotice: `© ${SITE.season} ${SITE.name}`, license: `${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage: `${SITE.baseUrl}/contact` };
   const article = { '@context': 'https://schema.org', '@type': 'Article', '@id': `${URL}#article`,
     headline: H1,
     description: metadata.description,
