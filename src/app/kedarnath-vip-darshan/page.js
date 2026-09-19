@@ -29,8 +29,6 @@ export const metadata = {
   },
 };
 
-const UPDATED = 'July 2026';
-
 function Schema() {
   
   const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -45,7 +43,8 @@ function Schema() {
   const wp = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${SITE.baseUrl}/kedarnath-vip-darshan#webpage`,
     url: `${SITE.baseUrl}/kedarnath-vip-darshan`, name: 'Kedarnath VIP Darshan 2026 — Price, Booking & Sparsh Darshan', inLanguage: 'en-IN',
     dateModified: PAGE_DATES.modifiedISO, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-answer'] } };
-  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wp) }} />
   </>);
@@ -96,7 +95,7 @@ export default function KedarnathVipDarshan() {
 
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 840, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>BKTC puja-linked · Sparsh Darshan · Updated {UPDATED}</span>
+          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>BKTC puja-linked · Sparsh Darshan · Updated {PAGE_DATES.modifiedHuman}</span>
           <h1 className="display-title speakable-answer" style={{ color: '#fff', fontSize: 'clamp(1.7rem,4.5vw,2.8rem)', marginBottom: 14 }}>Kedarnath VIP Darshan 2026 — Price &amp; Booking</h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The honest version: there's no flat VIP pass. Priority sanctum access comes bundled with a BKTC puja. Here are the real 2026 rates, how to book, and the scam to avoid.</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
@@ -148,7 +147,7 @@ export default function KedarnathVipDarshan() {
             <li style={{ marginBottom: 0 }}>Carry the printed receipt and a government photo ID. For morning Abhishek, reach the puja counter <strong>15–30 minutes before</strong> your slot.</li>
           </ol>
           <p style={p}>
-            Two honest cautions from experience: there's <strong>no fixed date when online booking opens</strong> each season, so check the portal regularly; and slots — especially Rudrabhishek and Shodashopachar, with only ~120 tickets a night — sell out. If portal timing stresses you, our <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath packages</Link> include puja booking so you're not refreshing a government site at midnight.
+            Two honest cautions from experience: there's <strong>no fixed date when online booking opens</strong> each season, so check the portal regularly; and slots — especially Rudrabhishek and Shodashopachar — sell out well ahead on peak dates. If portal timing stresses you, our <Link prefetch={false} href="/kedarnath-yatra" style={{ color: 'var(--teal)', fontWeight: 600 }}>Kedarnath packages</Link> include puja booking so you're not refreshing a government site at midnight.
           </p>
 
           <div style={{ background: '#FEF3F2', border: '1px solid #FECACA', borderRadius: 12, padding: '18px 18px', margin: '26px 0' }}>
@@ -190,7 +189,7 @@ export default function KedarnathVipDarshan() {
               </tbody>
             </table>
           </div>
-          <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>The pre-dawn Maha Abhishek (4:30–6:30 AM) is the most-booked Badrinath VIP option. BKTC raised special-puja charges ~10–20% for 2026, so older lists are stale.</p>
+          <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>The pre-dawn Maha Abhishek (4:30–6:30 AM) is the most-booked Badrinath VIP option. BKTC revises puja charges at the start of each season, so treat any list without a season on it as stale and confirm on the portal.</p>
 
           <h2 style={h2}>Temple timings &amp; key rules (2026)</h2>
           <ul style={{ ...p, paddingLeft: 20 }}>

@@ -18,7 +18,7 @@ const PAGE_DATES = pageDates('/blog/char-dham-packing-list-hindi');
 const faqs = [
   {
     q: 'चार धाम यात्रा में क्या-क्या ले जाना चाहिए?',
-    a: 'सबसे जरूरी चार चीजें — गर्म कपड़े (थर्मल, फ्लीस, विंडप्रूफ जैकेट), पकड़ वाले वाटरप्रूफ जूते, अपनी नियमित दवाइयां कम से कम 2 दिन extra, और यात्रा रजिस्ट्रेशन का प्रिंटआउट। बाकी सब बाजार में मिल जाता है, ये चार नहीं। ऊंचाई 3,000 मीटर से ऊपर है, इसलिए मई-जून में भी रात का तापमान 0-5°C तक गिर सकता है।',
+    a: 'सबसे जरूरी चार चीजें — गर्म कपड़े (थर्मल, फ्लीस, विंडप्रूफ जैकेट), पकड़ वाले वाटरप्रूफ जूते, अपनी नियमित दवाइयां कम से कम 3 दिन extra, और यात्रा रजिस्ट्रेशन का प्रिंटआउट। बाकी सब बाजार में मिल जाता है, ये चार नहीं। ऊंचाई 3,000 मीटर से ऊपर है, इसलिए मई-जून में भी रात का तापमान 0-5°C तक गिर सकता है।',
   },
   {
     q: 'केदारनाथ ट्रेक पर कितना सामान ले जा सकते हैं?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'चार धाम यात्रा में कौन सी दवाइयां जरूरी हैं?',
-    a: 'अपनी नियमित दवाइयां (BP, शुगर, दिल की) पूरी यात्रा के लिए और 2 दिन extra — पहाड़ में मेडिकल स्टोर हर जगह नहीं मिलते। इसके अलावा बुखार-दर्द की दवा, ORS के पैकेट, उल्टी की दवा, बैंड-एड, और डॉक्टर की पर्ची की एक कॉपी। 55 साल से ऊपर वालों के लिए मेडिकल फिटनेस सर्टिफिकेट रजिस्ट्रेशन में अनिवार्य है।',
+    a: 'अपनी नियमित दवाइयां (BP, शुगर, दिल की) पूरी यात्रा के लिए और 3 दिन extra — पहाड़ में मेडिकल स्टोर हर जगह नहीं मिलते। इसके अलावा बुखार-दर्द की दवा, ORS के पैकेट, उल्टी की दवा, बैंड-एड, और डॉक्टर की पर्ची की एक कॉपी। 55 साल से ऊपर वालों के लिए मेडिकल फिटनेस सर्टिफिकेट रजिस्ट्रेशन में अनिवार्य है।',
   },
   {
     q: 'क्या मंदिर के अंदर मोबाइल और कैमरा ले जा सकते हैं?',
@@ -44,7 +44,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: 'चार धाम यात्रा पैकिंग लिस्ट | हिंदी में' },
-  description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में। विश्वसनीय ऑपरेटर, तुरंत पुष्टि के साथ यात्रा बुक करें।`,
+  description: `चार धाम यात्रा ${SITE.season} की पूरी पैकिंग लिस्ट हिंदी में — थर्मल, जूते, दवाइयां, दस्तावेज, ₹20,000 नकद, 5–7 kg का डेपैक। केदारनाथ में रात 2–5°C, जून में भी।`,
   keywords: ['चार धाम यात्रा में क्या ले जाएं', 'char dham yatra packing list hindi', `चार धाम यात्रा सामान ${SITE.season}`, 'char dham yatra kya le jayen', 'चार धाम यात्रा दवाइयां'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi` },
   openGraph: { title: `चार धाम यात्रा पैकिंग लिस्ट ${SITE.season} — Print करके बैग में रख लो`, description: 'कपड़े, दवाइयां, जूते, दस्तावेज — सब की पूरी हिंदी लिस्ट। घर से निकलने से पहले check करें।', url: `${SITE.baseUrl}/blog/char-dham-packing-list-hindi`, type: 'article', 
@@ -101,7 +101,7 @@ export default function CharDhamPackingListHindi() {
         facts={[
           { label:"वजन", value:"10–12 kg" },
           { label:"कपड़े", value:"थर्मल + जैकेट" },
-          { label:"कैश", value:"₹8,000+" },
+          { label:"कैश", value:"₹20,000+" },
           { label:"जूते", value:"ट्रेकिंग शूज़" },
         ]}
       />
@@ -124,7 +124,7 @@ export default function CharDhamPackingListHindi() {
         </div>
 
         <KeyTakeaways title="एक नजर में" points={[
-          <>सबसे जरूरी चार चीजें — <strong>थर्मल कपड़े, पकड़ वाले वाटरप्रूफ जूते, अपनी दवाइयां (2 दिन extra), और रजिस्ट्रेशन का प्रिंटआउट</strong>।</>,
+          <>सबसे जरूरी चार चीजें — <strong>थर्मल कपड़े, पकड़ वाले वाटरप्रूफ जूते, अपनी दवाइयां (3 दिन extra), और रजिस्ट्रेशन का प्रिंटआउट</strong>।</>,
           <>केदारनाथ ट्रेक पर सिर्फ <strong>5-7 किलो का डेपैक</strong> ही ले जा पाएंगे — गाड़ी सोनप्रयाग पर ही रुक जाती है।</>,
           <>मई-जून में भी रात <strong>2-5°C</strong>, अक्टूबर में <strong>0°C से नीचे</strong>। गर्म कपड़े हर महीने चाहिए।</>,
           <>मंदिर के गर्भगृह में <strong>मोबाइल और कैमरा प्रतिबंधित</strong> हैं।</>,
@@ -242,7 +242,7 @@ export default function CharDhamPackingListHindi() {
 
         <h2 id="checklist" style={h2}>✅ Last Minute Checklist — घर से निकलने से 1 घंटे पहले</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 8, marginBottom: 28 }}>
-          {['Aadhaar Card ✓','E-Pass (Mobile + Print) ✓','ऊनी कपड़े ✓','ट्रेकिंग जूते ✓','दवाइयां (Extra 3 दिन) ✓','Power Bank (Charged) ✓','BSNL SIM ✓','नकद ₹20,000+ ✓','Doctor Certificate (60+) ✓','रेनकोट ✓','Sunscreen + Sunglasses ✓'].map(item => (
+          {['Aadhaar Card ✓','E-Pass (Mobile + Print) ✓','ऊनी कपड़े ✓','ट्रेकिंग जूते ✓','दवाइयां (Extra 3 दिन) ✓','Power Bank (Charged) ✓','BSNL SIM ✓','नकद ₹20,000+ ✓','Doctor Certificate (55+) ✓','रेनकोट ✓','Sunscreen + Sunglasses ✓'].map(item => (
             <div key={item} style={{ display: 'flex', gap: 8, background: 'rgba(29,158,117,0.06)', borderRadius: 8, padding: '10px 12px', border: '1px solid #9FE1CB', fontSize: 13, color: '#0F6E56', fontWeight: 600 }}>
               <span>✅</span>{item}
             </div>
