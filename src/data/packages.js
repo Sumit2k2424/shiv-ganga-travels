@@ -93,6 +93,10 @@ export const CATEGORIES = {
   'do-dham': { slug:'do-dham',      name:'Do Dham Yatra',        shortName:'Do Dham',      icon:'🕌', desc:'Two dhams, one journey' , cover:'https://images.pexels.com/photos/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=800', coverAlt:'Badrinath Temple — Do Dham Yatra 2026'},
   'single-dham': { slug:'single-dham',  name:'Single Dham Yatra',    shortName:'Single Dham',  icon:'🙏', desc:'One shrine, pure devotion' , cover:'https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop', coverAlt:'Kedarnath Temple against snow peaks — Single Dham Yatra'},
   'helicopter': { slug:'helicopter',   name:'Helicopter Tours',     shortName:'Helicopter',   icon:'🚁', desc:'VIP aerial yatra' , cover:'https://images.pexels.com/photos/34912011/pexels-photo-34912011.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', coverAlt:'Helicopter over Himalayan peaks — Char Dham by Helicopter'},
+  // Kumaon is the only non-Garhwal category left. It is deliberately NOT the
+  // old 'uttarakhand' category slug: that one addressed /packages/uttarakhand,
+  // which is 410 Gone and must stay that way. One package sits here.
+  'kumaon': { slug:'kumaon',       name:'Kumaon Tours',         shortName:'Kumaon',       icon:'🏞️', desc:'Kainchi Dham, lakes, orchards' , cover:'https://images.pexels.com/photos/35536243/pexels-photo-35536243.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop', coverAlt:'Nainital lake in the Kumaon hills — Kainchi Dham tour'},
 };
 
 // ================================================================
@@ -670,6 +674,60 @@ export const PACKAGES = [
     metaTitle: 'Valley of Flowers & Hemkund Sahib 6N/7D from Haridwar',
     metaDesc : 'Valley of Flowers & Hemkund Sahib 2026 — 6N/7D from ₹13,900/person. Direct Haridwar operator, instant confirmation.',
     faqs:[],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // KUMAON — the one non-Garhwal itinerary we still sell as a page.
+  // Restored 20 Sep 2026. It was deleted on 15 Sep with the other 23
+  // Uttarakhand tours because that tier was generated from a template;
+  // this one is not template output — /kainchi-dham is the site's
+  // highest-volume hub (165K/mo, pos 17) and had no itinerary to send
+  // a reader to, so the enquiry died on the hub page.
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug     : 'kainchi-dham-nainital-mukteshwar-3n-4d',
+    photo    : 'https://images.pexels.com/photos/35536243/pexels-photo-35536243.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop',
+    category : 'kumaon',
+    name     : 'Kainchi Dham + Nainital + Mukteshwar — 3N/4D',
+    subtitle : 'Ex-Kathgodam | Neem Karoli Baba Ashram · Lakes · Orchards',
+    seoHeading: 'Kainchi Dham Nainital Tour 2026 — 3N/4D with Mukteshwar',
+    duration : { nights:3, days:4 },
+    groupSize: 'Any group size',
+    difficulty:'Easy',
+    season   : 'March – June & Sept – Nov 2026',
+    transport:'AC Innova / Tempo Traveller',
+    startCity: 'Kathgodam',
+    endCity  : 'Kathgodam',
+    altitude : 'Kainchi 1,400m | Nainital 2,084m | Mukteshwar 2,286m',
+    price    : { original:11500, discounted:6750, currency:'₹', perPerson:true },
+    highlights:[
+      'Kainchi Dham — Neem Karoli Baba\'s ashram on the Nainital–Almora road',
+      'We time the Kainchi visit for early morning, before the tour buses arrive',
+      'Naini Lake boating and the Naina Devi temple at Nainital',
+      'Snow View Point ropeway with Nanda Devi and Trishul on a clear day',
+      'Mukteshwar — apple orchards, the Shiva temple and Chauli ki Jaali cliff',
+      'Bhimtal and Sattal on the drive down, away from the Nainital crowd',
+      'Small-group pace — no rushed \'cover 10 spots in a day\' itinerary',
+    ],
+    inclusions:['3 nights hotel accommodation (Nainital + Mukteshwar)','Daily breakfast and dinner','AC vehicle for the full route and sightseeing','Local driver who knows the ashram timings','All toll, parking and driver allowance','Pickup and drop at Kathgodam railway station'],
+    exclusions:['Train to Kathgodam','Naini Lake boating ticket (₹210 per boat)','Snow View ropeway (₹300 return)','Personal expenses and shopping on Mall Road','Any meal on travel days marked as lunch','Insurance'],
+    itinerary:[
+      {day:1, title:'Kathgodam → Kainchi Dham → Nainital (70 km)', desc:'Pick you up at Kathgodam and drive up towards Bhowali. Stop at Kainchi Dham for darshan — the ashram Neem Karoli Baba built beside the Shipra river. It is calm in the forenoon; by afternoon the parking overflows, which is why we go first. Continue to Nainital, check in, and keep the evening free for Mall Road and the lakeside. Overnight Nainital.'},
+      {day:2, title:'Nainital Full Day', desc:'Boat across Naini Lake to the Naina Devi temple, one of the Shakti Peethas. Ropeway to Snow View Point for the Himalayan skyline. Tiffin Top and Eco Cave Gardens if the group is up for a short walk. The rest of the day is unhurried — chai, the flat lake walk, some shopping. Overnight Nainital.'},
+      {day:3, title:'Nainital → Mukteshwar (50 km)', desc:'Drive to Mukteshwar through Bhowali\'s fruit market. This is the quiet counterpart to Nainital — a 350-year-old Shiva temple on the ridge, the IVRI campus, and Chauli ki Jaali, a cliff with a sheer drop and long valley views. Apple and plum orchards line the road. Overnight Mukteshwar.'},
+      {day:4, title:'Mukteshwar → Sattal → Kathgodam', desc:'Slow morning with the sunrise over the peaks. Drive down via Sattal — a cluster of interconnected freshwater lakes that stays green and empty compared to Nainital. Reach Kathgodam by afternoon for your train. Tour ends.'},
+    ],
+    featured : true,
+    badge    : 'Trending',
+    images   : ['kainchi','nainital'],
+    tags     : ['kainchi dham','neem karoli baba','nainital','mukteshwar','kumaon','bhimtal','sattal','ashram','weekend'],
+    metaTitle: 'Kainchi Dham Nainital Tour 2026 | Price Starts at ₹6,750 | 3N/4D',
+    metaDesc : 'Kainchi Dham Nainital Tour 2026 — 3N/4D from ₹6,750/person. Direct Haridwar operator, instant confirmation.',
+    faqs:[
+      {q:'Where is Kainchi Dham and how far is it from Nainital?', a:'Kainchi Dham sits on the Nainital–Almora highway near Bhowali, about 17 km from Nainital and 38 km from Kathgodam. Our vehicle stops there on the way up on day 1, so you do not make a separate trip for it.'},
+      {q:'What is the best time to visit Kainchi Dham?', a:'March to June and September to November are comfortable. The ashram is busiest around June 15, the Pratishtha Diwas (foundation day), when the annual bhandara draws huge crowds — plan for long queues if you come that week. On normal days, early morning is calmest, which is how we schedule it.'},
+      {q:'Is this package good for elderly parents?', a:'Yes. There is no trekking. The only walking is short and optional — Tiffin Top and Chauli ki Jaali. We arrange ground-floor or lift-access rooms where the hotel has them, and keep the driving days short.'},
+    ],
   },
 ];
 

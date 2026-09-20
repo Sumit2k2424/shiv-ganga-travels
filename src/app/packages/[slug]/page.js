@@ -7,7 +7,7 @@ import { BlurFade } from '@/components/magicui/blur-fade';
 import SpecRail from '@/components/lux/SpecRail';
 import RouteMap from '@/components/lux/RouteMap';
 import { DayTimeline, FaqList } from '@/components/lux/PackageSections';
-import { nodesForPackage, hotelsForPackage, dhamDatesForPackage, altitudeLede } from '@/data/packageRoute';
+import { nodesForPackage, hotelsForPackage, dhamsForPackage, dhamDatesForPackage, altitudeLede } from '@/data/packageRoute';
 import { nightRuns, WHY_THIS } from '@/data/packageChoice';
 import Icon, { WhatsAppIcon } from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
@@ -142,7 +142,14 @@ export default async function PackageDetailPage({ params }) {
     : `${pkg.price.currency}${pkg.price.discounted.toLocaleString('en-IN')}`;
   const related  = PACKAGES.filter(p => p.category === pkg.category && p.slug !== pkg.slug).slice(0,3);
   const guides   = CATEGORY_GUIDES[pkg.category] || [];
-  const isYatra  = true; // every remaining package is a pilgrimage itinerary
+  // Which blocks this page may print. Derived from the stops the package
+  // actually makes, never assumed: the Kumaon itinerary visits no dham, and
+  // dhamDatesForPackage falls back to ALL FOUR rows when nothing matches, so
+  // an unguarded dates paragraph would tell a Nainital reader about Kedarnath
+  // kapat dates. Every Garhwal package names at least one shrine and is
+  // unaffected.
+  const dhams    = dhamsForPackage(pkg);
+  const isYatra  = dhams.length > 0;
   const isCharDham = pkg.category === 'char-dham';
   const fromDelhi = (pkg.startCity || '').toLowerCase() === 'delhi';
   // Standard-terms packages spread INC_STD; anything beyond it is this itinerary's own.
@@ -161,7 +168,7 @@ export default async function PackageDetailPage({ params }) {
     { mode:'Helicopter (via Dehradun)', time:'~50 min flight', cost:'₹2,30,000 (5N/6D heli charter)', note:'No chopper from Delhi direct — the Char Dham heli circuit starts at Dehradun.' },
   ];
   const msg      = encodeURIComponent(`Namaste! I want to book "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D).`);
-  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day pilgrimage from ${pkg.startCity} priced from ${priceTxt} per person, all-inclusive, by ${pkg.transport.toLowerCase()}. ${pkg.subtitle ? pkg.subtitle.replace(/\s*\|\s*/g, ' · ') + '.' : ''}`;
+  const quickAnswer = `The ${pkg.name} is a ${pkg.duration.nights}-night, ${pkg.duration.days}-day ${isYatra ? 'pilgrimage' : 'tour'} from ${pkg.startCity} priced from ${priceTxt} per person, all-inclusive, by ${pkg.transport.toLowerCase()}. ${pkg.subtitle ? pkg.subtitle.replace(/\s*\|\s*/g, ' · ') + '.' : ''}`;
 
   // Editorial section header — one change restyles every <h2 style={SH}> below.
   const SH = { fontFamily:'var(--font-display)', fontSize:'clamp(1.3rem,2.4vw,1.75rem)', fontWeight:600, color:'var(--ink)', letterSpacing:'-0.018em', lineHeight:1.15, marginBottom:18, paddingBottom:14, borderBottom:'1px solid var(--rule)' };
@@ -496,13 +503,19 @@ export default async function PackageDetailPage({ params }) {
           <section>
             <h2 style={SH}>Before you go</h2>
             <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-              {[
+              {(isYatra ? [
                 ['Packing list', '/blog/char-dham-yatra-packing-list'],
                 ['Emergency contacts', '/char-dham-yatra-emergency-contacts'],
                 ['Best time to go', '/blog/best-time-char-dham'],
                 ['Medical certificate', '/blog/char-dham-yatra-medical-certificate'],
                 ['What every package includes', '/packages#included'],
-              ].map(([t, href]) => (
+              ] : [
+                // A non-dham itinerary has no yatra registration, no kapat
+                // dates and no medical certificate rule, so it does not get
+                // the Char Dham strip. It gets the pages that are about it.
+                ['Kainchi Dham guide', '/kainchi-dham'],
+                ['What every package includes', '/packages#included'],
+              ]).map(([t, href]) => (
                 <Link prefetch={false} key={href} href={href} className="lux-pill" style={{ textDecoration:'none' }}>{t}</Link>
               ))}
             </div>
@@ -544,6 +557,7 @@ export default async function PackageDetailPage({ params }) {
               package's dhams. The full table, lede and advice note that sat
               here were 158 words repeated on all 11 pages; the guide pages
               they link to carry the detail. */}
+          {isYatra && (
           <section>
             <h2 style={SH}>Dates and registration</h2>
             <p style={{ fontSize:13.5, color:'var(--text-mid)', lineHeight:1.7, margin:0 }}>
@@ -560,6 +574,7 @@ export default async function PackageDetailPage({ params }) {
               <Link prefetch={false} href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)', fontWeight:600 }}>closing dates</Link> if you are booking late in the season.
             </p>
           </section>
+          )}
 
           {/* Operator identity is one line here; the full case is on /about and
               the trust strip under the sticky bar already carries the numbers. */}

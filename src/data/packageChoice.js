@@ -58,6 +58,12 @@ export const PACKAGE_NIGHTS = {
   'hemkund-sahib-badrinath-valley-of-flowers-6n-7d': [
     'Joshimath', 'Ghangaria', 'Ghangaria', 'Ghangaria', 'Badrinath', 'Srinagar / Rudraprayag',
   ],
+  // Kumaon. No HOTELS entry matches these towns, so the night list renders
+  // the town alone — which is correct: we book Nainital and Mukteshwar
+  // property by property, and naming one we do not hold would be a claim.
+  'kainchi-dham-nainital-mukteshwar-3n-4d': [
+    'Nainital', 'Nainital', 'Mukteshwar',
+  ],
 };
 
 /** Consecutive nights in the same town, collapsed: [{ from, to, town }]. */
@@ -105,4 +111,7 @@ export const WHY_THIS = {
 
   'hemkund-sahib-badrinath-valley-of-flowers-6n-7d':
     'This is not a Char Dham itinerary; it shares only Badrinath with the others. The centre of it is three nights at Ghangaria (3,050 m): the 13 km walk up from Govindghat on Day 2, the Valley of Flowers on Day 3, and the 14 km round trip to Hemkund Sahib at 4,329 m on Day 4 — higher than any of the four dhams. Badrinath follows on Day 5 as the way down, with Brahmakapal rites for those who want them. It runs in the Valley of Flowers season, June to September, when the Char Dham road packages are quietest, and the walking is more than any of them: roughly 40 km over three days. Take it if Hemkund Sahib is the destination, or the wildflowers are; do not take it as a roundabout way to Badrinath. There is no helicopter alternative for Hemkund as there is for Kedarnath.',
+
+  'kainchi-dham-nainital-mukteshwar-3n-4d':
+    'Every other itinerary on this site is Garhwal — Haridwar, the four dhams, a trek. This one is Kumaon, the other half of Uttarakhand, and it starts at Kathgodam rather than Haridwar. The draw is Kainchi Dham, Neem Karoli Baba’s ashram on the Nainital–Almora road, and the itinerary is built around going there first thing on Day 1, before the buses fill the parking. Most people do Kainchi as a stop on someone else’s day trip and get an hour in a queue; three nights means you get the forenoon there and still have Nainital, Mukteshwar and Sattal without a rushed drive. Difficulty is Easy and there is no trek at any point — the highest you sleep is Mukteshwar at 2,286 m, well under the altitude where the Garhwal packages start asking things of you. Take it if you are travelling with parents, with small children, or in the March–June and September–November windows when the Char Dham road is either shut or at its busiest. If it is the four dhams you want, nothing here overlaps with them.',
 };
