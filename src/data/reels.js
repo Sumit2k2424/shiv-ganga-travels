@@ -2,8 +2,8 @@
    REELS — what the "From the road" section on the homepage plays.
 
    YouTube is automatic. The channel publishes an RSS feed, so new
-   Shorts appear on the site within the hour with nothing to edit
-   here. Channel: @Shivgangatravelsharidwar.
+   Shorts appear on the site within a day (or at the next deploy)
+   with nothing to edit here. Channel: @Shivgangatravelsharidwar.
 
    Instagram is NOT automatic, and cannot be. Meta retired the public
    oEmbed endpoint (it now needs a reviewed Facebook app token), and
@@ -22,8 +22,13 @@ export const YOUTUBE_CHANNEL_ID = 'UC3mgcBDq4J-3dtY0mJXN4TA';
 /** How many reels the rail shows. The feed returns 15. */
 export const REEL_COUNT = 8;
 
-/** Re-read the feed this often (seconds). One hour is plenty for a reel. */
-export const REEL_REVALIDATE = 3600;
+/** Re-read the feed this often (seconds).
+    This is what makes the homepage an ISR route: Vercel's edge cache holds
+    `/` for exactly this long, then re-reads the 405 KB page from the ISR
+    store (52 read units) in every region that gets traffic and regenerates
+    it. At one hour that was ~13 regenerations a day and a fifth of all ISR
+    read units (20 Sep 2026); a day is plenty for a reel. */
+export const REEL_REVALIDATE = 86400;
 
 /**
  * Instagram-only reels. Each needs a poster image committed to
