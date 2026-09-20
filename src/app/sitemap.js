@@ -204,7 +204,6 @@ export default function sitemap() {
   // per-destination pages that used to be generated here are 410 (gone.js).
   const cabs = [
     { url: `${b}/cabs`,                        p: 0.88, cf: 'monthly' },
-    { url: `${b}/char-dham-yatra-cab-booking`, p: 0.85, cf: 'monthly' },
   ];
 
   // Newsroom. Releases come from the same publishability gate that drives

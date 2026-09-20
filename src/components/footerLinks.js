@@ -30,8 +30,7 @@ export const COLS = [
     {l:'Uttarakhand Tours',          h:'/uttarakhand-tour-packages'},
     ]},
   { heading:'Cabs & Transport', links:[
-    {l:'All Uttarakhand Cabs',         h:'/cabs'},
-    {l:'Char Dham Cab Booking',       h:'/char-dham-yatra-cab-booking'},
+    {l:'Char Dham Cabs & Fares',      h:'/cabs'},
     {l:'Dehradun Airport → Haridwar', h:'/dehradun-airport-to-haridwar-taxi'},
   ]},
   { heading:'Guides & Tools', links:[
@@ -60,6 +59,7 @@ export const COLS = [
   { heading:'How to Reach', links:[
     {l:'How to Reach Kedarnath',     h:'/blog/how-to-reach-kedarnath'},
     {l:'How to Reach Badrinath',     h:'/how-to-reach-badrinath'},
+    {l:'How to Reach Gangotri',      h:'/how-to-reach-gangotri'},
     {l:'How to Reach Yamunotri',     h:'/how-to-reach-yamunotri'},
     {l:'Barkot Hotels',              h:'/barkot-hotels'},
     {l:'Emergency Contacts',         h:'/char-dham-yatra-emergency-contacts'},

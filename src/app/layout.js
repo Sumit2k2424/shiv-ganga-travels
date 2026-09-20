@@ -307,7 +307,7 @@ function SiteSchema() {
         { '@type': 'Offer', name: 'Kedarnath Yatra Package',      price: '5250',  priceCurrency: 'INR', url: `${SITE.baseUrl}/kedarnath-yatra` },
         { '@type': 'Offer', name: 'Char Dham Helicopter Package', price: '230000', priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-helicopter` },
         { '@type': 'Offer', name: 'Do Dham Yatra Package',        price: '8200', priceCurrency: 'INR', url: `${SITE.baseUrl}/do-dham-yatra` },
-        { '@type': 'Offer', name: 'Char Dham Cab Booking',        price: '5500',  priceCurrency: 'INR', url: `${SITE.baseUrl}/char-dham-yatra-cab-booking` },
+        { '@type': 'Offer', name: 'Char Dham Cab Booking',        price: '5500',  priceCurrency: 'INR', url: `${SITE.baseUrl}/cabs` },
       ],
     },
 
