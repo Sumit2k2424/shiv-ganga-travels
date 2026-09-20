@@ -93,6 +93,37 @@ export default function Page() {
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Yamunotri is the least visited of the four dhams, and in some ways the most intimate. The legend attached to it is a story of devotion rather than cosmic drama. The sage Asit Muni lived his entire life near the source of the Yamuna, meditating and bathing daily in both the Yamuna and the Ganga. When he grew too old and frail to make the long journey to the Ganga, the river is said to have appeared here beside the Yamuna — so that the old sage would not have to die without completing his ritual. That is why even today a small stream appears alongside the Yamuna at Yamunotri, known as Submerged Ganga, and pilgrims consider bathing here equivalent to bathing in both sacred rivers.</p>
         <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Yamuna herself is the daughter of Surya (the sun god) and the twin sister of Yama, the god of death. Devotion to Yamuna is said to free one from the fear of death — which is why the Surya Kund here, fed by the sun's heat, is considered particularly auspicious. The goddess is depicted in black, representing the dark, fertile soil of the Yamuna plains that has fed Indian civilisation for centuries.</p>
 
+        {/* Folded in from /barkot-hotels on 20 Sep 2026 — that page was the
+            last of the hotels cluster and drew 48 impressions in a quarter.
+            The decision it answered belongs here: where you sleep before the
+            trek decides what time you leave and how the trek day goes. */}
+        <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>Where to Stay for Yamunotri</h2>
+        <p style={{fontSize:'15px',color:'var(--text-mid)',lineHeight:1.85,marginBottom:'16px'}}>Barkot, at 1,220 m and 36 km from the Janki Chatti trailhead, is where we put essentially every group: the widest choice of rooms on this leg, attached bathrooms with geyser hot water, kitchens that cook to order, mobile signal that works, and an altitude low enough that nobody has trouble on night one. Expect ₹1,200–4,000 a night, and in May and June book 45–60 days ahead — the town has a fixed, fairly small room stock and it sells out completely. The trade is a 4:00–4:30 AM start for the drive to the trailhead. Ask whether the kitchen will serve at 3:30 AM; a hotel that will not is a hotel that starts your trek day with no food.</p>
+        <div style={{ overflowX:'auto', marginBottom:16 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:560 }}>
+            <caption className="sr-only">Bases for the Yamunotri trek, with distance to the trailhead, departure time and typical room rate</caption>
+            <thead><tr style={{ background:'var(--navy-light)' }}>
+              {['Base','Altitude','To trailhead','Leave by','Typical rate','Verdict'].map(x=>(
+                <th key={x} scope="col" style={{ padding:'9px 10px', textAlign:'left', fontWeight:700, fontSize:11, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.05em' }}>{x}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['Barkot','1,220 m','36 km','4:00–4:30 AM','₹1,200–4,000','Right for almost everyone'],
+                ['Janki Chatti','~2,650 m','At the trailhead','6:00 AM','₹800–2,500','Only if Barkot is full — cold, thin air, basic'],
+                ['Hanuman Chatti','~2,400 m','~8 km','5:30 AM','₹800–2,000','Fallback; check what is actually open'],
+                ['Purola / Naugaon','~1,500 m','60–75 km','3:00 AM','₹1,000–3,000','Peak-season overflow only'],
+                ['Mussoorie','~2,000 m','~100 km','Not same-day','₹2,500–12,000','A night on the way up, not a trek base'],
+              ].map((r,i)=>(
+                <tr key={r[0]} style={{ borderTop:'1px solid hsl(var(--border))', background:i%2?'var(--bg)':'#fff' }}>
+                  {r.map((c,j)=>(<td key={j} style={{ padding:'9px 10px', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?600:400, whiteSpace:j<4?'nowrap':'normal' }}>{c}</td>))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:13, color:'var(--text-muted)', lineHeight:1.7, marginBottom:24 }}>Rates are typical per-room bands for the season and move sharply with demand — May and June at the top, September and October well below. A planning guide, not a quote; our packages have the Barkot room pre-blocked.</p>
+
         <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.5rem',fontWeight:600,color:'var(--navy)',margin:'36px 0 12px'}}>Places to Visit Around Yamunotri</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14, marginBottom:28 }}>
           {[

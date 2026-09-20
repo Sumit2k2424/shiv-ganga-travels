@@ -9,6 +9,9 @@ export const metadata = {
   description: 'Media resources for journalists covering the Char Dham Yatra: press releases, an operator dataset free to use, boilerplate, and a named spokesperson available for comment.',
   keywords: ['shiv ganga travels press','char dham yatra press release','char dham data journalists','uttarakhand tourism operator comment','char dham media contact','char dham yatra statistics source','newsroom'],
   alternates: { canonical: `${SITE.baseUrl}/press` },
+  // 20 Sep 2026: kept for journalists, out of the index — a newsroom with
+  // one release reads as self-promotion to a site-quality classifier.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Press Office & Newsroom — Shiv Ganga Travels',
     description: 'Press releases, a Char Dham dataset free for news organisations to use, and a named operator available for comment.',
