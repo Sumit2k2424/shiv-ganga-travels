@@ -7,6 +7,13 @@ export const runtime = 'edge';
 // in Vercel — see LEAD-TRACKING-SETUP.md). The sheet is the lead store; it
 // downloads as Excel any time. The site has no database by design.
 // Always returns 204 fast — tracking must never slow or break the site.
+//
+// Every call to the webhook carries a timeout. Apps Script occasionally
+// stalls (the /exec → googleusercontent redirect hop, sheet lock contention)
+// and without one the edge runtime kills the function at 25 s with a 504 —
+// seen in production on 20 Sep 2026. Beacons get a short budget and are
+// dropped on the floor if Google is slow; the contact form gets most of the
+// 25 s and then reports "unconfirmed" so the visitor is sent to WhatsApp.
 
 function istNow() {
   const f = (opt) =>
@@ -18,6 +25,21 @@ function istNow() {
 }
 
 const clean = (v, n) => String(v ?? '').replace(/[\r\n\t]/g, ' ').trim().slice(0, n);
+
+// Edge functions are killed at 25 s; stay under it so the caller gets a real
+// answer instead of a 504.
+const FORM_TIMEOUT_MS   = 20_000;
+const BEACON_TIMEOUT_MS = 8_000;
+
+function postRow(hook, row, timeoutMs) {
+  return fetch(hook, {
+    method  : 'POST',
+    headers : { 'Content-Type': 'application/json' },
+    redirect: 'follow',
+    body    : JSON.stringify(row),
+    signal  : AbortSignal.timeout(timeoutMs),
+  });
+}
 
 // GET /api/lead            → is the webhook env var configured?
 // GET /api/lead?test=1     → send a real test row and report what Google said.
@@ -44,22 +66,19 @@ export async function GET(req) {
   }
 
   const { date, time } = istNow();
+  const started = Date.now();
   try {
-    const r = await fetch(hook, {
-      method  : 'POST',
-      headers : { 'Content-Type': 'application/json' },
-      redirect: 'follow',
-      body    : JSON.stringify({
-        date, time, type: 'TEST', page: '/api/lead?test=1',
-        package: 'Diagnostic', number: '', name: '', detail: 'Self-test row',
-      }),
-    });
+    const r = await postRow(hook, {
+      date, time, type: 'TEST', page: '/api/lead?test=1',
+      package: 'Diagnostic', number: '', name: '', detail: 'Self-test row',
+    }, FORM_TIMEOUT_MS);
     const body = (await r.text()).slice(0, 300);
     return NextResponse.json({
       ok: r.ok && body.trim() === 'ok',
       ...shape,
       googleStatus: r.status,
       googleSaid  : body,
+      googleMs    : Date.now() - started,
       hint: body.includes('<HTML') || body.includes('<!DOCTYPE')
         ? 'Google returned a login/error page instead of "ok". Re-deploy the ' +
           'Apps Script with "Who has access: Anyone" (NOT "Anyone with Google ' +
@@ -69,7 +88,7 @@ export async function GET(req) {
           : 'Unexpected reply from Apps Script.',
     });
   } catch (e) {
-    return NextResponse.json({ ok: false, ...shape, error: String(e) });
+    return NextResponse.json({ ok: false, ...shape, googleMs: Date.now() - started, error: String(e) });
   }
 }
 
@@ -109,29 +128,22 @@ export async function POST(req) {
       return NextResponse.json({ ok: false, reason: 'name and number are required' }, { status: 400 });
     }
     try {
-      const r = await fetch(hook, {
-        method  : 'POST',
-        headers : { 'Content-Type': 'application/json' },
-        redirect: 'follow',
-        body    : JSON.stringify(row),
-      });
+      const r = await postRow(hook, row, FORM_TIMEOUT_MS);
       const said = (await r.text()).trim();
       if (r.ok && said === 'ok') return NextResponse.json({ ok: true });
       return NextResponse.json({ ok: false, reason: 'lead store rejected the row' }, { status: 502 });
-    } catch {
-      return NextResponse.json({ ok: false, reason: 'lead store unreachable' }, { status: 502 });
+    } catch (e) {
+      // A timeout is ambiguous: Apps Script may still have appended the row.
+      // Say "unconfirmed", not "failed" — the form copy is written for that.
+      const reason = e?.name === 'TimeoutError' ? 'lead store did not confirm in time' : 'lead store unreachable';
+      return NextResponse.json({ ok: false, reason }, { status: 502 });
     }
   }
 
   if (hook) {
     try {
-      await fetch(hook, {
-        method  : 'POST',
-        headers : { 'Content-Type': 'application/json' },
-        redirect: 'follow',
-        body    : JSON.stringify(row),
-      });
-    } catch { /* sheet down ≠ site down */ }
+      await postRow(hook, row, BEACON_TIMEOUT_MS);
+    } catch { /* sheet down or slow ≠ site down */ }
   }
 
   return new NextResponse(null, { status: 204 });

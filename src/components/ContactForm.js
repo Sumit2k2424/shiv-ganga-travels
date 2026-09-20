@@ -187,9 +187,9 @@ export default function ContactForm({ packages = [] }) {
 
       {status === 'error' && (
         <div role="alert" style={{ background: '#FDF2F0', border: '1px solid #F3C9C0', color: '#8A2E1C', borderRadius: 10, padding: '12px 14px', fontSize: 13.5, lineHeight: 1.6 }}>
-          The enquiry did not go through. Nothing was lost on your side — please send it on WhatsApp instead:{' '}
+          We could not confirm that your enquiry reached us. To be sure, please send it on WhatsApp:{' '}
           <a href={waHref} target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#8A2E1C', fontWeight: 700 }}>+91 78179 96730</a>,
-          or call the same number.
+          or call the same number. If it did arrive, we will not contact you twice.
         </div>
       )}
 
