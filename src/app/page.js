@@ -210,7 +210,7 @@ const INTENTS = [
   { icon:'temple', title:'Char Dham Yatra', desc:'All four sacred dhams — Yamunotri, Gangotri, Kedarnath, Badrinath.', tag:'Most chosen', from:'₹13,900', href:'/char-dham-yatra' },
   { icon:'mountain', title:'Kedarnath Yatra', desc:'Three nights, four days — Lord Shiva’s abode at 3,583 m.', tag:'Shortest trip', from:'₹5,250', href:'/kedarnath-yatra' },
   { icon:'helicopter', title:'Helicopter Package', desc:'All four dhams in six days — for seniors and VIP darshan.', tag:'Premium', from:'₹2,30,000', href:'/char-dham-helicopter' },
-  { icon:'car', title:'Just the Cab', desc:'Vehicle only — Innova, Ertiga or Tempo from Haridwar.', tag:'Cab only', from:'₹5,500', href:'/char-dham-yatra-cab-booking' },
+  { icon:'car', title:'Just the Cab', desc:'Vehicle only — Innova, Ertiga or Tempo from Haridwar.', tag:'Cab only', from:'₹5,500', href:'/cabs' },
 ];
 
 const DESTINATIONS = [
@@ -449,7 +449,7 @@ export default function HomePage() {
                 </span>
               </Link>
             ))}
-            <Link prefetch={false} href="/char-dham-yatra-cab-booking" className="lux-link" style={{ marginTop: 20 }}>
+            <Link prefetch={false} href="/cabs" className="lux-link" style={{ marginTop: 20 }}>
               All cab options + group rates <Icon name="arrowRight" size={14} />
             </Link>
           </div>

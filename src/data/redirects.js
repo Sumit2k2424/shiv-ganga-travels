@@ -82,6 +82,19 @@ const REDIRECTS = [
   { source: '/blog/badrinath-temple-guide',    destination: '/badrinath-temple',         permanent: true },
   { source: '/blog/yamunotri-yatra-guide',     destination: '/yamunotri-yatra',          permanent: true },
   { source: '/blog/gangotri-yatra-guide',      destination: '/gangotri-yatra',           permanent: true },
+
+  // 20 Sep 2026 — the Gangotri route page came back. It and the two cab URLs
+  // were 410'd on 15 Sep, but "haridwar to gangotri distance" alone was
+  // ~5,900 impressions in the quarter, and Yamunotri and Badrinath kept
+  // their route pages. All three demand shapes land on the one guide.
+  { source: '/haridwar-to-gangotri-distance',  destination: '/how-to-reach-gangotri',    permanent: true },
+  { source: '/haridwar-to-gangotri-cab',       destination: '/how-to-reach-gangotri',    permanent: true },
+  { source: '/cabs/haridwar-to-gangotri-cab',  destination: '/how-to-reach-gangotri',    permanent: true },
+
+  // 20 Sep 2026 — one taxi page. /cabs and /char-dham-yatra-cab-booking
+  // shared every section but their fare table (0.28 text containment, 0 and
+  // 2 clicks in 90 days); the circuit-hire content now lives on /cabs.
+  { source: '/char-dham-yatra-cab-booking',    destination: '/cabs',                     permanent: true },
   { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
   { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
 

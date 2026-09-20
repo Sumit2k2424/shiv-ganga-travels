@@ -59,8 +59,7 @@ const sections = [
   {
     title: 'Cab & Transport',
     links: [
-      { label: 'Char Dham Cab Booking', href: '/char-dham-yatra-cab-booking' },
-      { label: 'All Uttarakhand Cabs', href: '/cabs' },
+      { label: 'Char Dham Cabs & Fares', href: '/cabs' },
       { label: 'Dehradun Airport to Haridwar Taxi', href: '/dehradun-airport-to-haridwar-taxi' },
     ],
   },
@@ -246,8 +245,7 @@ export default function SitemapPage() {
             </h2>
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
               {[
-                ['All Cab Routes & Fares', '/cabs'],
-                ['Char Dham Cab Booking', '/char-dham-yatra-cab-booking'],
+                ['Char Dham Cabs & Fares', '/cabs'],
                 ['Dehradun Airport to Haridwar Taxi', '/dehradun-airport-to-haridwar-taxi'],
               ].map(([label, href]) => (
                 <li key={href}>

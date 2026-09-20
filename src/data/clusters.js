@@ -101,7 +101,7 @@ export const CLUSTERS = [
     id: 'haridwar-local',
     name: 'Haridwar local sightseeing',
     hub: '/haridwar-sightseeing-places',
-    money: '/char-dham-yatra-cab-booking',
+    money: '/cabs',
     spokes: [
       { slug: '/har-ki-pauri-guide', head: 'har ki pauri aarti time', vol: 2400, pos: 12 },
       { slug: '/mansa-devi-temple', head: 'har ki pauri to mansa devi temple distance', vol: 590, pos: 11 },

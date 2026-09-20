@@ -27,8 +27,7 @@ const PKG_LINKS = [
 // The per-route cab pages were deleted on 15 Sep 2026; /cabs carries the
 // whole fare table now.
 const CAB_LINKS = [
-  { label:'All Cabs & Fares',      href:'/cabs',                        sub:'Every route · fixed fares · book in a minute', icon:'car' },
-  { label:'Char Dham Cab Booking', href:'/char-dham-yatra-cab-booking', sub:'Innova · Ertiga · Tempo · Full circuit',  icon:'car' },
+  { label:'Char Dham Cabs & Fares', href:'/cabs',                        sub:'Full circuit or one-way · fixed fares · Innova · Tempo', icon:'car' },
   { label:'Dehradun Airport → Haridwar', href:'/dehradun-airport-to-haridwar-taxi', sub:'35 km · ~1 hr · ₹1,200 fixed', icon:'car' },
 ];
 
