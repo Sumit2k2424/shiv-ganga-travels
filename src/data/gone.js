@@ -278,7 +278,6 @@ const GONE = [
   '/packages/haridwar-rishikesh-spiritual-4n-5d',
   '/packages/jim-corbett-jungle-safari-2n-3d',
   '/packages/jim-corbett-nainital-wildlife-5n-6d',
-  '/packages/kainchi-dham-nainital-mukteshwar-3n-4d',
   '/packages/kedarkantha-trek-5n-6d',
   '/packages/kedarnath-chopta-badrinath-adventure-6n-7d',
   '/packages/lansdowne-khirsu-getaway-2n-3d',
