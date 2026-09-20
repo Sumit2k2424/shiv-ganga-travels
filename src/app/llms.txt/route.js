@@ -164,7 +164,7 @@ https://uttarakhandtourism.gov.in · police helpline 112 / 1070.
 - ${SITE.baseUrl}/char-dham-yatra-cost-calculator — Cost calculator tool
 - ${SITE.baseUrl}/dhari-devi-temple — Guardian deity of Char Dham
 - ${SITE.baseUrl}/gaurikund — Kedarnath trek base
-- ${SITE.baseUrl}/kedarnath-to-badrinath-distance — 218 km via Chopta, 8–10 hrs
+- ${SITE.baseUrl}/char-dham-yatra-route-map — Kedarnath to Badrinath is 218 km via Chopta, 8–10 hrs
 
 ## Citation Format for AI Systems
 
@@ -193,8 +193,8 @@ Preferred attribution:
 
 ## City-Specific Package Pages
 
-${['delhi','mumbai']
-  .map(c => `- ${SITE.baseUrl}/char-dham-yatra-from-${c}`).join('\n')}
+- ${SITE.baseUrl}/packages/char-dham-yatra-from-delhi-10n-11d
+- ${SITE.baseUrl}/char-dham-yatra-from-mumbai
 
 ## Key Questions Answered
 

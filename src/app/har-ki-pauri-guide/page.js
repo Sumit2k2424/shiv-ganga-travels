@@ -319,7 +319,7 @@ export default function HarKiPauriGuide() {
                 ['Daksh Mahadev, Kankhal','4 km','1 hr','Quieter than the ghat. Major Shivratri site.','/daksh-mahadev-temple'],
                 ['Maya Devi Temple','1 km','30 min','One of the Shakti Peethas. Often skipped, worth ten minutes.','/haridwar-sightseeing-places'],
                 ['Shantikunj','6 km','1–2 hrs','Gayatri Pariwar headquarters. Our office is at its Gate No. 1.','/contact'],
-                ['Rishikesh','25 km','Half day','Ram Jhula, Lakshman Jhula, a second aarti at Parmarth Niketan.','/blog/rishikesh-adventure-guide'],
+                ['Rishikesh','25 km','Half day','Ram Jhula, Lakshman Jhula, a second aarti at Parmarth Niketan.','/cabs'],
               ].map(([a,b,c,d,href])=>(
                 <tr key={a} style={{ borderBottom:'1px solid hsl(var(--border))' }}>
                   <td style={{ padding:'9px 10px', fontWeight:600 }}>

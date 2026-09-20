@@ -3,7 +3,6 @@ import path from 'path';
 import { PACKAGES, SITE } from '@/data/packages';
 import { REDIRECT_SOURCE_PATHS } from '@/data/redirects';
 import { GONE_PATHS } from '@/data/gone';
-import { getPublishedReleases } from '@/data/press';
 import { pageDates, SITE_CONTENT_UPDATED_ISO } from '@/lib/pageDates';
 // Concrete path → the route pageDates knows: itself, or its dynamic pattern.
 function lastModifiedFor(path) {
@@ -75,7 +74,7 @@ function discoverCitySlugs() {
 }
 
 const CITY_PRIORITY = {
-  'char-dham-yatra-from-delhi': 0.88, 'char-dham-yatra-from-mumbai': 0.85,
+  'char-dham-yatra-from-mumbai': 0.85,
   'char-dham-yatra-from-haridwar': 0.82,
 };
 const DEFAULT_CITY_P = 0.80;
@@ -101,7 +100,6 @@ export default function sitemap() {
     { url: `${b}/yamunotri-yatra`,                     p: 0.86, cf: 'monthly' },
     { url: `${b}/panch-kedar-yatra`,                   p: 0.84, cf: 'monthly' },
     { url: `${b}/panch-badri-yatra`,                   p: 0.84, cf: 'monthly' },
-    { url: `${b}/uttarakhand-tour-packages`,           p: 0.82, cf: 'monthly' },
     { url: `${b}/chopta-tungnath`,                     p: 0.82, cf: 'monthly' },
     { url: `${b}/about`,                               p: 0.70, cf: 'monthly' },
     { url: `${b}/contact`,                             p: 0.75, cf: 'monthly' },
@@ -132,7 +130,6 @@ export default function sitemap() {
     { url: `${b}/phata`,                               p: 0.84, cf: 'monthly' },
     { url: `${b}/madhyamaheshwar-temple`,              p: 0.82, cf: 'monthly' },
     { url: `${b}/yamunotri-pony-palki-rates`,          p: 0.86, cf: 'monthly' },
-    { url: `${b}/kedarnath-to-badrinath-distance`,     p: 0.85, cf: 'monthly' },
     // Distance and on-route logistics. Fixed factual answers — the format AI
     // engines cite most readily, and the cheapest pages on the site to keep true.
     { url: `${b}/haridwar-to-badrinath-distance`,      p: 0.85, cf: 'monthly' },
@@ -208,12 +205,9 @@ export default function sitemap() {
 
   // Newsroom. Releases come from the same publishability gate that drives
   // generateStaticParams, so an unapproved draft can never reach the sitemap.
-  const press = [
-    { url: `${b}/press`, p: 0.75, cf: 'monthly' },
-    ...getPublishedReleases().map(r => ({
-      url: `${b}/press/${r.slug}`, p: 0.70, cf: 'yearly',
-    })),
-  ];
+  // 20 Sep 2026: /press and its releases are noindex,follow — kept for
+  // journalists, not for the index — so they no longer go in the sitemap.
+  const press = [];
 
   const blog = [
     { url: `${b}/blog`, p: 0.82, cf: 'weekly' },
@@ -325,6 +319,7 @@ export default function sitemap() {
     'ui-kit', 'review', 'packages', 'blog', 'cabs',
     'opengraph-image', 'sitemap-page',
     // noindex routes — a sitemap must never list a URL that asks not to be indexed
+    'press', // noindex,follow since 20 Sep 2026
     'book', 'styleguide',
   ]);
   const seen = new Set(listed.map(x => x.url));

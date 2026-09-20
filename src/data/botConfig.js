@@ -197,7 +197,7 @@ export const CUSTOM_QA = [
   // ── 27. UTTARAKHAND TOURS (NON-PILGRIMAGE) ──────────────────
   {
     keywords: ['mussoorie','nainital','rishikesh','chopta','auli','corbett','skiing','rafting','adventure','hill station','wildlife'],
-    answer: `**Uttarakhand Tour Packages (Non-Pilgrimage):**\n\n🏔️ **Adventure & Hills:**\n• Chopta + Tungnath Trek — ₹6,350 (2N/3D)\n• Auli Skiing Tour — ₹9,400 (3N/4D)\n• Rishikesh Adventure (Rafting + Bungee) — ₹3,750 (2N/3D)\n\n🌸 **Leisure & Sightseeing:**\n• Mussoorie + Rishikesh + Kanatal — ₹6,350 (4N/5D)\n• Haridwar + Rishikesh Spiritual — ₹4,500 (4N/5D)\n• Nainital + Kausani + Ranikhet — ₹10,100 (4N/5D)\n\n🦁 **Wildlife:**\n• Jim Corbett + Nainital — ₹10,500 (5N/6D)\n\n🌺 **UNESCO Special:**\n• Valley of Flowers + Hemkund Sahib — ₹10,100 (5N/6D)\n\n🗺️ **Complete:**\n• Grand Uttarakhand Tour — ₹17,200 (10N/11D)\n\nAll quoted on enquiry — see /uttarakhand-tour-packages or send us your dates on WhatsApp! 🙏`,
+    answer: `**Uttarakhand Tour Packages (Non-Pilgrimage):**\n\n🏔️ **Adventure & Hills:**\n• Chopta + Tungnath Trek — ₹6,350 (2N/3D)\n• Auli Skiing Tour — ₹9,400 (3N/4D)\n• Rishikesh Adventure (Rafting + Bungee) — ₹3,750 (2N/3D)\n\n🌸 **Leisure & Sightseeing:**\n• Mussoorie + Rishikesh + Kanatal — ₹6,350 (4N/5D)\n• Haridwar + Rishikesh Spiritual — ₹4,500 (4N/5D)\n• Nainital + Kausani + Ranikhet — ₹10,100 (4N/5D)\n\n🦁 **Wildlife:**\n• Jim Corbett + Nainital — ₹10,500 (5N/6D)\n\n🌺 **UNESCO Special:**\n• Valley of Flowers + Hemkund Sahib — ₹10,100 (5N/6D)\n\n🗺️ **Complete:**\n• Grand Uttarakhand Tour — ₹17,200 (10N/11D)\n\nAll quoted on enquiry — see /packages or send us your dates on WhatsApp! 🙏`,
   },
 
   // ── 28. ADVANCE BOOKING / HOW EARLY ─────────────────────────

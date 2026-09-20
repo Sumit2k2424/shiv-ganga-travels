@@ -28,6 +28,7 @@
 // listed). CommonJS so next.config.js can also read it if ever needed.
 
 const GONE = [
+  '/blog/rishikesh-adventure-guide',
   '/adi-badri-temple',
   '/adi-kailash-yatra',
   '/altitude-sickness-char-dham',

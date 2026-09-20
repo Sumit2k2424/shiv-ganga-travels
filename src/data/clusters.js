@@ -37,7 +37,7 @@ export const CLUSTERS = [
     // a 165K/mo head term at position 17 delivering 21.8% of all sessions,
     // sitting in a cluster whose money page almost nothing links to.
     hub: '/kainchi-dham',
-    money: '/uttarakhand-tour-packages',
+    money: '/packages',
     spokes: [
       { slug: '/kainchi-dham', head: 'kainchi dham', vol: 165000, pos: 17 },
       { slug: '/chitai-golu-devta-temple', head: 'chitai golu devta temple', vol: 33100, pos: 15 },
@@ -70,7 +70,6 @@ export const CLUSTERS = [
       { slug: '/badrinath-temple', head: 'badrinath jyotirlinga', vol: 590, pos: 29 },
       { slug: '/how-to-reach-badrinath', head: 'how to reach badrinath temple', vol: 210, pos: 41 },
       { slug: '/badrinath-weather', head: 'badrinath temperature in june', vol: 210, pos: 14 },
-      { slug: '/kedarnath-to-badrinath-distance' },
     ],
   },
   {
@@ -114,7 +113,7 @@ export const CLUSTERS = [
     id: 'char-dham-core',
     name: 'Char Dham circuit',
     hub: '/char-dham-yatra',
-    money: '/uttarakhand-tour-packages',
+    money: '/packages',
     spokes: [
       { slug: '/char-dham-yatra-route-map', head: 'char dham yatra map with distance', vol: 110, pos: 47 },
       { slug: '/char-dham-road-status' },

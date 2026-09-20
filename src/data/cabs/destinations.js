@@ -160,7 +160,7 @@ export const DESTINATIONS = [
       ['When is there snow in Auli?', 'December through February is reliable, with January the deepest. March can still hold snow at the top. From April the meadows open up green, which many people prefer.'],
       ['Can I combine Auli with Badrinath?', 'Easily, and it barely costs a day — you pass Joshimath either way, so it is the same road up to that point.'],
     ],
-    guides: [['Auli Tour Package', '/uttarakhand-tour-packages']],
+    guides: [['All packages', '/packages']],
   },
   {
     slug: 'chopta',
@@ -187,7 +187,7 @@ export const DESTINATIONS = [
       ['Can I trek Tungnath from Chopta in one day?', 'Yes — 3.5 km up to Tungnath and another 1.5 km to Chandrashila. Most people do the whole thing as a half day from a Chopta overnight and are back by lunch.'],
       ['Is Chopta worth it after doing the Char Dham?', 'It is the trip people come back for. Far fewer crowds than the dham routes, real forest, and a summit you can actually reach on your own legs in a morning.'],
     ],
-    guides: [['Uttarakhand Tour Packages', '/uttarakhand-tour-packages']],
+    guides: [['All packages', '/packages']],
   },
   {
     slug: 'mussoorie',
@@ -215,7 +215,7 @@ export const DESTINATIONS = [
       ['Is a Mussoorie day trip possible from Haridwar or Rishikesh?', 'Comfortably. Leave by 7 AM, take in Kempty Falls and Mall Road, and you are back by evening. An overnight is better if you want Gun Hill and the Camel’s Back walk unhurried.'],
       ['Can the cab drive on Mall Road?', 'Only outside the restricted hours. Your driver drops you at the permitted parking and picks you up there — it is a short and pleasant walk either way.'],
     ],
-    guides: [['Uttarakhand Tour Packages', '/uttarakhand-tour-packages']],
+    guides: [['All packages', '/packages']],
   },
   {
     slug: 'nainital',
@@ -244,7 +244,7 @@ export const DESTINATIONS = [
       ['Can I add Jim Corbett to a Nainital trip?', 'Easily — Ramnagar, the Corbett gateway, is directly on the route. A Haridwar or Delhi loop taking in Corbett and Nainital works well over three or four days.'],
       ['How far is Kainchi Dham from Nainital?', 'About 17 km on the Almora road, half an hour. Go early; the ashram gets very busy by mid-morning.'],
     ],
-    guides: [['Uttarakhand Tour Packages', '/uttarakhand-tour-packages']],
+    guides: [['All packages', '/packages']],
   },
   {
     slug: 'mukteshwar',
@@ -271,7 +271,7 @@ export const DESTINATIONS = [
       ['Is Mukteshwar better than Nainital?', 'It is higher, quieter, and has much bigger mountain views, but no lake and far fewer places to eat. Plenty of travellers do both in one Kumaon loop — Nainital for the lake, Mukteshwar for the calm.'],
       ['How long is the drive to Mukteshwar?', 'From Haridwar about 310 km and eight to nine hours; from Dehradun 335 km. Most of it is highway, with the hill climb in the last 60 km. A night at Nainital on the way splits it neatly.'],
     ],
-    guides: [['Uttarakhand Tour Packages', '/uttarakhand-tour-packages']],
+    guides: [['All packages', '/packages']],
   },
 
   // ───────────────── GATEWAY CITIES (as destinations) ─────────────────

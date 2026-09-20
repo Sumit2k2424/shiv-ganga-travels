@@ -72,7 +72,7 @@ const REDIRECTS = [
   // ── Thin/duplicate blog pages consolidated into canonical pages (May 2026 update cleanup) ──
   { source: '/blog/char-dham-budget-guide',    destination: '/blog/char-dham-yatra-cost', permanent: true },
   { source: '/blog/kedarnath-yatra-package',   destination: '/kedarnath-yatra',          permanent: true },
-  { source: '/blog/kedarnath-yatra-guide',     destination: '/blog/kedarnath-yatra-complete-guide', permanent: true },
+  { source: '/blog/kedarnath-yatra-guide',     destination: '/kedarnath-yatra', permanent: true },
   { source: '/blog/kedarnath-pony-palki-rates-2026', destination: '/kedarnath-pony-palki-kandi-rates', permanent: true },
   { source: '/blog/vip-darshan-kedarnath-booking', destination: '/kedarnath-vip-darshan', permanent: true },
   // Cannibalised /char-dham-road-status: identical target queries, and from
@@ -95,7 +95,20 @@ const REDIRECTS = [
   // shared every section but their fare table (0.28 text containment, 0 and
   // 2 clicks in 90 days); the circuit-hire content now lives on /cabs.
   { source: '/char-dham-yatra-cab-booking',    destination: '/cabs',                     permanent: true },
-  { source: '/blog/uttarakhand-tour-packages', destination: '/uttarakhand-tour-packages', permanent: true },
+
+  // 20 Sep 2026 audit — merges. Each pair answered the same query with two
+  // pages (see memory/content-audit-2026-09-20): the Delhi city page and the
+  // Delhi package (3/167 vs 1/150 clicks/impr, both ~pos 8.7); the Uttarakhand
+  // hub that only linked three Char Dham packages once its own tier was
+  // removed; the Valley of Flowers post beside the Hemkund package; the lone
+  // Barkot hotels page; the Kedarnath–Badrinath distance page whose stages
+  // now sit on the route map.
+  { source: '/char-dham-yatra-from-delhi',     destination: '/packages/char-dham-yatra-from-delhi-10n-11d',        permanent: true },
+  { source: '/uttarakhand-tour-packages',      destination: '/packages',                                           permanent: true },
+  { source: '/blog/valley-of-flowers-trek',    destination: '/packages/hemkund-sahib-badrinath-valley-of-flowers-6n-7d', permanent: true },
+  { source: '/barkot-hotels',                  destination: '/yamunotri-yatra',                                    permanent: true },
+  { source: '/kedarnath-to-badrinath-distance', destination: '/char-dham-yatra-route-map',                         permanent: true },
+  { source: '/blog/uttarakhand-tour-packages', destination: '/packages', permanent: true },
   { source: '/blog/how-to-reach-badrinath',    destination: '/how-to-reach-badrinath',   permanent: true },
 
   // ── /index — a second URL serving the whole homepage ──
@@ -109,24 +122,24 @@ const REDIRECTS = [
   // ── Duplicate city pages (92% identical content) → main Char Dham page ──
   // Keeps: Delhi, Noida, Mumbai, Bangalore, Chennai, Kolkata, Pune, Hyderabad, Chandigarh
   // Redirects: all other city pages that add no unique value
-  { source: '/char-dham-yatra-from-lucknow',     destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-varanasi',    destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-jaipur',      destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-lucknow',     destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-varanasi',    destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-jaipur',      destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
   { source: '/char-dham-yatra-from-ahmedabad',   destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-indore',      destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-bhopal',      destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-nagpur',      destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-surat',       destination: '/char-dham-yatra-from-mumbai', permanent: true },
-  { source: '/char-dham-yatra-from-patna',       destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-rishikesh',   destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-dehradun',    destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-patna',       destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-rishikesh',   destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-dehradun',    destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
   // Second pass, 14 Sep 2026: the seven remaining templated city pages (twin
   // similarity 0.42-0.44, 261-276 own words, 610 impressions and 6 clicks
   // between them in 28 days). Same split as above — north and east to Delhi,
   // west and south to Mumbai. Delhi, Mumbai and Haridwar are hand-written and stay.
-  { source: '/char-dham-yatra-from-noida',       destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-chandigarh',  destination: '/char-dham-yatra-from-delhi', permanent: true },
-  { source: '/char-dham-yatra-from-kolkata',     destination: '/char-dham-yatra-from-delhi', permanent: true },
+  { source: '/char-dham-yatra-from-noida',       destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-chandigarh',  destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
+  { source: '/char-dham-yatra-from-kolkata',     destination: '/packages/char-dham-yatra-from-delhi-10n-11d', permanent: true },
   { source: '/char-dham-yatra-from-pune',        destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-hyderabad',   destination: '/char-dham-yatra-from-mumbai', permanent: true },
   { source: '/char-dham-yatra-from-bangalore',   destination: '/char-dham-yatra-from-mumbai', permanent: true },

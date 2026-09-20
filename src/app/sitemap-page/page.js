@@ -20,7 +20,6 @@ const sections = [
       { label: 'Gangotri Yatra', href: '/gangotri-yatra' },
       { label: 'Yamunotri Yatra', href: '/yamunotri-yatra' },
       { label: 'Panch Badri Yatra', href: '/panch-badri-yatra' },
-      { label: 'Uttarakhand Tour Packages', href: '/uttarakhand-tour-packages' },
       { label: 'Chopta & Tungnath', href: '/chopta-tungnath' },
       { label: 'All Packages', href: '/packages' },
     ],
@@ -75,7 +74,7 @@ const sections = [
   {
     title: 'Book from Your City',
     links: [
-      { label: 'Char Dham Yatra from Delhi', href: '/char-dham-yatra-from-delhi' },
+      { label: 'Char Dham Yatra from Delhi (10N/11D)', href: '/packages/char-dham-yatra-from-delhi-10n-11d' },
       { label: 'Char Dham Yatra from Mumbai', href: '/char-dham-yatra-from-mumbai' },
       ],
   },
@@ -98,8 +97,6 @@ const sections = [
       { label: 'Char Dham with Kids', href: '/blog/char-dham-yatra-with-kids' },
       { label: 'Medical Certificate Guide', href: '/blog/char-dham-yatra-medical-certificate' },
       { label: 'Haridwar to Kedarnath Guide', href: '/blog/haridwar-to-kedarnath' },
-      { label: 'Valley of Flowers Trek', href: '/blog/valley-of-flowers-trek' },
-      { label: 'Rishikesh Adventure Guide', href: '/blog/rishikesh-adventure-guide' },
       { label: 'Mana Village Badrinath', href: '/blog/mana-village-badrinath' },
       { label: 'Uttarakhand Weather Guide', href: '/blog/uttarakhand-weather-guide' },
       { label: 'All Blog Posts', href: '/blog' },
@@ -111,7 +108,6 @@ const sections = [
       { label: 'Gangotri Temple Guide', href: '/gangotri-temple' },
       { label: 'Yamunotri Temple Guide', href: '/yamunotri-temple' },
       { label: 'Gaurikund Guide', href: '/gaurikund' },
-      { label: 'Kedarnath to Badrinath Distance', href: '/kedarnath-to-badrinath-distance' },
       { label: 'Harsil Valley Guide', href: '/harsil-valley' },
       { label: 'Surkanda Devi Temple', href: '/surkanda-devi-temple' },
       { label: 'Chitai Golu Devta Temple', href: '/chitai-golu-devta-temple' },
@@ -187,6 +183,9 @@ const sections = [
 
 export default function SitemapPage() {
   const catEntries = Object.entries(CATEGORIES);
+  // The /packages/<category> routes 301 to these hubs since 17 Sep 2026;
+  // an HTML sitemap must link the destination, not the redirect.
+  const CATEGORY_HUB = { 'char-dham': '/char-dham-yatra', 'do-dham': '/do-dham-yatra', 'single-dham': '/ek-dham-yatra', 'helicopter': '/char-dham-helicopter' };
 
   return (
     <>
@@ -229,7 +228,7 @@ export default function SitemapPage() {
             <ul style={{ listStyle:'none', padding:0, margin:0, display:'flex', flexDirection:'column', gap:5 }}>
               {catEntries.map(([slug, cat]) => (
                 <li key={slug}>
-                  <Link prefetch={false} href={`/packages/${slug}`} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
+                  <Link prefetch={false} href={CATEGORY_HUB[slug] || '/packages'} style={{ fontSize:13.5, color:'var(--navy)', textDecoration:'none', display:'flex', alignItems:'center', gap:6 }}>
                     <span style={{ color:'var(--gold)', fontSize:10 }}>▸</span>
                     {cat.name}
                   </Link>

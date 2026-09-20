@@ -307,7 +307,7 @@ export default function Ukhimath() {
         <div style={{ borderTop: '1px solid hsl(var(--border))', paddingTop: 24, marginTop: 32 }}>
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Nearby and related</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {[['Chopta & Tungnath', '/chopta-tungnath'], ['Gaurikund', '/gaurikund'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Harsil Valley', '/harsil-valley'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Closing Dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Road Status', '/char-dham-road-status'], ['Uttarakhand Packages', '/uttarakhand-tour-packages']].map(([l, href]) => (
+            {[['Chopta & Tungnath', '/chopta-tungnath'], ['Gaurikund', '/gaurikund'], ['Kedarnath Temple', '/kedarnath-temple'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Harsil Valley', '/harsil-valley'], ['Dhari Devi Temple', '/dhari-devi-temple'], ['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Closing Dates 2026', '/blog/char-dham-yatra-closing-dates-2026'], ['Road Status', '/char-dham-road-status'], ['All Packages', '/packages']].map(([l, href]) => (
               <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>
