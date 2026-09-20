@@ -3,6 +3,7 @@
   "buildCommand": "next build",
   "devCommand": "next dev",
   "installCommand": "npm install --legacy-peer-deps",
+  "ignoreCommand": "bash scripts/vercel-ignore.sh",
   "crons": [
     {
       "path": "/api/index-now",
