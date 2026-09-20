@@ -24,6 +24,7 @@ export function generateMetadata({ params }) {
   return {
     title: { absolute: `${r.headline} | Press Release` },
     description: r.summary.slice(0, 155),
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `${SITE.baseUrl}/press/${r.slug}`,
       types: { 'application/rss+xml': `${SITE.baseUrl}/press/feed.xml` },

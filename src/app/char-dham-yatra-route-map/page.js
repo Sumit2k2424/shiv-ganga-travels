@@ -228,6 +228,57 @@ export default function RouteMap() {
         <h2 style={h2}>Kedarnath Route Map — The Segment Everyone Asks About</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The Kedarnath leg is the only part of the circuit with a mandatory trek, so its route deserves its own line. From Haridwar the road runs <strong>Rishikesh → Devprayag → Srinagar → Rudraprayag → Tilwara → Agastyamuni → Guptkashi → Sonprayag (235 km)</strong>. Private vehicles stop at Sonprayag; a shuttle jeep covers the 5 km to Gaurikund; and the final <strong>16 km to the temple is on foot</strong> via Jungle Chatti, Bheembali and Lincholi — or 8 minutes by helicopter from Phata/Sersi/Guptkashi. Coming from Gangotri on the full circuit, you join this road at Guptkashi via Ghansali instead of driving back through Rishikesh. The one navigation mistake pilgrims still make: following an old map to the pre-2013 Rambara trail. That route no longer exists — the rebuilt trail crosses to the true left bank of the Mandakini after Bheembali.</p>
 
+        {/* Folded in from /kedarnath-to-badrinath-distance on 20 Sep 2026.
+            Distance queries are 183 a quarter site-wide at 0.1 % CTR — Google
+            answers them itself — so the leg lives here with the rest of the
+            circuit instead of on its own page. */}
+        <h2 style={h2}>Kedarnath to Badrinath — 218 km for 41 aerial kilometres</h2>
+        <p style={{ fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:16 }}>
+          On a map the two temples sit almost side by side, 41 km apart as the crow flies. But the Kedarnath and
+          Badrinath valleys are separated by a wall of 5,000-metre ridges with no motorable pass, so the road drops
+          all the way down the Mandakini valley, crosses the Chopta ridge at 2,700 m, and climbs the Alaknanda —{' '}
+          <strong>218 km from Gaurikund and 8–10 hours of driving</strong>, after the 16 km trek down from the temple.
+          The detour happens to be one of the prettiest drives in Uttarakhand: the Chopta stretch runs through deodar
+          forest and open meadows with Chaukhamba filling the windscreen on clear mornings.
+        </p>
+        <div style={{ overflowX:'auto', marginBottom:16 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13, minWidth:520 }}>
+            <caption className="sr-only">Kedarnath to Badrinath road route, leg by leg</caption>
+            <thead><tr style={{ background:'var(--navy-light)' }}>
+              {['Leg','Distance','Time'].map(x=>(
+                <th key={x} scope="col" style={{ padding:'9px 10px', textAlign:'left', fontWeight:700, fontSize:11, color:'var(--navy)', textTransform:'uppercase', letterSpacing:'0.05em' }}>{x}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['Kedarnath Temple → Gaurikund','16 km trek','5–7 hrs down (walk, pony or palki)'],
+                ['Gaurikund → Guptkashi','31 km','1–1.5 hrs'],
+                ['Guptkashi → Ukhimath → Chopta','41 km','1.5–2 hrs'],
+                ['Chopta → Gopeshwar → Chamoli','62 km','2–2.5 hrs'],
+                ['Chamoli → Pipalkoti → Joshimath','40 km','1.5 hrs'],
+                ['Joshimath → Badrinath','44 km','1.5–2 hrs (gated one-way sections)'],
+                ['Total by road','218 km','8–10 hrs driving'],
+              ].map(([leg,dist,time],i)=>(
+                <tr key={leg} style={{ borderTop:'1px solid hsl(var(--border))', background:i===6?'var(--navy-light)':(i%2?'var(--bg)':'#fff'), fontWeight:i===6?700:400 }}>
+                  <td style={{ padding:'9px 10px', color:'var(--navy)' }}>{leg}</td>
+                  <td style={{ padding:'9px 10px', color:'var(--teal)', fontFamily:'monospace', whiteSpace:'nowrap' }}>{dist}</td>
+                  <td style={{ padding:'9px 10px', color:'var(--text-mid)' }}>{time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:15, color:'var(--text-mid)', lineHeight:1.85, marginBottom:24 }}>
+          A one-day transfer is possible on paper and rarely pleasant: leave the temple by 5 AM, reach Gaurikund by
+          10, then sit in a car for nine hours after a 16 km downhill trek, with the 10 PM night-driving ban as a hard
+          deadline. The plan that works, and the one built into our packages, is to trek down in the morning, drive as
+          far as <strong>Pipalkoti</strong> (about six hours from Gaurikund), sleep at a comfortable 1,260 m, and do the
+          final 75 km to Badrinath early next morning — arriving in time for darshan before the day crowd. As a
+          dedicated one-way transfer with that halt, the leg runs roughly ₹7,500–9,000 in a sedan, ₹10,000–12,500 in an
+          Innova Crysta and ₹14,000–17,000 in a Tempo Traveller; inside a full-circuit booking it is already in the fare
+          (see <Link prefetch={false} href="/cabs" style={{ color:'var(--teal)' }}>cab fares</Link>).
+        </p>
+
         {/* Distance table */}
         <h2 style={h2}>Distance Reference Table</h2>
         <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflowX:'auto', marginBottom:28 }}>
@@ -249,10 +300,10 @@ export default function RouteMap() {
                 ['Uttarkashi → Guptkashi', '200 km', '6–7 hrs'],
                 ['Guptkashi → Gaurikund', '30 km', '1.5 hrs'],
                 ['Gaurikund → Kedarnath (trek)', '16 km', '5–7 hrs'],
-                ['Gaurikund → Joshimath', '90 km', '3.5 hrs'],
-                ['Joshimath → Badrinath', '46 km', '1.5–2 hrs'],
+                ['Gaurikund → Joshimath (via Chopta)', '174 km', '6–7 hrs'],
+                ['Joshimath → Badrinath', '44 km', '1.5–2 hrs'],
                 ['Badrinath → Haridwar (return)', '300 km', '8–9 hrs'],
-                ['Total Circuit', '~860 km + 22km trek', '9–12 days'],
+                ['Total Circuit', '~1,150 km + 22 km trek', '9–12 days'],
               ].map(([seg, dist, time], i) => (
                 <tr key={i} style={{ borderTop:'1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ padding:'10px 16px', color:'var(--text)' }}>{seg}</td>

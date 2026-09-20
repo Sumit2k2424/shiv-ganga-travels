@@ -581,7 +581,7 @@ export default function TeenDhamYatra() {
 
           <div style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--navy)', marginBottom: 12 }}>Other yatra combinations</div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 20 }}>
-            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/char-dham-yatra-from-delhi'], ['Do Dham vs Char Dham', '/do-dham-yatra'], ].map(([l, href]) => (
+            {[['Char Dham Yatra', '/char-dham-yatra'], ['Do Dham Yatra', '/do-dham-yatra'], ['Ek Dham Yatra', '/ek-dham-yatra'], ['Kedarnath Yatra', '/kedarnath-yatra'], ['Panch Badri Yatra', '/panch-badri-yatra'], ['Char Dham by Helicopter', '/char-dham-helicopter'], ['All Packages', '/packages'], ['Char Dham from Delhi', '/packages/char-dham-yatra-from-delhi-10n-11d'], ['Do Dham vs Char Dham', '/do-dham-yatra'], ].map(([l, href]) => (
               <Link prefetch={false} key={href} href={href} style={{ background: 'var(--bg)', border: '1px solid hsl(var(--border))', color: 'var(--navy)', padding: '7px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 600, textDecoration: 'none' }}>{l} →</Link>
             ))}
           </div>

@@ -103,8 +103,8 @@ export const CATEGORIES = {
 // Each had ~270-390 words of its own against a 50-60% shared template and
 // earned 0-10 impressions in 28 days — the same footprint as the cab pages
 // cut two days earlier. Noindexing them on 14 Sep was not enough: the pages
-// still existed. Non-pilgrimage tours are now enquiry-only via
-// /uttarakhand-tour-packages. The Char Dham / Do Dham / single-dham /
+// still existed. Non-pilgrimage tours are now enquiry-only (the
+// /uttarakhand-tour-packages hub went too, 20 Sep 2026 — it 301s to /packages). The Char Dham / Do Dham / single-dham /
 // helicopter packages below are hand-written (1,000-1,400 own words).
 export const PACKAGES = [
 

@@ -9,7 +9,7 @@ import Link from 'next/link';
 // (Noida, Chandigarh, Kolkata, Pune, Hyderabad, Bangalore, Chennai) followed on
 // 14 Sep 2026 — all 308 in data/redirects.js. Linking to a redirected slug
 // here sent every crawl through a 308 hop on ~20 pages.
-const CITIES = ['delhi','mumbai'];
+const CITIES = ['mumbai'];
 
 const LABEL = { delhi:'Delhi & North India', mumbai:'Mumbai & South India', haridwar:'Haridwar' };
 
@@ -28,12 +28,16 @@ export default function CityLinkMesh({ current = '' }) {
 
   return (
     <nav aria-label="Related Char Dham pages" style={{ borderTop:'1px solid hsl(var(--border))', paddingTop:24, marginTop:36 }}>
-      <p style={heading}>Char Dham Yatra from other cities</p>
-      <div style={row}>
-        {siblings.map(c => (
-          <Link prefetch={false} key={c} href={`/char-dham-yatra-from-${c}`} style={chip}>From {LABEL[c]} →</Link>
-        ))}
-      </div>
+      {siblings.length > 0 && (
+        <>
+          <p style={heading}>Char Dham Yatra from other cities</p>
+          <div style={row}>
+            {siblings.map(c => (
+              <Link prefetch={false} key={c} href={`/char-dham-yatra-from-${c}`} style={chip}>From {LABEL[c]} →</Link>
+            ))}
+          </div>
+        </>
+      )}
 
       <p style={heading}>Plan &amp; book your yatra</p>
       <div style={row}>

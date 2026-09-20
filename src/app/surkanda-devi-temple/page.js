@@ -49,7 +49,7 @@ function Schema() {
     hasMap:'https://www.google.com/maps?q=30.4114,78.2886',
     sameAs:['https://en.wikipedia.org/wiki/Surkanda_Devi'],
     containedInPlace:{ '@type':'AdministrativeArea', name:'Tehri Garhwal district, Uttarakhand, India' },
-    isPartOf:{ '@type':'TouristAttraction', name:'Uttarakhand Tour Packages', url:`${SITE.baseUrl}/uttarakhand-tour-packages` },
+    isPartOf:{ '@type':'TouristAttraction', name:'Shiv Ganga Travels packages', url:`${SITE.baseUrl}/packages` },
     openingHoursSpecification:[
       { '@type':'OpeningHoursSpecification', dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens:'05:00', closes:'19:00', validFrom:'2026-04-01', validThrough:'2026-10-31' },
       { '@type':'OpeningHoursSpecification', dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens:'07:00', closes:'17:00', validFrom:'2026-11-01', validThrough:'2027-03-31' },
@@ -58,7 +58,7 @@ function Schema() {
     '@context':'https://schema.org','@type':'BreadcrumbList',
     itemListElement:[
       { '@type':'ListItem', position:1, name:'Home', item:SITE.baseUrl },
-      { '@type':'ListItem', position:2, name:'Uttarakhand Tour Packages', item:`${SITE.baseUrl}/uttarakhand-tour-packages` },
+      { '@type':'ListItem', position:2, name:'Packages', item:`${SITE.baseUrl}/packages` },
       { '@type':'ListItem', position:3, name:'Surkanda Devi Temple', item:`${SITE.baseUrl}/surkanda-devi-temple` },
     ],
   }];
@@ -121,7 +121,7 @@ export default function SurkandaDeviTemple() {
     <nav style={{ background:'var(--bg)', borderBottom:'1px solid hsl(var(--border))', padding:'9px 20px' }}>
       <div style={{ maxWidth:'var(--container)', margin:'0 auto', fontSize:12, color:'var(--text-muted)', display:'flex', gap:6, flexWrap:'wrap' }}>
         <Link prefetch={false} href="/" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Home</Link><span>&rsaquo;</span>
-        <Link prefetch={false} href="/uttarakhand-tour-packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Uttarakhand Tour Packages</Link><span>&rsaquo;</span>
+        <Link prefetch={false} href="/packages" style={{ color:'var(--text-muted)', textDecoration:'none' }}>Packages</Link><span>&rsaquo;</span>
         <span>Surkanda Devi Temple</span>
       </div>
     </nav>
@@ -275,7 +275,7 @@ export default function SurkandaDeviTemple() {
       <div style={{ background:'var(--navy-light)', borderRadius:14, padding:'18px 20px', marginBottom:24, marginTop:28 }}>
         <div style={{ fontWeight:700, fontSize:13.5, color:'var(--navy)', marginBottom:10 }}>Related on this route:</div>
         <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-          {[{l:'Uttarakhand Tour Packages',h:'/uttarakhand-tour-packages'},{l:'Mussoorie Cab Fares',h:'/cabs'}].map(l=>(
+          {[{l:'All Packages',h:'/packages'},{l:'Mussoorie Cab Fares',h:'/cabs'}].map(l=>(
             <Link prefetch={false} key={l.h} href={l.h} style={{ background:'#fff', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none', border:'1px solid hsl(var(--border))' }}>{l.l} &rarr;</Link>
           ))}
         </div>

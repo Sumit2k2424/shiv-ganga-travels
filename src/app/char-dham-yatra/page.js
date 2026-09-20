@@ -608,8 +608,8 @@ export default function CharDhamYatra() {
                 Delhi and Mumbai (11 on 31 Aug 2026, 7 on 14 Sep 2026 — see
                 data/redirects.js); linking a redirected slug here just sent
                 crawlers through a 308. */}
-            {[['Delhi & North India','delhi'],['Mumbai & South India','mumbai']].map(([l,c])=>(
-              <Link prefetch={false} key={c} href={`/char-dham-yatra-from-${c}`} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
+            {[['Delhi & North India','/packages/char-dham-yatra-from-delhi-10n-11d'],['Mumbai & South India','/char-dham-yatra-from-mumbai']].map(([l,c])=>(
+              <Link prefetch={false} key={c} href={c} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'7px 14px', borderRadius:8, fontSize:12.5, fontWeight:600, textDecoration:'none' }}>From {l} →</Link>
             ))}
           </div>
         </div>

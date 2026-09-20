@@ -38,13 +38,6 @@
         "src/app/badrinath-yatra/page.js"
       ]
     },
-    "/barkot-hotels": {
-      "created": "2026-08-17",
-      "modified": "2026-08-17",
-      "files": [
-        "src/app/barkot-hotels/page.js"
-      ]
-    },
     "/blog": {
       "created": "2026-04-22",
       "modified": "2026-09-01",
@@ -228,13 +221,6 @@
         "src/app/blog/mana-village-badrinath/page.js"
       ]
     },
-    "/blog/rishikesh-adventure-guide": {
-      "created": "2026-04-22",
-      "modified": "2026-08-31",
-      "files": [
-        "src/app/blog/rishikesh-adventure-guide/page.js"
-      ]
-    },
     "/blog/senior-citizen-char-dham": {
       "created": "2026-04-22",
       "modified": "2026-08-23",
@@ -247,13 +233,6 @@
       "modified": "2026-08-31",
       "files": [
         "src/app/blog/uttarakhand-weather-guide/page.js"
-      ]
-    },
-    "/blog/valley-of-flowers-trek": {
-      "created": "2026-04-22",
-      "modified": "2026-08-23",
-      "files": [
-        "src/app/blog/valley-of-flowers-trek/page.js"
       ]
     },
     "/book": {
@@ -320,13 +299,6 @@
         "src/app/char-dham-yatra-emergency-contacts/page.js"
       ]
     },
-    "/char-dham-yatra-from-delhi": {
-      "created": "2026-04-24",
-      "modified": "2026-08-13",
-      "files": [
-        "src/app/char-dham-yatra-from-delhi/page.js"
-      ]
-    },
     "/char-dham-yatra-from-mumbai": {
       "created": "2026-04-24",
       "modified": "2026-08-13",
@@ -336,7 +308,7 @@
     },
     "/char-dham-yatra-route-map": {
       "created": "2026-04-24",
-      "modified": "2026-08-31",
+      "modified": "2026-09-20",
       "files": [
         "src/app/char-dham-yatra-route-map/page.js"
       ]
@@ -510,13 +482,6 @@
         "src/app/kedarnath-temple/page.js"
       ]
     },
-    "/kedarnath-to-badrinath-distance": {
-      "created": "2026-07-09",
-      "modified": "2026-08-17",
-      "files": [
-        "src/app/kedarnath-to-badrinath-distance/page.js"
-      ]
-    },
     "/kedarnath-vip-darshan": {
       "created": "2026-06-29",
       "modified": "2026-09-19",
@@ -592,7 +557,7 @@
     },
     "/press": {
       "created": "2026-08-19",
-      "modified": "2026-09-14",
+      "modified": "2026-09-20",
       "files": [
         "src/app/press/page.js",
         "src/data/press.js"
@@ -600,7 +565,7 @@
     },
     "/press/[slug]": {
       "created": "2026-08-19",
-      "modified": "2026-09-14",
+      "modified": "2026-09-20",
       "files": [
         "src/app/press/[slug]/page.js",
         "src/data/press.js"
@@ -662,13 +627,6 @@
         "src/app/ukhimath/page.js"
       ]
     },
-    "/uttarakhand-tour-packages": {
-      "created": "2026-04-24",
-      "modified": "2026-08-31",
-      "files": [
-        "src/app/uttarakhand-tour-packages/page.js"
-      ]
-    },
     "/yamunotri-temple": {
       "created": "2026-05-29",
       "modified": "2026-08-23",
@@ -685,7 +643,7 @@
     },
     "/yamunotri-yatra": {
       "created": "2026-04-24",
-      "modified": "2026-09-15",
+      "modified": "2026-09-20",
       "files": [
         "src/app/yamunotri-yatra/page.js"
       ]

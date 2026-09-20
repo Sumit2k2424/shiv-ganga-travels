@@ -14,7 +14,7 @@ export const COLS = [
     {l:'Deluxe 11N/12D',             h:'/packages/char-dham-yatra-11n-12d-haridwar'},
     {l:'Helicopter 5N/6D',           h:'/char-dham-helicopter'},
     {l:'Senior Special 12N/13D',     h:'/packages/char-dham-yatra-senior-citizen-12n-13d'},
-    {l:'From Delhi',                 h:'/char-dham-yatra-from-delhi'},
+    {l:'From Delhi',                 h:'/packages/char-dham-yatra-from-delhi-10n-11d'},
     {l:'From Mumbai',                h:'/char-dham-yatra-from-mumbai'},
     ]},
   { heading:'Single & Do Dham', links:[
@@ -27,7 +27,7 @@ export const COLS = [
     {l:'Ek Dham Yatra',              h:'/ek-dham-yatra'},
     {l:'Panch Badri Yatra',          h:'/panch-badri-yatra'},
     {l:'Chopta & Tungnath',          h:'/chopta-tungnath'},
-    {l:'Uttarakhand Tours',          h:'/uttarakhand-tour-packages'},
+    {l:'All Packages',              h:'/packages'},
     ]},
   { heading:'Cabs & Transport', links:[
     {l:'Char Dham Cabs & Fares',      h:'/cabs'},
@@ -61,7 +61,6 @@ export const COLS = [
     {l:'How to Reach Badrinath',     h:'/how-to-reach-badrinath'},
     {l:'How to Reach Gangotri',      h:'/how-to-reach-gangotri'},
     {l:'How to Reach Yamunotri',     h:'/how-to-reach-yamunotri'},
-    {l:'Barkot Hotels',              h:'/barkot-hotels'},
     {l:'Emergency Contacts',         h:'/char-dham-yatra-emergency-contacts'},
   ]},
   { heading:'Distances & On-Route', links:[

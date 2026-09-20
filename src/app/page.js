@@ -273,7 +273,7 @@ const TOOLS = [
 // Pune, Noida, Chandigarh, Kolkata) were folded into these on 14 Sep 2026 and
 // 308 there — see src/data/redirects.js.
 const CITY_LINKS = [
-  ['Delhi & North India','/char-dham-yatra-from-delhi'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],];
+  ['Delhi & North India','/packages/char-dham-yatra-from-delhi-10n-11d'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],];
 const GUIDE_LINKS = [
   ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['All Blog Posts','/blog'],
 ];
