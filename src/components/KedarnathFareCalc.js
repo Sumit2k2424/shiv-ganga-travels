@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { KEDARNATH_TREK as T } from '@/data/trekRates';
 
 /**
  * KedarnathFareCalc — interactive prepaid-counter fare estimator.
@@ -15,14 +16,15 @@ import { useState } from 'react';
  */
 
 const SERVICES = {
-  pony:  { label: 'Pony / Horse (Ghoda)', base: 3300, time: '3–4 hrs up' },
-  palki: { label: 'Palki (Dandi, 4 carriers)', base: 9000, time: '5–7 hrs up' },
-  kandi: { label: 'Kandi / Pitthu (basket)', base: 4200, time: '6–7 hrs up' },
+  pony:  { label: 'Pony / Horse (Ghoda)', base: T.pony.calcBase, time: '3–4 hrs up' },
+  palki: { label: 'Palki (Dandi, 4 carriers)', base: T.palki.calcBase, time: '5–7 hrs up' },
+  kandi: { label: 'Kandi / Pitthu (basket)', base: T.kandi.calcBase, time: '6–7 hrs up' },
 };
 
 function surcharge(weight) {
-  if (weight <= 75) return 0;
-  return Math.ceil((weight - 75) / 15) * 200;
+  const { freeKg, slabKg, surchargePerSlab } = T.weight;
+  if (weight <= freeKg) return 0;
+  return Math.ceil((weight - freeKg) / slabKg) * surchargePerSlab;
 }
 
 const inr = (n) => '₹' + n.toLocaleString('en-IN');
@@ -91,7 +93,7 @@ export default function KedarnathFareCalc() {
         </div>
       </div>
       <p style={{ fontSize: 11.5, color: '#94a3b8', marginTop: 10, lineHeight: 1.6 }}>
-        Surcharge assumed at ₹200 per 15 kg over 75 kg, per the counter's published slab. Peak May–June demand can push real quotes to the top of this range. Always confirm at the counter.
+        Surcharge assumed at {T.weight.label}, per the counter's published slab. Peak May–June demand can push real quotes to the top of this range. Always confirm at the counter.
       </p>
     </div>
   );
