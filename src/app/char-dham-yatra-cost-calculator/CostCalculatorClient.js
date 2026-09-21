@@ -2,6 +2,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/data/packages';
+import { KEDARNATH_TREK, YAMUNOTRI_TREK } from '@/data/trekRates';
 
 /* Range-based Char Dham cost estimator.
    Every tier is a LOW–HIGH band (matching our /blog/char-dham-yatra-cost ranges
@@ -17,8 +18,8 @@ const TIERS = {
 
 // Per-person add-ons as ranges (low–high)
 const ADDONS = {
-  ponyKedarnath: { label:'🐴 Pony at Kedarnath', lo:3500, hi:5000 },
-  ponyYamunotri: { label:'🐴 Pony at Yamunotri', lo:1500, hi:2500 },
+  ponyKedarnath: { label:'🐴 Pony at Kedarnath', lo:KEDARNATH_TREK.pony.lo, hi:KEDARNATH_TREK.pony.hi },
+  ponyYamunotri: { label:'🐴 Pony at Yamunotri', lo:YAMUNOTRI_TREK.pony.lo, hi:YAMUNOTRI_TREK.pony.hi },
   helicopter:    { label:'🚁 Kedarnath Helicopter (Sersi–Guptkashi)', lo:6390, hi:12762 },
   vipDarshan:    { label:'🛕 VIP Darshan (all dhams)', lo:1100, hi:4400 },
   insurance:     { label:'🛡️ Travel Insurance', lo:400, hi:700 },

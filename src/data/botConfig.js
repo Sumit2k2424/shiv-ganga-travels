@@ -7,6 +7,8 @@
 // Both were corrected against packages.js and confirmed by the owner.
 // When a package price changes, change it here in the same commit.
 
+import { KEDARNATH_TREK, YAMUNOTRI_TREK } from './trekRates';
+
 // ================================================================
 // CHAT BOT CONFIGURATION — SHIV GANGA TRAVELS
 // ================================================================
@@ -65,7 +67,7 @@ export const CUSTOM_QA = [
   // ── 5. KEDARNATH ─────────────────────────────────────────────
   {
     keywords: ['kedarnath','kedar','kedarna'],
-    answer: `**Kedarnath Yatra** — Lord Shiva at 3,583m:\n\n💰 Single package: **₹5,250** (3N/4D)\n🗺️ Route: Haridwar → Guptkashi → Gaurikund → Kedarnath\n🥾 Trek: 16 km one way from Gaurikund (3–5 hrs)\n\n**No-Trek Options:**\n🐴 Pony — ₹3,500–4,500 one way\n🛕 Palki/Doli — ₹8,000–12,000 one way\n🚁 Helicopter — ₹7,500–9,500 round trip (Phata/Sersi helipad)\n\n✨ **Must-see at Kedarnath:**\n• Kedarnath Temple (12th Jyotirlinga)\n• Adi Shankaracharya Samadhi\n• Bhairavnath Temple (10 min walk)\n• Mandakini River & glacial views\n\nBest time: May–June & Sept–Oct. 🙏`,
+    answer: `**Kedarnath Yatra** — Lord Shiva at 3,583m:\n\n💰 Single package: **₹5,250** (3N/4D)\n🗺️ Route: Haridwar → Guptkashi → Gaurikund → Kedarnath\n🥾 Trek: 16 km one way from Gaurikund (3–5 hrs)\n\n**No-Trek Options:**\n🐴 Pony — ${KEDARNATH_TREK.pony.oneWay} one way\n🛕 Palki/Doli — ${KEDARNATH_TREK.palki.band} per booking\n🚁 Helicopter — ₹7,500–9,500 round trip (Phata/Sersi helipad)\n\n✨ **Must-see at Kedarnath:**\n• Kedarnath Temple (12th Jyotirlinga)\n• Adi Shankaracharya Samadhi\n• Bhairavnath Temple (10 min walk)\n• Mandakini River & glacial views\n\nBest time: May–June & Sept–Oct. 🙏`,
   },
 
   // ── 6. BADRINATH ─────────────────────────────────────────────
@@ -101,7 +103,7 @@ export const CUSTOM_QA = [
   // ── 11. TREK MANDATORY / ALTERNATIVES ───────────────────────
   {
     keywords: ['trek','trekking','walk','hike','difficult','can i avoid','no trek','pony','palki','doli','horse','walk how much'],
-    answer: `**Trekking in Char Dham — Your Options:**\n\n🌊 **Yamunotri:** 6 km trek from Janki Chatti\n• 🐴 Pony: ₹1,800–2,500 one way\n• 🛕 Palki: ₹4,000–6,000 one way\n\n🌿 **Gangotri:** ✅ NO TREK — road to temple\n\n🏔️ **Kedarnath:** 16 km trek from Gaurikund\n• 🐴 Pony: ₹3,500–4,500 one way\n• 🛕 Palki: ₹8,000–12,000 one way\n• 🚁 Helicopter: ₹7,500–9,500 round trip\n\n🕌 **Badrinath:** ✅ NO TREK — road to temple\n\n💡 **Verdict:** Only 2 of 4 dhams require trekking. And even those have comfortable alternatives! Everyone from age 4 to 86 can complete Char Dham with us. 🙏`,
+    answer: `**Trekking in Char Dham — Your Options:**\n\n🌊 **Yamunotri:** 6 km trek from Janki Chatti\n• 🐴 Pony: ${YAMUNOTRI_TREK.pony.oneWay} one way\n• 🛕 Doli: ${YAMUNOTRI_TREK.doli.oneWay} one way\n\n🌿 **Gangotri:** ✅ NO TREK — road to temple\n\n🏔️ **Kedarnath:** 16 km trek from Gaurikund\n• 🐴 Pony: ${KEDARNATH_TREK.pony.oneWay} one way\n• 🛕 Palki: ${KEDARNATH_TREK.palki.band} per booking\n• 🚁 Helicopter: ₹7,500–9,500 round trip\n\n🕌 **Badrinath:** ✅ NO TREK — road to temple\n\n💡 **Verdict:** Only 2 of 4 dhams require trekking. And even those have comfortable alternatives! Everyone from age 4 to 86 can complete Char Dham with us. 🙏`,
   },
 
   // ── 12. SENIOR CITIZENS ──────────────────────────────────────

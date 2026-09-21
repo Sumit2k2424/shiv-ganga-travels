@@ -8,6 +8,8 @@
 // changes it — altitude, weather and the yatra calendar all move things.
 // ════════════════════════════════════════════════════════════════
 
+import { YAMUNOTRI_TREK } from './trekRates';
+
 const PX = 'https://images.pexels.com/photos';
 
 /* ══════════════════════════════════════════════════════════════
@@ -146,7 +148,7 @@ export const TEMPLES = {
     ],
     photography: 'Allowed in the courtyard and around Surya Kund. Not inside the sanctum.',
     facts: [
-      'The 6 km trek climbs roughly 1,000 m. Ponies run ₹1,500–2,500 each way, palki ₹4,000–6,000.',
+      `The 6 km trek climbs about ${YAMUNOTRI_TREK.climbM} m. Ponies run ${YAMUNOTRI_TREK.pony.oneWay} each way, doli ${YAMUNOTRI_TREK.doli.oneWay}.`,
       'Surya Kund holds at about 88°C year-round — hot enough that vendors sell muslin bags purely for cooking rice.',
       'The actual glacial source, Champasar Glacier at 4,421 m, is another day’s trek above the temple and is not part of the yatra.',
     ],

@@ -6,7 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import GoogleReviews from '@/components/GoogleReviews';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
-import { YAMUNOTRI_TREK } from '@/data/trekRates';
+import { KEDARNATH_TREK, YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/char-dham-yatra');
 
@@ -431,7 +431,7 @@ export default function CharDhamYatra() {
           </div>
           <div style={{ background:'#FFF8F0', border:'1px solid #FDBA74', borderRadius:12, padding:'16px' }}>
             <div style={{ fontWeight:700, fontSize:13.5, color:'#92400E', marginBottom:10 }}>📌 Genuine optional extras (your choice)</div>
-            {['Kedarnath pony — ₹3,500–4,500 one way (booked at Gaurikund)',`Yamunotri pony — ${YAMUNOTRI_TREK.pony.oneWayLabel}`,'Kedarnath helicopter — ₹7,500–9,500 round trip (book via IRCTC)','Kedarnath overnight stay — ₹800–1,500 (GMVN tents)','Pind Daan at Brahma Kapal Badrinath — priest charges vary','Travel insurance (recommended, not included)','Personal expenses: tips, snacks, souvenirs'].map(item => (
+            {[`Kedarnath pony — ${KEDARNATH_TREK.pony.oneWayLabel} (booked at the Gaurikund counter)`,`Yamunotri pony — ${YAMUNOTRI_TREK.pony.oneWayLabel}`,'Kedarnath helicopter — ₹7,500–9,500 round trip (book via IRCTC)','Kedarnath overnight stay — ₹800–1,500 (GMVN tents)','Pind Daan at Brahma Kapal Badrinath — priest charges vary','Travel insurance (recommended, not included)','Personal expenses: tips, snacks, souvenirs'].map(item => (
               <div key={item} style={{ fontSize:13, color:'#78350F', padding:'4px 0', borderBottom:'1px solid rgba(146,64,14,0.1)', display:'flex', gap:6 }}>
                 <span style={{ color:'#E8920A', fontWeight:700, flexShrink:0 }}>+</span>{item}
               </div>

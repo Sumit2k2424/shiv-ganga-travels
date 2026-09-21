@@ -9,6 +9,7 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import { YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-with-kids');
 
@@ -24,7 +25,7 @@ const faqs = [
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra with Kids | Age & Altitude Safety' },
-  description: `Char Dham with children — doable for fit kids from about 8, ponies from ₹1,800 if they cannot walk. Gangotri needs no trek at all; altitude rules by age.`,
+  description: `Char Dham with children — doable for fit kids from about 8, ponies from ${YAMUNOTRI_TREK.pony.oneWay.split('–')[0]} if they cannot walk. Gangotri needs no trek at all; altitude rules by age.`,
   keywords: [`char dham yatra with kids ${SITE.season}`, 'char dham yatra with children', 'kedarnath yatra with family', 'char dham yatra family package', 'char dham with small children', 'kids char dham yatra altitude safety'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-with-kids` },
 };
@@ -57,7 +58,8 @@ function Schema() {
   };
   
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />  </>);
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+  </>);
 }
 
 
@@ -119,7 +121,7 @@ export default function Page() {
         <h2 id="dham-by-dham" style={h2}>Dham-by-Dham: What to Expect with Children</h2>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))', gap:12, marginBottom:28 }}>
           {[
-            { dham:'Yamunotri', age:'8+ recommended', trek:'6km from Janki Chatti', verdict:'Doable for fit children 8+. Ponies available from ₹1,800 for those who cannot walk. The trek through forest is actually the most child-friendly of all — shorter, cooler, and interesting (hot spring cooking ritual at the top is a huge hit with kids).' },
+            { dham:'Yamunotri', age:'8+ recommended', trek:'6km from Janki Chatti', verdict:'Doable for fit children 8+. Ponies available at ' + YAMUNOTRI_TREK.pony.oneWay + ' for those who cannot walk. The trek through forest is actually the most child-friendly of all — shorter, cooler, and interesting (hot spring cooking ritual at the top is a huge hit with kids).' },
             { dham:'Gangotri', age:'All ages', trek:'No trek — motor road to temple', verdict:'The easiest dham for families. No trekking at all. Children can manage this at any age. The Bhagirathi river gorge and the Harsil Valley drive are genuinely beautiful and children respond to the landscape well.' },
             { dham:'Kedarnath', age:'12+ for trek', trek:'16km trek at 3,583m', verdict:'The 16km trek at high altitude is not appropriate for children under 10. For 10–14 year olds, pony is available. For younger children, the helicopter option from Phata or Sersi (20-minute flight) is the right choice and is actually thrilling for kids.' },
             { dham:'Badrinath', age:'All ages', trek:'No trek — motor road to temple', verdict:'Like Gangotri, fully accessible by car. The Mana Village walk (3km from temple) is excellent for children — the Bhim Pul boulder bridge, the caves, and the "last dhaba before Tibet" sign all make for memorable moments.' },

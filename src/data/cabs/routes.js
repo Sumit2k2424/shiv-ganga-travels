@@ -21,7 +21,7 @@
 //    verifiedBy    optional expert id from data/cabs/experts.js
 //    lastDrivenOn  optional ISO date — only set it if it is TRUE
 
-import { YAMUNOTRI_TREK } from '../trekRates.js';
+import { YAMUNOTRI_TREK } from '../trekRates';
 
 export const ROUTES = [
   // ═══════════════ FROM HARIDWAR ═══════════════
@@ -743,7 +743,7 @@ export const ROUTES = [
     faqs: [
       ['How far is Yamunotri from Rishikesh?', 'About 197 km to Janki Chatti, 7.5 to 8 hours by cab. From there it is a 6 km trek, pony ride or palki to the temple.'],
       ['What is the Rishikesh to Yamunotri taxi fare?', 'Around ₹3,800–₹4,300 one way to Janki Chatti in a sedan, ₹6,100–₹7,500 in an Innova Crysta and ₹8,900–₹11,300 in a Tempo Traveller — slightly less than from Haridwar. Round trips with a Barkot halt are the usual booking.'],
-      ['Can the cab go all the way to Yamunotri temple?', 'No — Janki Chatti is the last motorable point. From there it is 6 km on foot, by pony (₹1,200–1,800) or palki, same as from every other starting city.'],
+      ['Can the cab go all the way to Yamunotri temple?', 'No — Janki Chatti is the last motorable point. From there it is 6 km on foot, by pony (' + YAMUNOTRI_TREK.pony.oneWay + ') or doli, same as from every other starting city.'],
     ],
   },
   {
