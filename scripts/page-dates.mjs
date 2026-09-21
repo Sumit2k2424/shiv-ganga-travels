@@ -28,7 +28,8 @@
       (langContent/<lang>.js, cabs/*.js for cab routes, press.js for /press,
       packages.js only for /packages routes). Site-wide data modules
       (packages.js elsewhere, social.js, redirects.js, languages.js,
-      experience.js, botConfig.js, clusters.js, distances.js, winterSeats.js)
+      experience.js, botConfig.js, clusters.js, distances.js, winterSeats.js,
+      trekRates.js)
       are excluded — a phone-number edit there is not a content update on
       every page that shows the phone number.
   Shared components are excluded on purpose: a footer refactor is not a
@@ -46,7 +47,7 @@ const OUT = join(ROOT, 'src', 'data', 'pageDates.json');
 const SITE_WIDE_DATA = new Set([
   'packages', 'social', 'redirects', 'languages', 'experience', 'botConfig',
   'clusters', 'distances', 'winterSeats', 'routeStops', 'packageRoute', 'reels',
-  'haridwarPlaces', 'localTaxi',
+  'haridwarPlaces', 'localTaxi', 'trekRates',
 ]);
 
 // ── 0. commits that touched pages without changing what a reader sees ──────
