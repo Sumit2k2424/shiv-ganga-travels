@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import { YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-7-days');
 
@@ -18,7 +19,8 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-7-days` },
   openGraph: { title: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice', description: 'Honest 7-day Char Dham Yatra itinerary with what is rushed, what is skipped, and when it makes sense.', url: `${SITE.baseUrl}/blog/char-dham-yatra-7-days`, type: 'article', 
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Yatra in 7 Days: Itinerary & Honest Advice' }],
-  },
+  },
+
 };
 
 function Schema() {
@@ -28,7 +30,7 @@ function Schema() {
 
 const DAY_ITINERARY = [
   { day:'Day 1', route:'Haridwar → Barkot', dist:'175km / 5–6 hrs', details:'Leave Haridwar by 5 AM. Reach Barkot by 11 AM via Mussoorie bypass. Check in. Rest. Attend Aarti at local temple. Prepare for early morning trek day tomorrow. Stay: Barkot.', warning:'175km on mountain roads — tiring but doable. Do not leave after 6 AM or you will arrive in darkness.' },
-  { day:'Day 2', route:'Yamunotri + Uttarkashi', dist:'Trek 12km + drive 120km', details:'Leave Barkot at 5 AM for Janki Chatti (30 min). Trek 6km to Yamunotri (3–4 hrs ascending). Darshan. Cook rice in Surya Kund hot spring. Trek back 6km. Drive to Uttarkashi (100km, 2.5 hrs). Stay: Uttarkashi.', warning:'Very long day. 12km trek + 3.5hrs driving. Pilgrims with knee problems must take pony (pre-book at Janki Chatti, ₹1,200 one way).' },
+  { day:'Day 2', route:'Yamunotri + Uttarkashi', dist:'Trek 12km + drive 120km', details:'Leave Barkot at 5 AM for Janki Chatti (30 min). Trek 6km to Yamunotri (3–4 hrs ascending). Darshan. Cook rice in Surya Kund hot spring. Trek back 6km. Drive to Uttarkashi (100km, 2.5 hrs). Stay: Uttarkashi.', warning:'Very long day. 12km trek + 3.5hrs driving. Pilgrims with knee problems must take pony (book at Janki Chatti, ' + YAMUNOTRI_TREK.pony.oneWayLabel + ').' },
   { day:'Day 3', route:'Gangotri + drive to Guptkashi', dist:'265km total driving', details:'Leave Uttarkashi by 6 AM. Reach Gangotri (100km, 3 hrs). Darshan at Gangotri temple. Bhagirathi river. Drive back to Uttarkashi (100km, 3 hrs) then continue to Guptkashi (180km, 5 hrs) via Rudraprayag. Very long day. Stay: Guptkashi.', warning:'This is the hardest driving day — 265km on mountain roads. Unavoidable if doing 7 days. Consider Uttarkashi overnight (Day 3) and add one day.' },
   { day:'Day 4', route:'Kedarnath trek + return', dist:'32km round trek + 15km driving', details:'Leave Guptkashi at 3 AM for Sonprayag (15km). Jeep shuttle to Gaurikund. Trek 16km to Kedarnath (5–7 hrs ascending). Darshan. Trek back 16km to Gaurikund (4–5 hrs). Return to Guptkashi. Stay: Guptkashi.', warning:'Trek starts in darkness (5 AM). Carry headtorch. Do not start after 6 AM — afternoon clouds reduce visibility. Helicopter option recommended for this day if budget allows.' },
   { day:'Day 5', route:'Guptkashi → Joshimath', dist:'260km / 7–8 hrs', details:'Long driving day through Rudraprayag, Chamoli, Pipalkoti to Joshimath. Arrive by 5–6 PM. Rest. Joshimath acclimatisation important before Badrinath. Stay: Joshimath.', warning:'Joshimath road has 30 km/h speed restriction through town. Allow extra time. Do not push this to reach Badrinath same evening — altitude sickness risk is high.' },

@@ -17,6 +17,8 @@
 //  season window here and link out to the dedicated dates page
 //  rather than baking a date that goes stale.
 
+import { YAMUNOTRI_TREK } from '../trekRates.js';
+
 export const DESTINATIONS = [
   // ───────────────── THE FOUR DHAMS ─────────────────
   {
@@ -116,7 +118,7 @@ export const DESTINATIONS = [
     season: 'Opens on Akshaya Tritiya in late April or early May; closes on Bhai Dooj after Diwali',
     intro: 'Yamunotri is the first dham in the traditional clockwise circuit and the gentlest introduction to Garhwal driving — the road climbs steadily through Chamba and Barkot with the Yamuna valley opening below you, and nothing about it is frightening. The cab reaches Janki Chatti; the last 6 km to the temple is on foot, by pony or by palki, and it is a proper climb rather than a stroll. The Surya Kund hot spring at the top is hot enough to cook rice in, which is exactly what pilgrims do as prasad.',
     gettingAround: [
-      ['Pony or palki from Janki Chatti', '₹1,200–₹1,800 for a pony, more for a palki; arranged at the Janki Chatti stand'],
+      ['Pony or palki from Janki Chatti', `${YAMUNOTRI_TREK.pony.oneWay} for a pony, ${YAMUNOTRI_TREK.doli.oneWay} for a doli, one way; arranged at the Janki Chatti stand`],
       ['On foot', '6 km, roughly three hours up and two down'],
       ['Surya Kund & Divya Shila', 'At the temple — the hot spring where prasad is cooked'],
     ],

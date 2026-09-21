@@ -21,6 +21,8 @@
 //    verifiedBy    optional expert id from data/cabs/experts.js
 //    lastDrivenOn  optional ISO date — only set it if it is TRUE
 
+import { YAMUNOTRI_TREK } from '../trekRates.js';
+
 export const ROUTES = [
   // ═══════════════ FROM HARIDWAR ═══════════════
   {
@@ -112,7 +114,7 @@ export const ROUTES = [
     faqs: [
       ['How far is Yamunotri from Haridwar by cab?', 'About 222 km to Janki Chatti, where the road ends, then a 6 km trek to the temple. By cab it is 8–9 hours of driving, so an overnight halt at Barkot is the norm.'],
       ['What is the Haridwar to Yamunotri taxi fare?', 'A one-way drop to Janki Chatti runs about ₹4,000–₹4,500 in a Swift Dzire, ₹6,500–₹8,000 in an Innova Crysta and ₹9,500–₹12,000 in a Tempo Traveller. Round-trip with a halt is quoted as a package.'],
-      ['Can the cab go all the way to Yamunotri temple?', 'No. Janki Chatti is the last motorable point. From there it is 6 km on foot, by pony (₹1,200–1,800) or palki. Your driver waits at Janki Chatti.'],
+      ['Can the cab go all the way to Yamunotri temple?', 'No. Janki Chatti is the last motorable point. From there it is 6 km on foot, by pony (' + YAMUNOTRI_TREK.pony.oneWay + ') or doli. Your driver waits at Janki Chatti.'],
     ],
   },
   {
