@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import { KEDARNATH_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/blog/how-to-reach-kedarnath');
 
@@ -156,8 +157,8 @@ export default function HowToReachKedarnath() {
             <tbody>
               {[
                 ['Trek (on foot)','16km one way','5–7 hrs up, 3–4 hrs down','Free','Fit pilgrims under 65, spiritual experience'],
-                ['Pony/Horse','16km one way','3–4 hrs up','₹3,000–5,000 one way','65+, knee problems, children'],
-                ['Palki/Doli','16km carried','4–5 hrs','₹8,000–12,000 one way','Mobility limitations, premium comfort'],
+                ['Pony/Horse','16km one way','3–4 hrs up',KEDARNATH_TREK.pony.oneWayLabel,'65+, knee problems, children'],
+                ['Palki/Doli','16km carried','4–5 hrs',KEDARNATH_TREK.palki.bandLabel,'Mobility limitations, premium comfort'],
                 ['Helicopter (Phata)','Direct fly','7 minutes','₹7,000–9,000 one way (IRCTC)','Medical conditions, premium, time-saving'],
                 ['Helicopter (Sersi)','Direct fly','12 minutes','₹7,000–9,000 one way (IRCTC)','Alternative helipad to Phata'],
               ].map(([m,d,t,c,b],i)=>(

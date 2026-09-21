@@ -5,17 +5,18 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import { KEDARNATH_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/kedarnath-yatra');
 
 export const metadata = {
   title: { absolute: 'Kedarnath Yatra Package from Haridwar | Trek & Heli' },
-  description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
+  description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ${KEDARNATH_TREK.pony.oneWay}, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
   keywords: [`Kedarnath Yatra ${SITE.season}`,'ek dham yatra package','kedarnath ek dham yatra','kedarnath package','kedarnath tour package','kedarnath trip package','kedarnath trip','kedarnath tour','kedarnath travel package','Kedarnath package from Haridwar','kedarnath package from delhi','kedarnath package from mumbai','kedarnath package from bangalore','Kedarnath trek guide',`Kedarnath helicopter booking ${SITE.season}`,'kedarnath trip cost','kedarnath yatra package','haridwar to kedarnath package','vasuki tal kedarnath','gandhi sarovar kedarnath','triyuginarayan temple kedarnath','ardh narishwar guptkashi'],
   alternates: { canonical: `${SITE.baseUrl}/kedarnath-yatra` },
   openGraph: {
     title: `Kedarnath Yatra ${SITE.season} — Complete Trek, Packages & Helicopter Guide`,
-    description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ₹3,500, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
+    description: `Complete Kedarnath Yatra guide ${SITE.season}. 16km trek, pony ${KEDARNATH_TREK.pony.oneWay}, helicopter ₹7,500, temple opens April 22. Packages from ₹5,250. Direct operator.`,
     url: `${SITE.baseUrl}/kedarnath-yatra`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Yatra Package ${SITE.season} from Haridwar — Shiv Ganga Travels` }],
@@ -78,12 +79,12 @@ export default function KedarnathYatra() {
       <article style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px 60px' }}>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '16px 20px', marginBottom: 28, display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10 }}>
-          {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹5,250/person'],['Pony one-way','₹3,500–4,500']].map(([k,v]) => (
+          {[['Altitude','3,583 metres'],['Jyotirlinga','12th of 12'],['Trek distance','16 km one way'],['Trek time','5–7 hrs ascent'],['From Haridwar','230 km · 7 hrs'],['Temple opens','April 22, 2026'],['Package from','₹5,250/person'],['Pony one-way',KEDARNATH_TREK.pony.oneWay]].map(([k,v]) => (
             <div key={k}><div style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>{k}</div><div style={{ fontWeight: 700, fontSize: 13, color: '#FFD166' }}>{v}</div></div>
           ))}
         </div>
 
-        <p style={p}><strong>Kedarnath temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for ₹3,500–4,500 one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹5,250 per person all-inclusive. <strong>Biometric registration is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
+        <p style={p}><strong>Kedarnath temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for {KEDARNATH_TREK.pony.oneWay} one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹5,250 per person all-inclusive. <strong>Biometric registration is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
         <p style={p}>Kedarnath is one of the 12 Jyotirlingas of Lord Shiva — the only one in the Himalayas. The current stone temple was built by Adi Shankaracharya in the 8th century CE on a site venerated since the Mahabharata era (the Pandavas sought Shiva's penance here after the Kurukshetra war). The structure survived the 2013 cloudburst that killed over 5,000 people in the valley — a massive boulder deflected the floodwaters around the shrine and still stands directly behind the temple. Every season, approximately 15–20 lakh pilgrims attempt the trek. On peak May days, the darshan queue stretches 4–6 hours for general pilgrims. Our VIP darshan arrangement, included in all packages, reduces this to under 30 minutes.</p>
 
         {kedarnathPkgs.length > 0 && (
@@ -137,8 +138,8 @@ export default function KedarnathYatra() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 28 }}>
           {[
             { mode:'🥾 On foot', cost:'Free', time:'5–7 hrs ascent', for:'Ages 18–65, good health', pros:'Most spiritually meaningful. See every metre. No booking. You control your pace.', cons:'Physically demanding. Rain makes trail slippery. Altitude sickness risk above 3,000m.' },
-            { mode:'🐴 Pony (ghoda)', cost:'₹3,500–4,500 one way', time:'4–5 hrs up', for:'Anyone. Best 45–70 age', pros:'Less tiring. Government-fixed rate displayed at Gaurikund. Ponies know every stone.', cons:'One way only. Book at Gaurikund counter on the day — no advance booking. Descent separately.' },
-            { mode:'🛕 Palki / Doli', cost:'₹8,000–12,000 round', time:'5–7 hrs (carried)', for:'Elderly, physically limited', pros:'Zero effort. 4–6 bearers rotate. Best non-air option for 70+ pilgrims.', cons:'Uncomfortable on steep sections. Negotiate price with registered porter cooperative before starting.' },
+            { mode:'🐴 Pony (ghoda)', cost:KEDARNATH_TREK.pony.oneWayLabel, time:'4–5 hrs up', for:'Anyone. Best 45–70 age', pros:'Less tiring. Government-fixed rate displayed at Gaurikund. Ponies know every stone.', cons:'One way only. Book at Gaurikund counter on the day — no advance booking. Descent separately.' },
+            { mode:'🛕 Palki / Doli', cost:KEDARNATH_TREK.palki.bandLabel, time:'5–7 hrs (carried)', for:'Elderly, physically limited', pros:'Zero effort. 4–6 bearers rotate. Best non-air option for 70+ pilgrims.', cons:'Uncomfortable on steep sections. Negotiate price with registered porter cooperative before starting.' },
             { mode:'🚁 Helicopter', cost:'₹7,500–9,500 round', time:'7 min each way', for:'All ages. Mandatory 70+', pros:'No altitude stress. VIP darshan included. Views of Kedarnath valley from above are extraordinary. Weather delays possible.', cons:'Weather-dependent. Book via heli.irctc.co.in — May slots sell out by February. Early booking essential.' },
           ].map(item => (
             <div key={item.mode} style={{ background: '#fff', borderRadius: 12, padding: '16px', border: '1px solid hsl(var(--border))' }}>

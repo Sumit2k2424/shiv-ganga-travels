@@ -7,10 +7,11 @@ import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import AnswerBox from '@/components/AnswerBox';
+import { KEDARNATH_TREK } from '@/data/trekRates';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony vs Helicopter | Cost & Verdict' },
-  description: `Kedarnath pony vs helicopter ${SITE.season}: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.`,
+  description: `Kedarnath pony vs helicopter ${SITE.season}: cost (pony ${KEDARNATH_TREK.pony.oneWay} vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.`,
   keywords: [`kedarnath pony vs helicopter ${SITE.season}`, 'kedarnath helicopter or pony', `kedarnath pony cost ${SITE.season}`, `kedarnath helicopter cost ${SITE.season}`, 'best way to reach kedarnath', 'kedarnath trek alternatives'],
   alternates: { canonical: `${SITE.baseUrl}/blog/kedarnath-pony-vs-helicopter` },
 };
@@ -37,7 +38,7 @@ export default function PonyVsHelicopter() {
         updated="Updated May 2026"
         readTime="6 min read"
         facts={[
-          { label:'Pony',      value:'₹3,000–5,000' },
+          { label:'Pony',      value:KEDARNATH_TREK.pony.oneWay },
           { label:'Helicopter', value:'From ₹3,043 (1-way)' },
           { label:'Trek',      value:'16 km · free' },
           { label:'Palki',     value:'4-porter doli' },
@@ -62,11 +63,11 @@ export default function PonyVsHelicopter() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": "Kedarnath pony vs helicopter 2026: cost (pony ₹3,000–5,000 vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "kedarnath-pony-vs-helicopter", "title": "Kedarnath Pony vs Helicopter: Cost & Verdict", "description": `Kedarnath pony vs helicopter 2026: cost (pony ${KEDARNATH_TREK.pony.oneWay} vs heli from ₹3,043 one-way), time, comfort and booking — which suits your age and fitness.`, "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
 
         <AnswerBox>
-          <strong>Pony costs ₹3,000–5,000 one way and takes 3 to 4 hours; helicopter costs ₹7,000–9,000 one way and takes 8 to 10 minutes.</strong> The real difference is not speed but reliability — helicopters are grounded by cloud and rain for days at a time, and the flight only runs from Phata, Sersi or Guptkashi. Ponies run in almost any weather. Many pilgrims fly up and ride or walk down, which hedges both.
+          <strong>Pony costs {KEDARNATH_TREK.pony.oneWay} one way and takes 3 to 4 hours; helicopter costs ₹7,000–9,000 one way and takes 8 to 10 minutes.</strong> The real difference is not speed but reliability — helicopters are grounded by cloud and rain for days at a time, and the flight only runs from Phata, Sersi or Guptkashi. Ponies run in almost any weather. Many pilgrims fly up and ride or walk down, which hedges both.
         </AnswerBox>
         <BlogTOC items={[
           { id:'at-a-glance', label:'At a glance — all 4 options' },
@@ -86,7 +87,7 @@ export default function PonyVsHelicopter() {
             </tr></thead>
             <tbody>
               {[
-                ['One-way cost','Free','₹3,000–5,000','₹3,043–₹6,077','₹8,000–12,000'],
+                ['One-way cost','Free',KEDARNATH_TREK.pony.oneWay,'₹3,043–₹6,077',`${KEDARNATH_TREK.palki.up} (per booking)`],
                 ['One-way time','5–7 hrs','3–4 hrs','8 minutes','4–5 hrs'],
                 ['Distance','16km on foot','16km on pony','Phata to temple','16km carried'],
                 ['Physical effort','High','Low','None','None'],
@@ -109,7 +110,7 @@ export default function PonyVsHelicopter() {
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:20 }}>
           {[
             { t:'The pony route', d:'Ponies travel the same 16km stone path as trekkers. The route is wide enough for ponies in most sections. The Kedarnath route from Gaurikund passes through Jungle Chatti (6km), Bhimbali (9km), and Kedarnath (16km). The pony typically takes 3–4 hours one way.' },
-            { t:'2026 official pony rates (government fixed)', d:'Gaurikund to Kedarnath: ₹3,000–5,000 (one way). Kedarnath to Gaurikund: ₹2,500–4,000 (one way). Children sharing adult saddle: reduced rate. Prices are regulated by the Uttarakhand government and displayed at the Gaurikund pony stand. Do not pay above the listed rate.' },
+            { t:'2026 official pony rates (government fixed)', d:`Gaurikund to Kedarnath: ${KEDARNATH_TREK.pony.oneWay} one way, ${KEDARNATH_TREK.pony.roundTrip} for both legs as two bookings. Children sharing an adult saddle pay a reduced rate. Prices are on the printed rate card at the Gaurikund prepaid counter, with a ${KEDARNATH_TREK.weight.label} surcharge. Do not pay above the card rate.` },
             { t:'Pony stand location', d:'The official pony stand is at Gaurikund (the road end, 5km from Sonprayag). You must reach Gaurikund first (by shared jeep from Sonprayag, ₹40–80 per person). The pony stand issues tickets. You are assigned a pony handler who accompanies you.' },
             { t:'Is it safe?', d:'Yes — ponies on this route have done the Kedarnath trail thousands of times. Handlers are experienced local Garhwalis. However, if you have severe vertigo or fear of heights, it may feel uncomfortable on certain steep sections. Most pilgrims find it comfortable.' },
             { t:'Physical requirements', d:'No fitness requirement — this is suitable for all ages including senior citizens. The only condition: you must be able to mount and dismount the pony (handlers assist). Maximum weight capacity is approximately 90kg.' },
@@ -152,7 +153,7 @@ export default function PonyVsHelicopter() {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(220px,100%),1fr))', gap:14, marginBottom:28 }}>
           {[
             { title:'Trek (Walk)', emoji:'🥾', for:'Fit pilgrims under 50 who want the full spiritual experience of the mountain', why:'The trek itself is part of the pilgrimage. The physical challenge creates a deeper sense of arrival at the temple.', cost:'Free', book:'No advance booking needed', col:'var(--teal)' },
-            { title:'Pony', emoji:'🐴', for:'Pilgrims of all ages who want an alternative to walking — including seniors with moderate fitness', why:'Comfortable, affordable, and still gives you the mountain experience. Most popular choice at Kedarnath.', cost:'₹3,000–5,000 one way', book:'Advance booking through operator recommended', col:'#D97706' },
+            { title:'Pony', emoji:'🐴', for:'Pilgrims of all ages who want an alternative to walking — including seniors with moderate fitness', why:'Comfortable, affordable, and still gives you the mountain experience. Most popular choice at Kedarnath.', cost:KEDARNATH_TREK.pony.oneWayLabel, book:'Book at the Gaurikund prepaid counter on the day', col:'#D97706' },
             { title:'Helicopter', emoji:'🚁', for:'Senior pilgrims (65+), those with health conditions, and time-pressed pilgrims doing same-day Kedarnath', why:'8-minute flight vs 5-hour trek. Saves the day for those who physically cannot do the trek or pony.', cost:'From ₹3,043 one way (Sersi) via IRCTC', book:'Book on irctc.co.in — slots fill fast', col:'#7C3AED' },
             { title:'Palki / Doli', emoji:'🪑', for:'Pilgrims who cannot walk or ride — very senior, disabled, or health conditions preventing both', why:'4 porters carry you in a chair. Slower than pony. More expensive. Most accessible option for those with severe mobility limitations.', cost:'₹8,000–12,000 one way', book:'Pre-book through operator', col:'var(--navy)' },
           ].map(opt=>(

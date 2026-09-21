@@ -7,6 +7,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathFareCalc from '@/components/KedarnathFareCalc';
 import { h2, h3, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import { KEDARNATH_TREK } from '@/data/trekRates';
 
 const PATH = '/kedarnath-pony-palki-kandi-rates';
 const URL = `${SITE.baseUrl}${PATH}`;
@@ -22,7 +23,7 @@ const H1 = 'Kedarnath Pony, Palki & Kandi Rates 2026: Official Price vs What Tou
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price' },
-  description: 'Pony ₹3,000–4,500, Palki ₹8,000–12,000, Kandi ₹3,500–5,000 one-way. The 2026 rate table, weight slabs, and how to avoid overpaying touts at Gaurikund.',
+  description: `Pony ${KEDARNATH_TREK.pony.oneWay}, Palki ${KEDARNATH_TREK.palki.band}, Kandi ${KEDARNATH_TREK.kandi.oneWay} one-way. The 2026 rate table, weight slabs, and how to avoid overpaying touts at Gaurikund.`,
   keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','kedarnath khachar price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
   alternates: { canonical: URL },
   openGraph: {
@@ -35,7 +36,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price',
-    description: 'Pony ₹3,000–4,500 · Palki ₹8,000–12,000 · Kandi ₹3,500–5,000. Weight slabs, prepaid counters, timings, and how not to get overcharged.',
+    description: `Pony ${KEDARNATH_TREK.pony.oneWay} · Palki ${KEDARNATH_TREK.palki.band} · Kandi ${KEDARNATH_TREK.kandi.oneWay}. Weight slabs, prepaid counters, timings, and how not to get overcharged.`,
     images: [{ url: PHOTO_CARD, alt: PHOTO_ALT }],
   },
 };
@@ -81,10 +82,10 @@ const td = { padding: '11px 14px', borderTop: '1px solid hsl(var(--border))', co
 const link = { color: 'var(--teal)', fontWeight: 600 };
 
 const FAQS = [
-  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: 'From Gaurikund, a pony runs ₹3,000–4,500 one-way (₹6,000–9,000 return), a palki (dandi) ₹8,000–9,200 up and about ₹12,000 with a same-day return, and a kandi/pitthu ₹3,500–5,000 one-way (₹7,000–9,000 return). These are the counter ranges for the 2026 season. Always match them against the printed card at Gaurikund before you pay, since the exact figure moves within that band depending on your weight and the day\'s demand.' },
+  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: `From Gaurikund, a pony runs ${KEDARNATH_TREK.pony.oneWay} one-way (${KEDARNATH_TREK.pony.roundTrip} return), a palki (dandi) ${KEDARNATH_TREK.palki.up} up and ${KEDARNATH_TREK.palki.withReturn} with a same-day return, and a kandi/pitthu ${KEDARNATH_TREK.kandi.oneWay} one-way (${KEDARNATH_TREK.kandi.roundTrip} return). These are the counter ranges for the 2026 season. Always match them against the printed card at Gaurikund before you pay, since the exact figure moves within that band depending on your weight and the day's demand.` },
   { q: 'Is pony or palki better for senior citizens?', a: 'Palki, in most cases. A pony asks the rider to balance and grip for three to four hours on a stony, switch-backed trail, which is hard on anyone with knee, hip or balance issues. A palki is carried, so there\'s no balance requirement, though it costs roughly double and takes longer. If there\'s any cardiac history, get a fitness check at the Gaurikund medical camp before booking either; the altitude, not the mode of transport, is usually the bigger risk.' },
   { q: 'How do official rates differ from what touts quote on the trail, and how do I avoid getting overcharged?', a: 'The Gaurikund and Sonprayag prepaid counters post the season\'s rate card and issue a printed, numbered receipt. Anyone who approaches you outside that counter and quotes a round number with no receipt is almost always asking above the card rate. Book only at the counter, take the receipt, and check that the registration number on it matches the animal or palki you\'re actually given. Mismatches are the most common trick.' },
-  { q: 'What is the weight limit for a pony or palki, and what is the surcharge over it?', a: 'The free limit is 75 kg. Above that, a surcharge of ₹200 applies for every additional 15 kg slab, rounded up. A 90 kg rider pays one slab (₹200 extra); a 95 kg rider still pays one slab, since 20 kg over rounds up to the next 15 kg block, not two.' },
+  { q: 'What is the weight limit for a pony or palki, and what is the surcharge over it?', a: `The free limit is ${KEDARNATH_TREK.weight.freeKg} kg. Above that, a surcharge of ₹${KEDARNATH_TREK.weight.surchargePerSlab} applies for every additional ${KEDARNATH_TREK.weight.slabKg} kg slab, rounded up. A 90 kg rider pays one slab (₹200 extra); a 95 kg rider still pays one slab, since 20 kg over rounds up to the next 15 kg block, not two.` },
   { q: 'Is Kedarnath or Char Dham registration required before booking a pony or palki?', a: 'Yes. Registration is mandatory for the Kedarnath yatra and is checked at Sonprayag before you\'re allowed onto the trail, and pony and palki operators will ask to see it too. Register in advance at registrationandtouristcare.uk.gov.in rather than relying on the on-spot biometric counters, which back up badly in peak season (May–June and September–October).' },
   { q: 'Can I go up by pony or palki and come down by helicopter (or the reverse)?', a: 'Yes, mixed itineraries are common and none of the operators mind. Book each leg separately (the heli seat through the official IRCTC Heliyatra portal, the pony or palki at the Gaurikund counter) and don\'t assume one booking covers the other. Weather cancels helicopter legs more often than it disrupts pony or palki service, so it\'s worth having the trail leg as your fallback if you\'re on a tight schedule.' },
   { q: 'What\'s the difference between a kandi (pitthu) and a palki (dandi)?', a: 'A kandi is a wicker basket strapped to a porter\'s back, and you sit inside it with knees drawn up; it suits smaller or lighter pilgrims and children. A palki (also called dandi) is a cloth seat slung on a pole and carried by four men. It\'s steadier and more comfortable over the full 16 km, and priced accordingly higher.' },
@@ -119,7 +120,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <BlogAuthor variant="top" author="dhanesh" />
 
           <AnswerBox>
-            A pony from Gaurikund to Kedarnath costs ₹3,000–4,500 one-way in 2026, a palki (dandi) ₹8,000–12,000, and a kandi (pitthu porter) ₹3,500–5,000 one-way — but only at the government prepaid counter. Off that counter, on the open trail, touts routinely ask 30–50% more from anyone who looks unsure. Everything below is how to get the counter price, not the tout price.
+            A pony from Gaurikund to Kedarnath costs {KEDARNATH_TREK.pony.oneWay} one-way in 2026, a palki (dandi) {KEDARNATH_TREK.palki.band} per booking, and a kandi (pitthu porter) {KEDARNATH_TREK.kandi.oneWay} one-way — but only at the government prepaid counter. Off that counter, on the open trail, touts routinely ask 30–50% more from anyone who looks unsure. Everything below is how to get the counter price, not the tout price.
           </AnswerBox>
 
           <p style={p}>
@@ -151,15 +152,15 @@ export default function KedarnathPonyPalkiKandiRates() {
                 <tr><th style={th}>Service</th><th style={th}>One-way</th><th style={th}>Return (same day)</th><th style={th}>Time (up)</th></tr>
               </thead>
               <tbody>
-                <tr><td style={td}><strong>Pony / Horse</strong> (ghoda, usually a mule)</td><td style={td}>₹3,000–4,500</td><td style={td}>₹6,000–9,000</td><td style={td}>3–4 hrs</td></tr>
-                <tr><td style={td}><strong>Palki / Dandi</strong> (4 bearers)</td><td style={td}>₹8,000–9,200</td><td style={td}>up to ₹12,000*</td><td style={td}>5–7 hrs</td></tr>
-                <tr><td style={td}><strong>Kandi / Pitthu</strong> (person)</td><td style={td}>₹3,500–5,000</td><td style={td}>₹7,000–9,000</td><td style={td}>6–7 hrs</td></tr>
-                <tr><td style={td}><strong>Pitthu</strong> (luggage only)</td><td style={td}>₹1,000–1,500</td><td style={td}>—</td><td style={td}>—</td></tr>
+                <tr><td style={td}><strong>Pony / Horse</strong> (ghoda, usually a mule)</td><td style={td}>{KEDARNATH_TREK.pony.oneWay}</td><td style={td}>{KEDARNATH_TREK.pony.roundTrip}</td><td style={td}>3–4 hrs</td></tr>
+                <tr><td style={td}><strong>Palki / Dandi</strong> (4 bearers)</td><td style={td}>{KEDARNATH_TREK.palki.up}</td><td style={td}>up to {KEDARNATH_TREK.palki.withReturn.replace('about ', '')}*</td><td style={td}>5–7 hrs</td></tr>
+                <tr><td style={td}><strong>Kandi / Pitthu</strong> (person)</td><td style={td}>{KEDARNATH_TREK.kandi.oneWay}</td><td style={td}>{KEDARNATH_TREK.kandi.roundTrip}</td><td style={td}>6–7 hrs</td></tr>
+                <tr><td style={td}><strong>Pitthu</strong> (luggage only)</td><td style={td}>{KEDARNATH_TREK.luggagePitthu.oneWay}</td><td style={td}>—</td><td style={td}>—</td></tr>
               </tbody>
             </table>
           </div>
           <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>
-            *A palki is priced per booking, not per leg: ₹8,000–9,200 gets you up, and a same-day return booking runs to about ₹12,000 because the four bearers wait at the top rather than taking another fare. Weight surcharge on palki and kandi: <strong>₹200 for every 15 kg over 75 kg</strong>. Sonprayag to Gaurikund by shared jeep is an extra ₹50–100 per person and isn't part of the fare — pay it at the Sonprayag stand.
+            *A palki is priced per booking, not per leg: {KEDARNATH_TREK.palki.up} gets you up, and a same-day return booking runs to {KEDARNATH_TREK.palki.withReturn} because the four bearers wait at the top rather than taking another fare. Weight surcharge on palki and kandi: <strong>{KEDARNATH_TREK.weight.label}</strong>. Sonprayag to Gaurikund by shared jeep is an extra ₹50–100 per person and isn't part of the fare — pay it at the Sonprayag stand.
           </p>
 
           <h2 style={h2}>Official rate vs what touts actually charge</h2>
@@ -253,8 +254,8 @@ export default function KedarnathPonyPalkiKandiRates() {
             Pony/palki/kandi fare is one line item in the day, not the whole cost. Roughly, for one pilgrim doing the up-and-down from Gaurikund:
           </p>
           <ul style={{ ...p, paddingLeft: 22 }}>
-            <li style={{ marginBottom: 8 }}><strong>Budget (kandi, no overnight stay):</strong> ₹7,000–9,000 kandi return + ₹500–800 meals and jeep to Gaurikund + tip. A long single-day trip, best for fit younger travellers.</li>
-            <li style={{ marginBottom: 8 }}><strong>Mid-range (pony return, one night at Kedarnath):</strong> ₹6,000–9,000 pony return + ₹1,500–3,000 guesthouse + ₹800–1,200 meals for two days + tip. The most common pattern among our own groups.</li>
+            <li style={{ marginBottom: 8 }}><strong>Budget (kandi, no overnight stay):</strong> {KEDARNATH_TREK.kandi.roundTrip} kandi return + ₹500–800 meals and jeep to Gaurikund + tip. A long single-day trip, best for fit younger travellers.</li>
+            <li style={{ marginBottom: 8 }}><strong>Mid-range (pony return, one night at Kedarnath):</strong> {KEDARNATH_TREK.pony.roundTrip} pony return + ₹1,500–3,000 guesthouse + ₹800–1,200 meals for two days + tip. The most common pattern among our own groups.</li>
             <li style={{ marginBottom: 0 }}><strong>Comfort (palki up, helicopter down):</strong> ₹8,000–9,200 palki one-way + a heli seat booked separately through IRCTC Heliyatra (fares vary by operator and season, so check the portal directly) + meals. The fastest option for anyone short on time or trail-averse.</li>
           </ul>
           <p style={p}>

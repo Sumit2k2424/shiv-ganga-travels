@@ -10,6 +10,7 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import { KEDARNATH_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/blog/kedarnath-trek-guide');
 
@@ -76,7 +77,8 @@ function Schema() {
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}/>
     </>
   );
 }
@@ -129,7 +131,7 @@ export default function KedarnathTrekGuide() {
           points={[
             <>The trek is <strong>16 km one way</strong> from Gaurikund to Kedarnath (3,583 m), typically <strong>6–9 hours</strong> up.</>,
             <>It's a <strong>steady, non-technical climb</strong> — hard on stamina, not skill. Fitness and pacing matter more than trekking experience.</>,
-            <>Choices: walk, <strong>pony</strong> (₹3,000–5,000), <strong>palki</strong>, or <strong>helicopter</strong> (₹7,500–9,500 return).</>,
+            <>Choices: walk, <strong>pony</strong> ({KEDARNATH_TREK.pony.oneWay}), <strong>palki</strong> ({KEDARNATH_TREK.palki.band} per booking), or <strong>helicopter</strong> (₹7,500–9,500 return).</>,
             <>Start by <strong>6 AM</strong> — afternoon clouds and rain build fast above the treeline.</>,
             <>Best months: <strong>May–June and mid-Sep–October</strong>. Avoid the July–August monsoon.</>,
           ]}
@@ -275,8 +277,8 @@ export default function KedarnathTrekGuide() {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(175px,1fr))', gap:12, marginBottom:24 }}>
           {[
             { mode:'On Foot 🥾', cost:'Free', time:'5–7 hrs up', who:'Fit pilgrims aged 15–65', note:'Most spiritually meaningful. Most exhausting. Most memorable.' },
-            { mode:'Pony 🐴', cost:'₹3,500–4,500', time:'4–5 hrs up', who:'Those with knee or back issues', note:'Bumpy, not comfortable for long distances. Good middle ground.' },
-            { mode:'Palki 🛕', cost:'₹8,000–12,000', time:'5–6 hrs', who:'Elderly, those who cannot walk', note:'4–6 bearers carry you. Physically hard for them — tip generously.' },
+            { mode:'Pony 🐴', cost:KEDARNATH_TREK.pony.oneWay, time:'4–5 hrs up', who:'Those with knee or back issues', note:'Bumpy, not comfortable for long distances. Good middle ground.' },
+            { mode:'Palki 🛕', cost:KEDARNATH_TREK.palki.bandLabel, time:'5–6 hrs', who:'Elderly, those who cannot walk', note:'4–6 bearers carry you. Physically hard for them — tip generously.' },
             { mode:'Helicopter 🚁', cost:'₹7,500–9,500', time:'7 minutes', who:'Medical conditions, tight schedule', note:'From Phata/Sersi/Guptkashi. Weather dependent. Book 4–6 weeks ahead.' },
           ].map(m => (
             <div key={m.mode} style={{ background:'#fff', borderRadius:10, padding:'14px', border:'1px solid hsl(var(--border))' }}>

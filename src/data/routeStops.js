@@ -1,6 +1,8 @@
 // Rich data for the interactive Char Dham route map.
 // Each stop expands into things-to-do, key points and a local tip.
 
+import { YAMUNOTRI_TREK } from './trekRates';
+
 export const ROUTE_STOPS = [
   {
     id:0, name:'Haridwar', alt:'314m', dist:'0 km', day:'Day 1', type:'base', icon:'🛕', color:'#0F2B5B',
@@ -35,7 +37,7 @@ export const ROUTE_STOPS = [
     todo:[
       ['♨️','Cook rice at Surya Kund','Pilgrims tie rice in cloth and dip it in the boiling hot spring as prasad — a ritual unique to Yamunotri.'],
       ['🙏','Divya Shila darshan','Touch the sacred rock pillar before entering the temple.'],
-      ['🐴','Pony or palki up','The trek is steep; ponies (₹1,500–2,500) and palkis make it doable for everyone.'],
+      ['🐴','Pony or palki up',`The trek is steep; ponies (${YAMUNOTRI_TREK.pony.oneWay}) and dolis make it doable for everyone.`],
     ],
     points:['6 km trek each way from Janki Chatti','Temple opens ~April 19 (Akshaya Tritiya)','Surya Kund water is genuinely boiling — handle with care'],
     tip:'Carry the rice-tying ritual cloth from below; it is the photo and memory everyone keeps.',

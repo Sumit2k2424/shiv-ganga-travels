@@ -40,7 +40,7 @@
     },
     "/blog": {
       "created": "2026-04-22",
-      "modified": "2026-09-20",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/page.js",
         "src/data/gone.js"
@@ -55,7 +55,7 @@
     },
     "/blog/bujurg-char-dham-yatra": {
       "created": "2026-05-14",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/bujurg-char-dham-yatra/page.js"
       ]
@@ -85,8 +85,7 @@
       "created": "2026-05-04",
       "modified": "2026-09-21",
       "files": [
-        "src/app/blog/char-dham-yatra-7-days/page.js",
-        "src/data/trekRates.js"
+        "src/app/blog/char-dham-yatra-7-days/page.js"
       ]
     },
     "/blog/char-dham-yatra-closing-dates-2026": {
@@ -100,8 +99,7 @@
       "created": "2026-04-22",
       "modified": "2026-09-21",
       "files": [
-        "src/app/blog/char-dham-yatra-cost/page.js",
-        "src/data/trekRates.js"
+        "src/app/blog/char-dham-yatra-cost/page.js"
       ]
     },
     "/blog/char-dham-yatra-for-heart-patients": {
@@ -120,7 +118,7 @@
     },
     "/blog/char-dham-yatra-kitna-kharcha": {
       "created": "2026-05-14",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/char-dham-yatra-kitna-kharcha/page.js"
       ]
@@ -155,7 +153,7 @@
     },
     "/blog/char-dham-yatra-with-kids": {
       "created": "2026-05-05",
-      "modified": "2026-08-23",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/char-dham-yatra-with-kids/page.js"
       ]
@@ -176,7 +174,7 @@
     },
     "/blog/how-to-reach-kedarnath": {
       "created": "2026-05-04",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/how-to-reach-kedarnath/page.js"
       ]
@@ -197,14 +195,14 @@
     },
     "/blog/kedarnath-pony-vs-helicopter": {
       "created": "2026-05-04",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/kedarnath-pony-vs-helicopter/page.js"
       ]
     },
     "/blog/kedarnath-trek-guide": {
       "created": "2026-04-22",
-      "modified": "2026-08-13",
+      "modified": "2026-09-21",
       "files": [
         "src/app/blog/kedarnath-trek-guide/page.js"
       ]
@@ -284,8 +282,7 @@
       "created": "2026-04-22",
       "modified": "2026-09-21",
       "files": [
-        "src/app/char-dham-yatra/page.js",
-        "src/data/trekRates.js"
+        "src/app/char-dham-yatra/page.js"
       ]
     },
     "/char-dham-yatra-cost-calculator": {
@@ -449,8 +446,7 @@
       "modified": "2026-09-21",
       "files": [
         "src/app/how-to-reach-yamunotri/page.js",
-        "src/data/cabs/index.js",
-        "src/data/trekRates.js"
+        "src/data/cabs/index.js"
       ]
     },
     "/joshimath-narsingh-temple": {
@@ -497,7 +493,7 @@
     },
     "/kedarnath-yatra": {
       "created": "2026-04-21",
-      "modified": "2026-08-23",
+      "modified": "2026-09-21",
       "files": [
         "src/app/kedarnath-yatra/page.js"
       ]
@@ -616,8 +612,7 @@
       "created": "2026-08-17",
       "modified": "2026-09-21",
       "files": [
-        "src/app/teen-dham-yatra/page.js",
-        "src/data/trekRates.js"
+        "src/app/teen-dham-yatra/page.js"
       ]
     },
     "/terms-and-conditions": {
@@ -650,7 +645,7 @@
     },
     "/yamunotri-yatra": {
       "created": "2026-04-24",
-      "modified": "2026-09-20",
+      "modified": "2026-09-21",
       "files": [
         "src/app/yamunotri-yatra/page.js"
       ]
