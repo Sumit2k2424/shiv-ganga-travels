@@ -83,9 +83,10 @@
     },
     "/blog/char-dham-yatra-7-days": {
       "created": "2026-05-04",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
-        "src/app/blog/char-dham-yatra-7-days/page.js"
+        "src/app/blog/char-dham-yatra-7-days/page.js",
+        "src/data/trekRates.js"
       ]
     },
     "/blog/char-dham-yatra-closing-dates-2026": {
@@ -97,9 +98,10 @@
     },
     "/blog/char-dham-yatra-cost": {
       "created": "2026-04-22",
-      "modified": "2026-08-31",
+      "modified": "2026-09-21",
       "files": [
-        "src/app/blog/char-dham-yatra-cost/page.js"
+        "src/app/blog/char-dham-yatra-cost/page.js",
+        "src/data/trekRates.js"
       ]
     },
     "/blog/char-dham-yatra-for-heart-patients": {
@@ -280,9 +282,10 @@
     },
     "/char-dham-yatra": {
       "created": "2026-04-22",
-      "modified": "2026-08-23",
+      "modified": "2026-09-21",
       "files": [
-        "src/app/char-dham-yatra/page.js"
+        "src/app/char-dham-yatra/page.js",
+        "src/data/trekRates.js"
       ]
     },
     "/char-dham-yatra-cost-calculator": {
@@ -446,7 +449,8 @@
       "modified": "2026-09-21",
       "files": [
         "src/app/how-to-reach-yamunotri/page.js",
-        "src/data/cabs/index.js"
+        "src/data/cabs/index.js",
+        "src/data/trekRates.js"
       ]
     },
     "/joshimath-narsingh-temple": {
@@ -610,9 +614,10 @@
     },
     "/teen-dham-yatra": {
       "created": "2026-08-17",
-      "modified": "2026-09-01",
+      "modified": "2026-09-21",
       "files": [
-        "src/app/teen-dham-yatra/page.js"
+        "src/app/teen-dham-yatra/page.js",
+        "src/data/trekRates.js"
       ]
     },
     "/terms-and-conditions": {
