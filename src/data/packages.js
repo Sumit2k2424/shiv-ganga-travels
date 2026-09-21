@@ -690,7 +690,7 @@ export const PACKAGES = [
     category : 'kumaon',
     name     : 'Kainchi Dham + Nainital + Mukteshwar — 3N/4D',
     subtitle : 'Ex-Kathgodam | Neem Karoli Baba Ashram · Lakes · Orchards',
-    seoHeading: 'Kainchi Dham Nainital Tour 2026 — 3N/4D with Mukteshwar',
+    seoHeading: 'Kainchi Dham, Nainital and Mukteshwar — 3N/4D from Kathgodam',
     duration : { nights:3, days:4 },
     groupSize: 'Any group size',
     difficulty:'Easy',
@@ -721,8 +721,11 @@ export const PACKAGES = [
     badge    : 'Trending',
     images   : ['kainchi','nainital'],
     tags     : ['kainchi dham','neem karoli baba','nainital','mukteshwar','kumaon','bhimtal','sattal','ashram','weekend'],
-    metaTitle: 'Kainchi Dham Nainital Tour 2026 | Price Starts at ₹6,750 | 3N/4D',
-    metaDesc : 'Kainchi Dham Nainital Tour 2026 — 3N/4D from ₹6,750/person. Direct Haridwar operator, instant confirmation.',
+    // Retitled 21 Sep 2026. The restore on 20 Sep brought back the old
+    // "Tour 2026 | Price Starts at ₹" pattern that the 17 Sep retitle had
+    // purged from every other package — this page was 410 that day.
+    metaTitle: 'Kainchi Dham Nainital Mukteshwar 3N/4D | Ex-Kathgodam',
+    metaDesc : 'Kainchi Dham darshan before the tour buses, two nights in Nainital, one in Mukteshwar. 3N/4D from Kathgodam at ₹6,750 per person, no trekking, small-group pace.',
     faqs:[
       {q:'Where is Kainchi Dham and how far is it from Nainital?', a:'Kainchi Dham sits on the Nainital–Almora highway near Bhowali, about 17 km from Nainital and 38 km from Kathgodam. Our vehicle stops there on the way up on day 1, so you do not make a separate trip for it.'},
       {q:'What is the best time to visit Kainchi Dham?', a:'March to June and September to November are comfortable. The ashram is busiest around June 15, the Pratishtha Diwas (foundation day), when the annual bhandara draws huge crowds — plan for long queues if you come that week. On normal days, early morning is calmest, which is how we schedule it.'},
