@@ -12,6 +12,7 @@ import { KEDARNATH_TREK } from '@/data/trekRates';
 const PATH = '/kedarnath-pony-palki-kandi-rates';
 const URL = `${SITE.baseUrl}${PATH}`;
 const PAGE_DATES = pageDates(PATH);
+const CARD = KEDARNATH_TREK.officialCard;
 
 // Our own photo, shot at the Gaurikund stand. The 1200×630 crop exists for
 // the social card; the 1200×800 one is the in-page figure.
@@ -86,7 +87,7 @@ const td = { padding: '11px 14px', borderTop: '1px solid hsl(var(--border))', co
 const link = { color: 'var(--teal)', fontWeight: 600 };
 
 const FAQS = [
-  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: `From Gaurikund, a pony runs ${KEDARNATH_TREK.pony.oneWay} one-way (${KEDARNATH_TREK.pony.roundTrip} return), a palki (dandi) ${KEDARNATH_TREK.palki.up} up and ${KEDARNATH_TREK.palki.withReturn} with a same-day return, and a kandi/pitthu ${KEDARNATH_TREK.kandi.oneWay} one-way (${KEDARNATH_TREK.kandi.roundTrip} return). These are the counter ranges for the 2026 season. Always match them against the printed card at Gaurikund before you pay, since the exact figure moves within that band depending on your weight and the day's demand.` },
+  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: `From Gaurikund, a pony runs ${KEDARNATH_TREK.pony.oneWay} one-way (${KEDARNATH_TREK.pony.roundTrip} return), a palki (dandi) ${KEDARNATH_TREK.palki.up} up and ${KEDARNATH_TREK.palki.withReturn} with a same-day return, and a kandi/pitthu ${KEDARNATH_TREK.kandi.oneWay} one-way (${KEDARNATH_TREK.kandi.roundTrip} return). Those are the counter ranges for the 2026 season. The district's own printed card is lower — ${CARD.gaurikundUpInr} for the Gaurikund mule leg, ${CARD.gaurikundDownInr} back down, ${CARD.sonprayagUpInr} from Sonprayag — and it is linked in full on this page. Match what you are quoted against it before you pay.` },
   { q: 'Is pony or palki better for senior citizens?', a: 'Palki, in most cases. A pony asks the rider to balance and grip for three to four hours on a stony, switch-backed trail, which is hard on anyone with knee, hip or balance issues. A palki is carried, so there\'s no balance requirement, though it costs roughly double and takes longer. If there\'s any cardiac history, get a fitness check at the Gaurikund medical camp before booking either; the altitude, not the mode of transport, is usually the bigger risk.' },
   { q: 'How do official rates differ from what touts quote on the trail, and how do I avoid getting overcharged?', a: 'The Gaurikund and Sonprayag prepaid counters post the season\'s rate card and issue a printed, numbered receipt. Anyone who approaches you outside that counter and quotes a round number with no receipt is almost always asking above the card rate. Book only at the counter, take the receipt, and check that the registration number on it matches the animal or palki you\'re actually given. Mismatches are the most common trick.' },
   { q: 'What is the weight limit for a pony or palki, and what is the surcharge over it?', a: `The free limit is ${KEDARNATH_TREK.weight.freeKg} kg. Above that, a surcharge of ₹${KEDARNATH_TREK.weight.surchargePerSlab} applies for every additional ${KEDARNATH_TREK.weight.slabKg} kg slab, rounded up. A 90 kg rider pays one slab (₹200 extra); a 95 kg rider still pays one slab, since 20 kg over rounds up to the next 15 kg block, not two.` },
@@ -108,7 +109,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
       <section style={{ background: 'linear-gradient(145deg,var(--navy) 0%,#1A3E75 60%,var(--teal) 100%)', padding: '52px 20px 40px', textAlign: 'center' }}>
         <div style={{ maxWidth: 840, margin: '0 auto' }}>
-          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>Gaurikund → Kedarnath · 16 km · Updated {PAGE_DATES.modifiedHuman}</span>
+          <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>Gaurikund → Kedarnath · 16 km trail · Updated {PAGE_DATES.modifiedHuman}</span>
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.6rem,4.2vw,2.5rem)', marginBottom: 14 }}>{H1}</h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The prepaid-counter prices for the Gaurikund trek — pony, palki, kandi and pitthu — how the counter system works, and how to pay the card rate and nothing more.</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
@@ -124,7 +125,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <BlogAuthor variant="top" author="dhanesh" />
 
           <AnswerBox>
-            A pony from Gaurikund to Kedarnath costs {KEDARNATH_TREK.pony.oneWay} one-way in 2026, a palki (dandi) {KEDARNATH_TREK.palki.band} per booking, and a kandi (pitthu porter) {KEDARNATH_TREK.kandi.oneWay} one-way — but only at the government prepaid counter. Off that counter, on the open trail, touts routinely ask 30–50% more from anyone who looks unsure. Everything below is how to get the counter price, not the tout price.
+            The Rudraprayag district's printed rate card puts a mule from Gaurikund to Kedarnath at {CARD.gaurikundUpInr} ({CARD.sonprayagUpInr} from Sonprayag, {CARD.gaurikundDownInr} back down). In practice a pony costs {KEDARNATH_TREK.pony.oneWay} one-way in 2026, a palki (dandi) {KEDARNATH_TREK.palki.band} per booking, and a kandi (pitthu porter) {KEDARNATH_TREK.kandi.oneWay} one-way at the prepaid counter — and touts on the open trail ask 30–50% more. Everything below is how to pay the card rate, not the tout rate.
           </AnswerBox>
 
           <p style={p}>
@@ -148,7 +149,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>The 2026 rate table — pony, palki, kandi</h2>
           <p style={p}>
-            These are one-way and same-day-return ranges for the full Gaurikund–Kedarnath stretch, 16 km each way. The spread within each range comes down to your weight slab and, on the trail, how much you negotiate — though at the counter there's nothing to negotiate, which is the point.
+            These are the ranges pilgrims actually pay for the Gaurikund–Kedarnath stretch — the district's printed card is lower (it is quoted in full in the next section), and the gap between the two is the spread you see here: weight slab, time of season and, on the trail, how much you negotiate. At the counter there is nothing to negotiate, which is the point.
           </p>
           <div style={tableWrap}>
             <table style={table}>
@@ -165,6 +166,29 @@ export default function KedarnathPonyPalkiKandiRates() {
           </div>
           <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>
             *A palki is priced per booking, not per leg: {KEDARNATH_TREK.palki.up} gets you up, and a same-day return booking runs to {KEDARNATH_TREK.palki.withReturn} because the four bearers wait at the top rather than taking another fare. Weight surcharge on palki and kandi: <strong>{KEDARNATH_TREK.weight.label}</strong>. Sonprayag to Gaurikund by shared jeep is an extra ₹50–100 per person and isn't part of the fare — pay it at the Sonprayag stand.
+          </p>
+
+          <h2 style={h2}>The official rate card — what the district actually printed</h2>
+          <p style={p}>
+            Every page that quotes &ldquo;official&rdquo; Kedarnath pony rates gives you a range and no document. Here is the document. The District Magistrate, Rudraprayag fixes the ghoda–khachar fares for the Sonprayag–Gaurikund–Kedarnath trail by notice each time they are revised; the current one is <strong>{CARD.notice}</strong> — <a href={CARD.url} target="_blank" rel="noopener noreferrer" style={link}>read the notice (PDF, Hindi, 4 pages)</a> on the district site. Each fare below is the mule owner&rsquo;s fee plus a ₹{CARD.arrangementFee} arrangement fee, which is the total your receipt shows.
+          </p>
+          <div style={tableWrap}>
+            <table style={table}>
+              <thead>
+                <tr><th style={th}>From</th><th style={th}>To</th><th style={th}>km</th><th style={th}>Card rate</th></tr>
+              </thead>
+              <tbody>
+                {CARD.legs.map((l) => (
+                  <tr key={l.from + l.to}><td style={td}>{l.from}</td><td style={td}>{l.to}</td><td style={td}>{l.km}</td><td style={td}><strong>₹{l.total.toLocaleString('en-IN')}</strong></td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>
+            Source: {CARD.issuer}, {CARD.notice}. The notice covers mules only; dandi and kandi rates are fixed separately by the Zila Panchayat and are not published online, which is why those rows above are ranges. No 2025 or 2026 revision has been published on the district site as of {PAGE_DATES.modifiedHuman}; the counters are working from this card.
+          </p>
+          <p style={p}>
+            Three things on the card that most rate pages get wrong. The mule leg from Gaurikund is measured at <strong>14 km</strong> to the base camp (the walking trail to the temple is the 16 km everyone quotes). The <strong>ride down is cheaper than the ride up</strong> — {CARD.gaurikundDownInr} against {CARD.gaurikundUpInr} — so a handler quoting the same figure for both legs is already above card. And the card&rsquo;s first row is <strong>Sonprayag to Kedarnath, {CARD.sonprayagUpInr}</strong>: mules do start at Sonprayag, and for anyone who cannot manage the jeep queue that is the leg to book.
           </p>
 
           <h2 style={h2}>Official rate vs what touts actually charge</h2>
@@ -202,10 +226,10 @@ export default function KedarnathPonyPalkiKandiRates() {
             Torn between the two most common choices? Our <Link prefetch={false} href="/blog/kedarnath-pony-vs-helicopter" style={link}>pony vs helicopter comparison</Link> goes through it leg by leg.
           </p>
 
-          <h2 style={h2}>Two things people search for that do not exist</h2>
+          <h2 style={h2}>Two things people search for — one exists, one doesn&rsquo;t</h2>
           <h3 style={h3}>&ldquo;Sonprayag to Kedarnath by horse&rdquo;</h3>
           <p style={p}>
-            Private vehicles stop at Sonprayag, and the shared jeep covers the last 5 km to Gaurikund. <strong>Every pony, palki and kandi starts at Gaurikund</strong>, not Sonprayag. So the real cost of &ldquo;Sonprayag to Kedarnath by horse&rdquo; is the ₹50–100 jeep fare plus the ₹3,000–4,500 ride from Gaurikund. Budget for both.
+            This one does exist, and it is the first row on the district card: <strong>Sonprayag to Kedarnath base camp, 19 km, {CARD.sonprayagUpInr}</strong>. Most pilgrims still take the shared jeep to Gaurikund (₹50–100) and book from there at {CARD.gaurikundUpInr}, because the mule stand at Gaurikund has more animals and the jeep is quicker than riding the road section. But if the jeep queue is long, or you are travelling with someone who cannot stand in it, booking the mule from Sonprayag is a legitimate, card-priced option — not a tout arrangement.
           </p>
           <h3 style={h3}>&ldquo;Gaurikund to Kedarnath by helicopter&rdquo;</h3>
           <p style={p}>
@@ -214,9 +238,9 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>Route facts at a glance</h2>
           <ul style={{ ...p, paddingLeft: 22 }}>
-            <li>Gaurikund to Kedarnath: 16 km, gaining roughly 1,600 m</li>
+            <li>Gaurikund to Kedarnath: 16 km on foot to the temple, gaining roughly 1,600 m; the mule leg is measured at 14 km to the base camp</li>
             <li>Kedarnath sits at about 3,583 m above sea level</li>
-            <li>Sonprayag to Gaurikund: a short jeep ride, not walked</li>
+            <li>Sonprayag to Gaurikund: 5 km, a shared jeep for most pilgrims; mules can also be booked from Sonprayag</li>
             <li>Trail is stone-paved most of the way, with a few steep switchback sections in the upper stretch</li>
           </ul>
           <p style={p}>
@@ -304,7 +328,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </ul>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18, lineHeight: 1.7 }}>
-            Rate ranges are the prepaid-counter figures at Gaurikund and Sonprayag for the 2026 season, as seen by our groups on the route; the printed card at the counter is final. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
+            Mule fares: {CARD.issuer}, {CARD.notice} (<a href={CARD.url} target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8' }}>PDF</a>). Palki and kandi ranges are the prepaid-counter figures at Gaurikund and Sonprayag for the 2026 season, as seen by our groups on the route; the printed card at the counter is final. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

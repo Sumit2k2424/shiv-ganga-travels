@@ -86,6 +86,43 @@ export const KEDARNATH_TREK = {
   luggagePitthu: { oneWay: band(1000, 1500) },   // porter for bags only
 
   weight: { freeKg: 75, slabKg: 15, surchargePerSlab: 200 },
+
+  // The district's own printed card — the only primary source there is.
+  // Rudraprayag DM, letter 34/यात्रा व्यवस्था सेल/2024-25, notified 26 Apr
+  // 2024 and revised 16 May 2024. Each fare is the mule-owner fee plus a
+  // ₹150 "vyavastha shulk" (arrangement fee); `total` is what the receipt
+  // says. Ghoda/khachar only — dandi and kandi are set separately by the
+  // Zila Panchayat and that notice has not been found online. No 2025 or
+  // 2026 revision has been published anywhere on rudraprayag.gov.in as of
+  // 21 Sep 2026, so the counters are still working from this card; the
+  // bands above are what pilgrims actually pay against it. Scanned copy
+  // kept at seo/sources/rudraprayag-ghoda-khachar-rates-2024-05-16.pdf.
+  officialCard: {
+    season: 2024,
+    issuer: 'District Magistrate, Rudraprayag',
+    notice: 'Letter 34/Yatra Vyavastha Cell/2024-25, revised 16 May 2024',
+    url: 'https://cdn.s3waas.gov.in/s3e6b4b2a746ed40e1af829d1fa82daa10/uploads/2024/05/2024051783.pdf',
+    listingUrl: 'https://rudraprayag.gov.in/hi/document/%E0%A4%B8%E0%A5%8B%E0%A4%A8%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AF%E0%A4%BE%E0%A4%97-%E0%A4%97%E0%A5%8C%E0%A4%B0%E0%A5%80%E0%A4%95%E0%A5%81%E0%A4%A3%E0%A5%8D%E0%A4%A1-%E0%A4%B8%E0%A5%87-%E0%A4%95-2/',
+    arrangementFee: 150,
+    legs: [
+      { from: 'Sonprayag',           to: 'Kedarnath base camp', km: 19, total: 3500 },
+      { from: 'Sonprayag',           to: 'Lincholi',            km: 16, total: 2500 },
+      { from: 'Sonprayag',           to: 'Bhimbali',            km: 11, total: 1700 },
+      { from: 'Sonprayag',           to: 'Gaurikund',           km: 5,  total: 1100 },
+      { from: 'Gaurikund',           to: 'Kedarnath base camp', km: 14, total: 3200 },
+      { from: 'Gaurikund',           to: 'Lincholi',            km: 11, total: 2400 },
+      { from: 'Gaurikund',           to: 'Bhimbali',            km: 6,  total: 1200 },
+      { from: 'Bhimbali',            to: 'Kedarnath base camp', km: 8,  total: 1800 },
+      { from: 'Kedarnath base camp', to: 'Sonprayag',           km: 19, total: 2500 },
+      { from: 'Kedarnath base camp', to: 'Gaurikund',           km: 14, total: 2300 },
+      { from: 'Kedarnath base camp', to: 'Bhimbali',            km: 8,  total: 1300 },
+      { from: 'Kedarnath base camp', to: 'Lincholi',            km: 3,  total: 1000 },
+    ],
+    // The three figures the page quotes in prose.
+    gaurikundUp:   3200,
+    gaurikundDown: 2300,
+    sonprayagUp:   3500,
+  },
 };
 
 // Ready-made phrases so pages do not each re-assemble the sentence.
@@ -94,6 +131,9 @@ for (const t of [YAMUNOTRI_TREK, KEDARNATH_TREK]) {
   t.pony.typicalOneWayInr   = inr(t.pony.typicalOneWay);
   if (t.pony.typicalRoundTrip) t.pony.typicalRoundTripInr = inr(t.pony.typicalRoundTrip);
 }
+KEDARNATH_TREK.officialCard.gaurikundUpInr   = inr(KEDARNATH_TREK.officialCard.gaurikundUp);
+KEDARNATH_TREK.officialCard.gaurikundDownInr = inr(KEDARNATH_TREK.officialCard.gaurikundDown);
+KEDARNATH_TREK.officialCard.sonprayagUpInr   = inr(KEDARNATH_TREK.officialCard.sonprayagUp);
 KEDARNATH_TREK.palki.bandLabel = `${KEDARNATH_TREK.palki.band} per booking`;
 KEDARNATH_TREK.palki.explained = `${KEDARNATH_TREK.palki.up} up, ${KEDARNATH_TREK.palki.withReturn} with a same-day return`;
 KEDARNATH_TREK.weight.label    = `₹${KEDARNATH_TREK.weight.surchargePerSlab} for every ${KEDARNATH_TREK.weight.slabKg} kg over ${KEDARNATH_TREK.weight.freeKg} kg`;
