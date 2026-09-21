@@ -472,7 +472,7 @@
     },
     "/kedarnath-pony-palki-kandi-rates": {
       "created": "2026-06-29",
-      "modified": "2026-09-19",
+      "modified": "2026-09-21",
       "files": [
         "src/app/kedarnath-pony-palki-kandi-rates/page.js"
       ]
