@@ -6,6 +6,7 @@ import ExpertNote from '@/components/ExpertNote';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import { h2, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import { YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/teen-dham-yatra');
 
@@ -130,7 +131,8 @@ function Schema() {
       { '@type': 'Offer', name: 'Teen Dham + Kedarnath Helicopter 7N/8D', price: '19900', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: `${SITE.baseUrl}/teen-dham-yatra` },
     ],
   };
-  return (<>    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
+  return (<>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bc) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }} />
   </>);
 }
@@ -489,7 +491,7 @@ export default function TeenDhamYatra() {
               title: 'Not included',
               color: '#DC2626',
               bg: 'rgba(220,38,38,0.05)',
-              points: ['Lunch (we stop at dhabas — budget ₹200–300/day)', 'Pony or palki at Yamunotri (₹1,800–3,000 each way)', 'Kedarnath helicopter, if you add that combination', 'Personal puja, VIP darshan tickets, prasad', 'Travel insurance', 'Anything caused by a road closure or landslide delay'],
+              points: ['Lunch (we stop at dhabas — budget ₹200–300/day)', `Pony (${YAMUNOTRI_TREK.pony.oneWay}) or doli (${YAMUNOTRI_TREK.doli.oneWay}) at Yamunotri, each way`, 'Kedarnath helicopter, if you add that combination', 'Personal puja, VIP darshan tickets, prasad', 'Travel insurance', 'Anything caused by a road closure or landslide delay'],
             },
           ].map(card => (
             <div key={card.title} style={{ background: card.bg, borderRadius: 12, padding: 16, border: `1px solid ${card.color}`, borderTop: `3px solid ${card.color}` }}>

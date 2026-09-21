@@ -9,6 +9,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import { YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-cost');
 
@@ -189,7 +190,7 @@ export default function CharDhamCost() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
           {[
             ['Kedarnath pony (if not trekking)','₹3,500–4,500 one way','Booked at Gaurikund counter on the day. Not bookable in advance.'],
-            ['Yamunotri pony (6km trek)','₹1,800–2,500 one way','Available at Janki Chatti. Most pilgrims above 55 use this.'],
+            ['Yamunotri pony (6km trek)',YAMUNOTRI_TREK.pony.oneWayLabel,'Available at Janki Chatti. Most pilgrims above 55 use this.'],
             ['Temple VIP darshan (Gangotri/Badrinath)','₹150–300 per person','VIP queue tokens. Your operator handles this; confirm it is included.'],
             ['Registration (2026)','FREE — ₹0','Government removed the fee for 2026. Register at registrationandtouristcare.uk.gov.in or WhatsApp +91-8394833833.'],
             ['Tapt Kund entry (Badrinath)','₹50','Small BKTC entry fee for the hot spring bath before Badrinath darshan.'],
@@ -219,14 +220,14 @@ export default function CharDhamCost() {
               title: '👨‍👩‍👧 Average family (with pony)',
               total: '₹28,000–₹33,000',
               color: '#BA7517',
-              breakdown: ['Package 9N/10D: ₹13,900', 'Kedarnath pony (1 way): ₹4,000', 'Yamunotri pony (1 way): ₹2,000', 'Registration: FREE (₹0)', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
+              breakdown: ['Package 9N/10D: ₹13,900', 'Kedarnath pony (1 way): ₹4,000', `Yamunotri pony (1 way): ${YAMUNOTRI_TREK.pony.typicalOneWayInr}`, 'Registration: FREE (₹0)', 'Train: ₹500–700', 'Personal expenses: ₹2,500'],
               note: 'Most families with mixed ages. Pony at Kedarnath and Yamunotri. Good hotels.',
             },
             {
               title: '👴 Senior / comfort traveller',
               total: '₹35,000–₹45,000',
               color: '#533AB7',
-              breakdown: ['Deluxe package 11N/12D: ₹30,000', 'Kedarnath helicopter: ₹8,500', 'Yamunotri pony RT: ₹4,500', 'Registration: FREE (₹0)', 'Flight Bangalore-Dehradun: ₹6,000', 'Personal expenses: ₹3,000'],
+              breakdown: ['Deluxe package 11N/12D: ₹30,000', 'Kedarnath helicopter: ₹8,500', `Yamunotri pony RT: ${YAMUNOTRI_TREK.pony.typicalRoundTripInr}`, 'Registration: FREE (₹0)', 'Flight Bangalore-Dehradun: ₹6,000', 'Personal expenses: ₹3,000'],
               note: 'Maximum comfort. Private vehicle, 3-star hotels, helicopter at Kedarnath. For seniors and those with health concerns.',
             },
             {

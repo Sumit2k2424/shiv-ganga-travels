@@ -6,6 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import { YAMUNOTRI_TREK } from '@/data/trekRates';
 
 const PAGE_DATES = pageDates('/how-to-reach-yamunotri');
 const PAGE = '/how-to-reach-yamunotri';
@@ -18,7 +19,7 @@ const PAGE = '/how-to-reach-yamunotri';
 
    Deepened 21 Sep 2026. The earlier version carried its own figures (250 km,
    pony ₹1,000–1,500) that disagreed with src/data/distances.js and the cab
-   route. Distances and legs now come from ROUTES['haridwar-yamunotri'] and
+   route; the pony/doli bands now come from src/data/trekRates.js. Distances and legs now come from ROUTES['haridwar-yamunotri'] and
    the fares from getRoute('haridwar-to-yamunotri-cab'), so this page and the
    cab page cannot drift apart again. */
 const R = ROUTES['haridwar-yamunotri'];
@@ -33,8 +34,8 @@ const fromCities = [
 
 const trekOptions = [
   { type:'On foot',          cost:'Free',                    time:'2.5–3 hrs up, 2 down', note:'Rock-paved path, steep from the first bend. Poles help on the descent. Start at first light.' },
-  { type:'Pony',             cost:'₹1,800–2,500 one way',    time:'2–2.5 hrs',            note:'Booked at the Janki Chatti stand, government rate card. In May–June book the evening before or expect an hour in the queue.' },
-  { type:'Doli (palanquin)', cost:'₹3,000–5,000 one way',    time:'3–4 hrs',              note:'Four porters. The option for anyone who cannot sit a pony — hip, back or balance problems.' },
+  { type:'Pony',             cost:YAMUNOTRI_TREK.pony.oneWayLabel,    time:'2–2.5 hrs',            note:'Booked at the Janki Chatti stand, government rate card. In May–June book the evening before or expect an hour in the queue.' },
+  { type:'Doli (palanquin)', cost:`${YAMUNOTRI_TREK.doli.oneWay} one way`,    time:'3–4 hrs',              note:'Four porters. The option for anyone who cannot sit a pony — hip, back or balance problems.' },
   { type:'Helicopter',       cost:'Via IRCTC HeliYatra',     time:'~1 km walk from helipad', note:'Lands at Kharsali across the river. Still a short walk or doli to the temple.' },
 ];
 
