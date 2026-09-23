@@ -14,7 +14,7 @@ const PAGE_DATES = pageDates('/blog/senior-citizen-char-dham');
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra for Senior Citizens | Full Guide' },
-  description: `There is no official age limit for Char Dham. Our Senior Special is ₹21,000 for 12N/13D with pony or palki, a medical attendant, oxygen and pulse oximeters.`,
+  description: `There is no official age limit for Char Dham. Our Senior Special is ₹21,000 for 12N/13D with the Yamunotri pony, a medical attendant, oxygen and pulse oximeters.`,
   keywords: [`senior citizen char dham yatra ${SITE.season}`, 'char dham yatra for elderly', `char dham yatra age limit ${SITE.season}`, 'char dham yatra senior citizen package', 'old age char dham yatra', 'char dham yatra 60 years'],
   alternates: { canonical: `${SITE.baseUrl}/blog/senior-citizen-char-dham` },
   openGraph: { title:`Char Dham Yatra for Senior Citizens ${SITE.season}: Guide`, description:'Can elderly people do Char Dham Yatra? Yes — with the right planning. Complete guide.', url:`${SITE.baseUrl}/blog/senior-citizen-char-dham`, type:'article', 
@@ -80,7 +80,7 @@ return (
           points={[
             <>There is <strong>no official age limit</strong> — pilgrims aged 70–80+ complete the yatra safely every year.</>,
             <>A doctor's <strong>fitness certificate</strong> is advised (and mandatory at 55+) for anyone with heart, BP or recent-surgery history.</>,
-            <>Our <strong>Senior Special Package — ₹21,000 (12N/13D)</strong> includes pony/palki, a medical attendant, oxygen, pulse oximeters and ground-floor rooms.</>,
+            <>Our <strong>Senior Special Package — ₹21,000 (12N/13D)</strong> includes the pony at Yamunotri, a medical attendant, oxygen, pulse oximeters and ground-floor rooms. A palki, or a pony at Kedarnath, is an optional extra at the official rate.</>,
             <>Only <strong>Kedarnath and Yamunotri</strong> involve a climb — pony, palki or helicopter cover both; Badrinath and Gangotri are road-accessible.</>,
             <>For high-risk conditions, the <strong>helicopter package</strong> removes almost all altitude stress.</>,
           ]}

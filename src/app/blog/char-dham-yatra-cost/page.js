@@ -110,7 +110,7 @@ export default function CharDhamCost() {
               {[
                 ['Standard 9N/10D','₹13,900','Shared Tempo Traveller','Budget/standard hotels','Breakfast + dinner'],
                 ['Deluxe 11N/12D','₹30,000','Private AC Innova Crysta','3-star hotels, better rooms','Breakfast + dinner'],
-                ['Senior Special 12N/13D','₹21,000','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Kedarnath'],
+                ['Senior Special 12N/13D','₹21,000','Private AC, ground floor priority','Ground floor preferred','Breakfast + dinner + pony at Yamunotri'],
                 ['Helicopter 5N/6D','₹2,30,000','Helicopter charter (Sahastradhara)','Luxury hotels throughout','All meals + VIP darshan all 4 dhams'],
               ].map(([pkg,price,vehicle,hotel,meals],i) => (
                 <tr key={pkg} style={{ borderBottom:'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>

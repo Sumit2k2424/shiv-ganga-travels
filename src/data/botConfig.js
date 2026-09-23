@@ -109,7 +109,7 @@ export const CUSTOM_QA = [
   // ── 12. SENIOR CITIZENS ──────────────────────────────────────
   {
     keywords: ['senior','elderly','old age','aged','parents','mata pita','grandfather','grandmother','70','75','80','health issue'],
-    answer: `👴👵 **Senior Citizen Char Dham Package — ₹21,000 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony/palki included at Yamunotri & Kedarnath\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7817996730`,
+    answer: `👴👵 **Senior Citizen Char Dham Package — ₹21,000 (12N/13D)**\n\nSpecially designed for elderly pilgrims:\n\n✅ 3 extra rest days vs. standard package\n✅ Ground-floor hotel rooms at all stops\n✅ Pony included at Yamunotri (both ways)\n➕ Palki, or a pony at Kedarnath, arranged on request at the official rate\n✅ Medical attendant with oxygen cylinder on vehicle\n✅ Pulse oximeters to monitor altitude sickness\n✅ Walking sticks & compression socks provided\n✅ Slower, comfortable pace throughout\n✅ Doctor consultation before departure\n\n💡 We have successfully guided pilgrims **aged up to 86**!\n\nFor pre-existing conditions (BP, diabetes, heart issues), please share medical history and our team will advise accordingly. 📞 +91-7817996730`,
   },
 
   // ── 13. HOW TO BOOK ──────────────────────────────────────────

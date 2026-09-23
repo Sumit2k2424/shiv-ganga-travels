@@ -145,7 +145,7 @@ export default function BujurgCharDham() {
           <div style={{ fontWeight: 800, fontSize: 20, color: '#1D9E75', marginBottom: 4 }}>₹21,000 प्रति व्यक्ति</div>
           <div style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>12 रात / 13 दिन (अतिरिक्त दिन — थकान के लिए)</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8 }}>
-            {['केदारनाथ + यमुनोत्री में घोड़ा शुल्क शामिल','Ground Floor कमरे की प्राथमिकता','पालकी सेवा (जरूरत पड़ने पर)','हर गाड़ी में ऑक्सीजन + First Aid','VIP दर्शन — लाइन में नहीं खड़ा होना','शुद्ध सात्विक भोजन (Jain option)','24/7 WhatsApp support','ऑक्सीजन + First Aid हर वाहन में'].map(f => (
+            {['यमुनोत्री में घोड़ा शुल्क शामिल (आना-जाना)','Ground Floor कमरे की प्राथमिकता','पालकी या केदारनाथ में घोड़ा — वैकल्पिक, सरकारी दर पर बुक करवाते हैं','हर गाड़ी में ऑक्सीजन + First Aid','VIP दर्शन — लाइन में नहीं खड़ा होना','शुद्ध सात्विक भोजन (Jain option)','24/7 WhatsApp support','ऑक्सीजन + First Aid हर वाहन में'].map(f => (
               <div key={f} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13 }}><span style={{ color: '#1D9E75', flexShrink: 0 }}>✅</span><span style={{ color: '#334155' }}>{f}</span></div>
             ))}
           </div>

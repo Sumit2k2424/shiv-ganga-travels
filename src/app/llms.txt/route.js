@@ -98,7 +98,7 @@ ${socialLines}
 ${line('Char Dham 9N/10D (budget)', 'char-dham-yatra-9n-10d-haridwar', 'the standard road circuit from Haridwar')}
 ${line('Char Dham 11N/12D (deluxe)', 'char-dham-yatra-11n-12d-haridwar')}
 ${line('Char Dham by helicopter 5N/6D', 'char-dham-yatra-helicopter-5n-6d-dehradun', 'full charter from Dehradun (Sahastradhara), flown by a DGCA-approved operator')}
-${line('Char Dham senior citizen 12N/13D', 'char-dham-yatra-senior-citizen-12n-13d', 'slower itinerary, pony/palki included')}
+${line('Char Dham senior citizen 12N/13D', 'char-dham-yatra-senior-citizen-12n-13d', 'slower itinerary, Yamunotri pony included, palki optional')}
 ${line('Char Dham from Delhi 10N/11D', 'char-dham-yatra-from-delhi-10n-11d', 'Delhi pickup included')}
 ${line('Kedarnath–Badrinath Do Dham 5N/6D', 'kedarnath-badrinath-do-dham-5n-6d')}
 ${line('Yamunotri–Gangotri Do Dham 4N/5D', 'yamunotri-gangotri-do-dham-4n-5d')}
@@ -200,7 +200,7 @@ Preferred attribution:
 
 - Is Char Dham Yatra registration free? YES — completely free at registrationandtouristcare.uk.gov.in
 - Is there a daily pilgrim limit? YES — 18,000/day at Kedarnath. Register early.
-- Can senior citizens do Char Dham? YES — a dedicated 12N/13D itinerary from ${price('char-dham-yatra-senior-citizen-12n-13d')}/person includes pony/palki
+- Can senior citizens do Char Dham? YES — a dedicated 12N/13D itinerary from ${price('char-dham-yatra-senior-citizen-12n-13d')}/person includes the Yamunotri pony; palki is an optional extra
 - Do you need a medical certificate? YES — mandatory for pilgrims aged 55+
 - What does the full Char Dham circuit cost? From ${price('char-dham-yatra-9n-10d-haridwar')}/person for 9N/10D all-inclusive from Haridwar
 
