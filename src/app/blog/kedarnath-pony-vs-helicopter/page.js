@@ -8,6 +8,8 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
 import AnswerBox from '@/components/AnswerBox';
 import { KEDARNATH_TREK } from '@/data/trekRates';
+import Image from 'next/image';
+import { HELIPAD_PHOTO } from '@/data/photos';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony vs Helicopter | Cost & Verdict' },
@@ -125,6 +127,13 @@ export default function PonyVsHelicopter() {
         </div>
 
         <h2 id="helicopter" style={H2}>Kedarnath Helicopter — Everything You Need to Know in 2026</h2>
+        <figure style={{ margin:'0 0 18px', borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
+          <Image src={HELIPAD_PHOTO.src} alt={HELIPAD_PHOTO.alt} width={HELIPAD_PHOTO.width} height={HELIPAD_PHOTO.height}
+            sizes="(max-width: 820px) 100vw, 780px" style={{ width:'100%', height:'auto', display:'block' }} />
+          <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
+            Where the helicopter option ends: the Kedarnath helipad, with a Pawan Hans shuttle on the pad. {HELIPAD_PHOTO.credit}
+          </figcaption>
+        </figure>
         <div style={{ background:'#FEF3E2', border:'2px solid var(--gold)', borderRadius:12, padding:'14px 18px', marginBottom:16 }}>
           <strong style={{ color:'#7B3F00' }}>⚠️ Critical 2026 Rule:</strong>
           <span style={{ color:'#7B3F00', fontSize:14 }}> All Kedarnath helicopter bookings must be made through irctc.co.in — walk-in bookings at Phata, Sersi, and Guptkashi helipads are not permitted. Shiv Ganga Travels assists with IRCTC booking for all our pilgrims.</span>

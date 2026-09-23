@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE } from '@/data/packages';
+import { HELIPAD_PHOTO } from '@/data/photos';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
@@ -21,13 +23,13 @@ export const metadata = {
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
     url: `${SITE.baseUrl}/blog/kedarnath-helicopter-booking`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Kedarnath Helicopter Booking ${SITE.season} — Price & Guide | Shiv Ganga Travels` }],
+    images: [{ url: HELIPAD_PHOTO.src, width: HELIPAD_PHOTO.width, height: HELIPAD_PHOTO.height, alt: HELIPAD_PHOTO.alt }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `Kedarnath Helicopter Booking ${SITE.season} — Complete Guide`,
     description: 'How to book Kedarnath helicopter — prices, helipads, tips.',
-    images: [{ url: '/opengraph-image', alt: `Kedarnath Helicopter Booking ${SITE.season} — Complete Guide | Shiv Ganga Travels` }],
+    images: [{ url: HELIPAD_PHOTO.src, alt: HELIPAD_PHOTO.alt }],
   },
 };
 
@@ -49,7 +51,13 @@ function Schema() {
         jobTitle: 'Founder & Director, Shiv Ganga Travels',
         url: `${SITE.baseUrl}/about`,
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
-      }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl }, datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
+      }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
+      // Our own photo. GSC's Image Metadata report wants the four licensing fields.
+      image: { '@type':'ImageObject', url:`${SITE.baseUrl}${HELIPAD_PHOTO.src}`, width:HELIPAD_PHOTO.width, height:HELIPAD_PHOTO.height, caption:HELIPAD_PHOTO.alt,
+        dateCreated:HELIPAD_PHOTO.dateISO, contentLocation:{ '@type':'Place', name:'Kedarnath helipad, Rudraprayag district, Uttarakhand' },
+        creditText:SITE.name, creator:{ '@id':`${SITE.baseUrl}/#organization` }, copyrightHolder:{ '@id':`${SITE.baseUrl}/#organization` },
+        copyrightNotice:`© ${SITE.season} ${SITE.name}`, license:`${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage:`${SITE.baseUrl}/contact` },
+      datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
   
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/></>);
 }
@@ -104,6 +112,14 @@ export default function KedarnathHelicopterBooking() {
           <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
           <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath helicopters fly from three helipads — <strong>Sersi, Phata and Guptkashi</strong> — reaching the temple in 7–10 minutes. Official 2026 round-trip fares are <strong>₹6,390 (Sersi), ₹10,164 (Phata) and ₹12,762 (Guptkashi)</strong> per person, plus a ₹300 IRCTC fee and 18% GST. Tickets are booked only on the IRCTC HeliYatra portal (heliyatra.irctc.co.in) and require a valid Char Dham registration. Shiv Ganga Travels arranges the road journey, registration and morning-slot guidance around your flight.</p>
         </div>
+
+        <figure style={{ margin:'0 0 24px', borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
+          <Image src={HELIPAD_PHOTO.src} alt={HELIPAD_PHOTO.alt} width={HELIPAD_PHOTO.width} height={HELIPAD_PHOTO.height}
+            sizes="(max-width: 820px) 100vw, 780px" style={{ width:'100%', height:'auto', display:'block' }} />
+          <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
+            A Pawan Hans helicopter (VT-PHU) on the Kedarnath helipad. IRCTC assigns the operator for each flight, so yours may be a different company. {HELIPAD_PHOTO.credit}
+          </figcaption>
+        </figure>
 
         <BlogTOC items={[
           { id:'price',       label:'Official IRCTC price 2026' },
