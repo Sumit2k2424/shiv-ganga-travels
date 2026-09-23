@@ -33,7 +33,7 @@ export const DESTINATIONS = [
     intro: 'Kedarnath is the hardest of the four dhams to reach and the one people most want to. No road goes there. Private vehicles stop at Sonprayag, a timed police-run shuttle covers the last 5 km to Gaurikund, and from Gaurikund it is 16 km uphill on foot, by pony, by palki, or a helicopter hop from Phata or Guptkashi. Every cab route to Kedarnath on this site therefore ends at Sonprayag or Gaurikund — anyone quoting you a taxi "to Kedarnath temple" is quoting you a taxi to Gaurikund and hoping you do not ask.',
     gettingAround: [
       ['Pony or khachar from Gaurikund', `${KEDARNATH_TREK.pony.oneWay} each way depending on season; book at the Gaurikund prepaid counter`],
-      ['Palki (four bearers)', `${KEDARNATH_TREK.palki.band} per booking — ${KEDARNATH_TREK.palki.explained}; the usual choice for senior pilgrims`],
+      ['Palki (four bearers)', `${KEDARNATH_TREK.palki.explained} (Zila Panchayat 2026 board); the usual choice for senior pilgrims`],
       ['Helicopter from Phata, Sersi or Guptkashi', 'Roughly ₹8,000 return per person; slots sell out weeks ahead and grounds instantly in bad weather'],
       ['On foot', '16 km, six to nine hours up. Start by 4 AM to be back down the same day, or stay overnight at Kedarnath'],
     ],

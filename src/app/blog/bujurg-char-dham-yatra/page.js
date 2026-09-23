@@ -101,7 +101,7 @@ export default function BujurgCharDham() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 12, marginBottom: 24 }}>
           {[
             { icon:'🐴', title:'घोड़ा / खच्चर', cost:KEDARNATH_TREK.pony.oneWay, dir:'एक तरफ', note:'सबसे किफायती। पीक में सुबह 5:30 बजे बुक कराएं।', color:'#1D9E75' },
-            { icon:'🛕', title:'पालकी (डंडी)', cost:KEDARNATH_TREK.palki.band, dir:'प्रति बुकिंग (ऊपर, या ऊपर + उसी दिन वापसी)', note:'4-6 व्यक्ति उठाते हैं। जिन्हें घोड़े पर डर लगे।', color:'#BA7517' },
+            { icon:'🛕', title:'पालकी (डंडी)', cost:KEDARNATH_TREK.palki.up, dir:'एक तरफ, वज़न के हिसाब से (ज़िला पंचायत की 2026 दर)', note:'4-6 व्यक्ति उठाते हैं। जिन्हें घोड़े पर डर लगे।', color:'#BA7517' },
             { icon:'🚁', title:'हेलिकॉप्टर', cost:'₹7,500–₹9,500', dir:'एक तरफ', note:'7 मिनट में केदारनाथ। ह्रदय रोगियों के लिए सबसे सुरक्षित।', color:'#533AB7' },
           ].map(({ icon, title, cost, dir, note, color }) => (
             <div key={title} style={{ background: '#fff', borderRadius: 14, padding: '18px', border: '1px solid hsl(var(--border))', borderTop: `3px solid ${color}` }}>

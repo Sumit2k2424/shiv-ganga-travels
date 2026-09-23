@@ -87,7 +87,7 @@ export default function PonyVsHelicopter() {
             </tr></thead>
             <tbody>
               {[
-                ['One-way cost','Free',KEDARNATH_TREK.pony.oneWay,'₹3,043–₹6,077',`${KEDARNATH_TREK.palki.up} (per booking)`],
+                ['One-way cost','Free',KEDARNATH_TREK.pony.oneWay,'₹3,043–₹6,077',`${KEDARNATH_TREK.palki.up} (by weight)`],
                 ['One-way time','5–7 hrs','3–4 hrs','8 minutes','4–5 hrs'],
                 ['Distance','16km on foot','16km on pony','Phata to temple','16km carried'],
                 ['Physical effort','High','Low','None','None'],
@@ -110,7 +110,7 @@ export default function PonyVsHelicopter() {
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:20 }}>
           {[
             { t:'The pony route', d:'Ponies travel the same 16km stone path as trekkers. The route is wide enough for ponies in most sections. The Kedarnath route from Gaurikund passes through Jungle Chatti (6km), Bhimbali (9km), and Kedarnath (16km). The pony typically takes 3–4 hours one way.' },
-            { t:'2026 official pony rates (government fixed)', d:`Gaurikund to Kedarnath: ${KEDARNATH_TREK.pony.oneWay} one way, ${KEDARNATH_TREK.pony.roundTrip} for both legs as two bookings. Children sharing an adult saddle pay a reduced rate. Prices are on the printed rate card at the Gaurikund prepaid counter, with a ${KEDARNATH_TREK.weight.label} surcharge. Do not pay above the card rate.` },
+            { t:'2026 official pony rates (government fixed)', d:`The district's printed mule card puts Gaurikund to the Kedarnath base camp at ${KEDARNATH_TREK.officialCard.gaurikundUpInr} and the ride back down at ${KEDARNATH_TREK.officialCard.gaurikundDownInr}, one fare per leg with no weight surcharge. On the trail pilgrims usually pay ${KEDARNATH_TREK.pony.oneWay} one way, ${KEDARNATH_TREK.pony.roundTrip} for both legs as two bookings. The card is posted at the Gaurikund prepaid counter. Do not pay above it.` },
             { t:'Pony stand location', d:'The official pony stand is at Gaurikund (the road end, 5km from Sonprayag). You must reach Gaurikund first (by shared jeep from Sonprayag, ₹40–80 per person). The pony stand issues tickets. You are assigned a pony handler who accompanies you.' },
             { t:'Is it safe?', d:'Yes — ponies on this route have done the Kedarnath trail thousands of times. Handlers are experienced local Garhwalis. However, if you have severe vertigo or fear of heights, it may feel uncomfortable on certain steep sections. Most pilgrims find it comfortable.' },
             { t:'Physical requirements', d:'No fitness requirement — this is suitable for all ages including senior citizens. The only condition: you must be able to mount and dismount the pony (handlers assist). Maximum weight capacity is approximately 90kg.' },
@@ -155,7 +155,7 @@ export default function PonyVsHelicopter() {
             { title:'Trek (Walk)', emoji:'🥾', for:'Fit pilgrims under 50 who want the full spiritual experience of the mountain', why:'The trek itself is part of the pilgrimage. The physical challenge creates a deeper sense of arrival at the temple.', cost:'Free', book:'No advance booking needed', col:'var(--teal)' },
             { title:'Pony', emoji:'🐴', for:'Pilgrims of all ages who want an alternative to walking — including seniors with moderate fitness', why:'Comfortable, affordable, and still gives you the mountain experience. Most popular choice at Kedarnath.', cost:KEDARNATH_TREK.pony.oneWayLabel, book:'Book at the Gaurikund prepaid counter on the day', col:'#D97706' },
             { title:'Helicopter', emoji:'🚁', for:'Senior pilgrims (65+), those with health conditions, and time-pressed pilgrims doing same-day Kedarnath', why:'8-minute flight vs 5-hour trek. Saves the day for those who physically cannot do the trek or pony.', cost:'From ₹3,043 one way (Sersi) via IRCTC', book:'Book on irctc.co.in — slots fill fast', col:'#7C3AED' },
-            { title:'Palki / Doli', emoji:'🪑', for:'Pilgrims who cannot walk or ride — very senior, disabled, or health conditions preventing both', why:'4 porters carry you in a chair. Slower than pony. More expensive. Most accessible option for those with severe mobility limitations.', cost:'₹8,000–12,000 one way', book:'Pre-book through operator', col:'var(--navy)' },
+            { title:'Palki / Doli', emoji:'🪑', for:'Pilgrims who cannot walk or ride — very senior, disabled, or health conditions preventing both', why:'4 porters carry you in a chair. Slower than pony. More expensive. Most accessible option for those with severe mobility limitations.', cost:KEDARNATH_TREK.palki.bandLabel, book:'Prepaid counter at Gaurikund', col:'var(--navy)' },
           ].map(opt=>(
             <div key={opt.title} style={{ border:`2px solid ${opt.col}`, borderRadius:14, padding:'16px', background:'#fff' }}>
               <div style={{ fontSize:28, marginBottom:8 }}>{opt.emoji}</div>

@@ -131,7 +131,7 @@ export default function KedarnathTrekGuide() {
           points={[
             <>The trek is <strong>16 km one way</strong> from Gaurikund to Kedarnath (3,583 m), typically <strong>6–9 hours</strong> up.</>,
             <>It's a <strong>steady, non-technical climb</strong> — hard on stamina, not skill. Fitness and pacing matter more than trekking experience.</>,
-            <>Choices: walk, <strong>pony</strong> ({KEDARNATH_TREK.pony.oneWay}), <strong>palki</strong> ({KEDARNATH_TREK.palki.band} per booking), or <strong>helicopter</strong> (₹7,500–9,500 return).</>,
+            <>Choices: walk, <strong>pony</strong> ({KEDARNATH_TREK.pony.oneWay}), <strong>palki</strong> ({KEDARNATH_TREK.palki.bandLabel}), or <strong>helicopter</strong> (₹7,500–9,500 return).</>,
             <>Start by <strong>6 AM</strong> — afternoon clouds and rain build fast above the treeline.</>,
             <>Best months: <strong>May–June and mid-Sep–October</strong>. Avoid the July–August monsoon.</>,
           ]}

@@ -7,12 +7,32 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathFareCalc from '@/components/KedarnathFareCalc';
 import { h2, h3, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
-import { KEDARNATH_TREK } from '@/data/trekRates';
+import { KEDARNATH_TREK, ZP_DANDI_2026 as DANDI, ZP_KANDI_2026 as KANDI } from '@/data/trekRates';
 
 const PATH = '/kedarnath-pony-palki-kandi-rates';
 const URL = `${SITE.baseUrl}${PATH}`;
 const PAGE_DATES = pageDates(PATH);
 const CARD = KEDARNATH_TREK.officialCard;
+const inr = (n) => '₹' + n.toLocaleString('en-IN');
+const dandi = (id) => DANDI.routes.find((r) => r.id === id).totals;
+const kandi = (id) => KANDI.routes.find((r) => r.id === id).totals;
+const MULE_BOTH_WAYS = inr(CARD.gaurikundUp + CARD.gaurikundDown);
+// What a same-day return saves against two one-way dandi fares, lightest and heaviest slab.
+const RETURN_SAVES = [0, 4].map((i) => inr(dandi('up')[i] + dandi('down')[i] - dandi('return')[i]));
+
+// The Zila Panchayat's 2026 boards, photographed by our team on the route.
+const BOARD_PHOTOS = {
+  dandi: {
+    src: DANDI.photo,
+    alt: 'Zila Panchayat Rudraprayag board of 2026 dandi (doli) rates for the Gaurikund–Kedarnath footpath, listing fares by route across five passenger-weight slabs from 0–60 kg to 101–120 kg',
+    caption: 'The 2026 dandi (doli) board, Zila Panchayat Rudraprayag. The table below is transcribed from it. Photo: Shiv Ganga Travels, 2026 season.',
+  },
+  kandi: {
+    src: KANDI.photo,
+    alt: 'Zila Panchayat Rudraprayag board of 2026 kandi rates for the Gaurikund–Kedarnath footpath, listing fares for up to 25 kg and up to 50 kg, hung above the dandi–kandi prepaid counter',
+    caption: 'The 2026 kandi board, hung above the dandi–kandi prepaid counter (the sign at the bottom of the frame). Photo: Shiv Ganga Travels, 2026 season.',
+  },
+};
 
 // Our own photo, shot at the Gaurikund stand. The 1200×630 crop exists for
 // the social card; the 1200×800 one is the in-page figure.
@@ -24,12 +44,12 @@ const H1 = 'Kedarnath Pony, Palki & Kandi Rates 2026: Official Price vs What Tou
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price' },
-  description: `Pony ${KEDARNATH_TREK.pony.oneWay}, Palki ${KEDARNATH_TREK.palki.band}, Kandi ${KEDARNATH_TREK.kandi.oneWay} one-way. The 2026 rate table, weight slabs, and how to avoid overpaying touts at Gaurikund.`,
-  keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','kedarnath khachar price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath porter charges'],
+  description: `Official 2026 rates, photographed on the trail: palki (dandi) ${KEDARNATH_TREK.palki.up} by weight, kandi ${KEDARNATH_TREK.kandi.oneWay}, mule ${CARD.gaurikundUpInr} from Gaurikund. Every weight slab in full.`,
+  keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','kedarnath khachar price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath doli rate 2026','kedarnath kandi rate 2026','kedarnath porter charges'],
   alternates: { canonical: URL },
   openGraph: {
     title: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price',
-    description: 'Real 2026 rates for pony, palki and kandi from Gaurikund to Kedarnath, plus the prepaid-counter system that keeps you from being overcharged.',
+    description: 'The Zila Panchayat’s 2026 dandi and kandi boards, photographed and transcribed in full, the district mule card, and the prepaid-counter system that keeps you from being overcharged.',
     url: URL,
     type: 'article',
     images: [{ url: PHOTO_CARD, width: 1200, height: 630, alt: PHOTO_ALT }],
@@ -37,7 +57,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price',
-    description: `Pony ${KEDARNATH_TREK.pony.oneWay} · Palki ${KEDARNATH_TREK.palki.band} · Kandi ${KEDARNATH_TREK.kandi.oneWay}. Weight slabs, prepaid counters, timings, and how not to get overcharged.`,
+    description: `Palki ${KEDARNATH_TREK.palki.up} · Kandi ${KEDARNATH_TREK.kandi.oneWay} · Mule ${CARD.gaurikundUpInr}. The 2026 boards, every weight slab, and how not to get overcharged.`,
     images: [{ url: PHOTO_CARD, alt: PHOTO_ALT }],
   },
 };
@@ -53,15 +73,17 @@ function Schema() {
   ] };
   // GSC's Image Metadata report (19 Sep 2026) wants the four licensing fields
   // on any ImageObject; without them it files a non-critical issue per image.
-  const image = { '@type': 'ImageObject', '@id': `${URL}#photo`, url: `${SITE.baseUrl}${PHOTO_WIDE}`, width: 1200, height: 800, caption: PHOTO_ALT,
-    creditText: SITE.name, creator: { '@id': `${SITE.baseUrl}/#organization` }, copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` },
+  const licensing = { creditText: SITE.name, creator: { '@id': `${SITE.baseUrl}/#organization` }, copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` },
     copyrightNotice: `© ${SITE.season} ${SITE.name}`, license: `${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage: `${SITE.baseUrl}/contact` };
+  const image = { '@type': 'ImageObject', '@id': `${URL}#photo`, url: `${SITE.baseUrl}${PHOTO_WIDE}`, width: 1200, height: 800, caption: PHOTO_ALT, ...licensing };
+  const boards = Object.entries(BOARD_PHOTOS).map(([k, b]) => ({ '@type': 'ImageObject', '@id': `${URL}#${k}-board`,
+    url: `${SITE.baseUrl}${b.src}`, width: 1280, height: 960, caption: b.alt, ...licensing }));
   const article = { '@context': 'https://schema.org', '@type': 'Article', '@id': `${URL}#article`,
     headline: H1,
     description: metadata.description,
     url: URL,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${URL}#webpage` },
-    image: [image],
+    image: [image, ...boards],
     inLanguage: 'en-IN',
     datePublished: PAGE_DATES.createdISO,
     dateModified: PAGE_DATES.modifiedISO,
@@ -85,16 +107,33 @@ const table = { width: '100%', borderCollapse: 'collapse', minWidth: 560, fontSi
 const th = { textAlign: 'left', padding: '11px 14px', background: 'var(--navy)', color: '#fff', fontWeight: 700, fontSize: 12.5, whiteSpace: 'nowrap' };
 const td = { padding: '11px 14px', borderTop: '1px solid hsl(var(--border))', color: '#334155', verticalAlign: 'top' };
 const link = { color: 'var(--teal)', fontWeight: 600 };
+const num = { ...td, whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' };
+const sub = { display: 'block', fontSize: 12, color: '#64748b', marginTop: 2 };
+const note = { ...p, fontSize: 13.5, color: '#64748b' };
+
+function BoardFigure({ photo }) {
+  return (
+    <figure style={{ margin: '18px 0 20px', borderRadius: 14, overflow: 'hidden', border: '1px solid hsl(var(--border))' }}>
+      <a href={photo.src} target="_blank" rel="noopener" style={{ display: 'block' }}>
+        <Image src={photo.src} alt={photo.alt} width={1280} height={960}
+          sizes="(max-width: 820px) 100vw, 780px" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      </a>
+      <figcaption style={{ padding: '10px 14px', fontSize: 12.5, color: '#64748b', background: '#F8FAFC' }}>
+        {photo.caption} <a href={photo.src} target="_blank" rel="noopener" style={link}>Open full size</a>
+      </figcaption>
+    </figure>
+  );
+}
 
 const FAQS = [
-  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: `From Gaurikund, a pony runs ${KEDARNATH_TREK.pony.oneWay} one-way (${KEDARNATH_TREK.pony.roundTrip} return), a palki (dandi) ${KEDARNATH_TREK.palki.up} up and ${KEDARNATH_TREK.palki.withReturn} with a same-day return, and a kandi/pitthu ${KEDARNATH_TREK.kandi.oneWay} one-way (${KEDARNATH_TREK.kandi.roundTrip} return). Those are the counter ranges for the 2026 season. The district's own printed card is lower — ${CARD.gaurikundUpInr} for the Gaurikund mule leg, ${CARD.gaurikundDownInr} back down, ${CARD.sonprayagUpInr} from Sonprayag — and it is linked in full on this page. Match what you are quoted against it before you pay.` },
-  { q: 'Is pony or palki better for senior citizens?', a: 'Palki, in most cases. A pony asks the rider to balance and grip for three to four hours on a stony, switch-backed trail, which is hard on anyone with knee, hip or balance issues. A palki is carried, so there\'s no balance requirement, though it costs roughly double and takes longer. If there\'s any cardiac history, get a fitness check at the Gaurikund medical camp before booking either; the altitude, not the mode of transport, is usually the bigger risk.' },
+  { q: 'What are the current pony, palki and kandi rates for Kedarnath in 2026?', a: `The Zila Panchayat Rudraprayag's 2026 boards put a dandi (palki) from Gaurikund to Kedarnath at ${KEDARNATH_TREK.palki.up} one way, depending on the passenger's weight (${KEDARNATH_TREK.palki.withReturn} for a same-day return), and a kandi at ${inr(kandi('up')[0])} up to 25 kg or ${inr(kandi('up')[1])} up to 50 kg. A mule is ${CARD.gaurikundUpInr} on the district card (${CARD.sonprayagUpInr} from Sonprayag, ${CARD.gaurikundDownInr} back down), though pilgrims usually end up paying ${KEDARNATH_TREK.pony.oneWay}. Both boards are photographed and transcribed in full on this page. Match what you are quoted against them before you pay.` },
+  { q: 'Is pony or palki better for senior citizens?', a: 'Palki, in most cases. A pony asks the rider to balance and grip for three to four hours on a stony, switch-backed trail, which is hard on anyone with knee, hip or balance issues. A palki is carried, so there\'s no balance requirement, though it costs about three times the mule fare and takes longer. If there\'s any cardiac history, get a fitness check at the Gaurikund medical camp before booking either; the altitude, not the mode of transport, is usually the bigger risk.' },
   { q: 'How do official rates differ from what touts quote on the trail, and how do I avoid getting overcharged?', a: 'The Gaurikund and Sonprayag prepaid counters post the season\'s rate card and issue a printed, numbered receipt. Anyone who approaches you outside that counter and quotes a round number with no receipt is almost always asking above the card rate. Book only at the counter, take the receipt, and check that the registration number on it matches the animal or palki you\'re actually given. Mismatches are the most common trick.' },
-  { q: 'What is the weight limit for a pony or palki, and what is the surcharge over it?', a: `The free limit is ${KEDARNATH_TREK.weight.freeKg} kg. Above that, a surcharge of ₹${KEDARNATH_TREK.weight.surchargePerSlab} applies for every additional ${KEDARNATH_TREK.weight.slabKg} kg slab, rounded up. A 90 kg rider pays one slab (₹200 extra); a 95 kg rider still pays one slab, since 20 kg over rounds up to the next 15 kg block, not two.` },
+  { q: 'Does weight change the pony, palki or kandi fare?', a: `For a palki and a kandi, yes; for a mule, no. The mule card sets one fare per leg with no weight slabs. The 2026 dandi (palki) board has ${KEDARNATH_TREK.palki.slabLabel}: each slab up to 100 kg adds ₹1,000 to the fare, and the step to 101–120 kg adds ₹3,000. The kandi board has two slabs, up to 25 kg and up to 50 kg, and nothing above that, so anyone heavier goes by dandi.` },
   { q: 'Is Kedarnath or Char Dham registration required before booking a pony or palki?', a: 'Yes. Registration is mandatory for the Kedarnath yatra and is checked at Sonprayag before you\'re allowed onto the trail, and pony and palki operators will ask to see it too. Register in advance at registrationandtouristcare.uk.gov.in rather than relying on the on-spot biometric counters, which back up badly in peak season (May–June and September–October).' },
   { q: 'Can I go up by pony or palki and come down by helicopter (or the reverse)?', a: 'Yes, mixed itineraries are common and none of the operators mind. Book each leg separately (the heli seat through the official IRCTC Heliyatra portal, the pony or palki at the Gaurikund counter) and don\'t assume one booking covers the other. Weather cancels helicopter legs more often than it disrupts pony or palki service, so it\'s worth having the trail leg as your fallback if you\'re on a tight schedule.' },
-  { q: 'What\'s the difference between a kandi (pitthu) and a palki (dandi)?', a: 'A kandi is a wicker basket strapped to a porter\'s back, and you sit inside it with knees drawn up; it suits smaller or lighter pilgrims and children. A palki (also called dandi) is a cloth seat slung on a pole and carried by four men. It\'s steadier and more comfortable over the full 16 km, and priced accordingly higher.' },
-  { q: 'Do rates change during peak season?', a: 'The printed card rate doesn\'t move; it holds for the season. What changes in peak weeks (May–June, and again around the opening and closing dates) is availability: fewer animals and porters are free, so touts get more aggressive about quoting above-card rates to travellers who show up without a booking. Reaching Gaurikund early morning gets you the printed rate with far less hassle.' },
+  { q: 'What\'s the difference between a kandi (pitthu) and a palki (dandi)?', a: `A kandi is a wicker basket strapped to one porter's back, and you sit inside it with knees drawn up. The 2026 board only prices it up to ${KANDI.maxKg} kg, so it is for children and very light adults. A palki (also called dandi or doli) is a seat slung on poles and carried by four men. It's steadier and more comfortable over the full 16 km, and it costs more: ${inr(dandi('up')[0])} and up for the climb, against the kandi's ${KEDARNATH_TREK.kandi.oneWay}.` },
+  { q: 'Do rates change during peak season?', a: 'No. The 2026 boards are printed "for the 2026 yatra season" and hold for all of it. What changes in peak weeks (May–June, and again around the opening and closing dates) is availability: fewer animals and porters are free, so touts get more aggressive about quoting above the board to travellers who show up without a booking. Reaching Gaurikund early morning gets you the printed rate with far less hassle.' },
   { q: 'How much should I tip the pony or palki handler?', a: 'There\'s no fixed rule, but ₹100–200 for a pony handler and ₹200–400 split among a palki\'s four bearers is standard for good service on a hard trail. Tip at the end, once you\'re safely at the temple or back at Gaurikund, not in advance, whatever anyone tells you about it being customary.' },
   { q: 'What happens if I\'ve booked and the weather turns bad?', a: 'Pony and palki operations rarely stop for weather short of an active landslide warning or a trail closure ordered by the district administration, unlike helicopters, which ground easily. If the trail is officially closed, the prepaid counter holds your booking or refunds it; ask for a written note on your receipt if you\'re rebooking for the next day.' },
   { q: 'Is there a group discount for pony or palki bookings?', a: 'Not at the government counter. Rates are per person, per animal or palki, fixed by the printed card regardless of group size. Some private operators outside the counter system offer bundled family rates, but that\'s exactly the arrangement that tends to skip the receipt and registration checks this page keeps telling you to insist on.' },
@@ -111,7 +150,7 @@ export default function KedarnathPonyPalkiKandiRates() {
         <div style={{ maxWidth: 840, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>Gaurikund → Kedarnath · 16 km trail · Updated {PAGE_DATES.modifiedHuman}</span>
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.6rem,4.2vw,2.5rem)', marginBottom: 14 }}>{H1}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The prepaid-counter prices for the Gaurikund trek — pony, palki, kandi and pitthu — how the counter system works, and how to pay the card rate and nothing more.</p>
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The Zila Panchayat's 2026 dandi and kandi boards, photographed on the trail and transcribed in full, the district's mule card, and how to pay the printed rate and nothing more.</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
             <a href={wa('Namaste! I want help planning Kedarnath — pony/palki and a yatra package.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Get a Free Quote</a>
             <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
@@ -125,7 +164,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <BlogAuthor variant="top" author="dhanesh" />
 
           <AnswerBox>
-            The Rudraprayag district's printed rate card puts a mule from Gaurikund to Kedarnath at {CARD.gaurikundUpInr} ({CARD.sonprayagUpInr} from Sonprayag, {CARD.gaurikundDownInr} back down). In practice a pony costs {KEDARNATH_TREK.pony.oneWay} one-way in 2026, a palki (dandi) {KEDARNATH_TREK.palki.band} per booking, and a kandi (pitthu porter) {KEDARNATH_TREK.kandi.oneWay} one-way at the prepaid counter — and touts on the open trail ask 30–50% more. Everything below is how to pay the card rate, not the tout rate.
+            The Zila Panchayat Rudraprayag's 2026 boards, which we photographed on the trail, put a dandi (palki) from Gaurikund to Kedarnath at {inr(dandi('up')[0])} for a passenger up to 60 kg, rising by weight slab to {inr(dandi('up')[4])} at 101–120 kg, and a kandi at {inr(kandi('up')[0])} up to 25 kg or {inr(kandi('up')[1])} up to 50 kg. A mule is {CARD.gaurikundUpInr} on the district card ({CARD.sonprayagUpInr} from Sonprayag, {CARD.gaurikundDownInr} back down). Touts on the open trail ask 30–50% more. Everything below is how to pay the printed rate, not the tout rate.
           </AnswerBox>
 
           <p style={p}>
@@ -147,30 +186,89 @@ export default function KedarnathPonyPalkiKandiRates() {
             </figcaption>
           </figure>
 
-          <h2 style={h2}>The 2026 rate table — pony, palki, kandi</h2>
+          <h2 style={h2}>The 2026 rates at a glance</h2>
           <p style={p}>
-            These are the ranges pilgrims actually pay for the Gaurikund–Kedarnath stretch — the district's printed card is lower (it is quoted in full in the next section), and the gap between the two is the spread you see here: weight slab, time of season and, on the trail, how much you negotiate. At the counter there is nothing to negotiate, which is the point.
+            Every figure in this table is printed on an official card. Dandi and kandi fares come from the Zila Panchayat&rsquo;s 2026 boards, photographed and transcribed in full below. Mule fares come from the District Magistrate&rsquo;s card, which is linked as a PDF further down. At the counter there is nothing to negotiate, which is the point.
           </p>
           <div style={tableWrap}>
             <table style={table}>
               <thead>
-                <tr><th style={th}>Service</th><th style={th}>One-way</th><th style={th}>Return (same day)</th><th style={th}>Time (up)</th></tr>
+                <tr><th style={th}>Service</th><th style={th}>Up (Gaurikund → Kedarnath)</th><th style={th}>Down</th><th style={th}>Same-day return</th><th style={th}>Time up</th></tr>
               </thead>
               <tbody>
-                <tr><td style={td}><strong>Pony / Horse</strong> (ghoda, usually a mule)</td><td style={td}>{KEDARNATH_TREK.pony.oneWay}</td><td style={td}>{KEDARNATH_TREK.pony.roundTrip}</td><td style={td}>3–4 hrs</td></tr>
-                <tr><td style={td}><strong>Palki / Dandi</strong> (4 bearers)</td><td style={td}>{KEDARNATH_TREK.palki.up}</td><td style={td}>up to {KEDARNATH_TREK.palki.withReturn.replace('about ', '')}*</td><td style={td}>5–7 hrs</td></tr>
-                <tr><td style={td}><strong>Kandi / Pitthu</strong> (person)</td><td style={td}>{KEDARNATH_TREK.kandi.oneWay}</td><td style={td}>{KEDARNATH_TREK.kandi.roundTrip}</td><td style={td}>6–7 hrs</td></tr>
-                <tr><td style={td}><strong>Pitthu</strong> (luggage only)</td><td style={td}>{KEDARNATH_TREK.luggagePitthu.oneWay}</td><td style={td}>—</td><td style={td}>—</td></tr>
+                <tr><td style={td}><strong>Mule / Pony</strong><span style={sub}>district card, any weight</span></td><td style={num}>{CARD.gaurikundUpInr}*</td><td style={num}>{CARD.gaurikundDownInr}</td><td style={num}>{MULE_BOTH_WAYS}<span style={sub}>two bookings</span></td><td style={num}>3–4 hrs</td></tr>
+                <tr><td style={td}><strong>Dandi / Palki</strong><span style={sub}>passenger 0–60 kg</span></td><td style={num}>{inr(dandi('up')[0])}</td><td style={num}>{inr(dandi('down')[0])}</td><td style={num}>{inr(dandi('return')[0])}</td><td style={num}>5–7 hrs</td></tr>
+                <tr><td style={td}><strong>Dandi / Palki</strong><span style={sub}>passenger 101–120 kg</span></td><td style={num}>{inr(dandi('up')[4])}</td><td style={num}>{inr(dandi('down')[4])}</td><td style={num}>{inr(dandi('return')[4])}</td><td style={num}>5–7 hrs</td></tr>
+                <tr><td style={td}><strong>Kandi</strong><span style={sub}>up to 25 kg</span></td><td style={num}>{inr(kandi('up')[0])}</td><td style={num}>{inr(kandi('down')[0])}</td><td style={num}>{inr(kandi('return')[0])}</td><td style={num}>6–7 hrs</td></tr>
+                <tr><td style={td}><strong>Kandi</strong><span style={sub}>up to 50 kg</span></td><td style={num}>{inr(kandi('up')[1])}</td><td style={num}>{inr(kandi('down')[1])}</td><td style={num}>{inr(kandi('return')[1])}</td><td style={num}>6–7 hrs</td></tr>
+                <tr><td style={td}><strong>Pitthu</strong><span style={sub}>luggage only, no printed card</span></td><td style={num}>{KEDARNATH_TREK.luggagePitthu.oneWay}</td><td style={num}>—</td><td style={num}>—</td><td style={num}>—</td></tr>
               </tbody>
             </table>
           </div>
-          <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>
-            *A palki is priced per booking, not per leg: {KEDARNATH_TREK.palki.up} gets you up, and a same-day return booking runs to {KEDARNATH_TREK.palki.withReturn} because the four bearers wait at the top rather than taking another fare. Weight surcharge on palki and kandi: <strong>{KEDARNATH_TREK.weight.label}</strong>. Sonprayag to Gaurikund by shared jeep is an extra ₹50–100 per person and isn't part of the fare — pay it at the Sonprayag stand.
+          <p style={note}>
+            *The mule fare runs to the Kedarnath base camp, 14 km; on the trail pilgrims usually pay {KEDARNATH_TREK.pony.oneWay} for it, which is the gap this page is about. The in-between dandi slabs (61–75, 76–90 and 91–100 kg) are in the full board below. Sonprayag to Gaurikund by shared jeep is an extra ₹50–100 per person and isn&rsquo;t part of any fare; pay it at the Sonprayag stand.
           </p>
 
-          <h2 style={h2}>The official rate card — what the district actually printed</h2>
+          <h2 style={h2}>The 2026 dandi (palki) board, every weight slab</h2>
           <p style={p}>
-            Every page that quotes &ldquo;official&rdquo; Kedarnath pony rates gives you a range and no document. Here is the document. The District Magistrate, Rudraprayag fixes the ghoda–khachar fares for the Sonprayag–Gaurikund–Kedarnath trail by notice each time they are revised; the current one is <strong>{CARD.notice}</strong> — <a href={CARD.url} target="_blank" rel="noopener noreferrer" style={link}>read the notice (PDF, Hindi, 4 pages)</a> on the district site. Each fare below is the mule owner&rsquo;s fee plus a ₹{CARD.arrangementFee} arrangement fee, which is the total your receipt shows.
+            Most pages quoting &ldquo;official&rdquo; Kedarnath palki rates give you a range and no document. Here is the board. It is the Zila Panchayat Rudraprayag&rsquo;s, headed <em lang="hi">वर्ष 2026 के यात्राकाल के लिए गौरीकुण्ड से केदारनाथ पैदल मार्ग के लिए डण्डी (डोली) की दरें</em>, which means dandi (doli) rates for the Gaurikund–Kedarnath footpath for the 2026 yatra season. Our team photographed it on the route this season.
+          </p>
+          <BoardFigure photo={BOARD_PHOTOS.dandi} />
+          <p style={p}>
+            The fare depends on the route and on the passenger&rsquo;s weight. Every figure is the bearers&rsquo; wages plus a ₹{DANDI.arrangementFee} arrangement fee (<em>vyavastha shulk</em>) plus ₹{DANDI.dandiFee} for the dandi itself with its cushion. The table gives the total, which is what your receipt should show.
+          </p>
+          <div style={tableWrap}>
+            <table style={{ ...table, minWidth: 600 }}>
+              <thead>
+                <tr><th style={th}>Route</th>{DANDI.slabs.map((s) => <th key={s} style={th}>{s}</th>)}</tr>
+              </thead>
+              <tbody>
+                {DANDI.routes.map((r) => (
+                  <tr key={r.id}>
+                    <td style={td}><strong>{r.from} → {r.to}</strong><span style={sub}>{r.trip.toLowerCase()} · {r.km} km</span></td>
+                    {r.totals.map((t, i) => <td key={i} style={num}>{t === null ? '—†' : inr(t)}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={note}>
+            Over 120 kg: the board adds ₹{DANDI.over120Extra.toLocaleString('en-IN')} to the 101–120 kg rate, so Gaurikund to Kedarnath becomes {inr(dandi('up')[4] + DANDI.over120Extra)}. The board prints the middle slab as &ldquo;75–90 kg&rdquo;; 75 kg itself falls in 61–75. †These two cells are unreadable in our photo because of a crease in the banner. Ask at the counter.
+          </p>
+          <p style={p}>
+            Three things the board tells you that a range never will. First, <strong>book the return as one booking</strong>. A same-day return costs less than an up fare plus a down fare: {RETURN_SAVES[0]} less at 0–60 kg and {RETURN_SAVES[1]} less at 101–120 kg, because the bearers wait for you at the top instead of finding another fare. Second, keeping them overnight at the top costs exactly {inr(dandi('returnNight')[0] - dandi('return')[0])} more than the same-day return, at every weight. Third, the slabs climb by ₹1,000 each up to 100 kg and then jump ₹3,000 to the 101–120 kg slab. State the passenger&rsquo;s weight honestly. The four men carrying the dandi feel every kilo, and a dispute halfway up the trail is worse than the fare.
+          </p>
+
+          <h2 style={h2}>The 2026 kandi board</h2>
+          <p style={p}>
+            A kandi is a wicker basket on one porter&rsquo;s back. The Zila Panchayat&rsquo;s 2026 kandi board has only two weight slabs, up to 25 kg and up to 50 kg, and nothing above that. That makes the kandi a choice for children and very light adults; anyone heavier is on the dandi board. We photographed this one where it hangs, above the dandi–kandi prepaid counter.
+          </p>
+          <BoardFigure photo={BOARD_PHOTOS.kandi} />
+          <div style={tableWrap}>
+            <table style={{ ...table, minWidth: 0 }}>
+              <thead>
+                <tr><th style={th}>Route</th>{KANDI.slabs.map((s) => <th key={s} style={th}>{s}</th>)}</tr>
+              </thead>
+              <tbody>
+                {KANDI.routes.map((r) => (
+                  <tr key={r.id}>
+                    <td style={td}><strong>{r.from} → {r.to}</strong><span style={sub}>{r.trip.toLowerCase()} · {r.km} km</span></td>
+                    {r.totals.map((t, i) => <td key={i} style={num}>{inr(t)}{r.alt50 && i === 1 ? '‡' : ''}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={note}>
+            Each total is the porter&rsquo;s wages plus a ₹{KANDI.arrangementFee} arrangement fee. ‡The board lists Kedarnath → Lincholi twice, once at {inr(kandi('lincholiDn')[1])} and once at {inr(KANDI.routes.find((r) => r.id === 'lincholiDn').alt50)} for the 50 kg slab. If you are quoted either, it is on the board.
+          </p>
+          <p style={p}>
+            The kandi is not the budget option it is often described as. For the climb it costs {inr(kandi('up')[0])} to {inr(kandi('up')[1])}, two to two-and-a-half times the mule&rsquo;s card fare. For a passenger close to 50 kg, it is only {inr(dandi('up')[0] - kandi('up')[1])} less than a dandi, which is far steadier. Where the kandi does make sense is a small child, and on the same-day return: {inr(kandi('return')[0])} up to 25 kg, against {inr(kandi('up')[0] + kandi('down')[0])} for two one-way trips.
+          </p>
+
+          <h2 style={h2}>The mule (pony) card: the district&rsquo;s notice</h2>
+          <p style={p}>
+            Mule fares come from a different office. The District Magistrate, Rudraprayag fixes the ghoda–khachar fares for the Sonprayag–Gaurikund–Kedarnath trail by notice each time they are revised; the current one is <strong>{CARD.notice}</strong>. You can <a href={CARD.url} target="_blank" rel="noopener noreferrer" style={link}>read the notice (PDF, Hindi, 4 pages)</a> on the district site. Each fare below is the mule owner&rsquo;s fee plus a ₹{CARD.arrangementFee} arrangement fee, which is the total your receipt shows. Unlike the dandi board, there are no weight slabs. It is one fare per leg.
           </p>
           <div style={tableWrap}>
             <table style={table}>
@@ -184,8 +282,8 @@ export default function KedarnathPonyPalkiKandiRates() {
               </tbody>
             </table>
           </div>
-          <p style={{ ...p, fontSize: 13.5, color: '#64748b' }}>
-            Source: {CARD.issuer}, {CARD.notice}. The notice covers mules only; dandi and kandi rates are fixed separately by the Zila Panchayat and are not published online, which is why those rows above are ranges. No 2025 or 2026 revision has been published on the district site as of {PAGE_DATES.modifiedHuman}; the counters are working from this card.
+          <p style={note}>
+            Source: {CARD.issuer}, {CARD.notice}. The notice covers mules only; dandi and kandi rates are the Zila Panchayat&rsquo;s, on the two 2026 boards above. No 2025 or 2026 revision of the mule card has been published on the district site as of {PAGE_DATES.modifiedHuman}; the counters are working from this card.
           </p>
           <p style={p}>
             Three things on the card that most rate pages get wrong. The mule leg from Gaurikund is measured at <strong>14 km</strong> to the base camp (the walking trail to the temple is the 16 km everyone quotes). The <strong>ride down is cheaper than the ride up</strong> — {CARD.gaurikundDownInr} against {CARD.gaurikundUpInr} — so a handler quoting the same figure for both legs is already above card. And the card&rsquo;s first row is <strong>Sonprayag to Kedarnath, {CARD.sonprayagUpInr}</strong>: mules do start at Sonprayag, and for anyone who cannot manage the jeep queue that is the leg to book.
@@ -193,18 +291,21 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>Official rate vs what touts actually charge</h2>
           <p style={p}>
-            Every season, the Rudraprayag district administration sets the rate card that the Gaurikund and Sonprayag prepaid counters operate on, and that card is what's printed on your receipt. It's the only figure that's binding: an operator who charges above it is breaking the terms of their registration, and you have a receipt to prove it if you need to complain.
+            Two bodies set the rates on this trail: the District Magistrate for mules, and the Zila Panchayat for dandi and kandi. Their cards are what the prepaid counters charge and what's printed on your receipt. They're the only figures that are binding. An operator who charges above them is breaking the terms of their licence, and you have a receipt to prove it if you need to complain.
+          </p>
+          <p style={p}>
+            That licence is worth knowing about. The Zila Panchayat&rsquo;s own boards say every mule owner, dandi or kandi porter and hawker on the route must hold its licence (the fee is ₹{DANDI.licenceFee}), and that anyone found working without one faces penal action. So a porter who can&rsquo;t show a licence card is not someone to hand money to.
           </p>
           <p style={p}>
             Outside that counter, on the trail itself, unregistered or loosely affiliated operators quote whatever the moment allows. It's rarely a huge markup on a single ride, but it adds up over a family group, and it comes with none of the recourse a printed receipt gives you. The fix isn't complicated: book at the counter, first thing in the morning, before the day's animals are gone and before anyone on the trail has a reason to approach you.
           </p>
           <p style={p}>
-            A useful habit: photograph the rate card at the counter before you walk off with your receipt. If a handler tries to add a &ldquo;return supplement&rdquo; or a &ldquo;rest-stop charge&rdquo; halfway up (both are common asks that aren't on any official card), you have the printed rate in your pocket to point back to.
+            Photograph the board before you walk off with your receipt. That's how the two boards on this page got here, and it's a habit worth copying. If a handler tries to add a &ldquo;return supplement&rdquo; or a &ldquo;rest-stop charge&rdquo; halfway up (both are common asks that aren't on any official card), you have the printed rate in your pocket to point back to.
           </p>
 
-          <h2 style={h2}>Work out your own fare</h2>
+          <h2 style={h2}>Look up your own fare</h2>
           <p style={p}>
-            This mirrors the counter's own weight-slab arithmetic, so you can check the number before you're standing in the queue. It's a planning figure, not a quote.
+            Pick the service, the route and the passenger&rsquo;s weight, and this reads the fare straight off the boards above, with the fee split the receipt should show. Check the number before you&rsquo;re standing in the queue.
           </p>
           <KedarnathFareCalc />
 
@@ -216,8 +317,8 @@ export default function KedarnathPonyPalkiKandiRates() {
               </thead>
               <tbody>
                 <tr><td style={td}><strong>Pony</strong></td><td style={td}>Fit riders comfortable balancing for hours</td><td style={td}>Sore thighs and back by the end; not ideal with knee or hip issues</td></tr>
-                <tr><td style={td}><strong>Palki</strong></td><td style={td}>Seniors, anyone with balance or joint concerns</td><td style={td}>Roughly double the pony fare, and slower</td></tr>
-                <tr><td style={td}><strong>Kandi</strong></td><td style={td}>Children and lighter pilgrims, budget trips</td><td style={td}>Cramped for anyone over medium build; longest ride time</td></tr>
+                <tr><td style={td}><strong>Palki</strong></td><td style={td}>Seniors, anyone with balance or joint concerns</td><td style={td}>About three times the mule fare, priced by weight, and slower</td></tr>
+                <tr><td style={td}><strong>Kandi</strong></td><td style={td}>Small children and very light adults (the board stops at {KANDI.maxKg} kg)</td><td style={td}>Cramped, the longest ride time, and not cheap: {KEDARNATH_TREK.kandi.oneWay} up</td></tr>
                 <tr><td style={td}><strong>Helicopter</strong></td><td style={td}>Time-limited trips, medical caution</td><td style={td}>Weather-dependent, books out weeks ahead, most expensive — see our <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={link}>helicopter booking guide</Link></td></tr>
               </tbody>
             </table>
@@ -251,7 +352,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <ol style={{ ...p, paddingLeft: 22 }}>
             <li style={{ marginBottom: 10 }}>Complete Char Dham registration in advance at registrationandtouristcare.uk.gov.in — it's checked at the <strong>Sonprayag checkpost</strong> before you reach Gaurikund.</li>
             <li style={{ marginBottom: 10 }}>Reach Gaurikund early — the prepaid counter opens before sunrise in peak season, and the day's better animals go first.</li>
-            <li style={{ marginBottom: 10 }}>State your weight honestly at the counter; the slab surcharge is calculated there, not negotiated.</li>
+            <li style={{ marginBottom: 10 }}>For a dandi or kandi, state the passenger&rsquo;s weight honestly at the counter. The fare is set by the weight slab on the board, not negotiated.</li>
             <li style={{ marginBottom: 10 }}>Take the printed receipt and check the registration number matches the pony, palki team or porter you're handed over to.</li>
             <li style={{ marginBottom: 0 }}>Pay the amount on the receipt — nothing extra unless you're adding a return or changing service mid-route, which goes through the counter too.</li>
           </ol>
@@ -266,6 +367,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <ul style={{ ...p, paddingLeft: 22 }}>
             <li style={{ marginBottom: 8 }}><strong>Book at the counter, not on the trail.</strong> Anyone who approaches you directly, especially near the Sonprayag or Gaurikund entry points, is working outside the registered system.</li>
             <li style={{ marginBottom: 8 }}><strong>Insist on the printed receipt</strong> with a registration number, and check that number against the animal or team you're actually given before you set off.</li>
+            <li style={{ marginBottom: 8 }}><strong>Ask to see the licence.</strong> Every mule owner and dandi or kandi porter on this route needs a Zila Panchayat licence. No licence card, no booking.</li>
             <li style={{ marginBottom: 8 }}><strong>Don't pay the full amount upfront</strong> to anyone without a receipt in hand. A verbal promise on the trail isn't enforceable.</li>
             <li style={{ marginBottom: 8 }}><strong>Confirm return pricing before you start</strong> if you're booking a round trip in two parts; some operators quote a low one-way fare and then raise the return price once you're stuck at the top.</li>
             <li style={{ marginBottom: 0 }}><strong>Watch for fake helicopter and Char Dham booking websites.</strong> Book heli seats only through the official IRCTC Heliyatra portal. A wave of look-alike booking sites appears every season and takes advance payments for seats that don't exist.</li>
@@ -282,9 +384,10 @@ export default function KedarnathPonyPalkiKandiRates() {
             Pony/palki/kandi fare is one line item in the day, not the whole cost. Roughly, for one pilgrim doing the up-and-down from Gaurikund:
           </p>
           <ul style={{ ...p, paddingLeft: 22 }}>
-            <li style={{ marginBottom: 8 }}><strong>Budget (kandi, no overnight stay):</strong> {KEDARNATH_TREK.kandi.roundTrip} kandi return + ₹500–800 meals and jeep to Gaurikund + tip. A long single-day trip, best for fit younger travellers.</li>
-            <li style={{ marginBottom: 8 }}><strong>Mid-range (pony return, one night at Kedarnath):</strong> {KEDARNATH_TREK.pony.roundTrip} pony return + ₹1,500–3,000 guesthouse + ₹800–1,200 meals for two days + tip. The most common pattern among our own groups.</li>
-            <li style={{ marginBottom: 0 }}><strong>Comfort (palki up, helicopter down):</strong> ₹8,000–9,200 palki one-way + a heli seat booked separately through IRCTC Heliyatra (fares vary by operator and season, so check the portal directly) + meals. The fastest option for anyone short on time or trail-averse.</li>
+            <li style={{ marginBottom: 8 }}><strong>Budget (walk up, mule down, same day):</strong> {CARD.gaurikundDownInr} mule down on the card + ₹500–800 meals and jeep to Gaurikund + tip. A long single-day trip, best for fit younger travellers.</li>
+            <li style={{ marginBottom: 8 }}><strong>Mid-range (mule both ways, one night at Kedarnath):</strong> {MULE_BOTH_WAYS} on the card, {KEDARNATH_TREK.pony.roundTrip} as usually paid, + ₹1,500–3,000 guesthouse + ₹800–1,200 meals for two days + tip. The most common pattern among our own groups.</li>
+            <li style={{ marginBottom: 8 }}><strong>Comfort (palki up, helicopter down):</strong> {KEDARNATH_TREK.palki.up} palki one way, by weight, + a heli seat booked separately through IRCTC Heliyatra (fares vary by operator and season, so check the portal directly) + meals. The fastest option for anyone short on time or trail-averse.</li>
+            <li style={{ marginBottom: 0 }}><strong>Palki both ways, one night at the top:</strong> {KEDARNATH_TREK.palki.nightHalt} as a single booking, by weight, + guesthouse and meals. For anyone who can neither walk nor ride.</li>
           </ul>
           <p style={p}>
             For full per-person figures across a multi-day Char Dham itinerary, our <Link prefetch={false} href="/blog/char-dham-yatra-cost" style={link}>Char Dham Yatra cost breakdown</Link> walks through budget, mid-range and luxury planning in detail.
@@ -328,7 +431,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </ul>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18, lineHeight: 1.7 }}>
-            Mule fares: {CARD.issuer}, {CARD.notice} (<a href={CARD.url} target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8' }}>PDF</a>). Palki and kandi ranges are the prepaid-counter figures at Gaurikund and Sonprayag for the 2026 season, as seen by our groups on the route; the printed card at the counter is final. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
+            Dandi and kandi fares: {DANDI.issuer}, rate boards for the {DANDI.season} yatra season on the Gaurikund–Kedarnath footpath, photographed by our team (<a href={DANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>dandi board</a>, <a href={KANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>kandi board</a>). Mule fares: {CARD.issuer}, {CARD.notice} (<a href={CARD.url} target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8' }}>PDF</a>). The mule band pilgrims actually pay and the luggage-pitthu range are what our groups paid on the route; neither is on a printed card. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

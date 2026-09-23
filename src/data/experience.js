@@ -8,7 +8,7 @@
 // changes it — altitude, weather and the yatra calendar all move things.
 // ════════════════════════════════════════════════════════════════
 
-import { YAMUNOTRI_TREK } from './trekRates';
+import { YAMUNOTRI_TREK, KEDARNATH_TREK } from './trekRates';
 
 const PX = 'https://images.pexels.com/photos';
 
@@ -205,7 +205,7 @@ export const TEMPLES = {
     photography: 'Permitted in the courtyard. Strictly no photography or phones inside the sanctum.',
     facts: [
       'The trek gains about 1,600 m over 16 km. Fit walkers take 6–8 hours; nobody sensible rushes it.',
-      'Pony ₹3,500–4,500, palki ₹8,000–12,000, and helicopter from ₹3,043 one way at the official IRCTC fare.',
+      `Pony ${KEDARNATH_TREK.pony.oneWay}, palki ${KEDARNATH_TREK.palki.bandLabel}, and helicopter from ₹3,043 one way at the official IRCTC fare.`,
       'Oxygen saturation drops noticeably above Linchauli. Our vehicles carry a cylinder, and there are medical posts along the route.',
       'In winter the deity moves to Ukhimath, where darshan continues for the six months the temple is shut.',
     ],
