@@ -20,17 +20,19 @@ const MULE_BOTH_WAYS = inr(CARD.gaurikundUp + CARD.gaurikundDown);
 // What a same-day return saves against two one-way dandi fares, lightest and heaviest slab.
 const RETURN_SAVES = [0, 4].map((i) => inr(dandi('up')[i] + dandi('down')[i] - dandi('return')[i]));
 
-// The Zila Panchayat's 2026 boards, photographed by our team on the route.
+// The Zila Panchayat's 2026 boards, photographed by our team at Gaurikund.
+const SHOT = DANDI.photographed;
+const SHOT_CREDIT = `Photo: Shiv Ganga Travels, ${SHOT.place}, ${SHOT.human}.`;
 const BOARD_PHOTOS = {
   dandi: {
     src: DANDI.photo,
     alt: 'Zila Panchayat Rudraprayag board of 2026 dandi (doli) rates for the Gaurikund–Kedarnath footpath, listing fares by route across five passenger-weight slabs from 0–60 kg to 101–120 kg',
-    caption: 'The 2026 dandi (doli) board, Zila Panchayat Rudraprayag. The table below is transcribed from it. Photo: Shiv Ganga Travels, 2026 season.',
+    caption: `The 2026 dandi (doli) board, Zila Panchayat Rudraprayag. The table below is transcribed from it. ${SHOT_CREDIT}`,
   },
   kandi: {
     src: KANDI.photo,
     alt: 'Zila Panchayat Rudraprayag board of 2026 kandi rates for the Gaurikund–Kedarnath footpath, listing fares for up to 25 kg and up to 50 kg, hung above the dandi–kandi prepaid counter',
-    caption: 'The 2026 kandi board, hung above the dandi–kandi prepaid counter (the sign at the bottom of the frame). Photo: Shiv Ganga Travels, 2026 season.',
+    caption: `The 2026 kandi board, hung above the dandi–kandi prepaid counter (the sign at the bottom of the frame). ${SHOT_CREDIT}`,
   },
 };
 
@@ -44,7 +46,7 @@ const H1 = 'Kedarnath Pony, Palki & Kandi Rates 2026: Official Price vs What Tou
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony, Palki & Kandi Rates 2026 | Official Price' },
-  description: `Official 2026 rates, photographed on the trail: palki (dandi) ${KEDARNATH_TREK.palki.up} by weight, kandi ${KEDARNATH_TREK.kandi.oneWay}, mule ${CARD.gaurikundUpInr} from Gaurikund. Every weight slab in full.`,
+  description: `Official 2026 rates, photographed at Gaurikund: palki (dandi) ${KEDARNATH_TREK.palki.up} by weight, kandi ${KEDARNATH_TREK.kandi.oneWay}, mule ${CARD.gaurikundUpInr}. Every weight slab in full.`,
   keywords: [`kedarnath pony palki kandi rates ${SITE.season}`,`kedarnath pony charges ${SITE.season}`,'kedarnath horse price','kedarnath khachar price','gaurikund to kedarnath by horse price','ponies and palkies rates for kedarnath','kedarnath palki charges','kedarnath palki rate','kedarnath kandi pitthu rate','kedarnath palki booking online','kedarnath ghoda price','sonprayag to kedarnath by horse','kedarnath palki price per person','kedarnath dandi rate','kedarnath doli rate 2026','kedarnath kandi rate 2026','kedarnath porter charges'],
   alternates: { canonical: URL },
   openGraph: {
@@ -77,7 +79,8 @@ function Schema() {
     copyrightNotice: `© ${SITE.season} ${SITE.name}`, license: `${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage: `${SITE.baseUrl}/contact` };
   const image = { '@type': 'ImageObject', '@id': `${URL}#photo`, url: `${SITE.baseUrl}${PHOTO_WIDE}`, width: 1200, height: 800, caption: PHOTO_ALT, ...licensing };
   const boards = Object.entries(BOARD_PHOTOS).map(([k, b]) => ({ '@type': 'ImageObject', '@id': `${URL}#${k}-board`,
-    url: `${SITE.baseUrl}${b.src}`, width: 1280, height: 960, caption: b.alt, ...licensing }));
+    url: `${SITE.baseUrl}${b.src}`, width: 1280, height: 960, caption: b.alt, dateCreated: SHOT.dateISO,
+    contentLocation: { '@type': 'Place', name: `${SHOT.place}, Rudraprayag district, Uttarakhand` }, ...licensing }));
   const article = { '@context': 'https://schema.org', '@type': 'Article', '@id': `${URL}#article`,
     headline: H1,
     description: metadata.description,
@@ -150,7 +153,7 @@ export default function KedarnathPonyPalkiKandiRates() {
         <div style={{ maxWidth: 840, margin: '0 auto' }}>
           <span style={{ background: 'rgba(232,146,10,0.18)', color: '#FFD166', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '5px 16px', borderRadius: 100, display: 'inline-block', marginBottom: 16 }}>Gaurikund → Kedarnath · 16 km trail · Updated {PAGE_DATES.modifiedHuman}</span>
           <h1 className="display-title" style={{ color: '#fff', fontSize: 'clamp(1.6rem,4.2vw,2.5rem)', marginBottom: 14 }}>{H1}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The Zila Panchayat's 2026 dandi and kandi boards, photographed on the trail and transcribed in full, the district's mule card, and how to pay the printed rate and nothing more.</p>
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7 }}>The Zila Panchayat's 2026 dandi and kandi boards, photographed at Gaurikund and transcribed in full, the district's mule card, and how to pay the printed rate and nothing more.</p>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 20 }}>
             <a href={wa('Namaste! I want help planning Kedarnath — pony/palki and a yatra package.')} target="_blank" rel="nofollow noopener noreferrer" style={{ background: '#25D366', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none' }}>💬 Get a Free Quote</a>
             <a href={`tel:${SITE.phone}`} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '12px 24px', borderRadius: 9, fontWeight: 700, fontSize: 13.5, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>📞 {SITE.phone}</a>
@@ -164,7 +167,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           <BlogAuthor variant="top" author="dhanesh" />
 
           <AnswerBox>
-            The Zila Panchayat Rudraprayag's 2026 boards, which we photographed on the trail, put a dandi (palki) from Gaurikund to Kedarnath at {inr(dandi('up')[0])} for a passenger up to 60 kg, rising by weight slab to {inr(dandi('up')[4])} at 101–120 kg, and a kandi at {inr(kandi('up')[0])} up to 25 kg or {inr(kandi('up')[1])} up to 50 kg. A mule is {CARD.gaurikundUpInr} on the district card ({CARD.sonprayagUpInr} from Sonprayag, {CARD.gaurikundDownInr} back down). Touts on the open trail ask 30–50% more. Everything below is how to pay the printed rate, not the tout rate.
+            The Zila Panchayat Rudraprayag's 2026 boards, which we photographed at {SHOT.place} on {SHOT.human}, put a dandi (palki) from Gaurikund to Kedarnath at {inr(dandi('up')[0])} for a passenger up to 60 kg, rising by weight slab to {inr(dandi('up')[4])} at 101–120 kg, and a kandi at {inr(kandi('up')[0])} up to 25 kg or {inr(kandi('up')[1])} up to 50 kg. A mule is {CARD.gaurikundUpInr} on the district card ({CARD.sonprayagUpInr} from Sonprayag, {CARD.gaurikundDownInr} back down). Touts on the open trail ask 30–50% more. Everything below is how to pay the printed rate, not the tout rate.
           </AnswerBox>
 
           <p style={p}>
@@ -211,7 +214,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>The 2026 dandi (palki) board, every weight slab</h2>
           <p style={p}>
-            Most pages quoting &ldquo;official&rdquo; Kedarnath palki rates give you a range and no document. Here is the board. It is the Zila Panchayat Rudraprayag&rsquo;s, headed <em lang="hi">वर्ष 2026 के यात्राकाल के लिए गौरीकुण्ड से केदारनाथ पैदल मार्ग के लिए डण्डी (डोली) की दरें</em>, which means dandi (doli) rates for the Gaurikund–Kedarnath footpath for the 2026 yatra season. Our team photographed it on the route this season.
+            Most pages quoting &ldquo;official&rdquo; Kedarnath palki rates give you a range and no document. Here is the board. It is the Zila Panchayat Rudraprayag&rsquo;s, headed <em lang="hi">वर्ष 2026 के यात्राकाल के लिए गौरीकुण्ड से केदारनाथ पैदल मार्ग के लिए डण्डी (डोली) की दरें</em>, which means dandi (doli) rates for the Gaurikund–Kedarnath footpath for the 2026 yatra season. Our team photographed it at {SHOT.place} on {SHOT.human}.
           </p>
           <BoardFigure photo={BOARD_PHOTOS.dandi} />
           <p style={p}>
@@ -241,7 +244,7 @@ export default function KedarnathPonyPalkiKandiRates() {
 
           <h2 style={h2}>The 2026 kandi board</h2>
           <p style={p}>
-            A kandi is a wicker basket on one porter&rsquo;s back. The Zila Panchayat&rsquo;s 2026 kandi board has only two weight slabs, up to 25 kg and up to 50 kg, and nothing above that. That makes the kandi a choice for children and very light adults; anyone heavier is on the dandi board. We photographed this one where it hangs, above the dandi–kandi prepaid counter.
+            A kandi is a wicker basket on one porter&rsquo;s back. The Zila Panchayat&rsquo;s 2026 kandi board has only two weight slabs, up to 25 kg and up to 50 kg, and nothing above that. That makes the kandi a choice for children and very light adults; anyone heavier is on the dandi board. We photographed this one the same day, where it hangs above the dandi–kandi prepaid counter at {SHOT.place}.
           </p>
           <BoardFigure photo={BOARD_PHOTOS.kandi} />
           <div style={tableWrap}>
@@ -431,7 +434,7 @@ export default function KedarnathPonyPalkiKandiRates() {
           </ul>
 
           <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 18, lineHeight: 1.7 }}>
-            Dandi and kandi fares: {DANDI.issuer}, rate boards for the {DANDI.season} yatra season on the Gaurikund–Kedarnath footpath, photographed by our team (<a href={DANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>dandi board</a>, <a href={KANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>kandi board</a>). Mule fares: {CARD.issuer}, {CARD.notice} (<a href={CARD.url} target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8' }}>PDF</a>). The mule band pilgrims actually pay and the luggage-pitthu range are what our groups paid on the route; neither is on a printed card. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
+            Dandi and kandi fares: {DANDI.issuer}, rate boards for the {DANDI.season} yatra season on the Gaurikund–Kedarnath footpath, photographed by our team at {SHOT.place} on {SHOT.human} (<a href={DANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>dandi board</a>, <a href={KANDI.photo} target="_blank" rel="noopener" style={{ color: '#94a3b8' }}>kandi board</a>). Mule fares: {CARD.issuer}, {CARD.notice} (<a href={CARD.url} target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8' }}>PDF</a>). The mule band pilgrims actually pay and the luggage-pitthu range are what our groups paid on the route; neither is on a printed card. Registration: <a href="https://registrationandtouristcare.uk.gov.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>registrationandtouristcare.uk.gov.in</a>. Helicopter bookings: <a href="https://heliyatra.irctc.co.in" target="_blank" rel="noopener noreferrer nofollow" style={{ color: '#94a3b8' }}>heliyatra.irctc.co.in</a>.
           </p>
 
           <BlogAuthor author="dhanesh" variant="bottom" />

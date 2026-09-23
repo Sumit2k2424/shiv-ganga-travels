@@ -11,7 +11,7 @@
 //
 //  KEDARNATH palki (dandi) and kandi figures are read off the Zila
 //  Panchayat Rudraprayag's printed 2026 boards, which our team
-//  photographed on the trail (added 23 Sep 2026) — every summary figure below is derived
+//  photographed at Gaurikund on 22 Sep 2026 — every summary figure below is derived
 //  from those two tables, not typed separately. The mule figures are
 //  the District Magistrate's card (2024 notice, still in force) plus
 //  the band pilgrims actually pay. YAMUNOTRI figures are what our
@@ -54,7 +54,7 @@ export const YAMUNOTRI_TREK = {
 // ── Kedarnath: Zila Panchayat Rudraprayag's 2026 boards ──────────
 // Two printed boards headed "वर्ष 2026 के यात्राकाल के लिए गौरीकुण्ड से
 // केदारनाथ पैदल मार्ग के लिए डण्डी (डोली) / कण्डी की दरें", photographed
-// by our team on the route in the 2026 season. The photos are served at
+// by our team at Gaurikund on 22 Sep 2026. The photos are served at
 // public/images/kedarnath-dandi-doli-rate-board-2026.jpg and
 // public/images/kedarnath-kandi-rate-board-2026.jpg and shown on the
 // rates page, so any figure here can be checked against the board.
@@ -68,6 +68,7 @@ const ZP_BOARD = {
   issuer: 'Zila Panchayat, Rudraprayag',
   season: 2026,
   licenceFee: 400,   // every mule owner, dandi/kandi porter and hawker needs a ZP licence
+  photographed: { place: 'Gaurikund', dateISO: '2026-09-22', human: '22 September 2026' },
 };
 
 export const ZP_DANDI_2026 = {
