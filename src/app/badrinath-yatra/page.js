@@ -6,6 +6,8 @@ import AnswerBox from '@/components/AnswerBox';
 import { ROUTES } from '@/data/distances';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import Image from 'next/image';
+import { BADRINATH_PILGRIMS_PHOTO } from '@/data/photos';
 
 const PAGE_DATES = pageDates('/badrinath-yatra');
 
@@ -26,14 +28,13 @@ export const metadata = {
     description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
-  
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels` }],
+    images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, width: BADRINATH_PILGRIMS_PHOTO.width, height: BADRINATH_PILGRIMS_PHOTO.height, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
     description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
-    images: [{ url: '/opengraph-image', alt: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500 | Shiv Ganga Travels` }],
+    images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
   },
 };
 
@@ -44,6 +45,9 @@ function Schema() {
     name: 'Badrinath Yatra Package 2026 from Haridwar — 2N/3D',
     description: 'Badrinath Yatra package from Haridwar. All-inclusive 2 nights 3 days. Includes AC cab, hotel near Badrinath, VIP darshan arrangement, sattvic meals. Operated directly with zero commission.',
     url: `${SITE.baseUrl}/badrinath-yatra`,
+    image: { '@type': 'ImageObject', url: `${SITE.baseUrl}${BADRINATH_PILGRIMS_PHOTO.src}`, width: BADRINATH_PILGRIMS_PHOTO.width, height: BADRINATH_PILGRIMS_PHOTO.height,
+      caption: BADRINATH_PILGRIMS_PHOTO.alt, creditText: BADRINATH_PILGRIMS_PHOTO.creditText, dateCreated: BADRINATH_PILGRIMS_PHOTO.dateISO,
+      contentLocation: { '@type': 'Place', name: BADRINATH_PILGRIMS_PHOTO.place } },
     touristType: { '@type': 'Audience', name: 'Hindu Pilgrims' },
     itinerary: {
       '@type': 'ItemList',
@@ -217,6 +221,14 @@ export default function BadrinathYatraPage() {
             </div>
           ))}
         </div>
+
+        <figure style={{ margin: '0 0 28px', borderRadius: 14, overflow: 'hidden', border: '1px solid hsl(var(--border))' }}>
+          <Image src={BADRINATH_PILGRIMS_PHOTO.src} alt={BADRINATH_PILGRIMS_PHOTO.alt} width={BADRINATH_PILGRIMS_PHOTO.width} height={BADRINATH_PILGRIMS_PHOTO.height}
+            sizes="(max-width: 900px) 100vw, 860px" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <figcaption style={{ padding: '10px 14px', fontSize: 12.5, color: '#64748b', background: '#F8FAFC', lineHeight: 1.6 }}>
+            Sunirmal Ji and his wife at the Singh Dwar, the painted main gate of Badrinath Temple, on their darshan day with us. Clear sky and bright sun, and still a sweater and woollen cap: at 3,133 m the air stays cold, so pack layers whatever the forecast says. {BADRINATH_PILGRIMS_PHOTO.credit}
+          </figcaption>
+        </figure>
 
         <h2 style={h2}>Badrinath Yatra Packages 2026</h2>
 

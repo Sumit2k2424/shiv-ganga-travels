@@ -29,7 +29,7 @@
       packages.js only for /packages routes). Site-wide data modules
       (packages.js elsewhere, social.js, redirects.js, languages.js,
       experience.js, botConfig.js, clusters.js, distances.js, winterSeats.js,
-      trekRates.js)
+      trekRates.js, photos.js)
       are excluded — a phone-number edit there is not a content update on
       every page that shows the phone number.
   Shared components are excluded on purpose: a footer refactor is not a
@@ -48,6 +48,10 @@ const SITE_WIDE_DATA = new Set([
   'packages', 'social', 'redirects', 'languages', 'experience', 'botConfig',
   'clusters', 'distances', 'winterSeats', 'routeStops', 'packageRoute', 'reels',
   'haridwarPlaces', 'localTaxi', 'trekRates',
+  // One record per own photo, shared by every page that shows one: adding the
+  // Badrinath record would otherwise redate the two helicopter pages. A page
+  // that gains a figure is still dated by its own page.js.
+  'photos',
 ]);
 
 // ── 0. commits that touched pages without changing what a reader sees ──────

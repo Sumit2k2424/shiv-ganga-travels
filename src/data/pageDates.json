@@ -19,7 +19,7 @@
     },
     "/badrinath-temple": {
       "created": "2026-04-25",
-      "modified": "2026-08-23",
+      "modified": "2026-09-24",
       "files": [
         "src/app/badrinath-temple/page.js"
       ]
@@ -33,7 +33,7 @@
     },
     "/badrinath-yatra": {
       "created": "2026-05-09",
-      "modified": "2026-09-15",
+      "modified": "2026-09-24",
       "files": [
         "src/app/badrinath-yatra/page.js"
       ]
@@ -190,16 +190,14 @@
       "created": "2026-04-22",
       "modified": "2026-09-23",
       "files": [
-        "src/app/blog/kedarnath-helicopter-booking/page.js",
-        "src/data/photos.js"
+        "src/app/blog/kedarnath-helicopter-booking/page.js"
       ]
     },
     "/blog/kedarnath-pony-vs-helicopter": {
       "created": "2026-05-04",
       "modified": "2026-09-23",
       "files": [
-        "src/app/blog/kedarnath-pony-vs-helicopter/page.js",
-        "src/data/photos.js"
+        "src/app/blog/kedarnath-pony-vs-helicopter/page.js"
       ]
     },
     "/blog/kedarnath-trek-guide": {
