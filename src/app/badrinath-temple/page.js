@@ -3,14 +3,32 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
+import Image from 'next/image';
+import { BADRINATH_PILGRIMS_PHOTO } from '@/data/photos';
+const DESCRIPTION = `Badrinath temple ${SITE.season} — darshan 4:30 AM to 9 PM, opens April 23, and no trek at all. Mahabhishek timings, Mana village, Brahma Kapal and how to reach.`;
 export const metadata = {
   title: { absolute: 'Badrinath Temple | Darshan Timings, History & Opening' },
-  description: `Badrinath temple ${SITE.season} — darshan 4:30 AM to 9 PM, opens April 23, and no trek at all. Mahabhishek timings, Mana village, Brahma Kapal and how to reach.`,
+  description: DESCRIPTION,
   keywords: ['badrinath temple',`badrinath temple timings ${SITE.season}`,'badrinath darshan timings',`badrinath temple opening date ${SITE.season}`,'badrinath maha abhishek puja'],
   alternates: { canonical: `${SITE.baseUrl}/badrinath-temple` },
+  // Without its own block this page inherited the homepage's og:url, title
+  // and Kedarnath image alt from layout.js.
+  openGraph: {
+    title: 'Badrinath Temple | Darshan Timings, History & Opening',
+    description: DESCRIPTION,
+    url: `${SITE.baseUrl}/badrinath-temple`,
+    type: 'website',
+    images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, width: BADRINATH_PILGRIMS_PHOTO.width, height: BADRINATH_PILGRIMS_PHOTO.height, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Badrinath Temple | Darshan Timings, History & Opening',
+    description: DESCRIPTION,
+    images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
+  },
 };
 function Schema() {
-  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', '@id':`${SITE.baseUrl}/badrinath-temple#attraction`, name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, isPartOf:{ '@id':`${SITE.baseUrl}/#organization` }, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Badrinath_Temple','https://www.wikidata.org/wiki/Q799695'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
+  const ld = { '@context':'https://schema.org','@type':'TouristAttraction', '@id':`${SITE.baseUrl}/badrinath-temple#attraction`, name:'Badrinath Temple', description:'Sacred Hindu temple dedicated to Lord Vishnu, one of the Char Dhams, located at 3,133m in Chamoli district, Uttarakhand.', url:`${SITE.baseUrl}/badrinath-temple`, image:{ '@type':'ImageObject', url:`${SITE.baseUrl}${BADRINATH_PILGRIMS_PHOTO.src}`, width:BADRINATH_PILGRIMS_PHOTO.width, height:BADRINATH_PILGRIMS_PHOTO.height, caption:BADRINATH_PILGRIMS_PHOTO.alt, creditText:BADRINATH_PILGRIMS_PHOTO.creditText, contentLocation:{ '@type':'Place', name:BADRINATH_PILGRIMS_PHOTO.place } }, isPartOf:{ '@id':`${SITE.baseUrl}/#organization` }, geo:{'@type':'GeoCoordinates',latitude:'30.7433',longitude:'79.4938'}, touristType:'Pilgrim', sameAs:['https://en.wikipedia.org/wiki/Badrinath_Temple','https://www.wikidata.org/wiki/Q799695'], containedInPlace:{'@type':'AdministrativeArea',name:'Uttarakhand, India'}, isPartOf:{'@type':'TouristAttraction',name:'Chota Char Dham',sameAs:'https://en.wikipedia.org/wiki/Chota_Char_Dham'} };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(ld) }}/>;
 }
 const PAA = [
@@ -103,6 +121,13 @@ export default function BadrinathTemple() {
 
       <h2 style={h2}>What Makes Badrinath Different from the Other Dhams</h2>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Badrinath is the only one of the four dhams where you can drive all the way to the temple gate. No trekking, no pony ride — just a walk of a few hundred metres from the parking area. This makes it uniquely accessible for elderly pilgrims, families with small children, and anyone with mobility limitations. Yet despite this accessibility, it doesn't feel like a lesser pilgrimage. The scale of the mountains around it — deep valley, sheer cliff walls, the roar of the Alaknanda — is the most dramatic of all four dhams.</p>
+      <figure style={{ margin:'0 0 20px', borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
+        <Image src={BADRINATH_PILGRIMS_PHOTO.src} alt={BADRINATH_PILGRIMS_PHOTO.alt} width={BADRINATH_PILGRIMS_PHOTO.width} height={BADRINATH_PILGRIMS_PHOTO.height}
+          sizes="(max-width: 900px) 100vw, 860px" style={{ width:'100%', height:'auto', display:'block' }} />
+        <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
+          Sunirmal Ji and his wife, who travelled with us, on the forecourt below the Singh Dwar, the temple&apos;s painted main gate. This is as far as you need to walk: the road ends a few hundred metres away, and the steps behind them climb through the gate to the sanctum. {BADRINATH_PILGRIMS_PHOTO.credit}
+        </figcaption>
+      </figure>
       <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The town of Badrinath itself is also different from the others. It has a village quality, with the Alaknanda running right through it and a row of ashrams and dhabas along the river bank. In peak season (May–June), the town is full and energetic. But those who come in mid-September find it quieter, the mountains dusted with early snow, and the darshan lines short. Our team considers the September window the ideal time to visit Badrinath if your schedule allows it.</p>
 
       <h2 style={h2}>Local Wildlife & Sightings</h2>

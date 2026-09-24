@@ -22,3 +22,23 @@ export const HELIPAD_PHOTO = {
   dateHuman: '16 September 2026',
 };
 HELIPAD_PHOTO.credit = `Photo: Shiv Ganga Travels, ${HELIPAD_PHOTO.place}, ${HELIPAD_PHOTO.dateHuman}.`;
+
+// Sunirmal Ji and his wife, pilgrims who travelled with us, at the
+// Singh Dwar. NOT our photograph: it came to us as a phone shot of the
+// print they brought home, so it carries no copyright or licence
+// fields — only creditText naming who shared it. The print's white
+// paper border was trimmed, levels lifted slightly, the frame cut to
+// 4:3 around the gate and both faces, resized to 1200×900, q78 (195 KB).
+// A 3px median pass takes out the print's paper grain — sharpening it
+// instead made the served AVIF 2.5× the helipad photo's size.
+// Trip date not yet known: when it is, add dateISO/dateHuman here and
+// dateCreated to the ImageObject on both pages.
+export const BADRINATH_PILGRIMS_PHOTO = {
+  src: '/images/badrinath-temple-singh-dwar-pilgrims.jpg',
+  width: 1200,
+  height: 900,
+  alt: 'Sunirmal Ji, in a brown sweater and black woollen cap, and his wife, in a mustard-yellow kurta, stand with folded hands in front of the painted Singh Dwar of Badrinath Temple, pilgrims climbing the steps behind them under a clear blue sky',
+  place: 'Badrinath Temple, Chamoli district, Uttarakhand',
+  creditText: 'Sunirmal Ji',
+  credit: 'Photo shared by Sunirmal Ji.',
+};
