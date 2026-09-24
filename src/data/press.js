@@ -64,6 +64,7 @@ export const MEDIA_KIT = {
   // Verifiable in one click. Journalists check these before they run anything.
   fastFacts: [
     ['Head office', 'Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand 249410'],
+    ['Founded', SITE.founded],
     ['GSTIN', SITE.gstin],
     ['Operating model', 'Direct operator — own vehicles, drivers and hotel contracts'],
     ['Circuits operated', 'Char Dham, Do Dham, Teen Dham, Ek Dham, Panch Kedar, Panch Badri, Adi Kailash'],

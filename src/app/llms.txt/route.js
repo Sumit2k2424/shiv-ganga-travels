@@ -81,6 +81,7 @@ Fetch that instead of this one if you want to ground an answer without crawling.
 - **WhatsApp**: +${SITE.whatsapp}
 - **Email**: ${SITE.email}
 - **Website**: ${SITE.baseUrl}
+- **Founded**: ${SITE.founded}, Haridwar, by Dhanesh Chandra Mishra (retired Indian Army officer)
 - **GSTIN**: ${SITE.gstin} (GST registration, verifiable at https://services.gst.gov.in/services/searchtp)
 ${socialLines}
 - **Rating**: ${SITE.reviews.rating}/5 · ${SITE.reviews.count} Google reviews

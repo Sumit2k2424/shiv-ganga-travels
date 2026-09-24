@@ -15,7 +15,12 @@ export const SITE = {
   whatsapp2  : '918859123961',
   email      : 'support@shivgangatravels.com',
   address    : 'Saptrishi Road, Near Shantikunj Gate No. 1, Bhupatwala, Haridwar, Uttarakhand 249410, India',
-  // No founding year: the claim was not verifiable and was removed sitewide on 14 Sep 2026.
+  // Founding year, set 17 Sep 2026 to match the Google Business Profile
+  // (which is what Bing, the company LinkedIn page and JustDial were aligned
+  // to on 15 Sep). It was removed sitewide on 14 Sep because the old "since
+  // 2010" claim could not be verified; this is now the ONE value every
+  // schema node, fact list and llms.txt line reads. Change it here only.
+  founded: '2017',
   // Google Business Profile rating and review count — the ONLY place these
   // numbers live. Every badge, pill, FAQ answer, JSON-LD aggregateRating and
   // llms.txt line interpolates from here (they used to be typed into ~35
