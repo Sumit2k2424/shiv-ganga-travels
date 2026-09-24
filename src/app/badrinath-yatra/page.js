@@ -46,7 +46,7 @@ function Schema() {
     description: 'Badrinath Yatra package from Haridwar. All-inclusive 2 nights 3 days. Includes AC cab, hotel near Badrinath, VIP darshan arrangement, sattvic meals. Operated directly with zero commission.',
     url: `${SITE.baseUrl}/badrinath-yatra`,
     image: { '@type': 'ImageObject', url: `${SITE.baseUrl}${BADRINATH_PILGRIMS_PHOTO.src}`, width: BADRINATH_PILGRIMS_PHOTO.width, height: BADRINATH_PILGRIMS_PHOTO.height,
-      caption: BADRINATH_PILGRIMS_PHOTO.alt, creditText: BADRINATH_PILGRIMS_PHOTO.creditText,
+      caption: BADRINATH_PILGRIMS_PHOTO.alt, creditText: BADRINATH_PILGRIMS_PHOTO.creditText, dateCreated: BADRINATH_PILGRIMS_PHOTO.dateISO,
       contentLocation: { '@type': 'Place', name: BADRINATH_PILGRIMS_PHOTO.place } },
     touristType: { '@type': 'Audience', name: 'Hindu Pilgrims' },
     itinerary: {
