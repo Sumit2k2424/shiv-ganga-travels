@@ -12,7 +12,7 @@
     },
     "/about": {
       "created": "2026-04-18",
-      "modified": "2026-08-31",
+      "modified": "2026-09-24",
       "files": [
         "src/app/about/page.js"
       ]
@@ -336,7 +336,7 @@
     },
     "/contact": {
       "created": "2026-04-18",
-      "modified": "2026-09-13",
+      "modified": "2026-09-24",
       "files": [
         "src/app/contact/page.js"
       ]
