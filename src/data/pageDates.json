@@ -90,7 +90,7 @@
     },
     "/blog/char-dham-yatra-closing-dates-2026": {
       "created": "2026-05-10",
-      "modified": "2026-08-31",
+      "modified": "2026-09-25",
       "files": [
         "src/app/blog/char-dham-yatra-closing-dates-2026/page.js"
       ]
@@ -528,7 +528,7 @@
     },
     "/packages": {
       "created": "2026-04-18",
-      "modified": "2026-09-23",
+      "modified": "2026-09-25",
       "files": [
         "src/app/packages/page.js",
         "src/data/packages.js"
@@ -536,7 +536,7 @@
     },
     "/packages/[slug]": {
       "created": "2026-04-18",
-      "modified": "2026-09-23",
+      "modified": "2026-09-25",
       "files": [
         "src/app/packages/[slug]/page.js",
         "src/data/packages.js",
