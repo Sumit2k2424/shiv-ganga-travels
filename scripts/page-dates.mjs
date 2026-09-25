@@ -84,6 +84,8 @@ const HOUSEKEEPING = new Set([
   '3aa489c', // 27 Aug 2026 — orphan-link mesh
   '196d3f4', // 31 Aug 2026 — og:image on cab templates
   'bf714d5', //  3 Sep 2026 — prefetch attribute sweep
+  'b2b0a79', // 25 Sep 2026 — pony fare in the fitness FAQ; it renders on / and
+             // /char-dham-yatra only, never on the /packages routes that date from packages.js
 ]);
 
 // ── 1. one pass over history: file → { created, modified } ─────────────────
