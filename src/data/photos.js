@@ -44,7 +44,8 @@ export const BADRINATH_PILGRIMS_PHOTO = {
 };
 BADRINATH_PILGRIMS_PHOTO.credit = `Photo shared by Sunirmal Ji, Badrinath, ${BADRINATH_PILGRIMS_PHOTO.dateHuman}.`;
 
-// A real IRCTC HeliYatra ticket: two passengers, Guptkashi (Chipsan's
+// A real IRCTC HeliYatra ticket for two of our pilgrims (Sumit confirmed
+// 25 Sep 2026; the page does not name them): Guptkashi (Chipsan's
 // Buransh helipad, Devshal) → Kedarnath 9 Oct 2026, back 10 Oct, booked
 // 22 Sep 2026. NOT a photograph and not our document — IRCTC issued it —
 // so, like the pilgrims' photo, it carries creditText and no copyright or

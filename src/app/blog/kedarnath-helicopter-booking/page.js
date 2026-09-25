@@ -106,7 +106,7 @@ export default function KedarnathHelicopterBooking() {
         <AnswerBox>
           <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. The 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person, GST included; only a fuel surcharge and the ₹300 IRCTC fee (plus GST) are added. A real Guptkashi round trip booked in September 2026 came to ₹13,487.50 per person all-in. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
         </AnswerBox>
-        <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
+        <p className="blog-lede">Kedarnath helicopter fares are quoted a dozen different ways online, and this page used to get them wrong too. So everything below is checked against a real ticket: one booked on 22 September 2026 for two of our pilgrims, flying from Guptkashi on 9 October and returning the next day. You can see it further down, with their details masked. It came to ₹13,487.50 a person, almost ₹2,000 less than we used to quote.</p>
 
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Whether you’re booking for yourself, your parents, or someone who simply cannot manage the 16km trek — this is everything you need to know about <strong>Kedarnath helicopter booking in 2026</strong> — or “Kedarnath chopper booking”, as half of North India searches for it — written honestly from years of arranging these flights for our pilgrims.</p>
 
@@ -167,14 +167,14 @@ export default function KedarnathHelicopterBooking() {
         </p>
 
         <h3 id="real-ticket" style={h3}>A Real 2026 Ticket, Line by Line</h3>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is a genuine IRCTC HeliYatra ticket, booked on 22 September 2026 for two passengers: Guptkashi to Kedarnath on 9 October, back the next day. We have blacked out the names, ages, yatra registration numbers, booking ID and both QR codes. Nothing else has been changed, so this is what a real ticket looks like. If a &ldquo;ticket&rdquo; someone sends you has no IRCTC booking ID, no yatra registration number for each passenger or no QR code, check it on the HeliYatra portal before you pay anything more.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is a genuine IRCTC HeliYatra ticket, booked on 22 September 2026 for two of our pilgrims: Guptkashi to Kedarnath on 9 October, back the next day. We have blacked out the names, ages, yatra registration numbers, booking ID and both QR codes. Nothing else has been changed, so this is what a real ticket looks like. If a &ldquo;ticket&rdquo; someone sends you has no IRCTC booking ID, no yatra registration number for each passenger or no QR code, check it on the HeliYatra portal before you pay anything more.</p>
         <figure style={{ margin:'0 auto 20px', maxWidth:560, borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
           <a href={HELI_TICKET_IMAGE.src} target="_blank" rel="noopener" style={{ display:'block' }}>
             <Image src={HELI_TICKET_IMAGE.src} alt={HELI_TICKET_IMAGE.alt} width={HELI_TICKET_IMAGE.width} height={HELI_TICKET_IMAGE.height}
               sizes="(max-width: 600px) 100vw, 560px" style={{ width:'100%', height:'auto', display:'block' }} />
           </a>
           <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
-            Guptkashi ⇄ Kedarnath, 9–10 October 2026, two passengers, operator Chipsan Aviation. Tap the ticket to open it full size. {HELI_TICKET_IMAGE.credit}
+            Guptkashi ⇄ Kedarnath, 9–10 October 2026, two of our pilgrims, operator Chipsan Aviation. Tap the ticket to open it full size. {HELI_TICKET_IMAGE.credit}
           </figcaption>
         </figure>
         <div style={{ overflowX:'auto', marginBottom:14 }}>
