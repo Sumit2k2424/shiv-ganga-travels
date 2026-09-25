@@ -451,7 +451,7 @@
     },
     "/joshimath-narsingh-temple": {
       "created": "2026-08-10",
-      "modified": "2026-09-01",
+      "modified": "2026-09-25",
       "files": [
         "src/app/joshimath-narsingh-temple/page.js"
       ]
@@ -465,7 +465,7 @@
     },
     "/kedarnath-doli-yatra": {
       "created": "2026-08-10",
-      "modified": "2026-09-01",
+      "modified": "2026-09-25",
       "files": [
         "src/app/kedarnath-doli-yatra/page.js"
       ]
@@ -521,7 +521,7 @@
     },
     "/mukhba-gangotri-winter-seat": {
       "created": "2026-08-10",
-      "modified": "2026-08-31",
+      "modified": "2026-09-25",
       "files": [
         "src/app/mukhba-gangotri-winter-seat/page.js"
       ]
