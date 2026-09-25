@@ -19,10 +19,16 @@ case "$VERCEL_GIT_COMMIT_MESSAGE" in
   *"[deploy]"*) exit 1 ;;
 esac
 
+# Compare against the last SUCCESSFUL deploy, not just the last commit. On
+# 25 Sep 2026 a push of five commits ended with a scripts/-only commit; diffing
+# HEAD^..HEAD saw only that one and cancelled the deploy, so the four content
+# commits before it never shipped. VERCEL_GIT_PREVIOUS_SHA is set by Vercel in
+# the Ignored Build Step only; HEAD^ remains the fallback.
+#
 # Overridable so the rule can be tested locally against any commit:
-#   VERCEL_IGNORE_TO=<sha> bash scripts/vercel-ignore.sh; echo $?
+#   VERCEL_IGNORE_FROM=<sha> VERCEL_IGNORE_TO=<sha> bash scripts/vercel-ignore.sh; echo $?
 to=${VERCEL_IGNORE_TO:-HEAD}
-from=${VERCEL_IGNORE_FROM:-$to^}
+from=${VERCEL_IGNORE_FROM:-${VERCEL_GIT_PREVIOUS_SHA:-$to^}}
 
 # No parent commit (first deploy, shallow clone without history) → build.
 git rev-parse --verify "$from" >/dev/null 2>&1 || exit 1
