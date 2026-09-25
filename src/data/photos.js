@@ -43,3 +43,24 @@ export const BADRINATH_PILGRIMS_PHOTO = {
   creditText: 'Sunirmal Ji',
 };
 BADRINATH_PILGRIMS_PHOTO.credit = `Photo shared by Sunirmal Ji, Badrinath, ${BADRINATH_PILGRIMS_PHOTO.dateHuman}.`;
+
+// A real IRCTC HeliYatra ticket: two passengers, Guptkashi (Chipsan's
+// Buransh helipad, Devshal) → Kedarnath 9 Oct 2026, back 10 Oct, booked
+// 22 Sep 2026. NOT a photograph and not our document — IRCTC issued it —
+// so, like the pilgrims' photo, it carries creditText and no copyright or
+// licence fields. Page 1 of the PDF was rendered at 3× to a flat raster;
+// solid boxes (not blur) cover the names, gender, ages, yatra registration
+// numbers, booking ID and both QR codes, so nothing survives underneath.
+// The PDF itself never enters the repo. Cropped to 1545×2000, 256-colour
+// PNG with no metadata (112 KB) — smaller than a JPEG and the text stays sharp.
+export const HELI_TICKET_IMAGE = {
+  src: '/images/kedarnath-helicopter-irctc-ticket-2026-masked.png',
+  width: 1545,
+  height: 2000,
+  alt: 'IRCTC HeliYatra ticket for two passengers, Guptkashi to Kedarnath on 9 October 2026 and back on 10 October, with the names, ages, yatra registration numbers, booking ID and QR codes blacked out. The fare table, all including GST, reads: helicopter fare ₹25,523.40, fuel surcharge ₹744, dynamic fare ₹0, IRCTC convenience fee ₹708, total ₹26,975.',
+  place: 'Guptkashi (Chipsan Buransh helipad, Devshal) to Kedarnath',
+  dateISO: '2026-09-22',
+  dateHuman: '22 September 2026',
+  creditText: 'IRCTC HeliYatra',
+};
+HELI_TICKET_IMAGE.credit = `IRCTC HeliYatra ticket booked ${HELI_TICKET_IMAGE.dateHuman}; passenger details masked by Shiv Ganga Travels.`;

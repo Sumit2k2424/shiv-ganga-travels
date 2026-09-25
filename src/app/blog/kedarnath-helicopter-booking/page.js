@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE } from '@/data/packages';
-import { HELIPAD_PHOTO } from '@/data/photos';
+import { HELIPAD_PHOTO, HELI_TICKET_IMAGE } from '@/data/photos';
 import BlogCTA from '@/components/BlogCTA';
 import BlogAuthor from '@/components/BlogAuthor';
 import BlogHero from '@/components/BlogHero';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogTOC from '@/components/BlogTOC';
-import { h2, p } from "@/lib/prose";
+import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 
@@ -34,11 +34,11 @@ export const metadata = {
 };
 
 const faqData = [
-  { q: 'How much does a Kedarnath helicopter cost in 2026?', a: 'Official 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person, plus a ₹300 IRCTC convenience fee and 18% GST. One-way fares are roughly ₹3,043 (Sersi), ₹4,840 (Phata) and ₹6,077 (Guptkashi). Fares are fixed by UCADA and sold only on the IRCTC HeliYatra portal.' },
+  { q: 'How much does a Kedarnath helicopter cost in 2026?', a: 'Official 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person, with 5% GST already included. A fuel surcharge and the ₹300 IRCTC convenience fee (plus 18% GST on the fee) are added at checkout: a real Guptkashi round trip booked in September 2026 came to ₹13,487.50 per person all-in. One-way base fares are ₹3,043 (Sersi), ₹4,840 (Phata) and ₹6,077 (Guptkashi) before GST. Fares are fixed by UCADA and sold only on the IRCTC HeliYatra portal.' },
   { q: 'Which is the best helipad for Kedarnath helicopter?', a: 'Phata is the practical choice — the most operators and best availability, at a middle price. Sersi is closest to Kedarnath and cheapest but its slots sell out fastest. Guptkashi is the most expensive yet the easiest helipad to reach by road and stay near. All three reach the temple in 7–10 minutes.' },
-  { q: 'What happens if the Kedarnath helicopter is cancelled due to weather?', a: 'Weather cancellations are fully refunded or rescheduled at no extra cost. Cloud cover at Kedarnath is common in the afternoon — morning slots (6–10 AM) have the best success rate. Always book return flight for the same day and plan an extra buffer day in your itinerary.' },
+  { q: 'What happens if the Kedarnath helicopter is cancelled due to weather?', a: 'The fare is refunded to the account you paid from within 5–7 days, minus the payment-gateway charges and the IRCTC convenience fee. You are not moved to the next slot, so get your ticket stamped as cancelled at the helipad counter and rebook or take the trail. Cloud cover at Kedarnath is common in the afternoon, so morning slots (6–10 AM) have the best success rate. Plan an extra buffer day in your itinerary.' },
   { q: 'Can I book Kedarnath helicopter for senior citizens?', a: 'Yes, absolutely. Helicopter is actually our recommended option for pilgrims above 65 years of age, those with heart or lung conditions, or anyone who cannot manage the 16km trek. The flight is just 7–10 minutes and completely safe.' },
-  { q: 'How early in advance should I book Kedarnath helicopter?', a: 'For May and June (peak season), book helicopter slots at least 60–90 days in advance. Slots fill up very quickly. September–October is slightly more flexible but still books up 30–45 days ahead. Last-minute bookings are possible but risky.' },
+  { q: 'How early in advance should I book Kedarnath helicopter?', a: 'For May and June (peak season), book helicopter slots at least 60–90 days in advance. Slots fill up very quickly. September–October is more flexible: the ticket shown on this page was booked on 22 September for a 9 October Guptkashi flight, 17 days ahead. Sersi and Phata go faster than Guptkashi, and last-minute bookings are possible but risky.' },
   { q: 'Can GMVN book my Kedarnath helicopter ticket?', a: 'No. GMVN (Garhwal Mandal Vikas Nigam) is the state tourism corporation — it runs guesthouses and road packages but does not sell helicopter tickets. All Kedarnath shuttle tickets are sold only on the IRCTC HeliYatra portal, heliyatra.irctc.co.in, after your yatra registration is complete.' },
   { q: 'Is there a direct helicopter from Dehradun to Kedarnath?', a: 'Yes, as a private charter from Sahastradhara helipad, Dehradun — typically ₹1.1–1.5 lakh per seat for a same-day darshan trip with VIP darshan included. This is separate from the IRCTC valley shuttle (₹6,390–12,762 round trip from Sersi, Phata or Guptkashi), which requires reaching the valley by road first.' },
 ];
@@ -53,10 +53,13 @@ function Schema() {
         sameAs: ['https://www.linkedin.com/in/dhanesh-chandra-635564429/'],
       }, publisher:{ '@type':'Organization', name:SITE.name, url:SITE.baseUrl },
       // Our own photo. GSC's Image Metadata report wants the four licensing fields.
-      image: { '@type':'ImageObject', url:`${SITE.baseUrl}${HELIPAD_PHOTO.src}`, width:HELIPAD_PHOTO.width, height:HELIPAD_PHOTO.height, caption:HELIPAD_PHOTO.alt,
+      image: [{ '@type':'ImageObject', url:`${SITE.baseUrl}${HELIPAD_PHOTO.src}`, width:HELIPAD_PHOTO.width, height:HELIPAD_PHOTO.height, caption:HELIPAD_PHOTO.alt,
         dateCreated:HELIPAD_PHOTO.dateISO, contentLocation:{ '@type':'Place', name:'Kedarnath helipad, Rudraprayag district, Uttarakhand' },
         creditText:SITE.name, creator:{ '@id':`${SITE.baseUrl}/#organization` }, copyrightHolder:{ '@id':`${SITE.baseUrl}/#organization` },
         copyrightNotice:`© ${SITE.season} ${SITE.name}`, license:`${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage:`${SITE.baseUrl}/contact` },
+        // IRCTC's document, not ours: credit only, no copyright or licence fields.
+        { '@type':'ImageObject', url:`${SITE.baseUrl}${HELI_TICKET_IMAGE.src}`, width:HELI_TICKET_IMAGE.width, height:HELI_TICKET_IMAGE.height, caption:HELI_TICKET_IMAGE.alt,
+        dateCreated:HELI_TICKET_IMAGE.dateISO, creditText:HELI_TICKET_IMAGE.creditText }],
       datePublished:PAGE_DATES.createdISO, dateModified:PAGE_DATES.modifiedISO, mainEntityOfPage:`${SITE.baseUrl}/blog/kedarnath-helicopter-booking` };
   
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(article) }}/></>);
@@ -101,7 +104,7 @@ export default function KedarnathHelicopterBooking() {
 
 
         <AnswerBox>
-          <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. The 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person (one-way ₹3,043 / ₹4,840 / ₹6,077), plus a ₹300 IRCTC fee and 18% GST on top. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
+          <strong>Kedarnath helicopter tickets are sold only on the IRCTC HeliYatra portal</strong> — heliyatra.irctc.co.in — and nowhere else. Flights run from Phata, Sersi and Guptkashi, not from Haridwar or Gaurikund, and the hop takes 8 to 10 minutes. The 2026 round-trip fares are ₹6,390 from Sersi, ₹10,164 from Phata and ₹12,762 from Guptkashi per person, GST included; only a fuel surcharge and the ₹300 IRCTC fee (plus GST) are added. A real Guptkashi round trip booked in September 2026 came to ₹13,487.50 per person all-in. Slots for May and June open weeks ahead and sell out within hours; anyone offering you a guaranteed ticket outside IRCTC is reselling at a markup or is not selling a ticket at all.
         </AnswerBox>
         <p className="blog-lede">My father refused to consider the Kedarnath helicopter for years. "Yatra toh paidal karte hain," he would say — the pilgrimage is done on foot. Then at 71, with a knee replacement and early-stage COPD, he finally agreed. Seven minutes from Phata to Kedarnath. He stood inside the ancient stone temple and wept for twenty minutes. "Same darshan," he said afterwards, smiling. "Shiva doesn’t care how you arrive."</p>
 
@@ -110,7 +113,7 @@ export default function KedarnathHelicopterBooking() {
         {/* Quick Answer — claim-first, extractable for AI Overviews / ChatGPT */}
         <div style={{ background:'var(--navy-light)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', marginBottom:24 }}>
           <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
-          <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath helicopters fly from three helipads — <strong>Sersi, Phata and Guptkashi</strong> — reaching the temple in 7–10 minutes. Official 2026 round-trip fares are <strong>₹6,390 (Sersi), ₹10,164 (Phata) and ₹12,762 (Guptkashi)</strong> per person, plus a ₹300 IRCTC fee and 18% GST. Tickets are booked only on the IRCTC HeliYatra portal (heliyatra.irctc.co.in) and require a valid Char Dham registration. Shiv Ganga Travels arranges the road journey, registration and morning-slot guidance around your flight.</p>
+          <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath helicopters fly from three helipads — <strong>Sersi, Phata and Guptkashi</strong> — reaching the temple in 7–10 minutes. Official 2026 round-trip fares are <strong>₹6,390 (Sersi), ₹10,164 (Phata) and ₹12,762 (Guptkashi)</strong> per person, GST included, plus a fuel surcharge and the ₹300 IRCTC fee. Tickets are booked only on the IRCTC HeliYatra portal (heliyatra.irctc.co.in) and require a valid Char Dham registration. Shiv Ganga Travels arranges the road journey, registration and morning-slot guidance around your flight.</p>
         </div>
 
         <figure style={{ margin:'0 0 24px', borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
@@ -123,6 +126,7 @@ export default function KedarnathHelicopterBooking() {
 
         <BlogTOC items={[
           { id:'price',       label:'Official IRCTC price 2026' },
+          { id:'real-ticket', label:'A real 2026 ticket' },
           { id:'helipads',    label:'Which helipad to choose' },
           { id:'dehradun',    label:'Dehradun charter option' },
           { id:'gmvn',        label:'GMVN mix-up cleared up' },
@@ -133,11 +137,11 @@ export default function KedarnathHelicopterBooking() {
         ]}/>
 
         <h2 id="price" style={h2}>Kedarnath Helicopter Price 2026 (Official IRCTC Fares)</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Fares are fixed per helipad by the Uttarakhand Civil Aviation Development Authority (UCADA) and charged <strong>per person</strong>. The difference reflects distance from Kedarnath, not service quality — Sersi is closest and cheapest, Guptkashi farthest and priciest. All fares below exclude the ₹300 IRCTC convenience fee and 18% GST.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Fares are fixed per helipad by the Uttarakhand Civil Aviation Development Authority (UCADA) and charged <strong>per person</strong>. The difference reflects distance from Kedarnath, not service quality — Sersi is closest and cheapest, Guptkashi farthest and priciest. The round-trip fares already include 5% GST; the one-way figures are the base fare before it (₹6,077 × 2 + 5% = ₹12,762). A fuel surcharge and the IRCTC convenience fee are added at checkout. The real ticket below shows both.</p>
         <div style={{ overflowX:'auto', marginBottom:14 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:540 }}>
             <thead><tr style={{ background:'var(--navy)' }}>
-              {['Helipad','Distance to Kedarnath','Round-trip fare','One-way fare','Notes'].map(hd=>(
+              {['Helipad','Distance to Kedarnath','Round trip (incl. GST)','One-way (before GST)','Notes'].map(hd=>(
                 <th key={hd} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{hd}</th>
               ))}
             </tr></thead>
@@ -162,6 +166,51 @@ export default function KedarnathHelicopterBooking() {
           ⚠️ <strong>Book only on the official portal:</strong> Kedarnath helicopter tickets are sold exclusively on <strong>heliyatra.irctc.co.in</strong>. IRCTC allocates the operator per flight — you don’t choose it. Any site or agent selling &ldquo;guaranteed&rdquo; heli tickets outside IRCTC is unauthorised; the Uttarakhand administration has flagged fake booking sites every season. A one-way ticket up plus trek down is a popular money-saver for fit pilgrims.
         </p>
 
+        <h3 id="real-ticket" style={h3}>A Real 2026 Ticket, Line by Line</h3>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is a genuine IRCTC HeliYatra ticket, booked on 22 September 2026 for two passengers: Guptkashi to Kedarnath on 9 October, back the next day. We have blacked out the names, ages, yatra registration numbers, booking ID and both QR codes. Nothing else has been changed, so this is what a real ticket looks like. If a &ldquo;ticket&rdquo; someone sends you has no IRCTC booking ID, no yatra registration number for each passenger or no QR code, check it on the HeliYatra portal before you pay anything more.</p>
+        <figure style={{ margin:'0 auto 20px', maxWidth:560, borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
+          <a href={HELI_TICKET_IMAGE.src} target="_blank" rel="noopener" style={{ display:'block' }}>
+            <Image src={HELI_TICKET_IMAGE.src} alt={HELI_TICKET_IMAGE.alt} width={HELI_TICKET_IMAGE.width} height={HELI_TICKET_IMAGE.height}
+              sizes="(max-width: 600px) 100vw, 560px" style={{ width:'100%', height:'auto', display:'block' }} />
+          </a>
+          <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
+            Guptkashi ⇄ Kedarnath, 9–10 October 2026, two passengers, operator Chipsan Aviation. Tap the ticket to open it full size. {HELI_TICKET_IMAGE.credit}
+          </figcaption>
+        </figure>
+        <div style={{ overflowX:'auto', marginBottom:14 }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:320 }}>
+            <thead><tr style={{ background:'var(--navy)' }}>
+              {['On the ticket','2 passengers','Per person'].map(hd=>(
+                <th key={hd} style={{ padding:'9px 12px', textAlign:'left', color:'#fff', fontWeight:700, fontSize:12 }}>{hd}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {[
+                ['Helicopter fare','₹25,523.40','₹12,761.70'],
+                ['Fuel surcharge','₹744','₹372'],
+                ['Dynamic fare','₹0','₹0'],
+                ['IRCTC convenience fee (₹300 + 18% GST)','₹708','₹354'],
+                ['Total paid','₹26,975','₹13,487.50'],
+              ].map((r,i)=>(
+                <tr key={r[0]} style={{ background:i%2?'var(--bg)':'#fff' }}>
+                  <td style={{ padding:'9px 12px', fontWeight:i===4?700:600, color:'var(--navy)' }}>{r[0]}</td>
+                  <td style={{ padding:'9px 12px', color:'#475569', fontWeight:i===4?700:400, whiteSpace:'nowrap' }}>{r[1]}</td>
+                  <td style={{ padding:'9px 12px', color:'#475569', fontWeight:i===4?700:400, whiteSpace:'nowrap' }}>{r[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:12 }}>Every figure above includes GST, as printed. What the ticket settles:</p>
+        <ul style={{ paddingLeft:22, marginBottom:20, color:'var(--text-mid)', fontSize:14.5, lineHeight:1.9 }}>
+          <li><strong>GST is already inside the fare.</strong> The helicopter-fare line is the ₹12,762 round-trip fare per person, and the ticket prints it as &ldquo;Including GST&rdquo;. Earlier versions of this page added 18% GST on top of it, which overstated a Guptkashi round trip by almost ₹2,000 a head.</li>
+          <li><strong>The extras are small.</strong> Fuel surcharge and IRCTC fee together added ₹726 per person. The IRCTC fee is the same from every helipad. This ticket only shows the Guptkashi fuel surcharge, so we don&rsquo;t quote one for Sersi or Phata.</li>
+          <li><strong>&ldquo;Guptkashi&rdquo; is the operator&rsquo;s helipad, not the town.</strong> This flight left from Chipsan&rsquo;s Buransh helipad at Devshal village. Drive to the helipad address printed on your ticket.</li>
+          <li><strong>Print it.</strong> The ticket states that no digital ticket will be accepted: bring a paper copy and each passenger&rsquo;s original ID, the same one used when booking.</li>
+          <li><strong>Reach the entry gate an hour before your slot</strong> (two hours is advised). Later than that counts as a no-show, with no refund.</li>
+          <li><strong>80 kg per passenger.</strong> Every kilo above that costs ₹150, paid at the helipad, and one passenger&rsquo;s spare weight does not offset another&rsquo;s. One bag of up to 2 kg is allowed. Children aged 2 and over pay the full fare; infants under 2 fly free with no seat.</li>
+        </ul>
+
         <h2 id="helipads" style={h2}>The Three Helipads — Which One Should You Choose?</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>All three reach Kedarnath in roughly 7–10 minutes; the choice comes down to budget, road access and how fast slots vanish. <strong>Sersi</strong> is cheapest but its slots sell out fastest. <strong>Phata</strong> is the practical middle choice with the most operators and best availability. <strong>Guptkashi</strong> costs the most but is the easiest helipad to drive to and to stay near the night before. If you’re on a Kedarnath or Char Dham package with us, we point you to <strong>Phata or Sersi</strong> for the best price-to-availability balance and book your road leg to match.</p>
 
@@ -177,6 +226,7 @@ export default function KedarnathHelicopterBooking() {
         <h2 id="weather" style={h2}>Weather & When to Book Morning Slots</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This is the most important practical tip — and most operators won’t tell you this upfront. <strong>Kedarnath gets heavy cloud cover almost every afternoon from 11 AM onwards</strong>, especially in the shoulder season. If your flight is scheduled for 2 PM and clouds roll in, it gets cancelled.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Always request the <strong>first morning slot (6:00 AM – 8:00 AM)</strong>. Yes, it means waking at 4 AM. But in our experience the morning flights almost always go, and it is the afternoon ones — especially in May–June — that get cancelled. When we book helicopter for our pilgrims, morning slots are non-negotiable.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>The one exception is a night at Kedarnath. IRCTC&rsquo;s rules, printed on every ticket, say night-stay passengers should book a slot from 2 PM onwards, and report for the return flight at the Kedarnath helipad at 6 AM the next day. That is why the ticket above flies up in the 3–6 PM slot. Book your room at Kedarnath first. On a same-day return you must report back to the Kedarnath helipad within 1 hour 30 minutes of landing, or you count as a no-show.</p>
 
         <h2 id="how-to-book" style={h2}>How to Book on the IRCTC HeliYatra Portal (Step by Step)</h2>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Since the system moved fully to IRCTC, this is the only official way to buy a Kedarnath helicopter ticket online. Bookings typically open in April for the season, released in batches rather than all at once — and prime Sersi/Phata slots can vanish within hours of a release.</p>
@@ -186,7 +236,7 @@ export default function KedarnathHelicopterBooking() {
           <li>Pick your helipad — Sersi, Phata or Guptkashi — then the date and time slot.</li>
           <li>Enter passenger details linked to the registration. Up to 6 seats per ID (12 for groups).</li>
           <li>Pay online. IRCTC allocates the operator per flight by rotation — you don’t choose the company.</li>
-          <li>Save the e-ticket; carry the same ID you registered with to the helipad.</li>
+          <li>Print the ticket: the helipad does not accept one on your phone. Carry each passenger&rsquo;s original ID, the same one used when booking.</li>
         </ol>
 
         <h2 style={h2}>How We Help Around Your Helicopter Booking</h2>

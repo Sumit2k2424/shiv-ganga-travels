@@ -185,8 +185,8 @@ export default function Page() {
             ['2','Create IRCTC account','Mobile OTP verification required. Use an active Indian mobile number.'],
             ['3','Select helipad and date','Choose Phata, Sersi, or Guptkashi. Select departure date and time slot.'],
             ['4','Enter passenger details','Name as per Aadhaar, age, ID proof details for each passenger.'],
-            ['5','Pay online','Official fare per helipad: Sersi ₹3,043, Phata ₹4,840, Guptkashi ₹6,077 one-way (+ fee & GST).'],
-            ['6','Download ticket','Print or save digital ticket. Carry to helipad — QR code is scanned.'],
+            ['5','Pay online','Official fare per helipad: Sersi ₹3,043, Phata ₹4,840, Guptkashi ₹6,077 one-way, plus 5% GST, a fuel surcharge and the IRCTC fee.'],
+            ['6','Print the ticket','Carry a printed copy: the helipad does not accept one on your phone. Bring each passenger’s original ID, the same one used when booking.'],
           ].map(([n,t,d])=>(
             <div key={n} style={{display:'flex',gap:0,borderRadius:10,overflow:'hidden',border:'1px solid hsl(var(--border))'}}>
               <div style={{background:'var(--navy)',minWidth:44,display:'flex',alignItems:'center',justifyContent:'center',padding:'12px 8px'}}>
