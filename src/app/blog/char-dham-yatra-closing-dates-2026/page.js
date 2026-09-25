@@ -13,12 +13,12 @@ const PAGE_DATES = pageDates('/blog/char-dham-yatra-closing-dates-2026');
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra Closing Dates 2026 | All 4 Temples' },
-  description: `Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony guide.`,
+  description: `Expected 2026 Char Dham closing dates: Gangotri Nov 10, Yamunotri and Kedarnath Nov 11 (Bhai Dooj), Badrinath ~Nov 13 until the BKTC confirms it on Dussehra.`,
   keywords: ['char dham closing dates 2026', 'kedarnath closing date 2026', 'badrinath closing date 2026', 'gangotri closing date 2026', 'yamunotri closing date 2026', 'char dham yatra last date 2026', 'when does char dham close'],
   alternates: { canonical: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026` },
   openGraph: {
     title: 'Char Dham Yatra Closing Dates 2026: All 4 Temples',
-    description: 'Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony guide.',
+    description: 'Expected 2026 Char Dham closing dates: Gangotri Nov 10, Yamunotri and Kedarnath Nov 11 (Bhai Dooj), Badrinath ~Nov 13 until the BKTC confirms it on Dussehra.',
     url: `${SITE.baseUrl}/blog/char-dham-yatra-closing-dates-2026`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Char Dham Closing Dates 2026 — When Kedarnath, Badrinath, Gangotri & Y | Shiv Ganga Travels' }],
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Char Dham Closing Dates 2026 — When All 4 Dhams Close for Winter',
-    description: 'Confirmed 2026 Char Dham closing dates. Kedarnath closes Nov 11, Badrinath Nov 13, Gangotri Nov 10, Yamunotri Nov 11. Winter abodes and Kapat Band ceremony',
+    description: 'Expected 2026 Char Dham closing dates: Gangotri Nov 10, Yamunotri and Kedarnath Nov 11 (Bhai Dooj), Badrinath ~Nov 13 until the BKTC confirms it on Dussehra.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Closing Dates 2026 — When All 4 Dhams Close for Wi | Shiv Ganga Travels' }],
   },
 };
@@ -52,7 +52,7 @@ export default function ClosingDates() {
       name: 'Gangotri',
       opens: 'April 19, 2026',
       closes: 'November 10, 2026',
-      occasion: 'Diwali',
+      occasion: 'Annakut (Govardhan Puja)',
       winterAbode: 'Mukhba village, Uttarkashi district',
       ceremony: 'The Goddess Ganga\'s brass idol is carried in a Doli (palanquin) from Gangotri to Mukhba — a 25km journey through the Bhagirathi valley. The Bhog (offering) ceremony takes place at sunrise, after which the temple doors are sealed. Thousands of devotees attend to witness the final aarti before the kapat closes.',
       tip: 'Last-chance visits in October see crystal-clear autumn skies and dramatically fewer crowds than May–June. The post-monsoon visibility from Gangotri is often the best of the entire season.',
@@ -61,7 +61,7 @@ export default function ClosingDates() {
       name: 'Yamunotri',
       opens: 'April 19, 2026',
       closes: 'November 11, 2026',
-      occasion: 'Bhai Dooj (day after Diwali)',
+      occasion: 'Bhai Dooj',
       winterAbode: 'Kharsali village (Syana Chattra), Uttarkashi',
       ceremony: 'The 6km trek from Jankichatti to Yamunotri is done one final time by the officiating priests and a core group of devotees. Goddess Yamuna\'s idol is moved to Kharsali by Doli. The closing ceremony at Yamunotri includes the last Bhog, the last Aarti, and the symbolic sealing of the doors as winter descends on the valley.',
       tip: 'Yamunotri is the least-visited of the four dhams and the most underrated in October. The Surya Kund hot spring (88°C) near the temple is uniquely atmospheric with morning mist and autumn colours on the surrounding hillsides.',
@@ -78,8 +78,8 @@ export default function ClosingDates() {
     {
       name: 'Badrinath',
       opens: 'April 23, 2026',
-      closes: 'November 13, 2026',
-      occasion: '~2 weeks after Diwali (exact date on Vijayadashami)',
+      closes: '~November 13, 2026 (tentative)',
+      occasion: 'Set by the BKTC, announced on Vijayadashami',
       winterAbode: 'Pandukeshwar / Narsingh Temple, Joshimath',
       ceremony: 'The closing ceremony (Kapat Band) at Badrinath begins with the early morning Narada Kund bath, followed by the final Abhishek of Lord Vishnu\'s idol. The Narad Shila (a rock beside the temple) is symbolically worshipped as a farewell gesture. Lord Vishnu\'s idol is dressed for winter and moved in a ceremonial procession to Pandukheshwar/Joshimath. The Akhand Jyot at Badrinath is also lit at closing time.',
       tip: 'Badrinath closes last among all four dhams and is often accessible well into November. Late-season Badrinath visits combine cold, clear weather, empty roads, and the possibility of early snowfall on the surrounding peaks — a striking visual.',
@@ -94,7 +94,7 @@ export default function ClosingDates() {
       <BlogHero
         badge="2026 Season End · Kapat Band Dates"
         title="Char Dham Closing Dates 2026"
-        dek="Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath Nov 13. Complete closing ceremony guide, winter abodes, and last-chance visit tips."
+        dek="Gangotri Nov 10 · Yamunotri Nov 11 · Kedarnath Nov 11 · Badrinath ~Nov 13 (tentative). Complete closing ceremony guide, winter abodes, and last-chance visit tips."
         author="Dhanesh Chandra Mishra"
         updated={`Updated ${PAGE_DATES.modifiedHuman}`}
         readTime="5 min read"
@@ -102,7 +102,7 @@ export default function ClosingDates() {
           { label:'Gangotri',  value:'Nov 10, 2026' },
           { label:'Yamunotri', value:'Nov 11, 2026' },
           { label:'Kedarnath', value:'Nov 11 (Bhai Dooj)' },
-          { label:'Badrinath', value:'Nov 13, 2026' },
+          { label:'Badrinath', value:'~Nov 13 (tentative)' },
         ]}
       />
 
@@ -117,13 +117,13 @@ export default function ClosingDates() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
 
         {/* Author byline — E-E-A-T signal */}
-        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath Nov 13. Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
+        <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath ~Nov 13 (tentative). Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <AnswerBox>
-          <strong>The 2026 Char Dham temples close between 10 and 13 November.</strong> Gangotri closes 10 November on Diwali, Yamunotri and Kedarnath both on 11 November for Bhai Dooj, and Badrinath last on 13 November. Closing dates are confirmed on Vijayadashami each year. After closing, each deity moves to its winter seat — Mukhba for Ganga, Kharsali for Yamuna, Ukhimath for Kedarnath and Pandukeshwar for Badrinath.
+          <strong>The 2026 Char Dham temples close between 10 and 13 November.</strong> Gangotri closes 10 November on Annakut, Yamunotri and Kedarnath both on 11 November for Bhai Dooj, and Badrinath last, expected around 13 November. The first three follow the Diwali calendar; the Badrinath date is fixed by the Badrinath-Kedarnath Temple Committee and announced on Vijayadashami, so treat it as tentative until then. After closing, each deity moves to its winter seat — Mukhba for Ganga, Kharsali for Yamuna, Ukhimath for Kedarnath and Pandukeshwar for Badrinath.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
-          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} — dates confirmed for 2026 season
+          🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} — Badrinath date awaits the BKTC’s Vijayadashami announcement
         </div>
 
         {/* Quick reference table */}
@@ -152,7 +152,7 @@ export default function ClosingDates() {
           </table>
         </div>
         <p style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 28 }}>
-          Note: Exact closing dates are confirmed by temple committees on Vijayadashami (Dussehra). Dates above are based on 2026 Hindu calendar calculations and are tentative until official confirmation. Gangotri and Yamunotri dates follow Diwali; Kedarnath follows Bhai Dooj; Badrinath is confirmed approximately 1–2 weeks post-Diwali.
+          Note: Gangotri (Annakut), Yamunotri and Kedarnath (Bhai Dooj) close on fixed festival days, so their dates follow the 2026 Diwali calendar. Badrinath’s closing date is set by the Badrinath-Kedarnath Temple Committee and announced on Vijayadashami (Dussehra); 13 November is our estimate until then. Avoid non-refundable bookings that depend on the exact Badrinath date.
         </p>
 
         <BlogTOC items={[
