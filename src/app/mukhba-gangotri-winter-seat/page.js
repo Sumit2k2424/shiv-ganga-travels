@@ -14,12 +14,12 @@ const S = SEATS.mukhba;
 
 export const metadata = {
   title: { absolute: 'Mukhba — Gangotri\'s Winter Seat in the Harsil Valley' },
-  description: 'Goddess Ganga leaves Gangotri on Diwali and winters at Mukhba near Harsil. One of the most beautiful valleys in Garhwal, and empty from November to April.',
+  description: 'Goddess Ganga leaves Gangotri the day after Diwali and winters at Mukhba near Harsil. One of the most beautiful valleys in Garhwal, and empty from November to April.',
   keywords: ['mukhba','mukhba village','gangotri winter seat','mukhimath','ganga winter abode','harsil valley winter','gangotri in winter','mukhba how to reach'],
   alternates: { canonical: `${SITE.baseUrl}/mukhba-gangotri-winter-seat` },
   openGraph: {
     title: 'Mukhba — Gangotri\'s Winter Seat in the Harsil Valley',
-    description: 'Ganga leaves Gangotri on Diwali and winters here. The Harsil valley in winter is almost empty.',
+    description: 'Ganga leaves Gangotri the day after Diwali and winters here. The Harsil valley in winter is almost empty.',
     url: `${SITE.baseUrl}/mukhba-gangotri-winter-seat`,
     type: 'article',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Mukhba village near Harsil — winter seat of Goddess Ganga' }],
@@ -27,14 +27,14 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mukhba — Gangotri\'s Winter Seat in the Harsil Valley',
-    description: 'Ganga leaves Gangotri on Diwali and winters here, in an almost empty valley.',
+    description: 'Ganga leaves Gangotri the day after Diwali and winters here, in an almost empty valley.',
     images: [{ url: '/opengraph-image', alt: 'Mukhba, Gangotri Winter Seat | Shiv Ganga Travels' }],
   },
 };
 
 const FAQS = [
   { q:'What is Mukhba?',
-    a:'Mukhba, also called Mukhimath, is the winter seat of Gangotri. On Diwali — the same day the Gangotri doors close — the idol of Goddess Ganga is carried down the valley in procession to the temple at Mukhba, where she is worshipped through the winter. She returns to Gangotri on Akshaya Tritiya in April or May. The village sits near Harsil in Uttarkashi district at around 2,620 m.' },
+    a:'Mukhba, also called Mukhimath, is the winter seat of Gangotri. On Annakut, the day after Diwali, the Gangotri doors close and the idol of Goddess Ganga is carried down the valley in procession to the temple at Mukhba, where she is worshipped through the winter. She returns to Gangotri on Akshaya Tritiya in April or May. The village sits near Harsil in Uttarkashi district at around 2,620 m.' },
   { q:'How far is Mukhba from Gangotri?',
     a:'About 20 km down the valley, and the difference in feel is complete. Gangotri in season is a busy pilgrimage town with queues and shops; Mukhba is a stone-and-timber Garhwali village of a few hundred people where the temple sits among houses. The road between them is closed above Harsil in deep winter, which is precisely why the deity comes down.' },
   { q:'Can I visit Mukhba in winter, and is the road open?',
@@ -53,7 +53,7 @@ export default function MukhbaWinterSeat() {
   const blocks = buildSchema({
     slug:'mukhba-gangotri-winter-seat',
     name:'Mukhba (Mukhimath), winter seat of Gangotri',
-    description:'Village near Harsil in Uttarkashi district, Uttarakhand, at about 2,620 m, where Goddess Ganga is worshipped from Diwali until Akshaya Tritiya.',
+    description:'Village near Harsil in Uttarkashi district, Uttarakhand, at about 2,620 m, where Goddess Ganga is worshipped from Annakut, the day after Diwali, until Akshaya Tritiya.',
     geo:[31.0350, 78.7400],
     types:['PlaceOfWorship','HinduTemple','TouristAttraction'],
     faqs:FAQS,
@@ -65,7 +65,7 @@ export default function MukhbaWinterSeat() {
       <SchemaBlocks blocks={blocks}/>
 
       <Hero eyebrow={`Winter seat of Gangotri · ${S.altitude}`} title="Mukhba, Winter Seat of Ganga">
-        Ganga leaves Gangotri on Diwali and spends the winter here, in a village in the Harsil valley —{' '}
+        Ganga leaves Gangotri the day after Diwali and spends the winter here, in a village in the Harsil valley —{' '}
         <strong style={{ color:'#FFD166' }}>one of the most beautiful and least visited places in Garhwal</strong>.
       </Hero>
 
@@ -75,7 +75,7 @@ export default function MukhbaWinterSeat() {
 
 
         <AnswerBox>
-          <strong>Mukhba is where Goddess Ganga spends the winter</strong> — when Gangotri closes on Diwali, the idol is carried down to this village near Harsil and worshipped there daily until the shrine reopens on Akshaya Tritiya. It sits at about 2,600m, is reachable by road all winter, and receives a fraction of Gangotri's summer crowds. The procession down from Gangotri, and back up in spring, is the thing worth timing a visit around.
+          <strong>Mukhba is where Goddess Ganga spends the winter</strong> — when Gangotri closes on Annakut, the day after Diwali, the idol is carried down to this village near Harsil and worshipped there daily until the shrine reopens on Akshaya Tritiya. It sits at about 2,600m, is reachable by road all winter, and receives a fraction of Gangotri's summer crowds. The procession down from Gangotri, and back up in spring, is the thing worth timing a visit around.
         </AnswerBox>
         <P>
           On {SEASON.closing.gangotri.date}, the day the Gangotri doors close, the idol of Goddess Ganga
@@ -118,7 +118,7 @@ export default function MukhbaWinterSeat() {
           head={['','Gangotri (summer)','Mukhba (winter)']}
           rows={[
             ['Altitude','3,100 m','About 2,620 m'],
-            ['Season','May to Diwali','Diwali to Akshaya Tritiya'],
+            ['Season','Akshaya Tritiya to Annakut','Annakut to Akshaya Tritiya'],
             ['Setting','Pilgrimage town, shops, queues','Village temple among houses'],
             ['Visitors','Thousands a day in peak season','Often a handful'],
             ['Access','Open road, busy','Snow-dependent'],

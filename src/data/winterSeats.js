@@ -21,10 +21,12 @@ export const WINTER_VERIFIED = false; // flip once checked against a real winter
 export const SEASON = {
   year: 2026,
   closing: {
-    gangotri : { date: '10 November 2026', occasion: 'Diwali / Annakut' },
+    gangotri : { date: '10 November 2026', occasion: 'Annakut, the day after Diwali' },
     kedarnath: { date: '11 November 2026', occasion: 'Bhai Dooj' },
     yamunotri: { date: '11 November 2026', occasion: 'Bhai Dooj' },
-    badrinath: { date: '13 November 2026', occasion: 'Two days after Bhai Dooj' },
+    // Badrinath is the one date not fixed by a festival: the BKTC announces it
+    // on Vijayadashami. Flip `tentative` to false once it has.
+    badrinath: { date: '13 November 2026', occasion: 'Set by the BKTC on Vijayadashami', tentative: true },
   },
   // Doors reopen late April / early May; exact dates are declared on
   // Basant Panchami (Badrinath) and Mahashivratri (Kedarnath).
@@ -71,7 +73,7 @@ export const SEATS = {
     village: 'Mukhba, near Harsil, Uttarkashi district',
     altitude: 'About 2,620 m',
     fromHaridwar: 'About 230 km via Uttarkashi, 9–10 hrs',
-    arrives: 'On Diwali, the same day Gangotri closes',
+    arrives: 'On Annakut, the day Gangotri closes',
     worship: 'Ganga is worshipped at the Mukhba temple through the winter and returns to Gangotri on Akshaya Tritiya',
     access: 'Harsil valley. Genuinely snow-affected in January and February — call before you commit.',
     why: 'Mukhba sits in the Harsil valley, which is among the most beautiful places in Garhwal and almost empty in winter. The Ganga you queue to see at Gangotri in June is here, in a village temple, with nobody else in the room.',

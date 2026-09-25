@@ -78,7 +78,10 @@ export default function JoshimathNarsinghTemple() {
           <strong>Narsingh Temple at Joshimath is the winter seat of Badrinath</strong> — when the shrine closes each November the deity is carried down and worshipped here until the doors reopen in spring. It is one of the four cardinal maths founded by Adi Shankaracharya. The temple's Narsingh idol is famous for a wrist said to be slowly thinning, which local belief ties to the eventual closing of the Badrinath route.
         </AnswerBox>
         <P>
-          Badrinath closes on {SEASON.closing.badrinath.date}, the last of the four dhams to shut. From
+          Badrinath {SEASON.closing.badrinath.tentative
+            ? <>is expected to close around {SEASON.closing.badrinath.date} &mdash; the temple committee
+              announces the exact date on Vijayadashami &mdash;</>
+            : <>closes on {SEASON.closing.badrinath.date},</>} the last of the four dhams to shut. From
           the following day Badri Vishal is worshipped at the Narsingh Temple in Joshimath, at{' '}
           {S.altitude} on the main highway, while Uddhav and Kubera go up the valley to Pandukeshwar.
           Joshimath is the largest and most comfortable of the four winter seats to visit, and it is the
