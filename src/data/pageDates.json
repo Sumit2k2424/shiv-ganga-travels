@@ -5,7 +5,7 @@
   "routes": {
     "/": {
       "created": "2026-04-18",
-      "modified": "2026-09-15",
+      "modified": "2026-09-25",
       "files": [
         "src/app/page.js"
       ]
@@ -19,14 +19,14 @@
     },
     "/badrinath-temple": {
       "created": "2026-04-25",
-      "modified": "2026-09-24",
+      "modified": "2026-09-25",
       "files": [
         "src/app/badrinath-temple/page.js"
       ]
     },
     "/badrinath-weather": {
       "created": "2026-05-05",
-      "modified": "2026-09-21",
+      "modified": "2026-09-25",
       "files": [
         "src/app/badrinath-weather/page.js"
       ]
@@ -40,7 +40,7 @@
     },
     "/blog": {
       "created": "2026-04-22",
-      "modified": "2026-09-21",
+      "modified": "2026-09-25",
       "files": [
         "src/app/blog/page.js",
         "src/data/gone.js"
@@ -111,7 +111,7 @@
     },
     "/blog/char-dham-yatra-in-october": {
       "created": "2026-05-05",
-      "modified": "2026-08-31",
+      "modified": "2026-09-25",
       "files": [
         "src/app/blog/char-dham-yatra-in-october/page.js"
       ]
@@ -216,7 +216,7 @@
     },
     "/blog/mana-village-badrinath": {
       "created": "2026-05-05",
-      "modified": "2026-08-23",
+      "modified": "2026-09-25",
       "files": [
         "src/app/blog/mana-village-badrinath/page.js"
       ]
@@ -230,7 +230,7 @@
     },
     "/blog/uttarakhand-weather-guide": {
       "created": "2026-05-04",
-      "modified": "2026-09-21",
+      "modified": "2026-09-25",
       "files": [
         "src/app/blog/uttarakhand-weather-guide/page.js"
       ]
@@ -301,21 +301,21 @@
     },
     "/char-dham-yatra-from-mumbai": {
       "created": "2026-04-24",
-      "modified": "2026-08-13",
+      "modified": "2026-09-25",
       "files": [
         "src/app/char-dham-yatra-from-mumbai/page.js"
       ]
     },
     "/char-dham-yatra-route-map": {
       "created": "2026-04-24",
-      "modified": "2026-09-20",
+      "modified": "2026-09-25",
       "files": [
         "src/app/char-dham-yatra-route-map/page.js"
       ]
     },
     "/char-dham-yatra-statistics": {
       "created": "2026-05-26",
-      "modified": "2026-08-16",
+      "modified": "2026-09-25",
       "files": [
         "src/app/char-dham-yatra-statistics/page.js"
       ]
@@ -427,7 +427,7 @@
     },
     "/how-to-reach-badrinath": {
       "created": "2026-05-05",
-      "modified": "2026-09-21",
+      "modified": "2026-09-25",
       "files": [
         "src/app/how-to-reach-badrinath/page.js",
         "src/data/cabs/index.js"
@@ -559,7 +559,7 @@
     },
     "/press": {
       "created": "2026-08-19",
-      "modified": "2026-09-20",
+      "modified": "2026-09-25",
       "files": [
         "src/app/press/page.js",
         "src/data/press.js"
@@ -567,7 +567,7 @@
     },
     "/press/[slug]": {
       "created": "2026-08-19",
-      "modified": "2026-09-20",
+      "modified": "2026-09-25",
       "files": [
         "src/app/press/[slug]/page.js",
         "src/data/press.js"
@@ -610,7 +610,7 @@
     },
     "/teen-dham-yatra": {
       "created": "2026-08-17",
-      "modified": "2026-09-21",
+      "modified": "2026-09-25",
       "files": [
         "src/app/teen-dham-yatra/page.js"
       ]
