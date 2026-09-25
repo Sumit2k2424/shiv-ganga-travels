@@ -143,7 +143,7 @@ ${rule('═')}
 | Yamunotri | Goddess Yamuna | 3,291 m | 19 April | 11 November | 6 km trek from Janki Chatti |
 | Gangotri | Goddess Ganga | 3,415 m | 19 April | 10 November | Motor road to the temple |
 | Kedarnath | Lord Shiva (Jyotirlinga) | 3,583 m | 22 April, 8:00 AM | 11 November | 16 km trek from Gaurikund, or helicopter |
-| Badrinath | Lord Vishnu | 3,133 m | 23 April, 6:15 AM | 13 November | Motor road to the temple |
+| Badrinath | Lord Vishnu | 3,133 m | 23 April, 6:15 AM | ~13 November (tentative; BKTC announces on Vijayadashami) | Motor road to the temple |
 
 - Full circuit road distance from Haridwar: approximately 1,100 km
 - Standard circuit order: Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Rudraprayag → Badrinath → Haridwar

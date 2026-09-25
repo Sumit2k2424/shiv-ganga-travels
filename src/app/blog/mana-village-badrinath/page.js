@@ -31,7 +31,7 @@ const faqs = [
   { q: 'How far is Mana village from Badrinath?', a: '3km, on a made road. It is a 45-minute walk from the temple or a short shared jeep ride at roughly ₹30–50. Because it is so close, almost every Badrinath itinerary fits Mana in on the morning of departure — it costs you an hour or two, not a day.' },
   { q: 'What is there to see in Mana village?', a: 'Vyas Gufa and Ganesh Gufa, the two facing caves where the Mahabharata is said to have been dictated and transcribed; Bhim Pul, a single enormous boulder bridging the Saraswati gorge; the point where the Saraswati goes underground; and the village\'s working shawl weavers, who sell from their own doorways. There is also a dhaba advertising itself as the last before Tibet.' },
   { q: 'Do foreign nationals need a permit for Mana?', a: 'Yes. Mana sits close to the international border in a restricted area, and foreign nationals need an Inner Line Permit, issued at Joshimath. Indian citizens need nothing beyond their Char Dham registration. Rules on border areas can tighten at short notice, so foreign visitors should confirm before travelling rather than at Joshimath.' },
-  { q: 'When is Mana village open?', a: 'It follows the Badrinath temple exactly — open from 23 April 2026 and closed when the temple closes on 13 November. Mana is a winter-migration village: the residents move down the valley to Chamoli district for the cold months, so out of season there is genuinely nobody there.' },
+  { q: 'When is Mana village open?', a: 'It follows the Badrinath temple exactly — open from 23 April 2026 and closed when the temple closes, expected around 13 November (the exact date is announced on Vijayadashami). Mana is a winter-migration village: the residents move down the valley to Chamoli district for the cold months, so out of season there is genuinely nobody there.' },
   { q: 'How much time do you need at Mana?', a: 'Two to three hours covers everything without rushing. Go before 8 AM if you can — the tour vehicles from Badrinath start arriving mid-morning and the village is a different place before they do.' },
   { q: 'What is the altitude of Mana village?', a: 'About 3,200m, effectively the same as Badrinath at 3,133m. There is no extra acclimatisation to plan for; if you are comfortable at the temple you will be comfortable at Mana. The walk to Bhim Pul is short but it is still at altitude, so take it slowly.' },
 ];
@@ -121,7 +121,7 @@ export default function Page() {
           <>Officially <strong>India&apos;s first village since 2022</strong>, having been called its last for decades. The signboard was changed.</>,
           <>See <strong>Vyas Gufa, Ganesh Gufa, Bhim Pul</strong> and the point the Saraswati goes underground.</>,
           <>Altitude <strong>3,200m</strong>, effectively the same as Badrinath — no extra acclimatisation needed.</>,
-          <>Open <strong>23 April to 13 November 2026</strong>, with the temple. Foreign nationals need an Inner Line Permit from Joshimath.</>,
+          <>Open <strong>23 April to around 13 November 2026</strong>, with the temple. Foreign nationals need an Inner Line Permit from Joshimath.</>,
         ]}/>
 
         <BlogTOC items={[

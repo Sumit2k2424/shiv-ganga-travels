@@ -109,7 +109,7 @@ export default function Page() {
                 ['Yamunotri','April 19','Nov 11, 2026','Usually closes on Diwali / Yama Dwitiya'],
                 ['Gangotri','April 19','Nov 10, 2026','Closes on Diwali'],
                 ['Kedarnath','April 22','Nov 11, 2026','Closes on Bhai Dooj — exact date announced annually'],
-                ['Badrinath','April 23','Nov 13, 2026','Last to close — usually 2 days after Kedarnath'],
+                ['Badrinath','April 23','~Nov 13 (tentative)','Last to close — usually 2 days after Kedarnath'],
               ].map(([dham,open,close,note],i)=>(
                 <tr key={i} style={{ borderBottom:'1px solid hsl(var(--border))', background:i%2===0?'#fff':'var(--bg)' }}>
                   <td style={{ padding:'9px 12px', fontWeight:700, color:'var(--navy)', fontSize:13.5 }}>{dham}</td>

@@ -108,7 +108,7 @@ export const RELEASES = [
     body: [
       'Char Dham Yatra registrations for the 2026 season crossed 50 lakh by 13 August, according to Uttarakhand Tourism figures. Kedarnath and Badrinath alone had recorded 30,62,228 darshans by 11 August — 16,12,112 at Kedarnath and 14,50,116 at Badrinath — with the two shrines together taking more than ₹74.5 crore in offerings and revenue.',
       'The pace was set early. More than 17.8 lakh pilgrims had completed registration by mid-April, before the Badrinath doors opened on 23 April, making it the busiest booking window in five years.',
-      'What the headline numbers obscure is that the yatra now runs straight through the monsoon rather than pausing for it. On 6 July 2026, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib. The 2026 season runs 208 days, from 19 April to 13 November.',
+      'What the headline numbers obscure is that the yatra now runs straight through the monsoon rather than pausing for it. On 6 July 2026, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib. The 2026 season runs about 208 days, from 19 April to mid-November.',
       'Shiv Ganga Travels has published a consolidated statistics page — pilgrim numbers, route distances, cost breakdowns, hotel booking patterns and safety data — cross-referenced against Uttarakhand Tourism, Devasthanam Board and Char Dham Yatra Authority notifications. The company is making the dataset available to news organisations without charge.',
     ],
     quotes: [
@@ -127,7 +127,7 @@ export const RELEASES = [
       { fact: 'Char Dham registrations, 2026 season', value: 'Over 50 lakh by 13 August', source: 'Uttarakhand Tourism' },
       { fact: 'Kedarnath + Badrinath darshans', value: '30,62,228 by 11 August', source: 'Devasthanam Board' },
       { fact: 'Offerings and revenue, both shrines', value: 'Over ₹74.5 crore', source: 'Devasthanam Board' },
-      { fact: '2026 season length', value: '208 days (19 Apr – 13 Nov)', source: 'Devasthanam Board' },
+      { fact: '2026 season length', value: '~208 days (19 Apr – ~13 Nov)', source: 'Devasthanam Board' },
       { fact: 'Single monsoon day, 6 July 2026', value: '13,254 pilgrims across shrines', source: 'Uttarakhand Tourism' },
       { fact: 'Circuit length', value: '~1,607 km across four shrines', source: 'Shiv Ganga Travels operator data' },
     ],

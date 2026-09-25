@@ -59,7 +59,7 @@ const FAQS = [
   },
   {
     q: 'When do the temples open and close in 2026?',
-    a: 'Gangotri and Yamunotri open 19 April 2026 on Akshaya Tritiya, Kedarnath 22 April and Badrinath 23 April. Closing runs 10–13 November 2026 around Bhai Dooj. Yamunotri and Gangotri close first, so a late-season Teen Dham that includes them needs to be booked before the first week of November.',
+    a: 'Gangotri and Yamunotri open 19 April 2026 on Akshaya Tritiya, Kedarnath 22 April and Badrinath 23 April. Closing runs 10–11 November 2026 for Gangotri, Yamunotri and Kedarnath, with Badrinath expected around 13 November. Yamunotri and Gangotri close first, so a late-season Teen Dham that includes them needs to be booked before the first week of November.',
   },
   {
     q: 'Is Teen Dham Yatra suitable for senior citizens?',
@@ -454,7 +454,7 @@ export default function TeenDhamYatra() {
                 ['Yamunotri', '19 April', '11 November', '3,293 m', '6 km trek from Janki Chatti'],
                 ['Gangotri', '19 April', '10 November', '3,415 m', 'Road to temple'],
                 ['Kedarnath', '22 April', '11 November', '3,583 m', '16 km trek from Gaurikund'],
-                ['Badrinath', '23 April', '13 November', '3,133 m', 'Road to temple'],
+                ['Badrinath', '23 April', '~13 November', '3,133 m', 'Road to temple'],
               ].map((r, i) => (
                 <tr key={r[0]} style={{ borderBottom: '1px solid hsl(var(--border))', background: i % 2 === 0 ? '#fff' : 'var(--bg)' }}>
                   <td style={{ ...TD, fontWeight: 600, color: 'var(--navy)' }}>{r[0]}</td>

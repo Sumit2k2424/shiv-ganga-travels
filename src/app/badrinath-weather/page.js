@@ -26,7 +26,7 @@ const weather = [
   { month:'August',    day:'13°C to 18°C', night:'8°C to 11°C',  snow:'None',                              rain:'Heavy — peak monsoon', crowd:'Light',      verdict:'avoid',   note:'Wettest month and the highest landslide risk on the approach. If your dates are fixed, build in spare days at Joshimath rather than at Badrinath.' },
   { month:'September', day:'11°C to 16°C', night:'4°C to 8°C',   snow:'None',                              rain:'Light to medium',      crowd:'Moderate',   verdict:'best',    note:'Monsoon withdraws through the first fortnight. From mid-month the air is washed clean, Nilkantha stands clear all day and the crowds have gone home. Our favourite month here.' },
   { month:'October',   day:'7°C to 12°C',  night:'−1°C to 3°C',  snow:'Upper peaks only',                  rain:'Very low',             crowd:'Moderate',   verdict:'best',    note:'Sharp, clear and cold. The evening aarti at 7 pm is the coldest hour of a pilgrim\'s day — this is a thermals month, and the Tapt Kund bath at dawn is genuinely welcome.' },
-  { month:'November',  day:'2°C to 6°C',   night:'−6°C to −2°C', snow:'Likely; road can close',            rain:'Very low',             crowd:'Light',      verdict:'caution', note:'Temple closes 13 November, two days after Bhai Dooj, after which the deity moves to Joshimath. The last week is severe and the gate road can shut for snow with a day\'s notice.' },
+  { month:'November',  day:'2°C to 6°C',   night:'−6°C to −2°C', snow:'Likely; road can close',            rain:'Very low',             crowd:'Light',      verdict:'caution', note:'Temple expected to close around 13 November, two days after Bhai Dooj (the BKTC confirms the date on Vijayadashami), after which the deity moves to Joshimath. The last week is severe and the gate road can shut for snow with a day\'s notice.' },
 ];
 
 const VERDICT = {
@@ -131,7 +131,7 @@ export default function BadrinathWeather() {
       <div style={{ maxWidth:900, margin:'0 auto', padding:'32px 20px 60px' }}>
 
         <AnswerBox>
-          <strong>Badrinath sits at 3,133 m — the lowest of the four dhams — and the season runs 23 April to 13 November 2026.</strong>{' '}
+          <strong>Badrinath sits at 3,133 m — the lowest of the four dhams — and the season runs 23 April to around 13 November 2026, with the exact closing date announced on Vijayadashami.</strong>{' '}
           Daytime temperatures at the temple range from about 7°C in April to 21°C in June; nights run from −6°C in
           November to 11°C in July. The best windows are <strong>May to mid-June</strong> (warmest, busiest) and{' '}
           <strong>mid-September to October</strong> (clearest, far quieter). July and August are peak monsoon and the

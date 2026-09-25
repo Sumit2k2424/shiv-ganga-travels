@@ -120,7 +120,7 @@ All ${PACKAGES.length} packages with full itineraries: ${SITE.baseUrl}/packages
 | Yamunotri | April 19, 2026 | Nov 11, 2026 | 3,291m | 6km trek from Janki Chatti |
 | Gangotri | April 19, 2026 | Nov 10, 2026 | 3,415m | Motor road to temple |
 | Kedarnath | April 22, 2026 at 8AM | Nov 11, 2026 | 3,583m | 16km trek or helicopter |
-| Badrinath | April 23, 2026 | Nov 13, 2026 | 3,133m | Motor road to temple |
+| Badrinath | April 23, 2026 | ~Nov 13, 2026 (tentative) | 3,133m | Motor road to temple |
 
 **Registration**: Free. Portal: registrationandtouristcare.uk.gov.in
 **Medical certificate**: Mandatory for pilgrims 55+

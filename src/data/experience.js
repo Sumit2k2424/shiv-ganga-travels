@@ -219,7 +219,7 @@ export const TEMPLES = {
     photo: `${PX}/15017640/pexels-photo-15017640.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1500&fit=crop`,
     photoAlt: 'Badrinath Temple with its painted facade below Neelkanth peak, fourth dham of the Char Dham Yatra',
     opens2026: 'April 23, 2026',
-    closes2026: 'November 13, 2026',
+    closes2026: '~November 13, 2026 (tentative)',
     darshanHours: '4:30 AM – 1:00 PM · 4:00 PM – 9:00 PM',
     approach: 'Fully motorable, right up to the temple town.',
     history:

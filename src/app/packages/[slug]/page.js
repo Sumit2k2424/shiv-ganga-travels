@@ -159,7 +159,7 @@ export default async function PackageDetailPage({ params }) {
     { dham:'Yamunotri', opens:'19 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
     { dham:'Gangotri',  opens:'19 April 2026', closes:'10 Nov 2026', reg:'Mandatory' },
     { dham:'Kedarnath', opens:'22 April 2026', closes:'11 Nov 2026', reg:'Mandatory' },
-    { dham:'Badrinath', opens:'23 April 2026', closes:'13 Nov 2026', reg:'Mandatory' },
+    { dham:'Badrinath', opens:'23 April 2026', closes:'~13 Nov 2026', reg:'Mandatory' },
   ];
   const delhiModes = [
     { mode:'Volvo / AC Bus (overnight)', time:'~6 hrs', cost:'Included in package', note:'Sleep through the journey, arrive Haridwar by 6 AM. Best value for groups.' },

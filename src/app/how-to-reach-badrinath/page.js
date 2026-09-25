@@ -108,7 +108,7 @@ export default function HowToReachBadrinath() {
 
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
         <div style={{ background:'var(--navy)', borderRadius:14, padding:'18px 20px', marginBottom:28, display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:10 }}>
-          {[['Altitude','3,133 m'],['From Haridwar','320 km by road'],['Driving time','10–11 hrs'],['Trek required','None (motor road)'],['Nearest town','Joshimath (45 km)'],['Season','23 Apr – 13 Nov 2026']].map(([k,v]) => (
+          {[['Altitude','3,133 m'],['From Haridwar','320 km by road'],['Driving time','10–11 hrs'],['Trek required','None (motor road)'],['Nearest town','Joshimath (45 km)'],['Season','23 Apr – ~13 Nov 2026']].map(([k,v]) => (
             <div key={k}><div style={{ fontSize:11, color:'rgba(255,255,255,0.55)', marginBottom:2 }}>{k}</div><div style={{ fontWeight:700, fontSize:13, color:'#FFD166' }}>{v}</div></div>
           ))}
         </div>

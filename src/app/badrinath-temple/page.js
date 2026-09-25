@@ -70,7 +70,7 @@ export default function BadrinathTemple() {
     </nav>
     <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(130px,1fr))', gap:10, marginBottom:28 }}>
-        {[{icon:'📅',label:'Opens',val:'Apr 23, 2026'},{icon:'📅',label:'Closes',val:'Nov 13, 2026'},{icon:'🏔️',label:'Altitude',val:'3,133m'},{icon:'🚗',label:'Access',val:'Motor road'},{icon:'⏰',label:'Darshan',val:'4:30 AM–9 PM'},{icon:'🙏',label:'Deity',val:'Lord Vishnu'}].map(s=>(
+        {[{icon:'📅',label:'Opens',val:'Apr 23, 2026'},{icon:'📅',label:'Closes',val:'~Nov 13, 2026'},{icon:'🏔️',label:'Altitude',val:'3,133m'},{icon:'🚗',label:'Access',val:'Motor road'},{icon:'⏰',label:'Darshan',val:'4:30 AM–9 PM'},{icon:'🙏',label:'Deity',val:'Lord Vishnu'}].map(s=>(
           <div key={s.label} style={{ background:'var(--navy-light)', borderRadius:10, padding:'12px', textAlign:'center' }}>
             <div style={{ fontSize:18, marginBottom:3 }}>{s.icon}</div>
             <div style={{ fontSize:10.5, color:'var(--text-muted)', marginBottom:2 }}>{s.label}</div>

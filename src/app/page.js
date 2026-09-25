@@ -661,7 +661,7 @@ export default function HomePage() {
       {/* ═══ 16 · FINAL CTA ═══ */}
       <Section tone="ink">
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <Reveal variant="fade"><Pill tone="gold">Season 2026 · Apr 19 – Nov 13</Pill></Reveal>
+          <Reveal variant="fade"><Pill tone="gold">Season 2026 · Apr 19 – mid-Nov</Pill></Reveal>
           <Reveal>
             <h2 className="lux-display lux-display--lg" style={{ color: '#fff', margin: '22px 0 16px' }}>
               Plan your 2026 yatra <span className="lux-accent">with the operator</span>
