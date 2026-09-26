@@ -6,6 +6,8 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import OfficialLink from '@/components/OfficialLink';
+import Image from 'next/image';
+import { DO_DHAM_DEPARTURE_PHOTO } from '@/data/photos';
 
 const PAGE_DATES = pageDates('/do-dham-yatra');
 
@@ -43,7 +45,13 @@ function Schema() {
     name:'Do Dham Yatra 2026 — Kedarnath & Badrinath',
     description:'5N/6D Do Dham Yatra from Haridwar covering Kedarnath (3,583m) and Badrinath (3,133m) — AC vehicle, hotels, meals, VIP darshan and registration. Direct operator.',
     url:`${SITE.baseUrl}/do-dham-yatra`,
-    image:[`${SITE.baseUrl}/opengraph-image`],
+    // Our own photo first. GSC's Image Metadata report wants the four licensing fields.
+    image:[{ '@type':'ImageObject', url:`${SITE.baseUrl}${DO_DHAM_DEPARTURE_PHOTO.src}`, width:DO_DHAM_DEPARTURE_PHOTO.width, height:DO_DHAM_DEPARTURE_PHOTO.height,
+      caption:DO_DHAM_DEPARTURE_PHOTO.alt, dateCreated:DO_DHAM_DEPARTURE_PHOTO.dateISO,
+      contentLocation:{ '@type':'Place', name:'Shiv Ganga Travels office, Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand' },
+      creditText:SITE.name, creator:{ '@id':`${SITE.baseUrl}/#organization` }, copyrightHolder:{ '@id':`${SITE.baseUrl}/#organization` },
+      copyrightNotice:`© ${SITE.season} ${SITE.name}`, license:`${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage:`${SITE.baseUrl}/contact` },
+      `${SITE.baseUrl}/opengraph-image`],
     touristType:['Pilgrims','Families','Senior citizens'],
     itinerary:{ '@type':'ItemList', itemListElement:[
       {'@type':'ListItem',position:1,name:'Haridwar → Guptkashi'},
@@ -189,6 +197,13 @@ export default function DoDhamYatra() {
 
         {/* Itinerary */}
         <h2 style={h2}>Do Dham Yatra Itinerary — 5N/6D from Haridwar</h2>
+        <figure style={{ maxWidth:520, margin:'0 auto 24px', borderRadius:14, overflow:'hidden', border:'1px solid hsl(var(--border))' }}>
+          <Image src={DO_DHAM_DEPARTURE_PHOTO.src} alt={DO_DHAM_DEPARTURE_PHOTO.alt} width={DO_DHAM_DEPARTURE_PHOTO.width} height={DO_DHAM_DEPARTURE_PHOTO.height}
+            sizes="(max-width: 560px) 100vw, 520px" style={{ width:'100%', height:'auto', display:'block' }} />
+          <figcaption style={{ padding:'10px 14px', fontSize:12.5, color:'#64748b', background:'#F8FAFC', lineHeight:1.6 }}>
+            Day 1 starts here. Our founder, Dhanesh Chandra Mishra (left), seeing off a mother, her son and his wife outside our office in Bhupatwala, Haridwar, before their Kedarnath and Badrinath yatra. {DO_DHAM_DEPARTURE_PHOTO.credit}
+          </figcaption>
+        </figure>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:28 }}>
           {[
             { day:'Day 1', route:'Haridwar → Guptkashi', km:'210km · 7–8 hrs', alt:'1,319m', desc:'Depart Haridwar early morning. Drive via Devprayag (Ganga confluence — worth a 20-min stop), Rudraprayag, Tilwara. Arrive Guptkashi by evening. Overnight. Optional: evening darshan at Ardh Narishwar Temple (Shiva-Parvati combined deity — uncommon in India).' },

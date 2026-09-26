@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { SITE } from '@/data/packages';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import Image from 'next/image';
+import { DO_DHAM_DEPARTURE_PHOTO } from '@/data/photos';
 
 export const metadata = {
   title: { absolute: 'About Shiv Ganga Travels | Char Dham Operator, Haridwar' },
@@ -110,11 +112,31 @@ function Schema() {
     // rated node here triggered Google's "multiple aggregate ratings" error.
   };
 
+  // Our own photo of the founder at work outside the Haridwar office. On the
+  // page node rather than the org, whose @id is shared sitewide.
+  const page = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${SITE.baseUrl}/about#webpage`,
+    url: `${SITE.baseUrl}/about`,
+    name: 'About Shiv Ganga Travels',
+    mainEntity: { '@id': `${SITE.baseUrl}/#organization` },
+    primaryImageOfPage: {
+      '@type': 'ImageObject', url: `${SITE.baseUrl}${DO_DHAM_DEPARTURE_PHOTO.src}`,
+      width: DO_DHAM_DEPARTURE_PHOTO.width, height: DO_DHAM_DEPARTURE_PHOTO.height,
+      caption: DO_DHAM_DEPARTURE_PHOTO.alt, dateCreated: DO_DHAM_DEPARTURE_PHOTO.dateISO,
+      contentLocation: { '@type': 'Place', name: 'Shiv Ganga Travels office, Saptrishi Road, Bhupatwala, Haridwar, Uttarakhand' },
+      creditText: SITE.name, creator: { '@id': `${SITE.baseUrl}/#organization` }, copyrightHolder: { '@id': `${SITE.baseUrl}/#organization` },
+      copyrightNotice: `© ${SITE.season} ${SITE.name}`, license: `${SITE.baseUrl}/terms-and-conditions`, acquireLicensePage: `${SITE.baseUrl}/contact`,
+    },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dhanesh) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sumit) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(page) }} />
     </>
   );
 }
@@ -235,6 +257,14 @@ export default function AboutPage() {
           <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>
             The logical next step was Haridwar — the official gateway to the Char Dham circuit and the city where every yatra truly begins. Shiv Ganga Travels opened its Haridwar office, positioning itself at the heart of pilgrimage activity. Today we operate from both Roorkee and Haridwar, with a full fleet of over <strong>20 vehicles</strong> — Innova Crysta, Ertiga, Tempo Travellers of various capacities — all maintained to a standard that Dhanesh himself inspects regularly.
           </p>
+
+          <figure style={{ maxWidth: 520, margin: '28px auto 8px', borderRadius: 14, overflow: 'hidden', border: '1px solid hsl(var(--border))' }}>
+            <Image src={DO_DHAM_DEPARTURE_PHOTO.src} alt={DO_DHAM_DEPARTURE_PHOTO.alt} width={DO_DHAM_DEPARTURE_PHOTO.width} height={DO_DHAM_DEPARTURE_PHOTO.height}
+              sizes="(max-width: 560px) 100vw, 520px" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <figcaption style={{ padding: '10px 14px', fontSize: 12.5, color: '#64748b', background: '#F8FAFC', lineHeight: 1.6 }}>
+              Dhanesh Ji (left) outside our Haridwar office in Bhupatwala, seeing off a mother, her son and his wife on their Kedarnath–Badrinath Do Dham. {DO_DHAM_DEPARTURE_PHOTO.credit}
+            </figcaption>
+          </figure>
 
         </div>
       </section>

@@ -65,3 +65,22 @@ export const HELI_TICKET_IMAGE = {
   creditText: 'IRCTC HeliYatra',
 };
 HELI_TICKET_IMAGE.credit = `IRCTC HeliYatra ticket booked ${HELI_TICKET_IMAGE.dateHuman}; passenger details masked by Shiv Ganga Travels.`;
+
+// Our founder, Dhanesh Chandra Mishra (left), seeing off a pilgrim family
+// (a mother, her son and his wife) outside our office on Saptrishi Road,
+// Bhupatwala, Haridwar, before their Kedarnath–Badrinath Do Dham. Shot by
+// our team on 21 Sep 2026; the family agreed to appear on the site (Sumit
+// confirmed 26 Sep 2026) and is not named. It reached us as a WhatsApp copy
+// with no EXIF, so the date comes from Sumit. Cropped left and right to the
+// four people (1080×1200 out of 1600×1200) and saved as a q78 progressive
+// JPEG (249 KB). Portrait, so pages cap the figure's width.
+export const DO_DHAM_DEPARTURE_PHOTO = {
+  src: '/images/do-dham-yatra-departure-haridwar-2026-09-21.jpg',
+  width: 1080,
+  height: 1200,
+  alt: 'Dhanesh Chandra Mishra (left), founder of Shiv Ganga Travels, and a pilgrim family, an elderly mother, her son and his wife, hold a Shiv Ganga Travels banner showing Badrinath and Kedarnath temples beside a white car on a wet road outside the company office in Bhupatwala, Haridwar',
+  place: 'Bhupatwala, Haridwar',
+  dateISO: '2026-09-21',
+  dateHuman: '21 September 2026',
+};
+DO_DHAM_DEPARTURE_PHOTO.credit = `Photo: Shiv Ganga Travels, ${DO_DHAM_DEPARTURE_PHOTO.place}, ${DO_DHAM_DEPARTURE_PHOTO.dateHuman}.`;
