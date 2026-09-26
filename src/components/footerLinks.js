@@ -4,7 +4,11 @@
    noindexed or redirected page is repeated ~200 times sitewide — the strongest
    possible internal signal, pointed at a page we have told Google to drop.
    The cab origin/destination hubs and the long-tail cab routes were noindexed
-   on 13 Sep 2026; the footer now links only the indexed cab routes. */
+   on 13 Sep 2026; the footer now links only the indexed cab routes.
+   The same weight works the other way: a page left out of the footer gets
+   only its handful of body links. "Before You Go" holds the pages that earn
+   the most clicks (GSC, 90 days to 15 Sep 2026) and were outside it until
+   26 Sep — each had 4–22 internal links against 97 for /privacy-policy. */
 
 
 export const COLS = [
@@ -63,9 +67,11 @@ export const COLS = [
     {l:'How to Reach Yamunotri',     h:'/how-to-reach-yamunotri'},
     {l:'Emergency Contacts',         h:'/char-dham-yatra-emergency-contacts'},
   ]},
-  { heading:'Distances & On-Route', links:[
-    ]},
-  { heading:'Before You Book', links:[
+  { heading:'Before You Go', links:[
+    {l:'Char Dham Road Status',      h:'/char-dham-road-status'},
+    {l:'Kedarnath Pony & Palki Rates', h:'/kedarnath-pony-palki-kandi-rates'},
+    {l:'Kedarnath VIP Darshan',      h:'/kedarnath-vip-darshan'},
+    {l:'पैकिंग लिस्ट (हिंदी)',        h:'/blog/char-dham-packing-list-hindi'},
     ]},
   { heading:'Winter Char Dham', links:[
     {l:'Omkareshwar, Ukhimath',      h:'/ukhimath'},
@@ -86,7 +92,6 @@ export const COLS = [
     {l:'About Us',                   h:'/about'},
     {l:'Press & Media',              h:'/press'},
     {l:'Contact Us',                 h:'/contact'},
-    {l:'All Packages',               h:'/packages'},
     {l:'Senior Citizen Package',     h:'/blog/senior-citizen-char-dham'},
     {l:'Leave a Review',             h:'/review'},
     {l:'Site Map',                   h:'/sitemap-page'},

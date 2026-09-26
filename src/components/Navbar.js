@@ -293,7 +293,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </MobileAccordion>
-            {[{label:'Char Dham Yatra',href:'/char-dham-yatra'},{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'From Delhi',href:'/packages/char-dham-yatra-from-delhi-10n-11d'},{label:'From Mumbai',href:'/char-dham-yatra-from-mumbai'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
+            {[{label:'Char Dham Yatra',href:'/char-dham-yatra'},{label:'Kedarnath',href:'/kedarnath-yatra'},{label:'Road Status',href:'/char-dham-road-status'},{label:'From Delhi',href:'/packages/char-dham-yatra-from-delhi-10n-11d'},{label:'From Mumbai',href:'/char-dham-yatra-from-mumbai'},{label:'Blog',href:'/blog'},{label:'About',href:'/about'},{label:'Contact',href:'/contact'}].map(l => (
               <Link prefetch={false} key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="eq-mob-link">
                 {l.label}
               </Link>

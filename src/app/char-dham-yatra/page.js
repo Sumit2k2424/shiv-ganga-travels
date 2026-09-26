@@ -72,17 +72,6 @@ function Schema() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trip) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context':'https://schema.org','@type':'WebPage', '@id':`${SITE.baseUrl}/char-dham-yatra#webpage`, url:`${SITE.baseUrl}/char-dham-yatra`, name:'Char Dham Yatra Package 2026 from Haridwar', inLanguage:'en-IN', speakable:{ '@type':'SpeakableSpecification', cssSelector:['.speakable-answer'] } }) }}/>
-
-      <section style={{ background:'var(--bg)', borderTop:'1px solid hsl(var(--border))', padding:'32px 20px' }}>
-        <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
-          <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
-          <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
-              <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
@@ -621,7 +610,7 @@ export default function CharDhamYatra() {
         <div style={{ maxWidth:'var(--container)', margin:'0 auto' }}>
           <div style={{ fontWeight:700, fontSize:14, color:'var(--navy)', marginBottom:14 }}>Useful Resources</div>
           <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
-            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
+            {[['Char Dham Cost Calculator','/char-dham-yatra-cost-calculator'],['Registration Guide','/blog/char-dham-yatra-registration'],['Packing List','/blog/char-dham-yatra-packing-list'],['How to Reach Kedarnath','/blog/how-to-reach-kedarnath'],['Kedarnath Pony & Palki Rates','/kedarnath-pony-palki-kandi-rates'],['Road Status 2026','/char-dham-road-status'],].map(([l,h])=>(
               <Link prefetch={false} key={h} href={h} style={{ background:'#fff', border:'1px solid hsl(var(--border))', color:'var(--navy)', padding:'8px 16px', borderRadius:8, fontSize:13, fontWeight:600, textDecoration:'none' }}>{l} →</Link>
             ))}
           </div>
