@@ -202,7 +202,7 @@
     },
     "/blog/kedarnath-trek-guide": {
       "created": "2026-04-22",
-      "modified": "2026-09-23",
+      "modified": "2026-09-26",
       "files": [
         "src/app/blog/kedarnath-trek-guide/page.js"
       ]
