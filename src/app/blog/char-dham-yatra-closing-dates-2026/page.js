@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-closing-dates-2026');
 
@@ -120,7 +121,7 @@ export default function ClosingDates() {
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-yatra-closing-dates-2026", "title": "Char Dham Yatra Closing Dates 2026: All 4 Temples", "description": "Char Dham Yatra 2026 closing dates: Gangotri Nov 10, Yamunotri Nov 11, Kedarnath Nov 11 (Bhai Dooj), Badrinath ~Nov 13 (tentative). Plan your last-visit window.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <AnswerBox>
-          <strong>The 2026 Char Dham temples close between 10 and 13 November.</strong> Gangotri closes 10 November on Annakut, Yamunotri and Kedarnath both on 11 November for Bhai Dooj, and Badrinath last, expected around 13 November. The first three follow the Diwali calendar; the Badrinath date is fixed by the Badrinath-Kedarnath Temple Committee and announced on Vijayadashami, so treat it as tentative until then. After closing, each deity moves to its winter seat — Mukhba for Ganga, Kharsali for Yamuna, Ukhimath for Kedarnath and Pandukeshwar for Badrinath.
+          <strong>The 2026 Char Dham temples close between 10 and 13 November.</strong> Gangotri closes 10 November on Annakut, Yamunotri and Kedarnath both on 11 November for Bhai Dooj, and Badrinath last, expected around 13 November. The first three follow the Diwali calendar; the Badrinath date is fixed by the <OfficialLink k="bktc">Badrinath-Kedarnath Temple Committee</OfficialLink> and announced on Vijayadashami, so treat it as tentative until then. After closing, each deity moves to its winter seat — Mukhba for Ganga, Kharsali for Yamuna, Ukhimath for Kedarnath and Pandukeshwar for Badrinath.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>
           🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman} — Badrinath date awaits the BKTC’s Vijayadashami announcement

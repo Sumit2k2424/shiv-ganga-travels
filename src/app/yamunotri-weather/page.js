@@ -4,6 +4,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/yamunotri-weather');
 
@@ -261,7 +262,7 @@ export default function YamunotriWeather() {
           There is no observing station at Yamunotri itself. Published temperatures for the shrine are
           interpolated from Barkot and Uttarkashi and adjusted for altitude, which is why sites disagree by
           several degrees for the same month. The bands here are what our drivers and guides have recorded on
-          the route over many seasons, cross-checked against IMD regional data, and are given as ranges
+          the route over many seasons, cross-checked against <OfficialLink k="imd">IMD</OfficialLink> regional data, and are given as ranges
           rather than single figures for that reason.
         </p>
 

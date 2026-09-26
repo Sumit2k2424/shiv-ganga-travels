@@ -6,6 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/badrinath-weather');
 const PAGE = '/badrinath-weather';
@@ -245,7 +246,7 @@ export default function BadrinathWeather() {
           There is no observing station at Badrinath itself. Published temperatures for the shrine are interpolated
           from Joshimath and Chamoli and adjusted for altitude, which is why sites disagree by several degrees for
           the same month. The bands here are what our drivers and guides have recorded on the route over many
-          seasons, cross-checked against IMD regional data, and are given as ranges rather than single figures for
+          seasons, cross-checked against <OfficialLink k="imd">IMD</OfficialLink> regional data, and are given as ranges rather than single figures for
           that reason.
         </p>
 

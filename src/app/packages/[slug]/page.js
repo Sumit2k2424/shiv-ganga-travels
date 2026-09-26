@@ -13,6 +13,7 @@ import Icon, { WhatsAppIcon } from '@/components/Icon';
 import AnswerBox from '@/components/AnswerBox';
 import { Pill } from '@/components/lux/primitives';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/packages/[slug]');
 
@@ -257,7 +258,7 @@ export default async function PackageDetailPage({ params }) {
           {pkg.season ? ` It operates ${pkg.season}.` : ''}
           {pkg.transport ? ` Transport is by ${pkg.transport.toLowerCase()}.` : ''}
           {pkg.difficulty ? ` Difficulty is rated ${pkg.difficulty.toLowerCase()}.` : ''}
-          {' '}Hotels, breakfast and dinner, the vehicle, tolls and registration are in the fare; travel to {pkg.startCity},
+          {' '}Hotels, breakfast and dinner, the vehicle, tolls and <OfficialLink k="registration">registration</OfficialLink> are in the fare; travel to {pkg.startCity},
           pony or helicopter charges and lunch on travel days are not.
         </AnswerBox>
       </section>

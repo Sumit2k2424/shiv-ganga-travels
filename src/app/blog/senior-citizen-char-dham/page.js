@@ -9,6 +9,7 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import { h2 } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/senior-citizen-char-dham');
 
@@ -79,7 +80,7 @@ return (
         <KeyTakeaways
           points={[
             <>There is <strong>no official age limit</strong> — pilgrims aged 70–80+ complete the yatra safely every year.</>,
-            <>A doctor's <strong>fitness certificate</strong> is advised (and mandatory at 55+) for anyone with heart, BP or recent-surgery history.</>,
+            <>A doctor's <strong><OfficialLink k="health">fitness certificate</OfficialLink></strong> is advised (and mandatory at 55+) for anyone with heart, BP or recent-surgery history.</>,
             <>Our <strong>Senior Special Package — ₹21,000 (12N/13D)</strong> includes the pony at Yamunotri, a medical attendant, oxygen, pulse oximeters and ground-floor rooms. A palki, or a pony at Kedarnath, is an optional extra at the official rate.</>,
             <>Only <strong>Kedarnath and Yamunotri</strong> involve a climb — pony, palki or helicopter cover both; Badrinath and Gangotri are road-accessible.</>,
             <>For high-risk conditions, the <strong>helicopter package</strong> removes almost all altitude stress.</>,

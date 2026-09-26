@@ -20,6 +20,7 @@ import {
 } from '@/components/cabs/CabSections';
 import { JsonLd, breadcrumb } from '@/components/cabs/cabSchema';
 import Icon from '@/components/Icon';
+import OfficialLink from '@/components/OfficialLink';
 
 /* The one taxi page.
 
@@ -178,7 +179,7 @@ export default function CabsPage() {
         <VerifiedStrip expert={expert} subject="the full Char Dham circuit" />
         <p className="lux-body" style={{ marginTop: 22 }}>
           We run the Char Dham circuit by road out of Haridwar, Rishikesh, Dehradun and Delhi. Every vehicle is our
-          own, carries a current Green Card, and is driven by someone who works these roads through the whole season
+          own, carries a current <OfficialLink k="greencard">Green Card</OfficialLink>, and is driven by someone who works these roads through the whole season
           rather than being pulled in from the plains in May. You can book the cab on its own if you have your stays
           arranged, or as part of a full package — the vehicle and the driver are identical either way.
         </p>

@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/green-card-char-dham-yatra-2026');
 
@@ -81,7 +82,7 @@ export default function GreenCard() {
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "green-card-char-dham-yatra-2026", "title": "Green Card for Char Dham Yatra 2026: Rules & Cost", "description": "Green Card (Trip Card) is mandatory for non-Uttarakhand vehicles on Char Dham routes in 2026. How to apply, cost, which routes need it and penalties.", "datePublished": "2026-01-10", "dateModified": "2026-06-20", "lang": "en-IN"}} />
 
         <AnswerBox>
-          <strong>A Green Card is the fitness certificate a commercial vehicle needs to run the Char Dham hill routes</strong>, issued by the Uttarakhand transport department after inspection and checked at barriers alongside the driver's trip card. It applies to the operator, not to pilgrims — you do not need one personally. What it does mean for you is that a vehicle without a current Green Card can be turned back at a checkpost with you in it, which is worth confirming before you book.
+          <strong>A <OfficialLink k="greencard">Green Card</OfficialLink> is the <OfficialLink k="health">fitness certificate</OfficialLink> a commercial vehicle needs to run the Char Dham hill routes</strong>, issued by the Uttarakhand transport department after inspection and checked at barriers alongside the driver's trip card. It applies to the operator, not to pilgrims — you do not need one personally. What it does mean for you is that a vehicle without a current Green Card can be turned back at a checkpost with you in it, which is worth confirming before you book.
         </AnswerBox>
         <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 20, textAlign: 'right' }}>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</div>
 
@@ -90,7 +91,7 @@ export default function GreenCard() {
         </div>
 
         <p style={p}>
-          In 2026, the Uttarakhand government introduced the Green Card (officially: Trip Card) system for all Char Dham Yatra routes. It requires every vehicle with a non-Uttarakhand registration plate to register the trip in advance through the online portal. The permit is ₹50, takes 5 minutes to apply for, and is valid for the duration of your yatra. This is a crowd management and safety measure — the registration system helps authorities track vehicles on fragile Himalayan roads.
+          In 2026, the Uttarakhand government introduced the Green Card (officially: Trip Card) system for all Char Dham Yatra routes. It requires every vehicle with a non-Uttarakhand <OfficialLink k="registration">registration</OfficialLink> plate to register the trip in advance through the online portal. The permit is ₹50, takes 5 minutes to apply for, and is valid for the duration of your yatra. This is a crowd management and safety measure — the registration system helps authorities track vehicles on fragile Himalayan roads.
         </p>
 
         <BlogTOC items={[

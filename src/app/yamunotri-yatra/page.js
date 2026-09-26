@@ -5,6 +5,7 @@ import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 import { YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/yamunotri-yatra');
 
@@ -83,7 +84,7 @@ export default function Page() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
 
         <AnswerBox>
-          Yamunotri Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in
+          <OfficialLink k="ut-yamunotri">Yamunotri</OfficialLink> Yatra costs ₹4,500 per person from Haridwar. Yamunotri sits at 3,291 m in
           Uttarkashi district and is the source of the Yamuna, the first of the four dhams in the
           traditional circuit. The road ends at Janki Chatti; the temple is a 6 km trek above it,
           with pony, palki and porter available. Open late April to early November.
@@ -191,7 +192,7 @@ export default function Page() {
             </tr></thead>
             <tbody>
               <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'#fff'}}>
-                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Barkot</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}><OfficialLink k="gmvn">GMVN</OfficialLink> Barkot</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Barkot</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,200–1,800/night</td>

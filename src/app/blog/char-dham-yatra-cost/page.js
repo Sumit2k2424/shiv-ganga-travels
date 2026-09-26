@@ -10,6 +10,7 @@ import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK, YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-cost');
 
@@ -74,7 +75,7 @@ export default function CharDhamCost() {
         <BlogAuthor variant="top" author="dhanesh" />
 
         <AnswerBox>
-          <strong>A Char Dham Yatra from Haridwar costs from ₹13,900 per person for 9N/10D all-inclusive.</strong> Deluxe with 3-star hotels and a private Innova runs ₹28,000–40,000, and a genuine full helicopter charter about ₹2,30,000. On top of the package, budget for the Kedarnath pony ({KEDARNATH_TREK.pony.oneWay} one way) or helicopter (₹7,000–9,000), plus puja and personal expenses. Registration is free. Anything advertised as a helicopter package near ₹85,000 is a road trip with shuttle tickets.
+          <strong>A Char Dham Yatra from Haridwar costs from ₹13,900 per person for 9N/10D all-inclusive.</strong> Deluxe with 3-star hotels and a private Innova runs ₹28,000–40,000, and a genuine full helicopter charter about ₹2,30,000. On top of the package, budget for the Kedarnath pony ({KEDARNATH_TREK.pony.oneWay} one way) or helicopter (₹7,000–9,000), plus puja and personal expenses. <OfficialLink k="registration">Registration</OfficialLink> is free. Anything advertised as a helicopter package near ₹85,000 is a road trip with shuttle tickets.
         </AnswerBox>
 
         {/* Intent-first answer */}

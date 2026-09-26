@@ -8,6 +8,7 @@ import {
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/haridwar-sightseeing-places');
 
@@ -91,7 +92,7 @@ export default function HaridwarSightseeingPlaces() {
 
 
         <AnswerBox>
-          <strong>A full day in Haridwar covers Har Ki Pauri, Mansa Devi, Chandi Devi and Daksh Mahadev, and that is the sensible order.</strong> Do the two hill temples in the morning by ropeway, Daksh Mahadev at Kankhal after lunch, and keep the evening for the Ganga Aarti at Har Ki Pauri, which is the thing people remember. Maya Devi, Bharat Mata Mandir and Shantikunj fit in if you have a second day.
+          <strong>A full day in <OfficialLink k="ut-haridwar">Haridwar</OfficialLink> covers Har Ki Pauri, Mansa Devi, Chandi Devi and Daksh Mahadev, and that is the sensible order.</strong> Do the two hill temples in the morning by ropeway, Daksh Mahadev at Kankhal after lunch, and keep the evening for the Ganga Aarti at Har Ki Pauri, which is the thing people remember. Maya Devi, Bharat Mata Mandir and Shantikunj fit in if you have a second day.
         </AnswerBox>
         <P>
           Haridwar is small enough to see properly in a day, and almost everybody gets the sequence

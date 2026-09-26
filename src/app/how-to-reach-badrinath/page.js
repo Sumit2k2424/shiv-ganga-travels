@@ -6,6 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/how-to-reach-badrinath');
 const PAGE = '/how-to-reach-badrinath';
@@ -114,7 +115,7 @@ export default function HowToReachBadrinath() {
         </div>
 
         <AnswerBox>
-          <strong>Haridwar to Badrinath is 320 km by road and takes 10–11 hours of driving</strong> via Rishikesh,
+          <strong>Haridwar to <OfficialLink k="ut-badrinath">Badrinath</OfficialLink> is 320 km by road and takes 10–11 hours of driving</strong> via Rishikesh,
           Devprayag, Rudraprayag, Karnaprayag, Chamoli and Joshimath — normally split over two days with a night at
           Joshimath or Pipalkoti. There is no trek: the road runs to the temple. The nearest railhead is Haridwar, the
           nearest airport Dehradun (320 km), and Badrinath has its own helipad beside the temple. The last 45 km from
@@ -283,7 +284,7 @@ export default function HowToReachBadrinath() {
 
         <h3 style={h3}>Registration</h3>
         <p style={p}>
-          Char Dham yatra registration is mandatory, free, and checked at barriers on the way up — do it{' '}
+          <OfficialLink k="registration">Char Dham yatra registration</OfficialLink> is mandatory, free, and checked at barriers on the way up — do it{' '}
           <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>online before you travel</Link>{' '}
           rather than queueing at Rishikesh. No separate permit is needed for the temple or for Mana village.
         </p>
@@ -294,7 +295,7 @@ export default function HowToReachBadrinath() {
           few minutes on foot from the shrine, so there is no road transfer. The Dehradun–Badrinath sector flies from
           Sahastradhara Helipad in about 45 minutes and is sold as a leg of the{' '}
           <Link prefetch={false} href="/char-dham-helicopter" style={{ color:'var(--teal)' }}>Char Dham helicopter circuit</Link>{' '}
-          rather than as a standalone hop. Book only through the official IRCTC HeliYatra portal — no agent can sell
+          rather than as a standalone hop. Book only through the official <OfficialLink k="heliyatra">IRCTC HeliYatra</OfficialLink> portal — no agent can sell
           you a seat, and the helicopter-ticket scam is the most common fraud on this circuit.
         </p>
 

@@ -6,6 +6,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/kedarnath-yatra');
 
@@ -84,7 +85,7 @@ export default function KedarnathYatra() {
           ))}
         </div>
 
-        <p style={p}><strong>Kedarnath temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for {KEDARNATH_TREK.pony.oneWay} one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹5,250 per person all-inclusive. <strong>Biometric registration is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
+        <p style={p}><strong><OfficialLink k="ut-kedarnath">Kedarnath</OfficialLink> temple opens on April 22, 2026</strong> and is accessible via a 16km trek from Gaurikund (1,982m) to the shrine at 3,583m. The one-way trek takes 5–7 hours on foot; pony is available for {KEDARNATH_TREK.pony.oneWay} one way; helicopter from Phata/Sersi/Guptkashi costs ₹7,500–9,500 round trip. A registered Haridwar operator like Shiv Ganga Travels offers complete 3N/4D packages from ₹5,250 per person all-inclusive. <strong><OfficialLink k="registration">Biometric registration</OfficialLink> is mandatory</strong> — pilgrims without a printed QR certificate are turned back at Sonprayag, even after a 7-hour drive.</p>
         <p style={p}>Kedarnath is one of the 12 Jyotirlingas of Lord Shiva — the only one in the Himalayas. The current stone temple was built by Adi Shankaracharya in the 8th century CE on a site venerated since the Mahabharata era (the Pandavas sought Shiva's penance here after the Kurukshetra war). The structure survived the 2013 cloudburst that killed over 5,000 people in the valley — a massive boulder deflected the floodwaters around the shrine and still stands directly behind the temple. Every season, approximately 15–20 lakh pilgrims attempt the trek. On peak May days, the darshan queue stretches 4–6 hours for general pilgrims. Our VIP darshan arrangement, included in all packages, reduces this to under 30 minutes.</p>
 
         {kedarnathPkgs.length > 0 && (
@@ -153,7 +154,7 @@ export default function KedarnathYatra() {
         </div>
 
         <h2 style={h2}>Temple Timings, Pujas & Darshan 2026</h2>
-        <p style={p}>The Kedarnath temple schedule is set by the Badrinath-Kedarnath Temple Committee (BKTC). The <strong>Mahabhishek</strong> at 4:30 AM — where the Shivling is bathed with milk, curd, honey, and ghee by the head priest — is the most sacred ritual of the day. You can pre-book participation through your operator or directly at the BKTC desk. The <strong>evening aarti at 7 PM</strong> is the most visually dramatic: lamps, incense, conch shells, and drums in complete darkness at 3,583m. Every pilgrim who stays overnight rates it as the defining moment of their yatra.</p>
+        <p style={p}>The Kedarnath temple schedule is set by the <OfficialLink k="bktc">Badrinath-Kedarnath Temple Committee</OfficialLink> (BKTC). The <strong>Mahabhishek</strong> at 4:30 AM — where the Shivling is bathed with milk, curd, honey, and ghee by the head priest — is the most sacred ritual of the day. You can pre-book participation through your operator or directly at the BKTC desk. The <strong>evening aarti at 7 PM</strong> is the most visually dramatic: lamps, incense, conch shells, and drums in complete darkness at 3,583m. Every pilgrim who stays overnight rates it as the defining moment of their yatra.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 24, border: '1px solid hsl(var(--border))', borderRadius: 12, overflow: 'hidden' }}>
           {[
             ['4:30 AM', 'Mahabhishek', 'Milk, curd, honey, ghee poured on Shivling by head priest. Can be booked ₹500–2,000. Most sacred time.'],

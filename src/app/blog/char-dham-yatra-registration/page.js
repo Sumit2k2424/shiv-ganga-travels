@@ -9,6 +9,7 @@ import BlogTOC from '@/components/BlogTOC';
 import ExpertNote from '@/components/ExpertNote';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-registration');
 
@@ -164,7 +165,7 @@ export default function RegistrationBlog() {
 
 
         <AnswerBox>
-          <strong>Char Dham registration is mandatory, free, and checked at police barriers.</strong> Register at registrationandtouristcare.uk.gov.in, on the Tourist Care Uttarakhand app, by WhatsApp on +91-8394833833, or at offline counters in Haridwar and Rishikesh. It takes about fifteen minutes and produces a QR yatra card. Pilgrims aged 55 and over also need a medical fitness certificate. Unregistered pilgrims are turned back at Sonprayag after an eight-hour drive.
+          <strong>Char Dham registration is mandatory, free, and checked at police barriers.</strong> Register at registrationandtouristcare.uk.gov.in, on the Tourist Care Uttarakhand app, by WhatsApp on +91-8394833833, or at offline counters in Haridwar and Rishikesh. It takes about fifteen minutes and produces a QR yatra card. Pilgrims aged 55 and over also need a <OfficialLink k="health">medical fitness certificate</OfficialLink>. Unregistered pilgrims are turned back at Sonprayag after an eight-hour drive.
         </AnswerBox>
         {/* === CONVERSION HOOK — above fold, reduces bounce === */}
         {/* Alert box */}
@@ -389,7 +390,7 @@ export default function RegistrationBlog() {
           <div id="helicopter" style={{ background:'#EEF6FF', border:'1px solid #B5D4F4', borderRadius:12, padding:'16px 20px', marginBottom:28 }}>
             <div style={{ fontWeight:700, fontSize:14, color:'#0C447C', marginBottom:8 }}>🚁 Booking Kedarnath Helicopter? Register First.</div>
             <p style={{ fontSize:13.5, color:'#185FA5', lineHeight:1.7, margin:'0 0 10px' }}>
-              From 2026, the IRCTC helicopter portal (<strong>heliyatra.irctc.co.in</strong>) requires your Yatra Registration Number to log in. You cannot book a Kedarnath helicopter slot without first completing Char Dham Yatra registration. The sequence is:
+              From 2026, the IRCTC helicopter portal (<strong><OfficialLink k="heliyatra">heliyatra.irctc.co.in</OfficialLink></strong>) requires your Yatra Registration Number to log in. You cannot book a Kedarnath helicopter slot without first completing Char Dham Yatra registration. The sequence is:
             </p>
             {['1. Complete Char Dham Yatra registration at registrationandtouristcare.uk.gov.in (free, takes 15 min)','2. Note your Yatra Registration Number from the confirmation','3. Go to heliyatra.irctc.co.in and log in using your Registration Number + Aadhaar','4. Book your helicopter slot (May slots sell out by February — book early)'].map((step, i) => (
               <div key={i} style={{ display:'flex', gap:8, fontSize:13.5, color:'#185FA5', padding:'5px 0', borderBottom:'1px solid rgba(21,95,165,0.12)' }}>

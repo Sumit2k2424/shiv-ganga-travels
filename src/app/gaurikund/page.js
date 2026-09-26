@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/gaurikund');
 
@@ -167,7 +168,7 @@ export default function Gaurikund() {
         </div>
 
         <p style={p}>
-          <strong>Gaurikund is where the road ends and the walking starts.</strong> It sits at 1,982 m at the top of the Mandakini valley, and the 16 km trail to <Link prefetch={false} href="/kedarnath-temple">Kedarnath</Link> begins at its upper edge. You cannot drive here — private vehicles stop 5 km below at Sonprayag and a shuttle covers the rest. Almost everything that goes wrong on a Kedarnath trip goes wrong in this five-kilometre stretch, and almost all of it is avoidable.
+          <strong>Gaurikund is where the road ends and the walking starts.</strong> It sits at 1,982 m at the top of the Mandakini valley, and the 16 km trail to <Link prefetch={false} href="/kedarnath-temple">Kedarnath</Link> begins at its upper edge. You cannot drive here — private vehicles stop 5 km below at Sonprayag and a shuttle covers the rest. Almost everything that goes wrong on a <OfficialLink k="ut-kedarnath">Kedarnath</OfficialLink> trip goes wrong in this five-kilometre stretch, and almost all of it is avoidable.
         </p>
 
         <h2 style={h2}>What Is Gaurikund?</h2>
@@ -247,7 +248,7 @@ export default function Gaurikund() {
           </table>
         </div>
         <p style={p}>
-          Six to nine hours up, five to seven down. Ponies, palkis, kandis and porters all work from the trailhead at rates fixed by the temple committee &mdash; current figures are on our <Link prefetch={false} href="/kedarnath-pony-palki-kandi-rates">pony and palki rate page</Link>, and the full trail description with preparation advice is in the <Link prefetch={false} href="/blog/kedarnath-trek-guide">Kedarnath trek guide</Link>. If the climb is not realistic, the <Link prefetch={false} href="/blog/kedarnath-helicopter-booking">helicopter from Phata or Sersi</Link> skips it entirely.
+          Six to nine hours up, five to seven down. Ponies, palkis, kandis and porters all work from the trailhead at rates fixed by the <OfficialLink k="bktc">temple committee</OfficialLink> &mdash; current figures are on our <Link prefetch={false} href="/kedarnath-pony-palki-kandi-rates">pony and palki rate page</Link>, and the full trail description with preparation advice is in the <Link prefetch={false} href="/blog/kedarnath-trek-guide">Kedarnath trek guide</Link>. If the climb is not realistic, the <Link prefetch={false} href="/blog/kedarnath-helicopter-booking">helicopter from Phata or Sersi</Link> skips it entirely.
         </p>
 
         <h2 style={h2}>Where to Sleep the Night Before</h2>

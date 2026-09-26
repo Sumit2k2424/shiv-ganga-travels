@@ -4,6 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import CharDhamRoadChecker from '@/components/CharDhamRoadChecker';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
+import OfficialLink from '@/components/OfficialLink';
 
 const UPDATED = 'September 26, 2026';
 const UPDATED_ISO = '2026-09-26';
@@ -84,6 +85,7 @@ const SOURCES = [
   { l:'Uttarakhand Tourism (UTDB) — official advisories', h:'https://uttarakhandtourism.gov.in/' },
   { l:'Uttarakhand SDMA — road status & State Emergency Operation Centre', h:'https://usdma.uk.gov.in/' },
   { l:'Char Dham registration portal (URN before you travel)', h:'https://registrationandtouristcare.uk.gov.in/' },
+  { l:'Uttarakhand Transport — Green Card portal for hill-route vehicles', h:'https://greencard.uk.gov.in/' },
   { l:'IMD — Uttarakhand district weather warnings', h:'https://mausam.imd.gov.in/' },
   { l:'IMD Dehradun — 5-day district-level warning for Uttarakhand (PDF)', h:'https://mausam.imd.gov.in/dehradun/mcdata/DISTRICT_FORECAST.pdf' },
   { l:'Rudraprayag Police on X — Kedarnath road and trek bulletins', h:'https://x.com/RudraprayagPol' },
@@ -159,7 +161,7 @@ export default function CharDhamRoadStatus() {
       </div>
 
       <p style={{ ...p, fontSize:16.5, background:'var(--navy-light)', borderRadius:12, padding:'16px 18px' }}>
-        <strong>Short answer:</strong> no — as of {UPDATED}, 6:30 PM, the Char Dham Yatra is suspended on all four routes from the afternoon of September 26 through September 27, on the Garhwal Commissioner&rsquo;s order, because of IMD red alerts. Pilgrims are asked not to travel and to stay at safe places, and the restart will be announced separately; the Hemkund Sahib yatra and trekking are suspended too. The warnings ease on the 28th and clear from the 29th, so if your dates are flexible, plan to move from the 28th once the restart is confirmed. For an October Kedarnath helicopter seat, IRCTC&rsquo;s October 1–15 release (opened September 22) is still the latest — book on heliyatra.irctc.co.in and nowhere else.
+        <strong>Short answer:</strong> no — as of {UPDATED}, 6:30 PM, the Char Dham Yatra is suspended on all four routes from the afternoon of September 26 through September 27, on the Garhwal Commissioner&rsquo;s order, because of IMD red alerts. Pilgrims are asked not to travel and to stay at safe places, and the restart will be announced separately; the Hemkund Sahib yatra and trekking are suspended too. The warnings ease on the 28th and clear from the 29th, so if your dates are flexible, plan to move from the 28th once the restart is confirmed. For an October Kedarnath helicopter seat, IRCTC&rsquo;s October 1–15 release (opened September 22) is still the latest — book on <OfficialLink k="heliyatra">heliyatra.irctc.co.in</OfficialLink> and nowhere else.
       </p>
 
       <div style={{ background:'#fff8ed', border:'1px solid #f5d9a8', borderRadius:12, padding:'14px 18px', marginBottom:22 }}>

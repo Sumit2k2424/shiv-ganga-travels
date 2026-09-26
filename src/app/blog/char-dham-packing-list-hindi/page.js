@@ -9,6 +9,7 @@ import KeyTakeaways from '@/components/KeyTakeaways';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-packing-list-hindi');
 
@@ -124,7 +125,7 @@ export default function CharDhamPackingListHindi() {
         </div>
 
         <KeyTakeaways title="एक नजर में" points={[
-          <>सबसे जरूरी चार चीजें — <strong>थर्मल कपड़े, पकड़ वाले वाटरप्रूफ जूते, अपनी दवाइयां (3 दिन extra), और रजिस्ट्रेशन का प्रिंटआउट</strong>।</>,
+          <>सबसे जरूरी चार चीजें — <strong>थर्मल कपड़े, पकड़ वाले वाटरप्रूफ जूते, अपनी दवाइयां (3 दिन extra), और <OfficialLink k="registration">रजिस्ट्रेशन</OfficialLink> का प्रिंटआउट</strong>।</>,
           <>केदारनाथ ट्रेक पर सिर्फ <strong>5-7 किलो का डेपैक</strong> ही ले जा पाएंगे — गाड़ी सोनप्रयाग पर ही रुक जाती है।</>,
           <>मई-जून में भी रात <strong>2-5°C</strong>, अक्टूबर में <strong>0°C से नीचे</strong>। गर्म कपड़े हर महीने चाहिए।</>,
           <>मंदिर के गर्भगृह में <strong>मोबाइल और कैमरा प्रतिबंधित</strong> हैं।</>,

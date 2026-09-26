@@ -9,6 +9,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/bujurg-char-dham-yatra');
 
@@ -74,7 +75,7 @@ export default function BujurgCharDham() {
         <BlogAuthor variant="top" author="dhanesh" />
 
         <AnswerBox>
-          <strong>70 और 80 साल के बुजुर्ग भी चार धाम यात्रा कर सकते हैं — शर्त यह है कि यात्रा धीमी रखी जाए।</strong> चारों धाम 3,000 मीटर से ऊपर हैं, इसलिए 55 साल से ऊपर वालों के लिए मेडिकल सर्टिफिकेट अनिवार्य है। केदारनाथ और यमुनोत्री में घोड़ा या पालकी लें, बद्रीनाथ और गंगोत्री तक गाड़ी मंदिर तक जाती है। 9 रात की जगह 12–13 रात का इटिनरेरी लें, बीच में आराम के दिन रखें, और अपनी दवाइयाँ 2 दिन ज़्यादा साथ रखें।
+          <strong>70 और 80 साल के बुजुर्ग भी चार धाम यात्रा कर सकते हैं — शर्त यह है कि यात्रा धीमी रखी जाए।</strong> चारों धाम 3,000 मीटर से ऊपर हैं, इसलिए 55 साल से ऊपर वालों के लिए <OfficialLink k="health">मेडिकल सर्टिफिकेट</OfficialLink> अनिवार्य है। केदारनाथ और यमुनोत्री में घोड़ा या पालकी लें, बद्रीनाथ और गंगोत्री तक गाड़ी मंदिर तक जाती है। 9 रात की जगह 12–13 रात का इटिनरेरी लें, बीच में आराम के दिन रखें, और अपनी दवाइयाँ 2 दिन ज़्यादा साथ रखें।
         </AnswerBox>
 
         <p style={{ ...p, fontStyle: 'italic', background: 'rgba(15,43,91,0.05)', padding: '16px 20px', borderRadius: 10, borderLeft: '3px solid var(--navy)' }}>रमेश जी, उम्र 72 साल, बरेली से आए थे। बेटे ने कहा था "उम्र हो गई है, पहाड़ पर मत जाओ।" लेकिन वे नहीं माने। मई 2024 में हमारे साथ चार धाम गए — केदारनाथ में घोड़े पर बैठकर पहुँचे, आँखों में आँसू थे। लौटकर उन्होंने फोन किया — <strong>"बेटा, जिंदगी की सबसे बड़ी खुशी मिली।"</strong></p>

@@ -10,6 +10,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { KEDARNATH_TREK } from '@/data/trekRates';
 import Image from 'next/image';
 import { HELIPAD_PHOTO } from '@/data/photos';
+import OfficialLink from '@/components/OfficialLink';
 
 export const metadata = {
   title: { absolute: 'Kedarnath Pony vs Helicopter | Cost & Verdict' },
@@ -136,7 +137,7 @@ export default function PonyVsHelicopter() {
         </figure>
         <div style={{ background:'#FEF3E2', border:'2px solid var(--gold)', borderRadius:12, padding:'14px 18px', marginBottom:16 }}>
           <strong style={{ color:'#7B3F00' }}>⚠️ Critical 2026 Rule:</strong>
-          <span style={{ color:'#7B3F00', fontSize:14 }}> All Kedarnath helicopter bookings must be made through irctc.co.in — walk-in bookings at Phata, Sersi, and Guptkashi helipads are not permitted. Shiv Ganga Travels assists with IRCTC booking for all our pilgrims.</span>
+          <span style={{ color:'#7B3F00', fontSize:14 }}> All Kedarnath helicopter bookings must be made through irctc.co.in — walk-in bookings at Phata, Sersi, and Guptkashi helipads are not permitted. Shiv Ganga Travels assists with <OfficialLink k="heliyatra">IRCTC</OfficialLink> booking for all our pilgrims.</span>
         </div>
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:20 }}>
           {[

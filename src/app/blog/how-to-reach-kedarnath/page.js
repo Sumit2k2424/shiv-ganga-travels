@@ -9,6 +9,7 @@ import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/how-to-reach-kedarnath');
 
@@ -198,7 +199,7 @@ export default function HowToReachKedarnath() {
         </div>
 
         <h2 id="flights" style={h2}>Flights to Kedarnath — What You Can and Cannot Book</h2>
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There is no airport at Kedarnath and no commercial flight lands there — anyone selling a "Kedarnath flight ticket" is selling either a Dehradun flight or a scam. What exists is a two-part air journey. First, a regular flight to <strong>Jolly Grant Airport, Dehradun (DED)</strong> — IndiGo, Air India and SpiceJet fly in daily from Delhi, Mumbai, Bengaluru and Hyderabad, and fares from Delhi start around ₹3,000. Second, the <strong>helicopter shuttle</strong> from Phata, Sersi or Guptkashi helipads to the Kedarnath helipad, booked only on <strong>heliyatra.irctc.co.in</strong> after your yatra registration is done — roughly ₹7,500–9,500 round trip, weather permitting.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>There is no airport at Kedarnath and no commercial flight lands there — anyone selling a "Kedarnath flight ticket" is selling either a Dehradun flight or a scam. What exists is a two-part air journey. First, a regular flight to <strong>Jolly Grant Airport, Dehradun (DED)</strong> — IndiGo, Air India and SpiceJet fly in daily from Delhi, Mumbai, Bengaluru and Hyderabad, and fares from Delhi start around ₹3,000. Second, the <strong>helicopter shuttle</strong> from Phata, Sersi or Guptkashi helipads to the Kedarnath helipad, booked only on <strong><OfficialLink k="heliyatra">heliyatra.irctc.co.in</OfficialLink></strong> after your yatra <OfficialLink k="registration">registration</OfficialLink> is done — roughly ₹7,500–9,500 round trip, weather permitting.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>Between the airport and the helipad still sits a 7–8 hour road journey (Dehradun → Rishikesh → Guptkashi), which is why "flying to Kedarnath" in practice means: flight to Dehradun, cab up the valley, helicopter for the final hop. Our <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color:'var(--teal)', fontWeight:600 }}>helicopter booking guide</Link> walks through the IRCTC slots, and the road leg is exactly what our Kedarnath package covers.</p>
         <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}><strong>केदारनाथ जाने का रास्ता (हिंदी में):</strong> हरिद्वार या ऋषिकेश से सड़क मार्ग से सोनप्रयाग (लगभग 235 किमी), वहां से शटल जीप में गौरीकुंड (5 किमी), और फिर 16 किमी की पैदल चढ़ाई मंदिर तक। हेलीकॉप्टर से जाना हो तो फाटा या सेरसी हेलीपैड से IRCTC बुकिंग के ज़रिए।</p>
 

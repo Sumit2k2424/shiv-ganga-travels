@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/kedarnath-darshan-timing');
 
@@ -95,7 +96,7 @@ export default function KedarnathTimings() {
       <article className="blog-container" itemScope itemType="https://schema.org/Article">
       <div style={{ background:'var(--bg)', borderLeft:'4px solid var(--gold)', borderRadius:12, padding:'16px 18px', margin:'0 0 24px' }}>
         <div style={{ fontSize:11.5, fontWeight:700, color:'var(--gold-dark)', textTransform:'uppercase', letterSpacing:'0.04em', marginBottom:6 }}>Quick Answer</div>
-        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath temple timings: opens <strong>4:00 AM</strong> for Maha Abhishek, general darshan roughly <strong>6:00 AM–3:00 PM</strong>, closed 3:00–5:00 PM, evening darshan and Shayan Aarti <strong>5:00–7:00 PM</strong> (temple closes ~7:30 PM). Timings shift slightly with festivals and BKTC notices — verify on the day.</p>
+        <p style={{ fontSize:14.5, color:'var(--navy)', lineHeight:1.75, margin:0 }}>Kedarnath temple timings: opens <strong>4:00 AM</strong> for Maha Abhishek, general darshan roughly <strong>6:00 AM–3:00 PM</strong>, closed 3:00–5:00 PM, evening darshan and Shayan Aarti <strong>5:00–7:00 PM</strong> (temple closes ~7:30 PM). Timings shift slightly with festivals and <OfficialLink k="bktc">BKTC</OfficialLink> notices — verify on the day.</p>
       </div>
 
         {/* Author byline — E-E-A-T signal */}

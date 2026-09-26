@@ -10,6 +10,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import { YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-with-kids');
 
@@ -105,7 +106,7 @@ export default function Page() {
         <KeyTakeaways points={[
           <>We do not recommend the <strong>full circuit under age 5</strong> — Kedarnath is 3,583m and a small child cannot tell you what is wrong.</>,
           <><strong>Badrinath is the easiest dham</strong> with children: road to the door, lowest of the four, and Mana village nearby.</>,
-          <>Children need <strong>their own registration</strong>, free, same portal. The 55+ medical certificate rule does not apply to them.</>,
+          <>Children need <strong>their own <OfficialLink k="registration">registration</OfficialLink></strong>, free, same portal. The 55+ <OfficialLink k="health">medical certificate</OfficialLink> rule does not apply to them.</>,
           <>Plan <strong>11–13 days instead of 9</strong>, using the extra nights as rest days rather than more sightseeing.</>,
           <>In children, altitude sickness shows as <strong>going quiet, refusing food or unusual clinginess</strong> — not as a stated complaint.</>,
         ]}/>

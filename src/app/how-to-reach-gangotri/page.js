@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/how-to-reach-gangotri');
 const PAGE = '/how-to-reach-gangotri';
@@ -123,7 +124,7 @@ export default function HowToReachGangotri() {
         </div>
 
         <AnswerBox>
-          <strong>Haridwar to Gangotri is 265 km by road and takes 9–10 hours of driving</strong> via Rishikesh, Chamba,
+          <strong>Haridwar to <OfficialLink k="ut-gangotri">Gangotri</OfficialLink> is 265 km by road and takes 9–10 hours of driving</strong> via Rishikesh, Chamba,
           Dharasu, Uttarkashi and Harsil — normally split over two days with a night at Uttarkashi or Harsil. It is the
           only Char Dham where the road reaches the temple, so there is no trek. The nearest railhead is Haridwar, the
           nearest airport Dehradun (about 245 km), and the helicopter for this sector lands at Harsil, 25 km short.
@@ -290,7 +291,7 @@ export default function HowToReachGangotri() {
 
         <h3 style={h3}>Registration and permits</h3>
         <p style={p}>
-          Char Dham yatra registration is mandatory, free, and checked at barriers on the way up — do it{' '}
+          <OfficialLink k="registration">Char Dham yatra registration</OfficialLink> is mandatory, free, and checked at barriers on the way up — do it{' '}
           <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>online before you travel</Link>{' '}
           rather than queueing at Uttarkashi. A separate permit is required only if you continue past the temple
           towards Gaumukh, inside Gangotri National Park; it is issued at the park office in Uttarkashi and capped at

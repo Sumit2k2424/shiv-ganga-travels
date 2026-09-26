@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/panch-prayag');
 
@@ -180,7 +181,7 @@ export default function PanchPrayag() {
             Panch Prayag — The Five Confluences, In Order
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Vishnuprayag · Nandprayag · Karnaprayag · Rudraprayag · Devprayag — and you already drive past all five
+            Vishnuprayag · Nandprayag · Karnaprayag · Rudraprayag · <OfficialLink k="ut-devprayag">Devprayag</OfficialLink> — and you already drive past all five
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             {['🌊 All on the Alaknanda', '🛣️ All roadside', '📅 3 days from Haridwar', '🕉️ The Ganga starts at #5'].map(t => (

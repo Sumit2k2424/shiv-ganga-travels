@@ -9,6 +9,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, h3, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/best-time-char-dham');
 
@@ -230,7 +231,7 @@ export default function BestTimeCharDham() {
           </table>
         </div>
         <p style={{ ...p, fontSize:13, color:'#64748b' }}>
-          Note: All four dhams open on Akshaya Tritiya or within 4 days. The exact time of the opening puja (muhurta) is set by the Badrinath–Kedarnath Temple Committee (BKTC) each year. Closing dates for 2026 will be announced in September.
+          Note: All four dhams open on Akshaya Tritiya or within 4 days. The exact time of the opening puja (muhurta) is set by the Badrinath–Kedarnath Temple Committee (<OfficialLink k="bktc">BKTC</OfficialLink>) each year. Closing dates for 2026 will be announced in September.
         </p>
 
         {/* ── Mid-article conversion CTA ── */}

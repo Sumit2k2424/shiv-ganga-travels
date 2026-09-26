@@ -9,6 +9,7 @@ import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK, YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-yatra-kitna-kharcha');
 
@@ -74,7 +75,7 @@ export default function CharDhamKharcha() {
         <BlogAuthor variant="top" author="dhanesh" />
 
         <AnswerBox>
-          <strong>चार धाम यात्रा का खर्च हरिद्वार से ₹13,900 प्रति व्यक्ति से शुरू होता है — 9 रात 10 दिन, सब कुछ शामिल।</strong> इसमें गाड़ी, होटल, नाश्ता-खाना, गाइड, टोल-पार्किंग और रजिस्ट्रेशन आता है। डीलक्स पैकेज ₹30,000 तक जाता है और हेलीकॉप्टर चार्टर करीब ₹2,30,000। अलग से रखें — केदारनाथ का घोड़ा ({KEDARNATH_TREK.pony.oneWay}) या हेलीकॉप्टर (₹7,000–9,000 एक तरफ़), और निजी खर्च।
+          <strong>चार धाम यात्रा का खर्च हरिद्वार से ₹13,900 प्रति व्यक्ति से शुरू होता है — 9 रात 10 दिन, सब कुछ शामिल।</strong> इसमें गाड़ी, होटल, नाश्ता-खाना, गाइड, टोल-पार्किंग और <OfficialLink k="registration">रजिस्ट्रेशन</OfficialLink> आता है। डीलक्स पैकेज ₹30,000 तक जाता है और हेलीकॉप्टर चार्टर करीब ₹2,30,000। अलग से रखें — केदारनाथ का घोड़ा ({KEDARNATH_TREK.pony.oneWay}) या हेलीकॉप्टर (₹7,000–9,000 एक तरफ़), और निजी खर्च।
         </AnswerBox>
 
         {/* Quick answer box */}

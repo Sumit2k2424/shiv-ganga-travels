@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
+import OfficialLink from '@/components/OfficialLink';
 
 export const metadata = {
   title: { absolute: 'Gangotri Temple | Darshan Timings, History & Aarti' },
@@ -70,7 +71,7 @@ export default function GangotriTemple() {
 
       <h2 style={h2}>About Gangotri Temple</h2>
       <AnswerBox>
-        Gangotri Temple is the origin shrine of the river Ganga, dedicated to Goddess Ganga, at
+        <OfficialLink k="dist-gangotri">Gangotri</OfficialLink> Temple is the origin shrine of the river Ganga, dedicated to Goddess Ganga, at
         3,415m in Uttarkashi district, Uttarakhand. Built in the 18th century in white granite, it
         opens on Akshaya Tritiya (late April/early May 2026) and is reachable by motor road.
       </AnswerBox>

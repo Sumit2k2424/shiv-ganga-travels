@@ -4149,3 +4149,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .trust-strip-rot    { animation: none; }
   .trust-strip-rot-2  { display: none; }
 }
+
+/* Inline citations to official sources (<OfficialLink>). No colour of its own:
+   inside <article> the article-link teal applies; elsewhere it inherits the
+   surrounding text colour, so a citation in a dark section stays legible. */
+.official-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}

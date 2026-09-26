@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
+import OfficialLink from '@/components/OfficialLink';
 export const metadata = {
   title: { absolute: 'Kedarnath Temple | Darshan Timings, History & Trek' },
   description: `Everything about Kedarnath Temple — 12th Jyotirlinga, darshan timings, history, trek, puja & ${SITE.season} opening dates.`,
@@ -65,7 +66,7 @@ export default function KedarnathTemple() {
       </div>
       <h2 style={h2}>About Kedarnath Temple</h2>
       <AnswerBox>
-        Kedarnath Temple is one of the twelve Jyotirlingas of Lord Shiva, located at 3,583m in
+        <OfficialLink k="ut-kedarnath">Kedarnath</OfficialLink> Temple is one of the twelve Jyotirlingas of Lord Shiva, located at 3,583m in
         the Garhwal Himalayas of Uttarakhand. It opens 22 April 2026, with darshan 4 AM–9 PM, and
         is reached by a 16km trek from Gaurikund (or helicopter from Phata/Sersi/Guptkashi).
       </AnswerBox>

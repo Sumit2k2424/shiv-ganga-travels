@@ -5,6 +5,7 @@ import DoDhamConfigurator from '@/components/DoDhamConfigurator';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/do-dham-yatra');
 
@@ -266,7 +267,7 @@ export default function DoDhamYatra() {
           </table>
         </div>
         <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          Competitor figures are their own published 2026 starting prices. We run this route ourselves from Haridwar — same hotels, same temples, same registration handled, without the brand premium. That's the whole difference.
+          Competitor figures are their own published 2026 starting prices. We run this route ourselves from Haridwar — same hotels, same temples, same <OfficialLink k="registration">registration</OfficialLink> handled, without the brand premium. That's the whole difference.
         </p>
 
         {/* What makes it special */}

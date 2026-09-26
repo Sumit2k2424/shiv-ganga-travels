@@ -9,6 +9,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE = '/blog/uttarakhand-weather-guide';
 const PAGE_DATES = pageDates(PAGE);
@@ -194,7 +195,7 @@ export default function WeatherGuide() {
           </table>
         </div>
         <p style={{ ...p, fontSize:'0.95em', color:'var(--text-muted)' }}>
-          Ranges are night low to day high. The plains and halt-town figures are IMD station data; the shrine
+          Ranges are night low to day high. The plains and halt-town figures are <OfficialLink k="imd">IMD</OfficialLink> station data; the shrine
           figures are the bands from our four per-dham guides, which explain where they come from.
         </p>
 

@@ -6,6 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2, p } from "@/lib/prose";
+import OfficialLink from '@/components/OfficialLink';
 
 export const metadata = {
   title: { absolute: 'Char Dham Yatra from Mumbai | Pickup & VIP Darshan' },
@@ -85,7 +86,7 @@ export default function CharDhamFromMumbai() {
         <AnswerBox>
           Char Dham Yatra from Mumbai costs from ₹24,999 per person and takes 11–13 days. Mumbai
           is 1,450 km from the Uttarakhand start point: the fastest route is a 1h 45m flight to
-          Dehradun, or roughly 26 hours by train. Registration is mandatory and free, and we
+          Dehradun, or roughly 26 hours by train. <OfficialLink k="registration">Registration</OfficialLink> is mandatory and free, and we
           handle it for you. The 2026 season runs 19 April to November.
         </AnswerBox>
 

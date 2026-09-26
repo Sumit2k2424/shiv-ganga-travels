@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import BlogAuthor from '@/components/BlogAuthor';
 import { h2, h3, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/harsil-valley');
 
@@ -134,7 +135,7 @@ export default function HarsilValley() {
       <BlogAuthor variant="top" author="dhanesh" article={{ slug:'harsil-valley', title:'Harsil Valley Guide 2026 — Permits, Weather & Route', description:'Harsil Valley on the Bhagirathi, 25 km before Gangotri — apple orchards, Gartang Gali, real permit rules, weather by month and the route from Haridwar.', datePublished:'2026-07-28', dateModified: HARSIL_UPDATED_ISO, lang:'en-IN' }} />
 
       <AnswerBox>
-        Harsil Valley sits at <strong>2,620 m on the Bhagirathi River</strong> in Uttarkashi district, <strong>25 km before Gangotri</strong> on NH-108. It&rsquo;s known for apple orchards, deodar forest and <strong>Gartang Gali</strong>, a restored 150-year-old wooden cliff walkway. No permit is needed for Harsil itself &mdash; just valid ID &mdash; though the nearby Nelong Valley does require one. Best visited <strong>April&ndash;June or mid-September&ndash;November</strong>. A flash flood destroyed much of neighbouring Dharali in August 2025; the highway and services have since been rebuilt and the valley is open to visitors again.
+        <OfficialLink k="dist-harsil">Harsil</OfficialLink> Valley sits at <strong>2,620 m on the Bhagirathi River</strong> in Uttarkashi district, <strong>25 km before Gangotri</strong> on NH-108. It&rsquo;s known for apple orchards, deodar forest and <strong>Gartang Gali</strong>, a restored 150-year-old wooden cliff walkway. No permit is needed for Harsil itself &mdash; just valid ID &mdash; though the nearby Nelong Valley does require one. Best visited <strong>April&ndash;June or mid-September&ndash;November</strong>. A flash flood destroyed much of neighbouring Dharali in August 2025; the highway and services have since been rebuilt and the valley is open to visitors again.
       </AnswerBox>
 
       <h2 style={h2}>The Valley Everyone Drives Past</h2>
@@ -210,7 +211,7 @@ export default function HarsilValley() {
       <p style={p}>Accommodation here is modest by design &mdash; this is a working village, not a resort town &mdash; and that is part of the appeal.</p>
       <ul style={{ ...p, paddingLeft:22 }}>
         <li style={{ marginBottom:8 }}><strong>Homestays (₹1,000&ndash;₹2,500/night)</strong> &mdash; run by local Garhwali families, with home-cooked meals included. This is the experience worth having; book ahead in April&ndash;June and September&ndash;November.</li>
-        <li style={{ marginBottom:8 }}><strong>GMVN Tourist Rest House (₹1,500&ndash;₹2,500/night)</strong> &mdash; the government-run option, basic but reliable, near Kalp Kedar Temple.</li>
+        <li style={{ marginBottom:8 }}><strong><OfficialLink k="gmvn">GMVN</OfficialLink> Tourist Rest House (₹1,500&ndash;₹2,500/night)</strong> &mdash; the government-run option, basic but reliable, near Kalp Kedar Temple.</li>
         <li style={{ marginBottom:8 }}><strong>Riverside resorts (₹3,000&ndash;₹8,000/night)</strong> &mdash; a handful of nicer properties with Bhagirathi views for travellers who want more comfort after a long drive.</li>
         <li style={{ marginBottom:8 }}><strong>Carry cash.</strong> Card facilities are limited and the nearest ATM is in Uttarkashi, 73 km back the way you came.</li>
       </ul>

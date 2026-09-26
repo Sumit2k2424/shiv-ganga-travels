@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import KeyTakeaways from '@/components/KeyTakeaways';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-kab-jayen');
 
@@ -177,7 +178,7 @@ export default function CharDhamKabJayen() {
         <p style={p}>
           एक बात और जो आमतौर पर नहीं बताई जाती — <strong>केदारनाथ में रोज़ाना यात्रियों की तय सीमा</strong>{' '}
           होती है (हाल के सीज़न में 18,000 तक), और मई-जून में यह सीमा सच में भर जाती है। कोटा पूरा होने पर
-          सोनप्रयाग का बैरियर बंद हो जाता है, चाहे आपके पास वैध रजिस्ट्रेशन हो। सितंबर-अक्टूबर में यह
+          सोनप्रयाग का बैरियर बंद हो जाता है, चाहे आपके पास वैध <OfficialLink k="registration">रजिस्ट्रेशन</OfficialLink> हो। सितंबर-अक्टूबर में यह
           दिक्कत लगभग नहीं आती।
         </p>
 

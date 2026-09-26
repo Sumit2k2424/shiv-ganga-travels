@@ -8,6 +8,7 @@ import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import Image from 'next/image';
 import { BADRINATH_PILGRIMS_PHOTO } from '@/data/photos';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/badrinath-yatra');
 
@@ -128,7 +129,7 @@ export default function BadrinathYatraPage() {
             Badrinath Yatra Package 2026
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto 20px' }}>
-            Haridwar to Badrinath — <strong style={{ color: '#FFD166' }}>2N/3D from ₹4,500/person</strong> · No trekking · All-inclusive · Zero commission
+            Haridwar to <OfficialLink k="ut-badrinath">Badrinath</OfficialLink> — <strong style={{ color: '#FFD166' }}>2N/3D from ₹4,500/person</strong> · No trekking · All-inclusive · Zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
             {['🕌 Fully motorable', '✅ VIP darshan', '🚗 AC cab included', '🍱 Sattvic meals', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
@@ -339,7 +340,7 @@ export default function BadrinathYatraPage() {
         <p style={{ ...p, fontSize:13.5 }}>
           The <strong>Maha Abhishek at 4:30 AM</strong> is the one worth getting up for — the temple at first
           light with Neelkanth behind it. It needs booking in advance. Timings shift slightly on festival days
-          and are set by the temple committee.
+          and are set by the <OfficialLink k="bktc">temple committee</OfficialLink>.
         </p>
 
         <h2 style={h2}>How to Reach Badrinath from Haridwar</h2>

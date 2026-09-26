@@ -7,6 +7,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
 import { YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/how-to-reach-yamunotri');
 const PAGE = '/how-to-reach-yamunotri';
@@ -124,7 +125,7 @@ export default function HowToReachYamunotri() {
         </div>
 
         <AnswerBox>
-          <strong>Haridwar to Yamunotri is 222 km by road to Janki Chatti, then a 6 km trek to the temple.</strong> The
+          <strong>Haridwar to <OfficialLink k="ut-yamunotri">Yamunotri</OfficialLink> is 222 km by road to Janki Chatti, then a 6 km trek to the temple.</strong> The
           drive takes 8–9 hours via Rishikesh, Chamba, Brahmakhal and Barkot, and the road ends at Janki Chatti at
           2,650 m. The final 6 km climbs 641 m and takes 2.5–3 hours on foot, or 2 hours by pony from the road head.
           Almost everyone sleeps at Barkot and walks the next morning. Nearest railhead Haridwar, nearest airport
@@ -328,7 +329,7 @@ export default function HowToReachYamunotri() {
           short walk or a doli. It is sold as a leg of the{' '}
           <Link prefetch={false} href="/char-dham-helicopter" style={{ color:'var(--teal)' }}>Char Dham helicopter circuit</Link>{' '}
           rather than as a standalone hop, and it is the one dham where the helicopter does not save you the walk
-          entirely. Book only through the official IRCTC HeliYatra portal — the helicopter-ticket scam is the most
+          entirely. Book only through the official <OfficialLink k="heliyatra">IRCTC HeliYatra</OfficialLink> portal — the helicopter-ticket scam is the most
           common fraud on this circuit, and no agent can sell you a seat.
         </p>
 
@@ -342,7 +343,7 @@ export default function HowToReachYamunotri() {
 
         <h3 style={h3}>Registration and the medical certificate</h3>
         <p style={p}>
-          Char Dham yatra registration is mandatory, free, and checked at the barrier below Barkot — do it{' '}
+          <OfficialLink k="registration">Char Dham yatra registration</OfficialLink> is mandatory, free, and checked at the barrier below Barkot — do it{' '}
           <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)' }}>online before you travel</Link>.
           Yamunotri is one of the two trek dhams, so the{' '}
           <Link prefetch={false} href="/blog/char-dham-yatra-medical-certificate" style={{ color:'var(--teal)' }}>medical-certificate rules</Link>{' '}

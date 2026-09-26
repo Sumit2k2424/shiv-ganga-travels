@@ -8,6 +8,7 @@ import BlogTOC from '@/components/BlogTOC';
 import { h2, p } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/char-dham-registration-hindi');
 
@@ -79,7 +80,7 @@ export default function CharDhamRegistrationHindi() {
         <BlogAuthor variant="top" author="dhanesh" article={{"slug": "char-dham-registration-hindi", "title": "चार धाम यात्रा रजिस्ट्रेशन 2026: मोबाइल से कैसे करें", "description": "चार धाम यात्रा 2026 का ऑनलाइन रजिस्ट्रेशन मुफ्त है। WhatsApp और website से — 9 आसान steps में पूरी जानकारी हिंदी में। जरूरी दस्तावेज़ और 55+ उम्र के नियम।", "datePublished": "2025-08-15", "dateModified": "2026-06-20", "lang": "hi-IN"}} />
 
         <AnswerBox>
-          <strong>चार धाम रजिस्ट्रेशन पूरी तरह मुफ़्त है और हर यात्री के लिए अनिवार्य है।</strong> registrationandtouristcare.uk.gov.in पर, Tourist Care Uttarakhand ऐप से, या WhatsApp पर +91-8394833833 नंबर पर &ldquo;Yatra&rdquo; लिखकर करें। हरिद्वार और ऋषिकेश में ऑफलाइन काउंटर भी हैं। 55 साल से ऊपर वालों को मेडिकल सर्टिफिकेट भी लगेगा। QR वाली पर्ची सोनप्रयाग चेकपोस्ट पर स्कैन होती है — प्रिंटआउट ज़रूर रखें।
+          <strong>चार धाम <OfficialLink k="registration">रजिस्ट्रेशन</OfficialLink> पूरी तरह मुफ़्त है और हर यात्री के लिए अनिवार्य है।</strong> registrationandtouristcare.uk.gov.in पर, Tourist Care Uttarakhand ऐप से, या WhatsApp पर +91-8394833833 नंबर पर &ldquo;Yatra&rdquo; लिखकर करें। हरिद्वार और ऋषिकेश में ऑफलाइन काउंटर भी हैं। 55 साल से ऊपर वालों को मेडिकल सर्टिफिकेट भी लगेगा। QR वाली पर्ची सोनप्रयाग चेकपोस्ट पर स्कैन होती है — प्रिंटआउट ज़रूर रखें।
         </AnswerBox>
 
         <div style={{ background: 'var(--navy)', borderRadius: 14, padding: '20px 24px', marginBottom: 28 }}>

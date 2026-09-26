@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/ukhimath');
 
@@ -175,7 +176,7 @@ export default function Ukhimath() {
         </div>
 
         <p style={p}>
-          <strong>For six months of the year, Kedarnath is not at Kedarnath.</strong> When the temple closes around Bhai Dooj in November, the idol is carried down by palanquin to Ukhimath and installed in the Omkareshwar Temple, where the same priests perform the same rituals until the doors reopen in late April. Ukhimath sits at 1,311 m on a road that stays open all winter. You can drive to it in January and stand alone in front of it.
+          <strong>For six months of the year, Kedarnath is not at Kedarnath.</strong> When the temple closes around Bhai Dooj in November, the idol is carried down by palanquin to <OfficialLink k="dist-ukhimath">Ukhimath</OfficialLink> and installed in the Omkareshwar Temple, where the same priests perform the same rituals until the doors reopen in late April. Ukhimath sits at 1,311 m on a road that stays open all winter. You can drive to it in January and stand alone in front of it.
         </p>
 
         <h2 style={h2}>What Is Ukhimath?</h2>

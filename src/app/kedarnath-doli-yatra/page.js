@@ -7,6 +7,7 @@ import {
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/kedarnath-doli-yatra');
 
@@ -97,7 +98,7 @@ export default function KedarnathDoliYatra() {
 
 
         <AnswerBox>
-          <strong>The Kedarnath doli is the ceremonial procession that carries the deity between the shrine and Ukhimath each season.</strong> It leaves Kedarnath on the morning the temple closes in November, halting overnight at Rampur and Guptkashi before reaching Omkareshwar Temple at Ukhimath, and makes the reverse journey in April before the doors reopen. Anyone can walk with it. It is free, and for many local families it is the more meaningful half of the yatra.
+          <strong>The Kedarnath doli is the ceremonial procession that carries the deity between the shrine and <OfficialLink k="dist-ukhimath">Ukhimath</OfficialLink> each season.</strong> It leaves Kedarnath on the morning the temple closes in November, halting overnight at Rampur and Guptkashi before reaching Omkareshwar Temple at Ukhimath, and makes the reverse journey in April before the doors reopen. Anyone can walk with it. It is free, and for many local families it is the more meaningful half of the yatra.
         </AnswerBox>
         <P>
           On {SEASON.closing.kedarnath.date}, after the kapat band ceremony, the Panchmukhi Utsav Doli of

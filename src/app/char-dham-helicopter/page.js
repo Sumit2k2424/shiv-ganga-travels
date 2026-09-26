@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/char-dham-helicopter');
 
@@ -82,7 +83,7 @@ export default function Page() {
           Dehradun, with DGCA-approved operators, VIP darshan and luxury hotels — no treks or queues.
           Our all-inclusive charter is ₹2,30,000 per person, which sits inside the ₹2,09,000–2,50,000
           band this product runs at across the market. Anything advertised near ₹85,000 is a road
-          package with IRCTC shuttle tickets bought separately — a different thing entirely.
+          package with <OfficialLink k="heliyatra">IRCTC</OfficialLink> shuttle tickets bought separately — a different thing entirely.
         </AnswerBox>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px',marginBottom:'20px'}}>
           <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>

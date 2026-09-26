@@ -7,6 +7,7 @@ import {
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/chandi-devi-temple');
 
@@ -77,7 +78,7 @@ export default function ChandiDeviTemple() {
 
 
         <AnswerBox>
-          <strong>Chandi Devi stands on Neel Parvat across the Ganga from Haridwar</strong>, reached by a 3km trek from Chandi Ghat or by ropeway in about 10 minutes. Built in 1929 on a much older shrine, it is one of Haridwar's three Siddh Peeths alongside Mansa Devi and Maya Devi. Ropeway hours run roughly 8am to 6pm and it is busiest during Navratri.
+          <strong><OfficialLink k="dist-chandidevi">Chandi Devi</OfficialLink> stands on Neel Parvat across the Ganga from Haridwar</strong>, reached by a 3km trek from Chandi Ghat or by ropeway in about 10 minutes. Built in 1929 on a much older shrine, it is one of Haridwar's three Siddh Peeths alongside Mansa Devi and Maya Devi. Ropeway hours run roughly 8am to 6pm and it is busiest during Navratri.
         </AnswerBox>
         <P>
           Chandi Devi stands on Neel Parvat, {C.distanceFromHarKiPauri} from Har Ki Pauri on the far side

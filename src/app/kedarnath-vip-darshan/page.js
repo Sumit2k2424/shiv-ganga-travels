@@ -6,6 +6,7 @@ import BlogAuthor from '@/components/BlogAuthor';
 import KedarnathPujaPicker from '@/components/KedarnathPujaPicker';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/kedarnath-vip-darshan');
 
@@ -109,7 +110,7 @@ export default function KedarnathVipDarshan() {
         <div style={wrap}>
 
           <AnswerBox>
-            Kedarnath has no flat "VIP pass" sold at a window. Priority entry into the Garbha Griha — the part that lets you touch the Shivling — is bundled with a paid puja booked through the Badrinath-Kedarnath Temple Committee (BKTC). It starts at ₹300 for basic special darshan, ₹1,100 for the popular parchi, and runs up to ₹28,600 for a full-day group puja. Book it on badrinath-kedarnath.gov.in. General darshan, by the way, is completely free.
+            Kedarnath has no flat "VIP pass" sold at a window. Priority entry into the Garbha Griha — the part that lets you touch the Shivling — is bundled with a paid puja booked through the Badrinath-Kedarnath Temple Committee (BKTC). It starts at ₹300 for basic special darshan, ₹1,100 for the popular parchi, and runs up to ₹28,600 for a full-day group puja. Book it on <OfficialLink k="bktc">badrinath-kedarnath.gov.in</OfficialLink>. General darshan, by the way, is completely free.
           </AnswerBox>
 
           <p style={p}>
@@ -157,7 +158,7 @@ export default function KedarnathVipDarshan() {
             </p>
             <ul style={{ ...p, marginBottom: 0, paddingLeft: 20 }}>
               <li>Pay only on <strong>badrinath-kedarnath.gov.in</strong> or at the official BKTC counter at the temple.</li>
-              <li>Never accept a "backdoor" entry — you can be removed and your yatra registration flagged.</li>
+              <li>Never accept a "backdoor" entry — you can be removed and your yatra <OfficialLink k="registration">registration</OfficialLink> flagged.</li>
               <li>WhatsApp "VIP pass" offers from unknown agents are reported every season. Ignore them.</li>
             </ul>
           </div>
@@ -169,7 +170,7 @@ export default function KedarnathVipDarshan() {
 
           <h2 style={h2}>VIP darshan with helicopter</h2>
           <p style={p}>
-            If you're flying in, the combination is genuinely the easiest Kedarnath there is — but the two bookings are separate. Helicopter tickets come from the official IRCTC heliyatra portal (flights run from <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link>), and the VIP darshan puja comes from the BKTC portal. A heli ticket does not include sanctum priority on its own; you still book the puja. Many of our heli pilgrims pair a morning flight with a pre-dawn Maha Abhishek for the calmest possible darshan.
+            If you're flying in, the combination is genuinely the easiest Kedarnath there is — but the two bookings are separate. Helicopter tickets come from the official <OfficialLink k="heliyatra">IRCTC heliyatra</OfficialLink> portal (flights run from <Link prefetch={false} href="/blog/kedarnath-helicopter-booking" style={{ color: 'var(--teal)', fontWeight: 600 }}>Phata, Sersi and Guptkashi</Link>), and the VIP darshan puja comes from the BKTC portal. A heli ticket does not include sanctum priority on its own; you still book the puja. Many of our heli pilgrims pair a morning flight with a pre-dawn Maha Abhishek for the calmest possible darshan.
           </p>
 
           <h2 style={h2}>Is VIP darshan worth it? (honest take)</h2>

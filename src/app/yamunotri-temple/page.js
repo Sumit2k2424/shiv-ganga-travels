@@ -3,6 +3,7 @@ import { SITE } from '@/data/packages';
 import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
+import OfficialLink from '@/components/OfficialLink';
 
 export const metadata = {
   title: { absolute: 'Yamunotri Temple | Darshan Timings, Trek & History' },
@@ -72,7 +73,7 @@ export default function YamunotriTemple() {
 
       <h2 style={h2}>About Yamunotri Temple</h2>
       <AnswerBox>
-        Yamunotri Temple is the source shrine of the river Yamuna, dedicated to Goddess Yamuna, at
+        <OfficialLink k="dist-yamunotri">Yamunotri</OfficialLink> Temple is the source shrine of the river Yamuna, dedicated to Goddess Yamuna, at
         3,291m in Uttarkashi district, Uttarakhand. The first of the four Char Dham shrines, it opens
         on Akshaya Tritiya (late April/early May 2026) and is reached by a 6km trek from Janki Chatti.
       </AnswerBox>

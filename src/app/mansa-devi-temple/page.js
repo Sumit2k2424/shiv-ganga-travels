@@ -7,6 +7,7 @@ import {
 } from '@/components/LocalPageKit';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/mansa-devi-temple');
 
@@ -77,7 +78,7 @@ export default function MansaDeviTemple() {
 
 
         <AnswerBox>
-          <strong>Mansa Devi sits on Bilwa Parvat above Haridwar and is reached either by a 1.5km uphill walk or by the ropeway</strong>, which runs roughly 8am to 7pm and takes a few minutes each way. The temple is one of the Siddh Peeths and is traditionally visited together with Chandi Devi across the river. Most pilgrims combine both with Har Ki Pauri in a single Haridwar day.
+          <strong><OfficialLink k="dist-mansadevi">Mansa Devi</OfficialLink> sits on Bilwa Parvat above Haridwar and is reached either by a 1.5km uphill walk or by the ropeway</strong>, which runs roughly 8am to 7pm and takes a few minutes each way. The temple is one of the Siddh Peeths and is traditionally visited together with Chandi Devi across the river. Most pilgrims combine both with Har Ki Pauri in a single Haridwar day.
         </AnswerBox>
         <P>
           Mansa Devi sits on Bilwa Parvat, {M.distanceFromHarKiPauri} above Har Ki Pauri, and is the

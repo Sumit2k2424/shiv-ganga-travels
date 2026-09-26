@@ -7,6 +7,7 @@ import GoogleReviews from '@/components/GoogleReviews';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK, YAMUNOTRI_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/char-dham-yatra');
 
@@ -357,7 +358,7 @@ export default function CharDhamYatra() {
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:8 }}>All prices include AC vehicle, hotel, breakfast + dinner, guide, registration assistance, VIP darshan at all 4 dhams, tolls and parking. 5% GST included. Zero commission — you pay the operator directly.</p>
+        <p style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:8 }}>All prices include AC vehicle, hotel, breakfast + dinner, guide, <OfficialLink k="registration">registration</OfficialLink> assistance, VIP darshan at all 4 dhams, tolls and parking. 5% GST included. Zero commission — you pay the operator directly.</p>
 
         <h2 style={h2Style}>Char Dham Yatra Package Cost 2026 — Budget, Deluxe & Premium</h2>
         <p style={pStyle}>

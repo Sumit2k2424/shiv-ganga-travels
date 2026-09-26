@@ -4,6 +4,7 @@ import AnswerBox from '@/components/AnswerBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { h2, h3, p } from '@/lib/prose';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/char-dham-yatra-emergency-contacts');
 
@@ -365,7 +366,7 @@ export default function EmergencyContacts() {
           <strong>In any emergency on the Char Dham route, dial 112.</strong> It is India’s single emergency
           number and reaches police, fire, ambulance and disaster response from any phone, on any network,
           even with zero balance. For an ambulance specifically call <strong>108</strong>; for a landslide,
-          road closure or missing person call the Uttarakhand state disaster control room on <strong>1070</strong>,
+          road closure or missing person call the <OfficialLink k="usdma">Uttarakhand state disaster control room</OfficialLink> on <strong>1070</strong>,
           or the district control room on <strong>1077</strong>. The seasonal Char Dham yatra helpline is <strong>1364</strong>.
         </AnswerBox>
 
@@ -453,7 +454,7 @@ export default function EmergencyContacts() {
           including children, and keep a photo of the e-pass on a second phone.
         </p>
         <p style={p}>
-          More detail on the process, documents and the medical certificate rules is in our{' '}
+          More detail on the process, documents and the <OfficialLink k="health">medical certificate</OfficialLink> rules is in our{' '}
           <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color: 'var(--teal)' }}>registration guide</Link>{' '}
           and the <Link prefetch={false} href="/blog/char-dham-yatra-medical-certificate" style={{ color: 'var(--teal)' }}>medical certificate explainer</Link>.
         </p>
@@ -465,7 +466,7 @@ export default function EmergencyContacts() {
           <p style={{ margin: 0 }}>
             <strong>Last verified:</strong> {VERIFIED}. <strong>Sources:</strong> Uttarakhand State Disaster
             Management Authority (usdma.uk.gov.in), Shri Badarinath Kedarnath Temple Committee
-            (badrinath-kedarnath.gov.in), Registration &amp; Tourist Care Uttarakhand
+            (<OfficialLink k="bktc">badrinath-kedarnath.gov.in</OfficialLink>), Registration &amp; Tourist Care Uttarakhand
             (registrationandtouristcare.uk.gov.in), Uttarkashi / Rudraprayag / Chamoli district portals, and
             Shiv Ganga Travels operations records.
           </p>

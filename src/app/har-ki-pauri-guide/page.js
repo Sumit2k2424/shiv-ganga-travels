@@ -4,6 +4,7 @@ import { AARTI } from '@/data/localTaxi';
 import { h2 } from "@/lib/prose";
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/har-ki-pauri-guide');
 
@@ -169,7 +170,7 @@ export default function HarKiPauriGuide() {
 
 
         <AnswerBox>
-          <strong>Har Ki Pauri is the main bathing ghat at Haridwar and the site of the evening Ganga Aarti</strong>, held daily around sunset — roughly 6pm in summer and 5.30pm in winter. It is free, needs no ticket, and is busiest on full-moon days and during Kumbh. The ghat marks the spot where the Ganga leaves the mountains for the plains, and it is where most Char Dham pilgrims begin or end the circuit.
+          <strong><OfficialLink k="dist-harkipauri">Har Ki Pauri</OfficialLink> is the main bathing ghat at Haridwar and the site of the evening Ganga Aarti</strong>, held daily around sunset — roughly 6pm in summer and 5.30pm in winter. It is free, needs no ticket, and is busiest on full-moon days and during Kumbh. The ghat marks the spot where the Ganga leaves the mountains for the plains, and it is where most Char Dham pilgrims begin or end the circuit.
         </AnswerBox>
       <article style={{ maxWidth:900, margin:'0 auto', padding:'36px 20px 60px' }}>
 

@@ -5,6 +5,7 @@ import AnswerBox from '@/components/AnswerBox';
 import { h2 } from "@/lib/prose";
 import Image from 'next/image';
 import { BADRINATH_PILGRIMS_PHOTO } from '@/data/photos';
+import OfficialLink from '@/components/OfficialLink';
 const DESCRIPTION = `Badrinath temple ${SITE.season} — darshan 4:30 AM to 9 PM, opens April 23, and no trek at all. Mahabhishek timings, Mana village, Brahma Kapal and how to reach.`;
 export const metadata = {
   title: { absolute: 'Badrinath Temple | Darshan Timings, History & Opening' },
@@ -80,7 +81,7 @@ export default function BadrinathTemple() {
       </div>
       <h2 style={h2}>About Badrinath Temple</h2>
       <AnswerBox>
-        Badrinath Temple is a sacred shrine of Lord Vishnu (as Badri Narayan) at 3,133m in Chamoli
+        <OfficialLink k="dist-badrinath">Badrinath</OfficialLink> Temple is a sacred shrine of Lord Vishnu (as Badri Narayan) at 3,133m in Chamoli
         district, Uttarakhand, on the banks of the Alaknanda. The northernmost Char Dham, it opens
         late April 2026 (date announced on Maha Shivratri) and is reachable by motor road — no trek.
       </AnswerBox>

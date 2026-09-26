@@ -4,6 +4,7 @@ import PeopleAlsoAsk from '@/components/PeopleAlsoAsk';
 import TempleLinkMesh, { MESH } from '@/components/TempleLinkMesh';
 import AnswerBox from '@/components/AnswerBox';
 import { pageDates } from '@/lib/pageDates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/gangotri-yatra');
 
@@ -82,7 +83,7 @@ export default function Page() {
       <article style={{ maxWidth:900, margin:'0 auto', padding:'40px 20px 60px' }}>
 
         <AnswerBox>
-          Gangotri Yatra costs ₹4,250 per person from Haridwar. Gangotri sits at 3,415 m in
+          <OfficialLink k="ut-gangotri">Gangotri</OfficialLink> Yatra costs ₹4,250 per person from Haridwar. Gangotri sits at 3,415 m in
           Uttarkashi district and is the origin shrine of the Ganga. It is the only Char Dham
           shrine with a motor road right to the temple — no trek at all — which makes it the
           easiest of the four for elderly pilgrims. The temple is open May to November.
@@ -165,7 +166,7 @@ export default function Page() {
             </tr></thead>
             <tbody>
               <tr style={{borderBottom:'1px solid hsl(var(--border))',background:'#fff'}}>
-                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>GMVN Uttarkashi</td>
+                <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}><OfficialLink k="gmvn">GMVN</OfficialLink> Uttarkashi</td>
                 <td style={{padding:'10px 12px',color:'var(--text-muted)',fontSize:13}}>Uttarkashi</td>
                 <td style={{padding:'10px 12px',color:'#E8920A',fontWeight:700,fontSize:13}}>★★</td>
                 <td style={{padding:'10px 12px',fontWeight:700,color:'var(--navy)',fontSize:13.5}}>₹1,200–2,000/night</td>
