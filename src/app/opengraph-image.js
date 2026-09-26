@@ -66,7 +66,7 @@ export default async function Image() {
                 should be, on the image every WhatsApp share displays. */}
             {[
               { num:'Rs 13,900', label:'Starting price' },
-              { num:'50,000+', label:'Happy pilgrims' },
+              { num:`Since ${SITE.founded}`, label:'Haridwar operator' },
               { num:'Own fleet', label:'Hill drivers' },
               { num:`${SITE.reviews.rating}/5`, label:'Google rating' },
             ].map(s => (

@@ -82,7 +82,7 @@ export const metadata = {
     default: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
     template: `%s | Shiv Ganga`,
   },
-  description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹13,900. Kedarnath, Badrinath, Gangotri, Yamunotri. 50,000+ pilgrims.',
+  description: 'Char Dham Yatra 2026 from Haridwar. Direct operator, zero commission, from ₹13,900. Kedarnath, Badrinath, Gangotri, Yamunotri.',
   keywords: [
     'Char Dham Yatra 2026', 'Char Dham Yatra package from Haridwar',
     'Kedarnath Yatra package 2026', 'Badrinath Yatra package',
@@ -109,7 +109,7 @@ export const metadata = {
     url: SITE.baseUrl,
     siteName: 'Shiv Ganga Travels',
     title: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
-    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹13,900. Zero commission. Direct operator. 50,000+ pilgrims.',
+    description: 'Yamunotri · Gangotri · Kedarnath · Badrinath. From ₹13,900. Zero commission. Direct operator.',
     images: [{
       url: '/opengraph-image',
       width: 1200, height: 630,
@@ -120,7 +120,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Shiv Ganga Travels — Char Dham Yatra from Haridwar`,
-    description: 'Char Dham Yatra 2026 from Haridwar from ₹13,900. Direct operator. Zero commission. 50,000+ pilgrims. Kedarnath, Badrinath, Gangotri, Yamunotri.',
+    description: 'Char Dham Yatra 2026 from Haridwar from ₹13,900. Direct operator. Zero commission. Kedarnath, Badrinath, Gangotri, Yamunotri.',
     images: [{ url: '/opengraph-image', alt: 'Char Dham Yatra 2026 from Haridwar — Shiv Ganga Travels, Direct Operator' }],
   },
 
@@ -130,7 +130,7 @@ export const metadata = {
   // hi-IN hreflang removed — /hi does not exist yet; broken hreflang gets the
   // whole set ignored. Re-add `languages` only when a real /hi section ships.
   other: {
-    'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹13,900 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन | 50,000+ तीर्थयात्री',
+    'description:hi': 'चार धाम यात्रा पैकेज 2026 — हरिद्वार से ₹13,900 से शुरू | शिव गंगा ट्रेवल्स | सीधे ऑपरेटर | शून्य कमीशन',
     'keywords:hi': 'चार धाम यात्रा हरिद्वार, केदारनाथ यात्रा, बद्रीनाथ यात्रा, चार धाम यात्रा पैकेज 2026',
   },
 
@@ -225,7 +225,7 @@ function SiteSchema() {
       { '@type': 'ImageObject', url: '/opengraph-image', caption: 'Kedarnath Temple — served by Shiv Ganga Travels' },
     ],
 
-    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours. 50,000+ pilgrims served.',
+    description: 'Shiv Ganga Travels is a Haridwar-based Char Dham Yatra specialist founded by Dhanesh Chandra Mishra, a retired Indian Army officer. Zero commission, all-inclusive packages for Char Dham, Do Dham, Kedarnath, Badrinath, Gangotri, Yamunotri and Uttarakhand tours.',
 
     // Reference by @id only — do NOT restate his properties here. The full
     // Person node is the `founder` const below, emitted on every route, and

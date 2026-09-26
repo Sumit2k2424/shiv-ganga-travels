@@ -105,7 +105,7 @@ export default function Blog() {
           { label: 'Guides', value: String(POSTS.length) },
           { label: 'Topics', value: String(new Set(POSTS.map((p) => p.tag)).size) },
           { label: 'Languages', value: 'English & हिंदी' },
-          { label: 'Pilgrims guided', value: '50,000+' },
+          { label: 'Operating since', value: SITE.founded },
         ]}
       />
 

@@ -775,7 +775,7 @@ export const GLOBAL_FAQS = [
   { q:'Is Char Dham Yatra safe for senior citizens?',
     a:'Yes — with the right package and planning. We run a dedicated Senior Citizen Char Dham package (12N/13D) that includes pony charges at Yamunotri, pony or palki at Kedarnath on request (an optional extra at the official rate), ground-floor hotel rooms, an extra acclimatisation day before Kedarnath, and oxygen cylinders in every vehicle. Over 30% of our pilgrims each year are 60+ years old. Our drivers and guides are trained for altitude-related health situations.' },
   { q:'Do I need to be physically fit for Char Dham Yatra?',
-    a:'You need to be able to walk 6km uphill (Yamunotri) and 16km (Kedarnath). Badrinath and Gangotri are fully motorable — no trekking required. For Kedarnath, pony (' + KEDARNATH_TREK.pony.oneWay + ' one way) and helicopter (from ₹3,043 one way via IRCTC) are available as alternatives. Most pilgrims aged 18–70 with no serious cardiac or respiratory conditions complete the Kedarnath trek without assistance. Carry a medical fitness certificate if you are 60+ or have any pre-existing condition.' },
+    a:'You need to be able to walk 6km uphill (Yamunotri) and 16km (Kedarnath). Badrinath and Gangotri are fully motorable — no trekking required. For Kedarnath, pony (' + KEDARNATH_TREK.pony.oneWay + ' one way) and helicopter (from ₹3,043 one way via IRCTC) are available as alternatives. Most pilgrims aged 18–70 with no serious cardiac or respiratory conditions complete the Kedarnath trek without assistance. Carry a medical fitness certificate if you are 55 or older or have any pre-existing condition.' },
   { q:'How do I book Char Dham Yatra from Shiv Ganga Travels?',
     a:'WhatsApp us at +91-7817996730 with your preferred dates, group size, and city. We send a detailed custom itinerary with exact pricing within 2 hours. A 25% advance payment secures your booking and holds your hotel and darshan slots. We accept UPI, bank transfer and major cards. No booking fee, no processing charge.' },
   { q:'Can I do Char Dham Yatra by helicopter?',
@@ -791,7 +791,7 @@ export const TRUST = {
   // board, vehicle checks) in section copy instead.
   stats: [
     { value:'Direct', label:'Operator',         sub:'You pay us, not an agent' },
-    { value:'50,000+', label:'Pilgrims Served',  sub:'Across every season' },
+    { value:SITE.founded, label:'Operating since', sub:'Office in Bhupatwala, Haridwar' },
     { value:`${SITE.reviews.rating}/5`, label:'Google Rating', sub:'Public, verifiable reviews' },
   ],
   // IATA / IATO / ISO badges removed until accreditation numbers can be

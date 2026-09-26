@@ -135,7 +135,7 @@ export default function PackagesPage() {
             { k: 'Starting from', v: `₹${lowestPrice.toLocaleString('en-IN')}`, gold: true },
             { k: 'Packages', v: String(PACKAGES.length) },
             { k: 'Categories', v: String(Object.keys(CATEGORIES).length) },
-            { k: 'Pilgrims', v: '50,000+' },
+            { k: 'Operating since', v: SITE.founded },
           ]} />
         </div>
       </section>
@@ -261,7 +261,7 @@ export default function PackagesPage() {
               <div className="lux-card" style={{ padding: '16px 18px', background: '#F0FDF4', borderColor: '#86EFAC' }}>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: '#15803D', marginBottom: 6 }}>💊 Medical preparation</div>
                 <div style={{ fontSize: 13.5, color: '#166534', lineHeight: 1.7 }}>
-                  Carry Diamox (ask your doctor first), Dolo 650, ORS sachets, an antacid and your own prescriptions. Medical camps sit every 3–5 km on the Kedarnath trek; pilgrims over 50 need a fitness certificate.
+                  Carry Diamox (ask your doctor first), Dolo 650, ORS sachets, an antacid and your own prescriptions. Medical camps sit every 3–5 km on the Kedarnath trek; pilgrims aged 55 and over need a fitness certificate.
                 </div>
               </div>
               <div className="lux-card" style={{ padding: '16px 18px', background: 'rgba(232,146,10,0.07)', borderColor: 'rgba(232,146,10,0.25)' }}>

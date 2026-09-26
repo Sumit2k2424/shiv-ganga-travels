@@ -510,7 +510,7 @@ export default function HomePage() {
             <div className="lux-body" style={{ display: 'grid', gap: 16 }}>
               <p style={{ margin: 0 }}>Dhanesh Chandra Mishra — a retired officer of the Indian Army — started Shiv Ganga Travels with a single vehicle and one conviction: that pilgrims deserved the same care and discipline the Army demands of every mission.</p>
               <p style={{ margin: 0 }}>He’d seen what happened when families entrusted their sacred journey to operators who prioritised profit over safety. Overloaded vehicles. Substandard hotels. Missing guides. Stranded pilgrims at 3,500 metres. He decided to do it differently.</p>
-              <p style={{ margin: 0 }}>Today, Shiv Ganga Travels has carried over 50,000 pilgrims across every season. Every vehicle is maintained to Army safety standards. Every driver is trained for high-altitude emergencies. Every rupee is accounted for before you pay.</p>
+              <p style={{ margin: 0 }}>Today, every vehicle is maintained to Army safety standards. Every driver is trained for high-altitude emergencies. Every rupee is accounted for before you pay.</p>
             </div>
             <div style={{ display: 'grid', gap: 10, margin: '26px 0' }} data-lux-stagger="">
               {FOUNDER_POINTS.map((f) => (
@@ -600,7 +600,7 @@ export default function HomePage() {
               <span className="lux-display lux-display--sm" style={{ color: '#fff' }}>Book with confidence</span>
             </div>
             <p className="lux-body" style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.88rem', marginBottom: 20 }}>
-              Zero commission. Free itinerary in two hours. 50,000+ pilgrims trusted us.
+              Zero commission. Free itinerary in two hours. Rated {SITE.reviews.rating}/5 from {SITE.reviews.count} Google reviews.
             </p>
             <div style={{ display: 'grid', gap: 10, marginTop: 'auto' }}>
               <a href={wa('Namaste! I want to plan Char Dham Yatra 2026.')} target="_blank" rel="nofollow noopener noreferrer" className="lux-wa lux-wa--sm" style={{ justifyContent: 'center' }}>

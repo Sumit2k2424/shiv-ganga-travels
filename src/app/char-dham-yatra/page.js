@@ -168,7 +168,7 @@ export default function CharDhamYatra() {
           The <strong>Char Dham Yatra</strong> covers four sacred Himalayan shrines in Garhwal, Uttarakhand — <strong>Yamunotri</strong> (source of the Yamuna), <strong>Gangotri</strong> (source of the Ganges), <strong>Kedarnath</strong> (Shiva's Jyotirlinga at 3,583m) and <strong>Badrinath</strong> (Vishnu's abode on the banks of the Alaknanda). Completing all four in a single circuit is called the Chhota Char Dham Yatra — the northern Hindu pilgrimage circuit established by Adi Shankaracharya in the 8th century.
         </p>
         <p style={pStyle}>
-          We run this circuit from Haridwar every year. Over 50,000 pilgrims have travelled with us across many seasons. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹13,900 that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
+          We run this circuit from Haridwar every year. Every package we sell is direct — no agent, no commission, no markup. When you pay ₹13,900 that money covers your vehicle, hotels, guide, meals and darshan arrangements, not a middleman's margin.
         </p>
 
         {/* Departure dates + urgency + EMI */}
@@ -532,12 +532,11 @@ export default function CharDhamYatra() {
         <p style={pStyle}>Most Char Dham "operators" you find online are booking desks in Delhi or Lucknow. They take your money, forward your yatra to whichever Haridwar driver has a free vehicle that week, and hope nothing goes wrong. We are the Haridwar driver. Our office is near Shantikunj Gate No. 1 — walk in and check before you pay a rupee. Our drivers have crossed Rudraprayag more times than they can count, our hotel owners in Barkot and Guptkashi hold rooms for us in peak May because we have filled them every season, and when your father calls at 10 pm from Joshimath because the altitude is bothering him, the phone is answered by someone who knows exactly which chemist is still open there.</p>
         <ul style={{ listStyle:'none', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:24 }}>
           {[
-            { icon:'🙏', point:'50,000+ pilgrims served' },
             { icon:'🏡', point:'Local Haridwar expertise — we know every route' },
             { icon:'💰', point:'No middleman pricing — pay us directly' },
-            { icon:'🎫', point:'VIP darshan at all 4 dhams — skip queues' },
+            { icon:'🎫', point:'VIP darshan booked where the temple committee offers it' },
             { icon:'🚌', point:'Own AC fleet — no rental vehicles' },
-            { icon:'⭐', point:`${SITE.reviews.rating}/5 Google rating — ${SITE.reviews.count} verified reviews` },
+            { icon:'⭐', point:`${SITE.reviews.rating}/5 Google rating — ${SITE.reviews.count} Google reviews` },
             { icon:'💊', point:'Oxygen cylinder + first aid on every vehicle' },
           ].map(w => (
             <li key={w.point} style={{ display:'flex', gap:10, alignItems:'flex-start', padding:'12px 14px', background:'var(--bg)', borderRadius:10, border:'1px solid hsl(var(--border))' }}>

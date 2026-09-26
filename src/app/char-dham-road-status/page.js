@@ -155,7 +155,7 @@ export default function CharDhamRoadStatus() {
       <div style={{ display:'flex', flexWrap:'wrap', gap:10, alignItems:'center', fontSize:12.5, color:'var(--text-muted)', marginBottom:22 }}>
         <span>📅 Last verified: <strong style={{ color:'var(--navy)' }}>{UPDATED}</strong></span>
         <span>·</span>
-        <span>✍️ By <Link prefetch={false} href="/#founder" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>Dhanesh Chandra Mishra</Link>, from the drivers&rsquo; morning reports</span>
+        <span>✍️ By <Link prefetch={false} href="/#founder" style={{ color:'var(--navy)', fontWeight:600, textDecoration:'none' }}>Dhanesh Chandra Mishra</Link>, compiled from Uttarakhand Police, IMD and district bulletins</span>
       </div>
 
       <p style={{ ...p, fontSize:16.5, background:'var(--navy-light)', borderRadius:12, padding:'16px 18px' }}>
@@ -168,7 +168,7 @@ export default function CharDhamRoadStatus() {
       </div>
 
       <h2 style={h2}>Latest road updates ({UPDATED})</h2>
-      <p style={p}>Dated bulletins from our route desk and official advisories — most recent first. These are point-in-time events; a stretch that shut in the morning is often cleared by afternoon, so always confirm live before you roll.</p>
+      <p style={p}>Dated bulletins compiled from official sources — Uttarakhand Police, IMD and the district administrations — and news reports, most recent first. These are point-in-time events; a stretch that shut in the morning is often cleared by afternoon, so always confirm live before you roll.</p>
       <div style={{ background:'#fff', borderRadius:12, border:'1px solid hsl(var(--border))', overflow:'hidden', marginBottom:22 }}>
         {LATEST_UPDATES.map((u,i) => (
           <div key={u.date} style={{ display:'grid', gridTemplateColumns:'96px 1fr', gap:12, padding:'12px 16px', borderTop: i===0?'none':'1px solid hsl(var(--border))', background: i%2===0?'#fff':'var(--bg)' }}>

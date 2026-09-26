@@ -111,36 +111,36 @@ export function DayTimeline({ days = [], stops = [] }) {
               </span>
             </button>
 
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  id={`day-panel-${d.day}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.45, ease: EASE }}
-                  style={{ overflow: 'hidden' }}
-                >
-                  <div className="lux-timeline__body">
-                    <p className="lux-body">{d.desc}</p>
+            {/* Every day is rendered and collapsed, never unmounted. Mounting only
+                the open day meant the server HTML carried day 1 alone — the days
+                that make each package its own existed only in the JS payload, so
+                Google saw the shared template and not the itinerary. `inert`
+                keeps a closed day out of the tab order and the screen reader. */}
+            <motion.div
+              id={`day-panel-${d.day}`}
+              initial={false}
+              animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+              transition={{ duration: 0.45, ease: EASE }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div className="lux-timeline__body" {...(isOpen ? {} : { inert: true })}>
+                <p className="lux-body">{d.desc}</p>
 
-                    <div className="lux-timeline__facts">
-                      {meta.distance && <MiniFact icon={<MapPin size={14} />} k="Distance" v={meta.distance} />}
-                      {meta.hours && <MiniFact icon={<Clock size={14} />} k="On the road" v={meta.hours} />}
-                      {stop && <MiniFact icon={<Mountain size={14} />} k="Altitude" v={`${stop.alt.toLocaleString('en-IN')} m`} />}
-                      <MiniFact icon={<Utensils size={14} />} k="Meals" v={i === 0 ? 'Dinner' : 'Breakfast · Dinner'} />
-                      <MiniFact icon={<BedDouble size={14} />} k="Overnight" v={meta.place.split('→').pop().trim()} />
-                    </div>
+                <div className="lux-timeline__facts">
+                  {meta.distance && <MiniFact icon={<MapPin size={14} />} k="Distance" v={meta.distance} />}
+                  {meta.hours && <MiniFact icon={<Clock size={14} />} k="On the road" v={meta.hours} />}
+                  {stop && <MiniFact icon={<Mountain size={14} />} k="Altitude" v={`${stop.alt.toLocaleString('en-IN')} m`} />}
+                  <MiniFact icon={<Utensils size={14} />} k="Meals" v={i === 0 ? 'Dinner' : 'Breakfast · Dinner'} />
+                  <MiniFact icon={<BedDouble size={14} />} k="Overnight" v={meta.place.split('→').pop().trim()} />
+                </div>
 
-                    {stop?.note && (
-                      <p className="lux-mark lux-body" style={{ fontSize: 14, marginTop: 22 }}>
-                        {stop.note}
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                {stop?.note && (
+                  <p className="lux-mark lux-body" style={{ fontSize: 14, marginTop: 22 }}>
+                    {stop.note}
+                  </p>
+                )}
+              </div>
+            </motion.div>
           </li>
         );
       })}
@@ -662,20 +662,17 @@ export function FaqList({ faqs = [] }) {
                 />
               </button>
             </h3>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  id={`faq-${i}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: EASE }}
-                  style={{ overflow: 'hidden' }}
-                >
-                  <p className="lux-body lux-faq__a">{f.a}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Collapsed, not unmounted, so every answer is in the server HTML
+                (same reasoning as DayTimeline). */}
+            <motion.div
+              id={`faq-${i}`}
+              initial={false}
+              animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: EASE }}
+              style={{ overflow: 'hidden' }}
+            >
+              <p className="lux-body lux-faq__a" {...(isOpen ? {} : { inert: true })}>{f.a}</p>
+            </motion.div>
           </div>
         );
       })}

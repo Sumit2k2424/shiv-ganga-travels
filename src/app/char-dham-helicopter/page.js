@@ -90,8 +90,8 @@ export default function Page() {
             <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>No road travel between shrines. Each dham by air — 7–20 minute flights.</div>
           </div>
           <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
-            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🎫 VIP Darshan Guaranteed</div>
-            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Pre-arranged priority darshan at all 4 temples. No 3-hour queues.</div>
+            <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🎫 VIP Darshan Pre-booked</div>
+            <div style={{fontSize:'12.5px',color:'var(--text-mid)'}}>Priority darshan booked for you where the temple committee offers it — the usual way past the long queues.</div>
           </div>
           <div style={{background:'#fff',borderRadius:'10px',padding:'14px',border:'1px solid hsl(var(--border))'}}>
             <div style={{fontWeight:700,fontSize:'13px',color:'var(--navy)',marginBottom:'4px'}}>🏨 Luxury Hotels</div>

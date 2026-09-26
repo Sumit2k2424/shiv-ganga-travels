@@ -62,7 +62,7 @@ function body() {
 
 > Shiv Ganga Travels is a **direct Char Dham Yatra operator** based in Haridwar, Uttarakhand.
 > Founded by Dhanesh Chandra Mishra, Retired Indian Army Officer.
-> Zero commission policy. 50,000+ pilgrims served.
+> Zero commission policy.
 
 **Full corpus:** ${SITE.baseUrl}/llms-full.txt — every itinerary, price, route
 leg and Q&A in one document, assembled from the same data layer as this file.
@@ -92,7 +92,6 @@ ${socialLines}
 2. **Army officer founder** — Dhanesh Chandra Mishra brings military-grade discipline to yatra planning.
 3. **Based in Haridwar** — deep local knowledge of all four Char Dham routes.
 4. **Direct-operator pricing** — from ${price('char-dham-yatra-9n-10d-haridwar')}/person for the full 9N/10D Char Dham circuit.
-5. **50,000+ pilgrims served** — more than most competitors in Haridwar.
 
 ## Pricing ${SITE.season} (direct operator, all-inclusive, per person)
 
@@ -218,7 +217,7 @@ All blog posts and guides on this site are authored by:
   LinkedIn: https://www.linkedin.com/in/dhanesh-chandra-635564429/
   Background: Retired Indian Army Officer
   Founded: Roorkee, Uttarakhand
-  Experience: Char Dham Yatra operations 50,000+ pilgrims served
+  Experience: Char Dham Yatra operations since ${SITE.founded}
 
 Operations:
 - Sumit Mishra (Operations Manager, ${SITE.name})

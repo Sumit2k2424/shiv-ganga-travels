@@ -106,8 +106,8 @@ export default function Page() {
             </tr></thead>
             <tbody>
               {[
-                ['Yamunotri','April 19','Nov 11, 2026','Usually closes on Diwali / Yama Dwitiya'],
-                ['Gangotri','April 19','Nov 10, 2026','Closes on Diwali'],
+                ['Yamunotri','April 19','Nov 11, 2026','Closes on Bhai Dooj (Yama Dwitiya)'],
+                ['Gangotri','April 19','Nov 10, 2026','Closes on Annakut, the day after Diwali'],
                 ['Kedarnath','April 22','Nov 11, 2026','Closes on Bhai Dooj — exact date announced annually'],
                 ['Badrinath','April 23','~Nov 13 (tentative)','Last to close — usually 2 days after Kedarnath'],
               ].map(([dham,open,close,note],i)=>(

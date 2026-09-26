@@ -119,7 +119,7 @@ export default function RegistrationBlog() {
       <BlogHero
         badge={`Step-by-Step Guide · Updated ${PAGE_DATES.modifiedHuman}`}
         title="Char Dham Yatra Registration 2026 — Step-by-Step Guide"
-        dek="Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Here is the complete step-by-step process from operators who've helped 50,000+ pilgrims register successfully."
+        dek="Register before you travel — not as a formality but as a hard requirement. Police checkpoints at Sonprayag, Gaurikund and Guptkashi turn back unregistered pilgrims. Here is the complete step-by-step process, from an operator that completes the registration for every guest it takes."
         author="Dhanesh Chandra Mishra"
         authorInitials="DM"
         updated={`Updated ${PAGE_DATES.modifiedHuman}`}
@@ -135,7 +135,7 @@ export default function RegistrationBlog() {
       {/* Author + freshness strip */}
       <div style={{ background:'#fff', borderBottom:'1px solid hsl(var(--border))', padding:'10px 20px' }}>
         <div style={{ maxWidth:'var(--container)', margin:'0 auto', display:'flex', gap:20, flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', fontSize:12.5, color:'var(--text-muted)' }}>
-          <span>✍️ <strong style={{ color:'var(--navy)' }}>By Dhanesh Chandra Mishra</strong> — Founder, Shiv Ganga Travels · Retd. Indian Army Officer · 50,000+ pilgrims</span>
+          <span>✍️ <strong style={{ color:'var(--navy)' }}>By Dhanesh Chandra Mishra</strong> — Founder, Shiv Ganga Travels · Retd. Indian Army Officer</span>
         </div>
       </div>
 

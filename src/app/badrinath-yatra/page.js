@@ -16,7 +16,7 @@ const badrinathRoute = ROUTES['haridwar-badrinath'];
 
 export const metadata = {
   title: { absolute: 'Badrinath Yatra Package from Haridwar | VIP Darshan' },
-  description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
+  description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator.`,
   keywords: [
     'badrinath yatra package','badrinath yatra from haridwar',`badrinath yatra ${SITE.season}`,
     'badrinath package from haridwar','badrinath dham yatra','badrinath tour package',
@@ -25,7 +25,7 @@ export const metadata = {
   alternates: { canonical: `${SITE.baseUrl}/badrinath-yatra` },
   openGraph: {
     title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
-    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator.`,
     url: `${SITE.baseUrl}/badrinath-yatra`,
     type: 'website',
     images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, width: BADRINATH_PILGRIMS_PHOTO.width, height: BADRINATH_PILGRIMS_PHOTO.height, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Badrinath Yatra Package ${SITE.season} — 2N/3D from Haridwar | ₹4,500`,
-    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator. 50,000+ pilgrims served.`,
+    description: `Book Badrinath Yatra from Haridwar ${SITE.season}. All-inclusive 2N/3D from ₹4,500. Zero commission, direct operator.`,
     images: [{ url: BADRINATH_PILGRIMS_PHOTO.src, alt: BADRINATH_PILGRIMS_PHOTO.alt }],
   },
 };

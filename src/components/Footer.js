@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
           </div>
           <p style={{ fontSize: '0.8rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.5)', marginBottom: 18, maxWidth: 240 }}>
-            Haridwar’s trusted Char Dham Yatra specialist. 50,000+ blessed pilgrims. Zero commission.
+            Haridwar’s trusted Char Dham Yatra specialist. Direct operator, zero commission.
           </p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
             <a href="tel:+917817996730" aria-label="Call us" className="eq-foot-cta" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', border: '1px solid var(--rule-light-soft)' }}>

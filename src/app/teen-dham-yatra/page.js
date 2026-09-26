@@ -216,7 +216,7 @@ export default function TeenDhamYatra() {
             3 Dham Yatra from Haridwar · <strong style={{ color: '#FFD166' }}>₹11,600/person</strong> · 7N/8D · all four combinations compared · zero commission
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            {['🕉️ 3 of the 4 dhams', '🚶 No Kedarnath trek', '🎖️ Retd. Army founder · 50k pilgrims', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
+            {['🕉️ 3 of the 4 dhams', '🚶 No Kedarnath trek', '🎖️ Retd. Army founder', `⭐ ${SITE.reviews.rating}/5 · ${SITE.reviews.count} reviews`].map(t => (
               <span key={t} style={{ background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: 12.5, fontWeight: 600, padding: '6px 14px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.2)' }}>{t}</span>
             ))}
           </div>

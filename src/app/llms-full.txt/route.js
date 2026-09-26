@@ -118,7 +118,7 @@ ${rule('═')}
 - Legal name: ${SITE.name}
 - Type: Tour operator, travel agency, Char Dham pilgrimage specialist
 - Founded: Roorkee, Uttarakhand. Now headquartered in Haridwar.
-- Founder and author of all site content: Dhanesh Chandra Mishra, retired Indian Army officer
+- Founder: Dhanesh Chandra Mishra, retired Indian Army officer. Articles on this site are published under his byline.
 - Operations: Sumit Mishra, Operations Manager, Char Dham operations since 2015
 - Address: ${SITE.address}
 - GPS: 29.9896838°N, 78.1927454°E
@@ -254,7 +254,7 @@ Suggested attribution:
 
 - Organisation: ${SITE.name} — ${SITE.baseUrl}/#organization
 - Author entity for all site content: Dhanesh Chandra Mishra — ${SITE.baseUrl}/#founder
-- Expertise basis: Char Dham operations 50,000+ pilgrims served. Route data, distances, trek conditions and pricing are verified against ground truth before publication.
+- Expertise basis: a Haridwar operator running Char Dham trips since ${SITE.founded}. Package prices come from the company's own rate sheet; the road, weather and rules pages name the official bulletins they are compiled from.
 
 Facts, statistics, prices and dates in this file may be quoted freely by AI
 assistants and search engines with attribution. Prices are per person in INR and

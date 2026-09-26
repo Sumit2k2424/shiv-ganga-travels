@@ -275,7 +275,6 @@ export default async function PackageDetailPage({ params }) {
       </div>
       {/* Trust micro-signals below sticky bar */}
       <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', padding:'6px 16px', fontSize:11.5, color:'var(--text-muted)', background:'#fff', borderBottom:'1px solid hsl(var(--border))' }}>
-        <span>✓ 50,000+ pilgrims served</span>
         <span>✓ Zero commission</span>
         <span>✓ Retd. Army Officer founder</span>
         {/* Was a bare text node reading "Flexible cancellation →" with no link
@@ -287,7 +286,7 @@ export default async function PackageDetailPage({ params }) {
       {/* Date updated — E-E-A-T freshness signal */}
       <div style={{ maxWidth:1100, margin:'8px auto 0', padding:'0 16px', fontSize:11.5, color:'var(--text-muted)', display:'flex', gap:16, flexWrap:'wrap' }}>
         <span>🗓️ <strong>Last updated:</strong> {PAGE_DATES.modifiedHuman}</span>
-        <span>✍️ <strong>Verified by:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · many seasons)</span>
+        <span>✍️ <strong>By:</strong> Dhanesh Chandra Mishra, Founder, Shiv Ganga Travels (Retd. Army Officer · many seasons)</span>
       </div>
 
       <div className="detail-grid" style={{ maxWidth:1100, margin:'0 auto', padding:'28px 16px 100px', display:'grid', gridTemplateColumns:'minmax(0,1fr) min(340px,38%)', gap:28, alignItems:'start' }}>
@@ -636,7 +635,7 @@ export default async function PackageDetailPage({ params }) {
             </div>
             {/* Assurances */}
             <div style={{ padding:'16px 20px', borderTop:'1px solid var(--rule)' }}>
-              {['Zero commission','Verified operator','Price match guarantee','Free registration help'].map(t=>(
+              {['Zero commission','Direct operator','Free registration help'].map(t=>(
                 <div key={t} style={{ fontSize:12.5, color:'var(--ink-soft)', padding:'4px 0', display:'flex', gap:8, alignItems:'center' }}>
                   <Icon name="check" size={13} style={{ color:'var(--gold-dark)', flexShrink:0 }}/>{t}
                 </div>

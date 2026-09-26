@@ -132,7 +132,7 @@ return (
 
         <p className="blog-lede">Every year, without fail, at least three or four pilgrims in our groups call us from Guptkashi or Joshimath in a panic. They packed wrong. They brought their best formal salwars and forgot thermal innerwear. They have three suitcases but no rain poncho. They are freezing at 9 PM in June at 3,000 metres of altitude.</p>
 
-        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This packing list comes from guiding over 50,000 pilgrims through the Char Dham. It's not a generic "what to carry" list from the internet. It's what we actually tell our pilgrims the week before departure, after years of watching what people wish they'd brought and what they wish they'd left at home.</p>
+        <p style={{ fontSize:15.5, color:'#334155', lineHeight:1.85, marginBottom:16 }}>This packing list comes from running Char Dham trips out of Haridwar every season. It's not a generic "what to carry" list from the internet. It's what we actually tell our pilgrims the week before departure, after years of watching what people wish they'd brought and what they wish they'd left at home.</p>
 
         <KeyTakeaways title="Pack this, skip the rest"
           points={[

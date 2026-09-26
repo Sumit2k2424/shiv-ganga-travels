@@ -44,7 +44,6 @@ export default function BlogAuthor({ variant = 'top', author = 'dhanesh', articl
       credentials: [
         'Retired Indian Army Officer',
         'Founded Shiv Ganga Travels',
-        '50,000+ pilgrims served',
         'many seasons on Char Dham routes',
       ],
       linkedin: 'https://www.linkedin.com/in/dhanesh-chandra-635564429/',

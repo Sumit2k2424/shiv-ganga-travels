@@ -31,11 +31,10 @@ import { SITE } from '@/data/packages';
    24×7 has no `n` deliberately — it is a pattern, not a quantity, and
    counting to it would be theatre. CountUp starts at 80% of the target and
    its SSR output is the REAL figure, so a crawler never sees a false low
-   number, and the digit count never changes mid-animation (40,000→50,000,
-   12→15, 16→20) — which is what keeps this out of CLS. */
+   number, and the digit count never changes mid-animation (16→20 on the fleet) — which is what keeps this out of CLS. */
 const HERO_TRUST = [
   { icon: 'medal',   fig: SITE.reviews.rating + '★', label: SITE.reviews.count + ' Google reviews' },
-  { icon: 'users',   n: 50000, suffix: '+', label: 'Pilgrims served' },
+  { icon: 'calendar', fig: 'Since ' + SITE.founded, label: 'Haridwar operator' },
   { icon: 'car',     n: 20,    suffix: '+', label: 'Own fleet vehicles' },
   { icon: 'headset', fig: '24×7',           label: 'On-road support' },
 ];
@@ -145,8 +144,8 @@ export default function HeroSection() {
           maxWidth:580, margin:'0 auto 34px',
           textShadow:'0 1px 12px rgba(0,0,0,0.45)',
         }}>
-          Yamunotri · Gangotri · Kedarnath · Badrinath — with the operator who has
-          carried <span className="hero-highlight">50,000+ pilgrims</span>.
+          Yamunotri · Gangotri · Kedarnath · Badrinath — run directly from
+          <span className="hero-highlight">Haridwar</span>, no agent in between.
           From <span className="hero-highlight">₹13,900</span> per person, all-inclusive.
         </p>
 
