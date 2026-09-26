@@ -158,7 +158,7 @@ https://uttarakhandtourism.gov.in · police helpline 112 / 1070.
 - ${SITE.baseUrl}/blog/uttarakhand-weather-guide — Month-by-month weather
 - ${SITE.baseUrl}/kedarnath-vip-darshan — VIP darshan & BKTC puja rates
 - ${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates — Official pony/palki/kandi rates
-- ${SITE.baseUrl}/char-dham-yatra-statistics — Citable pilgrim statistics (CC BY 4.0)
+- ${SITE.baseUrl}/char-dham-yatra-statistics — 2026 season figures: official registration and darshan counts, dates, distances, costs
 - ${SITE.baseUrl}/char-dham-yatra-emergency-contacts — Verified emergency directory (CC BY 4.0)
 - ${SITE.baseUrl}/char-dham-yatra-route-map — Interactive route map with distances
 - ${SITE.baseUrl}/char-dham-yatra-cost-calculator — Cost calculator tool

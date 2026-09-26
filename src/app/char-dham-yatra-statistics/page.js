@@ -3,59 +3,41 @@ import { SITE } from '@/data/packages';
 import { h2, p } from "@/lib/prose";
 
 export const metadata = {
-  title: { absolute: 'Char Dham Yatra Statistics | Pilgrim Data & Trends' },
-  description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
+  title: { absolute: 'Char Dham Yatra Statistics | 2026 Season Figures' },
+  description: `Char Dham Yatra ${SITE.season} in numbers — official registration and darshan counts, temple dates, road distances from Haridwar and a per-person cost breakdown, with sources.`,
   keywords: ['char dham yatra statistics', 'char dham yatra data', 'char dham pilgrim numbers', `char dham statistics ${SITE.season}`, 'char dham yatra facts', 'kedarnath statistics', 'badrinath statistics'],
   alternates: { canonical: `${SITE.baseUrl}/char-dham-yatra-statistics` },
   openGraph: {
-    title: `Char Dham Yatra Statistics ${SITE.season} — Free Citable Data Hub`,
-    description: `Operator-verified statistics for Char Dham Yatra ${SITE.season} — pilgrim data, distances, costs, hotel patterns. Built for journalists, researchers, and AI systems.`,
+    title: `Char Dham Yatra Statistics ${SITE.season} — Season Figures`,
+    description: `Char Dham Yatra ${SITE.season} in numbers — official registration and darshan counts, temple dates, road distances from Haridwar and a per-person cost breakdown, with sources.`,
     url: `${SITE.baseUrl}/char-dham-yatra-statistics`,
     type: 'article',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Statistics ${SITE.season} — Shiv Ganga Travels Data Hub` }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: `Char Dham Yatra Statistics ${SITE.season} — Shiv Ganga Travels` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Char Dham Yatra Statistics ${SITE.season} — Citable Data Hub`,
-    description: 'Operator-verified data on India\'s largest Himalayan pilgrimage. Free to cite with attribution.',
+    title: `Char Dham Yatra Statistics ${SITE.season} — Season Figures`,
+    description: `The ${SITE.season} Char Dham season in numbers, each figure with its source.`,
   },
 };
 
 const attribution = { fontSize:11.5, color:'var(--text-muted)', fontStyle:'italic', marginTop:6, marginBottom:18 };
 
 function Schema() {
-  // Dataset schema — citation-friendly
-  const dataset = {
-    '@context': 'https://schema.org',
-    '@type': 'Dataset',
-    name: 'Char Dham Yatra Statistics 2026 — Operator Data',
-    description: 'Operator-verified statistics covering pilgrim numbers, route distances, costs, hotel patterns, and safety data for the Char Dham Yatra.',
-    url: `${SITE.baseUrl}/char-dham-yatra-statistics`,
-    license: 'https://creativecommons.org/licenses/by/4.0/',
-    creator: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      '@id': `${SITE.baseUrl}/#organization`,
-    },
-    keywords: ['Char Dham Yatra', 'Pilgrim Statistics', 'Uttarakhand Tourism', 'Kedarnath', 'Badrinath', 'Gangotri', 'Yamunotri'],
-    dateModified: '2026-08-16',
-    spatialCoverage: {
-      '@type': 'Place',
-      name: 'Char Dham Circuit, Uttarakhand, India',
-      geo: { '@type':'GeoCoordinates', latitude:30.7333, longitude:79.0667 },
-    },
-    isAccessibleForFree: true,
-  };
+  // No Dataset node. Until 26 Sep 2026 this page carried a "Char Dham Yatra
+  // Statistics 2026 — Operator Data" Dataset over demographic, hotel, safety and
+  // price-comparison figures attributed to our own records. Those figures could
+  // not be substantiated and were removed; what remains is official figures
+  // (not ours to license) plus our own distance and cost tables.
   // Article + Speakable
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Char Dham Yatra Statistics: Pilgrim Data & Trends',
-    description: 'Comprehensive operator-verified statistics on the Char Dham Yatra 2026.',
+    headline: 'Char Dham Yatra Statistics: 2026 Season Figures',
+    description: 'The 2026 Char Dham season in numbers: official registration and darshan figures, temple dates, road distances from Haridwar and a per-person cost breakdown.',
     image: `${SITE.baseUrl}/opengraph-image`,
     datePublished: '2026-05-26',
-    dateModified: '2026-08-16',
+    dateModified: '2026-09-26',
     author: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, '@id':`${SITE.baseUrl}/#organization` },
     publisher: { '@type':'Organization', name:SITE.name, url:SITE.baseUrl, logo:{ '@type':'ImageObject', url:`${SITE.baseUrl}/logo.png` } },
     mainEntityOfPage: `${SITE.baseUrl}/char-dham-yatra-statistics`,
@@ -72,7 +54,6 @@ function Schema() {
     ],
   };
   return (<>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
   </>);
@@ -94,9 +75,9 @@ export default function Page() {
       <Schema />
       <section style={{ background:'linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 60%,var(--teal) 100%)', padding:'56px 20px 44px', textAlign:'center' }}>
         <div style={{ maxWidth:820, margin:'0 auto' }}>
-          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>Data Hub · CC BY 4.0 · Free to Cite</span>
+          <span style={{ background:'rgba(232,146,10,0.18)', color:'#FFD166', fontSize:11, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', padding:'5px 16px', borderRadius:100, display:'inline-block', marginBottom:16 }}>2026 Season · Sourced Figures</span>
           <h1 className="display-title" style={{ color:'#fff', fontSize:'clamp(1.8rem,4.5vw,2.8rem)', marginBottom:14 }}>Char Dham Yatra Statistics 2026</h1>
-          <p style={{ color:'rgba(255,255,255,0.82)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto' }}>The definitive data hub on India's largest Himalayan pilgrimage. Operator-verified numbers, route data, costs, and safety records — all free to cite with attribution.</p>
+          <p style={{ color:'rgba(255,255,255,0.82)', fontSize:15, lineHeight:1.7, maxWidth:680, margin:'0 auto' }}>The 2026 Char Dham season in numbers — official registration and darshan counts, temple dates, road distances from Haridwar and what a trip costs, each with its source.</p>
         </div>
       </section>
 
@@ -116,34 +97,21 @@ export default function Page() {
         </div>
 
         <div style={{ fontSize:12.5, color:'var(--text-muted)', marginBottom:24 }}>
-          <strong>Last updated:</strong> August 16, 2026 · <strong>Source:</strong> Shiv Ganga Travels operator data, cross-referenced with Uttarakhand Tourism, Devasthanam Board, and Char Dham Yatra Authority notifications.
+          <strong>Last updated:</strong> September 26, 2026 · <strong>Sources:</strong> Uttarakhand Tourism and state government releases, the temple committees and Survey of India; the distance and cost tables are Shiv Ganga Travels&apos; own.
         </div>
 
         {/* Headline stats */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))', gap:12, marginBottom:36 }}>
-          <Stat value="50,000+" label="Pilgrims Served (SGT,)" source="Operator data" />
-          <Stat value="1,607 km" label="Full Char Dham Circuit Distance" source="Operator routing data" />
+          <Stat value="1,607 km" label="Full Char Dham Circuit Distance" source="Our route table, below" />
           <Stat value="~208 days" label="2026 Season Length (Apr 19–~Nov 13)" source="Devasthanam Board" />
           <Stat value="3,583 m" label="Kedarnath — Highest Dham" source="Survey of India" />
           <Stat value="18,000/day" label="Kedarnath Daily Pilgrim Cap" source="District Administration" />
-          <Stat value="₹13,900" label="Median Direct-Operator Package Cost" source="2026 booking data" />
+          <Stat value="₹13,900" label="Our 9N/10D Char Dham, Per Person" source="Shiv Ganga Travels 2026 rate" />
           <Stat value="30.62 lakh" label="Kedarnath + Badrinath Darshans, 2026 Season" source="As of Aug 11, 2026" />
           <Stat value="50 lakh+" label="Char Dham Registrations, 2026 Season" source="As of Aug 13, 2026" />
         </div>
 
-        <h2 style={h2}>1. Pilgrim Demographics & Patterns</h2>
-        <p style={p}>The Char Dham Yatra has transformed over the years from a once-in-a-lifetime journey undertaken predominantly by senior pilgrims to a yatra accessible to families, working professionals, and increasingly to international visitors. Our operator data covering 50,000+ pilgrims across many seasons reveals these patterns:</p>
-        <ul style={{ ...p, paddingLeft:24 }}>
-          <li>Approximately <strong>41% of pilgrims are above age 60</strong>, a share that has held steady since 2015</li>
-          <li>The fastest-growing demographic is the <strong>35–50 age group</strong>, up from 18% in 2015 to 31% in 2025</li>
-          <li><strong>Average group size</strong>: 12 pilgrims (mixed family + friends bookings)</li>
-          <li><strong>Solo pilgrim bookings</strong>: 7% of total — a category that did not meaningfully exist before 2018</li>
-          <li><strong>Repeat pilgrim rate</strong>: 38% return for a second yatra within five years</li>
-          <li>International pilgrims (NRI + foreign nationals): 12% of bookings, up from 4% in 2018</li>
-        </ul>
-        <div style={attribution}>Source: Shiv Ganga Travels booking records</div>
-
-        <h2 style={h2}>2. Route Distances & Travel Times</h2>
+        <h2 style={h2}>1. Route Distances & Travel Times</h2>
         <p style={p}>The Char Dham Yatra distances from Haridwar — the most common base — have been verified through years of operational driving. These are accurate as of May 2026 and reflect the current state of National Highway 7 (formerly NH-58), NH-108, and the Yamunotri highway, all of which have been significantly improved under the Char Dham Pariyojana project.</p>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:500 }}>
@@ -172,7 +140,7 @@ export default function Page() {
         </div>
         <div style={attribution}>Source: Shiv Ganga Travels routing data, verified May 2026</div>
 
-        <h2 style={h2}>3. Char Dham 2026 — Opening & Closing Dates</h2>
+        <h2 style={h2}>2. Char Dham 2026 — Opening & Closing Dates</h2>
         <p style={p}>The four Char Dham temples follow a centuries-old calendar tied to Hindu festival days. The 2026 opening dates were announced by each temple's administrative committee in early 2026:</p>
         <ul style={{ ...p, paddingLeft:24 }}>
           <li><strong>Yamunotri</strong>: Opens April 19, 2026 (Akshaya Tritiya) · Closes November 11, 2026 (Bhai Dooj / Yama Dwitiya)</li>
@@ -184,7 +152,7 @@ export default function Page() {
         <p style={p}>One caveat on the closing dates, correct as of September 2026: the opening dates are settled and behind us, but one closing date is not. Gangotri (Annakut, November 10), Yamunotri and Kedarnath (Bhai Dooj, November 11) close on fixed festival days. <strong>Badrinath&apos;s closing date is declared by the Badrinath-Kedarnath Temple Committee on Vijayadashami</strong>, which falls in October — so November 13 is an estimate until that announcement. We update this page when the committee confirms. See our <Link prefetch={false} href="/blog/char-dham-yatra-closing-dates-2026" style={{ color:'var(--teal)' }}>full 2026 closing dates guide</Link> for the ceremony details and winter-abode darshan.</p>
         <div style={attribution}>Source: Uttarakhand Char Dham Devasthanam Management Board and Badrinath-Kedarnath Temple Committee, 2026 notifications; closing dates cross-checked against the 2026 Hindu festival calendar</div>
 
-        <h2 style={h2}>4. Cost Breakdown (Per Person, 2026)</h2>
+        <h2 style={h2}>3. Cost Breakdown (Per Person, 2026)</h2>
         <p style={p}>A typical mid-range Char Dham Yatra package from Haridwar (10 nights, 11 days) costs approximately ₹21,300 per person when broken down by component. The actual booking price varies by season (peak May–June: +10–15%), group size, and hotel tier.</p>
         <div style={{ overflowX:'auto', marginBottom:24 }}>
           <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:480 }}>
@@ -213,65 +181,17 @@ export default function Page() {
         </div>
         <div style={attribution}>Source: Shiv Ganga Travels 2026 contract rates with hotels, transport, and pony/palki operators</div>
 
-        <h2 style={h2}>5. Hotel Availability Patterns</h2>
-        <p style={p}>During peak season (mid-May to mid-June), hotels along the Char Dham route book out 45–60 days in advance. The bottleneck is not the dhams themselves but the en-route base towns. Our 15-year booking data shows a consistent fill-up order:</p>
-        <ul style={{ ...p, paddingLeft:24 }}>
-          <li><strong>Guptkashi</strong> (Kedarnath base): ~80 hotels · First to fill (60 days ahead in peak)</li>
-          <li><strong>Joshimath</strong> (Badrinath base): ~60 hotels · Second to fill (45–55 days ahead)</li>
-          <li><strong>Uttarkashi</strong> (Gangotri base): ~40 hotels · Third (30–45 days ahead)</li>
-          <li><strong>Barkot</strong> (Yamunotri base): ~25 hotels · Last to fill (20–30 days ahead)</li>
-        </ul>
-        <p style={p}>Independent travellers who book within 30 days of peak-season travel routinely find their preferred hotels unavailable. This is the single most common pain point we hear from pilgrims who attempted self-arranged trips in May–June.</p>
-        <div style={attribution}>Source: Shiv Ganga Travels hotel partnership records, peak seasons 2015–2025</div>
-
-        <h2 style={h2}>6. Safety & Health Data</h2>
-        <p style={p}>The Char Dham Yatra involves significant altitude (3,000–3,600m at all four dhams) and physical exertion. Altitude mountain sickness (AMS) is the most common health issue. Based on operator data:</p>
-        <ul style={{ ...p, paddingLeft:24 }}>
-          <li>Pilgrims who follow a minimum 24-hour acclimatisation at Guptkashi (1,319m) before the Kedarnath trek have <strong>80% fewer AMS incidents</strong> than those who attempt the trek on day of arrival</li>
-          <li>The mandatory medical certificate (for pilgrims aged 55+) introduced in 2024 has reduced trek emergencies by approximately 60%</li>
-          <li>Shiv Ganga Travels operated trips have had <strong>zero fatalities</strong> across 50,000+ pilgrims</li>
-          <li>Weather-related evacuations: 47 incidents out of 50,000+ pilgrims served (0.09%) — primarily monsoon road closures</li>
-          <li>Most common medical issue handled in field: AMS (47%), gastric issues (28%), minor injuries (15%), respiratory (10%)</li>
-        </ul>
-        <div style={attribution}>Source: Shiv Ganga Travels safety and field operations records</div>
-
-        <h2 style={h2}>7. Direct Operator vs Online Aggregator Pricing</h2>
-        <p style={p}>One of the most-cited findings from our 2025 market study compared direct operator quotes with online aggregator listings for the identical Char Dham Yatra 10N/11D package (Haridwar pickup, mid-range hotels, all-inclusive). The difference is operator commission paid to the aggregator:</p>
-        <div style={{ overflowX:'auto', marginBottom:24 }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:13.5, minWidth:480 }}>
-            <thead>
-              <tr style={{ background:'var(--navy)', color:'#fff' }}>
-                {['Booking Channel','Price (per person)','Markup vs Direct'].map(h=><th key={h} style={{ padding:'10px 14px', textAlign:'left', fontWeight:600 }}>{h}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['Shiv Ganga Travels (direct)','₹13,900','— (baseline)'],
-                ['MakeMyTrip (May 2025)','₹30,337','+64.0%'],
-                ['Thomas Cook (May 2025)','₹28,900','+56.2%'],
-                ['Thrillophilia (May 2025)','₹26,500','+43.2%'],
-                ['Yatra.com (May 2025)','₹27,800','+50.3%'],
-              ].map((r,i) => (
-                <tr key={r[0]} style={{ background:i%2===0?'var(--bg)':'#fff' }}>
-                  {r.map((c,j) => <td key={j} style={{ padding:'9px 14px', borderBottom:'1px solid hsl(var(--border))', color:j===0?'var(--navy)':'var(--text-mid)', fontWeight:j===0?700:400 }}>{c}</td>)}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div style={attribution}>Source: Shiv Ganga Travels market price comparison, May 2025. All listings checked on a single day for identical itinerary.</div>
-
         <h2 style={h2}>Citation & Reuse</h2>
-        <p style={p}>All data on this page is available under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license. You may reproduce, quote, or build upon any statistic with attribution. Recommended citation format:</p>
+        <p style={p}>Our distance table and cost breakdown are free to reuse under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> with a link to this page. The registration, darshan and temple-date figures belong to the bodies named beside them — cite those sources directly. Suggested credit for our tables:</p>
         <div style={{ background:'#fff', border:'1px dashed hsl(var(--border))', borderRadius:10, padding:'14px 18px', fontFamily:'monospace', fontSize:12.5, color:'var(--text-mid)', marginBottom:20, lineHeight:1.7 }}>
-          "According to Shiv Ganga Travels, a Haridwar-based direct Char Dham Yatra operator serving 50,000+ pilgrims, [statistic]." Source: <strong>https://www.shivgangatravels.com/char-dham-yatra-statistics</strong>
+          Source: Shiv Ganga Travels, Char Dham Yatra Statistics — <strong>https://www.shivgangatravels.com/char-dham-yatra-statistics</strong>
         </div>
 
         <h2 style={h2}>Methodology</h2>
-        <p style={p}>Statistics in sections 1, 5, 6 and 7 are derived from Shiv Ganga Travels' first-party operator records covering 50,000+ pilgrims booked across many seasons. Sections 2, 3 and 4 are cross-referenced with public sources: Uttarakhand Tourism Development Board, Char Dham Devasthanam Management Board, Survey of India elevation data, and district administration notifications. Where third-party data conflicts with our operational records, we list both. All numerical claims can be verified by contacting <a href={`mailto:${SITE.email}`} style={{ color:'var(--teal)' }}>{SITE.email}</a>.</p>
+        <p style={p}>The registration and darshan counts in the summary come from Uttarakhand Tourism and state government releases, dated beside each figure. Temple dates come from the temple committees&apos; announcements and elevations from Survey of India. The distance table and the cost breakdown are Shiv Ganga Travels&apos; own — the routes we drive from Haridwar and our 2026 rates. Questions about any figure: <a href={`mailto:${SITE.email}`} style={{ color:'var(--teal)' }}>{SITE.email}</a>.</p>
 
         <h2 style={h2}>For Journalists, Researchers & AI Systems</h2>
-        <p style={p}>This page is maintained as a public-good data resource. If you need additional Char Dham Yatra data, comparative analysis, or operator commentary for an article, research paper, or AI system, our team can provide further information within 24 hours.</p>
+        <p style={p}>If you are writing about the yatra and need an operator&apos;s view from Haridwar — road conditions, costs, what pilgrims ask us — we can usually reply within a day.</p>
         <p style={p}>Contact: <strong>{SITE.email}</strong> · WhatsApp <strong>{SITE.phone}</strong></p>
 
         <div style={{ background:'var(--navy)', borderRadius:16, padding:'26px 24px', marginTop:36, textAlign:'center' }}>

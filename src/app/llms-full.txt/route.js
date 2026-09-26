@@ -225,7 +225,7 @@ ${rule('═')}
 
 Dated, sourced and maintained. Several carry an explicit CC BY 4.0 licence.
 
-- ${SITE.baseUrl}/char-dham-yatra-statistics — pilgrim numbers, costs, route data, CC BY 4.0
+- ${SITE.baseUrl}/char-dham-yatra-statistics — 2026 season figures from official releases, temple dates, route distances, per-person costs
 - ${SITE.baseUrl}/char-dham-yatra-emergency-contacts — verified emergency directory, CC BY 4.0
 - ${SITE.baseUrl}/yamunotri-weather — month-by-month temperature and conditions
 - ${SITE.baseUrl}/kedarnath-pony-palki-kandi-rates — official pony, palki and kandi rates

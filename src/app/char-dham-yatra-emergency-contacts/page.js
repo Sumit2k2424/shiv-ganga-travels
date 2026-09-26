@@ -17,7 +17,7 @@ const PAGE_DATES = pageDates('/char-dham-yatra-emergency-contacts');
  * facts unambiguously, dated, and attributed. So the page carries a Dataset
  * node with an explicit CC BY 4.0 licence, an `isAccessibleForFree` flag, a
  * speakable quick answer, and a per-number `verified` provenance column —
- * the same treatment /char-dham-yatra-statistics gets.
+ * the treatment /char-dham-yatra-statistics had until 26 Sep 2026.
  *
  * NUMBER PROVENANCE — read before editing
  * Every number below is one of three kinds, and they age very differently:

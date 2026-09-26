@@ -7,8 +7,10 @@ import { SITE } from '@/data/packages';
  * An answer engine will happily read any page. What decides whether it *quotes*
  * you, with a link, is whether the page looks like a citable source: structured
  * data that says "this is a dataset", a named creator, a modification date, and
- * a licence that grants reuse. /char-dham-yatra-statistics has carried that
- * treatment since Aug 2026 and it is the single most-quoted page on the site;
+ * a licence that grants reuse. /char-dham-yatra-statistics carried that
+ * treatment from Aug 2026 until its operator-record figures were removed on
+ * 26 Sep 2026 (they could not be substantiated) — only publish a Dataset over
+ * data you can show the source of;
  * this helper makes the same treatment one import rather than 40 lines of
  * hand-copied JSON-LD per page.
  *
