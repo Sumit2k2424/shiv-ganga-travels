@@ -124,8 +124,8 @@ export default function KedarnathTrekGuide() {
         <BlogAuthor variant="top" author="dhanesh" />
 
         {/* INTRO */}
-        <p className="blog-lede">I still remember the first time I guided a group to Kedarnath back in 2012. One of our pilgrims — a 58-year-old retired school teacher from Lucknow — was convinced she couldn't make it up the 16km trail. She had never trekked in her life. But somewhere around Linchauli, with the Mandakini river roaring below and the first glimpse of snow peaks ahead, she turned to me and said, <em>"Yeh toh swarg hai."</em> She reached the temple, touched the Shivalinga, and wept.</p>
-        <p style={p}>That's what the <strong>Kedarnath trek</strong> does to people. It breaks you down physically and builds you back up spiritually. This guide covers the complete 16km route, difficulty, best time to visit, how to reach Gaurikund, stay options at Kedarnath, and everything you need to pack.</p>
+        <p className="blog-lede">The <strong>Kedarnath trek</strong> is 16 km of steady climbing from Gaurikund to the temple at 3,583 m. It is hard on stamina rather than technique, and every season it is walked by pilgrims who have never trekked in their lives.</p>
+        <p style={p}>This guide covers the complete 16km route, difficulty, best time to visit, how to reach Gaurikund, stay options at Kedarnath, and everything you need to pack.</p>
 
         <KeyTakeaways
           points={[
