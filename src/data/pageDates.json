@@ -294,7 +294,7 @@
     },
     "/char-dham-yatra-emergency-contacts": {
       "created": "2026-04-25",
-      "modified": "2026-08-23",
+      "modified": "2026-09-26",
       "files": [
         "src/app/char-dham-yatra-emergency-contacts/page.js"
       ]
@@ -315,7 +315,7 @@
     },
     "/char-dham-yatra-statistics": {
       "created": "2026-05-26",
-      "modified": "2026-09-25",
+      "modified": "2026-09-26",
       "files": [
         "src/app/char-dham-yatra-statistics/page.js"
       ]
