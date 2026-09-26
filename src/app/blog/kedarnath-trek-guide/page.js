@@ -11,6 +11,7 @@ import ExpertNote from '@/components/ExpertNote';
 import { h2, p } from "@/lib/prose";
 import { pageDates } from '@/lib/pageDates';
 import { KEDARNATH_TREK } from '@/data/trekRates';
+import OfficialLink from '@/components/OfficialLink';
 
 const PAGE_DATES = pageDates('/blog/kedarnath-trek-guide');
 
@@ -38,7 +39,7 @@ const faqData = [
   { q: 'How long is the Kedarnath trek?', a: 'The Kedarnath trek is 16 km one way from Gaurikund (1,982m) to Kedarnath Temple (3,583m) — a total elevation gain of around 1,600 metres. Most trekkers take 5–7 hours to ascend and 4–5 hours to descend.' },
   { q: 'Is the Kedarnath trek difficult?', a: 'Moderate to challenging. The trail is well-marked and not technical, but the steep incline and high altitude make it physically demanding. We have guided pilgrims aged 14 to 72 on this trail — anyone with reasonable fitness and 4–6 weeks of preparation can complete it.' },
   { q: 'What is the best time for the Kedarnath trek?', a: 'May–June and September–October are the ideal months. The trail is clear, weather is stable, and views are spectacular. Avoid July–August due to monsoon rains and slippery paths. September is the single best month — post-monsoon clarity, fewer crowds, stunning views.' },
-  { q: 'Where can I stay near Kedarnath Temple?', a: 'Three main options: GMVN Tourist Rest House (government-run, ₹800–₹1,500/room — book in advance at gmvnl.in), private guesthouses (₹600–₹2,500/night, quality varies), and tented camps (₹300–₹600/person, very basic). Families are better off staying at Guptkashi or Sonprayag and doing the trek as a day trip.' },
+  { q: 'Where can I stay near Kedarnath Temple?', a: 'Three main options: GMVN Tourist Rest House (government-run, ₹800–₹1,500/room — book in advance at gmvnonline.com), private guesthouses (₹600–₹2,500/night, quality varies), and tented camps (₹300–₹600/person, very basic). Families are better off staying at Guptkashi or Sonprayag and doing the trek as a day trip.' },
   { q: 'How do I reach Gaurikund from Haridwar?', a: 'Take a shared or private cab from Haridwar to Sonprayag (about 230km, 7–8 hours). Route goes via Devprayag, Rudraprayag, Augustmuni, Sonprayag. From Sonprayag, government shuttles run to Gaurikund (5km). There is no direct bus to Gaurikund from Haridwar.' },
   { q: 'Can I do the Kedarnath trek without prior trekking experience?', a: 'Yes. The Kedarnath trail is a pilgrim route, not a technical mountaineering route. It is well-paved for most of the way. Start physical preparation 4–6 weeks before — daily walks of 5–8 km are sufficient.' },
   { q: 'Is pony or helicopter better than trekking to Kedarnath?', a: 'Trekking is the most spiritually meaningful experience. Pony is a good middle ground for those who cannot walk the full distance. Helicopter is best for elderly pilgrims, those with medical conditions, or very tight time constraints. All options result in equally valid darshan.' },
@@ -124,7 +125,7 @@ export default function KedarnathTrekGuide() {
         <BlogAuthor variant="top" author="dhanesh" />
 
         {/* INTRO */}
-        <p className="blog-lede">The <strong>Kedarnath trek</strong> is 16 km of steady climbing from Gaurikund to the temple at 3,583 m. It is hard on stamina rather than technique, and every season it is walked by pilgrims who have never trekked in their lives.</p>
+        <p className="blog-lede">The <strong><OfficialLink k="ut-kedarnath">Kedarnath</OfficialLink> trek</strong> is 16 km of steady climbing from Gaurikund to the temple at 3,583 m. It is hard on stamina rather than technique, and every season it is walked by pilgrims who have never trekked in their lives.</p>
         <p style={p}>This guide covers the complete 16km route, difficulty, best time to visit, how to reach Gaurikund, stay options at Kedarnath, and everything you need to pack.</p>
 
         <KeyTakeaways
@@ -250,7 +251,7 @@ export default function KedarnathTrekGuide() {
         <p style={p}>Accommodation at Kedarnath is basic by design — you are at 3,583m, and electricity and heating are limited. Manage your expectations accordingly. That said, there are good options for every budget:</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:12, marginBottom:20 }}>
           {[
-            { type:'GMVN Tourist Rest House', price:'₹800 – ₹1,500/room', stars:'⭐⭐⭐', pros:'Government-run and most reliable. Clean bedding, attached bathrooms in some rooms.', cons:'Books up fast. Reserve online at gmvnl.in at least 2–3 months in advance in peak season.', tag:'Most Reliable' },
+            { type:'GMVN Tourist Rest House', price:'₹800 – ₹1,500/room', stars:'⭐⭐⭐', pros:'Government-run and most reliable. Clean bedding, attached bathrooms in some rooms.', cons:'Books up fast. Reserve online at gmvnonline.com at least 2–3 months in advance in peak season.', tag:'Most Reliable' },
             { type:'Private Guesthouses', price:'₹600 – ₹2,500/night', stars:'⭐⭐', pros:'More options near the temple. Some include blankets and basic room service.', cons:'Quality varies significantly. Confirm before paying. No fixed pricing — negotiate.', tag:'Budget Pick' },
             { type:'Tented Camps', price:'₹300 – ₹600/person', stars:'⭐⭐', pros:'Cheapest option. Fine for young, experienced trekkers comfortable with basic conditions.', cons:'Very cold at night, especially October. Shared facilities, no hot water.', tag:'Backpacker' },
             { type:'Stay at Guptkashi / Sonprayag', price:'₹1,200 – ₹3,500/night', stars:'⭐⭐⭐⭐', pros:'Much better comfort, good restaurants, warm rooms. Trek Kedarnath as a day trip.', cons:'Requires an early 4–5AM start to reach Kedarnath by midday.', tag:'Best for Families' },
@@ -312,7 +313,7 @@ export default function KedarnathTrekGuide() {
           <p style={{ ...p, marginBottom:0 }}>A roughly 13 km ropeway from Sonprayag to Kedarnath has been approved, and it is expected to cut the journey to around 40 minutes once operational. It's aimed squarely at elderly and less-mobile pilgrims who can't manage the trek or a long pony ride. It is still under development, so for the 2026 season the trek, pony, palki and helicopter remain your options — but it's worth watching if you're planning a future yatra with senior family members.</p>
         </div>
         <div style={{ background:'#fff', border:'1px solid var(--gold)', borderRadius:12, padding:'14px 16px', marginBottom:24 }}>
-          <p style={{ ...p, marginBottom:0, fontSize:14 }}>⚠️ <strong>Whichever route you pick, register first.</strong> No one is allowed past Sonprayag without a valid Char Dham Yatra registration in 2026. Sort it before you arrive — see our <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>free Char Dham Yatra registration guide</Link> and check the <Link prefetch={false} href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</Link> before you drive to Gaurikund.</p>
+          <p style={{ ...p, marginBottom:0, fontSize:14 }}>⚠️ <strong>Whichever route you pick, register first.</strong> No one is allowed past Sonprayag without a valid <OfficialLink k="registration">Char Dham Yatra registration</OfficialLink> in 2026. Sort it before you arrive — see our <Link prefetch={false} href="/blog/char-dham-yatra-registration" style={{ color:'var(--teal)', fontWeight:600 }}>free Char Dham Yatra registration guide</Link> and check the <Link prefetch={false} href="/char-dham-road-status" style={{ color:'var(--teal)', fontWeight:600 }}>live road status</Link> before you drive to Gaurikund.</p>
         </div>
 
         {/* PACKING */}

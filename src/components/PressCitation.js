@@ -15,7 +15,7 @@ import { useRef, useState } from 'react';
 // Two targets, because they are the two things people actually take:
 //   1. The citation line, for a credit or a footnote.
 //   2. The figures block with sources attached — so that when a number is
-//      lifted, the attribution to Uttarakhand Tourism or the Devasthanam Board
+//      lifted, the attribution to Uttarakhand Tourism or a temple committee
 //      travels with it rather than being silently reassigned to us. That
 //      matters: we do not want to be cited as the source of a government
 //      figure, and a desk that discovers we were is done with us.
@@ -166,7 +166,7 @@ export default function PressCitation({ citation, facts, permalink }) {
       </CopyRow>
 
       <p style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.7, margin: '10px 0 0' }}>
-        Where a figure is sourced to Uttarakhand Tourism, the Devasthanam Board
+        Where a figure is sourced to Uttarakhand Tourism, a temple committee
         or another third party, please carry that attribution rather than ours.
       </p>
     </section>

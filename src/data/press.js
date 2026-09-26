@@ -74,7 +74,7 @@ export const MEDIA_KIT = {
   // Being explicit about reuse removes a permissions email and makes it likelier
   // someone actually runs the piece.
   assetPolicy:
-    'Photographs and figures published in this newsroom may be reproduced by news organisations without charge, with attribution to Shiv Ganga Travels. Where a figure is sourced to Uttarakhand Tourism, the Devasthanam Board or another third party, please carry that attribution instead of ours. High-resolution images and the underlying operator data are available on request.',
+    'Photographs and figures published in this newsroom may be reproduced by news organisations without charge, with attribution to Shiv Ganga Travels. Where a figure is sourced to Uttarakhand Tourism, a temple committee or another third party, please carry that attribution instead of ours. High-resolution images and the underlying operator data are available on request.',
 
   // Deliberately the general address rather than an invented press@ alias — see
   // the note in the PR. Swap it the day a dedicated inbox exists.
@@ -102,14 +102,14 @@ export const RELEASES = [
     // bodies, named phenomena — never phrases we would like to rank for.
     topics: ['Kedarnath', 'Badrinath', 'Uttarakhand Tourism', 'Pilgrimage footfall', 'Monsoon'],
     headline: 'Char Dham registrations cross 50 lakh in 2026, with Kedarnath and Badrinath alone recording over 30 lakh darshans',
-    subhead: 'Haridwar operator publishes its operator dataset covering pilgrim numbers, route distances, costs and safety, and makes it free to use',
+    subhead: 'A Haridwar operator puts the official 2026 figures on one page with their sources, alongside its own route and cost tables',
     summary:
-      'Char Dham Yatra registrations for the 2026 season passed 50 lakh by 13 August, and Kedarnath and Badrinath together had recorded 30,62,228 darshans by 11 August. Shiv Ganga Travels, a Haridwar operator running the circuit, has published its own multi-year dataset alongside the official figures and made it free for news organisations to use.',
+      'Char Dham Yatra registrations for the 2026 season passed 50 lakh by 13 August, and Kedarnath and Badrinath together had recorded 30,62,228 darshans by 11 August. Shiv Ganga Travels, a Haridwar operator running the circuit, has put the official figures on one page with their sources, alongside its own route and cost tables.',
     body: [
       'Char Dham Yatra registrations for the 2026 season crossed 50 lakh by 13 August, according to Uttarakhand Tourism figures. Kedarnath and Badrinath alone had recorded 30,62,228 darshans by 11 August — 16,12,112 at Kedarnath and 14,50,116 at Badrinath — with the two shrines together taking more than ₹74.5 crore in offerings and revenue.',
       'The pace was set early. More than 17.8 lakh pilgrims had completed registration by mid-April, before the Badrinath doors opened on 23 April, making it the busiest booking window in five years.',
       'What the headline numbers obscure is that the yatra now runs straight through the monsoon rather than pausing for it. On 6 July 2026, 13,254 pilgrims visited the shrines despite heavy rain — 5,892 at Badrinath, 3,124 at Kedarnath, 1,983 at Gangotri and 2,151 at Hemkund Sahib. The 2026 season runs about 208 days, from 19 April to mid-November.',
-      'Shiv Ganga Travels has published a consolidated statistics page — pilgrim numbers, route distances, cost breakdowns, hotel booking patterns and safety data — cross-referenced against Uttarakhand Tourism, Devasthanam Board and Char Dham Yatra Authority notifications. The company is making the dataset available to news organisations without charge.',
+      'Shiv Ganga Travels keeps a statistics page that sets the official registration and darshan figures beside their sources, with its own route-distance table and per-person cost breakdown, which news organisations may reuse with credit.',
     ],
     quotes: [
       {
@@ -117,17 +117,12 @@ export const RELEASES = [
         by: 'Dhanesh Chandra Mishra',
         role: 'Founder & Director, Shiv Ganga Travels',
       },
-      {
-        text: 'We have been running this route, including the years after 2013 when almost nobody came. Operators sit on that data and do nothing with it. It is more useful to a reporter than it is to us.',
-        by: 'Dhanesh Chandra Mishra',
-        role: 'Founder & Director, Shiv Ganga Travels',
-      },
     ],
     facts: [
       { fact: 'Char Dham registrations, 2026 season', value: 'Over 50 lakh by 13 August', source: 'Uttarakhand Tourism' },
-      { fact: 'Kedarnath + Badrinath darshans', value: '30,62,228 by 11 August', source: 'Devasthanam Board' },
-      { fact: 'Offerings and revenue, both shrines', value: 'Over ₹74.5 crore', source: 'Devasthanam Board' },
-      { fact: '2026 season length', value: '~208 days (19 Apr – ~13 Nov)', source: 'Devasthanam Board' },
+      { fact: 'Kedarnath + Badrinath darshans', value: '30,62,228 by 11 August', source: 'Uttarakhand government, as reported 11 Aug' },
+      { fact: 'Offerings and revenue, both shrines', value: 'Over ₹74.5 crore', source: 'State and temple committee figures, as reported 13 Aug' },
+      { fact: '2026 season length', value: '~208 days (19 Apr – ~13 Nov)', source: 'Temple committees' },
       { fact: 'Single monsoon day, 6 July 2026', value: '13,254 pilgrims across shrines', source: 'Uttarakhand Tourism' },
       { fact: 'Circuit length', value: '~1,607 km across four shrines', source: 'Shiv Ganga Travels operator data' },
     ],
@@ -137,9 +132,8 @@ export const RELEASES = [
       { label: 'Live road status', href: '/char-dham-road-status' },
     ],
     notesToEditors: [
-      'The underlying operator data is available as a spreadsheet on request.',
       'Dhanesh Chandra Mishra is available for interview in Hindi or English, in person in Haridwar or by phone.',
-      'Where figures are attributed to Uttarakhand Tourism or the Devasthanam Board, please carry that attribution rather than ours.',
+      'Where figures are attributed to Uttarakhand Tourism, the state government or a temple committee, please carry that attribution rather than ours.',
     ],
   },
 

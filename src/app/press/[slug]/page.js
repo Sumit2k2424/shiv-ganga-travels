@@ -111,7 +111,7 @@ function Schema({ r }) {
       ...(r.topics || []).map((t) => ({ '@type': 'Thing', name: t })),
     ],
     // The sourced figures, each as a claim with its own attribution. A model
-    // lifting "30,62,228 darshans" can see the source is the Devasthanam Board
+    // lifting "30,62,228 darshans" can see the source is the state government
     // and not us — which is the attribution we actually want carried.
     citation: r.facts.map((f) => ({
       '@type': 'CreativeWork',
