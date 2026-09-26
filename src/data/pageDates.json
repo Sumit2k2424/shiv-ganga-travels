@@ -559,7 +559,7 @@
     },
     "/press": {
       "created": "2026-08-19",
-      "modified": "2026-09-25",
+      "modified": "2026-09-26",
       "files": [
         "src/app/press/page.js",
         "src/data/press.js"
@@ -567,7 +567,7 @@
     },
     "/press/[slug]": {
       "created": "2026-08-19",
-      "modified": "2026-09-25",
+      "modified": "2026-09-26",
       "files": [
         "src/app/press/[slug]/page.js",
         "src/data/press.js"
