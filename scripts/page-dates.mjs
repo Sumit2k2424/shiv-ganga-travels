@@ -88,6 +88,13 @@ const HOUSEKEEPING = new Set([
              // /char-dham-yatra only, never on the /packages routes that date from packages.js
 ]);
 
+// Narrower: one file inside an otherwise real content commit, as 'hash:path'.
+// For when a commit changes one page's content and only touches a comment in
+// another — skipping the whole commit would lose the real update.
+const HOUSEKEEPING_FILES = new Set([
+  'db2b317:src/app/char-dham-yatra-emergency-contacts/page.js', // 26 Sep 2026 — code comment only; the statistics page in the same commit is a real change
+]);
+
 // ── 1. one pass over history: file → { created, modified } ─────────────────
 const log = execFileSync(
   'git',
@@ -96,6 +103,7 @@ const log = execFileSync(
 );
 const dates = new Map(); // path (posix) → { created, modified }
 let cur = null;
+let curHash = null;
 let skip = false;
 for (const raw of log.split('\n')) {
   const line = raw.trim().replace(/^'|'$/g, '');
@@ -103,10 +111,12 @@ for (const raw of log.split('\n')) {
   if (line.startsWith('C ')) {
     const [, date, hash, ...subject] = line.split(' ');
     cur = date;
+    curHash = hash;
     skip = HOUSEKEEPING.has(hash) || subject.join(' ').includes('[housekeeping]');
     continue;
   }
   if (!cur || skip) continue;
+  if (HOUSEKEEPING_FILES.has(`${curHash}:${line}`)) continue;
   const e = dates.get(line);
   if (!e) dates.set(line, { modified: cur, created: cur }); // newest first
   else e.created = cur;                                     // keeps walking back
