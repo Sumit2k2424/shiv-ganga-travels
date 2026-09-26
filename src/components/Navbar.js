@@ -85,6 +85,21 @@ const NAV_CSS = `
     .eq-burger:hover { border-color:var(--ink); }
   }
 
+  /* Breakpoints come from measurement, not from md/lg. The bar needs ~1,148px
+     for logo + six links + phone icon + Free Quote before the links start to
+     squeeze, and ~1,268px with the number spelled out (measured 26 Sep 2026).
+     Under the old md/lg switches it overflowed from 768 to ~1,270px, and
+     html's overflow-x:clip hid Free Quote off-screen. Each switch below sits
+     ~30–50px above its measurement, headroom for the fallback font on a first
+     visit. Phone icon and Free Quote stay from 768px. */
+  .eq-deskonly { display:none !important; }
+  .eq-phone__num { display:none; }
+  @media (min-width:1180px) {
+    .eq-deskonly { display:flex !important; }
+    .eq-deskhide { display:none !important; }
+  }
+  @media (min-width:1320px) { .eq-phone__num { display:inline; } }
+
   .eq-mobile { background:#fff; border-top:1px solid var(--rule); max-height:80vh; overflow-y:auto; }
   .eq-mob-link { display:block; padding:15px 20px; font-size:0.85rem; letter-spacing:0.04em; color:var(--ink); border-bottom:1px solid var(--rule); text-decoration:none; transition:background .2s var(--ease-lux); }
   .eq-mob-acc { border-bottom:1px solid var(--rule); }
@@ -177,7 +192,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex" style={{ display:'flex', alignItems:'center', gap:2, flex:1, marginLeft:28 }}>
+          <nav className="eq-deskonly" style={{ display:'flex', alignItems:'center', gap:2, flex:1, marginLeft:28 }}>
 
             {/* Packages dropdown */}
             <div ref={dropRef} style={{ position:'relative' }}>
@@ -246,9 +261,9 @@ export default function Navbar() {
 
           {/* Right CTAs */}
           <div style={{ display:'flex', alignItems:'center', gap:10, marginLeft:'auto', flexShrink:0 }}>
-            <a href="tel:+917817996730" className="eq-phone hidden md:flex">
+            <a href="tel:+917817996730" className="eq-phone hidden md:flex" aria-label="Call +91-7817996730">
               <Icon name="phone" size={14}/>
-              <span className="hidden lg:inline">+91-7817996730</span>
+              <span className="eq-phone__num">+91-7817996730</span>
             </a>
 
             <a
@@ -259,7 +274,7 @@ export default function Navbar() {
               <WhatsAppIcon size={15}/> Free Quote
             </a>
 
-            <button onClick={() => setMobileOpen(o => !o)} className="eq-burger md:hidden"
+            <button onClick={() => setMobileOpen(o => !o)} className="eq-burger eq-deskhide"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}>
               {mobileOpen
@@ -272,7 +287,7 @@ export default function Navbar() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <nav className="eq-mobile md:hidden" aria-label="Mobile">
+          <nav className="eq-mobile eq-deskhide" aria-label="Mobile">
             <MobileAccordion label="Packages">
               {PKG_LINKS.map(l => (
                 <Link prefetch={false} key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
