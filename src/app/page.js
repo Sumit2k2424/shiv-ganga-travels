@@ -260,12 +260,18 @@ const FOUNDER_POINTS = [
   { icon:'receipt',     t:'Full cost transparency', d:'Every package includes a line-by-line cost breakdown before you book.' },
 ];
 
+// The homepage holds most of the site's external link equity, so these cards
+// are the strongest internal links on the site. The first four are the pages
+// that earn the most clicks (GSC, 90 days to 15 Sep 2026); keep them here.
 const TOOLS = [
+  { icon:'alert',      title:'Live Road Status',      desc:'Which Char Dham roads are open, closed or slow today, route by route.', href:'/char-dham-road-status' },
+  { icon:'receipt',    title:'Pony, Palki & Kandi Rates', desc:'Official Kedarnath trek rates, including every palki weight slab.', href:'/kedarnath-pony-palki-kandi-rates' },
+  { icon:'ticket',     title:'Kedarnath VIP Darshan', desc:'There is no flat VIP pass. What the BKTC pujas cost and how to book.', href:'/kedarnath-vip-darshan' },
+  { icon:'helicopter', title:'Kedarnath Helicopter Booking', desc:'Sold only on IRCTC HeliYatra: fares by helipad, booking steps, scams.', href:'/blog/kedarnath-helicopter-booking' },
   { icon:'calculator', title:'Yatra Cost Calculator', desc:'Instant personalised estimate for your group size and route.', href:'/char-dham-yatra-cost-calculator' },
+  { icon:'clipboard',  title:'Registration Guide',    desc:'Biometric yatra registration, step by step.',                 href:'/blog/char-dham-yatra-registration' },
   { icon:'map',        title:'Route Map 2026',        desc:'All distances, altitudes and stops from Haridwar.',            href:'/char-dham-yatra-route-map' },
   { icon:'calendar',   title:'Best Time to Visit',    desc:'Month-by-month weather across all four dhams.',               href:'/blog/best-time-char-dham' },
-  { icon:'clipboard',  title:'Registration Guide',    desc:'Biometric yatra registration, step by step.',                 href:'/blog/char-dham-yatra-registration' },
-  { icon:'megaphone',  title:'2026 New Rules',        desc:'Phone ban, age 55+ certificate, IRCTC helicopter.',           href:'/blog/char-dham-yatra-registration' },
   { icon:'backpack',   title:'Packing List',          desc:'Exactly what to carry — and what to leave behind.',           href:'/blog/char-dham-yatra-packing-list' },
 ];
 
@@ -275,7 +281,7 @@ const TOOLS = [
 const CITY_LINKS = [
   ['Delhi & North India','/packages/char-dham-yatra-from-delhi-10n-11d'],['Mumbai & South India','/char-dham-yatra-from-mumbai'],];
 const GUIDE_LINKS = [
-  ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['All Blog Posts','/blog'],
+  ['Kedarnath Temple','/kedarnath-temple'],['Badrinath Temple','/badrinath-temple'],['Emergency Contacts','/char-dham-yatra-emergency-contacts'],['पैकिंग लिस्ट (हिंदी)','/blog/char-dham-packing-list-hindi'],['All Blog Posts','/blog'],
 ];
 
 const FUNNEL = [
